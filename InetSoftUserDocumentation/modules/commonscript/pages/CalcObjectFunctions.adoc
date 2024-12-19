@@ -1,0 +1,32 @@
+= CALC Object Functions
+
+The CALC library contains implementations of Microsoft Excel^®^ spreadsheet functions.  All these functions are static and can be used without creating an instance of the CALC object.
+
+== Examples: Array Operations
+
+[source,javascript]
+--
+// Average of items in a JavaScript array:
+CALC.average([1,2,3]);
+
+// Average of items in table column ‘Total’:
+CALC.average(TableView1.table['Total']);
+
+// Average of items in ‘Total’ column of ‘Sales’ data block:
+CALC.average(Sales['Total']);
+--
+
+
+== Examples: Scalar Operations
+
+[source,javascript]
+--
+// Return the year part of a Date object:
+CALC.year(new Date(1900,0,2));
+
+// Return the year part of values in the ‘Order Date’ field:
+CALC.year(field['Order Date']);
+
+// Return the year part of the start date selected on Calendar1:
+CALC.year(Calendar1.selectedObjects[0]);
+--

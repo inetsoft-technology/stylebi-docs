@@ -1,0 +1,34 @@
+= x2Title.color
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the title color for the secondary (top) X-axis.
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.x2Title.color = [128,0,128];
+Chart1.x2Title.color = {r:128,g:0,b:128};
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+x2Title.color             // unqualified
+Chart1.x2Title.color      // qualified
+
+{secondForm}
+====
+

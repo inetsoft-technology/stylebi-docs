@@ -1,0 +1,31 @@
+= title
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the title text to appear above the Chart.
+
+
+
+== Type
+String::			The title to display
+
+
+
+
+== Example
+[source,javascript]
+Chart1.title = 'Sales Chart';
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+title         // unqualified
+Chart1.title  // qualified
+
+{secondForm}
+====
+
+

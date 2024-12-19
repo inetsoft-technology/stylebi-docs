@@ -1,0 +1,36 @@
+= CALC.lcm(array)
+:navtitle: CALC.lcm()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the least common multiple of an array of non-negative numbers. Non-integer values are truncated. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of positive integers for which to find LCM
+
+
+== Example
+[source,javascript]
+----
+CALC.lcm([24, 32, 16, 12]);  // returns 96
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.lcm(TableView1.table['Quantity'])
+----
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.lcm(Sales['Quantity']);
+----
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

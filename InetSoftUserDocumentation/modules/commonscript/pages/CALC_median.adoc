@@ -1,0 +1,35 @@
+= CALC.median(array)
+:navtitle: CALC.median()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the median of the elements in array. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of numeric values
+
+
+== Example
+[source,javascript]
+----
+CALC.median([1,2,3,4,5,6,7]);  // returns 4.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.median(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.median(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

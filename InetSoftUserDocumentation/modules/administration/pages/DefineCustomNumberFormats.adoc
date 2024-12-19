@@ -1,0 +1,33 @@
+= Define Custom Number Formats
+%experimetal%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+When applying a number format, users can add a suffix “K”, “M”, or “B” to the pattern string to automatically divide the numerical value by 10^3^, 10^6^, or 10^9^, respectively.
+
+image:viewsheet:Format Number KMB.png[]
+
+You can define custom symbols and multipliers by adding the desired entries into the _userformat.xml_ file. For example, the following _userformat.xml_ file defines three new multipliers, “halfK”, “halfM”, and “halfB”, that divide the numerical values by 5x10^2^, 5x10^5^, and 5x10^8^, respectively.
+
+[source,xml]
+<?xml version="1.0" encoding="utf-8"?>
+<userFormat>
+   <NumberFormat suffix="halfK" multiplier="500"/>
+   <NumberFormat suffix="halfM" multiplier="500000"/>
+   <NumberFormat suffix="halfB" multiplier="500000000"/>
+</userFormat>
+
+
+
+To upload this file to the server, use the btn:[User Format] button on the *Presentation* page. (See xref:Presentation.adoc#LookandFeel[Look and Feel].) When you restart the server with this _userformat.xml_ file in place, the new suffixes will be available for use with number format patterns, and will be displayed among the format presets for  Dashboards:
+
+image:commonscript:Format Number Custom Multiplier.png[]
+
+
+To *redefine* the existing “K”, “M”, or “B” suffixes, simply assign these suffixes new values in the _userformat.xml_ file.
+
+[source,xml]
+<NumberFormat suffix="K" multiplier="..."/>
+<NumberFormat suffix="M" multiplier="..."/>
+<NumberFormat suffix="B" multiplier="..."/>
+
+NOTE: The default suffixes can be redefined but not removed.

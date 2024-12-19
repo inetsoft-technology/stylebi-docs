@@ -1,0 +1,36 @@
+= chartStyle
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+For a chart with ‘Multiple Styles’ selected from {buttonSelectChartStyle}, sets the style for the specified dataset. For a chart with a single style, sets the global style.
+
+== Type
+One of the following constants:
+
+include::ROOT:partial$chartStyle.adoc[]
+
+
+
+== Examples
+[source,javascript]
+.Multi-style chart
+Chart1.chartStyle['Sum(Total)'] = Chart.CHART_LINE
+
+[source,javascript]
+.Single-style chart
+Chart1.chartStyle = Chart.CHART_LINE
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+chartStyle         // unqualified
+Chart1.chartStyle  // qualified
+
+{secondForm}
+====

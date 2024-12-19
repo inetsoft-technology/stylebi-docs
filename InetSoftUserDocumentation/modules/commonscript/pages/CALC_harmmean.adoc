@@ -1,0 +1,36 @@
+= CALC.harmean(array)
+:navtitle: CALC.harmean()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the *harmonic mean* of values in array. The harmonic mean is the reciprocal of the arithmetic mean of reciprocals. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of positive values for which to compute harmonic mean
+
+
+
+== Example
+[source,javascript]
+----
+CALC.harmean([4,5,8,7,11,4,3]);  // returns 5.028375962061728
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.harmean(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.harmean(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

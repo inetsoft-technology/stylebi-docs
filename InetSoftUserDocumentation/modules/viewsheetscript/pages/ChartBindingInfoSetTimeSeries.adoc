@@ -1,0 +1,24 @@
+= bindingInfo.setTimeSeries(col, Boolean)
+:navtitle: bindingInfo.setTimeSeries()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:ChartBindingInfoIsTimeSeries.adoc[]  to obtain the time-series status.
+
+Specifies that gaps in Date data should be retained. For example, if the data in the chart is grouped by month, and there is no data for the month of June, `setTimeSeries` ensures that the month of June is still retained in the chart.
+
+== Paramater
+col::			Name of field to set as time-series
+Boolean:: `true`: gaps are preserved for date data +
+`false`: gaps are removed
+
+== Example
+[source,javascript]
+Chart1.bindingInfo.setTimeSeries("Order Date", true);
+
+
+image:commonscript:setTimeSeries_1.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

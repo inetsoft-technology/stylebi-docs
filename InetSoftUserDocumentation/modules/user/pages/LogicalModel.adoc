@@ -1,0 +1,9 @@
+= Logical Model
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A *logical model* presents a business-oriented, easy-to-understand view of a single underlying physical view. The logical model organizes data from the physical view into logical entities that correspond to business world objects, rather than to the underlying physical tables. Each entity contains one or more attributes that map to database table columns from the physical view.
+
+NOTE:  A physical view can  be exposed to end users *only* through a logical model.
+
+The following sections explain how to design and configure a logical model.

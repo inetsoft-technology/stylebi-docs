@@ -1,0 +1,93 @@
+= CategoricalLineFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+The `CategoricalLineFrame` object contains a unique line style for each discrete value. To create a `CategoricalLineFrame` object, call the `CategoricalLineFrame` constructor.
+
+[source,javascript]
+var frame = new CategoricalLineFrame('Quantity');
+
+You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property.  You can also assign a LineFrame using the xref:viewsheetscript:ChartBindingInfoLineFrame.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"],["NJ",300],["NY",200],["PA",100]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CategoricalLineFrame(); //<2>
+frame.setField("State"); //<3>
+elem.setLineFrame(frame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:LineFrame.adoc[] object.
+<3> Use `setField` to specify the field for the `CategoricalLineFrame`.
+<4> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:CategoricalLineFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new CategoricalLineFrame();
+frame.setField("State");
+elem.setLineFrame(frame);
+
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:LineFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
+Chart1.bindingInfo.lineFrame = new CategoricalLineFrame;
+Chart1.bindingInfo.lineFrame.setLine('Robert', GLine.LARGE_DASH);
+Chart1.bindingInfo.lineFrame.setLine('Eric', GLine.LARGE_DASH);
+Chart1.bindingInfo.lineFrame.setLine('Sue',GLine.DOT_LINE);
+Chart1.bindingInfo.lineFrame.setLine('Annie', GLine.DOT_LINE);
+
+--
+
++
+image:commonscript:CategoricalLineFrame.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

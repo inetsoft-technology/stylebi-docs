@@ -1,0 +1,27 @@
+= appendRow(table,row)
+:navtitle: appendRow()
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheet:TableProperties.adoc[] for information on making a table editable.
+* xref:viewsheetscript:TableAppendRow.adoc[] to add a blank row to an Editable Table in a dashboard.
+====
+
+Append the data in array `row` to the Embedded Table data block named `table` in the associated Data Worksheet.
+
+== Example
+The script below can be placed in the *onClick* handler of a Submit button. See xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script] for more information.
+[source,javascript]
+----
+var row = ['Sue','New York',534,1329.45,0];
+appendRow('SalesTable',row);
+
+// Save the Data Worksheet, included the modified Embedded Table:
+saveWorksheet();
+
+// Refresh the Dashboard with saved data from the Data Worksheet:
+refreshAfterSubmit = true;
+----
+
+See xref:viewsheetscript:SpecialFunctionsSaveWorksheet.adoc[] and xref:viewsheetscript:SubmitButtonRefreshAfterSubmit.adoc[] for more information about these functions.

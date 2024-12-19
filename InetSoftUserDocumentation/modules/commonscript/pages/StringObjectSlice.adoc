@@ -1,0 +1,36 @@
+= slice(start, end)
+:navtitle: slice()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Extract a sub-string from a larger string by specifying the starting and ending indices of the sub-string. Indexing starts from 0.
+
+
+== Parameter
+start:: 			Index of the first character of the desired 			sub-string.
+end:: 			Index of the character following the last 			character of the desired sub-string.
+
+
+
+
+
+
+
+== Examples
+
+[source,javascript]
+"a new string".slice(2,5)  // returns 'new'
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].slice(2,5);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.slice(2,5);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

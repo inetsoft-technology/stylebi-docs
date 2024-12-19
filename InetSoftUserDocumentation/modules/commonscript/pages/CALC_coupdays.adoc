@@ -1,0 +1,47 @@
+= CALC.coupdays(settlement, maturity, frequency, [basis])
+:navtitle: CALC.coupdays()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the number of *days* in the *coupon* period that contains the settlement date. {CALCExcelFunctionPage}
+
+
+== Parameters
+settlement::				Date object: The security’s settlement date
+maturity::				Date object: Security’s maturity date (date when security expires)
+frequency::				Number of coupon payments per year (1=annual, 2=semi-annual, 4=quarterly)
+basis::            {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+== Example
+Number of days in coupon period that includes settlement date of January 25, 2007, where payments are made twice per year, maturity date is November 15, 2008, and Actual/Actual counting convention is used.
+
+
+[source,javascript]
+----
+CALC.coupdays(new Date(2007,0,25), new Date(2008,10,15), 2, 1);
+// returns 181
+----
+
+With semi-annual payments, the coupon dates in this example are May 15 and November 15, hence the function returns the number of days from coupon date November 15, 2006 to coupon date May 15, 2007 (the span that includes the settlement date).
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.coupdays(field['SettleDate'], field['MaturityDate'],   2, 1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.coupdays(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1],   2, 1)
+CALC.coupdays(parameter.SettleDate, parameter.MaturityDate,   2, 1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,35 @@
+= popComponent
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TextProperties.adoc[] for general information about the Text component.
+====
+
+Specifies the name of an individual component or Container to display as a pop-up interface. When the user clicks the text, the selected component is displayed at the location of the text. At all other times, the specified component is not visible in the Dashboard.
+
+
+== Type
+String
+
+
+
+
+== Example
+[source,javascript]
+Text1.popComponent = "Gauge1";
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+popComponent            // unqualified
+Text1.popComponent      // qualified
+
+{secondForm}
+====
+
+

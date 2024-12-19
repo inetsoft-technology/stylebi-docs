@@ -1,0 +1,57 @@
+= SAP  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing SAP  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:SAP.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonSAPQuery} appropriate for the data connection you previously created, either ‘SAP ABAP Query’, ‘SAP BAPI Query’, or ‘SAP Table Query’. This opens the ‘SAP  Query’ dialog box.
++
+image:dataSourceSAP5.png[]
+
+
+
+. For an *SAP ABAP* connection, follow the steps below:
+
+.. Select the desired ‘Infoset’ and ‘User Group’.
+.. Press the btn:[Find] button. This populates the  ‘Query Name’ menu.
+.. Select the desired query in the ‘Query Name’ menu.
+.. Press the btn:[Load Parameters] button. To supply a value for a parameter, check the corresponding box and enter a parameter value.
+.. *_Optional:_*  To add additional parameters, press the btn:[Add] button. To remove a parameter, check the corresponding box and press the btn:[Remove] button.
++
+image:dataSourceSAP7.png[]
+
+
+. For an *SAP BAPI* connection, follow the steps below:
+
+.. Press the btn:[Find] button. This populates the ‘Object Type’ menu.
+.. Select the desired ‘Object Type’.
+.. Press the btn:[Find] button. This populates the  ‘Function Name’ menu.
+.. Select the desired function in the ‘Function Name’ menu.
+.. Press the btn:[Find] button. This populates the  ‘Table’ menu.
+.. Select the desired table in the ‘Table’ menu.
+.. Press the btn:[Load Parameters] button. To supply a value for a parameter, check the corresponding box and enter a parameter value.
+.. *_Optional:_*  To add additional parameters, press the btn:[Add] button. To remove a parameter, check the corresponding box and press the btn:[Remove] button.
++
+image:dataSourceSAP8.png[]
+
+. For an *SAP Tables* connection, follow the steps below:
+
+.. Select the desired ‘Type’.
+.. *_Optional:_*  In the ‘Table Name Contains’ field, enter a table name or name fragment to restrict the tables displayed to those that match the entered text.
+.. Press the btn:[Find] button. This populates the  ‘Table Name’ menu.
++
+NOTE: This may take a few minutes.
+.. Select the desired table in the ‘Table Name’ menu.
++
+image:dataSourceSAP9.png[]
+
+include::partial$finalStepsQuery.adoc[]
+

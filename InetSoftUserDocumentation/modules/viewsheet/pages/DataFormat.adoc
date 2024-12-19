@@ -1,0 +1,161 @@
+= Add Data Format
+%experimetal%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The ‘Format’ setting allows you to specify a data format. Formatting is available for the following data types: Date, Number, Currency, Text, Percent.
+
+image:Table format_3.png[]
+
+A data format is a method for representing data as a string (for display purposes). For example, the date December 31, 2008 might be displayed as “12/31/08” or “Dec. 31, 2008” or simply “2008,” depending on the  format specified. Likewise, the number 123456 might be displayed as “123,456” or “123456.00” or “00123456,” depending on the  format specified.
+
+The following sections explain the available formats.
+
+[#DateFormat]
+== Date Format
+For ‘Date’ format, several predefined formats are available from the pop-up menu.
+
+image:dateFormatPredefined.png[]
+
+To create other formats, select the ‘Custom’ option and use the following date masks to create the desired format:
+
+include::commonscript:partial$dateFormatTable.adoc[]
+
+
+
+You can insert other text into the format string by using single quotes, for example: `'The date is' MMM, yyyy`. To insert a single-quote in the date format, use a double single-quote (e.g., `MMM ''yy`).
+
+.Date Format
+[example]
+====
+For the date Nov 8, 2006:
+[source]
+M = 11; MM = 11; MMM = Nov; MMMM = November
+d = 8; dd = 08
+yy = 06; yyyy = 2006
+EEE = Wed; EEEE = Wednesday
+
+Therefore, the mask `MMM-dd-yyyy` yields the string “Nov-08-2006”.
+====
+
+[#NumberFormat]
+== Number Format
+For ‘Number’ format, several predefined formats are available.
+
+image:numberFormatPredefined.png[]
+
+
+The number format pattern string uses the symbols  listed below.
+
+include::commonscript:partial$numberFormatTable.adoc[]
+
+For example, to add commas to a number, use a format such as `pass:[#,###,###.00]`. The `#` placeholder will show a digit if needed, while a `0` placeholder will display zero if the digit is _not_ needed. Add a `%` symbol at the end of the format to multiply the value by 100 and display as a percentage. To display a `%` sign *without* multiplying the values, enclose the ‘%’ in quotes.
+
+TIP: Decimal formatting only works if the value is truly a numeric type. If the numeric value you wish to format is actually text, convert the type using JavaScript so that formatting can be applied.
+
+
+Add the suffix “K”, “M”, or “B” to the pattern string to automatically divide the numerical value by 10^3^, 10^6^, or 10^9^, respectively.
+
+image:Format Number KMB.png[]
+
+You can insert other text into the format string, for example: `pass:[Total is $#,###.00]`. To insert a literal single-quote in the number  format, use a double single-quote (e.g., `pass:[Dave''s total: $#,###.00]`). To create custom multipliers, see xref:administration:DefineCustomNumberFormats.adoc[] in xref:administration:ManageServer.adoc[].
+
+.Number Format
+[example]
+====
+.For the number 124521.63:
+----
+ #,###.## = 124,521.63    <1>
+ #,###.000 = 124,521.630  <2>
+----
+<1> Insert comma every three places
+<2> Pad to hundredths by using ‘0’ to right of decimal
+
+
+.For  the number 745850.78:
+[source]
+----
+ #,###.## = 745,850.78       <1>
+ #.# = 745850.8              <2>
+ #,###.000 = 745,850.780     <3>
+----
+<1> Insert comma every three places
+<2> Round to tenths by using ‘#’ to right of decimal
+<3> Pad to hundredths by using ‘0’ to right of decimal
+====
+
+
+
+
+== Currency Format
+The ‘Currency’ format represents the number as a currency rounded to two decimal places. For example, the number 25.867 displays as `$25.87`. Use the {buttonIncreaseDecimal} and {buttonDecreaseDecimal} in the panel to change the number of decimals displayed.
+
+IMPORTANT: The *currency symbol* ($, £, €, ¥, etc.)  is automatically determined by the user *locale* upon login. If the user has no assigned locale, the locale settings of the operating system are used. To apply a fixed currency symbol for all locales, use the xref:#NumberFormat[]  option with a recognized currency symbol, e.g., `pass:[$#,###.##]`.
+
+== Text Format
+Use ‘Text’ format to add a prefix or suffix to string data. The special tag `pass:[{0}]` acts as a placeholder for the actual data. Use the escape sequence `\n` to insert a carriage return in the text.
+
+NOTE: To apply *localization* within a text format, use a string identifier in curly braces within the text format. The identifier in curly braces is used as a Text ID to locate the corresponding replacement text (usually a translation into another language) within the _SreeBundle_ localization file. For example, the string `pass:[{replacementText}]` within a text format will use “replacementText” as the Text ID. For information on how to map Text IDs to replacement text in the _SreeBundle_ localization file, see xref:administration:Localization.adoc[] in xref:administration:ManageServer.adoc[].
+
+
+.Text Format
+[example]
+====
+. Consider a Table column  containing the following values:
+
+ Annie
+ Eric
+ Robert
+ Sue
++
+The text format `“Employee name: pass:[{0}]”` will display these values as follows:
+
+ Employee Name: Annie
+ Employee Name: Eric
+ Employee Name: Robert
+ Employee Name: Sue
+
+. Consider a Table column containing the following values:
+
+ NJ
+ NY
+ CA
+ AZ
++
+The text format `pass:[“-{0}-”]` will display these values as follows:
+
+ -NJ-
+ -NY-
+ -CA-
+ -AZ-
+====
+
+==  Percent Format
+The ‘Percent’ format displays a number as a percent. For example, percent format displays the number 0.15  as `15%.` To gain more precision over how the value is displayed, use a xref:#NumberFormat[] together with a `%` symbol.
+
+[#DurationFormat]
+== Duration Format
+The ‘Duration’ format provides a way of displaying elapsed time. Select a ‘Custom’ format, or enter your own custom duration format.
+
+image:commonscript:Ad Hoc Table Format14.png[]
+
+The custom formats use a set of placeholders (`H`,`m`,`s`, etc.) to represent the duration. (See xref:#DateFormat[] above for more information about the codes.) The ‘Pad with Zeros’ option places “0” in any position that has no value.
+
+.Duration Format
+[example]
+====
+You can represent the millisecond duration of 2684722000 in a variety of ways:
+
+[source,javascript]
+--
+// ‘Pad with Zeros’ enabled or disabled
+HH:mm = 745:45 // 745 hours, 45 minutes
+
+// ‘Pad with Zeros’ disabled:
+ddd HH:mm:ss = 31 1:45:22 // 31 days, 1 hour, 45 minutes, 22 seconds
+
+// ‘Pad with Zeros’ enabled:
+ddd HH:mm:ss = 031 01:45:22 // 31 days, 1 hour, 45 minutes, 22 seconds
+--
+====
+
+

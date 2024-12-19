@@ -1,0 +1,23 @@
+To add filter components to a Selection Container, follow the steps below:
+
+. Drag a Selection Container component from the *Toolbox* panel onto the Dashboard. This creates an empty Selection Container element.
+
+. Drag a data field from the data source at the top of the *Toolbox* panel onto the Selection Container. (Use the green highlight to place the field as desired.)
++
+image:SelectionContainerAddDataBlock.png[]
++
+This adds the chosen field to the Selection Container as a Selection List (string field) or a Range Slider (numerical or date field).
++
+TIP: You can also press the {buttonAddFilter} in the mini-toolbar to select the field to add.
+
+. *_Optional:_*  Right-click on the Selection Container, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Selection Container Properties’ panel.
++
+To permit the end-user to drag new fields from the Chart Editor to the Selection Container, enable ‘Allow User to Add/Remove Selections’. See xref:SelectionContainerProperties.adoc[] for more information.
+
+To display a selection component in a Selection Container, press the {buttonShow} in the selection component title bar. This expands the selection component and its toolbar. (See xref:UseFilterComponents.adoc[] for information on how to use these selection components.) To collapse a selection component in a Selection Container, press the {buttonHide}.
+
+image:SelectionContainer1.png[]
+
+To clear the filters on all selection components in the Selection Container, press the {buttonUnselectAll} in the Selection Container title bar.
+
+image:SelectionContainer2.png[]

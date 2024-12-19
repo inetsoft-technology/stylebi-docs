@@ -1,0 +1,44 @@
+= setActionVisible(name,Boolean)
+:navtitle: setActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:thisViewsheet.adoc#thisViewsheetSetActionVisible[thisViewsheet.setActionVisible] to show or hide Dashboard toolbar buttons.
+
+
+Sets the visibility/accessibility of end-user Calendar features. To disable a feature, set the value to `false`.
+
+== Parameters
+name::			name of toolbar button (String):
++
+[source]
+'Switch To Year View'
+'Switch To Month View'
+'Switch To Simple View'
+'Switch To Date Range Mode’
+'Clear Calendar'
+'Apply'
+
+Boolean::	`false`: hide the specified function +
+`true`: show the specified function
+
+
+
+== Example
+[source,javascript]
+Calendar1.setActionVisible("Switch To Year View", false);
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setActionVisible               // unqualified
+Calendar1.setActionVisible    // qualified
+
+{secondForm}
+====
+
+

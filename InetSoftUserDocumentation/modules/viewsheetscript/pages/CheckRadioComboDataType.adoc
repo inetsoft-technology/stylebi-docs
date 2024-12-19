@@ -1,0 +1,32 @@
+= datatype
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for  properties shared with other components.
+* xref:viewsheet:RadioCheckBoxComboProperties.adoc[]for more information about Form components.
+====
+
+Specifies the data type for items displayed in a Check Box, Radio Button, or ComboBox component via the “Embedded” option.
+
+== Type
+xref:commonscript:StyleConstant.adoc[] object:: See xref:commonscript:StyleConstantDataType.adoc[] for available options.
+
+== Example
+[source,javascript]
+ComboBox1.datatype = StyleConstant.STRING;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+datatype            // unqualified
+ComboBox1.datatype  // qualified
+
+{secondForm}
+====

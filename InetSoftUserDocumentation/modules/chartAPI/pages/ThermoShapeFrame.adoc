@@ -1,0 +1,58 @@
+= ThermoShapeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:MultiShapeFrame.adoc[]
+* xref:VisualFrame.adoc[]
+====
+
+The `ThermoShapeFrame` object contains the shape styles for two-dimensional “thermometer” elements that have a fill level and box width. To create a `ThermoShapeFrame` object, call the `ThermoShapeFrame` constructor.
+
+[source,javascript]
+var frame = new ThermoShapeFrame("Height", "Weight");
+
+You can pass a pair of field names (e.g., ‘Height’, ‘Weight’) to the constructor, or specify this later using the inherited xref:MultiShapeFrameSetFields.adoc[] function. The dimensions are specified in the order [fill level, box width].
+
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity","Height","Weight"], ["NJ", 200,50,1], ["NY", 300,30,4]]; //<1>
+graph = new EGraph();
+var frame = new ThermoShapeFrame(); //<2>
+var elem = new PointElement("State", "Quantity");
+var hscale = new LinearScale();
+var wscale = new LinearScale();
+hscale.setMin(0);
+hscale.setMax(100);
+wscale.setMin(0);
+wscale.setMax(5);
+frame.setFields(["Height", "Weight"]); //<3>
+frame.setScales([hscale, wscale]); //<4>
+elem.setShapeFrame(frame); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `ThermoShapeFrame` object.
+<3> Use the inherited xref:MultiShapeFrameSetFields.adoc[] function to assign the data fields.
+<4> Use the inherited xref:MultiShapeFrameSetScales.adoc[] function to assign the xref:LinearScale.adoc[] objects.
+<5> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the element.
+
+image:commonscript:ThermoShapeFrame.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+

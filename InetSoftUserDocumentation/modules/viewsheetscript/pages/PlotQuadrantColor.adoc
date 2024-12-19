@@ -1,0 +1,31 @@
+= quadrantColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the color of the quadrant lines.
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.quadrantColor = [255,0,0];
+Chart1.quadrantStyle = Chart.DOT_LINE;
+
+image:commonscript:quadrantColor.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+quadrantColor          // unqualified
+Chart1.quadrantColor   // qualified
+
+{secondForm}
+====

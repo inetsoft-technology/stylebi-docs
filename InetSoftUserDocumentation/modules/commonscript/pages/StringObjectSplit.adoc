@@ -1,0 +1,37 @@
+= split(separator, limit)
+:navtitle: split()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=see also]
+xref:ArrayObjectJoin.adoc[] to combine elements of an array into a string.
+
+Split the specified string into an array of string values using the specified delimiter.
+
+== Parameter
+separator:: 			The characters to be used as delimiters when 			splitting the string. (Default is a space.)
+limit:: 			The number of sub-strings to be returned.
+
+
+
+
+
+
+== Examples
+
+[source,javascript]
+Examplevar str = "abc,def,ghi"
+var arr = str.split(",",2); // returns array ['abc','def'];
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].split(",",2);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.split(",",2);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

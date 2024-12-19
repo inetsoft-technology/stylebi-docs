@@ -1,0 +1,35 @@
+= Salesforce  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Salesforce  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:Salesforce.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonSalesforceQuery}.
++
+image:dataSourceSalesforce5.png[]
++
+This opens the ‘Salesforce  Query’ dialog box.
+
+. Select ‘Use Bulk API’ to take advantage of optimizations for large data sets.  See the https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/#StartTopic=Content/asynch_api_quickstart.htm[Bulk API Developer Guide]  for more information about the Bulk API.
+
+. Select the desired table from the ‘SObject’ menu.
+
+. Enter the desired SOQL query in the text box.
++
+image:dataSourceSalesforce6.png[]
++
+For more information about SOQL queries, see the https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/[Force.com SOQL and SOSL Reference].
+
+
+
++
+include::dataworksheet:partial$finalStepsQuery.adoc[]
+

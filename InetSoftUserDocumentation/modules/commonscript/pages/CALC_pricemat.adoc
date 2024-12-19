@@ -1,0 +1,49 @@
+= CALC.pricemat(settlement, maturity, issue, rate, yld, [basis])
+:navtitle: CALC.pricemat()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *price* per $100 face value of a security that pays interest at *maturity*.  {CALCExcelFunctionPage}
+
+== Parameters
+settlement::			Date object: The security’s settlement date
+maturity::			Date object: Security’s maturity date (date when security expires)
+issue::			Date object: Security’s issue date
+rate::			Security’s annual coupon rate (paid at maturity)
+yld::			Security’s annual yield
+basis:: {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+
+
+== Example
+Price for a security with coupon rate of 6.1%, annual yield of 6.1%, settlement date of February 15, 2008, maturity date of April 13, 2008, issue date of November 11, 2007, and US 30/360 counting convention.
+
+
+[source,javascript]
+----
+CALC.pricemat(new Date(2008,1,15), new Date(2008,3,13), new Date(2007, 10, 11), 0.061, 0.061, 0);
+// returns 99.98449887555694 (approx $99.98)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.pricemat(field['SettleDate'], field['MatureDate'], 0.061, 0.061, 0)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.pricemat(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 0.061, 0.061, 0)
+CALC.pricemat(parameter.SettleDate, parameter.MatureDate, 0.061, 0.061, 0)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

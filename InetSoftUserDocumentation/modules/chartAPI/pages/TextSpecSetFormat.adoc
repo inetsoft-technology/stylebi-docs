@@ -1,0 +1,154 @@
+= TextSpec.setFormat(format)
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies how date or numeric data should be represented in string format for display.  The corresponding “getter” function is `getFormat()`.
+
+
+== Parameter
+format::
+{JavaTextFormat} or `inetsoft.util.ExtendedDecimalFormat`
+
+
+=== Date Format
+
+
+For date formatting, use the following date masks:
+[source]
+M = Month
+d = date
+y = year
+E = day of the week
+
+TIP: Date masks are described in the xref:viewsheet:DataFormat.adoc#DateFormat[Date Format] section.
+
+
+.Date Format
+[example]
+====
+For the date Nov 8, 2006:
+[source]
+M = 11; MM = 11; MMM = Nov; MMMM = November
+d = 8; dd = 08
+yy = 06; yyyy = 2006
+EEE = Wed; EEEE = Wednesday
+
+Therefore, the mask `MMM-dd-yyyy` yields the string “Nov-08-2006”.
+====
+
+
+
+
+
+
+=== Number Format
+
+For number formatting, use the following numeric masks:
+
+[source]
+--
+# = Number
+0 = Number with zero padding
+--
+
+include::ROOT:partial$extendedDecimalFormat.adoc[]
+
+
+.Number Format
+[example]
+====
+.For the number 124521.63:
+----
+ #,###.## = 124,521.63    <1>
+ #,###.000 = 124,521.630  <2>
+----
+<1> Insert comma every three places
+<2> Pad to hundredths by using ‘0’ to right of decimal
+
+
+.For  the number 745850.78:
+[source]
+----
+ #,###.## = 745,850.78       <1>
+ #.# = 745850.8              <2>
+ #,###.000 = 745,850.780     <3>
+----
+<1> Insert comma every three places
+<2> Round to tenths by using ‘#’ to right of decimal
+<3> Pad to hundredths by using ‘0’ to right of decimal
+====
+
+
+== Text Format
+
+
+For text formatting, use `pass:[{0}]` as a placeholder for the string data.
+
+
+.Text Format
+[example]
+====
+For the string `'Susan'`, the Text Format `Salesperson: pass:[{0}]` yields:
+
+ Salesperson: Susan
+
+The Text Format `pass:[--{0}--]` yields:
+
+ --Susan--
+
+====
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"],["NJ",20000],["NY",30000]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var qscale = new LinearScale("Quantity");
+var aspec = new AxisSpec();
+var tspec = new TextSpec(); //<2>
+tspec.setFormat(java.text.DecimalFormat("##,###.00")); //<3>
+aspec.setTextSpec(tspec); //<4>
+qscale.setAxisSpec(aspec);
+graph.setScale("Quantity", qscale);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:TextSpec.adoc[] object.
+<3> Use `setFormat()` to assign the number format to the `TextSpec`.
+<4> Use xref:AxisSpecSetTextSpec.adoc[] to assign the `TextSpec` to the `AxisSpec`.
+
+image:commonscript:TextSpecsetFormat.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②, xref:chartAPI:ScaleGetAxisSpec.adoc[] ③, and xref:chartAPI:AxisSpecGetTextSpec.adoc[] ④ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[], xref:chartAPI:Scale.adoc[], xref:chartAPI:AxisSpec.adoc[], and xref:chartAPI:TextSpec.adoc[]. For example:
+
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); // <1>
+var scale = coord.getYScale(); //<2>
+var spec = scale.getAxisSpec(); //<3>
+var textspec = spec.getTextSpec(); //<4>
+// Compact syntax: var textspec = graph.getCoordinate().getYScale().getAxisSpec().getTextSpec();
+
+textspec.setFormat(java.text.DecimalFormat("##,###.00"));
+
+--
+=====

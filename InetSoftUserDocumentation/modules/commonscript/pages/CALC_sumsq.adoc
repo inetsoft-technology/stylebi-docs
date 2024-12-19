@@ -1,0 +1,37 @@
+= CALC.sumsq(array)
+:navtitle: CALC.sumsq()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the sum of the squares of all the elements in the array. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of values
+
+
+
+== Example
+[source,javascript]
+----
+CALC.sumsq([1,2,3]);  // returns 14.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.sumsq(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.sumsq(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

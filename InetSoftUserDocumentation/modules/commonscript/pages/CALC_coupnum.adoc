@@ -1,0 +1,45 @@
+= CALC.coupnum(settlement, maturity, frequency, [basis])
+:navtitle: CALC.coupnum()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *number of coupons* payable between the settlement date and maturity date, rounded up to the nearest whole coupon. {CALCExcelFunctionPage}
+
+== Parameters
+settlement::				Date object: The security’s settlement date
+maturity::				Date object: Security’s maturity date (date when security expires)
+frequency::				Number of coupon payments per year (1=annual, 2=semi-annual, 4=quarterly)
+basis::            {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+== Example
+Number of payments between settlement date of January 25, 2007 and maturity date of November 15, 2008, where payments are made twice per year, and Actual/Actual counting convention is used.
+
+
+[source,javascript]
+----
+CALC.coupnum(new Date(2007,0,25), new Date(2008,10,15), 2, 1);
+// returns 4
+----
+
+With semi-annual payments, the coupon dates in this example are May 15 and November 15, hence there are four payments issued between settlement and maturity.
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.coupnum(field['SettleDate'], field['MaturityDate'],   2, 1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.coupnum(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1],   2, 1)
+CALC.coupnum(parameter.SettleDate, parameter.MaturityDate,   2, 1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

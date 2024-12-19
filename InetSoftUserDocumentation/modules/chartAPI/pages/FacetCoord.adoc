@@ -1,0 +1,53 @@
+= FacetCoord
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:ChangeChartCoordinates.adoc#FacetCoordinates[Facet Coordinates] for a walkthrough of facet coordinates
+====
+
+The `FacetCoord` object contains a set of inner and outer coordinates on which multidimensional data can be represented as nested charts. To create a FacetCoord object, call the `FacetCoord` constructor:
+
+[sourcejavascript]
+var rect = new FacetCoord(outerCoord,innerCoord);
+
+You can pass a pair of xref:RectCoord.adoc[] objects (e.g., ‘outerCoord’, ‘innerCoord’, etc.) to the constructor, or specify these later using the xref:FacetCoordSetInnerCoordinates.adoc[] and xref:FacetCoordSetOuterCoordinates.adoc[]  properties.
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "City", "Product", "Quantity"],["NJ", "Piscataway", "P1", 200],
+["NJ", "Edison", "P2", 100],["NY", "NYC", "P1", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("City", "Quantity");
+var state = new CategoricalScale("State");
+var city = new CategoricalScale("City");
+var product = new CategoricalScale("Product");
+var quantity = new LinearScale("Quantity");
+var inner = new RectCoord(city, quantity); //<2>
+var outer = new RectCoord(state, product); //<2>
+var coord = new FacetCoord(outer,inner);  //<3>
+graph.setCoordinate(coord); //<4>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the xref:RectCoord.adoc[] objects.
+<3> Create the `FacetCoord` from the `RectCoord` objects.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:FacetCoordExample2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

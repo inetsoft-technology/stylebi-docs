@@ -1,0 +1,44 @@
+= bindingInfo.textureFrame
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:TextureFrame.adoc[] outside of the data binding.
+* xref:viewsheetscript:ChartBindingInfoTextures.adoc[] to set a static texture for a particular measure.
+* xref:viewsheetscript:ChartBindingInfoSetShapeField.adoc[] for information on binding a shape field.
+====
+
+
+
+
+
+
+Specifies the aesthetic treatment (fill pattern) for the shape-coded data on a xref:viewsheet:BarChart.adoc[]. A xref:chartAPI:TextureFrame.adoc[] can texture-code chart elements by value, or simply specify a static texture style.
+
+
+
+
+
+
+
+== Type
+xref:chartAPI:TextureFrame.adoc[]
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.textureFrame = new GridTextureFrame;
+
+--
+
+
+image:commonscript:bindingInfoTextureFrame.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

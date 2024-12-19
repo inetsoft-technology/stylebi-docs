@@ -1,0 +1,25 @@
+site:
+  title: StyleBI Documentation
+  url: https://www.inetsoft.com/docs/stylebi
+  start_page: InetSoftUserDocumentation:ROOT:index.adoc
+
+content:
+   #edit_url: 'https://repo.inetsoft.com/docs/inetsoft/files/master/{path}'
+   sources: 
+   - url: ..\
+     branches: 'main'
+     start_path: InetSoftUserDocumentation
+
+ui:
+  bundle:
+    url: ..\ui\build\ui-bundle.zip
+        
+antora:
+  extensions:
+  - require: '@antora/lunr-extension'
+  - antora-router-extension
+    
+asciidoc:
+  attributes:
+    testdrive: false
+    si: true

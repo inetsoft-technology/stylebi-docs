@@ -1,0 +1,20 @@
+= Cache
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
+
+When the user opens a  Dashboard, the StyleBI engine generates  objects and datasets for the  Dashboard, and stores these objects in an  internal cache. To configure this cache, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *General* page in the left panel, and select the *Caching* page in the right panel.
++
+image:Cache Config.png[]
+
+. Enter the location of the cache directory in the ‘Directory’ field. (This can also be specified by the `replet.cache.directory` property.  See xref:AllProperties.adoc[].) The default is _/var/lib/inetsoft/temp/cache_.
+
+
+. Enable ‘Clean Cache on Startup’ to automatically remove temporary files when the server starts up. If multiple applications are using the same cache directory and automatic removal is not desired, disable this option.
+
+To set the size of the cache, as well as a variety of other performance settings related to caching, see xref:TailorServerPerformance.adoc[].

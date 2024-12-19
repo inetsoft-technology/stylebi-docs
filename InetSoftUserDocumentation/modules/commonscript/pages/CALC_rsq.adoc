@@ -1,0 +1,39 @@
+= CALC.rsq(array1, array2)
+:navtitle: CALC.rsq()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the square of the Pearson product moment correlation coefficient (*R^2^*) for the values in `array1` and `array2`. {CALCExcelFunctionPage}
+
+The R^2^ coefficient indicates the degree to which variance in `array2` can be accounted for by variance in `array1` (or vice versa). An R^2^ value near 0 indicates that the values in `array1` and `array2` have little linear relationship. An R^2^ value near 1 indicates that the values in `array1` and `array2` have a strong linear relationship, such that the variance in `array2` can be largely explained by variance in `array1` using a linear model.
+
+== Parameters
+array1::			Array of real values
+array2::			Array of real values
+
+
+== Example
+
+[source,javascript]
+----
+CALC.rsq([3,2,4,5,6],[9,7,12,15,17]);  // returns 0.9941176470588233
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.rsq(TableView1.table['Quantity'],TableView1.table['Price'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.rsq(Sales['Quantity'], Sales['Price']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

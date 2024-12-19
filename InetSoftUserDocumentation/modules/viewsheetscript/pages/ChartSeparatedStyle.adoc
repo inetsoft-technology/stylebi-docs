@@ -1,0 +1,30 @@
+= separatedStyle
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the Chart style for a chart with a *single measure*. For a chart with ‘Multiple Styles’ selected from {buttonSelectChartStyle}, use xref:ChartSingleStyle.adoc[].
+
+== Type
+One of the following constants:
+
+include::ROOT:partial$chartStyle.adoc[]
+
+
+== Example
+[source,javascript]
+Chart1.separatedStyle = Chart.CHART_3D_BAR;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+separatedStyle         // unqualified
+Chart1.separatedStyle  // qualified
+
+{secondForm}
+====
+
+

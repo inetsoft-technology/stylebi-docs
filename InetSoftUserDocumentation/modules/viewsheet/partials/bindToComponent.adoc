@@ -1,0 +1,12 @@
+[TIP]
+====
+If the Dashboard contains other  Tables or Crosstabs, you can use the data in those components as the data source.  Simply expand the ‘Components’ folder, and select the desired fields.
+
+image:bindingToComponent.png[]]
+
+There are two restrictions on binding a component to another component’s data:
+
+[square]
+* This option is not available in *meta-data* mode. See xref:DashboardOptions.adoc[] for information about meta-data mode.
+* You will not be able to filter the component using a Selection List or Range Slider. However, you can still filter the component by using a condition (see xref:AddConditions.adoc[]).
+====

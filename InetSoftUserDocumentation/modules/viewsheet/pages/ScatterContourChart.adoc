@@ -1,0 +1,79 @@
+= Scatter Contour Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A Scatter Contour chart displays contours that correspond to the density of the plotted points. The points themselves are *not* displayed.
+
+
+image:commonscript:ScatterContour1.png[]
+
+To create a scatter contour chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Scatter Contour’  style.    Press the {buttonApply}.
++
+image:commonscript:scatterContourChartExp1.png[]
+
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
++
+include::ROOT:partial$measureTip.adoc[]
+
++
+image:commonscript:scatterContourChartExp2.png[]
++
+TIP: {convertToMeasure}
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+IMPORTANT: For a scatter contour  plot you may not want any aggregation at all. In this case, select ‘None’ as the aggregation method.
++
+image:commonscript:scatterContourChartExp3.png[]
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *second measure* to the ‘X’ or ‘Y’ region. (Use the region that does not already contain the first measure.)
++
+image:commonscript:scatterContourChartExp4.png[]
+
+. Press the {buttonEditMeasure} next to the second measure, and select the desired aggregation method for the measure. Press the {buttonApply}.
++
+image:commonscript:scatterContourChartExp5.png[]
++
+This creates the desired scatter contour chart.
++
+image:commonscript:scatterContourChartExp6.png[]
+
+. *_Optional:_* Drag a *dimension* to the ‘Text’ area to display labels on the Chart.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:scatterContourChartExp7.png[]
++
+NOTE: If ‘None’ is selected as the aggregation method, duplicate labels may be displayed.
+
+. *_Optional:_*  Press the {buttonEditColor} to select an alternate color scheme.
++
+image:commonscript:scatterContourChartExp8.png[]
++
+NOTE: For a Scatter Contour chart you cannot bind a data field to the ‘Color’ region.
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+. *_Optional:_* To weight the data points according to a specified measure, drag a measure representing the weights to the ‘Size’ region. A larger weight assigns greater density to the point.
++
+To change how the contours are focused on the data points (without weighting), press the ‘Edit Size’ button, and choose a fixed size value.
++
+image:commonscript:contourMapExp7.png[]
++
+NOTE: You can make additional adjustments to the appearance of the contours from the ‘Chart Properties’ dialog box. See below.
+
+. {finishEditing}
+
+
+. *_Optional:_*  To change the characteristics of the contours, press the {buttonMore} in the Chart toolbar, and select ‘Properties’. In the ‘Chart Properties’ dialog box, adjust the following  settings under ‘Density Contour’ in the *Advanced* tab.
++
+****
+include::ROOT:partial$contourSettings.adoc[]
+****
+
+include::partial$addTitlesLegend.adoc[]

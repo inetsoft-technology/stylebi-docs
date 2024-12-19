@@ -1,0 +1,35 @@
+= layoutInfo.setCellName(row,col,name)
+:navtitle: setCellName()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the name of the specified cell in a Freehand Table.
+
+
+
+
+
+
+== Parameter
+row:: row index
+col:: column index
+name:: name for the cell
+
+
+
+
+== Example
+[source,javascript]
+FreehandTable1.layoutInfo.setCellName(1,0,'state');
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+layoutInfo.setCellName                 // unqualified
+FreehandTable1.layoutInfo.setCellName  // qualified
+
+{secondForm}
+====

@@ -1,0 +1,29 @@
+= facetGridColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the color for the global border of a facet-type chart (a chart with multiple dimensions on the axes).
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.facetGrid = true;
+Chart1.facetGridColor = 'red';
+
+image:commonscript:facetGrid.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+facetGridColor          // unqualified
+Chart1.facetGridColor   // qualified
+
+{secondForm}
+====

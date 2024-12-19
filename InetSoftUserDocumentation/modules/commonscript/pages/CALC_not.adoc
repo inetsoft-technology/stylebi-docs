@@ -1,0 +1,37 @@
+= CALC.not(Boolean)
+:navtitle: CALC.not()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Reverses the value of the Boolean argument. {CALCExcelFunctionPage} This is similar to the JavaScript `!` operator, which can also be used for this purpose.
+
+
+== Parameters
+Boolean::			Boolean value to reverse
+
+
+== Example
+[source,javascript]
+----
+CALC.not(0 < 3)  // returns false
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.not(field['Paid'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.not(RadioButton1.selectedObject)
+CALC.not(parameter.Paid)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]
+

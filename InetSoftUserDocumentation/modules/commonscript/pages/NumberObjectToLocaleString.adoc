@@ -1,0 +1,25 @@
+= toLocaleString()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the localized value in string format for the specified date.
+
+
+
+== Examples
+[source,javascript]
+var d = CALC.today();
+d.toLocaleString(); // returns “Mar 28, 2017 2:03:13 PM”
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Date'].toLocaleString();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.toLocaleString();
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

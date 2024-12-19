@@ -1,0 +1,43 @@
+= CALC.t(value)
+:navtitle: CALC.t()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the string or date supplied by `value`. If `value` is numerical or Boolean, the function returns an empty string. {CALCExcelFunctionPage}
+
+== Parameters
+value::			String, date, numeric, or Boolean value.
++
+[square]
+* *Strings* are returned unchanged
+* *Dates* are converted to string format
+* *Numeric* and *Boolean* values return an empty string
+
+== Example
+
+[source,javascript]
+----
+CALC.t('asd');  // returns asd
+CALC.t(true) // returns ''
+CALC.t(56);  // returns ''
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.t(field['Label'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.t(parameter.Label)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

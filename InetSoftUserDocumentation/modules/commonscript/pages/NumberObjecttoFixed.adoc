@@ -1,0 +1,31 @@
+= toFixed(fractionDigits)
+:navtitle: toFixed()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:commonscript:CALC_round.adoc[] for the equivalent CALC function.
+
+Convert a number to a fixed decimal number.
+
+
+== Parameters
+fractionDigits:: The number of digits following the decimal point.
+
+
+== Examples
+[source,javascript]
+var num = 1/3;
+num.toFixed(2); // returns 0.33
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Num'].toFixed(2);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Num.toFixed(2);
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

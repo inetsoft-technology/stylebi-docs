@@ -1,0 +1,9 @@
+= CALC.now()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the current date and time. {CALCExcelFunctionPage}
+
+== Examples
+[source,javascript]
+CALC.now(); // returns, e.g., Thu May 29 15:45:59 EDT 2014

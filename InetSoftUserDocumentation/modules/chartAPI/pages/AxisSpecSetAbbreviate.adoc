@@ -1,0 +1,63 @@
+= AxisSpec.setAbbreviate(Boolean)
+:navtitle: AxisSpec.setAbbreviate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies that the common prefix of xref:chartAPI:TimeScale.adoc[] labels should be omitted to conserve space. This property is only observed when a *Date format* is specified. {noGetter}
+
+
+== Parameter
+Boolean:: `true`: drop common prefixes +
+`false`: do not drop prefixes
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+var date1 = new Date();
+var date2 = new Date();
+date1.setFullYear(2008,0,1);
+date2.setFullYear(2008,10,1);
+dataset = [["Date", "Quantity"], [date1,200], [date2,300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("Date", "Quantity");
+var tscale = new TimeScale("Date");
+var aspec = new AxisSpec(); //<2>
+var tspec = new TextSpec();
+tspec.setFormat(java.text.SimpleDateFormat('yyyy-MMM'));
+aspec.setTextSpec(tspec);
+aspec.setAbbreviate(true); //<3>
+tscale.setAxisSpec(aspec);
+graph.setScale("Date", tscale);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Use `setAbbreviate` to drop common prefixes.
+
+image:commonscript:TextSpecsetAbbreviate.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); <1>
+var xscale = coord.getXScale(); <2>
+var xspec = xscale.getAxisSpec(); <3>
+// Compact syntax: var xspec = graph.getCoordinate().getXScale().getAxisSpec();
+
+var tspec = new TextSpec();
+tspec.setFormat(java.text.SimpleDateFormat('yyyy-MMM'));
+xspec.setTextSpec(tspec);
+xspec.setAbbreviate(true);
+--
+=====

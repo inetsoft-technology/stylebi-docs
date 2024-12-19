@@ -1,0 +1,33 @@
+= toExponential(fractionDigits)
+:navtitle: toExponential()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Converts a number to scientific notation.
+
+
+
+
+
+
+
+== Parameters
+fractionDigits:: The number of digits following the decimal point.
+
+== Examples
+[source,javascript]
+var num = 3251.234;
+num.toExponential(2); // returns 3.25e+3
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Num'].toExponential(2);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Num.toExponential(2);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

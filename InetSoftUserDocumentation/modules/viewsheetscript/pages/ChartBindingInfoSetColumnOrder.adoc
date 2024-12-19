@@ -1,0 +1,68 @@
+= bindingInfo.setColumnOrder(col, order, [sortCol])
+:navtitle: bindingInfo.setColumnOrder()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoGetColumnOrder.adoc[]  to obtain existing binding information.
+
+Specifies the sorting order for a specified dimension. To sort a dimension by measure value, set `order` to `SORT_VALUE_ASC` or `SORT_VALUE_DESC`, and use the `sortCol` string to supply the column and aggregation by which to sort.
+
+== Parameter
+col::			Name of field on which to apply sorting
+order::			The sort order, one of the following constants:
++
+[source,javascript]
+Chart.SORT_NONE
+Chart.SORT_ASC        // ascending
+Chart.SORT_DESC       // descending
+Chart.SORT_VALUE_ASC  // ascending by value
+Chart.SORT_VALUE_DESC // ascending by value
+
+sortCol::			String: Formula for sorting:
++
+[source]
+'Sum(column_name)'
+'Average(column_name)'
+'Max(column_name)'
+'Min(column_name)'
+'Count(column_name)'
+'Distinct Count(column_name)'
+'First(column_name1,column_name2)'
+'Last(column_name1,column_name2)'
+'Correlation(column_name1,column_name2)'
+'Covariance(column_name1,column_name2)'
+'Variance(column_name)'
+'Median(column_name)'
+'Mode(column_name)'
+'Std Deviation(column_name)'
+'Variance(Pop)(column_name)'
+'Std Deviation(Pop)(column_name)'
+'NthLargest NthLargest(column_name,n)'
+'NthSmallest NthSmallest(column_name,n)'
+'NthMostFrequent NthMostFrequent(column_name,n)'
+'PthPercentile PthPercentile(column_name,n)'
+'Weighted Average(column_name1,column_name2)'
+
+
+
+== Examples
+[source,javascript]
+--
+Chart1.bindingInfo.setColumnOrder('Company',Chart.SORT_DESC)
+
+--
+
+image:commonscript:SetColumnOrder.png[]
+
+[source,javascript]
+--
+Chart1.bindingInfo.setColumnOrder('Company',Chart.SORT_VALUE_DESC,'Sum(Total)');
+
+--
+
+image:commonscript:SetColumnOrder1.png[]
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

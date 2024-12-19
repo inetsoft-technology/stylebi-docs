@@ -1,0 +1,34 @@
+= Date Grouping Level
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Date grouping levels are used for Chart and Crosstab binding.
+
+[cols="1,2"]
+|===
+|Level|Description
+
+|YEAR_DATE_GROUP|Group by year
+|QUARTER_DATE_GROUP|Group by quarter
+|MONTH_DATE_GROUP|Group by month
+|WEEK_DATE_GROUP|Group by week
+|DAY_DATE_GROUP|Group by day
+|QUARTER_OF_YEAR_DATE_GROUP|Group by quarter of year
+|MONTH_OF_YEAR_DATE_GROUP|Group by month of year
+|WEEK_OF_YEAR_DATE_GROUP|Group by week of year
+|DAY_OF_MONTH_DATE_GROUP|Group by day of month
+|DAY_OF_WEEK_DATE_GROUP|Group by day of week
+|HOUR_OF_DAY_DATE_GROUP|Group by hour of day
+|MINUTE_OF_HOUR_DATE_GROUP|Group by minute of hour
+|SECOND_OF_MINUTE_DATE_GROUP|Group by second of minute
+|HOUR_DATE_GROUP|Group by hour
+|MINUTE_DATE_GROUP|Group by minute
+|SECOND_DATE_GROUP|Group by second
+|NONE_DATE_GROUP|No date grouping
+|===
+
+
+
+
+== Type
+Integer

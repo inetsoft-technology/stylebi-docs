@@ -1,0 +1,38 @@
+= CALC.maxa(array)
+:navtitle: CALC.maxa()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the largest value in array, where Booleans are valued as 1 if `true` and 0 if `false`, and string values are valued as 0. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of values (numeric, Boolean, or string)
+
+
+== Example
+Largest value in set pass:[{4,5,8,8,4,true,3,yesterday}]:
+
+
+[source,javascript]
+----
+CALC.maxa([4,5,8,8,4,true,3,'yesterday']);  // returns 8.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.maxa(TableView1.table['Col1'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.maxa(Sales['Col1']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,43 @@
+= bindingInfo.shapes
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:ShapeFrame.adoc[] outside of the data binding.
+* xref:viewsheetscript:ChartBindingInfoShapeFrame.adoc[] for information on assigning value-keyed frames.
+====
+
+
+
+
+
+Specifies a xref:chartAPI:StaticShapeFrame.adoc[]
+(fixed shape) for a particular measure on a xref:viewsheet:PointChart.adoc[].
+
+
+
+
+
+
+
+== Type
+xref:chartAPI:StaticShapeFrame.adoc[]
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.shapes['Sum(Total)'] = new StaticShapeFrame(GShape.SQUARE);
+
+--
+
+
+image:commonscript:bindingInfoShapes.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

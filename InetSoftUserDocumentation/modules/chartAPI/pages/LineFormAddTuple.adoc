@@ -1,0 +1,49 @@
+= LineForm.addTuple(value)
+:navtitle: LineForm.addTuple()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+Specifies a point defining the line in logical space. The coordinates of the points are relative to the prevailing axis scaling.
+
+
+
+
+
+
+== Parameter
+value::			An [X,Y] pair
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new LineForm(); //<2>
+form.addTuple([.5, 0]); //<3>
+form.addTuple([.5, 200]); //<3>
+form.addTuple([1,100]); //<3>
+form.setColor(java.awt.Color(0xff0000));
+graph.addForm(form); //<4>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the  xref:LineForm.adoc[] object.
+<3> Use `addTuple()` to set `form` location.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:LineFormAddTuple.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

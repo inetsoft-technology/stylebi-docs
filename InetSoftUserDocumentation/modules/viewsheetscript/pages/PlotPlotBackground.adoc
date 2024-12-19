@@ -1,0 +1,32 @@
+= plotBackground
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the plot background color.
+
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.plotBackground = java.awt.Color.YELLOW;
+
+
+image:commonscript:plotBackground.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+plotBackground          // unqualified
+Chart1.plotBackground   // qualified
+
+{secondForm}
+====

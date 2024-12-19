@@ -1,0 +1,41 @@
+= xFields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::viewsheetscript:partial$readOnly.adoc[]
+
+
+
+Returns the names of the query fields (as an array) that are currently assigned to the X-axis binding at runtime. This property is read-only.   Use xref:ChartBindingInfoXFields.adoc[] to  assign fields to the X-axis.
+
+
+
+
+
+
+== Type
+Array of Strings
+
+
+
+
+
+== Example
+[source,javascript]
+if (Chart1.xFields[0] == 'State') {
+  StateSelectionList1.visible = true;
+}
+else {
+  StateSelectionList1.visible = false;
+}
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+xFields           // unqualified
+Chart1.xFields    // qualified
+
+{secondForm}
+====

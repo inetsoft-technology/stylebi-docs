@@ -1,0 +1,88 @@
+= setPresenter
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the contents of a Text component to the specified Presenter. Built-in presenters include the following:
+
+[source]
+inetsoft.report.painter.Abstract2DCodePresenter
+inetsoft.report.painter.AbstractBarcodePresenter
+inetsoft.report.painter.Bar2Presenter
+inetsoft.report.painter.Barcode2of7Presenter
+inetsoft.report.painter.Barcode3of9Presenter
+inetsoft.report.painter.BarcodeCodabarPresenter
+inetsoft.report.painter.BarcodeCode39Presenter
+inetsoft.report.painter.BarcodeCode128APresenter
+inetsoft.report.painter.BarcodeCode128BPresenter
+inetsoft.report.painter.BarcodeCode128CPresenter
+inetsoft.report.painter.BarcodeCode128Presenter
+inetsoft.report.painter.BarcodeEAN128Presenter
+inetsoft.report.painter.BarcodeGTINPresenter
+inetsoft.report.painter.BarcodeMonarchPresenter
+inetsoft.report.painter.BarcodeNW7Presenter
+inetsoft.report.painter.BarcodePDF417Presenter
+inetsoft.report.painter.BarcodeSCC14Presenter
+inetsoft.report.painter.BarcodeSINPresenter
+inetsoft.report.painter.BarcodeSSCC18Presenter
+inetsoft.report.painter.BarcodeUCC128Presenter
+inetsoft.report.painter.BarcodeUSD3Presenter
+inetsoft.report.painter.BarcodeUSD4Presenter
+inetsoft.report.painter.BarcodeUSPSPresenter
+inetsoft.report.painter.BarPresenter
+inetsoft.report.painter.BooleanPresenter
+inetsoft.report.painter.BulletGraphPresenter
+inetsoft.report.painter.BulletPainter
+inetsoft.report.painter.ButtonPresenter
+inetsoft.report.painter.CCWRotatePresenter
+inetsoft.report.painter.ComponentPainter
+inetsoft.report.painter.CWRotatePresenter
+inetsoft.report.painter.HeaderPresenter
+inetsoft.report.painter.HTMLPresenter
+inetsoft.report.painter.HTMLSource
+inetsoft.report.painter.IconCounterPresenter
+inetsoft.report.painter.ImagePainter
+inetsoft.report.painter.LegendPresenter
+inetsoft.report.painter.ImagePresenter
+inetsoft.report.painter.PresenterPainter
+inetsoft.report.painter.QRCodePresenter
+inetsoft.report.painter.RotatedPainter
+inetsoft.report.painter.RotatePresenter
+inetsoft.report.painter.RulerPresenter
+inetsoft.report.painter.ShadowPresenter
+inetsoft.report.painter.TrafficLightPresenter
+
+
+
+== Parameters
+presenter::				name of Presenter
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+// Rotate the text by 45 degrees:
+Text1.setPresenter("HeaderPresenter");
+
+----
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setPresenter            // unqualified
+Text1.setPresenter      // qualified
+
+{secondForm}
+====
+
+

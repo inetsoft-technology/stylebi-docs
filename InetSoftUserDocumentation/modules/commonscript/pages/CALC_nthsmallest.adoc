@@ -1,0 +1,39 @@
+= CALC.nthsmallest(array,n)
+:navtitle: CALC.nthsmallest()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the nth smallest value in the specified array. Use n=1  to return the minimum, equivalent to xref:CALC_min.adoc[]. {CALCExcelFunctionPage}
+
+== Parameters
+array::				Array of values
+n::	Size rank (1=smallest, 2=second smallest, etc.)
+
+
+== Example
+
+[source,javascript]
+----
+CALC.nthsmallest([1,1,3,3,4,5,2,1,4,3],2); // 2nd smallest
+// returns 2
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.nthsmallest(TableView1.table['Quantity'],3)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.nthsmallest(Sales['Quantity'],3);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

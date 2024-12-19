@@ -1,0 +1,87 @@
+= StaticLineFrame.setLine(value)
+:navtitle: StaticLineFrame.setLine()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Specifies the static line style for graphical elements in element script . If the data in the column assigned to the inherited xref:VisualFrameSetField.adoc[] property are `GLine` objects, these data values are used instead of the `setLine()` value. You can also set this using the `bindingInfo.lineFrame.line`  property syntax in *onRefresh* script . See xref:#Example2[] below.  The corresponding “getter” function is `getLine()`.
+
+== Parameter
+value::			A xref:GLine.adoc[] constant or `Chart.NONE` for empty border:
++
+include::partial$gLineConstants.adoc[]
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+
+dataset = [["State", "Quantity"], ["NJ", 300], ["NY", 200]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var frame = new StaticLineFrame(); //<2>
+frame.setLine(GLine.DOT_LINE); //<3>
+elem.setLineFrame(frame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `LineFrame` object.
+<3> Use `setLine` to assign the dotted line style to the `StaticLineFrame`.
+<4> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:StaticLineFrame2setLine.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new StaticLineFrame();
+frame.setLine(GLine.DOT_LINE);
+elem.setLineFrame(frame);
+--
+=====
+
+
+
+[#Example2]
+== Example 2
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:LineFrame.adoc[].
+
+. Bind a xref:viewsheet:LineChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.lineFrame = new StaticLineFrame;
+Chart1.bindingInfo.lineFrame.line = GLine.LARGE_DASH;
+
+--
+
++
+image:commonscript:StaticLineFrameOnLoad_1.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

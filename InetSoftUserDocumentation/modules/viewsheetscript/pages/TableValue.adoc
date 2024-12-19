@@ -1,0 +1,40 @@
+= value
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+* xref:AccessComponentData.adoc#TableCrosstabComponents[Table/Crosstab Components] for more information about how to access Table data.
+* xref:viewsheet:TableProperties.adoc[] for general information about the Table component.
+====
+
+
+
+Returns the value in the cell currently referenced by a *Format* expression script. For example, if you specify a ‘Color’ expression in the *Format* panel for a Table *header cell*, you can use the `value` property within the script to obtain the value in the targeted header cell. Likewise, if you specify a ‘Color’ expression in the *Format* panel for a *detail cell* in a Table column (which means that the expression will be evaluated in turn for each detail cell in the column), you can use the `value` property within the script to obtain the value of the currently referenced detail cell.
+
+
+
+
+See xref:viewsheet:DynamicallySetProperties.adoc#ControlPropertieswithExpression[Control Properties with Expression] for information about how to use expressions to set properties.
+
+
+
+== Example
+The script below can be used in a ‘Color’ or ‘Background’ expression to set color formatting on a Table detail cell.
+
+[source,javascript]
+----
+
+if (value > 1000) {
+  [255,0,0]
+}
+else {
+  [0,255,0]
+}
+----
+
+

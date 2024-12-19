@@ -1,0 +1,46 @@
+= data
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,   caption=See Also]
+xref:chartAPI:Data.adoc[] in xref:chartAPI:ChartScriptReference.adoc[] for information about working with chart data.
+
+Two-dimensional array containing the chart data or a string containing the name of a Data Worksheet data block. The `data` property is readable and writable.
+
+== Type
+Two-dimensional array or String
+
+
+== Examples
+.Read and write Chart data array
+[source,javascript]
+for (var i=1; i<data.length; i++) {
+  if (Chart1.data[i]['Name'] == 'Web Bridge') {
+    Chart1.data[i]['Sum(Quantity Purchased)'] = 0;
+    alert('Note: "Web Bridge" has been discontinued.');
+  }
+}
+
+
+.Bind Chart data source
+[source,javascript]
+----
+// Bind a Data Worksheet data block:
+Chart1.data="table_name";
+// Bind a cube:
+Chart1.data="cube::table_name";
+----
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+data         // unqualified
+Chart1.data  // qualified
+
+{secondForm}
+====
+
+

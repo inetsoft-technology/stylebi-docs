@@ -1,0 +1,67 @@
+= PlotSpec.setLockAspect(Boolean)
+:navtitle: PlotSpec.setLockAspect()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies that the original image aspect ratio should be retained, with coordinate scaling adapted to the image. If set to `false` (default), the image is resized to fit the existing coordinate scaling.
+
+== Parameter
+Boolean:: `true`: keep original aspect ratio +
+`false`: change ratio to fit plot area (default)
+
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+elem.setHint(GraphElement.HINT_ALPHA,.8);
+var sscale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var coord = new RectCoord(sscale,qscale);
+var spec = new PlotSpec(); //<2>
+spec.setLockAspect(true); //<3>
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+spec.setBackgroundImage(logo);
+coord.setPlotSpec(spec); //<4>
+graph.setCoordinate(coord);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:PlotSpec.adoc[] object.
+<3> Use `setLockAspect` to enforce original image aspect ratio.
+<4> Use xref:CoordinateSetPlotSpec.adoc[] to assign the `PlotSpec` to the `Coordinate`.
+
+image:commonscript:PlotSpecSetLockAspect.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] {circle1} and xref:chartAPI:CoordinateGetPlotSpec.adoc[] {circle2} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:PlotSpec.adoc[]. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); // <1>
+var spec = coord.getPlotSpec(); //<2>
+// Compact syntax: var spec = graph.getCoordinate().getPlotSpec();
+
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+spec.setBackgroundImage(logo);
+spec.setLockAspect(true);
+
+--
+=====

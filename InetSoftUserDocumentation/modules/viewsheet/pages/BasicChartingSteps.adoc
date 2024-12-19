@@ -1,0 +1,197 @@
+= Basic Charting Steps
+%experimental%
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+
+The following sections explain how to add a Chart to your Dashboard.
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Basic charting steps...
+video::359085988[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+== Understanding  Dimensions and Measures
+A chart visualizes a _dataset_, which is a table containing rows and columns. Columns (also called fields) in the dataset are classified as either *_dimensions_* or *_measures_* in the Chart Editor.
+
+image:addingChart1.png[]
+
+include::ROOT:partial$dimensionTip.adoc[]
+
+include::ROOT:partial$measureTip.adoc[]
+
+In some cases you may need to use a dimension as a measure, or a measure as a dimension.  To convert a field between dimension and measure in a Dashboard Chart, right-click the field in the *Data Source* panel of the Chart Editor and select ‘Convert to Dimension’ or ‘Convert to Measure’.
+
+
+== Create a Basic Chart
+
+include::partial$chartNewbieTip.adoc[]
+
+
+
+. *_Optional:_*  Set the style of the chart. To do this, press the {buttonSelectChartStyle}. Choose a desired style, such as ‘Line’ or ‘Bar’, and press the {buttonApply}.
++
+image:viewsheetExp37.png[]
++
+NOTE: To set different styles for different datasets, see xref:MultipleStyleChart.adoc[].
++
+To create a stacked chart, enable the ‘Stack’ option at the bottom of the panel. If you do not select a specific chart style, the default ‘Auto’ style automatically selects a chart style appropriate to your dataset.
+
+. From the ‘Dimensions’ folder of the data source, drag a desired dimension to the ‘X’ region.
++
+image:addingChart2a.png[]
++
+TIP: If you selected a ‘Pie’ style, you should place the dimension field in either the ‘Color’ or ‘Shape’ region rather than the ‘X’ region.
++
+include::viewsheet:partial$bindToComponent.adoc[]
+
+. To break-out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
++
+image:addingChart3.png[]
++
+Note that the effect of color, shape, and size coding varies by chart style. For example, in a bar-type chart the ‘Shape’ representation affects the style of the fill pattern, whereas in a point-type chart the ‘Shape’ representation affects the image of the point.
+. *_Optional:_* To upload a custom image to use as a shape, press the {buttonAddShape}, and select the desired file.
++
+image:addShapeButton.png[]
++
+NOTE: An administrator can make custom shapes available by placing the image files (png, gif, jpg) in the _portal/shapes_ directory of SREE Home. (See xref:administration:Presentation.adoc#LookandFeel[Look and Feel] and xref:administration:Storage.adoc[] for  information on how to upload a file to this location.) The icons are sorted alphabetically by file name. Custom shape images can be any size, and are scaled according to the ‘Size’ setting in the Chart Editor.
+
+
+. To break-out the data into groups _without_ applying any visual formatting, drag a dimension to the ‘Break By/Tooltip’ region.
+
+. *_Optional:_*  For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:viewsheetExp34.png[]
+. From the ‘Measures’ folder of the data source panel, drag measure the ‘Y’ region. This places the selected field onto the chart as a measure. You can add multiple measures to a chart. (See xref:MultipleMeasureChart.adoc[].)
++
+image:addingChart4.png[]
++
+TIP: {convertToMeasure}
+
+. To represent a measure using color, shape, size, or labeling, drag the desired measure field from the data source to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
++
+image:addingChart5.png[]
++
+Note that the effect of color, shape, and size coding varies by chart style. For example, in a bar-type chart the ‘Shape’ representation affects the density of the fill pattern, whereas in a point-type chart the ‘Shape’ representation affects the geometry of the point or the fraction filled.
+
+. Press the {buttonEditMeasure} next to any measure, and select the desired aggregation method for the measure.
++
+.Read more about the available aggregation methods…
+[%collapsible]
+====
+include::ROOT:partial$AggregationMethods.adoc[]
+====
++
+image:Chart Edit Y Axis_1.png[]
++
+Use the ‘Trend and Comparison’ menu to perform calculations based on chart aggregates, such as running total or percent change.  See xref:TrendCompareData.adoc[] for full details.
+
+. To represent a measure by using tooltip information, drag the measure to the ‘Break By/Tooltip’ region.
+. {finishEditing}
+
+== Adjust  Chart Axes
+To hide an axis, right-click the axis and select ‘Hide Axis’ from the context menu. {rightClickOptions}
+
+To make other adjustments to an axis, right-click the axis and select ‘Axis Properties’ from the context menu. See xref:AxisProperties.adoc[] in xref:DashboardReference.adoc[] for more information about these axis settings.
+
+== Add a Chart Title
+To add a title above a chart, follow the steps below:
+. Right-click on the chart and select ‘Properties’. {rightClickOptions} This opens the ‘Chart Properties’ panel.
++
+image:Chart Add Title2.png[]
+
+. Under the *General* tab, enter the desired text for the 'Title' property.
+. Select the ‘Visible’ option next to the 'Title' property.
++
+image:Chart Add Title.png[]
+
+. Press btn:[OK] to close the panel.
+
+. To format the title, click the title area to select it, and then select the *Format* tab in the left panel of Visual Composer. Use the formatting options to style the text as desired. (See xref:VisualFormat.adoc[] for more information.)
++
+image:Chart Add Title3.png[]
+
+. To increase the vertical space available for the title, drag down the handle under the title text.
++
+image:Chart Add Title4.png[]
+
+See xref:ChartProperties.adoc[]  for full information about the ‘Chart Properties’ dialog box.
+
+[#ModifyChartLegend]
+== Modify Chart Legend
+To edit a legend, right-click the legend, and select ‘Legend Properties’ from the context menu. This opens the ‘Legend Properties’ panel, which features the following tabs: *General*, *Scale*, *Alias*.
+
+NOTE: To hide a legend, right-click the legend and choose ‘Hide Legend’ from the context menu. To show all legends, right-click the chart and select ‘Show Legend’ from the context menu.
+
+=== General Tab
+The *General* tab offers the following options:
+
+image:Chart Legend Format Dialog.png[]
+
+****
+Title:: The text to display in the legend title bar.
+Visible:: Sets the visibility of the legend title bar.
+Legend Border:: The line style and color of the legend boundary.
+Legend Position:: Sets the position of the legend on the plot. Legend position can also be changed by dragging with the mouse.
++
+image:Chart Legend Move.png[]
+Ignore Null:: Ignore null values when generating the legend.
+****
+
+=== Scale Tab
+The *Scale.adoc* tab offer the following options.
+
+NOTE: The Scale tab is available for *measure* (numerical) legends.
+****
+Logarithmic Scale:: Set logarithmic scaling for the legend scale. (The logarithm base is selected automatically.)
+Reverse:: Orient the scale with maximum at left, minimum at right.
+
+****
+
+=== Alias Tab
+
+The *Alias* tab of the ‘Legend Properties’ dialog box allows you to change the labels displayed in the legend.
+
+NOTE: The *Alias* tab is available for *dimension* (categorical) legends.
+
+To modify the labels of a legend, follow the steps below:
+
+. Right-click the legend, and select ‘Legend Properties’. {rightClickOptions} This opens the ‘Legend Properties’ panel.
+
+. Click the *Alias* tab. This displays a table containing the mapping between original legend labels and new legend labels.
+
+. Double-click the cells in the ‘Alias’ column that correspond to the legend labels that you wish to rename, and enter the desired replacement text.
++
+image:legendFormatAlias.png[]
+
+. Press btn:[OK] to close the panel. This updates the legend labels with the specified replacement text.
++
+image:legendFormatAliasUpdated.png[]
+
+[#AdjustChartSpacing]
+== Adjust Chart Spacing
+To change the vertical or horizontal spacing of elements on a chart, follow the steps below:
+
+. Right-click on the Chart and select ‘Resize Plot’ from the context menu.  This will enable vertical or horizontal slider controls (as appropriate).
++
+image:Change Chart Spacing.png[]
+. Drag the slider control to change the element spacing.  The chart will automatically enable scroll bars as required to accommodate the new spacing.
++
+image:Change Chart Spacing2.png[]
+. To reset the Chart to its original spacing, right-click on the Chart and select ‘Reset Size’ from the context menu.
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Census.zip[Census] Dashboard (in the ‘Examples’ folder) provides an example of a chart that uses color and fill to represent dimensions and measures.
+
+image:viewsheet:galleryMultipleMeasure3.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Census.zip[Census] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+
+
+****
+
+

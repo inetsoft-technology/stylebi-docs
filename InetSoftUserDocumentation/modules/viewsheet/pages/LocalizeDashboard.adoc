@@ -1,0 +1,43 @@
+= Localize a Dashboard
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+If the Dashboards you create are viewed in multiple locales, it may be desirable to configure Dashboard components to display text in a language specific to the user locale. The following Dashboard components can be localized in this way:
+
+* Table title and column header text
+* Freehand Table title and text cell text
+* Crosstab title, column header text, and grand total text
+* Chart axis titles and legend titles
+* Filter component titles
+* Text component text
+* Form component titles
+* Submit button label
+
+You can configure a Dashboard component for localization by associating one or more *Text ID* properties with the component. The specified Text IDs for each component are then used to create a mapping between the text string(s) in the component and the replacement text string(s) to be shown to the user.
+
+== Assign Text ID
+To specify a Text ID for a component, follow the steps below:
+
+. Press the {buttonOptions} in the Visual Composer toolbar to open the ‘Dashboard Options’ dialog box.
+
+. Select the *Localization* tab.
++
+image:administration:Localization1.png[]
+
+. In the left ‘Component’ panel, select the property in the element tree that you wish to localize, and press btn:[Add]. This adds the property to the right ‘Localization Text ID’ panel.
+
+. In the ‘Localization Text ID’ panel, enter a label for the element in the ‘Text ID’ field.
++
+image:administration:Localization2.png[]
++
+The Text ID that you enter here is the label used to represent the text of the corresponding component in the localization mapping file discussed in xref:#SreeBundleMappingFile[] below.
+
+. Press btn:[OK] to exit the ‘Dashboard Options’ dialog box.
+
+[#SreeBundleMappingFile]
+== SreeBundle Mapping File
+The mapping between the specified Text IDs and the replacement text for each locale is specified in a resource bundle specific to that locale. The resource bundle  must be placed in the  _/usr/local/inetsoft/classes/inetsoft/util_ directory. The file should be named using the ISO-standard https://www.oracle.com/technetwork/java/javase/java8locales-2095355.html[two-letter codes] for language and country; for example, a property file supporting Canadian French speakers would be called _SreeBundle_fr_CA.properties_. See  xref:administration:Localization.adoc[] in  xref:administration:ManageServer.adoc[] for details on configuring resource bundle contents.
+
+When the end-user selects a locale from the User Portal login menu (or is assigned the locale specified for them by an administrator), the mapping in the corresponding resource bundle is used to display the replacement text for all mapped elements. If a resource bundle corresponding to the user’s locale selection is not found on the classpath, no localization will be performed.
+
+In addition to localizing Dashboard elements, an administrator can also configure localization for User Portal interface components (tabs, tree elements, etc.). See  xref:administration:Localization.adoc[] section in xref:administration:ManageServer.adoc[]

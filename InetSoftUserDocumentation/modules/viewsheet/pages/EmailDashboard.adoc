@@ -1,0 +1,72 @@
+= Email a Dashboard
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheet:partial$availableToEndUsers.adoc[]
+
+
+To *immediately* email a Dashboard  to other users, follow the steps below.  To schedule a Dashboard to be periodically emailed, see xref:user:ScheduleDashboard.adoc[].
+
+. Open the Dashboard. (See xref:user:UseDashboard.adoc[].)
+
+. Press the {buttonEmail} on the Dashboard toolbar.
++
+image:emailButton.png[]
++
+This opens the ‘Email’ dialog box.
++
+image:emailDialogBox.png[]
+
+. Select the *Email* tab, and make the following selections:
++
+.Email Tab
+****
+. In the ‘Mail To’ field, enter a semicolon-separated list of emails to which the Dashboard should be sent. To choose the emails from a list, press the ‘...’ button. This opens the ‘Select Emails’ dialog box.
++
+image:testdrive:agileDash28.png[]
++
+Select the users you want to email and press the {buttonAddArrow}, or simply drag users to the right panel. When you are finished, press btn:[OK].
+
+. Repeat the above step to enter the desired emails in the ‘CC To’ field.
+
+. In the ‘From’ field, enter the email address that should be used to represent the sender.
+
+. In the ‘Subject’ field, enter a message for the email subject
+line.
+
+. In the ‘Message’ field, enter the body of the email message.
+****
+
+. Select the *Content* tab, and make the following selections:
++
+.Content Tab
+****
+. Choose the export type: ‘Excel’, ‘PowerPoint’, ‘PDF’, ‘HTML’, ‘Embedded PNG’, ‘CSV’.
++
+CSV:: {ExportCSV}
+Excel:: {ExportExcel}
+
+//ifdef::si[]
+
++
+image:Viewsheet Export Content Tab.png[]
+//endif::[]
+
+
+////
+ifdef::testdrive[]
++
+image:testdrive:agileDash39.png[]
+endif::[]
+////
+
+. In the  ‘Data Size’ panel, select ‘Match Layout’ to obtain the closest possible match between the appearance of the emailed copy and the original Dashboard. Select ‘Expand Components’ to expand scrolling tables and charts in the emailed Dashboard so that all data is displayed. Select the ‘Only Data Elements’ option to limit the export to only the data-bearing components.
+
+. Select ‘Current View’ to include the current state of the Dashboard in the emailed file.
+
+. Select ‘Include Link’ to include a URL link to the Dashboard in the email. The email recipient can click the link to open the Dashboard in a new browser tab if they possess the appropriate permissions for that Dashboard.
+
+. Select the bookmarks that you want to include in the exported file. The selected views are converted to individual pages (PowerPoint and PDF) or sheets (Excel) in the exported copy.
+****
+
+. Press btn:[OK] to close the dialog box and email the Dashboard.

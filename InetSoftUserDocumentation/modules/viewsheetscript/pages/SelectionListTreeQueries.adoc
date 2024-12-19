@@ -1,0 +1,38 @@
+= queries
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheetscript:SelectionListTreeFields.adoc[] to specify the fields to display in the Selection List or Tree.
+====
+
+Specifies the data blocks to be merged in the Selection Tree or Selection List component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.) See xref:viewsheet:AddFilterComponents.adoc[] for more information about merging compatible data blocks in a Selection Tree or Selection List.
+
+
+image:dataworksheet:dataBlocks_2.png[]
+
+
+== Type
+Array
+
+
+== Example
+[source,javascript]
+queries = ['LimitedProducts', 'ProductInfo'];
+SelectionList1.fields = ['State'];
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+queries                    // unqualified
+SelectionList1.queries     // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,37 @@
+= lineStyle
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:ShapeProperties.adoc[] for more information about Rectangle components.
+====
+
+Specifies the style of the line.
+
+
+
+
+== Type
+xref:commonscript:StyleConstant.adoc[] integer::		See xref:commonscript:StyleConstantLineStyle.adoc[] for available options
+
+
+
+== Example
+[source,javascript]
+Rectangle1.lineStyle = StyleConstant.THIN_LINE;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+lineStyle           // unqualified
+Rectangle1.lineStyle    // qualified
+
+{secondForm}
+====
+
+

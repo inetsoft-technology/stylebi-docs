@@ -1,0 +1,43 @@
+= CALC.find(string1, String2, search_index)
+:navtitle: CALC.find()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:StringObjectLastIndexOf.adoc[] to find the last occurrence of a string.
+
+Returns the location of the *first* occurrence of `string1` within `string2`, starting the search from the position specified by `search_index`.  {CALCExcelFunctionPage}
+
+== Parameters
+string1::				A string to find
+string2::				The string in which to search
+search_index:: Location at which to start search (first character has index 1)
+
+
+
+== Example
+Search within the string “asdqwertasd” starting with the sixth character (“e”), and determine where the substring “asd” appears.
+[source,javascript]
+----
+CALC.find('asd','asdqwertasd', 6);  // returns 9
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.find(field['Label1'], field['Label2'], 6)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.find(parameter.Label1, parameter.Label2, 6)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

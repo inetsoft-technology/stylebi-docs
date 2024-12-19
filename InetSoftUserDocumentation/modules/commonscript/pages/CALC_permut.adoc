@@ -1,0 +1,39 @@
+= CALC.permut(number, number_chosen)
+:navtitle: CALC.permut()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the number of possible permutations in which `number_chosen` objects can be selected from `number` of objects, where order is significant. {CALCExcelFunctionPage}
+
+== Parameters
+number::			Number of objects in complete set
+number_chosen::			Number of objects in selected subsets
+
+
+== Example
+The number of ways in which 2 objects can be selected from a set of 3, where order is significant.
+
+[source,javascript]
+----
+CALC.permut(3,2);  // returns 6.0
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.permut(field['SetSize'], field['NumChosen'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.permut(Slider1.selectedObject, Slider2.selectedObject)
+CALC.permut(parameter.SetSize, parameter.NumChosen)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,53 @@
+= End-User Chart Control
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+In addition to using basic chart tools  to explore a chart (see xref:DrillDownIntoData.adoc[]), users can also dynamically modify a chart by changing the fields displayed on the X and Y axes, changing aggregation methods, adding target lines, and so on.
+
+There are two difference ways that users can make modifications to charts: By using  the Ad Hoc Editor, or by using dynamic properties.  These approaches are described below.
+
+== Modify a chart by using the Ad Hoc Editor
+Users can access an Ad Hoc Chart Editor that gives them complete flexibility to  edit charts. The Editor is the same as the Chart Editor available to designers. See xref:AddAChart.adoc[] for more information about using the Editor.
+
+To provide end users with access to the Ad Hoc Chart Editor, follow the steps below:
+
+. Right-click the desired chart or crosstab and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Chart Properties’ or ‘Crosstab Properties’ dialog box.
+
+. Select the *Advanced* tab in the dialog box.
+
+. Select the ‘Enable Ad Hoc Editing’ option.
++
+image:enableAdHocEditing.png[]
+
+If this option is not selected, users will not have access to the Chart Editor. However, other features (brushing, show details, export, zooming, etc.) will remain available.
+
+== Modify a chart using dynamic properties
+You can allow a user to modify a chart using dynamic properties. To do this, use Form components to set chart properties by choosing the ‘Variable’ or Expression’ option in the {buttonChangeValueType}. See xref:DynamicallySetProperties.adoc[] for more information.
+
+.Walkthrough: Dynamic Properties
+****
+In this example, you will add a RadioButton that allows the user to set the Y-axis field of a chart to either ‘Quantity Purchased’ or ‘Total Revenue’.
+
+. Create a new Dashboard based on the ‘ProductSales’ Data Worksheet.
+
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$ProductSalesWorksheet.adoc[]
+
+. Add a Radio Button to the Dashboard, with two embedded values (‘Quantity Purchased’ and ‘Total’).Add a Chart to the Dashboard, and open the Chart Editor. (See xref:AddAChart.adoc[].) Add the ‘State’ field from the ‘SalesByDate’ data block to the X-axis and the ‘Quantity Purchased’ field as the Y-axis.
+
+. Press the {buttonChangeValueType} next to ‘Quantity Purchased’, and choose the ‘Variable’ option. The menu displays the available variable names.
++
+image:Crosstab Select Variable.png[]
+
+
+. From the list of variables, choose `$(RadioButton)`.
+
+. Now press the radio buttons. Note that the chart displays the Y-axis field that you choose using the radio button control.
++
+image:Capture_006.png[]
+****
+
+

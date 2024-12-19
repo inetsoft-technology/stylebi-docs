@@ -1,0 +1,199 @@
+= Configure LDAP Security
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+The LDAP security provider is useful when your users, groups, and roles are already defined in an LDAP environment such as Active Directory or any generic LDAP implementation.
+
+[NOTE]
+You can use the LDAP server only for *authentication* (i.e., verifying user credentials), not for *authorization* (setting permissions).  LDAP  is not available when multi-tenancy is enabled.  (See xref:administration:EnableMultiTenant.adoc[].)
+
+
+
+include::administration:partial$keystore.adoc[]
+
+To use an LDAP provider, select the ‘LDAP’ option from the ‘Authentication’ menu on the ‘Security Provider’ page. (See xref:SpecifySecurityProvider.adoc[].) All user, group, and role information is then retrieved from the LDAP server and cannot be created or configured in Enterprise Manager. The following sections explain how to specify an LDAP security provider.
+
+== Prepare the LDAP Server
+Before you configure the LDAP security provider in StyleBI, read the recommendations below:
+
+* Active Directory schemas can contain a large number of objects, so it is important to specify the portions of the schema that will be accessed by StyleBI. Browse your LDAP schema with a tool such as https://directory.apache.org/studio/[Apache Directory Studio] to familiarize yourself with the objects in your LDAP schema.
+
+* It is *recommended* that you add new security groups into your LDAP schema to be used when defining security for StyleBI (e.g.,    `InetSoftAdmin`, `InetSoftUser`, `InetSoftDeveloper`, etc.). Add the appropriate users to each of these groups.
+
+* Since directory servers do not currently support roles fully, *groups* in the LDAP schema are mapped to *roles* in InetSoft.
+
+* If the administrator password on the LDAP server is changed, you will not be able to log into Enterprise Manager in the usual way. Instead, log into Enterprise Manager by using the administrator’s Distinguished Name (DN) together with the new LDAP administrator password. This allows Enterprise Manager to connect to the LDAP server and update the security configuration. You can then log into Enterprise Manager using the usual administrator credentials.
+
+* When you enable an LDAP security provider authentication you can no longer log into the EM using the default ‘admin/admin’ credentials. Instead, you must log in as a user with an ‘Administrator’ role (group). If there is no role (group) named ‘Administrator’ in your system, you can set the role by adding the `role.administrator` property, e.g., `role.administrator=SRAdmin`. (See xref:AllProperties.adoc[] for more information about setting properties.)
+
+* The performance of any `AbstractSecurityProvider` security implementation (including LDAP security) can be enhanced by setting `security.cache=true`. (See xref:AllProperties.adoc[] for more information about setting properties.)
+
+* Security data is cached. To refresh the cache when security data changes, press the {buttonClearSecurityCache} on the *Security* page. See xref:SpecifySecurityProvider.adoc[] for more information.
+
+* If you are using a “Named Viewer Session” or “Named Session” license key, you should filter the list of users so that the number of users is not greater than that permitted by the license.
+
+
+[#DefineLDAPSchema]
+== Define LDAP Schema
+The structure of the LDAP schema must be defined in the Enterprise Manager. To add schema information, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Security* page in the left panel.
++
+image:Figure 23_1.png[]
+
+. Select ‘Enable Security’ to activate security settings.
+
+. In the ‘Authentication’ menu, press the {buttonEdit} next to ‘Primary Provider’ or press btn:[Add Provider] and enter a provider name. Select the ‘LDAP’ provider type.
+
+. Choose the appropriate LDAP server implementation from the ‘LDAP Server’ menu. Make sure the main LDAP server is correctly installed and configured, and supply the necessary connection information. See  xref:#ActiveDirectory[] and xref:#GenericLDAP[] for more details.
++
+image:LDAP Settings.png[]
+
+. Enable ‘Search User Subtree’ to perform a recursive search on the specified user base.
+
+. Press the btn:[Test Connection] button to test the connection to the LDAP database.
+
+. In the ‘System Administrator Roles’ field, press the {buttonEdit} and enter the role that a user must possess in order to log into Enterprise Manager.  This must be the *primary role* of the Active Directory user.
+
+. Press btn:[Apply] to save the settings.
+
+Once the directory server environment is configured, you can assign permissions to users/groups/roles for different components and functions. (See xref:SetRepositoryPermissions.adoc[] and xref:SetSecurityActions.adoc[] for more information.)
+
+[#ActiveDirectory]
+== Active Directory
+
+To use an Active Directory server for authentication, select ‘LDAP’ from the ‘Authentication’ menu on the ‘Security Provider’ page, and select ‘Active Directory’ from the ‘LDAP Server’ menu. (See xref:SpecifySecurityProvider.adoc[] for more information about the ‘Security Provider’ page.)
+
+image:Figure 25.png[]
+
+
+When configuring an Active Directory server to perform authentication for StyleBI, take note of the following points:
+
+* An Active Directory schema can contain a large number of objects (users, security groups, etc). Before setting up the security provider in Enterprise Manager, use a tool like https://directory.apache.org/studio/[Apache Directory Studio] to browse your schema and become familiar with its structure.
+
+* It is *highly recommended* that you add new security groups to the Active Directory schema to support StyleBI users. For example, add security groups such as `InetSoftAdmin`, `InetSoftUser`, `InetSoftDeveloper`, etc., to the Active Directory schema, and then add the appropriate users to these groups.
+
+* A *security group* in Active Directory is equivalent to a *role* in StyleBI. An *organizational unit* in Active Directory is equivalent to a *group* in StyleBI.
+
+* A *search base* is the location within Active Directory from which StyleBI will search for and load users, security groups, etc. It is typically mapped to an organizational unit, for example, `ou=Departments`. A search base can also be a composite of multiple search bases separated by semicolons, e.g., `ou=IT,ou=Departments;ou=Sales,ou=Departments`. Press the btn:[Show Users], btn:[Show Groups], or btn:[Show Roles] button to verify that the entities are being read correctly.
+
+* After you configure LDAP security, you can no longer log into Enterprise Manager using the default admin/admin credentials. You must log in as a user who has the administrator role security group.
+
+* After you configure LDAP security, you can no longer add users/groups/roles from within the *Users* tab in Enterprise Manager. You must do this from within Active Directory. However, the *Users* tab allows you to view the users defined in Active Directory.
+
+
+
+
+
+.Sample Active Directory Setup
+[example]
+====
+In the following example, consider the following Active Directory schema. The property list below indicate how to fill out the ‘Security Provider’ page for this schema.
+
+image:ActiveDirectorySampleSchema.png[]
+
+Root DN:: The ‘Root DN’ (here, `dc=vm`) is automatically appended to all units within InetSoft and need not be included in any other entry.
++
+image:ActiveDirectorySampleSchema5.png[]
+
+User Search Base/Group Search Base:: To search all units below the ‘Departments’ unit, set ‘User Search Base’ and ‘Group Search Base’ to `ou=Departments`. (If you want to include only the ‘Accounts’ and ‘Sales’ units, set `ou=Accounts,ou=Departments;ou=Sales,ou=Departments`.)
++
+image:ActiveDirectorySampleSchema1.png[]
+
+Role Search Base:: To search the ‘InetSoftRoles’ unit, set ‘Role Search Base’ to `ou=InetSoftRoles,ou=Roles`.
++
+image:ActiveDirectorySampleSchema2.png[]
+
+Administrator ID:: The ‘Administrator ID’ in this case is `cn=James Brown,ou=Admin`. Any account with sufficient read permissions can be used (preferably a service account). It does not need to be an Active Directory domain administrator, and does not need to be in the user search base.
++
+image:ActiveDirectorySampleSchema3.png[]
+
+The ‘Security Provider’ page for these setting appears as follows:
+
+image:ActiveDirectorySampleSchema4.png[]
+====
+
+To use an Active Directory server for authorization, you should enable writing to the schema. To do this, follow the steps below:
+
+. menu:Start[Run].
+. Type `mmc` and press btn:[OK].
+. Select  menu:Console[Add/Remove Span-In]  and press btn:[Add].
+. Select ‘Active Directory Schema’ and press btn:[Add].
+. Select ‘Active Directory Users and Groups’ and press btn:[Add].
+. Press btn:[Close] and then btn:[OK].
+. Right-click ‘Active Directory Schema’ in the tree on the left.
+. Select ‘Change Domain Controller’.
+. If the Current DC is not correct, select ‘Specify Name’, enter the DC, and press btn:[OK].
+. Right-click ‘Active Directory Schema’ and select ‘Operations Master’.
+. If the Current Operations Master is not the same as the DC you just entered, press the btn:[Change] button.
+. Check the “The Schema may be modified...” box.
+. Press btn:[OK] and exit the MMC.
+
+Note that the administrator account needs to be a member of the Schema Admins group.
+
+[#GenericLDAP]
+== Generic LDAP
+
+To use any  LDAP server other than xref:#ActiveDirectory[], select ‘Generic’ from the ‘LDAP Server’ menu under the ‘Security Provider’ page. (See xref:SpecifySecurityProvider.adoc[] for information about the ‘Security Provider’ page.)
+
+image:Figure 26.png[]
+
+Note that a fully qualified name must be entered for the Administrator ID. The following properties are available:
+
+Host Name:: The host name of the server that is running the directory server. Example: `inetsoft.com`.
+
+Port:: The port number on which the directory server is listening. Example: `389`.
+
+Use StartTLS:: Enable STARTTLS for encryption.
+
+Root DN:: The distinguished name [DN] of the root of the directory server. Example: `dc=inetsoft,dc=com`.
+
+Administrator ID:: The distinguished name [DN] of the directory server administrator. Example: `cn=manager,dc=inetsoft,dc=com`.
+
+Administrator Password:: Directory server administrator's password. Example: `secret`.
+
+User Search Filter:: The search filter used to find system users. Example: `(objectclass=person)`.
+
+User Search Base:: The base directory from which user searches will be performed. Example: `ou=People`.
+
+User Attribute:: The name of the attribute in the user entry that will be used as the user ID. Example: `uid`.
+
+Email Attribute:: The name of the attribute in the user entry that should be used to designate the user email address.Group Search FilterThe group search filter used to find system groups. Example:   `(objectclass=organizationalunit)`.
+
+Group Search Base:: The base directory from which group searches will be performed. Example: `ou=People`.
+
+Group Attribute:: The name of the attribute in the group entry that will be used as the group ID. Example: `ou`.
+
+Role Search Filter:: The role search filter used to find system roles. Example: `(objectclass=groupofuniquenames)`.
+
+Role Search Base:: The base directory from which role searches will be performed. Example: `ou=Groups`.
+
+Role Attribute:: The name of the attribute in the role entry that will be used as the role ID. Example: `cn`.
+
+User-Role Search Filter:: The user-role search filter used to find the roles assigned to a specific user. This property is a standard LDAP search filter in which the string `pass:[{0}]` will be replaced with the user ID. Example:
++
+[source]
+(&(objectclass=groupofuniquenames)
+(uniquemember=uid={0},*))
+
+
+Role-Role Search Filter:: The role-role search filter used to find the roles assigned to a specific role. This property is a standard LDAP search filter in which the string `pass:[{0}]` will be replaced with the role ID. Example:
++
+[source]
+(&(objectclass=groupofuniquenames)
+(uniquemember=uid={0},*))
+
+
+Group-Role Search Filter:: The group-role search filter used to find the roles assigned to a specific group. This property is a standard LDAP search filter in which the string `pass:[{0}]` will be replaced with the group ID. Example:
++
+[source]
+(&(objectclass=groupofuniquenames)
+(uniquemember=uid={0},*))
+
+
+Search User Subtree:: Recursively search the tree for uid entries.
+
+System Administrator Roles:: Press the {buttonEdit} and enter the role that a user must possess in order to log into Enterprise Manager.

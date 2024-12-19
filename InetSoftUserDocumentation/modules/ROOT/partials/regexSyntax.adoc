@@ -1,0 +1,49 @@
+The following is a summary of the regular expression syntax, alternatives separated by `|`. Expressions within parentheses are matched as subpattern groups and saved for use by certain methods.
+
+Quantified atoms::
+[source]
+{n,m} Match at least n but not more than m times.
+{n,} Match at least n times.
+{n} Match exactly n times.
+* Match 0 or more times.
++ Match 1 or more times.
+? Match 0 or 1 times.
+a . matches everything except \n
+a ^ is a null token matching the beginning of a string or line
+    (i.e., the position right after a newline or right before the
+    beginning of a string)
+a $ is a null token matching the end of a string or line (i.e., the
+    position right before a newline or right after the end of a string)
+Character classes (e.g., [abcd]) and ranges (e.g., [a-z])
+
+Special backslashed characters (character class)::
+[source]
+Work within a character class (except for backreferences and boundaries).
+\b is backspace inside a character class
+
+
+Special backslashed characters::
+[source]
+\b null token matching a word boundary (\w on one side and \W on the other)
+\B null token matching a boundary that isn't a word boundary
+\A Match only at beginning of string
+\Z Match only at end of string (or before newline at the end)
+\n newline
+\r carriage return
+\t tab
+\f formfeed
+\d digit [0-9]
+\D non-digit [^0-9]
+\w word character [0-9a-z_A-Z]
+\W a non-word character [^0-9a-z_A-Z]
+\s a whitespace character [ \t\n\r\f]
+\S a non-whitespace character [^ \t\n\r\f]
+\xnn hexadecimal representation of character
+\cD matches the corresponding control character
+\nn or \nnn octal representation of character unless a backreference.
+a \1, \2, \3, etc. match whatever the first, second, third, etc.
+    parenthesized group matched. This is called a backreference.
+    If there is no corresponding group, the number is interpreted as
+    an octal representation of a character.
+\0 matches null character
+Any other backslashed character matches itself

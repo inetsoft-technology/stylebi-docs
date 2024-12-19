@@ -1,0 +1,38 @@
+= bindingInfo.sizeFrame
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:SizeFrame.adoc[] outside of the data binding.
+* xref:viewsheetscript:ChartBindingInfoSizes.adoc[] to set a static size for a particular measure.
+* xref:viewsheetscript:ChartBindingInfoSetSizeField.adoc[] for information on binding a size field.
+====
+
+Specifies the size of graphical elements. A xref:chartAPI:SizeFrame.adoc[] can size-code chart elements by value, or simply specify a static size. The default for dimensions is xref:chartAPI:CategoricalSizeFrame.adoc[]. The default for measures is xref:chartAPI:LinearSizeFrame.adoc[].
+
+
+== Type
+xref:chartAPI:SizeFrame.adoc[]
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.setSizeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.sizeFrame = new LinearSizeFrame;
+Chart1.bindingInfo.sizeFrame.smallest = 10;
+Chart1.bindingInfo.sizeFrame.largest = 50;
+Chart1.bindingInfo.sizeFrame.max = 100;
+
+--
+
+
+image:commonscript:SizeFrame.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

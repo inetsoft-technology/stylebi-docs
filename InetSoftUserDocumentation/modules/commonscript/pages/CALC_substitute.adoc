@@ -1,0 +1,44 @@
+= CALC.substitute(old_string, rep_string , new_string, instance_num)
+:navtitle: CALC.substitute()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Replaces an instance of `rep_string` within `old_string` using replacement text provided by `new_string`. {CALCExcelFunctionPage}
+
+This function replaces specific *text* within `old_string`. Use xref:CALC_replace.adoc[] to replace text that occurs at a specific *location* in `old_string`.
+
+== Parameters
+old_string::			A string containing one or more instances of `rep_string`
+rep_string::			The string to replace within `old_string`
+new_string::			String containing replacement text
+instance_num::			Occurrence of `rep_string` instance to replace
+
+
+== Example
+Replace the second instance of “/” in string “asd/pqr/xyz” with “-”.
+
+[source,javascript]
+----
+CALC.substitute('asd/pqr/xyz', '/', '-', 2);
+// returns asd/pqr-xyz
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.substitute(field['Label'], '/', '-', 2)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.substitute(parameter.Label, '/', '-', 2)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

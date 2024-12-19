@@ -1,0 +1,44 @@
+= bindingInfo.sizes
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:SizeFrame.adoc[] outside of the data binding.
+* xref:viewsheetscript:ChartBindingInfoSizeFrame.adoc[] for information on assigning value-keyed frames.
+====
+
+
+
+
+
+
+Specifies a xref:chartAPI:StaticSizeFrame.adoc[] (fixed size) for the specified measure.
+
+
+
+
+
+
+
+
+
+== Type
+xref:chartAPI:StaticSizeFrame.adoc[]
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.sizes['Sum(Total)'] = new StaticSizeFrame(30);
+
+--
+
+
+image:commonscript:bindingInfoSize.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

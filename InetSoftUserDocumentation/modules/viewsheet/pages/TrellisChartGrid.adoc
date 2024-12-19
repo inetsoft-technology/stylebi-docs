@@ -1,0 +1,41 @@
+= Trellis Chart (Grid)
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+NOTE: Web map backgrounds (e.g., Google Maps) cannot be used in Trellis-type charts.
+
+
+In some cases you may want to create a *grid of charts*, where different charts represent different values of a particular *dimension* (‘Region’ and ‘Category’ in the chart below).
+
+include::ROOT:partial$dimensionTip.adoc[]
+
+image:commonscript:chart2_1.png[]
+
+
+
+
+To create a grid of charts, simply add dimensions into the ‘X’ and ‘Y’ regions to create the desired arrangement. For example, to break out the ‘Region’ dimension on the X-axis and the ‘Category’ dimension on the Y-axis, place these fields as shown below in the Chart Editor.
+
+include::viewsheet:partial$chartNewbieTip.adoc[]
+
+image:commonscript:chart3_1.png[]
+
+
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Mortality_Analysis.zip[Mortality Analysis] Dashboard provides an example of a grid of pie charts.
+
+image:viewsheet:galleryGridOfPie2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Mortality_Analysis.zip[Mortality Analysis] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+
+'''
+
+The sample xref:ROOT:attachment$Marketing_Lead_Trends.zip[ Marketing Lead Trends] Dashboard provides an example of a grid of line charts.
+
+image:viewsheet:galleryMap2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Marketing_Lead_Trends.zip[ Marketing Lead Trends] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****

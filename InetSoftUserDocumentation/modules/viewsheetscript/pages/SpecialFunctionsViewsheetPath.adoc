@@ -1,0 +1,14 @@
+= viewsheetPath
+
+include::partial$readOnly.adoc[]
+
+[WARNING,caption=See Also]
+xref:parameter.adoc[] to obtain other environment information in script.
+
+Returns the path of the Dashboard in the repository. For example, for a Dashboard named “Sales Explore” saved in the ‘Tutorial’ folder of the repository, `viewsheetPath` returns path `Tutorial/Sales Explore`.
+
+== Example
+[source,javascript]
+alert('This Dashboard is located at ' + viewsheetPath);
+
+

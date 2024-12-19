@@ -1,0 +1,48 @@
+= ParallelCoord.setScales(scales)
+:navtitle: ParallelCoord.setScales()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+Specifies the set of parallel scales to use. These can also be specified as arguments to the constructor.
+
+== Parameter
+scales::			Array of xref:Scale.adoc[] objects
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["Quantity","Total","Returns"],[200,800,10],[175,1000,15],[50,300,20]]; //<1>
+graph = new EGraph();
+var elem = new LineElement();
+var qscale = new LinearScale("Quantity"); //<2>
+var tscale = new LinearScale("Total"); //<2>
+var rscale = new LinearScale("Returns"); //<2>
+var coord = new ParallelCoord();
+coord.setScales([qscale,tscale,rscale]); //<3>
+elem.addDim("Quantity");
+elem.addDim("Total");
+elem.addDim("Returns");
+graph.addElement(elem);
+graph.setCoordinate(coord); //<4>
+
+--
+<1> {dataset}
+<2> Create the xref:LinearScale.adoc[] objects.
+<3> Create the `ParallelCoord` from the `LinearScale` objects.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:ParallelCoordssetCoords.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

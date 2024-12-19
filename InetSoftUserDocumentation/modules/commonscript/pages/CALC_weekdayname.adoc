@@ -1,0 +1,46 @@
+= CALC.weekdayname(date)
+:navtitle: CALC.weekdayname()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the full name for the day of the week corresponding to the given `date` (e.g., “Monday”). {CALCExcelFunctionPage}
+
+
+
+
+
+== Parameters
+date::			Date object
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.weekdayname(new Date(2006,0,18));  // returns Wednesday
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.weekdayname(field['Order Date'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.weekdayname(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

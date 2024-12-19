@@ -1,0 +1,37 @@
+= roundCorner
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:ShapeProperties.adoc[] for more information about Rectangle components.
+====
+
+
+Specifies the radius of corner curvature in pixels.
+
+== Type
+Integer::			corner curvature (pixels)
+
+
+
+
+
+
+== Example
+[source,javascript]
+Rectangle1.roundCorner = 30;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+roundCorner           // unqualified
+Rectangle1.roundCorner    // qualified
+
+{secondForm}
+====
+
+

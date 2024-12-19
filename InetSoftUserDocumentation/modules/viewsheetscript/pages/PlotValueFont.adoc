@@ -1,0 +1,31 @@
+= valueFont
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:PlotValueFormats.adoc[] to set the font  on a multi-style chart.
+
+Sets the font for data values displayed in the chart plot area.
+
+== Type
+https://download.oracle.com/javase/7/docs/api/index.html?java/awt/Font.html[java.awt.Font] or font description
+
+== Example
+[source,javascript]
+Chart1.valueFont = new java.awt.Font('Serif', java.awt.Font.BOLD, 12);
+Chart1.valueFont='Lucida Sans Unicode-BOLD-14'
+
+image:commonscript:valueFont.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+valueFont         // unqualified
+Chart1.valueFont  // qualified
+
+{secondForm}
+====

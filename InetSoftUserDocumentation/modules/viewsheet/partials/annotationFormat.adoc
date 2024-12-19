@@ -1,0 +1,32 @@
+To change the visual appearance of an annotation box or callout line, first make sure the annotation is visible. (Press the {buttonShowAnnotation}  in the toolbar.) Then follow the steps below:
+
+. Right-click on the annotation and select ‘Format’ from the context menu.  This opens the ‘Format’ dialog box.
++
+image:AnnotationFomat1_1.png[]
+
+
+. Adjust the following settings in the ‘Box’ panel:
++
+image:AnnotationFomat2_1.png[]
++
+[square]
+* From ‘Style’ menu, select a line style for the box border. Select a border color from the adjacent color-picker.
+
+* From the ‘Round Corner’ menu, select a radius (in pixels) for the box corners. Larger values produce more gently rounded corners, and smaller values produce more sharply rounded corners.
+
+* From the ‘Fill Color’ menu, select a background color for the annotation box.
+
+* From the ‘Alpha’ menu, set the background transparency. A value of 0% indicates complete transparency (i.e., fill color not visible), and a value of 100% indicates complete opacity.
+
+. Adjust the following settings in the ‘Line’ panel:
++
+[square]
+* Enable the ‘Visible’ option to display the callout line.
+
+* From ‘Line’ menu, select a line style for the callout line.
+
+* From the ‘End’ menu, select the arrow type for the callout line.
+
+* From the ‘Color’ menu, select a color for the callout line.
+
+. Press btn:[OK] to close the dialog box.

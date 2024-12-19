@@ -1,0 +1,48 @@
+= StackTextFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:TextFrame.adoc[]
+* xref:VisualFrame.adoc[]
+====
+
+
+The `StackTextFrame` object contains data for a  xref:viewsheet:MultipleMeasureChart.adoc#Stack[Stacked Chart]. To create a `StackTextFrame` object, call the `StackTextFrame` constructor.
+
+[source, javascript]
+var frame = new StackTextFrame (elem);
+
+To stylize or reposition text created using a `StackTextFrame`, use the xref:GraphElementSetTextSpec.adoc[] and xref:GraphElementSetLabelPlacement.adoc[] fucntions.
+
+== Parameter
+elem::			a xref:GraphElement.adoc[] object
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new StackTextFrame(elem); //<2>
+elem.setTextFrame(frame);  //<3>
+--
+
+<1> Use xref:EGraph_getElement.adoc[] to get a handle to the xref:GraphElement.adoc[].
+<2> Create the `StackTextFrame` object.
+<3> Use xref:GraphElementSetTextFrame.adoc[] to add the `TextFrame` to the element.
+
+image:commonscript:StackTextFrame1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

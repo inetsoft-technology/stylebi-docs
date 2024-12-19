@@ -1,0 +1,89 @@
+= Create a Physical View
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+IMPORTANT: Physical views can only be created for relational databases. (See xref:JDBC.adoc[]  or  xref:ConnectToDataSource.adoc[] for information on how to configure a relational database data source.)
+
+include::ROOT:partial$createVisualizationClose.adoc[]
+
+
+
+To create a physical view, follow the steps below:
+
+. Press the top {buttonData}.
++
+image:dataModel1.png[]
+
+. In the ‘Navigation Tree’ in the left panel, expand the ‘Data Sources’ folder. Locate the relational database data source for which you want to add a physical view. Select the ‘Data Model’ node, and press the {buttonNewPhysicalView}.
++
+image:dataModel2.png[]
+
+
+. Provide a name for the physical view and press ‘OK’.
++
+image:dataModel3.png[]
+
+
+. Add tables to the physical view. Follow the steps below:
+
+.. *_Optional:_*  To filter the list of available tables, use the ‘Search’ box to enter the name (or partial name) of the tables to which you want to restrict the listing.
++
+image:dataModel4.png[]
+
+.. Click to select the tables to add to the physical view. (Add all the tables from which you want the data model to be able to retrieve data.)
++
+image:dataModel5.png[]
+
+.. *_Optional:_*  To add a custom table based on a SQL query, see xref:EditPhysicalView.adoc#AddInlineSQL[Add Inline SQL] in xref:EditPhysicalView.adoc[].
+
+.. *_Optional:_*  To hide the tables you have not selected, press the  {buttonOnlyShowDelectedTable} at the top of the ‘Tables’ panel.
+
+.. To display the columns within a table, press the {buttonShowColumns}.
+
+. Add joins to create relations between the tables. To add an individual join between tables, follow the steps below. To automatically add joins between many tables, see xref:EditPhysicalView.adoc#AutomaticallyCreateJoins[Automatically Create Joins] in xref:EditPhysicalView.adoc[].
+
+
+.. Click the first table in the left panel that you want to join. Drag the {buttonJoinHandle}  from the first table onto the  of the second table. This opens the Join Editor.
++
+image:dataModel12.png[]
++
+If a join between the tables already exists, click on the join link to open the ‘Edit Join’ dialog box.
++
+image:dataModel13.png[]
++
+The ‘Edit Join’ dialog box allows you to modify the join operator (inner/equal, outer, or inequality), and set the cardinality, merging rule, and weak join. See xref:EditPhysicalView.adoc#ModifyJoinProperties[Modify Join Properties] for more information about these join settings.
++
+image:dataModel15.png[]
+
+.. Press btn:[OK] to close the ‘Edit Join’ dialog box.
+
+.. To remove an existing join, right-click on the join link, and select ‘Remove Join Condition’.
++
+image:dataModel14.png[]
+
+.. To create a new join, simply drag the desired join field from one table into the other table. Repeat to create any additional joins.
++
+image:dataModel16.png[]
+
+.. Press btn:[Done] to exit the Join Editor.
++
+[NOTE]
+====
+You can also add a join by selecting a table, and pressing the {buttonAddJoin}.
+
+image:dataModel17.png[]
+
+This opens the ‘Add Join’ dialog box. Choose the join column within the selected table (‘Column’) and the ‘Foreign column’ within a desired ‘Foreign table’, and press btn:[OK].
+
+image:dataModel18.png[]
+====
+
+. To edit a join, select the table from which the join is an outgoing join, and press the {buttonEditJoin}. This will open the ‘Edit Join’ dialog box (see above), where you can modify the join.
++
+image:dataModel19.png[]
+
+. To delete a join, select the table from which the join is an outgoing join, and press the {buttonRemoveSelectedJoins}.
+
+. Repeat the above steps to join all tables in the physical view. (To automatically add joins between many tables, see xref:EditPhysicalView.adoc#AutomaticallyCreateJoins[Automatically Create Joins] in xref:EditPhysicalView.adoc[].)
+
+. Press the {buttonSave} to save the physical view.

@@ -1,0 +1,46 @@
+= Math.abs(number)
+:navtitle: Math.abs()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_abs.adoc[] for the preferred version from the CALC library.
+====
+
+
+
+
+
+
+Return the absolute value of a specified number. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs[Math.abs()] method, and can be used with or without the `Math` qualifier, `abs()` or `Math.abs()`.
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+abs(-234.45); // returns 234.45
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+abs(field['Cost'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+abs(Slider1.selectedObject)
+abs(parameter.Cost)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

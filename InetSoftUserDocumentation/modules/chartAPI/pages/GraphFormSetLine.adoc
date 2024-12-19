@@ -1,0 +1,43 @@
+= GraphForm.setLine(value)
+:navtitle: GraphForm.setLine()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the line style used to draw the form.  The corresponding “getter” function is `getLine()`.
+
+
+== Parameter
+value::					A xref:GLine.adoc[] constant:
++
+include::partial$gLineConstants.adoc[]
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var form = new LineForm(); //<2>
+var elem = new IntervalElement("State", "Quantity");
+form.addPoint(new java.awt.Point(0,0));
+form.addPoint(new java.awt.Point(100,100));
+form.addPoint(new java.awt.Point(200,100));
+form.setLine(Chart.DASH_LINE); //<3>
+graph.addForm(form); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:GraphForm.adoc[] object.
+<3> Use `setLine()` to set the line style.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:GraphFormSetLine.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

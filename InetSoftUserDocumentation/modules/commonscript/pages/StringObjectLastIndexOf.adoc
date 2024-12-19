@@ -1,0 +1,40 @@
+= lastIndexOf(searchValue[, fromIndex])
+:navtitle: lastIndexOf()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:StringObjectIndexOf.adoc[] to find the initial  occurrence of a sub-string.
+* xref:CALC_search.adoc[] for a related  function.
+====
+
+
+Return the index of the last occurrence of the specified sub-string within the larger string, or return `-1` if not found.
+
+
+
+
+== Parameters
+fromIndex:: Starting position of the search (optional). Indexing starts from 0.
+
+
+
+
+
+== Example
+[source,javascript]
+var str = 'How much wood would a wood chuck chuck';
+var lastIndex = str.lastIndexOf('wood') // returns 22
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].lastIndexOf('wood');
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.lastIndexOf('wood');
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

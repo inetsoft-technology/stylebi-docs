@@ -1,0 +1,36 @@
+= expandAll
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:SelectionListProperties.adoc[] and xref:viewsheet:SelectionTreeProperties.adoc[] more information on these components.
+
+
+For Selection Trees, when set to `true`, specifies that all levels of the tree should be fully expanded when the Dashboard loads. The Selection Tree will appear fully expanded when the Dashboard loads even if the user has previously saved a bookmark with the Selection Tree in an alternate state of expansion.
+
+NOTE: `expandAll` does not apply to Selection Lists.
+
+
+
+
+== Type
+Boolean::	`true`: expand all levels by default +
+`false`: do not expand all levels (default)
+
+
+== Example
+[source,javascript]
+SelectionTree1.expandAll = true;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+expandAll                   // unqualified
+SelectionTree1.expandAll    // qualified
+
+{secondForm}
+====
+
+

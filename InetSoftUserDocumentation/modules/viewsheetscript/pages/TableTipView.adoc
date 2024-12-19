@@ -1,0 +1,37 @@
+= tipView
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Sets the data tip for the Table. A *data tip* is a graphical form of tooltip that  displays a specified Dashboard component  when the user hovers the mouse over cells in the Table. See xref:viewsheet:AddTipsToChart.adoc[] for more details about data tips.
+
+
+
+== Type
+String::			name of a Dashboard component
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+TableView1.tipView = 'Gauge1';
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+tipView                 // unqualified
+TableView1.tipView      // qualified
+
+{secondForm}
+====
+
+

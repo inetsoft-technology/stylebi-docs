@@ -1,0 +1,9 @@
+<script src="{{{uiRootPath}}}/medium-zoom.min.js"></script>
+<script>
+mediumZoom('.content img');
+</script>
+<script id="site-script" src="{{{uiRootPath}}}/js/site.js" data-ui-root-path="{{{uiRootPath}}}"></script>
+<script async src="{{{uiRootPath}}}/js/vendor/highlight.js"></script>
+{{#if env.SITE_SEARCH_PROVIDER}}
+{{> search-scripts}}
+{{/if}}

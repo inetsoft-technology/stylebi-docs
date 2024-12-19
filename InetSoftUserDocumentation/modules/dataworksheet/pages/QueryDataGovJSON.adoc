@@ -1,0 +1,26 @@
+= Data.Gov JSON  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Data.Gov JSON  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:DataGovJSON.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonDataGovJSONQuery}. This opens the ‘Data gov JSON  Query’ dialog box.
+
++
+image:dataSourceDataGov5.png[]
+
+. Enter the desired ‘URL Suffix’ for the web service.
++
+image:dataSourceDataGov6.png[]
+
+. *_Optional:_* {datasourceSelectTabular}
+
+include::dataworksheet:partial$finalStepsQuery.adoc[]

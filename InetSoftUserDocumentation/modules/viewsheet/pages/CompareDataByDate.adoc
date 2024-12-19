@@ -1,0 +1,186 @@
+= Compare Data by Date
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+include::viewsheet:partial$availableToEndUsers.adoc[]
+
+Charts and Crosstabs provide an easy way to *compare* data across different date ranges. For example:
+
+* Compare this quarter’s sales to the previous two quarters
+* Compare this January’s sales to each of the past five January’s sales
+* Compare each day last week to each day this week, showing percent change
+
+To perform such date comparisons in a Chart or Crosstab, follow the steps below.
+
+IMPORTANT: The Chart or Crosstab must contain a Date-type field. Date comparisons use color to distinguish date groups unless the original chart already uses color; in this case, the axis is used to distinguish date groups.
+
+. Press the {buttonMore} in the top corner of Chart or Crosstab, and select ‘Date Comparison’.
++
+image:commonscript:dateComparison1.png[]
++
+This opens the ‘Date Comparison’ dialog box.
++
+image:commonscript:dateComparison2.png[]
+
+. *_Optional:_* To apply an existing date comparison from another Chart or Crosstab in the Dashboard, enable the ‘Share Date Comparison With’ option, and choose the component from which to share the date comparison. Then press btn:[OK] to exit the dialog box.
++
+image:commonscript:dateComparison3.png[]
+
+. Under *Date Range to Include in Comparison*, set the span of time to consider in the comparison. You can do this by specifying either a number of previous standard periods to compare (e.g., “compare previous 5 years”) or by specifying a set of custom periods to compare (e.g., “compare Jan. 5, 2019 through Feb. 10, 2020 with Nov. 5, 2019 through Dec 10, 2020”). Expand the sections below for more details on these two approaches.
++
+.Compare standard periods...
+[%collapsible]
+====
+.. Select the ‘Standard Periods’ tab if not already selected.
++
+image:commonscript:dateComparison12.png[]
+
+.. Enter the number of past periods to compare and the type of period. For example, enter ‘4’ and select ‘Quarter’ to compare data from the past four quarters.
++
+image:commonscript:dateComparison4.png[]
++
+TIP: You can also use Form components to set the number and period by pressing the {buttonValueType} and selecting the ‘Variable’ or Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
+
+.. Specify the ‘Range End Date’. This is the date that determines the most recent data to include in the comparison. Select ‘Today’ to use the current date as the cut-off, or deselect ‘Today’ and enter an arbitrary date as the cut-off.  *_Optional:_* To include the end date period (the period in which the  selected ‘Range End Date’ occurs) in the comparison, enable the ‘Include Year/Quarter/Month/Week For End Date’ option. Otherwise, the comparison will include data up to, but not including, the end date period.
+
+.. *_Optional:_* Select ‘From Beginning of Each Year/Quarter/Month/Week to … of Year/Quarter/Month/Week ’ to include data only up to the ‘Range End Date’ (i.e., the same number of days) for all selected periods. For example, if the ‘Range End Date’ is Jan 21, and you select “previous four quarters” and enable ‘From Beginning of Each Quarter to 1st Month 21st Day of Quarter’, the current and previous four quarters will each only include the first 20 days of the quarter.
+====
++
+.Compare custom periods...
+[%collapsible]
+====
+.. Select the ‘Custom Periods’ tab if not already selected.
++
+image:commonscript:dateComparison10.png[]
+
+.. Enter the desired period ranges by typing the dates in the indicated format or by pressing the {buttonSelectDate}.
++
+image:commonscript:dateComparison5.png[]
++
+You must specify at least two ranges. To add additional ranges, press the {buttonAddButton}. To remove a range, press the {buttonRemove} next to the range.
++
+TIP: You can also use Form components to set the dates by pressing the {buttonValueType} and selecting the ‘Variable’ or Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
+====
+
+. Under *Compare Data Of*, use the menus to set the desired comparison. You can perform the following three types of comparisons:
++
+.Compare all periods within the date range...
+[%collapsible]
+====
+.. To compare *all periods* within the date range (e.g., all quarters, all months, etc.), select ‘All’ from the left menu. From the ‘Granularity’ menu, select the periods that you want to display on the Chart.
++
+image:commonscript:dateComparison8.png[]
++
+TIP: You can also use Form components to set these options by pressing the {buttonValueType} and selecting the ‘Variable’ or Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
++
+.Compare this month to date against last month, showing percent change
+[example]
+=====
+Configure the options as follows:
+
+image:commonscript:dateComparison21.png[]
+
+The resulting date comparison is shown below. {dateCompareDetails}
+
+image:commonscript:dateComparison22.png[]
+
+The Chart and Crosstab compare the past month and present month (to date), and provides the percent change as well as the respective values.
+=====
++
+.Compare the past six quarters, broken out by month
+[example]
+=====
+Configure options as follows:
+
+image:commonscript:dateComparison15.png[]
+
+The resulting date comparison is shown below. {dateCompareDetails}
+
+image:commonscript:dateComparison16.png[]
+
+The data on the Chart and Crosstab includes the past six quarters, and provide a comparison of each quarter broken out by month of quarter (month 1, 2, or 3).
+=====
+====
++
+.Compare the single same period across the date range...
+[%collapsible]
+====
+To compare the *single same period* across the date range (e.g., same month of each year, same week of each quarter, etc.), select ‘Same Month’, ‘Same Week’, or ‘Same Day’ from the left menu.
+
+NOTE: The particular period being compared (e.g., the particular month) is determined by the end date: Select ‘Use Range End Date’ to compare the same month/week/day as the selected ‘Range End Date’ above, or deselect ‘Use Range End Date’ and enter an arbitrary date using the calendar widget.
+
+From the ‘Granularity’ menu, select the periods that you want to display on the Chart.
+
+image:commonscript:dateComparison13.png[]
+
+TIP: You can also use Form components to set these options by pressing the {buttonValueType} and selecting the ‘Variable’ or ‘Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
+
+.Compare this month this year (to date) against this month last year.
+[example]
+=====
+Configure the options as follows:
+
+image:commonscript:dateComparison23.png[]
+
+The resulting date comparison is shown below. {dateCompareDetails}
+
+image:commonscript:dateComparison24.png[]
+
+The Chart and Crosstab compare the current month of the current and previous year.
+=====
+.Compare the second month of each quarter for the past six quarters.
+[example]
+=====
+Configure the options as follows:
+
+image:commonscript:dateComparison17.png[]
+
+The resulting date comparison is shown below. {dateCompareDetails}
+
+image:commonscript:dateComparison18.png[]
+
+The data on the Chart and Crosstab includes the past six quarters, and provides a comparison of the second month of each quarter (e.g., Feb, May, Aug, Nov).
+=====
+====
++
+.Compare the same period “to date” across the date range...
+[%collapsible]
+====
+To compare the *same period “to date”* across the date range (e.g., same month of each year up to the 15th day of the month), select ‘Quarter To Date’, ‘Month To Date’, or ‘Week To Date’ from the left menu. Select ‘Use Range End Date’ to compare each month/week/day up until the ‘Range End Date’ date (specified above) within that period (e.g., the 24th day of the quarter), or deselect ‘Use Range End Date’ and enter an arbitrary date using the calendar widget. Check the ‘Inclusive’ option to include the specified “as of” date in the range. From the ‘Granularity’ menu, select the periods that you want to display on the Chart.
+
+image:commonscript:dateComparison14.png[]
+
+TIP: You can also use Form components to set these options by pressing the {buttonValueType} and selecting the ‘Variable’ or Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
+
+.Compare month-to-date for each quarter in the past two years.
+[example]
+=====
+Configure the options as follows:
+
+image:commonscript:dateComparison19.png[]
+
+The resulting date comparison is shown below. {dateCompareDetails}
+
+image:commonscript:dateComparison20.png[]
+
+The data on the Chart and Crosstab includes the past two years, and provides a comparison of the current month (in this case the third month) of each quarter up to today’s date (e.g., the 8th day of the month).
+=====
+====
+
+. Under *Display*, choose a way to display the comparisons on the Chart:
++
+* *Value* displays the aggregated values for all groups on the chart.
+* *Change*  displays the change of each group from the previous group.
+* *% Change* display the change of each group from the previous group as a percentage.
+* *Change & Value* and *% Change & Value* combine both representations on the Chart.
+
+. *_Optional:_* Select ‘In Separate Sub-Graphs’ to break the comparison across separate axes on the Chart.
++
+NOTE: When ‘In Separate Sub-Graphs’ is enabled, the ‘% Change & Value’ representation is a line; otherwise, the representation is a point.
+
+. *_Optional:_* Select ‘Only Show Most Recent Date On Axis Label’ to display only the more recent of the compared dates on the X-axis. This can sometimes help relieve label crowding on the axis.
+
+. Press btn:[OK] to apply the specified comparison and exit the dialog box, or press btn:[Apply] to view the comparison on the Chart without leaving the dialog box.
+
+. Explore the data on the Chart using the tools in the Chart mini-toolbar. See xref:DrillDownIntoData.adoc[] for information about how to view chart details, zoom the chart, brush the chart, etc.

@@ -1,0 +1,52 @@
+= hyperlink
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheet:TextProperties.adoc[] for general information about Text components.
+* xref:viewsheet:DrillDownIntoData.adoc[] for basic information on hyperlinks.
+====
+
+Specifies a hyperlink to a  Dashboard or URL.  The examples below illustrate how to use an array to pass parameters in the hyperlink.
+
+In the array syntax below, the first argument is the URL or Dashboard name, the second argument is an optional parameter array, the third argument is `REPORT_LINK` or `WEB_LINK` (default), and the last argument is the target frame.
+
+
+
+
+== Type
+String or {InetSoftReportHyperlink}
+
+
+
+
+
+== Examples
+[source,javascript]
+----
+// Link to Dashboard, no paramaters
+Text1.hyperlink = "Tutorial/Interactive";
+
+// Link to URL, no paramaters
+Text2.hyperlink = "www.google.com";
+
+// Link to Dashboard, including parameters
+Text3.hyperlink = ["Sales Dashboard", [["parameter1", "value1"], ["parameter2", "value2"], ...]];
+
+// Link to Dashboard, with target frame
+Text4.hyperlink = ["Orders Dashboard", [["parameter", "value"]], "REPORT_LINK", "_blank"];
+----
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+hyperlink           // unqualified
+Text1.hyperlink    // qualified
+
+{secondForm}
+====
+
+

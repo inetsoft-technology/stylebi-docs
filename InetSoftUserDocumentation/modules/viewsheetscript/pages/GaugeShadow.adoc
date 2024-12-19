@@ -1,0 +1,40 @@
+= shadow
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+Adds a drop shadow to the component.
+
+
+== Type
+Boolean:: `true`: add drop shadow +
+`false`: no drop shadow
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Gauge1.shadow = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shadow           // unqualified
+Gauge1.shadow    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,197 @@
+= Scheduler Actions
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The scheduler action specifies the operations to be performed when the scheduled task runs. (See xref:CreateScheduledTask.adoc[].) There are three types of actions:  ‘Dashboard’, ‘Backup’, and '`Batch`'.
+
+
+== Dashboard Action
+A Dashboard action executes one or more Dashboards, and delivers them as emails, transmits a notification, or saves a snapshot to the server. If the Dashboard requires *parameter values*, assign these parameters in the 'Creation Parameters' table at the bottom of the page.
+
+image:user:schedulerCreationParamaters.png[]
+
+Use the *Bookmarks* section to add the bookmarks that you wish to include. (For Excel output, bookmarks are exported to separate Excel tabs.)
+
+image:schedulerChooseBookmarks.png[]
+
+The following actions are available:
+
+=== Notification of Task Status
+This option sends notifications to the email addresses that you specify in the '`Notify`' field.  The email notification informs the recipient of whether the Dashboard was generated or not. Enter a comma-separated list of emails, or press the {buttonSelectEmails} button next to the email field to open the ‘Select Emails’ dialog box and choose emails from a list.  Select ‘Notify only if failed’ to limit the notification only to the event of a task failure.
+
+image:schedulerAdminNotification1.png[]
+
+To send a test email to the addresses you entered, press the 'Test Mail' button. To send an *SMS*  message to a phone, enter the provisioned email address supplied by the recipient’s service provider. (For example, to send a text message to Verizon number 1234567890, enter the email address `1234567890@vtext.com`.)
+
+Select ‘Include Link’ to include a URL link to the Dashboard in the email. The email recipient can click the link to open the Dashboard in a new browser tab if they possess the appropriate permissions for that Dashboard.
+
+=== Deliver to Emails
+
+This option sends the Dashboard as an email attachment to the email addresses that you specify.  Enter a comma-separated list of emails in the ‘To’ field, or press the {buttonSelectEmails} next to the email fields to open the ‘Select Emails’ dialog box and choose emails from a list.
+
+image:schedulerAdminDeliverToEmails_dashboard.png[]
+
+Use the '`Format`' menu to choose the format in which to generate the Dashboard: '`PDF`', '`PowerPoint`', or '`Excel`'. Enter the ‘Message’ body of the email using the rich text editor provided. For information on using an email template for the body, see xref:ConfigureServerEmail.adoc[].
+
+NOTE: If the generated file is too large, it will be split into multiple emails. The ‘Bundled as zip’ option allows you to zip the attachment and optionally specify a password to encode the archive with WinZip 256-bit AES encryption. (See '`Maximum Attachment Size`' in xref:ConfigureServerEmail.adoc[] to set this threshold.)
+
+The email '`Subject`' line can include parameters for automatic insertion of Dashboard alias and time or date of generation (see xref:#InsertParameters[] below). The subject line that you specify here overrides the setting on the ‘Mail Configuration’ page. (See xref:ConfigureServerEmail.adoc[].)
+
+
+Other Options::
+* The ‘Match Layout’ option obtains the closest possible match between the appearance of the emailed copy and the original Dashboard.
+* The ‘Expand Components’ option expands scrolling tables and charts in the generated Dashboard so that all data is displayed.
+* The ‘Only Data Elements’ option limits the export to only the data-bearing components.
+* The ‘Include Link’ option  includes a URL link to the Dashboard in the email. The email recipient can click the link to open the Dashboard in a new browser tab if they possess the appropriate permissions for that Dashboard.
+
+
+=== Save to Disk
+
+This option saves a copy of the Dashboard to the server file system or to an FTP server. Use the '`Format`' menu to choose the format in which to generate the Dashboard: 'PDF', 'PowerPoint', or 'Excel'.
+
+image:schedulerAdminSaveToServer.png[]
+
+To save to the server file system, press the {buttonAddFilePath}  button and specify a valid absolute path including filename.  (The filename extension, e.g., `.pdf`, is added automatically.) The filename can include parameters for automatic insertion of Dashboard name and time/date of  generation (see xref:#InsertParameters[] below).
+
+
+To save to an FTP server, check  the '`FTP/SFTP`' box and enter a valid '`Path`', '`Username`' and '`Password`'.
+
+
+
+IMPORTANT: For SFTP connections, the known hosts file, _.ssh/known_hosts_, is automatically read from the user’s home directory. Before running the scheduled task, an administrator should populate the _known_hosts_ file by first connecting (SSH) to the target server from each InetSoft server node.
+
+Other Options::
+
+* The ‘Match Layout’ option obtains the closest possible match between the appearance of the saved copy and the original Dashboard.
+* The ‘Expand Components’ option expands scrolling tables and charts in the generated Dashboard so that all data is displayed.
+* The ‘Only Data Elements’ option limits the export to only the data-bearing components.
+
+Insert Parameters:: The filename can include parameters for automatic insertion of Dashboard name and time and date of generation. These parameters use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:viewsheet:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
++
+|===
+|Filename |Generated As...
+
+|pass:[myDash_{1,date}.pdf]|myDash_Nov 14, 2007.pdf
+|pass:[{0}_{1,date}.pdf]|Production_Nov 14, 2007.pdf
+|pass:[myDash_{1,date,MMM-dd}.pdf]|myDash_Nov-14.pdf
+|pass:[myDash_{1,date,EEE-h-mm a}.pdf]|myDash_Wed-11-49 AM.pdf
+|pass:[myDash_{1,date,yy-MM-dd-HH-z}.pdf]|myDash_07-11-14-11-EST.pdf
+|===
++
+NOTE: Because of filename restrictions,  you cannot use the `pass:[{1,time}]` syntax for the  name.
++
+To include Dashboard  *creation parameter* values in the filename, simply place each parameter name within curly braces. The parameter names you enter  must exactly match the parameter names in the ‘Creation Parameters’ panel of the *Actions* tab. (See xref:#CreationParameters[] below.)  For example, if a parameter called `stateParam` is assigned a value of “NJ” in the ‘Creation Parameters’ panel, then the filename `pass:[myRep_{1,date,MMM-dd}_{stateParam}.pdf]` will yield a generated filename of `myRep_Nov-14_NJ.pdf`.
+
+
+
+
+
+
+
+
+
+
+
+
+[#InsertParameters]
+=== Insert Parameters
+The '`Subject`' line and '`Attachment Name`' can include parameters for automatic insertion of Dashboard name and time and date of generation. These parameters use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:viewsheet:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
+
+|===
+|Subject or Filename |Generated As...
+
+|pass:[myRep_{1,date}.pdf]|myRep_Nov 14, 2007.pdf
+|pass:[{0}_{1,date}.pdf]|Production_Nov 14, 2007.pdf
+|pass:[myRep_{1,date,MMM-dd}.pdf]|myRep_Nov-14.pdf
+|pass:[myRep_{1,date,EEE-h-mm a}.pdf]|myRep_Wed-11-49 AM.pdf
+|pass:[myRep_{1,date,yy-MM-dd-HH-z}.pdf]|myRep_07-11-14-11-EST.pdf
+|===
+
+
+For example, for a Dashboard with alias ‘SalesDashboard’, the ‘Subject’ specification `pass:[Dashboard named {0}, generated at {1,time} on {1,date}]` would produce  an email subject line such as the following: `Dashboard named SalesDashboard, generated at {localtime} on {localdate}`.
+
+NOTE: Because of filename restrictions,  you cannot use the `{1,time}` syntax for the  attachment name. However, you can use this syntax for the  subject line.
+
+To include Dashboard  *creation parameter* values in the filename or subject line, simply place each parameter name within curly braces. The parameter names you enter  must exactly match the parameter names in the ‘Creation Parameters’ panel of the *Actions* tab. (See xref:#CreationParameters[] below.)  For example, if a parameter called `stateParam` is assigned a value of “NJ” in the ‘Creation Parameters’ panel, then the attachment name `pass:[myRep_{1,date,MMM-dd}_{stateParam}.pdf]` will yield a generated filename of `myRep_Nov-14_NJ.pdf`.
+
+
+
+
+
+
+[#CreationParameters]
+== Creation Parameters
+To include parameters in the scheduled action, follow the steps below:
+
+include::ROOT:partial$settingCreationParams.adoc[]
+
+[#ScheduleOptions]
+== Schedule Options
+The settings available under the *Options* tab options are described below.
+
+image:Schedule4.png[]
+
+****
+Enabled:: Temporarily enables or disables a task.
+Delete if not scheduled to run again:: For a task that is scheduled to run only once, deletes the task from the system upon completion.
+Start From and Stop On:: Execute the task only within the specified date range.
+Execute As:: Execute the task as a particular user so that user permissions (e.g., VPM filtering) can be applied during task execution. Any user who has permission to use the Scheduler can be selected from the menu.
+Locale:: Sets the locale for the scheduled task, which configures language and formatting.
+****
+
+
+== Backup Action
+A backup action automatically backs up selected assets from the repository on the selected schedule. To create a backup task, follow the steps below:
+
+. Enter a path to the backup file in the ‘Path’ field.
+
+. Click or {buttonCtrl}-click to select assets in the left panel  and press the btn:[Add] button to add them to the right panel.
++
+image:scheduleBackup1.png[]
+
+. Press the btn:[Save] button.
+
+== Batch Action
+
+A ‘Batch’ action allows you to run another task with a ‘Dashboard’ action repeatedly using different sets of parameters. Parameters values can be entered manually or retrieved from a Data Worksheet. Follow the steps below to configure a ‘Batch’ action:
+
+. In the ‘Select Schedule Task’ field, choose the existing task that you want to run with different sets of parameters.
++
+image:scheduleBatch1.png[]
+
+. To manually enter parameter/value pairs, select the ‘Embedded’ option, and follow the steps below:
+
+.. Press the btn:[Edit] button to open the ‘Embedded Parameters’ dialog box.
+.. Press the btn:[Add] button. This opens the ‘Edit Parameters’ dialog box.
+.. Press the btn:[Add] button to open the ‘Add Parameter’ dialog box.
+.. Enter the ‘Parameter Name’, ‘Type’, and ‘Value’. The ‘Parameter Name’ can be a parameter in the  Dashboard that the task executes, or it can provide a value for one of the following properties of the task’s ‘Deliver To Emails’ action: ‘Email Addresses’, ‘CC’, ‘BCC’, ‘Subject’, ‘Attachment Name’, ‘Message’.
++
+To parametrize a property, specify a variable name (e.g., `messageVar`) in the relevant property field (e.g., the ‘Subject’ field) of the task action using the syntax `$(messageVar)`, and enter the variable name in the ‘Parameter Name’ field of the ‘Add Parameter’ dialog box.
++
+image:scheduleBatch2.png[]
+
+.. Press btn:[OK] and repeat the above steps to add additional parameters.
+
+. To retrieve parameter/value pairs from a Data Worksheet, select the ‘Query’ option, and follow the steps below:
+
+.. Press the ‘Edit’ button to open the ‘Query Parameters’ dialog box. The dialog box displays the parameters that are expected by the  Dashboard associated with the scheduled task.
+
+.. From the ‘Query’ menu, choose the Data Worksheet that contains the parameter information.
++
+image:scheduleBatch4.png[]
++
+This Data Worksheet should contain a data block with relevant parameter value sets in each row, such as the one below (with four parameter value sets). See xref:dataworksheet:EnterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for information on how to create a table like this.
++
+image:scheduleBatch3.png[]
+
+.. Use the menus next to the parameter names to specify the columns in the data block that contain the values for each parameter.
++
+image:scheduleBatch5.png[]
++
+Parameters can also provide a value for one of the following properties of the task’s ‘Deliver To Emails’ action: ‘Email Addresses’, ‘CC’, ‘BCC’, ‘Subject’, ‘Attachment Name’, ‘Message’.  To parametrize a property, specify a variable name (e.g., `messageVar`) in the relevant property field of the task action (e.g., the ‘Subject’ field) using the syntax `$(messageVar)`. This variable will then appear in the ‘Query Parameters’ dialog box along with the  Dashboard parameters.
++
+image:scheduleBatch6.png[]
+
+.. Press btn:[OK] to exit the dialog box.
+
+. Press the btn:[Save] button to save the Batch task.

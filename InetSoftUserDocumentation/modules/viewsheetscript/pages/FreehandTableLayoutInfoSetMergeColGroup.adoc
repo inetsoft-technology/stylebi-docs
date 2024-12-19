@@ -1,0 +1,30 @@
+= layoutInfo.setMergeColGroup(row,col,name)
+:navtitle: setMergeColGroup()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Sets the column group for the specified merged cells in a Freehand Table. See xref:viewsheet:AddFreehandTable.adoc[] for more information about ‘Column Group’ for merged cells.
+
+
+
+
+== Parameter
+row:: row index
+col:: column index
+name::			Name of the cell representing the column group
+
+
+== Example
+[source,javascript]
+FreehandTable1.layoutInfo.setMergeColGroup(1,0,'state');
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+layoutInfo.setMergeColGroup                 // unqualified
+FreehandTable1.layoutInfo.setMergeColGroup  // qualified
+
+{secondForm}
+====

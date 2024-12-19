@@ -1,0 +1,39 @@
+= Google Analytics GA4
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$dataSourceUserIntro.adoc[]
+
+. Select the ‘Google Analytics’ data source, and press btn:[Create]. This opens the data source definition screen.
++
+image:dataSourceGoogleAnalytics2.png[]
+
+. In the ‘Name’ field, enter a label for this data source connection.
+
+
+. Press btn:[Sign in with Google]. This opens a web page that may prompt you to log into Google (if you are not logged in already).
+
+. Follow the prompts, and then close the browser window. This populates the token fields.
+
+. *_Optional:_*  Enter a value for the ‘Connect Timeout’ to set a timeout for establishing a connection. (A value of zero indicates no timeout.)
+
+. *_Optional:_*  Enter a value for the ‘Read Timeout’ to set a timeout for reading from an existing connection. (A value of zero indicates no timeout.)
++
+. *_Optional:_* {multiTenantUser}
+
+. Press btn:[OK].
+
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceGoogleAnalytics3.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceGoogleAnalytics4.png[]
++
+In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
+
+After you have created a connection to the database, you can proceed to define a data set. See xref:dataworksheet:QueryGoogleAnalytics.adoc[].

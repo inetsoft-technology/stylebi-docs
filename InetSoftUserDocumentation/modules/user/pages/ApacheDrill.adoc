@@ -1,0 +1,46 @@
+= Apache Drill
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+IMPORTANT: {pluginDriverRequired}
+
+include::partial$dataSourceUserIntro.adoc[]
+
+. Select the ‘Apache Drill’ data source, and press btn:[Create]. This opens the data source definition screen.
+
++
+image:dataSourceNewApacheDrill2.png[]
+
+. In the ‘Name’ field, enter a label for this database connection.
+
+. From the ‘Database Type’ menu, select ‘Custom’ (if not already selected).
+
+. Enter the name of the driver class in the ‘Driver Class’ field. The name of the driver class is usually provided by the driver vendor.
+
+. Enter the ‘JDBC URL’ that should be used to connect to the database, which has the following form. (You can obtain this from the database administrator.)
+
+ jdbc:drill:zk=<zk name>[:<port>]
+
+include::partial$connectionTestQuery.adoc[]
+
+. Enter the additional required connection information for your database, such as login credentials. You can obtain this information from your database administrator.
+
+include::user:partial$JDBCCommonWeb.adoc[]
+
+include::user:partial$testConnection.adoc[]
+
+include::partial$hikariConfig.adoc[]
+
+. Press btn:[OK].
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceApacheDrill2.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceApacheDrill3.png[]
++
+include::user:partial$dataSourceFinalSteps.adoc[]

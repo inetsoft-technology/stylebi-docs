@@ -1,0 +1,36 @@
+= CALC.countn(array)
+:navtitle: CALC.countn()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Counts the number of numeric elements in array.
+
+== Parameters
+array::			Array of numeric or non-numeric values
+
+
+
+== Example
+[source,javascript]
+----
+CALC.countn(['asd',true,3,2,4,5,6]);  // returns 5
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.countn(TableView1.table['Col1'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.countn(Sales['Col1']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

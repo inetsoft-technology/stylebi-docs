@@ -1,0 +1,47 @@
+= Math.cos(number)
+:navtitle: Math.cos()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_cos.adoc[] for the preferred version from the CALC library.
+====
+
+
+
+
+Return the cosine (in radians) of a number. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos[Math.cos()] method, and can be used with or without the `Math` qualifier, `cos()` or `Math.cos()`.
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+cos(pi());  // returns -1.0
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+cos(field['Angle'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+cos(Slider1.selectedObject)
+cos(parameter.Angle)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

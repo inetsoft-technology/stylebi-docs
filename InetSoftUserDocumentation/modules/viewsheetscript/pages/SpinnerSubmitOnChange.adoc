@@ -1,0 +1,45 @@
+= submitOnChange
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+
+
+
+
+Specifies that user selections should be submitted immediately to the server and the Dashboard refreshed with updated data (default). When this feature is disabled, user selections are not submitted until the user explicitly preforms a submit operation. (See xref:viewsheet:DynamicallySetProperties.adoc[] and xref:viewsheet:SubmitButtonProperties.adoc[] for more information.)
+
+
+
+
+
+== Type
+Boolean::	`true`: submit user selections immediately (default) +
+`false`: submit user selections on demand
+
+
+
+
+
+
+== Example
+[source,javascript]
+Spinner1.submitOnChange = false;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+submitOnChange              // unqualified
+Spinner1.submitOnChange     // qualified
+
+{secondForm}
+====
+
+

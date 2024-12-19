@@ -1,0 +1,78 @@
+= PolygonShapeFrame.setFill(Boolean)
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Specifies whether the polygonal elements should be filled.  You can also set this using the `bindingInfo.shapeFrame.fill`  property syntax in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+== Parameter
+Boolean:: `true`: fill polygon  +
+`false`: do not fill polygon
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Total"], ["NJ",200,30], ["NY",300,15],["PA",150,5]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var sizeframe = new StaticSizeFrame();
+sizeframe.setSize(10);
+var frame = new PolygonShapeFrame("Total"); //<2>
+frame.setFill(true); //<3>
+elem.setShapeFrame(frame); //<4>
+elem.setSizeFrame(sizeframe);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `PolygonShapeFrame` object.
+<3> Use `setFill` to fill the shapes.
+<4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:PolygonShapeFrame2SetFill.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ShapeFrame.adoc[].
+
+. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.shapeFrame = new PolygonShapeFrame;
+Chart1.bindingInfo.shapeFrame.fill = true;
+
+--
++
+image:commonscript:PolygonShapeFrameFill.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

@@ -1,0 +1,31 @@
+= panX
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+The number of pixels by which to pan a xref:viewsheet:MapChart.adoc[] in the horizontal direction. Positive values shift the map left, while negative values shift the map right.
+
+IMPORTANT: Setting the `panX` value  causes the map’s default UI pan controls to be *hidden*.
+
+== Type
+Integer
+
+
+
+== Example
+[source,javascript]
+Chart1.panX = -25;
+
+image:commonscript:panX.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+panX          // unqualified
+Chart1.panX   // qualified
+
+{secondForm}
+====

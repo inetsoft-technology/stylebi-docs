@@ -1,0 +1,43 @@
+= LinearScale.setScaleRange(range)
+:navtitle: LinearScale.setScaleRange()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+Specifies the calculation strategy for finding the scale range.  The corresponding “getter” function is `getScaleRange()`.
+
+== Parameter
+range::			a xref:ScaleRange.adoc[] object
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale("Quantity"); //<2>
+var elem = new IntervalElement("State", "Quantity");
+qscale.setScaleRange(new StackRange()); // adds 200+300 <3>
+graph.setScale("Quantity", qscale); //<4>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create the xref:LinearScale.adoc[] object.
+<3> Use `setScaleRange` to compute the scale range by stacking.
+<4> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+
+image:commonscript:LinearScaleSetRange.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

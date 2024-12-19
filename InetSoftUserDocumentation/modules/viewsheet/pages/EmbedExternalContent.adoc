@@ -1,0 +1,39 @@
+= Embed External Content
+%experimetal%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+xref:AddTextOrHTML.adoc[], to insert HTML markup containing an IFrame tag.
+====
+
+
+To embed external content within an automatically generated  IFrame, follow the steps below:
+
+. If necessary, create a new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+
+. From the *Toolbox* panel, drag a Text component into the Dashboard. (If you see the following ‘Layout Option’ dialog box, select ‘Move component here’ and press ‘OK’.)
++
+image:viewsheetExp51.png[]
+
+. Right-click the Text component and select ‘Properties’ to open the ‘Text Properties’ panel.
+
+. Select the ‘Embed as URL’ option.
++
+image:embedURL.png[]
+
+. In the ‘Text’ field, enter the URL that you want to display within the embedded IFrame, for example, `http://www.inetsoft.com`.
+
+. Press btn:[OK].
+
+. Drag the resize handles (or borders) of the Text component to make the Text component the size of the desired embedded content.
++
+image:embedURL2.png[]
+
+. Press the {buttonPreview} in the toolbar.
+
+Observe that the text you entered for the Text component (e.g., `http://www.inetsoft.com`) is used as the `src` attribute of an IFrame within the rendered Dashboard. The IFrame displays the desired embedded content at the same position and size of the Text component.
+
+image:embedURL3.png[]

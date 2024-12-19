@@ -1,0 +1,41 @@
+= CALC.year(date)
+:navtitle: CALC.year()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Returns the year corresponding to the given date. {CALCExcelFunctionPage}
+
+
+
+
+== Parameters
+date::			a Date object
+
+
+
+== Example
+[source,javascript]
+----
+CALC.year(new Date(2005,11,1)); // returns 2005
+
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.year(field['Order.Date'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.year(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

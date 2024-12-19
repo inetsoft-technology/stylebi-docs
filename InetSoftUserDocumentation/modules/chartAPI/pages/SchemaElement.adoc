@@ -1,0 +1,51 @@
+= SchemaElement
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+The `SchemaElement` object contains user-defined visual elements that can be added to the graph. To create a new `SchemaElement` object, call the `SchemaElement` constructor.
+
+[source,javascript]
+var elem = new SchemaElement("State", "Quantity");
+
+You can pass a set of field names (e.g., ‘State’, ‘Quantity’) to the constructor, or specify these later using the  xref:GraphElementAddDim.adoc[] and  xref:GraphElementAddVar.adoc[] methods.
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Hi","Upper","Median","Lower","Lo"],["NJ",200,180,150,120,100],
+["NJ",220,170,140,110,105],["NY",300,250,230, 150,80]]; //<1>
+graph = new EGraph();
+var elem = new SchemaElement(); //<2>
+elem.addDim("State");
+elem.addSchema("Hi","Upper","Median","Lower","Lo");
+elem.setPainter(new BoxPainter());
+graph.addElement(elem); //<3>
+
+
+--
+
+<1> {dataset}
+<2> Create the `SchemaElement` object.
+<3> Use xref:EGraph_addElement.adoc[] to add the `PointElement` to the Chart.
+
+
+image:commonscript:SchemaElement.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

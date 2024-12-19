@@ -1,0 +1,40 @@
+= bindingInfo.setPercentageType(col,type)
+:navtitle: bindingInfo.setPercentageType()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoGetPercentageType.adoc[]  to obtain the binding information.
+
+Specifies the basis for computing percentages, grand total or group total.
+
+
+
+== Parameter
+col::			Field for which to set percentage type
+type::			One of the following constants:
++
+[source,javascript]
+Chart.PERCENTAGE_OF_GRANDTOTAL
+Chart.PERCENTAGE_OF_GROUP
+Chart.PERCENTAGE_NONE
+
+
+
+
+
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.setPercentageType("Total", Chart.PERCENTAGE_OF_GROUP)
+
+--
+
+image:commonscript:setPercentageTypeGroup.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]

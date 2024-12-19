@@ -1,0 +1,36 @@
+= CALC.lower(string)
+:navtitle: CALC.lower()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Converts all uppercase characters in `string` to lowercase characters. This is generally the same as xref:StringObjectToLowerCase.adoc[]. {CALCExcelFunctionPage}
+
+== Parameters
+string::			A string to convert to lowercase
+
+
+== Example
+[source,javascript]
+----
+CALC.lower('abCdefgHIJ');  // returns abcdefghij
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.lower(field['Label'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.lower(parameter.Label)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

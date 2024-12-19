@@ -1,0 +1,42 @@
+= CALC.day(date)
+:navtitle: CALC.day()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Returns the day of the month corresponding to the Date object in parameter `date`.  {CALCExcelFunctionPage}
+
+== Parameters
+date::			a Date object
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+var today = new Date(); // returns Mon Jun 24 17:31:04 EDT 2024
+CALC.day(today); // returns 24
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.day(field['Order Date'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.day(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

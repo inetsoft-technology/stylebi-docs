@@ -1,0 +1,39 @@
+= labelVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+
+Specifies whether the Gauge displays a digital representation of the current reading. (This applies only to Gauge faces that support a digital display.)
+
+== Type
+Boolean::	`true`: display digital measure (default) +
+`false`: hide digital display
+
+
+
+
+
+== Example
+[source,javascript]
+Gauge1.labelVisible = false;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+labelVisible           // unqualified
+Gauge1.labelVisible    // qualified
+
+{secondForm}
+====
+
+

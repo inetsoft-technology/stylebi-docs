@@ -1,0 +1,46 @@
+= CALC.sumx2py2(array1, array2)
+:navtitle: CALC.sumx2py2()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the sum of the sum of squares of corresponding values in two arrays. For arrays `[a1,a2,a3,...,an]` and `[b1,b2,b3,...,bn]`, the result gives
+
+stem:[(a_1^2+b_1^2) + (a_2^2+b_2^2) + (a_3^2+b_3^2) + ... + (a_n^2+b_n^2)]
+
+{CALCExcelFunctionPage}
+
+
+
+
+== Parameters
+array1::				An array of values `[a1,a2,...,an]`
+array2::				An array of values `[b1,b2,...,bn]`
+
+
+
+== Example
+[source,javascript]
+----
+CALC.sumx2py2([2,3,9,1,8,7,5],[6,5,11,7,5,4,4]);  // returns 521.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.sumx2py2(TableView1.table['Col1'], TableView1.table['Col2'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.sumx2py2(Sales['Col1'], Sales['Col2'])
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,69 @@
+= PlotSpec.setXMax(value)
+:navtitle: PlotSpec.setXMax()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the X-axis value at which to place the right edge of the background image.  The corresponding “getter” function is `getXMax()`.
+
+== Parameter
+value::			A number
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["Q1","Q2"], [300,200], [500,300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("Q1", "Q2");
+elem.setHint(GraphElement.HINT_ALPHA,.8);
+var sscale = new LinearScale("Q1");
+var qscale = new LinearScale("Q2");
+var coord = new RectCoord(sscale,qscale);
+var spec = new PlotSpec(); //<2>
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+spec.setBackgroundImage(logo); //<3>
+spec.setYMax(150);
+spec.setYMin(100);
+spec.setXMax(400); //<4>
+spec.setXMin(100);
+coord.setPlotSpec(spec); //<5>
+graph.setCoordinate(coord);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:PlotSpec.adoc[] object.
+<3> Use xref:PlotSpec_setBackgroundImage.adoc[]  to assign a background image to plot area.
+<4> Use `setXMax()` to set the right edge X position for background image.
+<5> Use xref:CoordinateSetPlotSpec.adoc[]  to assign the `PlotSpec` to the `Coordinate`.
+
+image:commonscript:PlotSpecSetXMax.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] {circle1} and xref:chartAPI:CoordinateGetPlotSpec.adoc[] {circle2} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:PlotSpec.adoc[]. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); // <1>
+var spec = coord.getPlotSpec(); //<2>
+// Compact syntax: var spec = graph.getCoordinate().getPlotSpec();
+
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+spec.setBackgroundImage(logo);
+spec.setYMax(30000);
+spec.setYMin(10000);
+spec.setXMax(20);
+spec.setXMin(15);
+
+--
+=====

@@ -1,0 +1,38 @@
+= submitOnChange
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:CalendarProperties.adoc[] for more information on user selection editing.
+
+
+
+
+
+
+Specifies that user selections should be submitted immediately to the server and the Dashboard refreshed with updated data (default). When this feature is disabled, user selections are not submitted until the user explicitly preforms a submit operation. (See xref:viewsheet:DynamicallySetProperties.adoc[] and xref:viewsheet:SubmitButtonProperties.adoc[] for more information.)
+
+== Type
+Boolean:: `true`: submit user selections immediately +
+`false`: submit user selections on demand
+
+
+
+
+
+== Example
+[source,javascript]
+Calendar1.submitOnChange = false;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+submitOnChange               // unqualified
+Calendar1.submitOnChange     // qualified
+
+{secondForm}
+====
+
+

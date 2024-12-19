@@ -1,0 +1,50 @@
+= CALC.weekday(date [,number])
+:navtitle: CALC.weekday()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns an integer representing the day of the week corresponding to the specified `date`.  {CALCExcelFunctionPage}
+
+
+
+
+== Parameters
+date::			Date object
+number:: Optional  code to specify starting index: +
+[square]
+* *1*: Returns the day as a number representing Sunday (1) through Saturday (7). This is the default. +
+* *2*: Returns the day as a number representing Monday (1) through Sunday (7). +
+* *3*: Returns the day as a number representing Monday (0) through Sunday (6).
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.weekday(new Date(2006,0,18),2);  // returns 3 (Wednesday)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.weekday(field['Order.Date'],2)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.weekday(RangeSlider1.selectedObjects[0],2)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,36 @@
+= Change Images with Script
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheetscript:partial$scriptAccessDashboardData.adoc[]
+
+You can dynamically set the image file (GIF, JPG, etc.) of an image component using a variable or an expression. Follow the steps below:
+
+. Add an image element into the Dashboard. Right-click and select the ‘Properties’ option. This opens the ‘Image Properties’ panel.  (See xref:viewsheet:ImageProperties.adoc[].)
+
+. Select the *Advanced* tab and select ‘Dynamic Image Selection’.
+
+. Press the {buttonValueType} and select ‘Expression’ or ‘Variable’, depending on the mechanism you wish to use to set the image property.
++
+image:viewsheet:Advanced dynamic image.png[]
++
+[square]
+* If you chose ‘Expression’, press the {buttonEdit} and use the Formula Editor to add a script. A typical script might take the following form.  See xref:viewsheet:DynamicallySetProperties.adoc#ControlPropertieswithExpression[Control Properties with Expression] for more details.
++
+[source,javascript]
+if(condition) {
+   'image1.gif';
+}
+else {
+   'image2.gif';
+}
+
+
+* If you chose '`Variable`',  select the Form component that will provide the name of the image.  See xref:viewsheet:DynamicallySetProperties.adoc#ControlPropertieswithFormComponents[Control Properties with Form Components] for more information.
++
+TIP: You can specify an image by the uploaded image name (e.g., `'image1.gif'`), a resource path on the server (e.g., `'/library/image1.gif'`), or a URL (e.g., https://www.google.com/images/logos/ps_logo2.png).
+
+
+. Press btn:[OK] to close the Formula Editor, and then press the btn:[OK] to close the ‘Image Properties’ panel.
+
+The Image component now displays the specified image file.

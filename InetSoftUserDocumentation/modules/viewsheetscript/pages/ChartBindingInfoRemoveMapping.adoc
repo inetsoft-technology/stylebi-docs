@@ -1,0 +1,38 @@
+= bindingInfo.getMappings(col)
+:navtitle: bindingInfo.getMappings()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheetscript:ChartBindingInfoAddMapping.adoc[] to set  the  mapping.
+* xref:viewsheetscript:ChartBindingInfoRemoveMapping.adoc[] to remove a currently specified mapping.
+====
+
+
+Returns the mappings that exist between the values in field `col` and defined geographical codes (as a two-dimensional string array).
+
+
+== Parameter
+col::			Field whose mappings should be returned
+
+
+
+
+
+== Example
+Display mappings in column 'city':
+[source,javascript]
+--
+var mapArr = Chart1.bindingInfo.getMappings('city');
+for(i=0 ; i<mapArr.length ; i++) {
+  alert('Value "' + mapArr[i][0] + '" is mapped to ' + mapArr[i][1] + '.');
+}
+--
+
+image:commonscript:getMappingsAlert.png[]
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

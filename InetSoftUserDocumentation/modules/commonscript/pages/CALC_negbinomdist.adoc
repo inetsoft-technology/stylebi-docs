@@ -1,0 +1,44 @@
+= CALC.negbinomdist(number_f, number_s, probability_s)
+:navtitle: CALC.negbinomdist()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the negative binomial distribution, the probability that there will be `number_f` failures before the `number_s`-th success in a series of independent Bernoulli trials, when the constant probability of a success is `probability_s`. {CALCExcelFunctionPage}
+
+== Parameters
+number_s::			Number of successes in trials
+number_f::			Number of failures preceding the `number_s`-th success
+probability_s::			Probability of success on each trial
+
+
+
+
+
+== Example
+Probability that there will be 10 failures preceding the fifth success in a series of trials having 25% chance of success on any given trial:
+
+
+[source,javascript]
+----
+CALC.negbinomdist(10, 5, 0.25);
+// returns 0.05504866037517786 (approximately 5.5%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.negbinomdist(field['Failures'], field['SuccessNum'], 0.25)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.negbinomdist(Slider1.selectedObject, Slider2.selectedObject, 0.25)
+CALC.hypgeomdist(parameter.Failures, parameter.SuccessNum, 0.25)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

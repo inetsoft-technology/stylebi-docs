@@ -1,0 +1,239 @@
+= Manage Logical Models
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Manage logical models in script by using the `:logicalmodel` or equivalent `:lm` command. See xref:user:CreateLogicalModel.adoc[] for  information about logical models in the User Portal.
+
+include::partial$adminConsoleOptionalParams.adoc[]
+
+
+== List Model Attributes
+The `list-columns` action lists the attributes of a model. {connectRepositoryNote}
+
+
+=== Parameters
+datasource:: Data source for which to list views
+
+physicalmodel:: Physical view for logical model
+
+logicalmodel:: Logical model wor which to  list attributes
+
+parentmodel:: Base logical model for an extended model.  (See xref:user:ExtendLogicalModel.adoc[] for more information about extended models.) (optional)
+
+connection::  Connection for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Examples
+[source,groovy]
+--
+// List attributes of logical model clm1
+:lm list-columns 'Examples/ModelTest' "Order View" clm1
+
+// List attributes of default connection logical model for organization0
+:lm list-columns "Oracle" 'pv' '(Default Connection)' --parentmodel lm1 --organizationid organization0
+--
+
+
+== List Available Logical Models
+The `list-models` action lists the available logical models. {connectRepositoryNote}
+
+=== Parameters
+datasource:: Data source for which to list logical model (optional)
+
+physicalmodel:: Physical view for which to list extended physical views (optional)
+
+logicalmodel:: Logical model to list (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+=== Examples
+[source,groovy]
+--
+// List all logical models in environment
+:lm list-models
+
+// List logical model named Order Model
+:lm list-models 'Order Model'
+
+// List all logical models in organization0
+:lm list-models --organizationid=organization0
+
+// List extended views for physical view pv_org1 in organization1
+:pm list-models --physicalmodel=pv_org1 --organizationid organization1
+
+// List logical models for Orders data source
+:lm list-models 'Examples/Orders'
+
+// List logical models for Order View physical view on Orders data source
+:lm list-models 'Examples/Orders' 'Order View'
+
+// List logical models for default connection of Order View physical view on Orders data source
+:lm list-models 'Examples/Orders' 'Order View' '(Default Connection)'
+--
+
+
+== Get Logical Model
+The `get-model` action returns a handle to the  logical model. {connectRepositoryNote}
+
+=== Parameters
+
+datasource:: The datasource name for logical model
+
+physicalmodel:: Physical view for on which logical model is based (optional)
+
+logicalmodel:: Logical model to get (optional)
+
+parentmodel:: Base logical model for an extended model.  (See xref:user:ExtendLogicalModel.adoc[] for more information about extended models.) (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Examples
+[source,groovy]
+--
+// Get a handle to Order Model, defined on physical view Order View for Orders data source
+:lm get-model 'Examples/Orders' 'Order View' 'Order Model'
+
+// Get extended model for base model lm for organization0
+:lm get-model 'Oracle' 'pv' '(Default Connection)' --parentmodel lm --organizationid organization0
+
+--
+
+
+
+== Create Logical Model
+The `create-model` action creates a  physical view. {connectRepositoryNote}
+
+=== Parameters
+
+datasource:: Data source on which new logical model should be defined
+
+physicalmodel:: Physical view  on which logical model is based (optional)
+
+model:: Name of logical model
+
+parentModel:: Name of base logical model that is being extended.
+
+folder:: Folder to contain  logical model (optional)
+
+description:: Description for logical model (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Examples
+[source,groovy]
+--
+import inetsoft.shell.dsl.LogicalModelBuilder
+def model= new LogicalModelBuilder().with {
+    name("(Default Connection)")
+    physicalModel("Order View")
+    parent("lm")
+    connection(null)
+    description("des")
+    logicalModel
+}
+
+
+// Create new logical model named Default Connection extending base model lm
+:lm create-model "Examples/Orders" "Order View" model --parentmodel "lm"
+
+--
+
+
+
+
+
+
+== Rename Logical Model
+The `rename-model` action renames a  logical model. {connectRepositoryNote}
+
+=== Parameters
+datasource:: Data source on which logical model is defined
+
+oldname:: Name of logical model
+newname:: New name of logical model
+
+folder:: Folder to contain  logical model (optional)
+
+description:: Description for logical mmodel (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Examples
+[source,groovy]
+--
+
+// Rename lm2 to lm3
+:lm rename-model "Oracle" "lm2" "lm3"
+
+// Rename lm2 to lm3 in folder f1 for organization0
+:lm rename-model "Oracle" "lm2" "lm3" --folder=f1 --description this is desc --organizationid organization0
+
+--
+
+== Update Logical Model
+The `update-model` action changes properties the logical model. {connectRepositoryNote}
+
+=== Parameters
+
+datasource:: Data source on which logical model is defined
+
+name:: Name of logical model
+model:: New name of logical model
+
+folder:: Folder to contain  logical model (optional)
+
+parentmodel:: Name of for base logical model (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+
+=== Examples
+[source,groovy]
+--
+// Update logical model name from 'lm' to 'lm1'
+import inetsoft.shell.dsl.LogicalModelBuilder
+def model = new LogicalModelBuilder().with {
+    name("lm1")
+    physicalModel("Order View")
+    parent(null)
+    connection(null)
+    description("des")
+    logicalModel
+}
+
+:lm update-model "Examples/Orders" "lm" model
+--
+
+
+
+
+== Remove Logical Model
+The `remove-model` action deletes a  physical view. {connectRepositoryNote}
+
+=== Parameters
+
+
+datasource:: Data source on which  physical view is defined
+
+logicalmodel:: Name of physical view
+
+folder:: Folder  containing  physical view (optional)
+
+parentModel:: Name of base physical view for extended physical view. (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Examples
+[source,groovy]
+--
+// Remove base logical model lm
+:lm remove-model 'Examples/Orders' 'lm'
+
+// Remove logical model Default Connection  having parent lm3 for organization0
+:lm remove-model "Oracle" "(Default Connection)"  --folder f1 --parentmodel lm3 --organizationid organization0
+--
+

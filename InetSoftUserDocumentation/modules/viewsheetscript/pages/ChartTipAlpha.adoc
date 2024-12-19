@@ -1,0 +1,36 @@
+= tipAlpha
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+
+Sets the transparency (alpha) of the data tip for the Chart. A *data tip* is a graphical form of tooltip that  displays a specified Dashboard component  when the user hovers the mouse over a group on the Chart. See xref:viewsheet:AddTipsToChart.adoc[] for more details.
+
+== Type
+Integer::			Value between 0 (transparent) and 100 (opaque)
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.tipAlpha = 35; // mostly transparent
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+tipAlpha         // unqualified
+Chart1.tipAlpha  // qualified
+
+{secondForm}
+====
+
+

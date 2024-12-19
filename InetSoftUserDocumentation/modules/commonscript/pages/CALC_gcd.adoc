@@ -1,0 +1,39 @@
+= CALC.gcd(array)
+:navtitle: CALC.gcd()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the greatest common divisor of an array of non-negative numbers. Non-integer values are truncated. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of non-negative numbers for which to find GCD
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.gcd([24, 32, 16, 12]); // returns 4
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.gcd(TableView1.table['Quantity'])
+----
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.gcd(Sales['Quantity']);
+----
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

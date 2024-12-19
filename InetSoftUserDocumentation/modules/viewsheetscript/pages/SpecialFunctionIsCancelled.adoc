@@ -1,0 +1,16 @@
+= isCancelled()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns `true` if the user has pressed the btn:[Cancel] button during Dashboard loading, otherwise returns `false`.
+
+This function allows a long-running script to be terminated by a user btn:[Cancel] action. If a script does not check the `isCancelled` status and self-terminate, the Dashboard cannot be canceled by user action until the script has run to completion.
+
+== Example
+[source,javascript]
+for(var i = 0; i < 100000 && !isCancelled(); i++) {
+  // statement to execute
+  // statement to execute
+  //...
+  // statement to execute
+}

@@ -1,0 +1,29 @@
+= toString([radix])
+:navtitle: toString()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Convert a number to a string.
+
+== Parameters
+radix:: The number’s base (optional): An integer between 2 and 36. Values outside this range return `null`.
+
+
+
+== Examples
+[source,javascript]
+var num = 5;
+num.toString(2);   // returns 101 (binary representation)
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Num'].toString(2);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Num.toString(2);
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,325 @@
+= Manage Scheduled Tasks
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Monitor and manage scheduled tasks using the `:schedule` or equivalent `:sch` command.  This command has actions to add, edit, run, and remove schedule tasks, as well as actions to get the current status of schedule tasks.
+
+
+include::partial$runCommand.adoc[]
+
+include::partial$adminConsoleOptionalParams.adoc[]
+
+
+[#ListScheduledTasks]
+== List Scheduled Tasks
+The `list` action returns a list of all schedule tasks. {connectRepositoryNote}
+
+=== Parameter
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+=== Example
+ :schedule list --organizationid organization0
+
+== Create a New Scheduled Task
+The `add` action creates a new scheduled task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task to create.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+enabled:: `true` if the task should be enabled upon creation.
+conditions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.sree.web.api.schedule.ScheduleCondition] instances. The `ScheduleCondition` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+actions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.sree.web.api.schedule.ScheduleAction] instances. The `ScheduleAction` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Schedule
+import java.time.OffsetDateTime
+import inetsoft.sree.security.IdentityID
+conditions = [
+  Schedule.timeCondition {
+    type 'AT'
+    date OffsetDateTime.parse('2019-01-01T00:00:00Z')
+  },
+  Schedule.completionCondition {
+    task 'Other Task'
+  }
+]
+ps = [state: 'NJ', startDate: '2019-01-01 00:00:00']
+ems = [ 'joe@inetsoft.com', 'annie@inetsoft.com' ]
+adminUser = new IdentityID("admin", "host-org")
+actions = [
+  Schedule.viewsheetAction {
+    viewsheet '1^128^__NULL__^Examples/Census^host-org'
+    bookmarkName '(Home)'
+    bookmarkNames(['(Home)'])
+    bookmarkUsers([adminUser])
+    bookmarkType 'all_share'
+    bookmarkTypes(['all_share'])
+    emails ems
+    sender 'reportserver@inetsoft.com'
+    format 'PDF'
+    subject 'Monthly Earnings'
+    message 'Please review and take the necessary actions prior to month end.'
+  }
+]
+:schedule add Task --organizationid organization0 true conditions actions
+
+== Get Information About  Scheduled Task
+The `get` action returns information about an existing scheduled task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:schedule get 'My Task' admin --organizationid organization0
+
+== Modify Scheduled Task Properties
+The `update` action allows you to modify the properties of an existing scheduled task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+task:: The name of a variable that contains an https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleTask.html[inetsoft.web.api.schedule.ScheduleTask] instance. The `ScheduleTask` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+
+
+=== Example
+.Rename  “My Task”  to “New Name” and disable it.
+[source,groovy]
+import inetsoft.shell.dsl.Schedule
+import inetsoft.sree.security.IdentityID
+def ownerID = new IdentityID("admin", "host-org")
+def task1 = Schedule.task {
+  name 'New Name'
+  owner ownerID
+  description 'test update'
+  enabled false
+}
+:sch update 'My Task' admin --organizationid organization0 task1
+
+
+== Remove Scheduled Task
+The `remove` action deletes an existing scheduled task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:schedule remove 'My Task' admin --organizationid organization0
+
+[#GetStatusScheduledTask]
+== Get  Status of Scheduled Task
+The  `status` action returns the status of a scheduled task. This can also be obtained from the `list` action above. (See xref:#ListScheduledTasks[].) {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:schedule status 'My Task' admin --organizationid organization0
+
+== Run  Scheduled Task
+The `run` action executes a scheduled task. {connectRepositoryNote} After you run the task, use the `status` action to determine whether the task is complete. (See xref:#GetStatusScheduledTask[].)
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:schedule run 'My Task' admin --organizationid organization0
+
+== List Scheduled Task Conditions
+The  `list-conditions` action returns the conditions assigned for a task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:schedule list-conditions 'My Task' admin --organizationid organization0
+
+== Add New Condition to Scheduled Task
+The `add-condition` action applies a new condition to a schedule task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+condition:: The name of a variable that contains a https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the condition to be added. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Schedule
+import java.time.OffsetDateTime
+def condition = Schedule.timeCondition {
+  type 'AT'
+  date OffsetDateTime.parse('2019-01-01T00:00:00Z')
+}
+:schedule add-condition 'My Task' admin --organizationid organization0 condition
+
+
+
+== Get Information About Scheduled Task Condition
+The `get-condition` action returns information about an existing task condition. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+index:: The zero-based index of the condition.
+
+=== Example
+[source,groovy]
+:schedule get-condition 'My Task' admin --organizationid organization0 0
+
+== Modify  Scheduled Task Condition
+The `update-condition` action allows you to modify an existing condition of a schedule task.  {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+index:: The zero-based index of the condition.
+condition:: The name of a variable that contains an https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the updated condition properties. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Schedule
+import java.time.OffsetDateTime
+def condition = Schedule.timeCondition {
+  type 'AT'
+  date OffsetDateTime.parse('2019-01-01T00:00:00Z')
+}
+:schedule update-condition 'My Task' admin --organizationid organization0 0 condition
+
+
+== Remove  Condition from Schedule Task
+The `remove-condition` action removes an existing condition from a schedule task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+index:: The zero-based index of the condition.
+
+=== Example
+[source,groovy]
+:schedule remove-condition 'My Task' admin --organizationid organization0 1
+
+== List  Actions of Scheduled Task
+The  `list-actions` action returns the actions performed by a scheduled task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:schedule list-actions 'My Task' admin --organizationid organization0
+
+== Add  New Action to Scheduled Task
+The `add-action` action allows you to add a new action to a schedule task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+action:: The name of a variable that contains an https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.web.api.schedule.ScheduleAction]  object that defines the updated action properties. The `ScheduleAction` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+
+=== Example
+[source,groovy]
+import inetsoft.sree.security.IdentityID
+import inetsoft.shell.dsl.Schedule
+adminUser = new IdentityID("admin", "host-org")
+def ems = ['sarapeng@inetsoft.com']
+def action2 = Schedule.viewsheetAction {
+viewsheet '1^128^__NULL__^Examples/Census^host-org'
+bookmarkName '(Home)'
+bookmarkNames(['(Home)'])
+bookmarkUsers([adminUser])
+bookmarkType 'all_share'
+bookmarkTypes(['all_share'])
+emails ems
+sender 'reportserver@inetsoft.com'
+format 'EXCEL'
+subject 'updated'
+message 'updated'
+}
+:sch add-action 'My Task' admin --organizationid organization0 action2
+
+
+
+== Get Information About Scheduled Task Action
+The `get-action` action returns information about an existing action. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+index:: The zero-based index of the action.
+
+=== Example
+[source,groovy]
+:schedule get-action 'My Task' admin --organizationid organization0 0
+
+== Modify  Scheduled Task Action
+The `update-action` action allows you to modify an existing action of a schedule task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+index:: The zero-based index of the action.
+action:: The name of a variable that contains an https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.web.api.schedule.ScheduleAction] object that defines the updated condition properties. The `ScheduleAction` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+
+=== Example
+[source,groovy]
+import inetsoft.sree.security.IdentityID
+import inetsoft.shell.dsl.Schedule
+adminUser = new IdentityID("admin", "host-org")
+def ems = ['user1@inetsoft.com']
+def action2 = Schedule.viewsheetAction {
+  viewsheet '1^128^__NULL__^Examples/Census^host-org'
+  bookmarkName '(Home)'
+  bookmarkNames(['(Home)'])
+  bookmarkUsers([adminUser])
+  bookmarkType 'all_share'
+  bookmarkTypes(['all_share'])
+  emails ems
+  sender 'reportserver@inetsoft.com'
+  format 'EXCEL'
+  subject 'updated'
+  message 'updated'
+}
+:schedule update-action 'My Task' admin --organizationid organization0 0 action2
+
+
+
+== Remove  Action from Scheduled Task
+The `remove-action` action removes an existing action from a schedule task. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the task.
+owner:: The owner of the task
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+index:: The zero-based index of the action.
+
+=== Example
+[source,groovy]
+:schedule remove-action 'My Task' admin --organizationid organization0 1
+

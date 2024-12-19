@@ -1,0 +1,38 @@
+= createSunburstGraph(colorDim, sizeCol, treeDims, xdims, ydims)
+:navtitle: createSunburstGraph()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+The `createSunburstGraph()` function generates a xref:viewsheet:SunburstChart.adoc[].
+
+
+
+== Parameters
+colorDim::			Name of dimension column whose values should be represented by color.
+sizeCol::	Name of measure column whose values should determine the box size.
+treeDims::			Array of dimension column names from which to construct the tree hierarchy.
+xdims::	 Array of dimensions (from among `colorDim` and `treeDims`) to be used to as the X-axis dimension.
+ydims:: Array of dimensions (from among `colorDim` and `treeDims`) to be used to as the Y-axis dimension.
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = viewsheet['Query1']; //<1>
+graph = createSunburstGraph("state", "price", ["state", "city", "product_name"]) //<2>
+--
+<1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
+<2> Create the sunburst chart.
++
+image:viewsheet:sunburst1.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

@@ -1,0 +1,37 @@
+= stackMeasures
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+For a *stacked* chart (press {buttonSelectChartStyle} and select the ‘Stack’ option) in *single-graph* display (press the {buttonSwitchSingleGraph}), this displays multiple measures in “stacked” format rather than side-by-side.
+
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.stackMeasures = false;
+
+image:commonscript:stackMeasures2.png[]
+
+[source,javascript]
+Chart1.stackMeasures = true;
+
+image:commonscript:stackMeasures.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+stackMeasures          // unqualified
+Chart1.stackMeasures   // qualified
+
+{secondForm}
+====

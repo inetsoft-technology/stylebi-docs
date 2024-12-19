@@ -1,0 +1,12 @@
+= LegendSpec
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:VisualFrame.adoc[] to create groupings that generate a legend on the chart.
+* xref:chartAPI:EGraph_setLegendLayout.adoc[] to place the legend in a predefined location.
+====
+
+
+
+The `LegendSpec` object contains legend formatting information. The topics in this section preset the properties of the `LegendSpec` object.

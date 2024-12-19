@@ -1,0 +1,38 @@
+= toolTip
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies a tooltip to be displayed on Chart elements. You can use placeholders `pass:[{0}]`, `pass:[{1}]`, `pass:[{2}]`, etc., to insert data values from the corresponding fields into the tooltip text, and format the inserted data using number or date formats. (See xref:viewsheet:DataFormat.adoc[] for more details on format strings.) You can additionally use HTML markup such as `<i>`, `<b>`, `<h1>`, `<u>`, `<small>`, and `<br>`    to format the tooltip contents.
+
+
+
+
+
+
+
+
+== Type
+String::			The tooltip to display
+
+
+
+
+== Example
+[source,javascript]
+Chart1.toolTip = "<b>Company</b>: {0} <br><b>Total Sales</b>: {1,number,$##,###.00}";
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+toolTip         // unqualified
+Chart1.toolTip  // qualified
+
+{secondForm}
+====
+
+

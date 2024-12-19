@@ -1,0 +1,88 @@
+= CircularColorFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+The `CircularColorFrame` object contains a continuous color frame that returns gradations from the full spectrum. To create a `CircularColorFrame` object, call the `CircularColorFrame` constructor.
+
+[source,javascript]
+var frame = new CircularColorFrame('Quantity');
+
+You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:viewsheetscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"],["NJ",200],["NY",300],["PA",50],["CT",100]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CircularColorFrame(); //<2>
+frame.setField("Quantity"); //<3>
+elem.setColorFrame(frame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:CircularColorFrame.adoc[] object.
+<3> Use `setField` to specify the field for the `CircularColorFrame`.
+<4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
+
+image:commonscript:CircularColorFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new CircularColorFrame();
+frame.setField("Quantity");
+elem.setColorFrame(frame);
+
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new CircularColorFrame;
+
+
+--
+
++
+image:commonscript:BrightnessColorFrame1.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

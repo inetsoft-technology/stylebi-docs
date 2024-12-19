@@ -1,0 +1,38 @@
+= CALC.average(array)
+:navtitle: CALC.average()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:CALC_averagea.adoc[] to process text and Boolean values in addition to numerical values.
+
+Returns the average (arithmetic mean) of the data in array. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of real values to average
+
+
+== Example
+[source,javascript]
+----
+CALC.average([4,5,6,7,5,4,3]);  // returns 4.857142857142857
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.average(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of  ‘Sales’ data block in Data Worksheet:
+CALC.average(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

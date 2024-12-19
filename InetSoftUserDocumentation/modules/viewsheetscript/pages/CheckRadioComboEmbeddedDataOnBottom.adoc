@@ -1,0 +1,37 @@
+= embeddedDataOnBottom
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for  properties shared with other components.
+* xref:viewsheet:RadioCheckBoxComboProperties.adoc[]for more information about Form components.
+====
+
+
+
+Forces items set via the ‘Embedded List Values’ dialog box to the end of the list (i.e., following any query-retrieved items).
+
+== Type
+Boolean:: `true`: place embedded items after query-retrieved items +
+`false`: integrate embedded items with query-retrieved items
+
+
+
+== Example
+[source,javascript]
+ComboBox1.embeddedDataOnBottom = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+embeddedDataOnBottom            // unqualified
+ComboBox1.embeddedDataOnBottom  // qualified
+
+{secondForm}
+====

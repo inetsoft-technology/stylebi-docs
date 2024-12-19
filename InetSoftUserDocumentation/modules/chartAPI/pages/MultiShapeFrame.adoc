@@ -1,0 +1,25 @@
+= MultiShapeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=created by]
+====
+[square]
+* xref:VineShapeFrame.adoc[]
+* xref:ThermoShapeFrame.adoc[]
+* xref:StarShapeFrame.adoc[]
+* xref:SunShapeFrame.adoc[]
+* xref:BarShapeFrame.adoc[]
+* xref:ProfileShapeFrame.adoc[]
+
+====
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+The `MultiShapeFrame` object contains the shape styles for visual chart objects on multiple dimensions.
+

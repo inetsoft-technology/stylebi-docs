@@ -1,0 +1,17 @@
+.Create a Compound Condition
+****
+[square]
+Insert a new clause into an existing condition:: In the ‘Conditions’ dialog box, click to select an existing condition.  Construct the new condition as described above. Select the desired connector, ‘and’ or ‘or’.  Press btn:[Insert]  to add the new condition  above the selected condition,  joining the two clauses with the chosen connector.
+
+Modify an existing condition:: In the ‘Conditions’ dialog box, click to  select the existing condition (clause) you wish to modify. Edit the condition as desired using the menus at the top of the dialog box. Press  btn:[Modify]  to make the change.
+
+Modify the connector between condition clauses:: In the ‘Conditions’ dialog box, select the connector, `[and]` or `[or]`, that you wish to change in the existing condition string. Choose the desired replacement connector using the ‘and’ and ‘or’ buttons at the top of the dialog box. Press  btn:[Modify]  to make the change.
+
+Elevate the priority of a connector:: In some cases you may need to specify that a particular condition clause evaluation should be performed before others (i.e., override the default order of operations). Select the connector, `[and]` or `[or]`, that you wish to evaluate first in the condition string. Press btn:[Indent]. The connector and its accompanying clauses are indented to indicate that they will be evaluated first. Indenting is equivalent to placing _parentheses_ around the specified clauses, and in general changes the meaning of the condition.
+
+Delete a condition clause:: In the ‘Conditions’ dialog box, select the existing condition (clause) you wish to delete. Press btn:[Delete]. To delete all conditions (clauses), press btn:[Clear].
+
+Change the position of a condition clause:: In the ‘Conditions’ dialog box, select the existing condition (clause) you wish to move. Press btn:[Up] or btn:[Down], as needed.
++
+NOTE: If the condition contains both ‘and’ and ‘or’ connectors, the reordering of clauses will in general change the meaning of the condition.
+****

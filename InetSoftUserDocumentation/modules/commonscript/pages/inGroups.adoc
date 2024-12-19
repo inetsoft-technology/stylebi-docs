@@ -1,0 +1,21 @@
+= inGroups(list [,others])
+:navtitle: inGroups()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+In a Freehand Table expression, returns `true` when the values in the list match any group cells in the context.
+
+== Parameter
+list::			An array of pairs. The first item of each pair is the group name, the second item is the column.
+others::			The label of the “Others” group.
+
+
+
+
+==  Example
+Sum the values in the ‘Total’ column where the group in the ‘Company’ column is "`AMG Logistics`"  and the group in the ‘Salesperson’ column is "`Annie`":
+
+[source,javascript]
+sum(data['Total?inGroups(["AMG Logistics", Company, "Annie", Salesperson])']);

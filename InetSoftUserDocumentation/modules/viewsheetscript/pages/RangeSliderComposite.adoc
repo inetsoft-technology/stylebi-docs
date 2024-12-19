@@ -1,0 +1,39 @@
+= composite
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:CommonProperties.adoc[] for properties shared with other components.
+====
+
+Specifies whether the Range Slider displays a single value or composite value. This is equivalent to selecting ‘Single Value’ or ‘Composite Value’ in the *Data* tab of the component ‘Properties’ dialog box.
+
+image:viewsheet:RangeSliderComposite.png[]
+
+
+
+
+== Type
+Boolean
+
+
+
+== Example
+[source,javascript]
+RangeSlider1.query = 'Sales';
+RangeSlider1.fields = ['Region','Category'];
+RangeSlider1.composite = true;
+RangeSlider1.rangeType = StyleConstant.STRING;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+composite                  // unqualified
+RangeSlider1.composite     // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,30 @@
+= foreground
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,  caption=See Also]
+xref:viewsheet:VisualFormat.adoc[] for more information about setting color.
+
+
+Specifies the foreground (text) color of the component.
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+
+== Example
+[source,javascript]
+foreground = 'red';
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+foreground               // unqualified
+Component1.foreground    // qualified
+
+{secondForm}
+====
+
+

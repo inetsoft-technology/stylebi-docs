@@ -1,0 +1,77 @@
+= LinearLineFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+The `LinearLineFrame` object contains a continuous line frame that returns varying line styles. To create a `LinearLineFrame` object, call the `LinearLineFrame` constructor.
+
+[source,javascript]
+var frame = new LinearLineFrame('Quantity');
+
+
+You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property.  You can also assign a LineFrame using the  xref:viewsheetscript:ChartBindingInfoLineFrame.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity","Total"], ["NJ",300,1000], ["NY",200,1500]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var lframe = new LinearLineFrame(); //<2>
+var sframe = new StaticSizeFrame();
+lframe.setField("Total"); //<3>
+sframe.setSize(10);
+elem.setLineFrame(lframe); //<4>
+elem.setSizeFrame(sframe);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `LinearLineFrame` object.
+<3> Use `setField` to specify the field for the `LinearLineFrame`.
+<4> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:LinearLineFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[#Example2]
+== Example 2
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:LineFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.lineFrame = new LinearLineFrame;
+
+--
+
++
+image:commonscript:LinearLineFrame_1.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

@@ -1,0 +1,60 @@
+= GraphElement.setSizeFrame(frame)
+:navtitle: GraphElement.setSizeFrame()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies the size of graphical elements. A xref:SizeFrame.adoc[] can size-code chart elements by value, or simply specify a static size.   The corresponding “getter” function is xref:GraphElementGetSizeFrame.adoc[].
+
+
+
+
+
+== Parameter
+frame:: A xref:SizeFrame.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","width"],["NJ",200,5],["NY",300,10],["PA",75,15]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity"); //<2>
+var frame = new LinearSizeFrame(); //<3>
+frame.setField("width");
+frame.setSmallest(10);
+frame.setLargest(50);
+frame.setMax(100);
+elem.setSizeFrame(frame); //<4>
+graph.addElement(elem);  //<5>
+--
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Create a `SizeFrame` object.
+<4> Use `setSizeFrame` to assign the `SizeFrame` to the `IntervalElement`.
+<5> Use `addElement` to add the `IntervalElement` to the Chart.
+
+
+image:commonscript:GraphElementsetSizeFrame.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getSizeFrame();
+frame.setSmallest(10);
+frame.setLargest(50);
+frame.setMax(100);
+--
+=====

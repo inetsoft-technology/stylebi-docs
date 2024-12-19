@@ -1,0 +1,32 @@
+= Date.getDay()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+JavaScript function to return the day of the week (with Sunday having index 0) corresponding to the Date object. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay[Date.getDay()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date(); // returns Thu Jun 20 14:55:21 EDT 2024 (example)
+d.getDay(); // returns 4.0
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getDay();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getDay();
+
+include::partial$readMoreCalcFieldTypes.adoc[]

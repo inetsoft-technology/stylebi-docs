@@ -1,0 +1,32 @@
+= axis.logarithmic
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Sets logarithmic scaling for a measure axis.
+
+== Type
+Boolean
+
+
+
+== Example
+[source,javascript]
+Chart1.axis['Sum(Total)'].logarithmic = true
+
+image:commonscript:measureLogarithmic.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].logarithmic             // unqualified
+Chart1.axis['...'].logarithmic      // qualified
+
+{secondForm}
+====
+

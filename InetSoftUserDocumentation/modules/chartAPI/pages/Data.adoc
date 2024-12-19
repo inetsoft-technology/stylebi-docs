@@ -1,0 +1,34 @@
+= data
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:CreateChartwithChartAPI.adoc[] for an example using xref:commonscript:runQuery.adoc[runQuery].
+* xref:chartAPI:Dataset.adoc[] for information on setting the Chart `dataset`.
+====
+
+The Chart `data` object is a two-dimensional array containing the aggregate data displayed on the Chart. You can use standard array notation, `data[i][j]`, to access the data value in row `i` and column `j`. Use `data.length` and `data.size`, respectively, to obtain the number of X-axis labels and number of datasets. For an example, see xref:chartAPI:AccessChartData.adoc[].
+
+TIP: You can also use the Chart’s `query` property to set a query in *onRefresh* script . See xref:chartAPI:ModifyChartDataBinding.adoc[] for an example.
+
+You can assign the results of  xref:commonscript:runQuery.adoc[runQuery] to the `data` object to set the Chart dataset:
+
+[source,javascript]
+data = runQuery("ws:global:Examples/AllSales");
+
+The `data` object also supports formula table syntax such as the following:
+
+[source,javascript]
+--
+// Data in aggregated measure/column 'Sum(Sales)'
+data["Sum(Sales)"]
+
+// Data in 'Sum(Sales)' for state of NJ
+data["Sum(Sales)@State:NJ"]
+
+// Data in 'Sum(Sales)' where the value exceeds 1000000
+data["State?Sum(Sales) > 1000000"]
+--

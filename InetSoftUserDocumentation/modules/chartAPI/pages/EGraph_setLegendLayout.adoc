@@ -1,0 +1,51 @@
+= EGraph.setLegendLayout(value)
+:navtitle: EGraph.setLegendLayout()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies the Chart legend’s position.  The corresponding “getter” function is xref:chartAPI:EGraph_getLegendLayout.adoc[].
+
+
+
+
+
+== Paramater
+value:: One of the following constants:
++
+include::viewsheetscript:partial$legendPosition.adoc[]
+
+== Example
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CategoricalColorFrame();
+frame.setField("State");
+elem.setColorFrame(frame);
+graph.setLegendLayout(Chart.BOTTOM); <1>
+graph.addElement(elem);
+--
+<1> Set the legend layout.
+
+image:commonscript:EGraphaddsetLegendLayout.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To use the property on a Chart that was previously created with the Chart Editor, simply call the function. For example:
+
+[source,javascript]
+--
+graph.setLegendLayout(Chart.BOTTOM);
+--
+=====
+
+
+

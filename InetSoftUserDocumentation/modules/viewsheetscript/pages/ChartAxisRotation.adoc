@@ -1,0 +1,37 @@
+= axis.rotation
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+
+
+Sets the rotation of the dimension or measure axis labels.
+
+
+
+== Type
+Number (degrees)
+
+
+
+== Example
+[source,javascript]
+Chart1.axis['Company'].rotation = 30;
+
+image:commonscript:dimensionRotation.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].rotation             // unqualified
+Chart1.axis['...'].rotation      // qualified
+
+{secondForm}
+====
+

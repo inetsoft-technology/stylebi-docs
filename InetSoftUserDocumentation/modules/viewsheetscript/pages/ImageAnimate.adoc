@@ -1,0 +1,34 @@
+= animate
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+====
+
+Specifies that the animation in an *animated GIF* image should be played. Otherwise, a static image is displayed.
+
+
+== Type
+Boolean:: `true`: play animation +
+`false`: do not play animation
+
+
+
+== Example
+[source,javascript]
+Image1.animate = true;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+animate           // unqualified
+Image1.animate    // qualified
+
+{secondForm}
+====
+
+

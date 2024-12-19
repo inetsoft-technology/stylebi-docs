@@ -1,0 +1,34 @@
+= CALC.odd(number)
+:navtitle: CALC.odd()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Rounds a number away from 0 to the nearest *odd* integer. Positive values are rounded up, negative values are rounded down. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A number to round
+
+== Example
+[source,javascript]
+----
+CALC.odd(13.1); // returns 15
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.odd(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.odd(Slider1.selectedObject)
+CALC.odd(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

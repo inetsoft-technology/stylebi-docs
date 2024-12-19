@@ -1,0 +1,61 @@
+= Icicle Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+An icicle chart displays a measure by using the sizes of rectangles in a hierarchical display.
+
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+
+image:commonscript:icicleConfig1.png[]
+
+To create an icicle  chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+To create an icicle chart, place the desired hierarchical dimensions in the ‘T’ region of the Chart Editor, and place the desired measure in the ‘Size’ region of the Chart Editor. Use the ‘Color’ region to distinguish particular dimension values by color.
+
+NOTE: To create a grid of charts, place dimensions into the ‘X’ and/or ‘Y’ regions as well. See xref:TrellisChartGrid.adoc[] for more information.
+
+.Walkthrough: Icicle Chart
+****
+This example illustrates how to create an icicle chart that displays total broken down by state, city, and product name.
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Drag a Chart component from the *Toolbox*  to the Dashboard, and press the {buttonEdit} at the top-right corner of the Chart to open the Visualization Recommender. Press the  {buttonFullEditor} at the top right to open the Chart Editor. (For more details on creating a chart, see xref:BasicChartingSteps.adoc[].)
+
+. In the Chart Editor, press the {buttonSelectChartStyle} and choose the ‘Icicle’ option. Press the {buttonApply}.
++
+image:commonscript:icicleConfig2.png[]
+
+. Drag the ‘State’, ‘City’, and ‘Name’ fields from the *Data Source* panel to the ‘T’ region.
+
+. Drag the ‘Total’ measure   from the *Data Source* panel to the ‘Size’ region.
+
+. Drag the ‘State’ dimension from the *Data Source* panel to the ‘Color’ region.
++
+image:commonscript:icicleConfig3.png[]
+
+
+. *_Optional:_* Press the ‘Edit Color’ button next to the ‘State’ dimension, and choose the desired colors to represent the state values. Press the {buttonApply}.
++
+image:commonscript:EditColorButton.png[]
+
+. {finishEditing}
+
+. Resize the chart as desired.
++
+image:commonscript:icicleConfig1.png[]
+
+. Hover the mouse over the chart to see a tooltip providing full information about each group.
+
+include::partial$addTitlesLegend.adoc[]
+****
+
+
+
+
+

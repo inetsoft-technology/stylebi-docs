@@ -1,0 +1,29 @@
+= legendBorder
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the legend border`'s line style. Set the property to `Chart.NONE` to hide the legend border.
+
+== Type
+A  xref:commonscript:StyleConstantLineStyle.adoc[] constant
+
+== Example
+[source,javascript]
+Chart1.legendBorderColor = [255,0,0];
+Chart1.legendBorder = Chart.DASH_LINE;
+
+image:commonscript:legendBorder.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+legendBorder          // unqualified
+Chart1.legendBorder   // qualified
+
+{secondForm}
+====

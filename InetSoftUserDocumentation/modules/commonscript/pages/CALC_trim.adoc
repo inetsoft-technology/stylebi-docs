@@ -1,0 +1,40 @@
+= CALC.trim(string)
+:navtitle: CALC.trim()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Removes all white space characters from `string` except for single spaces after words or punctuation. {CALCExcelFunctionPage}
+
+== Parameters
+string::			A string from which to remove extra white space
+
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.trim('   Mary had a   little     lamb.');
+// returns Mary had a little lamb.
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.trim(field['Label'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.trim(parameter.Label)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

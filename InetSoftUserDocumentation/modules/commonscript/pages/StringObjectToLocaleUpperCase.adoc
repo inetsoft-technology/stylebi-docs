@@ -1,0 +1,29 @@
+= toLocaleUpperCase(locale)
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Convert all characters to uppercase according to specified locale convention, specified as https://www.oracle.com/technetwork/java/javase/java8locales-2095355.html[Java-supported two-letter codes] for locale language and country.
+
+
+
+
+
+
+== Example
+[source,javascript]
+var str = 'abCdefgHIJ';
+str.toLocaleUpperCase('en-US'); // returns ABCDEFGHIJ
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].toLocaleUpperCase();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.toLocaleUpperCase();
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

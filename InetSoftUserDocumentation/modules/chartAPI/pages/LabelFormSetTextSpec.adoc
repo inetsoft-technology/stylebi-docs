@@ -1,0 +1,54 @@
+= LabelForm.setTextSpec(spec)
+:navtitle: LabelForm.setTextSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+Specifies the label text attributes, such as color, font, format, etc.  The corresponding “getter” function is `getTextSpec()`.
+
+
+
+
+
+
+
+
+== Parameter
+value::			a xref:TextSpec.adoc[] object
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new LabelForm(); //<2>
+form.setLabel("label1");
+form.setValues(['NY', 100]);
+var spec = new TextSpec(); //<3>
+spec.setColor(new java.awt.Color(0xff0000));
+form.setTextSpec(spec); //<4>
+graph.addForm(form); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:LabelForm.adoc[] object.
+<3> Create the  xref:TextSpec.adoc[] object.
+<4> Use `setTextSpec()` to assign the `TextSpec`.
+<5> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:LabelFormSetTextSpec.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

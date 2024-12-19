@@ -1,0 +1,37 @@
+= CALC.len(string)
+:navtitle: CALC.len()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the number of characters in a text string, which is generally the same as the String   xref:StringObjectLength.adoc[] property. {CALCExcelFunctionPage}
+
+== Parameters
+string::			A string in which to count characters
+
+
+
+== Example
+[source,javascript]
+----
+CALC.len('abc def ghij');  // returns 12
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.len(field['Label'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.len(parameter.Label)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

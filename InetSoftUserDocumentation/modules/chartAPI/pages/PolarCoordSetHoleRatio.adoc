@@ -1,0 +1,62 @@
+= PolarCoord.setHoleRatio(value)
+:navtitle: PolarCoord.setHoleRatio()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:ChangeChartCoordinates.adoc#PolarCoordinates[Polar Coordinates] for a walkthrough of polar coordinates.
+====
+
+Specifies the size of the “hole” when using the `PolarCoord.PLUS` option for xref:PolarCoordSetType.adoc[].  The corresponding “getter” function is `getHoleRatio()`.
+
+== Parameter
+value::			Number between 0 and 1, indicating the fraction of outer plot radius occupied by center hole. Default is 0.5, specifying hole radius as half of outer plot radius. Value of 0 specifies no hole; value of 1 sets hole to full chart.
+
+
+
+
+== Example
+. Create a Dashboard  based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Press the {buttonSelectChartStyle} and select ‘Bar Chart’ with the ‘Stack’ option enabled.
+
+. Set ‘State’  on the X-axis, ‘Sum(Quantity Purchased)’ on the Y-axis, and ‘City’ in the ‘Color’ binding.
+
+.  {finishEditing}
+
+. Add the script below.
+
+
+
+
+.Chart Component Script
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var polar = new PolarCoord(coord); //<2>
+polar.setType(PolarCoord.PLUS);
+polar.setHoleRatio(.25); //<3>
+graph.setCoordinate(polar); //<4>
+--
+<1> Get a handle to the xref:Coordinate.adoc[] object.
+<2> Create the `PolarCoord`  object.
+<3> Use `setHoleRatio` to set the hole to ¼ of the outer plot radius.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:PolarCoordsExampleSeyHoleRatio.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+

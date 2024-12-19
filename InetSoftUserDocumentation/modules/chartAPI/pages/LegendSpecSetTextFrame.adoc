@@ -1,0 +1,68 @@
+= LegendSpec.setTextFrame(frame)
+:navtitle: LegendSpec.setTextFrame()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies the xref:chartAPI:TextFrame.adoc[] containing a mapping between legend values and replacement text.  The corresponding “getter” function is `getTextFrame()`.
+
+
+
+
+== Parameter
+frame::			A xref:chartAPI:TextFrame.adoc[] object
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CategoricalColorFrame();
+var tf = new DefaultTextFrame(); //<2>
+frame.setField("State");
+tf.setText('NJ','New Jersey');
+tf.setText('NY','New York');
+var spec = new LegendSpec(); //<3>
+spec.setTextFrame(tf); //<4>
+frame.setLegendSpec(spec);
+elem.colorFrame = frame;
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:TextFrame.adoc[] object.
+<3> Create the xref:LegendSpec.adoc[] object.
+<4> Use `setTextFrame` to assign the `TextFrame` to the legend.
+
+image:commonscript:LegendSpecsetTextFrame.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getElement.adoc[] ① and xref:chartAPI:GraphElementGetColorFrame.adoc[] ② to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[] and xref:chartAPI:ColorFrame.adoc[]. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); <1>
+var frame = elem.getColorFrame(); <2>
+// Compact syntax: var frame = graph.getElement(0).getColorFrame();
+
+var spec = new LegendSpec();
+var tf = new DefaultTextFrame();
+tf.setText('NJ','New Jersey');
+tf.setText('NY','New York');
+spec.setTextFrame(tf);
+frame.setLegendSpec(spec);
+--
+=====

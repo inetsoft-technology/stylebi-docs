@@ -1,0 +1,29 @@
+= Date.getMilliseconds()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to return the milliseconds part of a date in local time.     See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds[Date.getMilliseconds()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var msecs = d.getMilliseconds();
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getMilliseconds();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getMilliseconds();
+
+include::partial$readMoreCalcFieldTypes.adoc[]

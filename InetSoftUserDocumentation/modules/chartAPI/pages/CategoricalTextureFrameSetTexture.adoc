@@ -1,0 +1,93 @@
+= CategoricalTextureFrame.setTexture(val,texture)
+:navtitle: CategoricalTextureFrame.setTexture()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Assigns a texture to the specified value.  The corresponding “getter” function is `getTexture(val)`. You can also set this using the `bindingInfo.textureFrame.setTexture`  property syntax in *onRefresh* script. See xref:#Example2[] below.
+
+== Parameter
+val::			a data value
+shape::
+include::commonscript:partial$gTexture.adoc[]
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+textureframe = new CategoricalTextureFrame("State"); //<2>
+textureframe.setTexture('NJ',GTexture.PATTERN_18); //<3>
+textureframe.setTexture('NY',GTexture.PATTERN_14); //<3>
+elem.setTextureFrame(textureframe); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:CategoricalTextureFrame.adoc[] object.
+<3> Use `setTexture` to assign the desired pattern for '`NJ`' and '`NY`'.
+<4> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:CategoricalTextureFrame2setTexture.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+textureframe = new CategoricalTextureFrame("State");
+textureframe.setTexture('NJ',GTexture.PATTERN_18);
+textureframe.setTexture('NY',GTexture.PATTERN_14);
+elem.setTextureFrame(textureframe);
+
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:TextureFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
+Chart1.bindingInfo.textureFrame = new CategoricalTextureFrame;
+Chart1.bindingInfo.textureFrame.setTexture('Robert',GTexture.PATTERN_1);
+Chart1.bindingInfo.textureFrame.setTexture('Eric',GTexture.PATTERN_1);
+Chart1.bindingInfo.textureFrame.setTexture('Sue',GTexture.PATTERN_5);
+Chart1.bindingInfo.textureFrame.setTexture('Annie',GTexture.PATTERN_5);
+
+--
++
+image:commonscript:CategoricalTextureFrameSetTexture_1.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

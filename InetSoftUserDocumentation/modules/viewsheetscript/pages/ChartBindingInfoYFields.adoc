@@ -1,0 +1,39 @@
+= bindingInfo.yFields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:PlotYFields.adoc[]  to return the fields currently bound to Y-axis at runtime.
+
+
+Specifies the query fields to be displayed on the Y-axis.
+
+
+
+
+
+
+
+== Type
+Two-dimensional array: `[[Field_1,Type_1],[Field_2,Type_2],...]`
+
+[square]
+* `Field` is a  field name (String)
+* `Type`	is  one of  `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
+
+
+
+== Example
+[source,javascript]
+--
+Chart1.query = "All Sales";
+Chart1.bindingInfo.xFields = [["Employee",Chart.STRING]];
+Chart1.bindingInfo.yFields = [["Total",Chart.NUMBER]];
+
+--
+
+image:commonscript:bindingInfoXFields_1.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

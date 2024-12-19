@@ -1,0 +1,69 @@
+= IntervalElement.setStackGroup(Boolean)
+:navtitle: IntervalElement.setStackGroup()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+
+Specifies whether each element group (i.e., bar series) should be stacked independently, or whether all should form a single stack order. {noGetter}
+
+
+== Parameters
+Boolean:: `true`: independent stack order for each group +
+`false`: single stack order for all groups
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"],["NJ",200], ["NJ",300],["NY",300],["NY",100]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity"); //<2>
+var scale = new LinearScale("Quantity");
+var frame = new HeatColorFrame();
+frame.setField("Quantity");
+elem.setColorFrame(frame);
+elem.setStackGroup(true); //<3>
+elem.setCollisionModifier(GraphElement.STACK_SYMMETRIC);
+graph.addElement(elem); //<4>
+--
+
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use `setStackGroup` to assign  independent stack order.
+<4> Use xref:EGraph_addElement.adoc[] to add the `IntervalElement` to the Chart.
+
+
+image:commonscript:IntervalElementsetStackGroup.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.setStackGroup(false);
+// To adjust the Y-axis to include all elements:
+graph.getCoordinate().getYScale().setScaleRange(new StackRange());
+--
+=====
+
+
+
+
+

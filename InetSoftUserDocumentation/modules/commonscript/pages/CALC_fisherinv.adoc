@@ -1,0 +1,40 @@
+= CALC.fisherinv(z)
+:navtitle: CALC.fisherinv()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the inverse of the Fisher transformation given by xref:CALC_fisher.adoc[]. {CALCExcelFunctionPage}
+
+== Parameters
+z::			Z-value for which to compute the inverse transformation
+
+
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.fisherinv(1);  // returns 0.7615941559557649
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.fisherinv(field['ZValue'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.fisherinv(Slider1.selectedObject)
+CALC.fisherinv(parameter.ZValue)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,34 @@
+= CALC.degrees(number)
+:navtitle: CALC.degrees()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Converts a number representing an angle in radians to degrees. {CALCExcelFunctionPage}
+
+== Parameters
+number::			An angle in radians
+
+== Example
+[source,javascript]
+----
+CALC.degrees(pi()/2);  // returns 89.99999999999991 (approx 90°)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.degrees(field['Angle'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.degrees(Slider1.selectedObject)
+CALC.degrees(parameter.Angle)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

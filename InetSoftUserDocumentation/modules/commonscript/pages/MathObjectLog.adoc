@@ -1,0 +1,45 @@
+= Math.log(number)
+:navtitle: Math.log()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:commonscript:CALC_log.adoc[] for the preferred version from the CALC library.
+* xref:log.adoc[] to write a message into the server log.
+====
+
+Return the natural logarithm (base stem:[e]) of a number. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log[Math.log()] method, and *must* be used with the `Math` qualifier, `Math.log()`.
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+Math.log(exp(1));  // returns 1.0
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+Math.log(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+Math.log(Slider1.selectedObject)
+Math.log(parameter.Value)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,35 @@
+= values
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for  properties shared with other components.
+* xref:viewsheet:RadioCheckBoxComboProperties.adoc[]for more information about Form components.
+* xref:CommonSelectObjects.adoc[] to access the current user selection.
+====
+
+Specifies the values (as an array) for a Check Box, Radio Button, or ComboBox component. This property can be used only within component-level script   (see xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script]), and the  xref:CheckRadioComboLabels.adoc[] property must specify an array of the same length.
+
+
+== Type
+Array
+
+== Example
+[source,javascript]
+ComboBox1.labels = ['Region','State','City'];
+ComboBox1.values = [1,2,3];
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+values            // unqualified
+ComboBox1.values  // qualified
+
+{secondForm}
+====

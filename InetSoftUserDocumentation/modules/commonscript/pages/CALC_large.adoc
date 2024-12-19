@@ -1,0 +1,40 @@
+= CALC.large(array, k)
+:navtitle: CALC.large()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the __k__th largest value in the array.  {CALCExcelFunctionPage}
+
+NOTE: Duplicate values are included in the ranking. For example, ranking set {4,5,8,7,8,4,5,3,7} from greatest to least yields {8,8,7,7,5,5,4,4,3}.
+
+== Parameters
+array::			Array of values
+k::		Rank of the value to obtain (k=1 is largest)
+
+
+== Example
+The third-largest value in set {4,5,8,7,8,4,5,3,7}:
+
+[source,javascript]
+----
+CALC.large([4,5,8,7,8,4,5,3,7], 3);  // returns 7.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.large(TableView1.table['Quantity'], 3)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.large(Sales['Quantity'], 3);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

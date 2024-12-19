@@ -1,0 +1,35 @@
+= size
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies the width and height of a component in terms of pixels. Fractional values for width and height are rounded down to the next lowest integer. This property does not take effect in the design view of Visual Composer and does not apply to components within a Selection Container.
+
+== Type
+https://download.oracle.com/javase/7/docs/api/index.html?java/awt/Dimension.html[java.awt.Dimension]::			`java.awt.Dimension(width,height)`
+
+== Example
+[source,javascript]
+----
+// Table with 700 pixel width, 400 pixel height
+TableView1.size = java.awt.Dimension(700,400)
+
+// Chart with 200 pixel width, 60 pixel height
+Chart1.size = java.awt.Dimension(60,200)
+----
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+size               // unqualified
+Component1.size    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,43 @@
+= IntervalElement.addInterval(lower,upper)
+:navtitle: IntervalElement.addInterval()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+
+Adds a “floating” interval element (bar) with lower and upper values specified by the parameters.
+
+== Parameters
+lower::			Name of field defining lower values (String)
+upper::			Name of field defining upper values (String)
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["Student","Bottom Score","Top Score"],["Joe",70,80],
+["Eric",50,90],["Jane",90,100], ["Sue",40,45]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement(); //<2>
+elem.addDim("Student");
+elem.addInterval("Bottom Score","Top Score"); //<3>
+graph.addElement(elem); //<4>
+--
+
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use `addInterval` to assign  measures to the interval element.
+<4> Use xref:EGraph_addElement.adoc[] to add the `IntervalElement` to the Chart.
+
+
+image:commonscript:IntervalElementaddInterval.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

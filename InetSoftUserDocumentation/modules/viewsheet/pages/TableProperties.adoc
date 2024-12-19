@@ -1,0 +1,50 @@
+= Table Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+* xref:AddTable.adoc[] for information on how to create a Table.
+* {commonProperties}
+====
+
+The Table component’s ‘Properties’ panel provides *General*, *Advanced*, and *Script* tabs. The next sections discuss the component-specific properties available under these tabs.
+
+== General Tab
+
+In addition to the common properties, the *General* tab in the ‘Table Properties’ panel provides the following properties.
+
+image:TableProperties.png[]
+
+
+Table Styles:: A *table style* is a set of predefined formats (fonts, alignments, backgrounds etc.) that is directly applied to any table. The ‘Table Styles’ panel provides access to a Style Library containing a large number of predefined table styles. To select a table style, expand the desired category node (e.g. ‘Grid’, ‘Columns’, ‘Rows’, etc.) and click on one of the styles. A preview is of the style is displayed on the right side.  See xref:CreateTableStyle.adoc[] to create a custom style.
+
+Submit On Change:: For *Embedded Table* only. (See the ‘Embedded Table’ setting under the xref:#AdvancedTab[].) When this option is enabled (default), any changes that you make to entries in the Embedded Table are immediately submitted to the linked Embedded Table in the underlying Data Worksheet, which immediately updates any dependent data views in the Dashboard.
++
+TIP: See xref:dataworksheet:EnterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for information about how to create an Embedded Table.
++
+When ‘Submit On Change’ is disabled, changes that you make to entries in the Embedded Table are not submitted until you press the {buttonApply} in the table title bar. Press the {buttonReset} to restore the table’s entries to their most recently submitted state.
++
+image:Embedded Table Toolbar.png[]
+
+[#AdvancedTab]
+== Advanced Tab
+The *Advanced* tab in the ‘Table Properties’ panel provides the following Table-specific properties:
+
+image:Table Dialog Advanced Tab.png[]
+
+Shrink to Fit:: When enabled, this reduces the height of the table to match the number of records displayed. For example, if the original table height (as designed) was 10 rows, and the user then makes selections which restrict the result set to five rows, the table’s bottom border will retract or “shrink” to eliminate any empty rows at the bottom of the table.
+Embedded Table:: When enabled, specifies that the table is an Embedded Table. This makes the table cells editable by the user and removes any hyperlinks. (This option is only available if the table was originally created as an Embedded Table. See xref:dataworksheet:EnterData.adoc[] for more information about how to create an Embedded Table.)
+Enable Table Editing:: This option allows users to modify various aspects of a table by inserting, removing, or changing data records. To perform validation checks on data entered by users, see xref:viewsheetscript:WriteBackToDatabase.adoc#ValidateUserInput[Validate User Input]. Modified table data can be written back to the database by an appropriate Dashboard script. See xref:viewsheetscript:WriteBackToDatabase.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[]  for information.
++
+NOTE: End-user table editing options are available only if product is licensed for Dashboard Forms.
+Add Rows:: Allows a user to add new rows to the table. To add a new row, the user should right-click a row in the table and select ‘Insert Row’ or ‘Append Row’ from the context menu to respectively add a row before or after the clicked row. {rightClickOptions} Added rows are not retained across sessions unless they are committed to the database by a Dashboard script. (See xref:viewsheetscript:WriteBackToDatabase.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[]  for information. See xref:viewsheetscript:WriteBackToDatabase.adoc#ValidateUserInput[Validate User Input] for information about validation.)
+Delete Rows:: Allows a user to delete rows from the table. To do this, the user should right-click a row in the table and select ‘Delete Row’ from the context menu. {rightClickOptions} Deletions are not retained across sessions unless they are committed to the database by a Dashboard script. (See xref:viewsheetscript:WriteBackToDatabase.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[]  for more information.)
+Edit Rows:: Allows a user to edit data in the table. Edited data is not retained across sessions unless committed to the database by a Dashboard script. (See xref:viewsheetscript:WriteBackToDatabase.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[]  for more information. See xref:viewsheetscript:WriteBackToDatabase.adoc#ValidateUserInput[Validate User Input] for information about validation.)
+Write Back to Storage:: Allows user-modified data in an Embedded Table to persist across sessions by saving the modified data together with the underlying Data Worksheet.
+Data Tip View:: A Dashboard component is displayed when mouse hovers over table area. The component is filtered based on the hover region. See xref:AddTipsToChart.adoc[] for more details.
+Flyover Views:: Allows you to select a set of Dashboard components which will be adaptively filtered as the user hovers the mouse or clicks on the table area. (Select ‘On Click Only’ if you want the filtered components to update when the user clicks.) If the table contains aggregated data, filtering is based on the grouping field dimension(s) in the row on which the user hovers or clicks. If the table contains detail data, filtering is based on the non-numeric columns in the row on which the user hovers or clicks. See xref:DrillDownIntoData.adoc[] for more details.
+
+
+== Script Tab
+{commonScript}

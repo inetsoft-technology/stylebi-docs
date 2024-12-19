@@ -1,0 +1,68 @@
+= drillMember
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheetscript:AccessComponentData.adoc#FilterComponents[Filter Components] for an example usage of drillMember.
+* xref:SelectionListTreeDrillMembers.adoc[] to create a dynamic drill-down for  multiple geographical levels.
+* xref:viewsheet:SelectionTreeProperties.adoc[] for more information on Selection Trees.
+====
+
+
+Returns the name of the field *one level below* the deepest level in the hierarchy at which the user has made a selection in a *Selection Tree*. This is useful for creating interactive chart drilldowns, as shown in the example in xref:viewsheetscript:AccessComponentData.adoc#FilterComponents[Filter Components].
+
+NOTE: `drillMember` does not apply to Selection Lists.
+
+
+For example, consider a three-level Selection Tree hierarchy: menu:Region[State > City].
+
+image:viewsheet:Selection Tree 3 Level.png[]
+
+If the user’s most specific selection is at the level of region, then drillMember returns `'State'`. If the user’s most specific selection is at the level of state, then drillMember returns `'City'`. If the user’s most specific selection is at the level of city, then because there is no lower level drillMember again returns `'City'`. If the user has not selected any values in the Selection Tree, then `drillMember` returns the highest level, here `'Region'`.
+
+
+== Type
+String::			field name for child of deepest selected level
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var drillField = SelectionTree1.drillMember;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+drillMember                       // unqualified
+SelectionTree1.drillMember     // qualified
+
+{secondForm}
+====
+
+
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Call_Center_Team_Performance.zip[Call Center Team Performance] Dashboard (in the ‘Examples’ folder) provides an example of using drillMember to control the view of a chart.
+
+image:viewsheet:galleryHeatMap2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Call_Center_Team_Performance.zip[Call Center Team Performance] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+
+****
+

@@ -1,0 +1,21 @@
+= test(str)
+:navtitle: test()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING, caption=See Also]
+xref:StringObjectMatch.adoc[] to return multiple occurrences with a single function execution.
+
+Execute the search for a regular expression match in a string. Return `true` if the match is found, `false` otherwise.  This function is an implementation of the standard JavaScript RegExp https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test[test()] method.
+
+
+== Example
+
+[source,javascript]
+----
+var str = 'Many free Java resources are available.'
+var pattern = new RegExp(".*JavA.*", 'i');
+pattern.test(str); // returns true
+----
+
+

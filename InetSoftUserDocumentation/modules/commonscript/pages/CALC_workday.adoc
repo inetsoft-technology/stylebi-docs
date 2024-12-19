@@ -1,0 +1,42 @@
+= CALC.workday(date, days, [holidayArray])
+:navtitle: CALC.workday()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns a date representing the first workday following a period of working days, specified by `days`, that begin on `date`. {CALCExcelFunctionPage}
+
+
+
+== Parameters
+date::			Date object: date on which to begin counting
+days::			Number of working days to count
+holidayArray::			Optional array of dates to exclude from working day count
+
+
+
+
+== Example
+[source,javascript]
+----
+// First working day following six days from May 20, 2014:
+CALC.workday(new Date(2014,4,20), 6) // returns Wed May 28
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.workday(field['Order Date'], 6)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.workday(RangeSlider1.selectedObjects[0], 6)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

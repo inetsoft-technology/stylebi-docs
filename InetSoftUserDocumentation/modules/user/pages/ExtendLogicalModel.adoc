@@ -1,0 +1,44 @@
+= Extend a Logical Model
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+In a multi-tenant environment, you can provide a different logical model to each tenant. Each logical model can provide access to a tenant-specific physical view that draws data from a tenant-specific database *connection*.
+
+TIP: See xref:AddAdditionalConnection.adoc[], for information on how to add a tenant connection.  See xref:ExtendPhysicalView.adoc[] to create an extended physical view.
+
+include::ROOT:partial$createVisualizationClose.adoc[]
+
+
+To create a tenant-specific logical model, *extend* an existing logical model by linking the model to an existing *extended physical view*. Follow the steps below:
+
+. Press the top {buttonData}.
++
+image:dataModel1.png[]
+
+. Expand the ‘Data Source’ folder in the left panel, and click the ‘Data Model’ node for the desired data source. Press the {buttonMoreOptions} next to the data model you want to extend, and select ‘Add Extended Model’ from the context menu. This opens the ‘Extended Model’ dialog box.
++
+image:dataModel88.png[]
+
+
+
+. In the ‘Extended Model’ dialog box, choose a connection option for the new extended model, and press btn:[OK]. (You can select the default connection for the data source, or any of the additional connections.)
++
+image:dataModel89.png[]
++
+NOTE: An extended model is associated with one (and only one) connection and physical view. Likewise, a connection can be associated with only one extended model.
++
+This opens the extended model for editing. The *View* panel displays the tables and columns that are available from the corresponding extended physical view. The right panel displays entities and attributes that are inherited from the base model.
++
+image:dataModel90.png[]
++
+Note that entities and attributes that are inherited from the base logical model cannot be modified within the extended model. However, you can hide an inherited property by disabling its ‘Visible’ option. (See xref:EditLogicalModel.adoc#ModifyAttributeProperties[Modify Attribute Properties] in xref:EditLogicalModel.adoc[] for more information.)
+
+. Press the {buttonAddElement} to add new entities and attributes, or to extend inherited entities. (See xref:CreateLogicalModel.adoc[] for more information about creating entities and attributes.)
++
+image:dataModel91.png[]
+
+. When you have finished defining the extended model, press the {buttonSave}.
+
+Administrators can now expose this extended model to particular tenants by setting user or group permissions on the corresponding *connection*. See xref:administration:SetRepositoryPermissions.adoc[] in xref:administration:ManageServer.adoc[] for more information.

@@ -1,0 +1,40 @@
+= geoFields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::viewsheetscript:partial$readOnly.adoc[]
+
+
+
+
+[WARNING,caption=See Also]
+xref:ChartBindingInfoGeoFields.adoc[] to associate fields with the ‘Geographic’ binding.
+
+
+Returns the names of the query fields (as an array) that are currently assigned to the ‘Geographic’ binding at runtime. This property is read-only.
+
+
+==  Type
+Array of Strings
+
+
+
+
+== Example
+[source,javascript]
+if (Chart1.geoFields[0] == 'State') {
+  StateSelectionList1.visible = true;
+}
+else {
+  StateSelectionList1.visible = false;
+}
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+geoFields           // unqualified
+Chart1.geoFields    // qualified
+
+{secondForm}
+====

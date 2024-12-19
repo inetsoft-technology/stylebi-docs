@@ -1,0 +1,39 @@
+= CALC.sum(array)
+:navtitle: CALC.sum()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the sum of all the elements in an array. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of elements to sum
+
+
+
+== Example
+[source,javascript]
+----
+CALC.sum([2,3,4,5]);  // returns 14.0
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.sum(TableView1.table['Quantity'])
+
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.sum(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

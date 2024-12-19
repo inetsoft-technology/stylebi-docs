@@ -1,0 +1,18 @@
+A schedule *condition* determines when the scheduled task executes.
+
+image:user:scheduleReport3.png[]
+
+
+There are several types of conditions: Daily, Weekly, Monthly, Hourly, Run Once, Chained, and User Defined.
+
+NOTE: Select the ‘Show Server Time Zone’ option to set times according to the server time rather than the client (user) time, or select the desired time zone from the ‘Time Zone’ menu.
+
+Daily:: This task will execute every N days (every 1 day, every 5 days, etc.) at the specified time. The time is specified using the format `HH:mm`, for example, `23:39`. Select the ‘Weekdays’ option to execute the task at the specified time on weekdays only. {timeRangeCondition}
+Weekly:: This task will execute every N weeks (every 1 week, 4 weeks, etc.) at the specified time and days of the week. {timeRangeCondition}
+Hourly:: This task will execute every N hours (every 2 hours, every 5 hours, etc.), beginning at the specified time. The time is specified using the format `HH:mm`, for example, `23:39`.
+Monthly:: This task will execute every Nth day of the specified months (e.g., April 15) or every Nth day of the week of the specified month (e.g., 1st Sunday of May). {timeRangeCondition}
+Run Once:: This task will execute once on a certain day at a specified time (e.g, Nov. 25, 2006 at 11:30).
+Chained Condition:: This task will execute only if another specified task or cycle has successfully completed first.
+User Defined Condition:: ‘User Defined’ conditions (if any) that have been created by a developer within your organization can be selected from the menu.
+
+To specify multiple conditions, press the btn:[Multiple Schedules] button at the bottom right of the editing panel. This will display the schedule condition list to which you can add, delete, or edit conditions.

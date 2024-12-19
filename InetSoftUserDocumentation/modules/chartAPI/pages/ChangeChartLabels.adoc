@@ -1,0 +1,110 @@
+= Change Chart Labels
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+When you assign a xref:chartAPI:TextFrame.adoc[] to a Chart element to represent data textually, you can modify the *labels* by using xref:chartAPI:TextFrameSetText.adoc[].
+
+== Walkthrough
+The following example illustrates how you can construct custom labels for the chart using script. The labels display the names of the companies represented on the chart together with each company’s percentage of total sales.
+
+. Create a Dashboard with a Chart based on the ‘All Sales’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Place the ‘Company’ field in the ‘X’ region and the ‘Total’ field in the ‘Y’ region.
+
+. Press the {buttonEditDimension} next to the ‘Company’ field. From the ‘Ranking’ menu, select “Top 5 of Sum(Total)” and press the {buttonApply}.
+
+. Right-click the Chart and select '`Properties`'.  Enter the script  below into the *Script* tab.
++
+[source,javascript]
+--
+// Create new TextFrame based on 'Company' field:
+var tframe = new DefaultTextFrame('Company');
+
+// Get a handle to the graph element (bars):
+var elem = graph.getElement(0);
+
+// Assign the TextFrame to the element. This adds the
+// category names above the bars (text-coding).
+elem.setTextFrame(tframe)
+
+// Compute the total amount of all companies:
+var sumTotal = sum(data['Sum(Total)']);
+
+// Loop through companies on chart:
+for(i=1; i<data.length; i++) {
+
+  // Get the original label (company):
+  var oldLabel = data[i][0];
+
+  // Compute the fractional value of corresponding 'Total':
+  var barFraction = data[i][1]/sumTotal;
+
+  // Format the fraction as a percent:
+  var barPercent = formatNumber(barFraction,'##.00%');
+
+  // Compose the new label, with form 'Company:Percent':
+  var newLabel = oldLabel + ':\n' + barPercent;
+
+  // Assign the new label in place of the old label:
+  tframe.setText(oldLabel,newLabel);
+}
+--
++
+include::partial$scriptThatModifiesGraph.adoc[]
++
+image:commonscript:ChartChangeLabels.png[]
+
+The above script uses a customized `TextFrame` to display the company name together with the percentage of total represented by each company. The xref:chartAPI:TextFrameSetText.adoc[] function is the key to replacing one set of labels by a different set of labels.
+
+
+
+In the above  example you created a completely new `TextFrame` to display the data, but you can use the same technique to modify an existing `TextFrame`. For example, to modify the existing X-axis labels, you would first get a handle to the existing X-axis `TextFrame`. For example:
+
+[source,javascript]
+var tframe = graph.getCoordinate().getXScale().getAxisSpec().getTextFrame();
+
+Because this `TextFrame` is already associated with the X-axis labels, there is no need to assign the `TextFrame` to the axis. The only thing you need to do is to swap in the new labels. Here is the revised script in its entirety:
+
+.Revised script to access existing TextFrame
+[source,javascript]
+--
+// Get a handle to the existing X-axis TextFrame:
+var tframe = graph.getCoordinate().getXScale().getAxisSpec().getTextFrame();
+
+// Get a handle to the graph element (bars):
+var elem = graph.getElement(0);
+
+// Compute the total amount of all companies:
+var sumTotal = sum(data['Sum(Total)']);
+
+// Loop through companies on chart:
+for(i=1; i<data.length; i++) {
+
+  // Get the original label (company):
+  var oldLabel = data[i][0];
+
+  // Compute the fractional value of corresponding 'Total':
+  var barFraction = data[i][1]/sumTotal;
+
+  // Format the fraction as a percent:
+  var barPercent = formatNumber(barFraction,'##.00%');
+
+  // Compose the new label, with form 'Company:Percent':
+  var newLabel = oldLabel + ':\n' + barPercent;
+
+  // Assign the new label in place of the old label:
+   tframe.setText(oldLabel,newLabel);
+}
+--
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+= Math.max(num1, num2 [, ..., numN])
+:navtitle: Math.max()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_max.adoc[] for the preferred version from the CALC library.
+====
+
+
+
+Return the maximum of the specified values. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max[Math.max()] method, and *must* be used with the `Math` qualifier, `Math.max()`.
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+Math.max(2,3);  // returns 3
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+Math.max(field['Col1'], field['Col2'], field['Col3'], ...)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+Math.max(parameter.param1, parameter.param2, parameter.param3, ...)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

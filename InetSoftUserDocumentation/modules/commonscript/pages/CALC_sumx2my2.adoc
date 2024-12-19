@@ -1,0 +1,43 @@
+= CALC.sumx2my2(array1, array2)
+:navtitle: CALC.sumx2my2()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the sum of the *difference* of squares of corresponding values in two arrays. For arrays `[a1,a2,a3,...,an]` and `[b1,b2,b3,...,bn]`, the result gives
+
+stem:[(a_1^2-b_1^2) + (a_2^2-b_2^2) + (a_3^2-b_3^2) + ... + (a_n^2-b_n^2)]
+
+{CALCExcelFunctionPage}
+
+== Parameters
+array1::				An array of values `[a1,a2,...,an]`
+array2::				An array of values `[b1,b2,...,bn]`
+
+
+
+== Example
+[source,javascript]
+----
+CALC.sumx2my2([1,2,3],[4,5,6]);  // returns -63.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.sumx2my2(TableView1.table['Col1'], TableView1.table['Col2'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.sumx2my2(Sales['Col1'], Sales['Col2'])
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

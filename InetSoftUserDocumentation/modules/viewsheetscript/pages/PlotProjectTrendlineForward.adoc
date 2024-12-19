@@ -1,0 +1,31 @@
+= projectTrendLineForward
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the number of axis increments to project the trend line forward (into the future).
+
+== Type
+Positive integer
+
+
+
+== Example
+[source,javascript]
+Chart1.projectTrendLineForward = 3;
+
+image:commonscript:projectTrendlineForward.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+projectTrendLineForward          // unqualified
+Chart1.projectTrendLineForward   // qualified
+
+{secondForm}
+====

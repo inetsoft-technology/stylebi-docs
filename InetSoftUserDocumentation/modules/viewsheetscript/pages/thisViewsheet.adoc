@@ -1,0 +1,145 @@
+= thisViewsheet
+
+This section presents Dashboard functions that address Dashboard appearance and scheduling.
+
+[#thisViewsheetIsActionVisible]
+== thisViewsheet.isActionVisible(name)
+
+Returns the visibility setting for the specified toolbar button.
+
+=== Parameters
+name:: name of toolbar button or export option (String):
++
+*Buttons*: `'Annotation', 'Back', 'Bookmark', 'Close', 'Edit', 'Email', 'Export', 'Full Screen', 'Import', 'Next','Previous', 'Print', 'Refresh', 'Schedule', 'Social Sharing', 'Toolbar', 'Zoom In'`
++
+*Export options*: `'CSV', 'Excel', 'HTML', 'PDF', 'PNG', 'PowerPoint', 'Snapshot'`
+
+=== Example
+[source,javascript]
+if (!thisViewsheet.isActionVisible("Export")) {
+  alert('Some features are disabled.');
+}
+
+[#scheduleAction]
+== thisViewsheet.scheduleAction(Boolean[,emails])
+Specifies whether the Dashboard should be executed as part of a scheduled task. Set to `true` to allow the Dashboard to run as scheduled. Set to `false` to override the scheduled task setting and suppress Dashboard execution. See xref:user:ScheduleDashboard.adoc[] in xref:user:UsePortal.adoc[] and xref:administration:Schedule.adoc[] in xref:administration:ManageServer.adoc[] for more information about scheduling.
+
+=== Parameters
+Boolean:: `true` (default): execute task, `false`: do not execute task
+emails:: Array of emails
+
+You can use the `scheduleAction` function to conditionalize the execution of a scheduled Dashboard task based on actual Dashboard data. Use the optional second parameter, `emails`, to dynamically set the list of emails for the ‘Deliver To Emails’ scheduled action. Use xref:#taskName[] to obtain the name of the currently executing task.
+
+The email list that you provide in the emails array supersedes any emails specified on the Scheduler *Action* tab (both for user-scheduled tasks and administrator-scheduled tasks), and automatically enables the ‘Deliver To Emails’ task action.
+
+NOTE: While the `scheduleAction` function facilitates the creation of "`alerts`", an easier method of setting alerts is also available. See xref:administration:CreateScheduledTask.adoc#CreateAlert[Create Alert] in xref:administration:ManageServer.adoc[]  and xref:user:ScheduleDashboard.adoc[] in xref:user:UseDashboard.adoc[] for more information.
+
+
+=== Examples
+The following script uses the value of a Gauge component to determine whether the Dashboard task should execute as scheduled.
+
+.Evaluate dashboard for execution
+[source,javascript]
+if (Gauge1.value > 10000) {
+  thisViewsheet.scheduleAction(true)
+}
+else {
+  thisViewsheet.scheduleAction(false)
+}
+
+If the scheduled action is a user notification (for example), then the user will receive the alert only when the value of the Gauge component exceeds the threshold.
+
+.Evaluate dashboard for execution and deliver emails
+[source,javascript]
+if (Gauge1.value > 10000) {
+  emails = ['joe@inetsoft.com', 'sue@inetsoft.com', 'mark@inetsoft.com'];}
+else {
+  emails = ['joe@inetsoft.com'];
+}
+thisViewsheet.scheduleAction(true, emails);
+
+[#thisViewsheetSetActionVisible]
+== thisViewsheet.setActionVisible(name,Boolean)
+
+Sets the visibility of Dashboard toolbar buttons and export options. To hide a button or export option, set the value to false. This function should generally be placed in the onInit Handler. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
+NOTE: The `setActionVisible` property for individual components is documented with the other component properties.
+
+=== Parameters
+name:: name of toolbar button or export option (String):
++
+*Buttons*: `'Annotation', 'Back', 'Bookmark', 'Close', 'Edit', 'Email', 'Export', 'Full Screen', 'Import', 'Next','Previous', 'Print', 'Refresh', 'Schedule', 'Social Sharing', 'Toolbar', 'Zoom In'`
++
+*Export options*: `'CSV', 'Excel', 'HTML', 'PDF', 'PNG', 'PowerPoint', 'Snapshot'`
+
+
+Boolean:: `false`: hide the specified button, `true`: show the specified button
+
+=== Example
+[source,javascript]
+thisViewsheet.setActionVisible("Export", false);
+
+TIP: Use the `'Toolbar'` option to control the visibility of the entire toolbar: `thisViewsheet.setActionVisible("Toolbar", false)`.
+
+
+== thisViewsheet.updateTime
+include::partial$readOnly.adoc[]
+
+Returns the date/time at which data was most recently obtained by the Dashboard.
+
+* If a materialized view is in effect for the Dashboard (see xref:administration:MaterializedView.adoc[] in xref:administration:ManageServer.adoc[]), `thisViewsheet.updateTime` returns the date/time at which the most recent materialized view was generated for the Dashboard.
+* If a materialized view is not in effect, `thisViewsheet.updateTime` returns the date/time of the most recent query execution for the Dashboard.
+
+=== Type
+Date:: Date/time at which data was obtained
+
+=== Example
+[source,javascript]
+Text1.text = 'Last Updated at ' + formatDate(thisViewsheet.updateTime,'MMM dd, h:mm a');
+
+== thisViewsheet.viewsheetAlias
+include::partial$readOnly.adoc[]
+
+
+Returns the Dashboard alias.  See xref:administration:Repository.adoc[] in xref:administration:ManageServer.adoc[] for information on how to set an alias for a Dashboard. See xref:parameter.adoc[] to obtain other environment information in script.
+
+=== Example
+[source,javascript]
+alert('This Dashboard is displayed in the repository as ' + thisViewsheet.viewsheetAlias);
+
+== thisViewsheet.viewsheetName
+include::partial$readOnly.adoc[]
+
+Returns the name of the Dashboard.  See xref:administration:Repository.adoc[] in xref:administration:ManageServer.adoc[] for information on how to set the name of a Dashboard.
+
+=== Example
+[source,javascript]
+alert('The actual name of this Dashboard is  ' + thisViewsheet.viewsheetName);
+
+== thisViewsheet.viewsheetPath
+include::partial$readOnly.adoc[]
+
+Returns the path of the Dashboard.  See xref:administration:Repository.adoc[] in xref:administration:ManageServer.adoc[] for information on how to set the path  of a Dashboard.
+
+=== Example
+[source,javascript]
+alert('This path to this Dashboard is  ' + thisViewsheet.viewsheetPath);
+
+[#taskName]
+== thisViewsheet.taskName
+
+include::partial$readOnly.adoc[]
+
+Returns the name of the scheduled task currently executing the Dashboard, which can be used together with xref:#scheduleAction[]. See xref:user:ScheduleDashboard.adoc[] in xref:user:UsePortal.adoc[] and xref:administration:Schedule.adoc[] in xref:administration:ManageServer.adoc[] for more information about scheduled tasks.
+
+=== Example
+.Trigger different emails based on executing task
+[source,javascript]
+if (thisViewsheet.taskName ==  'Task5') {
+  emails = ['joe@inetsoft.com', 'sue@inetsoft.com', 'mark@inetsoft.com'];
+}
+else {
+ emails = ['joe@inetsoft.com'];
+}
+Text1.text = 'Generated by scheduled task' + thisViewsheet.taskName;
+thisViewsheet.scheduleAction(true, emails);

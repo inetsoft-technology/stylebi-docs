@@ -1,0 +1,65 @@
+= VisualFrame.setScale(scale)
+:navtitle: VisualFrame.setScale()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the scale associated with this frame.  The corresponding “getter” function is xref:VisualFrameGetScale.adoc[].
+
+== Parameter
+scale::			a xref:Scale.adoc[] object
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new BrightnessColorFrame();
+frame.setField("Quantity");
+var scale = new LinearScale(); //<2>
+scale.setMax(325);
+scale.setMin(175);
+frame.setScale(scale); //<3>
+frame.setColor(java.awt.Color(0xff0000));
+elem.setColorFrame(frame);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:LinearScale.adoc[] object.
+<3> Use `setScale` to add the `LinearScale` to the xref:BrightnessColorFrame.adoc[].
++
+image:commonscript:VisualFrameSetScales.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} and xref:GraphElementGetColorFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:ColorFrame.adoc[]  objects. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getColorFrame(); //<2>
+// Compact syntax: var frame = graph.getElement(0).getColorFrame();
+
+var scale = new LinearScale();
+scale.setMax(325);
+scale.setMin(175);
+frame.setScale(scale);
+
+--
+=====
+

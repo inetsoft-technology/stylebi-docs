@@ -1,0 +1,40 @@
+= tickVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:RangeSliderProperties.adoc[] for more information on user selection editing.
+====
+
+Specifies whether tick marks are displayed on the slider scale.
+
+
+
+
+
+== Type
+Boolean::	`true`: Display tick marks (default) +
+`false`: Hide tick marks
+
+
+
+
+
+== Example
+[source,javascript]
+RangeSlider1.tickVisible = false;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+tickVisible                  // unqualified
+RangeSlider1.tickVisible     // qualified
+
+{secondForm}
+====
+
+

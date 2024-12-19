@@ -1,0 +1,65 @@
+= LegendSpec.setTitleTextSpec(spec)
+:navtitle: LegendSpec.setTitleTextSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the legend title text attributes, such as color, font, format, etc.  The corresponding “getter” function is `getTitleTextSpec()`.
+
+
+
+
+
+
+== Parameter
+frame::			A xref:chartAPI:TextSpec.adoc[] object
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CategoricalColorFrame();
+frame.setField("State");
+var lspec = new LegendSpec(); //<2>
+var tspec = new TextSpec(); //<3>
+tspec.setColor(java.awt.Color(0xff0000))
+lspec.setTitleTextSpec(tspec); //<4>
+frame.setLegendSpec(lspec);
+elem.setColorFrame(frame);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:LegendSpec.adoc[] object.
+<3> Create the xref:TextSpec.adoc[] object.
+<4> Use `setTitleTextSpec` to assign the `TextSpec` to the `LegendSpec`.
+
+image:commonscript:LegendSpecsetTitleTextSpec.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getElement.adoc[] {circle1}, xref:chartAPI:GraphElementGetColorFrame.adoc[] {circle2}, and xref:chartAPI:VisualFrameGetLegendSpec.adoc[] {circle3} to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[],  xref:chartAPI:ColorFrame.adoc[], and xref:chartAPI:LegendSpec.adoc[]. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); // <1>
+var frame = elem.getColorFrame(); // <2>
+var lspec = frame.getLegendSpec(); // <3>
+// Compact syntax: var lspec = graph.getElement(0).getColorFrame().getLegendSpec();
+
+var tspec = new TextSpec();
+tspec.setColor(java.awt.Color(0xff0000));
+lspec.setTitleTextSpec(tspec);
+--
+=====

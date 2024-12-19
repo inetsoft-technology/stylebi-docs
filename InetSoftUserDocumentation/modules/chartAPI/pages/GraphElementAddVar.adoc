@@ -1,0 +1,56 @@
+= GraphElement.addVar(field)
+:navtitle: GraphElement.addVar()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Add a variable or measure to a xref:GraphElement.adoc[] object. A variable is plotted on the Y-axis.
+
+
+
+== Parameter
+field::			String containing name of variable
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity", "Total"],["NY",550,2500],["NJ",370,3000]]; //<1>
+graph = new EGraph();
+var elem = new LineElement("State","Quantity"); //<2>
+elem.addVar("Total"); //<3>
+graph.addElement(elem); //<4>
+--
+<1> {dataset}
+<2> Create the `LineElement` object.
+<3> Use `addVar` to add the '`Total`' measure.
+<4> Use `addElement` to add the LineElement to the Chart.
+
+image:commonscript:GraphElementaddVar.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.addVar("Total");
+--
+=====
+
+

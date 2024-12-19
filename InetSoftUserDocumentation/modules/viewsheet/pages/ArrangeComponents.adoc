@@ -1,0 +1,129 @@
+= Arrange Components
+%experimetal%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Because screen real estate is limited, it is often important to organize Dashboard components for maximum efficiency. There are a variety of ways that you can efficiently arrange components and combine multiple components to conserve screen real estate.
+
+These methods often require selecting multiple components at the same time.  See xref:#SelectComponents[] below for different approaches to making multiple selections.
+
+[#SelectComponents]
+== Select Components
+include::viewsheet:partial$selectComponents.adoc[]
+
+[#SnapComponents]
+== Snap Components
+When moving components on the Dashboard, you can choose to snap components to the *grid* or to other *components*.  Press the {buttonSnapping} in the toolbar and select '`Snap to Grid`' or '`Snap to Objects`', or both.  You can adjust the grid snapping interval from the '`Options`' dialog box.  See xref:DashboardOptions.adoc[] for more information.
+
+[#GroupComponents]
+== Group Components
+When you need to position a set of components together, it is helpful to combine the components into a group. Grouped  components are represented by a _Container_ component. Components within a Container always retain their relative positions when the group is moved.
+
+NOTE: Selection Containers cannot be grouped.
+
+To create a group, follow these steps:
+
+. Select the components you want to group into a Container. (See xref:#SelectComponents[] for different ways to select.)
++
+TIP: You can also select _existing groups_ to combine into a new Container. However, a Container component contains only *individual* components, not other Container components. Therefore, if you group together two existing groups, the existing Containers are deleted, and a single new Container is created to contain all of the individual components from the two preexisting groups.
+
+. Right-click any selected component, and choose ‘Group’ from the context menu.
++
+image:groupComponents.png[]
++
+This creates a new Container component to group the selected components. The components within a Container remain fully functional, and you can adjust the component settings and properties in the usual manner.
++
+IMPORTANT: You can select and move a component _within_ the group in the normal manner. *To move the group as a whole*, click twice on a component within the group to select the whole group.
+
+To *undo a grouping*, right-click the Container  and select ‘Ungroup’ from the context menu.
+
+
+
+== Align and Distribute Components
+
+You can align, distribute, and match sizes of multiple components on the Dashboard. To align multiple components, first *select* the desired components. (See xref:#SelectComponents[].) Then press the {buttonArrange} on the toolbar and choose the desired alignment.
+
+image:Align1.png[]
+
+To *distribute* (equally space) multiple components, select the desired components and press the {buttonArrange} on the toolbar. Then choose the {buttonDistributeHorizontally} or {buttonDistributeVertically}.
+
+image:Align2.png[]
+
+To *match the sizes* of multiple components, select the desired components and press the {buttonArrange} on the toolbar. Then choose the desired ‘Resize’ option.
+
+image:Align3.png[]
+
+
+== Combine Multiple Filters into a Selection Container
+A Selection Container can display a variety of filter components such as Selection Lists and Range Sliders in a single region of the Dashboard.  This is an effective way to package Filter components to save space on the screen.
+
+
+
+include::viewsheet:partial$selectionContainer.adoc[]
+
+See xref:SelectionContainerProperties.adoc[] for information about additional Selection Container features.
+
+
+
+== Combine Multiple Components in a Tabbed Interface
+A Tabbed Interface allows you to stack components onto distinct pages that are accessed by tabs. Since only one tab is visible at a time, this allows you to comfortably display many components in the same space on the Dashboard.
+
+To create a tabbed interface, follow the steps below.
+
+. Drag and drop one component (or group) onto another component (or group). This opens the ‘Layout Option’ dialog box.
++
+image:Capture_012_1.png[]
+
+. Choose the ‘Place component into tabbed interface’ option. This places the two components (or groups) into a tabbed interface.
++
+image:Capture_014_1.png[]
+
+Note that each component is placed at the top-left corner within its own tab. To display a component at a different location within its tab, first group the component together with a background (e.g., an Image or Shape component), and then use the group as the contents of the tab.  See xref:#GroupComponents[] for information on how to create a group.
+
+To apply a unique style to the active (currently selected) tab, click on a tab to make it active, and then apply the desired styling from the *Format* panel. (See xref:TabbedInterfaceProperties.adoc[]   for additional information.)
+
+== Pop or Tip a Component
+In some cases, you may want display a component only when the user takes a specific action, and otherwise keep it hidden.  There are several ways to do this:
+
+* Switch component visibility on and off.  See xref:#AdaptComponentVisibility[] below.
+* Make the component a *Data Tip*.   A Data Tip displays the component (or group of components) only when the user hovers the mouse over another component, such as a Chart, and automatically filters the Data Tip component based on the hover region. The Data Tip component is displayed at the *hover location*, and  otherwise remains *hidden*. See xref:AddTipsToChart.adoc[] for more about how to use a Data Tip.
+* Make the component a *Pop Component*.  This displays the component (or group of components) when the user clicks on a Text component. The component is displayed at the *click location*, and  otherwise remains *hidden*. See xref:TextProperties.adoc[] for more information.
+
+[#AdaptComponentVisibility]
+== Adapt Component Visibility
+Use Form controls to allow the user to selectively hide and show various components on the Dashboard. For example, you can provide a Form component that lets the user choose whether to see data displayed in a Table or Chart (by dynamically controlling the 'Visible' property of a Table and Chart that occupy the same space on the Dashboard). See xref:DynamicallySetProperties.adoc[]  for more information.
+
+== Adapt Component Data Display
+Use Form controls to allow the user to modify the data displayed on  data view components such as  Charts or Crosstabs. For example, rather than adding several different Charts to the Dashboard, provide  Form components that let the user choose from a set of dimensions and measures to display on a single Chart (by dynamically controlling the fields bound in the 'X' and 'Y' regions of the Chart Editor). See xref:DynamicallySetProperties.adoc[]  for more information.
+
+== Enable User Editing
+Provide the user with access to the Chart Editor and Crosstab Editor so that the user can change the properties of a Chart or Crosstab to suit their own needs, thus  eliminating the need for multiple Charts and Crosstabs. End-user access to these tools is enabled by default. See xref:EndUserChartControl.adoc[] for more information.
+
+== Scale Components to the Screen
+By default, a Dashboard is displayed in the Portal at the same size that you designed it.  However, this may not be convenient for a user whose screen or browser window is significantly smaller or larger than the Dashboard dimensions. To address these issues, set the Dashboard to automatically scale to the user's browser window.
+
+To enable Dashboard scaling, follow the steps below:
+
+. Press the {buttonOptions} in the Dashboard toolbar. This opens the 'Dashboard Options' dialog box.
++
+image:Viewsheet Options Button.png[]
+
+. Select the *Layout* tab.
+
+. Enable the '`Scale to Screen`' option. This scales the Dashboard to the browser window so that all components are visible without scrolling.
++
+image:Viewsheet Options ScaleToScreen.png[]
+
+. *_Optional:_*  Select '`Fit to Width`'	to scale the Dashboard to the full width of the browser window. In this case, the Dashboard height is scaled proportionally to the width and may exceed the height of the window. (A vertical scroll bar is provided in this case.)
+
+. Press btn:[OK] to close the dialog box.
+
+TIP: If you want the Dashboard to appear with different layouts or with different sets of components for different viewing devices, see xref:CreateDeviceLayout.adoc[]. If you specify such device layouts, then the '`Scale to Screen`' option on the Layout tab applies only to the “Master” layout.
+
+
+
+
+
+
+
+
+

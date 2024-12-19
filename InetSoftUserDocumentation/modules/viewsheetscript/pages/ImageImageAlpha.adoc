@@ -1,0 +1,33 @@
+= imageAlpha
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+====
+
+Sets the transparency (alpha) of the image displayed by the Image component.
+
+== Type
+Integer::			Value between 0 (transparent) and 100 (opaque)
+
+
+
+
+== Example
+[source,javascript]
+Image1.imageAlpha = 75;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+imageAlpha           // unqualified
+Image1.imageAlpha    // qualified
+
+{secondForm}
+====
+
+

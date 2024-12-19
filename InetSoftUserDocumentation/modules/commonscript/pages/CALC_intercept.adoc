@@ -1,0 +1,36 @@
+= CALC.intercept(array_Y, array_X)
+:navtitle: CALC.intercept()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Calculates the point at which the best-fit regression line for the values in `array_x` and `array_y` intersects the y-axis. {CALCExcelFunctionPage}
+
+== Parameters
+array_y::				Array of y values
+array_x::	Array of x values
+
+
+== Example
+[source,javascript]
+----
+CALC.intercept([8,11,14,17],[1,2,3,4]);  // returns 5.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Columns of Dashboard table TableView1:
+CALC.intercept(TableView1.table['YValues'],TableView1.table['XValues'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Columns of ‘Sales’ data block in Data Worksheet:
+CALC.intercept(Sales['YValues'], Sales['XValues']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

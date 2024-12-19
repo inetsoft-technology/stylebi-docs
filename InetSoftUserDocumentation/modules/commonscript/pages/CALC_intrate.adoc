@@ -1,0 +1,45 @@
+= CALC.intrate(settlement, maturity, investment, redemption, [basis])
+:navtitle: CALC.intrate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *interest rate* for a fully invested security without compounding. {CALCExcelFunctionPage}
+
+== Parameters
+settlement::			Date object: The security’s settlement date
+maturity::			Date object: Security’s maturity date (date when security expires)
+investment::			Amount paid for the security
+redemption::			Security’s redemption value per $100 face value
+basis:: {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+== Example
+Effective interest rate without compounding for a security purchased at $100 on January 1, 2008 and redeemed for $200 on January 1, 2016, with Actual/Actual counting convention.
+
+[source,javascript]
+----
+CALC.intrate(new Date(2008,0,1), new Date(2016,0,1), 100, 200, 1)
+// Returns 0.12525667351129363 (approx 12.5%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.intrate(field['SettleDate'], field['MatureDate'], 100, 200, 1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.intrate(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 100, 200, 1)
+CALC.intrate(parameter.SettleDate, parameter.MatureDate, 100, 200, 1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

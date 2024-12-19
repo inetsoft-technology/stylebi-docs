@@ -1,0 +1,47 @@
+= REST XML  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing REST XML  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:RESTXML.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonRESTXMLQuery}. This opens the ‘REST XML  Query’ dialog box.
++
+image:user:dataSourceRESTXML3.png[]
+
+. Enter the ‘URL Suffix’, and select the ‘XMLSchema’ (optional). If you select ‘XSD’ or ‘DTD’, supply the ‘XMLSchema URL’ for the XSD or DTD schema file.
+
+. Enter a desired ‘XPath expression’ to filter the data.  See https://www.w3schools.com/xml/xml_xpath.asp[XML and XPath] for information about the XPath syntax.
++
+image:user:dataSourceRESTXML4.png[]
+
+
+
+. *_Optional:_*  Select ‘Expand Arrays’ to expand a record that contains an array into multiple records.
++
+****
+.Example: Expand Arrays...
+[%collapsible]
+=====
+include::dataworksheet:partial$expandArrays.adoc[]
+=====
+****
+
+. For ‘Request Type’, select ‘GET’ or ‘POST’.
+
+. *_Optional:_* From the ‘Pagination’ menu, select ‘None ‘ or ‘Page Count’ as the type of pagination. ‘Page Count’ finds the total number of pages from the initial response and iterates through them page by page. Enter a desired ‘Page Count XPath’ and ‘Page Number URL Variable’.  (See https://www.w3schools.com/xml/xml_xpath.asp[XML and XPath] for information about the XPath syntax.) If ‘Zero-based Page Index’ is enabled, the page count starts with 0; otherwise, the page count starts with 1.
+
+
+
+
+. *_Optional:_* {datasourceSelectTabular}
++
+include::partial$finalStepsQuery.adoc[]
+

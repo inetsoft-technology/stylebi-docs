@@ -1,0 +1,53 @@
+= Scale.setScaleOption(value)
+:navtitle: Scale.setScaleOption()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies a scaling option for the default scaling.  The corresponding “getter” function is `getScaleOption()`.
+
+
+The `Scale.TICKS` option uses the maximum and minimum tick values (i.e., rounded numbers) rather than the maximum and minimum data values. The `Scale.ZERO` option uses zero as the minimum rather than the minimum data value (if positive). To combine multiple options, use the pipe (“or”) operator:
+
+[source,javascript]
+qscale.setScaleOption(Scale.ZERO | Scale.TICKS);
+
+
+== Parameter
+value:: `Scale.RAW` (no modification) +
+`Scale.NO_NULL` (remove NULL-data gaps in scale) +
+`Scale.TICKS` (use ticks in scale range calculation) +
+`Scale.ZERO` (use zero in scale range)
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var sscale = new CategoricalScale("State"); //<2>
+var qscale = new LinearScale("Quantity"); //<2>
+var coord = new RectCoord(sscale,qscale); //<3>
+qscale.setScaleOption(Scale.ZERO); //<4>
+graph.setCoordinate(coord); //<5>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create   the xref:Scale.adoc[] objects.
+<3> Use the `Scale` to create a new xref:Coordinate.adoc[].
+<4> Use `setScaleOption` to use zero in scale range.
+<5> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:ScaleSetOption.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

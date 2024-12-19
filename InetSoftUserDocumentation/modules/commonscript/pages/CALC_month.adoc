@@ -1,0 +1,40 @@
+= CALC.month(date)
+:navtitle: CALC.month()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Returns the numeric month for the given `date` object. (January has value 1.) {CALCExcelFunctionPage}
+
+
+
+== Parameters
+date::			a Date object
+
+
+
+== Example
+[source,javascript]
+----
+CALC.month(new Date(2000,1,21))  // returns 2 (February)
+
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.month(field['Order Date'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.month(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,48 @@
+= getHiddenColumnValue(col,row)
+:navtitle: getHiddenColumnValue()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:WriteBackToDatabase.adoc#SetTableEditable[Set a Table to be  Editable] for information on making a Table editable.
+* xref:viewsheet:TableProperties.adoc[] for general  Table settings.
+====
+
+
+For a hidden column (often a primary key column) in an *Editable Table*, retrieves the value in the specified row of the hidden column.
+
+
+== Parameters
+col::			hidden column name
+row::			row index
+
+
+
+
+
+
+== Example
+[source,javascript]
+for(var i=0; i<TableView1.table.length; i++) {
+  if(TableView1.getFormRow(i).rowState == CHANGED) {
+    var hiddenValue = TableView1.getHiddenColumnValue("columnName", i);
+  }
+}
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+getHiddenColumnValue                 // unqualified
+TableView1.getHiddenColumnValue      // qualified
+
+{secondForm}
+====
+
+

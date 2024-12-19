@@ -1,0 +1,50 @@
+= DataSet.setOrder(dim, arr)
+:navtitle: DataSet.setOrder()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+xref:chartAPI:DataSetGetData.adoc[] to retrieve data from the DataSet object.
+====
+
+
+
+Set a manual label ordering for a given dimension field.
+
+== Parameters
+dim::		Name of the dimension to sort
+arr::  Array of strings with desired label order:
++
+[source,javascript]
+--
+['label1','label2','label3',...]
+--
+
+
+
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"],["NJ", 200],["NY", 300],["PA", 25]];
+dataset.setOrder('State',['PA','NY','NJ']); <1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+graph.addElement(elem);
+--
+<1> Sort the 'State' field in the specified order.
+
+image:commonscript:datasetsetOrder.png[]
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

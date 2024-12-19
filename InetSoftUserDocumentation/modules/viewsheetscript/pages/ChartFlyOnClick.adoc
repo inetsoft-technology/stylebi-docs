@@ -1,0 +1,37 @@
+= flyOnClick
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:ChartProperties.adoc[] to set flyover in the ‘Chart Properties’ dialog box.
+
+
+
+
+
+Specifies that components filtered by a chart flyover will be updated only when the user clicks on the chart.
+
+== Type
+Boolean:: `true`: update on mouse click +
+`false`: update on mouse hover (default)
+
+
+
+
+== Example
+[source,javascript]
+Chart1.flyOnClick = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+flyOnClick         // unqualified
+Chart1.flyOnClick  // qualified
+
+{secondForm}
+====
+
+

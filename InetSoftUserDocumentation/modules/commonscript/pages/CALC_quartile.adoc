@@ -1,0 +1,50 @@
+= CALC.quartile(array, quart)
+:navtitle: CALC.quartile()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the specified *quartile* for the values in array. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of real values
+quart::			Desired quartile code:
++
+[width=50%,cols="1,5"]
+|===
+|Code|Quartile
+
+|0|minimum value
+|1| first quartile (25th percentile)
+|2| second quartile (50th percentile, median)
+|3|  third quartile (75th percentile)
+|4|  maximum value
+|===
+
+
+
+== Example
+First quartile (25th percentile) for dataset pass:[{1,2,4,7,8,9,10,12}]:
+
+[source,javascript]
+----
+CALC.quartile([1,2,4,7,8,9,10,12], 1);  // returns 3.5
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.quartile(TableView1.table['Quantity'], 1)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.quartile(Sales['Quantity'], 1);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

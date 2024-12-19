@@ -1,0 +1,29 @@
+The Spark SQL string has the following features:
+
+[square]
+* Spark SQL syntax is similar to HiveQL. See the https://cwiki.apache.org/confluence/display/Hive/LanguageManual[Hive Language Manual] for more information about the language.
+
+* The SQL string can reference any managed Hive tables in the HDFS if the InetSoft server is configured for Hive access. (Consult an administrator.) For example, if the Hive database contains a table `orderdetails`, you can access this table in your SQL:
++
+[source,sql]
+ select * from orderdetails
+
+* The SQL string can contain multiple statements separated by semi-colons. Each statement can refer to the `select` result of the previous statement by using the keyword `dataset`. For example, if `OrderDetails` and `Orders` are Hive tables, the following SQL statements join the two tables. The term *dataset* in the second line refers to the select result from the first line.
++
+[source,sql]
+select * from OrderDetails;
+select * from dataset INNER JOIN Orders on dataset.OrderID = Orders.OrderID;
++
+Data sources are searched for named tables in the following order:
+
+. Temporary view
+. Hive table
+
++
+If tables of the same name exist in different data sources, the first discovered instance of the table is used.
+
+
+* To pass a parameter in the SQL string, use the syntax `($(parameterName))`. For example:
++
+[source,sql]
+select * from dataset where State in ($(parameterName1))

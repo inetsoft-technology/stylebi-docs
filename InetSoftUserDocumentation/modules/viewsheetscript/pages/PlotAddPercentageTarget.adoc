@@ -1,0 +1,76 @@
+= addPercentageTarget(measure, colors, values, options)
+:navtitle: addPercentageTarget()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Draws a set of horizontal or vertical lines on the chart to mark the specified percentage figures.  See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.
+
+include::ROOT:partial$targetLinesGraphForm.adoc[]
+
+
+
+== Parameter
+measure::			Name of measure on which to draw percentage lines
+colors::			Color (see xref:PlotValueColor.adoc[]) or array of colors to fill areas between percentage lines
+values::			Percentage, or array of percentages, at which to draw lines
+options::			Object literal containing name-value pairs of options (see xref:#Options[] below, e.g., `{fillAbove:0xff0000, fillBelow:0x00ff00}`)
+
+[#Options]
+
+== Options
+fillAbove::				Color (see xref:PlotValueColor.adoc[]) to fill the region above the upper percentage line
+fillBelow::				Color (see xref:PlotValueColor.adoc[]) to fill the region below the lower percentage line
+label::				String, or array of strings, to label the percentage line(s). The following codes can be inserted:
++
+include::partial$targetLabelCodes.adoc[]
+
+
+lineColor::				Color (see xref:PlotValueColor.adoc[]) to apply to all percentage lines
+lineStyle::				The line style (a  xref:commonscript:StyleConstantLineStyle.adoc[] constant) to apply to all percentage lines
+labelFont::				The font description (e.g., `'Lucida Sans Unicode-BOLD-14'`) to apply to all line labels
+labelColor::				The color (see xref:commonscript:StyleConstantLineStyle.adoc[]) to apply to all line labels
+percentageAggregate::				The basis on which to compute the percentage: `'Average'`, `'Minimum'`, `'Maximim'`, `'Median'`, `'Sum'`.
+
+==  Examples
+.Single Percentage Line
+[source,javascript]
+--
+// The 'options' object is broken into several lines for clarity:
+var options = {fillAbove:[225,225,225],fillBelow:[225,225,225], \
+label:['{1}: {0,number,$#,##0}'],lineColor:'red',lineStyle:Chart.THICK_LINE, \
+labelFont:'Lucida Sans Unicode-BOLD-11',labelColor:'black', \
+percentageAggregate:'Average'}
+Chart1.addPercentageTarget('Sum(Product:Total)','null',125,options)
+--
+
+image:commonscript:PlotAddTargetPercentage1.png[]
+
+.Multiple Percentage Lines
+[source,javascript]
+--
+// The 'options' object is broken into several lines for clarity:
+var options = {fillAbove:[225,225,225],fillBelow:[225,225,225], \
+label:['{1}: {0,number,$#,##0}','{1}: {0,number,$#,##0}'],lineColor:'red', \
+lineStyle:Chart.THICK_LINE,labelFont:'Lucida Sans Unicode-BOLD-11', \
+labelColor:'black',percentageAggregate:'Maximum'}
+Chart1.addPercentageTarget('Sum(Product:Total)',[0xDDAAAA,0xDDCCCC],[30,60,90],options)
+--
+
+
+image:commonscript:PlotAddTargetPercentage2.png[]
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+addPercentageTarget         // unqualified
+Chart1.addPercentageTarget  // qualified
+
+{secondForm}
+====

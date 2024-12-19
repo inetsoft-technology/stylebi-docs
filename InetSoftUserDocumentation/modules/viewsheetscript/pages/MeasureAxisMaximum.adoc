@@ -1,0 +1,35 @@
+= axis.maximum
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Sets the maximum value for a measure axis.
+
+== Type
+number
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.axis['Sum(Total)'].maximum = 1500000;
+
+image:commonscript:measureMaximum.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].maximum             // unqualified
+Chart1.axis['...'].maximum      // qualified
+
+{secondForm}
+====
+

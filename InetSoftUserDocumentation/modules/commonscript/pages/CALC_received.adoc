@@ -1,0 +1,51 @@
+= CALC.received(settlement, maturity, investment, discount, [basis])
+:navtitle: CALC.received()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the amount *received* at maturity for a fully invested security with no interest payments. {CALCExcelFunctionPage}
+
+== Parameters
+settlement::			Date object: The security’s settlement date
+maturity::			Date object: Security’s maturity date (date when security expires)
+investment::			Amount invested in the security
+discount::			Security’s discount rate
+basis:: {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+
+
+
+
+== Example
+Amount received at maturity for a $1,000,000 investment made at 5.75%, with settlement date of February 15, 2008, maturity date of May 15, 2008, and Actual/360 counting convention.
+
+
+[source,javascript]
+----
+CALC.received(new Date(2008,1,15), new Date(2008,4,15), 1000000, 0.0575, 2);
+// returns 1014584.6544071021 (approx $1,014,584.65)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.received(field['SettleDate'], field['MatureDate'], 1000000, 0.0575, 2)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.received(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 1000000, 0.0575, 2)
+CALC.received(parameter.SettleDate, parameter.MatureDate, 1000000, 0.0575, 2)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

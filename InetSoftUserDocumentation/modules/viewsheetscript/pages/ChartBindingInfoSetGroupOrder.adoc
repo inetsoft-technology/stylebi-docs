@@ -1,0 +1,52 @@
+= bindingInfo.setGroupOrder(col, grouping)
+:navtitle: bindingInfo.setGroupOrder()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoGetGroupOrder.adoc[]  to set the binding information.
+
+Specifies the grouping level for a specified Date dimension.
+
+
+== Parameters
+col::			Date field to group
+grouping:: One of the following constants.
++
+[source]
+Chart.YEAR_INTERVAL
+Chart.QUARTER_INTERVAL
+Chart.MONTH_INTERVAL
+Chart.WEEK_INTERVAL
+Chart.DAY_INTERVAL
+Chart.HOUR_INTERVAL
+Chart.MINUTE_INTERVAL
+Chart.SECOND_INTERVAL
+Chart.QUARTER_OF_YEAR_PART
+Chart.MONTH_OF_YEAR_PART
+Chart.WEEK_OF_YEAR_PART
+Chart.DAY_OF_MONTH_PART
+Chart.DAY_OF_WEEK_PART
+Chart.HOUR_OF_DAY_PART
+
+The distinction between grouping levels such as `Chart.MONTH_INTERVAL` and `Chart.MONTH_OF_YEAR_PART` is as follows:
+
+[square]
+* `Chart.MONTH_INTERVAL` groups the same month of different years individually (e.g., January 2009, January 2010, February 2009, February 2010, etc.).
+* `Chart.MONTH_OF_YEAR_PART` groups the same month of different years together (January, February, etc.).
+
+
+The same distinction obtains for `Chart.DAY_INTERVAL`, `Chart.DAY_OF_MONTH_PART`, and other similar pairs.
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.setGroupOrder("Order Date",Chart.QUARTER_INTERVAL)
+
+--
+image:commonscript:setGroupOrder.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]

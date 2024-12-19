@@ -1,0 +1,62 @@
+= TriCoord
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+The `TriCoord` object contains triangular coordinates against which data can be represented. Although the triangular coordinate system contains three axes, it represents only two *independent* measures, because the three measures must sum to the maximum value of the scale. This makes the triangular coordinates effective for representing proportions of a fixed total.
+
+IMPORTANT: The three measures must sum to the maximum value of the scale.
+
+To create a `TriCoord` object, call the `TriCoord` constructor:
+
+[source,javascript]
+var coord = new TriCoord(qscale);
+
+You can pass a `Scale` object (e.g., ‘qscale’) to the constructor, or specify this later using the xref:TriCoordSetScale.adoc[] property.
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["Quantity","Total","Returns"],[50,50,100],[75,100,25],[100,100,0]]; //<1>
+graph = new EGraph();
+var elem = new PointElement();
+var qscale = new LinearScale("Quantity"); //<2>
+qscale.setMin(0);
+qscale.setMax(200);
+var spec = new AxisSpec();
+spec.setGridStyle(Chart.DOT_LINE);
+qscale.setAxisSpec(spec);
+var coord = new TriCoord(qscale); //<3>
+elem.addDim("Quantity"); //<4>
+elem.addDim("Total"); //<5>
+elem.addVar("Returns"); //<6>
+graph.addElement(elem);
+graph.setScale("Quantity", qscale);
+graph.setScale("Total", qscale);
+graph.setScale("Returns", qscale);
+graph.setCoordinate(coord); //<7>
+--
+<1> {dataset}
+<2> Create the xref:Scale.adoc[] object.
+<3> Create the xref:TriCoord.adoc[] object from the `Scale` object.
+<4> Add first measure (‘Quantity’),  represented on the bottom axis.
+<5> Add  second measure (‘Total’),  represented on the right axis.
+<6> Add third measure (‘Returns’),  represented on the left axis. #Note#: The third measure must be added using  xref:GraphElementAddVar.adoc[] rather than xref:GraphElementAddDim.adoc[].
+<7> Use xref:EGraph_setCoordinate.adoc[] to add the `RectCoord` to the Chart.
+
+image:commonscript:Tricoord.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

@@ -1,0 +1,39 @@
+= CALC.weightedavg(array1, array2)
+:navtitle: CALC.weightedavg()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the average of the values in `array1` weighted by the values in the `array2`.
+
+== Parameters
+array1::			Array of numerical, text, and/or Boolean values to average. Text evaluates to 0,  Boolean  `true` evaluates to 1, and  `false` evaluates to 0.
+array2::			Array of weights
+
+
+== Example
+
+[source,javascript]
+----
+CALC.weightedavg([50,76,80,98],[0.15,0.2,0.2,0.45]);
+// returns 82.8
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.weightedavg(TableView1.table['Score'],TableView1.table['Weight'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.weightedavg(Sales['Score'], Sales['Weight']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

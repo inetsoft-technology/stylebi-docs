@@ -1,0 +1,41 @@
+= yFields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::viewsheetscript:partial$readOnly.adoc[]
+
+
+
+Returns the names of the query fields (as an array) that are currently assigned to the Y-axis binding at runtime. This property is read-only.   Use xref:ChartBindingInfoYFields.adoc[] to  assign fields to the Y-axis.
+
+
+
+
+
+
+== Type
+Array of Strings
+
+
+
+
+
+== Example
+[source,javascript]
+if (Chart1.yFields[0] == 'Quantity Purchased') {
+  Gauge1.visible = true;
+}
+else {
+  Gauge1.visible = false;
+}
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+yFields           // unqualified
+Chart1.yFields    // qualified
+
+{secondForm}
+====

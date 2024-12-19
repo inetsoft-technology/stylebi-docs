@@ -1,0 +1,34 @@
+= singleStyle
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+For a chart with ‘Multiple Styles’ selected from {buttonSelectChartStyle}, sets the style for the specified dataset. Use xref:ChartSeparatedStyle.adoc[] to set a single global style.
+
+
+
+== Type
+One of the following constants:
+
+include::ROOT:partial$chartStyle.adoc[]
+
+
+== Example
+[source,javascript]
+Chart1.singleStyle['Sum(Discount)'] = Chart.CHART_LINE;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+singleStyle         // unqualified
+Chart1.singleStyle  // qualified
+
+{secondForm}
+====
+
+

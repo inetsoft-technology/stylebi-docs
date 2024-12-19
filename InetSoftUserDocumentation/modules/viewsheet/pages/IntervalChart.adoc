@@ -1,0 +1,66 @@
+= Interval Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+An Interval chart is similar to a  xref:BarChart.adoc[] but represents *two measures* with each bar: A smaller value that defines the bottom of the bar, and a larger value that defines the size of the bar. (Note that the second measure specifies the vertical span of the bar, and *_not_* the upper value of the bar.)
+
+image:commonscript:intervalChartExp0.png[]
+
+To create an interval chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Interval’ style.   Press the {buttonApply}.
++
+image:commonscript:intervalChartExp1.png[]
+
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:intervalChartExp2.png[]
+
++
+TIP: {convertToDimension}
+
+. *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:viewsheetExp34.png[]
+
+. *_Optional:_* {multipleDimensionNoColor} {addDimensionsUsingVisual}
+
+
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘Y’ region. This measure defines the lower value of each bar/interval on the chart.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:intervalChartExp4.png[]
++
+TIP: {convertToMeasure}
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+image:commonscript:intervalChartExp5.png[]
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a second *measure* to the  ‘Size’ region. This measure defines the *_height_* of each bar/interval on the chart.
++
+NOTE: As shown in the example, the second measure can be the same as the first measure, but with  a different aggregation method.
++
+image:commonscript:intervalChartExp6.png[]
+
+
+. Press the {buttonEditMeasure} next to the ‘Size’  measure, and select the desired aggregation method for the measure.
++
+image:commonscript:intervalChartExp7.png[]
++
+The lower value of each bar is specified by the aggregate ‘Y’ measure, and its height (vertical span) is specified by the aggregate ‘Size’ measure.
++
+image:commonscript:intervalChartExp8.png[]
+
+. You can add additional measures to the Chart if desired. See xref:BasicChartingSteps.adoc[] for information on how to add measures using color, shape, or size representation.
+
+. {finishEditing}
+
+include::partial$addTitlesLegend.adoc[]

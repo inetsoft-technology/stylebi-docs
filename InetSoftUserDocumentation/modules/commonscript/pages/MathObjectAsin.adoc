@@ -1,0 +1,47 @@
+= Math.asin(number)
+:navtitle: Math.asin()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_asin.adoc[] for the preferred version from the CALC library.
+====
+
+
+
+
+Return the inverse sine (in radians) of a number between 0 and 1. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/asin[Math.asin()] method, and can be used with or without the `Math` qualifier, `asin()` or `Math.asin()`.
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+asin(1);  // returns 1.570796 (π/2 radians)
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+asin(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+asin(Slider1.selectedObject)
+asin(parameter.Value)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

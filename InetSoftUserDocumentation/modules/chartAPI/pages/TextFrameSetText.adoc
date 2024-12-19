@@ -1,0 +1,64 @@
+= TextFrame.setText(value,text)
+:navtitle: TextFrame.setText()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Specifies the mapping between a value and the text that should be displayed.  The corresponding “getter” function is `getText(value)`.
+
+
+== Parameters
+value::			the data value to be replaced
+text::			the replacement string
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var tframe = new DefaultTextFrame("State"); //<2>
+tframe.setText('NJ','New Jersey'); //<3>
+tframe.setText('NY','New York'); //<3>
+elem.setTextFrame(tframe); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `DefaultTextFrame` object.
+<3> Use `setText` to assign the desired labels to  '`NJ`' and '`NY`'.
+<4> Use xref:GraphElementSetTextFrame.adoc[] to add the `DefaultTextFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:TextFrame2setText.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} and xref:GraphElementGetTextFrame.adoc[] {circle2}  to obtain a handle to the desired xref:GraphElement.adoc[] and xref:TextFrame.adoc[]. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getTextFrame(); //<2>
+// Compact syntax: var frame = graph.getElement(0).getTextFrame();
+
+frame.setText('NJ','New Jersey');
+frame.setText('NY','New York');
+--
+=====
+
+

@@ -1,0 +1,49 @@
+= dataset
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+xref:chartAPI:BindDatatoChartinScript.adoc[] for various approaches to binding data to a chart.
+====
+
+
+The `dataSet` object allows you to set the values to be displayed on the graph. It has the form of a two-dimensional array, where each column represents a distinct measure. You can specify the `dataset` by one of the following methods:
+
+[square]
+* Set the Chart binding using the Chart Editor.
+* In script, assign a JavaScript array to the `dataset` property.
++
+[source,javascript]
+dataset = [["State", "Quantity"],["NJ", 200],["NY", 300],["PA", 370],["CT", 75]];
+
+* In script, assign a Data Worksheet result (e.g., ‘AllSales’) to the dataset property.
++
+[source,javascript]
+dataset = runQuery("ws:global:Examples/AllSales");
++
+See xref:viewsheetscript:RunQueryFromScript.adoc[]  and xref:chartAPI:CreateChartwithChartAPI.adoc[] for details about using xref:commonscript:runQuery.adoc[runQuery].
+
+
+The `dataset` object is also accessible for reading. See the xref:chartAPI:DataSetGetData.adoc[] method for more information. However, in many cases, the xref:chartAPI:Data.adoc[] property provides more convenient access to Chart data.
+
+
+== Example
+
+.Set the dataset
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["CA",200], ["NY",3000]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+graph.addElement(elem);
+--
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+

@@ -1,0 +1,62 @@
+= Array.sort([compareFunction])
+:navtitle: Array.sort()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:indexOf.adoc[] to detect an item in an array.
+====
+
+Sort the array items according to a *compare function*. If the function is not provided, all items are sorted as strings.
+
+
+== Parameters
+compareFunction::  A function that accepts two parameters and has the following return values:
++
+* Returns a *positive number* if the first parameter is greater than the second parameter.
+* Returns a *negative number* if the first parameter is less than the second parameter.
+* Returns *zero* if the two parameters are the same.
+
+
+
+
+
+== Example
+[source,javascript]
+----
+function compareInt(a, b) {
+  return a - b;
+}
+array1.sort(compareInt);
+----
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+function compareDate(a, b) {
+  return dateDiff('d',b,a);
+}
+var arr = TableView1.table.Date;
+arr.sort(compareDate);
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+function compareDate(a, b) {
+  return dateDiff('d',b,a);
+}
+var arr = Sales['Date'];
+arr.sort(compareDate);
+
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

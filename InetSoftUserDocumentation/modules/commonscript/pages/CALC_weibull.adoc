@@ -1,0 +1,44 @@
+= CALC.weibull(x, alpha, beta, cumulative)
+:navtitle: CALC.weibull()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the value of the *Weibull distribution* for specified value of random variable `x`, scale parameter `alpha`, and shape parameter `beta`. Value `x` typically represents a time interval between events.  {CALCExcelFunctionPage}
+
+== Parameters
+x::			Time interval for which to compute probability
+alpha::		Scale parameter
+beta::	Shape parameter
+cumulative			(Boolean):: 			`true`: computes cumulative distribution function +
+`false`: computes probability density function
+
+
+
+
+== Example
+Weibull cumulative distribution function for a value of 105, alpha of 20, and beta of 100.
+
+[source,javascript]
+----
+CALC.weibull(105, 20, 100, true); // returns 0.9295813900692769
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.weibull(field['Value'],  20, 100, true)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.weibull(Slider1.selectedObject,  20, 100, true)
+CALC.weibull(parameter.Value,  20, 100, true)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

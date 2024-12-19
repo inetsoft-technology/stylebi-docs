@@ -1,0 +1,251 @@
+= Enter Data
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$rightClickOptions.adoc[]
+
+
+
+Instead of creating a data block from database tables or data model fields (see xref:CreateNewWorksheet.adoc[]), you can create a data block by manually entering values into the Data Worksheet. This kind of  data block is called an _Embedded Table_. You can save the entered data into a Data Worksheet to persist across sessions.
+
+
+== Create an Embedded Table
+
+include::ROOT:partial$createVisualizationClose.adoc[]
+To create a new Embedded Table, follow the steps below:
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Manually enter data  into a data block...
+video::299093804[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+. If a Data Worksheet is not already open, create a new Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
+
+. Press the {buttonCreateObject}, and select {buttonEmbeddedTable}.
++
+image:newEmbeddedTableToobar.png[]
+
+. In the ‘Embedded Table’ dialog box provide a ‘Name’ for the Embedded Table and enter a number for ‘Rows’ and ‘Columns’. Then press btn:[OK].
++
+image:EmbeddedTableCreate.png[]
+
+. To edit a column header, double-click on the header in the bottom panel and enter the desired text.
+
+. Set the column data type for each column. See xref:dataworksheet:ModifyColumn.adoc#changeColType[Change Column Type] for more about changing the column type.
+
+. To edit a data cell, click in the cell in the bottom panel and enter text directly. You can enter both numeric and non-numeric values.
++
+image:embeddedTableEnterData.png[]
+. Press the {buttonSave} in the toolbar to save the Data Worksheet with the embedded data.
+
+.Example: Create Embedded Table
+****
+Assume that you want to create a table of values to be used in a formula for some other table in the Data Worksheet.  In the following example you will create an Embedded Table with three rows and three columns of data.
+
+. Create a new Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
+
+. Press the {buttonCreateObject}, and select {buttonEmbeddedTable}. Use the ‘Embedded Table’ dialog box to create an Embedded Table with three rows and three columns.
++
+image:EmbeddedTableCreate2.png[]
+
+. Press btn:[OK] to close the dialog box and create the Embedded Table.
+
+. In the bottom panel, double-click on the ‘col0’ header cell. The cell switches to editing mode, and you can now type in the cell to change the text.
++
+image:EditableEmbeddedTable.png[]
+
+. Change the column names for ‘col0’, ‘col1’ and ‘col2’ to ‘A’, ‘B’ and ‘C’, respectively.
+
+. Enter any values in the nine data cells. Note that both numeric and non-numeric values can be entered in the table.
++
+image:filledEmbeddedTable.png[]
+****
+
+== Add Rows to an Embedded Table
+To *add a new row* to an Embedded Table, follow these steps:
+
+. Click the Embedded Table data block in the top panel to select it.
+
+. Press the {buttonEmbeddedChangeView} in the bottom panel and select {buttonEditAction}.
+
+. Right-click a table row in the bottom panel, and choose ‘Insert Row’ or ‘Append Row’ from the context menu. This inserts a blank row above the row you clicked or appends a blank row below the row you clicked, respectively.
++
+image:insertRowEmbedded.png[]
++
+All cells in the new row can be edited.
+
+== Remove Rows from an Embedded Table
+To *remove an existing row* from an Embedded Table, follow these steps:
+
+. Click the Embedded Table data block in the top panel to select it.
+. Press the {buttonChangeView} in the bottom panel and select {buttonEditAction}.
+. Right-click a table row you want to delete in the bottom panel, and choose ‘Remove Row’ from the context menu. This removes the row you clicked, and shifts subsequent rows upward in the table.
+
+== Convert a Data Block to an Embedded Table
+To convert a regular data block to an Embedded Table, right-click the title bar of the data block, and select ‘Convert to Embedded Table’. {rightClickOptions}
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Convert a data block to an Embedded Table...
+video::299081891[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+.Example: Convert Data Block to Embedded Table
+****
+In the following example, the ‘Sales’ data block of the ‘Sales Explore’ Data Worksheet is converted to an editable Embedded Table.
+
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Create a new Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
+
+. From the left panel, drag the ‘Sales Explore’ Data Worksheet into the right panel. This creates the data block ‘Sales1’.
++
+image:importWorksheet_2.png[]
+. Press the {buttonChangeView} in the bottom panel, and select {buttonLiveDataView}.
++
+image:SalesbyCategoryLiveData.png[]
+
+. Right-click the data block and select ‘Convert to Embedded Table’. {rightClickOptions}
++
+A new data block is created with name ‘Query1’.
+. Select the ‘Query1’ data block. Press the {buttonChangeView} in the bottom panel and select {buttonEditAction}.
++
+image:converttoEmbedded2.png[]
+
+. Click on any of the cells in the bottom panel. Notice that all of the cells are now editable.
++
+image:EmbeddedTableEditable.png[]
+****
+
+== Import Data into an Embedded Table
+//ifdef::si[]
+
+To upload a text or Excel data into a new Embedded Table, see xref:UploadData.adoc[].
+//endif::[]
+
+////
+ifdef::testdrive[]
+To upload a text or Excel data into a new Embedded Table, see Upload an Excel or Text File. XXXX
+endif::[]
+////
+
+To upload a text or Excel data into an existing Embedded Table, follow the steps below.
+Note: Any existing data and column names in the Embedded Table will be overwritten by the imported data.
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Upload  data into an Embedded Table...
+video::300562831[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+. Select an existing Embedded Table.
+. In the bottom panel, Press the {buttonImportDataFile}.
++
+image:importCSVButton.png[]
++
+This opens the ‘Import Data File’ dialog box.
++
+image:embeddedTable4.png[]
+
+. Press ‘Choose File’, and choose the desired text file. (By default, only files with the extension `.csv` are shown. To view all file types, enter `\*.*` in the ‘File Name’ field, and press kbd:[Enter].)
+
+. From the ‘Encoding’ menu, select the encoding of the text file.
+. In the ‘Delimiter’ field, enter the character that is used in the text file to separate entries. The default delimiter character is a comma. For tab-delimited files, select the ‘Tab’ option.
+. Adjust any of the following optional settings to modify the way the file data is interpreted:
+.. Select ‘First Row as Header (Regular Table)’ to use the entries in the first row of the text file as the column header text. Otherwise, default column names are used (“col0,” “col1,” etc.).
+.. *_Optional:_*  Select ‘Unpivot Data (Crosstab Table)’ if the data in the file is in crosstab table form, and you wish to convert the crosstab table into a regular table within the Data Worksheet. This option will convert the column header row into a “dimension” column and convert the crosstab cells into a “measure” column. If the crosstab table in the file contains multiple levels of row headers, enter the number of levels in the ‘Header Columns’ field.
++
+NOTE: You can only unpivot a crosstab that has a single level of column headers.
+
+.. *_Optional:_*  Select ‘Remove Quotation Marks’ to strip quotation marks out of the text file upon import.
+.. Press btn:[OK]. The delimited text is imported into the existing Embedded Table, replacing any previous data.
+.. Press the {buttonSave} in the toolbar to save the Data Worksheet with the embedded data.
+
+== Modify Embedded Data from a Dashboard
+A user can modify the values in an Embedded Table (or the value of a Variable) in the Data Worksheet by using a Dashboard Form component  or Dashboard Embedded Table (a Table with the ‘Embedded Table’ option enabled).
+
+=== Control from Dashboard Form Component
+To configure a Dashboard *Form component* to control  a Data Worksheet Embedded Table (or Variable), follow these steps:
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Modify embedded data from a dashboard...
+video::300402540[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+//ifdef::si[]
+
+. Open the Dashboard for editing. (See xref:viewsheet:EditADashboard.adoc[].)
+//endif::[]
+
+////
+ifdef::testdrive[]
+. Open the Dashboard for editing. (See XXXXXX.)
+endif::[]
+////
+
+. Right-click on the Form control in the Dashboard, and select ‘Properties’.
+
+. Select the *Data* tab in the ‘Properties’ panel.
+
+. Open the ‘Target’ menu:
+* To access an Embedded Table, expand the ‘Table’ node, and select the desired Embedded Table data block of the Data Worksheet.
++
+NOTE: Multiple controls can be linked to the same Embedded Table.
+* To access a Variable, expand the ‘Variable’ node, and select the desired Variable asset in the Data Worksheet. Skip to the final step below.
+. For an Embedded Table, press the {buttonChooseCell} next to the ‘Target’ field. This displays a representation of the Embedded Table.
++
+image:viewsheet:Input Browse Embedded Table.png[]
+
+. In the displayed Embedded Table, click to select the table cell into which form values should be passed. This automatically populates the ‘Column’ and ‘Row’ menus with the corresponding cell indices. Alternatively, specify the target cell directly from the provided menus:
+* From the ‘Column’ menu, select the appropriate field of the Embedded Table data block.
+* From the ‘Row’ menu, select the row of the table to which the form element should provide data.
++
+NOTE: The ‘Row’ menu displays the format “row: row value.” For example, “1:25” indicates that form values are passed to the second row of the Embedded Table, which currently contains the value “25.”
+
+. *_Optional:_* If you want the modified data to persist across sessions, enable the ‘Write Back to Storage’ option. This will save the modified data together with the Data Worksheet.
+
+. Press btn:[OK] to exit the ‘Properties’ panel.
+
+The control is now linked to the Data Worksheet’s Embedded Table or Variable, and changes you make using the control will alter the values in the specified Embedded Table cells or Variable. To set the options displayed by the Form control, see xref:viewsheet:RadioCheckBoxComboProperties.adoc[] in  xref:viewsheet:DashboardReference.adoc[].
+
+=== Control from Dashboard Embedded Table
+To configure a Dashboard *Table* to control of a Data Worksheet Embedded Table (or Variable), follow these steps:
+
+
+//ifdef::si[]
+
+. Open the Dashboard for editing. (See xref:viewsheet:EditADashboard.adoc[].)
+//endif::[]
+
+////
+ifdef::testdrive[]
+. Open the Dashboard for editing. (See XXXXXX.)
+endif::[]
+////
+
+. Create a Table based on a Data Worksheet Embedded Table. (To do this, assign fields from an Embedded Table in the Data Worksheet to a Dashboard Table component.)
+. Right-click on the Table in the Dashboard, and select ‘Properties’.
+. Select the *Advanced* tab in the ‘Properties’ panel. Enable the ‘Embedded Table’ option, and the ‘Enable Table Editing’ option.
+. Press btn:[OK] to close the panel.
+. *_Optional:_* By default, user-modifications to the table are individually submitted immediately upon entry. To batch-submit modifications, right-click on the Table and select ‘Properties’. Select the *General* tab and disable the ‘Submit on Change’ option. Note that this option is only available when the ‘Embedded Table’ option is enabled on the *Advanced* tab.
++
+image:viewsheet:TableSubmitOnChange.png[]
++
+If ‘Submit On Change’ is disabled, the user can batch-submit changes by pressing the {buttonApply} in the Table mini-toolbar.
++
+NOTE: You can also batch-submit user modifications using script. See xref:viewsheetscript:DashboardTableApplyChanges.adoc[] in xref:viewsheetscript:DashboardObjectReference.adoc[].

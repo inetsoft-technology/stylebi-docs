@@ -1,0 +1,40 @@
+= yAxis
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Provides a *shortcut* to set axis properties for the all Y-axes. The available properties are listed in xref:ChartAxisProperties.adoc[] and xref:MeasureAxisProperties.adoc[].
+
+
+
+
+== Example
+[source,javascript]
+Chart1.yAxis.minorIncrement = 1000;
+Chart1.yAxis.labelColor = [255,0,0]
+
+image:commonscript:measureyAxis.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+yAxis             // unqualified
+Chart1.yAxis      // qualified
+
+{secondForm}
+====
+
+
+To set properties for a particular Y-axis (e.g., ‘Total’), use the `axis` property together with the axis name:
+
+
+[source,javascript]
+
+Chart1.axis['Sum(Total)'].minorIncrement = 1000;
+Chart1.axis['Sum(Total)'].labelColor = [255,0,0];

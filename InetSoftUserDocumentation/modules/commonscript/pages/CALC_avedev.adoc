@@ -1,0 +1,37 @@
+= CALC.avedev(array)
+:navtitle: CALC.avedev()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the average of the absolute deviations from mean of data in `array`. This is a measure of the variability in the data set. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of real values for which to compute the average absolute deviation
+
+
+
+== Example
+[source,javascript]
+----
+CALC.avedev([4,5,6,7,5,4,3]);  // returns 1.0204081632653061
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.avedev(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.avedev(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,40 @@
+= bindingInfo.isDiscrete(col)
+:navtitle: bindingInfo.isDiscrete()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Returns the state of the specified column, designated as ‘discrete’ or not.
+
+
+
+
+== Parameter
+col::			Name of field to test for discrete
+
+
+
+== Return
+Boolean:: `true`: Field is set as discrete +
+`false`: Field is not set as discrete
+
+
+
+
+
+
+
+
+
+== Example
+
+[source,javascript]
+--
+var dis = Chart1.bindingInfo.isDiscrete("Order Num");
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

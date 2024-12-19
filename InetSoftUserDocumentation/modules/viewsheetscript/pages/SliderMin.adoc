@@ -1,0 +1,36 @@
+= min
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+The value of the smallest label displayed on the Slider scale.
+
+
+
+== Type
+Number::			Value of lowest scale label
+
+
+
+
+== Example
+[source,javascript]
+Slider1.min = -50;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+min             // unqualified
+Slider1.min     // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,36 @@
+= singleSelection
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:SelectionListProperties.adoc[] and xref:viewsheet:SelectionTreeProperties.adoc[] more information on these components.
+
+
+Specifies that only a single choice can be selected in a Selection List.
+
+
+
+
+
+== Type
+Boolean::	`true`: select only one item +
+`false`: select one or more items (default)
+
+
+== Example
+[source,javascript]
+SelectionList1.singleSelection = true
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+singleSelection                   // unqualified
+SelectionList1.singleSelection    // qualified
+
+{secondForm}
+====
+
+

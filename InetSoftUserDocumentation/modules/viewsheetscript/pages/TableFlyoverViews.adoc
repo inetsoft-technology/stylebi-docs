@@ -1,0 +1,49 @@
+= flyoverViews(arr)
+:navtitle: flyoverViews()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TableProperties.adoc[] to set the property without using script.
+====
+
+
+
+Specifies an array of component names, representing the components to be filtered by Table flyover.  See xref:viewsheet:DrillDownIntoData.adoc#DrillwithFlyover[Drill  with a Flyover] for more information about flyovers.
+
+== Parameters
+arr::			array of component names (String)
+
+
+
+
+
+
+== Example
+
+
+[source,javascript]
+----
+TableView1.flyoverViews = ['Crosstab1','Gauge1'];
+
+----
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+flyoverViews                 // unqualified
+TableView1.flyoverViews      // qualified
+
+{secondForm}
+====
+
+

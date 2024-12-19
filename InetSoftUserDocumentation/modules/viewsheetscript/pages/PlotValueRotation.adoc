@@ -1,0 +1,30 @@
+= valueRotation
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:PlotValueFormats.adoc[] to set the color of a value on a multi-style chart.
+
+Sets the rotation angle for data values displayed in the chart plot area.
+
+== Type
+number (degrees)
+
+== Example
+[source,javascript]
+Chart1.valueRotation = 30;
+
+image:commonscript:valueRotation.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+valueRotation         // unqualified
+Chart1.valueRotation  // qualified
+
+{secondForm}
+====

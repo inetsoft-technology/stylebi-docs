@@ -1,0 +1,37 @@
+= scaleImage
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+====
+
+Specifies that the image should be scaled to the Image component dimensions. Scaling can be set to either preserve the image proportions (xref:ImageMaintainAspectRatio.adoc[], default) or to resize just a selected portion of the image (xref:ImageScale9.adoc[]).
+
+NOTE: The `scaleImage` and xref:ImageTile.adoc[] properties are mutually exclusive.
+
+
+== Type
+Boolean:: `true`: scale image to container +
+`false`: keep original image size
+
+
+
+== Example
+[source,javascript]
+Image1.scaleImage = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+scaleImage           // unqualified
+Image1.scaleImage    // qualified
+
+{secondForm}
+====
+
+

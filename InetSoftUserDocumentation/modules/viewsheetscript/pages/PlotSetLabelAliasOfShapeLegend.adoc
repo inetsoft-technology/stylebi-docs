@@ -1,0 +1,35 @@
+= setLabelAliasOfShapeLegend(value, alias)
+:navtitle: setLabelAliasOfShapeLegend()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Replace the specified label in the shape legend with an alias. {noGetter}
+
+
+
+== Parameters
+value::			Value to be replaced
+alias::			Replacement string
+
+
+
+
+== Examples
+
+[source,javascript]
+Chart1.setLabelAliasOfShapeLegend('NJ','New Jersey');
+Chart1.setLabelAliasOfShapeLegend('NY','New York');
+
+
+image:commonscript:setLabelAliasOfShapeLegend.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setLabelAliasOfShapeLegend(value, alias)           // unqualified
+Chart1.setLabelAliasOfShapeLegend(value, alias)    // qualified
+
+{secondForm}
+====

@@ -1,0 +1,42 @@
+= CALC.poisson(x, lambda, cumulative)
+:navtitle: CALC.poisson()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the value of the Poisson distribution for specified value of random variable `x` and rate parameter `lambda`. Value `x` typically represents the number of events that occur over a period of time in an independently distributed random process, where `lambda` represents the expected (average) number of events over such a period. {CALCExcelFunctionPage}
+
+== Parameters
+x::			Number of events for which to compute probability
+lambda::			Average number of events
+cumulative 			(Boolean):: 			`true`: computes cumulative distribution function +
+`false`: computes probability density function
+
+
+== Example
+Probability that 2 or fewer events occur in a random process during the period of time when 5 events would occur on average.
+
+[source,javascript]
+----
+CALC.poisson(2, 5, true);
+// returns 0.12465201948308113 (approximately 12.5%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.poisson(field['Successes'],  5, true)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.poisson(Slider1.selectedObject, 5, true)
+CALC.poisson(parameter.Successes, 5, true)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

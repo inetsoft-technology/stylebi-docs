@@ -1,0 +1,74 @@
+= CSS Table Style Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The table below lists table regions that can be formatted with a CSS TableStyle. See xref:CreateCSSDefinitionFile.adoc#CSSTableStyle[CSS TableStyle] for more information about the TableStyle syntax.
+
+If the CSS file does not include specific formatting for a table region, the `TableStyle` selector with the most similar attributes is used. For example, if `EvenCol` formatting is omitted, `Body` formatting is used instead. If no substitute is found, the default TableStyle formatting is used.
+
+For `GroupHeader` and `GroupRows`, if there is no CSS specified for a particular grouping level, styling for the group header/footer row defaults to the appropriate `OddRow` or `EvenRow` style. If these are not specified, styling defaults to `Body`.
+
+HeaderRow:: Top row containing column headers. *Restrictions*: Does not support `opacity` and `word-wrap` attributes.
++
+[source,css]
+TableStyle[region=HeaderRow].
++
+
+HeaderCol:: Left-most column containing row headers. *Restrictions*: Available only for Crosstabs. Does not support `opacity` and `word-wrap` attributes.
++
+[source,css]
+TableStyle[region=HeaderCol]
+
+TrailerRow:: Bottom row containing grand total or other aggregation. *Restrictions*: Does not support `opacity` and `word-wrap` attributes.
++
+[source,css]
+TableStyle[region=TrailerRow]
+
+TrailerCol:: Right-most column containing grand total or other aggregation. *Restrictions*: Available only for Crosstabs. Does not support `opacity` and `word-wrap` attributes.
++
+[source,css]
+TableStyle[region=TrailerCol]
+
+Body:: All table cells other than HeaderRow and HeaderCol. *Restrictions*: Does not support `opacity` and `word-wrap` attributes.
++
+[source,css]
+TableStyle[region=Body]
+
+Table:: Line type and color for outer borders of table.
++
+[source,css]
+TableStyle[region=Table]
+
+GroupHeader:: Group header of a table. *Restrictions*: Does not support `opacity` and `word-wrap` attributes. Does not apply to Dashboard Table.
++
+[source,css]
+TableStyle[region=Body][type=GroupHeader][level='n']
+/* n is the integer group level. */
+
+GroupFooter:: Group footer of a table.  *Restrictions*: Does not support `opacity` and `word-wrap` attributes. Does not apply to Dashboard Table.
++
+[source,css]
+TableStyle[region=Body][type=GroupFooter][level='n']
+/* n is the group level. */
+
+OddRow:: Every other row, starting with row index 1. *Restrictions*: Does not support `opacity` and `word-wrap` attributes.
++
+[source,css]
+TableStyle[region=Body][pattern=OddRow]
+
+EvenRow:: Every other row, starting with row index 2. *Restrictions*: Does not support `opacity` and `word-wrap` attributes.
++
+[source,css]
+TableStyle[region=Body][pattern=EvenRow]
+
+OddCol:: Every other row, starting with column index 1. *Restrictions*: Does not support `opacity` and `word-wrap` attributes.
+
++
+[source,css]
+TableStyle[region=Body][pattern=OddCol]
+
+EvenCol:: Every other row, starting with column index 2. *Restrictions*: Does not support `opacity` and `word-wrap` attributes.
+
++
+[source,css]
+TableStyle[region=Body][pattern=EvenCol]

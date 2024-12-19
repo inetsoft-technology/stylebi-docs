@@ -1,0 +1,45 @@
+= fields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheetscript:SelectionListTreeQuery.adoc[] to specify the data block from which to draw the fields.
+====
+
+Specifies the field (Selection List) or fields (Selection Tree) of the data block to be displayed by the Selection component. This is equivalent to selecting fields under the *Data* tab of the component ‘Properties’ dialog box.
+
+image:viewsheet:SelectionListFields.png[]
+
+
+
+
+== Type
+Array
+
+
+
+== Examples
+.Selection List
+[source,javascript]
+SelectionList1.query = 'SalesByDate';
+SelectionList1.fields = ['State'];
+
+.Selection Tree
+[source,javascript]
+SelectionTree1.query = 'SalesByDate';
+SelectionTree1.fields = ['State','Company'];
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fields                    // unqualified
+SelectionTree1.fields     // qualified
+
+{secondForm}
+====
+
+

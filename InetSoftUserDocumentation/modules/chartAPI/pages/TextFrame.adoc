@@ -1,0 +1,20 @@
+= TextFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=created by]
+====
+[square]
+* xref:DefaultTextFrame.adoc[]
+
+====
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+
+The `TextFrame` object contains a mapping between values and displayed text.

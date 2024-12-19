@@ -1,0 +1,155 @@
+= Create a  Crosstab
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following sections explain how to add a  Crosstab, which allows you to display aggregated data in tabular  form. To create a crosstab, follow the steps below:
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Add a Crosstab...
+video::359390270#chapter=16506257[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+. If necessary, create a new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+. Drag the Crosstab element from the *Toolbox* panel into the Dashboard.
++
+image:addCrosstab_1.png[]
+
+. Press the {buttonEdit} at the top-right corner of the Crosstab to open the Crosstab Editor.
++
+image:Crosstab Edit Button_1.png[]
++
+. From the *Data Source* panel, drag the desired columns or cube dimensions into the ‘Columns’ and ‘Rows’ regions.
+
++
+NOTE: The panel displays all OLAP cubes defined on the data source.
++
+image:Crosstab Binding_1.png[]
++
+include::viewsheet:partial$bindToComponent.adoc[]
+
+. Drag the desired columns or cube measures into the  ‘Aggregates’ region.
++
+image:Crosstab 2_1.png[]
++
+TIP: You can change the order of multiple dimensions or measures by dragging them left or right in the Editor.
+
+. *_Optional:_*  To make the row, column, and aggregate fields dynamic so that a user can change them, see xref:DynamicallySetProperties.adoc[].
++
+TIP: If you want to use a single Form component (e.g., ComboBox) to dynamically set both the measure field and aggregation method, you can enter strings such as `Ave('Total')` or `Sum('Total')` as the values in the Form element,  and then use the Form element as a ‘Variable’ to set the measure in the ‘Aggregates’ panel. (See xref:DynamicallySetProperties.adoc[] for information on how to do this.) With this approach, you also need to press the {buttonEditMeasure} next to the Variable-based measure in the ‘Aggregates’ panel, and set the ‘Aggregate’ property to ‘None’.
+
+. *_Optional:_*  Specify group sorting  and ranking. Follow the steps below:
++
+[#SortandRank]
+.Sort and Rank
+****
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Add a Crosstab...
+video::359390270#chapter=16506274[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+.. Press the {buttonEditDimension} next to a row header or column header.
++
+image:crosstabSortRank.png[]
+.. In the ‘Sort’ menu, specify how the values in the field should be ordered. ‘Ascending’ and ‘Descending’ sort the values in alphabetical or reverse-alphabetical order. ‘By Value (Asc)’ and ‘By Value (Desc)’ sort the values according to the aggregate measure selected in the adjacent menu.
++
+To specify an arbitrary sort order, select the ‘Manual’ option in the ‘Sort’ menu, and press the  to open the ‘Manual Ordering’ dialog box. To reorder an item in the ‘Manual Ordering’ dialog box, select the item and press the btn:[Up] or btn:[Down] buttons. Press btn:[OK] to close the dialog box.
++
+image:Manual Ordering Dialog.png[]
+
+.. For a Date-type field, select the desired level of date grouping (‘Year’, ‘Month’, etc.) from the ‘Level’ menu.  *_Optional:_* Select ‘As time series’ to force the display of date groups even when the group has no data. In this case the cell is filled either with a null value or with a zero (if the 'Fill Blank Cell With Zero' option is enabled on the *Advanced* tab of the ‘Table Properties’ dialog box).
++
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Set Date Grouping Level...
+video::359390270#chapter=16505740[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+.. In the ‘Rank’ menu, select the ‘Top’ or ‘Bottom’ filter, and specify the (integer) number of top or bottom groups to select. In the adjacent menu, specify the *measure* by which groups should be ranked.
++
+include::ROOT:partial$measureTip.adoc[]
++
+Select ‘Group all others together’ to create an “Others” category which represents (in aggregate) all the groups excluded by the Top/Bottom ranking filter.
+
+.. In the ‘Summarize’ menu (available for parent groups), specify whether group totals should be shown.
+
+.. Press the {buttonApply} to close the panel.
+****
+
+. Press the {buttonEditMeasure} next to a measure, and select the desired method from the ‘Aggregate’ menu.
++
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Set Date Grouping Level...
+video::359390270#chapter=16506565[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
++
+image:Crosstab Measure Options_1.png[]
++
+To display a bivariate aggregation measure (e.g., ‘Correlation’, ‘Weighted Average’, etc.), select the second operand (column) from the ‘with’ menu. To display a univariate measure (‘Sum’, ‘Count’, etc.) as a percentage, select the basis for percentage in the ‘Percentage of’ menu. Press the {buttonApply} to close the panel.
++
+NOTE: If you choose a percentage representation, press the btn:[Edit] button to select the dimension along which the percentage is computed (‘Rows’ or ‘Columns’). Percentage by rows uses the row totals, and by columns uses the column totals.
+
+
+
+. {finishEditing}
+
+. If desired, expand the crosstab horizontally so that all of the column headers are visible.
+
+. *_Optional:_* Merge column headers or row headers together to agglomerate data into larger categories called _named groups_. For example, you can combine column header labels designating individual states MA, CT, NY, NJ, etc., into larger groups such as ‘New England’ and ‘Mid-Atlantic’. Follow the steps below:
++
+NOTE: Named groups cannot be defined for date fields.
++
+[#CreateNamedGroups]
+.Create Named Groups
+****
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Set Date Grouping Level...
+video::359390270#chapter=16508525[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+.. Hold the {buttonCtrl} and click to select the individual crosstab header labels (from the same heading level) that you want to combine into a single group.
+
+.. Right-click on one of the selected labels, and select ‘Group’ from the context menu. {rightClickOptions} This opens the ‘Group Name’ dialog box.
++
+image:Named Group 5.png[]
++
+TIP: You can group existing groups to make larger groups.
+
+.. Enter a name for the new group in the ‘Group Name’ dialog box, and press btn:[OK].
++
+image:Named Group 2.png[]
+This replaces the selected labels with the label for the named grouping, and agglomerates the data corresponding to the original labels under the new label.
++
+image:Named Group 6.png[]
+
+.. Repeat the above steps to add additional named groups.
+
+To decompose an existing name group, right-click on the header label and select ‘Ungroup’ from the context menu. {rightClickOptions}
+
+image:Named Group 7.png[]
+
+****
+
+Proceed to format and style the Crosstab as you would for any Table.  See xref:AddTable.adoc#ConfigureTableAppearance[Configure Table Appearance] for more information about how to apply styles.
+

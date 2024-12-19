@@ -1,0 +1,36 @@
+= summarySideBySide
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Display multiple measures side-by-side rather than stacked vertically (the default).
+
+
+
+
+
+== Type
+Boolean:: `true`: place measures side-by-side +
+`false`: stack measures vertically (default)
+
+
+
+== Example
+[source,javascript]
+summarySideBySide = true
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+summarySideBySide             // unqualified
+Crosstab1.summarySideBySide   // qualified
+
+{secondForm}
+====
+
+

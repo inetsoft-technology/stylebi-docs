@@ -1,0 +1,146 @@
+= Manage Data Worksheets
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Manage Data Worksheets in script by using the `:worksheet` or equivalent `:ws` command. See xref:dataworksheet:PrepareYourData.adoc[] for  information about Data Worksheets in the User Portal.
+
+
+include::partial$adminConsoleOptionalParams.adoc[]
+
+
+== List Available Data Worksheets
+The `list` action lists the available Data Worksheets. {connectRepositoryNote}
+
+=== Parameters
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+=== Examples
+[source,groovy]
+--
+// List all Data Worksheets in environment
+:ws list
+
+// List all Data Worksheets in organization0
+:ws list --organizationid organization0
+--
+
+
+
+== Get Data Worksheet Parameters
+The `parameters` action returns the parameters defined in the Data Worksheet. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Data Worksheet ID
+
+
+=== Examples
+[source,groovy]
+--
+// Get a parameters for Call Center Monitoring Data Worksheet
+:ws parameters '1^2^__NULL__^Examples/Call Center Monitoring'
+--
+
+
+== Get Data Worksheet Metadata
+The `metadata` action returns the  Data Worksheet metadata. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Data Worksheet ID
+
+
+=== Examples
+[source,groovy]
+--
+// Get a metadata for Hurricane Data Worksheet
+:ws metadata 1^2^__NULL__^Examples/Hurricane
+--
+
+== List open Data Worksheets
+The `list-open` action returns a list of currently open  Data Worksheets. {connectRepositoryNote}
+
+=== Parameters
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+=== Examples
+[source,groovy]
+--
+// List all open Data Worksheets
+:ws list-open
+
+--
+
+
+
+== Open Data Worksheet
+The `open` action opens a   Data Worksheet for editing in Visual Composer. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Data Worksheet ID
+
+parameters:: Parameter  values to pass to Data Worksheet (optional)
+
+
+=== Examples
+[source,groovy]
+--
+// Open Call Center Monitoring for editing, and pass 2035 as parameter
+:ws open '1^2^__NULL__^Examples/Call Center Monitoring^host-org' 2035
+--
+
+
+== Get Data Worksheet
+The `get` action obtains a handle to a    Data Worksheet. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Runtime Data Worksheet ID
+
+
+
+=== Examples
+[source,groovy]
+--
+// Get handle to Data Worksheet 2
+:ws get 2
+--
+
+
+== Close Data Worksheet
+The `close` action closes an open     Data Worksheet. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Runtime Data Worksheet ID
+
+
+=== Examples
+[source,groovy]
+--
+// Close Data Worksheet 2
+:ws close 2
+--
+
+== Return Data Worksheet Data
+The `data` action obtains data from the primary data block of a     Data Worksheet. See xref:dataworksheet:DataBlockProperties.adoc[] for more information about the primary data block. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Runtime Data Worksheet ID
+from:: Start row for data retrieval
+rows:: Number of rows to retrieve
+
+
+=== Examples
+[source,groovy]
+--
+// get data from Data Worksheet 2, starting with row 3 and continuing for four rows
+:ws data 2 3 4
+--

@@ -1,0 +1,82 @@
+= LegendSpec.setPosition(value)
+:navtitle: LegendSpec.setPosition()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:EGraph_setLegendLayout.adoc[] to place the legend in a predefined location.
+====
+
+
+Specifies the position of the legend’s bottom-left corner (in pixels or proportion) for cases when “in place” layout is used. (Positive values specify distance from left/bottom. Negative values specify distance from right/top.)  The corresponding “getter” function is `getPosition()`.
+
+== Paramater
+value::			a subclass of {javaawtgeomPoint2D} +
+(e.g., {javaawtPoint} for pixels, {javaawtgeomPoint2DDouble} for proportion)
+
+
+
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CategoricalColorFrame();
+frame.setField("State");
+var spec = new LegendSpec(); //<2>
+spec.setPosition(java.awt.Point(50,245)); // in pixels //<3>
+frame.setLegendSpec(spec); //<4>
+elem.setColorFrame(frame);
+graph.setLegendLayout(Chart.IN_PLACE);
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the xref:LegendSpec.adoc[] object.
+<3> Use `setPosition` to assign position.
+<4> Use xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` object to the `ColorFrame`.
+
+image:commonscript:LegendSpecExamplesetPosition.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+
+
+
+
+[TIP]
+=====
+
+
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getElement.adoc[] ① and xref:chartAPI:GraphElementGetColorFrame.adoc[] ② to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[] and xref:chartAPI:ColorFrame.adoc[]. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); <1>
+var frame = elem.getColorFrame(); <2>
+// Compact syntax: var frame = graph.getElement(0).getColorFrame();
+
+var spec = new LegendSpec();
+spec.setPosition(java.awt.Point(50,245)); // in pixels
+frame.setLegendSpec(spec);
+graph.setLegendLayout(Chart.IN_PLACE);
+
+--
+=====

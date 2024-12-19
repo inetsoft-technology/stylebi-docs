@@ -1,0 +1,62 @@
+= Use a Dashboard
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following sections explain how to open and use a Dashboard in the Portal. See xref:viewsheet:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.
+
+NOTE: Mobile devices should be running iOS 7 or later, or Android 4.1 "Jelly Bean" or later, to view Dashboards.
+
+
+== Open a Pinned Dashboard
+To open a Dashboard using the Portal's {buttonDashboard}, follow the steps below.
+
+
+. Open the User Portal. (See xref:UsePortal.adoc[].)
+
+. Press the {buttonDashboard} at the top of the User Portal.
+
+. Select the tab for the Dashboard that you want to view.
++
+image:Opening Sample Viewsheet2.png[]
+
+See xref:viewsheet:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.  See xref:DeployDashboard.adoc[]  for information on how to add and manage Dashboards under the {buttonDashboard}.
+
+== Open a Repository Dashboard
+To open a Dashboard using the Portal's {buttonRepository}, follow the steps below.
+
+
+. Open the User Portal. (See xref:UsePortal.adoc[].)
+
+. Press  the {buttonRepository} at the top of the User Portal.
+
+. In the tree on the left side of the Portal, expand the folder containing the desired Dashboard.
+
+. Click to select the Dashboard that you want to view.
++
+image:user:Opening Sample Viewsheet.png[]
+
+See xref:viewsheet:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.   See xref:ManageRepository.adoc[]  for information on how to organize Dashboards under the {buttonRepository}.
+
+== Use the Dashboard Tools
+The Dashboard toolbar has the following buttons:
+
+image:viewsheet:Viewsheet Toolbar.png[]
+
+NOTE: Not all buttons may be available at all times.
+
+{buttonPrevious}:: Undoes the most recent action.
+{buttonNext}:: Restores the most recent action that was undone.
+{buttonEdit}:: Opens the current Dashboard in Visual Composer. For more information about creating and modifying Dashboards using Visual Composer, see xref:viewsheet:VisualizeYourData.adoc[].
+{buttonRefresh}:: Updates the Dashboard with the most current data, bookmarks, and script results.
+{buttonEmail}:: Sends an export of the Dashboard to another person. See xref:viewsheet:EmailDashboard.adoc[] for more information.
+{buttonSocialSharing}:: Shares the Dashboard to a social network. See xref:viewsheet:ShareToSocialNetwork.adoc[] for more information.
+{buttonSchedule}:: Configures a Dashboard for automatic generation and delivery. See xref:ScheduleDashboard.adoc[] for more information.
+{buttonPrint}:: Prints the Dashboard on any available printer.
+{buttonExport}:: Exports a copy of the Dashboard to Excel, PowerPoint, or PDF format. See xref:viewsheet:ExportDashboard.adoc[]  for detailed instructions.
+{buttonZoomDash}:: Increase or decrease the Dashboard magnification.
+{buttonBookmarks}:: Opens the ‘Bookmark’ menu, which allows you to save a bookmark or load a previously-saved bookmark. xref:BookmarkDashboard.adoc[] for more details.
+{buttonFullScreen}:: Expands the Dashboard to use the full screen.
+{buttonShowAnnotation}:: Toggles annotations on and off. See xref:viewsheet:AddAnnotation.adoc[] for more details.
+{buttonClose}:: Closes the Dashboard.
+
+

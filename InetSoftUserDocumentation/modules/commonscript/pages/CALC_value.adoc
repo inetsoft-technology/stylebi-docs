@@ -1,0 +1,37 @@
+= CALC.value(string)
+:navtitle: CALC.value()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Converts a formatted number `string` to the equivalent numerical value. {CALCExcelFunctionPage}
+
+== Parameters
+string::			A string to convert
+
+
+== Example
+
+[source,javascript]
+----
+CALC.value('$2800.00');  // returns 2800.0
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.value(field['Price'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.value(parameter.Price)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

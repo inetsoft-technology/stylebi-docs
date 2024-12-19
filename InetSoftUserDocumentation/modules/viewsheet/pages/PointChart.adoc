@@ -1,0 +1,68 @@
+= Point Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption= see also]
+====
+* xref:BubbleChart.adoc[], to use point size to represent a measure.
+* xref:ScatterChart.adoc[], to place measures on both axes.
+* xref:DotPlotChart.adoc[], to displays individual values as points.
+====
+
+
+
+
+A Point Chart displays a measure as a collection of points.
+
+image:commonscript:pointChartExp5.png[]
+
+To create a point chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Point’  style.  (To create a stacked point chart, enable the ‘Stack’ option at the bottom of the panel.)  Press the {buttonApply}.
++
+image:commonscript:pointChartExp1.png[]
++
+NOTE: ‘Point’ is the default chart style when numerical dimensions are used.
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:pointChartExp2.png[]
+
++
+TIP: {convertToDimension}
+
+. To break-out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to  the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
++
+image:commonscript:pointChartExp3.png[]
+
+. To break-out the data into groups without applying any visual formatting, drag a dimension to the ‘Break By/Tooltip’ region.
+
+. *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:viewsheetExp34.png[]
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:pointChartExp4.png[]
++
+TIP: {convertToMeasure}
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+image:Chart Edit Y Axis_1.png[]
+
+
+
+. *_Optional:_* {multipleMeasure} {addMeasuresUsingVisual}
+
+. {finishEditing}
+
+include::partial$addTitlesLegend.adoc[]

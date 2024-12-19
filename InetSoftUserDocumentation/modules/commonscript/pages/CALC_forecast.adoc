@@ -1,0 +1,46 @@
+= CALC.forecast(x, known_y_values, known_x_values)
+:navtitle: CALC.forecast()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Predicts the future value of a function based on past values using *linear regression*. {CALCExcelFunctionPage}
+
+
+== Parameters
+x::				Value at which to compute function
+known_y_values::				Array of dependent (function) values corresponding to `known_x_values`
+known_x_values::				Array of independent values corresponding to `known_y_values`
+
+
+
+== Example
+For a function with the following (x,y) pairs, {(20,6),(28,7),(31,9),(38,15),(40,21)}, compute the function value at x=30.
+[source,javascript]
+----
+CALC.forecast(30, [6,7,9,15,21],[20,28,31,38,40]);
+// returns 10.607253086419755
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.forecast(field['Value'], [6,7,9,15,21],[20,28,31,38,40])
+
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Columns of Dashboard table TableView1:
+CALC.forecast(parameter.Value, TableView1.table['YValues'],TableView1.table['XValues'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Columns of ‘Sales’ data block in Data Worksheet:
+CALC.forecast(parameter.Value, Sales['YValues'], Sales['XValues']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

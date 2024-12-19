@@ -1,0 +1,26 @@
+= valueVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the visibility for data values displayed in the chart plot area.
+
+== Type
+Boolean
+
+== Example
+[source,javascript]
+Chart1.valueVisible = false;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+valueVisible          // unqualified
+Chart1.valueVisible   // qualified
+
+{secondForm}
+====

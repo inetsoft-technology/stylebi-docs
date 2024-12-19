@@ -1,0 +1,38 @@
+= CALC.sqrt(number)
+:navtitle: CALC.sqrt()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the square root of a positive number. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A positive number
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.sqrt(5.5)  // returns 2.345207879911715
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.sqrt(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.sqrt(Slider1.selectedObject)
+CALC.sqrt(parameter.Value)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

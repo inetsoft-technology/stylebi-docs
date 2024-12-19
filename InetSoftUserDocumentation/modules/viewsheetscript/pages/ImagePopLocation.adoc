@@ -1,0 +1,34 @@
+= popLocation
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+====
+
+Specifies the  location where the pop component appears, either where the mouse was clicked or at the center of the screen.
+
+
+== Type
+One of the following constants:  `"CENTER"` or `"MOUSE"`
+
+
+
+
+== Example
+[source,javascript]
+Image1.popLocation = "MOUSE";
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+popLocation           // unqualified
+Image1.popLocation    // qualified
+
+{secondForm}
+====
+
+

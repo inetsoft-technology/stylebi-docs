@@ -1,0 +1,36 @@
+= CALC.mode(array)
+:navtitle: CALC.mode()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the most frequently occurring value in `array`. If there are several elements that occur with the maximum frequency, the *smallest* of these is returned. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of values
+
+
+== Example
+[source,javascript]
+----
+CALC.mode([1,1,2,3,4,5,2,6,7]);  // returns 1
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.mode(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.mode(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

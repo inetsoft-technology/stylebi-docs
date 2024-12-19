@@ -1,0 +1,42 @@
+= Math.round(number)
+:navtitle: Math.round()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_round.adoc[] for the preferred version from the CALC library.
+====
+
+
+Return the value of a number rounded to the nearest integer.  This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round[Math.round()] method, and can be used with or without the `Math` qualifier, `round()` or `Math.round()`.
+
+
+
+
+
+== Example
+[source,javascript]
+----
+round(15.8);  // returns 16
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+round(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+round(Slider1.selectedObject)
+round(parameter.Value)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

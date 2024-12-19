@@ -1,0 +1,75 @@
+= Waterfall Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A waterfall chart displays the cumulative contributions of different groups to a total.
+
+image:commonscript:waterfallChartExp9.png[]
+
+To create a waterfall  chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Waterfall’ style.   Press the {buttonApply}.
++
+image:commonscript:waterfallChartExp1.png[]
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:waterfallChartExp2.png[]
+
++
+TIP: {convertToDimension}
+
+
+. *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:viewsheetExp34.png[]
+
+
+. *_Optional:_* {multipleDimensionNoColor} {addDimensionsUsingVisual}
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:waterfallChartExp3.png[]
++
+TIP: {convertToMeasure}
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+image:commonscript:waterfallChartExp8.png[]
+
+. *_Optional:_*  In some cases, you may want to represent the aggregate value for each group as a change from the previous aggregate, in which case the total represents the overall change. To do this, select ‘Change from Previous’ in the ‘Trend and Comparison’ menu, and press the {buttonApply}.
++
+image:commonscript:waterfallChartExp4.png[]
+
+. *_Optional:_* {multipleMeasure} {addMeasuresUsingVisual}
+
+. {finishEditing}
+
+. Add a highlight to distinguish the negative “bricks” on the chart from the positive bricks. To do this, right-click the chart, and select the ‘Highlight’ option. {rightClickOptions}
++
+image:commonscript:waterfallChartExp5.png[]
+
+. Create a highlight to format negative values. See xref:ConditionalFormat.adoc[] for more information.
++
+image:commonscript:waterfallChartExp6.png[]
+
+. Press btn:[OK].
++
+image:commonscript:waterfallChartExp7.png[]
+
+include::partial$addTitlesLegend.adoc[]
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Financial_Client_Demographics.zip[Financial Client Demographics] Dashboard provides an example of a waterfall chart.
+
+image:viewsheet:galleryWaterfall2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Financial_Client_Demographics.zip[Financial Client Demographics] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****

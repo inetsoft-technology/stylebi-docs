@@ -1,0 +1,42 @@
+= majorInc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+
+Specifies the interval between display of labels on the Gauge. For example, a value of 15 indicates that the gauge labels should be placed at positions of 0, 15, 30, 45, etc. The `majorInc` value should be larger than the xref:GaugeMinorInc.adoc[] value.
+
+CAUTION: Increments that are too large or too small may result in undesirable Gauge appearance.
+
+
+
+== Type
+Number::			Spacing between Gauge labels
+
+
+
+
+
+== Example
+[source,javascript]
+Gauge1.majorInc = 1000;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+majorInc           // unqualified
+Gauge1.majorInc    // qualified
+
+{secondForm}
+====
+
+

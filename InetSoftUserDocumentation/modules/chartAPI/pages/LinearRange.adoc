@@ -1,0 +1,43 @@
+=  LinearRange
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:ScaleRange.adoc[]
+====
+
+The `LinearRange` object computes the range by using the minimum and maximum data values. To create a LinearRange object, call the `LinearRange` constructor.
+
+[source,javascript]
+var range = new LinearRange();
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"],["NJ",-200],["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale("Quantity");
+var elem = new IntervalElement("State", "Quantity");
+range = new LinearRange(); //<2>
+qscale.setScaleRange(range); //<3>
+graph.setScale("Quantity", qscale); //<4>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create the `LinearRange` object.
+<3> Use `setScaleRange` to assign the `LinearRange` to the xref:LinearScale.adoc[].
+<4> Use  xref:EGraph_setScale.adoc[] to add the Scale to the Chart.
+
+
+image:commonscript:LinearRange.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

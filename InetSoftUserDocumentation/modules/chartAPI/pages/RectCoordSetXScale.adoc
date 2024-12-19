@@ -1,0 +1,47 @@
+= RectCoord.setXScale(scale)
+:navtitle: RectCoord.setXScale()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+
+
+Specifies the xref:Scale.adoc[] for the X-axis. This can also be specified as an argument to the constructor.  The corresponding “getter” function is xref:RectCoordGetXScale.adoc[].
+
+
+== Parameter
+scale::			a xref:Scale.adoc[] object
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var sscale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var coord = new RectCoord(); //<2>
+coord.setXScale(sscale); //<3>
+coord.setYScale(qscale);
+graph.setCoordinate(coord); //<4>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create xref:RectCoord.adoc[] object.
+<3> Use `setXScale` to set the   xref:Scale.adoc[] for the X-axis.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:RectCoordSetXScale.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

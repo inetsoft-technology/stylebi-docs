@@ -1,0 +1,44 @@
+= GraphForm.setLineEquation(line)
+:navtitle: GraphForm.setLineEquation()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the model to fit to the data. {noGetter}
+
+
+
+
+
+
+== Parameter
+line::		A model to fit:
++
+[square]
+* xref:ExponentialLineEquation.adoc[]
+* xref:LogarithmicLineEquation.adoc[]
+* xref:PolynomialLineEquation.adoc[]
+* xref:PowerLineEquation.adoc[]
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+var form = new LineForm(); //<1>
+var equation = new LogarithmicLineEquation();
+form.setLineEquation(equation); //<2>
+form.setColor(java.awt.Color(0xff0000));
+graph.addForm(form); //<3>
+--
+<1> Create the  xref:GraphForm.adoc[] object.
+<2> Use `setLineEquation()` to set the curve fit.
+<3> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:GraphFormSetEquation.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

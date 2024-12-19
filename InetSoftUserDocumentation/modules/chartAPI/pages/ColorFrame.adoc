@@ -1,0 +1,80 @@
+= ColorFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=created by]
+====
+[square]
+* xref:BrightnessColorFrame.adoc[]
+* xref:SaturationColorFrame.adoc[]
+* xref:BipolarColorFrame.adoc[]
+* xref:StaticColorFrame.adoc[]
+* xref:CircularColorFrame.adoc[]
+* xref:GradientColorFrame.adoc[]
+* xref:HeatColorFrame.adoc[]
+* xref:RainbowColorFrame.adoc[]
+* xref:CategoricalColorFrame.adoc[]
+====
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+
+
+A `ColorFrame` object contains the color treatment for visual chart elements. You can use a `ColorFrame` object to represent data dimensions with color (color coding), or to apply a fixed (static) color style.  To create a `ColorFrame` object, call one of the various `ColorFrame` constructors, for example:
+
+[source,javascript]
+var frame = new CircularColorFrame('Quantity');
+
+You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:viewsheetscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+var elem = graph.getElement(0); // <1>
+var frame = new StaticColorFrame(); //<2>
+frame.setColor(java.awt.Color(0xFF00FF));
+elem.setColorFrame(frame); //<3>
+--
+<1> Use xref:EGraph_getElement.adoc[] to obtain a handle to the desired xref:GraphElement.adoc[] object.
+<2> Create the xref:ColorFrame.adoc[] object.
+<3> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
+
+image:commonscript:graphStaticColorFrame.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new BrightnessColorFrame;
+Chart1.bindingInfo.colorFrame.color = 0xFF00FF;
+
+--
+
+
+image:commonscript:BrightnessColorFrame.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

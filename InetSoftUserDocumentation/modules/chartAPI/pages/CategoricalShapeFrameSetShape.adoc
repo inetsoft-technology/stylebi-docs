@@ -1,0 +1,95 @@
+= CategoricalShapeFrame.setShape(val,shape)
+:navtitle: CategoricalShapeFrame.setShape()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Assigns a shape to the specified value.  The corresponding “getter” function is `getShape(val)`. You can also set this using the `bindingInfo.shapeFrame.setShape`  property syntax in *onRefresh* script. See xref:#Example2[] below.
+
+== Parameter
+val::			data value
+shape:: xref:GShape.adoc[] or xref:GShapeImageShape.adoc[] object
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+sizeframe = new StaticSizeFrame("State");
+sizeframe.setSize(10);
+shapeframe = new CategoricalShapeFrame("State"); //<2>
+shapeframe.setShape('NJ',GShape.FILLED_CIRCLE); // <3>
+shapeframe.setShape('NY',GShape.FILLED_DIAMOND); //<3>
+elem.setShapeFrame(shapeframe); // <4>
+elem.setSizeFrame(sizeframe);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:CategoricalShapeFrame.adoc[] object.
+<3> Use `setShape` to assign the desired shape for '`NJ`' and '`NY`'.
+<4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:CategoricalShapeFrame2setShape.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+sizeframe = new StaticSizeFrame("State");
+sizeframe.setSize(10);
+shapeframe = new CategoricalShapeFrame("State");
+shapeframe.setShape('NJ',GShape.FILLED_CIRCLE);
+shapeframe.setShape('NY',GShape.FILLED_DIAMOND);
+elem.setShapeFrame(shapeframe);
+elem.setSizeFrame(sizeframe);
+
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ShapeFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
+Chart1.bindingInfo.shapeFrame = new CategoricalShapeFrame;
+Chart1.bindingInfo.shapeFrame.setShape('Robert', GShape.FILLED_CIRCLE);
+Chart1.bindingInfo.shapeFrame.setShape('Sue', GShape.FILLED_DIAMOND);
+
+--
+
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

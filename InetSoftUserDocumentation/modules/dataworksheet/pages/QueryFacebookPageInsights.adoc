@@ -1,0 +1,35 @@
+= Facebook Page Insights  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Facebook Page Insights  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:FacebookPageInsights.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonFacebookPageInsightsQuery}.
++
+image:FacebookPageInsightsQuery1.png[]
++
+This opens the ‘Facebook Page Insights  Query’ dialog box.
++
+image:FacebookPageInsightsQuery2.png[]]
+
+. Select the ‘Metric Type’.
+
+. In the ‘Date Preset’ menu, select the range of dates for the data that you want to analyze.
+
+. *_Optional:_* To add additional parameters, press the btn:[Add] button in the ‘Additional Parameters’ region. (See the Facebook developer website for a list of https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/[Parameters]. Use the ‘Quick Add’ menu to add a listed parameter.)
+
+. Press the btn:[Add] button to add a ‘Metric’ field. Enter the metric that you want to retrieve. (See the Facebook developer website for a https://developers.facebook.com/docs/marketing-api/reference/adgroup/insights/[list of available metrics].)
+
+. Repeat the above step to add additional metrics. To remove a metric, check the box next to the metric and press btn:[Remove]. (Use the ‘Quick Add’ menu to add a listed metric.)
+
+
+
+include::partial$finalStepsQuery.adoc[]

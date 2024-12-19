@@ -1,0 +1,52 @@
+= CALC.exact(string1, string2)
+:navtitle: CALC.exact()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns `true` if `string1` is identical to `string2`, and returns `false` otherwise. {CALCExcelFunctionPage}
+
+[TIP]
+====
+You can also use the JavaScript identity operator (`===`) for this purpose. For example:
+[source,javascript]
+if('hello' === 'Hello') {
+  alert('They are the same');
+}
+else {
+  alert('No match')
+}
+// Displays 'No match'
+====
+
+== Parameters
+string1::			A string to compare
+string2::			A string to compare
+
+
+== Example
+[source,javascript]
+
+----
+CALC.exact('hello','Hello');
+// returns false (due to case mismatch)
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.exact(field['Label1'], field['Label2'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.exact(parameter.Label1, parameter.Label2)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

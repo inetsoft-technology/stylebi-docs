@@ -1,0 +1,28 @@
+= Date.setFullYear(value)
+:navtitle: Date.setFullYear()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to set the  year for a date in local time.    See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear[Date.setFullYear()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+d.setFullYear(2002);
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.setFullYear(2002);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+var d = parameter.Date;
+d.setFullYear(2002);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

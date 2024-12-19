@@ -1,0 +1,41 @@
+= toolTip
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TextProperties.adoc[] for general information about the Text component.
+====
+
+
+Specifies a tooltip to be displayed on the Text component. Use placeholder `pass:[{0}]` to insert the data value from the Text, and format the inserted data using number formats. (See xref:viewsheet:DataFormat.adoc[] for more details on format strings.)
+
+You can additionally use HTML markup such as `<i>`, `<b>`, `<h1>`, `<u>`, `<small>`, `<br>`   to format the tooltip contents.
+
+
+
+== Type
+String
+
+
+
+
+
+
+== Example
+[source,javascript]
+Text1.toolTip = "<b>Total Sales</b>: {0,number,$##,###.00}";
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+toolTip            // unqualified
+Text1.toolTip      // qualified
+
+{secondForm}
+====
+
+

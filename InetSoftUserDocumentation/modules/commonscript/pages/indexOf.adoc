@@ -1,0 +1,42 @@
+= indexOf(array, value)
+:navtitle: indexOf()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the integer index of the value within the specified array, with indexing starting at 0 for the first array element. If the value does not exist in the array, the function returns -1.
+
+==  Examples
+
+.Example 1
+[source,javascript]
+colorArray = ['gold','silver','blue','red','green'];
+alert(indexOf(colorArray ,'red')) // returns 3 (fourth item)
+alert(indexOf(colorArray ,'purple')) // returns -1
+
+.Example 2
+[source,javascript]
+if(indexOf(roles, "Administrator")) {
+  isAdmin = true;
+}
+
+include::commonscript:partial$dashboardScriptData.adoc[]
+
+
+
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+indexOf(TableView1.table['Product Name'],"Wireless Mouse")
+----
+
+include::partial$worksheetScriptData.adoc[]
+
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+indexOf(Sales['Category'], "Hardware");
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

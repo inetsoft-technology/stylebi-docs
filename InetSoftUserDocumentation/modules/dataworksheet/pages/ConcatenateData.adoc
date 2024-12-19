@@ -1,0 +1,196 @@
+= Concatenate Data
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Concatenations  allow you to mash up data from different data blocks, which may represent different database tables, queries, or data models.  A _concatenated data block_ is a *vertical composition* of two or more data blocks with a specified relationship (union, intersection, difference) between the rows of the base data blocks.
+
+NOTE: To create a horizontal composition  of two or more data blocks, see xref:JoinData.adoc[].
+
+To create a union, intersection, or difference (minus) between two data blocks, follow these steps:
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Create a concatenation...
+video::298278750[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+
+
+. Create the data block you want to join. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
+
+
+. Select the data blocks you want to concatenate. (You can hold the {buttonCtrl} or {buttonShift} key and click on the data blocks to select both, or drag with the mouse to “lasso” the data blocks.)
++
+IMPORTANT: Data blocks must have the same number of columns in order to participate in concatenations, and the corresponding columns of each data block must have the *same data type*.
++
+NOTE: If you plan to create a difference (*minus*), the order in which you select the data blocks is important. If you seek the difference C=A-B, where the result C should contain the rows that are present in A but not present in B, *_first_* select data block A and *_then_* select data block B.
+
+. Press the {buttonConcatenate} in the toolbar and select the desired concatenation.
++
+image:ConcatenateTableButton2.png[]
+
+* {buttonIntersect}: See xref:Intersection[] for an example.
+* {buttonUnion}: See xref:Union[] for an example.
+* {buttonMinus}: See xref:Minus[] for an example.
+
+include::ROOT:partial$CreateDashboard.adoc[]
+
+
+[id=Intersection]
+== Create an Intersection
+The intersection of two data blocks contains the unique set of common rows shared by the two data blocks, ordered lexicographically. Only a single instance of each shared row is retained in the intersection table; all duplicates are removed.
+
+.Example: Intersection
+****
+Assume that you want a list of only those customers who have purchased more than 100 pieces of both ‘Wireless Mouse’ and ‘Fast Go Game’. This can be accomplished by taking the intersection of the ‘Wireless Mouse’ and ‘Fast Go Game’ Data Worksheets.
+
+. Create a new Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
+
+. From the left *Asset* panel,  Drag the ‘Wireless Mouse’ Data Worksheet  into the right panel. This creates a new data block named ‘Wireless Mouse1’.
++
+include::ROOT:partial$FastGoGameQuery.adoc[]
+. From the left *Asset* panel, drag the ‘Fast Go Game’ Data Worksheet  into the right panel. This creates a new data block named ‘Fast Go Game1’.
+. Drag across both data blocks to select them. Press the {buttonConcatenate} in the toolbar and select {buttonIntersect}.
++
+image:IntersectConcat2.png[]
++
+This creates a new data block, ‘Query1’.
+. Click the ‘Query1’ data block to select it. In the bottom panel, press the {buttonChangeView} and choose {buttonLiveDataView}.
++
+image:IntersectPreview.png[]
++
+Only those customers who purchased more than 100 pieces of both ‘Wireless Mouse’ and ‘Fast Go Game’ are included in the result set.
+****
+
+[id=Union]
+== Create a Union
+By default, the union of two data blocks contains all the unique rows from the two data blocks. The first data blocks you select is the data block whose distinct rows will appear first in the result. By default, no duplicate rows are retained in the union data blocks.  To retain duplicates, see xref:ChangeConcatenationType[].
+
+.Example: Union
+****
+Consider a data block that returns a list of customers who have purchased more than 100 pieces of ‘Wireless Mouse’ and a second data block returns a list of customers who have purchased more than 100 pieces of ‘Fast Go Game’. To see the contact information of all these customers  in a single data block, perform a union.
+
+Follow the steps below:
+
+. Create a new Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
+
+. From the left *Asset* panel,  Drag the ‘Wireless Mouse’ Data Worksheet  into the right panel. This creates a new data block named ‘Wireless Mouse1’.
++
+include::ROOT:partial$FastGoGameQuery.adoc[]
+
+. From the left *Asset* panel, drag the ‘Fast Go Game’ Data Worksheet  into the right panel. This creates a new data block named ‘Fast Go Game1’.
+. Drag across both data blocks to select them. Press the {buttonConcatenate} in the toolbar and select {buttonUnion}.
++
+image:DragQueryforUnion_1.png[]
++
+This creates a new data block, ‘Query1’.
+
+. Click the ‘Query1’ data block to select it. In the bottom panel, press the {buttonChangeView} and choose {buttonLiveDataView}.
++
+image:UnionConcatPreview.png[]
++
+The data block returns all customers who purchased more than 100 pieces of either ‘Wireless Mouse’ or ‘Fast Go Game’.
+****
+
+
+[id=Minus]
+== Create a Minus (Difference)
+The difference (minus) of two data blocks is the set of distinct rows found in one data block but not in the other. The first data block that you select is the data block whose unique rows are retained in the result.
+
+.Example: Minus (Difference)
+****
+Assume you want a list of all the customers who purchased more than 100 pieces of ‘Fast Go Game’ *_but did not_* purchase more than 100 pieces of ‘Wireless Mouse’. Follow these steps to obtain that result.
+
+
+. Create a new Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
+
+. From the left *Asset* panel,  Drag the ‘Wireless Mouse’ Data Worksheet  into the right panel. This creates a new data block named ‘Wireless Mouse1’.
++
+include::ROOT:partial$FastGoGameQuery.adoc[]
+
+. From the left *Asset* panel, drag the ‘Fast Go Game’ Data Worksheet  into the right panel. This creates a new data block named ‘Fast Go Game1’.
+
+. *First* click the ‘Fast Go Game1’ data block to select it.
+
+
+. *Now* click the ‘Wireless Mouse1’ data block to select it.
++
+IMPORTANT: It is important to select the ‘Wireless Mouse1’ data block *_after_* you select the ‘Fast Go Game1’ data block.
+
+. Press the {buttonConcatenate} in the toolbar and select {buttonMinus}. This creates a new data block, ‘Query1’.
++
+image:MinusConcat2.png[]
+. Click the ‘Query1’ data block to select it. In the bottom panel, press the {buttonChangeView} and choose {buttonLiveDataView}.
++
+image:MinusPreview.png[]
++
+The data block returns all customers who purchased more than 100 pieces of ‘Fast Go Game’ but did not purchase more than 100 pieces of ‘Wireless Mouse’. (In this example, there is only one such customer).
+
+****
+
+[#ChangeConcatenationType]
+== Change the Concatenation Type
+To change the concatenation type of concatenated data block (intersection, union, minus), follow these steps:
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Change concatenation type...
+video::298263200[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+. Right-click on the Concatenated Table and select ‘Edit Concatenation’ from the context menu. {rightClickOptions}
++
+image:editConcatenation.png[]
++
+This opens the Concatenation Editor.
+. Press the ‘Edit Concatenation’ button on the left side of the diagram corresponding to the concatenation you want to change. This opens the ‘Concatenation Type’ panel.
++
+image:ConnectorLine.png[]
+. Select a new concatenation type.
++
+image:ConnectorLine2.png[]
+. If you set the concatenation type to ‘Union’, you can choose ‘Keep Duplicate Rows’ to prevent the removal of duplicate rows from the result.
+. *_Optional:_*  If the concatenated data block contains multiple concatenations, select ‘Apply to all concatenations’ to simultaneously update all of the links to the specified concatenation type. Leave this option disabled to modify only the selected link.
+. Press btn:[Done] to close the Editor.
+
+include::ROOT:partial$CreateDashboard.adoc[]
+
+== Change Concatenation Order
+
+To change the order in which the tables are concatenated (which would affect the result in the case of a Minus operation), follow the steps below:
+
+. Open the Concatenation Editor as described in xref:ChangeConcatenationType[] above.
+
+. Press the btn:[Reorder Tables] button at the bottom of the left panel. This opens the ‘Reorder Tables’ dialog box.
++
+image:Concatenate Reorder 1.png[]
+. In the ‘Reorder Tables’ dialog box, click a table in the list and set the desired position for the table by using the arrow buttons. Then press btn:[OK].
++
+image:Concatenate Reorder 2.png[]
+. Press btn:[Done] to close the Editor.
+
+include::ROOT:partial$CreateDashboard.adoc[]
+
+== Add Tables to a Concatenation
+To add additional tables into a existing concatenation, follow these steps:
+
+. Right-click on the Concatenated Table and select ‘Edit Concatenation’ from the context menu. {rightClickOptions}
++
+image:editConcatenation.png[]
+. In the Concatenation Editor, drag any additional tables from the left panel onto the border of the table where the concatenation should be made. (A green highlight indicates the concatenation position.)
++
+image:editConcatenation2.png[]
+. Press btn:[Done] to close the Editor.
+
+include::ROOT:partial$CreateDashboard.adoc[]
+
+

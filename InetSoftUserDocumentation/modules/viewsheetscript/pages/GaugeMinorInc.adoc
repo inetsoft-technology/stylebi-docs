@@ -1,0 +1,41 @@
+= minorInc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+
+Specifies the interval between minor ticks on the Gauge. For example, a value of 15 indicates that tick marks should be placed at positions of 0, 15, 30, 45, etc. The `minorInc` value should be smaller than the  xref:GaugeMajorInc.adoc[] value.
+
+
+
+CAUTION: Increments that are too large or too small may result in undesirable Gauge appearance.
+
+
+
+== Type
+Number::			Spacing between minor tick marks
+
+
+== Example
+[source,javascript]
+Gauge1.minorInc = 100;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+minorInc           // unqualified
+Gauge1.minorInc    // qualified
+
+{secondForm}
+====
+
+

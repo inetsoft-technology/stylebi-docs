@@ -1,0 +1,41 @@
+= createMekkoGraph(xdim, innerDim, measure, colorDim, textCols)
+:navtitle: createMekkoGraph()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+The `createMekkoGraph()` function generates a xref:viewsheet:MarimekkoChart.adoc[].
+
+== Parameter
+xdim::	The dimension to place on the X-axis.
+innerDim::	The dimension used to break out each X column.
+measure::	The measure (with aggregation method) to represent on the chart.
+colorDim::	 		Name of dimension column whose values should be represented by color.
+textCols::	 Array of dimension column names from which to render labels.
+
+
+
+
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = viewsheet['Query1']; //<1>
+graph = createMekkoGraph("state", "city", "price", "state"); //<2>
+--
+<1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
+<2> Create the Mekko chart.
++
+image:viewsheet:mekko1.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

@@ -1,0 +1,99 @@
+= GradientColorFrame.setFromColor(value)
+:navtitle: GradientColorFrame.setFromColor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+Specifies the starting color (for lowest value) of the gradient.   The corresponding “getter” function is `getFromColor()`. You can also set this using the `bindingInfo.colorFrame.fromColor`   property syntax in *onRefresh* script. See xref:#Example2[] below.
+
+
+== Paramater (Function Syntax)
+value:: a {JavaAwtColor} object
+
+== Value (Property Syntax)
+
+include::viewsheetscript:partial$colorSyntax.adoc[]
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"],["NJ",200],["NY",300],["PA",50],["CT",100]];  //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new GradientColorFrame(); //<2>
+frame.setFromColor(java.awt.Color(0x000000)); //<3>
+frame.setToColor(java.awt.Color(0xff0000));
+frame.setField("Quantity"); //<4>
+elem.setColorFrame(frame); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:GradientColorFrame.adoc[] object.
+<3> Use `setFromColor` to specify the start color for the `GradientColorFrame`.
+<4> Use `setField` to specify the field for the `GradientColorFrame`.
+<5> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
+
+image:commonscript:GradientColorFrame3.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new GradientColorFrame();
+frame.setFromColor(java.awt.Color(0x000000));
+frame.setToColor(java.awt.Color(0xff0000));
+frame.setField("Quantity");
+elem.setColorFrame(frame);
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new GradientColorFrame;
+Chart1.bindingInfo.colorFrame.fromColor = 0x0000FF;
+Chart1.bindingInfo.colorFrame.toColor = 0xFF00FF;
+
+--
+
++
+image:commonscript:GradientColorFrame_2.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

@@ -1,0 +1,78 @@
+= Pie Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A pie chart displays a single *measure* on a circular axis.
+
+include::ROOT:partial$measureTip.adoc[]
+
+image:commonscript:Ad Hoc Pie8.png[]
+
+To create a pie chart, follow the steps below.
+
+
+include::partial$chartNewbieTip.adoc[]
+
+
+
+. In the Chart Editor, drag the *measure*  field (e.g., ‘Total’) from the *Data Source* panel to the ‘Y’ region.
++
+image:commonscript:PieChartConfig2.png[]
+
+. In the Chart Editor, drag the *dimension* field (e.g., ‘Date’) from the *Data Source* panel to the ‘Color’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:PieChartConfig.png[]
+
+. Press the ‘Edit Color’ button to choose the colors. See xref:GroupDataByDimension.adoc[] for more information about the color panel.
++
+image:commonscript:PieChartConfig4.png[]
+
+
+. Press the {buttonSelectChartStyle}, and choose  ‘Pie’ or ‘3D Pie’. This converts the chart into a pie-chart representation.
++
+image:commonscript:SelectChartTypeButtonPie.png[]
+
+. Add the respective dimension values to the pie slices: Drag the dimension (‘Date’) field from the *Data Source* panel to the ‘Text’ region.
++
+image:commonscript:PieChartTextLabels.png[]
+
+. *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
+
+. *_Optional:_* Remove the legend if desired. To do this, right-click on the legend, and select ‘Hide Legend’ from the context menu.
++
+image:commonscript:PieChartHideLegend.png[]
+
+. *_Optional:_* To place a small gap between the pie slices, follow these steps:
+
+.. Right-click the plot area and select ‘Properties’ from the context menu.
++
+image:commonscript:VS Pie6.png[]
++
+.. In the *Advanced* tab of the ‘Chart Properties’ panel, select ‘Explode Pie’ and press btn:[OK].
++
+image:commonscript:Ad Hoc Pie7.png[]
++
+
+
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+. {finishEditing}
+
+
+The pie chart is now complete.
++
+image:commonscript:Ad Hoc Pie8.png[]
+
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Mortality_Analysis.zip[Mortality Analysis] Dashboard provides an example of a grid of pie charts.
+
+image:viewsheet:galleryGridOfPie2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Mortality_Analysis.zip[Mortality Analysis] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+
+****

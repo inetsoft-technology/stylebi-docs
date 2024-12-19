@@ -1,0 +1,363 @@
+= Add Filter Components
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+* xref:dataworksheet:FilterData.adoc[], in xref:dataworksheet:PrepareYourData.adoc[], to explicitly filter data at the Data Worksheet level.
+* xref:UseFilterComponents.adoc[], for information on how to *use* Filter components to filter the Dashboard.
+====
+
+You can add a variety of different Filter components to a Dashboard. These components filter the data received from the underlying data source, and so affect any components in the Dashboard that display data from the data source.
+
+The following sections explain how to add these components.
+
+[#FilterWithSelectionList]
+== Filter  with a Selection List
+The most common way to filter the values of a *dimension* in a Dashboard is with a Selection List.  You can also use a Selection List to filter a *measure*, although this is  generally useful only for measures with a limited number of discrete values.
+
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+
+
+A Selection List filters the data in all Tables, Charts, and Output components that are based on the same data block as the Selection List. To add a Selection List, follow the steps below:
+
+. If necessary, create a new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+. At the top of the *Toolbox* panel, expand the data block that contains the field you want to filter.
+
+. Drag the dimension that you want to filter to an empty region in the Dashboard. For a string-type field, this creates a Selection List.
++
+image:viewsheetExp17_1.png[]
++
+TIP: To filter a *measure* with a Selection List,  drag  a  Selection List component from the *Toolbox* into the Dashboard, and then drag the measure into the blank Selection List. (This works for dimensions as well.)
+
+. Resize the Selection List as desired.
++
+image:viewsheetExp19_1.png[]
+
+. To display multiple columns in a Selection List, click any data cell to select it. Then drag the handle on the right side of the cell to change the cell size.
++
+TIP: If there is a scroll bar, the handle will appear slightly to the right of the scroll bar.
++
+image:viewsheetExp20_1a.png[]
+
+See xref:UseFilterComponents.adoc[] for information on how to use a Selection List to filter a Dashboard.
+
+[#FilterHierarchicalDataSelectionTree]
+== Filter Hierarchical Data with Selection Tree
+Like a Selection List, a Selection Tree filters the data in all Tables, Charts, and Output components that are based on the same data block as the Selection Tree.
+To add a Selection Tree, follow the steps below:
+
+. Drag a Selection Tree component from the *Toolbox* tree onto the Dashboard. This creates an empty Selection Tree.
+
+. Add hierarchical fields to the Selection Tree using one of the following approaches:
+
+* xref:#CreateHierarchyDraggingFields[]
+* xref:#CreateHierarchyPropertiesDialogBox[]
+* xref:#CreateRecursiveParentChildHierarchy[]
+
+See xref:UseFilterComponents.adoc[] for information on  how to use a Selection Tree to filter a Dashboard.
+
+[#CreateHierarchyDraggingFields]
+=== Create Hierarchy by Dragging Fields
+
+To create a hierarchy by dragging fields from the data source, follow the steps below:
+
+. Drag a *dimension* field from the data block in the *Toolbox* panel onto the Selection Tree. The values of this dimension provide the outer level of the hierarchy.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:Selection Tree Exp 1.png[]
+
+
+. Drag another dimension from the data block onto the Selection Tree. The values of this dimension provide the inner level of the hierarchy.
++
+image:Selection Tree Exp 2.png[]
+
+
+
+. Repeat the above step to add additional levels. Each new field you add is placed at the innermost level of the hierarchy.
++
+[NOTE]
+====
+The inner levels of the hierarchy show only the unique items compatible with corresponding outer level data. For example, the companies nested within the outer-level ‘CA’ node are only those companies whose corresponding state is CA.
+
+image:Selection Tree Expanded.png[]
+====
+
+. To change the hierarchy ordering, use the ‘Selection Tree Properties’ dialog box, as described in xref:#CreateHierarchyPropertiesDialogBox[] below.
+
+
+[#CreateHierarchyPropertiesDialogBox]
+=== Create Hierarchy in the ‘Properties’ Dialog Box
+
+To define a hierarchy by selecting columns on the *Hierarchy* tab of the ‘Selection Tree Properties’ dialog box, follow the steps below:
+
+. Right-click the Selection Tree, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Selection Tree Properties’ panel.
+
+. Select the *Data* tab.
+
+. At the top of the dialog box, select the ‘Columns’ option.
++
+image:Selection Tree Properties Data.png[]
+
+. In the ‘Table’ menu, expand the desired data block to reveal its columns, or expand a cube dimension to reveal its levels.
++
+image:Selection Tree Columns.png[]
+
+. Select the column or level that you want to be the outer-most level of the Selection Tree hierarchy, and press btn:[Add]. This adds the column or level to the ‘Level’ list.
+
+. Repeat to add all desired levels of the hierarchy. To change the hierarchy ordering, use the btn:[Move Down] and btn:[Move Up] buttons. The order from top to bottom represents the nesting order of the Selection Tree, from outer to inner.
++
+image:Selection Tree Dialog.png[]
+
+. Press btn:[OK] to close the dialog box.
++
+[NOTE]
+====
+The inner levels of the hierarchy show only the unique items compatible with corresponding outer level data. For example, the companies nested within the outer-level ‘CA’ node are only those companies whose corresponding state is CA.
+
+image:Selection Tree Expanded.png[]
+====
+
+[#CreateRecursiveParentChildHierarchy]
+=== Create Recursive Parent-Child Hierarchy
+
+To define a recursive hierarchy in a Selection Tree by selecting fields containing parent and child indexes, follow the steps below.
+
+. *Configure your data appropriately*:  For example, consider the following data:
++
+****
+The “Child ID” is the ID of the node itself, while the “Parent ID” is the ID of the node’s immediate parent. Nodes that lack a “Parent ID” are at the root level of the hierarchy.
+
+[cols="1,1,1"]
+|===
+|Parent ID |Child ID | Label
+
+| |1|Northeast
+| |2|Midwest
+| |3|South
+| |4|West
+|1|5|New England
+|1|6|Mid-Atlantic
+|2|7|East North Central
+|2|8|West North Central
+|3|9|South Atlantic
+|3|10|East South Central
+|3|11|West South Central
+|4|12|Mountain
+|4|13|Pacific
+|===
+
+The data above represent the following tree structure.
+
+image:SelectionTreeRecursive3.png[]
+
+The “Parent ID” and “Child ID” columns indicate that nodes 5 and 6 share node 1 as parent, nodes 7 and 8 share node 2 as parent, nodes 9, 10, and 11 share node 3 as parent, and nodes 12 and 13 share node 4 as parent.
+****
+
+
+. At the top of the ‘Selection Tree Properties’ dialog box, select the ‘Parent/Child IDs’ option.
++
+image:SelectionTreeRecursive1.png[]
+
+. In the ‘Table’ menu, expand the desired data block to reveal its columns.
+
+. In the ‘Parent ID’ field, select the column that contains the parent node IDs.
+
+. In the ‘ID’ field, select the column that contains the child node IDs.
+
+. In the ‘Label’ column select the column that contains the labels corresponding to the child node IDs.
+
+. *_Optional:_*  Enable ‘Auto Select Children’ if you want the selection of a parent to automatically select the parent’s children.
+
+. Press btn:[OK] to close the dialog box.
+
+
+The Selection Tree is now populated based on the selected “Parent ID” and “Child ID” columns.
+
+image:SelectionTreeRecursive2.png[]
+
+[#FilterDateNumericalDataRangeSlider]
+== Filter Date/Numerical Data with Range Slider
+A Range Slider component allows you to select a date range or numerical range from a measure, as shown below.
+
+image:RangeSlider_1.png[]
+
+TIP: You can also filter a discrete measure using a Selection List.  See xref:#FilterWithSelectionList[].
+
+To add a Range Slider follow the steps below:
+
+. Drag a Range Slider element from the *Toolbox* panel into the Dashboard.
+
+. Drag a *measure* field from a data block in the *Toolbox* panel (or from a Dashboard Table) onto the Range Slider element. This binds the Range Slider to the selected column.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:RangeSliderExp1.png[]
++
+TIP: You can also drag a measure from the *Toolbox* panel into an empty region of the Dashboard.  This will automatically create a Range Slider.
+
+. Adjust the selection range by dragging the slider end-handles. (You can also click on an end-handle and press kbd:[<] or kbd:[>]  on the keyboard.)
+
+. To enter precise values for the start-point or end-point, right-click on the Range Slider and select ‘Edit’ from the context menu. In the ‘Edit’ dialog box, enter the desired values and press btn:[OK].
++
+image:Range Slider Edit1_2.png[]
+
+. To quickly set the right side of the range to its maximum, double-click on the right end-handle. To quickly set the left side of the range to its minimum, double-click on the left end-handle. To quickly set the entire range to its full extent, double-click on the slider body.
+
+
+
+
+== Filter Dates  with a Calendar
+A Calendar allows you to restrict data to a particular range of dates, either continuous or non-continuous. A Calendar is similar in purpose to a Range Slider (see xref:#FilterDateNumericalDataRangeSlider[]), but provides functionality beyond simple range selection. For example, a Calendar also allows you to compare date ranges in a Chart or Crosstab.
+
+To add a Calendar, follow the steps below.
+
+. Drag a ‘Calendar’ element from the *Toolbox* panel onto the Dashboard. This creates a new Calendar component.
++
+image:Capture_051.png[]
+
+. Drag a date field from a data source in the *Toolbox* panel  onto the Calendar. This links the Calendar to the data represented by the selected date field.
++
+image:AddCalendarExp1.png[]
+
+. To format the dates displayed in the Calendar, click on a date, and then select the *Format* tab in the left panel. {rightClickFormat} For example, when the Calendar is in ‘Year View’, you can format the months to display the month name (format `MMM` or `MMMM`) rather than the month number. See xref:DataFormat.adoc[] for more information  about date formats.
+
+
+See xref:UseFilterComponents.adoc[] for information on how to use a Calendar to select different date ranges.
+
+
+
+
+== Combine Multiple Filters into a Selection Container
+A Selection Container can display a variety of filter components such as Selection Lists and Range Sliders in a single region of the Dashboard.
+
+include::viewsheet:partial$selectionContainer.adoc[]
+
+== Display Aggregates in Filter Component
+To display summarized data next to the *dimension* values in a Selection List or Selection Tree, follow the steps below:
+
+include::ROOT:partial$dimensionTip.adoc[]
+
+. Create the Selection List or Selection Tree as desired.  See xref:#FilterWithSelectionList[] or xref:#FilterHierarchicalDataSelectionTree[] for more information.
+
+. Right-click the  component, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Properties’ dialog box.
++
+image:Selection List properties_2.png[]
+
+. From the ‘Measure’ menu, select the field that you wish to summarize.
+
+. From the ‘Aggregate’ menu, select the method of summarization.
++
+.Read about the available aggregation methods...
+[%collapsible]
+====
+****
+include::ROOT:partial$AggregationMethods.adoc[]
+****
+====
+
+
+. *_Optional:_*  Enable the ‘Text’ option to display the aggregate values as plain text next to the corresponding dimension values.
+
+. *_Optional:_*  Enable the ‘Bar’ option to graphically display the aggregate values as proportional bars next to the corresponding dimension values.
+
+. Press btn:[OK] to close the dialog box. The summarized values are now displayed next to the Selection component dimension values.
+
+. *_Optional:_*  Improve the appearance of the Selection component by making the following adjustments to the layout:
+
+.. Adjust the column layout to provide the needed space by dragging the handle at the right side of column.
++
+image:SelectionListAggResize1.png[]
+
+.. Adjust the width of the aggregate text region by dragging the handle at the left side of the text.
++
+image:SelectionListAggResize2.png[]
+
+.. Adjust the width of the aggregate bar region by dragging the handle at the left side of the bar.
++
+image:SelectionListAggResize3.png[]
+
+. *_Optional:_*  To format the aggregate text, click on the aggregate text to select it, and then select the *Format* tab in the left panel of Visual Composer.  (See xref:DataFormat.adoc[] for more information about the available options.)
+
+. *_Optional:_*  To format the aggregate bar, click on the aggregate bar to select it, and then select the *Format* tab in the left panel of Visual Composer.  (See xref:VisualFormat.adoc[] for more information about the available options.)
+
+
+[id=FilterMultipleDataBlocks]
+== Filter Multiple Data Blocks
+By default, a Filter component operates on only a single data block. However, you can configure a Filter component to operate on multiple data blocks simultaneously.
+
+[WARNING,caption=see also]
+To synchronize Filters across multiple Dashboards, see xref:ModularizeDashboard.adoc[].
+
+To do this, follow the steps below:
+
+. Add a Filter component as described in the sections above.
+
+. Right-click on the component and select ‘Properties’ from the context menu. {rightClickOptions} This opens the component’s ‘Properties’ dialog box.
+
+. Select the *Data* tab. Data blocks with compatible columns are listed in the ‘Compatible Tables’ panel.
++
+image:multipleFilter1.png[]
++
+Compatibility requires that the data block have a column with the *same name* as the column bound to the filter component. The data type of this column must be mergeable with the column bound to the Filter component (e.g., both String, both Integer, Integer and Double, etc.). If the column bound to the Filter component is drawn from a cube data source, the ‘compatible data block’ must also be drawn from a cube.
+
+. Press the {buttonAddArrow} to add the data block to the ‘Additional Tables’ panel.
++
+image:multipleFilter2.png[]
+
+. Repeat the above steps to merge any additional data block columns.
+
+. Press btn:[OK].
+
+Data values from the compatible columns in the added data blocks are merged into the existing Filter component, and the Filter component will filter all of the specified compatible data blocks (in addition to the data block bound to the Filter).
+
+.Example: Filter Multiple Data Blocks
+****
+In the example below, a Dashboard is based on a Data Worksheet with three data blocks, containing data for companies in different regions: Eastern, Western, and Central.
+
+image:multipleFilter3.png[]
+
+To use a single Selection List to filter all three data blocks, follow the steps below:
+
+. In the Dashboard, drag the ‘Company’ field from the ‘Eastern Customers’ data block into the Dashboard canvas.
++
+image:multipleFilter4.png[]
++
+This creates a Selection List that filters the ‘Eastern Customers’ data block based on ‘Company’.
++
+image:multipleFilter5.png[]
+
+. Right-click the Selection List and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Selection List Properties’ dialog box.
+
+. Select the *Data* tab.
+
+. Hold down the {buttonCtrl} key and click in the ‘Compatible Tables’ list to select both the ‘Western Customers’ and ‘Central Customers’ data blocks. Press the {buttonAddArrow} to add them to the ‘Additional Tables’ list.
++
+image:multipleFilter6.png[]
++
+These are “compatible” data blocks because they have a column of the same name (‘Company’) as the ‘Eastern Customers’ data block, and the corresponding columns have mergeable data types (identical data types, in this case).
+
+. Press btn:[OK].
+
+The Selection List now displays the merged data from the ‘Company’ field of all three data blocks, and filtering selections that you make in the Selection List will filter all three data blocks simultaneously.
+
+image:multipleFilter7.png[]
+
+To verify this, add a Table to the Dashboard for each of the three data blocks (see xref:AddTable.adoc[] or xref:AddCrosstab.adoc[]). Note how the Selection List filters the data in each table even though each table draws data from an independent data block.
+
+image:multipleFilter8.png[]
+****
+
+== Submit Filters in Batch
+To submit settings from all Filter components in batch by using a Submit button, follow the steps below:
+
+. Drag a Submit button from the *Toolbox* to the Dashboard. (See  xref:SubmitButtonProperties.adoc[] for more information.)
+
+. Right-click a Filter component in the Dashboard, and select ‘Properties’ from the context menu. {rightClickOptions} In the ‘Properties’ dialog box, *disable* the ‘Submit on Change’ option located in the *Advanced* or *General* tab.
+
+. Repeat the previous step for each Filter component in the Dashboard.
+
+The Submit button will now batch-submit all Filter selections, as well as selections made in any Form components that similarly have the ‘Submit on Change’ option disabled.

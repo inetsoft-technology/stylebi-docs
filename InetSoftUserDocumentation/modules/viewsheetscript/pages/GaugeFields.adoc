@@ -1,0 +1,50 @@
+= fields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:GaugeQuery.adoc[] to specify the data block from which to draw the fields.
+
+
+
+Specifies the field of the data block to be displayed by the Gauge component. This is equivalent to selecting a field from the '`Columns`' menu under the *Data* tab of the component ‘Properties’ dialog box.
+
+image:viewsheetscript:GaugeFields.png[]
+
+
+When you use a bivariate aggregation method (e.g., correlation), the fields array should contain two field names. Otherwise, the array should contain just a single field name.
+
+
+
+== Type
+Array
+
+
+
+== Examples
+.One-measure aggregation
+[source,javascript]
+Gauge1.query = 'Sales';
+Gauge1.fields = ['Total'];
+Gauge1.formula = StyleConstant.AVERAGE_FORMULA;
+
+.Two-measure aggregation
+[source,javascript]
+Gauge1.query = 'Sales';
+Gauge1.fields = ['Total','Quantity Purchased'];
+Gauge1.formula = StyleConstant.CORRELATION_FORMULA;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fields           // unqualified
+Gauge1.fields    // qualified
+
+{secondForm}
+====
+
+

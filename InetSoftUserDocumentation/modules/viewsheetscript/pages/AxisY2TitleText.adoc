@@ -1,0 +1,32 @@
+= y2Title.text
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the title text for the secondary (right) Y-axis.
+
+== Type
+string
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.y2Title.text = "New Jersey Employees"
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+y2Title.text             // unqualified
+Chart1.y2Title.text      // qualified
+
+{secondForm}
+====
+

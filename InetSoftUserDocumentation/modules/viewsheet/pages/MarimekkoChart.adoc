@@ -1,0 +1,63 @@
+= Marimekko Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A Marimekko chart (also known as a Mekko or mosaic chart) displays a *measure* by using the sizes of rectangles in a hierarchical display.
+
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+
+image:commonscript:MekkoConfig1.png[]
+
+To create a Marimekko  chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+To create a Marimekko chart, place a *dimension* in the ‘X’ region of the Chart Editor to create the X-axis labels, and place the desired Mekko category *dimension* in the ‘Color’ or ‘Break By’ region of the Chart Editor. The Mekko category dimension determines the grouping in each column of the chart.
+
+NOTE: To create a grid of charts, place dimensions into the ‘X’ and/or ‘Y’ regions as well. See xref:TrellisChartGrid.adoc[] for more information.
+
+.Walkthrough: Marimekko Chart
+****
+This example illustrates how to create a Marimekko chart that displays total broken down by state and city.
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Drag a Chart component from the *Toolbox*  to the Dashboard, and press the {buttonEdit} at the top-right corner of the Chart to open the Visualization Recommender. Press the  {buttonFullEditor} at the top right to open the Chart Editor. (For more details on creating a chart, see xref:BasicChartingSteps.adoc[].)
+
+. In the Chart Editor, press the {buttonSelectChartStyle} and choose the ‘Marimekko’ option. Press the {buttonApply}.
++
+image:commonscript:MekkoConfig2.png[]
+
+. Drag the ‘State’ field from the *Data Source* panel to the ‘X’ region.
+
+. Drag the ‘City’ field from the *Data Source* panel to the ‘Color’ region, and *_then again_* to the ‘Text’ region.
+
+. Drag the ‘Total’ measure   from the *Data Source* panel to the ‘Y’ region.
++
+image:commonscript:MekkoConfig3.png[]
+
+
+. *_Optional:_* Press the ‘Edit Color’ button next to the ‘City’ dimension, and choose the desired colors to represent the city values. Press the {buttonApply}.
++
+image:commonscript:MekkoConfig4.png[]
+
+. *_Optional:_* Drag the ‘Category’ dimension  from the *Data Source* panel to the ‘Break By’ region to break out the data further by category.
+
+. {finishEditing}
+
+. Resize the chart as desired.
++
+image:commonscript:MekkoConfig1.png[]
+
+. Hover the mouse over the chart to see a tooltip providing full information about each group.
+
+include::partial$addTitlesLegend.adoc[]
+****
+
+
+
+
+

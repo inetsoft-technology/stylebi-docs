@@ -1,0 +1,15 @@
+= LineForm
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+The `LineForm` object contains information for lines manually drawn on the chart. To create a `LineForm` object, call the `LineForm` constructor.
+
+[source, javascript]
+var line = new LineForm();

@@ -1,0 +1,39 @@
+= CALC.sumproduct(2Darray)
+:navtitle: CALC.sumproduct()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Multiplies corresponding row components of a two-dimensional array (matrix) and returns the sum of those products. For example, for a 3x3 matrix
+
+stem:[[[a,b,c\],[d,e,f\],[g,h,i\]\]]
+
+
+this returns the result stem:[adg+beh+cfi].
+
+== Parameters
+2Darray::			2D array of values
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.sumproduct([[1,2,3],[2,1,2],[3,3,1]]);  // returns 18.0
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.sumproduct(parameter.row1, parameter.row2, parameter.row3)
+----
+
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,47 @@
+= setActionVisible(name,Boolean)
+:navtitle: setActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:thisViewsheet.adoc#thisViewsheetSetActionVisible[thisViewsheet.setActionVisible]  to show or hide Dashboard toolbar buttons.
+====
+
+
+Sets the visibility/accessibility of end-user features. To disable a feature, set the value to `false`.
+
+
+
+
+
+== Parameters
+name:: Name of toolbar button (String): +
+`'Add Filter'` +
+`'Unselect All'`
+
+Boolean:: `false`: hide the specified function +
+`true`: show the specified function
+
+
+
+
+
+== Example
+[source,javascript]
+CurrentSelection1.setActionVisible("Add Filter", false);
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setActionVisible                       // unqualified
+CurrentSelection1.setActionVisible     // qualified
+
+{secondForm}
+====
+
+

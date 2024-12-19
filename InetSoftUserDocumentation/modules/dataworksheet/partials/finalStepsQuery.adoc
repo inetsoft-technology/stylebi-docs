@@ -1,0 +1,10 @@
+
+. Press btn:[OK]. This creates a new data block in the Data Worksheet.
+
+. *_Optional:_* Right-click on the data block, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel. In the ‘Name’ field, enter  a name for the data block, and press ‘OK’. (See xref:ModifyColumn.adoc[] for information about how to rename columns.
++
+include::ROOT:partial$duplicateNames.adoc[]
+
+. Press the {buttonSave} in the toolbar to save the Data Worksheet.
+
+{mashupOperations}

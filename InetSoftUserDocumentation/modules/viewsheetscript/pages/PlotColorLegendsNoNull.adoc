@@ -1,0 +1,27 @@
+= colorLegends.noNull
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+For Charts with *multiple* Date/Time or Categorical color legends, set to `true` to suppress the display of `null` dimension values in the legend. When `false` (default), `null` values are represented without a label in the legend.
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.colorLegends['Order Date'].noNull = true;
+Chart1.colorLegends['Product:Name'].noNull = false;
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorLegends['...'].noNull          // unqualified
+Chart1.colorLegends['...'].noNull   // qualified
+
+{secondForm}
+====

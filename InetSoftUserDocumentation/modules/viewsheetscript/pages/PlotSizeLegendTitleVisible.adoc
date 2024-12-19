@@ -1,0 +1,29 @@
+= sizeLegend.titleVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the visibility of the legend title bar for a size-key legend.
+
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.sizeLegend.titleVisible = false;
+
+image:commonscript:sizeLegendTitleVisible.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sizeLegend.titleVisible           // unqualified
+Chart1.sizeLegend.titleVisible    // qualified
+
+{secondForm}
+====

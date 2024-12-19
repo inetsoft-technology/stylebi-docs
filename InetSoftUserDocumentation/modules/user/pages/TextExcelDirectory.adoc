@@ -1,0 +1,33 @@
+= Text/Excel Directory
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+This page explains how to create a persistent connection to a specified file (text or Excel) or file location. If you instead want to create a data set from a one-time data import, see xref:dataworksheet:UploadData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[].
+
+include::partial$dataSourceUserIntro.adoc[]
+
+. Select the ‘Text/Excel Directory’ data source, and press btn:[Create]. This opens the root folder definition screen.
+
+
+. In the ‘Name’ field, enter a label for this server file connection.
+
+. Select the ‘Root Folder’ location. The root folder is the server folder containing the server file (or files) to which you want to connect.
++
+image:dataSourceTextExcel3.png[]
++
+include::partial$testConnection.adoc[]
+
+. Press btn:[OK].
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceTextExcel4.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceTextExcel4b.png[]
++
+In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
+
+After you have created a connection to the database, you can proceed to define a data set. See xref:dataworksheet:QueryTextExcelDirectory.adoc[].

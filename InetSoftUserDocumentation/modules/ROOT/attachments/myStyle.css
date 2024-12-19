@@ -1,0 +1,53 @@
+/* Global format for all Dashboard text */
+* {
+   font-family: "Verdana";
+}
+ 
+/* Formatting for all Chart-type components */
+Chart { 
+   background:Azure;
+}
+ 
+/* Formatting for all TableTitle sub-components */ 
+TableTitle {
+   color: green;
+}
+ 
+/* Formatting for all ChartAxisTitle sub-components */
+ChartAxisTitle { 
+   background: yellow; 
+}
+ 
+/* Formatting for all ChartAxisTitle X-axis sub-components */
+ChartAxisTitle[axis=x] { 
+   background:DarkKhaki; 
+}
+ 
+/* Formatting for all components having CSS Class "Header2" */
+.Header2 {
+   font-size: 20pt;
+   font-family: "Arial Narrow";
+   font-weight: bold;
+   background-color: #FFEEBB;
+   color: rgb(100,50,50);
+   text-align: center;
+   vertical-align: middle;
+   border-color: rgb(150,50,50);
+   border-style: double dotted;
+}
+ 
+/* Formatting for all components having CSS Class "AxisText" */
+.AxisText {
+   font-size: 14pt;
+   font-weight: bold;
+}
+ 
+/* Formatting for Table-type components having CSS ID "SalesTable" */
+Table#SalesTable {
+   background-color: #FFEEBB;
+}
+ 
+/* Formatting for odd rows of tables having CSS Class "YellowRows" */
+.YellowRows TableStyle[region=Body][pattern=OddRow] {
+   background-color: yellow;
+}

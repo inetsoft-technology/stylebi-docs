@@ -1,0 +1,12 @@
+*_Optional:_* To enter the value of a *parameter* into the text, for example a parameter named `param1`, use the following syntax:
+
+[source,javascript]
+--
+{parameter.param1} // no format, convert to string
+{parameter.param1, number, '$#,###M'} // number format
+{parameter.param1, text, '--{0}--'}   // text format
+{parameter.param1, date, 'MM/d/yy'}   // date format
+{parameter.param1, duration, 'ddd HH:mm:ss'} // duration format
+{parameter.param1, percent}  // percent format
+{parameter.param1, currency} // currency format
+--

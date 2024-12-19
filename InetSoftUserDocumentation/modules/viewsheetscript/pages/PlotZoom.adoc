@@ -1,0 +1,41 @@
+= zoom
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the zoom level for a xref:viewsheet:MapChart.adoc[] that uses a default or Mapbox background. If the value is an integer, this is equivalent to the number of times the {buttonZoomIn} is pressed on the map.
+
+NOTE: This property *does not apply* to maps that use a Google Map background. Use the  xref:PlotZoomLevel.adoc[] property instead.
+
+
+== Type
+For default map background::
+Non-negative number. There is no upper limit on zoom.
+For Mapbox background:: A value between 0 and 22. See the https://docs.mapbox.com/help/glossary/zoom-level/[Mapbox Documentation] for more details about zoom levels.
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.zoom = 5.0;
+
+image:commonscript:zoom.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+zoom          // unqualified
+Chart1.zoom   // qualified
+
+{secondForm}
+====

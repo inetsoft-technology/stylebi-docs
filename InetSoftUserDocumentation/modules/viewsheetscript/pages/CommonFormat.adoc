@@ -1,0 +1,45 @@
+= format
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Sets the data format.
+
+== Type
+One of the format constants below:
+
+include::commonscript:partial$dataFormats.adoc[]
+
+
+TIP: To format cells or columns of a Table, use the xref:TableTableLens.adoc[] property.
+
+
+For the Date, Decimal, and Message formats, use the xref:CommonFormatSpec.adoc[]  property to assign a format specification using the appropriate masks.
+
+
+== Example
+[source,javascript]
+----
+// Number format
+format = StyleConstant.DECIMAL_FORMAT;
+formatSpec = "#,###.00";
+
+// Text format
+format = StyleConstant.MESSAGE_FORMAT;
+formatSpec = "{0} Inc."
+----
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+format               // unqualified
+Component1.format    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,36 @@
+= CALC.int(number)
+:navtitle: CALC.int()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Rounds number down to the nearest integer.  {CALCExcelFunctionPage}
+
+NOTE: `CALC.integer()` is an alias for `CALC.int()`.
+
+== Parameters
+number::			Number to round
+
+
+== Example
+[source,javascript]
+----
+CALC.int(15.9);  // returns 15
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.int(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.int(Slider1.selectedObject)
+CALC.int(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,48 @@
+= CALC.mirr(values, finance_rate, reinvest_rate)
+:navtitle: CALC.mirr()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *modified internal rate* of return for a series of periodic cash flows. This function considers both the cost of the investment and the interest received on reinvestment of cash. {CALCExcelFunctionPage}
+
+== Parameters
+values::			Array of numbers representing a series of payments (negative values) and income (positive values) occurring at regular periods.
++
+NOTE: The  array must contain at least one negative and one positive value. Typically, for an investment, the first value is the (negative) amount of the investment, and subsequent values are (positive) payments which are reinvested at the `reinvest_rate`.
+
+finance_rate::			Interest rate paid on money used in the cash flows
+reinvest_rate::			Interest rate on reinvested cash flows
+
+
+
+
+
+== Example
+Modified interest rate for an investment of $120,000 at a 10% interest rate, where payments of $39,000, $30,000, $21,000, $37,000, and $46,000 are reinvested at 12%.
+
+
+
+[source,javascript]
+----
+CALC.mirr([-120000, 39000, 30000, 21000, 37000, 46000], 0.1, 0.12);
+// returns 0.1260941303659051 (approx 12.6%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.mirr([-120000, 39000, 30000, 21000, 37000, 46000], field['Rate'], 0.12);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.mirr([-120000, 39000, 30000, 21000, 37000, 46000], Slider1.selectedObject, 0.12);
+CALC.mirr([-120000, 39000, 30000, 21000, 37000, 46000], parameter.Rate, 0.12);
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

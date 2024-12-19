@@ -1,0 +1,29 @@
+= tableLens
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the Table’s TableLens object, which allows you to access and modify table attributes using the https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/report/lens/AttributeTableLens.html[TableLens API].
+
+== Type
+https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/report/lens/AttributeTableLens.html[inetsoft.report.lens.AttributeTableLens]
+
+
+
+== Example
+[source,javascript]
+TableView1.tablelens.setForeground(0, 2, java.awt.Color.red);
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+tableLens                 // unqualified
+TableView1.tableLens      // qualified
+
+{secondForm}
+====

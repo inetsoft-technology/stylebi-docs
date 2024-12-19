@@ -1,0 +1,67 @@
+= LineElement.setClosed(Boolean)
+:navtitle: LineElement.setClosed()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+
+Specifies whether the line object should be automatically closed (i.e., endpoints connected). {noGetter}
+
+
+
+
+
+
+
+== Parameters
+Boolean:: `true`: close the figure +
+`false`:  do not close
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"],["NJ",100],["NY",300],["PA",200]]; //<1>
+graph = new EGraph();
+elem = new LineElement("State", "Quantity"); //<2>
+elem.setClosed(true); //<3>
+graph.addElement(elem); //<4>
+--
+
+<1> {dataset}
+<2> Create the `LineElement` object.
+<3> Use `setClosed` to close the figure.
+<4> Use xref:EGraph_addElement.adoc[] to add the `LineElement` to the Chart.
+
+
+image:commonscript:LineElementsetClosed.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.setClosed(true);
+--
+=====
+
+
+
+
+

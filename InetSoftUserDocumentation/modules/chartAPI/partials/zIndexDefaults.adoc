@@ -1,0 +1,16 @@
+The table below provides the default Z-Index settings for common chart objects.
+
+[width=50%]
+|===
+|Object|Default Z-Index
+
+|Coordinate border|20
+|Grid line|30
+|Axis|40
+|Axis border|50
+|Visual object|60
+|Grid line on top of Object|70
+|Form object|80
+|Facet gridline|90
+|Text|100
+|===

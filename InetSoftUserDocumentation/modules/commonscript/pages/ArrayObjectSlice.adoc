@@ -1,0 +1,52 @@
+= Array.slice(begin[, end])
+:navtitle: Array.slice()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:commonscript:indexOf.adoc[] to detect an item in an array.
+* xref:commonscript:StringObjectSlice.adoc[] to extract a slice of a string.
+====
+
+Return a slice of the array as a new array.
+
+== Parameters
+begin::  Starting index  of the slice
+end:: Optional ending index. If omitted, the end index is the end of the array.
+
+
+
+
+
+== Example
+[source,javascript]
+----
+var arr1 = ['joe','mary','roberto','donald','mike'];
+var arr2 = arr.slice(1,3); // returns array ['mary','roberto']
+----
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+var arr = TableView1.table['Name'];
+arr.slice(1,3);
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+var arr = Sales['Name'];
+arr.slice(1,3);
+
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

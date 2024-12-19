@@ -1,0 +1,39 @@
+= colorLegend.format
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the format for data values displayed in the color legend.
+
+
+== Type
+include::commonscript:partial$dataFormats.adoc[]
+
+For the Date, Decimal, and Message formats, use the xref:CommonFormatSpec.adoc[]  property to assign a format specification using the appropriate masks: `[formatType, formatSpec]`.  See the examples below.
+
+
+== Examples
+
+.Number Format
+[source,javascript]
+Chart1.colorLegend.format = [Chart.DECIMAL_FORMAT,"$#,##0.00"]
+
+image:commonscript:colorLegendFormatNumber.png[]
+
+
+.Text Format
+[source,javascript]
+Chart1.colorLegend.format = [Chart.MESSAGE_FORMAT,"{0} Inc."];
+
+image:commonscript:colorLegendFormatText.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorLegend.format          // unqualified
+Chart1.colorLegend.format   // qualified
+
+{secondForm}
+====

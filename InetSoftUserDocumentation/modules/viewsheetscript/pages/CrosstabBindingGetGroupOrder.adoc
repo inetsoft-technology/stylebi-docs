@@ -1,0 +1,38 @@
+= bindingInfo.getGroupOrder(group_field, header)
+:navtitle: getGroupOrder()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the date grouping level  specified by xref:CrosstabBindingInfoSetGroupOrder.adoc[] or set by the ‘Level’ option in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetGroupOrder_1.png[]
+
+
+== Parameters
+group_field::			String: Name of a grouped date column
+header::			`StyleConstant.ROW_HEADER` or `StyleConstant.COLUMN_HEADER`
+
+== Returns
+xref:commonscript:StyleConstant.adoc[] integer
+
+
+
+== Example
+[source,javascript]
+if(Crosstab1.bindingInfo.getGroupOrder('Date',StyleConstant.ROW_HEADER)==StyleConstant.QUARTER_OF_YEAR_DATE_GROUP) {
+  Crosstab2.bindingInfo.setGroupOrder('Date',StyleConstant.ROW_HEADER,StyleConstant.QUARTER_OF_YEAR_DATE_GROUP);
+}
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.getGroupOrder             // unqualified
+Crosstab1.bindingInfo.getGroupOrder   // qualified
+
+{secondForm}
+====
+
+

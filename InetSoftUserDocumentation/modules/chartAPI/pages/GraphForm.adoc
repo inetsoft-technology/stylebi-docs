@@ -1,0 +1,18 @@
+= GraphForm
+
+
+[CAUTION,caption=created by]
+====
+[square]
+* xref:LabelForm.adoc[]
+* xref:TagForm.adoc[]
+* xref:ShapeForm.adoc[]
+* xref:RectForm.adoc[]
+* xref:LineForm.adoc[]
+====
+
+
+
+The `GraphForm` object contains information for form (i.e., shape) elements manually drawn on the chart.
+
+image:commonscript:GraphForm.png[]

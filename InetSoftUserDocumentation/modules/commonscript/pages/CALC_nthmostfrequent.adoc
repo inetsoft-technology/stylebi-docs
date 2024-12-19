@@ -1,0 +1,39 @@
+= CALC.nthmostfrequent(array,n)
+:navtitle: CALC.nthmostfrequent()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the __n__th most frequently occurring value in the specified array. Use  n=1 (first most frequent value) to return the mode, equivalent to xref:CALC_mode.adoc[].
+
+== Parameters
+array::				Array of values
+n::	Frequency rank (1=most frequent, 2=second most frequent, etc.)
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.nthmostfrequent([1,1,3,3,4,5,2,1,4,3],3);  // 3rd most freq
+// returns 4
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.nthmostfrequent(TableView1.table['Quantity'],3)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.nthmostfrequent(Sales['Quantity'],3);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

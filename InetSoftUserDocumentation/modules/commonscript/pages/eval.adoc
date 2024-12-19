@@ -1,0 +1,5 @@
+= eval(string)
+:navtitle: eval()
+
+
+Evaluate a string of JavaScript code. This function can be useful for executing dynamically-created JavaScript commands and expressions, but scripts that rely on `eval()` are often difficult to debug. In general, you should avoid using `eval()`.

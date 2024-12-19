@@ -1,0 +1,55 @@
+= isActionVisible(name)
+:navtitle: isActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:thisViewsheet.adoc#thisViewsheetIsActionVisible[thisViewsheet.IsActionVisible]  to return Dashboard toolbar button visibility.
+====
+
+Returns the visibility/accessibility of the specified end-user Selection List or Selection Tree feature.
+
+== Parameter
+name::			Name of toolbar button (String):
++
+[source]
+'Search'
+'Apply'
+'Unselect'
+'Reverse'
+'Sort'
+'Show' (in Selection Container)
+'Hide' (in Selection Container)
+'Remove' (right-click menu item in Selection Container)
+'Select Subtree' (right-click menu item)
+'Clear Subtree' (right-click menu item)
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+if (Selection1.isActionVisible('Apply')==true) {
+  Text1.text = 'Press the Apply button to submit';
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+isActionVisible                    // unqualified
+SelectionTree1.isActionVisible     // qualified
+
+{secondForm}
+====
+
+

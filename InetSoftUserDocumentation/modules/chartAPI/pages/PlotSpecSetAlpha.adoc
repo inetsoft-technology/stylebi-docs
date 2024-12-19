@@ -1,0 +1,64 @@
+= PlotSpec.setAlpha(value)
+:navtitle: PlotSpec.setAlpha()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the transparency level for the xref:chartAPI:Coordinate.adoc[] object background color or background image.  The corresponding “getter” function is `getAlpha()`.
+
+
+== Parameter
+value:: Number in range [0,1] where: +
+0 = completely transparent +
+1 = completely opaque
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+elem.setHint(GraphElement.HINT_ALPHA,.8);
+var sscale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var coord = new RectCoord(sscale,qscale);
+var spec = new PlotSpec(); // <2>
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+spec.setBackgroundImage(logo);
+spec.setAlpha(.3); // <3>
+coord.setPlotSpec(spec); // <4>
+graph.setCoordinate(coord);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:PlotSpec.adoc[] object.
+<3> Use `setAlpha` to set the transparency.
+<4> Use xref:CoordinateSetPlotSpec.adoc[] to assign the `PlotSpec` to the `Coordinate`.
+
+image:commonscript:PlotSpecSetAlpha.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] {circle1} and xref:chartAPI:CoordinateGetPlotSpec.adoc[] {circle2} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:PlotSpec.adoc[]. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); // <1>
+var spec = coord.getPlotSpec(); //<2>
+// Compact syntax: var spec = graph.getCoordinate().getPlotSpec();
+
+spec.setAlpha(0.5);
+
+--
+=====

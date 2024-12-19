@@ -1,0 +1,39 @@
+= CALC.power(number, power)
+:navtitle: CALC.power()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the result of a number raised to a power, stem:[b^n]. {CALCExcelFunctionPage}
+
+== Parameters
+number::			The base b
+power::			The exponent n
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.power(2,3); // returns 8.0
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.power(field['Value'], 3)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.power(Slider1.selectedObject, 3)
+CALC.power(parameter.Value, 3)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,13 @@
+= Visual Composer Console
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The Visual Composer Console allows you to view errors that occur while you are designing a Dashboard, for example, when a query fails to execute. To open the Console, press the btn:[Console] button at the bottom of the window.
+
+image:VisualComposerConsole1.png[]
+
+Use the menu to select the level of information that you want to see reported in the console: ‘All’, ‘Error’, ‘Warning’, or ‘Info’.
+
+image:VisualComposerConsole2.png[]
+
+To clear the contents of the Console window, press the btn:[Clear] button.

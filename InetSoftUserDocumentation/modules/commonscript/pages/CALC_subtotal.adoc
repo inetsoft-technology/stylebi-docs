@@ -1,0 +1,53 @@
+= CALC.subtotal(functionNumber, array)
+:navtitle: CALC.subtotal()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the subtotal of an array based on the specified aggregation function. {CALCExcelFunctionPage}
+
+== Parameters
+functionNumber::				Aggregation function, represented by number:
++
+****
+. Average of items
+. Count of items
+. Count of non-null items
+. Maximum value of items
+. Minimum value of items
+. Product of items
+. Sample standard deviation of items
+. Population standard deviation of items
+. Sum of items
+. Sample variance of items
+. Population variance of items
+****
+array::				Array of numbers
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.subtotal(1, [1,2,3]);  // returns 2.0
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.subtotal(1, TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.subtotal(1, Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

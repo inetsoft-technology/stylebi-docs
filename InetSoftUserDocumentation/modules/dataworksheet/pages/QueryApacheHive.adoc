@@ -1,0 +1,34 @@
+= Hive Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Apache Hive  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:ApacheHive.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonApacheHiveQuery}. This opens the ‘Apache Hive  Query’ dialog box.
++
+image:apacheHiveQuery1.png[]
+
+. In the ‘Enter SQL’ field, type or paste the Hive SQL string that you want to execute.
++
+image:apacheHiveQuery2.png[]
+
+include::partial$finalStepsQuery.adoc[]
+
+
+
+
+
+
+
+
+
+
+

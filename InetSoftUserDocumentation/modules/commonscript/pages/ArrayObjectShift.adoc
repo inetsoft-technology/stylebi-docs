@@ -1,0 +1,51 @@
+= Array.shift()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:commonscript:ArrayObjectPop.adoc[] to remove the last item in an array.
+* xref:commonscript:ArrayObjectUnshift.adoc[] to add  items to the beginning of the array.
+* xref:commonscript:ArrayObjectJoin.adoc[] to combine the elements of an array into a string.
+====
+
+
+
+Returns the first element of the array, and removes that element from the original array.
+
+
+
+
+
+== Example
+[source,javascript]
+----
+var arr = ['A','B','C'];
+alert('First item was ' + arr.shift());   // returns "First item was A"
+alert('Array is now ' + arr.join(',')) // returns "Array is now B,C"
+----
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column  of Dashboard table TableView1:
+var arr = TableView1.table['Name'];
+alert('First item was ' + arr.shift());
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+ // Column of  ‘Sales’ data block in Data Worksheet:
+var arr = Sales['Name'];
+alert('First item was ' + arr.shift());
+
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

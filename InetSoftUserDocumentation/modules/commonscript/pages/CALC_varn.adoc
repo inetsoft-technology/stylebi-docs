@@ -1,0 +1,39 @@
+= CALC.varn(array)
+:navtitle: CALC.varn()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the *sample variance* for the values in array. Variance is the square of the standard deviation and provides a measure of how widely the data are spread about the mean.
+
+== Parameters
+array::			Array of real values. (Text and Boolean values are ignored.)
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.varn([1345,1301,1368,1322,1310,1370,1318,1350,1303,1299]);
+// returns 754.2666666666665
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.varn(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.varn(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,5 @@
+= Secure  Data
+
+The fundamental method used by InetSoft for securing data is the Virtual Private Model (VPM). A VPM allows you to restrict data based on user, group, role, or any other criteria. See  xref:user:AddDataSecurity.adoc[] for  information on how to create and use a VPM.
+
+NOTE: To control data access on an individual data block level, you can set filtering conditions that use session data, such as user, group, and role.  See xref:FilterData.adoc[] for more information.

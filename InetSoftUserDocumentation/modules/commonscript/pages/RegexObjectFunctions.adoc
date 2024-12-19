@@ -1,0 +1,15 @@
+= Regex  Functions
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A regular expression or *regex* object contains the pattern of a regular expression. It has properties and methods for using the regular expression to find and replace matches in strings. A regular expression can be created as a literal:
+
+[source,javascript]
+var re = /.*JavA.*/i;
+
+Alternatively, you can  create a regular expression using the RegExp constructor:
+
+[source,javascript]
+var re = new RegExp('.*JavA.*', 'i');
+
+A regular expression can be used in the xref:StringObjectMatch.adoc[], xref:StringObjectReplace.adoc[], and xref:StringObjectSearch.adoc[] methods to find the regular expression in a string, or can be evaluated against a string using one of the  RegExp methods described  in the following topics.

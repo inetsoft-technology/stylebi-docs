@@ -1,0 +1,12 @@
+= Date and Time Functions
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following topics present  date and time functions provided by the CALC object. {CALCExcelHeadingPage}
+
+[NOTE]
+====
+Many date functions include an optional parameter *basis* to indicate the day count convention:
+
+include::partial$basisTable.adoc[]
+====

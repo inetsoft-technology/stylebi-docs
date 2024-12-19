@@ -1,0 +1,48 @@
+= CALC.rank(number, array, order)
+:navtitle: CALC.rank()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the rank of `number` within the values in `array`. The rank is the position of the value in the list after sorting in ascending or descending order. {CALCExcelFunctionPage}
+
+
+== Parameters
+number::			The value for which to find rank. This value must occur within `array`.
+array::			Array of real values. Non-numeric values are ignored.
+order::		`1`: Find rank in ascending-sorted array +
+`0`: Find rank in descending-sorted array
+
+
+
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.rank(7,[1,2,4,7,8,9,10,12],1);
+// returns 4 (value '7' is fourth from bottom)
+
+CALC.rank(7,[1,2,4,7,8,9,10,12],0);
+// returns 5 (value '7' is fifth from top)
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.rank(7, TableView1.table['Quantity'], 1)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.rank(7, Sales['Quantity'], 1);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

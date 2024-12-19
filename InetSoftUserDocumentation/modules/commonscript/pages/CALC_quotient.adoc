@@ -1,0 +1,37 @@
+= CALC.quotient(numerator, denominator)
+:navtitle: CALC.quotient()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the integer portion of the quotient `numerator/denominator`. {CALCExcelFunctionPage}
+
+== Parameters
+numerator::			The numerator
+denominator::			The non-zero denominator
+
+
+
+== Example
+[source,javascript]
+----
+CALC.quotient(5,2);  // returns 2
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.quotient(field['Value'], 2)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.quotient(Slider1.selectedObject, 2)
+CALC.quotient(parameter.Value, 2)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

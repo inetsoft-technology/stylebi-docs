@@ -1,0 +1,13 @@
+= Data Worksheet  Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$rightClickOptions.adoc[]
+
+
+To access Data Worksheet propeties, press the {buttonOptions} in the Visual Compoer toolbar.
+
+image:dataWorksheetOptions.png[]
+
+Enter a desired  '`Alias`' and '`Description`' for the Data Worksheet.  When  specified, the alias will be disaplayed in the data source listing instead of the name.
+
+image:dataWorksheetOptions2.png[]

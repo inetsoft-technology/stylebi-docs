@@ -1,0 +1,74 @@
+= Configure Server Email
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To specify how the  server mails Dashboards and notifications to users (and how end users can contact an administrator in case an error is generated during Dashboard generation), follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *General* page in the left panel, and select the *Email* page in the right panel.
++
+image:Figure 6.png[]
++
+IMPORTANT: In a multi-tenant environment, only the Site Administrator can access the *General* settings.  See xref:EnableMultiTenant.adoc[] for more information about multi-tenancy.
+
+. Make the desired settings and press btn:[Apply].  See xref:#EmailProperties[] below.
+
+
+== Email Template
+You can use an *email template* for both scheduled emails (see xref:SchedulerActions.adoc[]) and emails sent from the User Portal.  To do this, place a Mustache HTML template named *email-template.html* in the *SREE Home* directory.
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+This template contains a single key, `message`, whose value  is the HTML body of the email message. It should be injected in the template using a triple-mustache, as shown below:
+
+[source,html]
+<div>
+   {{{message}}}
+</div>
+
+The template will be applied to all email message bodies. For more information about the Mustache HTML template, see the https://mustache.github.io/[Mustache project site].
+
+[#EmailProperties]
+== Email Properties
+Mail Host (Required):: Specifies one or more valid SMTP servers, separated by commas. If the servers require secure protocol, enable the '`Secure SMTP`' option.
+
+From Email Address:: Specifies the fixed email address from which all emails are sent.
+
+Opportunistic TLS:: Enable Opportunistic TLS encryption.
+
+Mail Session JNDI URL:: If a JNDI URL is provided, the server will first try to obtain a session from the JNDI directory when sending emails. If this fails, it will create a new session based on the setting provided for the ‘Mail Host’ property.
++
+NOTE: The Scheduler cannot access this ‘Mail Session JNDI URL’ property, since the Scheduler runs as a separate application independent of the application server. (See xref:Schedule.adoc[] for more details about the Scheduler.)
+
+
+Auto-complete Email:: Specifies that the user email address (stored from previously entered email) should be automatically populated for scheduled mail tasks.  When disabled, the email address is not automatically populated.
+
+
+Emails Subject Format:: The ‘Delivery Emails Subject Format’ and ‘Notification Emails Subject Format’ use {JavaTextMessageFormat} syntax with two parameters, the first (index 0) being the Dashboard alias, and the second (index 1) being the date and time of Dashboard generation.  You can specify a format for the *date* parameter using date format symbols.
++
+.See a list  of available date format symbols...
+[%collapsible]
+====
+For examples of how  to construct dates using these symbols, see xref:viewsheet:DataFormat.adoc#DateFormat[Date Format] in xref:viewsheet:VisualizeYourData.adoc[].
+
+
+include::commonscript:partial$dateFormatTable.adoc[]
+====
+
++
+If no alias is specified for the Dashboard in the ‘Alias’ field, then parameter `pass:[{0}]` defaults to the Dashboard name. The global ‘Delivery Emails Subject Format’ setting is overridden by the ‘Subject’ specified (if any) under a Scheduled task  *Action* tab of  Enterprise Manager or the User Portal.
++
+.Subject format
+[example]
+====
+Consider the following Subject Format specification  provided for a  Dashboard with  alias ‘testReport’:
+
+ Dashboard named {0}, generated at {1,time} on {1,date}
+
+This will produce an email subject line such as the following:
+
+ Dashboard named testReport, generated at 10:34:54 AM on Nov 5, 2024
+
+The time and date  will be the actual time and date of Dashboard generation.
+====

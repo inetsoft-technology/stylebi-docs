@@ -1,0 +1,50 @@
+= CALC.pv(rate, nper, pmt, fv, type)
+:navtitle: CALC.pv()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *present value* of an investment, the lump-sum amount that a series of future payments is worth right now. {CALCExcelFunctionPage}
+
+== Parameters
+rate::			Interest rate per period
+nper::			Total number of payment periods in an annuity
+pmt::			Fixed payment made each period. Typically includes principal and interest but no other fees or taxes.
+fv::			Future value (generally 0 for a loan), the  cash balance you want to attain after the last payment is made
+type::			Timing of payment: +
+`0`: payment at end of period (default) +
+`1`: payment at start of period
+
+
+
+
+
+
+
+== Example
+Present value of a 20-year loan with interest rate of 8% and payments of $500 at the end of each period. (Payments are negative, income is positive.)
+
+
+[source,javascript]
+----
+CALC.pv(0.08/12, 20*12, -500, 0, 0); // returns 59777.14585118775 (approx $59,777.15)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.pv(field['Rate'], 20*12, -500, 0, 0)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.pv(Slider1.selectedObject, 20*12, -500, 0, 0)
+CALC.pv(parameter.Rate, 20*12, -500, 0, 0)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

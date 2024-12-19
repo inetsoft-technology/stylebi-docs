@@ -1,0 +1,35 @@
+= CALC.atan(number)
+:navtitle: CALC.atan()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the inverse tangent of a number in radians. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A numerical value
+
+== Example
+[source,javascript]
+----
+CALC.atan(1);   // returns 0.7853981633974483 (π/4 radians)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.atan(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.atan(Slider1.selectedObject)
+CALC.atan(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

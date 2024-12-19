@@ -1,0 +1,40 @@
+= max
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+The value of the largest label displayed on the Gauge face.
+
+
+
+
+== Type
+Number::			Value of highest Gauge label
+
+
+
+
+
+== Example
+[source,javascript]
+Gauge1.max = 16000;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+max           // unqualified
+Gauge1.max    // qualified
+
+{secondForm}
+====
+
+

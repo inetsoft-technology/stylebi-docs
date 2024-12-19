@@ -1,0 +1,29 @@
+= x2Title.font
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the title font for the secondary (top) X-axis.
+
+
+
+== Type
+{javaawtfont} or font description
+
+== Example
+[source,javascript]
+Chart1.x2Title.font = new java.awt.Font('Serif', java.awt.Font.BOLD, 12);
+Chart1.x2Title.font = 'Lucida Sans Unicode-BOLD-14';
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+x2Title.font            // unqualified
+Chart1.x2Title.font     // qualified
+
+{secondForm}
+====
+
+

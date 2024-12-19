@@ -1,0 +1,43 @@
+= data.size
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+include::partial$readOnly.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:TableTableSize.adoc[] for the width of post-aggregate (as-displayed) results table.
+* xref:viewsheetscript:AccessComponentData.adoc#TableCrosstabComponents[Table/Crosstab Components] for  information about working with table data.
+====
+
+
+
+Returns the number of columns in a table, prior to grouping and aggregation.
+
+
+
+
+== Type
+Integer
+
+
+
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+data.size                 // unqualified
+TableView1.data.size      // qualified
+
+{secondForm}
+====
+
+

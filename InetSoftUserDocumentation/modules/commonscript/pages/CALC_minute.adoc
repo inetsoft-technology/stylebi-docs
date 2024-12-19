@@ -1,0 +1,42 @@
+= CALC.minute(date)
+:navtitle: CALC.minute()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Returns the minute of the hour for the given date object. {CALCExcelFunctionPage}
+
+== Parameters
+date::			a Date object
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.minute(new Date(2000,0,14,7,15,23))  // returns 15
+
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.minute(field['Order.Date'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.minute(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

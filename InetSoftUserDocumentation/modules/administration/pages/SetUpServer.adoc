@@ -1,0 +1,180 @@
+= Set Up Server
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+If the server is running, it is best to manage server properties and storage using Enterprise Manager as described in xref:AllProperties.adoc[] and xref:Storage.adoc[]. However, if the server is not running, you can set up the server in script by using the `:setup`  or equivalent `:su` command.
+
+include::partial$runCommand.adoc[]
+
+IMPORTANT: To connect to a non-running server, you will need to launch the Administration Console with  appropriate flags.  See xref:ConnectToRepository.adoc[].
+
+////
+// Documentation #67942 SAYS THIS IS DELETED ***********
+== Convert SREE Home to New Storage Format
+The `upgrade-storage` action converts the SREE Home (server repository) of from the format of version 2021 and earlier to the new storage structure of version 2022 and later. See https://www.inetsoft.com/wiki/bin/view/Main/HowToUpgrade2022[How to Upgrade to 2022] for detailed instructions on upgrading to version 2022.
+
+=== Parameters
+oldSREEHome:: Absolute path to *SREE Home* of the previous version
+newSREEHome:: Absolute path to new *SREE Home*, which should be an empty directory
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+=== Example
+[source,groovy]
+:setup upgrade-storage 'C:/ProgramData/InetSoft\ Technology/InetSoft/2021/server-config' 'C:/NewSREEHome'
+////
+
+== Set a Property
+The `set-property` action sets a specified server property.
+
+=== Parameters
+directory:: Path to *SREE Home*
+property:: Name of the property to set
+value:: Value of the property
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+=== Example
+[source,groovy]
+ :setup set-property '/var/lib/inetsoft' 'license.key' 'S000-000-ERX-000000000000000-000000000000'
+
+This can also be used in script form:
+
+[source,groovy]
+inetsoft {
+  setup('/var/lib/inetsoft') {
+    properties {
+      put 'license.key', 'S000-000-ERX-000000000000000-000000000000'
+    }
+  }
+}
+
+
+
+== Get a Property
+The `get-property` action gets a specified server property.
+
+=== Parameters
+directory:: Path to *SREE Home*
+property:: Name of the property to get
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+=== Example
+[source,groovy]
+:setup get-property '/var/lib/inetsoft' 'license.key'
+
+This can also be used in script form:
+
+[source,groovy]
+inetsoft {
+  setup('/var/lib/inetsoft') {
+    properties {
+      get(license.key)
+    }
+  }
+}
+
+
+[#UploadFilestoStorage]
+== Upload Files to Storage
+The `upload-file`  action allows you to move files into server storage. (See xref:ManageContent.adoc[] for information about importing to the repository.) {connectRepositoryNote}
+
+=== Parameters
+directory:: Path to SREE Home
+file:: Path to local file
+targetPath:: Desired location of file in server storage. This is the path displayed on the *Storage* page in Enterprise Manager. (See xref:Storage.adoc[] for more information.)
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+=== Example
+
+[source,groovy]
+:setup upload-file '/var/lib/inetsoft' '/arbitrary/container/path/uploadFile.txt' 'path_in_dataspace/text.txt'
+
+
+This can also be accomplished in a DSL script using the `write`  method. The `write` method parameters are the target storage path and the file to upload.
+
+[source,groovy]
+inetsoft {
+  setup('/path_to_sree_home') {
+  storage {
+    write('data_space/text.txt', new File('/arbitrary/container/path/uploadFile.txt'))
+  }
+}
+
+
+
+== Download Files from Storage
+The `download-file`  action allows you to move files out of server storage. (See xref:ManageContent.adoc[] for information about exporting from the repository.) {connectRepositoryNote}
+
+=== Parameters
+directory:: Path to SREE Home
+sourcePath:: Path to file in server storage. This is the path displayed on the *Storage* page in Enterprise Manager. (See xref:Storage.adoc[] for more information.)
+files:: Path to local file to be written
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+=== Example
+
+[source,groovy]
+:setup download-file '/var/lib/inetsoft' 'path_in_dataspace/text.txt' '/arbitrary/container/path/downloadedFile.txt'
+
+
+This can also be accomplished in a DSL  script using the  `read` method.  The `read` method parameters are  the server storage path and a closure with an `InputStream` as the parameter.
+
+[source,groovy]
+inetsoft {
+  setup('/var/lib/inetsoft') {
+  storage {
+    read('path_in_dataspace/text.txt') { inp ->
+      // opens a new file output stream and copies the input stream to it
+      new File('/arbitrary/container/path/downloadedFile.txt').withCloseable { it << inp }
+    }
+  }
+}
+
+
+== Restore Assets to Server
+The `restore` action restores backed-up server storage from a Zip file.   To backup assets to Zip file, see xref:ManageContent.adoc[]. {connectRepositoryNote}
+
+CAUTION: The server should not be running during the restore operation.
+
+
+=== Parameter
+path:: The path to the local Zip file that contains the backed-up files.
+
+=== Example
+Restore server storage from _backup.zip_.
+
+[source,groovy]
+:setup restore '/var/lib/inetsoft' '/arbitrary/container/path/backup.zip'
+
+
+== List Drivers
+The `list-drivers` action returns a list of drivers contained in the specified JAR file, which should be uploaded as described in xref:#UploadFilestoStorage[]. {connectRepositoryNote}
+
+=== Parameter
+jarFiles:: A JAR file in the bin directory containing drivers.
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.SetupDelegate
+:setup list-drivers '/arbitrary/container/path/ojdbc6-11.2.0.4.jar'
+
+
+== Package Drivers as a Plugin
+The `create-driver-plugin` packages database drivers into a plugin Zip file with the specified name. {connectRepositoryNote}
+
+=== Parameter
+pluginID:: A unique ID, typically be a namespaced value, such as `com.mycompany.jdbc.dbtype`.
+pluginName:: A desired name for the plugin. The plugin will be listed under this name in Enterprise Manager.
+pluginVersion:: The plugin version, which should conform to https://semver.org/[semantic versioning standards].
+drivers:: The class name of the driver to package.
+jarFile:: The JAR file containing the driver, which should be located in the _bin_ directory of the installation.
+zipFile:: The Zip file in which the plugin should be saved.
+
+=== Example
+[source,groovy]
+:setup create-driver-plugin 'com.mycompany.jdbc.dbtype' 'myDB' '1.1.1' 'oracle.jdbc.OracleDriver' '/arbitrary/container/path/ojdbc6-11.2.0.4.jar' '/arbitrary/container/path/ojdbc6-11.2.0.4.jar.zip'

@@ -1,0 +1,46 @@
+= Text/Excel Directory  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Text/Excel Directory  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:TextExcelDirectory.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonTextExcelDirectoryQuery}.
++
+image:dataSourceTextExcel5.png[]
++
+This opens the ‘Text/Excel Directory  Query’ dialog box.
++
+image:dataSourceTextExcel6.png[]
++
+
+. From the ‘File/Folder’ menu, select an Excel/CSV/Text file, or select a folder.  If you select a folder, all files in the folder will be concatenated.  If you select a file, specify the file properties using the additional controls.  The options (‘Sheet’, ‘Encoding’, ‘Text Delimiter’, etc.) are the same as for uploading a file (see xref:dataworksheet:UploadData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[]):
+
+.. For an Excel file, use the ‘Sheet’ menu to choose the sheet that you want to import.
+
+.. From the ‘Encoding’ menu, select the encoding of the text file.
+
+.. In the ‘Delimiter’ field, enter the character that is used in the text file to separate entries. The default delimiter character is a comma. For tab-delimited files, select the ‘Tab’ option.
+
+. Adjust any of the following optional settings to modify the way the file data is interpreted:
+
+.. Select ‘Unpivot Data (Crosstab Table)’ if the data in the file is in crosstab table form, and you want to convert the crosstab table into a regular table. This option will convert the column header row into a “dimension” column and convert the crosstab cells into a “measure” column. If the crosstab table in the file contains multiple levels of row headers, enter the number of levels in the ‘Header Columns’ field.
++
+NOTE: You can only unpivot a crosstab that has a single level of column headers.
+
+.. Select ‘First Row as Header (Regular Table)’ to use the entries in the first row of the file as the column header text. Otherwise, default column names are used (“col0,” “col1,” etc.).
+
+.. Select ‘Remove Quotation Marks’ to strip quotation marks out of the text file upon loading.
+
+. *_Optional:_* {datasourceSelectTabular}
+
+
+include::dataworksheet:partial$finalStepsQuery.adoc[]
+

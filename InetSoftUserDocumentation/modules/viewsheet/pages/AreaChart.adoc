@@ -1,0 +1,71 @@
+= Area Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+An area chart displays a measure as a filled region. It is functionally the same as a xref:LineChart.adoc[].
+
+image:commonscript:areaChartExp5b.png[]
+
+To create an area chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Area’  style. (To create a stacked area chart, enable the ‘Stack’ option at the bottom of the panel.) Press the {buttonApply}.
++
+image:commonscript:areaChartExp1.png[]
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
++
+image:commonscript:areaChartExp4.png[]
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+TIP: {convertToDimension}
+
+
+
+
+. To break-out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to  the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
++
+image:commonscript:areaChartExp2.png[]
+
+. To break-out the data into groups without applying any visual formatting, drag a dimension to the ‘Break By/Tooltip’ region.
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+. *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:viewsheetExp34.png[]
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
++
+image:commonscript:areaChartExp3.png[]
++
+include::ROOT:partial$measureTip.adoc[]
++
+TIP: {convertToMeasure}
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+image:Chart Edit Y Axis_1.png[]
+
+. To represent a measure by using tooltip information, drag the measure to the ‘Break By/Tooltip’ region.
+
+. *_Optional:_* {multipleMeasure}
+
+. {finishEditing}
+
+include::partial$addTitlesLegend.adoc[]
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Financial_Client_Demographics.zip[Financial Client Demographics] Dashboard provides an example of an area chart.
+
+image:viewsheet:galleryWaterfall2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Financial_Client_Demographics.zip[Financial Client Demographics] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****
+
+

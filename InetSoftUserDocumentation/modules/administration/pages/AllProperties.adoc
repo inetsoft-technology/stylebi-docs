@@ -1,0 +1,412 @@
+= All Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+:availableDataSources: JDBC, Microsoft Access, Oracle, Oracle BI, SQL Server, MySQL, DB2, jTDS, Ingres, Sybase, Derby, Derby Embedded, Informix, SQL Anywhere, PostgreSQL, Dremio, Impala, Vertica, Teradata, SAP HANA, Snowflake, Actian Matrix, Actian Vector, Amazon Aurora/RDS MySQL, Amazon Aurora/RDS PostgreSQL, AWS EMR, AWS Redshift, Aster Data nCluster, Cisco Info Server, Exasol, Google Cloud SQL, IBM AS400, MapR, MariaDB, MemSQL, MonetDB, Pivotal Greenplum, Progress OpenEdge, DataStax Enterprise, FileMaker, LucidDB, Netezza, Oracle JD Edwards, SQLite, SQL Server Express, MarkLogic, Google BigQuery, Oracle PeopleSoft (DB2), Oracle PeopleSoft (Oracle), Oracle PeopleSoft (SQL Server), Siebel CRM (Oracle), Siebel CRM (SQL Server), HPCC, Splice Machine, OrientDB, Aerospike, Apache Drill, Presto, PHOENIX, Text/Excel Directory, Google Spreadsheets, SAP ABAP, SAP BAPI, SAP Tables, R, Facebook Ad Insights, Google Analytics, Sharepoint Online, Apache Hive, Data.gov JSON, OData, MongoDB, Cassandra, Couchbase, Redis, Cosmosdb, Salesforce, REST JSON, REST XML, Rest.ActiveCampaign, Rest.AdobeAnalytics, Rest.Airtable, Rest.Appfigures, Rest.Asana, Rest.AzureBlob, Rest.AzureSearch, Rest.Box, Rest.CampaignMonitor, Rest.Chargebee, Rest.Chargify, Rest.ChartMogul, Rest.ConstantContact, Rest.Copper, Rest.DataDotWorld, Rest.Firebase, Rest.FortyTwoMatters, Rest.Freshdesk, Rest.Freshsales, Rest.Freshservice, Rest.Fusebill, Rest.GitHub, Rest.GitLab, GoSquared, Rest.GoogleCalendar, GraphQL, Rest.Harvest, Rest.HelpScoutDocs, Rest.HubSpot, Rest.InfluxDB, Rest.Insightly, Rest.Intervals, Rest.Jira, Rest.Jive, Rest.Lighthouse, Rest.Linkedin, Rest.LiveAgent, Rest.Mailchimp, Rest.Mixpanel, monday.com, Rest.Nicereply, Rest.Pipedrive, Rest.PipelineDeals, Rest.Prometheus, Rest.Remedyforce, Rest.SEOmonitor, Rest.SalesforceReports, Rest.SendGrid, Rest.ServiceNow, Shopify, Rest.Smartsheet, Rest.Square, Rest.Stripe, Rest.SurveyMonkey, Rest.TeamDesk, Rest.Toggl, Rest.Twilio, Rest.Twitter, Rest.WordPress, Rest.Xero, Rest.YouTubeAnalytics, Rest.Zendesk, Rest.ZendeskSell, Rest.ZohoCRM
+
+To set a property manually, follow the steps below.   File paths  in properties can be absolute, or relative to the repository directory. Relative paths can use the *SREE Home* environment variable, for example, `$(sree.home)/filename.xml`.
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+WARNING: Entering illegitimate property values can prevent the software from operating correctly.
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *All Properties* page in the left panel.
++
+image:allProperties.png[]
+
+. To locate an existing property in the list, type some or all of the property name in the  {buttonFilterField} above the table.
+
+. To edit an existing property, press the {buttonEdit} next to the property. Enter the desired value and press {buttonAccept}.
+
+. To delete an existing property, press the {buttonDelete} next to the property.
+
+. To add a new property, press the {buttonAddProperty} button above the table.
+
+== Chart Properties
+The following table lists a variety of charting properties.
+
+graph.3dbar.maxcount:: The maximum number of dimension values that can be displayed in a 3D Bar Chart (default is 5000).
+graph.3dpie.maxcount:: The maximum number of dimension values that can be displayed in a 3D Pie Chart (default is 2,000).
+graph.area.maxcount:: The maximum number of dimension values that can be displayed in an Area Chart (default is 5000).
+graph.axis.inplot:: Specifies whether the maximum measure value is included within the plot region. (Default is `false`.) See also xref:viewsheetscript:PlotInPlot.adoc[].
+graph.axislabel.maxcount:: The maximum number of labels to display on a Chart axis (default is 2000).
+graph.bar.maxcount:: The maximum number of dimension values that can be displayed in a Bar Chart (default is 10,000).
+graph.candle.maxcount:: The maximum number of dimension values that can be displayed in a Candle Chart (default is 2,000).
+graph.line.maxcount:: The maximum number of dimension values that can be displayed in a Line Chart (default is 100,000).
+graph.maxarea:: The maximum allowable Chart area in square pixels (default is 16,000,000). If the area exceeds this value, the Chart will attempt to rescale to this size.
+graph.pareto.maxcount:: The maximum number of dimension values that can be displayed in a Pareto Chart (default is 2,000).
+graph.pie.maxcount:: The maximum number of dimension values that can be displayed in a Pie Chart (default is 2,000).
+graph.point.maxcount:: The maximum number of dimension values that can be displayed in a Point Chart (default is 10,000,000).
+graph.radar.maxcount:: The maximum number of dimension values that can be displayed in a Radar Chart (default is 2,000).
+graph.script.action.support:: When set to `true`, enables interactive Dashboard Chart features (brushing, zoom, data tip, flyover, etc.) for Charts that are modified by script. By default, these features are disabled for scripted Charts because scripts may interfere with the operation of these features.
+graph.stock.maxcount:: The maximum number of dimension values that can be displayed in a Stock Chart (default is 2,000).
+graph.subgraph.maxcount:: The maximum number of nested subgraphs for facet-type Chart. If this value is exceeded, the chart is *truncated* to the maximum number of subgraphs. (See also `graph.ggraph.maxcount` below.)
+graph.ggraph.maxcount:: The maximum number of nested subgraphs for facet-type Chart. If this value is exceeded, an error is produced and the chart is *not generated*. (See also `graph.subgraph.maxcount` above.)
+graph.waterfall.maxcount:: The maximum number of dimension values that can be displayed in a Waterfall Chart (default is 2,000).
+graph.circle.packing:: For Circle Packing Charts, set to `circle` to produce perfect circles (default). Set to `fill_x` to fill only the Chart width (producing horizontal ovals), or set to `fill` to fill both width and height (producing ovals determined by the Chart aspect ratio).
+map.border.color:: Specifies the border color between geographical regions on a map chart. Color can be specified as a hex string (e.g., `#008000` or `008000`) or as a case-insensitive https://www.w3schools.com/cssref/css_colors.asp[CSS color name] (e.g., `LightCyan`).
+map.default.color:: Specifies the default color for map shapes that contain data, and applies when no static color is selected in the ‘Visual’ panel. Color can be specified as a hex string (e.g., `#008000` or `008000`) or as a case-insensitive https://www.w3schools.com/cssref/css_colors.asp[CSS color name] (e.g., `LightCyan`). This is the default for the ‘Map Default Color’ property in the ‘Chart Properties’ settings.
+map.empty.color:: Specifies the default color for map shapes that do not contain data. Color can be specified as a hex string (e.g., `#008000` or `008000`) or as a case-insensitive https://www.w3schools.com/cssref/css_colors.asp[CSS color name] (e.g., `LightCyan`).
+map.mapping.dir:: Directory where map files are stored. Default is *map* in SREE Home.
+
+//include::ROOT:partial$SREEHome.adoc[]
+map.selection.enabled:: When `false`, prevents user  selections on a map from displaying a solid outline. (Default is `true`.)
+
+== Data Source Properties
+The following table lists a variety of properties related to data source interactions.
+
+datasource.registry.path:: List of `.xml` files that are used to define all of the available data sources.
+datasource.selectedSource:: Specifies the datasource for which to refresh metadata.
+db.caseSensitive:: When `true`, wraps all column identifiers within query with double quotes to preserve identifier case. Default is `false`.
+driver.directory:: A comma-separated list of directory paths to search for driver files. Default is `sree.home/drivers`. Only the final directory in the list can be edited (add or remove driver files) in Enterprise Manager. Other directories on the list are read-only in Enterprise Manager.
+formula.avg.keep.type:: Set to `true` to keep the data type of an average formula the same data type as the input in order to match SQL behavior (e.g., truncating the average result to integer if the input field is of integer data type).
+olap.cancel.enabled:: Set to `true` (default) to enable query cancellation for OLAP databases. This feature cancels currently executing queries when a user makes updates to their selections. Set to `false` to prevent errors on databases that do not support query cancellation.
+query.cache.data:: Set to `true` (default) to cache query result sets for reuse across Data Worksheets and Dashboards.
+query.registry.path:: List of `.xml` files that are used to define all the available queries.
+query.variable.unique:: If query variables are declared as unique, variables with the same name across different queries are treated as one variable. Otherwise, each query contains its own set of variables.
+remove.outerJoin.only:: When `false`, the query engine removes joined tables with no columns in the ‘select’ and ‘where’ clauses, such as when a condition is dropped due to null parameter.
+string.compare.caseSensitive:: Default grouping and ordering is now case-insensitive, which is consistent with most databases. Set this property to `true` to revert to pre-9.1 behavior.
+
+== Export Properties
+The following table lists properties related to exporting  Dashboards.
+
+excel.chart.imageonly:: When `false` (default), displays all dashboard Chart data views on additional Excel sheets. This may increase the size of the export.
+excel.close.factor:: For Excel export, a factor determining whether nearby  elements are placed in adjacent cells or spaced apart. A smaller factor creates more space between elements in the exported spreadsheet.
+excel.colwidth.max:: For export to Excel (best data editing), specifies the maximum permitted Excel column width. If an element width exceeds the maximum, it is represented in Excel by merging multiple columns with widths given by `excel.colwidth.normal`.
+excel.colwidth.normal:: For export to Excel (best data editing), specifies the column width to use for merged columns when an element’s width exceeds `excel.colwidth.max`. A value of `-1` indicates that no merging should be performed.
+excel.export.grid.show:: When `true`, specifies that gridlines will be shown in the Excel export, and that default text backgrounds are transparent. When `false`, gridlines are suppressed and default text backgrounds are white.
+excel.font.ratio:: Sets the proportion by which font size is globally reduced for Excel exports. (Font size reduction can often improve the appearance of Excel exports.) For example, setting `excel.font.ratio=0.85` uniformly reduces font sizes within the export to 85% of their size in the original. To set this proportion on a font-by-font basis, use the property `template excel.font.<fontname>.ratio`, e.g., `excel.font.arial.ratio=0.80`.
+excel.rowheight.max:: For export to Excel (best data editing), specifies the maximum permitted Excel row height. If an element height exceeds the maximum, it is represented in Excel by merging multiple rows with heights given by `excel.rowheight.normal`.
+excel.rowheight.normal:: For export to Excel (best data editing), specifies the row height to use for merged rows when an element’s height exceeds `excel.rowheight.max`. A value of `-1` indicates that no merging should be performed.
+excel.sheet.maxrows:: Sets the integer row limit for every table within an Excel export. A message is displayed below each limited table to indicate that the data in the table has been truncated.
+excel.table.datatab:: When `true` (default), displays all dashboard Table data views on additional Excel sheets. This may increase the size of the export.
+excel.vs.export.grid.show:: When `true` (default), specifies that gridlines will be shown in the Excel export for a Dashboard, and that default text backgrounds are transparent. When `false`, gridlines are suppressed and default text backgrounds are white. This property applies only when the ‘Expand Components’ export property is enabled, and affects only the main export tab (not the individual data tabs).
+export.csv.delimiter:: Delimiter used when exporting a CSV file.
+export.csv.quote:: Quote character used when exporting a CSV file.
+export.Excel.isHeaderFooterInPageSetup:: If `true`, top and bottom margins, and headers and footers will be set in Excel’s “Page Setup”.
+export.menu.options:: A comma separated list of option numbers. Only the options on the list are added to the export menu. e.g: `PDF, EXCEL, EXCEL_SHEET, EXCEL_DATA, RTF, RTF_LAYOUT, HTML, HTML_NO_PAGINATION, HTML_BUNDLE, HTML_BUNDLE_NO_PAGINATION, CSV, SVG, TEXT, REPORT.`
+export.text.table.maxRowAlign:: Set the number of rows to look at when determining the column width to use in Text exports.
+export.expandComponents:: For Dashboard email and export operations, sets the default export option to '`Expand Components`' rather than  '`Match Layout`'.
+html.export.embed:: Set to `true` to embed the output of the export (from the ‘Export’ dialog box) into the same frame and replace the existing contents.
+rtf.hyperlink.indicator:: Set to `false` to remove hyperlink underlining in RTF format.
+table.export.format:: When set to `csv`, table data exported from a Dashboard or Data Worksheet will use CSV format. Some formatting may be lost. When set to `xls`, exported data will use Excel format, spanning multiple Excel sheets if needed, and preserving all formatting. If the property is left unspecified, tables with greater than 10000 rows are exported in CSV format, otherwise in Excel format.
+
+
+== Format Properties
+The following table lists a variety of properties related to format and appearance.
+
+barcode.bar.width:: The width (in pixels) of the thinnest bar in a barcode. Other bars will change their size relative to this.
+barcode.resolution:: The output resolution of the barcode when either the barcode is being output to a device other than the screen, or the barcode is being generated on a headless machine and the screen resolution could not be determined. The default resolution is 72 dpi.
+format.date:: Format used for all date data. See xref:viewsheet:DataFormat.adoc[] for more information.
+format.number.round:: If formatting has not been specified for a number displayed in a Dashboard, this property controls the rounding of the value. Available settings are shown below in xref:#RoundingSettings[].  The default is `ROUND_HALF_EVEN`.
+format.percent.round:: For a percent format, this property controls the rounding of the value. Available settings are shown below in xref:#RoundingSettings[]. The default is `ROUND_HALF_EVEN`.
+format.time:: Format used for all time data (Date). See xref:viewsheet:DataFormat.adoc[] for more information.
+
+
+[#RoundingSettings]
+=== Rounding Settings
+The available rounding options for `format.number.round` and `format.percent.round` are shown below:
+
+include::commonscript:partial$roundingSetting.adoc[]
+
+== Image Properties
+The following table lists a variety of image properties.  See xref:Presentation.adoc[] for related properties in Enterprise Manager.
+
+image.antialias:: PNG images are antialiased by default when using j2d. Set this property to `false` to turn off antialias. (Antialias gets rid of “jaggies”.)
+image.filtered:: Default is `false` (recommended). Turns PNG compression on or off. This property is ignored if JPEG images are used.
+image.type:: `PNG` or `JPEG`. PNG can only be used with version 4.0 or newer browsers. Generally PNG results in an image with a smaller file size, and better quality than JPEG.
+html.image.count:: Specifies the maximum number of images cached on the  server. Reducing the number of cached images can help alleviate certain server memory issues.
+html.image.scale:: Set to `true` to scale images using x/y ratio; otherwise, natural size is used, regardless of the size setting.
+html.image.xratio:: When generating HTML, images are converted to JPEG using a resizing ratio of 1.0. This sometimes causes the image to be distorted. This default can be changed by setting this property.
+html.image.yratio:: When generating HTML, images are converted to JPEG using a resizing ratio of 1.0. This sometimes causes the image to be distorted. This default can be changed by setting this property.
+rtf.image.scale:: Boolean that determines whether the image is exported in its original size in RTF format.
+stylereport.dither:: True to dither image when printing to black/white printer. Default is `false`.
+stylereport.ditherImage:: `true` to force all images to be dithered before printing. Default is `false`.
+
+[#LimitsandSafeguards]
+== Limits and Safeguards
+The following table lists a variety of limits and safeguards. See xref:TailorServerPerformance.adoc[] for related properties.
+
+ways.warn.joinMaxRows:: If set to `false` (default), the user will be shown a single warning for the session when the `join.table.maxrows` limit is violated. (See below.) Set to `true` to warn the user for each individual violation.
+asset.max.idle:: Sets the duration (in milliseconds) that a Dashboard remains active in the Portal when no user interactions are detected. Default is 2 hours (7,200,000 milliseconds). There is no timeout for Dashboards that are open for editing in Visual Composer. Dashboards open in the Portal are automatically closed after three minutes if the web browser is closed.
+asset.sample.maxrows:: The row limit used for subqueries (inner select queries) performed before aggregation or joining. In some cases, subqueries that return too few results may not possess any rows that match the specified join condition. In these case, a higher subquery limit may be necessary to ensure that the final query returns results.
+csv.import.max:: Sets the maximum size in bytes for CSV files imported into a Data Worksheet Embedded Table (see xref:dataworksheet:UploadData.adoc[]).
+DistinctTableLens.maxrow:: Sets the maximum number of distinct values to display in a Condition '`Browse Data`' menu.
+excel.sheet.maxrows:: Sets the integer row limit for every table within an Excel export. A message is displayed below each limited table to indicate that the data in the table has been truncated.
+http.session.maxActive:: Maximum number of active sessions (default=10000). If a new session is created when the number of active sessions exceeds this property, the oldest session is invalidated.  You must restart the server after changing this property.
+http.session.maxPerClient:: Maximum number of sessions that a client (user/host) may have (default=5), not including `localhost`. If a new session is created when the number of active sessions exceeds this property, the oldest session for that client is invalidated.
+http.session.maxWebsocketPerUser:: Maximum number of websocket connections that a single HTTP session may have (default=20). If a new connection is requested when the number of active connections exceeds this property, the connection fails and a SockJS downgrade will occur (XHR streaming, long polling, etc.).
+http.session.timeout:: HTTP session timeout in seconds (default =1800 seconds). If the session timeout is set in the _web.xml_ file, that setting takes precedence over this property.  You must restart the server after changing this property.
+join.table.maxrows:: Sets the maximum number of rows to retain in any Data Block that is created by joining two or more Data Blocks in a Data Worksheet. The limit does *not* apply to joins performed in the ‘Database Query’ dialog box (see xref:dataworksheet:QueryData.adoc[]). By default, the user will be shown only a single warning each session if the limit is violated. To warn the user for each individual violation, set `always.warn.joinMaxRows=true`.
+olap.table.maxrow:: Determines how many rows to retrieve when creating unique values for selection lists. Default is 10000.
+query.analysis.maxrow:: Number of rows that the Visualization Recommender should use when suggesting components to display data. Default=5000. (The Visualization Recommender is displayed when the user selects ‘Open Wizard’  in the ‘New Dashboard’ dialog box.)
+query.cache.limit:: With `query.cache.data` enabled, specifies the number of query result sets to be retained in the cache. Default: 100 datasets (for  Data Worksheets/Dashboards).
+query.cache.timeout:: With `query.cache.data` enabled, specifies the amount of time (ms) that result sets for Data Worksheet and Dashboard queries persist in the cache. Default:  10 minutes.
+query.preview.maxrow:: Sets the maximum number of rows retrieved for design-time requests. This includes  Data Worksheet ‘Live Data View’ and Dashboard design views in Visual Composer. See xref:TailorServerPerformance.adoc[] for more information.
+query.preview.timeout:: Sets the timeout interval (seconds) for queries in Data Worksheet and Dashboard live data mode.
+query.runtime.maxrow:: Sets the global maximum size for all queries during  Dashboard runtime execution. Data limits set at  Dashboard level are not permitted to exceed this global limit.
+query.runtime.timeout:: Sets the global timeout (seconds) for all queries during Dashboard runtime execution.
+rest.cache.timeout.millis:: Sets the timeout (milliseconds) for REST queries to be cached. Use a value greater than 0 to prevent repeated execution of similar REST queries. If a request is made before the cache entry expires, the cached response will be used instead of executing a new HTTP request. (Default is 0, no caching of REST queries.)
+script.execution.timeout:: A safety-net for script execution time, especially for infinite loops. Times-out the script if execution time exceeds specified value (in seconds).
+table.output.maxrow:: Sets the global maximum row limit for all Tables, Crosstabs, and Freehand Tables during Dashboard runtime execution. This property controls the size of the final displayed table, following any grouping and aggregation.
+
+== Log Properties
+The following table lists a variety of log properties. See xref:Logging.adoc[] to  customize log detail levels and log message formats.
+
+log.detail.level:: A logging level, one of the following: `debug` (debugging messages), `info` (non-critical information messages), `warn` (non-fatal errors and critical messages), `error` (fatal errors).
+log.level.inetsoft.performance:: Set `log.level.inetsoft.performance=INFO` to record performance information in the log at ‘Info’ level.
+log.output.file:: Log file path.
+log.output.stderr:: `true` to send output to the stderr.
+log.view.maximum:: The maximum number of lines to return when the ‘All’ option is selected on the ‘Log View’ page.
+log.custom.config:: Enables custom logging, equivalent to ‘Use Custom Log Configuration’. See xref:Logging.adoc[] for more information.
+log.level.com.hazelcast:: Sets log level for `com.hazelcast`.
+report.log.count:: Sets the number of backup log files.
+report.log.max:: Sets the maximum log file size.
+
+== Mail Properties
+The following table lists a variety of email properties.  See xref:ConfigureServerEmail.adoc[] for related properties in Enterprise Manager.
+
+mail.attachment.max:: Maximum size for a PDF attachment on an email. If the PDF file is larger than the maximum size, the PDF is split into multiple parts.
+mail.from.address:: ‘From’ email address used in email messages. Set to `true` to allow users to enter a ‘From’ address that is different from their own email address. Default is `false`.
+mail.smtp.host:: Mail SMTP host name.
+mail.smtp.port:: Specifies the SMTP port number. The default for non-SSL use is port 25. The default for SSL use is port 465.
+mail.split.message:: Message used when a PDF file is split into multiple parts.
+mail.subject.format:: Format for the mail subject line. It is a message format ({JavaTextMessageFormat}). There are two parameters used in generating the subject line. The first parameter is the alias, and the second parameter is the date and time. For example, a possible format could be  `pass:[Dashboard {0} generated at {1,time} on {1,date}]`.
+mail.tls:: When set to `true`, specifies that a `STARTTLS` command should be issued. The default is `false`.
+system.admin.address:: Email address of system administrator for the  error page.
+
+== Materialized View Properties
+The following table lists configuration properties for materialized views. See xref:MaterializedView.adoc[] for more information about materialized views.
+
+mv.cache.data:: When set to `true`, caches materialized view result sets so that they can be shared across Dashboards.
+mv.detail.data:: When set to `true`, populates Dashboard Chart and Crosstab ‘Show Details’ data from an existing materialized view rather than from the database.
+mv.enabled.all:: Sets the ‘MV On-demand by Default’ property  (see xref:MaterializedView.adoc[]).
+mv.metadata:: Sets the ‘Use meta-data for editing if MV is not available’ property. Default is `false`.
+mv.ondemand:: Sets the ‘Enable MV On-demand’ property. Default is `false`.
+mv.required:: Sets the ‘Fail if MV is not available at runtime’ property. Default is `false`.
+mv.run.background:: When set to `true` (default is `false`), enables the ‘Run in Background’ option for new materialized views by default. The ‘Run in Background’ option can then be disabled as needed for particular materialized views.
+xmapTask.thread.count:: Maximum number of materialized view query execution threads in a Data Node (for ‘cpu’ and ‘session’ keys only). Default is 12 times the CPU count.
+
+== PDF and Font Properties
+The following table lists a variety of PDF and font properties.  See xref:Presentation.adoc#PDFSettings[PDF Settings] for related properties.
+
+default.font.family:: Specifies the InetSoft web interface default font. This font can be referenced using the font name "Default".  If your installation needs to support a specific language, install a font for that language (e.g., Arial), and then specify this font as the default font using `default.font.family`.
+font.afm.path:: Type 1 AFM file directories.
+font.cmap.path:: Cmap file directories. Only used when processing CJK characters.
+font.metrics.source:: TrueType to use TrueType fonts as specified in the directories in `font.truetype.path`.
+font.preload:: `true` to pre-load the TrueType and Type 1 font information. This causes the server startup to be slower. If set to `false`, the loading is done the first time a PDF file is generated.
+font.ratio.x:: A list of ratios used to adjust horizontal character spacing. This is mostly used when the font width information is different between Java and PDF. The ratio can be used to adjust the spacing so that the generated PDF matches the actual font size used in PDF viewers. It is a list of semi-colon separated ratios. Each ratio is specified by a font name and, optionally, a font style, followed by the ratio, e.g., `MS Hei:1.1;Algerian-bolditalic:1.02`.
+font.ratio.y:: Similar to `font.ratio.x`, but is applied to the font vertical spacing.
+font.truetype.path:: TrueType font directories.
+html.encoding.utf8:: Default is `true`. If set to `false`, the HTML output is not encoded using UTF8. This may cause international characters to be displayed improperly.
+pdf.compress.image:: `true` to compress all image data.
+pdf.compress.text:: `true` to compress all text data.
+pdf.embed.font:: `true` to embed the font in the generated PDF file.
+pdf.embed.cmap:: `true` to embed the cmap in the generated PDF file.
+pdf.font.mapping:: Font mapping from Java font to fonts used in PDF. It is a semicolon separated pairs of font names. Each pair is separated by a colon, e.g., `MS Hei:HeiseiKakuGo-W5-Acro;MS Song:Song-Acro`. See also xref:Presentation.adoc#FontMapping[Font Mapping].
+pdf.generate.links:: `true` to create hyperlinks in the resulting PDF file. `false` to turn off hyperlink generation and speed up the PDF generation process.
+pdf.map.symbols:: Map symbol characters to symbol fonts. This is required if symbol characters are used.
+pdf.open.bookmark:: `true` to have bookmarks immediately displayed when the generated PDF files are opened in Adobe Acrobat.
+pdf.open.thumbnail:: `true` to have thumbnails immediately displayed when the generated PDF files are opened in Adobe Acrobat.
+pdf.output.ascii:: `true` to generate only ASCII output in the PDF file. No ASCII data is encoded to seven bit data.
+pdf.output.attachment:: Default is `true`. This sends generated PDF as an attachment. If set to `false`, the PDF is returned as-is. In IE 4 through 5, a URL referring to dynamically generated PDF could result in a blank page. Optionally, it can be set to `embed`, which will cause a PDF request to return a HTML page with an `<embed>` tag, which normally displays correctly in IE without causing a dialog to prompt users to save the PDF.
+pdf.print.scaling:: `true` to make the PDF reader use the application default for the ‘Page Scaling’ print option. `false` to use ‘None’.
+text.encoding.utf8:: Set to  `false` to use the encoding specified for the local operating system instead of the UTF8 encoding. Default is `true`.
+viewsheet.font.size:: Specifies the default font size for all Dashboards. A plain integer value specifies an absolute size for all fonts. An integer preceded by a + or - indicates an increase or decrease in size from the default font sizes (e.g., `viewsheet.font.size=+5`).
+vs.font.asDefault:: When set to `true`, uses the Dashboard default font for a Table rather than the Table Style font. When set to `false` (default), uses the specified Table Style font.
+
+== Portal Properties
+The following table lists a variety of User Portal properties.  See xref:Presentation.adoc[] and xref:TailorServerPerformance.adoc[]   for the related  pages in Enterprise Manager.
+
+accessibility.enabled:: Set to `true` to enable features for Rehabilitation Act Section 508 compliance.
+
+asset.ignore.filtering:: When `true` (default), this displays a warning message to the Dashboard designer when a Data Worksheet data block returns no data. The warning indicates that conditions on *all* data blocks will be dropped in Dashboard design view (only) to help facilitate formatting. When `false`, all conditions are kept in place (which may make Dashboard formatting more difficult).
+
+default.browser:: This defines the default browser used on Unix machines.  It defaults to Mozilla.
+
+dhtml.error.page:: Defines the  error page.
+
+exceed.session.page:: Contains a path to an HTML file that contains a message to display when the maximum number of concurrent users has been exceeded. If this is not set, the default message is used.
+
+flash.wmode:: Controls z-index assignment of HTML layers for Dashboards within IFrames. It can be assigned one of the following values: `window`, `opaque`, `transparent`. The `window` setting allows the browser to determine how the IFrame and Dashboard are displayed on the page. The `opaque` setting presents the IFrame and Dashboard with opaque background in their designated layer. The `transparent` setting presents the IFrame and Dashboard with transparent background in their designated layer.
+
+help.url:: URL for the documentation. Default is http://www.inetsoft.com/docs/{productVersion}/userhelp.
+
+hidden.datasource.types:: Comma-separated list of datasource names to be hidden in the User Portal datasource catalog. If a datasource is included in both the `visible.datasource.types` and `hidden.datasource.types` lists, it will be hidden. If the property is not specified or is empty, it will not be applied.
++
+.See a list of available data sources...
+[%collapsible]
+====
+{availableDataSources}
+====
+
+
+html.offset.x:: The distance of the generated HTML contents to the left edge of the browser.
+
+html.offset.y:: The distance from the generated HTML contents to the top of the browser.
+
+
+html.page.button:: Set to `false` to remove ‘pass:[Page ____ of ____]’.
+
+html.page.frame:: Frame name for page view (only used if `html.page.window` is set to `false`).
+
+
+html.page.window:: Determines whether a new window is created when a Dashboard is launched from the repository view (`true` or `false`).
+
+
+html.ratio.x:: Specifies the horizontal scaling ratio that relates sizes and positions of elements and fonts in design view to their HTML representations within the Portal. (Default=1.3.) This setting should be changed only to correct visual abnormalities in the Portal display.
+
+html.ratio.y:: Specifies the vertical scaling ratio that relates sizes and positions of elements and fonts in  design view to their HTML representations within the Portal. (Default=1.2.) This setting should be changed only to correct visual abnormalities in the Portal display.
+
+
+html.repository.footer:: HTML codes to insert at the end of the repository window.
+
+html.repository.header:: HTML codes to insert at the beginning of the Repository window. If set to `none`, no welcome message will be displayed above the Repository listing.
+
+html.repository.help:: Set to `false` to suppress display of the ‘Help’ link below the Repository tree.
+
+html.repository.organize:: Set to `false` to suppress display of the ‘Organize’ link below the Repository tree.
+
+html.repservlet.title:: The Portal page title. If unspecified, a default title  will be used.
+
+
+
+html.tblheading.hide:: Set to `true` to include table and section grouping headers in the TOC.
+
+
+html.toolbar.background:: Specifies the background color of the toolbar. The value is a Hex triplet, prefixed by a `#`.
+
+html.toolbar.font:: Specifies the foreground color of the toolbar. The value is a Hex triplet, prefixed by a `#`.
+
+html.toolbar.location:: Specifies the location of the toolbar on the HTML page: `Top`, `Bottom`, `Left`, `Right`, or `Top_and_Bottom`.
+
+html.toolbar.text:: Set to `true` to use text-based toolbar. Default to use image buttons.
+
+html.viewer.frameset:: Set to `true` to use frames to display the repository tree and assets in the same window.
+
+hyperlink.indicator:: When set to `true`, automatically displays hyperlinks with underlining. When set to `false` (default), displays hyperlinks without underlining. (Users can manually format the hyperlinks as desired.)
+
+javascript.java.packages:: Specifies a comma-separated list of additional Java packages to be exposed in the restricted script execution environments of Visual Composer. By default, scripts created in these environments provide access only to the following Java packages: `java.awt`, `java.text`, `java.util`, `java.sql`, `inetsoft.graph.*`, `inetsoft.report`, `inetsoft.report.lens`, `inetsoft.report.filter`, `inetsoft.uql`, `inetsoft.report.painter`.
++
+CAUTION: Exposing additional Java packages may allow users to create malicious scripts, so you must thoroughly consider any such additions from a security standpoint.
+
+portal.history.bar:: Set to `true` (default) to display the Portal history bar, which shows recently accessed  Dashboards. This can be overridden by the user through the Portal ‘Preferences’ dialog box.
+
+portal.home.link:: Sets the URL of the ‘Home’ button in the User Portal. (The default is the `index.html` landing page). This can be an absolute URL such as https://www.google.com, or a path relative to `/app/` such as  `composer`.
+
+portal.customLoadingText:: Specifies text to display on the loading screen when the user logs into the User Portal.  The message is displayed under the "Please wait, the application is loading" message and logo.
+
+olap.table.originalContent:: Set to `true` (default) to display the value of a cube dimension in a Selection List with all its hierarchical components, otherwise set to `false`. (Applies to Chart labels and Selection Lists.)
+
+olap.drillthrough.maxrows:: Determines how many rows to display for a '`Show Details`' operation against an OLAP cube. Default is 10.
+
+output.null.to.zero:: When set to `true` (default), Dashboard Gauges display zero (0) when an empty result set is returned. When set to `false`, Gauges retain the value shown for the previous non-empty result set.
+
+
+
+
+repository.tree.sort:: Repository tree sorting order: `none`, `Ascend`, or `Descend`.
+
+search.pagelocation.perpage:: Specifies the number of search results displayed per page. The default value is 30.
+
+search.pagelocation.brieflength:: Specifies the length of the description for each search result. The default value is 45.
+
+sort.crosstab.aggregate:: When set to `true`, allows a Crosstab in a Dashboard to be sorted by aggregate value. Default is `false`.
+
+sort.crosstab.dimension:: When set to `true` (default), allows a Crosstab in a Dashboard to be sorted by dimension value.
+
+sree.collator:: Specifies a custom collator class for sorting. When set to `inetsoft.util.Collator_DEACCENT`, this removes all diacritical marks from letters prior to sorting strings (e.g., `ë` is sorted as `e`).
+
+viewsheet.chart.adhoc:: When set to `true` (default), configures the ‘Enable Ad Hoc Editing’ property of Dashboard charts to be enabled by default.
+
+viewsheet.hyperlink.singleClick:: When set to `true`, bypasses the hyperlink menu if the clicked region has only a single associated hyperlink. (Default is `false`.)
+
+visible.datasource.types:: Comma-separated list of datasource names to be displayed in the User Portal data source catalog. If a datasource is included in both the `visible.datasource.types` and `hidden.datasource.types` lists, it will be hidden. If the property is not specified or is empty, it will not be applied.
++
+.See a list of available data sources...
+[%collapsible]
+====
+{availableDataSources}
+====
+
+wallboarding.enabled:: When set to `true`, prevents Dashboards with ‘Server-Side Update’ enabled from timing out due to inactivity. This is useful for Dashboards that are publicly displayed (as  “wallboards”) for long periods of time without any user interaction. See xref:viewsheet:DashboardOptions.adoc[] for information about the ‘Server-Side Update’ Dashboard option.
+
+== Scheduler Properties
+The following table lists a variety of scheduling properties. See xref:ConfigureScheduler.adoc[] for related properties.
+
+ftp.knownhosts.path:: Location of the known hosts file for SFTP connections. Default is *.ssh/known_hosts* in user’s home directory.
+schedule.abnormity.notify:: Specifies a comma-separated list of emails to receive notification in the event that the Scheduler application becomes unresponsive.
+schedule.condition.taskDefaultTime:: Determines whether the user needs to explicitly supply a '`Start Time`' when creating a scheduled task.  Set to `false` to suppress the default value and force the user to enter an explicit value.  Set to `true` to allow the '`Start Time`' to be populated with a default value.
+schedule.cycle.interval:: Interval between batch cycles (in milliseconds).
+schedule.log.file:: Scheduler log file path.
+schedule.memory.min:: Minimum memory usage for the Scheduler.
+schedule.memory.max:: Maximum memory usage for the Scheduler.
+schedule.reload.auto:: Set to true to automatically reload schedule file when it is modified.
+schedule.reload.interval:: Interval (in milliseconds) for checking schedule file changes. Default is 2000.
+schedule.task.file:: Schedule a XML file path.
+schedule.task.listener:: Specifies the fully-qualified name of a listener class to be executed at the start and end of every scheduled task.
+schedule.time.12hours:: When `true`, uses a 12-hour clock for scheduled task conditions. Default is `false` (24-hour clock).
+scheduler.classpath:: The path that will be prepended to the system classpath when the Scheduler process is started.
+scheduleTask.thread.count:: Maximum number of task execution threads in the Scheduler (for ‘cpu’ and ‘session’ keys only). Default is 6 times the CPU count.
+schedule.task.timeout:: The maximum duration in milliseconds for a scheduled task running in a cloud provider. The default is 600000 milliseconds (10 minutes). The timeout ensures that a task job container cannot persist indefinitely and accumulate costs.  When the timeout is reached, the  job container is terminated regardless of whether the task is in a failed state or  running successfully.
+
+== Security Properties
+The following table lists a variety of security properties.  See xref:SpecifySecurityProvider.adoc[] and xref:TailorServerPerformance.adoc[] for related properties.
+
+anonymous.userdata.save:: Set to `false` to prevent storage of preferences for the anonymous user.
+em.user.max:: For LDAP security, the maximum number of users that will be listed in the user tree (under the *User* tab or *Security* tabs). The default is 1000.
+enable.changePassword:: Set to `false` to disable users’ ability to change passwords in the User Portal (using the default security provider).
+login.loginAs:: Set to `on` to permit an administrator to log in as a particular user. This adds a ‘Log in As’ action to the *Actions* tab of the *Security* page (see xref:SetSecurityActions.adoc[]) that determines which users are allowed to access this function. If a user is granted permission for the ‘Log in As’ action, they will see a ‘Login as’ field on the Portal login screen,  and can log in as any user for which they are assigned “Administrator Permissions”.  See  xref:LoginAsDifferentUser.adoc[] for more information.
+openid.property.provider:: Fully-qualified class name of an implementation of `inetsoft.web.security.sso.OpenIDPropertyProvider` that provides the OpenID Connect configuration for a given HTTP request.
+openid.postprocessor:: Fully-qualified class name of an implementation of `inetsoft.web.security.sso.OpenIDPostprocessor` that modifies the SRPrincipal created by the SSO filter given the set of claims returned from the IdP.
+role.administrator:: Only users with this role can log into the EM and administer the  server. For an LDAP/AD security provider it maps to a Security Group. It defaults to ‘Administrator’. Example: `role.administrator=SRAdmin`.
+security.acl.file:: Access the control file used by the default security service.
+security.cache:: Caches data when using LDAP security for improved performance.
+security.allow.iframe:: Set to `false` (default) to prevent the Enterprise Manager and User Portal login pages from being displayed within an IFrame. This is equivalent to setting the HTTP header property `X-Frame-Options` to `DENY`, and should be used in conjunction with Single Sign-On (SSO). See xref:integration:ConfigureSingleSignOn.adoc[] in xref:integration:AdvancedServerIntegration.adoc[]   for more information. Set to `true` when embedding the login pages within an IFrame. (The server must be using SSL in this case.)
+security.ldap.groupbase:: The base DN for groups. For iPlanet, default is `ou=Groups`, and for ADS, default is `cn=Users`.
+security.ldap.rolebase:: The base DN for roles. For iPlanet, default is `ou=People`, and for ADS, default is `cn=Users`.
+security.ldap.subtree:: Set to `true` to enable recursive search of specified LDAP user base. Default is `false`.
+security.ldap.userbase:: The base DN for users. For iPlanet, default is `ou=People`, and for ADS, default is `cn=Users`.
+security.use.cookie:: Set to `false` to disable the use of cookies in security service.
+sso.default.roles:: Sets the default roles for new user logging in via SSO.
+vpm.enforcement.policy:: Determines the scope of VPM enforcement: Set to `all` to generate an error if any query is not addressed by a VPM. Set to `user` to generate an error if any user query is not addressed by a VPM. (A “user query” is any query that is generated at runtime from a data model or a Data Worksheet) Set to `default` to permit the execution of queries that are not addressed by a VPM.
+
+
+== Server Engine Properties
+The following table lists a variety of server engine properties. Server engine properties include specifications relating to configuration file locations and names.
+
+asset.backup.count:: Number of copies of the storage backup to retain. (Default=1.) See xref:Storage.adoc[] for more information.
+assetData.thread.count:: The maximum number of Dashboards that can simultaneously execute queries  (for ‘cpu’ and ‘session’ keys only). Increase this value if a set of Dashboards with long-running queries is blocking the execution of other Dashboards. (Default is 12 times the CPU count.)
+cluster.defaultProxy:: Specifies a default value for an empty ‘Repository Servlet URL’ field on the ‘Server Status’ page.
+cluster.servers.https:: Specifies a comma-separated list of cluster nodes that should use HTTPS. Values should be specified as `host\:port`. For example, `cluster.servers.https=192.168.6.111\:8443`.
+composer.comm.error:: Set to `true` (default) to warn user about server connection errors when using Dashboards. Set to `false` to suppress these warnings.
+cpu.affinity.mask:: Controls which CPU cores the server process uses for execution. For example, `cpu.affinity.mask=0,2,4` restricts the server to use only CPU 0, CPU 2, and CPU 4.
+dependency.checker.enabled:: `true` (default) for automatic detection and re-synchronization of  dependencies.
+dependency.checker.interval:: Interval between checks for changes in  dependencies, in milliseconds (default=30000).
+html.directory:: Directory used to hold HTML temporary files (images).
+html.retry.interval:: Milliseconds between retry, when waiting for a Dashboard.
+html.session.timeout:: Inactivity timeout period for each  viewing session (in milliseconds). Default is 1200000 (20 minutes). When an open asset is inactive for the specified timeout period, the asset will be closed and the following message displayed: “Session timeout. Please re-open.”
+javascript.java.packages:: List of JavaScript packages accessible to the scripting environment.
+repository.asset.backup.enable:: Enables automatic backup of Data Worksheets and Dashboards. See xref:Storage.adoc[] to set this property in Enterprise Manager.
+repository.asset.backup.time:: Sets the time for automatic backup of Data Worksheets and Dashboards. See xref:Storage.adoc[] to set this property in Enterprise Manager.
+repository.user.timeout:: Inactivity timeout period for each user session (in milliseconds) for a server with session license. Default is 600000 (10 minutes). The user is logged out only when the session is inactive for the specified timeout period AND another concurrent user requires the session.
+rmi.localhost.ip:: Set to `true` to use localhost rather than the specific IP address for connection to RMI servers (Scheduling and Monitoring). Default is `false`.
+server.type:: Describes the server type: `rmi`, `servlet`, etc.
+soap.data.service.timeout:: Specifies the request timeout (in milliseconds) for a `SoapDataService` request. Default is 2 hours.
+sree.bundle:: The name of the  localization bundle.
+stylereport.library.path:: List of _.srl_ files specified using the file’s full path. Use this when specifying multiple _.srl_ files.
+stylereport.locale.encode:: Load the locale property file used by Catalog, so other language text can be properly loaded.
+stylereport.locale.properties:: Locale mapping property file name.
+stylereport.locale.resource:: Locale mapping file resource name.
+stylereport.useCustomDriver:: `true` to use custom driver. Default is `false`.
+
+== Time and Date Properties
+The following table lists a variety of time and date properties.
+
+crosstab.dateTime.expandAll.level:: Sets the maximum expansion of date fields in a Crosstab. Options are `Year`, `QuarterOfYear`, `MonthOfYear` (default), `DayOfMonth`, `HourOfDay`, `MinuteOfHour`, `SecondOfMinute`.
+fiscal.start.day:: The day in the `fiscal.start.month` on which the fiscal year begins.
+fiscal.start.month:: The month in which the fiscal year begins.
+local.timezone:: Set to a valid Java time zone ID to indicate the StyleBI server time zone (e.g., `US/Eastern`). If not defined, the default time zone is used.
+use.locale.weekGrouping:: When set to `true`, charts and crosstabs use Monday as the first day of the week for the ‘Week’ date grouping level. When set to `false` (default), charts and crosstabs use Sunday as the first day of the week for the ‘Week’ date grouping level. This setting applies *only* for user locales in which Monday is considered the first day of the week. It does not apply to the ‘Day of Week’ date grouping level, which automatically uses Monday as the first day of the week in appropriate locales.
+week.start::   The start day of the week for date components such as  Calendars (e.g., `week.start=tuesday`). If not specified, the locale setting for the user determines the start day.

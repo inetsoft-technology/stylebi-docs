@@ -1,0 +1,62 @@
+= CALC.frequency(data_array, bins_array)
+:navtitle: CALC.frequency()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns an array representing the frequencies with which values in `data_array` occur within the ranges specified by `bins_array`. For example, if `bins_array` specifies four values, `[value1, value2, value3, value4]`, this groups the values in `data_array` into the following five ranges:
+[source]
+x <= value1
+value1 < x <= value2
+value2 < x <= value3
+value3 < x <= value4
+x > value4
+
+The returned array contains the count of the values in each of these five bins. {CALCExcelFunctionPage}
+
+== Parameters
+data_array::			Array of data to group and count
+bins_array::			Array of thresholds defining the groups
+
+
+
+
+
+
+== Example
+Compute the frequencies of values pass:[{79, 85, 78, 85, 50, 81, 95, 88, 97}] in the following ranges:
+
+stem:[{(x ≤ 70),(70 < x ≤ 79),(79 < x ≤ 89),(x > 89):}].
+
+[source,javascript]
+----
+var freq = CALC.frequency([79,85,78,85,50,81,95,88,97], [70,79,89]);
+for (var i=0; i<freq.length; i++) {
+  alert('Count in bin ' + i + ': ' + freq[i])
+}
+
+// Returns:
+// Count in bin 0: 1
+// Count in bin 1: 2
+// Count in bin 2: 4
+// Count in bin 3: 2
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.frequency(TableView1.table['Quantity'], [100,300,500])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.frequency(Sales['Quantity'], [100,300,500]);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

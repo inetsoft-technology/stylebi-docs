@@ -1,0 +1,6 @@
+[source,javascript]
+Chart.BINDING_FIELD:   // bound to X or Y axis
+Chart.AESTHETIC_COLOR: // bound to Color
+Chart.AESTHETIC_SHAPE: // bound to Shape
+Chart.AESTHETIC_SIZE:  // bound to Size
+Chart.AESTHETIC_TEXT:  // bound to Text

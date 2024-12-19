@@ -1,0 +1,27 @@
+= bindingInfo.getTopNSummaryCol(col)
+:navtitle: bindingInfo.getTopNSummaryCol()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoSetTopNSummaryCol.adoc[]  to set the binding information.
+
+Returns the aggregate used for Top-N/Bottom-N filtering on a specified field.
+
+
+
+== Parameter
+col::			Name of filtered field
+
+
+== Example
+
+[source,javascript]
+--
+var agg = Chart1.bindingInfo.getTopNSummaryCol("Company")
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

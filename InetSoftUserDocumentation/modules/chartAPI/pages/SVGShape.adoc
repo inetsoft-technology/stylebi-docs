@@ -1,0 +1,111 @@
+= GShape.ImageShape
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:GShape.adoc[] for information on using built-in bitmap shapes.
+* xref:GShapeImageShape.adoc[] for information on using custom bitmap shapes.
+xref:ShapeForm.adoc[] for information on using `GShapes` as decorative shapes.
+* xref:StaticShapeFrame.adoc[] for information on using `GShapes` as static shapes.
+====
+
+
+
+The `SVGShape` object contains a set of shapes for use with xref:StaticShapeFrame.adoc[] and xref:ShapeForm.adoc[]. For element properties requiring a `SVGShape` object, the shape can be specified as  one of the following constants. See xref:#Example1[] below.
+
+[source]
+SVGShape.CHECK
+SVGShape.DOWN_ARROW
+SVGShape.FACE_BLANK
+SVGShape.FACE_HAPPY
+SVGShape.FACE_OK
+SVGShape.FACE_SAD
+SVGShape.FACE_SMILE
+SVGShape.FEMALE
+SVGShape.LEFT_ARROW
+SVGShape.MALE
+SVGShape.MINUS
+SVGShape.PLUS
+SVGShape.RIGHT_ARROW
+SVGShape.STAR
+SVGShape.SUN
+SVGShape.UP_ARROW
+SVGShape.WARNING
+SVGShape.X
+SVGShape.NIL (no shape)
+
+
+You can also create a custom `SVGShape` from an SVG image stored in the local file system or on a server.  See xref:#Example2[] and xref:#Example3[] below.
+
+[#Example1]
+== Example 1 (SVG Shape Constant)
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State","Quantity");
+var shapeFrame = new StaticShapeFrame(SVGShape.FACE_HAPPY); //<2>
+var sizeFrame = new StaticSizeFrame(10);
+elem.setSizeFrame(sizeFrame);
+elem.setShapeFrame(shapeFrame); //<3>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Pass the `SVGShape` to   the xref:StaticShapeFrame.adoc[] constructor.
+<3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:StaticShapeFrameSVG_1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+[#Example2]
+== Example 2 (Local SVG Shape)
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State","Quantity");
+var svg = new SVGShape("file:\C:/HappyFaceSVG.svg"); //<2>
+var shapeFrame = new StaticShapeFrame(svg); //<3>
+var sizeFrame = new StaticSizeFrame(10);
+elem.setSizeFrame(sizeFrame);
+elem.setShapeFrame(shapeFrame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Pass the image to the `SVGShape()` constructor to create the `svg` shape.
+<3> Pass the `svg` shape to the xref:StaticShapeFrame.adoc[] contructor.
+<4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
+
+[#Example3]
+== Example 3 (Remote SVG Shape)
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State","Quantity");
+var svg = new SVGShape("https://www.w3.org/Icons/SVG/svg-logo.svg"); //<2>
+var shapeFrame = new StaticShapeFrame(svg); //<3>
+var sizeFrame = new StaticSizeFrame(10);
+elem.setSizeFrame(sizeFrame);
+elem.setShapeFrame(shapeFrame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Pass the image URL to the `SVGShape()` constructor to create the `svg` shape.
+<3> Pass the `svg` shape to the xref:StaticShapeFrame.adoc[] contructor.
+<4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:StaticShapeFrameSVG_3.png[]
+
+
+

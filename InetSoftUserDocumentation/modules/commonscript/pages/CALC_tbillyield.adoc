@@ -1,0 +1,43 @@
+= CALC.tbillyield(settlement, maturity, pr)
+:navtitle: CALC.tbillyield()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *yield* for a Treasury bill using the 360-day year convention. The `settlement` and `maturity` dates must be within one calendar year of each other. {CALCExcelFunctionPage}
+
+== Parameters
+settlement::			Date object: T-bill’s settlement date
+maturity::			Date object: T-bill’s maturity date
+pr::			T-bill’s issue price per $100 face value
+
+
+
+
+== Example
+Yield for a Treasury bill purchased at $98.45 per $100 face value, settlement date of March 31, 2008, and maturity date of June 1, 2008.
+
+
+[source,javascript]
+----
+CALC.tbillyield(new Date(2008, 2, 31), new Date(2008, 5,1), 98.45);
+// returns 0.09141696292534264 (approx 9.14%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.tbillyield(field['SettleDate'], field['MatureDate'], 98.45)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.tbillyield(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 98.45)
+CALC.tbillyield(parameter.SettleDate, parameter.MatureDate, 98.45)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

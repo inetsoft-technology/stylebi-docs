@@ -1,0 +1,43 @@
+= StarShapeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:MultiShapeFrame.adoc[]
+* xref:VisualFrame.adoc[]
+====
+
+The `StarShapeFrame` object contains the shape styles for multi-dimensional “star” (closed line) elements. To create a `StarShapeFrame` object, call the `StarShapeFrame` constructor.
+
+[source,javascript]
+var frame = new StarShapeFrame("m1","m2","m3");
+
+You can pass a set of field names (e.g., ‘m1’, ‘m2’, ‘m3’) to the constructor, or specify this later using the inherited xref:MultiShapeFrameSetFields.adoc[] function.
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity","m1","m2","m3"], ["NJ", 200,5,1,3], ["NY", 300,3,4,4]]; //<1>
+graph = new EGraph();
+var frame = new StarShapeFrame(); //<2>
+var elem = new PointElement("State", "Quantity");
+frame.setFields(["m1","m2","m3"]);
+elem.setShapeFrame(frame); //<3>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the `StarShapeFrame` object.
+<3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:StarShapeFrame.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+

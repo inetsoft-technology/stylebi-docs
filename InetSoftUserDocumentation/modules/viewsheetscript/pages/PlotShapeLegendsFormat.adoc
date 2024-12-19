@@ -1,0 +1,32 @@
+= colorLegends.format
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the format for data values displayed within a color-key legend (on charts that have *multiple* color legends).
+
+
+== Type
+include::commonscript:partial$dataFormats.adoc[]
+
+For the Date, Decimal, and Message formats, use the xref:CommonFormatSpec.adoc[]  property to assign a format specification using the appropriate masks: `[formatType, formatSpec]`.  See the examples below.
+
+
+== Examples
+
+[source,javascript]
+Chart1.colorLegends['Sum(Product:Quantity Purchased)'].format = [Chart.MESSAGE_FORMAT,"{0} Inc."];
+Chart1.colorLegends['Sum(Product:Total)'].format = [Chart.DECIMAL_FORMAT,"$#,##0M"];
+
+image:commonscript:colorLegendsFormat.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorLegends['...'].format          // unqualified
+Chart1.colorLegends['...'].format   // qualified
+
+{secondForm}
+====

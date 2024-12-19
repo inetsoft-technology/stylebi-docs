@@ -1,0 +1,49 @@
+= PieShapeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:MultiShapeFrame.adoc[]
+* xref:VisualFrame.adoc[]
+====
+
+The `PieShapeFrame` object contains the shape styles for multi-dimensional “mini-pie” elements to be used together with a xref:viewsheet:PointChart.adoc[] (xref:PointElement.adoc[]) chart. To create a `PieShapeFrame` object, call the `PieShapeFrame` constructor.
+
+[source,javascript]
+var frame = new PieShapeFrame("m1","m2","m3");
+
+
+
+You can pass the name of a field (e.g., e.g., ‘m1’, ‘m2’, ‘m3’) to the constructor, or specify this later using the inherited xref:MultiShapeFrameSetFields.adoc[] property. The dimension values are mapped proportionately to the areas of the pie slices.
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity","m1","m2","m3"], ["NJ", 200,5,2,3], ["NY", 300,2,4,4]]; //<1>
+graph = new EGraph();
+var frame = new PieShapeFrame(); //<2>
+var elem = new PointElement("State", "Quantity");
+var sframe = new StaticSizeFrame(15);
+frame.setFields(["m1","m2","m3"]); //<3>
+elem.setShapeFrame(frame); //<4>
+elem.setSizeFrame(sframe);
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the `PieShapeFrame` object.
+<3> Use the inherited xref:MultiShapeFrameSetFields.adoc[] property to assign the fields to the `PieShapeFrame`.
+<4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `PieShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:PieShapeFrame.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

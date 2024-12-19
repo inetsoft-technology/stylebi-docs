@@ -1,0 +1,267 @@
+= Create a New Dashboard
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To create a new Dashboard, follow the steps below:
+
+
+== Create a Dashboard from User Portal
+. Log into the User Portal. (See xref:user:UsePortal.adoc[].)
++
+include::user:partial$createVisualizationStep3.adoc[]
+
+. In the User Portal, press the {buttonCreate} and select the {buttonCreateDashboard}  option.
++
+image:viewsheet:portalDesignTab.png[]
++
+This opens the ‘New Dashboard’ dialog box.
+. In the ‘New Dashboard’ dialog box, select the desired data source (Data Worksheet,  data model, or database table).
++
+image:viewsheetExp1_1.png[]
++
+If you select a data model or table as the data source, your Dashboard will have access to all the fields in the selected data source. If you select a Data Worksheet as the data source, the Dashboard will have access to all the data blocks in the selected Data Worksheet. To add a derived data field to the fields already available in the selected data source, see xref:dataworksheet:CreateNewDataField.adoc[].
++
+NOTE: If you do not want to use the Dashboard Wizard (see below), you do not need to specify a data source at this time. (See xref:DashboardOptions.adoc[] to choose a data source at a later time.)
+. Choose how you want to start building your Dashboard, by using the Dashboard Wizard or the Visual Composer.
++
+* xref:UseDashboardWizard[]
+* xref:UseVisualComposer[]
+
++
+The *Dashboard Wizard* helps you set up your Dashboard by suggesting appropriate ways to visualize your data. If you do not want to use the Wizard, you can proceed to *Visual Composer* and build your Dashboard there.
+
+[#UseDashboardWizard]
+=== Use the Dashboard Wizard
+Follow these steps:
+
+. Follow the initial steps in xref:CreateNewDashboard.adoc[] above to open the ‘New Dashboard’ dialog box.
+
+. Press ‘Open Wizard’ in the ‘New Dashboard’ dialog box. This  opens the “Visualization Recommender” screen.
+. Select the data that you want to visualize in the left panel.
++
+image:wizard2.png[]
++
+The top panel suggests various visualizations, such as charts, crosstabs, and tables.
++
+image:wizard3.png[]
+
+. Select the desired visualization, and set the desired options.
++
+.Chart Visualization...
+[%collapsible]
+====
+.. Press the {buttonChart} in the top panel.
+.. Choose the chart type from the top panel.
++
+image:wizard4.png[]
+.. In the ‘Group and Aggregate’ panel, use the menu to select the desired aggregation method for the selected measure(s).
++
+image:wizard6.png[]
+
+.. To display an existing measure using an additional aggregation method, press the {buttonMoreAdd} and then specify the additional aggregation method using the added menu.
++
+image:wizard7.png[]
+.. To change a selected dimension to a measure, or a measure to a dimension, press the {buttonConvertToMeasure} or {buttonConvertToDimension} in the ‘Group and Aggregate’ panel, respectively.
++
+image:wizard5.png[]
++
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+
+
+.. To change the formatting for a numerical-type field or a date-type field, press the {buttonFormatWizard} and select the desired format. (See xref:DataFormat.adoc[] for more information about the available format options.)
++
+image:wizard8.png[]
+.. To delete a selected field, press the {buttonDeleteWizard} next to the field.
+.. *_Optional:_* To make more detailed adjustments to the component, press the {buttonFullEditor} in the top toolbar. See xref:BasicChartingSteps.adoc[] for more information about how to use the Chart Editor.
++
+NOTE: After you make modifications to the chart using the full Chart Editor, you should press the {buttonFinish} in the top toolbar. You can also return to the Wizard by pressing the {buttonToWizard}, but you will lose any changes that you made in the Chart Editor.
+====
++
+.Crosstab Visualization...
+[%collapsible]
+====
+.. Press the {buttonCrosstabButton} in the top panel.
+.. In the ‘Group and Aggregate panel, use the menu to select the desired aggregation method for the selected measure(s).
++
+image:wizard6.png[]
+.. To display an existing measure using an additional aggregation method, press the {buttonMoreAdd} and then specify the additional aggregation method using the added menu.
++
+image:wizard7.png[]
+.. To change a selected dimension to a measure, or a measure to a dimension, press the {buttonConvertToMeasure} or {buttonConvertToDimension} in the ‘Group and Aggregate’ panel, respectively.
++
+image:wizard5.png[]
++
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+
+
+.. To change the formatting for a numerical-type field or a date-type field, press the {buttonFormatWizard} and select the desired format. (See xref:DataFormat.adoc[] for more information about the available format options.)
++
+image:wizard8.png[]
+.. To delete a selected field, press the {buttonDeleteWizard} next to the field.
+
+.. To change the sort order of a row or column header, move the pointer over the header and press the {buttonSort}.
++
+image:wizard9.png[]
+.. *_Optional:_* To make more detailed adjustments to the component, press the {buttonFullEditor} in the top toolbar.  See xref:AddTable.adoc[] for more information about how to use the Crosstab Editor.
++
+NOTE: After you make modifications to the crosstab using the full Crosstab Editor, you should press the {buttonFinish} in the top toolbar. You can also return to the Wizard by pressing the {buttonToWizard}, but you will lose any changes that you made in the Crosstab Editor.
+====
++
+.Table Visualization...
+[%collapsible]
+====
+.. Press the {buttonTableButton} in the top panel.
+.. To change a selected dimension to a measure, or a measure to a dimension, press the {buttonConvertToDimension} or {buttonConvertToMeasure} in the ‘Details’ panel, respectively.
++
+image:wizard10.png[]
++
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+
+.. To change the formatting for a numerical-type field or a date-type field, press the {buttonFormatWizard} and select the desired format. (See xref:DataFormat.adoc[] for more information about the available format options.)
++
+image:wizard11.png[]
+.. To delete a selected field, press the {buttonDeleteWizard} next to the field.
+.. To change the sort order of a column, move the pointer over the header and press the {buttonSort}.
+
+.. *_Optional:_* To make more detailed adjustments to the component, press the {buttonFullEditor} in the top toolbar.  See xref:AddTable.adoc[] for more information about how to use the Table Editor.
++
+NOTE: After you make modifications to the crosstab using the full Table Editor, you should press the {buttonFinish} in the top toolbar. You can also return to the Wizard by pressing the {buttonToWizard}, but you will lose any changes that you made in the Table Editor.
+====
++
+.Gauge Visualization...
+[%collapsible]
+====
+.. Press the {buttonGaugeButton} in the top panel.
+.. Choose the Gauge type from the top panel.
++
+image:wizard12.png[]
+
+.. *_Optional:_* Enter a ‘Description’ for the Gauge.
+.. In the ‘Group and Aggregate panel, use the menu to select the desired aggregation method for the selected measure.
++
+image:wizard13.png[]
++
+include::ROOT:partial$measureTip.adoc[]
+
+.. To change the formatting for a numerical-type field or a date-type, press the {buttonFormatWizard} and select the desired format. (See xref:DataFormat.adoc[] for more information about the available format options.)
++
+image:wizard14.png[]
+
+.. To delete a selected field, press the {buttonDeleteWizard} next to the field.
+
+.. *_Optional:_* You can  make more detailed adjustments to the Gauge  after you exit the Wizard.  (See xref:AddAKPI.adoc[] and xref:GaugeProperties.adoc[] for more information about Gauges.)
+====
++
+.Filter Visualization...
+[%collapsible]
+====
+.. Press the {buttonFilter} in the top panel.
+.. If you have selected a single dimension or measure in the left panel, choose the Filter type from the top panel: Selection List or Range Slider. (If you have selected multiple dimensions, the only option is a Selection Tree.)
++
+image:wizard15.png[]
++
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+
+
+.. *_Optional:_* For a Slider-type filter, enter a ‘Description’. For the Selection List or Selection Tree-type filter, double-click the header to edit the label.
+
+.. *_Optional:_* To change the order of the fields in a Selection Tree, press the arrows next to the fields in the ‘Details’ panel.
++
+image:wizard16.png[]
+
+.. To change the formatting for a numerical-type field or a date-type, press the {buttonFormatWizard} and select the desired format. (See xref:DataFormat.adoc[] for more information about the available format options.)
++
+image:wizard17.png[]
+
+.. To delete a selected field, press the {buttonDeleteWizard} next to the field.
+
+.. *_Optional:_* You can  make more detailed adjustments to the Filter  after you exit the Wizard.  (See xref:AddFilterComponents.adoc[], xref:SelectionListProperties.adoc[], xref:SelectionTreeProperties.adoc[], and xref:RangeSliderProperties.adoc[] for more information about Filter components.)
+====
++
+.Text Visualization...
+[%collapsible]
+====
+.. Press the {buttonTextButton} in the top panel.
+.. *_Optional:_* Enter a ‘Description’ for the Text.
+.. In the ‘Group and Aggregate panel, use the menu to select the desired aggregation method for the selected measure.
++
+image:wizard13.png[]
++
+include::ROOT:partial$measureTip.adoc[]
+
+.. To change the formatting for a numerical-type field or a date-type, press the {buttonFormatWizard} and select the desired format. (See xref:DataFormat.adoc[] for more information about the available format options.)
++
+image:wizard14.png[]
+
+.. To delete a selected field, press the {buttonDeleteWizard} next to the field.
+
+.. *_Optional:_* You can  make more detailed adjustments to the Text  after you exit the Wizard.  (See xref:AddAKPI.adoc[] and xref:TextProperties.adoc[] more information about Text components.)
+====
+
+. Press the {buttonFinish} in the top toolbar to open the layout view, where you can add more components.
+
+. To add an additional component, move the pointer to the location where you want to insert the component, and press the large {buttonAddButton}.
++
+image:wizard1.png[]
++
+This opens the “Visualization Recommender” screen again. Follow the previous steps to configure your component.
+
+. To add titles or labels to the Dashboard, press the {buttonInsertTextImage}, and select ‘Insert Text’. To edit the inserted text, double-click the text or press the {buttonEdit}. You can make more detailed modifications to the Text component after you exit the Wizard. (See xref:AddTextOrHTML.adoc[] and xref:TextProperties.adoc[] for more information about Text.)
++
+image:wizard19.png[]
+. *_Optional:_* To add an image to the Dashboard, press the {buttonInsertTextImage} (see above), and select ‘Insert Image’. This prompts you to select an image. You can make more detailed modifications to the Image component after you exit the Wizard. (See xref:AddBackground.adoc[] and xref:ImageProperties.adoc[] for more information about Images.)
+
+When you have added all desired components using the Wizard, press the top {buttonFinish}. This will open your Dashboard for editing in Visual Composer, where you can continue to add and modify components. See the section below for more information about building a Dashboard in Visual Composer.
+
+
+
+
+
+
+
+
+
+
+[#UseVisualComposer]
+=== Use Visual Composer
+Follow these steps:
+
+. Follow the initial steps in xref:CreateNewDashboard.adoc[] above to open the ‘New Dashboard’ dialog box.
+
+. Press btn:[OK] in the ‘New Dashboard’ dialog box. This  displays an empty  Dashboard in Visual Composer.  (Visual Composer is the  tool you will use for creating both Dashboards and Data Worksheets.)
++
+image:Asset_Component_Panels_1.png[]
+
+. Build the Dashboard by adding components from the left Toolbox panel. See xref:AddComponentsToDashboard.adoc[] for more details.
++
+image:addingChart.png[]
+
+. Press the {buttonSave} in the toolbar to save the Dashboard.
++
+NOTE: If you close the browser (or let the session expire) without saving the Dashboard, you will be prompted to restore the Dashboard the next time you open Visual Composer.
+
+
+== Create a Dashboard from Visual Composer
+If you are already in Visual Composer, you can create a new Dashboard by pressing the {buttonCreate} and selecting {buttonNewDashboard}.  Then follow the steps in xref:#UseVisualComposer[].
+
+image:user:CreateNewDashboardComposer.png[]
+
+[#CreateNewAssetFolder]
+== Create a New  Folder
+To create new folder to hold Dashboards or Data Worksheets, follow the steps below:
+
+. Right-click the folder in the *Asset* panel where you want to create the new folder.
+
+. Select '`New Folder`', and provide a name for the folder when prompted.
++
+image:user:NewFolderComposer.png[]
+
+
+
+
+
+
+
+
+
+

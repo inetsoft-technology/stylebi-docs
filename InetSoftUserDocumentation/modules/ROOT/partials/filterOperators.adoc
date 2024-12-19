@@ -1,0 +1,15 @@
+equal to:: True when the column value identically matches the specified criterion. (String matching is case-insensitive.)
+one of:: True when the column value is a member of the set of criteria values. (String matching is case-sensitive.)
+less than:: True when the column value is strictly less than the criterion value. Select the ‘or equal to’ check box to obtain a “less than or equal to” criterion. (Strings are compared based on their alphabetical ordering.)
+greater than:: True when the column value is strictly greater than the criterion value. Select the ‘or equal to’ check box to obtain a “greater than or equal to” criterion. (Strings are compared based on their alphabetical ordering.)
+between:: True when the column value is within the interval specified by its upper and lower boundaries. The boundary values are included in the interval. (Strings are compared based on their alphabetical ordering.) For date fields, consider using the ‘in range’ operator in place of specifying fixed dates.
+null:: True when the column value is ‘null’. (Nulls appear as empty cells in a table.)
+top:: For grouped and aggregated data, true when the aggregated column value is among the top N aggregated values, according to the grouping specified by the secondary menu.
+bottom:: For grouped and aggregated data, true when the aggregated column value is among the bottom N aggregated values, according to the grouping specified by the secondary menu.
+starting with:: For numeric and string data, true when the column value begins with (i.e., the left-most characters match) the specified numerals or characters. String matching is case-insensitive.
+contains:: For numeric and string data, true when the column value contains the exact sequence of specified numerals or characters. String matching is case-insensitive.
+in range:: For date fields, true when the column value (date) falls within the specified date range criterion.
++
+=====
+include::ROOT:partial$dateRanges.adoc[]
+=====

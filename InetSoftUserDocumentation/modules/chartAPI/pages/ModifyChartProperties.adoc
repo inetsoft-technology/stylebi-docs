@@ -1,0 +1,68 @@
+= Modify Chart Properties
+%experimental%
+
+include::ROOT:partial$underConstructionAPITut.adoc[]
+
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheetscript:AddScriptToDashboard.adoc[] for information on using the Dashboard script handlers.
+====
+
+To modify the basic properties of a Chart element, simply specify the desired property value in the *onInit* handler, *onRefresh* handler, or component script. The following sections provide some basic examples of property modifications.
+
+TIP: Whenever possible, use the syntax auto-completion feature to enter legitimate property names and values.
+
+== Modify Chart Style
+To modify the style of a chart in script (e.g., line, bar, pie, etc.), use the xref:viewsheetscript:PlotChartStyle.adoc[] attribute:
+
+* For a multi-style chart, use `chartStyle` together with the name of the dataset you want to style, e.g., `Chart1.chartStyle['Sum(Total)']`.
+*  For a single-style chart, use `chartStyle` without any modifiers, e.g., `Chart1.chartStyle`.
++
+TIP: You can switch between multiple-style and single-style in the ‘Select Chart Style’ panel.
+
+For example, if you want to parameterize the style of a chart, you could prompt the user for a parameter called ‘Chart Style’. Then access this parameter in the chart script and modify the chart style accordingly.
+
+.Example: Change style based on parameter
+[source,javascript]
+if (parameter['Chart Style'] == 'bar') {
+  Chart1.chartStyle = Chart.CHART_BAR;
+}
+else if (parameter['Chart Style'] == 'line') {
+  Chart1.chartStyle = Chart.CHART_LINE;
+}
+
+== Modify Axis Title Text
+To modify axis title text, use xref:viewsheetscript:AxisXTitleText.adoc[] (xref:viewsheetscript:AxisX2TitleText.adoc[]) and xref:viewsheetscript:AxisYTitleText.adoc[]  (xref:viewsheetscript:AxisY2TitleText.adoc[]).
+
+.Example: Change axis titles
+[source,javascript]
+Chart1.xTitle.text = 'Text to go below bottom X-axis';
+Chart1.x2Title.text = 'Text to go above top X-axis';
+
+TIP: Use auto-complete for correct syntax.
+
+== Modify Axis Properties
+[WARNING, caption=see Also]
+====
+[square]
+* xref:viewsheetscript:ChartAxisProperties.adoc[] for general axis characteristics.
+* xref:viewsheetscript:MeasureAxisProperties.adoc[] for numeric axis characteristics.
+* xref:viewsheetscript:AxisTitleProperties.adoc[] for axis title characteristics.
+* xref:viewsheetscript:PlotProperties.adoc[] for plot area characteristics.
+====
+
+To modify axis properties, including labels, visibility, tick marks, etc., use the `axis` properties (xref:viewsheetscript:ChartAxisFont.adoc[], xref:viewsheetscript:MeasureAxisMinimum.adoc[] xref:viewsheetscript:ChartAxisLabelColor.adoc[], xref:viewsheetscript:ChartAxisFormat.adoc[], etc.).
+
+.Example: Set axis properties
+[source,javascript]
+Chart1.axis.Employee.font = 'Comic Sans MS-BOLD-12';
+Chart1.axis.Employee.ticksVisible = false;
+Chart1.axis.Employee.labelColor = [0,0,255];
+Chart1.axis['Sum(Total)'].logarithmic = true;
+Chart1.axis['Sum(Total)'].minimum = 10000;
+Chart1.axis['Sum(Total)'].format = [Chart.DECIMAL_FORMAT, "#,###.00"];
+
+TIP: Use auto-complete for correct syntax. Type “`.`” after “`axis`” to see the property prompt.

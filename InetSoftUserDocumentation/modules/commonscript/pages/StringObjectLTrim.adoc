@@ -1,0 +1,28 @@
+= ltrim(string)
+:navtitle: ltrim()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Remove leading whitespace characters from a string.
+
+
+
+
+
+== Example
+[source,javascript]
+var str = "          hello";
+ltrim(str); // returns "hello"
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+ltrim(field['Char']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+ltrim(parameter.Char);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

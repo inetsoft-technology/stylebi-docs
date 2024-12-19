@@ -1,0 +1,235 @@
+= Contour Map Chart
+%experimental%
+:page-stem:
+include::ROOT:partial$buttonSnippets.adoc[]
+
+This chart type combines a xref:MapChart.adoc[] with a xref:ScatterContourChart.adoc[] to display density data either based on regional information (country, state, city, etc.) or based on latitude and longitude.   For information on creating maps with user-defined regions, see xref:administration:CreateCustomMap.adoc[] in xref:administration:ManageServer.adoc[].
+
+image:commonscript:contourMapChartExp10.png[]
+
+
+== Display Data by Region
+
+To display data on a map by region (state, city, zip code, etc.), follow the steps below:
+
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Contour Map’ style.   Press the {buttonApply} (or double-click the ‘Contour Map’ icon).
++
+image:commonscript:contourMapChartExp1.png[]
++
+The Chart Editor now provides a ‘Geographic’ field.
+
+. *_Optional:_* If you want to use a web map background (Mapbox map or Google Map, depending on what your administrator has configured), follow the steps below:
++
+include::partial$webMapResize.adoc[]
++
+****
+.. Right-click the Chart and select ‘Properties’. This opens the ‘Chart Properties’ dialog box.
++
+image:webMap1.png[]
+
+.. Under the *Advanced* tab, enable ‘Use Web Map as Background’ and press btn:[OK]. (If this option is not available, ask your administrator  to enable the Web Map feature.)
++
+image:Report_Ad Hoc Chart Map4.png[]
+
+.. *_Optional:_* If your geographical field represents areas on the Chart (e.g., states) rather than points (e.g., cities), adjust the ‘Alpha’ setting to  less than 100% so that the filled regions do not obscure the underlying map background.
+
+.. Press btn:[OK] to exit the ‘Chart Properties’ dialog box.
+****
+
+. Mark the *dimensions* you want to use on the map as _geographical fields_.  To do this, see xref:SetGeographicalField[].
++
+include::ROOT:partial$dimensionTip.adoc[]
+
+. From the *Data Source* panel in the Chart Editor, drag a *geographic dimension* onto the ‘Geographic’ field in the Chart Editor.
++
+image:commonscript:contourMapChartExp2.png[]
++
+The chart updates to display the locations contained in the geographic field.
+
+. Repeat the previous step to bind additional ‘Geographic’ levels. For example, you can bind ‘City’ and ‘State’ fields.
++
+image:commonscript:contourMapChartExp3.png[]
+
+. *_Optional:_* To weight the data points according to a specified *measure*, drag a measure representing the weights to the ‘Size’ region. A larger weight assigns greater density to the point.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:contourMapExp6.png[]
+
+. To change how the contours are focused on the data points (without weighting), press the ‘Edit Size’ button, and choose a fixed size value.
++
+image:commonscript:contourMapExp7.png[]
++
+TIP: You can make additional adjustments to the appearance of the contours from the ‘Chart Properties’ dialog box. See below.
+
+. *_Optional:_*  To change the characteristics of the contours, press the {buttonMore} in the Chart toolbar, and select ‘Properties’. In the ‘Chart Properties’ dialog box, adjust the following  settings under ‘Density Contour’ in the *Advanced* tab.
++
+****
+include::ROOT:partial$contourSettings.adoc[]
+****
+
+. *_Optional:_*  Set the initial map view by pressing the {buttonPanMap} and dragging on the map to reposition, and by pressing the {buttonZoomIn} or {buttonZoomOut} to zoom. Press the {buttonClearMapZoom} to reset the view.
++
+image:commonscript:contourMapChartExp4.png[]
+
+
+
+
+== Display Data by Latitude and Longitude
+
+To learn how to display a contour on a map by latitude and longitude, follow the steps in the walkthrough below.
+
+.Walkthrough: Latitude and Longitude
+****
+
+
+include::partial$chartNewbieTip.adoc[]
+
+. Create a new Dashboard based on the ‘Hurricane’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$hurricaneWorksheet.adoc[]
+
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Contour Map’ style.   Press the {buttonApply} (or double-click the ‘Contour Map’ icon).
++
+image:commonscript:contourMapChartExp5.png[]
++
+The Chart Editor now provides a ‘Geographic’ field.
+
+. *_Optional:_* If you want to use a web map background (Mapbox map or Google Map, depending on what your administrator has configured), expand the section below:
++
+.Use Web Map...
+[%collapsible]
+====
+.. Right-click the Chart and select ‘Properties’. This opens the ‘Chart Properties’ dialog box.
++
+image:VS Chart Map3.png[]
+
+.. Under the *Advanced* tab, enable ‘Use Web Map as Background’ and press btn:[OK]. (If this option is not available, ask your administrator  to enable the Web Map feature.)
++
+image:VS Chart Map4.png[]
+
+.. *_Optional:_* If your geographical field represents areas on the Chart (e.g., states) rather than points (e.g., cities), adjust the ‘Alpha’ setting to  less than 100% so that the filled regions do not obscure the underlying map background.
+
+.. Press btn:[OK] to exit the ‘Chart Properties’ dialog box.
++
+include::partial$webMapResize.adoc[]
+====
+
+. In the *Data Source* panel, right-click the ‘latitude’ measure or press the {buttonActions}, and select ‘Set Geographic’ from the context menu.
++
+image:commonscript:contourMapChartExp6.png[]
++
+This opens the ‘Edit Geographic’ dialog box. If you need to open the ‘Edit Geographic’ dialog box later, right-click the ‘latitude’ measure or press the {buttonActions}, and select ‘Edit Geographic’ from the context menu.
+
+. From the ‘Map’ menu, select ‘World’, and press btn:[OK].
++
+image:commonscript:Map Chart LongLat US.png[]
++
+IMPORTANT: If you are using a Web Map background with latitude and longitude data, you should always use the ‘World’ map option.
+
+. Repeat the above steps to set the ‘longitude’ measure as a geographic field.
+
+. Drag the ‘longitude’ field to the ‘X’ region.
+
+. Drag the ‘latitude’ field to the ‘Y’ region.
++
+image:commonscript:contourMapChartExp7.png[]
+
+
+. *_Optional:_* Drag the ‘wind’ *measure* to the ‘Size’ region to weight the points by wind speed.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:contourMapChartExp11.png[]
++
+To change how the contours are focused on the data points (without weighting), press the ‘Edit Size’ button, and choose a fixed size value.
++
+image:commonscript:contourMapExp7.png[]
++
+TIP: You can make additional adjustments to the appearance of the contours from the ‘Chart Properties’ dialog box. See below.
+
+. To add the labels to the points on the map, drag the ‘name’ field from the *Data Source* panel to the ‘Text’ field.
++
+image:commonscript:contourMapChartExp9.png[]
++
+The labels appear fairly crowded because of the long landmark names. You can zoom the map to see the labels more clearly. See xref:DrillDownIntoData.adoc[] for instructions.
+
+. {finishEditing}
+
+. *_Optional:_*  To change the characteristics of the contours, press the {buttonMore} in the Chart toolbar, and select ‘Properties’. In the ‘Chart Properties’ dialog box, adjust the following  settings under ‘Density Contour’ in the *Advanced* tab.
++
+[example]
+====
+include::ROOT:partial$contourSettings.adoc[]
+====
+
+. Drag the ‘name’ field into the Dashboard to add a Selection List for the hurricane names. Select the desired hurricanes in the Selection List.
++
+image:commonscript:contourMapChartExp8.png[]
+
+. *_Optional:_*  Set the initial map view by pressing the {buttonPanMap} and dragging on the map to reposition, and by pressing the {buttonZoomIn} or {buttonZoomOut} to zoom. Press the {buttonClearMapZoom} to reset the view.
++
+image:commonscript:contourMapChartExp4.png[]
+****
+
+
+
+
+
+
+
+
+
+
+
+
+[#SetGeographicalField]
+== Set a Geographical Field
+To mark a field as geographical, follow these steps:
+
+. Right-click the field in the tree or press the {buttonActions}, and select ‘Set Geographic’ from the context menu. This places a {buttonLocationIcon} next to the field name.
++
+image:setGeographic.png[]
++
+If the field is shown with a {buttonLocationIcon}, this means the field has been already been mapped to a geographical level. If the field is shown with an {buttonUnmappedLocationIcon}, this means you may need to set the geographical level for the field or resolve location names.
+
+. To set the geographical level, right-click the field name and select ‘Edit Geographic’ from the context menu. This opens the ‘Edit Geographic’ dialog box.
++
+image:editGeographic1.png[]
+
+
+. In the ‘Edit Geographic’ dialog box, select the desired region from the ‘Map’ menu: Asia, Canada, Europe, Mexico, U.S., or World.
++
+NOTE: The map that you select for a geographic field applies to all other geographical fields.
+
+. From the ‘Layer’ menu, select the geographical layer that corresponds to the data in the selected field.
++
+This specifies the layer of the geographical database against which field values should be matched (e.g., city names should be matched against the city layer, etc.). The options available in the ‘Layer’ menu depend on the previously selected ‘Map’ option.
+
+. From the ‘Mapping’ menu, select the desired map database. (This is almost always ‘Built-in’.) The Chart Editor attempts to resolve values in the selected geographic field against the corresponding layer in the map database.
++
+If the field was shown with an {buttonUnmappedLocationIcon}, this means you may need to resolve location names. To do this, follow the steps below:
++
+****
+.. Press the {buttonEdit} next to the ‘Mapping’ menu. This opens the ‘Geographic Mapping’ dialog box, which allows you to manually match place names.
+
+.. Select an unmatched location in the left panel, and  choose the correct match from the right panel. Use the ‘Algorithm’ and ‘Search’ options to help you find the desired match.
+.. Press btn:[Add] to add the match to the list of matched locations.
++
+image:editGeographic2.png[]
+
+.. *_Optional:_* Enable ‘Show automatically matched values’ to see all currently matched locations.
+
+.. Repeat the above steps to match all locations and press btn:[OK].
+****
+
+. *_Optional:_* To remove the geographical status of a field, right click the field or press the {buttonActions}, and select ‘Clear Geographic’ from the context menu.
+
+== Transforming Coordinates for Alaska and Hawaii
+
+include::ROOT:partial$alaskaHawaii.adoc[]

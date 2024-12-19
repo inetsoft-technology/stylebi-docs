@@ -1,0 +1,12 @@
+[source]
+----
+Chart.NONE      // (0) No legend
+Chart.BOTTOM    // (3) Below X-axis title, aligned left
+Chart.TOP       // (1) Above graph, aligned left
+Chart.LEFT      // (4) To left of Y-axis title, aligned top
+Chart.RIGHT     // (2) To right of graph, aligned top (default)
+Chart.IN_PLACE  // (5) Superimposed on graph
+----
+
+
+

@@ -1,0 +1,33 @@
+= pieRatio
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+A value in the range [0.1,1] that determines the proportion of the plot area occupied by the *pie element* of the xref:viewsheet:PieChart.adoc[]. Similarly-sized Pie charts with the same ratio setting will display pies having the same radius, which can be used to enforce consistency across multiple charts.
+
+CAUTION: Large  ratio settings may leave less area for the display of values on the Chart and cause truncation of text.
+
+== Type
+Number between 0.1 and 1
+
+
+
+== Example
+[source,javascript]
+Chart1.pieRatio = 0.8;
+Chart2.pieRatio = 0.5;
+
+
+image:commonscript:pieRatio.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+pieRatio          // unqualified
+Chart1.pieRatio   // qualified
+
+{secondForm}
+====

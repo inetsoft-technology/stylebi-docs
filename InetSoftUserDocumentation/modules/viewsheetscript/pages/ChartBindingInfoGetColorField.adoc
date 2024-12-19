@@ -1,0 +1,25 @@
+= bindingInfo.getColorField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:PlotColorField.adoc[]  to return the runtime ‘Color’ binding.
+
+Returns the field bound to the xref:chartAPI:ColorFrame.adoc[] (color coding).
+
+
+== Returns
+String::			Field name used for color-coding
+
+
+
+== Example
+[source,javascript]
+--
+var cfield = Chart1.bindingInfo.getColorField();
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

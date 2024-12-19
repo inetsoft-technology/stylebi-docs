@@ -1,0 +1,79 @@
+= TriangleShapeFrame.setFill(Boolean)
+:navtitle: TriangleShapeFrame.setFill()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Specifies whether the triangular elements should be filled.  You can also set this using the `bindingInfo.shapeFrame.fill`  property syntax in *onRefresh* script. See xref:#Example2[] below.
+
+== Parameter
+Boolean:: `true`: fill triangle +
+`false`: do not fill triangle
+
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Total"], ["NJ",200,30], ["NY",300,15], ["PA",150,5]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var sizeframe = new StaticSizeFrame();
+sizeframe.setSize(10);
+var frame = new TriangleShapeFrame("Total"); //<2>
+frame.setFill(true); //<3>
+elem.setShapeFrame(frame); //<4>
+elem.setSizeFrame(sizeframe);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `TriangleShapeFrame` object.
+<3> Use `setFill` to draw filled  shapes.
+<4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `TriangleShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:TriangleShapeFrame2setFill.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ShapeFrame.adoc[].
+
+. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.shapeFrame = new TriangleShapeFrame;
+Chart1.bindingInfo.shapeFrame.fill = true;
+
+--
+
++
+image:commonscript:TriangleShapeFrameFill.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

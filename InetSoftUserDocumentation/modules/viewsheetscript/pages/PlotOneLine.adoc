@@ -1,0 +1,33 @@
+= oneLine
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+For a xref:viewsheet:PointChart.adoc[] with a dimension set in the *Color*, *Shape*, *Size*, or *Text* regions, connects the points with a single line rather than using separate lines for the different dimension values.
+
+NOTE: Requires the ‘Show Lines’ property to be enabled for the Chart.
+
+
+
+== Type
+Boolean:: `true`: use single line +
+`false`: use separate lines
+
+== Example
+[source,javascript]
+Chart1.oneLine = true;
+
+
+image:commonscript:oneLine.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+oneLine          // unqualified
+Chart1.oneLine   // qualified
+
+{secondForm}
+====

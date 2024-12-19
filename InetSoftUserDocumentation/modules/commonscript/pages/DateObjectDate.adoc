@@ -1,0 +1,15 @@
+= Date()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Constructor for a JavaScript Date object. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date[Date()] in the {JavaScriptRef} for details on usage.
+
+== Examples
+[source,javascript]
+var now = new Date(); // current date
+var date1 = new Date(2008,10,1); // from date parts
+var date2 = new Date('January 1, 2000'); // from string date
+var date3 = new Date(800000000000); // from ms from epoch
+
+

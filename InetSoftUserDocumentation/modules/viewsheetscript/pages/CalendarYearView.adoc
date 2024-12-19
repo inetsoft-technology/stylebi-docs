@@ -1,0 +1,33 @@
+= yearView
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:CalendarProperties.adoc[] for more information on user selection editing.
+
+
+Specifies whether the Calendar should be displayed in “year view” or “month view”. Year view displays one or two years (depending on xref:CalendarDoubleCalendar.adoc[] setting) and allows selections at the month level. Month view displays one or two months (depending on xref:CalendarDoubleCalendar.adoc[] setting) and allows selections at the week or day level (depending on  xref:CalendarDaySelection.adoc[] setting).
+
+== Type
+Boolean::	`true`: display year view +
+`false`: disable year view (default)
+
+
+
+== Example
+[source,javascript]
+Calendar1.yearView=true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+yearView               // unqualified
+Component1.yearView    // qualified
+
+{secondForm}
+====
+
+

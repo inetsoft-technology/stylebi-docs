@@ -1,0 +1,52 @@
+= isActionVisible(name)
+:navtitle: isActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+xref:thisViewsheet.adoc#thisViewsheetIsActionVisible[thisViewsheet.IsActionVisible]  to return Dashboard toolbar button visibility.
+====
+
+
+Returns the visibility/accessibility of the specified end-user Table feature.
+
+
+== Parameters
+name:: name of Table function (String):
++
+[source]
+'Menu Actions' ('More' button)
+'Export'
+'Show Details' (Freehand Table)
+'Show Enlarged'
+'Sort Column' (column header 'Sort' button)
+
+
+
+
+
+== Example
+[source,javascript]
+----
+if (TableView1.isActionVisible('Export') == true) {
+  Text1.text = 'Press toolbar button to export.';
+}
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+isActionVisible                 // unqualified
+TableView1.isActionVisible      // qualified
+
+{secondForm}
+====
+
+

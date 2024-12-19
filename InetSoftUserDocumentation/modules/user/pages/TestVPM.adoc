@@ -1,0 +1,21 @@
+= Test a VPM
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+
+To test the VPM row and columns filters, follow the steps below.
+
+. If necessary, create a VPM as explained in xref:CreateNewVPM.adoc[].
+
+. Select the *Test* tab at the bottom.
++
+image:dataModel83.png[]
+
+. Select the user or role for which to test the VPM.
+
+. Press the btn:[Test] button.
++
+image:dataModel84.png[]
+
+The ‘Results’ panel displays information about how the VPM will be applied for the selected user or role.

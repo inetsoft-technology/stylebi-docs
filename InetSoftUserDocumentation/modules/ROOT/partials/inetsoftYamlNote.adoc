@@ -1,0 +1,1 @@
+You can configure storage in the *inetsoft.yaml* file instead of defining Docker variables as shown above, but this will require you to package additional JAR files or create a derived image. The corresponding settings for _inetsoft.yaml_ are shown below.

@@ -1,0 +1,8 @@
+[TIP]
+--
+.What is a *measure*?
+[%collapsible]
+=====
+A *measure* is generally used for aggregation, for example summation, averaging, correlation, etc., within a Crosstab, Chart, Text component, or Gauge. Adding a measure to the ‘Y’ region in a chart displays the computed aggregates by using locations on the Y-axis. Adding a measure to the ‘X’ region displays the computed aggregates by using locations on the X-axis. You can also display aggregates by using color, shape, size, or label.
+=====
+--

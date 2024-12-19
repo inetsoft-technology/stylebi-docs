@@ -1,0 +1,50 @@
+= RectCoord
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:ChangeChartCoordinates.adoc#RectangularCoordinates[Rectangular Coordinates] for a walkthrough of rectangular  coordinates.
+====
+
+The `RectCoord` object contains rectangular coordinates against which data can be represented. To create a `RectCoord` object, pass a pair of xref:Scale.adoc[] objects to the `RectCoord` constructor:
+
+[source,javascript]
+var rect = new RectCoord(xscale,yscale);
+
+You can pass a set of Scale objects (e.g., ‘xscale’, ‘yscale’, etc.) to the constructor, or specify this later using the xref:RectCoordSetXScale.adoc[] and xref:RectCoordSetYScale.adoc[] properties.
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var sscale = new CategoricalScale("State"); //<2>
+var qscale = new LinearScale("Quantity"); //<2>
+var coord = new RectCoord(sscale,qscale); //<3>
+graph.setCoordinate(coord); //<4>
+graph.addElement(elem);
+
+
+--
+<1> {dataset}
+<2> Create the xref:Scale.adoc[] objects.
+<3> Create the xref:RectCoord.adoc[] object from the `Scale` objects.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `RectCoord` to the Chart.
+
+image:commonscript:RectCoord.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

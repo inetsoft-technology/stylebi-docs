@@ -1,0 +1,56 @@
+= Create a D3 Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+This page explains how to incorporate a https://d3js.org/[D3.js] chart in a Dashboard. For information about the InetSoft plugin, see the https://github.com/inetsoft-technology/d3-inetsoft[d3-inetsoft project page].
+
+There are two steps to incorporating a D3.js chart in a Dashboard.
+
+== Step 1: Create  HTML page with  D3.js chart
+Create an HTML page with the D3.js chart and place it into the _web-assets_ folder in the *SREE Home* location. The HTML should be similar to that below:
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+[source,html]
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>D3 Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/d3-inetsoft.js"></script>
+</head>
+<body>
+  <div id="#chart"></div>
+  <script>
+    function loadData(table) {
+    // D3 code goes here, consuming the table data from the dashboard
+  }
+  // D3DataTable is the identifier of the table in the dashboard
+  d3.inetsoft('D3DataTable', loadData);
+  </script>
+</body>
+</html>
+
+
+Note the following features:
+
+* The `d3-inetsoft.js` plugin should be included as an external script.
+* Your D3.js code should be inserted in the `loadData()` function.
+* The first parameter of `d3.inetsoft()` function is the ‘Name’ of the *data table* in the Dashboard. See Step 2 below for more information about the data table.
+
+== Step 2: Create  Dashboard with  Data Table and Embedded HTML
+Follow the steps below to create the Dashboard that will host the D3.js chart:
+
+. Create a new dashboard. (See xref:viewsheet:CreateNewDashboard.adoc[] for more details.)
+
+. Add a Text component into the Dashboard. Set the content of the Text component to the URL of the HTML file from Step 1 above (e.g., `/d3.html`). (See xref:viewsheet:AddTextOrHTML.adoc[] for more information about using a Text component.)
+
+. Resize the Text component to  be able to display the D3.js chart.
+
+. Add a Table or Chart component that contains the data to be used by the D3.js chart. (See xref:viewsheet:AddTable.adoc[] or xref:viewsheet:AddCrosstab.adoc[] for more details.)
+
+. *_Optional:_* Set the table or chart to be *hidden* if you do not want users to see it. (See xref:viewsheet:GeneralTab.adoc[] for information on how to hide a component.)
+
+. Set the ‘Name’ of the Table or Chart to the ID used as the first parameter to the `d3.inetsoft()` function. (This is “D3DataTable“ in the HTML example above. See xref:viewsheet:GeneralTab.adoc[] for more information about the ‘Name’ property.)

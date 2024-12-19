@@ -1,0 +1,33 @@
+= Egraph.getY2TitleSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Returns a xref:chartAPI:TitleSpec.adoc[] object containing title information for the Y-axis on the *right* of the Chart.  The corresponding “setter” function is xref:chartAPI:EGraph_setY2TitleSpec.adoc[].
+
+
+== Returns
+A xref:chartAPI:TitleSpec.adoc[] object
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var spec = Chart1.graph.getY2TitleSpec();
+alert(spec.getLabel());
+--
+
+
+
+
+image:commonscript:EGraphaddsetY2TitleSpec.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+

@@ -1,0 +1,43 @@
+= Add a VPM Lookup Trigger
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+
+You can use scripted logic to enable or disable the VPM. Follow the steps below:
+
+. If necessary, create a VPM as explained in xref:CreateNewVPM.adoc[].
+
+. Select the *Lookup* tab at the bottom.
++
+image:dataModel81.png[]
+
+. Select the *Trigger* sub-tab.
++
+image:dataModel82.png[]
+
+. Enter the desired trigger script in the text box at the bottom. The trigger script should use standard JavaScript syntax, and should return `true` to enable VMP  or `false` to disable VPM.
++
+.Lookup trigger script
+[example]
+====
+[source,javascript]
+if(user=='Annie') {
+    false; // VPM not enabled
+}
+====
++
+The following parameters are available for use in the script:
++
+.Lookup Trigger Script Parameters
+****
+user:: The current user name
+roles:: Array of roles associated with this user
+groups:: Array of groups associated with this user
+parameter:: Dashboard or Worksheet parameters
+tables:: List of tables in the query
+columns:: Array of columns included in the query
+****
+
+. Press the {buttonSave} to save the VPM.

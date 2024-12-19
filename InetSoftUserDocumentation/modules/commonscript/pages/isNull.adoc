@@ -1,0 +1,37 @@
+= isNull(object)
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Tests for null value.
+
+== Parameters
+object::			a Dashboard object
+
+
+==  Example
+
+[source,javascript]
+if(isNull(Text1.text)) {
+   // action for when Text1 content is null
+}
+
+
+
+
+include::commonscript:partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+isNull(TableView1.table['Quantity'])
+----
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+isNull(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

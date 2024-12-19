@@ -1,0 +1,65 @@
+= JDBC
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The sections in xref:ConnectToDataSource.adoc[] explain how to create a connection to common databases such as SQL Server, Oracle, DB2, MySQL, etc. If you are *not* using one of these common relational databases, you can create a custom connection.
+
+
+IMPORTANT: {pluginDriverRequired}
+
+include::partial$dataSourceUserIntro.adoc[]
+
+
+. Select the ‘JDBC’ data source, and press btn:[Create]. This opens the data source definition screen.
++
+image:dataSourceNewJDBC2.png[]
+
+. In the ‘Name’ field, enter a label for this database connection.
+
+. From the ‘Database Type’ menu, select ‘Custom’ (if not already selected).
+
+. Enter the name of the driver class in the ‘Driver Class’ field. The name of the driver class is usually provided by the driver vendor.
+
+. Enter the ‘JDBC URL’ that should be used to connect to the database, which has the following form. (You can obtain this from the database administrator.)
+
+include::partial$connectionTestQuery.adoc[]
++
+.Sample test queries for other databases
+****
+Oracle:: `select 1 from dual`
+DB2:: `select 1 from sysibm.sysdummy1`
+MySQL:: `select 1`
+Microsoft SQL Server:: `select 1`
+PostgreSQL:: `select 1`
+Ingres:: `select 1`
+Derby:: `values 1`
+H2:: `select 1`
+Firebird:: `select 1 from rdb$database`
+HSQLDB:: `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`
+****
+
+
+. Enter the additional required connection information for your database, such as login credentials. You can obtain this information from your database administrator.
+
++
+include::user:partial$JDBCCommonWeb.adoc[]
++
+include::user:partial$testConnection.adoc[]
+
+
+. Press btn:[OK].
++
+TIP: If you are prompted again to upload a driver, this indicates that the ‘Driver Class’ you entered does not match the driver that you already uploaded. Check that the driver file and ‘Driver Class’ are correct for your particular database.
+
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceJDBC2.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceJDBC3.png[]
++
+include::user:partial$dataSourceFinalSteps.adoc[]

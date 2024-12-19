@@ -1,0 +1,38 @@
+= sortType
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:SelectionListProperties.adoc[] and xref:viewsheet:SelectionTreeProperties.adoc[] more information on these components.
+
+
+Specifies the sort order for the Selection List or Tree. You can list choices in ascending (alphabetical) order, in descending (reverse alphabetical) order, or display only compatible choices. This last option (the default) hides incompatible choices, but allows a user to display them if desired.
+
+
+
+
+
+== Type
+xref:commonscript:StyleConstant.adoc[]  integer::
++
+[source]
+StyleConstant.SORT_ASC: Ascending order
+StyleConstant.SORT_DESC: Descending order
+StyleConstant.SORT_HIDE_OTHERS: Hide incompatible choices
+
+== Example
+[source,javascript]
+SelectionList1.sortType = StyleConstant.SORT_ASC;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sortType                   // unqualified
+SelectionList1.sortType    // qualified
+
+{secondForm}
+====
+
+

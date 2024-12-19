@@ -1,0 +1,49 @@
+= Array.pop()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:commonscript:indexOf.adoc[] to detect an item in an array.
+* xref:commonscript:ArrayObjectJoin.adoc[] to combine the elements of an array into a string.
+====
+
+
+
+Returns the last element of the array, and removes that element from the original array.
+
+
+
+
+== Example
+[source,javascript]
+----
+var arr = ['A','B','C'];
+alert('Last item was ' + arr.pop());   // returns "Last item was C"
+alert('Array is now ' + arr.join(',')) // returns "Array is now A,B"
+----
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+var arr = TableView1.table['Name'];
+alert('Last item was ' + arr.pop());
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+var arr = Sales['Name'];
+alert('Last item was ' + arr.pop());
+
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

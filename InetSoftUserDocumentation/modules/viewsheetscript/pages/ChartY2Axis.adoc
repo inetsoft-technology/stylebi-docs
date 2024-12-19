@@ -1,0 +1,32 @@
+= y2Axis
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+
+Provides a *shortcut* to set axis properties for the all *secondary* Y-axes. This only applies to  measure axes that have been marked as ‘Secondary Axis’. The available properties are listed in xref:ChartAxisProperties.adoc[] and  xref:MeasureAxisProperties.adoc[].
+
+
+
+
+== Example
+[source,javascript]
+Chart1.y2Axis.minorIncrement = 1000;
+Chart1.y2Axis.labelColor = [255,0,0];
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+y2Axis             // unqualified
+Chart1.y2Axis      // qualified
+
+{secondForm}
+====
+

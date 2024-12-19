@@ -1,0 +1,29 @@
+= contourLevels
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+The number of individual colored contours to draw on a xref:viewsheet:ScatterContourChart.adoc[] or xref:viewsheet:ContourMapChart.adoc[].
+
+== Type
+Integer
+
+== Example
+[source,javascript]
+Chart1.contourLevels = 3;
+
+image:commonscript:contourLevels.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+contourLevels         // unqualified
+Chart1.contourLevels  // qualified
+
+{secondForm}
+====

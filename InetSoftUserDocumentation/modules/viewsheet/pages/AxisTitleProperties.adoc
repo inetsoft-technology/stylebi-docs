@@ -1,0 +1,39 @@
+= Axis Title Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+xref:AxisProperties.adoc[] to set properties of the axis labels.
+====
+
+The following sections explain how to edit and format an axis title.
+
+== Edit an Axis Title
+To edit the text of an axis title, right-click the title text on a Chart axis, and select ‘Title Properties’ from the context menu. {rightClickOptions} This opens the ‘Title Properties’ panel.
+
+TIP: {dynamicProperties}
+
+image:Chart Title Format Dialog.png[]
+
+
+In the ‘Title’ field, enter the title for the axis. (The title text you enter will *persist* even if you later change the field displayed on that axis.) To add the default axis name into your custom title, insert a placeholder such as `pass:[{0}]` in the title.
+
+
+
+****
+Example:: If the Chart displays two *measures* on the Y-axis, ‘Total’ and ‘Quantity’,  enter a custom '`Title`' such as `pass:[{0} and {1} for all Employees]` to display the following Y-axis title: “Sum(Total) and Sum(Quantity) for all Employees”.
+****
+
+
+Press btn:[OK] to close the panel and apply the changes.
+
+
+TIP: To *hide* an axis title, right-click the title text on the chart, and select ‘Hide Title’ from the context menu. {rightClickOptions} To show all axis titles, right-click on the chart, and select ‘Show All Titles’ from the context menu.
+
+== Format an Axis Title
+To format an axis title, click the title text on the Chart to select it, and select the *Format* tab at the bottom of the left panel.
+
+image:Format Title.png[]
+
+Select a font, color, alignment, etc., for the axis title. See xref:VisualFormat.adoc[] for more information about these options.

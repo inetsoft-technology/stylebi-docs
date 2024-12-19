@@ -1,0 +1,421 @@
+= Access Component Data
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheetscript:partial$seeAlsoComponentData.adoc[]
+
+You can access  component data and filter selections using script. The following sections explain how to do this. For information on how to detect the most recent user interaction, see xref:viewsheetscript:WriteBackToDatabase.adoc#AccessUserModifiedData[Access  User-Modified Data] in xref:WriteBackToDatabase.adoc[].
+
+[#FormComponents]
+== Form Components
+You can access the state of common Form components within the Dashboard by using the `selectedObject`, `selectedObjects`, `selectedLabel`, and `selectedLabels` properties.
+
+xref:viewsheetscript:CommonSelectObject.adoc[], xref:viewsheetscript:CommonSelectLabel.adoc[]:: The selected value or label of the component: Applies to *single-value* input elements (Slider, Spinner, RadioButton, ComboBox) and the tabs of co-located components in a Tabbed Interface. For example, to return the value or label selected in a Radio Button control, use the following syntax:
++
+.Example: selectedLabel
+[source,javascript]
+radioButton1.selectedObjectradioButton1.selectedLabel
++
+Tabbed Interface also has a property `selectedIndex` which returns the numeric representation of the active tab.
+
+xref:viewsheetscript:CommonSelectObjects.adoc[], xref:viewsheetscript:CommonSelectLabels.adoc[]::
+The selected values or labels of the component, as an array: Applies to *multiple-value* input elements (CheckBox). For example, to return the first selected item or label in a CheckBox:
++
+.Example: selectedObjects, selectedLabels
+[source,javascript]
+checkBox1.selectedObjects[0];
+checkBox1.selectedLabels[0];
+
+You can manually type these references into your script, or enter them automatically by clicking the appropriate node on the ‘Component’ tree of the Script Editor.
+
+image:viewsheet:ComponentSelectedObject.png[]
+
+The less-commonly used xref:viewsheetscript:TextInput.adoc[] and xref:viewsheetscript:Upload.adoc[] Form components provide different methods for data access: TextInput provides a `value` property to return the current text, while Upload provides a `getFileName()` function to retrieve the name of the user-selected file.
+
+.Access a RadioButton setting
+[example]
+====
+This example uses a RadioButton to give the user a choice of two input options, a Selection List, and a Range Slider. Follow the steps below:
+
+. Create a new Dashboard based on the ‘ProductSales’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$ProductSalesWorksheet.adoc[]
+
+. Add a Table, Selection List, and Range Slider. To do this, follow the steps below:
+
+.. Drag the ‘SalesByDate’ data block into the Dashboard. This creates a new table called ‘SalesByDate’. Resize the table as desired.
+
+.. From the ‘SalesByDate’ data block in the *Toolbox* panel, drag the ‘State’ column to an empty region on the Dashboard. This creates a new Selection List named ‘State’.
+
+.. From the *Toolbox* panel, drag a Range Slider into the Dashboard. This creates a new Range Slider.
+
+.. From the ‘SalesByDate’ data block in the Component tree, drag the ‘Date’ column onto the Range Slider. This binds the Range Slider to the ‘Date’ field.
+
+. Add a Form component to allow the user to select the input method. Follow the steps below:
+
+.. From the *Toolbox* panel, drag a RadioButton into the Dashboard. This creates a new Radio Button.
+
+.. Right-click the RadioButton, and select ‘Properties’ from the context menu. This opens the ‘RadioButton Properties’ panel.
+
+.. In the ‘RadioButton Properties’ panel, enter the text “DateOrState” in the ‘Name’ field. Enter the text ‘Selection’ in the ‘Title’ field.
+
+.. In the ‘List Values’ panel of the ‘Properties’ dialog box, select ‘Embedded’ and press the ‘Edit’ button. This opens the ‘Embedded List Values’ dialog box.
+
+.. Press btn:[Add]. For the first ‘Label’ enter the text “Select Date Range.” For the corresponding ‘Value’, enter the text “Date”.
+
+.. Press btn:[Add] again. For the second ‘Label’ enter the text “Select States.” For the corresponding ‘Value’, enter the text “State”.
++
+image:viewsheet:Object Access RadioButton.png[]
+
+.. Press btn:[OK] in both dialog boxes. This creates a RadioButton with two choices from which the user can select the input method.
++
+image:viewsheet:Object Access Viewsheet.png[]
+
+
+. Add expression scripts to the Selection List and the Range Slider so that the appropriate control is enabled for the given user selection. Follow the steps below:
+
+.. Right-click the Selection List, and select ‘Properties’ from the context menu to open the ‘Selection List Properties’ panel. {rightClickOptions}
+
+.. For the ‘Enabled’ option, press the {buttonValueType}, and select ‘Expression’. Then press the {buttonEditFormula} to open the Formula Editor.
++
+image:viewsheet:Selection List Properties Expression.png[]
+
+
+.. In the Formula Editor for the Selection List, enter the following script:
++
+[source,javascript]
+if (DateOrState.selectedObject=='Date') {
+  false
+}
+else {
+  true
+}
++
+This indicates that the Selection List component should be disabled whenever ‘Date’ is selected in the “DateOrState” RadioButton, and enabled otherwise.
++
+TIP: You can hide the component completely by adding a similar expression script (returning values ‘Show’ and ‘Hide’) to the ‘Visibility’ property.
+
+
+.. Press btn:[OK] twice to exit the Formula Editor and the ‘Selection List Properties’ panel.
+
+.. Repeat the above steps for the Range Slider, and set the ‘Enabled’ script as follows:
++
+[source,javascript]
+if (DateOrState.selectedObject=='Date') {
+  true
+}
+else {
+  false
+}
+
+.. Press btn:[OK] twice to exit the Formula Editor and the ‘Range Slider Properties’ panel.
+
+. Preview the Dashboard, and experiment with the controls.
+
+Note that when you choose ‘Select Date Range’, only the Range Slider is enabled, and when you choose ‘Select States’, only the Selection List is enabled.
+====
+
+[#FilterComponents]
+== Filter Components
+You can access the state of Filter components within the Dashboard by using the  `selectedObjects`, `selectedLabels`, and `drillMember` keywords.
+
+xref:viewsheetscript:CommonSelectObjects.adoc[], xref:viewsheetscript:CommonSelectLabels.adoc[]::
+An array of values or labels selected in a component: Applies to Selection List, Selection Tree, Range Slider, Calendar. (Range Slider and Calendar provide `selectedObjects` only). For example, to return the first selected item or label in a Selection List:
++
+.Example: selectedObjects, selectedLabels
+[source,javascript]
+SelectionList1.selectedObjects[0];
+SelectionList1.selectedLabels[0];
+
+xref:viewsheetscript:SelectionListTreeDrillMember.adoc[]:: For Selection Trees, the name of the field that resides one level in the hierarchy below the user’s lowest selected level:
++
+.Example: drillMember
+[source,javascript]
+SelectionTree1.drillMember;
+
+You can manually type these references into your script, or enter them automatically by clicking the appropriate node on the ‘Component’ tree of the Script Editor.
+
+image:viewsheet:ComponentSelectedObject.png[]
+
+.Interactive Chart drilldown
+[example]
+====
+In this example, you will create a Selection Tree that filters the geographical regions displayed on a Chart. You will use the xref:viewsheetscript:SelectionListTreeDrillMember.adoc[] property of the Selection Tree to dynamically adapt the Chart X-axis to display the appropriate geographical level (Region, State, or City), based on user selections. Follow the steps below:
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. From the *Toolbox* panel, drag a Chart component into the Dashboard. Resize the Chart as desired.
+
+. From the *Toolbox* panel, drag a Selection Tree component into the Dashboard.
+
+. Add a three-level geographical hierarchy to the Selection Tree. Follow the steps below:
+
+.. Expand the ‘Sales’ data block at the top of the *Toolbox* panel.
+
+.. Drag the ‘Region’ field from the data block onto the Selection Tree. This adds the ‘Region’ data to the tree.
+
+.. Drag the ‘State’ field from the data block onto the Selection Tree. This adds the ‘State’ data to the tree.
+
+.. Drag the ‘City’ field from the data block onto the Selection Tree. This adds the ‘City’ data to the tree.
+
+.. Resize the Selection Tree so that it can display a reasonable number of rows.
++
+image:commonscript:DrillMemberExample1.png[]
+
+. Press the {buttonEdit} on the Chart to open the Visualization Recommender. Press the {buttonFullEditor} at the top right of the Recommender to bypass the Recommender and open the Chart Editor.
+
+. From the Data Source panel, drag the ‘Total’ field (Under ‘Measures’) to the ‘Y’ region.
+
+. From the Data Source panel, drag the ‘Region’ field (Under ‘Dimensions’) to the ‘X’ region.
+
+. Configure the Chart to adapt the X-axis binding based on the user’s selection in the Selection Tree. To do this, follow the steps below:
+
+.. Press the {buttonValueType} next to the ‘Region’ dimension in the top panel, and select the ‘Expression’ option.
++
+image:commonscript:DrillMemberExample2.png[]
+
+.. Press the {buttonEditFormula} to open the Script Editor.
++
+image:commonscript:DrillMemberExample6.png[]
+
+.. In the top-left panel of the Script Editor, expand the ‘SelectionTree1’ node, and click ‘drillMember’. This adds the `SelectionTree1.drillMember` property in the editing area.
++
+image:commonscript:DrillMemberExample3.png[]
++
+The xref:viewsheetscript:SelectionListTreeDrillMember.adoc[]  property returns the name of the field that resides one level (in the Selection Tree hierarchy) below the *lowest* level that the user has selected. Thus, if the user has selected one or more _states_ in the Selection Tree, `SelectionTree1.drillMember` returns the string ‘City’.
+
+.. Press btn:[OK] to close the Formula Editor. The output of `SelectionTree1.drillMember` is now assigned to the Chart X-axis binding.
++
+image:commonscript:DrillMemberExample4.png[]
+
+. {finishEditing}
+
+. Verify that the X-axis binding adapts to the user’s selections:
+
+.. Press the {buttonUnselect} in the Selection Tree to remove any existing selections. Observe that the Chart X-axis now represents the ‘Region’ dimension, the top level of the Selection Tree hierarchy.
+
+.. Select the ‘USA East’ option in the Selection Tree. Observe that the Selection Tree now filters the Chart to display only data from the ‘USA East’ region. In addition, the Selection Tree `drillMember` property changes the X-axis binding to represent the ‘State’ dimension, which is one level below ‘Region’ in the Selection Tree hierarchy.
+
+.. Select the ‘CT’ and ‘MA’ options in the Selection Tree. Observe that the Selection Tree now filters the Chart to display only data from the states of ‘CT’ and ‘MA’. In addition, the Selection Tree `drillMember` property changes the X-axis binding to represent the ‘City’ dimension, which is one level below ‘State’ in the Selection Tree hierarchy.
++
+image:commonscript:DrillMemberExample5.png[]
+====
+
+== Output Components
+You can access the data in Output components within the Dashboard using the  xref:GaugeValue.adoc[] keyword, for example, `Gauge1.value`, `Text1.value`, `Image1.value`.
+
+== Chart Components
+You can access Chart data in scripts by referencing the Chart’s `data` or `table` properties. See xref:chartAPI:AccessChartData.adoc[] in xref:chartAPI:ChartScriptTutorial.adoc[] for full details.
+
+[#TableCrosstabComponents]
+== Table/Crosstab Components
+[WARNING,caption=See Also]
+xref:WriteBackToDatabase.adoc#AccessUserModifiedData[Access  User-Modified Data] in xref:WriteBackToDatabase.adoc[] information on how to access an *Editable Table*.
+
+The key properties for accessing the values in a Table or Crosstab are xref:viewsheetscript:TableData.adoc[] and xref:viewsheetscript:TableTable.adoc[].
+
+table[rowIx][colIx]:: A two-dimensional array containing the table data *as displayed*. The array includes header rows as well as data rows. For example,  `Table1.table[0][0]` provides the value in first row, first column, while `Table1.table[2][4]` provides the value in third row, fifth column. Indices may use keywords `row` and `col` to create relative references. See xref:#AccessDatainDifferentRowColumn[] below.
+
+data[rowIx][colIx]:: A two-dimensional array containing the *raw* table data (prior to grouping and summarization). It does not include header rows.  Indices may use keywords `row` and `col` to create relative references. See xref:#AccessDatainDifferentRowColumn[] below.
+
+Two sub-properties that are especially useful when looping through the rows or columns of tables are `length` and `size`:
+
+
+xref:TableTableLength.adoc[]/xref:TableTableSize.adoc[]:: The number of rows and columns (respectively) in the table, *as displayed*, including column header row.
+
+xref:TableDataLength.adoc[]/xref:TableDataSize.adoc[]:: The number of rows and columns (respectively) in the *original* table (prior to grouping and summarization), including column header row.
+
+NOTE: A table that returns no data still displays the column header row. Therefore, `table.length` is `1` in the no-data case.
+
+The following properties are useful when creating expression scripts on Tables:
+
+xref:TableField.adoc[]:: Value in the current row of column named “col_name”.
+xref:TableValue.adoc[]:: Value of the current cell.
+
+You can type these keywords manually into your script, or you can click the appropriate node on the ‘Component’ tree in the Script Editor.
+
+image:viewsheet:RelativeReferenceEditor.png[]
+
+The sections below provide examples of different ways to access table values.
+
+[#AccessArbitraryTableCell]
+=== Access  Arbitrary Table Cell
+The following table script iterates through all data rows (beginning with row index 1, the first data row) and columns of a table, and cumulatively sums these values into variable `tot`. See xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script] for information on where to place such a Table script.
+
+.Example: Arbitrary table cell with indexes
+[source,javascript]
+var tot = 0;
+for(var thisRow = 1; thisRow < table.length; thisRow ++) {
+   for(var thisCol= 0; thisCol < table.size; thisCol++) {
+      tot = tot + table[thisRow][thisCol];
+   }
+}
+
+TIP: When a property such as table is used within a component script, it is not necessary to qualify the property with the component name (e.g., `Table1`). In component script, `table` and `Table1.table` both refer to the same property.
+
+[#AccessDatainCurrentCell]
+=== Access Data in  Current Cell (‘value’)
+The xref:TableValue.adoc[] keyword refers to the value in the current cell. The `value` keyword is the equivalent of the index expression `table[row][col]`.
+
+.Walkthrough: Current cell value
+[example]
+====
+This example sets the text colors and fill colors of table cells based on data values within the table. If a price is greater than $1000, the price displays in red text, otherwise, in blue text.
+
+NOTE:  You can apply conditional formatting without using script. See xref:viewsheet:ConditionalFormat.adoc[] in the xref:viewsheet:VisualizeYourData.adoc[].
+
+. Create a new Dashboard based on the ‘ProductSales’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+include::ROOT:partial$ProductSalesWorksheet.adoc[]
+
+
+. Drag and drop the ‘ProductInfo’ data block from the left panel into the Dashboard.
++
+image:viewsheet:ProductInfoDataBlock.png[]
+
+. Click to select any data cell in the ‘Price’ column. Then select the *Format* tab at the bottom of the left panel.
++
+image:viewsheet:Capture_009.png[]
+
+
+. Press the {buttonValueType} next to the ‘Color’ property, and select ‘Expression’ option.
++
+image:Color Tab Formula Editor Button.png[]
+
+. Press the {buttonEditFormula} next to the ‘Color’ property to open the Formula Editor.
+
+. Enter the following script in the Formula Editor:
++
+[source,javascript]
+if (value > 1000) {
+  [255,0,0];  // red
+}
+else {
+  0x0000FF;   // blue
+}
++
+image:formulaEditor1.png[]
+
++
+NOTE: A color can be specified as an ordered triple, or as a hexadecimal number.
+
+. Press btn:[OK] to exit the Formula Editor.
++
+image:viewsheet:Capture_011.png[]
+
+Notice that the cells in the ‘Price’ column are colored red if the value is greater than 1000 and blue otherwise. The script affects the entire ‘Price’ column, and can be edited from the *Format* panel for any cell in the column. This example continues in xref:#AccessDataInSameRow[].
+====
+
+[#AccessDataInSameRow]
+=== Access Data in the Same Row (‘field’)
+
+You can access the value in the current row of another column by using  xref:TableField.adoc[], which refers to the value in the current row of a column named “col_name.”
+
+.Walkthrough: Access data in same row
+[example]
+====
+This example continues from xref:#AccessDatainCurrentCell[]. It will set the color of the ‘Name’ column based on the value of the ‘Price’ column:
+
+. Click to select a cell in the ‘Name’ column. Then select the *Format* tab at the bottom of the left panel.
+
+. Press the {buttonValueType} next to the ‘Color’ property and select ‘Expression’. Then press the {buttonEditFormula}. This opens the Formula Editor.
+
+. In the Formula Editor, enter the following expression:
++
+[source,javascript]
+if (field['Price'] > 1000) {
+   [255,0,0];
+}
+else {
+   [0,0,255];
+}
+
+. Press btn:[OK] to exit the Formula Editor.
++
+image:viewsheetscript:Set Property Using Field.png[]
+
+The values in the ‘Name’ column are now highlighted based on the corresponding values in the ‘Price’ column. This example continues in xref:#AccessDatainDifferentRowColumn[].
+====
+
+
+[#AccessDatainDifferentRowColumn]
+=== Access data in a different row or column (‘row’/‘col’)
+To access any cell in a table by relative reference, use the indexing expression `table[rowIx][colIx]` or `data[rowIx][colIx]`. Predefined variables `row` and `col` allow you to refer to the row and column of the current cell, that is, the cell whose format is being modified.
+You can use these variables to construct the desired offsets from the current cell.
+
+.Example: Offsets from current cell
+[source,javascript]
+table[row][col]   // Value in current cell (same as 'value' keyword)
+table[row][col-1] // Value in current row, one column to left
+table[row-1][col] // Value in current column, one row above
+table[row+1][col] // Value in current column, one row below
+
+The `data` and `table` constructs yield the same results for tables, but may produce different results when used in charts/crosstab tables. The `data` syntax references the data *prior to  summarization*, while the `table` syntax references the tabular data *as displayed*.
+
+.Walkthrough: Different row or column
+[example]
+====
+This examples continues from xref:#AccessDataInSameRow[]. It highlights every price that is less than the price immediately above it in the table, and uses the `row` and `col` variables to create relative references:
+
+. Select any data cell under the ‘Price’ column. Then select the *Format* tab at the bottom of the left panel.
+
+. Press the {buttonValueType} next to the ‘Background’ property and select ‘Expression’. Then press the {buttonEditFormula}. This opens the Formula Editor.
+
+. In the Formula Editor, enter the following script:
++
+[source,javascript]
+if (row > 1) {
+  if (value < table[row-1][col]) {
+    [255,255,0];
+  }
+}
+
+. Press btn:[OK] to exit the Formula Editor.
+
+The cells in which the value is less than the previous row’s price are now highlighted in yellow.
+
+image:viewsheet:Expression Access Relative Cell.png[]
+
+====
+
+.Example: Mixing table references
+[example]
+====
+This example continues from the previous example. It will set the header cell of the ‘Price’ column to show a red background if there exists a price exceeding $2000, and will otherwise show a green background. This requires a loop structure, as well as mixed absolute and relative references:
+
+. Select the header cell in the ‘Price’ column. Then select the *Format* tab at the bottom of the left panel.
+
+. Press the {buttonValueType} next to the ‘Background’ property select ‘Expression’ option, and press the {buttonEditFormula}. This opens the Formula Editor.
+
+. Add the following script in the Formula Editor.
++
+[source,javascript]
+for (i=1; i<table.length; i++) {
+  if (table[i][col] > 2000) {
+    [255,0,0];
+    break;
+  }
+  else {
+    [0,255,0];
+  }
+}
+
+. Press btn:[OK] to exit the Formula Editor.
++
+image:viewsheet:Expression Access Absolute Cell.png[]
+
+The header cell is red because a price exists that exceeds $2000. To test the header cell script, add a Range Slider to filter the values in the table. Follow these steps:
+
+. Drag a Range Slider from the *Toolbox* panel into the Dashboard. This creates a new Range Slider.
+
+. From the ‘ProductInfo’ data block at the top of the *Toolbox* panel , drag the ‘Price’ field onto the Range Slider. This binds the Range Slider to the ‘Price’ field.
++
+image:viewsheet:Expression Drag Price Slider.png[]
+
+. Drag the right side of the Range Slider to vary the prices included in the dataset. Observe the color of the header cell as the dataset changes.
+====

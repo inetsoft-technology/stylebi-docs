@@ -1,0 +1,36 @@
+= Enable Multi-Tenancy
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+You may want to provide  users from different organizations (i.e., “tenants”) with access to different sets of data and different server features. This is called a *multi-tenancy*. To facilitate design of a multi-tenant environment, StyleBI allows you to create  independent data *connections* for each tenant. Each tenant can access only the unique connections for which they have privileges.
+
+
+To enable   multi-tenancy,  follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Security* page in the left panel.
+. Select ‘Enable Multi-Tenancy’.
++
+image:EM_Security_Multitenant1.png[]
+
+. Select one of the options from the '`Pass Organization By`' menu.
++
+image:EM_Security_Multitenant2.png[]
+
++
+The following options are available:
++
+Domain::  The organization ID is extracted from the lowest-level subdomain of the URL.  For example, if the StyleBI server is accessed from http://organization1.stylebi.example.com, then "`organization1`" is passed as the user`'s organization ID.  If no organization is found in the URL, the default organization is used.
++
+The *Domain* option requires DNS records to resolve the domain name to the StyleBI server. This is typically achieved by using a wildcard DNS record  (`*.stylebi.example.com`, for example) that points to the StyleBI server`'s IP address.
+
+Path:: The organization ID is extracted from the first path component of the URL.  For example, if the StyleBI server is accessed from http://stylebi.example.com/organization1, then "`organization1`" is passed as the user`'s organization ID.  If no organization is found in the URL, the default organization is used.
++
+
+The *Path* option requires a proxy server in front of the StyleBI server to set the required HTTP headers (generally, `X-Forwarded-For`, `X-Forwarded-Host`, and `X-Inetsoft-Remote-Uri`)  so that the StyleBI server knows the original path and can extract the organization ID. The `X-Inetsoft-Remote-Uri` header should be set to `scheme://host/org_id` if the `org_id` is present.
+
+
+
+. Proceed to create organizations.  See xref:CreateOrganization.adoc[] for more information.

@@ -1,0 +1,50 @@
+= CALC.mduration(settlement, maturity, rate, yld, frequency, [basis])
+:navtitle: CALC.mduration()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *modified* Macaulay duration (in years) for a security with an assumed par value of $100. This is the Macaulay duration divided by `(1 + yld/frequency)`, where Macaulay duration is given by xref:CALC_duration.adoc[]. {CALCExcelFunctionPage}
+
+
+== Parameters
+settlement::			Date object: The security’s settlement date
+maturity::			Date object: Security’s maturity date (date when security expires)
+rate::			Security’s annual coupon rate
+yld::			Security’s annual yield
+frequency::			Number of coupon payments per year (1, 2, or 4)
+basis:: {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+
+== Example
+Modified Macaulay duration for a security with coupon rate of 8%, annual yield of 9%, settlement date of January 1, 2008, maturity date of January 1, 2016, two coupon payments per year, and Actual/Actual counting convention.
+
+
+
+[source,javascript]
+----
+CALC.mduration(new Date(2008, 0, 1), new Date(2016, 0, 1), 0.08, 0.09, 2, 1);
+// returns 5.735669813918838 (years)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.mduration(field['SettleDate'], field['MatureDate'],  0.08, 0.09, 2, 1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.mduration(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1],  0.08, 0.09, 2, 1)
+CALC.mduration(parameter.SettleDate, parameter.MatureDate,  0.08, 0.09, 2, 1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

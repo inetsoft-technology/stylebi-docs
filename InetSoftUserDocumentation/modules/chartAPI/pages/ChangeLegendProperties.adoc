@@ -1,0 +1,105 @@
+= Change Legend Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:chartAPI:RepresentMultipleMeasures.adoc[] for information on legends for multiple elements.
+* xref:chartAPI:RepresentDatawithShapeColorSize.adoc[] for more information on VisualFrames.
+====
+
+When you assign a xref:chartAPI:VisualFrame.adoc[] to a Chart element to visually code data, a corresponding legend is created automatically. You can change the appearance of this legend by editing the `VisualFrame`’s xref:chartAPI:LegendSpec.adoc[].
+
+Consider the following Chart component script:
+
+[source,javascript]
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CategoricalColorFrame("State");
+elem.setColorFrame(frame);
+graph.addElement(elem);
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+image:commonscript:LegendSpecExample.png[]
+
+This creates a basic bar chart displaying the dimensions ‘State’ and ‘Quantity’. In this script, a xref:chartAPI:CategoricalColorFrame.adoc[] distinguishes the different states by color. Follow the steps below to experiment with modifying the chart’s legend:
+
+. Change the legend border to a blue dotted line. To do this, create a xref:chartAPI:LegendSpec.adoc[] object and assign it to the xref:chartAPI:ColorFrame.adoc[].
++
+[source,javascript]
+var legend = new LegendSpec();
+legend.setBorder(Chart.DOT_LINE);
+legend.setBorderColor(java.awt.Color(0x0000ff));
+frame.setLegendSpec(legend);
+
+. Change the legend title to say simply ‘State’, and make the text bold. To do this, create a xref:chartAPI:TextSpec.adoc[] object and assign it to the `LegendSpec`.
++
+[source,javascript]
+var tspec = new TextSpec();
+tspec.setFont(java.awt.Font('Dialog',java.awt.Font.BOLD, 14));
+legend.setTitleTextSpec(tspec);
+legend.setTitle('State');
+
+. Change the text inside the legend to display the full state names. To do this, create a xref:chartAPI:TextFrame.adoc[] object and assign it to the `LegendSpec`.
++
+[source,javascript]
+var tframe = new DefaultTextFrame();
+tframe.setText('NJ','New Jersey');
+tframe.setText('NY','New York');
+legend.setTextFrame(tframe);
+
+. Place the legend above the chart. Use the xref:chartAPI:EGraph_setLegendLayout.adoc[] property to do this.
++
+[source,javascript]
+graph.setLegendLayout(Chart.TOP);
++
+image:commonscript:LegendSpecExampleFinal.png[]
+
+.Complete Script
+****
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CategoricalColorFrame("State");
+elem.setColorFrame(frame);
+var legend = new LegendSpec();
+legend.setBorder(Chart.DOT_LINE);
+legend.setBorderColor(java.awt.Color(0x0000ff));
+frame.setLegendSpec(legend);
+var tspec = new TextSpec();
+tspec.setFont(java.awt.Font('Dialog',java.awt.Font.BOLD, 14));
+legend.setTitleTextSpec(tspec);
+legend.setTitle('State');
+var tframe = new DefaultTextFrame();
+tframe.setText('NJ','New Jersey');
+tframe.setText('NY','New York');
+legend.setTextFrame(tframe);
+graph.setLegendLayout(Chart.TOP);
+graph.addElement(elem);
+--
+[TIP]
+=====
+To change properties on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getElement.adoc[] ①, xref:chartAPI:GraphElementGetColorFrame.adoc[] ②, and xref:chartAPI:VisualFrameGetLegendSpec.adoc[] ③ to obtain a handle to the desired  element, `ColorFrame`, `LegendSpec`, and so on. For example:
+[source,javascript]
+--
+var elem = graph.getElement(0); <1>
+var frame = elem.getColorFrame(); <2>
+var legend = frame.getLegendSpec(); <3>
+// Compact syntax: var legend = graph.getElement(0).getColorFrame().getLegendSpec();
+
+legend.setBorder(Chart.DOT_LINE);
+legend.setBorderColor(java.awt.Color(0x0000ff));
+graph.setLegendLayout(Chart.TOP);
+--
+=====
+****
+
+
+
+
+

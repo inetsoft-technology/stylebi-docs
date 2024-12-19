@@ -1,0 +1,32 @@
+= axis.minorIncrement
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Sets the numerical increment for measure axis tick marks.
+
+== Type
+number
+
+== Example
+[source,javascript]
+Chart1.axis['Sum(Total)'].increment = 500000;
+Chart1.axis['Sum(Total)'].minorIncrement = 100000;
+
+image:commonscript:measureMinorIncrement.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].minorIncrement             // unqualified
+Chart1.axis['...'].minorIncrement      // qualified
+
+{secondForm}
+====
+

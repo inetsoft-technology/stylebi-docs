@@ -1,0 +1,268 @@
+= Map Chart
+%experimental%
+%stem%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+You can use maps to display data either based on regional information (country, state, city, etc.) or based on latitude and longitude.     For information on creating maps with user-defined regions, see xref:administration:CreateCustomMap.adoc[] in xref:administration:ManageServer.adoc[].
+
+
+
+
+== Display Data by Region
+
+To display data on a map by region (state, city, zip code, etc.), follow the steps below:
+
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Map’ style.   Press the {buttonApply} (or double-click the ‘Map’ icon).
++
+image:commonscript:MapChartType_1.png[]
++
+The Chart Editor now provides a ‘Geographic’ field.
+
+. *_Optional:_* If you want to use a web map background (Mapbox map or Google Map, depending on what your administrator has configured), follow the steps below:
++
+include::partial$webMapResize.adoc[]
++
+****
+.. Right-click the Chart and select ‘Properties’. This opens the ‘Chart Properties’ dialog box.
++
+image:webMap1.png[]
+
+.. Under the *Advanced* tab, enable ‘Use Web Map as Background’ and press btn:[OK]. (If this option is not available, ask your administrator  to enable the Web Map feature.)
++
+image:Report_Ad Hoc Chart Map4.png[]
+
+.. *_Optional:_* If your geographical field represents areas on the Chart (e.g., states) rather than points (e.g., cities), adjust the ‘Alpha’ setting to  less than 100% so that the filled regions do not obscure the underlying map background.
+
+.. Press btn:[OK] to exit the ‘Chart Properties’ dialog box.
+****
+
+. Mark the *dimensions* you want to use on the map as _geographical fields_.  To do this, see xref:SetGeographicalField[].
++
+include::ROOT:partial$dimensionTip.adoc[]
+
+. From the *Data Source* panel in the Chart Editor, drag a *geographic dimension* onto the ‘Geographic’ field in the Chart Editor.
++
+image:commonscript:bindGeographicField.png[]
++
+The chart updates to display the locations contained in the geographic field.
+
+. Repeat the previous step to bind additional ‘Geographic’ levels. For example, you can bind ‘City’ and ‘State’ fields.
++
+image:commonscript:bindGeographicFieldStateCity_1.png[]
+
+. From the *Data Source* panel, drag a *measure* onto one of the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ regions.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:bindGeographicFieldVisual_1.png[]
++
+This displays the measure on the chart using the visual coding you selected (color, shape, or size), and automatically creates a corresponding legend.
+
+. Press the {buttonEditMeasure}, and select the desired aggregation method for the measure.
++
+image:commonscript:bindGeographicFieldSetAgg.png[]
+
+
+. *_Optional:_*  For any geographical fields that you specified, press the {buttonEditDimension}, and select the desired ranking for the geographical data. For example, you can display just the top three states according to the measure.
++
+image:commonscript:bindGeographicFieldRanking_1.png[]
+
+. *_Optional:_*  To create a particular trajectory through the points on the chart, drag a path field to the ‘P’ region. The values of this field are used to assign the sort order for the plotted data so that connecting lines are drawn between points that are adjacent in the path sort order.
+
+. {finishEditing}
+
+
+. *_Optional:_*  Set the initial map view by selecting a region, and pressing the {buttonZoom}.
++
+image:bindGeographicZoom_1.png[]
++
+You can also press the {buttonPanMap} and drag  the map to reposition, and  press the {buttonZoomIn} or {buttonZoomOut} to zoom. Press the {buttonClearMapZoom} to reset the view.
++
+image:commonscript:MapChartType_4.png[]
+
+
+
+
+== Display Data by Latitude and Longitude
+
+To learn how to display data on a map by latitude and longitude, follow the steps in the walk-through below.
+
+.Walkthrough: Latitude and Longitude
+****
+In this example, you will label a map with a list of landmarks along Historic Route 66. The locations of the landmarks are provided by the ‘Map Points’ Data Worksheet data block, which contains raw latitude and longitude data.
+
+Follow the steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Create a new Dashboard based on the ‘Map Points’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$mapPointsWorksheet.adoc[]
+
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Map’ style.   Press the {buttonApply} (or double-click the ‘Map’ icon).
++
+image:commonscript:MapChartType_1.png[]
++
+The Chart Editor now provides a ‘Geographic’ field.
+
+. *_Optional:_* If you want to use a web map background (Mapbox map or Google Map, depending on what your administrator has configured), expand the section below:
++
+.Use Web Map...
+[%collapsible]
+====
+.. Right-click the Chart and select ‘Properties’. This opens the ‘Chart Properties’ dialog box.
++
+image:commonscript:MapChartType_2.png[]
+
+.. Under the *Advanced* tab, enable ‘Use Web Map as Background’ and press btn:[OK]. (If this option is not available, ask your administrator  to enable the Web Map feature.)
++
+image:commonscript:MapChartType_3.png[]
+
+.. *_Optional:_* If your geographical field represents areas on the Chart (e.g., states) rather than points (e.g., cities), adjust the ‘Alpha’ setting to  less than 100% so that the filled regions do not obscure the underlying map background.
+
+.. Press btn:[OK] to exit the ‘Chart Properties’ dialog box.
++
+include::partial$webMapResize.adoc[]
+====
+
+. In the *Data Source* panel, right-click the ‘Lat’ measure or press the {buttonActions}, and select ‘Set Geographic’ from the context menu.
++
+NOTE: The  ‘Lat’ field contains latitude values.
++
+image:commonscript:Map Chart LongLat SetGeo.png[]
++
+This opens the ‘Edit Geographic’ dialog box. If you need to open the ‘Edit Geographic’ dialog box later, right-click the ‘latitude’ measure or press the {buttonActions}, and select ‘Edit Geographic’ from the context menu.
+
+. From the ‘Map’ menu, select ‘U.S.’,  and press btn:[OK].
++
+image:commonscript:Map Chart LongLat US.png[]
++
+IMPORTANT: If you are using a Web Map background with latitude and longitude data, you should always use the ‘World’ map option.
+
+. Repeat the above steps to set the ‘Long’ measure as a geographic field.
+
+. Drag the ‘Long’ field to the ‘X’ region.
++
+NOTE: The  ‘Long’ field contains longitude values.
+
+. Drag the ‘Lat’ field to the ‘Y’ region.
++
+image:commonscript:Map Chart LongLat BindGeo.png[]
++
+Data points now appear on the map to mark the locations specified by the latitude and longitude data, outlining Historic Route 66.
+
+. From the *Data Source* panel, drag a *measure* onto one of the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ regions.
++
+include::ROOT:partial$measureTip.adoc[]
++
+This displays the measure on the chart using the visual coding you selected (color, shape, or size), and automatically creates a corresponding legend.
+
+. Press the {buttonEditMeasure}, and select the desired aggregation method for the measure.
++
+image:commonscript:bindGeographicFieldSetAgg.png[]
+
+. To add the landmark labels to the points on the map, drag the ‘Name’ field from the *Data Source* panel to the ‘Text’ field.
++
+image:commonscript:Map Chart LongLat NameLabel.png[]
++
+The labels appear fairly crowded because of the long landmark names. You can zoom the chart to see the labels more clearly. (See below.)
++
+NOTE: By default, the landmark names are displayed as tooltips.
+
+. *_Optional:_*  Set the initial map view by selecting a region, and pressing the {buttonZoom}.
++
+image:commonscript:MapChartType_6.png[]
++
+You can also press the {buttonPanMap} and drag on the map to reposition, or  press the {buttonZoomIn} or {buttonZoomOut} to zoom. Press the {buttonClearMapZoom} to reset the view.
++
+image:commonscript:MapChartType_5.png[]
+
+. {finishEditing}
+
+****
+
+
+
+
+
+
+
+
+
+[#SetGeographicalField]
+== Set a Geographical Field
+To mark a field as geographical, follow these steps:
+
+. Right-click the field in the tree or press the {buttonActions}, and select ‘Set Geographic’ from the context menu. This places a {buttonLocationIcon} next to the field name.
++
+image:setGeographic.png[]
++
+If the field is shown with a {buttonLocationIcon}, this means the field has been already been mapped to a geographical level. If the field is shown with an {buttonUnmappedLocationIcon}, this means you may need to set the geographical level for the field or resolve location names.
+
+. To set the geographical level, right-click the field name and select ‘Edit Geographic’ from the context menu. This opens the ‘Edit Geographic’ dialog box.
++
+image:editGeographic1.png[]
+
+
+. In the ‘Edit Geographic’ dialog box, select the desired region from the ‘Map’ menu: Asia, Canada, Europe, Mexico, U.S., or World.
++
+NOTE: The map that you select for a geographic field applies to all other geographical fields.
+
+. From the ‘Layer’ menu, select the geographical layer that corresponds to the data in the selected field.
++
+This specifies the layer of the geographical database against which field values should be matched (e.g., city names should be matched against the city layer, etc.). The options available in the ‘Layer’ menu depend on the previously selected ‘Map’ option.
+
+. From the ‘Mapping’ menu, select the desired map database. (This is almost always ‘Built-in’.) The Chart Editor attempts to resolve values in the selected geographic field against the corresponding layer in the map database.
++
+If the field was shown with an {buttonUnmappedLocationIcon}, this means you may need to resolve location names. To do this, follow the steps below:
++
+****
+.. Press the {buttonEdit} next to the ‘Mapping’ menu. This opens the ‘Geographic Mapping’ dialog box, which allows you to manually match place names.
+
+.. Select an unmatched location in the left panel, and  choose the correct match from the right panel. Use the ‘Algorithm’ and ‘Search’ options to help you find the desired match.
+.. Press btn:[Add] to add the match to the list of matched locations.
++
+image:editGeographic2.png[]
+
+.. *_Optional:_* Enable ‘Show automatically matched values’ to see all currently matched locations.
+
+.. Repeat the above steps to match all locations and press btn:[OK].
+****
+
+. *_Optional:_* To remove the geographical status of a field, right click the field or press the {buttonActions}, and select ‘Clear Geographic’ from the context menu.
+
+== Transforming Coordinates for Alaska and Hawaii
+
+include::ROOT:partial$alaskaHawaii.adoc[]
+
+'''
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Global_Visual_Analysis.zip[Global Visual Analysis] Dashboard provides an example of a *world*  map.
+
+image:viewsheet:galleryBubble2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Global_Visual_Analysis.zip[Global Visual Analysis] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+
+'''
+
+The sample xref:ROOT:attachment$Marketing_Lead_Trends.zip[ Marketing Lead Trends] Dashboard provides an example of a *state* map.
+
+image:viewsheet:galleryMap2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Marketing_Lead_Trends.zip[ Marketing Lead Trends] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+
+'''
+
+The sample xref:ROOT:attachment$Hurricane.zip[Hurricane] Dashboard provides an example of a map chart displaying a connected series of locations in the data.
+
+image:viewsheet:galleryHurricane2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Hurricane.zip[Hurricane]  Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****

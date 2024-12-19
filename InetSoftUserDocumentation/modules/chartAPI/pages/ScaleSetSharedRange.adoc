@@ -1,0 +1,51 @@
+= Scale.setSharedRange(Boolean)
+:navtitle: Scale.setSharedRange()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+For a xref:FacetCoord.adoc[], specifies whether the same scale range should be used across all sub-graphs in a facet, or whether a sub-graph’s scaling should be shared only with sub-graphs in the same row (for Y-axis scaling) or same column (for X-axis scaling).
+
+== Parameter
+value:: `true`: share scaling across all sub-graphs +
+`false`: share scaling by row and column
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "City", "Product", "Quantity"],["NJ", "Piscataway", "P1", 200],
+["NJ", "Edison", "P2", 100],["NY", "NYC", "P1", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("City", "Quantity");
+var state = new CategoricalScale("State");
+var city = new CategoricalScale("City");
+var product = new CategoricalScale("Product");
+var quantity = new LinearScale("Quantity"); //<2>
+quantity.setSharedRange(false); //<3>
+var inner = new RectCoord(city, quantity); //<4>
+var outer = new RectCoord(state, product); //<4>
+var coord = new FacetCoord(outer,inner); //<5>
+graph.setCoordinate(coord); //<6>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create   the xref:LinearScale.adoc[] object.
+<3> Use `setSharedRange` to share scaling by row and column.
+<4> Use the scales to create a new xref:RectCoord.adoc[] object.
+<5> Create the xref:FacetCoord.adoc[] object.
+<6> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:ScaleSetSharedRange.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

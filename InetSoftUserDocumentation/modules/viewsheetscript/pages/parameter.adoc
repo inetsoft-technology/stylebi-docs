@@ -1,0 +1,100 @@
+= parameter
+
+
+The `parameter` property allows you to read and write Variables that have been defined in a Data Worksheet (see xref:dataworksheet:FilterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[]) or Form components that have been defined in a Dashboard (see xref:viewsheet:DynamicallySetProperties.adoc[] in xref:viewsheet:VisualizeYourData.adoc[]).
+
+The syntax is
+[source,javascript]
+parameter.variableName
+
+where `variableName` is the name of the Variable asset defined in the Data Worksheet or the Form component defined in the Dashboard.
+
+.Example: Read value of stateSelector parameter
+[source,javascript]
+parameter.stateSelector
+
+.Example: Read value of RadioButton1 Form component
+[source,javascript]
+parameter.RadioButton1
+
+
+
+.Example: Define new parameter in Dashboard script
+[source,javascript]
+parameter.myParamName = 'Hello';
+
+
+== parameter._GROUPS_
+include::partial$readOnly.adoc[]
+
+Returns an array of groups to which the current user belongs.
+
+=== Type
+Array of Strings:: Groups to which current user belongs
+
+=== Example
+[source,javascript]
+alert('User belongs to: ' + parameter._GROUPS_.join(', '))
+
+== parameter._ROLES_
+include::partial$readOnly.adoc[]
+
+Returns an array of roles possessed by the current user.
+
+=== Type
+Array of Strings::	Roles possesed by current user
+
+=== Example
+[source,javascript]
+alert('User roles: ' + parameter._ROLES_.join(', '))
+
+== parameter._USER_
+include::partial$readOnly.adoc[]
+
+Returns the user name of the current user.
+
+=== Type
+String:: User name of current user
+
+=== Example
+[source,javascript]
+alert('Logged in as ' + parameter._USER_)
+
+== parameter.__principle__
+include::partial$readOnly.adoc[]
+
+
+Returns the `SRPrincipal` object, which contains session information. See xref:integration:AccessUserSession.adoc[]  in xref:integration:AdvancedServerIntegration.adoc[]  for details on writing user data to SRPrincipal.
+
+
+=== Type
+Object::				SRPrincipal object
+
+=== Example
+[source,javascript]
+var p = parameter.__principal__;
+p.setParameter('State', ['NJ', 'NY', 'CT']);
+
+== parameter.length
+include::partial$readOnly.adoc[]
+
+Returns the number of currently defined parameters.
+
+=== Type
+Integer::				Number of currently defined parameters
+
+=== Example
+[source,javascript]
+alert(parameter.length)
+
+== parameter.parameterNames
+include::partial$readOnly.adoc[]
+
+An array containing the current parameter names.
+
+=== Type
+String::				Parameter Name
+
+=== Example
+[source,javascript]
+alert(parameter.parameterNames[0])

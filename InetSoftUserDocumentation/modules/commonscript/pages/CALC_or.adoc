@@ -1,0 +1,40 @@
+= CALC.or(Boolean_1, Boolean_2, ...., Boolean_n)
+:navtitle: CALC.or()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns `true` if one or more of the arguments evaluate to `true`, otherwise returns `false`. {CALCExcelFunctionPage}
+
+== Parameters
+Boolean_1::			Boolean, or expression that evaluates to Boolean
+Boolean_2::			Boolean, or expression that evaluates to Boolean
+Boolean_n::			Boolean, or expression that evaluates to Boolean
+
+
+
+== Example
+[source,javascript]
+----
+CALC.or((0 < 3),(-1 > 2),(5 < 6))  // returns true
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.or(field['Paid'], (field['Total'] > 10000))
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.or(RadioButton1.selectedObject,  RadioButton1.selectedObject)
+CALC.or(parameter.Paid, parameter.InStock)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]
+

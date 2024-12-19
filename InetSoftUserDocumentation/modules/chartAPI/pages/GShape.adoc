@@ -1,0 +1,16 @@
+= GShape
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:SVGShape.adoc[] for information on using built-in and custom SVG images.
+* xref:ShapeForm.adoc[] for information on using `GShapes` as decorative shapes.
+* xref:StaticShapeFrame.adoc[] for information on using `GShapes` as static shapes.
+====
+
+
+The `GShape` object contains a set of shapes. For element properties requiring a `GShape` object, the shape can be specified as a xref:GShapeImageShape.adoc[] (user-defined image) or as one of the following constants:
+
+include::partial$gShapeConstants.adoc[]

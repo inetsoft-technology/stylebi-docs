@@ -1,0 +1,45 @@
+= Array.reverse()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:indexOf.adoc[] to detect an item in an array.
+====
+
+
+
+Reverse the order of the elements in the array.
+
+
+
+== Example
+[source,javascript]
+----
+var arr = ['A','B','C'];
+arr.reverse(); // returns ['C','B','A']
+----
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column  of Dashboard table TableView1:
+var arr = TableView1.table['Name'];
+arr.reverse();
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of  ‘Sales’ data block in Data Worksheet:
+var arr = Sales['Name'];
+arr.reverse();
+
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

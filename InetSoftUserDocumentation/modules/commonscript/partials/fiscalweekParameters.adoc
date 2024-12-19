@@ -1,0 +1,7 @@
+== Parameters
+date:: 			Date object to be converted to fiscal week.
+startYear:: 			Integer specifying the starting year of the fiscal calendar.
+startMonth:: 			Integer specifying the starting month of the fiscal calendar.
+startDay::			Integer specifying the starting day of the fiscal calendar.
+leapYears::			Array of years that contain 53 weeks.
+timeZone::			Time zone for fiscal week start date, a valid time zone identifier (e.g., `"GMT"`, `"GMT-8"`, `"America/New_York"`). Default is the JVM system default time zone.

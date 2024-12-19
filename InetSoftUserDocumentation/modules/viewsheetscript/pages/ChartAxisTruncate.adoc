@@ -1,0 +1,35 @@
+= axis.truncate
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+When `true` (default), truncates long labels to prevent overlap with other labels (using ellipses “...” to indicate omitted text). When `false`, hides long labels to prevent overlap with other labels.
+
+
+
+
+== Type
+Boolean
+
+
+
+== Example
+[source,javascript]
+Chart1.axis['Name'].truncate = false;
+
+
+image:commonscript:lableTruncate.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].truncate             // unqualified
+Chart1.axis['...'].truncate      // qualified
+
+{secondForm}
+====
+

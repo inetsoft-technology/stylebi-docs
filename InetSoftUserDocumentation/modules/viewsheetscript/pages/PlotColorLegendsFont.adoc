@@ -1,0 +1,29 @@
+= colorLegends.font
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the font for labels within a color-key legend (on charts that have *multiple* color legends).
+
+== Type
+https://download.oracle.com/javase/7/docs/api/index.html?java/awt/Font.html[java.awt.Font] or font description
+
+== Example
+[source,javascript]
+Chart1.colorLegends['Sum(Product:Quantity Purchased)'].font = new java.awt.Font('Serif', java.awt.Font.BOLD, 12);
+Chart1.colorLegends['Sum(Product:Total)'].font = 'Comic Sans MS-BOLD-14';
+
+image:commonscript:colorLegendsFont.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorLegends['...'].font          // unqualified
+Chart1.colorLegends['...'].font   // qualified
+
+{secondForm}
+====

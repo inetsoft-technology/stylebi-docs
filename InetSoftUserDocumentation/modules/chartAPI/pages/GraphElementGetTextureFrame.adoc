@@ -1,0 +1,35 @@
+= GraphElement.getTextureFrame()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Retrieves the element’s xref:TextureFrame.adoc[].  The corresponding “setter” function is xref:GraphElementSetTextureFrame.adoc[].
+
+
+
+
+
+== Returns
+A xref:TextureFrame.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getTextureFrame(); //<2>
+frame.setField("Customer:Company"); //<3>
+--
+
+<1> Obtain a handle to the  `GraphElement` object.
+<2> Use `getTextureFrame` to obtain a handle to the `TextureFrame` object.
+<3> Set the desired properties of the `TextureFrame` object.
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

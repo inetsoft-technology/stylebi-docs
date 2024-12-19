@@ -1,0 +1,45 @@
+= formatDate(date,string)
+:navtitle: formatDate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Formats a date according to a simple date format and returns the result as a string.
+
+
+== Parameters
+date::				Java or JavaScript date object
+string::	Date pattern string, using the symbols below:
+
++
+include::partial$dateFormatTable.adoc[]
+
+
+
+== Examples
+[source,javascript]
+----
+formatDate(new Date(), "hh 'o''clock' a, zzzz");
+----
+Some format string patterns are shown below:
+
+|===
+|Date and time pattern|Result
+
+|`yyyy.MM.dd G ‘at’ HH:mm:ss z`|2006.08.07 AD at 02:19:35 PDT
+|`EEE, MMM d, ‘ ‘ yy`|Mon, Aug 7, ‘06
+|`h:mm a`|12:08 PM
+|`hh ‘o’ ‘clock’ a, zzzz`|12 o’clock PM, Pacific Daylight Time
+|===
+
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+formatDate(field['Date'], "hh 'o''clock' a, zzzz");
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+formatDate(parameter.Date, "hh 'o''clock' a, zzzz");
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

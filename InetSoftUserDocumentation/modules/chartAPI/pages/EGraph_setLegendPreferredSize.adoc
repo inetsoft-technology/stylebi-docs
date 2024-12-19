@@ -1,0 +1,52 @@
+= Egraph.setLegendPreferredSize(value)
+:navtitle: Egraph.setLegendPreferredSize()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Specifies the Chart legend’s height or width in pixels.  The corresponding “getter” function is xref:chartAPI:EGraph_getLegendPreferredSize.adoc[].
+
+== Parameter
+value:: Integer number of pixels
+
+
+
+
+
+== Example
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CategoricalColorFrame();
+frame.setField("State");
+elem.setColorFrame(frame);
+graph.setLegendPreferredSize(150); //<2>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Use `setLegendPreferredSize()` to set the legend size.
+
+image:commonscript:EGraphaddsetLegendPreferredSize.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+To use the property on a Chart that was previously created with the Chart Editor, simply call the function. For example:
+
+[source,javascript]
+--
+graph.setLegendPreferredSize(150);
+--
+=====
+
+
+

@@ -1,0 +1,35 @@
+= xGridStyle
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the X-axis grid style. A grid line is drawn at each axis tick.
+
+
+
+
+
+
+
+== Type
+A  xref:commonscript:StyleConstantLineStyle.adoc[] constant
+
+== Example
+[source,javascript]
+Chart1.yGridStyle = Chart.DOT_LINE;
+Chart1.xGridStyle = Chart.THICK_LINE
+
+image:commonscript:yGridStyle.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+xGridStyle          // unqualified
+Chart1.xGridStyle   // qualified
+
+{secondForm}
+====

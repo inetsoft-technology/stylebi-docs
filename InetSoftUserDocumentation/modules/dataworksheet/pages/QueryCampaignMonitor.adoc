@@ -1,0 +1,21 @@
+= Campaign Monitor Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Campaign Monitor  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:CampaignMonitor.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonCampaignMonitorQuery}. This opens the ‘Campaign Monitor  Query’ dialog box.
+
++
+image:campaignmonitor1.png[]
++
+include::dataworksheet:partial$RESTwEndpoint.adoc[]
+

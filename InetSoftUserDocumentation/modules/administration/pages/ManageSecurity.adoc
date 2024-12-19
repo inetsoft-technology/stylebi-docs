@@ -1,0 +1,525 @@
+= Manage Security
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Use the `:security` or equivalent `:sec` command to manage the server security configuration.   Security must first be enabled in Enterprise Manager. See xref:SpecifySecurityProvider.adoc[] for more information.
+
+include::partial$runCommand.adoc[]
+
+include::partial$adminConsoleOptionalParams.adoc[]
+
+
+== Change Master Password
+The  `change-master-password` action changes the master password for the application. This re-encrypts the  database password, the cluster password, and the *keystore*.  This action can only be performed on a local repository and should not be used while the server is running.
+
+include::partial$keystoreNote.adoc[]
+
+=== Parameter
+oldPassword:: The current master password.
+newPassword:: The new master password.
+
+=== Example
+[source,groovy]
+:security change-master-password success123 YouWillNeverGuessThis!
+
+== Change User Password
+The  `change-user-password` action changes a user password.
+
+=== Parameter
+
+user:: Name The username.
+newPassword:: The new user password.
+
+=== Example
+[source,groovy]
+:security change-user-password annie YouWillNeverGuessThis!
+
+== List Users
+The  `list-users` action returns the list of users as an array of `SecurityUser` objects. (See xref:#SecurityUserProperties[].)
+
+=== Parameter
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:security list-users --organizationid organization0
+
+== List Groups
+The  `list-groups` action returns the list of groups as an array of `SecurityGroup` objects. (See xref:#SecurityGroupProperties[].)
+
+=== Parameter
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:security list-groups --organizationid organization0
+
+== List Roles
+The  `list-roles` action returns the list of roles as an array of `SecurityRole` objects. (See xref:#SecurityRoleProperties[].)
+
+=== Parameter
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:security list-roles --organizationid organization0
+
+== List Organizations
+The  `list-organizations` action returns the list of organizations as an array of `SecurityOrganization` objects. (See xref:#SecurityOrganizationProperties[].)
+
+=== Example
+[source,groovy]
+:security list-organizations
+
+
+
+== Get User
+The  `get-user` action returns a user as a `SecurityUser` object. (See xref:#SecurityUserProperties[] below.)
+
+=== Parameter
+userName:: The username.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:security get-user annie --organizationid organization0
+
+== Get Group
+The  `get-group` action returns a user as a `SecurityGroup` object. (See xref:#SecurityGroupProperties[] below.)
+
+=== Parameter
+groupName:: The group name.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:security get-group hourlyEmployee --organizationid organization0
+
+== Get Role
+The  `get-role` action returns a role as a `SecurityRole` object. (See xref:SecurityRoleProperties[] below.)
+
+=== Parameter
+roleName:: The role name.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:security get-role Designer --organizationid organization0
+
+
+== Get Organization
+The  `get-organization` action returns an organization as a `SecurityOrganization` object. (See xref:SecurityOrganizationProperties[] below.)
+
+=== Parameter
+id:: The organization ID.
+
+=== Example
+[source,groovy]
+:security get-organization host-org
+
+
+
+
+== Create User
+The  `create-user`  action creates a new user. (See xref:#SecurityUserProperties[] below.)
+
+=== Parameter
+userName:: The new username.
+orgID:: Organization ID (optional).  If omitted user is created on current organization.
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+def newUser = Security.securityUser {
+  name 'annie'
+  orgID 'org1'
+}
+:security create-user newUser
+
+
+== Create Group
+The  `create-group` action creates a new group. (See xref:#SecurityGroupProperties[] below.)
+
+=== Parameter
+groupName:: The new group name.
+orgID:: Organization ID (optional).  If omitted user is created on current organization.
+
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+def newGroup = Security.securityGroup {
+  name 'hourlyEmployee'
+  orgID 'org1'
+}
+:security create-group newGroup
+
+
+== Create Role
+The  `create-role` action creates a new role. (See xref:#SecurityRoleProperties[] below.)
+
+=== Parameter
+roleName:: The new role name.
+orgID:: Organization ID (optional).  If omitted user is created on current organization.
+
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+def newRole = Security.securityRole {
+  name 'Designer'
+  orgID 'org1'
+}
+:security create-role newRole
+
+== Create Organization
+The  `create-organization` action creates a new organization. (See xref:#SecurityOrganizationProperties[] below.)
+
+=== Parameter
+id:: Organization ID from which to clone new organization settings.
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+def newOrganization = Security.securityOrganization {
+  name 'organization0'
+  id 'organization0'
+}
+:security create-organization newOrganization --copyFromOrgId host-org
+
+
+
+== Delete User
+The  `delete-user`  action deletes a specified user.
+
+=== Parameter
+userName:: The username.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+ :security delete-user annie --organizationid organization0
+
+== Delete Group
+The  `delete-group` action deletes a specified group.
+
+=== Parameter
+groupName:: The group name.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+=== Example
+ :security delete-group hourlyEmployee --organizationid organization0
+
+== Delete Role
+The  `delete-role` action deletes a specified role.
+
+=== Parameter
+roleName:: The role name.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+ :security delete-role Designer --organizationid organization0
+
+== Delete Organization
+The  `delete-organization` action deletes a specified organization.
+
+=== Parameter
+id:: The organization ID.
+
+
+=== Example
+ :security delete-organization organization0
+
+== Update User
+The  `update-user` action updates a user with new information. (See xref:#SecurityUserProperties[] below.)
+
+=== Parameter
+userName:: The username.
+user:: Name of variable containing user definition.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+def newUser = Security.securityUser {
+  name 'bob'
+}
+:security update-user annie newUser --organizationid organization0
+
+
+== Update Group
+The  `update-group` action updates a group with new information. (See xref:#SecurityGroupProperties[] below.)
+
+=== Parameter
+groupName:: The group name.
+name:: Name of variable containing group definition.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+def newGroup = Security.securityGroup {
+  name 'partTimeEmployee'
+}
+:security update-group hourlyEmployee newGroup --organizationid organization0
+
+
+
+== Update a Role
+The  `update-role` action updates a role with new information. (See xref:#SecurityRoleProperties[] below.)
+
+=== Parameter
+roleName:: The role name.
+name:: Name of variable containing role definition.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+def newRole = Security.securityRole {
+  name 'Developer'
+}
+:security update-role Designer newRole --organizationid organization0
+
+
+== Update an Organization
+The  `update-organization` action updates an organization with new information. (See xref:#SecurityOrganizationProperties[] below.)
+
+=== Parameter
+id:: The organization ID.
+name:: Name of variable containing organization definition.
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+def newOrganization= Security.securityOrganization {
+  name 'Company1'
+  id 'organization0'
+}
+:security update-organization organization0 newOrganization
+
+
+
+
+
+
+
+
+== List Permissions
+The  `list-permissions` action returns the list of permissions for assets in the Repository. {connectRepositoryNote}
+
+=== Example
+ :sec list-permissions
+
+== Get Permission
+The  `get-permission` action returns the permission associated with an asset, including all permission grants. {connectRepositoryNote}
+
+=== Parameter
+resourcePath:: The asset path in the repository.
+resourceType:: The type of asset: `REPORT` for dashboard, folder; `ASSET` for Data Worksheet; `DATA_SOURCE` for data sources.
+
+=== Example
+[source,groovy]
+:security get-permission "Examples/Census" "REPORT"
+
+== Set Permission
+The  `set-permission` action assigns a new permission to an asset. {connectRepositoryNote}
+
+=== Parameter
+permission:: A `resourcePermission` object describing the asset and the permission grants.
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+import inetsoft.sree.security.IdentityID
+def actionList = ['READ','WRITE','DELETE','SHARE','ADMIN']
+def id = new IdentityID('Everyone', 'host-org')
+def grant = Security.permissionGrant {
+  identityID id
+  type 'ROLE'
+  actions actionList
+}
+def grantList = [grant]
+def sec = Security.resourcePermission {
+  resource 'Examples/Census'
+  resourceType 'REPORT'
+  grants grantList
+}
+:sec set-permission sec
+
+
+
+
+
+
+
+
+== Delete Permission
+The  `delete-permission` action deletes the permission associated with an asset. {connectRepositoryNote}
+
+=== Parameter
+resourcePath:: The asset path in the repository.
+resourceType:: The type of asset: `REPORT` for dashboard,  folder; `ASSET` for Data Worksheet; `DATA_SOURCE` for data sources.
+
+=== Example
+[source,groovy]
+:security delete-permission "Examples/Census" "REPORT"
+
+== Create Permission Grant
+The  `create-grant` action creates a new permission grant for an asset. {connectRepositoryNote}
+
+=== Parameter
+resourcePath:: The asset path in the repository.
+resourceType:: The type of asset: `REPORT` for dashboard, folder; `ASSET` for Data Worksheet; `DATA_SOURCE` for data sources.
+grant:: A `permissionGrant` object.
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+import inetsoft.sree.security.IdentityID
+def actionList = ['READ','WRITE','DELETE','SHARE','ADMIN']
+def grant = Security.permissionGrant {
+  identityID id
+  type 'ROLE'
+  actions actionList
+}
+:sec create-grant "Examples/Census" 'REPORT' 'grant'
+
+
+
+
+
+
+
+
+== Get Permission Grant
+The  `get-grant` action returns the permissions grant (`READ`, `WRITE`, `DELETE`, `SHARE`, `ADMIN`) assigned to an asset. {connectRepositoryNote}
+
+=== Parameter
+resourcePath:: The asset path in the repository.
+resourceType:: The type of asset: `REPORT` for dashboard, folder; `ASSET` for Data Worksheet; `DATA_SOURCE` for data sources.
+idType:: The type of the identity: `USER`, `GROUP`, or `ROLE`.
+idName:: The name of the particular identity.
+
+=== Example
+[source,groovy]
+:sec get-grant "Examples/Census" 'REPORT' 'ROLE' 'Advanced'
+
+== Update Permission Grant
+The  `update-grant` action updates an existing permission grant for an asset. {connectRepositoryNote}
+
+=== Parameter
+resourcePath:: The asset path in the repository.
+resourceType:: The type of asset: `REPORT` for dashboard,  folder; `ASSET` for Data Worksheet; `DATA_SOURCE` for data sources.
+idType:: The type of the identity: `USER`, `GROUP`, or `ROLE`.
+idName:: The name of the particular identity.
+grant:: A `permissionGrant` object.
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Security
+import inetsoft.sree.security.IdentityID
+def id = new IdentityID('Everyone', 'host-org')
+def actionList = ['READ','WRITE','DELETE']
+def grant = Security.permissionGrant {
+  identityID id
+  type 'ROLE'
+  actions actionList
+}
+:sec update-grant "Examples/Census" 'REPORT' 'ROLE' 'Everyone' 'grant'
+
+
+
+
+
+
+== Delete Permission Grant
+The  `delete-grant` action deletes the permissions grant (`READ`, `WRITE`, `DELETE`, `SHARE`, `ADMIN`) assigned to an asset. {connectRepositoryNote}
+
+=== Parameter
+resourcePath:: The asset path in the repository.
+resourceType:: The type of asset: `REPORT` for dashboard,  folder; `ASSET` for Data Worksheet; `DATA_SOURCE` for data sources.
+idType:: The type of the identity: `USER`, `GROUP`, or `ROLE`.
+idName:: The name of the particular identity.
+
+=== Example
+[source,groovy]
+:sec delete-grant "Examples/Census" 'REPORT' 'ROLE' 'Advanced'
+
+
+
+
+
+[#SecurityUserProperties]
+== Security User Properties
+The   following properties are available for the `SecurityUser` structure. Only `name` is required.
+
+=== Properties
+name:: The name of the user (string).
+alias:: The alias of the user (string).
+locale:: The locale of the user (string).
+theme:: The theme used by the user (string).
+active:: The user’s status, active or inactivate (Boolean).
+emails:: The list of the user's email addresses (string).
+groups:: The list of groups that the user will be a member of (string).
+roles:: The list of roles to assign to the new user (string). Default user roles are added automatically, and need not be specified.
+adminIdentities:: Structure, with following elements, containing list of identities with admin permission over the user:
+* `users` (string) is the list of the users with admin permission over the identity. The list need not include the current API user, which is added automatically.
+* `groups` (string) is the list of the groups with admin permission over the identity.
+* `roles` (string) is the list of the roles with admin permission over the identity.
+orgID:: The ID of the user`'s organization. If omitted, the Host Organization is assumed.
+
+[#SecurityGroupProperties]
+== Security Group Properties
+The   following properties are available for the `SecurityGroup` structure. Only `name` is required.
+
+=== Properties
+name:: The name of the group (string).
+theme:: The theme used by the group (string).
+parentGroups:: The list of groups that this group will be a member of (string).
+memberUsers:: The list of users that will be members of this group (string).
+memberGroups:: The list of groups that will be members of this group (string).
+roles:: The list of roles to assign to this group (string).
+adminIdentities:: Structure, with the following elements, containing list of identities with admin permission over the group:
+* `users` (string) is the list of the users with admin permission over the identity. The list need not include the current API user, which is added automatically.
+* `groups` (string) is the list of the groups with admin permission over the identity.
+* `roles` (string) is the list of the roles with admin permission over the identity.
+orgID:: The ID of the user`'s organization. If omitted, the Host Organization is assumed.
+
+
+[#SecurityRoleProperties]
+== Security Role Properties
+The   following properties are available for the `SecurityRole` structure. Only `name` is required.
+
+=== Properties
+name:: The name of the role (string).
+description:: The description of the role (string).
+theme:: The theme used by the role (string).
+assignedUsers:: The list of users that will be assigned this role (string).
+assignedGroups:: The list of groups that will be assigned this role (string).
+inheritedRoles:: The list of roles that this role will inherit permissions from (string).
+adminIdentities::  Structure, with the following elements, containing list of identities with admin permission over the user:
+* `users` (string) is the list of the users with admin permission over the identity. The list need not include the current API user, which is added automatically.
+* `groups` (string) is the list of the groups with admin permission over the identity.
+* `roles` (string) is the list of the roles with admin permission over the identity.
+orgID:: The ID of the role`'s organization. If omitted, the Host Organization is assumed.
+
+[#SecurityOrganizationProperties]
+== Security Organization Properties
+The   following properties are available for the `SecurityOrganization` structure. Only `name` and `ID` are required.
+
+=== Properties
+name:: The name of the organization (string).
+ID:: The ID of the organization (string).
+theme:: The theme used by the organization (string).
+memberUsers:: The list of users  assigned to this organization (string).
+memberGroups:: The list of groups  assigned to this organization (string).
+roles:: The list of roles in available for this organization (string).
+adminIdentities::  Structure, with the following elements, containing list of identities with admin permission over the user:
+* `users` (string) is the list of the users with admin permission over the identity. The list need not include the current API user, which is added automatically.
+* `groups` (string) is the list of the groups with admin permission over the identity.
+* `roles` (string) is the list of the roles with admin permission over the identity.

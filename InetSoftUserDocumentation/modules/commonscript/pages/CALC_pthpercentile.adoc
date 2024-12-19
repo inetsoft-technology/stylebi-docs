@@ -1,0 +1,38 @@
+= CALC.pthpercentile(array,p)
+:navtitle: CALC.pthpercentile()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the  value below which _p_ percent of the values in the array fall. A value of _p_=50 returns the median value, equivalent to xref:CALC_median.adoc[].  This CALC function returns the same result as Excel’s PERCENTILE.EXC function.
+
+== Parameters
+array::				Array of values
+p::	Percentile value, in range [0,100]
+
+
+
+== Example
+[source,javascript]
+----
+CALC.pthpercentile([1,1,3,3,4,5,2,1,4,3],75); // 75th percentile
+// returns 4
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.pthpercentile(TableView1.table['Quantity'],75)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.pthpercentile(Sales['Quantity'],75);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

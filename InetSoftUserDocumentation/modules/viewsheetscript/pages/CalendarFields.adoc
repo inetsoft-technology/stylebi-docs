@@ -1,0 +1,37 @@
+= fields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:CalendarQuery.adoc[] to specify the data block from which to draw the fields.
+
+
+
+Specifies the field of the data block to be filtered by the Calendar component. This is equivalent to selecting the field under the *Data* tab of the component ‘Properties’ dialog box.
+
+image:viewsheet:calendarFields.png[]
+
+== Type
+array
+
+
+
+== Example
+[source,javascript]
+Calendar1.query = 'Sales';
+Calendar1.fields = ['Date'];
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fields               // unqualified
+Calendar1.fields    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,28 @@
+= applyEffect
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Enables a 3D visual effect for chart elements.
+
+== Type
+Boolean
+
+== Example
+[source,javascript]
+Chart1.applyEffect = true;
+Chart2.applyEffect = false;
+
+image:commonscript:applyEffect.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+applyEffect           // unqualified
+Chart1.applyEffect    // qualified
+
+{secondForm}
+====

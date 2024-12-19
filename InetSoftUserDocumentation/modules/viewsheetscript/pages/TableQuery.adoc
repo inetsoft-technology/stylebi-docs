@@ -1,0 +1,54 @@
+= query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+* xref:viewsheetscript:TableFields.adoc[] to specify the fields to display in the table.
+* xref:viewsheet:TableProperties.adoc[]  for general information about the Table component.
+====
+
+
+
+
+
+Specifies the data block to be used by the Table component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.
+
+image:dataworksheet:dataBlocks.png[]
+
+== Type
+String
+
+
+
+== Example
+[source,javascript]
+----
+TableView1.query = 'SalesByDate';
+TableView1.fields = ['State','Company','Total'];
+
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+query                 // unqualified
+TableView1.query      // qualified
+
+{secondForm}
+====
+
+
+
+
+
+
+
+
+
+

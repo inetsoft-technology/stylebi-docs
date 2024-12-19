@@ -1,0 +1,42 @@
+= rangeGradient
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+Specifies smooth blending for range color boundaries. If `false`, the color boundaries are sharp and well-defined.
+
+== Type
+Boolean:: `true`: blend colors at boundaries (default) +
+`false`: do not blend colors
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Gauge1.rangeColors = ['green','yellow','red'];
+Gauge1.ranges = [5,10,15]
+Gauge1.rangeGradient = false;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+rangeGradient           // unqualified
+Gauge1.rangeGradient    // qualified
+
+{secondForm}
+====
+
+

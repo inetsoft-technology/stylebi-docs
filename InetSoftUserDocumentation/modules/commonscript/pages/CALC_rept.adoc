@@ -1,0 +1,35 @@
+= CALC.rept(string, number_times)
+:navtitle: CALC.rept()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Repeats `string` a given number of times (concatenating the string to itself). {CALCExcelFunctionPage}
+
+== Parameters
+string::			String to repeat
+number_times::			Integer number of times to repeat string
+
+== Example
+[source,javascript]
+----
+CALC.rept('abcd', 5);  // returns abcdabcdabcdabcdabcd
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.rept(field['Label'], 5)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.rept(parameter.Label, 5)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

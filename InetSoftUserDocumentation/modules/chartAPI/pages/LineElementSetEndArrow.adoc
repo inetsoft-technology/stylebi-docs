@@ -1,0 +1,64 @@
+= LineElement.setEndArrow(Boolean)
+:navtitle: LineElement.setEndArrow()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+
+Specifies whether an arrow should be drawn at the end of the line (last point). {noGetter}
+
+
+
+
+== Parameters
+Boolean:: `true`: draw arrow +
+`false`:  do not draw arrow
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"],["NJ",100],["NY",300],["PA",200]]; //<1>
+graph = new EGraph();
+elem = new LineElement("State", "Quantity"); //<2>
+elem.setEndArrow(true); //<3>
+graph.addElement(elem); //<4>
+--
+
+<1> {dataset}
+<2> Create the `LineElement` object.
+<3> Use `setEndArrow` to place the arrow.
+<4> Use xref:EGraph_addElement.adoc[] to add the `LineElement` to the Chart.
+
+
+image:commonscript:LineElementsetEndArrow.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.setEndArrow(true);
+--
+=====
+
+
+
+
+

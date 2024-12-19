@@ -1,0 +1,33 @@
+= legendPosition
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the legend position relative to the chart. Set the property to `Chart.NONE` to hide the legend.
+
+
+
+
+== Type
+A Legend Position constant:
+
+include::partial$legendPosition.adoc[]
+
+== Example
+[source,javascript]
+Chart1.legendPosition = Chart.LEFT;
+
+image:commonscript:legendPosition.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+legendPosition          // unqualified
+Chart1.legendPosition   // qualified
+
+{secondForm}
+====

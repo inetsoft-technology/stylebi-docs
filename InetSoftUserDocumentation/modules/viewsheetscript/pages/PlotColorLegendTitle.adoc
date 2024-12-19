@@ -1,0 +1,27 @@
+= colorLegend.title
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the legend title for a color-key legend.
+
+== Type
+String
+
+
+== Examples
+
+[source,javascript]
+Chart1.colorLegend.title = 'Salesperson';
+
+image:commonscript:colorLegendTitle.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorLegend.title           // unqualified
+Chart1.colorLegend.title    // qualified
+
+{secondForm}
+====

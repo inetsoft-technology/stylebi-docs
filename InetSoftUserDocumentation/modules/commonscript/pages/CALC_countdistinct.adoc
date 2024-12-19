@@ -1,0 +1,36 @@
+= CALC.countDistinct(array)
+:navtitle: CALC.countDistinct()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Counts the number of distinct elements in array.
+
+== Parameters
+array::			Array of numeric or non-numeric values
+
+
+
+== Example
+[source,javascript]
+----
+CALC.countDistinct([3,3,2,4,4,5,6]);  // returns 5
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.countDistinct(TableView1.table['OrderNum'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.countDistinct(Sales['OrderNum']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

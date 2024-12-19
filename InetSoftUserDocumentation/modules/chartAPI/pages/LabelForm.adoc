@@ -1,0 +1,21 @@
+= LabelForm
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+The `LabelForm` object contains information for labels manually drawn on the chart. To create a `LabelForm` object, call the `LabelForm` constructor:
+
+[source,javascript]
+var form = new LabelForm();
+
+The label border color and style are set by the inherited xref:GraphFormSetColor.adoc[] and xref:GraphFormSetLine.adoc[] functions. See  xref:DefaultTextFrame.adoc[] to automatically use data values as element labels.
+
+
+
+

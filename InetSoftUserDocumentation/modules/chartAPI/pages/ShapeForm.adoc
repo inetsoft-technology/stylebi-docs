@@ -1,0 +1,11 @@
+= ShapeForm
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+The `ShapeForm` object contains information for shapes manually drawn on the chart.

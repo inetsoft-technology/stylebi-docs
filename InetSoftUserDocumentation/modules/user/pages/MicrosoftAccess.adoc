@@ -1,0 +1,61 @@
+= Microsoft Access
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[IMPORTANT]
+====
+Connections to a Microsoft Access database are supported via http://ucanaccess.sourceforge.net/site.html[UCanAccess], and have the following limitations:
+
+* The following Access formats are supported: 2000, 2002/2003, 2007, 2010/2013/2016. (Access 97 format is supported for read-only.)
+* The Access date format (e.g., pass:[#11/22/2003 10:42:58 PM#]) is *not* supported.
+* Both double-quotes and single-quotes are supported as SQL string delimiters.
+* The Access “New database sort order” option (in the ‘Access Options’ dialog box, *General* settings) must be set to “General” (or “General - Legacy”).
+* Values of 3.402823E+38 and -3.402823E+38 are *not* supported for single-precision type data.
+* The Access `format` function cannot operate on `NULL` values.
+* The built-in Access `ASC` stored procedure is *not* supported.
+* Logical model entities cannot contain a space in the entity name.
+====
+
+include::partial$dataSourceUserIntro.adoc[]
+
+
+. Select the ‘Microsoft Access’ data source, and press btn:[Create]. This opens the data source definition screen.
++
+image:dataSourceNewMicrosoftAccess2.png[]
+
+. In the ‘Name’ field, enter a label for this database connection.
+
+. From the ‘Database Type’ menu, select ‘Access’ (if not already selected).
++
+NOTE:  The UCanAccess driver is packaged with InetSoft. However, if you see a warning that the driver is not available, contact your administrator.
+
+
+. If your administrator has provided a connection URL, *enable* ‘Custom URL’, and enter the  ‘JDBC URL’ and login credentials.  The URL should have the following form:
++
+ jdbc:ucanaccess:{DatabaseFilePath}
++
+*If you do not have a URL*, disable ‘Custom URL’, and enter the   ‘File Path’ and login credentials.
+include::user:partial$customURLProperties.adoc[]
+
++
+include::user:partial$JDBCCommonWeb.adoc[]
++
+include::user:partial$testConnection.adoc[]
++
+include::user:partial$hikariConfig.adoc[]
+
+. Press btn:[OK].
++
+
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceMicrosoftAccess2.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceMicrosoftAccess3.png[]
++
+include::user:partial$dataSourceFinalSteps.adoc[]

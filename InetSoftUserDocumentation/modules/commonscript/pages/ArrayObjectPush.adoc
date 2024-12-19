@@ -1,0 +1,51 @@
+= Array.push(item1, item2, ...)
+:navtitle: Array.push()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:commonscript:indexOf.adoc[] to detect an item in an array.
+* xref:commonscript:ArrayObjectJoin.adoc[] to combine the elements of an array into a string.
+====
+
+
+
+Adds the specified items to the end of the array. Returns the new array length.
+
+
+
+
+
+== Example
+[source,javascript]
+----
+var arr = ['A','B','C'];
+alert('New length is ' + arr.push('D','E')); // returns "New length is 5"
+alert('Array is now ' + arr.join(',')) // returns "Array is now A,B,C,D,E"
+----
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+var arr = TableView1.table['Name'];
+alert('New length is '+ arr.push('Fred','Nancy'));
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+var arr = Sales['Name'];
+alert('New length is ' + arr.push('Fred','Nancy'));
+
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,39 @@
+= CALC.upper(string)
+:navtitle: CALC.upper()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Converts all lowercase characters in `string` to uppercase characters. {CALCExcelFunctionPage}  This is generally the same as xref:StringObjectToUpperCase.adoc[].
+
+== Parameters
+string::			A string to convert to uppercase
+
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.upper('abCdefgHIJ');  // returns ABCDEFGHIJ
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.upper(field['Label'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.upper(parameter.Label)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

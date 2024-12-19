@@ -1,0 +1,45 @@
+= query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheetscript:RangeSliderFields.adoc[] to specify the fields to display in the Range Slider.
+====
+
+Specifies the data block to be used by the Range Slider component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.
+
+image:dataworksheet:dataBlocks_3.png[]
+
+
+
+
+
+
+
+== Type
+String
+
+
+
+== Example
+[source,javascript]
+RangeSlider1.query = 'Sales';
+RangeSlider1.fields = ['Date'];
+RangeSlider1.composite = false;
+RangeSlider1.rangeType = StyleConstant.DATE;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+query                  // unqualified
+RangeSlider1.query     // qualified
+
+{secondForm}
+====
+
+

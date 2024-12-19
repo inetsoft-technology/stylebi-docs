@@ -1,0 +1,26 @@
+= Do You Need a Data Model?
+
+A *data model* is a simplified representation of the underlying database schema. The data model reorganizes the database tables and columns to provide a simplified entity-attribute interface for users who are designing  Dashboards. For example, the ‘Order Model’ data model below  organizes attributes into a set of five entities, ‘Customer’, ‘Order’, ‘Product’, ‘Salesperson’, and ‘Supplier’.
+
+image:user:entityAttribute.png[]
+
+
+You should consider creating a data model if you have the following objectives:
+
+* Reduce the number of individual queries that need to be created and maintained
+* Provide self-service access to business users
+* Provide a simplified view of data that reduces data misrepresentation
+* Allow data to be filtered on fields that are not included in a Dashboard
+* Avoid the need for users to perform joins
+
+
+== Create a Data Model
+
+
+NOTE: Data models are available only for relational data sources. Data models are not available for the ‘Hadoop Hive’ data source.
+
+
+A data model comprises a physical view and logical model:
+
+* *Physical View:* A physical view specifies a subset of database tables and the join relationships between them, covering all or part of the database schema. The physical view transforms the original database schema into a business intelligence-friendly schema, which can then be exposed to designers and end users through one or more logical models. See xref:PhysicalView.adoc[] for information on constructing a physical view.
+* *Logical Model:* A logical model is based on a single physical view, and presents a business-oriented, easy-to-understand representation of the physical view by mapping database tables into [.Emphasis]#entities# and columns into [.Emphasis]#attributes#. The logical model denormalizes the data (adds additional redundancy) in order to maximize simplicity for data analysts and end users. See xref:LogicalModel.adoc[] for information on constructing a logical model.

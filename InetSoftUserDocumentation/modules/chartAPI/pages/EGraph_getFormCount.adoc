@@ -1,0 +1,47 @@
+= Egraph.getFormCount()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Returns the number of forms currently present on the chart.
+
+
+
+
+
+
+== Returns
+Integer::			Number of form objects
+
+
+
+
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+graph.addForm(new LineForm()); //<2>
+graph.addForm(new LineForm()); //<2>
+graph.addForm(new LineForm()); //<2>
+var formCount = graph.getFormCount(); //<3>
+for (var i=0; i<formCount; i++) {
+  graph.getForm(i).addValues(['NJ',i*100]);
+  graph.getForm(i).addValues(['NY',300]);
+  graph.getForm(i).setColor(java.awt.Color(0xff0000));
+}
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Add xref:GraphForm.adoc[] objects to Chart.
+<3> Use `getFormCount` to return the number of `GraphForms`.
+
+image:commonscript:EGraphgetFormCount.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

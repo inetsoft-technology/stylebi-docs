@@ -1,0 +1,35 @@
+= shadow
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+====
+
+Adds a drop shadow to the component.
+
+
+
+== Type
+Boolean:: `true`: add drop shadow +
+`false`: no drop shadow
+
+
+
+== Example
+[source,javascript]
+Image1.shadow = true;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shadow           // unqualified
+Image1.shadow    // qualified
+
+{secondForm}
+====
+
+

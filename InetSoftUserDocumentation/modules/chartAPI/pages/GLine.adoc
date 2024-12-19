@@ -1,0 +1,90 @@
+= GLine
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:commonscript:StyleConstantLineStyle.adoc[] for the built-in styles available as Chart Constants.
+* xref:StaticLineFrame.adoc[] for information on using GLines.
+====
+
+The `GLine` object provides the following predefined line style constants:
+
+include::partial$gLineConstants.adoc[]
+
+
+
+You can also create a `GLine` object by passing a Chart constant (see xref:commonscript:StyleConstantLineStyle.adoc[]) to the object constructor, as follows:
+
+[source,javascript]
+var line = new GLine(Chart.DOT_LINE);
+
+To create a user-defined style, pass a dash size and width (both type doubles) to the object constructor, as follows.
+
+[source,javascript]
+var line = new GLine(dashsize, width);
+
+
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300], ["PA",100]]; //<1>
+graph = new EGraph();
+var elem = new LineElement("State", "Quantity");
+var frame = new StaticLineFrame(); //<2>
+frame.setLine(GLine.DASH_LINE); //<3>
+// or frame.setLine(new GLine(10,5)); <4>
+elem.setLineFrame(frame); //<5>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create a  xref:StaticLineFrame.adoc[] object.
+<3> Use    xref:StaticLineFrameSetLine.adoc[] to apply a `Gline` constant.
+<4> Use  xref:StaticLineFrameSetLine.adoc[] to apply a custom `Gline`.
+<5> Use xref:GraphElementSetLineFrame.adoc[] to add the `StaticLineFrame` to the xref:LineElement.adoc[].
+
+image:commonscript:LineFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[#Example2]
+== Example 2
+
+
+
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:LineFrame.adoc[].
+
+. Bind a xref:viewsheet:LineChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.lineFrame = new StaticLineFrame;
+Chart1.bindingInfo.lineFrame.line = GLine(20,10);
+
+--
+
++
+image:commonscript:GLineCustom.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]

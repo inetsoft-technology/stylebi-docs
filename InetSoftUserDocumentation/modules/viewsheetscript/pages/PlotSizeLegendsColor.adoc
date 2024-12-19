@@ -1,0 +1,31 @@
+= sizeLegends.color
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the label color within a size-key legend on charts that have *multiple* size legends.
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.sizeLegends['Sum(Product:Quantity Purchased)'].color = 'red';
+Chart1.sizeLegends['Sum(Product:Total)'].color = 'green';
+
+image:commonscript:sizeLegendsColor.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sizeLegends['...'].color         // unqualified
+Chart1.sizeLegends['...'].color  // qualified
+
+{secondForm}
+====

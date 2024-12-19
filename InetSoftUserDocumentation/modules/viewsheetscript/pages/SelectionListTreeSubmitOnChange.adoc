@@ -1,0 +1,36 @@
+= submitOnChange
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:SelectionListProperties.adoc[] and xref:viewsheet:SelectionTreeProperties.adoc[] more information on these components.
+
+
+Specifies that user selections should be submitted immediately to the server and the Dashboard refreshed with updated data (default). When this feature is disabled, user selections are not submitted until the user explicitly presses the {buttonApply}.
+
+
+
+
+
+
+== Type
+Boolean::	`true`: submit user selections immediately +
+`false`: submit user selections on 'Apply'
+
+
+== Example
+[source,javascript]
+SelectionList1.submitOnChange = false;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+submitOnChange                   // unqualified
+SelectionList1.submitOnChange    // qualified
+
+{secondForm}
+====
+
+

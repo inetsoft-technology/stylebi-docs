@@ -1,0 +1,24 @@
+= Quickbooks Reports  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Quickbooks Reports  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:QuickbooksReports.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonQuickBooksReportsQuery}.
++
+image:quickbooksReportsQuery2.png[]
+
++
+This opens the ‘Quickbooks Reports  Query’ dialog box.
++
+image:quickbooksReportsQuery1.png[]
+
+include::partial$RESTwEndpoint.adoc[]

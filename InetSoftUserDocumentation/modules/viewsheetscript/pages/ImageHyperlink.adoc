@@ -1,0 +1,36 @@
+= hyperlink
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+* xref:viewsheet:DrillDownIntoData.adoc[] for basic information on hyperlinks.
+====
+
+Specifies a hyperlink to a  Dashboard or URL.
+
+== Type
+String or {InetSoftReportHyperlink}
+
+
+
+
+
+== Example
+[source,javascript]
+Image1.hyperlink = "Tutorial/Interactive";
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+hyperlink           // unqualified
+Image1.hyperlink    // qualified
+
+{secondForm}
+====
+
+

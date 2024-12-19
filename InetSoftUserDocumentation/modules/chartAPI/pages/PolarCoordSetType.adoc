@@ -1,0 +1,84 @@
+= PolarCoord.setType(value)
+:navtitle: PolarCoord.setType()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:ChangeChartCoordinates.adoc#PolarCoordinates[Polar Coordinates] for a walkthrough of polar coordinates.
+====
+
+Specifies the type of polar transformation.  The corresponding “getter” function is `getType()`.
+
+==  Parameter
+value:: `PolarCoord.THETA` (use only angle) +
+`PolarCoord.THETA_RHO` (use angle and radius) +
+`PolarCoord.RHO`    (use only radius) +
+`PolarCoord.PLUS`  (use angle and radius, with hole)
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["CA",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("Quantity");
+var yscale = new LinearScale("Quantity");
+var rect = new RectCoord(null, yscale);
+var polar = new PolarCoord(rect); //<2>
+var frame = new CategoricalColorFrame();
+var range = new StackRange();
+polar.setType(PolarCoord.THETA); //<3>
+frame.setField("State");
+elem.setColorFrame(frame);
+elem.setCollisionModifier(GraphElement.MOVE_STACK);
+yscale.setScaleRange(range);
+var spec = new AxisSpec();
+spec.setLabelVisible(false);
+spec.setTickVisible(false);
+spec.setLineVisible(false);
+yscale.setAxisSpec(spec);
+graph.setCoordinate(polar); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `PolarCoord`  object.
+<3> Use `setType` to  display  angle only.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:PolarCoordsExample2_1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ①   to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var polar = new PolarCoord(coord);
+polar.setType(PolarCoord.PLUS);
+polar.rotate(90);
+polar.setHoleRatio(.25);
+graph.setCoordinate(polar);
+--
+=====
+
+
+

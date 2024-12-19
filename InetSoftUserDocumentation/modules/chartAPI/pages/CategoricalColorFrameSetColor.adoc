@@ -1,0 +1,93 @@
+= CategoricalColorFrame.setColor(val,color)
+:navtitle: CategoricalColorFrame.setColor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+Assigns a `color` to the specified `value`.  The corresponding “getter” function is xref:CategoricalColorFrameGetColor.adoc[].
+
+
+== Parameter
+val::			a data value
+color:: {javaawtcolor} to represent data value
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+frame = new CategoricalColorFrame(); //<2>
+frame.setField("State");
+frame.setColor('NJ',java.awt.Color(0xff0000)); //<3>
+frame.setColor('NY',java.awt.Color(0xff00ff)); //<3>
+elem.setColorFrame(frame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:ColorFrame.adoc[] object.
+<3> Use `setColor` to assign the indicated colors to  '`NJ`'  and '`NY`'.
+<4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
+
+image:commonscript:CategoricalColorFrameSetColor2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+frame = new CategoricalColorFrame();
+frame.setField("State");
+frame.setColor('NJ',java.awt.Color(0xff0000));
+frame.setColor('NY',java.awt.Color(0xff00ff));
+elem.setColorFrame(frame)
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setColorField("Employee",Chart.STRING);
+Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
+Chart1.bindingInfo.colorFrame.setColor("Robert",java.awt.Color.lightGray);
+Chart1.bindingInfo.colorFrame.setColor("Sue",java.awt.Color(0x222222));
+
+--
+
++
+image:commonscript:CategoricalColorFrameSetColor.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

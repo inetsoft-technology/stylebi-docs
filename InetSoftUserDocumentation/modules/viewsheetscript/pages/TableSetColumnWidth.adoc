@@ -1,0 +1,45 @@
+= setColumnWidth(col, width)
+:navtitle: setColumnWidth()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=see also]
+xref:viewsheet:AddFreehandTable.adoc[] for more information about Freehand Tables.
+
+
+Sets the width of the specified Table column in pixels. For an expanding table column in a Freehand Table, this affects only the first instance of the specified expanding column. To address all instances of an expanding column, use xref:TableSetColumnWidthAll.adoc[].
+
+
+== Parameters
+col::			column index (first column is index 0)
+width::			Positive integer:  column width in pixels +
+`-1` sets automatic width calculation (default) +
+`0` sets zero width (column hidden)
+
+
+
+== Example
+[source,javascript]
+----
+// Set third column width to 100 pixels:
+TableView1.setColumnWidth(2,100);
+
+// Hide fourth column
+TableView1.setColumnWidth(3,0);
+
+----
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setColumnWidth                 // unqualified
+TableView1.setColumnWidth      // qualified
+
+{secondForm}
+====
+
+

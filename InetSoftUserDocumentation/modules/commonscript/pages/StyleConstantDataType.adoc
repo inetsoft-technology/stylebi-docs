@@ -1,0 +1,34 @@
+= Data Type
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+The following data type constants available.
+
+== Type
+xref:commonscript:StyleConstant.adoc[] object:: One of the (integer) constants below:
++
+|===
+|Type|Description
+
+|BOOLEAN|true or false
+|BYTE|single byte number
+|CHAR|character
+|DATE|date with no time component
+|DOUBLE|double number
+|ENUM|user-defined string constants
+|FLOAT|float number
+|INTEGER|integer number
+|LONG|long integer number
+|SHORT|short integer number
+|STRING|text stringTIMEtime
+|TIME_INSTANT|time and date
+|===
+
+== Example
+[source,javascript]
+RangeSlider1.rangeType = StyleConstant.DATE;
+
+
+
+

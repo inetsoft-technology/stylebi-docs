@@ -1,0 +1,43 @@
+= max
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:RangeSliderProperties.adoc[] for more information on user selection editing.
+====
+
+Specifies the maximum slider value. If ‘Single Value’ is selected under the *Data* tab of the ‘Range Slider Properties’ dialog box, the `max` value is a single number or date (as appropriate for the data represented on the Slider). If ‘Composite Value’ is selected under the *Data* tab, the `max` value is an array.
+
+== Type
+Number, Date, or Array
+
+
+
+== Example
+.Number
+[source,javascript]
+RangeSlider1.max = 10;
+
+.Date
+[source,javascript]
+RangeSlider2.max = new Date("December 31, 2009");
+
+.Composite array
+[source,javascript]
+RangeSlider3.max = ["NJ", "Piscataway"];
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+max                  // unqualified
+RangeSlider1.max     // qualified
+
+{secondForm}
+====
+
+

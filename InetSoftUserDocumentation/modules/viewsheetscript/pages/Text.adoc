@@ -1,0 +1,16 @@
+= Text
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:AddAKPI.adoc[] for more information about how to display an aggregate as text.
+* xref:viewsheet:AddTextOrHTML.adoc[] for more information about how to display text on a Dashboard.
+====
+
+
+
+
+The following topics present  properties that are unique to the Text component.
+
+NOTE: Script placed on a Text element does not re-execute when the user makes Dashboard selections. To re-execute the script, place the script in the *onRefresh* handler. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about the onRefresh handler.)

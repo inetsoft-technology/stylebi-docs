@@ -1,0 +1,35 @@
+= CALC.ln(number)
+:navtitle: CALC.ln()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the natural logarithm of a positive number (base stem:[e]). {CALCExcelFunctionPage}
+
+== Parameters
+number::			Positive real number
+
+
+== Example
+[source,javascript]
+----
+CALC.ln(Math.E); // returns 1.0
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.ln(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.ln(Slider1.selectedObject)
+CALC.ln(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

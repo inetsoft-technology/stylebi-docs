@@ -1,0 +1,93 @@
+= Sliding Window Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+xref:CompareDataByDate.adoc[], to perform a variety of comparisons on date-based charts.
+====
+
+A sliding window chart displays an aggregate that is computed based on overlapping windows of data. This is most commonly used to display time-dependent summaries such as *moving averages*.
+
+image:commonscript:movingAverageChartExpw.png[]
+
+To create a running total chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose a desired style.   Press the {buttonApply}.
++
+image:commonscript:barChartExp1.png[]
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:barChartExp4.png[]
+
++
+TIP: {convertToDimension}
+
+. *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:viewsheetExp34.png[]
+
+. *_Optional:_* {multipleDimensionNoColor} {addDimensionsUsingVisual}
+
+
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:pctChangeChartExp1.png[]
+
++
+TIP: {convertToMeasure}
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+image:Chart Edit Y Axis_1.png[]
+
+. From the ‘Trend and Comparison’ menu, select ‘Moving Average’.
++
+image:commonscript:movingAverageChartExp1.png[]
+
+.  For more precise control, select the ‘Custom’ option, and press btn:[Edit]. Then choose ‘Sliding’ from  the ‘Calculation’ dialog box.
++
+****
+The ‘Sliding’ calculation allows you to express each group’s value as an accumulation of neighboring aggregate values in the series, specified by a rectangular sliding window. This generally has the effect of smoothing (low-pass filtering) the displayed data.
+
+image:commonscript:MovingCalculationDialog_1.png[]
+
+The method of accumulation is specified by the ‘Aggregate’ menu in the ‘Calculation’ dialog box.  The ‘Previous’ and ‘Next’ values specify the span of the sliding window as the number of preceding and succeeding groups, respectively, to include in the calculation. All included groups have equal weight in the calculation.
+
+.Read more about the available aggregation methods…
+[%collapsible]
+====
+include::ROOT:partial$AggregationMethods.adoc[]
+====
+
+The ‘Include current value’ option incorporates each group’s aggregate value into its own calculation. When this option is *not* enabled, the calculation for a group uses only its neighboring groups’ values.
+
+.Include current value
+[example]
+====
+Assume the chart displays sales totals for March, April, May, June, and July, and the sliding window is 3 units wide (‘Previous’=1 and ‘Next’ =1). If ‘Include current value’ is enabled, the displayed value for May is aggregated from three months’ data: April, May, and June. However, if ‘Include current value’ is *not* enabled, the displayed value for May is aggregated from two months’ data: April and June.
+====
+
+The ‘Null if not enough values’ option suppresses chart points for which the sliding window does not obtain the required span.
+
+.Null if not enough values
+[example]
+Assume the chart displays sales totals for March, April, May, June, July, August, and September, and that the sliding window is 5 units wide (‘Previous’=2 and ‘Next’ =2). If ‘Null if not enough values’ is enabled, then no points are displayed on the chart for the months of March and April because the calculation cannot be performed for these groups as specified (there is no data available preceding March.) However, if ‘Include current value’ is *not* enabled, the aggregates for March and April will be computed and displayed using the reduced data available within the sliding window.
+****
+
+
+. *_Optional:_* {multipleMeasure} {addMeasuresUsingVisual}
+
+. {finishEditing}
+
+image:commonscript:movingAverageChartExpw.png[]
+
+include::partial$addTitlesLegend.adoc[]

@@ -1,0 +1,35 @@
+= CALC.trunc(number, num_digits)
+:navtitle: CALC.trunc()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Truncates a number to a specified number of digits. {CALCExcelFunctionPage}
+
+== Parameters
+number::			Number to truncate
+num_digits::			Number of digits (to right of decimal point) to preserve after truncation
+
+== Example
+[source,javascript]
+----
+CALC.trunc(2245.789, 2);  // returns 2245.78
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.trunc(field['Value'], 2)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.trunc(Slider1.Value, 2)
+CALC.trunc(parameter.Value, 2)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

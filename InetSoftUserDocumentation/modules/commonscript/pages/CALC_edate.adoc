@@ -1,0 +1,47 @@
+= CALC.edate(date, months)
+:navtitle: CALC.edate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING, caption=see also]
+xref:DateGlobalDateAdd.adoc[] for another function to compute future and past dates.
+
+
+Returns a date that is the specified number of months before or after the date. {CALCExcelFunctionPage} A negative value for `months` represents a date prior to the specified date.
+
+
+== Parameters
+date::			Date object: date from which to begin counting
+months::			Positive integer: Number of months to count forward  +
+Negative integer: Number of months to count backward
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+//Add one month to Jan 14, 2000:
+CALC.edate(new Date(2000,0,14), 1); // returns Feb 14, 2000
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.edate(field['Order Date'], -1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.edate(RangeSlider1.selectedObjects[0], -1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

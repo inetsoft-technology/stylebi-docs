@@ -1,0 +1,59 @@
+= setActionVisible(name, Boolean)
+:navtitle: setActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+xref:thisViewsheet.adoc#thisViewsheetSetActionVisible[thisViewsheet.SetActionVisible]  to show or hide Dashboard toolbar buttons.
+====
+
+
+Sets the visibility/accessibility of end-user Table features. To disable a feature, set the value to `false`.
+
+
+
+
+
+
+
+
+== Parameters
+name:: name of Table function (String):
++
+[source]
+'Menu Actions' ('More' button)
+'Export'
+'Show Details' (Freehand Table)
+'Show Enlarged'
+'Sort Column' (column header 'Sort' button)
+
+Boolean:: `false`: hide the specified function +
+`true`: show the specified function
+
+
+
+
+== Example
+[source,javascript]
+----
+TableView1.setActionVisible("Show Details", false);
+
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setActionVisible                 // unqualified
+TableView1.setActionVisible      // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,31 @@
+= Date.setUTCMonth(value)
+:navtitle: Date.setUTCMonth()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+JavaScript function to set the  month for a date in universal time.          See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth[Date.setUTCMonth()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+d.setUTCMonth(9);
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.setUTCMonth(9);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+var d = parameter.Date;
+d.setUTCMonth(9);
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

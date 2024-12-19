@@ -1,0 +1,32 @@
+= numberToString(value)
+:navtitle: numberToString()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Convert a number to a string.  You can also convert a number to a string by simply concatenating (`+`) the number with any string.
+
+
+
+
+
+
+== Parameters
+value:: 			A numerical value to convert to a string value
+
+
+== Examples
+[source,javascript]
+numberToString(35) + ' years old'; // returns “35 years old”
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+numberToString(field['Num']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+numberToString(parameter.Num);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

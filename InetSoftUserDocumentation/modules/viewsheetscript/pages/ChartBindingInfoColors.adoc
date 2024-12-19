@@ -1,0 +1,40 @@
+= bindingInfo.colors
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:ColorFrame.adoc[] outside of the data binding.
+* xref:viewsheetscript:ChartBindingInfoColorframe.adoc[] for information on assigning value-keyed frames.
+* xref:viewsheetscript:ChartBindingInfoSetColorField.adoc[] for information on binding a color field.
+====
+
+
+
+Specifies a xref:chartAPI:StaticColorFrame.adoc[] (fixed color) for a particular measure.
+
+
+
+
+
+
+
+== Type
+xref:chartAPI:StaticColorFrame.adoc[]
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.colors['Sum(Total)'] = new StaticColorFrame(java.awt.Color(0xFF00FF));
+
+--
+
+
+image:commonscript:bindingInfoColors.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

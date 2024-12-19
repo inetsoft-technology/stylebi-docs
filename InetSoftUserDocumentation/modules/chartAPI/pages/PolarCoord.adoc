@@ -1,0 +1,60 @@
+= PolarCoord
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:ChangeChartCoordinates.adoc#PolarCoordinates[Polar Coordinates] for a walkthrough of facet coordinates
+====
+
+The `PolarCoord` object contains polar coordinates against which data can be represented. To create a `PolarCoord` object, call the `PolarCoord` constructor:
+
+[source,javascript]
+var polar = new PolarCoord(rect);
+
+You can pass a xref:RectCoord.adoc[] object to the constructor (e.g., ‘rect’), or specify this later using the xref:PolarCoordSetCoordinate.adoc[] property.
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["CA",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("Quantity");
+var yscale = new LinearScale("Quantity");
+var rect = new RectCoord(null, yscale); //<2>
+var polar = new PolarCoord(rect); //<3>
+var frame = new CategoricalColorFrame();
+var range = new StackRange();
+polar.setType(PolarCoord.THETA);
+frame.setField("State");
+elem.setColorFrame(frame);
+elem.setCollisionModifier(GraphElement.MOVE_STACK);
+yscale.setScaleRange(range);
+var spec = new AxisSpec();
+spec.setLabelVisible(false);
+spec.setTickVisible(false);
+spec.setLineVisible(false);
+yscale.setAxisSpec(spec);
+graph.setCoordinate(polar); //<4>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the xref:RectCoord.adoc[] object.
+<3> Create the `PolarCoord` from the `RectCoord` object.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:PolarCoordsExample2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

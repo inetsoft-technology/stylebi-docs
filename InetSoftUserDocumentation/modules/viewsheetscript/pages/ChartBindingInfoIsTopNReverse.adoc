@@ -1,0 +1,47 @@
+= bindingInfo.isTopNReverse(col)
+:navtitle: bindingInfo.isTopNReverse()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoSetTopNReverse.adoc[]  to set the filter.
+
+
+
+
+Returns the state of the Top-N/Bottom-N filter.
+
+
+
+
+
+
+
+== Parameter
+col::			Name of the filtered field
+
+
+
+== Return
+Boolean:: `true`: filter is bottom N +
+`false`: filter is top N
+
+
+
+
+
+
+
+
+
+== Example
+
+[source,javascript]
+--
+var rev = Chart1.bindingInfo.isTopNReverse("Company");
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

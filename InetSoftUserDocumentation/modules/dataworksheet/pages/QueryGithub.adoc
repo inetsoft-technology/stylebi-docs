@@ -1,0 +1,21 @@
+= Github  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Github  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:Github.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonGithubQuery}. This opens the ‘Github  Query’ dialog box.
+
++
+image:github1.png[]
++
+include::dataworksheet:partial$RESTwEndpoint.adoc[]
+

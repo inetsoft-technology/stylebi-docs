@@ -1,0 +1,31 @@
+= CALC.mdeterm(array)
+:navtitle: CALC.mdeterm()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the matrix determinant of the specified square matrix (two-dimensional `array`). {CALCExcelFunctionPage}
+
+== Parameters
+array::			A 2D array representing a square matrix
+
+
+== Example
+Determinant of identity matrix stem:[I_3], stem:[ |[1,0,0\],[0,1,0\],[0,0,1\]\|=1]:
+[source,javascript]
+----
+CALC.mdeterm([[1,0,0],[0,1,0],[0,0,1]]);  // returns 1.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.mdeterm(parameter.row1, parameter.row2, parameter.row3)
+----
+
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

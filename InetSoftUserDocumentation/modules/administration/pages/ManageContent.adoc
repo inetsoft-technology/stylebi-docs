@@ -1,0 +1,105 @@
+= Manage Content
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Manage repository contents in script by using the `:files` or equivalent `:file` command. This allows import, export, and backup of repository assets. To upload and download non-repository files, see xref:SetUpServer.adoc[].
+
+include::partial$runCommand.adoc[]
+
+== Import Assets into the Repository
+The `import-assets` action imports assets such as  Dashboards and data sources  into the connected repository. (These assets should have been previously exported into a Zip file by Enterprise Manager or the Administration Console.) {connectRepositoryNote}
+
+=== Parameters
+path:: The path to the exported asset ZIP file.
+excluded:: List of assets (designated by asset identifier) to be excluded from the import,  as a comma-separated string or the name of a variable containing a Groovy List of strings.
+overwrite::
+[square]
+* `true` to overwrite existing assets in the repository (if they have names identical to imported assets)
+* `false` to retain existing assets in the repository (if they have names identical to imported assets)
+targetFolder:: Name of folder into which to import.
+applyTargetToDependencies::
+[square]
+* `true` to copy dependencies into specified target folder
+* `false` to copy dependencies into original locations
+
+=== Examples
+
+.Overwrite existing assets
+[example]
+====
+Import all assets from _my_exports.zip_ into _Folder1_, including dependencies, and overwriting any existing assets of the same names.
+
+ :file import-assets /arbitrary/container/path/my_export.zip '' true Folder1 true
+
+====
+
+.Import with exceptions
+[example]
+====
+Import all assets except the _Examples/Census_ and _Examples/Hurricane_ Data Worksheets, keeping any assets that already exist in the repository.
+
+ :file import-assets /arbitrary/container/path/my_export.zip '1^2^__NULL__^Examples/Census"and "1^2^__NULL__^Examples/Hurricane' false
+====
+
+.Import with exceptions (Groovy list)
+[example]
+====
+Import all assets except the _Examples/Census_ and _Examples/Hurricane_ Data Worksheets, keeping any assets that already exist in the repository. This is the same as Example 2, but uses a Groovy List for the excluded asset list.
+
+[source,groovy]
+def excluded = [
+    '1^2^__NULL__^Examples/Census'
+    '1^2^__NULL__^Examples/Hurricane'
+]
+
+ :file import-assets /arbitrary/container/path/my_export.zip excluded false
+
+====
+
+== Export Assets from the Repository
+The `export-assets` action exports assets from the connected repository to the local file system. The exported Zip file can then be imported into a different environment by using Enterprise Manager or the Administration Console.{connectRepositoryNote}
+
+=== Parameters
+path:: The path to the local Zip file where the export should be written.
+includes:: List of Ant-like patterns that identify the assets to be exported, as a comma-separated string or as the name of a variable containing a Groovy List of pattern strings.
+excludes:: List of Ant-like patterns that identify the assets to be excluded from the list defined by the `includes` parameter, as a comma-separated string or as the name of a variable containing a Groovy List of pattern strings.
+exclude dependencies:: List of Ant-like patterns that identify the dependencies to be excluded from the list defined by the `includes` parameter, as a comma-separated string or as the name of a variable containing a Groovy List of pattern strings.
+
+=== Examples
+.Export all
+[example]
+====
+Export all shared Dashboards in the _Examples_ folder and all Data Worksheets, including those in subfolders. Nothing is excluded (except private Dashboards and Data Worksheets).
+
+ :file export-assets /arbitrary/container/path/exported.zip '/global/viewsheet/Examples/*,/global/worksheet/**' ''
+====
+
+.Export with exclude
+[example]
+====
+Export all shared Dashboards in the _Examples_ folder and all Data Worksheets, including those in subfolders. (The inclusion is the same as Example 1, but uses a Groovy List below.) Also, exclude the global _Examples/Hurricane_ Data Worksheet.
+
+[source,groovy]
+def included = [
+  '/global/viewsheet/Examples/*',
+  '/global/worksheet/**'
+]
+def excluded = [
+  '/global/worksheet/Examples/Hurricane'
+]
+
+ :file export-assets /arbitrary/container/path/exported.zip included excluded false
+====
+
+== Backup Assets in Server Storage
+The backup action backs up all server storage into a Zip file. To restore, see xref:SetUpServer.adoc[]. {connectRepositoryNote}
+
+=== Parameter
+path:: The path to the local Zip file to contain the backed up files.
+
+=== Example
+Backup server storage into _backup.zip_ in _/local/directory/path/_ on the local machine.
+
+
+ :file backup /arbitrary/container/path/backup.zip

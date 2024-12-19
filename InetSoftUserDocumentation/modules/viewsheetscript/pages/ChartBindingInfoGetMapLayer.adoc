@@ -1,0 +1,24 @@
+= bindingInfo.getMapLayer(col)
+:navtitle: bindingInfo.getMapLayer()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoSetMapLayer.adoc[]  to set the binding information.
+
+Returns the map layer assigned to a geographic field.
+
+== Parameters
+col::				Field for which layer is desired
+
+
+== Example
+
+[source,javascript]
+--
+var layer = Chart1.bindingInfo.getMapLayer('state')
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

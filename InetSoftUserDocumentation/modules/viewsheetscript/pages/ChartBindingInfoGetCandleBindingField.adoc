@@ -1,0 +1,42 @@
+= bindingInfo.getCandleBindingField(measure)
+:navtitle: bindingInfo.getCandleBindingField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:ChartBindingInfoSetCandleBindingField.adoc[]  to set the binding information.
+
+
+Returns the field used as the specified measure on a xref:viewsheet:CandleChart.adoc[], together with associated binding information.
+
+
+
+
+
+== Parameter
+measure:: The measure to return:
++
+[source, javascript]
+Chart.HIGH:  // measure defining the high values
+Chart.LOW:   // measure defining the low values
+Chart.OPEN:  // measure defining the opening values
+Chart.CLOSE: // measure defining the closing values
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+--
+Chart1.bindingInfo.getCandleBindingField(Chart.LOW);
+// returns (for example): lowPrice[lowPrice, null, Average, 0]
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

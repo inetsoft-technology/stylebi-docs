@@ -1,0 +1,50 @@
+= CALC.coupdaybs(settlement, maturity, frequency [,basis])
+:navtitle: CALC.coupdaybs()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the number of *days* from the most recent *coupon* date (preceding settlement) to the settlement date. {CALCExcelFunctionPage}
+
+
+== Parameters
+settlement::				Date object: The security’s settlement date
+maturity::				Date object: Security’s maturity date (date when security expires)
+frequency::				Number of coupon payments per year (1=annual, 2=semi-annual, 4=quarterly)
+basis::            {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+== Example
+Number of days from coupon date to settlement date, where settlement date is January 25, 2007, payments are made twice per year, maturity date is November 15, 2008, and Actual/Actual counting convention is used.
+
+
+[source,javascript]
+----
+CALC.coupdaybs(new Date(2007,0,25), new Date(2008,10,15), 2, 1);
+// returns 71
+----
+
+With semi-annual payments, the coupon dates in this example are May 15 and November 15, hence the function returns the number of days from coupon date November 15, 2006 to settlement date January 25, 2007, equivalent to the following:
+[source,javascript]
+
+dateDiff('d',new Date(2006,10,15), new Date(2007,0,25))
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.coupdaybs(field['SettleDate'], field['MaturityDate'],   2, 1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.coupdaybs(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1],   2, 1)
+CALC.coupdaybs(parameter.SettleDate, parameter.MaturityDate,   2, 1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

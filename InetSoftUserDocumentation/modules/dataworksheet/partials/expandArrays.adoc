@@ -1,0 +1,33 @@
+Consider the following JSON:
+
+[source,JSON]
+{
+    "id": 1,
+    "items": [
+        {
+            "id": 1,
+            "name": "Object 1",
+            "list1": [ "Item 1.1.1", "Item 1.1.2" ],
+            "list2": [ "Item 1.2.1", "Item 1.2.2" ]
+        },
+        {
+            "id": 2,
+            "name": "Object 2",
+            "list1": [ "Item 2.1.1", "Item 2.1.2" ],
+            "list2": [ "Item 2.2.1", "Item 2.2.2" ]
+        }
+    ]
+}
+
+If ‘Expand Arrays’ and ‘Top Level Only’ are both *enabled* (and ‘JSON Path’ is `$` or blank), the top level of the array will be expanded into its individual items.
+
+image:dataworksheet:expandArrays1.png[]
+
+If ‘Top Level Only’ is *disabled*, all arrays will be fully expanded in parallel, as shown below:
+
+image:dataworksheet:expandArrays2.png[]
+
+To selectively expand only certain portions of the result, deselect the ‘Top Level Only’ option, and use the ‘Expanded Array Path’ field to specify the portion of the JSON path on which arrays should be expanded. For example, set ‘Expanded Array Path’ to `items.list1` to expand the `items` and `list1` arrays. (The top level array is always expanded.)
+
+image:dataworksheet:expandArrays3.png[]
+

@@ -1,0 +1,58 @@
+= field
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+* xref:viewsheetscript:AccessComponentData.adoc#TableCrosstabComponents[Access Component Data] for information on how to access a Table.
+* xref:viewsheet:TableProperties.adoc[]  for general information about the Table component.
+====
+
+
+
+
+Returns the value of the cell in the specified field (column) and same row as the cell currently referenced by a ‘Format’ expression script. For example, if you specify a ‘Text Color’ expression in the ‘Format’ dialog box for a detail cell in a table column, you can use the `field` property within the script to obtain the value of the detail cell in the corresponding row of another column.
+
+See xref:viewsheet:DynamicallySetProperties.adoc#ControlPropertieswithExpression[Control Properties with Expression] for information about how to use expressions to set properties.
+
+
+
+
+
+
+== Example
+The script below can be used in a ‘Text Color’ or ‘Fill Color’ expression to set color formatting on a table detail cell.
+
+[source,javascript]
+----
+if (field['Total'] > 400) {
+  [255,0,0];
+}
+else {
+  [0,0,255];
+}
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+field                 // unqualified
+TableView1.field      // qualified
+
+{secondForm}
+====
+
+
+
+
+
+
+
+
+
+

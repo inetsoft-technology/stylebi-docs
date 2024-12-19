@@ -1,0 +1,280 @@
+= Group Data by Dimension
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To group data on a chart by using chart axis labels or color, shape, size, or text, see xref:BasicChartingSteps.adoc[]. The following sections explain some special ways of grouping chart data.
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Group data by dimension...
+video::359390270[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+NOTE: To perform calculations and create aggregates based on grouped data, see xref:dataworksheet:CreateNewDataField.adoc[].
+
+== Group by Color
+To group using *color*, follow the steps below:
+
+
+. Drag the *dimension* that you want to group from the data source panel to the ‘Color’ field in the bottom left panel.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:VS Group Visual2.png[]
++
+
++
+This distinguishes the different values by color and adds a color legend to the chart. (See xref:BasicChartingSteps.adoc#ModifyChartLegend[Modify  Chart Legend] for information about modifying the legend.) Set the ‘Stack’ option for the chart if you want to display the groups stacked vertically. See xref:BasicChartingSteps.adoc[] for more information.
+
+. *_Optional:_* Press the ‘Edit’ button next to the ‘Color’ field.This opens the color panel.
++
+image:VS Group Visual3.png[]
+
+. *_Optional:_* Press the {buttonSelectPalette} to open the ‘Select Palette’ dialog box.
++
+image:VS Group Visual4.png[]
+
+. *_Optional:_* Choose the desired palette from the ‘Select Palette’ menu. If desired, select the ‘Reverse’ option to reverse the order of the palette colors. Press btn:[OK].
++
+image:SelectPalette.png[]
++
+If the selected palette does not contain enough colors to represent all the distinct data groups, additional groups will be represented by colors from previously selected palettes or from the default palette.
+
+. Click on the color chips to create the desired color order. (Colors are assigned to values from left to right.) To reset the color order, press the {buttonReset} on the color menu.
++
+image:VS Group Visual6.png[]
+
+. *_Optional:_* Synchronize the color mapping with other charts, or create a custom color mapping. Follow the steps below:
+
+.. To ensure that this chart assigns the same colors to values as other charts in the Dashboard, enable the  ‘Share Colors’ option.
++
+image:fixedColorMapping3.png[]
++
+--
+All charts that have ‘Share Colors’ enabled will apply the same colors to values in the following cases:
+
+... The values are drawn from columns having the same column name (from any data source).
+... The values are drawn from data model attributes having the same name (from any entity in any data model).
++
+--
+For example, colors for values taken from attribute ‘Customer:State’ will be synchronized with values taken from attribute ‘Company:State’ across all charts.
++
+NOTE: Colors remain synchronized across all charts when any filtering or sorting is applied.
+
+.. *_Optional:_* To manually assign custom colors to values, press the {buttonAssignFixedMapping} to open the ‘Color Mapping’ dialog box.
++
+image:fixedColorMapping1.png[]
+
+.. In the ‘Color Mapping’ dialog box, press the ‘Add Row’ btn:[+] button to add a new value, and use the color swatch to set a fixed color for that value. Press the ‘Delete Row’ btn:[-] button to remove a mapping.
++
+image:fixedColorMapping2.png[]
+
+. Press ‘OK’.
+
+. Press the {buttonApply} to apply the color setting.
+
+== Group by Shape
+
+To group using *shape*, follow the steps below:
+
+. Drag the *dimension* that you want to group from the data source panel to the ‘Shape’ field in the bottom left panel.
++
+image:VS Group Visual7.png[]
++
+This distinguishes the different values by shape and adds a shape legend to the chart.  (See xref:BasicChartingSteps.adoc#ModifyChartLegend[Modify  Chart Legend] for information about modifying the legend.)  Set the ‘Stack’ option for the chart if you want to display the groups stacked vertically. See xref:BasicChartingSteps.adoc[] for more information.
++
+include::ROOT:partial$dimensionTip.adoc[]
+
+
+. *_Optional:_* Press the ‘Edit’ button next to the ‘Shape’ field. This opens the shape panel.
++
+image:VS Group Visual8.png[]
++
+NOTE: The available shape options vary depending on the Chart type.
+
+. Click on the shape chips to create the desired shape order. (Shapes are assigned to values from left to right.) To reset the shape order, press the {buttonReset} on the shape menu.
++
+image:VS Group Visual9.png[]
+. *_Optional:_* To upload a custom image to use as a shape, press the {buttonAddShape}, and select the desired file.
++
+image:addShapeButton.png[]
++
+NOTE: An administrator can make custom shapes available by placing the image files (png, gif, jpg) in the _portal/shapes_ directory of SREE Home. (See xref:administration:Presentation.adoc#LookandFeel[Look and Feel] and xref:administration:Storage.adoc[] for  information on how to upload a file to this location.) The icons are sorted alphabetically by file name. Custom shape images can be any size, and are scaled according to the ‘Size’ setting in the Chart Editor.
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+. Press the {buttonApply} to apply the shape setting.
+
+== Group by Size
+To group using *size*, follow the steps below:
+
+. Drag the *dimension* that you want to group from the data source panel to the ‘Size’ field in the bottom left panel.
++
+image:VS Group Visual10.png[]
++
+This distinguishes the different values by size and adds a size legend to the chart.  (See xref:BasicChartingSteps.adoc#ModifyChartLegend[Modify  Chart Legend]  for information about modifying the legend.)  Set the ‘Stack’ option for the chart if you want to display the groups stacked vertically. See xref:BasicChartingSteps.adoc[] for more information.
++
+include::ROOT:partial$dimensionTip.adoc[]
+
+. *_Optional:_* Press the ‘Edit’ button next to the ‘Size’ field. This opens the size panel. Use the slider to set the desired size range.
++
+image:Ad Hoc Group Visual11.png[]
+
+. Press the {buttonApply} to apply the size setting.
+
+== Group by Text
+To group using *text* labels, follow the steps below:
+
+. Drag the *dimension* that you want to group from the data source panel to the ‘Text’ field in the bottom left panel.
++
+image:VS Group Visual12.png[]
++
+This distinguishes the different values by label.    Set the ‘Stack’ option for the chart if you want to display the groups stacked vertically. See xref:BasicChartingSteps.adoc[] for more information.
++
+include::ROOT:partial$dimensionTip.adoc[]
+
+. *_Optional:_* Press the {buttonEditText} next to the ‘Text’ field to change the formatting of the text. This opens the top *Format* panel.
++
+image:VS Group Visual13.png[]
+. Press the {buttonApply} to apply the formatting.
+
+== Group dates by Week, Month, Year, Quarter, etc.
+. Open the Chart Editor. (Press the {buttonEdit} at the top-right corner of the chart.)
+. For a date *dimension*, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:viewsheetExp34.png[]
++
+include::ROOT:partial$dimensionTip.adoc[]
+. Press the {buttonApply} to apply the grouping.
+
+[#MergeChartLabelsintoGroups]
+== Merge Chart Labels into Larger Groups
+You can agglomerate data from different chart groups (axis groups, legend groups) into larger categories called _named groups_. For example, you can combine X-axis labels designating individual states MA, CT, NY, NJ, etc., into larger groups such as ‘New England’ and ‘Mid-Atlantic’.
+
+NOTE: Named groups cannot be defined for date fields.
+
+To create named groups for chart axis labels or legend labels, follow the steps below:
+
+. Hold the  {buttonCtrl} and click to select the individual axis labels or legend labels that you want to combine into a single group.
+
+. Right-click on one of the selected labels, and choose ‘Group Items’ from the context menu. {rightClickOptions} This opens the ‘Group Name’ dialog box.
++
+image:Named Group 1.png[]
++
+TIP: You can group existing named groups to make larger groups.
+
+. Enter a name for the new group in the ‘Group Name’ dialog box, and press btn:[OK].
++
+image:Named Group 2_1.png[]
++
+This agglomerates the data corresponding to the original labels and replaces the original labels with the named grouping label.
++
+image:Named Group 3.png[]
+. Repeat the above steps to add additional named groups.
+
+.Example: Named Groups
+****
+In the following example, you will create a chart that displays total sales by state. You will then group the states into one of six standard regions: New England, Mid-Atlantic, Midwest, South, Mountain, and Pacific.  Follow the steps below:
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+. Drag a Chart element from the *Toolbox* panel into the Dashboard.
+. Press the {buttonEdit} on the Chart to open the Wizard. Press the {buttonFullEditor} at the top right to open the Chart Editor.
+. Expand the ‘Sales’ data block. From the ‘Dimensions’ node, drag the ‘State’ field to the ‘X’ region of the Chart Editor.
+. From the ‘Measures’ node, drag the ‘Total’ field to the ‘Y’ region.
++
+image:Named Group Exp 1.png[]
+. Click the ‘CT’ label on the Chart’s X-axis to select it. Hold the {buttonCtrl} key  and click on the ‘MA’ label to select it also.
+. Right-click on either of the selected labels, and choose ‘Group Items’ from the context menu.
++
+image:Named Group Exp 2.png[]
++
+This opens the ‘Group Name’ dialog box.
+
+. In the ‘Group Name’ dialog box, enter the label for the new composite group: “New England”.
++
+image:Named Group Exp 3.png[]
++
+This adds ‘New England’ as a new X-axis label, and agglomerates the data from ‘MA’ and ‘CT’ into this new composite group.
++
+image:Named Group Exp 4.png[]
+. Repeat the above steps to create the following additional named groups:
+.. “Mid-Atlantic,” including states ‘NY’, ‘PA’, ‘NJ’.
+.. “South,” including states ‘MD’, ‘TX’, ‘FL’.
+.. “Mountain,” including states ‘AZ’, ‘CO’, ‘NV’.
+.. “Pacific,” including states ‘CA’, ‘WA’.
++
+image:Named Group Exp 5.png[]
+
++
+All states are now grouped into larger regions, except for ‘IL’, which belongs to the Midwest region. You cannot create a named group for ‘Midwest’ on the basis of a single label. Instead, if you need a group labeled ‘Midwest’, you can simply rename the ‘IL’ label as described in the next step.
+
+. *_Optional:_*  Rename the ‘IL’ label to “Midwest”. Follow the steps below:
+.. Right-click the ‘IL’ label on the X-axis, and select ‘Axis Properties’ from the context menu. This opens the ‘Axis Properties’ panel.
+.. In the ‘Axis Properties’ dialog box, select the *Alias* tab. Double-click in the ‘Alias’ column next to the ‘IL’ label, and enter the text “Midwest”.
++
+image:Named Group Exp 6.png[]
+.. Press btn:[OK] to close the dialog box. The Chart now displays all states grouped by region.
++
+image:Named Group Exp 7.png[]
+
+****
+
+To rename an existing group, right-click the group label, and select ‘Rename’ from the context menu. {rightClickOptions} Alternatively, select ‘Axis Properties’ or ‘Legend Properties’ from the context menu, and change the label’s alias on the *Alias* tab of the ‘Properties’ panel. (See xref:AxisProperties.adoc[] or xref:LegendProperties.adoc[] for more details.)
+
+To decompose an existing named group, right-click on the group label and select ‘Ungroup Items’ from the context menu.
++
+image:Named Group 4.png[]
+
+[#RankTopBottom]
+== Rank Top or Bottom Chart Groups
+In some cases, you may want a chart to display only the *top* or *bottom* groups according to a selected *measure*. For example, "top five companies according to revenue". To do this, set a _ranking filter_ for the *dimension*.
+
+include::ROOT:partial$dimensionTip.adoc[]
+
+include::ROOT:partial$measureTip.adoc[]
+
+To set a ranking filter for a dimension, follow the steps below:
+
+. Open the chart in the Chart Editor. (Press the {buttonEdit} at the top-right corner of the chart. If this opens the Visualization Recommender, press the {buttonFullEditor} button at the top right of the Recommender to open the Chart Editor.)
+
+. Press the {buttonEditDimension} next to the dimension for which you to apply the ranking filter.
++
+image:topNFilter1.png[]
+
+. From the 'Ranking' menu, select 'Top' or 'Bottom', respectively, to select the top or bottom groups  based on the measure you specify in the next step.
++
+image:topNFilter2.png[]
+. Enter the number of top or bottom groups to select, and choose the measure on which to rank the groups.
++
+image:topNFilter3.png[]
+. *_Optional:_*  To sort the selected top or bottom groups in order of the aggregated measure, select an option from the 'Sort' menu: 'By Value (Asc)' or 'By Value (Desc)'. Then choose the measure on which to sort the groups.
++
+image:topNFilter4.png[]
+
+. To specify an arbitrary sort order, select the ‘Manual’ option in the ‘Sort’ menu, and press the {buttonEdit} to open the ‘Manual Ordering’ dialog box. To reorder an item in the ‘Manual Ordering’ dialog box, select the item and press the ‘Up’ or ‘Down’ buttons. Press btn:[OK] to close the dialog box.
++
+image:Manual Ordering Dialog.png[]
+
+. Enable ‘Group all others together’ to create an “Others” group representing an aggregate of the items that have not been ranked.
+
+. Press the {buttonApply} to apply the ranking filter and sorting.
++
+image:topNFilter5.png[]
+
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard provides anexample of top-N filtering (ranking).
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+
+image:viewsheet:galleryDataTip2.png[]
+****
+
+

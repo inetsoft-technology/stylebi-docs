@@ -1,0 +1,190 @@
+= Change Chart Scaling
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+A xref:chartAPI:Scale.adoc[] object determines how abstract data values are mapped to physical Chart representations such as position, color, shape, etc. The xref:chartAPI:EGraph.adoc[] object and the xref:chartAPI:VisualFrame.adoc[] object both map data values to physical representations, so both of these objects require a Scale.
+
+NOTE: Some objects, such as xref:chartAPI:IntervalElement.adoc[], create an implicit xref:chartAPI:Scale.adoc[].
+
+== Change Chart Axis Scaling
+
+[WARNING,caption=see also]
+xref:chartAPI:ChangeAxisProperties.adoc[], for examples of other axis modifications.
+
+To change the *scaling* of chart axes, simply assign a new `Scale` to the Chart object. For example, consider the following Chart:
+
+
+[source,javascript]
+dataset = [["State","Quantity"], ["CA",200], ["NY",3000]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+graph.addElement(elem);
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+image:commonscript:ScalingChartAxes.png[]
+
+
+Note that in this Chart the xref:chartAPI:IntervalElement.adoc[] object implicitly defines a linear Y-axis scale. However, the data values on the Chart are widely different in magnitude, which suggests that a log scale might be more appropriate. To change the Y-axis to use a log scale, follow these steps:
+
+. Define the desired Scale object explicitly. In this case, create a xref:chartAPI:LogScale.adoc[] based on the ‘Quantity’ field.
++
+[source,javascript]
+var scale = new LogScale("Quantity");
+
+. Assign the new Scale to the Y-axis of the Chart object using the xref:chartAPI:EGraph_setScale.adoc[] method.
++
+[source,javascript]
+graph.setScale("Quantity",scale);
++
+image:commonscript:ScalingChartAxesFinal.png[]
+
+.Complete Script
+****
+[source,javascript]
+dataset = [["State","Quantity"], ["CA",200], ["NY",3000]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var scale = new LogScale("Quantity");
+graph.addElement(elem);
+graph.setScale('Quantity',scale);
+****
+
+
+.Changing Axis Range
+[example]
+====
+In this example, you will dynamically modify the axis range to match the data displayed on the chart. In particular, you will adapt the lower limit on the Y-axis so that it is always 75% of the lowest data value shown on the chart.
+
+Follow the steps below:
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a Chart component to the Dashboard, and press the {buttonEdit}  to open the Chart Editor.
+
+. From the ‘Dimensions’ node of the *Data Source* panel, drag the ‘State’ field to the ‘X’ region.
+
+. From the ‘Measures’ node of the *Data Source* panel, drag the ‘Total’ field to the ‘Y’ region.
+
+. Press the {buttonEditDimension} next to the ‘State’ field in the ‘Data’ panel.
++
+image:commonscript:Axis Range Example 1.png[]
+
+. From the ‘Ranking’ option in the ‘Edit Dimension’ panel, specify ‘Top 5 of Sum(Total)’. Press the {buttonApply}.
++
+image:commonscript:Axis Range Example 2.png[]
+
+. Right-click the Chart component on the Dashboard, and select ‘Properties’ from the context menu. This opens the ‘Chart Properties’ panel.
+
+. Select the *Script* tab, and enter the following script:
++
+[source,javascript]
+--
+var dMin = 10000000; // Default minimum
+
+// Get a handle to the chart's Y-axis Scale:
+var yScale = graph.getCoordinate().getYScale();
+
+// Find the minimum Y-value in the chart data:
+for (var i=0; i < dataset.getRowCount(); i++) {
+  yVal = dataset.getData('Sum(Total)',i);
+  if(yVal < dMin) {
+    dMin = yVal;
+  }
+}
+
+// Set Y-axis lower limit to .75 of minimum value:
+yScale.setMin(.75*dMin);
+--
+
+. Press btn:[OK] to close the ‘Chart Properties’ panel. Observe how the chart Y-axis updates so that the lower limit is 75% of the smallest chart value.
++
+image:commonscript:Axis Range Example 3.png[]
++
+. From the *Data Source* panel of the Chart Editor, drag the ‘Category’ field onto the Dashboard. This creates a ‘Category’ Selection List.
++
+image:commonscript:Axis Range Example 4.png[]
+
+. Select different combinations of categories from the ‘Category’ Selection List, and observe how the Chart axis updates.
+====
+
+== Change VisualFrame Scaling
+
+A xref:chartAPI:VisualFrame.adoc[] object contains information about how data values are mapped to physical properties of Chart elements. For example, a xref:chartAPI:BrightnessColorFrame.adoc[] contains information about how data values in a field map to the brightness of corresponding Chart elements. Mappings of this type require a xref:chartAPI:Scale.adoc[].
+
+To change the scaling of a `VisualFrame` object, simply assign a new `Scale` to the `VisualFrame`. For example, consider the following chart:
+[source,javascript]
+var dataset = [["State","Quantity","Total"],["NJ",200,2500],["NY",300,1500]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new BrightnessColorFrame();
+frame.setField("Total");
+frame.setColor(java.awt.Color(0xff0000));
+elem.setColorFrame(frame);
+graph.addElement(elem);
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+image:commonscript:ScalingChartColorFrame.png[]
+
+Note that in this Chart a linear scale is defined implicitly by the xref:chartAPI:BrightnessColorFrame.adoc[] object. The legend indicates that this default scale runs from 1400 to 2600. To change the scaling to run from 500 to 3000 instead, you must explicitly define a new `Scale` object. Follow these steps:
+
+. Define the desired `Scale` object explicitly. In this case, create a xref:chartAPI:LinearScale.adoc[] based on the ‘Total’ field.
++
+[source,javascript]
+var scale = new LinearScale("Total");
+scale.setFields("Total");
+
+. Set the minimum and maximum values of the new Scale object.
++
+[source,javascript]
+scale.setMax(3000);
+scale.setMin(500);
+
+. Assign the new scale to the existing VisualFrame object.
++
+[source,javascript]
+frame.setScale(scale);
++
+image:commonscript:ScalingChartAxesFinal.png[]
+
+.Complete Script
+****
+[source,javascript]
+dataset = [["State","Quantity","Total"], ["NJ",200,2500],["NY",300,1500]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new BrightnessColorFrame();
+frame.setField("Total");
+frame.setColor(java.awt.Color(0xff0000));
+var scale = new LinearScale("Total");
+scale.setFields("Total");
+scale.setMax(3000);
+scale.setMin(500);
+frame.setScale(scale);
+elem.setColorFrame(frame);
+graph.addElement(elem);
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use the xref:chartAPI:EGraph_getElement.adoc[] method ① to obtain a handle to the desired Chart element. For example:
+[source,javascript]
+--
+var elem = graph.getElement(0); <1>
+var frame = new BrightnessColorFrame();
+frame.setField("Total");
+frame.setColor(java.awt.Color(0xff0000));
+var scale = new LinearScale("Total");
+scale.setFields("Total");
+scale.setMax(3000);
+scale.setMin(500);
+frame.setScale(scale);
+elem.setColorFrame(frame);
+--
+=====
+****

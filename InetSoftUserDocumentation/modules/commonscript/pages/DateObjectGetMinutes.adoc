@@ -1,0 +1,22 @@
+= Date.getMinutes()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+JavaScript function to return the minutes part of a date in local time. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes[Date.getMinutes()] in the {JavaScriptRef} for details on usage.
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var mins = d.getMinutes();
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getMinutes();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getMinutes();
+
+include::partial$readMoreCalcFieldTypes.adoc[]

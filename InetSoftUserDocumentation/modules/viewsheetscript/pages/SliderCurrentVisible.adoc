@@ -1,0 +1,40 @@
+= currentVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+Specifies that the value currently selected on the Slider is numerically displayed at all times. Otherwise, the current value is numerically displayed only while the user is actively dragging the Slider.
+
+
+
+
+== Type
+Boolean::	`true`: display currently selected value +
+`false`: hide currently selected value
+
+
+
+
+
+
+== Example
+[source,javascript]
+Slider1.currentVisible = false;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+currentVisible                  // unqualified
+Slider1.currentVisible     // qualified
+
+{secondForm}
+====
+
+

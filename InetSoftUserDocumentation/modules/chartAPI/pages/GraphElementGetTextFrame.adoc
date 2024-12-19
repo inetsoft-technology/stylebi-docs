@@ -1,0 +1,39 @@
+= GraphElement.getTextFrame()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Retrieves the element’s xref:TextFrame.adoc[].  The corresponding “setter” function is xref:GraphElementSetTextFrame.adoc[].
+
+
+
+
+
+== Returns
+A xref:TextFrame.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getTextFrame(); //<2>
+// Compact syntax: var frame = graph.getElement(0).getTextFrame();
+
+frame.setText('NJ','New Jersey'); // <3>
+frame.setText('NY','New York'); //<3>
+--
+
+<1> Obtain a handle to the  `GraphElement` object.
+<2> Use `getTextFrame` to obtain a handle to the `TextFrame` object.
+<3> Set the desired properties of the `TextFrame` object.
+
+TIP: To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

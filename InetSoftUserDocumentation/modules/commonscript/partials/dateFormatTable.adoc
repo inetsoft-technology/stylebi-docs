@@ -1,0 +1,35 @@
+[cols="1,2,2"]
+|===
+|Symbol|Description|Example
+
+|G|Era|AD
+|y, yyyy|Year|18, 2018
+|M, MM, MMM, MMMM|Month in year|2, 02, Feb, February
+|w|Week number in year|34
+|W|Week number in month|3
+|D|Day number in year|200
+|d, dd|Day number in month|5, 05
+|u, uu|Day number in week (Monday = 1)|4, 04
+|F|Day of week in month|2 (i.e., second Tuesday in month)
+|E, EEEE|Day of week|Wed, Wednesday
+|a|AM/PM|PM
+|H|Hour in day (24-hour; midnight is 0)|23, if time is  11:01PM +
+0, if time is  12:01AM +
+1, if time is  1:01AM
+|k|Hour in day (24-hour; midnight is 24)|23, if time is  11:01PM +
+24, if time is  12:01AM +
+1, if time is  1:01AM
+|h|Hour in day (12-hour; midnight is 12)|11, if time is  11:01PM +
+12, if time is  12:01AM +
+1, if time is  1:01AM
+|K|Hour in day (12-hour; midnight is 0)|11, if time is  11:01PM +
+0, if time is  12:01AM +
+1, if time is  1:01AM
+|m, mm|Minute in hour|3, 03
+|s, ss|Second in minute|9, 09
+|S, SSS|Millisecond|27, 027
+|z, zzzz|Time zone|EST, Eastern Standard Time
+|Z|RFC 822 time zone| -0500
+|X, XX, XXX|ISO 8601 time zone|-05, -0500, -05:00
+
+|===

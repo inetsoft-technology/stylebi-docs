@@ -1,0 +1,40 @@
+= CALC.fact(number)
+:navtitle: CALC.fact()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the factorial of a number. (The factorial of 0 is 1 by definition.) {CALCExcelFunctionPage}
+
+== Parameters
+number::			Non-negative value stem:[n] for which to compute factorial stem:[n!]. Any fractional component is ignored.
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.fact(5);  // returns 120.0 (5x4x3x2x1)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.fact(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.fact(Slider1.selectedObject)
+CALC.fact(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

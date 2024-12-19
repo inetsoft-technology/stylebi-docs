@@ -1,0 +1,42 @@
+= bindingInfo.setSizeField(col, type)
+:navtitle: bindingInfo.setSizeField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheetscript:ChartBindingInfoGetSizeField.adoc[]  to obtain the binding information.
+* xref:viewsheetscript:ChartBindingInfoSizeFrame.adoc[]  for information on the different types of xref:chartAPI:SizeFrame.adoc[] available.
+====
+
+Bind the specified field to a xref:chartAPI:SizeFrame.adoc[] (size coding).
+
+== Parameter
+col::			Field to be used for size-coding
+type:: One of the following: `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
+
+
+
+
+
+
+
+== Examples
+.Dimension (categorical) field
+[source,javascript]
+--
+Chart1.bindingInfo.setSizeField("Employee",Chart.STRING);
+--
+image:commonscript:bindingInfoSetSizeDimension.png[]
+
+.Measure (numerical) field
+[source,javascript]
+--
+Chart1.bindingInfo.setSizeField("Total",Chart.NUMBER);
+--
+image:commonscript:bindingInfoSetSizeMeasure.png[]
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

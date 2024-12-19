@@ -1,0 +1,81 @@
+= GraphElement.setCollisionModifier(value)
+:navtitle: GraphElement.setCollisionModifier()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies how collisions (elements occupying the same location) should be handled.  The corresponding “getter” function is `getCollisionModifier()`.
+
+
+
+== Parameter
+value:: One of the following constants:
++
+[source]
+GraphElement.MOVE_NONE    (do not stack/center)
+GraphElement.MOVE_CENTER  (center, do not stack)
+GraphElement.MOVE_DODGE   (offset horizontal)
+GraphElement.MOVE_STACK   (offset vertical (stack))
+GraphElement.MOVE_JITTER  (random offset (points))
+GraphElement.DODGE_SYMMETRIC  (offset horiz, center)
+GraphElement.STACK_SYMMETRIC  (offset vert, center)
+
+
+
+== Examples
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"],["NJ", 200],["NJ", 300],["NY", 300],["NY", 100]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity"); //<2>
+var scale = new LinearScale("Quantity");
+var frame = new HeatColorFrame();
+frame.setField("Quantity");
+elem.setColorFrame(frame);
+elem.setStackGroup(true);
+elem.setCollisionModifier(GraphElement.STACK_SYMMETRIC); //<3>
+graph.addElement(elem); //<4>
+--
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use `setCollisionModifier` to set stacking.
+<4> Use `addElement` to add the IntervalElement to the Chart.
+
+image:commonscript:GraphElementsetCollisionMod.png[]
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"],["NJ",200],["NJ",200],["NJ",200],["NJ",200],["NJ",200],["NJ",300],
+["NY",300],["NY",300],["NY",300],["NY",300],["NY",300],["NY",450]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity"); //<2>
+var frame = new HeatColorFrame();
+frame.setField("Quantity");
+elem.setColorFrame(frame);
+elem.setStackGroup(true);
+elem.setCollisionModifier(GraphElement.MOVE_JITTER); //<3>
+graph.addElement(elem); //<4>
+--
+<1> {dataset}
+<2> Create the `PointElement` object.
+<3> Use `setCollisionModifier` to jitter the points.
+<4> Use `addElement` to add the PointElement to the Chart.
+
+image:commonscript:GraphElementsetCollisionMod2.png[]
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.setCollisionModifier(GraphElement.MOVE_JITTER);
+--
+=====

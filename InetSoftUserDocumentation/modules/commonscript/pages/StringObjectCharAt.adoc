@@ -1,0 +1,28 @@
+= charAt(index)
+:navtitle: charAt()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheetscript:partial$readOnly.adoc[]
+
+Return the character at the specified position in the string, indexed from 0. Use xref:StringObjectCharCodeAt.adoc[] to return the *code* rather than the character.
+
+
+
+
+
+== Example
+[source,javascript]
+var txt = 'Hello';
+txt.charAt(4); // returns “o”
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].charAt(4);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.charAt(4);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

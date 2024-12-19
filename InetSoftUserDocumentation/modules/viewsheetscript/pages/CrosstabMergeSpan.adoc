@@ -1,0 +1,34 @@
+= mergeSpan
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+When `true` (default), merge automatically expanded cells into a single cell. This is a useful way to simplify the table when expanded cells all contain the same text, or when borders between the cells are undesirable.
+
+
+
+== Type
+Boolean:: `true`: merge expanded cells +
+`false`: do not merge expanded cells
+
+
+
+== Example
+[source,javascript]
+mergeSpan = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+mergeSpan             // unqualified
+Crosstab1.mergeSpan   // qualified
+
+{secondForm}
+====
+
+

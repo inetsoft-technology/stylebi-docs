@@ -1,0 +1,76 @@
+= RectForm.setBottomRightPoint(value)
+:navtitle: RectForm.setBottomRightPoint()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+Specifies the pixel location (integer values) or proportional location (fractional values) defining the bottom right corner of the rectangle. (Positive values specify distance from left/bottom. Negative values specify distance from right/top.)  The corresponding “getter” function is `getBottomRightPoint()`.
+
+
+
+
+
+
+
+== Parameter
+value::			a subclass of {javaawtgeomPoint2D} +
+(e.g., {javaawtPoint} for pixels, {javaawtgeomPoint2DDouble} for proportion)
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var rect1 = new RectForm(); //<2>
+var rect2 = new RectForm(); //<2>
+rect1.setTopLeftPoint(new java.awt.Point(100, 100));
+rect1.setBottomRightPoint(new java.awt.Point(150, 50)); //<3>
+rect1.setColor(java.awt.Color(0xff0000));
+rect2.setTopLeftPoint(new java.awt.geom.Point2D.Double(.5,.8));
+rect2.setBottomRightPoint(new java.awt.geom.Point2D.Double(.8,.5)); //<4>
+rect2.setColor(java.awt.Color(0xff00ff));
+graph.addForm(rect1); //<5>
+graph.addForm(rect2); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:RectForm.adoc[] object.
+<3> Use `setBottomRightPoint()` to set `rect1` points in pixels.
+<4> Use `setBottomRightPoint()` to set `rect2` points proportionally.
+<5> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:RectFormSetBottomRightPoint.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was previously created with the Chart Editor, you do not need to add a Chart element. For example:
+
+[source,javascript]
+--
+var rect1 = new RectForm();
+var rect2 = new RectForm();
+rect1.setTopLeftPoint(new java.awt.Point(100, 100));
+rect1.setBottomRightPoint(new java.awt.Point(150, 50));
+rect1.setColor(java.awt.Color(0xff0000));
+rect2.setTopLeftPoint(new java.awt.geom.Point2D.Double(.5,.8));
+rect2.setBottomRightPoint(new java.awt.geom.Point2D.Double(.8,.5));
+rect2.setColor(java.awt.Color(0xff00ff));
+graph.addForm(rect1);
+graph.addForm(rect2);
+--
+=====
+

@@ -1,0 +1,44 @@
+= CALC.fiscalweek(date, startMonth [,startDay,timeZone])
+:navtitle: CALC.fiscalweek()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+For a fiscal calendar defined by an arbitrary start date, returns the fiscal week corresponding to the specified `date` as a number, e.g., “46”. The `startMonth` and optional `startDay` determine the starting point of the fiscal year.
+
+
+
+
+
+== Parameters
+date:: 			Date object to be converted to fiscal week.
+startMonth:: 			Integer specifying the starting month of the fiscal calendar.
+startDay::			Integer specifying the starting day of the fiscal calendar (defaults to 1).
+timeZone::			Time zone for fiscal year start date, a valid time zone identifier (e.g., `"GMT"`, `"GMT-8"`, `"America/New_York"`). Default is the JVM system default time zone.
+
+
+
+== Example
+[source,javascript]
+----
+// Today’s week in fiscal year beginning April 16:
+CALC.fiscalweek(CALC.today(), 4, 16)
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.fiscalweek(field['Order Date'], 4, 16)
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.fiscalweek(RangeSlider1.selectedObjects[0], 4, 16)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

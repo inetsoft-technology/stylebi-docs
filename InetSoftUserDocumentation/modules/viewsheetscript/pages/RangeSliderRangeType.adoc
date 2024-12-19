@@ -1,0 +1,46 @@
+= rangeType
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:RangeSliderProperties.adoc[] for more information on user selection editing.
+====
+
+Specifies the display mode for the Range Slider. This is equivalent to selecting a data type in the ‘Options’ panel of the *Advanced* tab in the ‘Properties’ dialog box.
+
+image:viewsheet:rangeSliderRangeType.png[]
+
+== Type
+xref:commonscript:StyleConstant.adoc[] object:: `StyleConstant.NUMBER` +
+`StyleConstant.YEAR` +
+`StyleConstant.MONTH` +
+`StyleConstant.DAY`
+
+
+
+
+
+
+== Example
+.Single-value Range Slider
+[source,javascript]
+RangeSlider1.composite = false;
+RangeSlider1.query = 'Sales';
+RangeSlider1.fields = ['Date'];
+RangeSlider1.rangeType = StyleConstant.MONTH;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+rangeType                  // unqualified
+RangeSlider1.rangeType     // qualified
+
+{secondForm}
+====
+
+

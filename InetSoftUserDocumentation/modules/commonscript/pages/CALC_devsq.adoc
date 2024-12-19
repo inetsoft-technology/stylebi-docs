@@ -1,0 +1,38 @@
+= CALC.devsq(array)
+:navtitle: CALC.devsq()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the sum of squares of deviations of values in array from their sample mean. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of real values
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.devsq([3,2,4,5,6]);  // returns 10.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.devsq(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.devsq(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

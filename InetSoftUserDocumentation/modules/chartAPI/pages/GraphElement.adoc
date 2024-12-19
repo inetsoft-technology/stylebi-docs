@@ -1,0 +1,24 @@
+= GraphElement
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[CAUTION,caption=Created by]
+====
+[square]
+* xref:AreaElement.adoc[]
+* xref:PointElement.adoc[]
+* xref:SchemaElement.adoc[]
+* xref:LineElement.adoc[]
+* xref:IntervalElement.adoc[]
+====
+
+The GraphElement object contains the visual elements that represent data. For example, xref:PointElement.adoc[] is a `GraphElement` that represents data tuples as points.
+
+
+
+image:commonscript:GraphElement.png[]
+
+
+

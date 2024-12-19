@@ -1,0 +1,48 @@
+= StackRange.setStackNegative(Boolean)
+:navtitle: StackRange.setStackNegative()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:ScaleRange.adoc[]
+====
+
+Specifies whether the negative scale range is determine by independently stacking the negative values (default), or whether stacking is not applied to negative values in computing the range.
+
+== Parameter
+Boolean:: `true`: stack negative values to get range +
+`false`: do not stack negative values
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"],["NJ",200],["NJ",100],["NY",-300],["NY",-400]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale("Quantity"); //<2>
+var elem = new IntervalElement("State", "Quantity");
+range = new StackRange(); //<3>
+range.setStackNegative(false); //<4>
+qscale.setScaleRange(range); //<5>
+graph.setScale("Quantity", qscale); //<6>
+graph.addElement(elem);
+
+
+--
+<1> {dataset}
+<2> Create the xref:Scale.adoc[] object.
+<3> Create the xref:StackRange.adoc[] object.
+<4> Use `setStackNegative` to suppress stacking for negative values.
+<5> Assign the `ScaleRange` to the `Scale`.
+<6> Use xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart.
+
+image:commonscript:ScaleRangeSetStackNegative.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

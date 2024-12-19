@@ -1,0 +1,37 @@
+= CALC.acos(number)
+:navtitle: CALC.acos()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the inverse cosine of a number in radians. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A numerical value between -1 and 1
+
+
+
+== Example
+[source,javascript]
+----
+CALC.acos(-1)   // returns 3.141592653589793 (π radians)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.acos(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.acos(Slider1.selectedObject)
+CALC.acos(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

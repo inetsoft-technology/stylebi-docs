@@ -1,0 +1,53 @@
+= colFormat
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TableProperties.adoc[] for general information about the Table component.
+====
+
+
+
+
+Specifies the Table column data format as an array. The attribute can be referenced using the column header or number. Column and row indices start at 0.
+
+
+
+== Type
+Array:: Array of formats.  See xref:viewsheet:DataFormat.adoc[] for information on how to specify formats.
++
+include::commonscript:partial$dataFormats.adoc[]
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+colFormat[5] = [StyleConstant.DATE_FORMAT, "yy-MMMM-dd"];
+colFormat['Total'] = [StyleConstant.DECIMAL_FORMAT, "#,###.00"];
+
+----
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colFormat                 // unqualified
+TableView1.colFormat      // qualified
+
+{secondForm}
+====
+
+

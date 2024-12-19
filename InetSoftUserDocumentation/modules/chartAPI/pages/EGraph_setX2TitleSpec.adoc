@@ -1,0 +1,60 @@
+= Egraph.setX2TitleSpec(spec)
+:navtitle: Egraph.setX2TitleSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Specifies the X-axis title information for X-axis *above* the chart.  The corresponding “getter” function is xref:chartAPI:EGraph_getX2TitleSpec.adoc[].
+
+== Parameter
+spec::			A xref:chartAPI:TitleSpec.adoc[] object
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var spec = new TitleSpec(); //<2>
+spec.setLabel("X Title")
+graph.setX2TitleSpec(spec); //<3>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:TitleSpec.adoc[] object.
+<3> Use `setX2TitleSpec()` to add the `TitleSpec` to Chart.
+
+
+image:commonscript:EGraphaddsetX2TitleSpec.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was previously created with the Chart Editor, use xref:chartAPI:EGraph_getX2TitleSpec.adoc[] ① to get a handle to the `TitleSpec` object. For example:
+
+
+[source,javascript]
+--
+var spec = graph.getX2TitleSpec(); <1>
+spec.setLabel("X Title");
+
+--
+=====
+
+
+

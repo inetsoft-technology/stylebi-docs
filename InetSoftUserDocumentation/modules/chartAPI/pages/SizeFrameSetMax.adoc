@@ -1,0 +1,97 @@
+= SizeFrame.setMax(value)
+:navtitle: SizeFrame.setMax()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Specifies an arbitrary value representing the maximum allowable size for a graphical element. For xref:SchemaElement.adoc[] and xref:IntervalElement.adoc[], the values specified for the xref:SizeFrameSetLargest.adoc[] and xref:SizeFrameSetSmallest.adoc[] properties are relative to the `max` value.
+
+For example, if `smallest=50` and `max=100`, the smallest value in the bound column is displayed at one half of the maximum allowable size. For xref:PointElement.adoc[] and xref:LineElement.adoc[] graphs, the `max` property is ignored.  You can also set this using the `bindingInfo.sizeFrame.max`  property syntax in *onRefresh* script. See xref:#Example2[] below.  The corresponding “getter” function is `getMax()`.
+
+
+
+
+
+== Parameter
+value::			Number of pixels, or relative size
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity", "width"], ["NJ", 200, 5],["NY", 300,10], ["PA",75,15]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new LinearSizeFrame(); //<2>
+frame.setField("width"); //<3>
+frame.setSmallest(10);
+frame.setLargest(50);
+frame.setMax(100); //<4>
+elem.setSizeFrame(frame); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `LinearSizeFrame` object.
+<3> Use the inherited  xref:VisualFrameSetField.adoc[] property to assign the desired measure to the `LinearSizeFrame`.
+<4> Use `setMax` to fix the maximum at 100 pixels.
+<5> Use xref:GraphElementSetSizeFrame.adoc[] to add the `LinearSizeFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:SizeFrameSetLargest_1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} and xref:GraphElementGetSizeFrame.adoc[] {circle2}  to obtain a handle to the desired xref:GraphElement.adoc[] and xref:SizeFrame.adoc[]. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getSizeFrame(); //<2>
+frame.setSmallest(10);
+frame.setLargest(50);
+frame.setMax(100);
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:SizeFrame.adoc[].
+
+. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setSizeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.sizeFrame = new LinearSizeFrame;
+Chart1.bindingInfo.sizeFrame.smallest = 10;
+Chart1.bindingInfo.sizeFrame.largest = 50;
+Chart1.bindingInfo.sizeFrame.max = 100;
+--
+
++
+image:commonscript:SizeFrameMax.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

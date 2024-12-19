@@ -1,0 +1,38 @@
+= axis.sharedRange
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+
+[WARNING,caption=see also]
+xref:chartAPI:FacetCoord.adoc[] for an example of creating a facet chart.
+
+For a *facet chart* (a chart with multiple bound X-fields and Y-fields), specifies whether the same scale range should be used across all sub-graphs in a facet, or whether a sub-graph’s scaling should be shared only with sub-graphs in the same row (for Y-axis scaling) or same column (for X-axis scaling).
+
+== Type
+Boolean
+
+
+
+
+== Example
+[source,javascript]
+Chart1.yAxis.sharedRange = false;
+
+image:commonscript:measureSharedRange.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].sharedRange             // unqualified
+Chart1.axis['...'].sharedRange      // qualified
+
+{secondForm}
+====
+

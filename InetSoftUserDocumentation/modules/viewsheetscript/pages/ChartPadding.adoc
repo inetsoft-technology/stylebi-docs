@@ -1,0 +1,35 @@
+= padding
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+xref:viewsheet:ChartProperties.adoc[] to set flyover in the ‘Chart Properties’ dialog box.
+
+
+Specifies  the padding for the Chart as an array of pixel values.
+
+== Type
+Array::	Padding for chart:		`[top,left,bottom,right]`
+
+
+
+== Example
+[source,javascript]
+Chart1.background = 'yellow';
+Chart1.padding = [0,50,0,50]; // 50 pixel padding, left and right
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+padding         // unqualified
+Chart1.padding  // qualified
+
+{secondForm}
+====
+
+

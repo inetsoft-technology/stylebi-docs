@@ -1,0 +1,92 @@
+= SizeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=created by]
+====
+[square]
+* xref:StaticSizeFrame.adoc[]
+* xref:LinearSizeFrame.adoc[]
+* xref:CategoricalSizeFrame.adoc[]
+====
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+The `SizeFrame` object contains the size scale for visual chart objects. You can use a `SizeFrame` object to represent data dimensions with size (size coding), or to apply a fixed (static) size. To create a `SizeFrame`, use a constructor such as  xref:LinearSizeFrame.adoc[]   or xref:StaticSizeFrame.adoc[].
+
+
+
+
+
+
+
+You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `SizeFrame` using the xref:viewsheetscript:ChartBindingInfoSizeFrame.adoc[]  property in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+
+
+== Example 1
+. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script to the Chart component. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
+.Chart Component Script
+[source,javascript]
+--
+var elem = Chart1.graph.getElement(0); //<1>
+var frame = new StaticSizeFrame();  //<2>
+frame.setSize(30);
+elem.setSizeFrame(frame); //<3>
+
+--
+<1> Use xref:EGraph_getElement.adoc[] to get a handle to the xref:PointElement.adoc[].
+<2> Create the `StaticSizeFrame` object.
+<3> Use xref:GraphElementSetSizeFrame.adoc[] to add the `StaticSizeFrame` to the xref:PointElement.adoc[].
++
+image:commonscript:StaticSizeFrameElement.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:SizeFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setSizeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.sizeFrame = new LinearSizeFrame;
+Chart1.bindingInfo.sizeFrame.smallest = 10;
+Chart1.bindingInfo.sizeFrame.largest = 50;
+Chart1.bindingInfo.sizeFrame.max = 100;
+--
+
++
+image:commonscript:StaticSizeFrame_1.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

@@ -1,0 +1,25 @@
+= Launch Enterprise Manager
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Enterprise Manager is a web-based tool that allows you to administer the InetSoft  server. To open  Enterprise Manager, follow these steps:
+
+. Point a web browser to the StyleBI webapp homepage and select  ‘Enterprise Manager’.
++
+image:InetSoft Home Screen.png[]
++
+This opens the Enterprise Manager login screen.  Alternatively, enter the Enterprise Manager URL: `pass:[http://{servername}:{port}/em]`.
+
+. Enter your login credentials, and press ‘Login’.
++
+image:Enterprise Manager Login Screen.png[]
++
+The default login/password is `admin/admin`. For security reasons, login information expires after five minutes. If you receive a ‘Login Expired’ warning, simply re-enter your credentials to log in.
+
+
+
+Before you begin managing resources and configuring components in Enterprise Manager, verify that you have completed the following steps:
+
+* Specify valid license keys. See xref:AdministerLicenseKeys.adoc[].
+* Ensure that the minimum system requirements are satisfied: {minimumReq}
+* Allocate the desired amount of memory to the Docker container. See xref:SetJVMMemory.adoc[] for more information.

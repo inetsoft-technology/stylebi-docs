@@ -1,0 +1,37 @@
+= Scale.init(dataset)
+:navtitle: Scale.init()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Forces the immediate computation of the automatic scale attributes. The `init()` method is only required if you need to access automatically-computed xref:Scale.adoc[] attributes within your Chart script. These attributes are not available within a script until the scale is initialized via the `init()` method.
+
+== Parameter
+dataset::			The Chart xref:Dataset.adoc[] attribute
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale("Quantity"); //<2>
+var elem = new IntervalElement("State", "Quantity");
+qscale.init(dataset); //<3>
+var defaultMax = qscale.getMax();
+qscale.setMax(defaultMax + defaultMax/2);
+graph.setScale("Quantity", qscale); //<4>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create   the xref:Scale.adoc[] object.
+<3> Use `init` to compute the xref:Scale.adoc[] attributes for `dataset`.
+<4> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

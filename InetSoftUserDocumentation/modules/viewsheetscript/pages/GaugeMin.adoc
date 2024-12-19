@@ -1,0 +1,40 @@
+= min
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+The value of the smallest label displayed on the Gauge face.
+
+
+
+
+== Type
+Number::			Value of lowest Gauge label
+
+
+
+
+
+== Example
+[source,javascript]
+Gauge1.min = -15;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+min           // unqualified
+Gauge1.min    // qualified
+
+{secondForm}
+====
+
+

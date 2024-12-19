@@ -1,0 +1,85 @@
+= CategoricalShapeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+The `CategoricalShapeFrame` object contains a shape style for visual chart objects, rendering a unique shape for each discrete value. To create a `CategoricalShapeFrame` object, call the `CategoricalShapeFrame` constructor.
+
+[source,javascript]
+var frame = new CategoricalShapeFrame('State');
+
+You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ShapeFrame` using the `bindingInfo.shapeFrame` property in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Rep"], ["NJ",200,"John"], ["NY",300,"Sue"], \
+["PA",75,"Sue"], ["CT", 120,"John"]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var frame = new CategoricalShapeFrame("Rep"); //<2>
+elem.setShapeFrame(frame); //<3>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:CategoricalShapeFrame.adoc[] object.
+<3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `CategoricalShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:CategoricalShapeFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new CategoricalShapeFrame("Rep");
+elem.setShapeFrame(frame);
+
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ShapeFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
+Chart1.bindingInfo.shapeFrame = new CategoricalShapeFrame;
+
+--
+
++
+image:commonscript:CategoricalShapeFrame.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

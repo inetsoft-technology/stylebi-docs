@@ -1,0 +1,36 @@
+= Egraph.getXTitleSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Returns a xref:chartAPI:TitleSpec.adoc[] object containing title information for the X-axis *below* the chart.  The corresponding “setter” function is xref:chartAPI:EGraph_setXTitleSpec.adoc[].
+
+
+
+== Returns
+A xref:chartAPI:TitleSpec.adoc[] object
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var spec = Chart1.graph.getXTitleSpec();
+alert(spec.getLabel());
+--
+
+
+
+
+image:commonscript:EGraphaddsetXTitleSpec.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+

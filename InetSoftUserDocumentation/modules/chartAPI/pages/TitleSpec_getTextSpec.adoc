@@ -1,0 +1,25 @@
+= TitleSpec.getTextSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Retrieves the title xref:chartAPI:TextSpec.adoc[].  The corresponding “setter” function is xref:chartAPI:TitleSpec_setTextSpec.adoc[].
+
+
+
+== Returns
+xref:chartAPI:TextSpec.adoc[]
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+var titlespec = graph.getXTitleSpec();
+var textspec = titlespec.getTextSpec();
+textspec.setBackground(java.awt.Color(0xff0000));
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

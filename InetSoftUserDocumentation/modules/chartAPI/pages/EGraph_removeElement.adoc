@@ -1,0 +1,61 @@
+= EGraph.removeElement(idx)
+:navtitle: EGraph.removeElement()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:RepresentMultipleMeasures.adoc[] to add multiple elements.
+====
+
+
+
+
+Removes the specified GraphElement from the chart. See xref:chartAPI:ChartElements.adoc[] for available elements.  Element objects are indexed in the order that they are added to the chart, beginning with index 0.
+
+
+
+
+
+
+
+== Parameter
+idx::			a xref:chartAPI:GraphElement.adoc[] object
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new LineElement("State", "Quantity");
+graph.addElement(elem); //<2>
+graph.removeElement(0); //<3>
+--
+<1> {dataset}
+<2> Add the xref:LineElement.adoc[] to Chart.
+<3> Use `removeElement()` to remove the `LineElement`.
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+
+To use the property on a Chart that was previously created with the Chart Editor, simply call the function. For example:
+
+[source,javascript]
+--
+graph.removeElement(0);
+--
+=====
+
+

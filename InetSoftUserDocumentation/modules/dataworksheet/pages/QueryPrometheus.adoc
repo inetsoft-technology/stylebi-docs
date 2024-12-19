@@ -1,0 +1,21 @@
+= Prometheus  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Prometheus  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:Prometheus.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonPrometheusQuery}. This opens the ‘Prometheus  Query’ dialog box.
+
++
+image:prometheus1.png[]
++
+include::dataworksheet:partial$RESTwEndpoint.adoc[]
+

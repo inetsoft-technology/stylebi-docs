@@ -1,0 +1,46 @@
+= MySQL
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+IMPORTANT: {pluginDriverRequired}
+
+include::partial$dataSourceUserIntro.adoc[]
+
+
+. Select the ‘MySQL’ data source, and press btn:[Create]. This opens the data source definition screen.
++
+image:dataSourceNewMySQL2.png[]
+
+. In the ‘Name’ field, enter a label for this database connection.
+
+. From the ‘Database Type’ menu, select ‘MySQL’ (if not already selected).
+
+
+. If your administrator has provided a connection URL, enable ‘Custom URL’, and enter the  URL in the '`URL`' field. *If you do not have a URL*, disable ‘Custom URL’, and enter the additional required connection information:  ‘Host Name’, ‘Port’, ‘Database Name’, and login credentials.
++
+include::user:partial$customURLProperties.adoc[]
+
+
+include::user:partial$JDBCCommonWeb.adoc[]
++
+include::user:partial$testConnection.adoc[]
++
+include::user:partial$hikariConfig.adoc[]
+
+. Press btn:[OK].
++
+
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceMySQL_2.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceMySQL_3.png[]
++
+include::user:partial$dataSourceFinalSteps.adoc[]

@@ -1,0 +1,221 @@
+= Query Data
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$rightClickOptions.adoc[]
+
+To create a data set by defining a new query in the User Portal, follow the steps below.  These instructions show how to do this for a *generic* relational database.  For other data sources, see xref:QuerySpecificDataSource.adoc[].
+
+. Log into the User Portal.
++
+include::ROOT:partial$createVisualizationStep2Query.adoc[]
+
+. Press the {buttonCreate} at the top  of the User Portal, and select the {buttonWorksheet} option.
++
+image:newWorksheet2.png[]
++
+This opens Visual Composer in a separate browser tab and displays the ‘New Data Worksheet’ dialog box.
++
+image:newWorksheet3.png[]
+
+
+. Choose the query option for the desired data source (e.g., ‘Orders Query’) and press btn:[OK].  This creates a blank Data Worksheet named ‘Untitled’ and opens the ‘Database Query’ dialog box.
++
+[NOTE]
+====
+If a Data Worksheet is already open, you can add a query-based data block by pressing the {buttonCreateObject} in the toolbar and selecting ‘_Database_ Query’. (The name  ‘_Database_’ is the name of the particular data source.) This opens the ‘Database Query’ dialog box described above.
+
+image:databaseQuery1.png[]
+
+====
+
+. Continue to construct the query with xref:#BasicQuery[] or xref:#AdvancedQuery[] below.
+
+
+. Press btn:[OK] to close the ‘Database Query’ dialog box. This creates a new data block based on the specified query.
++
+image:databaseQuery2.png[]
+
+. To edit the query further, press the {buttonEdit} in the bottom panel. This reopens the ‘Database Query’ dialog box.
++
+image:databaseQuery3_1.png[]
+
+include::ROOT:partial$mashupBlurb.adoc[]
+
+
+[#BasicQuery]
+== Basic Query
+
+Follow the steps below to create a basic query:
+
+. Verify that the '`Advanced Query`' setting is off.
+
+. In the data source menu, choose the database that you want to supply data to the data set. (This menu is only available when there is more than one data source defined.)
++
+image:agileData11_1.png[]
+
+. Select the database fields that you want to retrieve by dragging them from the left panel into the ‘Columns’ area.
++
+image:agileData12_1.png[]
+
+. Define any required joins. To do this, follow the steps below:
+.. Press the btn:[New] button next to the ‘Joins’ area to open the ‘Add Join’ dialog box.
+.. Select a table from the top-left menu, and select the join field for that table from the bottom-left menu. Select a table from the top-right menu, and select the join field for that table from the bottom-right menu. From the center menu, select the join operator (equi-join or inequality join).
++
+image:agileData13_1.png[]
++
+NOTE: For full information about specifying joins, see xref:JoinData.adoc[].
+.. *_Optional:_*  Select the ‘All’ option on the left side to retain all records from the left table, even those for which there is no match in the right table (left outer join). Select the ‘All’ option on the right side to retain all records from the right table, even those for which there is no match in the left table (right outer join). Select both ‘All’ options to retain all rows from both tables (full outer join).
+
+.. Press btn:[OK] to add the join. The join is now displayed in the ‘Joins’ area.
++
+image:agileData20_1.png[]
++
+
+.. To add an additional join, press the btn:[New] button again to open the ‘Add Join’ dialog box. Repeat as necessary to add all desired joins.
++
+image:agileData21_1.png[]
+
+.. To change an existing join, press the {buttonEdit} next to the join.
++
+image:agileData22_1.png[]
+.. To delete an existing join, press the {buttonDelete} button next to the join.
++
+image:agileData23_1.png[]
+
+. *_Optional:_*  Press the btn:[Edit] button next to the ‘Conditions’ area to open the ‘Conditions’ dialog box. Use the menus to enter a desired filter condition and press btn:[Insert]. Then press btn:[OK].
++
+image:agileData14_1.png[]
++
+NOTE: For full information about specifying conditions, see xref:FilterData.adoc[].
+
+
+. *_Optional:_*  To make manual edits to the SQL string that will be sent to the database, press the btn:[Edit] button next to the ‘SQL’  area to open the ‘SQL’ panel for editing. Make the desired edits.
++
+image:agileData15_1.png[]
++
+Press the btn:[Parse Now] button to parse the SQL string. Note, however, that due to database variations, the parser may not be able to parse all valid SQL statements.
++
+IMPORTANT: If you make manual edits to the SQL string, you will no longer be able to modify the query using the 'Columns', 'Joins', and 'Conditions' panels.
+
+
+[#AdvancedQuery]
+== Advanced Query
+The '`Advanced Query`' option provides some additional query design features such as sorting and grouping.  Note that you can also perform these operations on the data block at a later time.  See xref:SortData.adoc[] and xref:GroupAggregateData.adoc[] for more information.
+
+CAUTION: After you switch to '`Advanced Query`', you cannot return to the '`Basic Query`' interface.
+
+=== Create a New Query
+To create a new query for a relational database, follow the steps below:
+
+. Enable the '`Advanced Query`' option.
++
+image:advancedQuery1.png[]
+
+. Enter a '`Name`' for the query.
+
+. Under the *Links* tab, drag the desired database tables from the left panel to the right panel.
++
+image:advancedQuery2.png[]
++
+. Expand the tables if desired by pressing the {buttonShowColumns}  in the title bar.
++
+image:advancedQuery3.png[]
+
+
+. Define a set of joins to relate the tables. To do this, click a table title bar to activate the {buttonJoinHandle}.  Drag the {buttonJoinHandle} to the join handle of the table you want to join.
++
+image:advancedQuery4.png[]
++
+This opens the Join Editor. You may see a join that was *automatically created*, such as that below.  You can keep the automatic join if it is correct. To  delete it, right-click the join symbol and select '`Remove Join Condition`' to delete it.
++
+image:advancedQuery5.png[]
+
+
+. Specify a desired  inner join condition by dragging a join field from one table onto the corresponding join field in the other table. By default, an “equality” join condition is used, producing the so-called inner join or “equi-join,” and is indicated by an “equals” (=) symbol.
+ Repeat to create join conditions on as many fields as needed.
++
+image:advancedQuery6.png[]
++
+
++
+.Example: Multiple Joins
+****
+In the example below, the first join condition specifies that the values in the ‘Name’ column from the ‘Orders’ data block should be matched to the values in the ‘Name’ column from the ‘Returns’ data block. The second join condition specifies that the values in the ‘Order Num’ column from the ‘Orders’ data block should be matched to the values in the ‘Order Num’ column from the ‘Returns’ data block.
+
+image:mashup3_2.png[]
+
+****
+
+
+. *_Optional:_* To change an inner join to an outer join, right-click on the join link and choose the desired outer join.
++
+.Example: Change Inner Join to Outer Join
+****
+In the example below, the default inner join is changed to a right outer join.
+
+image:mashup3_3.png[]
+
+An *outer join* is a generalization of the inner join: In addition to the matching rows preserved by the equi-join, the left outer join returns all the rows in the left table, while the right outer join returns all the rows in the right table. The full outer join returns all the rows of both tables.
+
+NOTE: When you specify an outer join, the additional rows included from a table (beyond those selected by the equi-join) do not have matching rows in the other table. Therefore, outer-join tables generally exhibit empty cells corresponding to these unmatched rows.
+****
+
+. *_Optional:_* To change an inner join to an inequality join, right-click on the join link and choose the desired inequality (&gt;, &lt;, &gt;=, &lt;=, etc.)
+
+
+. Repeat the above steps to join all the tables as desired.
++
+image:advancedQuery7.png[]
+
+
+. Select the *Fields* tab.  Drag or double-click fields in the '`Database Fields`' panel to add them to the '`Query Fields`' panel, or use the arrow buttons.
++
+image:advancedQuery8.png[]
+
+. *_Optional_*:  To create a derived (expression) column, follow the steps below:
+
+.. Press the  {buttonFormula} above the ‘Query Fields’ panel. This opens the ‘Add Expression’ dialog box.
+
+.. Enter an expression to define the new column.    (The expression should use the appropriate SQL syntax for the underlying database. Double-click the field names to add them to the expression.)
++
+image:advancedQuery9.png[]
+
+.. Press btn:[OK].
+
+
+.. To create an alias for the expression column, select the expression column in the ‘Query Fields’ panel, and type a name into the ‘Field Alias’ box in the bottom panel.
++
+image:advancedQuery10.png[]
+
+. *_Optional_*: Select the *Conditions* tab. Use the menus to specify a filtering condition. This condition will restrict the data returned by the query. Press the {buttonChangeValueType} button on the right side to select a method of supplying the right-hand side of the condition.
++
+image:advancedQuery11.png[]
+
++
+The options are described below:
++
+****
+Field:: Select a different column from the same result set.
+Expression:: Enter a regular expression using Perl5 regex syntax.
+Value:: Enter a fixed value. Use the {buttonBrowseData} button to assist the selection.
+Subquery:: Specify a distinct query to return the right-side of the condition.
+Variable:: Enter an arbitrary parameter name. The value of the variable will either be provided by the user, by script, or by another sub-query. Check the ‘Selection List’ box to prompt the user with a list of values read from the field.
+****
+
+. Select the *Sort* tab. Drag or double-click the fields on which you wish to sort in  the ‘Available Fields’ panel to move them to the ‘Sort Fields’ panel (or use the arrow buttons).
+
+
+. Select a field in the ‘Sort Fields’ panel, and press the {buttonSort} above the panel. Click once to sort in descending order. Click again to sort in ascending order. An arrow to the left of the field name indicates the current sort order.
++
+image:advancedQuery12.png[]
+
+. Select the *Grouping* tab. Drag or double-click the fields on which you wish to group in  the ‘Available Fields’ panel to move them to the ‘Group Fields’ panel (or use the arrow buttons).  Use the *Having* tab to apply a post-group condition.
++
+IMPORTANT: If you are performing grouping, you must include all non-aggregate fields  as grouping fields.  Define any desired aggregate fields by using an expression column, described above.
+
+. Select the *SQL String* tab to view and edit the SQL representing the query.
++
+image:advancedQuery13.png[]
+
+. Select the *Preview*  tab to view a preview of the result set.
+
+

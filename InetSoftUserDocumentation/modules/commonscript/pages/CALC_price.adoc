@@ -1,0 +1,50 @@
+= CALC.price(settlement, maturity, rate, yld, redemption, frequency, [basis])
+:navtitle: CALC.price()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the clean *price* per $100 face value of a security that pays periodic interest. {CALCExcelFunctionPage}
+
+== Parameters
+settlement::			Date object: The security’s settlement date
+maturity::			Date object: Security’s maturity date (date when security expires)
+rate::			Security’s annual coupon rate
+yld::			Security’s annual yield
+redemption::			Security’s redemption value per $100 face value
+frequency::			Number of coupon payments per year (1, 2, or 4)
+basis:: {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+
+
+== Example
+Clean price for a security with coupon rate of 5.75%, annual yield of 6.5%, redemption price of $100, settlement date of February 15, 2008, maturity date of October 15, 2017, two coupon payments per year, and US 30/360 counting convention.
+
+[source,javascript]
+----
+CALC.price(new Date(2008,1,15), new Date(2017,10,15), 0.0575, 0.065, 100, 2, 0);
+// returns 94.63436162132213 (approx $94.63)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.price(field['SettleDate'], field['MatureDate'], 0.0575, 0.065, 100, 2, 0)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.price(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 0.0575, 0.065, 100, 2, 0)
+CALC.price(parameter.SettleDate, parameter.MatureDate, 0.0575, 0.065, 100, 2, 0)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

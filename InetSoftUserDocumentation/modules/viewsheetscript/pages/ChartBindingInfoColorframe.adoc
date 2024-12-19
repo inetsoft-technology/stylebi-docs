@@ -1,0 +1,36 @@
+= bindingInfo.colorFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:ColorFrame.adoc[] outside of the data binding.
+* xref:viewsheetscript:ChartBindingInfoColors.adoc[] to set a static color for a particular measure.
+* xref:viewsheetscript:ChartBindingInfoSetColorField.adoc[] for information on binding a color field.
+====
+
+
+
+Specifies the aesthetic color treatment for the chart elements. A xref:chartAPI:ColorFrame.adoc[] can color-code chart elements by value, or simply specify a static color scheme. The default for dimensions is xref:chartAPI:CategoricalColorFrame.adoc[], and the default for measures is xref:chartAPI:GradientColorFrame.adoc[].
+
+
+== Type
+xref:chartAPI:ColorFrame.adoc[]
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new HeatColorFrame;
+
+--
+
+
+image:commonscript:HeatColorFrame.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

@@ -1,0 +1,17 @@
+= EGraph
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:CreateChartwithChartAPI.adoc[] for the basic steps in building a Chart.
+====
+
+
+
+The EGraph object represents the graph definition. To create a new `EGraph` object, call the `EGraph` constructor.
+
+[source,javascript]
+graph = new EGraph();
+
+The topics in this section preset the properties of the `EGraph` object.

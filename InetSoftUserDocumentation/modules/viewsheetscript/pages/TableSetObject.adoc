@@ -1,0 +1,52 @@
+= setObject(row, col, value)
+:navtitle: setObject()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:AccessComponentData.adoc[] for information about `selectedObject`.
+* xref:WriteBackToDatabase.adoc#AccessMostRecentUserModification[Access the Most Recent User Modification] to retrieve the most recent modified object.
+====
+
+
+Sets the contents of an *Editable Table* cell to the specified value.  See  xref:viewsheet:TableProperties.adoc[] for information on how to make a Table editable.
+
+
+== Parameters
+row::				row index of cell to modify
+col::				column index of cell to modify
+value::				value to be placed into cell
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+
+// Insert text “Robert” into third row, fourth column:
+TableView1.setObject(2,3,'Robert');
+
+----
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setObject                 // unqualified
+TableView1.setObject      // qualified
+
+{secondForm}
+====
+
+

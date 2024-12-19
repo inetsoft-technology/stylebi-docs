@@ -1,0 +1,29 @@
+= diagonalStyle
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the style of the diagonal line.
+
+== Type
+A  xref:commonscript:StyleConstantLineStyle.adoc[] constant
+
+== Example
+[source,javascript]
+Chart1.diagonalColor = [255,0,0];
+Chart1.diagonalStyle = Chart.DOT_LINE;
+
+image:commonscript:diagonalColor_1.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+diagonalStyle          // unqualified
+Chart1.diagonalStyle   // qualified
+
+{secondForm}
+====

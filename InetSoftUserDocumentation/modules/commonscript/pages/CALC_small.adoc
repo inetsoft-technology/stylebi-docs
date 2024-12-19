@@ -1,0 +1,38 @@
+= CALC.small(array, k)
+:navtitle: CALC.small()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the _k_-th smallest value in `array`. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of real values
+k::			Position (from smallest) in array of data to return
+
+
+== Example
+
+[source,javascript]
+----
+CALC.small([1,2,4,7,8,9,10,12],3);
+// returns 4.0 (value '4' is third from smallest)
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.small(TableView1.table['Quantity'], 3)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.small(Sales['Quantity'], 3);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,41 @@
+= table.size
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+include::partial$readOnly.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:TableDataSize.adoc[] for number of columns prior to grouping and summarization.
+* xref:viewsheetscript:AccessComponentData.adoc#TableCrosstabComponents[Table/Crosstab Components] for  information about working with table data.
+====
+
+
+Returns the number of columns in a Table, *as displayed*.
+
+
+
+== Type
+Integer
+
+
+
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+table.size                 // unqualified
+TableView1.table.size      // qualified
+
+{secondForm}
+====
+
+

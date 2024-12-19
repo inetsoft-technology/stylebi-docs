@@ -1,0 +1,35 @@
+= CALC.radians(number)
+:navtitle: CALC.radians()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Converts a number representing an angle in degrees to radians. {CALCExcelFunctionPage}
+
+== Parameters
+number::			An angle in degrees
+
+
+== Example
+[source,javascript]
+----
+CALC.radians(90);  // returns 1.5707963267948966 (π/2 radians)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.radians(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.radians(Slider1.selectedObject)
+CALC.radians(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

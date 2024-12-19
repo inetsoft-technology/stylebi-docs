@@ -1,0 +1,35 @@
+= Coordinate.setPlotSpec(spec)
+:navtitle: Coordinate.setPlotSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Assign a xref:PlotSpec.adoc[] to the coordinates.  The corresponding “getter” function is xref:CoordinateGetPlotSpec.adoc[].
+
+
+
+
+
+== Parameter
+A xref:chartAPI:PlotSpec.adoc[] object
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var spec = new PlotSpec(); //<2>
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+spec.setBackgroundImage(logo);
+spec.setAlpha(.3); //<3>
+coord.setPlotSpec(spec); //<4>
+--
+
+<1> Obtain a handle to the xref:Coordinate.adoc[] object.
+<2> Create the xref:PlotSpec.adoc[] object.
+<3> Set the desired `PlotSpec` properties.
+<4> Use `setPlotSpec` to assign the `PlotSpec` to the  `Coordinate`.
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

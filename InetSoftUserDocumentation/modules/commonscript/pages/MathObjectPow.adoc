@@ -1,0 +1,41 @@
+= Math.pow(base, exponent)
+:navtitle: Math.pow()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_power.adoc[] for the preferred version from the CALC library.
+====
+
+
+Return the specified base raised to the given exponent power.  This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow[Math.pow()] method, and *must* be used with the `Math` qualifier, `Math.pow()`.
+
+
+
+
+== Example
+[source,javascript]
+----
+Math.pow(2,3); // returns 8
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+Math.pow(field['Value'], 3)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+Math.pow(Slider1.selectedObject, 3)
+Math.pow(parameter.Value, 3)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

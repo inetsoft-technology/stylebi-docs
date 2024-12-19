@@ -1,0 +1,80 @@
+= addTargetBand(measure, colors, values, options)
+:navtitle: addTargetBand()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Draws a set of horizontal or vertical target bands in the plot area using the specified colors and options.  See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.
+
+include::ROOT:partial$targetLinesGraphForm.adoc[]
+
+
+== Parameter
+measure::			Name of measure on which to draw target bands
+colors::			Color (see xref:PlotValueColor.adoc[]) or array of colors to fill area of bands
+values::			Array of values and/or valid aggregation methods (`'max'`,`'min'`,`'avg'`,`'med'`) at which to draw the band lines
+options::			Name-value pairs of options (see xref:#Options[] below, e.g., `{fillAbove:0xff0000, fillBelow:0x00ff00}`)
+
+[#Options]
+== Options
+fillAbove::				Color (see xref:PlotValueColor.adoc[]) to fill the region above the upper band line
+fillBelow::				Color (see xref:PlotValueColor.adoc[]) to fill the region below the lower band line
+label::				String to label the target band(s). The following codes can be inserted:
++
+include::partial$targetLabelCodes.adoc[]
+
+
+lineColor::				Color (see xref:PlotValueColor.adoc[]) to apply to all target band lines
+lineStyle::				The line style (a  xref:commonscript:StyleConstantLineStyle.adoc[] constant) to apply to all target band lines
+labelFont::				The font description (e.g., `'Lucida Sans Unicode-BOLD-14'`) to apply to all band labels
+labelColor::				The color (see xref:PlotValueColor.adoc[]) to apply to all band labels
+
+
+
+
+
+
+
+
+
+==  Examples
+.Single Target Band
+[source,javascript]
+--
+// The 'options' object is broken into several lines for clarity:
+var options = {fillAbove:[225,225,225],fillBelow:[225,225,225], \
+label:['{1}','{1}'],lineColor:'red',lineStyle:Chart.THICK_LINE, \
+labelFont:'Lucida Sans Unicode-BOLD-11', labelColor:'black'};
+Chart1.addTargetBand('Sum(Product:Total)',0xDDAAAA,['min','avg'],options)
+--
+
+image:commonscript:PlotAddTargetBand1.png[]
+
+.Multiple Target Bands
+[source,javascript]
+--
+// The 'options' object is broken into several lines for clarity:
+var options = {fillAbove:[225,225,225],fillBelow:[225,225,225], \
+label:['{1}: {0,number,$#,##0}','{1}: {0,number,$#,##0}','{1}: {0,number,$#,##0}'], \
+lineColor:'red',lineStyle:Chart.THICK_LINE,labelFont:'Lucida Sans Unicode-BOLD-11', \
+labelColor:'black'}
+Chart1.addTargetBand('Sum(Product:Total)',[0xDDAAAA,0xAAAADD],['min','avg','max'],options)
+--
+
+
+image:commonscript:PlotAddTargetBand2.png[]
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+addTargetBand         // unqualified
+Chart1.addTargetBand  // qualified
+
+{secondForm}
+====

@@ -1,0 +1,44 @@
+= value
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheet:TextProperties.adoc[] for general information about the Text component.
+* xref:viewsheet:AddAKPI.adoc[] for information about displaying text aggregates.
+====
+
+
+Specifies the contents displayed by the Text component in cases when the component is bound to a data field (i.e., displaying an aggregate). If the Text component is not bound to a data field, the `value` property is *undefined* unless explicitly set in script.
+
+
+== Type
+Number
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+if (Text1.value > 10000) {
+  Text1.value = 'Maximum exceeded';
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+value            // unqualified
+Text1.value      // qualified
+
+{secondForm}
+====
+
+

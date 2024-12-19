@@ -1,0 +1,63 @@
+= ScaleRange.setAbsoluteValue(Boolean)
+:navtitle: ScaleRange.setAbsoluteValue()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies whether negative quantities should be represented against the positive axis or against the negative axis (default).
+
+== Parameter
+Boolean:: `true`: show negative values on positive axis +
+`false`: show negative values on negative axis
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",-300]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale("Quantity");
+var elem = new IntervalElement("State", "Quantity");
+var frame = new DefaultTextFrame();
+frame.setField("Quantity");
+elem.setTextFrame(frame);
+var range = new LinearRange(); //<2>
+range.setAbsoluteValue(true); //<3>
+qscale.setScaleRange(range); //<4>
+graph.setScale("Quantity", qscale); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `LinearRange` object.
+<3> Use `setAbsoluteValue` to show negative values on positive axis.
+<4> Use xref:LinearScaleSetScaleRange.adoc[] to assign the `LinearRange` to the scale.
+<5> Use xref:EGraph_setScale.adoc[] to add the scale to the Chart for the '`Quantity`' axis.
+
+image:commonscript:ScaleRangeSetAbsoluteValue.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] {circle1},  xref:chartAPI:RectCoordGetYScale.adoc[] {circle2}, and xref:LinearScaleGetScaleRange.adoc[] {circle3} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[],  xref:chartAPI:Scale.adoc[], and xref:ScaleRange.adoc[]. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var scale = coord.getYScale(); //<2>
+var range = scale.getScaleRange(); //<3>
+// Compact syntax: var range = graph.getCoordinate().getYScale().getScaleRange();
+
+range.setAbsoluteValue(true);
+--
+=====

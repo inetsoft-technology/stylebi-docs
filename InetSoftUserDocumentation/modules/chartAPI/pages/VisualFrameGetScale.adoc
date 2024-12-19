@@ -1,0 +1,37 @@
+= VisualFrame.getScale()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Retrieves the xref:Scale.adoc[] associated with this xref:VisualFrame.adoc[].  The corresponding “setter” function is xref:VisualFrameSetScale.adoc[].
+
+== Returns
+scale::			a xref:Scale.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getColorFrame(); //<2>
+var scale = frame.getScale(); //<3>
+// Compact syntax: var scale = graph.getElement(0).getColorFrame().getScale();
+
+scale.setMax(4000); //<4>
+scale.setMin(700); //<4>
+--
+<1> Use xref:EGraph_getElement.adoc[] to obtain a handle to the xref:GraphElement.adoc[].
+<2>  Use xref:GraphElementGetColorFrame.adoc[] to obtain a handle to the xref:ColorFrame.adoc[].
+<3> Use `getScale` to obtain a handle to the xref:Scale.adoc[].
+<4> Set desired properties of the `Scale`.
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

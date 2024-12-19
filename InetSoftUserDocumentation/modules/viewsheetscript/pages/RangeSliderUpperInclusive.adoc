@@ -1,0 +1,51 @@
+= upperInclusive
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:RangeSliderProperties.adoc[] for more information on user selection editing.
+====
+
+Specifies whether the upper limit of the selection is included in the result set. For example, if the upper limit of the Range Slider selection is 15, a setting of `upperInclusive=true` (default) includes the value 15 in the result set.
+
+image:viewsheet:Range Slider Inclusive.png[]
+
+
+A setting of `upperInclusive=false` in this case excludes the value 15 from the result set.
+
+image:viewsheet:Range Slider Exclusive.png[]
+
+The range display on the slider reflects the status of the `upperInclusive` property (e.g., `10..15` vs. `10\->15`).
+
+
+
+
+
+
+
+== Type
+Boolean::	`true`: Include upper limit in selection (default) +
+`false`: Exclude upper limit from selection
+
+
+
+
+
+== Example
+[source,javascript]
+RangeSlider1.upperInclusive=false;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+upperInclusive                  // unqualified
+RangeSlider1.upperInclusive     // qualified
+
+{secondForm}
+====
+
+

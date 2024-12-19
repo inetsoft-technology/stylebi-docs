@@ -1,0 +1,57 @@
+= DataSet.getColCount()
+:navtitle: DataSet.getColCount()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:DataSetGetData.adoc[] to retrieve data from the `dataset` object.
+====
+
+Returns the number of columns in the xref:chartAPI:Dataset.adoc[].
+
+
+
+
+
+
+== Returns
+Integer number of columns
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+// Create a chart with two elements:
+dataset = [["State", "Total", "Profit"],["NJ", 200, 25], ["NY", 300, 150]]; //<1>
+graph = new EGraph();
+var elem1 = new IntervalElement("State", "Total");
+var elem2 = new IntervalElement("State", "Profit");
+var frame = new StaticColorFrame(java.awt.Color.red);
+elem2.setColorFrame(frame);
+graph.addElement(elem1);
+graph.addElement(elem2);
+
+
+// Loop through the rows and columns, and place labels on the bars.
+for (var i=0; i<dataset.getRowCount(); i++) { //<2>
+  for (var j=0; j<dataset.getColCount(); j++) { //<3>
+    var form = new LabelForm();
+    form.setColor(java.awt.Color.black);
+    form.setLabel(dataset.getData(j,i));
+    form.setValues([dataset.getData(0,i),dataset.getData(j,i)-20]);
+    graph.addForm(form)
+  }
+}
+--
+<1> {dataset}
+<2> Use xref:DataSetGetRowCount.adoc[] to get the number of rows.
+<3> Use `getColCount()` to get the number of columns.
+
+image:commonscript:datasetGetColCount.png[]
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

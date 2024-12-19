@@ -1,0 +1,23 @@
+= Point Shape
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The point shape constants can be used to specify the shape used in a Point Chart.  You are  recommended to use xref:chartAPI:GShape.adoc[] instead.
+
+[source]
+CIRCLE
+TRIANGLE
+SQUARE
+CROSS
+STAR
+DIAMOND
+X
+FILLED_CIRCLE
+FILLED_TRIANGLE
+FILLED_SQUARE
+FILLED_DIAMOND
+
+
+
+== Type
+Integer

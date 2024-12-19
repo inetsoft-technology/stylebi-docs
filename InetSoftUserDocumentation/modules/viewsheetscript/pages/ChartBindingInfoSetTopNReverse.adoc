@@ -1,0 +1,46 @@
+= (col, Boolean)
+:navtitle: bindingInfo.setTopNReverse()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoIsTopNReverse.adoc[]  to obtain the binding information.
+
+
+
+
+
+
+
+Specifies whether filter should extract the top-N or the bottom-N groups based on an aggregate.
+
+
+
+
+
+
+
+== Parameter
+col::			Name of field to filter
+Boolean::		`true`: filter bottom N +
+`false`: filter top N
+
+
+
+
+
+
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.setTopN("Company",3);
+Chart1.bindingInfo.setTopNReverse("Company",true); // Bottom-N
+
+--
+image:commonscript:SetTopNReverse.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]

@@ -1,0 +1,38 @@
+= position
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the position of the top-left corner of a component in terms of pixels, where the top-left corner of the Dashboard is (0,0). Fractional values for vertical and horizontal position are rounded down to the next lowest integer. This property does not take effect in the design view of Visual Composer and does not apply to components within a Selection Container.
+
+== Type
+https://docs.oracle.com/javase/7/docs/api/index.html?java/awt/Point.html[java.awt.Point]::
+`java.awt.Point(horizontal,vertical)`
+
+== Example
+[source,javascript]
+----
+// Table with top-left corner 400 pixels right, 90 pixels down
+TableView1.position = java.awt.Point(400,90)
+
+// Chart with top-left corner at 200 pixels right, 25 pixels down
+Chart1.position = java.awt.Point(200,25)
+----
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+position               // unqualified
+Component1.position    // qualified
+
+{secondForm}
+====
+
+

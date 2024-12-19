@@ -1,0 +1,45 @@
+= bindingInfo.percentageMode
+:navtitle: percentageMode
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the direction (row or column) for percentage computation. This is equivalent to selecting the ‘By’ option of the ‘Calculation’ dialog box in the Crosstab Editor (accessible from btn:[Edit] button under the {buttonEditMeasure}).
+
+image:commonscript:bindingInfoPercentMode.png[]
+
+== Type
+xref:commonscript:StyleConstant.adoc[] object:: `StyleConstant.PERCENTAGE_BY_COL` or `StyleConstant.PERCENTAGE_BY_ROW`
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Category','Name'];
+Crosstab1.bindingInfo.colFields = ['Region','State'];
+Crosstab1.bindingInfo.measureFields = ['Total','Quantity Purchased'];
+Crosstab1.bindingInfo.setFormula('Total',StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.setFormula('Quantity Purchased',StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.setPercentageType('Total',StyleConstant.PERCENTAGE_OF_GRANDTOTAL);
+Crosstab1.bindingInfo.percentageMode = StyleConstant.PERCENTAGE_BY_COL;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.percentageMode             // unqualified
+Crosstab1.bindingInfo.percentageMode   // qualified
+
+{secondForm}
+====
+
+

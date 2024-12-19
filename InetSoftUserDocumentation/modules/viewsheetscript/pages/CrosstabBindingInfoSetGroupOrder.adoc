@@ -1,0 +1,49 @@
+= bindingInfo.setGroupOrder(group_field, header, level)
+:navtitle: setGroupOrder()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the grouping level for a date-type field. This is equivalent to setting the ‘Level’ for a date-type field in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetGroupOrder.png[]
+
+
+
+
+
+
+
+
+
+== Parameters
+group_field::			String: Name of a grouped date column
+header::			`StyleConstant.ROW_HEADER` or `StyleConstant.COLUMN_HEADER`
+level::			xref:commonscript:StyleConstant.adoc[] object. See xref:commonscript:StyleConstantDateGrouping.adoc[].
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Date'];
+Crosstab1.bindingInfo.colFields = ['Region'];
+Crosstab1.bindingInfo.measureFields = ['Total'];
+Crosstab1.bindingInfo.setFormula('Total', StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.setGroupOrder('Date',StyleConstant.ROW_HEADER,StyleConstant.QUARTER_OF_YEAR_DATE_GROUP);
+
+image:commonscript:bindingInfoSetGroupOrderExp.png[]
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.setGroupOrder             // unqualified
+Crosstab1.bindingInfo.setGroupOrder   // qualified
+
+{secondForm}
+====
+
+

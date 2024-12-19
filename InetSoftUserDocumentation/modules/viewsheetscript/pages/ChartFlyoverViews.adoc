@@ -1,0 +1,38 @@
+= flyoverViews
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:ChartProperties.adoc[] to set flyover in the ‘Chart Properties’ dialog box.
+
+
+Specifies an array of component names, representing the components to be filtered by chart flyover.
+
+== Parameters
+arr::			String array of component names
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.flyoverViews = ['TableView1','Gauge1'];
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+flyoverViews         // unqualified
+Chart1.flyoverViews  // qualified
+
+{secondForm}
+====
+
+

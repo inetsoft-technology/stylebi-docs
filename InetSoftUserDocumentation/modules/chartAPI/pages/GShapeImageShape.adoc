@@ -1,0 +1,105 @@
+= GShape.ImageShape
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+The `GShape.ImageShape` object contains a custom image to be used as a fill pattern with xref:StaticShapeFrame.adoc[] and xref:CategoricalShapeFrame.adoc[] objects. To create an `ImageShape` object in element script , call the object constructor:
+
+[source,javascript]
+var shape = new GShape.ImageShape();
+
+You can provide the image location as input to the constructor, for example:
+
+[source,javascript]
+var shape = new GShape.ImageShape("https://.../image.gif");
+
+You can also specify this later using the `GShape.ImageShape.image` property  syntax in *onRefresh* script. See xref:#Example3[] below.
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+var shape = new GShape.ImageShape(); //<2>
+shape.image = logo; //<3>
+var frame = new StaticShapeFrame(shape); //<4>
+elem.setShapeFrame(frame); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `GShape.ImageShape` shape.
+<3> Use xref:GShapeImageShapeSetImage.adoc[] to assign the desired image to the `shape`.
+<4> Pass the `shape` to   the xref:StaticShapeFrame.adoc[] constructor.
+<5> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:GShapeImageShape2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+== Example 2
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+var shape = new GShape.ImageShape(logo); //<2>
+var frame = new CategoricalShapeFrame("State");
+frame.setShape("NJ", shape); //<3>
+elem.setShapeFrame(frame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Pass the image to the `GShape.ImageShape()` constructor to create the `shape`.
+<3> Use xref:CategoricalShapeFrameSetShape.adoc[] to assign the  `shape` to the data.
+<4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:GShapeImageShape3.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[#Example3]
+== Example 3
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ShapeFrame.adoc[].
+
+. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField('Employee',Chart.STRING);
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+var shape = new GShape.ImageShape();
+shape.image = logo;
+var frame = new StaticShapeFrame(shape);
+Chart1.bindingInfo.shapeFrame = frame;
+
+--
++
+image:commonscript:GShapeImageShape.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

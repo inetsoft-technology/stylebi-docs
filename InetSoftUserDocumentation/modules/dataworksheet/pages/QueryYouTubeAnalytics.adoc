@@ -1,0 +1,24 @@
+= YouTube Analytics  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing YouTube Analytics connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:YouTubeAnalytics.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonYouTubeAnalyticsQuery}. This opens the ‘YouTube Analytics  Query’ dialog box.
+
++
+image:youtubeAnalytics1.png[]
+
+
+
+
+include::dataworksheet:partial$RESTwEndpoint.adoc[]
+

@@ -1,0 +1,66 @@
+= PlotSpec.setBackgroundImage(value)
+:navtitle: PlotSpec.setBackgroundImage()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the background image for a xref:Coordinate.adoc[]  object (i.e., the plot area).  The corresponding “getter” function is `getBackgroundImage()`.
+
+== Parameter
+value::
+Image object, see xref:commonscript:getImage.adoc[]
+
+
+
+
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+elem.setHint(GraphElement.HINT_ALPHA,.8);
+var sscale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var coord = new RectCoord(sscale,qscale);
+var spec = new PlotSpec(); // <1>
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+spec.setBackgroundImage(logo); //<2>
+coord.setPlotSpec(spec); //<3>
+graph.setCoordinate(coord);
+graph.addElement(elem);
+--
+<1> Create the `PlotSpec` object.
+<2> Use `setBackgroundImage` to set the plot image.
+<3> Use `setPlotSpec` to assign the `PlotSpec` to the `Coordinate`.
+
+image:commonscript:PlotSpecSetBackgroundImage.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] {circle1} and xref:chartAPI:CoordinateGetPlotSpec.adoc[] {circle2} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:PlotSpec.adoc[]. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var spec = coord.getPlotSpec(); //<2>
+// Compact syntax: var spec = graph.getCoordinate().getPlotSpec();
+
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+spec.setBackgroundImage(logo);
+
+--
+=====

@@ -1,0 +1,52 @@
+=  StaticColorFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+The `StaticColorFrame` object contains a color frame defined by explicit color data in the xref:VisualFrameSetField.adoc[] column, or by the fixed color in xref:StaticColorFrameSetColor.adoc[]. To create a `StaticColorFrame` object, call the `StaticColorFrame` constructor.
+
+[source,javascript]
+--
+var frame = new StaticColorFrame(); // <1>
+var frame = new StaticColorFrame(java.awt.Color(0xFF00FF)); //<2>
+--
+<1> Call constructor without specifying a color.
+<2> Call constructor with specified color.
+
+You can pass a color value directly to the constructor or specify it later using the in xref:StaticColorFrameSetColor.adoc[] function.
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Color"], ["NJ",200,0xff0000], ["NY",300,0xff00ff]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new StaticColorFrame(); //<2>
+frame.setField("Color"); //<3>
+elem.setColorFrame(frame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `StaticColorFrame` object.
+<3> Use the inherited  xref:VisualFrameSetField.adoc[] function to specify the field for the `StaticColorFrame`.
+<4> Use xref:GraphElementSetColorFrame.adoc[] to add the `StaticColorFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:StaticColorFrame3.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+

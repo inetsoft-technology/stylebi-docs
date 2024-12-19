@@ -1,0 +1,23 @@
+= encodeURI(uri)
+:navtitle: encodeURI()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Produce a new URI with any special characters replaced by an appropriate encoding.
+
+== Example
+[source,javascript]
+encodeURI("https://www.inetsoft.com/My Folder")
+// returns: https://www.inetsoft.com/My%20Folder
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+encodeURI(field['Char']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+encodeURI(parameter.Char);
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,54 @@
+= EGraph.setScale(field, scale)
+:navtitle: EGraph.setScale()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ChangeChartScaling.adoc[] for information on setting scales.
+* xref:chartAPI:ChangeChartScaling.adoc[] for information on setting scales.
+====
+
+
+
+
+
+Sets the specified xref:chartAPI:Scale.adoc[] for the given axis. See xref:chartAPI:ChartCoordinates.adoc[] for available scales.  The corresponding “getter” function is xref:chartAPI:EGraph_getScale.adoc[].
+
+== Parameters
+field::			name of axis to receive scale (String)
+scale::			scale to apply to axis (xref:chartAPI:Scale.adoc[])
+
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]];
+graph = new EGraph();
+var elem = new LineElement("State", "Quantity");
+var qscale = new LinearScale("Quantity"); <1>
+qscale.setMin(100);
+qscale.setMax(500);
+graph.addElement(elem);
+graph.setScale("Quantity", qscale); <2>
+--
+<1> Create the `Scale` object.
+<2> Use `setScale` to add the `Scale` object to Chart.
+
++
+image:commonscript:EGraphsetScale.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+

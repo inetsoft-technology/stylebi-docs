@@ -1,0 +1,31 @@
+= DefaultForm
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Creates a xref:GraphForm.adoc[] object. Note that you can also create a GraphForm with  xref:LabelForm.adoc[], xref:LineForm.adoc[], xref:RectForm.adoc[], and xref:ShapeForm.adoc[].
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+var form = new DefaultForm(); //<1>
+form.setShape(new java.awt.geom.Rectangle2D.Double(100,100,200,200)); //<2>
+form.setFill(true); //<2>
+graph.addForm(form); //<3>
+--
+<1> Create the  xref:GraphForm.adoc[] object.
+<2> Set xref:GraphForm.adoc[] properties.
+<3> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` objects to the Chart.
+
+image:commonscript:DefaultForm1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

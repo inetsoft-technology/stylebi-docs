@@ -1,0 +1,41 @@
+= ranges
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+Specifies an array of one to three values defining the upper boundaries of the Gauge ranges (color zones). The colors corresponding to these boundaries are determined by the xref:GaugeRangeColors.adoc[] array. To use the xref:GaugeMax.adoc[] Gauge value as the boundary for a range, simply omit the boundary value for the desired range.
+
+
+== Type
+Array:: Upper range boundaries
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+// Omit 'red' boundary value to automatically use Gauge max:
+Gauge1.rangeColors = ['green','yellow','red'];
+Gauge1.ranges = [5,10];
+----
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+ranges           // unqualified
+Gauge1.ranges    // qualified
+
+{secondForm}
+====
+
+

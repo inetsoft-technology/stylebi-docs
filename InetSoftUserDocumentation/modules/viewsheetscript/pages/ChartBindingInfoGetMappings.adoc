@@ -1,0 +1,35 @@
+= bindingInfo.removeMapping(col,value)
+:navtitle: bindingInfo.removeMapping()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheetscript:ChartBindingInfoAddMapping.adoc[] to set  the  mapping.
+* xref:viewsheetscript:ChartBindingInfoGetMappings.adoc[] to retrieve the currently specified mappings.
+====
+
+
+Removes the mapping that exists between the specified `value` of field `col` and a defined geographical code.
+
+
+== Parameter
+col::			Field from which value is mapped
+value::			Value whose mapping should be removed
+
+
+
+
+
+== Example
+Remove mapping for value 'Queens' in column 'city':
+[source,javascript]
+--
+Chart1.bindingInfo.removeMapping('city','Queens');
+--
+
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

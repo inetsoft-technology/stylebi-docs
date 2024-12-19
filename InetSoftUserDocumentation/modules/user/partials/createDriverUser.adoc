@@ -1,0 +1,36 @@
+To upload a database driver to the server, you will package it as a plugin, either from *local storage* or from a *Maven repository*. Follow the steps below:
+
+Local Storage:: To upload drivers from *local storage*, follow the steps below:
+
+.. Select the ‘Upload’ option.
++
+image:user:Drivers_Plugins1.png[]
+
+.. Press the btn:[Add] button select the desired JAR files, as well as any other files required by the database.
+
+.. Press btn:[Next], and choose the desired driver file or files to package into a plugin.
++
+image:user:Drivers_Plugins2.png[]
+
+
+.. Press btn:[Next], and enter the desired ‘Plugin ID’, ‘Plugin Name’, and ‘Plugin Version’. The ID must be unique, and should typically be a namespaced value, such as `com.mycompany.jdbc.dbtype`. The Version should conform to https://semver.org/[semantic versioning standards].
++
+image:user:Drivers_Plugins3.png[]
+
+.. Press btn:[Finish] to create the plugin Zip file.
+
+Maven Repository:: To create a plugin from assets in a *Maven repository*, follow the steps below:
+
+.. Select the ‘Maven’ option.
+
+.. Enter the ‘Maven Coordinates’: `groupId:artifactId:packaging:version`.
++
+image:user:Drivers_Plugins4.png[]
+
+.. Press btn:[Next], and choose the desired driver file or files to package into a plugin.
++
+image:user:Drivers_Plugins5.png[]
+
+.. Press btn:[Next], and enter the desired ‘Plugin ID’, ‘Plugin Name’, and ‘Plugin Version’. The ID must be unique, and should typically be a namespaced value, such as `com.mycompany.jdbc.dbtype`. The Version should conform to https://semver.org/[semantic versioning standards].
+
+.. Press btn:[Finish] to create the plugin Zip file.

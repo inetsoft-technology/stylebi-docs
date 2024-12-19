@@ -1,0 +1,68 @@
+= Add Text or HTML
+%experimetal%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+You can add text, such as titles or descriptions, to any region of a Dashboard.  Text can contain UTF-8 (unicode) characters as well as HTML markup.
+
+== Add Regular Text
+To add regular text into a Dashboard, follow the steps below:
+
+. If necessary, create a new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+. From the *Toolbox* panel, drag a Text component into the Dashboard. (If you see the following ‘Layout Option’ dialog box, select ‘Move component here’ and press btn:[OK].)
++
+image:viewsheetExp51.png[]
+
+. Double-click on the Text component to edit the text contents. Enter the desired text.
++
+[TIP]
+====
+include::viewsheet:partial$parameterFormat.adoc[]
+
+The *optional* second parameter specifies the format type (e.g., `number`), and the third parameter then specifies the format string, if required (e.g., `pass:['#,###M']`). For more information about formats and strings, see xref:DataFormat.adoc[]. The parameter value can be set by script, by user input, or from session information  (e.g., `pass:[parameter._USER_]`). See xref:viewsheetscript:parameter.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] for more information.
+====
+
+. *_Optional:_* Click the Text component to select it, and select the *Format* tab in the left panel. Style the text as desired. (See xref:VisualFormat.adoc[]   for more details.)
++
+image:textComponentAggregateExp2.png[]
+
+== Add HTML
+There are two ways to display HTML content within a Dashboard. One method is to use the *Basic HTML presenter*, which is available for data elements such as Text and Tables. See xref:VisualFormat.adoc[] for more information.
+
+You can also display HTML content within any element that displays text (e.g., Table cell, Text component, Selection List, etc.) by simply surrounding the HTML markup with `<html>...</html>` tags. For example, the following markup placed within a Text element creates a list within the Text element:
+
+[source,html]
+<html><font color="#0000FF"><b>My List:</b></font><ul><li>Apples</li><li>Oranges</li><li>Mangos</li></ul></html>
+
+You can use any HTML tags allowed by the browser. For example, you can display a video or other multimedia in an *IFrame*, as shown below.
+
+TIP: It may be easier to allow the IFrame to be created automatically.  See xref:EmbedExternalContent.adoc[] for more information.
+
+.Embedded YouTube Video
+[example]
+====
+[source,html]
+<html>
+<iframe width="560" height="315" src="..." frameborder="0" allowfullscreen>
+</iframe>
+</html>
+
+
+====
+
+.MP4 or Ogg Video
+[example]
+====
+[source,html]
+<html>
+<!DOCTYPE html>
+<body>
+<video width="320" height="240" controls>
+<source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+<source src="https://www.w3schools.com/html/movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+</body>
+</html>
+====

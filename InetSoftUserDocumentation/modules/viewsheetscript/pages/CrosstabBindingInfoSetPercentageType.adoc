@@ -1,0 +1,45 @@
+= bindingInfo.setPercentageType(measure, pct)
+:navtitle: setPercentageType()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the percentage representation for one of the measures specified by xref:CrosstabBindingInfoMeasureFields.adoc[]. This is equivalent to setting a percentage representation for a measure in the '`Trend and Comparison`' property of the Crosstab Editor.
+
+image:commonscript:bindingInfoSetPercent.png[]
+
+
+
+== Parameters
+measure::			String: Name of a measure to show as percent
+pct::			`StyleConstant.PERCENTAGE_OF_GRANDTOTAL` or 			`StyleConstant.PERCENTAGE_NONE`
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Category','Name'];
+Crosstab1.bindingInfo.colFields = ['Region','State'];
+Crosstab1.bindingInfo.measureFields = ['Total','Quantity Purchased'];
+Crosstab1.bindingInfo.setFormula('Total',StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.setFormula('Quantity Purchased',StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.setPercentageType('Total',StyleConstant.PERCENTAGE_OF_GRANDTOTAL);
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.setPercentageType             // unqualified
+Crosstab1.bindingInfo.setPercentageType   // qualified
+
+{secondForm}
+====
+
+

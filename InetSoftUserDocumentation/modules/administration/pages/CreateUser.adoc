@@ -1,0 +1,101 @@
+= Create a User
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+If you are using the *default security provider* for authentication, you can define users in Enterprise Manager as described below. If you are using an LDAP server for authentication, you should define users in your LDAP software. See xref:SpecifySecurityProvider.adoc[] for more information about security providers.
+
+
+[TIP]
+====
+[square]
+* There are two embedded users: *admin* is a super-user with the role of ‘Administrator’ and *guest* is a user with the role of ‘Everyone’. The default passwords are ‘admin’ and ‘success123’, respectively.
+* To allow users to log in without a password (as  “guest”), create a user with name *anonymous*.  This will allow all users to log in without entering credentials and be governed by the permissions assigned to the ‘anonymous’ user (see xref:SetRepositoryPermissions.adoc[] and xref:SetSecurityActions.adoc[]). If  a user wants to log in under their own name, they will need to press the {buttonAccount} and select {buttonLogin}.
+====
+
+
+
+== Create a New User
+To create a new user in Enterprise Manager , follow the steps below:
+
+
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Security* page in the left panel.
++
+image:Figure 23_1.png[]
+. Select the *Users* tab.
++
+image:securityDefineUsers.png[]
+
+. From the ‘Provider Name’ menu, select the security provider under which to define users.
+
+include::administration:partial$selectOrganization.adoc[]
++
+New users will be added to the organization you select.
+
+. Press the ‘New User’ link below the tree. This creates a user with the default name ‘userN’ (user0, user1, etc.).
++
+image:server1.png[]
+
+. Type in the ‘Name’ field to change the name of the user.
+
+
+. *_Optional:_* Enter an ‘Alias’ for the user. This is the name that will be displayed in the Portal for the user.
+
+. Select ‘Active’ from the right-side menu to allow the user to log into the Portal.
+
+. Specify an email address for the user in the ‘Email’ field.
+
+. To select a Portal theme for the user, choose the desired theme from the ‘Theme’ menu. (See xref:Presentation.adoc[] for information about how to create a theme.)
+include::ROOT:partial$enterpriseOnlyInline.adoc[]
++
+IMPORTANT: The multi-tenant feature in Enterprise Edition must be *disabled*.  See xref:EnableMultiTenant.adoc[] for more information.
+
+. Select the ‘Change Password’ option to change the user’s password.
+. *_Optional_*: To add the user to a group, press the btn:[Add] button in the ‘Member Of’ area. Choose the desired group(s) in the ‘Add Group’ dialog box (kbd:[Ctrl]-click to select multiple groups), and press btn:[Add].
++
+image:securityDefineUsers2.png[]
+. *_Optional:_* To add a role for the user, press the btn:[Add] button in the ‘Roles’ area. Choose the desired role(s) in the ‘Add Role’ dialog box (kbd:[Ctrl]-click to select multiple roles), and press btn:[Add].
+
+. *_Optional:_* To add administrative permission for this user (ability for other users to administer this user), press the btn:[Add] button in the ‘Administrator Permissions’ area. Choose the desired user(s), groups(s), and role(s)  in the ‘Add Permission’ dialog box (kbd:[Ctrl]-click to select multiple items), and press btn:[Add]. Users, groups, or roles granted such administrative privileges will be able to use Enterprise Manager to remove the defined user or reassign groups and roles to the user.
+
+
+
+. Press btn:[Apply] to save your changes.
+
+. Repeat the above steps to add additional users. If you are using a “Named Viewer Session” license, the number of users you can add is limited by the license.  See note below.
++
+[IMPORTANT]
+.Defining Users for Named Licenses
+====
+If you are using  a “Named Viewer Session” or “Named Session” license key, the security provider must define the named users. (See xref:SpecifySecurityProvider.adoc[] for more information about security provider options.)
+
+* If you are using the default InetSoft security provider, you will not be permitted to create more users than the installed licenses allow. If existing users already exceed the licensed number, remove the excess users and restart the server.
+
+* If you are using an LDAP security provider, add a user filter to return only the desired named users. For example, `(|(uid=user1)(uid=user2)(uid=user3))` returns only user1, user2, and user3.
+* If you are using a custom security provider, modify the implementing class to ensure that the number of users is within the licensed limit.
+
+Note that if any security provider defines more than the allowed number of users, it is not possible to predict which of those users will be granted access to the User Portal.
+
+For a “Named Session” license key (which enables Visual Composer), you should specify which particular users have permission to access Visual Composer. To do this, assign the ‘Designer’ role to users who need Visual Composer access.
+
+image:NamedSessionDesignerRole.png[]
+
+You can assign the ‘Designer’ role to more users than the maximum number allowed by the license. If the maximum number of licensed users is reached, the next named user who attempts to open Visual Composer will receive a notification that all licenses are in use.
+====
+
+
+
+== Edit an Existing User
+To edit a user, follow the steps below:
+
+include::administration:partial$selectOrganization.adoc[]
+
+. Expand the user`'s organization on the tree,  expand the ‘Users’ node, and click on the username to select it. (A user may be listed directly under the ‘Users’ node or be listed within a group under the ‘Users’ node.)
+
+. Make any desired changes as described above, and press btn:[Apply].
+
+NOTE: For efficiency, the number of users listed in the navigation tree under LDAP security is limited by the `em.user.max` property (default 1000). See xref:AllProperties.adoc[] for more information about setting properties. Unlisted users can be found by using the {buttonFilterField}.
+
+== Rules for Users, Groups, Roles
+include::partial$userRoleGroupNote.adoc[]

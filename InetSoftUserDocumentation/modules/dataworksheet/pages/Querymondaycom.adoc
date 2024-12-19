@@ -1,0 +1,89 @@
+= monday.com  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing monday.com  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:mondaycom.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonmondaycomQuery}. This opens the ‘monday.com  Query’ dialog box.
+
++
+image:mondayCom1.png[]
++
+
+. Enter the desired GraphQL query in the ‘Query’ field. See the https://graphql.org/[GraphQL site] for more information about syntax and usage. An example of a simple query (without variables or pagination) is shown below:
++
+[source]
+boards {
+    activity_logs {
+        id
+        event
+        data
+    }
+}
++
+If the query uses variables or passes parameters such as limits or filters to an object being referenced, then use the *query* keyword as follows:
++
+[source]
+query($pageNum: Int) {
+    boards {
+        activity_logs(limit: 3, page: $pageNum) {
+            id
+            event
+            data
+        }
+    }
+}
+
+. *_Optional:_* In the ‘Variables’ field, enter any variables and values that you want to be substituted within the query. This is primarily useful when a value is used several times within the query. For example, if you use `$variableName` in the query, you can add `pass:[{"variableName": "value"}]` in the ‘Variables’ field to perform the substitution of `value` for `variableName`.
+
+. *_Optional:_* Check ‘Use Pagination’ if you want to paginate the result set. Enter the ‘Pagination Variable’ (e.g., `pageNum`). This variable’s appearance in the query will be substituted with the actual page number being requested.
++
+Enter as the ‘Pagination JSON Path’ the expression to evaluate to determine when retrieval is complete. For example, consider the query above. If ‘Pagination Variable’ is `pageNum`, then the above request is made with `pageNum` replaced in turn by the values 1, 2, 3, 4, and so on. Each individual request returns three results (`limit: 3`). The  ‘Pagination JSON Path’ in this case is `$.data.boards[0].activity_logs.length()`, which is evaluated on every response. When this expression returns a length of 0 for the `activity_logs` array, the process stops.
+
+. For ‘Request Type’, select ‘GET’ or ‘POST’. For a GraphQL data source, *‘POST’ is the usual method*. In this case, query and variable data is sent in the body of the request, so the actual request will be formed as shown below:
++
+[source,php]
+POST https://api.monday.com/v2
+{"query":"boards{activity_logs{id}}","variables":{pageNum:1}}
++
+Note that if you use the ‘GET’ method, parameters will be embedded in the query parameter part of the URL, which may not be desirable:
++
+[source,php]
+GET https://api.monday.com/v2?query=boards{activity_logs{id}}&amp;variables={pageNum:1}}
+
+
+. Enter the  desired ‘JSON Path’.  See https://goessner.net/articles/JsonPath/[JSONPath - XPath for JSON] for information about the JSON Path syntax.
++
+****
+Example: JSON Path:: Consider the data at https://jsonplaceholder.typicode.com/users.  The JSONPath string
++
+ $.[*][?(@.id < 4)]
++
+retrieves all fields (because none are specified) from all objects where the `id` field value is less than 4. The JSONPath string
++
+ $.[*][?(@.id < 4)].email
++
+retrieves just the `email` field from all objects where the `id` field value is less than 4.
+****
+
+
+. *_Optional:_*  Select ‘Expand Arrays’ to expand a record that contains an array into multiple records.
++
+****
+.Example: Expand Arrays…
+[%collapsible]
+=====
+include::dataworksheet:partial$expandArrays.adoc[]
+=====
+****
+
+
+include::partial$finalStepsQuery.adoc[]

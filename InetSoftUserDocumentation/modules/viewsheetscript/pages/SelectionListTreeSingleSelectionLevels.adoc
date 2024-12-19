@@ -1,0 +1,34 @@
+= singleSelectionLevels
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:SelectionListProperties.adoc[] and xref:viewsheet:SelectionTreeProperties.adoc[] more information on these components.
+
+For a Selection Tree on which the ‘Single Selection’ option is enabled, this property specifies an array of fields  for which single (mutually exclusive) selection is applied. Fields that are not included in the array will offer the usual multiple selection.
+
+
+
+
+
+== Type
+Array
+
+== Example
+[source,javascript]
+SelectionTree1.singleSelection = true;
+SelectionTree1.singleSelectionLevels = ['Region','City'];
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+singleSelectionLevels                   // unqualified
+SelectionTree1.singleSelectionLevels    // qualified
+
+{secondForm}
+====
+
+

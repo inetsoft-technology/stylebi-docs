@@ -1,0 +1,128 @@
+= Word Cloud Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A “word cloud” is a cluster of labels whose size and/or color indicates the value of some *measure* associated with these terms, such as their frequency of occurrence in the data set.
+
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+
+
+image:commonscript:WordCloudExample11.png[]
+
+To create a word cloud, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. *_Optional:_*  Place the desired break-down *dimensions* on the ‘X’ and ‘Y’ axes.
++
+{multipleDimensionNoColor}  If you *do not* place any dimension on ‘X’ or ‘Y’, this will create just a single word cloud (i.e., without any groups). If you place one or more dimensions on ‘X’ or ‘Y’, this will create an individual word cloud for each combination of dimension values.
+
+. Place the *dimension* containing the desired word cloud labels into the ‘Text’ region of the Chart Editor.
+
+. Place a desired *measure* in the ‘Size’ and/or ‘Color’ region of the Chart Editor. To create a traditional word cloud where the size and/or color of the labels is proportional to their frequency in the data set, place a measure in the ‘Size’ and/or ‘Color’ region and summarize it by using the ‘Count’  aggregation method.  You can also use other aggregation methods, such as ‘Sum’ or ‘Average’, to highlight different aspects of the data.
++
+NOTE: When you use the ‘Count’ method, it does not matter which measure you choose to aggregate. See the example below.
+
+
+.Walkthrough: Word Cloud
+****
+The following example illustrates how to create a word cloud that compares a count of products for two different years.
+
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Drag a Chart component into the grid. Resize the chart to use the full screen height.
+
+. Press the {buttonEdit} at the top right corner of the Chart to open the Visualization Recommender. Press the {buttonFullEditor} at the top right of the Recommender to bypass the Recommender and open the Chart Editor.
+
+. Drag the ‘Date’ dimension  to the ‘Y’ region. (This will break out the data by year.)
++
+image:commonscript:WordCloudExample12.png[]
+
+. Drag the ‘Name’ dimension  to the ‘Text’ region.
++
+image:commonscript:WordCloudExample13.png[]
+
+. Drag the ‘Quantity Purchased’ measure (or any other measure)  to the ‘Color’ region.
++
+image:commonscript:WordCloudExample2.png[]
+
+. Press the {buttonEditMeasure} next to the ‘Color’ field. Change the ‘Aggregate’ property to ‘Count’, and press the {buttonApply}.
++
+image:commonscript:WordCloudExample3.png[]
++
+This counts the occurrence of each product in each year group, and colors the corresponding labels proportionally.
+
+
+. Drag the ‘Quantity Purchased’ measure (again) to the ‘Size’ region.
+
++
+image:commonscript:WordCloudExample4.png[]
+
+
+. Press the {buttonEditMeasure} next to the ‘Size’ field, and verify that the ‘Aggregate’ property is set to ‘Count’.
++
+image:commonscript:WordCloudExample5.png[]
++
+This counts the occurrence of each product in each year group, and sizes the corresponding labels proportionally.
+
+. Press the ‘Edit Color’ button in the ‘Color’ region. Choose a desired color spectrum, and press the {buttonClose}. (A word cloud often displays the smaller-sized labels in a lighter color.)
++
+image:commonscript:WordCloudExample6.png[]
+
+. Filter the chart to display just the top two years. (This will reduce the clutter on the chart.) You can do this by applying a ranking condition. Follow the steps below:
++
+====
+.. Press the {buttonEditDimension} next to the ‘Date’ field.
+
+.. From the ‘Rank’ menu, select ‘Top’, and enter “2” as the number of groups to select. This selects the top two years according to the count of products.
+
+.. *Uncheck* the ‘As time series’ option. (This suppresses the labeling for any years that intervene between the top two years.)
++
+image:commonscript:WordCloudExample7.png[]
+
+.. Press the {buttonApply}.
+====
+. *_Optional:_*  Adjust the appearance of the chart display as desired. Follow the steps below:
+
++
+====
+.. Right-click on each legend and select ‘Hide Legend’.
++
+image:commonscript:WordCloudExample8.png[]
+
+.. *_Optional:_*  Hide  axis titles by right-clicking a title and selecting ‘Hide Title’.
+
+.. Click on one of the labels in the plot area. Select the *Format* tab in the left panel and set the font face and size as desired.
++
+image:commonscript:WordCloudExample9.png[]
+====
+
+. To adjust the label size further, press the ‘Edit Size’ button next to the ‘Size’ region. Adjust the maximum and minimum label sizes by dragging the slider. Press the {buttonApply} to apply the changes.
++
+image:commonscript:WordCloudExample10.png[]
++
+NOTE: To further increase the size range of displayed words, use the ‘Font Scale’ property under the *Advanced* tab of the ‘Chart Properties’ dialog box. (See xref:ChartProperties.adoc[] for more information.)
+
+. {finishEditing}
+
+The completed chart compares the word clouds for the top two years.
+
+
+image:commonscript:WordCloudExample11.png[]
+
+include::partial$addTitlesLegend.adoc[]
+
+****
+
+
+
+
+
+
+
+
+

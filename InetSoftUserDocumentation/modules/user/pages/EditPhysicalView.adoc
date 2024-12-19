@@ -1,0 +1,214 @@
+= Edit a Physical View
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$createVisualizationClose.adoc[]
+
+
+To modify an existing physical view, follow the steps below:
+
+. Press the top {buttonData} in the Portal.
+
+. In the  left panel, expand the ‘Data Sources’ folder.
+
+. Expand the data source for which the physical view is defined, select the ‘Data Model’ node, and click on the physical view to open it for editing.
++
+image:dataModel20.png[]
+
+. To add tables and joins to the physical view, follow the appropriate steps in xref:CreatePhysicalView.adoc[].
+
+. To make other modifications, see the sections below and then press the {buttonSave} to save the physical view.
+
+[#AddInlineSQL]
+== Add Inline SQL
+
+If you want to add custom business rules in your model without creating a new view in your database schema, you can create an inline *embedded SQL view*. This allows you to create a virtual “table” by embedding a SQL directly into the physical view.
+
+IMPORTANT: An embedded view may result in a different execution plan than a database view. You should test both options against your database.
+
+To create an inline view, follow the steps below.
+
+. Press the {buttonCreateInlineView} button.
++
+image:dataModel6.png[]
+
+. In the ‘Inline View’ dialog box, enter the view name in the ‘Name’ field, and type in the SQL query string into the ‘SQL Query’ field.
++
+image:dataModel7.png[]
+
+. Press btn:[OK]. This adds the inline view as a new table and places it into the physical view.
++
+image:dataModel8.png[]
+
+. Join the inline view to other tables in the physical view as described in xref:CreatePhysicalView.adoc[].
+
+. Press the {buttonSave} in the top right to save the physical view.
+
+[#AutomaticallyCreateJoins]
+== Automatically Create Joins
+
+When you are initially creating the physical view, it is often helpful to automatically create  joins between many tables. To do this, follow the steps below:
+
+. Select tables for the new physical view as described in xref:CreatePhysicalView.adoc[].
+
+. Press the {buttonAutoJoinTables} at the top of the ‘Tables’ panel.
+
+. Specify whether you want the joins to be constructed based on existing key relations or based on matching identical column names.
++
+image:dataModel9.png[]
+
+. Select the key columns or column names for which you want to create joins, and press btn:[OK]. This adds the specified joins into the physical view.
++
+image:dataModel10.png[]
+
+. To simplify the appearance of the physical view and remove line crossings, press the {buttonAutoLayout} in the toolbar.
++
+IMPORTANT: Join paths that are displayed in red indicate the presence of a join cycle, which is an ambiguity in the join structure. See xref:#ResolveLoops[] for information on how to correct this problem.
+
+. To modify the properties of a join, see xref:#ModifyJoinProperties[].
+
+. Press the {buttonSave} in the top right to save the physical view.
+
+[#ResolveLoops]
+== Resolve Loops
+
+When a join path is displayed in red, this indicates that a join cycle (join ambiguity) exists.
++
+image:dataModel11.png[]
+
+There are several approaches to resolving join cycles:
+
+* Change one of the joins in the join cycle to a  *weak join*. This specifies that this join relationship should be used only when it does not conflict with another join path, as for example when a query requests data only from the two tables joined by the weak join. To designate a join as a weak join, see xref:#ModifyJoinProperties[].  Weak joins appear as dotted lines.
+
+* Create an *alias* of a  table in the join cycle. The alias table can be used in the physical view as a independent copy of the original table to break the join cycle while preserving the semantics of the join structure. See xref:#AliasSingleTable[] for more information. An aliased table is indicated by a colored header. To display the name of the table that was originally aliased, hover the mouse over the alias table header.
+
+* Create an *auto-alias* of multiple tables in the join cycle. This is useful when the table that you want to alias has outgoing relationship links, and you therefore need to alias several “downstream” tables as well. See xref:#AliasMultipleTable[] for more information.
+
+
+
+[#ModifyJoinProperties]
+== Modify Join Properties
+
+To modify properties of a join in the physical view , follow the steps below:
+
+. Click to select the table that has the outgoing join you want to modify.
++
+image:dataModel21.png[]
+
+. In the *Outgoing Joins* panel, expand the selected table, click the join condition that you want to modify, and press the {buttonEditJoin}.
++
+image:dataModel22.png[]
+
+. Set the desired join characteristics in the ‘Edit Join’ panel.
++
+image:dataModel15.png[]
++
+The following settings are available:
++
+****
+Join Type:: Indicates the join operator, such as ‘Equal’ (inner join, the default), ‘Left Outer’, ‘Right Outer’, or one of several inequality relations.
+
+Order priority:: Indicates relative positioning of this particular join within any SQL query that is automatically generated from the physical view. The position of a join in the SQL string can often affect query performance.
+
+Merging Rule:: Determines how the join is integrated together with other joins between the same tables. The ‘And’ option indicates that the join is applied conjunctively (i.e., the join condition must be satisfied even if another join condition is already satisfied); the ‘Or’ option indicates that the join is applied ‘disjunctively’ (i.e., the join condition need not be satisfied if another join condition is already satisfied).
+
+Cardinality:: Allows you to override the automatic cardinality detection and specify the cardinality relationship between tables, indicated by the arrow on the join link.
+
+Weak Link:: Enforce the join condition only when no other join path between the tables is available. This option can often be used to break join cycles, or ambiguities in the join structure.
+****
+
+. To delete the join, press the {buttonRemoveSelectedJoins} in the ‘Outgoing Joins’ panel.
+
+. Press the {buttonSave} to save the physical view.
+
+
+
+
+[#AliasSingleTable]
+== Alias Single Table
+
+An alias table can be used in the physical view as a independent copy of the original table to break a join cycle while preserving the semantics of the model. (See xref:#ResolveLoops[].) To create an alias for a single table, follow the steps below:
+
+. Right-click the table that you want to alias, and select ‘Create Alias’.
++
+image:dataModel23.png[]
+
+. In the ‘Table Alias’ dialog box, provide a name for the alias table and press btn:[OK].
++
+image:dataModel24.png[]
+
++
+The new alias table is added into the physical view, highlighted in yellow. This table is identical to the original table, but can be used independently within the physical view.
++
+image:dataModel25.png[]
+
+
+. Click to select the original table (from which the alias was created), and delete the join that creates the cycle. See xref:#ModifyJoinProperties[] for information on how to delete a join.
++
+image:dataModel26.png[]
+
+. Create a join to the new alias table. (See  xref:CreatePhysicalView.adoc[] for more information about how to add a join.)
++
+image:dataModel27.png[]
++
+The alias table is now joined to the physical view as you specified, and the join cycle has been broken.
++
+image:dataModel28.png[]
++
+NOTE: When you successfully break a join cycle, another join cycle might be highlighted.  Only one join cycle is highlighted at a time.
+
+. Repeat the above steps to address any additional highlighted join cycles.
+
+. Press the {buttonSave} to save the physical view.
+
+
+[#AliasMultipleTable]
+== Alias Multiple Tables
+
+An alias table can be used in the physical view as a independent copy of the original table to break a join cycle while preserving the semantics of the view. (See xref:#ResolveLoops[].) In some cases you may need to alias other “downstream” tables as well in order to break the cycle. The easiest way to do this is to use the *auto-alias*  feature.
+
+Consider a simple example in which you need to alias the table ‘PRODUCTS’ to resolve a join cycle.
+
+image:dataModel29.png[]
+
+The joins highlighted in red indicate the presence of a cycle. Follow the steps below to break the cycle with an auto-alias:
+
+. Right-click the `PRODUCTS` table in the diagram, and then select ‘Auto Alias’.
++
+image:dataModel30.png[]
+
+. Check the ‘Enable auto aliasing’ box.
++
+image:dataModel31.png[]
++
+The dialog box lists all of the joins from the adjacent tables in the diagram.
+
+. Select the tables that provide the incoming joins to the `PRODUCTS` table , in this case the `ORDER_DETAILS` and `RETURNS` tables.
++
+image:dataModel32.png[]
++
+This designates the `ORDER_DETAILS` and `RETURNS` tables as providing the incoming joins to the `PRODUCTS` table. When the `PRODUCTS` table is auto-aliased, two copies of the table will be created. One copy corresponds to the incoming join from the `ORDER_DETAILS` table, and the other copy corresponds to the incoming join from the `RETURNS` table. By splitting the `PRODUCTS` table into two aliases, the join cycle is eliminated. However, if *only* the `PRODUCTS` table is aliased, the cycle will simply reappear on the `CATEGORIES` and `SUPPLIERS` tables. This is why in the next steps you will specify the ‘Keep Outgoing Links’ option.
+
+. In the ‘Table Alias’ field for the `ORDER_DETAILS` table, enter “Ordered Products”.
+
+. Select ‘Keep Outgoing Links’ for the `ORDER_DETAILS` table, and enter “Order” as the ‘Table Prefix’. This will cause the downstream `CATEGORIES` and `SUPPLIERS` tables to be aliased for the `ORDER_DETAILS` join path as well.
+
+
+
+
+. In the ‘Table Alias’ field for the `RETURNS` table, enter “Returned Products”.
+
+. Select ‘Keep Outgoing Links’ for the `RETURNS` table, and enter “Return” as the ‘Table Prefix’. This will cause the downstream `CATEGORIES` and `SUPPLIERS` tables to be aliased for the `RETURNS` join path as well.
++
+image:dataModel33.png[]
+
+. Press btn:[OK]. Observe that the `PRODUCTS`, `CATEGORIES`, and `SUPPLIERS` table have all been aliased, and this has successfully eliminated the join cycle.
++
+image:dataModel34.png[]
+
+
+. Press the {buttonSave} to save the physical view.
+
+The new aliased tables in the physical view will appear among the tables available for constructing the logical model (see xref:LogicalModel.adoc[]). With the elimination of the cycle, there is no remaining ambiguity in the join structure.
+
+CAUTION:  When you design your logical model from a physical view with aliased tables, *you must be careful* when selecting fields as model attributes. For example, the `Return_SA.SUPPLIERS` table will in general return *different data* than the  `Order_SA.SUPPLIERS` table when fields from these tables are used in a data model. Even though these two tables are identical aliases of the original `SUPPLIERS` table , they are joined to the other tables in different ways, which results in different data selections.

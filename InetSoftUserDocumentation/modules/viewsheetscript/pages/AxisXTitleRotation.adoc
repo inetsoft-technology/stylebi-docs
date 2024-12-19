@@ -1,0 +1,32 @@
+= xTitle.rotation
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the X-axis title rotation angle.
+
+
+
+== Type
+Number (degrees)
+
+
+
+== Example
+[source,javascript]
+Chart1.xTitle.rotation = 30;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+xTitle.rotation             // unqualified
+Chart1.xTitle.rotation      // qualified
+
+{secondForm}
+====
+

@@ -1,0 +1,53 @@
+= fields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheetscript:RangeSliderQuery.adoc[] to specify the data block from which to draw the fields.
+====
+
+Specifies the field (for single value) or fields (for composite value) of the data block to be displayed by the Range Slider component. This is equivalent to selecting fields under the *Data* tab of the component ‘Properties’ dialog box.
+
+image:viewsheet:RangeSliderFields.png[]
+
+== Type
+Array
+
+
+
+
+
+
+
+
+
+
+== Examples
+.Single-value Range Slider
+[source,javascript]
+RangeSlider1.composite = false;
+RangeSlider1.query = 'Sales';
+RangeSlider1.fields = ['Date'];
+RangeSlider1.rangeType = StyleConstant.DATE;
+
+.Composite-value Range Slider
+[source,javascript]
+RangeSlider1.composite = true;
+RangeSlider1.query = 'Sales';
+RangeSlider1.fields = ['Region','Category'];
+RangeSlider1.rangeType = StyleConstant.STRING;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fields                  // unqualified
+RangeSlider1.fields     // qualified
+
+{secondForm}
+====
+
+

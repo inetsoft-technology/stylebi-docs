@@ -1,0 +1,60 @@
+= VisualFrame.setLegendSpec(spec)
+:navtitle: VisualFrame.setLegendSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the formatting for the legend generated for the `VisualFrame`.  The corresponding “getter” function is xref:VisualFrameGetLegendSpec.adoc[].
+
+== Parameter
+spec::			a xref:LegendSpec.adoc[] object
+
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var frame = new LinearSizeFrame();
+var spec = new LegendSpec(); //<2>
+spec.setBorderColor(java.awt.Color(0xff0000));
+frame.setField("Quantity");
+frame.setLegendSpec(spec); //<3>
+elem.setSizeFrame(frame);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `LegendSpec` object.
+<3> Use `setLegendSpec` to add the `LegendSpec` to the xref:LinearSizeFrame.adoc[].
++
+image:commonscript:VisualFrameSetLegendSpec.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} and xref:GraphElementGetColorFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:ColorFrame.adoc[]  objects. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getColorFrame(); //<2>
+var spec = new LegendSpec();
+spec.setBorderColor(java.awt.Color(0xff0000));
+frame.setLegendSpec(spec);
+--
+=====
+

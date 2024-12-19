@@ -1,0 +1,91 @@
+= TextureFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=created by]
+====
+[square]
+* xref:LeftTiltTextureFrame.adoc[]
+* xref:OrientationTextureFrame.adoc[]
+* xref:RightTiltTextureFrame.adoc[]
+* xref:GridTextureFrame.adoc[]
+* xref:CategoricalTextureFrame.adoc[]
+* xref:StaticTextureFrame.adoc[]
+====
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+The `TextureFrame` object contains the texture for visual chart objects. You can use a `TextureFrame` object to represent data dimensions with texture (texture coding), or to apply a fixed (static) texture pattern. To create a `TextureFrame`, use constructors such as xref:GridTextureFrame.adoc[] or xref:StaticTextureFrame.adoc[].
+
+
+
+
+
+
+
+
+
+
+
+== Example 1
+
+. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script to the Chart component. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
+.Chart Component Script
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new StaticTextureFrame(); //<2>
+frame.setTexture(GTexture.PATTERN_5);
+elem.setTextureFrame(frame); //<3>
+--
+<1> Use xref:EGraph_getElement.adoc[] to get a handle to the xref:PointElement.adoc[].
+<2> Create the `StaticTextureFrame` object.
+<3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `StaticTextureFrame` to the xref:PointElement.adoc[].
+
++
+image:commonscript:StaticTextureFrame.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:TextureFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.textureFrame = new LeftTiltTextureFrame;
+--
+
++
+image:commonscript:LeftTiltTextureFrame.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

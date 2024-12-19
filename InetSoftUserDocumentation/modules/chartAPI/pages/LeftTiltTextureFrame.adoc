@@ -1,0 +1,85 @@
+= LeftTiltTextureFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+The `LeftTiltTextureFrame` object contains a texture for visual chart objects rendered by negatively-sloping lines with variable spacing. To create a `LeftTiltTextureFrame` object, call the `LeftTiltTextureFrame` constructor.
+
+[source,javascript]
+var frame = new LeftTiltTextureFrame('Total');
+
+You can pass the name of a field (e.g., ‘Total’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `TextureFrame` using the xref:viewsheetscript:ChartBindingInfoTextureFrame.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity","Total"], ["NJ",300,10],["NY",200,20],["PA",250,35]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new LeftTiltTextureFrame("Total"); //<2>
+elem.setTextureFrame(frame); //<3>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `LeftTiltTextureFrame` object.
+<3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:LeftTiltTextureFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new LeftTiltTextureFrame();
+frame.setField("Sum(Product:Quantity Purchased)");
+elem.setTextureFrame(frame);
+--
+=====
+
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:TextureFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.textureFrame = new LeftTiltTextureFrame;
+--
+
++
+image:commonscript:LeftTiltTextureFrame_1.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

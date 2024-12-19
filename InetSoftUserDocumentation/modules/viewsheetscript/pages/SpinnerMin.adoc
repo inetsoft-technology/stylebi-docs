@@ -1,0 +1,37 @@
+= min
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+The smallest value that the Spinner can represent. The user will not be able to use the Spinner to enter a smaller value.
+
+
+
+
+== Type
+Number::			Value of lowest Spinner input
+
+
+
+
+== Example
+[source,javascript]
+Spinner1.min = -50;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+min              // unqualified
+Spinner1.min     // qualified
+
+{secondForm}
+====
+
+

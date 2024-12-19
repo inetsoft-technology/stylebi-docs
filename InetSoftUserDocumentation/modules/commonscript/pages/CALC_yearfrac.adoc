@@ -1,0 +1,39 @@
+= CALC.yearfrac(start_date, end_date [,basis])
+:navtitle: CALC.yearfrac()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns a decimal value between 0 and 1 representing the number of days between `start_date` and `end_date` as a fraction of the year. {CALCExcelFunctionPage}
+
+
+== Parameters
+start_date::			Date object: date on which to begin counting
+end_date::			Date object: date on which to end counting
+basis::			Optional day count convention code  (0, 1, 2, 3, 4):
++
+include::partial$basisTable.adoc[]
+
+
+== Example
+[source,javascript]
+----
+CALC.yearfrac(new Date(2014,0,1), new Date(2015,0,1)); // returns 1.0
+CALC.yearfrac(new Date(2005,0,1), new Date(2005,5,30)); // returns 0.4972222149372101
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.yearfrac(field['Order Date'], CALC.today())
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.yearfrac(RangeSlider1.selectedObjects[0], CALC.today())
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

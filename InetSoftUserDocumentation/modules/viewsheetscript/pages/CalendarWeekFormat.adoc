@@ -1,0 +1,35 @@
+= weekFormat
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the format for the days of the week displayed at the top of the Calendar.
+
+== Type
+String:: The available formats are shown below:
++
+[source,javascript]
+'E'     // abbreviations, ‘Sun’, ‘Mon’, ‘Tue’, etc.
+'EEEE'  // full display, ‘Sunday’, ‘Monday’, ‘Tuesday’, etc.
+
+
+
+== Example
+[source,javascript]
+Calendar1.weekFormat = "EEEE";
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+weekFormat               // unqualified
+Calendar1.weekFormat    // qualified
+
+{secondForm}
+====
+
+

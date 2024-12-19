@@ -1,0 +1,23 @@
+. *_Optional:_* Adjust the following optional properties:
++
+image:dataSourceJDBC4.png[]
+
+ .. In the ‘Change Default DB’ field, enter the default schema name with which the login and password are associated.
+
+.. Select ‘ANSI Join Syntax’ to specify that queries should use the ANSI standard.
+
+.. The ‘Transaction Isolation’ option sets the database transaction isolation level.
+
+.. The ‘Table Name’ option allows you to select how table names are represented in the SQL that is sent to the database.
++
+.‘Schema.Table’ option
+[example]
+====
+If you select the ‘Schema.Table’ option, the SQL string will refer to tables by both the schema name and the table name.  For a schema called “ORDERS”, table names would therefore appear in SQL as `ORDERS.CATEGORIES`, `ORDERS.PRODUCTS`, and so on.
+====
++
+.‘Table’ option
+[example]
+====
+If you  select the ‘Table’ option, the SQL string will refer to tables by  the table name alone, e.g., `CATEGORIES`, `PRODUCTS`, and so on.
+====

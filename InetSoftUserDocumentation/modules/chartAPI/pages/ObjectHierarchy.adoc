@@ -1,0 +1,7 @@
+= Object Hierarchy
+
+
+The figure below shows the object structure of the  Chart API. Among the significant objects, xref:chartAPI:GraphElement.adoc[] contains the elements that graphically represent data (lines, bars, etc.). xref:chartAPI:VisualFrame.adoc[] contains information about mapping data dimensions to physical properties (size, color, etc.), and xref:chartAPI:Scale.adoc[] contains the scaling information for such mappings. xref:chartAPI:GraphForm.adoc[] contains information for manually-drawn chart objects.
+
+image:commonscript:ObjectHierarchy.png[]
+

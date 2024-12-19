@@ -1,0 +1,35 @@
+= Facebook Ad Insights  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Facebook Ad Insights  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:FacebookAdInsights.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonFacebookAdInsightsQuery}.
++
+image:FacebookInsightsQuery1.png[]
++
+This opens the ‘Facebook Ad Insights  Query’ dialog box.
++
+image:FacebookInsightsQuery2.png[]
+
+. In the ‘Date Preset’ menu, select the range of dates for the data that you want to analyze.
+
+. Press the btn:[Add] button to add a ‘Metric’ field. Enter the metric that you want to retrieve. (See the Facebook developer website for a https://developers.facebook.com/docs/marketing-api/reference/adgroup/insights/[list of available metrics].)
++
+image:FacebookInsightsQuery3.png[]
+
+. Repeat the above step to add additional metrics. To remove a metric, check the box next to the metric and press btn:[Remove]. (Use the ‘Quick Add’ menu to add a listed metric.)
+
+. Enter the desired breakdowns in the ‘Breakdowns’ field. See the https://developers.facebook.com/docs/marketing-api/insights/breakdowns/[Facebook API documentation] for details about breakdowns. (Use the ‘Quick Add’ menu to add a listed breakdown.)
+
+. *_Optional:_* To add additional parameters, press the btn:[Add] button in the ‘Additional Parameters’ region. (See the Facebook developer website for a list of https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/[Parameters]. Use the ‘Quick Add’ menu to add a listed parameter.)
+
+include::partial$finalStepsQuery.adoc[]

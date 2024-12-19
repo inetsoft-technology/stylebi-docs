@@ -1,0 +1,26 @@
+= charCodeAt(index)
+:navtitle: charCodeAt()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheetscript:partial$readOnly.adoc[]
+
+Return the character code of the character at the specified position in the string. Use xref:StringObjectCharAt.adoc[] to return the *character* rather than the code.
+
+
+
+== Example
+[source,javascript]
+var txt = 'Hello';
+txt.charCodeAt(4); // returns “111”
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].charCodeAt(4);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.charCodeAt(4);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

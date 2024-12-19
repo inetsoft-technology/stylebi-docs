@@ -1,0 +1,42 @@
+= form
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TableProperties.adoc[] to set the property without using script.
+====
+
+
+Specifies that the table should be “editable” by the user.   See xref:WriteBackToDatabase.adoc#AccessUserModifiedData[Access User-Modified Data] for more details.
+
+
+
+
+
+
+
+
+== Type
+Boolean:: `true`: allow editing +
+`false`: do not allow editing (default)
+
+
+
+== Example
+[source,javascript]
+TableView1.form = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+form                 // unqualified
+TableView1.form      // qualified
+
+{secondForm}
+====
+
+

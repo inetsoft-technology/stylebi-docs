@@ -1,0 +1,5 @@
+= Advanced Dashboard Scripting
+
+Certain Dashboard applications require a degree of flexibility that can only be achieved with programmatic logic. For example, you may need to hide or show certain Dashboard components under particular conditions, such as when a user’s selections return no data, or you might wish to present an alert message if a certain key indicator does not meet its target.
+
+The Dashboard scripting environment allows you to easily implement such event-driven behavior. The scripting language is based on the popular JavaScript language  (https://www.ecma-international.org/publications/standards/Ecma-262.htm[ECMA-262] standard). The following sections provide a short introduction to JavaScript, concentrating on the Dashboard environment and examples of common Dashboard scripting.

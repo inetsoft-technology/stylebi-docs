@@ -1,0 +1,44 @@
+= CALC.percentrank(array, x, [significance])
+:navtitle: CALC.percentrank()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the rank of a value `x` within the data provided in `array`. The rank is given as a percentage indicating the percentage of values in `array` that fall below value `x`. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of real values
+x::			Value to test
+significance::			Optional number of significant digits in the returned percentage value
+
+
+
+== Example
+Where does the value 2 rank within the set pass:[{13,12,11,8,4,3,2,1,1,1}], to three decimal places.
+
+[source,javascript]
+----
+CALC.percentrank([13,12,11,8,4,3,2,1,1,1],2,3);
+// returns 0.333 (approximately 33.3% of values are less than 2)
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+
+CALC.percentrank([6,7,9,15,21], field['XValue'], 3)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Columns of Dashboard table TableView1:
+CALC.percentrank(TableView1.table['Values'], parameter.XValue, 3)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Columns of ‘Sales’ data block in Data Worksheet:
+CALC.percentrank(Sales['Values'], parameter.XValue, 3);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

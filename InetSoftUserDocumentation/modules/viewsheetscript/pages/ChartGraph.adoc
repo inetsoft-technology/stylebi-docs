@@ -1,0 +1,17 @@
+= graph
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the xref:chartAPI:EGraph.adoc[] object of the Chart, to be used with Chart API scripts.  See xref:chartAPI:ChartScriptTutorial.adoc[] for more information about  Chart API script.
+
+
+== Type
+xref:chartAPI:EGraph.adoc[]
+
+== Example
+[source,javascript]
+graph = new EGraph();
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

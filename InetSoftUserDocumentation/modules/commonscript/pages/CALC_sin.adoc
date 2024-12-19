@@ -1,0 +1,37 @@
+= CALC.sin(number)
+:navtitle: CALC.sin()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the sine of the given angle specified in radians. {CALCExcelFunctionPage}
+
+== Parameters
+number::			An angle in radians
+
+
+
+== Example
+[source,javascript]
+----
+CALC.sin(pi())  // returns 3.2310891488651735E-15 (approximately 0)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.sin(field['Angle'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.sin(Slider1.selectedObject)
+CALC.sin(parameter.Angle)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

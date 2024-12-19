@@ -1,0 +1,29 @@
+= colorLegends.color
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the label color within a color-key legend (on charts that have *multiple* color legends).
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.colorLegends['Sum(Product:Quantity Purchased)'].color = 'red';
+Chart1.colorLegends['Sum(Product:Total)'].color = 'green';
+
+image:commonscript:colorLegendsColor.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorLegends['...'].color         // unqualified
+Chart1.colorLegends['...'].color  // qualified
+
+{secondForm}
+====

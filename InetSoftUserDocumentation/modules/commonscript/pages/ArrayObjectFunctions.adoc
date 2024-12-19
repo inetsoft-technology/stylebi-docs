@@ -1,0 +1,32 @@
+= Array Object Functions
+
+
+JavaScript arrays are a non-fixed length arrays. A constant array can be created using an array literal:
+
+[source,javascript]
+states = ["NJ", "NY", "CA"];
+
+This is equivalent to the array constructor:
+
+[source,javascript]
+states = new Array("NJ", "NY", "CA");
+
+The length of the array is dynamically adjusted when new items are added to an array. If the newly added item leaves a gap in the existing array, the items in the gap have an `undefined` value.
+
+[source,javascript]
+states[50] = 'FL';
+
+The `length` property of an array object returns the current array length.
+
+[source,javascript]
+for(var i = 0; i < states.length; i++) {
+  if(states[i] == 'NJ') {
+    // do something ...
+  }
+}
+
+Array objects also provide the  methods described in the following topics.
+
+
+
+

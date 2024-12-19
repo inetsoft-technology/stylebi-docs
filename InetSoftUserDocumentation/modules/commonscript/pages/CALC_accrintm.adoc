@@ -1,0 +1,50 @@
+= CALC.accrintm(issue, maturity, rate, par, [basis])
+:navtitle: CALC.accrintm()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *accrued interest* for a security that pays interest at *maturity*. {CALCExcelFunctionPage}
+
+
+
+
+== Parameters
+issue::			Date object: The security’s issue date
+maturity::			Date object: The security’s maturity date
+rate::			The security’s annual coupon rate
+par::			The security’s par value
+basis::            {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+
+
+
+== Example
+Interest accrued for a $1000 par value security with a 10% annual rate, issue date of April 1, 2008, maturity date of June 15, 2008, using an Actual/365 counting method.
+[source,javascript]
+----
+CALC.accrintm(new Date(2008,3,1), new Date(2008,5,15), 0.1, 1000, 3)
+// returns 20.54794520547945
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.accrintm(field['IssueDate'], field['MaturityDate'], 0.1, 1000, 3)
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.accrintm(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 0.1, 1000, 3)
+CALC.accrintm(parameter.IssueDate, parameter.MaturityDate, 0.1, 1000, 3)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

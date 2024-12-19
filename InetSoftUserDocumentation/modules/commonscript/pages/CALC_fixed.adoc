@@ -1,0 +1,39 @@
+= CALC.fixed(number, decimals, no_commas)
+:navtitle: CALC.fixed()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns a number rounded to the specified number of `decimals` and formatted as text using a period and commas. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A numerical value to round and format as text
+decimals::			The number of digits to right of decimal point
+no_commas (Boolean):: `true` to suppress commas in result +
+`false` to allow commas in result
+
+
+== Example
+[source,javascript]
+----
+CALC.fixed(1234.567, 2, false);  // returns 1,234.57
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.fixed(field['Price'], 2, false)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.fixed(parameter.Price, 2, false)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

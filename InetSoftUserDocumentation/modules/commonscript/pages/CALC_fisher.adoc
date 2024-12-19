@@ -1,0 +1,38 @@
+= CALC.fisher(x)
+:navtitle: CALC.fisher()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the Fisher z-transformation at numeric value `x`. This transformation produces a function that is normally distributed rather than skewed, and can be used to perform hypothesis testing on the sample correlation coefficient. {CALCExcelFunctionPage}
+
+
+== Parameters
+x::			Value to transform
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.fisher(0.75);  // returns 0.9729550745276566
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.fisher(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.fisher(Slider1.selectedObject)
+CALC.fisher(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

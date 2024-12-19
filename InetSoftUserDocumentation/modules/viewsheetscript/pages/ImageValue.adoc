@@ -1,0 +1,42 @@
+= value
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+====
+
+Specifies the value of the Image component in cases when the component is bound to a data field (i.e., representing an aggregate). If the Image component is not bound to a data field, the value property is undefined.
+
+== Type
+Number
+
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+if (Image1.value > 10000) {
+  Image1.background = 'red';
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+value           // unqualified
+Image1.value    // qualified
+
+{secondForm}
+====
+
+

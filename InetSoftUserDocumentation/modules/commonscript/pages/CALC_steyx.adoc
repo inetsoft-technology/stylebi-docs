@@ -1,0 +1,39 @@
+= CALC.steyx(array_y, array_x)
+:navtitle: CALC.steyx()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the *standard error* of the estimate for a regression model based on independent values in `array_x` and dependent (function) values in `array_y`. The standard error represents the average distance of values in `array_y` from the regression line. {CALCExcelFunctionPage}
+
+== Parameters
+array_y::			Array of y (dependent) values corresponding to values in `array_x`
+array_x:: Array of x (independent) values corresponding to values in `array_y`
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.steyx([2,3,9,1,8,7,5], [6,5,11,7,5,4,4]);  // returns 3.305718950210041
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.steyx(TableView1.table['Quantity'],TableView1.table['Price'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.steyx(Sales['Quantity'], Sales['Price']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

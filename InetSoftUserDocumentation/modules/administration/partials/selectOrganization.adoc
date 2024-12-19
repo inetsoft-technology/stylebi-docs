@@ -1,0 +1,6 @@
+. If *multi-tenancy* is enabled, from the '`Select Organization`' menu, choose the desired organization.
+include::ROOT:partial$enterpriseOnlyInline.adoc[]
++
+image:administration:organization1.png[]
++
+IMPORTANT: Settings you make in the steps below apply only to the *selected organization*.  Users and assets of other organizations are *not affected*.  Note that some settings may only be available to the Host Organization, and are only visible to the Site Administrator.

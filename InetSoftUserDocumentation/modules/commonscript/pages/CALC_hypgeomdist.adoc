@@ -1,0 +1,44 @@
+= CALC.hypgeomdist(sample_s, number_sample, population_s, number_population)
+:navtitle: CALC.hypgeomdist()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the value of the *hypergeometric distribution*, the probability of `sample_s` successes in a sample of size `number_sample` (drawn without replacement), where the population of size `number_population` has `population_s` successes. {CALCExcelFunctionPage}
+
+
+== Parameters
+sample_s::				Number of successes in sample
+number_sample::				Sample size
+population_s::				Number of successes in population
+number_population::	Population size
+
+
+
+== Example
+Probability of 1 success in a sample of size 4 (drawn without replacement), where the population of size 20 has 8 successes:
+
+[source,javascript]
+----
+CALC.hypgeomdist(1, 4, 8, 20);
+// returns 0.3632610939112487 (approximately 36.3%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.hypgeomdist(field['Successes'], field['Sample'], 8, 20)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.hypgeomdist(Slider1.selectedObject, Slider2.selectedObject, 8, 20)
+CALC.hypgeomdist(parameter.Successes, parameter.Sample, 8, 20)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

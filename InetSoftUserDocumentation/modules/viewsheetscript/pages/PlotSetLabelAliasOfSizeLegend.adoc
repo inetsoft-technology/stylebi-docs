@@ -1,0 +1,35 @@
+= setLabelAliasOfSizeLegend(value, alias)
+:navtitle: setLabelAliasOfSizeLegend()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Replace the specified label in the size legend with an alias. {noGetter}
+
+
+
+== Parameters
+value::			Value to be replaced
+alias::			Replacement string
+
+
+
+
+== Examples
+
+[source,javascript]
+Chart1.setLabelAliasOfSizeLegend('NJ','New Jersey');
+Chart1.setLabelAliasOfSizeLegend('NY','New York');
+
+
+image:commonscript:setLabelAliasOfSizeLegend.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setLabelAliasOfSizeLegend(value, alias)           // unqualified
+Chart1.setLabelAliasOfSizeLegend(value, alias)    // qualified
+
+{secondForm}
+====

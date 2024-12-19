@@ -1,0 +1,35 @@
+= max
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+The value of the largest label displayed on the Slider scale.
+
+
+== Type
+Number::			Value of highest scale label
+
+
+
+
+== Example
+[source,javascript]
+Slider1.max = 250;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+max                  // unqualified
+Slider1.max     // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,59 @@
+= Pareto Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A Pareto chart highlights the contributions of individual groups to an overall total. The chart consists of two parts: A bar chart that displays the dimension’s groups in order of decreasing value, and a line chart that provides a cumulative total of the groups’ values. The left axis of the chart represents the actual aggregate values, and the right axis represents the percent contribution to the overall total.
+
+image:commonscript:paretoChart4.png[]
+
+To create a Pareto chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Pareto’ style.   Press the {buttonApply}.
++
+image:commonscript:paretoChart1.png[]
+
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:paretoChart2.png[]
+
++
+TIP: {convertToDimension}
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:paretoChart3.png[]
+
++
+TIP: {convertToMeasure}
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+image:Chart Edit Y Axis_1.png[]
+
+
+
+. *_Optional:_* {multipleMeasure} {addMeasuresUsingVisual}
+
+. {finishEditing}
+
+include::partial$addTitlesLegend.adoc[]
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Auto_Insurance_Overview.zip[Auto Insurance Overview] Dashboard provides an example of a Pareto chart.
+
+image:viewsheet:galleryBar2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Auto_Insurance_Overview.zip[Auto Insurance Overview] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****

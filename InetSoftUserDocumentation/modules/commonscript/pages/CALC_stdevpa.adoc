@@ -1,0 +1,39 @@
+= CALC.stdevpa(array)
+:navtitle: CALC.stdevpa()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the *population standard deviation* for the values in `array`, which can include Boolean values. Standard deviation is the square root of the variance and provides a measure of how widely the data are spread about the mean.  {CALCExcelFunctionPage}
+
+
+
+== Parameters
+array::			Array of real or Boolean values. Boolean `true` evaluates to 1; `false` evaluates to 0. (String values are ignored.)
+
+
+== Example
+
+[source,javascript]
+----
+CALC.stdevpa([true, false,1345,1301,1368,1322,1310,1370,1318,1350,1303,1299]);
+// returns 495.5248269932261
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.stdevpa(TableView1.table['Col1'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.stdevpa(Sales['Col1']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

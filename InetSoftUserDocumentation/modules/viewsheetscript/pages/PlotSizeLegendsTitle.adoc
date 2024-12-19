@@ -1,0 +1,33 @@
+= sizeLegends.title
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the legend title within a size-key legend on charts that have *multiple* size legends.
+
+
+
+
+
+== Type
+String
+
+
+== Examples
+
+[source,javascript]
+Chart1.sizeLegends['Sum(Product:Quantity Purchased)'].title = 'Salesperson Size';
+Chart1.sizeLegends['Sum(Product:Total)'].title = 'Year Size';
+
+
+image:commonscript:sizeLegendsTitle.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sizeLegends['...'].title           // unqualified
+Chart1.sizeLegends['...'].title    // qualified
+
+{secondForm}
+====

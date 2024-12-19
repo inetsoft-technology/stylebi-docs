@@ -1,0 +1,33 @@
+= yTitle.visible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the visibility of the Y-axis title.
+
+== Type
+Boolean
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.yTitle.visible = false;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+yTitle.visible             // unqualified
+Chart1.yTitle.visible      // qualified
+
+{secondForm}
+====
+

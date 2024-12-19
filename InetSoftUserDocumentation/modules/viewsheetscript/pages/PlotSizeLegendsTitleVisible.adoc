@@ -1,0 +1,30 @@
+= sizeLegends.titleVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the visibility of the legend title bar within a size-key legend on Charts that have *multiple* size legends.
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.sizeLegends['Sum(Product:Quantity Purchased)'].titleVisible=true;
+Chart1.sizeLegends['Sum(Product:Total)'].titleVisible=false;
+
+
+image:commonscript:sizeLegendsTitleVisible.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sizeLegends['...'].titleVisible           // unqualified
+Chart1.sizeLegends['...'].titleVisible    // qualified
+
+{secondForm}
+====

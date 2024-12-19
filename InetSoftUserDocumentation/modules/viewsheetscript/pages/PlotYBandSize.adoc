@@ -1,0 +1,39 @@
+= yBandSize
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the width of the bands on a categorical or timescale Y-axis.
+
+
+
+== Type
+integer::				Number of category groups (for a categorical axis) or the number of date groups (for a timescale axis) to be spanned by each band
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.yBandSize = 3;
+
+
+image:commonscript:yBandColor_1.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+yBandSize          // unqualified
+Chart1.yBandSize   // qualified
+
+{secondForm}
+====

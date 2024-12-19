@@ -1,0 +1,39 @@
+= bindingInfo.addMapping(col, value, geocode)
+:navtitle: bindingInfo.addMapping()
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheetscript:ChartBindingInfoGetMappings.adoc[] to retrieve the currently specified mappings.
+* xref:viewsheetscript:ChartBindingInfoRemoveMapping.adoc[] to remove a currently specified mapping.
+====
+
+Specifies the mapping between a `value` of field `col` and a defined geographical code, `geocode`. The geographical codes are defined in the CSV files within _inetsoft/graph/geo/data_ directory of the _inetsoft-core.jar_ file for the corresponding map.
+
+
+
+== Parameter
+col::			Field from which `value` should be mapped
+value::			Value to be mapped to a defined geo location
+geocode::			A geographical location in the geo data file
+
+
+
+
+
+
+== Example
+
+Map the value `'Queens'` (in column `city`) to `'New York City'`. Note that the latitude and longitude for code `USA0113` are defined in _inetsoft/graph/geo/data/us-cities.csv_.
+[source,javascript]
+
+--
+Chart1.bindingInfo.addMapping('city','Queens','USA0113');
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

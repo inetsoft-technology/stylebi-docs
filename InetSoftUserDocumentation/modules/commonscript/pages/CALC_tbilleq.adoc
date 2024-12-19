@@ -1,0 +1,42 @@
+= CALC.tbilleq(settlement, maturity, discount)
+:navtitle: CALC.tbilleq()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *bond-equivalent yield* (BEY) for a Treasury bill using the 360-day year convention. {CALCExcelFunctionPage}
+
+== Parameters
+settlement::			Date object: T-bill’s settlement date
+maturity::			Date object: T-bill’s maturity date
+discount::			 T-bill’s discount rate
+
+
+
+== Example
+Required bond yield (payable at maturity) to match a Treasury bill with 9.14% discount rate, settlement date of March 31, 2008, and maturity date of June 1, 2008.
+
+
+[source,javascript]
+----
+CALC.tbilleq(new Date(2008, 2, 31), new Date(2008, 5,1), 0.0914);
+// returns 0.09415149356594302 (approx 9.42%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.tbilleq(field['SettleDate'], field['MatureDate'], 0.0914);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.tbilleq(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 0.0914);
+CALC.tbilleq(parameter.SettleDate, parameter.MatureDate, 0.0914);
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

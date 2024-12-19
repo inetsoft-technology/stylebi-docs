@@ -1,0 +1,45 @@
+= EGraph.getCoordinate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ChangeChartCoordinates.adoc[] for information on modifying coordinates.
+* xref:chartAPI:ChartCoordinates.adoc[] for available coordinate sets.
+====
+
+
+Returns a handle to the graph’s xref:chartAPI:Coordinate.adoc[] object. This is useful in cases where the coordinates were not explicitly assigned to a variable at creation time.  The corresponding “setter” function is xref:chartAPI:EGraph_setCoordinate.adoc[].
+
+
+
+
+
+== Returns
+A xref:chartAPI:Coordinate.adoc[] object
+
+== Example
+Follow the steps below:
+
+. Create a Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a xref:viewsheet:BarChart.adoc[]  with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+
+. Add the following script:
++
+.Chart Component Script
+[source,javascript]
+--
+var coord = graph.getCoordinate(); <1>
+coord.transpose(); <2>
+--
+<1> Obtain handle to `Coordinate` object.
+<2> Apply operations to `Coordinate` object.
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

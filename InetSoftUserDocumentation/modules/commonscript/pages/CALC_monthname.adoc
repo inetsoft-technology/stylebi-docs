@@ -1,0 +1,39 @@
+= CALC.monthname(date)
+:navtitle: CALC.monthname()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the name of the month for the given `date` object (e.g. “March”). {CALCExcelFunctionPage}
+
+
+
+
+
+
+== Parameters
+date::			a Date object
+
+
+
+== Example
+[source,javascript]
+----
+CALC.monthname(new Date(1978,1,21))  // returns February
+
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.monthname(field['Order.Date'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.monthname(field['Order Date'])CALC.monthname(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

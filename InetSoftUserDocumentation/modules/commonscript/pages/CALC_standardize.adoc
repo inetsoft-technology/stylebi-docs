@@ -1,0 +1,42 @@
+= CALC.standardize(x, mean, standard_dev)
+:navtitle: CALC.standardize()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the standard score (z-score) for value `x` based on the distribution characterized by population `mean` and `standard_dev`. The standardized value is `(x-mean)/standard_dev`, and indicates the deviation of `x` from the `mean` value in terms of the standard deviation. {CALCExcelFunctionPage}
+
+== Parameters
+x::			Value to standardize
+mean::			Mean of the distribution
+standard_dev::			Standard deviation of the distribution
+
+
+
+== Example
+Standard score of value 42, where the population mean is 40 and standard deviation is 1.5.
+
+[source,javascript]
+----
+CALC.standardize(42, 40, 1.5);  // returns 1.3333333333333333
+// 42 is approximately 1.33 standard deviations above the mean
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.standardize(field['Value'], 40, 1.5)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.standardize(Slider1.selectedObject, 40, 1.5)
+CALC.standardize(parameter.Value, 40, 1.5)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

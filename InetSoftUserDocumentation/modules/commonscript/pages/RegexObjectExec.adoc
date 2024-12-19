@@ -1,0 +1,52 @@
+= exec(str)
+:navtitle: exec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING, caption=See Also]
+xref:StringObjectMatch.adoc[] to return multiple occurrences with a single function execution.
+
+Execute the search for a regular expression match in a string and return the first matched sub-string. This function is an implementation of the standard JavaScript RegExp https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec[exec()] method. The return value is an array with the following elements and properties:
+
+Index 0:: The matched sub-string
+Index 1-n:: Matches for parenthesized sub-strings, if any
+index:: The starting index in the string where the match was found
+input:: The original string
+
+The RegExp object (i.e., the regular expression pattern) has the following properties:
+
+lastIndex:: For global search (using “g” flag), the index from which to begin the next search (i.e., conclusion of previous match), otherwise 0.
+ignoreCase:: `true` if `i` flag was set, otherwise `false`
+global:: `true` if `g` flag was set, otherwise `false`
+multiline:: `true` if `m` flag was set, otherwise, `false`
+source:: The specified regular expression
+
+If the global `g` flag is used, the `exec()` method updates the RegExp object so that the subsequent calls to the `exec()` method find additional occurrences of the pattern within the string.
+
+== Example
+Search for any numbers using the regex `/[0-9]+/g`.
+[source,javascript]
+----
+var pattern = /[0-9]+/g;
+var str = 'Joe Miller, 123-45-6789, age 79, was billed $4357 on April 2, 2017.'
+var result = pattern.exec(str);
+
+result[0] // returns 123
+result.index // returns 12
+result.input // returns 'Joe Miller, 123-45-6789, age 79, was billed $4357 on April 2, 2017.'
+pattern.lastIndex; // returns 15.0
+pattern.global; // returns true
+pattern.source; // returns [0-9]+
+----
+If the method is executed a second time, the global search continues in the string.
+[source,javascript]
+----
+var result = pattern.exec(str);
+
+result[0] // returns 45
+result.index // returns 16
+result.input // returns 'Joe Miller, 123-45-6789, age 79, was billed $4357 on April 2, 2017.'
+pattern.lastIndex; // returns 18.0
+pattern.global; // returns true
+pattern.source; // returns [0-9]+
+----

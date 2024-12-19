@@ -1,0 +1,28 @@
+= Date.getFullYear()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to return the year of a date in local time.  See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear[Date.getFullYear()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var year = d.getFullYear();
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getFullYear();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getFullYear();
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,36 @@
+= CALC.count(array)
+:navtitle: CALC.count()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the integer number of elements in array (both numeric and non-numeric). {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of numeric or non-numeric values
+
+
+
+== Example
+[source,javascript]
+----
+CALC.count(['asd',true,3,2,4,5,6]);  // returns 7
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.count(TableView1.table['Col1'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.count(Sales['Col1']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

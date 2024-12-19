@@ -1,0 +1,17 @@
+= runQuery(name [,parameters])
+:navtitle: runQuery()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:RunQueryFromScript.adoc[] for examples of executing Data Worksheet queries in a Dashboard.
+
+Returns a query result set as a two-dimensional array.
+
+== Parameters
+name::			string containing the data block name
+parameters::			 two-dimensional string array,			each row containing a name-value pair 			that corresponds to a query parameter (optional)
+
+== Example
+[source,javascript]
+var rs = runQuery('ws:global:Examples/AllSales',[['category','Business'],['price',100]]);

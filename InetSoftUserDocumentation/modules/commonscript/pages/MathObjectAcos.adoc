@@ -1,0 +1,45 @@
+= Math.acos(number)
+:navtitle: Math.acos()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_acos.adoc[] for the preferred version from the CALC library.
+====
+
+
+
+
+Return the inverse cosine (in radians) of a number between 0 and 1. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/acos[Math.acos()] method, and can be used with or without the `Math` qualifier, `acos()` or `Math.acos()`.
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+acos(0); // returns 1.570796 (π/2 radians)
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+acos(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+acos(Slider1.selectedObject)
+acos(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

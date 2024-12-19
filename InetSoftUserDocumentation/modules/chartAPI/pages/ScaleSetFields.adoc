@@ -1,0 +1,37 @@
+= Scale.setFields(field)
+:navtitle: Scale.setFields()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies the fields to which the xref:Scale.adoc[] should be applied.  The corresponding “getter” function is `getFields()`.
+
+== Parameter
+field::			a String containing a column name
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"],["NJ",100],["NY",4000]]; //<1>
+graph = new EGraph();
+var qscale = new LogScale(); //<2>
+var elem = new IntervalElement("State", "Quantity");
+qscale.setFields(["Quantity"]); //<3>
+var coord = new RectCoord(new CategoricalScale("State"), qscale); //<4>
+graph.setCoordinate(coord); //<5>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create   the xref:Scale.adoc[] object.
+<3> Use `setFields` to apply the  `Scale` to the '`Quantity`' field.
+<4> Use the `Scale` to create a new xref:Coordinate.adoc[].
+<5> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:ScaleFields.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

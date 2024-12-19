@@ -1,0 +1,47 @@
+= Math.atan(number)
+:navtitle: Math.atan()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_atan.adoc[] for the preferred version from the CALC library.
+====
+
+
+
+
+Return the inverse tangent (in radians) of a number.  This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan[Math.atan()] method, and can be used with or without the `Math` qualifier, `atan()` or `Math.atan()`.
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+atan(1);  // returns 0.785398 (π/4 radians)
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+atan(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+atan(Slider1.selectedObject)
+atan(parameter.Value)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

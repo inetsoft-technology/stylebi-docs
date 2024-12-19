@@ -1,0 +1,46 @@
+=  CategoricalScale
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+The `CategoricalScale` object contains a nominal scale, i.e., a scale that logically maps nominal values to physical attributes. To create a `CategoricalScale` object, call the `CategoricalScale` constructor with the fields for which the scale should be generated.
+[source,javascript]
+var qscale = new CategoricalScale('State');
+
+You can pass the names of the fields (e.g., ‘State’) for which the scale should be generated to the constructor, or specify these later using the inherited xref:ScaleSetFields.adoc[] method.
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var sscale = new CategoricalScale("State"); //<2>
+var qscale = new LinearScale("Quantity");
+var coord = new RectCoord(sscale, qscale); //<3>
+coord.transpose();
+graph.setCoordinate(coord);
+graph.addElement(elem);
+
+
+--
+
+<1> {dataset}
+<2> Create the `CategoricalScale` object.
+<3> Assign the scale to a xref:Coordinate.adoc[] object.
+
+
+image:commonscript:CategoricalScale.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

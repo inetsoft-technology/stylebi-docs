@@ -1,0 +1,40 @@
+= CALC.code(string)
+:navtitle: CALC.code()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the numeric character code corresponding to the first character in string. {CALCExcelFunctionPage}
+
+== Parameters
+string::			A string whose first character should be evaluated
+
+
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.code('jsd');  // returns 106 (code for 'j')
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.code(field['Label'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.code(parameter.Label)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

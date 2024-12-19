@@ -1,0 +1,45 @@
+= CALC.fiscalyear544(date, startYear, startMonth, startDay, leapYears[,timeZone])
+:navtitle: CALC.fiscalyear544()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+For a 5-4-4 fiscal calendar, returns the fiscal year corresponding to the specified date as a number, e.g., “2014”. The `startYear`, `startMonth`, and `startDay` determine the starting point of the fiscal calendar. Leap years must be explicitly specified by the array `leapYears`.
+
+In a 5-4-4 fiscal calendar, a typical year has 52 weeks totalling 364 days:
+[square]
+* The first month of each quarter is 5 weeks
+* The second month of each quarter is 4 weeks
+* The third month of each quarter is 4 weeks
+
+Every few years (as specified by array `leapYears`), the fiscal calendar requires a 53-week year in order to reconcile with the solar year. In any such leap year, the final month of the last quarter has 5 weeks.
+
+
+
+include::partial$fiscalyearParameters.adoc[]
+
+
+
+== Example
+[source,javascript]
+----
+// Today’s year in fiscal calendar beginning Jan 30, 2000
+// with leap years in 2000, 2006, 2012, and 2017:
+CALC.fiscalyear544(CALC.today(), 2000, 1, 30, [2000, 2006, 2012, 2017])
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.fiscalyear544(field['Order Date'], 2000, 1, 30, [2000, 2006, 2012, 2017])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.fiscalyear544(RangeSlider1.selectedObjects[0], 2000, 1, 30, [2000, 2006, 2012, 2017])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

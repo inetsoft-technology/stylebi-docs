@@ -1,0 +1,26 @@
+= Math.random()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_power.adoc[] for the preferred version from the CALC library.
+====
+
+
+Return a pseudo-random number between 0 and 1.  This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random[Math.random()] method, and *must* be used with the `Math` qualifier, `Math.random()`.
+
+
+
+
+== Example
+[source,javascript]
+----
+var num = Math.random();  // returns 0.917008, for example
+----
+
+
+
+

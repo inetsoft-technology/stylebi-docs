@@ -1,0 +1,37 @@
+= CALC.stdevp(array)
+:navtitle: CALC.stdevp()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the *population standard deviation* for the values in `array`. Standard deviation is the square root of the variance and provides a measure of how widely the data are spread about the mean. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of real values. (Text and Boolean values are ignored.)
+
+
+== Example
+
+[source,javascript]
+----
+CALC.stdevp([1345,1301,1368,1322,1310,1370,1318,1350,1303,1299]);
+// returns 26.054558142482477
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.stdevp(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.stdevp(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

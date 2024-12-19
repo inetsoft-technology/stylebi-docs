@@ -1,0 +1,47 @@
+= formula
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:CommonProperties.adoc[] for properties shared with other components.
+====
+
+Specifies the aggregation method for the measure displayed in the Selection component. This is equivalent to selecting a method from the ‘Aggregate’ menu under the *Data* tab of the component ‘Properties’ dialog box.
+
+image:viewsheet:SelectionListFormula.png[]
+
+== Type
+xref:commonscript:StyleConstant.adoc[] object::
++
+[source]
+StyleConstant.COUNT_FORMULA
+StyleConstant.SUM_FORMULA
+StyleConstant.MIN_FORMULA
+StyleConstant.MAX_FORMULA
+StyleConstant.NONE_FORMULA
+
+
+
+
+
+
+== Example
+[source,javascript]
+SelectionList1.query = 'SalesByDate';
+SelectionList1.fields = ['State'];
+SelectionList1.measure = 'Total';
+SelectionList1.formula = StyleConstant.MAX_FORMULA;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+formula                    // unqualified
+SelectionTree1.formula     // qualified
+
+{secondForm}
+====
+
+

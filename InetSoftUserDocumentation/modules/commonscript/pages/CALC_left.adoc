@@ -1,0 +1,39 @@
+= CALC.left(string, num_chars)
+:navtitle: CALC.left()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns `num_char` number of characters from the *left side* of `string`. {CALCExcelFunctionPage} To extract a substring with arbitrary starting and ending indexes, use xref:StringObjectsubString.adoc[] or xref:CALC_mid.adoc[].
+
+== Parameters
+string::			A string from which to extract characters
+num_chars::			Size of substring to extract, starting from left-most character
+
+
+
+== Example
+[source,javascript]
+----
+CALC.left('abcdefghij', 4);  // returns abcd
+
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.left(field['Label'], 4)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.left(parameter.Label, 4)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

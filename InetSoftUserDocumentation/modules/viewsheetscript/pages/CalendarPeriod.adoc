@@ -1,0 +1,34 @@
+= period
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:CalendarProperties.adoc[] for more information on user selection editing.
+
+Specifies whether the two panels of a Calendar in xref:CalendarDoubleCalendar.adoc[] mode represent a period comparison or a simple date range.
+
+== Type
+Boolean::	`true`: display date comparison +
+`false`: disable date range (default)
+
+
+
+== Example
+[source,javascript]
+Calendar1.period = true;
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+period               // unqualified
+Calendar1.period    // qualified
+
+{secondForm}
+====
+
+

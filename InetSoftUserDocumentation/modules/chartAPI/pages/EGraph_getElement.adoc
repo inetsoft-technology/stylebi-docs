@@ -1,0 +1,53 @@
+= Egraph.getElement(index)
+:navtitle: Egraph.getElement()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[aquare]
+xref:chartAPI:RepresentMultipleMeasures.adoc[] to add multiple elements.
+====
+
+
+Returns a handle to the xref:chartAPI:GraphElement.adoc[] object specified by the index. This is useful in cases where the element was not explicitly assigned to a variable at creation time.
+
+
+== Parameter
+index::			Integer index of element
+
+
+
+
+== Example
+
+
+
+Follow the steps below:
+
+. Create a Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a xref:viewsheet:BarChart.adoc[]  with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+
+. Add the following script:
++
+.Chart Component Script
+[source,javascript]
+--
+var elem = graph.getElement(0); <1>
+elem.setHint(GraphElement.HINT_SHINE,'false'); <2>
+--
+<1> Obtain handle to `GraphElement` object.
+<2> Apply operations to `GraphElement` object.
+
+
++
+image:commonscript:EGraphgetElement.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

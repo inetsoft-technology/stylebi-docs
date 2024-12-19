@@ -1,0 +1,3 @@
+To *change a column name*, select the data block and double-click the column header in the bottom panel. Names must be unique without respect to case (e.g., "num1" is the same name as "Num1").
++
+WARNING: If there is a Dashboard that uses this Data Worksheet column, renaming the column will cause the Dashboard to lose its reference.

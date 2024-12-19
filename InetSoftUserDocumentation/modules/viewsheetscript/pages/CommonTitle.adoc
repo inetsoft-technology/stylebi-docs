@@ -1,0 +1,35 @@
+= title
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,  caption=See Also]
+xref:viewsheet:GeneralTab.adoc[] for more information about setting the title.
+
+Specifies the text that appears in the title bar of the component. This property is only available for components that possess a title bar.
+
+NOTE: Range Sliders only have a title when displayed within a Selection Container.
+
+== Type
+String::				Text to appear in title bar
+
+
+== Example
+[source,javascript]
+SelectionList1.title = "Company Selector"
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+title               // unqualified
+Component1.title    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,34 @@
+= getImage(string)
+:navtitle: getImage()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:viewsheetscript:ChangeImageWithScript.adoc[] for another approach to dynamically change images in a Dashboard.
+
+
+Loads an image from a Java resource, URL, or database BLOB (binary large object).  The `getImage()` function checks whether the argument specifies a valid resource. If it does not specify a resource, then `getImage()` treats the parameter as an encoded image. Both ASCII Hex and ASCII85 are supported (useful for XML data).
+
+To retrieve a BLOB from a database, first create a Data Worksheet with a column bound to the image data field. Then use `getImage()` to reference the desired data block cell, as shown in the example below.
+
+== Parameters
+string::			One of the following:
++
+[square]
+* image file resource path or URL
+* ascii hex/ascii85 encoded gif/jpeg image data
+* data block cell containing BLOB data 			(ascii hex/ascii85 gif/jpeg image data)
+
+== Examples
+[source,javascript]
+----
+// resource path
+Image1.image = getImage('/com/mypackage/icon.gif');
+
+// URL
+Image1.image = getImage('https://visualizefree.com/images/inetsoft.png');
+
+// 'picture' column in data block 'Query1' contains BLOBs
+Image1.image = getImage(Query1[1]['picture']);
+
+----

@@ -1,0 +1,78 @@
+= LegendSpec.setPartial(Boolean)
+:navtitle: LegendSpec.setPartial()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Set to `true` to specify that legend items should be accessible by scrolling if they do not fit in the allotted legend area. Set to `false` to force all legend items to be displayed without scrolling. (This may result in significant label truncation in some cases.)
+
+
+
+== Parameter
+Boolean:: `true`: use scroll bar to access legend items +
+`false`: force all items to display
+
+
+
+== Example
+Create a Chart using the script below. Try dragging the Chart handles to  make the Chart component narrower. Note how the legend becomes scrollable so that labels are not truncated.
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["New Jersey",200], ["New York",300], ["Pennsylvania",120],
+["Connecticut",450], ["New Mexico",200],["Colorado",300], ["Oregon",200],
+["Kentucky",300], ["California",100],  ["Alaska",350], ["Alabama",200],
+["Kansas",500],  ["Texas",200], ["North Dakota",300], ["Maryland",200],
+["Delaware",250],  ["Washington",200], ["Vermont",75]]; //<1>
+
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CategoricalColorFrame();
+frame.setField("State");
+var spec = new LegendSpec(); //<2>
+spec.setPartial(true); //<3>
+frame.setLegendSpec(spec); //<4>
+elem.setColorFrame(frame);
+graph.addElement(elem);
+
+
+--
+<1> {dataset}
+<2> Create the xref:LegendSpec.adoc[] object.
+<3> Use `setPartial()` to enable scrollbars.
+<4> Use the inherited  xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` object to the `ColorFrame`.
+
+image:commonscript:LegendSpecsetPartial.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+
+
+
+
+[TIP]
+=====
+
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getElement.adoc[] ① and xref:chartAPI:GraphElementGetColorFrame.adoc[] ② to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[] and xref:chartAPI:ColorFrame.adoc[]. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); <1>
+var frame = elem.getColorFrame(); <2>
+// Compact syntax: var frame = graph.getElement(0).getColorFrame();
+
+var spec = new LegendSpec();
+spec.setPartial(true);
+frame.setLegendSpec(spec);
+
+--
+=====

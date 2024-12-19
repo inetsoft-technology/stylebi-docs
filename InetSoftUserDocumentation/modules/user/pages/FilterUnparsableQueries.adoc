@@ -1,0 +1,79 @@
+= Filter Unparsable Queries
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+In some cases, the server may not be able to parse highly complex SQL queries, or those that contain custom database syntax. If a query is unparsable, the server cannot automatically identify the columns being returned by the query, and therefore cannot automatically apply the VPM security model.
+
+To enable VPM filtering for an unparsable query, you must embed *special tags* into the query’s SQL string. These tags supply information to the server about hidden columns and filtering conditions. The special tags are listed below.
+
+.VPM Special Tags
+****
+--vpm.tables:: A list of the tables contained in the query (to be used for VPM filtering). Tag should be added at the beginning of the unparsable query.
+--vpm.columns:: A list of the table columns from which the query columns will inherit VPM settings. Every item on this list must exactly match one of the columns specified in the ‘Hidden Columns’ panel of the *Hidden Columns* tab. Tag should be added at the beginning of the unparsable query.
+--vpm.aliases:: A list of the table aliases used in the query.
+/\*<idx>*/:: The integer index of the hidden column in the `vpm.columns` list from which the tagged query column should inherit security. (Numbering begins with 1.)
+/\*<where>*/:: Denotes the  `where` clause of the query for which filtering conditions are to be added by the VPM.
+****
+
+
+To specify the security for a particular returned query column, you need to associate the given query column with one of the hidden columns in the `vpm.columns` list. To do this, wrap the query column inside a pair of `/\*<idx>*/` tags, and set `idx` to the index of the listed column from which the query column should inherit security. If the VPM defines filtering conditions for any one of the tables in the `vpm.tables` list, those conditions will be applied within the ‘/\*<where>*/’ tags.
+
+.Filtering Unparsable Queries
+[example]
+====
+Consider the following SQL query:
+[source,sql]
+select SA.CUSTOMERS.COMPANY_NAME,SA.ORDER_DETAILS.QUANTITY+10, SA.ORDERS.DISCOUNT,SA.PRODUCTS.PRODUCT_NAME,SA.PRODUCTS.PRICE,SA.PRODUCTS.DESCRIPTION
+from SA.CUSTOMERS, SA.ORDER_DETAILS, SA.ORDERS, SA.PRODUCTS
+where SA.ORDER_DETAILS.PRODUCT_ID = SA.PRODUCTS.PRODUCT_ID
+and SA.ORDERS.ORDER_ID = SA.ORDER_DETAILS.ORDER_ID
+and SA.ORDERS.CUSTOMER_ID = SA.CUSTOMERS.CUSTOMER_ID
+
+Assume that this  query is *unparsable* (for whatever reason), and that you want to apply security to the `CUSTOMERS.COMPANY_NAME` and `ORDER_DETAILS.QUANTITY+10` columns returned by the query, and that you also want to apply a VPM filter to the `where` clause.
+
+To configure the above security settings, follow these steps:
+
+. In the *Hidden Columns* tab, add the `SA.CUSTOMERS.COMPANY_NAME` and `SA.ORDER_DETAILS.QUANTITY` columns to the ‘Hidden Columns’ list. (See xref:CreateVPMHiddenColumn.adoc[].)
+
+. Specify the desired VPM filtering conditions in the *Conditions* tab. (See xref:CreateVPMCondition.adoc[].)
+
+. Open the query for editing in a Data Worksheet.  (See xref:dataworksheet:QueryData.adoc[].) Click the *SQL String* tab to edit the query SQL as follows.
+
+. Place the `/\*<where>*/` tags around the `where` clause of the query:
+[source,sql]
+/*<where>*/SA.ORDER_DETAILS.PRODUCT_ID = SA.PRODUCTS.PRODUCT_ID
+and SA.ORDERS.ORDER_ID = SA.ORDER_DETAILS.ORDER_ID
+and SA.ORDERS.CUSTOMER_ID = SA.CUSTOMERS.CUSTOMER_ID/*</where>*/
+
++
+NOTE: Line breaks are used above only for clarity.  *Do not* use line breaks  between two special tags in your query.
+
+. Add the following tags at the beginning of the query:
+[source,sql]
+--vpm.tables:SA.CUSTOMERS,SA.ORDER_DETAILS,SA.PRODUCTS
+--vpm.columns:SA.ORDER_DETAILS.QUANTITY,SA.CUSTOMERS.COMPANY_NAME
+
++
+Filtering conditions defined by the VPM on the specified tables (`vpm.tables`) will be applied within the `/\*<where>*/` tags. The specified columns (`vpm.columns`) will be referenced by the `/\*<idx>*/` tags in the queries, in the next step.
++
+IMPORTANT: The SQL query *must remain valid* when the material enclosed by tags is removed. Commas should therefore be placed *inside* the tags. Line breaks may not occur between two special tags.
+
+. Add `/\*<idx>*/` tags around the query columns that will inherit security:
++
+[source,sql]
+select /*<2>*/SA.CUSTOMERS.COMPANY_NAME,/*</2>*/
+/*<1>*/SA.ORDER_DETAILS.QUANTITY+10,/*</1>*/ ...
+
++
+Note that the index `idx` refers to the location of the corresponding hidden column in the `vpm.columns` list. Therefore, the tag `/\*<1>*/` refers to the first item in the `vpm.columns` list, which is `ORDER_DETAILS.QUANTITY`. This means that the returned column `SA.ORDER_DETAILS.QUANTITY+10` inherits security from the hidden column `ORDER_DETAILS.QUANTITY`.
+
+The complete tagged query is shown below:
+[source,sql]
+--vpm.tables:SA.CUSTOMERS,SA.ORDER_DETAILS,SA.PRODUCTS
+--vpm.columns:SA.ORDER_DETAILS.QUANTITY,SA.CUSTOMERS.COMPANY_NAME
+select /*<2>*/SA.CUSTOMERS.COMPANY_NAME,/*</2>*/ /*<1>*/SA.ORDER_DETAILS.QUANTITY+10,/*</1>*/ SA.ORDERS.DISCOUNT,SA.PRODUCTS.PRODUCT_NAME,SA.PRODUCTS.PRICE,SA.PRODUCTS.DESCRIPTION
+from SA.CUSTOMERS, SA.ORDER_DETAILS, SA.ORDERS, SA.PRODUCTS
+where /*<where>*/SA.ORDER_DETAILS.PRODUCT_ID = SA.PRODUCTS.PRODUCT_ID and SA.ORDERS.ORDER_ID = SA.ORDER_DETAILS.ORDER_ID and SA.ORDERS.CUSTOMER_ID = SA.CUSTOMERS.CUSTOMER_ID/*</where>*/
+
+====

@@ -1,0 +1,86 @@
+= CategoricalSizeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+The `CategoricalSizeFrame` object contains a frame that assigns a unique size to each distinct value. To create a `CategoricalSizeFrame` object, call the `CategoricalSizeFrame` constructor.
+
+[source,javascript]
+var frame = new CategoricalSizeFrame('State');
+
+You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `SizeFrame` using the xref:viewsheetscript:ChartBindingInfoSizeFrame.adoc[]  property in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300], ["PA", 75]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new CategoricalSizeFrame(); //<2>
+frame.setField("State");
+elem.setSizeFrame(frame); //<3>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:CategoricalSizeFrame.adoc[] object.
+<3> Use xref:GraphElementSetSizeFrame.adoc[] to add the `CategoricalSizeFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:CategoricalSizeFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new CategoricalSizeFrame();
+frame.setField("State");
+elem.setSizeFrame(frame);
+
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:SizeFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setSizeField("Employee",Chart.STRING);
+Chart1.bindingInfo.sizeFrame = new CategoricalSizeFrame;
+
+--
+
++
+image:commonscript:CategoricalSizeFrame.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

@@ -1,0 +1,45 @@
+= CALC.nper(rate, pmt, pv, fv, type)
+:navtitle: CALC.nper()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *number of periods* for an investment based on periodic, constant payments and a constant interest rate. {CALCExcelFunctionPage}
+
+== Parameters
+rate::			Interest rate per period
+pmt::			Payment made each period, constant over life of annuity. Typically,  contains principal and interest but no other fees or taxes.
+pv::			Present value (positive for a loan, negative for an investment), the lump-sum amount that a series of future payments is worth right now
+fv::			Future value (generally 0 for a loan), the cash balance  you want to attain after the last payment is made
+type::			Timing of payment: +
+    `0`: payment at end of period (default) +
+`1`: payment at start of period
+
+
+
+== Example
+Number of periods for an initial $1000 investment to grow to a future value of $10,000 with 12% interest per period (compounded) and payments of $100 at the start of each period. (Negative values indicate payments.)
+
+
+
+[source,javascript]
+----
+CALC.nper(0.12, -100, -1000, 10000, 1); // returns 15.288014619990111 (approx 15 periods)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.nper(field['Rate'], -100, field['InitialValue'], field['FinalValue'], 1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.nper(parameter.Rate, -100, Slider1.selectedObject, Slider2.selectedObject, 1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

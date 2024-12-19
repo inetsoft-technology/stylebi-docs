@@ -1,0 +1,15 @@
+
+[cols="1,5"]
+|===
+|Symbol|Description
+
+|0|Displays the digit at this location. Displays “0” if there is no value at this location.
+|#|Displays the digit at this location (rounded, if placed in least significant position to the right of the decimal point). Suppresses display if there is no value at this location.
+|.|Decimal point
+|-|Minus sign
+|,|Grouping separator
+|E|Separates mantissa and exponent in scientific notation
+|;|Separates positive and negative sub-patterns
+|%|Multiplies by 100 and displays as percentage
+|$, ¥, €, etc.|Inserts the specified currency symbol
+|===

@@ -1,0 +1,35 @@
+= Scale.setDataFields(arr)
+:navtitle: Scale.setDataFields()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies the fields to use for initializing the xref:Scale.adoc[]; i.e., determining the maximum and minimum values. If left unspecified, the values in the xref:ScaleSetDataFields.adoc[] property are used for this purpose.  The corresponding “getter” function is `getDataFields()`.
+
+== Parameter
+arr::			Array of Strings
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Total"], ["NJ",100,0], ["NY",1500,30000]]; //<1>
+graph = new EGraph();
+var qscale = new LogScale(); //<2>
+var elem = new IntervalElement("State", "Quantity");
+qscale.setDataFields(["Total"]); //<3>
+graph.addElement(elem);
+graph.setScale("Quantity", qscale); //<4>
+--
+
+<1> {dataset}
+<2> Create   the xref:Scale.adoc[] object.
+<3> Use `setDataFields` to initialize the  `Scale` with the '`Total`' field.
+<4> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+
+image:commonscript:ScaleSetDataFields.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

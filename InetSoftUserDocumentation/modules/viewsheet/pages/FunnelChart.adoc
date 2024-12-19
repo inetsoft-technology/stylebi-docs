@@ -1,0 +1,57 @@
+= Funnel Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A Funnel Chart typically displays the sequential stages of a process, where the aggregate for each stage represents a subset of the aggregate from the previous stage.
+
+image:commonscript:funnel1.png[]
+
+To create a Funnel chart, follow the basic steps below.
+
+include::viewsheet:partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Funnel’ style.  Press the {buttonApply}.
++
+image:commonscript:funnel2.png[]
+
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* designating the different stages to the ‘Y’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:funnel3VS.png[]
++
+TIP: {convertToDimension}
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’  region. Note that the bars of the chart are automatically placed in descending order by value.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:funnel4VS.png[]
++
+TIP: {convertToMeasure}
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+image:commonscript:funnel5VS.png[]
+
+. To add color to the different stages, drag the dimension (again) from the *Data Source* panel to the ‘Color’ region. (See xref:GroupDataByDimension.adoc[] for information about how to choose different colors.)
++
+image:commonscript:funnel6VS.png[]
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+. To add the measure values into the bars on the chart, drag the measure (again) from the *Data Source* panel to the ‘Text’ region. (To format the text, use the *Format* tab. See xref:DataFormat.adoc[] for more information.)
++
+image:commonscript:funnel7VS.png[]
+
+. *_Optional:_* To hide an axis title, right-click the title and select ‘Hide Title’.
++
+image:commonscript:funnel8VS.png[]
+
+. *_Optional:_* To hide the legend, right-click the legend and select ‘Hide Legend’.
+
+. {finishEditing}
+
+include::viewsheet:partial$addTitlesLegend.adoc[]
+

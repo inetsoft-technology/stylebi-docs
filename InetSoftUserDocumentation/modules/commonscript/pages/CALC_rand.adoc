@@ -1,0 +1,9 @@
+= CALC.rand()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Return a pseudo-random number between 0 and 1. {CALCExcelFunctionPage}
+
+== Example
+[source,javascript]
+CALC.rand();   // returns 0.5720482597650401, for example

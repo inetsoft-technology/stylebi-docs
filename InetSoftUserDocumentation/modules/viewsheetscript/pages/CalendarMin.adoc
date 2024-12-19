@@ -1,0 +1,35 @@
+= min
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:CalendarProperties.adoc[] for more information on user selection editing.
+
+
+Specifies the earliest date available to select on the Calendar.  Script that uses the `min` property should be placed on the Calendar *component*. See xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script] for more information.
+
+
+== Type
+Date
+
+
+
+== Example
+[source,javascript]
+Calendar1.max = CALC.today();
+Calendar1.min = dateAdd('yyyy',-1,CALC.today()); // 1 year ago
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+min               // unqualified
+Calendar1.min     // qualified
+
+{secondForm}
+====
+
+

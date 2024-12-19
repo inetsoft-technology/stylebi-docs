@@ -1,0 +1,14 @@
+= MultiShapeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+The `MultiTextFrame` object contains a mapping between values and multiple articles of displayed text.
+

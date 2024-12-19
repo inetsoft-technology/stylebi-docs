@@ -1,0 +1,203 @@
+= Access the User Session with SRPrincipal
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+It is often desirable to set certain custom properties for a user session. While these properties are external to InetSoft, they can still be accessed from within the InetSoft environment through the *SRPrincipal* object that is associated with the user session. The following sections explain how to access and modify the `SRPrincipal` object.
+
+== Access SRPrincipal in JSP/Servlet
+
+The `SRPrincipal` object can be accessed from the `HttpSession` object within a custom JSP or Servlet. You can add or set the properties of the `SRPrincipal` object using the xref:#SetProperty[] method.
+
+.Example: Access SRPrincipal from HttpSession
+[source]
+----
+<%@ page import="inetsoft.sree.security.*, inetsoft.sree.RepletRepository" %>
+<%
+SRPrincipal p;
+p = (SRPrincipal) session.getAttribute(RepletRepository.PRINCIPAL_COOKIE);
+
+if(p == null) {
+   p = new SRPrincipal();
+
+}
+
+// setting a custom property
+p.setProperty("property_name", "property_value");
+
+// setting the locale using the locale string
+p.setLocale(new Locale("en","US"));
+
+session.setAttribute(RepletRepository.PRINCIPAL_COOKIE, p);
+%>
+----
+
+== Access SRPrincipal via  Login Listener
+You can modify the `SRPrincipal` object to set user-specific properties, which you can later access in VPM script, etc. See xref:#AccessSRPrincipalinScript[]. To modify the `SRPrincipal` object, implement a *LoginListener* to be called at the time the user is authenticated (whether during live login or scheduled task). Follow the steps below:
+
+. Implement the `inetsoft.sree.security.LoginListener` interface’s single method `userLogin(LoginEvent)`. Use `LoginEvent.getPrincipal()` to obtain the `SRPrincipal` object, and `SRPrincipal.setProperty()` to assign a custom property. See xref:#SetProperty[] below.  For example:
++
+.Example: LoginListener
+[source,java]
+----
+import inetsoft.sree.security.*;
+
+public class MyLoginListener implements LoginListener {
+   public void userLogin(LoginEvent event) {
+      SRPrincipal prin = event.getPrincipal();
+      prin.setProperty("myprop", "myval");
+   }
+}
+----
+
+
+
+. Set property `sree.security.listeners` to a comma-separated list of your fully qualified `LoginListener` class names. ({EMPropertyConfig})
+For example:
+
+ sree.security.listeners = inetsoft.sree.security.MyLoginListener
+
+
+. *_Optional:_*  To customize the “Welcome” text displayed in the default portal, call `SRPrincipal.setAlias("Alternate Name")`.
+
+[#AccessSRPrincipalinScript]
+== Access SRPrincipal in Script
+
+You can access the `SRPrincipal` object within VPM trigger scripts and Dashboard scripts (in the  *onRefresh* handler or in component-level script).  See xref:user:CreateNewVPM.adoc[] and xref:viewsheetscript:AddScriptToDashboard.adoc[] for more information about using script.
+
+.Example: Access SRPrincipal in Script
+[source,javascript]
+----
+var p = parameter['__principal__'];
+
+// getting a custom property:
+p.getProperty("property_name");
+
+// Getting a common SRPrincipal property (user locale):
+p.getLocale();
+----
+
+[#SetProperty]
+== setProperty()
+
+The `setProperty()` method inserts a property (string) into the `SRPrincipal` object. The sample below uses `setProperty()` within a Login Listener:
+
+.Example: setProperty() in LoginListener
+[source,java]
+----
+import inetsoft.sree.security.*;
+
+public class MyLoginListener implements LoginListener {
+  public void userLogin(LoginEvent event) {
+    SRPrincipal prin = event.getPrincipal();
+    prin.setProperty("myprop", "myval");
+  }
+}
+----
+
+The corresponding `getProperty()` method allows you to retrieve a property value.
+
+[source,java]
+prin.getProperty("myprop")
+
+In a non-SSO setting, set the `pass:[__internal__]` property when you create the `SRPrincipal` object, as shown below:
+
+[source,java]
+SRPrincipal prin = new SRPrincipal(user,...);
+prin.setProperty("__internal__", "true");
+
+== setLocale()
+
+The `setLocale()` property allows you to set the user locale. The syntax is as follows:
+
+[source,java]
+principal.setLocale(new Locale("language_code","country_code","variant_name"));
+
+The specified language code, country code, and variant name are used to load the localization mapping files with corresponding names:
+
+ SreeBundle_{language_code}_{country_code}_{variant_name}.properties
+ srinter_{language_code}_{country_code}_{variant_name}.properties
+
+For more information about the structure and role of the *srinter* and *SreeBundle* files, see xref:administration:Localization.adoc[] in xref:administration:ManageServer.adoc[]. The variant name allows you to specify a sub-locale or other arbitrary identifier. It is optional and available only within an SSO filter. (See xref:IntegrateWithYourWebApplication.adoc[] for more information on SSO implementation.)
+
+.Localization without variant
+[example]
+====
+The following example code sets the user locale to US English (without variant) and loads localization settings from mapping files _SreeBundle_en_US.properties_ and _srinter_en_US.properties_.
+
+
+[source,java]
+HttpServletRequest hrequest = (HttpServletRequest) request;
+HttpSession session = hrequest.getSession();
+SRPrincipal principal = (SRPrincipal)session.getAttribute(RepletRepository.PRINCIPAL_COOKIE);
+principal.setLocale("en","US");
+
+====
+
+When a variant is used to set the locale, localization mappings are loaded from both the *optional* base file (e.g., _srinter_en_US.properties_) as well as from the variant file (e.g., _srinter_en_US_NJ.properties_), with settings from the variant file overwriting any conflicting settings from the optional base file.
+
+
+.Localization with variant
+[example]
+====
+The following example code adds a variant to load the localization settings from variant mapping files _SreeBundle_en_US_NJ.properties_ and _srinter_en_US_NJ.properties_ as well as from base files _SreeBundle_en_US.properties_ and _srinter_en_US.properties_.
+
+[source,java]
+HttpServletRequest hrequest = (HttpServletRequest) request;
+HttpSession session = hrequest.getSession();
+SRPrincipal principal = (SRPrincipal)session.getAttribute(RepletRepository.PRINCIPAL_COOKIE);
+principal.setLocale("en","US","NJ");
+====
+
+[#setParameter]
+== setParameter()
+
+The `setParameter()` method inserts a parameter and its value into the `SRPrincipal` object. The sample below uses `setParameter()` within an SSO request filter:
+
+.Example: setParameter()
+[source,java]
+HttpServletRequest hrequest = (HttpServletRequest) request;
+HttpSession session = hrequest.getSession();
+SRPrincipal principal = (SRPrincipal)session.getAttribute(RepletRepository.PRINCIPAL_COOKIE);
+principal.setParameter("State", new String[] {"NJ", "NY", "CT"})
+
+A parameter value specified with `setParameter()` can be accessed in the following contexts:
+
+* In Dashboards via the xref:viewsheetscript:parameter.adoc[] script keyword.
+
+* In a parameterized condition on a Data Worksheet data block. (See xref:dataworksheet:FilterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[].)
+
+* In a parameterized condition on a Dashboard component. (See xref:viewsheet:AddConditions.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].)
+
+When accessing the parameter in a condition (Dashboard or Data Worksheet), the name of the condition variable should exactly match the parameter name specified by `setParameter()`.
+
+== Use Case: Simulating User Session
+
+The example presented here will provide administrative users the ability to simulate different user sessions without explicitly logging in as that user. To login as a user, see xref:administration:LoginAsDifferentUser.adoc[] in xref:administration:ManageServer.adoc[].
+
+The administrator would login to the InetSoft server, and access a custom JSP page which sets custom properties on the `SRPrincipal` object.
+
+.Set custom property
+[source,java]
+----
+inetsoft.sree.security.SRPrincipal p =
+(inetsoft.sree.security.SRPrincipal)session.getAttribute
+(inetsoft.sree.RepletRepository.PRINCIPAL_COOKIE);
+
+// setting a custom property
+p.setProperty("sim_user", "david");
+----
+
+These custom properties can be accessed within the script of a VPM and used to set a user/role based filtering parameter defined in the *Conditions* tab of the VPM.
+
+.VPM Lookup trigger
+[source,javascript]
+var p = parameter['__principal__'];
+if(!isNull(p)) {
+   parameter['usr'] = p.getProperty("sim_user");
+}
+
+Note that `parameter['usr']` would be a parameter defined in a clause of the VPM filtering conditions (in the *Conditions* tab), for example:
+
+ sales_employees.first_name [is] [equal to] $(usr)
+
+Reserved parameters such as `pass:[$(_USER_)]` or `pass:[$(_ROLES_)]` cannot be modified (set) in VPM script and should not be used directly in VPM filtering conditions.

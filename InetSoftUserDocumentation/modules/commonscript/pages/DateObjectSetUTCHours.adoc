@@ -1,0 +1,27 @@
+= Date.setUTCHours(value)
+:navtitle: Date.setUTCHours()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+JavaScript function to set the hours part of a date in universal time.      See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCHours[Date.setUTCHours()] in the {JavaScriptRef} for details on usage.
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+d.setUTCHours(10);
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.setUTCHours(10);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+var d = parameter.Date;
+d.setUTCHours(10);
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

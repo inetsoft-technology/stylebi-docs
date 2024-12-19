@@ -1,0 +1,44 @@
+= createCirclePackingGraph(colorDim, sizeCol, textCol, treeDims, [xdims, ydims])
+:navtitle: createCirclePackingGraph()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+The `createCirclePackingGraph()` function generates a xref:viewsheet:CirclePackingChart.adoc[].
+
+
+
+== Parameters
+colorDim::			Name of dimension column whose values should be represented by color.
+sizeCol::	Name of measure column whose values should determine the circle size.
+textCol::	Name of dimension column that contains the group labels.
+treeDims::			Array of dimension column names from which to construct the circle hierarchy.
+xdims::	 Array of dimensions (from among `colorDim` and `treeDims`) to be used to as the X-axis dimension.
+ydims:: Array of dimensions (from among `colorDim` and `treeDims`) to be used to as the Y-axis dimension.
+
+
+
+
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = viewsheet['Query1']; //<1>
+graph = createCirclePackingGraph("_", "price", "state", ["state", "city", "product_name"]) //<2>
+--
+<1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
+<2> Create the circle packing chart.
++
+image:viewsheet:ciclePacking1.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

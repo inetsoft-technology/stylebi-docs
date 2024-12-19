@@ -1,0 +1,58 @@
+= setActionVisible(name,Boolean)
+:navtitle: setActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:thisViewsheet.adoc#thisViewsheetSetActionVisible[thisViewsheet.setActionVisible]  to show or hide Dashboard toolbar buttons.
+====
+
+Sets the visibility/accessibility of end-user Selection List or Selection Tree features. To disable a feature, set the value to `false`.
+
+
+
+
+== Parameter
+name::			Name of toolbar button (String):
++
+[source]
+'Search'
+'Apply'
+'Unselect'
+'Reverse'
+'Sort'
+'Show' (in Selection Container)
+'Hide' (in Selection Container)
+'Remove' (right-click menu item in Selection Container)
+'Select Subtree' (right-click menu item)
+'Clear Subtree' (right-click menu item)
+
+Boolean:: `false`: hide the specified function +
+`true`: show the specified function
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+SelectionList1.setActionVisible("Reverse", false);
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setActionVisible                    // unqualified
+SelectionTree1.setActionVisible     // qualified
+
+{secondForm}
+====
+
+

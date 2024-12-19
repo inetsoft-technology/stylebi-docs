@@ -1,0 +1,34 @@
+= singleSelection
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:CalendarProperties.adoc[] for more information on user selection editing.
+
+
+
+Prevents the user from selecting multiple date units on the Calendar.
+
+== Type
+Boolean::	`true`: enable single selection +
+`false`: disable single selection (default)
+
+
+
+== Example
+[source,javascript]
+Calendar1.singleSelection=true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+singleSelection               // unqualified
+Calendar1.singleSelection    // qualified
+
+{secondForm}
+====
+
+

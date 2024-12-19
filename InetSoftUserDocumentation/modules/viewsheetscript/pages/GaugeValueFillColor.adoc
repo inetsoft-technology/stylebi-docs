@@ -1,0 +1,41 @@
+= valueFillColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+Specifies the value fill color for donut-style and bullet-style Gauges.
+
+
+
+== Type
+Color in any of the following formats:
+
+include::partial$colorSyntax.adoc[]
+
+
+
+
+
+== Example
+[source,javascript]
+Gauge1.valueFillColor = "red";
+
+image:commonscript:valueFillColor.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+valueFillColor           // unqualified
+Gauge1.valueFillColor    // qualified
+
+{secondForm}
+====
+
+

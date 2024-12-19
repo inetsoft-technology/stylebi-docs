@@ -1,0 +1,91 @@
+= Modify a Column
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$rightClickOptions.adoc[]
+
+The following sections describe ways that you can modify the columns of a data block.
+
+== Find a Column
+
+To *search for a column*, press the {buttonSearchColumns}  in the bottom panel toolbar, and type the column name or any part of the column name. This will scroll the table to a matching column. If there are multiple matches, press the arrows to cycle through the matches. Press the {buttonClearSearch}  to clear the search term.
+
+image:searchColumn.png[]
+
+== Change a Column Name
+To *change a column name*, select the data block and double-click the column header in the bottom panel. To display long column names, press the {buttonWrapColumnHeaders}. Press again to hide long names.
+
+include::ROOT:partial$duplicateNames.adoc[]
+
+include::ROOT:partial$dashboardReferenceLossWarning.adoc[]
+
+
+[#changeColType]
+== Change a Column Type (Embedded Table)
+By default, all manually created columns in an Embedded Table are of type ‘String’. To change the type of an Embedded Table column, follow these steps:
+
+. Click the Embedded Table data block to select it.
+In the bottom panel, right-click the column header and select ‘Column Type’ from the context menu or press the {buttonColumnType} in the column header. {rightClickOptions}
++
+image:embeddedTableColumnType2.png[]
++
+This opens the ‘Column Type’ panel.
+
+. Select the desired data type from the ‘Type’ menu. If you select a numeric or date type, a secondary ‘Parse Format’ menu appears below.
+. *_Optional:_*  In the ‘Parse Format’ menu, select the format in which you have entered your data. This allows the Embedded Table to convert the data to a standard representation. For example, if you have entered dates in the form “1/13/1995,” select or type `MM/d/yyyy` as the parse format.
++
+NOTE: The ‘Parse Format’ menu is available only for _manually-created_ Embedded Table columns. It is not available for data converted from a regular data block.
+. *_Optional:_*  Enable ‘Set nonconvertible values to empty’ to assign a null value to numbers and dates that cannot be converted. Otherwise, you will be prompted to choose an action when nonconvertible values are detected.
+. Press btn:[OK] to close the ‘Column Type’ panel.
+
+After you have specified a data type for a column of an Embedded Table, any additional data you enter into the column must match this specified type.
+
+.Example: Change the Column Type
+****
+In the following example, you will change the data type of an Embedded Table column from ‘String’ to ‘Integer’:
+
+. Create a new Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
++
+. Create a new Embedded Table with four rows and four columns. (See xref:EnterData.adoc[] for instructions on how to create an Embedded Table.)
+
+. Click the Embedded Table data block to select it.
+
+. Right-click a header cell in the bottom panel and select ‘Column Type’ from the context menu. {rightClickOptions} This opens the ‘Column Type’ panel.
++
+image:embeddedTableColumnType.png[]
+. Select ‘Integer’ from the ‘Type’ menu and press btn:[OK].
++
+image:selectIntegerColumnType.png[]
+****
+
+[#ChangeColumnDescription]
+== Change Column Description
+
+To add or edit a column description, follow the steps below:
+
+. Click the data block to select it. Right-click the desired column header in the bottom panel (or press the {buttonActions}), and select ‘Column Description’ in the context menu.
++
+image::AddColumnDescription.png[]
++
+. Add or edit the desired description in the ‘Column Description’ dialog box and press ‘OK’.
++
+image::AddColumnDescription2.png[]
+
+[#RepositionColumn]
+== Reposition a Column
+To *reposition a column*, simply drag the column within the bottom panel and drop it at the desired position.
+
+To *reposition multiple columns*, press the {buttonReorderTableColumns}  in the bottom panel toolbar. This opens the ‘Reorder Columns’ dialog box. Select one or more fields and press the btn:[Up], btn:[Down], btn:[Move to Top] and btn:[Move to Bottom] buttons to adjust the order as desired. Press btn:[OK] at the bottom of the panel.
+
+image::reorderColumns.png[]
+
+== Hide a Column
+
+To *hide a column*, press the {buttonVisibility}  in the column header, or press the {buttonActions}  and select ‘Hide Column’ from the menu. To show the column again, press the {buttonVisibility}  again or press the {buttonActions}  and select ‘Show Column’ or ‘Show All Columns’ from the menu.
+
+NOTE: You may need to first press the {buttonChangeView}  and select {buttonMetaDataView}  in order to see the column listed.
+
+To *hide multiple columns*, press the {buttonShowHideColumns}  in the bottom panel toolbar. This opens the ‘Show/Hide Columns’ dialog box, where you can choose columns that you want to hide. Type in the ‘Search’ box and press the {buttonSearch}  to list columns that fully or partially match the search string. Press btn:[OK] at the bottom of the panel after making your selection.
+
+image::showHideColumns.png[]
+

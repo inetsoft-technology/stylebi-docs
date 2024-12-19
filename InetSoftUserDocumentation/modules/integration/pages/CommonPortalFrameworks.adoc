@@ -1,0 +1,22 @@
+= Common Portal Frameworks
+%experimental%
+:SREEContext: http://hostname:8080
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following sections discuss issues related to some common server and portal frameworks.
+
+== Microsoft IIS Web Server
+
+Microsoft IIS (Internet Information Server) is a commonly used web server on the windows platform. From a request-serving perspective, IIS natively supports serving only static files but has the facility to execute add-ons/plug-ins. This applies to all IIS versions. These add-ons/plug-ins are configured as ‘Application Mappings’ on IIS and are mapped to certain resource extensions (e.g., `.jsp`). IIS simply executes the configured add-on to handle a particular resource extension whenever it is requested. IIS is not inherently J2EE compliant and therefore cannot directly deploy servlets/JSPs. Since StyleBI is a 100% Java tool, it can only be deployed on a J2EE compliant application server.
+
+All commands to the InetSoft engine are sent via a servlet (repository servlet) in the form of HTTP URL requests with appropriate parameters. It is a common practice to run your InetSoft server separately and simply use HTTP URLs to link to the InetSoft server. For example, your portal framework could contain simple HTML pages which have framesets pointing to the InetSoft server URL as their source. See xref:LoadAssetsViaURL.adoc[].
+
+
+== SharePoint Portal Framework
+SharePoint is a popular portal framework developed by Microsoft (usually deployed on an IIS server). The ‘Contents’ of a Share Point portal consists of one or more components referred to as ‘Web Parts’. A Web Part may retrieve its content from any third party source by simply specifying the appropriate URL. Therefore, by adding a new ‘Web Part’ and specifying the appropriate content URL you can display an InetSoft Dashboard  as a ‘Web Part’. (See xref:LoadAssetsViaURL.adoc[]. For example:
+
+{SREEContext}/app/viewer/view/global/DashboardPath/DashboardName
+
+
+
+Seamless integration is only possible when the StyleBI  Server is running on the same host machine as the SharePoint Portal. If the  Server is running on another host machine, StyleBI replets and Dashboards will be accessible, however, browser security restrictions (due to cross-domain references within the same browser frame) will disable interactive operations.

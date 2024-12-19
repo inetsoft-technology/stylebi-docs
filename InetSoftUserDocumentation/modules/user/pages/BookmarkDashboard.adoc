@@ -1,0 +1,160 @@
+= Bookmark a Dashboard
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheet:partial$availableToEndUsers.adoc[]
+
+
+A bookmark allows you save your current Dashboard settings (filter selections, menu choices, annotations, etc.) so that you can return to these settings at a later time. The following sections explain how to work with bookmarks.
+
+NOTE: Bookmarks store only settings, *not* data. See xref:viewsheet:AddAnnotation.adoc[] to save annotations with a bookmark.
+
+[#SaveNewBookmark]
+== Save a New Bookmark
+To save a Dashboard configuration as a new bookmark in the User Portal, follow the steps below:
+
+. Open the Dashboard for viewing. (See xref:user:UseDashboard.adoc[].)
+
+. Adjust the Dashboard settings (filtering selections, menu choices, annotations, etc.) as desired to obtain the configuration that you want to save.
+
+. Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
++
+image:viewsheet:AddBookmark.png[]
+
+. Select the ‘Save as New Bookmark’ option. This opens the ‘Bookmark Properties’ dialog box.
+
+. Enter a name for the new bookmark in the ‘Name’ field. (The default bookmark name is current time.)
++
+image:viewsheet:AddBookmark2.png[]
+
+. Select ‘Private’ if you want the bookmark to be visible only to you. Select ‘Shared’ if you want other users of the Dashboard to be able to use the bookmark that you have created.
++
+If you select ‘Shared’, select ‘All Users’ to share the bookmark with all Dashboard users or select ‘Same Groups’ to share the bookmark only with users that belong to one or more of your current user groups. (User groups are configured by an administrator.)
+
+. Enable the ‘Read-only’ option if you do not want other users to modify this bookmark. Otherwise, any user who shares this bookmark will be able to change the bookmark settings.
+
+. Press btn:[OK] to save the bookmark.
+
+== Load a Bookmark
+To restore a Dashboard to the settings saved in a bookmark, follow the steps below:
+
+. Open the Dashboard for viewing. (See xref:UseDashboard.adoc[].)
+
+. Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
++
+image:viewsheet:AddBookmark.png[]
+
+. Press the {buttonFilter} to restrict the displayed bookmarks to either ‘Shared By Others’ or ‘Owned By Me’. The default is ‘All’.
++
+image:viewsheet:Bookmark Filter.png[]
+
+. To filter the list of available bookmarks, type all or part of a Bookmark label in the ‘Search’ field.
++
+image:viewsheet:Bookmark Search.png[]
+
+. Select the bookmark you want to restore.
++
+image:viewsheet:Browse Bookmark Dialog.png[]
+
+The Dashboard is updated with the settings previously saved in the bookmark.
+
+== Update a Bookmark
+To update a bookmark with new settings, follow the steps below:
+
+. Open the Dashboard for viewing. (See xref:UseDashboard.adoc[].)
+
+. Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
++
+image:viewsheet:AddBookmark.png[]
+
+. Select the bookmark you want to update. This bookmark is now the active bookmark.
+
++
+image:viewsheet:Browse Bookmark Dialog.png[]
+
+. Make any desired changes to the Dashboard settings (selections, input components, etc.).
+
+. Press the {buttonBookmarks} again and select ‘Save Current Bookmark’ or press kbd:[Ctrl+S] on the keyboard.  This updates the active bookmark with the current Dashboard settings.
+
+NOTE: You can only update a bookmark for which you have write permission. You can only update the *default bookmark* (the bookmark shown in italics or the ‘Home’ bookmark) if you have write permission for the Dashboard and you are the *first user* (among all active users of the Dashboard) to have opened the Dashboard.
+
+== Delete a Bookmark
+To delete a bookmark, follow the steps below:
+
+. Open the Dashboard for viewing. (See xref:user:UseDashboard.adoc[].)
+
+. Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
++
+image:viewsheet:AddBookmark.png[]
+
+. Press the {buttonRemove} next to the bookmark that you want to delete.
+
+NOTE: You can only delete a bookmark for which you have write permission. (The ‘Home’ bookmark cannot be deleted.)
+
+== Delete All Bookmarks
+To delete all bookmarks based on their age since creation or last access, follow the steps below:
+
+. Open the Dashboard for viewing. (See xref:UseDashboard.adoc[].)
+
+. Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
++
+image:viewsheet:AddBookmark.png[]
+
+. Press the {buttonRemoveBookmarks}.
++
+image:viewsheet:BookmarkDelete1.png[]
+
+
+. To remove bookmarks that were created prior to a certain date, select ‘Older than’ and choose the desired date. To remove bookmarks that have not been accessed since a certain date, select ‘Not accessed since’ and choose the desired date.
++
+image:viewsheet:BookmarkDelete2.png[]
+
+. Press btn:[OK].
+
+NOTE: You can only delete a bookmark for which you have write permission. (The ‘Home’ bookmark cannot be deleted.)
+
+== Modify Bookmark Name and Sharing
+To change the name or sharing settings for a bookmark, follow the steps below:
+
+. Open the Dashboard for viewing. (See xref:UseDashboard.adoc[].)
+
+. Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
++
+image:viewsheet:AddBookmark.png[]
+
+. Press the {buttonEdit} next to the bookmark that you want to change. This opens the ‘Edit Bookmark’ dialog box.
++
+image:viewsheet:BookmarkProps.png[]
+
+. Make the desired changes to the bookmark name and sharing. See xref:#SaveNewBookmark[] above for more information about these settings.
+
+. Press btn:[OK] to update the bookmark name and sharing.
+
+NOTE: You can only modify a bookmark that you have created yourself. (The ‘Home’ bookmark cannot be modified.)
+
+== Set a Default Bookmark
+The _default bookmark_ for a Dashboard specifies the settings (filter selections, menu choices, annotations) that will be in effect each time you re-open the Dashboard in the Portal. This is the “starting state” of the Dashboard.
+
+
+
+To set an existing bookmark as the default bookmark, follow the steps below:
+
+TIP: If you have not yet bookmarked the desired Dashboard state, see xref:#SaveNewBookmark[] above.
+
+. Open the Dashboard for viewing. (See xref:UseDashboard.adoc[].)
+
+. Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
++
+image:viewsheet:AddBookmark.png[]
+
+
+
+. Press the {buttonSetAsDefault} next to the bookmark that you want to set as the Dashboard’s starting state.
++
+image:viewsheet:Bookmark Default.png[]
++
+NOTE: The default bookmark is subsequently shown in _italics_.
+
+The Dashboard will now open with the settings defined by this default bookmark.
+
+If you do not specify a default bookmark for a Dashboard, the Dashboard will open with the settings defined by the ‘Home’ bookmark. To remove the _default_ designation from a bookmark, simply designate a different user-created bookmark or the ‘Home’ bookmark as the default.

@@ -1,0 +1,32 @@
+= trendLineColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the color of the trend lines.  This option only applies when the ‘One Per Color’ option is disabled (xref:PlotTrendPerColor.adoc[] set to `false`).
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.trendLineColor = 'red';
+Chart1.trendPerColor = false;
+Chart1.trendLineStyle = Chart.DASH_LINE;
+
+image:commonscript:trendlineColor.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+trendLineColor          // unqualified
+Chart1.trendLineColor   // qualified
+
+{secondForm}
+====

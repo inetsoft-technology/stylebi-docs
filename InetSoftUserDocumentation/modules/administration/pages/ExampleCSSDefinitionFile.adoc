@@ -1,0 +1,211 @@
+= Example CSS Definition File
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+In this example, you will create a new CSS file. The CSS instructions will format components in the Dashboard by using the *global* format (`pass:[*]`), component and sub-component *type* format, component *class* format, and component *ID* format.
+
+[#CreateCSSFile]
+== Create the CSS File
+To create the example CSS file, follow the steps below:
+
+. Create a plain text file with the following contents. (You can also download the completed file: xref:ROOT:attachment$myStyle.css[myStyle.css].)
++
+[source,css]
+----
+/* Global format for all Dashboard text */ <1>
+   font-family: "Verdana";
+}
+
+/* Formatting for all Chart-type components */ <2>
+Chart {
+   background: Azure;
+}
+
+/* Formatting for all TableTitle sub-components */ <2>
+TableTitle {
+   color: green;
+}
+
+/* Formatting for all ChartAxisTitle sub-components */ <2>
+ChartAxisTitle {
+   background: yellow;
+}
+
+/* Formatting for all ChartAxisTitle X-axis sub-components */ <2>
+ChartAxisTitle[axis=x] {
+   background:DarkKhaki;
+}
+
+/* Formatting for all components having CSS Class "Header2" */ <3>
+.Header2 {
+   font-size: 20pt;
+   font-family: "Arial Narrow";
+   font-weight: bold;
+   background-color: #FFEEBB;
+   color: rgb(100,50,50);
+   text-align: center;
+   vertical-align: middle;
+   border-color: rgb(150,50,50);
+   border-style: double dotted;
+}
+
+/* Formatting for all components having CSS Class "AxisText" */ <3>
+.AxisText {
+   font-size: 14pt;
+   font-weight: bold;
+}
+
+/* Formatting for Table-type components having CSS ID "SalesTable" */ <3>
+Table#SalesTable {
+   background-color: #FFEEBB;
+}
+
+/* Formatting for odd rows of tables having CSS Class "YellowRows" */ <3>
+.YellowRows TableStyle[region=Body][pattern=OddRow] {
+   background-color: yellow;
+}
+----
+<1> See xref:#GlobalFormat[] below.
+<2> See xref:#FormatComponentType[] below.
+<3> See xref:#FormatClassID[] below.
+
+. Save the text file in UTF-8 format (without BOM) with the name *myStyle.css*.
+
+. Open the  *Look-and-Feel* page in Enterprise Manager. (See xref:Presentation.adoc#LookandFeel[Look and Feel].)
+
+. Uncheck the ‘Default Dashboard CSS’ option.
+
+. Click in the ‘Custom Dashboard CSS File’ field. This opens the standard file upload dialog box.
+
+
+. Locate the _myStyle.css_ file that you saved, and press btn:[Open]. The selected file is now displayed next to the ‘Choose File’ button.
++
+NOTE: There can be only a single CSS file *per organization* at any time.
+
+
+
+. Press btn:[Apply]. This uploads the specified CSS file to the server.
+
+For an example of applying these CSS definitions to a Dashboard see xref:viewsheet:VisualFormat.adoc[]  in xref:viewsheet:VisualizeYourData.adoc[].
+
+[#GlobalFormat]
+== Global Format
+The global (`pass:[*]`) definition used in xref:#CreateCSSFile[] above affects all components that do not have an explicit assignment for a given property (in this case `font-family`). For this example, any component that displays text (e.g., Text, Table, Selection List, etc.) will use the font Verdana unless otherwise specified by an explicit CSS definition for that component or sub-component.
+
+[source,css]
+----
+/* Global font for all Dashboard text */
+* {
+   font-family: "Verdana";
+}
+----
+
+image:CSSExp_global.png[]
+
+See xref:CreateCSSDefinitionFile.adoc#CSSGlobalDefault[CSS Global Default] for further information about the global format.
+
+
+
+[#FormatComponentType]
+== Format by Component Type
+
+The `Chart` definition in xref:#CreateCSSFile[] affects only components of type Chart (in all  Dashboards).
+[source,css]
+----
+/* Formatting for all Chart-type components */
+Chart {
+   background:Azure;
+}
+----
+image:CSSExp_Chart.png[]
+
+The `TableTitle` definition in xref:#CreateCSSFile[] affects the title bar of all Table-type components (in all  Dashboards).
+[source,css]
+----
+/* Formatting for all TableTitle sub-components */
+TableTitle {
+   color: green;
+}
+----
+image:CSSExp_tableTitle.png[]
+
+The `ChartAxisTitle` definition in xref:#CreateCSSFile[] affects the title text of all chart axes (in all  Dashboards).
+[source,css]
+----
+/* Formatting for all ChartAxisTitle sub-components */
+ChartAxisTitle {
+   background: yellow;
+}
+----
+image:CSSExp_ChartAxisTitle.png[]
+
+It can be overwritten by more specific axis formatting, such as the X-axis formatting below.
+
+The `ChartAxisTitle[axis=x]` definition in xref:#CreateCSSFile[] affects the title text of all chart X-axes (in all  Dashboards).
+[source,css]
+----
+/* Formatting for all ChartAxisTitle X-axis sub-components */
+ChartAxisTitle[axis=x] {
+   background:DarkKhaki;
+}
+----
+image:CSSExp_ChartAxisTitleX.png[]
+
+See  xref:CreateCSSDefinitionFile.adoc#CSSType[CSS Type] for further information about component type styling.
+
+[#FormatClassID]
+== Format by Class and ID
+
+The `Header2` class definition in xref:#CreateCSSFile[] affects only components that have CSS Class “Header2” assigned to them.
+[source,css]
+----
+/* Formatting for all components having CSS Class "Header2" */
+.Header2 {
+   font-size: 20pt;
+   font-family: "Arial Narrow";
+   font-weight: bold;
+   background-color: #FFEEBB;
+   color: rgb(100,50,50);
+   text-align: center;
+   vertical-align: middle;
+   border-color: rgb(150,50,50);
+   border-style: double dotted;
+}
+----
+
+image:CSSExp_Header2.png[]
+
+The `AxisText` class definition in xref:#CreateCSSFile[] affects all components that have CSS Class “AxisText” assigned to them.
+[source,css]
+----
+/* Formatting for all components having CSS Class "AxisText" */
+.AxisText {
+   font-size: 14pt;
+   font-weight: bold;
+}
+----
+image:CSSExp_ChartAxisText.png[]
+
+The `Table#SalesTable` definition in xref:#CreateCSSFile[] affects only components of type Table that have CSS ID “SalesTable” assigned to them.
+[source,css]
+----
+/* Formatting for Table-type components having CSS ID "SalesTable" */
+Table#SalesTable {
+   background-color: #FFEEBB;
+}
+----
+image:CSSExp_TableClass.png[]
+
+The `.YellowRows TableStyle[region=Body][pattern=OddRow]` definition in xref:#CreateCSSFile[] affects only components of type Table that have CSS Class “YellowRows” assigned to them. This styles the odd rows within the body of the table.
+[source,css]
+----
+/* Formatting for odd rows of tables having CSS Class "YellowRows" */
+.YellowRows TableStyle[region=Body][pattern=OddRow] {
+   background-color: yellow;
+}
+----
+image:CSSExp_TableStyleClass.png[]
+
+See xref:CreateCSSDefinitionFile.adoc#CSSTableStyle[CSS TableStyle] for information about TableStyles.
+
+For information on setting a Dashboard component’s CSS Class and ID, see xref:viewsheet:VisualFormat.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].

@@ -1,0 +1,70 @@
+= Create a Chart with API
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$underConstructionAPIRef.adoc[]
+
+The previous sections, xref:chartAPI:ModifyChartDataBinding.adoc[] and xref:chartAPI:ModifyChartElement.adoc[], explained how to modify the data binding and element properties of an *existing* Chart. This section explains how to create a new Chart (from the ground-up) using Chart API commands.
+
+CAUTION: Charts created by script do not provide end-user interactivity features. Therefore, for script-based charts you should deselect ‘Enable Ad Hoc Editing’ in the ‘Chart Properties’ panel (*Advanced* tab).
+
+== Walkthrough
+In this example, you will create a new Chart, define the Chart data, and display the data on the Chart. Follow the steps below:
+
+. Add a new Chart to the report or Dashboard.
+
+
+. Open the Script Editor: Right-click the Chart and select ‘Properties’ from the context menu. Then select the *Script* tab.
++
+NOTE: Chart API script (which operates on the Chart’s 'Egraph' property) should be placed in element-level script.
+
+
+. *Define the data*: Define the dataset for the Chart using the Chart’s xref:chartAPI:Data.adoc[] property.
++
+[source,javascript]
+data = runQuery("ws:global:Examples/AllSales");
++
+You will generally obtain the data from a  Data Worksheet  by using xref:commonscript:runQuery.adoc[]. You can also define your own dataset in script by assigning a JavaScript array to the `data` or `dataset` property.
+
+See xref:BindDatatoChartinScript.adoc[] for more details.
+
+
+
+. *Create the Chart object*. Create a new graph using the xref:chartAPI:EGraph.adoc[] constructor. `EGraph` is the global chart object, which includes all axes, legends, visual elements, etc.  Assign it to the Chart’s `graph` property.
++
+[source,javascript]
+graph = new EGraph();
+
+. *Create the Chart data elements*. Pass the field names (column headers) to a xref:chartAPI:GraphElement.adoc[] constructor. This creates the representational elements (e.g., bars) for the Chart.
++
+[source,javascript]
+var elem = new IntervalElement("State", "Sales");
++
+The xref:chartAPI:IntervalElement.adoc[] is a particular type of `GraphElement` that creates “bars” or “intervals” as the representational elements. Other `GraphElements`, such as xref:chartAPI:PointElement.adoc[]  and xref:chartAPI:LineElement.adoc[], generate other kinds of chart types, such as scatter plots and line plots, respectively.
+
+. *Add the created elements to the Chart object*. Pass the `GraphElement` object to the Chart’s xref:chartAPI:EGraph_addElement.adoc[] method. This adds the “bar” elements to the existing Chart object.
++
+[source,javascript]
+graph.addElement(elem);
+
+. Close the Script Editor and press the {buttonPreview} to preview the  Dashboard.
+
++
+image:commonscript:GraphScriptIntro.png[]
+
+
+.Complete Script
+****
+[source,javascript]
+data = runQuery("ws:global:Examples/AllSales");
+graph = new EGraph();
+var elem = new IntervalElement("State", "Sales");
+graph.addElement(elem);
+****
+
+
+
+
+
+
+
+

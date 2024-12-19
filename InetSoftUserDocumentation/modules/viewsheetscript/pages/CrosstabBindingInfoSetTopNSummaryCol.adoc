@@ -1,0 +1,67 @@
+= bindingInfo.setTopNSummaryCol(field, header, measure)
+:navtitle: setTopNSummaryCol()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the measure to use in ranking groups. This is equivalent to setting the ‘Of’ measure in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetTopNExp2.png[]
+
+
+This function should always be used in conjunction with xref:CrosstabBindingInfoSetTopN.adoc[] and  bindingInfo.setTopNReverse(field,header,boolean).
+// XXXXXXXXXXXXXXXXXXXXXXXX
+
+
+== Parameters
+field::			String: Name of a column to rank
+header::			`StyleConstant.ROW_HEADER` or `StyleConstant.COLUMN_HEADER`
+measure::			String: Summary formula for ranking
++
+[source]
+'Sum(column_name)'
+'Average(column_name)'
+'Max(column_name)'
+'Min(column_name)'
+'Count(column_name)'
+'Distinct Count(column_name)'
+'First(column_name1,column_name2)'
+'Last(column_name1,column_name2)'
+'Correlation(column_name1,column_name2)'
+'Covariance(column_name1,column_name2)'
+'Variance(column_name)'
+'Median(column_name)'
+'Mode(column_name)'
+'Std Deviation(column_name)'
+'Variance(Pop)(column_name)'
+'Std Deviation(Pop)(column_name)'
+'Weighted Average(column_name1,column_name2)'
+
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Name'];
+Crosstab1.bindingInfo.colFields = ['Region'];
+Crosstab1.bindingInfo.measureFields = ['Total'];
+Crosstab1.bindingInfo.setFormula('Total', StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.showColumnTotal = true;
+Crosstab1.bindingInfo.setTopN('Name',StyleConstant.ROW_HEADER,3);
+Crosstab1.bindingInfo.setTopNSummaryCol('Name',StyleConstant.ROW_HEADER,'Sum(Total)');
+Crosstab1.bindingInfo.setTopNReverse('Name',StyleConstant.ROW_HEADER,false);
+
+image:commonscript:bindingInfoSetTopNExp1_1.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.setTopNSummaryCol             // unqualified
+Crosstab1.bindingInfo.setTopNSummaryCol   // qualified
+
+{secondForm}
+====
+
+

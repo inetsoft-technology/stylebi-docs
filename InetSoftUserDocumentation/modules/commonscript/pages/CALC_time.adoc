@@ -1,0 +1,47 @@
+= CALC.time(hour, minute, second)
+:navtitle: CALC.time()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns a decimal between 0 and 1 representing the specified time as a fraction of the 24-hour day. For example, time 0:00 has value 0.0, while time 12:00 has value 0.5. {CALCExcelFunctionPage}
+
+== Parameters
+hour::			Integer value for hour (24-hour time)
+minute::			Integer value for minute
+second::			Integer value for second
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.time(0,0,0);    // returns 0.0 (12am)
+CALC.time(12,0,0);   // returns 0.5 (12pm)
+CALC.time(23,59,59); // returns 0.9999884366989136
+CALC.time(5,30,40);  // returns 0.22962963581085205
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.time(CALC.hour(field['Order Date']),CALC.minute(field['Order Date']),CALC.second(field['Order Date']))
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.time(CALC.hour(RangeSlider1.selectedObjects[0]),CALC.minute(RangeSlider1.selectedObjects[0]),CALC.second(RangeSlider1.selectedObjects[0]))
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

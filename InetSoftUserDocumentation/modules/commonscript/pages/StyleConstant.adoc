@@ -1,0 +1,8 @@
+= Style Constant
+
+The `StyleConstant` object is a static object that contains all definitions for constants used in the StyleBI host environment. These constants can be accessed without explicitly creating an instance of a StyleConstant object, as shown below:
+
+[source,javascript]
+line = StyleConstant.DOUBLE_LINE
+
+The following topics describe the constants that can be accessed thorough `StyleConstant`.

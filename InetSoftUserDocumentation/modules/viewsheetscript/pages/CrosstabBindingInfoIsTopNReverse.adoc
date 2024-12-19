@@ -1,0 +1,50 @@
+= bindingInfo.isTopNReverse(field, header)
+:navtitle: isTopNReverse()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the value  set by xref:CrosstabBindingInfoSetTopNReverse.adoc[] or by the '`Rank`' property in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetTopNExp3_1.png[]
+
+
+
+
+== Parameters
+field::			String: Name of a column
+header::			`StyleConstant.ROW_HEADER` or `StyleConstant.COLUMN_HEADER`
+
+== Returns
+Boolean::			`true`: bottom groups selected +
+`false`: top groups selected
+
+
+
+
+
+
+== Example
+[source,javascript]
+var reverse = Crosstab1.bindingInfo.isTopNReverse('Category',StyleConstant.ROW_HEADER);
+if(reverse) {
+  Text1.text = 'Displaying bottom groups.';
+}
+else {
+  Text1.text = 'Displaying top groups.';
+}
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.isTopNReverse             // unqualified
+Crosstab1.bindingInfo.isTopNReverse   // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,49 @@
+= TimeScale
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+The `TimeScale` object contains a time scale, i.e., a scale that linearly maps date and time data values to physical attributes. To create a `TimeScale` object, call the `TimeScale` constructor with the fields for which the scale should be generated.
+
+[source,javascript]
+var qscale = new TimeScale('Date');
+
+You can pass the names of the fields (e.g., ‘Date’) for which the scale should be generated to the constructor, or specify these later using the inherited xref:ScaleSetFields.adoc[] property.
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var date1 = new Date();
+var date2 = new Date();
+var maxDate = new Date();
+date1.setFullYear(2008,0,1);
+date2.setFullYear(2009,0,1);
+maxDate.setFullYear(2011,0,1);
+dataset = [["Date", "Quantity"], [date1,200], [date2,300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("Date","Quantity");
+var tscale = new TimeScale(); //<2>
+tscale.setFields(["Date"]);
+tscale.setMax(maxDate);
+graph.setScale("Date", tscale); //<3>
+graph.addElement(elem);
+
+--
+
+<1> {dataset}
+<2> Create the `TimeScale` object.
+<3> Use  xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart.
+
+image:commonscript:TimeScale.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

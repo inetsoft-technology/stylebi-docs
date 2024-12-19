@@ -1,0 +1,58 @@
+= Pivot Data
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To create a desired chart or table in a Dashboard, you may sometimes need to “pivot” or “unpivot” the data in one of the following ways:
+
+* Convert multiple measures into a single measure by creating a new dimension. (The new dimension uses the measure labels as dimension values.)
+* Convert a single measure into multiple measures by using existing dimension values. (The new measures use the dimension values as  the measure labels.)
+
+== Change Multiple Measures into a Single Measure
+Consider the data block below, which contains one dimension (‘Name’) and three salary measures (‘Year 1’, ‘Year 2’, ‘Year 3’).
+
+image:pivotMeasure1.png[]
+
+In certain cases you may want to convert multiple measures into a single measure by using the measure labels (‘Year 1’, ‘Year 2’, ‘Year 3’) as the values of a new dimension. To do this, follow the steps below:
+
+. Right click the data block thumbnail, and select ‘Unpivot’. {rightClickOptions}
++
+image:pivotMeasure2.png[]
+. Enter a value for ‘Levels of Row Headers’. This is the number of columns (dimensions) to the left of the first measure in the data block. For the example above, there is just one column (‘Name’) to the left of the first measure.
++
+NOTE:  To change the level of row headers at a later time, right-click the data block, and select ‘Edit Pivot Level’ from the context menu.
++
+image:pivotMeasure3.png[]
+
+. Press btn:[OK]. This  creates a new data block called ‘Query1’.
+. Preview the new data block (see xref:PreviewData.adoc[]) to verify that the labels of the three measures have been used to create a new dimension, and the measure values have been combined into a single measure called ‘Measure’.
++
+image:pivotMeasure4.png[]
+
+. Change the column names as desired. (See xref:ModifyColumn.adoc[] for information on how to modify columns properties.)
+
+== Change a Single Measure into Multiple Measures
+Consider the data block below, which contains two dimensions (‘Name’ and ‘Year’) and one measure (‘Salary’).
+
+image:pivotMeasure5.png[]
+
+In certain cases you may want to convert a single measure into  multiple measures by using the dimension values (‘Year 1’, ‘Year 2’, ‘Year 3’) as the labels of the new measures. You can do this by converting the table into a Crosstab. (See xref:GroupAggregateData.adoc[] for full information about  Crosstabs.)
+
+Follow the steps below:
+
+. Click the data block thumbnail to select it, and press the  {buttonGroupAndAggregate} the toolbar of the bottom panel.
++
+image:pivotMeasure6.png[]
+
+. In the ‘Group and Aggregate’ panel, press btn:[Switch to Crosstab].
++
+image:pivotMeasure7.png[]
+. Select as the ‘Row Header’ the dimensions that you want to retain as dimensions. Select as ‘Column Header’ the dimension whose values you want to  use as the new measure labels. Select as ‘Measure’ the measure that you want to convert into multiple measures.
++
+image:pivotMeasure8.png[]
+
+. Press btn:[OK].
+. Preview the data block (see xref:PreviewData.adoc[]) to verify that the values of the ‘Year’ dimension have been used to create three new measures (‘Year 1’, ‘Year 2’, ‘Year 3’).
++
+image:pivotMeasure9.png[]
+
+. Change the column names as desired. (See xref:ModifyColumn.adoc[] for information on how to modify columns properties.)

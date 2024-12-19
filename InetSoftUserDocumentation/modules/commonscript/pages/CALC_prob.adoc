@@ -1,0 +1,42 @@
+= CALC.prob(array_x, arrayProb, lower_limit, [upper_limit])
+:navtitle: CALC.prob()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the probability that a value falls between `lower_limit` and `upper_limit` (inclusive) based on the discrete probabilities in `arrayProb`. The probability is computed by adding together the probabilities in `arrayProb` corresponding to the values in `array_x` that fall in the specified range. {CALCExcelFunctionPage}
+
+== Parameters
+array_x::			Array of values corresponding to probabilities in `arrayProb`
+arrayProb::			Array of probabilities corresponding to values in `array_x`. Sum of probabilities must be 1 or less.
+`lower_limit`::			Lower boundary of the range
+`upper_limit`::			Optional upper boundary of the range. If omitted,  the function returns the probability that values in `array_x` are equal to `lower_limit`.
+
+
+
+== Example
+Given values pass:[{0,1,2,3}] with associated probabilities pass:[{0.2, 0.3, 0.1, 0.4}], find the probability that a value lies between 1 and 3 (inclusive).
+
+[source,javascript]
+----
+CALC.prob([0,1,2,3], [0.2,0.3,0.1,0.4], 1, 3);
+// returns 0.8 (the summed probability for values 1,2,3)
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.prob(TableView1.table['Values'],TableView1.table['Probs'], 1, 3)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.prob(Sales['Values'], Sales['Probs'], 1, 3);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

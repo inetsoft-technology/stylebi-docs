@@ -1,0 +1,11 @@
+= Number Object Functions
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+All numeric values are number objects. The values are normally used for computation using  operators such as multiplication, addition, subtraction and division. See xref:commonscript:MathObjectFunctions.adoc[] and xref:commonscript:CalcObjectFunctions.adoc[] for functions that operate on numeric values.
+
+The following topics describe functions that are useful for *converting* a number object to a string.
+
+
+

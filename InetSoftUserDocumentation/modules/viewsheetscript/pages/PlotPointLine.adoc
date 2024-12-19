@@ -1,0 +1,31 @@
+= pointLine
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Draws line segments connecting the points on a xref:viewsheet:PointChart.adoc[].
+
+
+
+== Type
+Boolean:: `true`: draw lines +
+`false`: do not draw lines
+
+== Example
+[source,javascript]
+Chart1.pointLine = true;
+
+
+image:commonscript:pointLine.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+pointLine          // unqualified
+Chart1.pointLine   // qualified
+
+{secondForm}
+====

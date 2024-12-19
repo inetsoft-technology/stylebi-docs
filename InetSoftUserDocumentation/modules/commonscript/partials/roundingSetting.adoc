@@ -1,0 +1,13 @@
+[cols="1,3"]
+|===
+|Round Setting|Meaning
+
+|`ROUND_UP`|Round away from zero
+|`ROUND_DOWN`|Round toward zero
+|`ROUND_CEILING`|Round toward positive ∞
+|`ROUND_FLOOR`|Round toward negative ∞
+|`ROUND_HALF_UP`|Round toward nearest neighbor unless both neighbors are equidistant, in which case round up
+|`ROUND_HALF_DOWN`|Round toward nearest neighbor unless both neighbors are equidistant, in which case round down
+|`ROUND_HALF_EVEN`|Round toward nearest neighbor unless both neighbors are equidistant, in which case round to even neighbor
+|`ROUND_UNNECESSARY`|Apply no rounding
+|===

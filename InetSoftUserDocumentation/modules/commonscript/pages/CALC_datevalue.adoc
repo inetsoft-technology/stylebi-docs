@@ -1,0 +1,41 @@
+= CALC.datevalue(date)
+:navtitle: CALC.datevalue()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Returns the number of days between the epoch (12/31/1899) and parameter `date`. {CALCExcelFunctionPage}
+
+== Parameters
+date::			a Date object
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.datevalue(new Date(1900,0,2)); // returns 2
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.datevalue(field['Order Date'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+ CALC.datevalue(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

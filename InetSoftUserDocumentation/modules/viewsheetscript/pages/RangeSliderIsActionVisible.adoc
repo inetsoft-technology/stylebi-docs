@@ -1,0 +1,51 @@
+= isActionVisible(name)
+:navtitle: isActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:thisViewsheet.adoc#thisViewsheetIsActionVisible[thisViewsheet.IsActionVisible]  to return Dashboard toolbar button visibility.
+====
+
+
+
+Returns the visibility/accessibility of the specified end-user feature.
+
+== Parameters
+name::			Name of feature (String):
++
+[source]
+'Show Enlarged'
+'Show Actual Size'
+'Show' (in Selection Container)
+'Hide' (in Selection Container)
+'Remove' (right-click menu item in Selection Container)
+'Properties' (right-click menu item)
+'Edit' (right-click menu item for numerical Range Slider)
+
+
+
+
+
+
+== Example
+[source,javascript]
+
+if (RangeSlider1.isActionVisible('Properties')==true) {
+  Text1.text = 'Right-click for properties...';
+}
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+isActionVisible                  // unqualified
+RangeSlider1.isActionVisible     // qualified
+
+{secondForm}
+====
+
+

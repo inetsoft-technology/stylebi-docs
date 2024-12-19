@@ -1,0 +1,50 @@
+= datePart(interval, date)
+:navtitle: datePart()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Extracts the specified date interval.
+
+
+
+
+
+== Parameters
+interval:: 			The interval value to be extracted, one of the options below:
++
+|===
+|Interval String|Date Interval
+
+|yyyy|Year
+|q|Quarter
+|m|Month
+|y|Day of the year
+|d|Day of the month
+|w|Day of the week
+|ww|Week of the year
+|h|Hour
+|n|Minute
+|s|Second
+|===
+date:: 			The date from which the interval is to be 			extracted.
+
+
+
+
+
+== Examples
+[source,javascript]
+----
+datePart('m', new Date()); // returns current month
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+datePart('m', field['Date']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+datePart('m', parameter.Date);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

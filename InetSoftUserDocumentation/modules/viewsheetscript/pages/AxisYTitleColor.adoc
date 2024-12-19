@@ -1,0 +1,34 @@
+= yTitle.color
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the Y-axis title color.
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.yTitle.color = [128,0,128];
+Chart1.yTitle.color = {r:128,g:0,b:128};
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+yTitle.color             // unqualified
+Chart1.yTitle.color      // qualified
+
+{secondForm}
+====
+

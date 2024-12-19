@@ -1,0 +1,35 @@
+= doubleCalendar
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:CalendarProperties.adoc[] for more information on user selection editing.
+
+
+Specifies the calendar view type. The single-panel view shows one month or one year (depending on xref:CalendarYearView.adoc[] setting), while the double-panel view shows two months or two years (depending on xref:CalendarYearView.adoc[] setting).
+
+== Type
+Boolean::	`true`: double-panel calendar,			`false`: one-panel calendar
+
+
+
+
+
+
+== Example
+[source,javascript]
+Calendar1.doubleCalendar = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+doubleCalendar               // unqualified
+Calendar1.doubleCalendar    // qualified
+
+{secondForm}
+====
+
+

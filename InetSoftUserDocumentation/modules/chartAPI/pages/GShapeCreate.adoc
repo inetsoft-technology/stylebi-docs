@@ -1,0 +1,51 @@
+= GShape.create(outline, fill)
+:navtitle: GShape.create()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Creates a GShape object. (See xref:GShapeSetFillColor.adoc[] to set the interior color of the shape.)
+
+== Parameters
+outline:: `true`:  draw a border for the shape +
+`false`:  suppress border
+
+fill::		`true` to fill the shape with color +
+`false`: leave shape empty
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State","Quantity");
+var circle = GShape.CIRCLE.create(true, true); //<2>
+circle.setFillColor(java.awt.Color.RED);
+var shapeFrame = new StaticShapeFrame(circle); //<3>
+var sizeFrame = new StaticSizeFrame(10);
+elem.setSizeFrame(sizeFrame);
+elem.setShapeFrame(shapeFrame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Use `create()` to create the shape.
+<3> Pass the `shape` to the xref:StaticShapeFrame.adoc[] constructor.
+<4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:IntervalElement.adoc[].
++
+image:commonscript:GShapeImageShape4.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+

@@ -1,0 +1,38 @@
+= CALC.trimmean(array, percent)
+:navtitle: CALC.trimmean()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the mean of the interior of a data set by excluding a percentage of data points from the top and bottom tails. This provides a measure of the mean that is not influenced by outliers. {CALCExcelFunctionPage}
+
+== Parameters
+array::				Array of values to trim and average
+percent::	Fraction of data points to exclude
+
+
+== Example
+Mean of data set {4,5,6,7,2,3,4,5,1,2,3} after removing 20% of the most extreme values (10% from each tail).
+
+[source,javascript]
+----
+CALC.trimmean([4,5,6,7,2,3,4,5,1,2,3], 0.2); // returns 3.7777777777777777
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.trimmean(TableView1.table['Quantity'], 0.2)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.trimmean(Sales['Quantity'], 0.2);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

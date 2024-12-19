@@ -1,0 +1,66 @@
+= selectedObjects
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CheckRadioComboValues.adoc[] to access the values assigned to the component.
+* xref:CommonSelectLabels.adoc[] to access the labels corresponding to the values.
+* xref:CommonSelectObject.adoc[] to access the currently selected value  in single-valued components.
+* xref:AccessComponentData.adoc[] for more information about `selectedObjects`.
+* xref:WriteBackToDatabase.adoc#AccessMostRecentUserModification[Access the Most Recent User Modification] to retrieve the most recent modified object.
+====
+
+
+
+
+
+Specifies the selected *values* (not the labels) of the component as an array. Applies to multi-value input elements (Check Boxes) and selection elements (Selection Lists, Selection Trees, Range Slider, Calendars).
+
+NOTE: For a Calendar, `selectedObjects` specifies the selected range on the Calendar as an array of Dates, `[selected_min,selected_max]`.  If the selected range  falls outside the range of the Calendar's data (specified by xref:CalendarMin.adoc[] and xref:CalendarMax.adoc[]), the selected dates are forced into the available range.
+
+This property is *readable and writable* for Selection Lists, Selection Trees, and Calendars, and is *read-only* for other components. Script that reads the value of the `selectedObjects` property can be placed either on the component or in the onInit Handler or onRefresh Handler, while script that writes the `selectedObjects` property *must* be placed in the onInit Handler or onRefresh Handler. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about these handlers.)
+
+== Type
+Array::				array of selected option values
+
+== Examples
+.Example: Reading Selection List
+[source,javascript]
+var num = SelectionList1.selectedObjects.length;
+var msg = 'You selected ' + num + ' objects: ';
+msg += SelectionList1.selectedObjects.join(', ');
+alert(msg)
+
+.Example: Setting Selection List
+[source,javascript]
+SelectionList1.selectedObjects=['CA','MA','TX'];
+
+.Example: Setting Calendar
+[source,javascript]
+Calendar1.selectedObjects = [Calendar1.min, dateAdd('m',3,Calendar1.min)];
+
+
+
+
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+selectedObjects               // unqualified
+Component1.selectedObjects    // qualified
+
+{secondForm}
+====
+
+
+
+

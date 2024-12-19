@@ -1,0 +1,36 @@
+= TimeScale.setIncrement(value)
+:navtitle: TimeScale.setIncrement()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+Specifies an integer increment at which to place labels on the xref:TimeScale.adoc[] axis. The integer value designates the increment in terms of the prevailing time unit, e.g., Weeks, Months, Quarters, etc.  The corresponding “getter” function is `getIncrement()`.
+
+== Parameter
+value::			an integer
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+graph.getScale("Order Date").setIncrement(12) <1>
+
+--
+
+<1> Set increment to 12 weeks.
+
+
+image:commonscript:TimeScaleSetIncrement.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

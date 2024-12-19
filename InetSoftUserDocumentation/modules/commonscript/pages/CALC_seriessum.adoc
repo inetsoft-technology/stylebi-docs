@@ -1,0 +1,44 @@
+= CALC.seriessum(x, n, m, coefficients)
+:navtitle: CALC.seriessum()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the  power series sum stem:[a_0x^n + a_1x^(n+m)  + a_2x^(n+2m) + ... + a_ix^(n+im)]. {CALCExcelFunctionPage}
+
+== Parameters
+x::			The base x
+n::		Integer exponent in first term
+m::		Integer interval by which to increase exponent `n` in subsequent terms
+coefficients::			Array of coefficients `[a0, a1, a2, ..., ai]`
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.seriessum(2, 0, 1, [1,2,3]);  // returns 17.0
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.seriessum(field['Value'], 0, 1, [1,2,3])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.seriessum(Slider1.selectedObject, 0, 1, [1,2,3])
+CALC.seriessum(parameter.Value, 0, 1, TableView1.table['Coefficients'])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

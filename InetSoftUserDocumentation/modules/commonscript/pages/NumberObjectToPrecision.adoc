@@ -1,0 +1,33 @@
+= toPrecision(precision)
+:navtitle: toPrecision()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:commonscript:CALC_floor.adoc[] for the related function in the CALC library.
+
+
+Returns the floor of the given number, i.e., the number rounded down.
+
+
+== Parameters
+precision:: The total number of digits, including digits before and after the decimal point.
+
+
+
+== Examples
+[source,javascript]
+var num = 3.234;
+num.toPrecision(3); // returns 3.23
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Num'].toPrecision(3);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Num.toPrecision(3);
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

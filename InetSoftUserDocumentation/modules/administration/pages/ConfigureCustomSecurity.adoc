@@ -1,0 +1,184 @@
+= Configure Custom Security
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+To use a custom Java class for authentication (i.e., verifying user credentials), select the ‘Custom’ option from the ‘Provider Type’ menu on the ‘Security Provider’ page. (See xref:SpecifySecurityProvider.adoc[].)
+
+
+== Multi-tenancy Disabled
+If multi-tenancy is not enabled (see xref:EnableMultiTenant.adoc[] for more information), follow the steps below:
+
+. Enter `inetsoft.sree.security.CustomAuthenticationProvider` in the  '`Authentication Class`' field.
+
+. Enter the desired JSON  content from into the '`JSON Configuration`' field.  The default organization is `host-org`.  For example:
++
+.Expand to see example JSON content
+[%collapsible]
+====
+[source,JSON]
+{
+  "users" : [ {
+    "name" : "admin",
+    "organization" : "host-org",
+    "emails" : [ "free.user@example.com" ],
+    "groups" : [ ],
+    "roles" : [ "Administrator", "Everyone" ],
+    "password" : "success123"
+  }, {
+    "name" : "guest",
+    "organization" : "selfOrgtest",
+    "emails" : [ "guest.user@example.com" ],
+    "groups" : [ ],
+    "roles" : [ "Everyone" ],
+    "password" : "success123"
+  }, {
+    "name" : "userC1",
+    "organization" : "host-org",
+    "emails" : [ "userC1@example.com" ],
+    "groups" : [ "groupC0" ],
+    "roles" : [ "Everyone", "roleC0" ],
+    "password" : "success123"
+  } ],
+  "groups" : [ {
+    "name" : "groupC0",
+    "organization" : "host-org",
+    "groups" : [ ],
+    "roles" : [ ]
+  }, {
+    "name" : "groupC1",
+    "organization" : "host-org",
+    "groups" : [ "groupC0" ],
+    "roles" : [ ]
+  } ],
+  "roles" : [ {
+    "name" : "Administrator",
+    "organization" : "host-org",
+    "roles" : [ ],
+    "defaultRole" : true
+  }, {
+    "name" : "Everyone",
+    "organization" : "selfOrgtest",
+    "roles" : [ ],
+    "defaultRole" : true
+  }, {
+    "name" : "roleC0",
+    "organization" : "host-org",
+    "roles" : [ ],
+    "defaultRole" : false
+  }, {
+    "name" : "roleC1",
+    "organization" : "host-org",
+    "roles" : [ "roleC0" ],
+    "defaultRole" : false
+  } ],
+  "organizations" : [ {
+    "name" : "Host Organization",
+    "organizationID" : "host-org",
+    "members" : [ "admin", "userC1", "userC2", "groupC0", "groupC1" ]
+  }, {
+    "name" : "selfOrg",
+    "organizationID" : "selfOrgtest",
+    "members" : [ "guest" ]
+  } ]
+}
+====
+
+
+
+== Multi-tenancy Enabled
+If multi-tenancy is  enabled (see xref:EnableMultiTenant.adoc[] for more information), follow the steps below:
+
+. Enter `inetsoft.sree.security.CustomAuthenticationProvider` in the  '`Authentication Class`' field.
+
+. Enter the desired JSON  content from into the '`JSON Configuration`' field.  Multiple orgabnizations can be specified. For example:
++
+.Expand to see example JSON content
+[%collapsible]
+====
+[source,JSON]
+{
+"users" : [ {
+"name" : "admin",
+"emails" : [ "free.user@example.com" ],
+"groups" : [ ],
+"roles" : [ "Administrator", "Everyone" ],
+"organization":"Orgtest",
+"password" : "success123"
+}, {
+"name" : "guest",
+"emails" : [ "guest.user@example.com" ],
+"groups" : [ ],
+"roles" : [ "Everyone" ],
+"organization":"selfOrgtest",
+"password" : "success123"
+}, {
+"name" : "userC1",
+"emails" : [ "userC1@example.com" ],
+"groups" : [ "groupC0" ],
+"roles" : [ "Everyone", "roleC0","Organization Administrator" ],
+"organization":"Orgtest",
+"password" : "success123"
+}, {
+"name" : "userC2",
+"emails" : [ "userC2@example.com" ],
+"groups" : [ "groupC1" ],
+"roles" : [ "Everyone", "roleC1" ],
+"organization":"Orgtest",
+"password" : "success123"
+} ],
+"groups" : [ {
+"name" : "groupC0",
+"groups" : [ ],
+"organization":"Orgtest",
+"roles" : [ ]
+}, {
+"name" : "groupC1",
+"groups" : [ "groupC0" ],
+"organization":"Orgtest",
+"roles" : [ ]
+} ],
+"roles" : [ {
+"name" : "Administrator",
+"roles" : [ ],
+"defaultRole" : true
+}, {
+"name" : "Everyone",
+"roles" : [ ],
+"organization": "Orgtest",
+"defaultRole" : true
+}, {
+"name" : "Everyone",
+"roles" : [ ],
+"organization":"selfOrgtest",
+"defaultRole" : true
+}, {
+"name" : "Organization Administrator",
+"roles" : [ ],
+"defaultRole" : false
+}, {
+"name" : "roleC0",
+"roles" : [ ],
+"organization": "Orgtest",
+"defaultRole" : false
+}, {
+"name" : "roleC1",
+"roles" : [ "roleC0" ],
+"organization": "Orgtest",
+"defaultRole" : false
+} ],
+"organizations" : [ {
+"name" : "Org",
+"organizationID" : "Orgtest",
+"members" : ["admin","userC1","userC2","groupC0","groupC1"],
+"roles": ["Administrator","Everyone","roleC0","roleC1","Organization Administrator"]
+}, {
+"name" : "selfOrg",
+"organizationID" : "selfOrgtest",
+"members" : ["guest"],
+"roles": ["Administrator","Organization Administrator"]
+} ]
+}
+====
+

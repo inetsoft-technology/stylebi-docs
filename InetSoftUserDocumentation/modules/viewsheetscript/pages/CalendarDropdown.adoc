@@ -1,0 +1,35 @@
+= dropdown
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:CalendarProperties.adoc[] for more information on user selection editing.
+
+
+
+Specifies a collapsible style for the calendar.
+
+
+== Type
+Boolean::	`true`: collapse calendar when not in use +
+`false`: do not collapse calendar (default)
+
+
+== Example
+[source,javascript]
+Calendar1.dropdown=true;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+dropdown               // unqualified
+Calendar1.dropdown    // qualified
+
+{secondForm}
+====
+
+

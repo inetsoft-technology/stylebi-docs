@@ -1,0 +1,38 @@
+= EGraph.addElement(elem)
+:navtitle: EGraph.addElement()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:RepresentMultipleMeasures.adoc[] to add multiple elements.
+====
+
+Adds the specified xref:chartAPI:GraphElement.adoc[] to the chart. See xref:chartAPI:ChartElements.adoc[] for available elements.
+
+
+== Parameter
+elem::			a xref:chartAPI:GraphElement.adoc[] object
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new LineElement("State", "Quantity");
+graph.addElement(elem); //<2>
+--
+<1> {dataset}
+<2> Use `addElement` to add the LineElement to Chart.
+
+image:commonscript:EGraphaddElem.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

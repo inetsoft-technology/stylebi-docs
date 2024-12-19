@@ -1,0 +1,62 @@
+= CALC.ppmt(rate, per, nper, pv, fv, type)
+:navtitle: CALC.ppmt()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the capital in a given period’s *payment* for an investment based on *periodic* constant payments and a constant interest rate. {CALCExcelFunctionPage}
+
+TIP: Use xref:CALC_ipmt.adoc[] to calculate the portion of interest in a given payment. Use  xref:CALC_pmt.adoc[] to calculate the total payment (capital and interest).
+
+
+== Parameters
+rate::			Interest rate per period
+per::			Period for which to return capital repayment (between 1 and `nper`)
+nper::			Total number of payment periods in an annuity
+pv::			Present value (positive for a loan, negative for an investment), the lump-sum amount that a series of future payments is worth right now
+fv::			Future value (generally 0 for a loan), a cash balance you want to attain after the last payment is made
+type::			Timing of payment: +
+`0`: payment at end of period (default) +
+`1`: payment at start of period
+
+
+
+== Example
+Amount of capital repaid in each of the first ten payments for an $8000 two-year loan with 10% annual interest and payment at end of period. (The negative values indicates that these are payments.)
+
+[source,javascript]
+----
+for (var period = 1; period <= 10; period++){
+  alert('Period ' + period +': ' + CALC.ppmt(0.10/12, period, 12*2, 8000, 0, 0))
+}
+
+// Returns:
+// Period 1: -302.4927440334672
+// Period 2: -305.0135169004128
+// Period 3: -307.55529620791623
+// Period 4: -310.1182570096488
+// Period 5: -312.70257581806254
+// Period 6: -315.3084306165464
+// Period 7: -317.9360008716842
+// Period 8: -320.58546754561496
+// Period 9: -323.257013108495
+// Period 10: -325.95082155106576
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.ppmt(field['Rate'], period, 12*2, 8000, 0, 0)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.ppmt(Slider1.selectedObject, period, 12*2, 8000, 0, 0)
+CALC.ppmt(parameter.Rate, period, 12*2, 8000, 0, 0)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

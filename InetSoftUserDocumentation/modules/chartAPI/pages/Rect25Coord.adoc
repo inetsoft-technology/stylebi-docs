@@ -1,0 +1,45 @@
+= Rect25Coord
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:RectCoord.adoc[]
+* xref:Coordinate.adoc[]
+====
+
+The `Rect25Coord` object is the same as the xref:RectCoord.adoc[] object, but creates a 3D effect for elements. To create a `Rect25Coord` object, call the object constructor:
+
+[source,javascript]
+var rect = new Rect25Coord(xscale,yscale);
+
+You can pass a set of Scale objects (e.g., ‘xscale’, ‘yscale’, etc.) to the constructor, or specify these later using the inherited xref:RectCoordSetXScale.adoc[] and xref:RectCoordSetYScale.adoc[] properties.
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var sscale = new CategoricalScale("State"); //<2>
+var qscale = new LinearScale("Quantity"); //<2>
+var coord = new Rect25Coord(sscale,qscale); //<3>
+graph.setCoordinate(coord); //<4>
+graph.addElement(elem);
+
+
+--
+<1> {dataset}
+<2> Create the xref:Scale.adoc[] objects.
+<3> Create the xref:Rect25Coord.adoc[] object from the `Scale` objects.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `RectCoord` to the Chart.
+
+image:commonscript:Rect25Coord.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

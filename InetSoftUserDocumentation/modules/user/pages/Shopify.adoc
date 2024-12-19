@@ -1,0 +1,36 @@
+= Shopify
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$dataSourceUserIntro.adoc[]
+
+. Select the ‘Shopify’ data source, and press btn:[Create]. This opens the data source definition screen.
++
+image:dataSourceShopify1.png[]
+
+. In the ‘Name’ field, enter a label for this data source connection.
+
+. Enter the name of your Shopify store in the ‘Shop’ field. This will automatically populate all ‘URL’ and ‘URI’ fields.
+
+. Enter the desired scopes in the ‘Scope’ field. See the https://shopify.dev/docs/admin-api/access-scopes[Shopify API documentation] for more details.
++
+NOTE: Selecting scopes that are not compatible with your Shopify account may cause the data source connection to fail.
+
+. Enter the ‘Client ID’ and ‘Client Secret’ and press ‘Authorize’. This will populate the token fields.
++
+. *_Optional:_* {multiTenantUser}
+
+. Press btn:[OK].
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceShopify2.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceShopify3.png[]
++
+In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
+
+After you have created a connection to the database, you can proceed to define a data set. See xref:dataworksheet:QueryShopify.adoc[].

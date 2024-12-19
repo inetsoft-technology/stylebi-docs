@@ -1,0 +1,53 @@
+. Press the btn:[Add] button below the ‘Creation Parameters’ table. This opens the ‘Add Parameter’ dialog box.
++
+image:administration:Creation Parameters1.png[]
+
+. In the ‘Parameter Name’ field, select an existing parameter or manually enter the name of a parameter.
+
+. In the ‘Type’ field, select the data type of the parameter. Select ‘Array’ if the parameter requires an array of values.
+
+. In the ‘Value’ field, press the {buttonValueType} and select ‘Value’ to enter a fixed value to be passed into the parameter. (Enter a comma-separated list for an array parameter.)
++
+image:administration:Creation Parameters2.png[]
++
+To set the value using scripted logic, select ‘Expression’ or press the {buttonEditFormula} if available. This opens the Formula Editor. Create a script that returns the desired parameter value. You can use the predefined relative dates in the ‘Dynamic Dates’ folder.
++
+.See some examples of dynamic dates...
+[%collapsible]
+====
+If the *current time* is #2023-08-16,13:50:29#, dynamic dates will yeild the following results:
+[source]
+_BEGINNING_OF_THIS_YEAR is 2023-01-01,00:00:00
+_BEGINNING_OF_THIS_QUARTER is 2023-07-01,00:00:00
+_BEGINNING_OF_THIS_MONTH is 2023-08-01,00:00:00
+_BEGINNING_OF_THIS_WEEK is 2023-08-13,00:00:00
+_END_OF_THIS_YEAR is 2023-12-31,23:59:59
+_END_OF_THIS_QUARTER is 2023-09-30,23:59:59
+_END_OF_THIS_MONTH is 2023-08-31,23:59:59
+_END_OF_THIS_WEEK is 2023-08-19,23:59:59
+_NOW is 2023-08-16,13:50:29
+_THIS_QUARTER is 2023-07-16,13:50:29
+_TODAY is 2023-08-16,00:00:00
+_LAST_YEAR is 2022-08-16,13:50:29
+_LAST_QUARTER is 2023-04-16,13:50:29
+_LAST_MONTH is 2023-07-16,13:50:29
+_LAST_WEEK is 2023-08-09,13:50:29
+_LAST_DAY is 2023-08-15,13:50:29
+_LAST_HOUR is 2023-08-16,12:50:29
+_LAST_MINUTE is 2023-08-16,13:49:29
+_NEXT_YEAR is 2024-08-16,13:50:29
+_NEXT_QUARTER is 2023-10-16,13:50:29
+_NEXT_MONTH is 2023-09-16,13:50:29
+_NEXT_WEEK is 2023-08-23,13:50:29
+_NEXT_DAY is 2023-08-17,13:50:29
+_NEXT_HOUR is 2023-08-16,14:50:29
+_NEXT_MINUTE is 2023-08-16,13:51:29
+====
++
+image:administration:scheduleActionDynamicDates.png[]
+
+. Press btn:[OK] to close the dialog box. The parameter that you added is now listed in the table.
++
+image:administration:Creation Parameters3.png[]
+
+. *_Optional:_*  To modify the parameter settings, press the {buttonEdit} next to the parameter. To remove the parameter, press the {buttonDelete} next to the parameter.

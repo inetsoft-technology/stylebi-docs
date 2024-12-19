@@ -1,0 +1,52 @@
+= Elasticsearch REST  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Elasticsearch REST  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:ElasticsearchREST.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonElasticsearchRESTQuery}.
++
+image:elasticsearchRESTQuery1.png[]
++
+This opens the ‘Elasticsearch REST  Query’ dialog box.
++
+image:dataSourceElasticQuery1.png[]
+
+. Enter the ‘URL Suffix’ and a desired ‘JSON Path’.  See https://goessner.net/articles/JsonPath/[JSONPath - XPath for JSON] for information about the JSON Path syntax.
++
+****
+Example: JSON Path:: Consider the data at https://jsonplaceholder.typicode.com/users.  The JSONPath string
++
+ $.[*][?(@.id < 4)]
++
+retrieves all fields (because none are specified) from all objects where the `id` field value is less than 4. The JSONPath string
++
+ $.[*][?(@.id < 4)].email
++
+retrieves just the `email` field from all objects where the `id` field value is less than 4.
+****
+
+. *_Optional:_*  Select ‘Expand Arrays’ to expand a record that contains an array into multiple records.
++
+****
+.Example: Expand Arrays…
+[%collapsible]
+=====
+include::dataworksheet:partial$expandArraysNoTopLevel.adoc[]
+=====
+****
+
+. Use the ‘Filter’ field to restrict the result set. See the https://www.elastic.co/guide/en/elasticsearch/reference/current/filter-search-results.html#post-filter[Elastic Documentation] for more information about the filter specification.
+
+. *_Optional:_* {datasourceSelectTabular}
+
+
+include::partial$finalStepsQuery.adoc[]

@@ -1,0 +1,41 @@
+= scaleVertical
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TextProperties.adoc[] for general information about the Text component.
+====
+
+
+Enables the Text component to scale when the Dashboard is automatically scaled to screen. (See xref:viewsheet:ArrangeComponents.adoc[].) Set to `false` to prevent the Text from scaling, which may be appropriate when the Text is used as a label for components that do not scale, such as Radio Button.
+
+
+
+
+
+
+
+== Type
+Boolean:: `true`: scale text +
+`false`: do not scale text
+
+
+
+== Example
+[source,javascript]
+Text1.scaleVertical = false;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+scaleVertical            // unqualified
+Text1.scaleVertical      // qualified
+
+{secondForm}
+====
+
+

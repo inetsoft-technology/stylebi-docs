@@ -1,0 +1,9 @@
+= Add Data Security
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+A Virtual Private Model (VPM) is an optional component that provides a highly flexible and comprehensive security layer for relational data sources. The VPM controls security for individual database tables and physical models, filtering all queries that reference these tables or models. The VPM is invisible to users, transparently providing access only to data for which a given user is authorized.
+
+A VPM consists of _conditions_, _hidden columns_, _lookups_, and their associated _triggers_. Conditions and hidden columns allow you to filter rows and columns, respectively. Triggers provide fine-grained control on conditions and hidden columns by role, group, and individual user. Multiple VPMs can be specified for a given data source, and these are joined in an ‘and’ fashion.
+
+The following sections explain how to create and edit a VPM.

@@ -1,0 +1,48 @@
+= showText
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:SelectionListProperties.adoc[] and xref:viewsheet:SelectionTreeProperties.adoc[] more information on these components.
+
+
+Specifies that the aggregated measure should be displayed as text. This is equivalent to selecting ‘Text’ under the *Data* tab of the component ‘Properties’ dialog box.
+
+image:viewsheet:SelectionListShowText.png[]
+
+
+
+
+
+
+
+
+
+
+
+== Type
+Boolean::	`true`: show text +
+`false`: hide text
+
+
+== Example
+[source,javascript]
+SelectionList1.query = 'SalesByDate';
+SelectionList1.fields = ['State'];
+SelectionList1.measure = 'Total';
+SelectionList1.formula = StyleConstant.MAX_FORMULA;
+SelectionList1.showText = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+showText                   // unqualified
+SelectionList1.showText    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,34 @@
+= isDate(value)
+:navtitle: isDate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns `true` if the argument is a Date object, `false` otherwise.
+
+
+== Parameters
+value:: 			A value to test
+
+
+
+
+
+
+
+== Examples
+[source,javascript]
+----
+isDate(CALC.today()); // returns true
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+isDate(field['Date']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+isDate(parameter.Date);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

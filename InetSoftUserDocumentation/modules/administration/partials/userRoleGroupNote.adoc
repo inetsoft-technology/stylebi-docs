@@ -1,0 +1,23 @@
+
+The following are some rules which govern users, roles and groups:
+[square]
+* Users, groups, and roles are defined independently for different *organizations* if  multi-tenancy is enabled.  The exceptions are the *Administrator* role and *Organization Administrator* role, which are predefined and global. See xref:administration:EnableMultiTenant.adoc[] for more information.   If multi-tenancy is not enabled, all users, groups, and roles belong to the Host Organization.
+
+
+* Groups and Roles are independent, i.e., you do not have to define both groups and roles in your system. You can have  one or the other, or both.
+
+
+
+* A user can belong to more than one group.
+
+* A user can have multiple roles.
+
+* An entire group can be assigned one or more roles.
+
+* A role can be applied to one or more groups.
+
+* A role can inherit all the permissions from another role.
+
+* Permissions to  assets  can be assigned directly to users, groups, and roles.
+
+* When troubleshooting user problems, it is often useful for the administrator to log into the Portal as a particular user. See xref:LoginAsDifferentUser.adoc[]. This allows the administrator to experience the application environment as the user experiences it, which makes it easier to replicate the user’s problem.

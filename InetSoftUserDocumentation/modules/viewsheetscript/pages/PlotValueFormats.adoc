@@ -1,0 +1,47 @@
+= valueFormats
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+[square]
+
+* xref:PlotValueColor.adoc[] to specify value color in a single-style chart.
+* xref:PlotValueFont.adoc[] to specify value font in a single-style chart.
+* xref:PlotValueFormat.adoc[] to specify value format in a single-style chart.
+* xref:PlotValueRotation.adoc[] to specify value rotation in a single-style chart.
+====
+
+Provides access to value formatting for Charts that have ‘Multiple Styles’ enabled. (See xref:viewsheet:MultipleStyleChart.adoc[]  for information about the ‘Multiple Styles’ property in Dashboards.)   To format a measure in a multiple-style chart, set the `valueFormats` property for the desired measure.
+
+
+
+
+
+
+
+== Type
+See the following properties for the appropriate value type: xref:PlotValueColor.adoc[], xref:PlotValueFont.adoc[], xref:PlotValueFormat.adoc[], xref:PlotValueRotation.adoc[].
+
+== Example
+[source,javascript]
+Chart1.valueFormats['Sum(Quantity Purchased)'].color = [255,0,0];
+Chart1.valueFormats['Sum(Quantity Purchased)'].rotation = 30;
+Chart1.valueFormats['Sum(Total)'].color = [0,0,255];
+Chart1.valueFormats['Sum(Total)'].format = [Chart.DECIMAL_FORMAT,"$#,###.00"]
+Chart1.valueFormats['Sum(Total)'].font = 'Lucida Sans Unicode-BOLD-8';
+
+image:commonscript:valueFormats.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+valueFormats['...'].property         // unqualified
+Chart1.valueFormats['...'].property  // qualified
+
+{secondForm}
+====

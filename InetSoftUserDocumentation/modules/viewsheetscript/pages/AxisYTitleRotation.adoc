@@ -1,0 +1,31 @@
+= yTitle.rotation
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the Y-axis title rotation angle.
+
+
+== Type
+Number (degrees)
+
+
+
+== Example
+[source,javascript]
+Chart1.yTitle.rotation = 30;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+yTitle.rotation             // unqualified
+Chart1.yTitle.rotation      // qualified
+
+{secondForm}
+====
+

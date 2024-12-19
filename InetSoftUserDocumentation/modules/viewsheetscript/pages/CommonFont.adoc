@@ -1,0 +1,31 @@
+= font
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,  caption=See Also]
+xref:viewsheet:VisualFormat.adoc[] for more information about setting font.
+
+
+Specifies the font for this element.
+
+== Type
+https://download.oracle.com/javase/7/docs/api/index.html?java/awt/Font.html[java.awt.Font]
+
+
+== Example
+[source,javascript]
+font = java.awt.Font('Verdana',java.awt.Font.BOLD, 35)
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+font               // unqualified
+Component1.font    // qualified
+
+{secondForm}
+====
+
+

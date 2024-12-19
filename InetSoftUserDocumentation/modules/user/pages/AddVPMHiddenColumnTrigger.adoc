@@ -1,0 +1,43 @@
+= Add a VPM Hidden Column Trigger
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+
+To add scripted logic to the VPM hidden column, follow the steps below:
+
+. If necessary, create a VPM as explained in xref:CreateNewVPM.adoc[].
+
+. Select the *Hidden Columns* tab at the bottom.
++
+image:dataModel79.png[]
+
+. Select the *Trigger* sub-tab.
++
+image:dataModel80.png[]
+
+. Enter the desired trigger script in the text box at the bottom. The trigger script should use standard JavaScript syntax, and should return an array of hidden columns (e.g., array `hiddenColumns` in the last statement of the script).
++
+.Hidden column trigger script
+[example]
+====
+[source,javascript]
+hiddenColumns = ['SA.CUSTOMERS.CITY','SA.CUSTOMERS.STATE'];
+hiddenColumns;
+====
++
+The following parameters are available for use in the script:
++
+.Hidden Column Trigger Script Parameters
+****
+user:: The current user name
+roles:: Array of roles associated with this user
+groups:: Array of groups associated with this user
+parameter:: Dashboard or Worksheet parameters
+tables:: List of tables in the query
+columns:: Array of columns included in the query
+hiddenColumns:: Array of hidden columns currently defined in the VPM (for example, via API)
+****
+
+. Press the {buttonSave} to save the VPM.

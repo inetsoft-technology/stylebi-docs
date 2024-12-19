@@ -1,0 +1,21 @@
+. If the driver for the database has not yet been installed, press the btn:[Create Driver] button to open the ‘Create Driver’ dialog box.
++
+.Read more about how to create a driver...
+[%collapsible]
+====
+****
+include::user:partial$createDriverUser.adoc[]
+****
+====
++
+NOTE: This  feature is not enabled in all installations.  If you do not see the btn:[Create Driver] button, consult an administrator.
+
+
+
+
+. *_Optional:_* Press btn:[Test Connection] to check that the database is accessible.
+
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if a schema change has been made to a database, for example), press the btn:[Refresh Metadata] button.
+
+
+. *_Optional:_* For a multi-tenant environment, assign any desired additional connections. See xref:user:AddAdditionalConnection.adoc[] for more information.

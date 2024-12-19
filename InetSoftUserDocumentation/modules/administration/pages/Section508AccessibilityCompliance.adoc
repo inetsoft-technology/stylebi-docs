@@ -1,0 +1,19 @@
+
+= Section 508 Accessibility Compliance
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+The User Portal is compliant with Section 508 of the federal Rehabilitation Act of 1973. This means that most features of the User Portal are accessible via keyboard commands and corresponding voice commands. See xref:viewsheet:KeyboardNavigation.adoc[] for information on Dashboard accessibility.
+
+To enable full Section 508 compliance in the User Portal, set `accessibility.enabled=true`. ({EMPropertyConfig})
+
+NOTE: Enterprise Manager is not Section 508-compliant.
+
+
+Note that the User Portal ‘Repository’ listing is fully accessible only in ‘List’ view, not in ‘Tree’ view. Configure the Repository for ‘List’ view under the xref:Presentation.adoc#LookandFeel[Look and Feel] page of Enterprise Manager.
+
+image:LookAndFeelRepository.png[]
+
+

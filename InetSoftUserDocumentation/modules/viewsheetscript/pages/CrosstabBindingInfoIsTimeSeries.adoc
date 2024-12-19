@@ -1,0 +1,38 @@
+= bindingInfo.isTimeSeries(col)
+:navtitle: isTimeSeries()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Returns the state of the specified Date column, designated as time-series or not.  Fields can be designated as time-series by xref:CrosstabBindingInfoSetTimeSeries.adoc[] or in the Crosstab Editor.
+
+
+
+
+== Parameter
+col:: Name of field to test for time-series
+Boolean:: `true`: Field is set as time-series +
+`false`: Field is not set as time-series
+
+
+
+
+== Example
+[source,javascript]
+alert(Crosstab1.bindingInfo.isTimeSeries("Order:Date"));
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.isTimeSeries             // unqualified
+Crosstab1.bindingInfo.isTimeSeries   // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,30 @@
+= Date.getDate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+JavaScript function to return the day of the month corresponding to the Date object. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate[Date.getDate()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+var d = new Date(); // returns Thu Jun 20 14:55:21 EDT 2024 (example)
+d.getDate(); // returns 20.0
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getDate();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getDate();
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

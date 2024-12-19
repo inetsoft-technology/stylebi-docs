@@ -1,0 +1,60 @@
+= DataSet.getRowCount()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:DataSetGetData.adoc[] to retrieve data from the `dataset` object
+====
+
+Returns the number of rows in the DataSet (including the header row).
+
+
+
+
+
+
+
+
+== Returns
+Integer number of columns
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+ // Create a chart with two datasets:
+dataset = [["State", "Total", "Profit"],["NJ", 200, 25],["NY", 300, 150]]; //<1>
+graph = new EGraph();
+var elem1 = new IntervalElement("State", "Total");
+var elem2 = new IntervalElement("State", "Profit");
+var frame = new StaticColorFrame(java.awt.Color.red);
+elem2.setColorFrame(frame);
+graph.addElement(elem1);
+graph.addElement(elem2);
+
+// Loop through the rows of the second dataset (Profit),
+// and place labels on the bars.
+for (var i=0; i<dataset.getRowCount(); i++) { //<2>
+  var form = new LabelForm();
+  form.setLabel(dataset.getData(2,i));
+  form.setValues([dataset.getData(0,i), dataset.getData(2,i)]);
+  var spec = new TextSpec();
+  spec.setColor(java.awt.Color.red)
+  form.setTextSpec(spec)
+  graph.addForm(form)
+}
+
+--
+<1> {dataset}
+<2> Use `getRowCount()` to get the number of rows.
+
+
+image:commonscript:datasetGetRowCount.png[]
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

@@ -1,0 +1,57 @@
+= GraphElement.addDim(field)
+:navtitle: GraphElement.addDim()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Add a dimension to a xref:GraphElement.adoc[] object. A dimension is plotted on the X-axis, or on the outer coordinates of nested coordinates.
+
+== Parameter
+field::			String containing name of dimension
+
+
+
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["City" , "State", "Quantity"],["NJ","Edison",2500],
+["NJ","Piscataway",3000], ["NY","NY City",5000],["NY","Yonkers",450]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("City","Quantity"); //<2>
+elem.addDim("State"); //<3>
+graph.addElement(elem); //<4>
+--
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use `addDim` to add the '`State`' dimension.
+<4> Use `addElement` to add the IntervalElement to the Chart.
+
+image:commonscript:GraphElementaddDim.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.addDim("State");
+--
+=====
+
+

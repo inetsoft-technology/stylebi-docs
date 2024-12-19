@@ -1,0 +1,44 @@
+= bindingInfo.setGroupTotal(field, header, Boolean)
+:navtitle: setGroupTotal()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies whether the subtotal for a given parent group should be displayed. When `true`, this is equivalent to selecting ‘Show’ in the ‘Summarize’ menu of the Crosstab Editor.
+
+image:commonscript:bindingInfoSetGroupTotal.png[]
+
+
+
+== Parameters
+field::			String: Name of grouped column to total
+header::			`StyleConstant.ROW_HEADER` or `StyleConstant.COLUMN_HEADER`
+Boolean::			`true`: display group total +
+`false`: suppress group total (default)
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Region','State'];
+Crosstab1.bindingInfo.colFields = ['Category'];
+Crosstab1.bindingInfo.measureFields = ['Total'];
+Crosstab1.bindingInfo.setFormula('Total', StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.setGroupTotal('Region',StyleConstant.ROW_HEADER,true);
+
+image:commonscript:bindingInfoSetGroupTotalExp.png[]
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.setGroupTotal             // unqualified
+Crosstab1.bindingInfo.setGroupTotal   // qualified
+
+{secondForm}
+====
+
+

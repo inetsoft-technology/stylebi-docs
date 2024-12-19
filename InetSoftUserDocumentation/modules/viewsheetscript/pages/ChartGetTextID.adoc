@@ -1,0 +1,43 @@
+= getTextID(title)
+:navtitle: getTextID()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:viewsheet:LocalizeDashboard.adoc[] for more information on localization.
+
+Returns the *Text ID* assigned to the specified chart axis title. See xref:ChartSetTextID.adoc[] to assign a Text ID using script.
+
+== Parameter
+title::			One of the following strings:
++
+[source,javascript]
+'X Axis Title'
+'Y Axis Title'
+'Secondary X Axis Title'
+'Secondary Y Axis Title'
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.getTextID("X Axis Title");
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+getTextID             // unqualified
+Chart1.getTextID      // qualified
+
+{secondForm}
+====
+

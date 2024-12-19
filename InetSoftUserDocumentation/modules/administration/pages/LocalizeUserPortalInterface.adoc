@@ -1,0 +1,61 @@
+= Localize the User Portal Interface
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Localizable aspects of the User Portal and Enterprise Manager interfaces include the text in tab elements and nodes of the Repository tree and dialog box labels. The mapping (translation) file that specifies the text substitutions for these interface elements should be ASCII text and should be named
+
+ srinter_{language}_{country}.properties
+
+where  `pass:[{language}]` and `pass:[{country}]` are Java-supported https://www.oracle.com/technetwork/java/javase/java8locales-2095355.html[two-letter codes] for locale language and country. For example, the localization mapping file for Canadian French speakers should be called _srinter_fr_CA.properties_. Interface localization (“srinter”) files can be placed in any classpath root. For example, you can place the sample xref:ROOT:attachment$srinter_fr_CA.properties[srinter_fr_CA.properties] file  following directory: _/usr/local/inetsoft/classes/inetsoft/util_.
+
+
+Each line of text in the “srinter” mapping file should have the following simple format:
+
+ {interface_element}={translated_interface_element}
+
+
+The `pass:[{interface_element}]` text in most cases is just the text of the actual interface element, for example, ‘Schedule’ to represent the tooltip displayed in the *Schedule* tab. Spaces in the `pass:[{interface_element}]` text must be escaped by a backslash, for example, `My\ Dashboards`. The `pass:[{translated_interface_element}]` represents the localized text that you want to appear in the interface element. Spaces in the `pass:[{translated_interface_element}]` do not need to be escaped.
+
+[NOTE]
+====
+[square]
+* If the appropriate mapping file for the user’s locale selection cannot be found at runtime, the default _srinter.properties_ file is used and no localization is performed.
+
+* For non-Latin alphabets, convert a native UTF-8 text file to ASCII by using the https://docs.oracle.com/javase/8/docs/technotes/tools/windows/native2ascii.html[native2ascii] program bundled with the JDK, and specify the encoding. For example:
+
+ native2ascii -encoding UTF-8 Hebrew.txt > SreeBundle_iw_IL.properties
+====
+
+
+.Interface Localization
+[example]
+====
+Consider the following French Canadian localization file, _srinter_fr_CA.properties_, where `Repository_fr` is used as the French translation of `Repository` and so on. (You can download this file:  xref:ROOT:attachment$srinter_fr_CA.properties[srinter_fr_CA.properties].)
+
+[source, properties]
+Repository = Repository_fr
+Portal\ Dashboards = Portal Dashboards_fr
+Dashboard = Dashboard_fr
+Schedule = Schedule_fr
+Create = Create_fr
+Home = Home_fr
+My\ Dashboards = My Dashboards_fr
+Examples = Examples_fr
+OK = OK_fr
+Cancel = Cancel_fr
+
+
+The resulting localizations are shown below:
+
+.Localized User Portal Landing Page
+image:Portal Localization Viewer.png[]
+
+.Localized Repository Tree
+image:Portal Localization Viewer2.png[]
+
+.Localized Dialog Box
+image:Portal Localization Viewer3.png[]
+
+Consult the default _srinter.properties_ file (available upon request) for a complete listing of modifiable interface elements.
+====

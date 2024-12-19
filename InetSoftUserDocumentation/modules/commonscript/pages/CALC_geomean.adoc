@@ -1,0 +1,40 @@
+= CALC.geomean(array)
+:navtitle: CALC.geomean()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the *geometric mean* of values in array. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of positive values for which to compute geometric mean
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.geomean([4,5,8,7,11,4,3]);  // returns 5.476986969656962
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.geomean(TableView1.table['Quantity'])
+
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.geomean(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,35 @@
+= length
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+xref:CALC_len.adoc[] for an equivalent function.
+====
+
+
+The number of characters in the string.
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var strLength = 'Hello'.length; // returns '5'
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].length;
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.length;
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

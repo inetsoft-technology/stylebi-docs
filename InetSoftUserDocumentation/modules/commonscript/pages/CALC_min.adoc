@@ -1,0 +1,38 @@
+= CALC.min(array)
+:navtitle: CALC.min()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the smallest value in array. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of numerical values
+
+
+== Example
+Smallest value in set pass:[{4,5,8,7,8,4,5,3,7}]:
+
+
+[source,javascript]
+----
+CALC.min([4,5,8,7,8,4,5,3,7]);  // returns 3.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.min(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.min(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

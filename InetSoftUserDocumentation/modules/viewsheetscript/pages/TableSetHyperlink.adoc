@@ -1,0 +1,45 @@
+= setHyperlink(row, col, hyperlink)
+:navtitle: setHyperlink()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=see also]
+xref:viewsheet:DrillDownIntoData.adoc[] for basic information on hyperlinks.
+
+
+Creates a hyperlink for an individual Table cell.
+
+
+== Parameter
+row::			row index
+col::			column index
+hyperlink::			String or {InetSoftReportHyperlink}
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+setHyperlink(1, 1, "Tutorial/Ad Hoc");
+setHyperlink(1, 1, null); // remove hyperlink
+
+----
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setHyperlink                 // unqualified
+TableView1.setHyperlink      // qualified
+
+{secondForm}
+====
+
+

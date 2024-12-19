@@ -1,0 +1,32 @@
+= bindingInfo.textFrame
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:TextFrame.adoc[] outside of the data binding.
+====
+
+
+Specifies a mapping between axis values and replacement text.
+
+
+== Type
+xref:chartAPI:TextFrame.adoc[]
+
+
+== Example
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setTextField("Company",Chart.STRING);
+Chart1.bindingInfo.textFrame = new DefaultTextFrame;
+
+--
+
+
+image:commonscript:DefaultTextFrame.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]

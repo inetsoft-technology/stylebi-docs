@@ -1,0 +1,50 @@
+= GraphForm.setInPlot(Boolean)
+:navtitle: GraphForm.setInPlot()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:GraphElementSetInPlot.adoc[]    to adjust plot boundaries to include graph elements.
+* xref:chartAPI:AxisSpecSetInPlot.adoc[] to adjust plot boundaries to include graph labels.
+====
+
+For forms that use relative positioning (values or tuples), specifies whether the chart should be resized so that forms remain fully visible in the chart area. {noGetter}
+
+
+== Parameter
+Boolean:: `true`: resize chart +
+`false`: do not resize chart (crop forms)
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var form = new LineForm(); //<2>
+var elem = new IntervalElement("State", "Quantity");
+form.addValues(['NJ',0]);
+form.addValues(['NJ',300]);
+form.addValues(['NY',400]);
+form.setInPlot(true); //<3>
+form.setFill(true);
+graph.addForm(form); //<4>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the  xref:GraphForm.adoc[] object.
+<3> Use `setInPlot()` to resize the Chart to fit the `GraphForm`.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:GraphFormSetInPlot.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

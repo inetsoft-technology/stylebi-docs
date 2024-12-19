@@ -1,0 +1,32 @@
+= xTitle.text
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the X-axis title text.
+
+== Type
+string
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.xTitle.text = "New Jersey Employees"
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+xTitle.text             // unqualified
+Chart1.xTitle.text      // qualified
+
+{secondForm}
+====
+

@@ -1,0 +1,75 @@
+= LinearScale.setReversed(Boolean)
+:navtitle: LinearScale.setReversed()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+Specifies the orientation of the scale, either with value increasing from bottom to top (default), or from top to bottom. {noGetter}
+
+
+== Parameter
+Boolean:: `true`: value increases from top to bottom +
+`false`: value increases from bottom to top
+
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale("Quantity"); //<2>
+var elem = new IntervalElement("State", "Quantity");
+qscale.setMin(150);
+qscale.setMax(450);
+// Place setReversed() after setMin() and setMax()
+qscale.setReversed(true); //<3>
+graph.setScale("Quantity", qscale); //<4>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create the xref:LinearScale.adoc[] object.
+<3> Use `setReversed` to set the  scale orientation.
+<4> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+
+image:commonscript:LinearScaleSetReversed.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetYScale.adoc[] ② to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:Scale.adoc[]. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var scale = coord.getYScale(); //<2>
+// Compact Syntax: var scale = graph.getCoordinate().getYScale();
+
+scale.setMin(2000000);
+scale.setMax(15000000);
+// Place setReversed() after setMin() and setMax()
+scale.setReversed(true);
+--
+=====
+
+

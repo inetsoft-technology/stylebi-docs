@@ -1,0 +1,46 @@
+= CALC.weeknum(date)
+:navtitle: CALC.weeknum()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the week number within the year for the given date. (The first week of the year has index 1.) {CALCExcelFunctionPage}
+
+
+
+
+
+== Parameters
+date::			Date object
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.weeknum(new Date(2006,0,18));  // returns 3
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.weeknum(field['Order Date'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.weeknum(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

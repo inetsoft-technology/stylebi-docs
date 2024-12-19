@@ -1,0 +1,199 @@
+= Create a New Data Field
+include::ROOT:partial$buttonSnippets.adoc[]
+:experimental:
+
+You can create a new data field with one of the following two approaches.
+
+== Create an Expression Column in a Data Worksheet
+
+An *expression column* is a data set column that you define using either JavaScript or SQL (for SQL data sources). The expression is evaluated for each row of the data set. Creating an expression column in a Data Worksheet allows you to reference the field in any  Dashboard that uses the Data Worksheet. SQL expressions can often also be executed more efficiently  (for SQL data sources) than JavaScript expressions.
+
+To add an expression column to a data block, follow the steps below:
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Create a new data field in a data block...
+video::299108619[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+
+. Create the data block to which you want to add an expression column. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
+
+. Click the data block to select it.
++
+NOTE: If the data block is grouped and aggregated, use the {buttonChangeView} to switch the view to either {buttonMetaDetailView} or {buttonLiveDetailView}. (See xref:PreviewData.adoc[] for more information.)
+
+. In the bottom panel, press the {buttonCreateExpression}. This opens the Formula Editor.
++
+image:dataworksheet:agileTransform3.png[]
++
+. In the ‘Name’ field, enter the name of the new column that the expression will create.
++
+include::ROOT:partial$duplicateNames.adoc[]
++
+. At the top of the Formula Editor, select either ‘SQL’ or ‘Script’. Select ‘SQL’ (if available) to write the expression using your database’s SQL syntax. Select ‘Script’ to write the expression using JavaScript.
+
+. From the ‘Return Data Type’ menu, select the appropriate data type for the values that the expression will return.
+
+. Type the desired expression into the script area. To add a field into the expression, click on the field name in the ‘Fields’ listing. To reference the data contained in other cells of the data block, see xref:dataworksheet:AccessDataInExpression.adoc[].
++
+image:dataworksheet:agileTransform5.png[]
++
+*Date*-type fields supply the following date parts: Year, QuarterOfYear, MonthOfYear, DayOfMonth, and DayOfWeek. *Time*-type fields supply the following date parts: HourOfDay, MinuteOfHour, SecondOfMinute. *TimeInstant*-type fields supply all the previous date parts.
++
+image:dataworksheet:DateParts2.png[]
++
+. Press btn:[OK] to close the Editor and create the new column.
++
+image:dataworksheet:agileTransform6.png[]
++
+. Save the Data Worksheet by pressing the {buttonSave} in the toolbar or press kbd:[Ctrl + S] on the keyboard.
+
+include::ROOT:partial$CreateDashboard.adoc[]
+
+[id=CreateCalcField]
+== Create a Calculated Field in a Dashboard
+If your data source does not provide data in the correct form for display on the Dashboard, use a *calculated field* to create the desired data field. Unlike the expression column described above, a calculated field is available only to the Dashboard in which defined, and it can operate both on detail data and on data that is being aggregated within the Dashboard (for example, in charts and crosstabs).
+
+To create a new calculated field, follow the steps below:
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Create a calculated field in a dashboard...
+video::298164978[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+
+. Edit the Dashboard to which you want to add an expression field. See xref:viewsheet:EditADashboard.adoc[].
+
+
+. In the *Toolbox* panel, right-click on the data block or data model  to which you want to add the calculated field. Select ‘New Calculated Field’ from the context menu.
++
+
+image:viewsheet:NewCalculatedField1.png[]
+
++
+This opens the ‘Calculated Field’ panel.
++
+. In the ‘Name’ field, enter a name for the new calculated field.
++
+[IMPORTANT]
+.Name restrictions
+The following special characters are *permitted* in the name of a calculated field: Period ("."), comma (","), question mark ("?"), parentheses ("()"), exclamation point ("!"), at sign ("@"), ampersand ("&"), single quote (" ' ").  Slash("/") is *not permitted*.
+
+. Select the ‘Detail’ option to perform calculations on the data directly provided by the data block, or click ‘Aggregate’ to perform calculations on the data after it has been aggregated (for example in a Chart or a Crosstab). See below for examples of detail and aggregate calculations.
++
+NOTE: Your choice of ‘Detail’ or ‘Aggregate’ *cannot* be changed later.
++
+image:viewsheet:NewCalculatedField2.png[]
+
+
+. In the ‘Return Data Type’ menu, select the data type that the calculated field will return.
++
+. Enable the ‘SQL’ option to construct the formula using SQL syntax. Disable the ‘SQL’ option to construct the formula using JavaScript syntax.
++
+In general, SQL expressions perform better than JavaScript expressions because SQL expressions can be optimized for processing on the database whereas JavaScript expressions must be post-processed by the server. However, JavaScript provides greater programmatic flexibility and allows construction of expressions that are difficult or impossible to implement within the constraints of SQL.
++
+. Enter the desired calculation into the formula field at the bottom of the dialog box.  The sections below explain how to construct *detail* and *aggregate* calculations:
++
+* xref:DetailLevelCalculation[]
+* xref:AggeregateLevelCalculation[]
++
+. Press btn:[OK] to close the Formula Editor. This adds the new calculated field to the data source at the top of the *Toobox* panel.
++
+//ifdef::si[]
+
+image:viewsheet:NewCalculatedField4.png[]
+//endif::[]
+
+////
+ifdef::testdrive[]
+image:testdrive:agileDash61.png[]
+endif::[]
+////
+
+
+You can display this calculated field in Output Components (see xref:viewsheet:AddAKPI.adoc[]) or Data View Components (see xref:viewsheet:AddAChart.adoc[] and xref:viewsheet:AddTable.adoc[]) in the same way that would display any other data field.
+
+NOTE: You cannot bind an aggregate-based calculated field to Filter components.
+
+[id=DetailLevelCalculation]
+== Detail-Level Calculation
+See xref:CreateCalcField[] to open the ‘Edit Calculated Field’ dialog box, and select the ‘Detail’ option. The available detail fields are listed in the top-left panel. Click on an available field in the panel to add it to the expression.
+
+image:viewsheet:NewCalculatedField3.png[]
+
+NOTE:  *Date*-type fields supply the following date parts: Year, QuarterOfYear, MonthOfYear,             DayOfMonth, and DayOfWeek. *Time*-type fields supply the following date parts: HourOfDay, MinuteOfHour,            SecondOfMinute. *TimeInstant*-type fields supply all of the previous date parts.
+
+Many expressions are similar to formulas that you might use in Microsoft Excel^®^. Some common examples are shown below.
+
+include::ROOT:partial$ExcelScalarFormulas.adoc[]
+
+[id=AggeregateLevelCalculation]
+== Aggregate-Level Calculation
+An aggregate calculation field is a predefined aggregation formula that you can use in a component that aggregates data such as a Gauge, Text, Chart, or Crosstab. Typically, the calculation involves more than one data field.
+
+.Example
+****
+Your data set contains the fields ‘Sales Amount’ and ‘Order Number’, and you often want to display the average of the ‘Sales Amount’ field, i.e., ‘Average Sales Amount’. To make this aggregate quantity available to your components, create  ‘Average Sales Amount’ as an aggregate calculation with the following formula:
+[source,javascript]
+sum('Sales Amount')/count('Order Number')
+
+When you bind this ‘Average Sales Amount’ field to a Gauge that summarizes the whole dataset, it will present the average sales amount for all orders. On the other hand, when you use this ‘Average Sales Amount’ field as the measure for a Chart that has a ‘Product’ dimension, the Chart will display the average sales amount for each product.
+****
+See xref:CreateCalcField[] to open the ‘Edit Calculated Field’ dialog box, and select the ‘Aggregate’ option.  The Formula Editor may already contain the desired aggregate fields in the top-left panel. Click on an available field in the panel to add it to the expression.
+
+To add a new aggregate to the list, follow the steps below:
+
+. Press the ‘New Aggregate’ link in the top-left panel.
++
+image:viewsheet:CalcFieldExample8.png[]
++
+This opens the ‘Aggregate’ dialog box.
++
+. In the ‘Field’ menu of the ‘Aggregate’ dialog box, select the field that you wish to aggregate for purposes of the calculation.
++
+image:viewsheet:CalcFieldExample9.png[]
++
+. In the ‘Aggregate’ menu, select the desired aggregation method.
++
+.Read about the available aggregation methods...
+[%collapsible]
+====
+include::ROOT:partial$AggregationMethods.adoc[]
+====
+. For a bivariate aggregation method, select the second field from the ‘With’ menu.
+. Press btn:[OK] to close the ‘Aggregate’ dialog box. The Formula Editor now displays the newly defined aggregate quantity in the top-left panel.
++
+image:viewsheet:CalcFieldExample10.png[]
++
+. *_Optional:_*  Press the ‘New Aggregate’ button again, and repeat the above steps to add as many additional aggregates as desired.
+. Once you have defined the required aggregates in the top-left panel, enter the desired calculation (using the aggregate fields) in the formula field at the bottom of the dialog box.
++
+NOTE: Click an aggregate field in the top-left panel to add it to the expression.
++
+image:viewsheet:CalcFieldExample11.png[]
+
+
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Global_Visual_Analysis.zip[Global Visual Analysis] Dashboard provides an example of using *calculated fields* to color the regions on a map.
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Global_Visual_Analysis.zip[Global Visual Analysis] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+
+image:viewsheet:galleryBubble2.png[]
+****
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+= indexOf(searchValue[, fromIndex])
+:navtitle: indexOf()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:StringObjectLastIndexOf.adoc[] to find the final occurrence of a sub-string.
+* xref:CALC_search.adoc[] for an equivalent function.
+====
+
+Return the index of the first occurrence of specified sub-string within the larger string, or return `-1` if the sub-string is not found.
+
+== Parameters
+fromIndex:: Starting position of the search (optional). Indexing starts from 0.
+
+
+
+
+
+== Example
+[source,javascript]
+var index = 'Hello'.indexOf('lo'); // returns 3
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].indexOf('lo');
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.indexOf('lo');
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,45 @@
+= Localize a Data Source
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+You can use a simple text mapping to localize  data source names, data model names (entity/attribute), and query (column) names.
+
+
+== Create SreeBundle Mapping File
+Create a mapping file  that specifies the text substitutions for data source names.  (This is *the same file* that you use to map Dashboard element text.  See xref:LocalizeDashboard.adoc[].)
+
+
+IMPORTANT: A localization can not take effect until you register the locale in Enterprise Manager.  See xref:RegisterLocale.adoc[].
+
+=== File Name
+See xref:LocalizeDashboard.adoc[] for information on how to name the *SreeBundle* mapping file.
+
+=== File Contents
+Each data source translation is specified by a single line of text in the  localization file:
+
+ {datasource_name}={translated_datasource_name}
+
+The `pass:[{datasource_name}]` is the actual label of the data source, query column, data source entity, etc. Spaces and certain other non-alphanumeric characters in the `pass:[{datasource_name}]` must be escaped by a backslash, for example, ‘All\ Sales’. The `pass:[{translated_datasource_name}]` is the translated label for data source, query column, data source entity, etc. Spaces in the `pass:[{translated_datasource_name}]` do not need to be escaped.
+
+.French translation
+[example]
+====
+The French Canadian localization file mentioned in xref:LocalizeDashboard.adoc[], _SreeBundle_fr_CA.properties_, might contain the following lines of text, where, for purposes of illustration, `Orders_fr` is used as the French translation of `Orders`, and so on:
+
+ Orders = Orders_fr
+ All\ Sales = All Sales_fr
+
+The above mapping translates the '`Orders`' data source and '`All Sales`' Data Worksheet labels into the specified mock French text:
+
+|===
+|Label|Translated Label
+
+|Orders|Orders_fr
+|All Sales|All Sales_fr
+|===
+====
+
+
+== Find Available Localization Targets
+include::administration:partial$DownloadBundle.adoc[]
+

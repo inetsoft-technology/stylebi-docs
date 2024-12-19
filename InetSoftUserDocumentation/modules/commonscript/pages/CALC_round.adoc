@@ -1,0 +1,38 @@
+= CALC.round(number, num_digits)
+:navtitle: CALC.round()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Rounds a number to a specified number of digits. {CALCExcelFunctionPage}
+
+== Parameters
+number::			Number to round
+num_digits::			Number of digits (to right of decimal point) to preserve after rounding
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.round(2.15, 1);  // returns 2.2
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.round(field['Value'],1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.round(Slider1.selectedObject,1)
+CALC.round(parameter.Value, 1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

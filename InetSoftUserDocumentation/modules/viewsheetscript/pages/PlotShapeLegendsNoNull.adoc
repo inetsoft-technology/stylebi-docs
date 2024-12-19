@@ -1,0 +1,30 @@
+= shapeLegends.noNull
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+For Charts with *multiple* Date/Time or Categorical shape legends, set to `true` to suppress the display of `null` dimension values in the legend. When `false` (default), `null` values are represented without a label in the legend.
+
+
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.shapeLegends['Order Date'].noNull = true;
+Chart1.shapeLegends['Product:Name'].noNull = false;
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shapeLegends['...'].noNull          // unqualified
+Chart1.shapeLegends['...'].noNull   // qualified
+
+{secondForm}
+====

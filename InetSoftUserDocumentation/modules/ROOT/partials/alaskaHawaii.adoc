@@ -1,0 +1,26 @@
+
+For convenience, the default ‘U.S.’ map does not display Alaska and Hawaii in their geographical locations, but shifts and (in the case of Alaska) re-scales them to an *_inset_* position below California. For this reason, if you are plotting data on the ‘U.S.’ map you should transform your raw latitude and longitude data for Alaska and Hawaii prior to generating the chart.
+
+To remap your raw longitude and latitude data, [_long lat_], to the corrected values, [_long' lat'_], apply the following matrix transformations to your data.
+
+
+
+.Alaska Transform
+[example]
+====
+
+[stem]
+++++
+[[long'\],[lat'\],[1\]\] = [[0.204,0,-85.0\],[0,0.354,5.0\],[0,0,1\]\] [[long\],[lat\],[1\]\]
+++++
+====
+
+.Hawaii Transform
+[example]
+====
+
+[stem]
+++++
+[[long'\],[lat'\],[1\]\] = [[1,0,50.0\],[0,1,5.0\],[0,0,1\]\] [[long\],[lat\],[1\]\]
+++++
+====

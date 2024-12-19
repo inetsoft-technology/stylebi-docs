@@ -1,0 +1,41 @@
+= CALC.sign(number)
+:navtitle: CALC.sign()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the sign of a number, `-1` for negative, or `+1` for positive. {CALCExcelFunctionPage}
+
+== Parameters
+number::			The number for which to return sign
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.sign(-3);  // returns -1
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.sign(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.sign(Slider1.selectedObject)
+CALC.sign(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

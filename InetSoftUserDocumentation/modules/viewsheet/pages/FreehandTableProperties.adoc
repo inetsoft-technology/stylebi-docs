@@ -1,0 +1,35 @@
+= Freehand Table Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+* xref:TableProperties.adoc[] for properties of a regular Table.
+* {commonProperties}
+====
+
+The ‘Freehand Table Properties’ panel provides *General*, *Advanced*,  and *Script* tabs. The next sections discuss the Freehand Table-specific properties available under these tabs.
+
+== General Tab
+The *General* tab in the ‘Crosstab Properties’ panel is the same as for regular Tables.  See xref:TableProperties.adoc[].
+
+
+== Advanced Tab
+The *Advanced* tab in the ‘Crosstab Properties’ panel provides the following Freehand Table-specific properties.
+
+image:Freehand Properties Advanced.png[]
+
+Header Rows:: The number of initial rows that should be treated as header rows when a Table Style is applied.
+Header Columns:: The number of initial columns that should be treated as header columns when a Table Style is applied.
+Trailer Rows:: The number of final rows that should be treated as trailer rows when a Table Style is applied.
+Trailer Columns:: The number of final columns that should be treated as trailer columns when a Table Style is applied.
+Shrink to Fit:: When enabled, this reduces the height of the table to match the number of records displayed. For example, if the original table height (as designed) was 10 rows, and the user then makes selections which restrict the result set to five rows, the bottom table border retracts or “shrinks” to eliminate any empty rows at the bottom of the table.
+Fill Blank Cell With Zero:: Places a zero value in *measure* cells corresponding to row and column heading combinations for which no records exist. Otherwise, these cells are simply left blank.
+Sort Others Last:: Available when ‘Group all others together’ is enabled for Top/Bottom ranking in the ‘Group’ panel of the Freehand Table Editor. (See xref:AddFreehandTable.adoc[]  for information about dimension ranking.) When enabled, this property places the ‘Others’ group _after_ all the ranked groups, regardless of the specified dimension sorting.
+Data Tip View:: A Dashboard component is displayed when mouse hovers over the Table. The component is filtered based on the hover region. See xref:AddTipsToChart.adoc[] for more details.
+Flyover Views:: Allows you to select a set of Dashboard components which will be adaptively filtered as the user hovers the mouse or clicks on the Table. (Select ‘On Click Only’ if you want the filtered components to update when the user clicks.) See xref:DrillDownIntoData.adoc[] for more details.
+
+
+
+== Script Tab
+{commonScript}

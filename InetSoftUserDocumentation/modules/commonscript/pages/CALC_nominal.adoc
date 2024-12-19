@@ -1,0 +1,42 @@
+= CALC.nominal(effect_rate, nper)
+:navtitle: CALC.nominal()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *nominal* annual interest rate, given the effective compounded rate and the number of compounding periods per year. {CALCExcelFunctionPage}
+
+== Parameters
+effect_rate::			Effective interest rate
+nper::			Number of compounding periods per year
+
+
+
+== Example
+Nominal rate for an investment with an effective rate of 5.3543%, where interest is compounded four times per year.
+
+
+
+[source,javascript]
+----
+CALC.nominal(0.053543, 4); // returns 0.052500319868356016 (approx 5.25%)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.nominal(field['Rate'], 4)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.nominal(Slider1.selectedObject, 4)
+CALC.nominal(parameter.Rate, 4)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

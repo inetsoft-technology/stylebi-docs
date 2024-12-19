@@ -1,0 +1,37 @@
+= CALC.countif(array, condition)
+:navtitle: CALC.countif()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Counts the number of elements in the `array` that meet a certain condition, such as `>100` or `==21` or `=='desk'`. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of numeric or non-numeric values
+condition::			Condition against which elements should be compared
+
+
+== Example
+[source,javascript]
+----
+CALC.countif([3,2,4,5,6], '> 4');  // returns 2
+CALC.countif(['me','you','you','me','me'], '=="me"');  // returns 3
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.countif(TableView1.table['Quantity'], '> 50')
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.countif(Sales['Quantity'], '> 50');
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

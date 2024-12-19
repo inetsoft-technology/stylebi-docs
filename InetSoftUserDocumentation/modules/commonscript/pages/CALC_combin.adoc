@@ -1,0 +1,39 @@
+= CALC.combin(totalNumber, groupNumber)
+:navtitle: CALC.combin()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the number of unique combinations in which a set of elements can be combined into groups of a given size. {CALCExcelFunctionPage}
+
+== Parameters
+totalNumber::			Total number of elements available to combine
+groupNumber::			Size of groups into which elements are combined
+
+
+== Example
+Number of unique ways that 10 items can be combined into groups of two:
+[source,javascript]
+----
+CALC.combin(10, 2);  // returns 45.0
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.combin(field['Items'], field['Groups'])
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.combin(Slider1.selectedObject, Slider2.selectedObject)
+CALC.combin(parameter.Items, parameter.Groups)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

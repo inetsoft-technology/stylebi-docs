@@ -1,0 +1,72 @@
+= Represent Data with Shape, Color, Size
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING, caption=see also]
+xref:ChangeChartElements.adoc[], to use static VisualFrame objects.
+
+You can create a basic two-dimensional representation of data with just a xref:chartAPI:GraphElement.adoc[] object. To represent additional dimensions by using other visual attributes of elements, create a  xref:VisualFrame.adoc[].
+
+To understand how to use a VisualFrame, consider the script below:
+[source,javascript]
+dataset = [["State","Quantity","Total"],["NJ",200,2500],["NY",300,1500]];
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+graph.addElement(elem);
+
+image:commonscript:VisualFrameExample1.png[]
+
+include::partial$scriptThatModifiesGraph.adoc[]
+
+This creates a basic Point (scatter) Chart displaying the dimensions ‘State’ and ‘Quantity’. If you want to additionally represent the dimension ‘Total’ with the *element size*, use a `VisualFrame` such as the xref:chartAPI:LinearSizeFrame.adoc[]. Follow these steps:
+
+. Create a new `LinearSizeFrame` object, and specify the field containing the data that will determine the element sizes.
++
+[source,javascript]
+var frame = new LinearSizeFrame();
+frame.setField("Total");
+
++
+A `VisualFrame` object such as `LinearSizeFrame` contains a mapping between data values and physical attributes. Therefore, you need a xref:Scale.adoc[] to specify the mapping’s scaling.
+
+. Create a new xref:LinearScale.adoc[] object, and assign the scale properties. (See xref:ChangeChartScaling.adoc[] for more information.)
++
+[source,javascript]
+var scale = new LinearScale();
+scale.setFields("Total");
+scale.setMax(3000);
+scale.setMin(1000);
+
+. Assign the new `Scale` to the `VisualFrame` object:
++
+[source,javascript]
+frame.setScale(scale);
+
+. Assign the `VisualFrame` object to the xref:GraphElement.adoc[] object:
++
+[source,javascript]
+elem.setSizeFrame(frame);
+
++
+The point sizes now represent the data values contained in the ‘Total’ field.
++
+image:commonscript:VisualFrameExample2.png[]
+
+
+
+.Complete Script
+****
+[source,javascript]
+dataset = [["State","Quantity","Total"],["NJ",200,2500],["NY",300,1500]];
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var frame = new LinearSizeFrame();
+frame.setField("Total");
+var scale = new LinearScale();
+scale.setFields("Total");
+scale.setMax(3000);
+scale.setMin(1000);
+frame.setScale(scale);
+elem.setSizeFrame(frame);
+graph.addElement(elem);
+****

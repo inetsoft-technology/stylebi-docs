@@ -1,0 +1,32 @@
+= webMap
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets a xref:viewsheet:MapChart.adoc[]  to use a web map background. (If the setting does not affect the chart, ask your administrator  to enable the Web Map feature in Enterprise Manager.)
+
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.webMap = true;
+
+image:commonscript:webMap.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+webMap          // unqualified
+Chart1.webMap   // qualified
+
+{secondForm}
+====

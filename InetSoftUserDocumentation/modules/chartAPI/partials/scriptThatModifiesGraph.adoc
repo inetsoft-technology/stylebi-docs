@@ -1,0 +1,7 @@
+
+
+
+
+
+
+NOTE: Script that modifies the `graph` or `dataset` properties should be placed on the *Chart  component* itself.   See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script]  for more information. This script has access to the Chart data and Chart API methods. Scripted Charts are not good candidates for user-modification, so you should *deselect* ‘Enable Ad Hoc Editing’ in the Chart Properties dialog box.

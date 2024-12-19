@@ -1,0 +1,23 @@
+= SharePoint Online  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing SharePoint Online  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:SharePointOnline.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonSharePointOnlineQuery}. This opens the ‘SharePoint Online  Query’ dialog box.
+
++
+image:sharepointOnline1.png[]
+
+. Enter the Sharepoint Online ‘Site’ and ‘List’ properties. See the https://docs.microsoft.com/en-us/sharepoint/sharepoint-online[SharePoint Online documentation] for more information.
++
+include::dataworksheet:partial$finalStepsQuery.adoc[]
+

@@ -1,0 +1,60 @@
+= AxisSpec.setLabelGap(value)
+:navtitle: AxisSpec.setLabelGap()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the gap between the axis labels and the axis line.  The corresponding “getter” function is `getLabelGap()`.
+
+== Parameter
+value:: 			integer number of pixels to use for gap
+
+
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"],["NJ",20000],["NY",30000]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var qscale = new LinearScale("Quantity");
+var aspec = new AxisSpec(); //<2>
+aspec.setLabelGap(30); //<3>
+qscale.setAxisSpec(aspec);
+graph.setScale("Quantity", qscale);
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Use `setLabelGap` to add space next to the axis labels.
+
+image:commonscript:TextSpecsetLabelGap.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); <1>
+var scale = coord.getYScale(); <2>
+var spec = scale.getAxisSpec(); <3>
+// Compact syntax: var xspec = graph.getCoordinate().getXScale().getAxisSpec();
+
+spec.setLabelGap(30);
+--
+=====

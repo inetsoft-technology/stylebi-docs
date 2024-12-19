@@ -1,0 +1,57 @@
+= GraphElement.setLineFrame(frame)
+:navtitle: GraphElement.setLineFrame()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the aesthetic line style of graphical elements. A xref:LineFrame.adoc[] can line-code chart elements by value, or simply specify a static line style.  The corresponding “getter” function is `getLineFrame()`.
+
+
+
+
+
+== Parameter
+frame:: A xref:LineFrame.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["CA", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity"); //<2>
+var frame = new StaticLineFrame(); //<3>
+frame.setLine(GLine.LARGE_DASH);
+elem.setLineFrame(frame); //<4>
+graph.addElement(elem); //<5>
+--
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Create a `LineFrame` object.
+<4> Use `setLineFrame` to assign the `LineFrame` to the `IntervalElement`.
+<5> Use `addElement` to add the `IntervalElement` to the Chart.
+
+
+image:commonscript:GraphElementsetLineFrame.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new StaticLineFrame();
+frame.setLine(GLine.LARGE_DASH);
+elem.setLineFrame(frame);
+--
+=====

@@ -1,0 +1,36 @@
+= CALC.mod(number, divisor)
+:navtitle: CALC.mod()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the remainder when number is divided by divisor. {CALCExcelFunctionPage}
+
+== Parameters
+number::			Real number to be divided
+divisor::			Real number by which to divide
+
+
+
+== Example
+[source,javascript]
+----
+CALC.mod(3,2);  // Returns 1.0
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.mod(field['Value'],2)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.mod(Slider1.selectedObject,2)
+CALC.mod(parameter.Value,2)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

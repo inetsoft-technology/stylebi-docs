@@ -1,0 +1,34 @@
+= CALC.cosh(number)
+:navtitle: CALC.cosh()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Return the hyperbolic cosine of any real number. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A real number
+
+== Example
+[source,javascript]
+----
+CALC.cosh(2.7)  // returns 7.473468618806294
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.cosh(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.cosh(Slider1.selectedObject)
+CALC.cosh(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

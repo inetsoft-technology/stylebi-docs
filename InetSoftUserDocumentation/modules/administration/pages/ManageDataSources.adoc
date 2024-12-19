@@ -1,0 +1,63 @@
+= Manage Data Sources
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Manage data sources in script by using the `:datasource` or equivalent `:ds` command.
+include::partial$runCommand.adoc[]
+
+== List Available Data Sources
+The `list` action lists the available data sources. {connectRepositoryNote}
+
+=== Example
+ :datasource list
+
+== Get Data Source Information
+The `get` action provides information about a particular data source. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the data source.
+
+
+=== Example
+
+ :datasource get Examples/Orders
+ :datasource get 'Examples/Stock History'
+
+
+== Modify Data Source Properties
+The `update` action allows you to edit the definition of a data source. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the data source.
+properties:: The name of a variable containing the task definition structure. The `inetsoft.shell.dsl.DataSource` DSL facilitates task definition. There are five supported data source types: `jdbc`, `soap`, `tabular`, `text`, and `xml`. The DSL properties are the same as the corresponding data structures in the https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/package-summary.html[API documentation].
+
+
+=== Example
+Move an existing data source named “Examples/Test” to “Test Data Source” and change the property values to those in the closure passed to `jdbc`.
+
+[source,groovy]
+----
+import inetsoft.shell.dsl.DataSource
+def ds = DataSource.jdbc {
+  name 'Test Data Source'
+  url 'jdbc:h2:mem:test'
+  driver 'org.h2.Driver'
+  requireLogin true
+  user 'sa'
+  password 'secret'
+}
+----
+ :datasource update 'Examples/Test' ds
+
+
+
+== Remove a Data Source
+The `delete` action removes the specified data source. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the data source.
+
+
+=== Example
+ :datasource delete Examples/Orders

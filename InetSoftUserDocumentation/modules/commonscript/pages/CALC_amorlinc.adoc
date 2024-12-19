@@ -1,0 +1,69 @@
+= CALC.amorlinc(cost, date_purchased, first_period, salvage, period, rate, [basis])
+:navtitle: CALC.amorlinc()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the depreciation of an asset for accounting year `period` on a prorated basis according to the *linear* depreciation method of the French accounting system. {CALCExcelFunctionPage} This function is the same as  xref:CALC_amordegrc.adoc[] except in calculation of the depreciation coefficients.
+
+Depreciation during the first (fractional) period is given by:
+[source,javascript]
+cost * rate/100 * CALC.yearfrac(date_purchased,first_period,basis)
+
+Depreciation during subsequent (whole) periods is given by:
+[source,javascript]
+rate * cost
+
+Depreciation during the final (fractional) period is the difference between the asset’s value in the previous period and the asset’s salvage value. The function returns 0 for periods after which the asset has already reached its salvage value.
+
+== Parameters
+cost::				Initial cost of the asset
+date_purchased::				Date object: Asset purchase date
+first_period::				Date object: End of the first depreciation period
+salvage::				Salvage value at end of asset life
+period::				Period (year index) for which to return depreciation. First period, from `date_purchased` to `first_period`, is index `0`.
+rate::				Rate of depreciation
+basis::            {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+== Example
+Depreciation over time on a $2400 asset purchased on August 19, 2008, with first depreciation period ending December 31, 2008, end-of-life salvage value of $300, 15% rate of depreciation, and Actual/360 counting method.
+[source,javascript]
+----
+var deprec = 0;
+for(var period = 0; period < 10; period++) {
+  deprec = CALC.amorlinc(2400, new Date(2008,7,19), new Date(2008,11,31), 300, period, 0.15, 2);
+  alert('Period ' + period + ': Depreciation of ' + deprec);
+}
+
+// Returns:
+// Period 0: Depreciation of 133.99999737739563
+// Period 1: Depreciation of 360
+// Period 2: Depreciation of 360
+// Period 3: Depreciation of 360
+// Period 4: Depreciation of 360
+// Period 5: Depreciation of 360
+// Period 6: Depreciation of 166.00000262260437
+// Period 7: Depreciation of 0
+// Period 8: Depreciation of 0
+// Period 9: Depreciation of 0
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.amorlinc(2400, field['PurchaseDate'], field['DeprecDate'], 300, period, 0.15, 2);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.amorlinc(2400, RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 300, period, 0.15, 2);
+CALC.amorlinc(2400, parameter.PurchaseDate, parameter.DeprecDate, 300, period, 0.15, 2);
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

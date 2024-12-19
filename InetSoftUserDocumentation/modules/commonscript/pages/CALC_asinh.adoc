@@ -1,0 +1,35 @@
+= CALC.asinh(number)
+:navtitle: CALC.asinh()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the inverse hyperbolic sine of an number. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A numerical value greater than or equal to 1
+
+
+== Example
+[source,javascript]
+----
+CALC.asinh(77); // returns 5.03699476537355
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.asinh(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.asinh(Slider1.selectedObject)
+CALC.asinh(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

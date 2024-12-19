@@ -1,0 +1,100 @@
+= formatSpec
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=see also]
+xref:viewsheet:VisualFormat.adoc[] for more information about format specifications.
+
+
+Specifies a formatting instruction to be used for representing data on the screen.
+
+
+== Type
+The formatting instruction is specific to the format type, Date, Number, or Text.
+
+=== Date
+Date masks use the symbols shown below.  See  xref:viewsheet:DataFormat.adoc#DateFormat[Date Format] for more examples.
+
+include::commonscript:partial$dateFormatTable.adoc[]
+
+.Date format
+[example]
+====
+For the date Nov 8, 2006:
+[source,javascript]
+M = 11;
+MM = 11;
+MMM = Nov;
+MMMM = November
+d = 8;
+dd = 08;
+yy = 06;
+yyyy = 2006
+EEE = Wed
+EEEE = Wednesday
+
+Therefore, mask 'MMM-dd-yyyy' yields “Nov-08-2006.”
+====
+
+
+=== Numeric
+Numeric masks use the symbols shown below.  See  xref:viewsheet:DataFormat.adoc#NumberFormat[Number Format] for more examples.
+
+include::commonscript:partial$numberFormatTable.adoc[]
+
+.Number format
+[example]
+====
+For the number 124521.63:
+[source]
+#,###.##  yields 124,521.63
+#,###.000 yields 124,521.630
+====
+
+
+== Text
+For text formatting, use `pass:[{0}]` as a placeholder for the string data.
+
+.Text format
+[example]
+====
+For the string '`Susan`':
+[source]
+Salesperson: {0} yields 'Salesperson: Susan'
+--{0}-- yields '--Susan--'
+====
+
+
+
+
+
+
+== Examples
+[source,javascript]
+----
+// Date format
+format = StyleConstant.DATE_FORMAT;
+formatSpec = "MM/dd/yyyy";
+
+// Number format
+format = StyleConstant.DECIMAL_FORMAT;
+formatSpec = "#,###.00";
+
+// Text format
+format = StyleConstant.MESSAGE_FORMAT;
+formatSpec = "{0} Inc."
+----
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+formatSpec               // unqualified
+Component1.formatSpec    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,38 @@
+= CALC.vara(array)
+:navtitle: CALC.vara()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the *sample variance* for the values in `array`, which can include Boolean values. Variance is the square of the standard deviation and provides a measure of how widely the data are spread about the mean.  {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of real or Boolean values. Boolean `true` evaluates to 1; `false` evaluates to 0. (String values are ignored.)
+
+
+== Example
+
+[source,javascript]
+----
+CALC.vara([true,false,1345,1301,1368,1322,1310,1370,1318,1350,1303,1299]);
+// returns 267867.11363636365
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.vara(TableView1.table['Col1'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.vara(Sales['Col1']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

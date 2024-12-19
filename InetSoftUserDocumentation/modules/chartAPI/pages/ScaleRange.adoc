@@ -1,0 +1,13 @@
+= ScaleRange
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=created by]
+====
+[square]
+* xref:StackRange.adoc[]
+* xref:LinearRange.adoc[]
+====
+
+The `ScaleRange` object contains the calculation strategy for finding the scale range.
+

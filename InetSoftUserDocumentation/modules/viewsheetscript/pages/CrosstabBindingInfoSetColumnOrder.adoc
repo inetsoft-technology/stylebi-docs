@@ -1,0 +1,82 @@
+= bindingInfo.setColumnOrder(sort_field, header, method, [measure])
+:navtitle: setColumnOrder()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the sorting order for row or column header. This is equivalent to setting the sorting for a header in the Crosstab Editor. The `measure` parameter is required only when a “by value” sort is requested.
+
+image:commonscript:bindingInfoSetColumnOrder.png[]
+
+
+
+== Parameters
+sort_field::			String: Name of a column to sort
+header::			`StyleConstant.ROW_HEADER` or +
+`StyleConstant.COLUMN_HEADER`
+method::			xref:commonscript:StyleConstant.adoc[] object: One of the following sort methods:
++
+[source]
+StyleConstant.SORT_NONE
+StyleConstant.SORT_ASC
+StyleConstant.SORT_DESC
+StyleConstant.SORT_VALUE_ASC
+StyleConstant.SORT_VALUE_DESC
+
+measure::			String: Formula for by-value sorting:
++
+[source]
+'Sum(column_name)'
+'Average(column_name)'
+'Max(column_name)'
+'Min(column_name)'
+'Count(column_name)'
+'Distinct Count(column_name)'
+'First(column_name1,column_name2)'
+'Last(column_name1,column_name2)'
+'Correlation(column_name1,column_name2)'
+'Covariance(column_name1,column_name2)'
+'Variance(column_name)'
+'Median(column_name)'
+'Mode(column_name)'
+'Std Deviation(column_name)'
+'Variance(Pop)(column_name)'
+'Std Deviation(Pop)(column_name)'
+'Weighted Average(column_name1,column_name2)'
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Name'];
+Crosstab1.bindingInfo.colFields = ['Region'];
+Crosstab1.bindingInfo.measureFields = ['Total'];
+Crosstab1.bindingInfo.setFormula('Total', StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.showColumnTotal = true;
+Crosstab1.bindingInfo.setColumnOrder('Name',StyleConstant.ROW_HEADER,StyleConstant.SORT_VALUE_DESC,'Sum(Total)');
+
+image:commonscript:bindingInfoSetColumnOrder2.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.setColumnOrder             // unqualified
+Crosstab1.bindingInfo.setColumnOrder   // qualified
+
+{secondForm}
+====
+
+

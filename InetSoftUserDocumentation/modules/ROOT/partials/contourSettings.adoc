@@ -1,0 +1,4 @@
+Levels:: Specifies the number of contours used to represent each region. A larger number produces a smoother transition of colors.
+Bandwidth:: Specifies the area over which to calculate density. A larger number produces contours that span larger areas.
+Edge Alpha::  Specifies the transparency of the contour edge. The transparency of the contour center is determined by the  Chart ‘Alpha’ property. A higher value makes the edges more visible.
+Cell Size:: Specifies the size of the cells that make up the grid on which contour weights are computed. Higher values specify larger cells, and hence broader clusters. Lower values specify smaller cells, and hence smaller clusters.

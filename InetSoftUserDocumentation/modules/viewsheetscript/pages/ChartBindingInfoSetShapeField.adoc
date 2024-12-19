@@ -1,0 +1,52 @@
+= bindingInfo.setShapeField()
+:navtitle: bindingInfo.setShapeField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheetscript:ChartBindingInfoGetShapeField.adoc[]  to obtain the binding information.
+* xref:viewsheetscript:ChartBindingInfoTextureFrame.adoc[]  for information on setting the xref:chartAPI:TextureFrame.adoc[].
+* xref:viewsheetscript:ChartBindingInfoLineFrame.adoc[]  for information on setting the xref:chartAPI:LineFrame.adoc[].
+* xref:viewsheetscript:ChartBindingInfoShapeFrame.adoc[]  for information on setting the xref:chartAPI:ShapeFrame.adoc[].
+====
+
+
+Bind the specified field to a xref:chartAPI:ShapeFrame.adoc[] (shape coding). The aesthetic treatment applied to the chart elements depends on the type of the chart:
+
+[square]
+* A xref:viewsheet:BarChart.adoc[]  applies a  xref:chartAPI:TextureFrame.adoc[], which draws different fill patterns. (For dimension binding, the default is the  xref:chartAPI:CategoricalTextureFrame.adoc[]. For measure binding, the default is xref:chartAPI:LeftTiltTextureFrame.adoc[].)
+
+* A xref:viewsheet:LineChart.adoc[] applies a xref:chartAPI:LineFrame.adoc[], which draws different line styles. (For dimension binding, the default is the xref:chartAPI:CategoricalLineFrame.adoc[]. For measure binding, the default is  xref:chartAPI:LinearLineFrame.adoc[].)
+
+* A xref:viewsheet:PointChart.adoc[] applies a xref:chartAPI:ShapeFrame.adoc[], which draws different shape types. (For dimension binding, the default is the xref:chartAPI:CategoricalShapeFrame.adoc[]. For measure binding, the default is xref:chartAPI:FillShapeFrame.adoc[].)
+
+
+== Parameter
+col::			Field to be used for shape-coding
+type:: One of the following:  `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
+
+
+
+
+
+
+== Examples
+.Dimension (categorical) field
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
+--
+image:commonscript:bindingInfoSetShapeDimension.png[]
+
+.Measure (numerical) field
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+--
+image:commonscript:bindingInfoSetShapeMeasure.png[]
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

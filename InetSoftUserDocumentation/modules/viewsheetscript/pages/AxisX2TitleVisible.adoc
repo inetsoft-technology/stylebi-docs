@@ -1,0 +1,30 @@
+= x2Title.visible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the visibility of the secondary (top) X-axis. The default is `true` (visible) if a value has been provided for xref:AxisX2TitleText.adoc[], otherwise `false`.
+
+== Type
+Boolean
+
+
+
+== Example
+[source,javascript]
+Chart1.x2Title.visible = false;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+x2Title.visible             // unqualified
+Chart1.x2Title.visible      // qualified
+
+{secondForm}
+====
+

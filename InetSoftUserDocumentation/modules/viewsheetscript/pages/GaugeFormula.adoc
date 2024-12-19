@@ -1,0 +1,47 @@
+= formula
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies the aggregation method for the measure displayed in the Gauge component. This is equivalent to selecting a method from the ‘Aggregate’ menu under the *Data* tab of the component ‘Properties’ dialog box.
+
+image:viewsheetscript:GaugeFormula.png[]
+
+
+
+
+
+
+
+
+
+
+
+
+== Type
+xref:commonscript:StyleConstant.adoc[] object. See xref:commonscript:StyleConstantSummarizationFormula.adoc[].
+
+
+
+== Example
+[source,javascript]
+Gauge1.query = 'Sales';
+Gauge1.fields = ['Total'];
+Gauge1.formula = StyleConstant.AVERAGE_FORMULA;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+formula           // unqualified
+Gauge1.formula    // qualified
+
+{secondForm}
+====
+
+

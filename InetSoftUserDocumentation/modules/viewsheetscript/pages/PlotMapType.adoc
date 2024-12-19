@@ -1,0 +1,33 @@
+= mapType
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the type of map (region of globe displayed).
+
+
+
+
+== Type
+A Map Type constant (below) or one of the following  strings: `'U.S.'`, `'Asia'`, `'Canada'`, `'Europe'`, `'Mexico'`			`'World'`.
+
+include::partial$mapTypes.adoc[]
+
+== Example
+[source,javascript]
+Chart1.mapType = Chart['MAP_TYPE_U.S.'];
+Chart1.mapType = 'U.S.'
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+mapType          // unqualified
+Chart1.mapType   // qualified
+
+{secondForm}
+====

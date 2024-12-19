@@ -1,0 +1,64 @@
+= CALC.db(cost, salvage, life, period, [month])
+:navtitle: CALC.db()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the depreciation of an asset for accounting year `period` using the *fixed-declining balance* method. {CALCExcelFunctionPage} The rate of depreciation is for a given year is
+
+stem:[rate=(("months")/12)(1-(("salvage")/("cost"))^(1/"life"))]
+
+
+where _months_ is the number of months in the year. For the first (fractional) year, _months_ is given by parameter `month`. For subsequent full years, _months_ is 12.
+
+Depreciation during the final (fractional) period is the difference between the asset’s value in the previous period and the asset’s salvage value. The function returns 0 for periods after which the asset has already reached its salvage value.
+
+== Parameters
+cost::			Initial cost of the asset
+salvage::			Salvage value at end of asset life
+life::			Number of years of depreciation
+period::			Period (year index) for which to return depreciation (in range 1 to `life`, inclusive)
+month::			Number of months in the first year of depreciation (default=12)
+
+
+
+
+== Example
+Depreciation on a $1,000,000 asset that has a lifetime of 6 years, and end-of-life salvage value of $100,000, where the first year of depreciation contains 7 months.
+
+
+[source,javascript]
+----
+var deprec = 0;
+for(var period = 1; period < 7; period++) {
+  deprec = CALC.db(1000000, 100000, 6, period, 7);
+  alert('Period ' + period + ': Depreciation of ' + deprec);
+}
+
+// Returns:
+// Period 1: Depreciation of 186083.33333333334
+// Period 2: Depreciation of 259639.41666666666
+// Period 3: Depreciation of 176814.44275000002
+// Period 4: Depreciation of 120410.63551274998
+// Period 5: Depreciation of 81999.64278418274
+// Period 6: Depreciation of 55841.75673602846
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.db(field['Cost'], field['Salvage'], 6, period, 7)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.db(RangeSlider1.selectedObjects[1], RangeSlider1.selectedObjects[0], 6, period, 7)
+CALC.db(parameter.Cost, parameter.Salvage, 6, period, 7)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

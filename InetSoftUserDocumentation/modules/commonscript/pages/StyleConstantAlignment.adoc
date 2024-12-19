@@ -1,0 +1,33 @@
+= Alignment
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:viewsheetscript:CommonAlignment.adoc[] for information about using alignment constants.
+
+
+Alignment constants are defined for horizontal or vertical directions. You can combine the alignment options by using a bitwise OR of the values (see example below).
+
+[cols="1,3"]
+|===
+|Alignment|Description
+
+|H_LEFT|Left alignment
+|H_CENTER|Horizontal centered alignment
+|H_RIGHT|Right alignment
+|V_TOP|Top alignment
+|V_CENTER|Vertical centered alignment
+|V_BOTTOM|Bottom alignment
+|V_BASELINE|Character baseline alignment
+|FILL|Fill in whole space
+|LEFT|Synonym for H_LEFT
+|CENTER|Synonym for H_CENTER
+|RIGHT|Synonym for H_RIGHT
+|===
+
+== Type
+Integer
+
+== Example
+[source,javascript]
+alignment = StyleConstant.H_RIGHT | StyleConstant.V_CENTER;

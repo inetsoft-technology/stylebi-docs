@@ -1,0 +1,80 @@
+= ShapeForm.setPoint(value)
+:navtitle: ShapeForm.setPoint()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+Specifies the pixel location or proportional location where the shape is placed. (Positive values specify distance from left/bottom. Negative values specify distance from right/top.)  The corresponding “getter” function is `getPoint()`.
+
+
+
+
+
+== Parameter
+value::			a subclass of {javaawtgeomPoint2D} +
+(e.g., {javaawtPoint} for pixels, {javaawtgeomPoint2DDouble} for proportion)
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var shape1 = new ShapeForm(); //<2>
+var shape2 = new ShapeForm(); //<2>
+shape1.setPoint(new java.awt.Point(150, 100)); //<3>
+shape1.setShape(GShape.FILLED_TRIANGLE);
+shape1.setColor(java.awt.Color(0xff0000));
+shape1.setSize(new java.awt.Dimension(10,10));
+shape2.setPoint(new java.awt.geom.Point2D.Double(.5,.5)); //<4>
+shape2.setShape(GShape.FILLED_TRIANGLE);
+shape2.setColor(java.awt.Color(0xff0000));
+shape2.setSize(new java.awt.Dimension(20,20));
+graph.addForm(shape1); //<5>
+graph.addForm(shape2); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:ShapeForm.adoc[] object.
+<3> Use `setPoint()` to set `shape1` points in pixels.
+<4> Use `setPoint()` to set `shape2` points proportionally.
+<5> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:LabelFormSetPoint.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was previously created with the Chart Editor, you do not need to add a Chart element. For example:
+
+[source,javascript]
+--
+var shape1 = new ShapeForm();
+var shape2 = new ShapeForm();
+shape1.setPoint(new java.awt.Point(150, 100));
+shape1.setShape(GShape.FILLED_TRIANGLE);
+shape1.setColor(java.awt.Color(0xff0000));
+shape1.setSize(new java.awt.Dimension(10,10));
+shape2.setPoint(new java.awt.geom.Point2D.Double(.5,.5));
+shape2.setShape(GShape.FILLED_TRIANGLE);
+shape2.setColor(java.awt.Color(0xff0000));
+shape2.setSize(new java.awt.Dimension(20,20));
+graph.addForm(shape1);
+graph.addForm(shape2);
+
+--
+=====
+

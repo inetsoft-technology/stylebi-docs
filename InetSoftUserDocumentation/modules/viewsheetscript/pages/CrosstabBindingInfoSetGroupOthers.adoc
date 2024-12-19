@@ -1,0 +1,54 @@
+= bindingInfo.setGroupOthers(field, header, Boolean)
+:navtitle: setGroupOthers()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies whether groups excluded from the ranking should be grouped as ‘Others’. When `true`, this is equivalent to checking ‘Group all others together’ in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetGroupOthers.png[]
+
+
+== Parameters
+field::			String: Name of a column to rank
+header::			`StyleConstant.ROW_HEADER` or `StyleConstant.COLUMN_HEADER`
+Boolean::			`true`: group others together +
+`false`: suppress others (default)
+
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Name'];
+Crosstab1.bindingInfo.colFields = ['Region'];
+Crosstab1.bindingInfo.measureFields = ['Total'];
+Crosstab1.bindingInfo.setFormula('Total', StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.showColumnTotal = true;
+Crosstab1.bindingInfo.setTopN('Name',StyleConstant.ROW_HEADER,3);
+Crosstab1.bindingInfo.setTopNSummaryCol('Name',StyleConstant.ROW_HEADER,'Sum(Total)');
+Crosstab1.bindingInfo.setTopNReverse('Name',StyleConstant.ROW_HEADER,true);
+Crosstab1.bindingInfo.setGroupOthers('Name',StyleConstant.ROW_HEADER,true);
+
+image:commonscript:bindingInfoSetGroupOthers2.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.setGroupOthers             // unqualified
+Crosstab1.bindingInfo.setGroupOthers   // qualified
+
+{secondForm}
+====
+
+

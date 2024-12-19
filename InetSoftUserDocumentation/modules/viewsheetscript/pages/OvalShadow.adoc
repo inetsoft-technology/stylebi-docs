@@ -1,0 +1,36 @@
+= shadow
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:ShapeProperties.adoc[] for more information about Oval components.
+====
+
+Adds a drop shadow to the component.
+
+
+
+== Type
+Boolean:: `true`: add drop shadow +
+`false`: no drop shadow
+
+
+
+== Example
+[source,javascript]
+Oval1.shadow = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shadow           // unqualified
+Oval1.shadow     // qualified
+
+{secondForm}
+====
+
+

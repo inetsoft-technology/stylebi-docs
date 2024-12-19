@@ -1,0 +1,41 @@
+= snap
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+Specifies whether the Slider handle snaps to the specified increment.
+
+
+
+
+== Type
+Boolean::	`true`: Snap to increment +
+`false`: Do not snap  (default)
+
+
+
+
+
+
+== Example
+[source,javascript]
+Slider1.snap = true;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+snap             // unqualified
+Slider1.snap     // qualified
+
+{secondForm}
+====
+
+

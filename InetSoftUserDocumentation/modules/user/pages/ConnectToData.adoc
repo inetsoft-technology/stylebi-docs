@@ -1,0 +1,7 @@
+= Connect to Your Data
+
+A *datasource* provides a persistent connection to your data, so changes that you make to your data by updating, modifying, or deleting records are automatically reflected in all Dashboards that use the data source. To create a *new datasource*, find your database in the listing under xref:ConnectToDataSource.adoc[], and follow the directions there.
+
+If you do not wish to create a persistent datasource, you can still import data from a text file, CSV file, or Excel file directly into a Data Worksheet. For more information, see xref:dataworksheet:UploadData.adoc[].
+
+To edit an existing connection, see xref:EditConnection.adoc[]. To create a data model for a relational database, see xref:NeedDataModel.adoc[] To add data-level security, see xref:AddDataSecurity.adoc[].

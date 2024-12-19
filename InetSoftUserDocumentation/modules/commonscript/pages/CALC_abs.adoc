@@ -1,0 +1,35 @@
+= CALC.abs(number)
+:navtitle: CALC.abs()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the absolute value of a number. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A numerical value
+
+
+== Example
+[source,javascript]
+----
+CALC.abs(-6)// returns 6.0
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.abs(field['Cost'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.abs(Slider1.selectedObject)
+CALC.abs(parameter.Cost)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

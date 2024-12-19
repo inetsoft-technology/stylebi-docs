@@ -1,0 +1,8 @@
+= Common Properties
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To set the properties of a Dashboard component, right-click the component in the Dashboard, and select ‘Properties’ from the context menu. This opens the ‘Properties’ panel for the component.
+
+To set the properties of a Container component, right-click in an empty region between the components in the group, and select ‘Properties’ from the context menu. This opens the ‘Properties’ panel for the Container component. {rightClickOptions}
+
+Many of the properties in the ‘Properties’ panel are common across components. The following sections discuss these common properties. Properties that are unique to a particular element are discussed in the section for that element.

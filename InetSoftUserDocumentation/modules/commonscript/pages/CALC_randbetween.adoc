@@ -1,0 +1,36 @@
+= CALC.randbetween(bottom,top)
+:navtitle: CALC.randbetween()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Return a pseudo-random integer value between a specified `bottom` integer and `top` integer (inclusive). {CALCExcelFunctionPage}
+
+== Parameters
+bottom::			Lowest integer value that can be returned
+top::			Highest integer value that can be returned
+
+
+== Example
+[source,javascript]
+----
+CALC.randbetween(3,7);  // returns 4, for example
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.randbetween(field['MinValue'], field['MaxValue'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.randbetween(Slider1.selectedObject, Slider2.selectedObject)
+CALC.randbetween(parameter.MinValue, parameter.MaxValue)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

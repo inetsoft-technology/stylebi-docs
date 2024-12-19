@@ -1,0 +1,47 @@
+= CALC.sln(cost, salvage, life)
+:navtitle: CALC.sln()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *straight-line* depreciation of an asset for one period (year). {CALCExcelFunctionPage}
+
+== Parameters
+cost::			Initial cost of the asset
+salvage::			Salvage value at end of asset life
+life::			Number of years of depreciation
+
+
+
+
+
+
+
+
+
+== Example
+Depreciation on a $1,000,000 asset that has a lifetime of 6 years and end-of-life salvage value of $100,000.
+
+
+[source,javascript]
+----
+CALC.sln(1000000, 100000, 6); // Returns 150000.0 ($150,000 depreciation per year)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.sln(field['Cost'], field['Salvage'], 6)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.sln(Slider1.selectedObject, Slider2.selectedObject, 6)
+CALC.received(parameter.Cost, parameter.Salvage, 1000000, 0.0575, 2)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

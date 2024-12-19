@@ -1,0 +1,40 @@
+= OData
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$dataSourceUserIntro.adoc[]
+
+. Select the ‘OData’ data source, and press btn:[Create]. This opens the data source definition screen.
++
+image:dataSourceOData2.png[]
+
+. In the ‘Name’ field, enter a label for this data source connection.
+
+. Enter the web service root URL in the ‘URL’ field.
+
+. Choose the type of authentication:
++
+****
+Basic Authentication:: To use basic authentication, enter the ‘User’ ID and ‘Password’. Leave the following fields *empty*: ‘Client ID’, ‘Client Secret’, ‘Scope’, ‘Authorization URI’, ‘Token URI’. Press btn:[OK].
+Password Credentials Grant:: To use password credentials grant, enter the ‘User’ ID, ‘Password’, and ‘Token URI’.  Leave the following fields *empty*: ‘Client ID’, ‘Client Secret’, ‘Scope’, and ‘Authorization URI’. Press the btn:[Authorize] button. When the ‘Access Token’ and ‘Refresh Token’ fields have been automatically populated, press btn:[OK].
+OpenID Connect OAuth Authentication:: To use OpenID Connect OAuth authentication, enter the ‘Client ID’, ‘Client Secret’, ‘Scope’, ‘Authorization URI’, and  ‘Token URI’.  Leave the ‘User’ ID and ‘Password’ fields *empty*. Press the btn:[Authorize] button. The ‘Access Token’ and ‘Refresh Token’ fields will be automatically populated.
+****
++
+. *_Optional:_* {multiTenantUser}
+
+. Press btn:[OK].
+
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceOData3.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceOData4.png[]
++
+In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
+
+After you have created a connection to the database, you can proceed to define a data set. See xref:dataworksheet:QueryOData.adoc[].

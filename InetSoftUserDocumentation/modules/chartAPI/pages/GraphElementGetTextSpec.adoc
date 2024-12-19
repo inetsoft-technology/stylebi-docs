@@ -1,0 +1,38 @@
+= GraphElement.getTextSpec(field)
+:navtitle: GraphElement.getTextSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Retrieves the xref:TextSpec.adoc[] for a `field` representing text attributes such as color, font, format, etc.  The corresponding “setter” function is xref:GraphElementSetTextSpec.adoc[].
+
+
+
+== Parameters
+field:: Name of a data field (String), including aggregation operator
+
+== Returns
+A xref:TextSpec.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var spec = elem.getTextSpec("Sum(Product:Total)"); //<2>
+spec.setColor(java.awt.Color(0xff0000)); //<3>
+--
+
+<1> Obtain a handle to the  `GraphElement` object.
+<2> Use `getTextSpec` to obtain a handle to the `TextSpec` for the `Product:Total` measure.
+<3> Set the desired properties of the `TextSpec` object.
+
+TIP: To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

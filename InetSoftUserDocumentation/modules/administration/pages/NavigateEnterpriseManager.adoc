@@ -1,0 +1,23 @@
+= Navigate Enterprise Manager
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+After you have logged in to Enterprise Manager, press the {buttonSettings} at the top of the page to access the various administrative operations.
+
+image:Figure 1.png[]
+
+Use the left-side navigation tree to access desired properties. In many cases you may find it easier to simply *search* for the desired settings.
+
+image:EM_Search.png[]
+
+You can mark a page that you use frequently as a *favorite*. To do this, navigate to the desired page in Enterprise Manager, and press the {buttonAddBookmark} in the main toolbar.
+
+image:Bookmark1.png[]
+
+To return to this page at a later time, press the {buttonUserOptions} in the toolbar, and select the desired bookmark from the ‘Favorites’ menu.
+
+image:Bookmark2.png[]
+
+To delete an existing bookmark, press the {buttonUserOptions} in the toolbar, and select ‘Manage Favorites’ from the ‘Favorites’ menu. Then press the {buttonDelete} next to the bookmark that you want to remove.
+
+image:Bookmark3.png[]

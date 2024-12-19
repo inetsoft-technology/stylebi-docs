@@ -1,0 +1,37 @@
+= scale9
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+* xref:viewsheet:AddBackground.adoc[] for more information on 9-cell scaling.
+====
+
+When  xref:ImageScaleImage.adoc[] is enabled and xref:ImageMaintainAspectRatio.adoc[] is disabled, `scale9` specifies the number of pixels on each image boundary that should be left unscaled, in the order `[top left bottom right]`. This permits you to scale only the interior of an image, leaving edge treatments unmodified.
+
+== Type
+Array::			Pixels: `[top left bottom right]`
+
+
+
+
+
+== Example
+[source,javascript]
+Image1.scaleImage = true;
+Image1.maintainAspectRatio = false;
+Image1.scale9 = [3,2,4,4];
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+scale9           // unqualified
+Image1.scale9    // qualified
+
+{secondForm}
+====
+
+

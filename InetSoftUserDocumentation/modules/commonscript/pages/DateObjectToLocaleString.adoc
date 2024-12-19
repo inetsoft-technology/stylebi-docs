@@ -1,0 +1,27 @@
+= Date.toLocaleString()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+JavaScript function to return the locale-sensitive representation of a date in string format.  See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString[Date.toLocaleString()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var lstr = d.toLocaleString('en-GB'); // returns February 23, 2023 5:24:24 PM UTC
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.toLocaleString('en-GB');
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.toLocaleString('en-GB');
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,37 @@
+= bindingInfo.getFormula(measure)
+:navtitle: getFormula()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the aggregation formula for one of the measures specified by  xref:viewsheetscript:CrosstabBindingInfoMeasureFields.adoc[] or set as the aggregation method for a measure in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetFormula_1.png[]
+
+
+== Parameters
+measure::			String: Name of a measure
+
+== Return
+String::			 Name of aggregation method
+
+
+== Example
+[source,javascript]
+if(Crosstab1.bindingInfo.getFormula('Quantity Purchased')=='Sum'){
+  Crosstab2.bindingInfo.setFormula('Quantity Purchased',StyleConstant.SUM_FORMULA);
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.getFormula             // unqualified
+Crosstab1.bindingInfo.getFormula   // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,46 @@
+= CALC.coupncd(settlement, maturity, frequency, [basis])
+:navtitle: CALC.coupncd()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the first *coupon* date following the settlement date. {CALCExcelFunctionPage}
+
+== Parameters
+settlement::				Date object: The security’s settlement date
+maturity::				Date object: Security’s maturity date (date when security expires)
+frequency::				Number of coupon payments per year (1=annual, 2=semi-annual, 4=quarterly)
+basis::            {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+== Example
+First coupon date following settlement date of January 25, 2007, where payments are made twice per year, maturity date is November 15, 2008, and Actual/Actual counting convention is used.
+
+
+[source,javascript]
+----
+CALC.coupncd(new Date(2007,0,25), new Date(2008,10,15), 2, 1);
+// returns Tue May 15 00:00:00 EDT 2007
+
+----
+
+With semi-annual payments, the coupon dates in this example are May 15 and November 15, hence the function returns the first payment date of May 15, 2007.
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.coupncd(field['SettleDate'], field['MaturityDate'],   2, 1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.coupncd(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1],   2, 1)
+CALC.coupncd(parameter.SettleDate, parameter.MaturityDate,   2, 1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

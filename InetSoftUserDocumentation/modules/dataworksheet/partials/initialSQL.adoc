@@ -1,0 +1,9 @@
+Usually the ‘Initial SQL’ is used to create one or more temporary views that map a Spark file (e.g., CSV, JSON, Parquet) into the relational environment. For example, the following ‘Initial SQL’ maps the CSV file _orderdetails.csv_ to a temporary view named `order_details`.
+
+[source,sql]
+CREATE OR REPLACE TEMPORARY VIEW order_details (c1 int, c2 string, c3 string, c4 string, c5 string, c6 string, c7 int, c8 string, c9 string, c10 string, c11 int, c12 double, c13 double, c14 string)
+USING CSV OPTIONS (path  'hdfs://192.168.5.155/csv/orderdetails.csv')
+
+For more information about the available properties that you can set in the `OPTIONS` block for JSON and CSV files in the ‘Initial SQL’, see the Spark documentation for the https://spark.apache.org/docs/2.0.2/api/java/org/apache/spark/sql/DataFrameReader.html#json(scala.collection.Seq)[JSON loader] and https://spark.apache.org/docs/2.0.2/api/java/org/apache/spark/sql/DataFrameReader.html#csv(scala.collection.Seq)[CSV loader].
+
+TIP: If you are connecting to a table already managed by a Hive database, you do not need to specify any initial SQL.

@@ -1,0 +1,48 @@
+= setRowHeight(row, height)
+:navtitle: setRowHeight()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=see also]
+xref:viewsheet:AddFreehandTable.adoc[] for more information about Freehand Tables.
+
+
+
+
+Sets the height of the specified Table row in pixels. Row index `0` is the *column header* row. Setting the height for any *body* row has the effect of setting the same height for all body rows.
+
+== Parameter
+row::			row index (column header row is index `0`)
+height::			positive integer: row height in pixels +
+`-1` sets automatic height calculation (default) +
+`0` sets zero height (row hidden)
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+//Set body row height to 30 pixels
+TableView1.setRowHeight(1,30);
+
+
+----
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setRowHeight                 // unqualified
+TableView1.setRowHeight      // qualified
+
+{secondForm}
+====
+
+

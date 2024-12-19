@@ -1,0 +1,31 @@
+= fillBlankWithZero
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Populate empty cells of the Freehand Table with zeros. (Empty data cells occur when no results exist corresponding to the row and column headings.)
+
+== Type
+Boolean:: `true`: use zeros in empty cells +
+`false`: leave empty cells blank
+
+
+
+
+
+== Example
+[source,javascript]
+fillBlankWithZero = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fillBlankWithZero                 // unqualified
+FreehandTable1.fillBlankWithZero  // qualified
+
+{secondForm}
+====

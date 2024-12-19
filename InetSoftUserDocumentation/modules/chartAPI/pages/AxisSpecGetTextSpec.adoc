@@ -1,0 +1,31 @@
+= AxisSpec.getTextSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Retrieves the axis xref:chartAPI:TextSpec.adoc[].  The corresponding “setter” function is xref:chartAPI:AxisSpecSetTextSpec.adoc[].
+
+== Returns
+xref:chartAPI:TextSpec.adoc[]
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var scale = coord.getYScale(); //<2>
+var spec = scale.getAxisSpec(); //<3>
+var textspec = spec.getTextSpec(); //<4>
+// Compact syntax: textspec = graph.getCoordinate().getYScale().getAxisSpec().getTextSpec();
+
+textspec.setFormat(java.text.DecimalFormat("##,###.00"));
+--
+<1> Use xref:EGraph_getCoordinate.adoc[] to obtain a handle to the xref:Coordinate.adoc[].
+<2> Use xref:RectCoordGetYScale.adoc[] to obtain a handle to ttyhe xref:Scale.adoc[].
+<3> Use xref:ScaleGetAxisSpec.adoc[] to get a handle to the xref:AxisSpec.adoc[].
+<4> Use getTextSpec to get a handle ot the xref:TextSpec.adoc[].
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

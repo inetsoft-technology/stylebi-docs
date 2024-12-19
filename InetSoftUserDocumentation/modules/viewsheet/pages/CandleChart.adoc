@@ -1,0 +1,68 @@
+= Candle Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A candle chart displays four different measures (low, high, open, close) against a date dimension, and is most often used to plot trading information. A candle chart is functionally similar to a xref:StockChart.adoc[].
+
+
+image:commonscript:CandleChartType8.png[]
+
+To create a candle chart that displays the averaged high, low, opening, and closing prices by week, follow the steps below.
+
+include::partial$chartNewbieTip.adoc[]
+
+. Drag a *dimension* from the ‘Dimensions’ folder of the *Data Source* panel to the ‘X’ region. For a candle chart, the dimension is usually a date field.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:CandleChartType9.png[]
+
++
+TIP: {convertToDimension}
+
+. Press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:commonscript:CandleChartType3.png[]
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Candle’ style.  Press the {buttonApply}.
++
+image:commonscript:CandleChartType.png[]
++
+Note that the Chart Editor now provides binding regions for ‘High’, ‘Close’, ‘Open’, and ‘Low’.
++
+image:commonscript:CandleChartType2.png[]
+
+. Drag the high, close, open, and low measures from the  data source to the appropriate regions, as shown below.
++
+image:commonscript:CandleChartType4.png[]
+
+. Press the {buttonEditMeasure} next to the *High* field, and choose ‘Max’ from the ‘Aggregate’ menu. Press the {buttonApply}. Press the {buttonEditMeasure} next to the *Low* field, and choose ‘Min’ from the ‘Aggregate’ menu. Press the {buttonApply}.
++
+image:commonscript:Report_CandleChartType7.png[]
+. Press the {buttonEditMeasure} next to the *Close* field. Choose ‘Last’ from the ‘Aggregate’ menu and choose your ‘X’ field (e.g., ‘Date’) from the ‘By’ menu. Press the {buttonApply}. Press the {buttonEditMeasure} next to the *Open* field. Choose ‘First’ from the ‘Aggregate’ menu and choose your ‘X’ field (e.g., ‘Date’) from the ‘By’ menu. Press the {buttonApply}.
++
+image:commonscript:Report_CandleChartType7b.png[]
+
+. {finishEditing}
++
+image:commonscript:CandleChartType5.png[]
+
+. To observe the structure of the chart more closely, use the {buttonZoom} to view a more limited date range. (See xref:DrillDownIntoData.adoc[] for more information.)
++
+image:commonscript:CandleChartType8.png[]
++
+Note that for each week, the high and low measures are represented by the extremes of the candle “wick,” and the open and close measures are represented by the extremes of the candle “body.” Candles for which the open exceeds the close are shown filled. Candles for which the close exceeds the open are shown empty.
+
+
+include::partial$addTitlesLegend.adoc[]
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard provides an example of a candle chart.
+
+image:viewsheet:galleryDataTip2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****

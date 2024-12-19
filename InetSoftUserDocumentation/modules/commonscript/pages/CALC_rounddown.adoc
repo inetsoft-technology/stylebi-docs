@@ -1,0 +1,38 @@
+= CALC.rounddown(number, num_digits)
+:navtitle: CALC.rounddown()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Rounds a number toward zero to a specified number of digits. Positive number are rounded down, negative numbers are rounded up. {CALCExcelFunctionPage}
+
+== Parameters
+number::			Number to round
+num_digits::			Number of digits (to right of decimal point) to preserve after rounding
+
+
+
+== Example
+[source,javascript]
+----
+CALC.rounddown(3.14159, 3);  // returns 3.141
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.rounddown(field['Value'], 3)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.rounddown(Slider1.selectedObject,3)
+CALC.rounddown(parameter.Value, 3)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

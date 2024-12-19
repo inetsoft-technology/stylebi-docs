@@ -1,0 +1,53 @@
+= OData  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing OData  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:OData.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonODataQuery}. This opens the ‘OData  Query’ dialog box.
+
++
+image:dataSourceOData5.png[]
+
+
+. Select an entity in the ‘Entity’ menu.
+
+. *_Optional_*: Enter a '`Function`' for which to query (e.g.,  `GetNearestAirport`).
+
+. *_Optional:_*  Select ‘Expand Arrays’ to expand a record that contains an array into multiple records.
+
+. Enter a comma-separated list in the ‘Select’ field (e.g., “CompanyName, ContactName”) to restrict the columns in the result set to the specified fields.  See https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398163[System Query Option $select] in the OData documentation for information about the `$select` operator.
++
+image:dataSourceOData6.png[]
+
+. Enter a filtering condition (e.g., “City eq 'London'”) in the ‘Filter’ field to restrict the returned records to those that satisfy the condition.  See https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398094[System Query Option $filter] in the OData documentation for more information about the `$filter` operator.
++
+image:dataSourceOData7.png[]
+
+. Enter an expression in the ‘Expand’ field to expand a *navigation property*.   See https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398162[System Query Option $expand] in the OData documentation  for more information about the `$expand` operator.
++
+TIP: A *navigation property* provides a link between records in different entities.   For example, if ‘Orders’ is specified as the ‘Expand’ field when ‘Filter’ is set to “CustomerID eq 'ALFKI'”, this returns all the records in the ‘Orders’ entity for customer ID “ALFKI”.
++
+image:dataSourceOData8.png[]
+
+. Enter a comma-separated list in the ‘Order By’ field (e.g., “ContactTitle,ContactName”) to order the records in the result set based on the specified columns.  See https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398164[System Query Option $orderby] in the OData documentation  for information about the `$orderby` operator.
++
+image:dataSourceOData9.png[]
+
+. Enter an integer value in the ‘Top’ field (e.g., “5”, or “0” to suppress filtering) to include only the specified number of initial records in the result set and omit the remaining records from the end of the result set.  See https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398164[System Query Options $top and $skip]  in the OData documentation for information about the `$top` operator.
+
+
+. Enter an integer value in the ‘Skip’ field (e.g., “5”, or “0” to suppress filtering) to omit the specified number of initial records from the result set, and return the remaining records from the end of the result set. See https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398164[System Query Options $top and $skip]  in the OData documentation for information about the `$skip` operator.
+
+. *_Optional:_* {datasourceSelectTabular}
+
+include::dataworksheet:partial$finalStepsQuery.adoc[]
+

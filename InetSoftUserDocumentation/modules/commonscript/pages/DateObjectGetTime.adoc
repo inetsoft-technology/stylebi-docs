@@ -1,0 +1,26 @@
+= Date.getTime()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to return the milliseconds from January 1, 1970 (Unix epoch) to the specified date (UTC).   See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime[Date.getTime()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var seconds = d.getTime();
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getTime();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getTime();
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,94 @@
+= StaticTextureFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+The `StaticTextureFrame` object contains a texture frame defined by explicit texture data in the xref:VisualFrameSetField.adoc[] column, or by the fixed texture in xref:StaticTextureFrameSetTexture.adoc[]. To create a `StaticTextureFrame` object, call the `StaticTextureFrame` constructor.
+
+[source,javascript]
+--
+var frame = new StaticTextureFrame(); //<1>
+var frame = new StaticTextureFrame(GTexture.PATTERN_5); //<2>
+--
+<1> Call constructor without specifying a texture.
+<2> Call constructor and pass the specified texture.
+
+You can pass a `GTexture` object directly to the constructor or specify it later using the xref:StaticTextureFrameSetTexture.adoc[] function. You can also assign a `TextureFrame` using the xref:viewsheetscript:ChartBindingInfoTextureFrame.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Texture"],["NJ",200,1], ["NY",300,10]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new StaticTextureFrame(); //<2>
+frame.setField("Texture");
+elem.setTextureFrame(frame); //<3>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `StaticTextureFrame` object.
+<3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:StaticTextureFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} and xref:GraphElementGetTextureFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:TextureFrame.adoc[]  objects. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getTextureFrame(); //<2>
+frame.setField("Texture");
+--
+=====
+
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:TextureFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.textureFrame = new StaticTextureFrame;
+
+--
+
++
+image:commonscript:StaticTextureFrame_1.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

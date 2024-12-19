@@ -1,0 +1,11 @@
+
+.Configure Your Data...
+[%collapsible]
+====
+The data source  for the chart (data block or data model) should represent dimensions and measures as independent columns or fields, as shown below. See xref:dataworksheet:PrepareYourData.adoc[] for information on how to manipulate your data, if it is not currently in this form. (Note: A properly designed data model will already have the correct structure.)
+
+image:commonscript:dataStructureCharts.png[]
+
+
+In some cases (e.g., Pie Chart), you may want your data to provide just a single measure. In other cases (e.g., Line Chart), you may want the data to supply multiple measures. If the data does not provide the correct number of measures, you may be able to alter the number of measures to suit the needs of the chart by “pivoting” or “unpivoting” the data. See xref:dataworksheet:PivotData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for more information about this procedure.
+====

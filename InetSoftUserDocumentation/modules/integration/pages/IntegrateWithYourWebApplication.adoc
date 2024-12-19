@@ -1,0 +1,13 @@
+= Integrate with Your Web Application
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following  primary tasks are required to integrate StyleBI into a 3rd party-web application:
+
+* xref:ConfigureSingleSignOn.adoc[]
+* xref:ConfigureSecurityProvider.adoc[]
+* xref:LoadAssetsViaURL.adoc[]
+* xref:CustomizePortalLoginPage.adoc[]
+* xref:CustomizeServerSideUpdate.adoc[]
+
+The topics in this section guide you through this process.

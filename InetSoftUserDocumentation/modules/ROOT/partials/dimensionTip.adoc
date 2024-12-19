@@ -1,0 +1,8 @@
+[TIP]
+--
+.What is a *dimension*?
+[%collapsible]
+=====
+A *dimension* is used to break-down the dataset into multiple groups, often within a Crosstab, Chart, or Selection List. Adding a dimension to the ‘X’ region of a Chart distinguishes the different dimension groups by location on the X-axis. Adding a dimension to the ‘Y’ region distinguishes the different dimension groups by location on the Y-axis. You can add multiple dimensions into the ‘X’ or ‘Y’ regions of a Chart, or into the ‘Rows’ or ‘Columns’ regions of a Crosstab, to create multiple grouping levels. You can also distinguish groups in a dimension by using color, shape, size, or label in a Chart.
+=====
+--

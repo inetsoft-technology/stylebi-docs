@@ -1,0 +1,39 @@
+= bindingInfo.setDiscrete(col, val, type)
+:navtitle: bindingInfo.setDiscrete()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the specified column as ‘discrete’.
+
+
+== Parameter
+col::			Name of field to set discrete
+val:: `true`: Set field as discrete +
+`false`: Set field as not discrete
+type::			Binding type of field, one of the following. If omitted, defaults to `Chart.BINDING_FIELD`.
++
+[source]
+Chart.BINDING_FIELD
+Chart.AESTHETIC_COLOR
+Chart.AESTHETIC_SHAPE
+Chart.AESTHETIC_SIZE
+Chart.AESTHETIC_TEXT
+
+
+== Examples
+[source,javascript]
+--
+Chart1.bindingInfo.setDiscrete("Total", true, Chart.BINDING_FIELD);
+Chart1.bindingInfo.setDiscrete("Paid", true, Chart.AESTHETIC_COLOR);
+Chart1.bindingInfo.setDiscrete("Paid", true, Chart.AESTHETIC_SHAPE);
+Chart1.bindingInfo.setDiscrete("Paid", true, Chart.AESTHETIC_SIZE);
+Chart1.bindingInfo.setDiscrete("Paid", true, Chart.AESTHETIC_TEXT);
+
+--
+
+
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

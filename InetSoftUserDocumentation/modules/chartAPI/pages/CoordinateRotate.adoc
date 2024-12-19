@@ -1,0 +1,62 @@
+= Coordinate.rotate(value)
+:navtitle: Coordinate.rotate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Rotate the axes by the specified angle.
+
+== Parameter
+value::			an angle in degrees
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["Direction", "Score"],[(Math.PI/2),20],[(Math.PI/4),30],[(Math.PI),35]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("Direction", "Score");
+var xscale = new LinearScale("Direction");
+var yscale = new LinearScale("Score");
+yscale.setMin(0);
+yscale.setMax(40);
+xscale.setMin(0);
+xscale.setMax(1.95*Math.PI);
+xscale.setIncrement(Math.PI/8);
+var rect = new RectCoord(xscale,yscale);
+var polar = new PolarCoord(rect); //<2>
+polar.rotate(45); //<3>
+polar.setType(PolarCoord.THETA);
+graph.setCoordinate(polar); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:Coordinate.adoc[] object.
+<3> Use `rotate` to rotate the polar coordinates 45°.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:Coordinaterotate.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ① to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var polar = new PolarCoord(coord);
+polar.setType(PolarCoord.PLUS);
+polar.rotate(90);
+polar.setHoleRatio(.25);
+graph.setCoordinate(polar);
+
+--
+=====

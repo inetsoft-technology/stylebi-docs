@@ -1,0 +1,56 @@
+= GraphElement.setColorFrame(frame)
+:navtitle: GraphElement.setColorFrame()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the aesthetic color treatment for the chart elements. A xref:ColorFrame.adoc[]  can color-code chart elements by value, or simply specify a static color scheme.  The corresponding “getter” function is xref:GraphElementGetColorFrame.adoc[].
+
+
+
+
+
+== Parameter
+frame:: A xref:ColorFrame.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var frame = new HeatColorFrame(); //<2>
+var elem = new IntervalElement("State", "Quantity"); //<3>
+frame.setField("Quantity");
+elem.setColorFrame(frame); //<4>
+graph.addElement(elem); //<5>
+--
+<1> {dataset}
+<2> Create a `ColorFrame` object.
+<3> Create the `IntervalElement` object.
+<4> Use `setColorFrame` to assign the `ColorFrame` to the `IntervalElement`.
+<5> Use `addElement` to add the `IntervalElement` to the Chart.
+
+
+image:commonscript:GraphElementsetColorFrame.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new HeatColorFrame();
+frame.setField("Quantity");
+elem.setColorFrame(frame);
+--
+=====

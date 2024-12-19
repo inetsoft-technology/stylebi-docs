@@ -1,0 +1,126 @@
+= drillMembers
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:SelectionListTreeDrillMember.adoc[] to create a dynamic drill-down for a single geographical level.
+* xref:viewsheet:SelectionTreeProperties.adoc[] for more information on Selection Trees.
+====
+
+
+
+
+Returns an array of the levels at which the user has made a selection. The array includes all levels from the top level to one level below the current selection. (The top level is included even when no selection is made.)
+
+NOTE:  drillMembers  does not apply to Selection Lists.
+
+
+
+For example, consider a three-level Selection Tree hierarchy: menu:Region[State>City].
+
+image:viewsheet:Selection Tree 3 Level_1.png[]
+
+If the user makes a selection at the level of region, `drillMembers` returns the array `['Region','State']`. If the user makes a selection at the level of state or city, `drillMembers` returns the array `['Region','State','City']`. This array is useful for displaying multiple geographical levels on a map, as shown in the example below.
+
+
+
+
+== Type
+Array::			array of field names for selected levels
+
+
+
+== Example
+Follow the steps below to create a dynamic multi-level map drill:
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. From the *Toolbox* panel, drag a Chart component into the Dashboard. Resize the Chart as desired.
+
+. From the *Toolbox* panel, drag a Selection Tree component into the Dashboard.
+
+. Add a two-level geographical hierarchy to the Selection Tree. Follow the steps below:
+
+.. Expand the ‘Sales’ data block in the *Toolbox* panel.
+
+.. Drag the ‘State’ field from the data block onto the Selection Tree. This adds the ‘State’ values to the tree.
+
+.. Drag the ‘City’ field from the data block onto the Selection Tree. This adds the ‘City’ values to the tree.
+
+.. Resize the Selection Tree so that it can display a reasonable number of options.
++
+image:commonscript:DrillMembersExample1.png[]
+
+. Press the {buttonEdit} on the Chart to open the Visualization Recommender.  Press the {buttonFullEditor} at the top right of the Recommender to bypass the Recommender and open the Chart Editor.
+
+. Press the {buttonSelectChartStyle} in the *Data* panel, and choose the ‘Map’ chart type.
+
+. In the *Data Source* panel, right click on the ‘State’ field, and select ‘Set Geographic’.
+
+. In the *Data Source* panel, right click on the ‘City’ field, and select ‘Set Geographic’.
+
++
+image:commonscript:DrillMembersExample3.png[]
++
+NOTE: A red question mark indicates that not all cities in the ‘City’ field of this example have mappings.
+
+. From the *Data Source* panel of the Chart Editor, drag the ‘Total’ measure to the ‘Color’ region in the *Visual* panel.
+
+. From the *Data Source* panel of the Chart Editor, drag the ‘State’ dimension to the ‘Geographic’ region in the *Data* panel.
+
+. Configure the Chart to adapt the geographical level based on the user’s selection in the Selection Tree. To do this, follow the steps below:
+.. Press the {buttonValueType} button next to the ‘State’ dimension in the *Data* panel. In the pop-up menu, select the ‘Expression’ option.
++
+image:commonscript:DrillMembersExample5.png[]
+
+.. Press the {buttonEditFormula} to open the Script Editor.
++
+image:commonscript:DrillMembersExample6.png[]
+
+.. In the top-left panel of the Script Editor, expand the `SelectionTree1` node, and click `drillMembers` (*not* `drillMember`). This adds the `SelectionTree1.drillMembers` property in the editing area.
++
+image:commonscript:DrillMembersExample7.png[]
++
+If the user makes no selection in the Selection Tree, the `drillMembers` property returns the array `['State']`, which displays the ‘Total’ measure on a state-basis. If the user selects one or more states or cities in the Selection Tree, `drillMembers` returns the array `['State','City']`, which displays the ‘Total’ measure on a city-basis.
+
+
+.. Press btn:[OK] to close the Script Editor. The output of `SelectionTree1.drillMembers` is now assigned to the Chart Geographical binding.
++
+image:commonscript:DrillMembersExample8.png[]
+
+. Verify that the map adapts to the user’s selections:
+
+.. Press the {buttonClearSelection} in the Selection Tree to remove any existing selections. Observe that the map represents the measure on a state level, the top level of the Selection Tree hierarchy.
++
+image:commonscript:DrillMembersExample10.png[]
+
+.. Select the ‘CA’ option in the Selection Tree. Observe that the Selection Tree filters the map to display only data from California. In addition, the  `drillMembers` property changes the geographical binding to represent the ‘City’ dimension, and the measure is now displayed at the city-level.
++
+image:commonscript:DrillMembersExample9.png[]
+
+To automatically zoom a map to display only the regions that the user selects, see the example for Coordinate.setFullMap(boolean).
+// XXXXXXXXXXXXXX
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+drillMembers                       // unqualified
+SelectionTree1.drillMembers     // qualified
+
+{secondForm}
+====
+

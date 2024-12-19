@@ -1,0 +1,58 @@
+= table.length
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+include::partial$readOnly.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:TableDataLength.adoc[] for number of rows prior to grouping and summarization.
+* xref:viewsheetscript:AccessComponentData.adoc#TableCrosstabComponents[Table/Crosstab Components] for  information about working with table data.
+====
+
+
+
+
+Returns the number of rows in a Table, *as displayed*, including  header rows and   data rows.
+
+
+
+
+
+== Type
+Integer
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+// Testing for empty result set:
+if (Query1.table.length == 1) {
+  Text1.text = 'No data returned';
+}
+----
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+table.length                 // unqualified
+TableView1.table.length      // qualified
+
+{secondForm}
+====
+
+

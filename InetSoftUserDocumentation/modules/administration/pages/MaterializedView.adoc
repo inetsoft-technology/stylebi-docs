@@ -1,0 +1,257 @@
+= Materialized View
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A materialized view is a caching strategy that pre-aggregates and stores the data required by a Dashboard or Data Worksheet. When a Dashboard has a materialized view,  the Dashboard  will attempt to query the cached materialized view rather than the database. This can significantly reduce the run time for certain queries, and greatly improve performance for the end-user.
+
+Dashboards that are configured to use a materialized view will rely on this materialized view to supply their data.  If no materialized view is found, the Dashboard will either query the database directly or automatically trigger the creation of a materialized view. Use the ‘Enable MV On-demand’ option in xref:#MaterializedViewOptions[] to enable the latter behavior.
+
+[#CreateMaterializedView]
+== Create a Materialized View
+To create a materialized view for a Dashboard, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Content* page in the left panel, and select the *Repository* tab.
++
+image:Figure 15.png[]
+
+. Click to select the desired Dashboard in the tree.  *_Optional:_* Hold the {buttonCtrl} and click to select more than one Dashboard to create materialized views for multiple Dashboards at the same time.
+
+. Select the *MV* tab (if you have selected just a single Dashboard) or press the {buttonMaterialize} above the list (for one or more selected Dashboards).
++
+image:Materialized View Create page_1.png[]
+
+. Choose either ‘Full Data’ or ‘Minimum Data’.
++
+****
+Full Data:: Materializes the entire Data Worksheet data block associated with a materializable Dashboard component.  In cases when data in a data block is accessed by *multiple* Dashboard components, full data is used automatically. If you expect the Dashboard to undergo further development (for example, end-user chart binding modifications), use the ‘Full Data’ option to ensure that all data is available for use.
+
+Minimum Data:: ‘Minimum Data’ restricts the materialization to include only columns of the data block that are actually supplying data to a Dashboard Selection component, but only in cases when the Selection component is the *sole user* of this data. This can conserve disk space, and is *recommended* if  you do not expect the Dashboard to undergo further editing after deployment.
+****
+
+. *_Optional:_*  If you are using VPMs, select ‘Apply VPM’ if you want to apply existing VPMs when creating the materialized view. If your VPM filters data based on particular users, enable ‘Create Materialized View for all users in group’. This allows a custom materialized view to be generated for each user, if needed. (See xref:#SecurityandMaterializedViews[] below for more details.) To keep a materialized view free from the effects of any existing VPMs, select ‘Bypass VPM’.
++
+image:Materialized View Apply VPM.png[]
+
+. Press the btn:[Analyze] button. This opens the ‘Materialized View Candidates’ page containing a list of Dashboard assets that can be materialized.
++
+image:Materialized View Candidates_1.png[]
++
+[NOTE]
+====
+[square]
+* The analysis includes any nested (embedded) Dashboards, so these do not need to be analyzed independently.
+* Only Dashboards containing aggregated data can be considered candidates for materialized views.
+* See xref:#TransformationsandFaults[] for information about design features that may interfere with materialization.
+====
+
+. *_Optional:_*  Select ‘Hide existing MV’ to remove a Dashboard from the list if the Dashboard already possesses a materialized view (with or without data). Select ‘Hide existing MV with data’ to remove a Dashboard from the list if the Dashboard already possesses a materialized view that has been populated with data.
+
+. Select the Dashboard assets in the table for which you want to create a materialized view.
+
++
+image:Materialized View Candidates Select_1.png[]
+
+
+. From the ‘Set Cycle’ menu, choose the cycle on which these materialized view should be regenerated. (See  xref:Schedule.adoc[]  for more information about defining cycles.)
+
+. *_Optional:_*  Select ‘Generate Data’ if you want to immediately perform the full materialization process for the selected Dashboards upon pressing the btn:[Create/Update] button. (This may take a significant amount of time, during which the materialized view is constructed and data files are saved.)
+
++
+If you do not want to wait for materialized view generation to complete, select both ‘Generate Data’ and ‘Run in Background’. This automatically creates a scheduled task to generate the materialized view. You can check the status of the task under the *Schedule* page. (See xref:CreateScheduledTask.adoc[].)  If you *do not* select the ‘Generate Data’ option, materialized views will be created immediately, but will not be populated with data until the assigned cycle next executes.
+
+. Press btn:[Create/Update] to proceed with the options as specified above. If you selected ‘Generate Data’ only, this will immediately start the generation process. You will be notified upon completion.
++
+image:Materialized View Notice_1.png[]
++
+If you selected ‘Run in Background’, the materialized view will be scheduled to begin generation. You can check the status of the task under the *Schedule* page.
+
+To manage existing materialized views, see xref:#ManageMaterializedViews[].
+
+[#ManageMaterializedViews]
+== Manage Materialized Views
+
+To manage existing materialized views, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Content* page in the left panel, and select the *Materialized Views* tab at the top.
++
+image:Materialized View Manage page_1.png[]
++
+The table lists all existing materialized views.
++
+.Available Columns
+****
+Assets::	Dashboards or Data Worksheets using the materialized view.
+Table::	Data block in the Data Worksheet that is materialized.
+Users::	Users of the materialized view.
+Has Data::	Indicates that the materialized view has been populated with data.
+Last Modified::	Time at which the materialized view was most recently updated. To display modification dates as ages (e.g., “20 minutes”), enable ‘Show Dates as Ages’.
+Status::	Current state of the materialized view: ‘Successful’, ‘Failed’, ‘Pending’, or ‘Generating’. ‘Pending’ indicates that the materialized is scheduled to generate automatically on a cycle.
+Cycle::	Cycle on which the materialized view is scheduled to generate. Use the ‘Set Cycle’ menu to change the cycle. See xref:Schedule.adoc[] for information about how to create a cycle.
+Incremental::	Indicates that the materialized view has an incremental update condition. See xref:#IncrementallyUpdateMaterializedView[] for information on how to set update conditions.
+Size (MB)::	The combined size of all of the materialized view data files, not including the back-up.
+Valid::	Indicates that the current materialized view is compatible with the Dashboard. If the materialized view is no longer valid (due to subsequent Dashboard modifications), select the invalid materialized view in the table and press btn:[Update].
+****
+
+. To restrict the items shown in the table by status, cycle, or user, make the desired selections from the top menus.
++
+image:Materialized View Manage Filter_1.png[]
+
+. To restrict the columns shown in the table, expand the ‘Select Columns’ menu on the right side. Choose the columns you want to display.
++
+image:Materialized View Manage Column Select.png[]
+
+. To *update* a materialized view with new data, select the desired materialized view in the table and press btn:[Update]. To *delete* a materialized view (for example, if changes have been made to the underlying database schemas), select the materialized view in the table and press btn:[Delete].
+
+[#MaterializedViewOptions]
+== Materialized View Options
+
+include::ROOT:partial$siteAdminOnly.adoc[]
+
+To configure options for materialized views, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *General* page in the left panel, and select *Materialized Views* page in the right panel.
++
+image:Materialized View Node_1.png[]
+
+
+
+. Set any desired global options:
++
+****
+Create MV On-demand:: Set '`Create MV On-demand`' to specify that the ‘Dashboard Options’ dialog box in Visual Composer should offer the ‘Create MV On-demand’ option for individual Dashboards. When ‘Create MV On-demand’ is enabled for a Dashboard, a new materialized view is automatically created on-the-fly if the Dashboard does not have an existing materialized view (either because the materialized view was never populated with data or because the Dashboard underwent modifications that rendered an existing materialized view unusable). The materialized view will supply data to the Dashboard both at design time and at runtime. See xref:viewsheet:DashboardOptions.adoc[]  for information on setting this option.
++
+image:viewsheet:Options Create MV on Demand_1.png[]
+
+MV On-demand by Default:: Set '`MV On-demand by Default`' to specify that the ‘Dashboard Options’ dialog box in Visual Composer should have the ‘Create MV On-demand’ option enabled by default for all new Dashboards. This relieves you  from creating a materialized view for each Dashboard individually.
+
+Default Cycle for New MV:: Set '`Default Cycle for New MV`' to specify that the default cycle to be used for on-demand materialized view generation. See xref:Schedule.adoc[] for information on how to create a cycle.
+
+Use meta-data for editing if MV is not available:: Set '`Use meta-data for editing if MV is not available`' to specify that when a materialized view is not available to supply data for a Dashboard (for any reason), the design mode of Visual Composer should display meta-data rather than querying the database for data. This will improve design-time performance. See xref:viewsheet:DashboardOptions.adoc[] for more information about meta-data mode.
+
+Fail if MV is not available at runtime:: Set '`Fail if MV is not available at runtime`' to specify that when a user loads a Dashboard in the User Portal  an error message should be generated if the requested Dashboard does not possess a corresponding materialized view or the materialized view fails to generate (due to user-cancellation or for any other reason). If you prefer the Dashboard to query the database for data rather than generate an error in this case, disable ‘Fail if MV is not available at runtime’.
+****
+
+
+
+[#MaterializedViewPerformance]
+== Materialized View Performance
+
+When you design Data Worksheets and Dashboards  to be used with materialized views, keep the following points in mind:
+
+* In the Data Worksheet, try to keep the design as simple as possible.
+
+* In the Data Worksheet, if you are joining or concatenating tables, try to place any parameterized filtering conditions (i.e., conditions that change in response to user input or the runtime environment) on the *resultant* data block rather than on the base tables. Conditions that are placed on base tables may necessitate the creation of a “sub-materialized view” corresponding to each base table and require additional post-processing of these sub-materialized views.
+
+* In the Dashboard, try to place selection (filtering) components such as Selection List and Range Slider on the *resultant* data block of the Data Worksheet (i.e., the final data block resulting from join or concatenation operations) rather than on the base tables.
+
+* In the Dashboard, try to avoid creating tables that display large numbers of records (i.e., long, scrolling tables).
+
+* If you wish to add a fixed filter condition (i.e., a condition that does *not* change in response to user input or the runtime environment), implement the fixed condition in the Data Worksheet rather than in the Dashboard.
+
+* For *multi-tenant implementations* utilizing the multi-connection feature, materialized views are created based on user/group connection assignments.  For this reason, if you set a Dashboard’s permissions by *role* (on the Dashboard’s *Security* tab), you must also add individual permissions for users or groups that have particular connections. This will enable the materialized views to be generated from the appropriate connections. See xref:ConfigureSecurity.adoc[] for more information about setting Dashboard security.
+
+See xref:#TransformationsandFaults[] for an approach to addressing other common impediments to effective materialization.
+
+
+
+[#SecurityandMaterializedViews]
+== Security with Materialized Views
+
+If you are using a VPM to filter data based on particular users (see xref:user:AddDataSecurity.adoc[] for more about VPMs), you should generally enable the ‘Create Materialized View for all users in group’ option when creating the materialized view. (See  xref:#CreateMaterializedView[] above for instructions on how to create a materialized view.)
+
+image:Materialized View All Users In Group.png[]
+
+This allows custom materialized views to be generated for each user (based on their individual VPM permissions). If this option is disabled, only the group name will be available to the VPM, and the filter will not be correctly applied for users.
+
+In some cases, this VPM-based approach may generate too many distinct materialized views when security is applied *at the user-level*. In this case, you can substitute data block filtering in place of VPM-based filtering. To implement data block filtering, follow the steps below:
+
+. Place a filtering condition directly on the Data Worksheet data block that supplies data to the Dashboard. (See xref:dataworksheet:FilterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for directions on how to use conditions.) The condition should include a parameter that filters the data block appropriately for a particular user. For example, the condition
++
+ [First Name][is][equal to][$(_USER_)]
++
+filters the data block based on the user name by using the predefined variable `pass:[_USER_]` (which supplies the name of the currently logged-in user). To filter on a property such as the user’s corporate customers (i.e., companies), simply define your own variable to store the information:
++
+ [Company][is][one of][$(comp)]
++
+The value of the variable (`comp`) will be provided by the SRPrincipal object as explained in the next step.
+
+
+. *_Optional:_*  Use the xref:integration:AccessUserSession.adoc#setParameter[setParamater()] method of the SRPrincipal object to assign a value to the data block condition variable. You can do this from within an *external module* (e.g., an SSO request filter or Login Listener) or from within an internal *Dashboard script*.
++
+****
+External Module:: From within an *external module*, assign the desired user data to an SRPrincipal parameter of the same name as the target variable. For example, the following Login Listener assigns a set of companies to the `comp` parameter:
++
+[source,java]
+import inetsoft.sree.security.*;
+public class MyLoginListener implements LoginListener {
+  public void userLogin(LoginEvent event) {
+    SRPrincipal prin = event.getPrincipal();
+    prin.setParameter("comp", new String[] {"Ubermeyer", "Rutgers Bank", "Bigmart Foodstores"});
+  }
+}
++
+TIP: See xref:integration:AccessUserSession.adoc[] in xref:integration:AdvancedServerIntegration.adoc[]  for alternate SRPrincipal access.
+
+Dashboard Script:: From within a *Dashboard script*, assign the desired user data to an SRPrincipal parameter of the same name as the target variable. For example, the following script assigns a set of companies to the `comp` parameter:
++
+[source,javascript]
+var p = parameter['__principal__'];
+p.setParameter("comp", new String[] {"Ubermeyer", "Rutgers Bank", "Bigmart Foodstores"});
+****
+These procedures pass the desired user data (e.g., companies) directly into the data block condition. If a materialized view has been generated for the data set, the condition is applied to the *post-materialized* data set, extracting the appropriate data for the logged-in user. There is therefore no need to generate a distinct materialized view for each user.
+
+[#IncrementallyUpdateMaterializedView]
+== Incrementally Update a Materialized View
+You can schedule a materialized view to be regenerated on a predefined schedule by assigning a “cycle” to the view. (See xref:#CreateMaterializedView[] above for more information.) This allows the materialized view to be updated with new data from the database. However, for a large data set, repeatedly regenerating the materialized view in its entirety may be inefficient.
+
+To improve performance, you can elect to update the materialized view incrementally based on a set of specified conditions. For example, you can selectively update the materialized view with data which has posted subsequent to the previous materialization. Likewise, you can delete selected records from the materialized view if they meet a specified condition, such as an expiration date.
+
+You can specify an incremental update condition both for mergeable queries (e.g., relational database queries) and for non-mergeable queries (e.g., non-relational database queries, un-parsable queries, etc.), as described below.
+
+Mergeable query:: To specify the criteria that govern the incremental materialized view update for a mergeable query (i.e., standard, parsable, relational database query), add the desired conditions to the *MV Update* tab of the data block in the Data Worksheet. The data block’s *MV Update* condition will be tested each time an existing materialized view is regenerated (based on the cycle specified for the materialized view), and the materialized view regeneration will be limited to the additions and deletions specified by the condition. (See xref:dataworksheet:FilterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for more information on how to define the update conditions in the *MV Update* tab.)
+
+Non-Mergeable Query:: To specify the criteria that govern the incremental materialized view update for a non-mergeable query (e.g., non-relational database query or un-parsable query), follow the steps below to the criteria to the SQL string:
++
+****
+. Add the desired update condition to the query definition itself. (See xref:dataworksheet:QueryData.adoc[] for more information about how  to edit the query SQL.) For example:
++
+[source,sql]
+SELECT ... FROM T1 WHERE (...) AND DATE_COL = $(MV.LastUpdateTime)
++
+The update condition can use the special variables `MV.LastUpdateTime`, `MV.{Column Name}.Min`, and `MV.{Column Name}.Max`, where `{Column Name}` is the materialized view column name with non-alphanumeric characters *replaced by underscores*.
+For example, a materialized view column named `Year(Order Date)` should use parameter names `MV.Year_Order_Date_.Min` and `MV.Year_Order_Date_.Max`.  (See xref:dataworksheet:FilterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for more information about these parameters.)
+
+
+. In the *MV Update* tab of the Data Worksheet data block, enable the ‘Always append updates’ option. (See xref:dataworksheet:FilterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for more information about the *MV Update* tab.) This ensures that the results of the non-mergeable query will be appended to the existing materialized view. Note that this assumes that the tables being queried contain only new data to be appended to the existing materialized view.
+
+****
+
+[#TransformationsandFaults]
+== Transformations and Faults
+
+When a particular data view component (Chart, Table, etc.) is materialized, the materialization process caches the data in the underlying Data Worksheet data block to which the component is bound. This allows the component to rapidly query the cached dataset rather than the database.
+
+In order for the underlying data block to be materialized, any Dashboard filters (e.g., Selection Lists) that operate on the data block must be applied directly to the data block itself, rather than to any precursor data blocks. To materialize a data block, the materialization process must often first *transform* the Dashboard by moving these filter components forward to operate on the resultant data block rather than its precursors.  This transformation process is done *internally and automatically* during the materialization process. The result of the transformation is a new representation of the data set that preserves the same data as the original data block but is more appropriate for materialized view querying. When this transformation cannot be accomplished in a way that preserves the data intact, Enterprise Manager reports a “fault”. The *fault* means that a data block  cannot be materialized.
+
+In many of these instances, you may be able to facilitate materialization by manually moving the filters forward. To do this, shift the filters to apply to the *resultant* data block rather than its precursor data blocks.
+
+.Move Filters to Resultant Data Block
+[example]
+====
+In the Data Worksheet below, the ‘NJ Orders’ data block is filtered by a Dashboard Range Slider, and the ‘NY Orders’ data block is filtered by a Dashboard Selection List. These two precursor data blocks are concatenated to create the resulting ‘Query1’ data block that is displayed on the Dashboard Chart.
+
+.Data Worksheet with Filters on Precursor Data Blocks
+image:MaterializedViewTransform1.png[]
+
+Rather than applying the Dashboard filters to the *precursor* data blocks as above, it may be beneficial to move the filters forward to *resultant* ‘Query1’ data block, as shown below. Applying the filters to the ‘Query1’ data block (i.e., the data block that will be materialized) may *prevent faults* during the materialized view generation process.
+
+.Data Worksheet with Filters on Resultant Data Block
+image:MaterializedViewTransform2.png[]
+====
+

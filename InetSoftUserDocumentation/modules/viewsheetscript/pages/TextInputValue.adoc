@@ -1,0 +1,40 @@
+= value
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:TextInputProperties.adoc[] for more information about the TextInput component.
+====
+
+
+Specifies the contents displayed by the TextInput component.
+
+
+== Type
+String or Number
+
+
+
+
+
+== Example
+[source,javascript]
+if (TextInput1.value > 10000) {
+  TextInput1.value = 'Maximum exceeded';
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+value                // unqualified
+TextInput1.value     // qualified
+
+{secondForm}
+====
+
+

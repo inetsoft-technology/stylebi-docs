@@ -1,0 +1,35 @@
+= maintainAspectRatio
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+* xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+* xref:viewsheet:AddBackground.adoc[] for more information on aspect ratio.
+====
+
+When xref:ImageScaleImage.adoc[] is enabled, `maintainAspectRatio` specifies that the overall proportions of the image are maintained during scaling. When disabled, the image will scale to the dimensions of the component boundary using the 9-cell method (see xref:ImageScale9.adoc[]).
+
+
+== Type
+Boolean:: `true`: keep proportions constant +
+`false`: allow image to fill component boundary
+
+
+
+== Example
+[source,javascript]
+Image1.maintainAspectRatio = false;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+maintainAspectRatio           // unqualified
+Image1.maintainAspectRatio    // qualified
+
+{secondForm}
+====
+
+

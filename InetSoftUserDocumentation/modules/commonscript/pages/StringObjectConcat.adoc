@@ -1,0 +1,31 @@
+= concat(string2[,string3][,string4][,...])
+:navtitle: concat()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:CALC_concatenate.adoc[] for an equivalent function.
+
+Concatenate a given string with one or more additional strings. If the number of strings to concatenate is relatively small, you can also use the JavaScript concatenation operator (`+`), as shown below:
+
+[source,javascript]
+'madam' + 'i' + 'am' + 'adam'; // returns madamiamadam
+
+
+
+
+
+== Example
+[source,javascript]
+var txt = 'Hello'.concat(' ','and good morning.')
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Salesperson.First Name'].concat(" ",field['Salesperson.Last Name'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Company.concat(" Inc.");
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

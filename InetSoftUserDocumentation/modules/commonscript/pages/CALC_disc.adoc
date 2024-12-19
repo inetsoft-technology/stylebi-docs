@@ -1,0 +1,51 @@
+= CALC.disc(settlement, maturity, pr, redemption, [basis])
+:navtitle: CALC.disc()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *discount* rate for a security. {CALCExcelFunctionPage} The rate is calculated as follows:
+
+[source,javascript]
+rate = (redemption - pr) / (redemption * CALC.yearfrac(settlement; maturity; basis))
+
+== Parameters
+settlement::			Date object: The security’s settlement date
+maturity::			Date object: Security’s maturity date (date when security expires)
+pr::			Security’s price per $100 face value
+redemption::			Security’s redemption value per $100 face value
+basis:: {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+
+== Example
+Discount rate for a security with price of $97.975, redemption value of $100, settlement date of January 25, 2007, maturity date of June 15, 2007, and Actual/Actual counting convention.
+
+
+
+[source,javascript]
+----
+CALC.disc(new Date(2007, 0, 25), new Date(2007, 5, 15), 97.975, 100, 1);
+// returns 0.0524202127659576 (approximately 5.24%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.disc(field['SettleDate'], field['MatureDate'], 97.975, 100, 1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.disc(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[0], 97.975, 100, 1)
+CALC.disc(parameter.SettleDate, parameter.MatureDate, 97.975, 100, 1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

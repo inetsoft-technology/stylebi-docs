@@ -1,0 +1,46 @@
+= bindingInfo.geoFields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:PlotGeoFields.adoc[]  to return the currently bound ‘Geographic’ field at runtime.
+
+Specifies the query fields to be used as geographic fields. These fields will be bound to the ‘Geographic’ region of the Chart Editor.
+
+== Type
+Two-dimensional array: `[[Field_1,Type_1],[Field_2,Type_2],...]`
+
+[square]
+* `Field` is a  field name (String)
+* `Type`	is  one of  `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
+
+
+
+== Example
+[source,javascript]
+--
+Chart1.query = "customers";
+Chart1.chartStyle = Chart.CHART_MAP;
+Chart1.bindingInfo.setColorField("customer_id",Chart.NUMBER);
+Chart1.bindingInfo.setFormula("customer_id",Chart.DISTINCTCOUNT_FORMULA,Chart.AESTHETIC_COLOR);
+Chart1.bindingInfo.geoFields = [['state',Chart.STRING]]; <1>
+Chart1.mapType = Chart['MAP_TYPE_U.S.'];
+Chart1.bindingInfo.setMapLayer("state",Chart.STATE);
+Chart1.bindingInfo.shapes['DistinctCount(customer_id)'] = new StaticShapeFrame(GShape.NIL);
+--
+<1> Sets 'state' as the geographic field.
+
+image:commonscript:bindingInfoGeoFields.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.geoFields           // unqualified
+Chart1.bindingInfo.geoFields    // qualified
+
+{secondForm}
+====

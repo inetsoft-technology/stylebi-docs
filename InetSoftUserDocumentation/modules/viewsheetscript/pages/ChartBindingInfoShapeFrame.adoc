@@ -1,0 +1,41 @@
+= bindingInfo.shapeFrame
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:ShapeFrame.adoc[] outside of the data binding.
+* xref:viewsheetscript:ChartBindingInfoShapes.adoc[] to set a static shape for a particular measure.
+* xref:viewsheetscript:ChartBindingInfoSetShapeField.adoc[] for information on binding a shape field.
+====
+
+
+
+
+Specifies the aesthetic treatment for shape-coded data on a xref:viewsheet:PointChart.adoc[]. A xref:chartAPI:ShapeFrame.adoc[] can shape-code chart elements by value, or simply specify a static shape style.
+
+
+
+
+
+
+== Type
+xref:chartAPI:ShapeFrame.adoc[]
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.shapeFrame = new TriangleShapeFrame;
+--
+
+
+image:commonscript:bindingInfoShapeFrame.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

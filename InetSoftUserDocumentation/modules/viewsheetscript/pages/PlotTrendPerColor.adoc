@@ -1,0 +1,31 @@
+= trendPerColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies that an individual trend line should be displayed for each colored group (dimension value) on the Chart.
+
+
+
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.trendPerColor = true;
+
+image:commonscript:trendPerColor.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+trendPerColor          // unqualified
+Chart1.trendPerColor   // qualified
+
+{secondForm}
+====

@@ -1,0 +1,48 @@
+= formula
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheetscript:TextQuery.adoc[] to specify the data block from which to draw the fields.
+====
+
+Specifies the aggregation method for the measure displayed in the Text component. This is equivalent to selecting a method from the ‘Aggregate’ menu under the *Data* tab of the component ‘Properties’ dialog box.
+
+image:commonscript:bindingInfoTextFormula.png[]
+
+
+== Type
+xref:commonscript:StyleConstant.adoc[] integer. See xref:commonscript:StyleConstantSummarizationFormula.adoc[].
+
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Text1.query = 'Sales';
+Text1.fields = ['Total'];
+Text1.formula = StyleConstant.AVERAGE_FORMULA;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+formula            // unqualified
+Text1.formula      // qualified
+
+{secondForm}
+====
+
+

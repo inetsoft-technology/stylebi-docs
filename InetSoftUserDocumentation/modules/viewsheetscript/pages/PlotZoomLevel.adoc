@@ -1,0 +1,42 @@
+= zoomLevel
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the zoom level for a xref:viewsheet:MapChart.adoc[] with a Google Map background. (The integer value is equivalent to the number of times the {BUTTONZOOMIN} is pressed on the map.)
+
+NOTE: This property *does not apply* to maps that use the default background or Mapbox background. Use the xref:PlotZoom.adoc[] property instead.
+
+
+== Type
+Non-negative integer. Zoom levels up to 18 may be supported, but the available level of detail depends on the geographical region. See https://developers.google.com/maps/documentation[Google Maps Platform Documentation] for more details about zoom levels.
+
+
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.zoomLevel = 5;
+
+image:commonscript:zoomLevel.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+zoomLevel          // unqualified
+Chart1.zoomLevel   // qualified
+
+{secondForm}
+====

@@ -1,0 +1,40 @@
+= setHyperlink(col, hyperlink)
+:navtitle: setHyperlink()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Adds hyperlinks to a chart dataset. Use `setParameterField` to specify values to pass as parameters in the link and `setTargetFrame` to specify the link’s target frame. See the example below.
+
+== Parameter
+col::			dataset index, first dataset is `1`
+hyperlink:: string or 			`inetsoft.report.Hyperlink.Ref` object
+
+== Example 1
+[source,javascript]
+var link = new inetsoft.report.Hyperlink("www.google.com", inetsoft.report.Hyperlink.WEB_LINK);
+link.setParameterField("test", "Sales");
+link.setTargetFrame("_blank");
+setHyperlink(1, link);
+
+Alternatively, you can pass all of this information within a single array as the second argument to the function. See the example below. The Boolean item in the array indicates whether the hyperlink targets a  Dashboard (`true`) or a website (`false`).
+
+== Example 2
+[source,javascript]
+setHyperlink(1, ["dashboard1", [["param1", "value1"], ["param2", "value2"],...]], true, "_blank")
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setHyperlink           // unqualified
+Chart1.setHyperlink    // qualified
+
+{secondForm}
+====
+
+
+
+
+

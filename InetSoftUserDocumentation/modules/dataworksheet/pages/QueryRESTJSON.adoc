@@ -1,0 +1,64 @@
+= REST JSON  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing REST JSON  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:RESTJSON.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonRESTJSONQuery}. This opens the ‘REST JSON  Query’ dialog box.
++
+image:dataSourceREST5.png[]
+
+. Enter the ‘URL Suffix’ and  desired ‘JSON Path’.  See https://goessner.net/articles/JsonPath/[JSONPath - XPath for JSON] for information about the JSON Path syntax.
++
+image:dataSourceREST6.png[]
++
+****
+Example: JSON Path:: Consider the data at https://jsonplaceholder.typicode.com/users.  The JSONPath string
++
+ $.[*][?(@.id < 4)]
++
+retrieves all fields (because none are specified) from all objects where the `id` field value is less than 4. The JSONPath string
++
+ $.[*][?(@.id < 4)].email
++
+retrieves just the `email` field from all objects where the `id` field value is less than 4.
+****
+
+
+. *_Optional:_*  Select ‘Expand Arrays’ to expand a record that contains an array into multiple records.
++
+****
+.Example: Expand Arrays...
+[%collapsible]
+=====
+include::dataworksheet:partial$expandArrays.adoc[]
+=====
+****
+
+. From the ‘Pagination’ menu, select the type of pagination used by the data source, and enter the desired parameters.
+
++
+****
+.Pagination Options...
+[%collapsible]
+=====
+include::partial$paginationREST.adoc[]
+=====
+****
+
+
+. *_Optional:_* {datasourceSelectTabular}
+
+. *_Optional_*: Enter a '`Timeout`' in seconds to limit the query execution time.
+
++
+include::partial$finalStepsQuery.adoc[]
+

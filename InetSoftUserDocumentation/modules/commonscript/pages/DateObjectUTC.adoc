@@ -1,0 +1,6 @@
+= Date.UTC()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Constructor for a JavaScript Date object using UTC (universal time). See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC[Date.UTC()] in the {JavaScriptRef} for details on usage.

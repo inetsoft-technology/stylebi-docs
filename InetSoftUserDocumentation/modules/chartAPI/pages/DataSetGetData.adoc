@@ -1,0 +1,63 @@
+= DataSet.getData(column,row)
+:navtitle: DataSet.getData()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+xref:viewsheetscript:ChartData.adoc[] for information on accessing pre-aggregate data.
+====
+
+
+Returns the value in the `dataset` object specified by the column and row indices. The first column (index 0) contains the X-axis labels. For example, consider a chart with two datasets (measures), as shown below:
+
+
+
+
+image:commonscript:datasetChart_1.png[]
+
+Use `dataset.getData(j,i)` with row index `i` and column index `j` to access these plotted values. The `dataset.getRowCount()` and `dataset.getColCount()` functions provide the number of rows and columns of summarized data.
+
+IMPORTANT: Note the index order: `(column,row)`. In many cases, the xref:chartAPI:Data.adoc[] property is more convenient to use than xref:chartAPI:Dataset.adoc[].
+
+
+== Parameters
+column::			Column index of value to return
+row::			Row index of value to return
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+var str = "";
+// Loop through rows
+for (var i = 0; i < dataset.getRowCount(); i++) {
+  str = "";
+  // Loop through columns
+  for (var j = 0; j < dataset.getColCount(); j++) {
+    str += dataset.getData(j, i) + ",";
+  }
+  // Output the results
+  alert(str);
+}
+
+--
+
+The following output is displayed:
+[source]
+Sun May 31 00:00:00 EDT 2009, 1.0, 4.0,
+Mon Jun 01 00:00:00 EDT 2009, 2.0, 5.0,
+Tue Jun 02 00:00:00 EDT 2009, 3.0, 6.0,
+Wed Jun 03 00:00:00 EDT 2009, 4.0, 7.0,
+
+The values in the first column (e.g., Sun...2009, Mon...2009, etc.) are the dates on the X-axis, while the second and third columns represent the two datasets (Measure 1 and Measure 2).
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

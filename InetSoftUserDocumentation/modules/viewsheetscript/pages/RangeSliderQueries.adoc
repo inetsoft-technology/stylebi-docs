@@ -1,0 +1,38 @@
+= queries
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheetscript:RangeSliderFields.adoc[] to specify the fields to display in the Range Slider.
+====
+
+Specifies the data blocks to be merged in the Range Slider component. (The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.) See xref:viewsheet:AddFilterComponents.adoc[] for more information about merging compatible data blocks.
+
+image:dataworksheet:dataBlocks_2.png[]
+
+
+== Type
+Array
+
+
+
+== Example
+[source,javascript]
+RangeSlider1.queries = ['LimitedProducts', 'ProductInfo'];
+RangeSlider1.fields = ['State'];
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+queries                  // unqualified
+RangeSlider1.queries     // qualified
+
+{secondForm}
+====
+
+

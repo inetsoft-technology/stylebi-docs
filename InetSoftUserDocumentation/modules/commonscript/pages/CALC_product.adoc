@@ -1,0 +1,38 @@
+= CALC.product(array)
+:navtitle: CALC.product()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the product of all the elements in  `array`. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of elements to multiply
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.product([2,3,4,5]); // returns 120.0
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.product(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.product(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

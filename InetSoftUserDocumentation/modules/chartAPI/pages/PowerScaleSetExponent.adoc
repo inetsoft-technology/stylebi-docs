@@ -1,0 +1,46 @@
+= PowerScale.setExponent(value)
+:navtitle: PowerScale.setExponent()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:LinearScale.adoc[]
+* xref:Scale.adoc[]
+====
+
+Specifies the exponent  of the scaling. The axis position of data stem:[x] is given by stem:[x^(value)]. The corresponding “getter” function is `getExponent()`.
+
+== Parameter
+value::			a number specifying the scaling exponent
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new PowerScale(); //<2>
+qscale.setFields(["Quantity"]);
+var elem = new IntervalElement("State", "Quantity"); //<3>
+qscale.setExponent(0.5); //<4>
+graph.setScale("Quantity", qscale); //<5>
+graph.addElement(elem);
+
+--
+
+<1> {dataset}
+<2> Create the `PowerScale` object.
+<3> Compute the  `PowerScale`  using the   "`Quantity`" field.
+<4> Use `setExponent` to display value stem:[x] as stem:[x^0.5].
+<5> Use  xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart for the  "`Quantity`" field.
+
+
+image:commonscript:PowerScale_1.png[]
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

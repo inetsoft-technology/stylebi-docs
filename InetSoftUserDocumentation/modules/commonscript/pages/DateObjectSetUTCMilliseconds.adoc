@@ -1,0 +1,34 @@
+= Date.setUTCMilliseconds(value)
+:navtitle: Date.setUTCMilliseconds()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to set the milliseconds part of a date in universal time.        See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds[Date.setUTCMilliseconds()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+d.setUTCMilliseconds(0);
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.setUTCMilliseconds(0);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+var d = parameter.Date;
+d.setUTCMilliseconds(0);
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

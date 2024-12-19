@@ -1,0 +1,41 @@
+= bindingInfo.isTimeSeries(col)
+:navtitle: bindingInfo.isTimeSeries()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:ChartBindingInfoSetTimeSeries.adoc[]  to designate a field as time-series.
+
+
+Returns the state of the specified Date column, designated as time-series or not.
+
+
+
+
+== Parameter
+col::			Name of field to test for time-series
+
+
+
+== Return
+Boolean:: `true`: Field is set as time-series +
+`false`: Field is not set as time-series
+
+
+
+
+
+
+
+
+
+== Example
+
+[source,javascript]
+--
+var ts = Chart1.bindingInfo.isTimeSeries("Order Date");
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

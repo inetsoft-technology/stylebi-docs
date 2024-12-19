@@ -1,0 +1,245 @@
+= Use Filter Components
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheet:partial$availableToEndUsers.adoc[]
+
+The following sections explain how to *use* filter components to dynamically explore your data.  See xref:AddFilterComponents.adoc[] for information on how to design a Dashboard using these components.
+
+[#UseSelectionList]
+== Use a Selection List
+
+
+
+A Selection List filters the data displayed by data view components (Tables, Charts, etc.) and output components (Gauges, Text). A Selection List can provide either single-selection or multiple-selection capability, and can be configured to submit selections immediately when you make the selection or on-demand when you press the {buttonApply}.
+
+To filter data using a Selection List, select the desired item(s) in the list. If an {buttonApply} is visible in the title bar, press the {buttonApply} to submit your selections.
+
+
+image:SelectionList.png[]
+
+TIP: If you want to make only a single selection (all selections being mutually exclusive), hold down the {buttonAlt} key on the keyboard and make your selection. This changes the Selection List to “single-selection” mode. {buttonAlt}-click again to return to multiple-selection mode.
+
+If there is no {buttonApply} in the title bar, each selection you make is submitted immediately. To make multiple selections before submitting, hold the {buttonCtrl} key while making your selections.
+
+[WARNING,caption=see also]
+====
+xref:#ExampleFilterDashboard[] for an illustration of how to use Selection Lists in a sample Dashboard.
+====
+
+include::viewsheet:partial$selectionIcons.adoc[]
+
+Selection List and Selection Tree provide a *mini-toolbar* that allows you make convenient modifications to the current selection. Move the mouse over the Selection List or Selection Tree to see the mini-toolbar. The following functions are available:
+
+.Selection List and Selection Tree Mini-Toolbar
+****
+{buttonHideMiniToolbar}:: Press to hide the mini-toolbar temporarily. This is useful if the toolbar is obscuring some of the component data. To reactivate the toolbar, move the mouse away from the component.
+
+{buttonChartShowEnlarged}:: Press to display the Selection component full screen.  Press the {buttonChartShowActualSize} to return the component to its original size.
+
+{buttonSearch}:: Press to enter a search term in the text field. As you type, the Selection component updates to display only items having a match for your search text (appearing anywhere in the item). Press the {buttonClose} button in the text field to close the Search feature.
+
+{buttonSort}:: Press  once to sort the items in ascending numerical or alphabetical order. Press the button again to sort in descending numerical or reverse alphabetical order. Press the button a third time to reset the original order.
+
+{buttonReverse}:: Press to deselect all currently selected items and select all currently unselected items.
+
+{buttonUnselect}:: Press to deselect all items.
+
+{buttonApply}:: Press to submit the current selection. If the {buttonApply} is not visible, this means that your selections are submitted automatically.
+****
+
+
+== Use a Selection Tree
+A Selection Tree operates the same way as a Selection List but displays values in a hierarchical tree view.  See xref:#UseSelectionList[] above for a description of the selection symbols and mini-toolbar.
+
+Press the {buttonExpand} next to an item on the tree to expand the tree and view items at the next level in the hierarchy. To select all items under a given parent item in the tree, right-click the parent item and choose ‘Select Subtree’ from the context menu. {rightClickOptions}
+
+image:selectSubtreeMenu.png[]
+
+To clear all items under a given parent item in the tree, right-click the parent item and choose ‘Clear Subtree’ from the context menu.
+
+== Use a Range Slider
+A Range Slider component allows you to select a date range or numerical range, as shown below.
+
+image:RangeSlider_1.png[]
+
+Adjust the selection range by dragging the slider end-handles. (You can also click on an end-handle and press kbd:[<] or kbd:[>]  on the keyboard.)
+
+To enter precise values for the start-point or end-point, right-click on the Range Slider and select ‘Edit’ from the context menu. In the ‘Edit’ dialog box, enter the desired values and press btn:[OK].
+
+image:Range Slider Edit1_2.png[]
+
+To quickly set the right side of the range to its maximum, double-click on the right end-handle. To quickly set the left side of the range to its minimum, double-click on the left end-handle. To quickly set the entire range to its full extent, double-click on the slider body.
+
+
+== Use a Calendar
+
+You can use a Calendar to select dates at the year, month, week, or day level. Note that the Calendar *title bar* indicates the selected range. The range that you select is used to filter all Data View and Output components that are based on the same data block as the Calendar component.
+
+
+image:CalendarRangeTypes_1.png[]
+
+To filter a range of dates using the Calendar component, follow the steps below:
+
+. To switch the Calendar from single-page to double-page display, press the {buttonSwitchToRange}.
++
+image:SwitchToRangeComparison.png[]
++
+To switch the Calendar from double-page to single-page display, press the {buttonSwitchToSimpleView}.
++
+image:SwitchToSimpleView.png[]
+
+. To switch the Calendar from displaying a single month to displaying the entire year, press the {buttonSwitchToYearView}.
++
+image:SwitchToYearView.png[]
++
+To switch the Calendar from displaying the entire year to displaying a single month, press the {buttonSwitchToMonthView}.
++
+image:SwitchToMonthView.png[]
+
+. Press the buttons below the title bar ({buttonLastMonth}, {buttonLastYear}, {buttonNextMonth}, {buttonNextYear}) to display the appropriate calendar pages.
++
+image:LastNextMonth.png[]
+
+. Click a date on the Calendar to select the start date of the range. You can select a day, week, or month, depending on  how the Calendar has been configured.
++
+[TIP]
+====
+To select a column of days (e.g., all Thursdays in a month), click the name of the desired day. (This is only available if “day selection” is enabled for the Calendar.  See xref:CalendarProperties.adoc[] for more details.)
+
+image:CalendarDaySelection.png[]
+====
++
+In a ‘Month View’ calendar, click to select a day or week, or click the *name of the month* at the top of the calendar to select the entire month. In a ‘Year View’ calendar, click to select a month, or click the *name of the year* at the top of the calendar to select the entire year.
++
+image:CalendarYearSelection.png[]
+
+. Click another date on the Calendar to select the end date of the range, or hold the {buttonCtrl} key  and click to select discontiguous dates.
+
+. If the Calendar is in double-page view, press the {buttonApply} to submit your selection. (If the Calendar is in single-page view, the selection is applied automatically.)
+
+
+
+A summary of the buttons in the mini-toolbar is shown  below. (Move the mouse over the Calendar to see the mini-toolbar.)
+
+.Calendar Mini-Toolbar
+****
+{buttonSwitchToYearView} and {buttonSwitchToMonthView}:: Press to alternate between year and month styles.
+{buttonSwitchToSimpleView} and {buttonSwitchToRange}:: Press to alternate between single- and double- calendar modes. In single-calendar mode, selections are applied immediately. In double-calendar mode, press the {buttonApply} to submit your selections.
+{buttonClearCalendar}:: Press to remove the specified date information.
+{buttonApply}:: Press to submit the selection. If the {buttonApply} does not appear, this means that your selection is submitted automatically.
+****
+
+
+
+
+
+
+
+
+
+
+
+
+
+[#BundleFiltersinSelectionContainer]
+== Bundle Filters in a Selection Container
+You can add new Filter components into an existing Selection Container if the ‘Allow User to Add/Remove Selections’ property has been enabled. See xref:SelectionContainerProperties.adoc[] for more information.
+
+NOTE: Note: A Selection Container will also display the current values of all Dashboard filters if the ‘Show Current Selections’ option is enabled. See xref:SelectionContainerProperties.adoc[] for more information.
+
+There are several ways to add filters to a Selection Container:
+
+* xref:#AddFilterbyDraggingColumnfromTable[]
+* xref:#AddFilterwithAddFilterButton[]
+* xref:#AddPostAggregateFilter[]
+
+[#AddFilterbyDraggingColumnfromTable]
+=== Add Filter by Dragging Column from  Table
+To add a new filter to a Selection Container, locate the column that you want to filter within an existing  Table or Crosstab. Drag the column into the Selection Container.
+
+image:SelectionContainer4.png[]
+
+String-type fields are added to the Selection Container as Selection Lists, while numerical-type and date-type fields are added to the Selection Container as Range Sliders.
+
+[#AddFilterwithAddFilterButton]
+=== Add Filter with ‘Add Filter’ Button
+Press the {buttonAddFilter} in the mini-toolbar of the Selection Container.
+
+image:SelectionContainer6.png[]
+
+This opens the ‘Add Filter’ dialog box, where you can select the field to add as a filter to the Selection Container.
+
+image:SelectionContainer7.png[]
+
+String-type fields are added to the Selection Container as Selection Lists, while numerical-type and date-type fields are added to the Selection Container as Range Sliders.
+
+[#AddPostAggregateFilter]
+=== Add a Post-Aggregate Filter
+Add a post-aggregate filter into the Selection Container by right-clicking on a field in a Chart or Table and selecting the ‘Filter’ option. See xref:FilterAggregatedData.adoc#AdHocFilterPostAggregateCrosstabData[Ad Hoc Filter Post-Aggregate Crosstab Data] and xref:FilterAggregatedData.adoc#AdHocFilterPostAggregateChartData[Ad Hoc Filter Post-Aggregate Chart Data] for more information.
+
+image:Chart Filter1.png[]
+
+String-type fields are added to the Selection Container as Selection Lists, while numerical-type and date-type fields are added to the Selection Container as Range Sliders.
+
+=== Remove a Filter from Selection Container
+To remove a Filter component from the Selection Container, right-click the component and select ‘Remove’. {rightClickOptions}
+
+image:SelectionContainer5.png[]
+
+=== Hide or Show a Filter in Selection Container
+To collapse a Filter component in a Selection Container, press the {buttonHide} in the selection component title bar. To expand a Filter component in a Selection Container, press the {buttonShow}.
+
+image:SelectionContainer1.png[]
+
+=== Clear Filters in Selection Container
+To clear the filters on all Filter components in the Selection Container, press the {buttonUnselectAll} in the Selection Container title bar.
+
+image:SelectionContainer2.png[]
+
+
+
+
+
+[#ExampleFilterDashboard]
+.Example: Filter a Dashboard
+****
+The following example illustrates how to use the Selection Lists in the sample xref:ROOT:attachment$Census.zip[Census] Dashboard (in the ‘Examples’ folder).
+
+NOTE: If you don't see the Dashboard in the Repository, download and import the  xref:ROOT:attachment$Census.zip[Census] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+
+. Open the sample ‘Census’ Dashboard (in the ‘Examples’ folder).
++
+image:censusExp1.png[]
+
+. Select a few states (e.g., ‘New Jersey’, ‘Pennsylvania’, ‘Florida’) in the ‘State’ Selection List.
++
+Notice that the ‘Region’ selection list now shows two items with filled squares ({buttonSelectionListSelectedAuto}), ‘Northeast’ and ‘South’. This indicates that the result set includes only data from these two regions (because the states that you selected are in the Northeast and South regions.) The remaining regions are listed under ‘Others’.
++
+image:Visualization9.png[]
++
+NOTE: Some Selection Lists submit automatically when you make a selection. To make multiple selections, hold the {buttonCtrl} key  and click to make selections.
+
+. You can now filter the results further based on region. Select ‘Northeast’ in the ‘Region’ list. When you make this selection in the ‘Region’ selection list, the ‘State’ selection list automatically updates.
++
+image:Visualization10.png[]
++
+Notice the following things about the updated ‘State’ selection list:
++
+[square]
+* New Jersey and Pennsylvania are shown with check marks ({buttonSelectionListSelected}). This indicates that you explicitly selected ‘New Jersey’ and ‘Pennsylvania,’ and the records for New Jersey and Pennsylvania are returned in the result set.
+
+* Florida is shown with a gray check mark ({buttonSelectionListNotIncluded}). This indicates that you explicitly selected Florida, but the records for Florida are *_not_* included because of an incompatible choice in another Selection List. In this case, you explicitly selected the ‘Northeast’ region, so only records for Northeast states (i.e., New Jersey and Pennsylvania ) are actually included.
+
+* Several states are shown with empty boxes ({buttonSelectionListEmpty}), such as Delaware, Maine, Maryland, etc. This indicates that records for these states are not included, but these choices remain compatible with your other selections. You can select these choices to widen your result set.
+
+* All other states are listed under ‘Others’. This indicates that these records are *_not_* included in the result set, and moreover those choices are *_not_* compatible with your other selections.
+
+. Expand the ‘Others’ node in the ‘State’ selection list. Notice that all incompatible states have a gray ‘X’ icon ({buttonSelectionListExcluded}).
+
+. Select ‘Iowa’.
++
+This clears the ‘Northeast’ selection from the ‘Region’ list. In general, when you select an option from the ‘Others’ list, this will clear any incompatible selections that you previously have made in other Selections Lists. The divisions listed are now those compatible with the five currently selected states.
++
+image:Visualization11.png[]
+****

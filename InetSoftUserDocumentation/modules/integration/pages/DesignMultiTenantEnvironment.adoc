@@ -1,0 +1,22 @@
+= Data Access for Multi-Tenant Environment
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+In certain deployment scenarios, you may need to provide different groups of users (i.e., “tenants”) with access to different sets of data. This is called a *multi-tenant* environment. For example, if you are serving user groups from different departments or organizations, you may need to give each tenant access to data stored in a unique database or schema (different login permissions, etc.).
+
+To facilitate design of a multi-tenant environment, StyleBI allows you to define independent data *connections* for each tenant. Each tenant can access only the unique connections for which they have privileges. Additionally, you can define a common set of data that is accessible to all tenants.
+
+Follow the steps below:
+
+. Enable multi-tenancy on the server.  See xref:administration:EnableMultiTenant.adoc[].
+
+. Add database connections to your Data Source. Each connection may access a different database or schema that is specific to a particular tenant. See xref:user:AddAdditionalConnection.adoc[] in xref:user:ConnectToData.adoc[].
+
+. Extend a common Physical View by incorporating database tables/columns from a tenant-specific connection. The extended physical view will provide the common tables/columns as well as tables/columns that are specific to the particular tenant. See xref:user:ExtendPhysicalView.adoc[] in xref:user:ConnectToData.adoc[].
+
+. Extend a common Logical Model by defining entities/attributes based on tables/columns from a tenant-specific connection (extended physical view). The extended logical model will provide the common entities/attributes as well as entities/attributes specific to the particular tenant. See xref:user:ExtendLogicalModel.adoc[] in xref:user:ConnectToData.adoc[].
+
+. Assign the appropriate permissions for *connections* and *actions* to users and groups. See xref:administration:SetSecurityActions.adoc[] in the xref:administration:ManageServer.adoc[] for complete information.
+
+. Set appropriate aliases for  folders, Data Worksheets, and Dashboards. You can use aliases to provide similar names to multiple tenants (e.g., a “Marketing” folder) while maintaining distinct names for administration (e.g., “Marketing-Company A”, “Marketing-Company B”, etc.). See xref:administration:Repository.adoc[] for details on setting aliases.

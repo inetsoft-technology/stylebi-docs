@@ -1,0 +1,46 @@
+= bindingInfo.showRowTotal
+:navtitle: showRowTotal
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies whether a trailing row containing totals should be displayed. This is equivalent to setting ‘Row Total’ in the Crosstab Editor.
+
+image:commonscript:bindingInfoshowRowTotal.png[]
+
+
+
+== Type
+Boolean:: `true`: show row total +
+`false`: hide row total
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Category','Name'];
+Crosstab1.bindingInfo.colFields = ['Region','State'];
+Crosstab1.bindingInfo.measureFields = ['Total','Quantity Purchased'];
+Crosstab1.bindingInfo.setFormula('Total',StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.setFormula('Quantity Purchased',StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.showRowTotal = true;
+
+image:commonscript:bindingInfoshowRowTotal2.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.showRowTotal             // unqualified
+Crosstab1.bindingInfo.showRowTotal   // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,66 @@
+= VisualFrame.setScaleOption(value)
+:navtitle: VisualFrame.setScaleOption()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies a scaling option for the default scaling. The `Scale.TICKS` and `Scale.ZERO` options determine the maximum and minimum values that are used to calculate the scale range.
+To combine multiple options, use the pipe (“or”) operator:
+
+[source,javascript]
+frame.setScaleOption(Scale.ZERO | Scale.TICKS);
+
+The corresponding “getter” function is `getScaleOption()`.
+
+== Parameter
+value::
+[square]
+* `Scale.TICKS`: Use the maximum and minimum tick values (i.e., rounded numbers) rather than the maximum and minimum data values.
+* `Scale.ZERO`: Use zero as the minimum rather than the minimum data value (if positive).
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",290]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new GradientColorFrame(); //<2>
+frame.setField("Quantity");
+frame.setScaleOption(Scale.TICKS); //<3>
+elem.setColorFrame(frame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:VisualFrame.adoc[] object.
+<3> Use `setScaleOption` to calculate scale with max and min tick values.
+<4> Use xref:GraphElementSetColorFrame.adoc[] to add the `VisualFrame` to the xref:IntervalElement.adoc[].
++
+image:commonscript:VisualFrameSetScaleOption.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} and xref:GraphElementGetColorFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:ColorFrame.adoc[]  objects. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getColorFrame(); //<2>
+// Compact syntax: var frame = graph.getElement(0).getColorFrame();
+
+frame.setScaleOption(Scale.TICKS);
+
+--
+=====
+

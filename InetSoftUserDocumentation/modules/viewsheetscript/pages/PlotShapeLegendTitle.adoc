@@ -1,0 +1,29 @@
+= shapeLegend.title
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the legend title for a shape-key legend.
+
+
+
+== Type
+String
+
+
+== Example
+
+[source,javascript]
+Chart1.shapeLegend.title = 'Salesperson';
+
+image:commonscript:shapeLegendTitle.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shapeLegend.title           // unqualified
+Chart1.shapeLegend.title    // qualified
+
+{secondForm}
+====

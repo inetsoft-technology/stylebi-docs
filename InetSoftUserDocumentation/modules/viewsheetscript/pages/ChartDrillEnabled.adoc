@@ -1,0 +1,34 @@
+= drillEnabled
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:DrillDownIntoData.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for information on using the drill-down feature.
+
+Specifies whether the automatic drill-down feature is enabled for the Chart. If disabled, the ‘+’ and ‘–’ drill operators do not appear on the chart axes.
+
+== Type
+Boolean:: `true`: enabled, `false`: disabled
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.drillEnabled = false;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+drillEnabled         // unqualified
+Chart1.drillEnabled  // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,388 @@
+= Manage Physical Views
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Manage physical views in script by using the `:physicalmodel` or equivalent `:pm` command. See xref:user:CreatePhysicalView.adoc[] for  information about physical views in the User Portal.
+
+include::partial$adminConsoleOptionalParams.adoc[]
+
+
+== List Available Physical Views
+The `list-models` action lists the available physical views. {connectRepositoryNote}
+
+=== Parameters
+datasource:: Data source for which to list views (optional)
+
+physicalmodel:: Physical view for which to list extended physical views (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Examples
+[source,groovy]
+--
+// List all physical views in environment
+:pm list-models
+
+// List all physical views in organization1
+:pm list-models --organizationid organization1
+
+// List extended views for physical view pv_org1 in organization1
+:pm list-models --physicalmodel=pv_org1 --organizationid organization1
+
+// List physical views for data source ModelTest
+:pm list-models --datasource=Examples/ModelTest
+--
+
+
+
+== Rename Physical View
+The `rename-model` action renames a  physical view. {connectRepositoryNote}
+
+=== Parameters
+datasource:: Data source on which physical view is defined
+
+oldname:: Name of physical view
+newname:: New name of physical view
+
+folder:: Folder to contain  physical view (optional)
+
+description:: Description for physical view (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Examples
+[source,groovy]
+--
+// Rename pv_org1 to pv_org11
+:pm  rename-model "f1/org1"  "pv_org1" "pv_org11"
+
+// Rename pv_org1 to pv_org11 in folder f1 for organization1
+:pm rename-model "f1/org1"  "pv_org1" "pv_org11" --description desc --organizationid organization1 --folder=f1
+
+--
+
+
+
+== Create Physical View
+The `create-model` action creates a  physical view. {connectRepositoryNote}
+
+=== Parameters
+
+datasource:: Data source on which new physical view should be defined
+
+name:: Name of physical view
+
+parentModel:: Name of physical view that is being extended (optional).
+
+folder:: Folder to contain  physical view (optional)
+
+description:: Description for physical view (optional)
+
+connection:: Connection for multi-tenant environment. (See xref:EnableMultiTenant.adoc[].) (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Examples
+[source,groovy]
+--
+// Create new physical view pv_org111 for organization1
+:pm create-model "f1/org1" 'pv_org111' --organizationid organization1
+--
+
+== Remove Physical View
+The `remove-model` action deletes a  physical view. {connectRepositoryNote}
+
+=== Parameters
+
+
+datasource:: Data source on which  physical view is defined
+
+name:: Name of physical view
+
+folder:: Folder  containing  physical view (optional)
+
+parentModel:: Name of base physical view for extended physical view. (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Examples
+[source,groovy]
+--
+// Remove base physical view cphy1
+:pm remove-model "Examples/ModelTest" cphy1
+
+// Remove extended physical view associated with Default Connection having parent Order View
+:pm  remove-model 'Examples/Orders' '(Default Connection)' 'Order View'
+--
+
+
+
+== Open Physical View
+The `open-model` action opens a  physical view for editing. {connectRepositoryNote}
+
+=== Parameters
+
+datasource:: Data source on which  physical view is defined
+
+name:: Name of physical view
+
+parentModel:: Name of base physical view for extended physical view. (optional)
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Examples
+[source,groovy]
+--
+// Open base physical view OrderView
+:pm open-model "Examples/Orders" "OrderView"
+
+// Open extended physical view associated with Default Connection having parent Order View for organization1
+:pm open-model 'Examples/Orders' '(Default Connection)' --parentModel 'Order View' --organizationid organization1
+--
+
+== Get Physical View
+The `get-model` action returns a handle to the  physical view. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+
+
+=== Examples
+[source,groovy]
+--
+:pm get-model 1
+--
+
+== Save Physical View
+The `save-model` action save a  physical view. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+
+
+=== Examples
+[source,groovy]
+--
+:pm save-model 1
+--
+
+== Close Physical View
+The `close-model` action closes a  physical view. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+
+
+=== Examples
+[source,groovy]
+--
+:pm close-model 1
+--
+
+== Add Table to Physical View
+The `add-table` action adds a new table to the   physical view. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+baseTable:: Table to add
+
+
+=== Examples
+[source,groovy]
+--
+:pm add-table 1 "CUSTOMERS"
+--
+
+== Remove Table from Physical View
+The `remove-table` action removes a  table from the   physical view. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+qualifiedName:: The fully qualified name of the table to remove
+name:: The name of the table to remove
+
+
+=== Examples
+[source,groovy]
+--
+:pm remove-table 0 'SA.CUSTOMERS' 'CUSTOMERS'
+--
+
+
+== Create Inline View
+The `create-view` action creates an inline view from provided SQL. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+name:: Name for inline view
+sql:: SQL instruction to generate inline view
+
+
+=== Examples
+[source,groovy]
+--
+:pm create-view id cview1 'select * from SA.ORDERS'
+--
+
+== Create Join
+The `create-join` action creates a join between tables in the physical view. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+table:: Fully-qualified name of the table
+join:: The join definition
+
+
+=== Examples
+[source,groovy]
+--
+
+import inetsoft.shell.dsl.PhysicalTableDelegate
+def join1 = PhysicalTableDelegate.join {
+  type 'EQUAL'
+  orderPriority 1
+  merge 'AND'
+  cardinality 'MANY_TO_ONE'
+  weak false
+  column 'CUSTOMER_ID'
+  foreignTable 'SA.CUSTOMERS'
+  foreignColumn 'CUSTOMER_ID'
+  cycle false
+  base false
+}
+
+:pm create-join id cview1 join1
+--
+
+== Remove Join
+The `remove-join` action deletes a join. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+table:: Name of the table containing the join
+index:: Index of join to remove
+
+
+=== Examples
+[source,groovy]
+--
+// Remove the join on tableName
+:pm remove-join id tableName join_index
+--
+
+
+== Create an Alias Table
+The `create-alias` action creates an alias table.  See xref:user:EditPhysicalView.adoc#AliasSingleTable[Alias a Single Table] for information about the role of aliases in a physical view. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+table:: Name of table to alias
+alias:: Name of alias table
+
+
+=== Examples
+[source,groovy]
+--
+// Create an alias table for table cview1 with name cview1_alias
+:pm create-alias id cview1 cview1_alias
+--
+
+
+== Rename an Alias Table
+The `rename-alias` action renames an alias table.  See xref:user:EditPhysicalView.adoc#AliasSingleTable[Alias a Single Table] for information about the role of aliases in a physical view. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+oldName:: Old name of alias table
+newName:: New name of alias table
+
+
+=== Examples
+[source,groovy]
+--
+// Rename alias table cview1_alias1 to cview1_alias1_rename
+:pm rename-alias 2 cview1_alias1 cview1_alias1_rename
+--
+
+== Update Auto-Alias Properties
+The `update-auto-aliasing` action changes properties of auto-alias tables.  See xref:user:EditPhysicalView.adoc#AliasSingleTable[Alias a Single Table] for information about the role of aliases in a physical view. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Physical view ID
+table:: Table that has been aliased
+aliases:: Auto-alias information
+
+
+=== Examples
+[source,groovy]
+--
+import inetsoft.shell.dsl.PhysicalTableDelegate
+def aliases = [PhysicalTableDelegate.autoAlias {
+  alias 'a'
+  foreignTable 'SA.ORDERS'
+  keepOutgoing true
+  prefix 'b' }]
+
+:pm update-auto-aliasing 0 'SA.CUSTOMERS' aliases
+--
+
+== List Tables
+The `list-tables` action lists tables of an extended physical view.  See xref:user:ExtendPhysicalView.adoc[] for more information about extended physical views. {connectRepositoryNote}
+
+=== Parameters
+
+datasource:: Datasource name for which to list tables
+connection:: Connection for multi-tenant environment. (See xref:EnableMultiTenant.adoc[]) (optional)
+catalog:: Database catalog (optional)
+schema:: Database schema (optional)
+name:: The name of the table to match (optional)
+organizationid:: Organization ID (optional)
+
+
+=== Examples
+[source,groovy]
+--
+// List tables for Orders datasource for organization0
+:pm list-tables  --datasource=Examples/Orders --organizationid organization0
+
+// List tables for ModelTest datasourse, schema SA
+:pm list-tables "Examples/ModelTest" "" "" "SA" "CUSTOMERS"
+
+// List extended physical view tables
+:pm list-tables "mv1" "mv2"
+--
+
+
+== List Table Column
+The `list-columns` action lists the columns of specified tables {connectRepositoryNote}
+
+=== Parameters
+
+
+tablepath:: Path to the table
+organizationid:: Organization ID (optional)
+
+
+=== Examples
+[source,groovy]
+--
+// List columns  for ORDERS table for organization0
+:pm list-columns 'Examples/Orders/TABLE/SA/ORDERS' --organizationid organization0
+
+// List extended physical view tables
+:pm list-columns 'Examples/Orders/TABLE/SA/ORDERS' --organizationid organization0
+--
+
+

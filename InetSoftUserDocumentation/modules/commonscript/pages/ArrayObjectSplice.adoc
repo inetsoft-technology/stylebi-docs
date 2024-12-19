@@ -1,0 +1,69 @@
+= Array.splice(begin,count[,item1,item2,...])
+:navtitle: Array.splice()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:commonscript:indexOf.adoc[] to detect an item in an array.
+* xref:commonscript:StringObjectSlice.adoc[] to extract a slice of a string.
+====
+
+
+
+
+== Parameters
+begin::  Index at which to begin removing items from array. (Set to a *negative* value to count from the *end* of the array.)
+count:: Number of items to remove. Set  `0` to prevent removal of items.
+item1, item2, ...:: Optional values to be  added to the array at the location specified by the `begin` index.
+
+
+
+
+
+
+
+
+
+
+
+== Examples
+.Addition and removal
+[source,javascript]
+----
+var arr = ['A','B','C','D'];
+arr.splice(1,2,'X','Y','Z');   // remove 'B','C', add 'X','Y','Z' in same location
+alert('Array is now ' + arr.join(',')) // returns "Array is now A,X,Y,Z,D"
+----
+.Addition only
+[source,javascript]
+----
+var arr = ['A','B','C','D'];
+arr.splice(2,0,'X','Y','Z'); // no removal, adds 'X','Y','Z' before index 2
+alert('Array is now ' + arr.join(',')) // returns "Array is now A,B,X,Y,Z,C,D"
+----
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+var arr = TableView1.table['Name'];
+arr.splice(1,2,'X','Y','Z');
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+var arr = Sales['Name'];
+arr.splice(1,2,'X','Y','Z');
+
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

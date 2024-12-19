@@ -1,0 +1,40 @@
+= CALC.varpa(array)
+:navtitle: CALC.varpa()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the *population variance* for the values in `array`, which can include Boolean values. Variance is the square of the standard deviation and provides a measure of how widely the data are spread about the mean. {CALCExcelFunctionPage}
+
+
+
+== Parameters
+array::			Array of real or Boolean values. Boolean `true` evaluates to 1; `false` evaluates to 0. (String values are ignored.)
+
+
+== Example
+
+[source,javascript]
+----
+CALC.varpa([true,false,1345,1301,1368,1322,1310,1370,1318,1350,1303,1299]);
+// returns 245544.85416666666
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.varpa(TableView1.table['Col1'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.varpa(Sales['Col1']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

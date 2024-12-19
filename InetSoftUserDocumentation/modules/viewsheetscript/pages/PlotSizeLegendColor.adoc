@@ -1,0 +1,30 @@
+= sizeLegend.color
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the color for labels within a size-key legend.
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.sizeLegend.color = [255,0,0];
+Chart1.sizeLegend.color = {r:255,g:0,b:0};
+
+image:commonscript:sizeLegendColor.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sizeLegend.color         // unqualified
+Chart1.sizeLegend.color  // qualified
+
+{secondForm}
+====

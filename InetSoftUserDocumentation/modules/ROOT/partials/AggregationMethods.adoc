@@ -1,0 +1,28 @@
+
+The list below describes the available Crosstab and Chart aggregation measures. You can choose to display univariate aggregations (e.g., ‘Sum’, ‘Count’) as a percentage value by selecting the percentage basis (e.g., ‘Group’, ‘GrandTotal’) from the accompanying ‘Percentage of’ menu. For the bivariate aggregation methods (e.g., ‘Correlation’, ‘Weighted Average’), you will need to select a variable (column) to use as the second operand in the computation. Make this selection in the menu labeled ‘with’.
+
+Sum:: Displays the sum of the measure values for the given row and column headings.
+Average:: Displays the average of the measure values for the given row and column headings.
+Max:: Displays the maximum of the measure values for the given row and column headings.
+Min:: Displays the minimum of the measure values for the given row and column headings.
+Count:: Displays the total count of measure values for the given row and column headings. This represents the total number of records corresponding to the given row and column headings, and is the same value for any selected measure.
+Distinct Count:: Displays the count of unique measure values for the given row and column headings.
+First:: Displays the first value for the measure (for the given row and column headings) when sorted based on the values in a second column, specified by the menu labeled ‘by’.
+Last:: Displays the last value for the measure (for the given row and column headings) when sorted based on the values in a second column, specified by the menu labeled ‘by’.
+Correlation:: Displays the Pearson correlation coefficient for the correlation between the measure values (for the given row and column headings) and the corresponding values in a second column, specified by the menu labeled ‘with’.
+Covariance:: Displays the covariance between the measure values (for the given row and column headings) and the corresponding values in a second column, specified by the menu labeled ‘with’.
+Variance:: Displays the (sample) variance of the measure values for the given row and column headings.
+Std Deviation:: Displays the (sample) standard deviation of the measure values for the given row and column headings.
+Variance (Pop):: Displays the (population) variance of the measure values for the given row and column headings.
+Std Deviation (Pop):: Displays the (population) standard deviation of the measure values for the given row and column headings.
+Weighted Average:: Displays the weighted average of the measure values for the given row and column headings. The weights are given by the corresponding values in a second column, which is specified by the menu labeled ‘with’.
+Median:: Displays the median (middle) of the measure values for the given row and column headings.
+Mode::
+Displays the mode (most common) of the measure values for the given row and column headings.
+Product::
+Displays the product (multiplication) of the measure values for the given row and column headings.
+Concat:: Displays the concatenation into a comma-separated list of the measure values for the given row and column headings.
+NthLargest:: Displays the Nth largest of the measure values for the given row and column headings.
+NthSmallest:: Displays the Nth smallest of the measure values for the given row and column headings.
+NthMostFrequent:: Displays the Nth most common of the measure values for the given row and column headings.
+PthPercentile:: Displays the value of the Pth percentile for the measure values for the given row and column headings.

@@ -1,0 +1,21 @@
+= Java Objects (LiveConnect)
+
+The JavaScript engine used in InetSoft supports the *LiveConnect* feature, which allows a JavaScript script to access Java classes and objects. This is particularly useful in InetSoft because the host environment is running inside a Java virtual machine and many properties of the Dashboard elements require Java objects.
+
+A Java object can be created using the *new* operator:
+
+[source,javascript]
+Text1.foreground = new java.awt.Color(0xFF0000);
+
+
+The Java class name must be fully qualified in the `new` expression. Once a Java object is created, its properties and methods can be accessed from the script. The properties are discovered by search for the getter and setter methods etc. A "`getter`" method is a non-void method starting with ‘get’ and has an empty parameter list. A "`setter`" method is a void method starting with ‘set’ and accepts a single parameter. The name following the ‘get’ and ‘set’ is used as the property name with the first letter converted to lowercase.
+
+If a property has only a getter method, it is marked as a *read-only* property. Assignment to the property is ignored:
+
+[source,javascript]
+var rgb = Text1.foreground.red; // Color.getRed()
+
+Other public methods in the Java object are accessible as JavaScript methods in a script:
+
+[source,javascript]
+Text1.foreground = Text1.foreground.darker(); // Color.darker()

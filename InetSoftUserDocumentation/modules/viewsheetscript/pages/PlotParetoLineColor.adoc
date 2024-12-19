@@ -1,0 +1,32 @@
+= paretoLineColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the color of the *cumulative total* line in a xref:viewsheet:ParetoChart.adoc[]  when a field is bound in the *Color* region. If there is no *Color* binding, the Pareto line is the same color as the bars.
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+ Chart1.paretoLineColor = [255,0,0];
+Chart1.paretoLineColor = {r:255,g:0,b:0};
+
+
+image:commonscript:paretoLineColor.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+paretoLineColor         // unqualified
+Chart1.paretoLineColor  // qualified
+
+{secondForm}
+====

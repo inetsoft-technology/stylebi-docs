@@ -1,0 +1,24 @@
+= Save a Public Dashboard
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To save a Dashboard, follow the steps below:
+
+IMPORTANT: You must possess *write permission* for the Dashboard or  folder in order to save changes.
+
+. Press the {buttonSave} in the toolbar or press kbd:[Ctrl+S] on the keyboard. This opens the ‘Save Dashboard’ dialog box.
++
+TIP: The {buttonSave}  replaces an older version with the current version, retaining the same name. To save a new version of the Dashboard under a different name, press the {buttonSaveAs}.
+
+. Under the *Repository* tab, enter a name for the Dashboard in the ‘Name’ field.
+
+. To save into a *public location*, choose a location outside the ‘Private Dashboard’ folder, and press btn:[OK]. The Dashboard will be available to all users who have read permission for the selected location.
++
+image:viewsheet:viewsheetExp10.png[]
++
+To save into a *private location*, select the ‘Private Dashboard’ node and press btn:[OK]. The Dashboard will only be accessible to its creator.
+
+. Under the *Options* tab, select ‘List on Portal Tree’ to make the Dashboard available to users in the User Portal.
+
+. Press btn:[OK] to save the Dashboard.
+

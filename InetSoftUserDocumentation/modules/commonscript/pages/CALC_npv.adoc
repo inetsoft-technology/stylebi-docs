@@ -1,0 +1,44 @@
+= CALC.npv(rate, values)
+:navtitle: CALC.npv()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *net present value* of an investment by using a discount rate and a series of future payments (negative values) and income (positive values). {CALCExcelFunctionPage}
+
+== Parameters
+rate::			Discount rate over a period
+values::			Array of payment and income values
+
+
+
+
+
+== Example
+Net present value of an investment, under an assumed discount rate of 10%, that has first period payment (investment) of $10,000, second period income of $3000, third period income of $4200, and fourth period income of $6800.
+
+
+
+[source,javascript]
+----
+CALC.npv(0.10, [-10000, 3000, 4200, 6800]);
+// returns 1188.4434123352207 ($1188.44 present value)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.npv(field['Rate'],  [-10000, 3000, 4200, 6800])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.npv(Slider1.selectedObject,  [-10000, 3000, 4200, 6800])
+CALC.npv(parameter.Rate,  [-10000, 3000, 4200, 6800])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

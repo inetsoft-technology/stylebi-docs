@@ -1,0 +1,32 @@
+= Sort Data
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheet:partial$availableToEndUsers.adoc[]
+
+The following sections explain how to sort data in a Table and a Chart. (To sort at the Data Worksheet level, see xref:dataworksheet:SortData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[].)
+
+== Sort Data in a Table
+
+NOTE: Sorting actions for certain tables may be administratively restricted.
+
+To sort a Table column or Crosstab column, hover the mouse over the right side of header or data cell and press the {buttonSort}.
+
+image:SortColumn.png[]
+
+Press the button once to sort in ascending (alphabetical) order. Press the button a second time to sort in descending (reverse-alphabetical) order. Press the button a third time to restore the original order.
+
+For a Crosstab, hover the mouse over a cell to display the current sort order for the field. This may show an  {buttonAscSort}, a {buttonDescSort}, an {buttonAscSortByValue}, or a {buttonDescSortByValue}.  See xref:AddCrosstab.adoc[] for more information about setting sorting in a Crosstab.
+
+image:SortColumnByValue.png[]
+
+
+
+== Sort Data in  Chart
+To sort Chart *dimension* groups based on a *measure*, hover the mouse over the desired measure axis. This displays the {buttonSort} next to the axis. Press the button once to sort the groups in ascending order by measure value, press a second time to sort in descending order by measure value, and press a third time to restore the original order.
+
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+
+image:sortButtonChart.png[]
+
+When multiple dimensions are represented on the chart (as in the image above), the {buttonSort} operates on the innermost dimension.

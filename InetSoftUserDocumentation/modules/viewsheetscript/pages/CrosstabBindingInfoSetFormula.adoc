@@ -1,0 +1,46 @@
+= bindingInfo.setFormula(measure1, formula, [measure2])
+:navtitle: setFormula()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the aggregation formula for one of the measures specified by xref:viewsheetscript:CrosstabBindingInfoMeasureFields.adoc[]. This is equivalent to setting the ‘Aggregate’ method for a measure in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetFormula.png[]
+
+
+== Parameters
+measure1::			String: Name of a measure to aggregate
+formula::			A xref:commonscript:StyleConstant.adoc[] object.  See xref:commonscript:StyleConstantSummarizationFormula.adoc[].
+measure2::			String: Name of the secondary measure for bivariate aggregation formulas (e.g., correlation)
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Category','Name'];
+Crosstab1.bindingInfo.colFields = ['Region','State'];
+Crosstab1.bindingInfo.measureFields = ['Total','Quantity Purchased'];
+Crosstab1.bindingInfo.setFormula('Quantity Purchased',StyleConstant.SUM_FORMULA);
+Crosstab1.bindingInfo.setFormula('Total',StyleConstant.AVERAGE_FORMULA);
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.setFormula             // unqualified
+Crosstab1.bindingInfo.setFormula   // qualified
+
+{secondForm}
+====
+
+

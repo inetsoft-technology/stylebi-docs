@@ -1,0 +1,43 @@
+= CALC.timeValue(date)
+:navtitle: CALC.timeValue()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns a decimal between 0 and 1 representing the time in the specified date object as a fraction of the 24-hour day. For example, time 0:00 has value 0.0, while time 12:00 has value 0.5. {CALCExcelFunctionPage}
+
+== Parameters
+date::			Date object
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.timevalue(new Date(2014,0,1,0,0,0)); // returns 0.0
+CALC.timevalue(new Date(2014,0,1,12,0,0)) // returns 0.5
+CALC.timevalue(new Date(2005,1,2,6,0,0)); // returns 0.25
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.timevalue(field['Order Date'])
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.timevalue(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

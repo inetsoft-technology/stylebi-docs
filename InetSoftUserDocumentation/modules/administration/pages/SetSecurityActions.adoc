@@ -1,0 +1,93 @@
+= Set Security Actions
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The procedure for setting object permissions (Actions) is the same for all components.  For example, to set permissions for the ‘Bookmark’ feature, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Security* page in the left panel.
+
+
+. Select the *Actions* tab.
++
+image:securityActions.png[]
+
+include::partial$selectOrganization.adoc[]
+
+
+. Click to select the desired action or object in the tree. For example, select the ‘Open and Create Bookmarks’ item in the tree.
++
+.Expand to see a listing of available actions
+[%collapsible]
+====
+The following actions are available:
+
+Bookmark:: Access to the {buttonBookmarks} features in the  Dashboard toolbar. ‘Open Bookmark’ permission allows the user to view existing bookmarks, while ‘Open and Create Bookmark’ additionally allows the user to create new bookmarks. ‘Share Bookmark’ permission allows a user to share bookmarks to members of their own group(s), while ‘Share to All’ allows sharing to all users without exception.   (See xref:user:BookmarkDashboard.adoc[] for more information.)
+Chart Types:: Access to different chart types in the Chart Editor.
+Dashboard Toolbar:: Access to various buttons on the Dashboard toolbar. (See xref:user:UseDashboard.adoc[] for more information.)
+Enterprise Manager:: Access to various pages in Enterprise Manager.
++
+IMPORTANT: The following options are not available when multi-tenancy is enabled (see xref:administration:EnableMultiTenant.adoc[]): menu:Monitoring[Cache], menu:Monitoring[Clustering], menu:Monitoring[Summary], menu:Monitoring[Logs], menu:Settings[All Properties], menu:Settings[General], menu:Settings[Logging], menu:EM[Notification].
+
+Internal Scheduled Tasks:: Access to various predefined scheduled tasks.
+Portal Tabs:: Access to various Portal tabs. (See xref:user:UsePortal.adoc[] for more information about the Portal.)
+Schedule Options:: Access to various Scheduler options when scheduling  Dashboards in the Portal.  See xref:user:ScheduleDashboard.adoc[] or xref:administration:Schedule.adoc[] for more details.
+Social Sharing:: Access to the various options under the {buttonSocialSharing} in the Portal. (See xref:viewsheet:ShareToSocialNetwork.adoc[] for more information.)
+Visual Composer:: Access to Visual Composer, for example via the {buttonWorksheet} or {buttonCreateDashboard} options under the Portal {buttonCreate}. Visual Composer permission is required to edit Dashboards and Data Worksheets.
+Create New Data Source:: Permission to select {buttonDataSource} from the {buttonCreate} in the Portal. Requires also permission for the Portal Data tab (see ‘Portal Tabs’ above). (See xref:user:ConnectToData.adoc[] for more information.)
+Cross Join:: Permission to create cross joins via the {buttonCrossJoin} option in a Data Worksheet and to create cross-joins in a physical view. Restricting access to cross joins may help prevent the accidental creation of large queries that impact performance.
+Edit Mobile Devices:: Permission to edit mobile device screen layouts. (See xref:viewsheet:CreateDeviceLayout.adoc[] for more information about device layouts.)
+Free Form SQL:: Permission to create a data set by entering a SQL string in the ‘Database Query’ dialog box of a Data Worksheet. (See xref:dataworksheet:QueryData.adoc[] for more information.)
+Materialize Assets:: Access to the ‘Materialize’ menu option for Dashboards in the Portal Repository tree, as well as for Enterprise Manager. (See xref:viewsheet:ImprovePerformance.adoc[] and xref:administration:MaterializedView.adoc[]  for more information.)
+My Dashboards:: Access to the ‘My Dashboards’ folder in the Portal Repository tree for storage of private assets.
+Physical Table:: Access to database tables via the ‘TABLE’ folder of the ‘Data Source’ tree in a Data Worksheet.
+Portal Repository Tree - Drag and Drop:: Permission to drag-and-drop assets in the Portal Repository tree. (See xref:user:ManageRepository.adoc[] for more information.)
+Profile:: Permission to profile the performance of a Dashboard  via the Portal {buttonProfile} action. (See xref:user:ProfileDashboard.adoc[] for more information.)
+Upload Drivers:: Permission to upload database drivers when creating a new data source using the {buttonDataSource} option under the Portal {buttonCreate} and on the *Drivers and Plugins* page in Enterprise Manager. (See xref:user:ConnectToData.adoc[] and xref:administration:Storage.adoc#ManageDriversandPlugins[Manage Drivers and Plugins] for more information.)
+====
++
+image:server7.png[]
++
+. If the ‘Grant access to all users’ check-box is checked, uncheck it.
++
+[NOTE]
+====
+Depending on the particular component, the check-box may be labeled ‘Grant access to all users’, ‘Deny access to all users’, or ‘Use parent permissions’. In all cases, you must uncheck the box in order to specify individual permissions.
+
+.Expand to view a list of parent permissions
+[%collapsible]
+=====
+include::ROOT:partial$ParentPermissions.adoc[]
+=====
+====
+
+. Press the {buttonEMAdd} button. This opens the ‘Add Permission’ dialog box.
++
+image:server7a.png[]
+. {buttonCtrl}-click to select the desired users, groups, or roles, and press {buttonEMAdd}.
++
+image:Report Permissions.png[]
+. Select ‘Access requires both User and Role permission’ to specify that access to the object or component is granted only if the current user has *both* user *and* role permissions; i.e., both the user’s name (or group) and at least one of the user’s roles appear in the ‘Selected Entities’ table.
++
+Select ‘Access requires either User or Role permission’ to specify that access to the object or component is granted if the current user has *either* user *or* role permissions; i.e., either the user’s name (or group) or at least one of the user’s roles appear in the ‘Selected Entities’ table.
++
+IMPORTANT: This is an organization-wide setting, and will be applied to all assets within the same organization.
+
+. Select the desired permission (READ, ACCESS) by checking the boxes next to the users, roles, or groups.
+
+. Press {buttonEMApply} to save your changes.
+
+
+[IMPORTANT]
+.Notes on Action Permissions
+====
+[square]
+* For components under the ‘Data Source’ node, the ‘Use Parent Permissions’ setting implies that no permission is granted.
+
+* Changing permission for a data source folder has the effect of changing permissions for all data sources contained in that folder.
+
+* Permission for the ‘My Dashboards’ folder is granted by default for all users. However, if explicit permission for ‘My Dashboards’ is assigned to at least one user, then explicit permission must be assigned for any other users who require this feature.
+
+* The ‘Use Parent Permissions’ setting is significant only for the asset components listed under the ‘Data Worksheet’ node. If you set permissions for the ‘Global’ node, they can be inherited by all of the assets under this node.
+====

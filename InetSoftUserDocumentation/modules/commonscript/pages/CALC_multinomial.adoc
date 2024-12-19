@@ -1,0 +1,44 @@
+= CALC.multinomial(array)
+:navtitle: CALC.multinomial()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the ratio of the factorial of a sum of values to the product of their factorials. For `array` of three numbers stem:[[a, b,  c\]], the multinomial is given by
+
+stem:[((a+b+c)!)/(a!b!c!)]
+
+Non-integer values are truncated. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of positive integers for which to compute multinomial
+
+
+== Example
+[source,javascript]
+----
+CALC.multinomial([2,3,4]); // returns 1260.0
+
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.multinomial(TableView1.table['Quantity'])
+----
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.multinomial(Sales['Quantity']);
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,54 @@
+= Array.unshift(item1,item2,...)
+:navtitle: Array.unshift()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:commonscript:ArrayObjectPush.adoc[] to add items to the end of the array.
+* xref:commonscript:ArrayObjectShift.adoc[] to remove the first item from an array.
+* xref:commonscript:ArrayObjectJoin.adoc[] to combine the elements of an array into a string.
+====
+
+
+
+
+
+Adds specified items to the beginning of the array, and returns the new array length.
+
+
+
+
+
+== Example
+[source,javascript]
+----
+var arr = ['A','B','C'];
+alert('New length is ' + arr.unshift('D','E')); // returns "New length is 5"
+alert('Array is now ' + arr.join(',')) // returns "Array is now D,E,A,B,C"
+----
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+var arr = TableView1.table['Name'];
+alert('New length is ' + arr.unshift('Joe','Nancy'));
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+var arr = Sales['Name'];
+alert('New length is ' + arr.unshift('Joe','Nancy'));
+
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

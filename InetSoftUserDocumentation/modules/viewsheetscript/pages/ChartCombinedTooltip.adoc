@@ -1,0 +1,29 @@
+= combinedTooltip
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+For a xref:viewsheet:LineChart.adoc[] or xref:viewsheet:AreaChart.adoc[], when set to `true`, displays a single tooltip with details from all lines. (The amount of data displayed will be limited by available space in the tooltip.) When `false` (default), the tooltip displays details only for the line to which the user points.
+
+==  Type
+Boolean:: `true`: Display combined tooltip +
+`false`: Display individual tooltip
+
+
+== Example
+[source,javascript]
+Chart1.combinedTooltip = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+combinedTooltip         // unqualified
+Chart1.combinedTooltip  // qualified
+
+{secondForm}
+====
+
+

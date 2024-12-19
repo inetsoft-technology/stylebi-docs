@@ -1,0 +1,45 @@
+= bindingInfo.getColumnOrder(sort_field, header)
+:navtitle: getColumnOrder()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Returns the sorting order for a row or column header (as a xref:commonscript:StyleConstant.adoc[] integer) specified by  xref:CrosstabBindingInfoSetColumnOrder.adoc[] or set by the ‘Sort’ option in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetColumnOrder_1.png[]
+
+
+
+== Parameters
+sort_field::			String: Name of a sorted column
+header::			`StyleConstant.ROW_HEADER` or +
+`StyleConstant.COLUMN_HEADER`
+
+== Returns
+Integer
+
+
+
+
+
+
+== Example
+[source,javascript]
+if(Crosstab1.bindingInfo.getColumnOrder('Category',StyleConstant.ROW_HEADER)==StyleConstant.SORT_VALUE_DESC) {
+  Crosstab2.bindingInfo.setColumnOrder('Category',StyleConstant.ROW_HEADER,StyleConstant.SORT_VALUE_DESC,'Sum(Total)');
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.getColumnOrder             // unqualified
+Crosstab1.bindingInfo.getColumnOrder   // qualified
+
+{secondForm}
+====
+
+

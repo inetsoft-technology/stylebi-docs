@@ -1,0 +1,43 @@
+= query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheetscript:TextFields.adoc[] to specify the fields to display in the Text element.
+====
+
+Specifies the data block to be used by the Text component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.
+
+
+image:dataworksheet:dataBlocks_5.png[]
+
+== Type
+String
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Text1.query = 'Sales';
+Text1.fields = ['Total'];
+Text1.formula = StyleConstant.AVERAGE_FORMULA;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+query            // unqualified
+Text1.query      // qualified
+
+{secondForm}
+====
+
+

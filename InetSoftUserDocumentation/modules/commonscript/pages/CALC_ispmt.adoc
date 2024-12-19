@@ -1,0 +1,56 @@
+= CALC.ispmt(rate, per, nper, pv)
+:navtitle: CALC.ispmt()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *interest* paid during a given period for a fixed-rate investment in which a constant amount of the principal is paid at the start of each period. This function is provided for compatibility with Lotus 1-2-3. {CALCExcelFunctionPage}
+
+== Parameters
+rate::			Interest rate per period
+per::			Period for which to return interest (between 1 and `nper`)
+nper::			Total number of payment periods in an annuity
+pv::			Present value (positive for a loan, negative for an investment)
+
+
+
+== Example
+Amount of interest in each of the first ten payments for an $8000 two-year loan with 10% annual interest. (The negative values indicates that these are payments.)
+
+[source,javascript]
+----
+for(var period = 1; period <= 10; period++) {
+  alert('Period ' + period +': ' + CALC.ispmt(0.1/12, period, 12*2, 8000))
+}
+
+// Returns:
+// Period 1: -63.88888888888889
+// Period 2: -61.111111111111114
+// Period 3: -58.333333333333336
+// Period 4: -55.555555555555564
+// Period 5: -52.77777777777778
+// Period 6: -50
+// Period 7: -47.22222222222223
+// Period 8: -44.44444444444445
+// Period 9: -41.66666666666667
+// Period 10: -38.88888888888889
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.ispmt(field['Rate'], period, 12*2, 8000)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.ispmt(Slider1.selectedObject, period, 12*2, 8000)
+CALC.ispmt(parameter.Rate, period, 12*2, 8000)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

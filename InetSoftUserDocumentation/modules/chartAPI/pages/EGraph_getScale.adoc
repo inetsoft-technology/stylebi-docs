@@ -1,0 +1,50 @@
+= EGraph.getScale(field)
+:navtitle: EGraph.getScale()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+xref:chartAPI:ChangeChartScaling.adoc[] for information on setting scales.
+====
+
+
+Returns a handle to the xref:chartAPI:Scale.adoc[] object specified by the `field`  parameter. This is useful in cases where the scale was not explicitly assigned to a variable at creation time.  The corresponding “setter” function is xref:chartAPI:EGraph_getScale.adoc[].
+
+
+== Parameters
+field::			String representing field name
+
+
+
+
+== Example
+Follow the steps below:
+
+. Create a Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a xref:viewsheet:BarChart.adoc[]  with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+
+. Add the following script:
++
+.Chart Component Script
+[source,javascript]
+--
+var scale = graph.getScale("Sum(Total)"); <1>
+scale.setMin(600000);
+scale.setMax(1000000); <2>
+--
+<1> Obtain handle to `Scale` object.
+<2> Apply operations to `Scale` object.
+
++
+image:commonscript:EGraphgetScale.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+

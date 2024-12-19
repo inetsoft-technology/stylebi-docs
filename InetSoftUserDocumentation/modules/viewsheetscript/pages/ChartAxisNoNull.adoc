@@ -1,0 +1,33 @@
+= axis.noNull
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+For Date/Time and Categorical axes, set to `true` to suppress the display of null dimension values. When `false` (default), null values are represented without labels.
+
+
+
+== Type
+Boolean
+
+
+
+== Example
+[source,javascript]
+Chart1.axis['Year(Date)'].noNull = true;
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].noNull             // unqualified
+Chart1.axis['...'].noNull      // qualified
+
+{secondForm}
+====
+

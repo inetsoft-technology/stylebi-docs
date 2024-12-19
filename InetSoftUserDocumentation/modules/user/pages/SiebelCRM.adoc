@@ -1,0 +1,19 @@
+= Siebel CRM
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+To connect to Siebel CRM, create a direct connection to the back-end database.
+include::partial$dataSourceUserIntro.adoc[]
+
+
+
+. Select the appropriate ‘Siebel CRM’ data source (using back-end database of  Oracle or SQL Server), and press btn:[Create]. This opens the database definition screen for  Oracle or SQL Server. See the sections below for additional instructions for these databases:
++
+[square]
+* xref:Oracle.adoc[]
+* xref:SQLServer.adoc[]
+
+
+

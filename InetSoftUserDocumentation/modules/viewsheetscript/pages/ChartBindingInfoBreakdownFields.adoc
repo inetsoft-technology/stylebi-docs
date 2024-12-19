@@ -1,0 +1,40 @@
+= bindingInfo.breakdownFields
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the query fields on which to break down the data. These fields will be bound to the ‘Group By’ region of the Chart Editor.
+
+
+== Type
+2D Array:: `[[Field1,Type1],[Field2,Type2],...]` +
+`Field`: String +
+`Type`: `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
+
+
+
+
+
+
+
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.query = "All Sales";
+Chart1.bindingInfo.xFields = [["Employee",Chart.STRING]];
+Chart1.bindingInfo.yFields = [["Total",Chart.NUMBER]];
+Chart1.bindingInfo.breakdownFields = [["Order Date",Chart.DATE]];
+--
+
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+image:commonscript:bindingInfoBeakoutFields.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

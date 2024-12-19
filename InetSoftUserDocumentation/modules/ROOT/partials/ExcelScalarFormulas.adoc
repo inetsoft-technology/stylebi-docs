@@ -1,0 +1,93 @@
+.Excel-style Date functions
+[example]
+=====
+xref:commonscript:CALC_monthname.adoc[]:: Obtain the name of the month from a date field.
++
+[source,javascript]
+CALC.monthname(field['Date'])
++
+xref:commonscript:DateGlobalDateAdd.adoc[]:: Add or subtract a specified number of days, months, or years from a date field.
++
+[source,javascript]
+dateAdd('m',-1,field['Date'])
+// Subtract one month from the value in the date field
++
+
+xref:commonscript:DateGlobalDateDiff.adoc[]:: Return the difference in days, months, or years between two dates.
++
+[source,javascript]
+dateDiff('d',field['Date'],CALC.now())
+// Return the days elapsed from the Date value until today
++
+xref:commonscript:CALC_now.adoc[]:: Return the current date and time. Often used with a date operator such as dateDiff() or dateAdd().
++
+[source,javascript]
+dateDiff('d',field['Date'],CALC.now())
+// Return the days elapsed from the Date value until today
+=====
+.Excel-style Math functions
+[example]
+=====
+xref:commonscript:CALC_round.adoc[]:: Round a numerical value to a specified number of decimal places.
++
+[source,javascript]
+CALC.round(field['Total'],2)
+
+xref:commonscript:CALC_sqrt.adoc[]:: Compute the square root of a value.
++
+[source,javascript]
+CALC.sqrt(field['Total'])
+=====
+
+.Excel-style Text functions
+[example]
+=====
+xref:commonscript:CALC_proper.adoc[]:: Convert a string to “proper” case (initial caps):
++
+[source,javascript]
+CALC.proper(field['Description'])
++
+xref:commonscript:CALC_trim.adoc[]:: Remove extra whitespace from a string.
++
+[source,javascript]
+CALC.trim('   Mary had a   little     lamb.')
+// returns “Mary had a little lamb”.
+
+xref:commonscript:CALC_len.adoc[]:: Return the length of a string, including spaces.
++
+[source,javascript]
+CALC.len(field['Company'])
+
+xref:commonscript:CALC_concatenate.adoc[]:: Concatenate strings.
++
+[source,javascript]
+CALC.concatenate([field['First_Name'],' ',field['First_Name']]);
+// Or use the JavaScript concatenation operator, “+”:
+field['First_Name'] + field['First_Name']
+
+xref:commonscript:CALC_left.adoc[]:: Return a specified number of characters from the left side of a string:
++
+[source,javascript]
+CALC.left(field['Category'], 4);
+// Return the first four characters of each category name
+=====
+
+.Excel-style Logical functions
+[example]
+=====
+xref:commonscript:CALC_iif.adoc[]:: Test a condition to determine a return value:
++
+[source,javascript]
+CALC.iif(field['Total']>500,'big sale','small sale')
+// Return ”big sale” if Total > $500, otherwise “small sale”
+// Or use the JavaScript ternary operator:
+field['Total']>500 ? 'big sale' : 'small sale'
+
+xref:commonscript:CALC_and.adoc[]:: Return “true” if two or more conditions are simultaneously true. Often used together with a conditional operator such as iif.
++
+[source,javascript]
+CALC.and(field['Total']>200, field['Quantity Purchased']<10)
+// Return true if Total > $200 AND Quantity is less than 10
+// Or use the JavaScript “and” operator:
+(field['Total']>200) && (field['Quantity Purchased']<10)
+=====

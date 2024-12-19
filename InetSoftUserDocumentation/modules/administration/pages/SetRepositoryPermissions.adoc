@@ -1,0 +1,59 @@
+= Set Repository Permissions
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To set permissions for Dashboards,  data sources, repository folders, etc., follow the steps below.
+
+NOTE: Repository folders are logical groupings, and do not represent file system directories.
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Content* page in the left panel.
+
+include::partial$selectOrganization.adoc[]
+
+. Select the *Repository* tab.
++
+image:Figure 15.png[]
+
+
+. Click to select the desired repository asset (Dashboard, folder, etc.) in the tree.
+. Select the *Security* tab.
++
+image:dashboardSecurityTab.png[]
+. Uncheck ‘Derive permissions from Parent’.
++
+.Expand to view a list of parent permissions
+[%collapsible]
+=====
+include::ROOT:partial$ParentPermissions.adoc[]
+=====
+
+. Select ‘Access requires both User and Role permission’ to specify that access to the Dashboard or folder is granted only if the current user has *both* user *and* role permissions; i.e., both the user’s name (or group) and at least one of the user’s roles appear in the ‘Selected Entities’ table.
++
+Select ‘Access requires either User or Role permission’ to specify that access to the Dashboard or folder is granted if the current user has *either* user *or* role permissions; i.e., either the user’s name (or group) or at least one of the user’s roles appear in the ‘Selected Entities’ table.
++
+IMPORTANT: This is an organization-wide setting, and will be applied to all assets within the same organization.
+
+
+. Press the {buttonEMAdd} button. This opens the ‘Add Permission’ dialog box.
++
+image:dashboardSecurityTab2.png[]
+. {buttonCtrl}-click to select the desired users, groups, or roles, and press {buttonEMAdd}.
++
+image:Report Permissions.png[]
+. Select the desired permission (READ, WRITE, DELETE, SHARE, ADMIN) by checking the boxes next to the users, roles, or groups. Note that ADMIN permission provides privileges for administering the corresponding asset within Enterprise Manager, and therefore implies the  other permissions. The SHARE setting controls access to social sharing options in the Portal.
+. Press {buttonEMApply} to save your changes.
+
+
+
+[IMPORTANT]
+.Notes on Repository Permissions
+====
+
+* The ‘Derive permissions from parent folder’ option for a  Dashboard or folder specifies that permissions will be derived from the parent folder, as described below. If there are no explicit permissions set for its immediate parent, its permission inheritance will recurse higher up in the hierarchy of folders, until the root folder is reached.
+* 'Write' permission on a *folder* indicates that  Dashboards or sub-folders can be added to the folder, deleted from the folder, or modified within the folder.
+* 'Delete' permission on a *folder* indicates that the folder itself can be deleted, but does not entail individual delete permission for  Dashboards or sub-folders within the folder. To assign delete permission to all contents of a folder, set the ‘Write’ permission on the parent folder.
+* 'Write' permission on an individual *Dashboard* indicates that the   Dashboard can be modified, but does not entail delete permission for the  Dashboard.  To assign delete permission to a  Dashboard, set the ‘Delete’ permission on the individual  Dashboard.
+* Every user has full ‘Read’/’Write’/’Delete’ permissions to their own ‘My Dashboards’ folder.
+* If explicit permissions are set on an individual  Dashboard or  folder (i.e.,  ‘Derive permissions from parent folder’ is disabled), the explicit permissions govern the asset and the parent permissions are ignored.
+====

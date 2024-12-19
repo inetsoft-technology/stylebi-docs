@@ -1,0 +1,28 @@
+= Google Spreadsheets  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Google Spreadsheets  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:GoogleSpreadsheets.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonGoogleSpreadsheetsQuery}. This opens the ‘Google Spreadsheets  Query’ dialog box.
+
++
+image:dataSourceGoogleSheets5.png[]
+
+. From the ‘Spreadsheet’ menu choose the desired Google Spreadsheet. From the ‘Worksheet’ menu, choose the desired worksheet in the spreadsheet.
++
+image:dataSourceGoogleSheets6.png[]
+
++
+include::dataworksheet:partial$finalStepsQuery.adoc[]
+
+NOTE: The Google API applies certain formatting to column names, such as changing uppercase to lowercase and removing spaces.
+

@@ -1,0 +1,24 @@
+= Edit a Data Worksheet
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$rightClickOptions.adoc[]
+
+To edit a Data Worksheet in the User Portal, follow the steps below.
+
+include::ROOT:partial$createVisualizationClose.adoc[]
+
+. Press the top {buttonDataTab} in the Portal.
++
+image:user:uploadDriver1.png[]
+. Click to expand the folder containing the Data Worksheet that you want to edit.
++
+image:user:PortalEditWorksheet1.png[]
+. Click the name of the Data Worksheet that you want to edit.
++
+image:user:PortalEditWorksheet2.png[]
++
+This opens the Data Worksheet for editing in Visual Composer. You can now do data pipeline operations on this Data Worksheet, as described in the following sections (xref:dataworksheet:FilterData.adoc[], xref:dataworksheet:JoinData.adoc[], etc.).
+
+
+If Visual Composer is already open, you can open a Data Worksheet for editing by locating the Data Worksheet in the left panel. Double-click the Data Worksheet, or right-click and select ‘Open Sheet’ from the menu. Alternatively, you can drag the Data Worksheet into the canvas on the right side.
+
+image:dataworksheet:editWorksheetPortal.png[]

@@ -1,0 +1,277 @@
+= Schedule a Dashboard
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+The following sections explain how to schedule a Dashboard for automatic generation on a predefined cycle.
+
+== Quick-Schedule a Dashboard
+To quickly and easily schedule a Dashboard for automatic generation and delivery, follow the steps below.  For additional features, see xref:#CreateAdvancedSchedule[].
+
+. Open the Dashboard for viewing. (See xref:UseDashboard.adoc[].)
+
+. Press the {buttonSchedule} on the Dashboard toolbar. This opens the ‘Schedule Dashboard’ dialog box.
+
+. Select ‘Create New Bookmark’ and provide a name for the new bookmark, or select ‘Use Current Bookmark’. (See xref:BookmarkDashboard.adoc[] for more information about bookmarks.)
++
+image:scheduleDashboard1.png[]
+
+. Press btn:[Next].
+
+. In the ‘Format’ menu, select the format in which the Dashboard should be delivered.
++
+CSV:: {exportcsv}
+Excel:: {exportexcel}
+
+. In the ‘Emails’ field, enter a comma-separated list of email addresses to which the Dashboard should be delivered, or press the btn:[⋯] button to select from a list of user emails. (Only users from your own groups are listed.)
+
+. Select a ‘Daily’, ‘Weekly’, or ‘Monthly’, option and specify the additional details (e.g., time) when the Dashboard should be generated. {timeRangeCondition}
++
+image:scheduleDashboard2.png[]
+
+
+. Select the desired time zone from the ‘Time Zone’ menu.
+
+. Select ‘Include Link’ to include a URL link to the Dashboard in the email. The email recipient can click the link to open the Dashboard in a new browser tab if they possess the appropriate permissions for that Dashboard.
+
+. Press btn:[Finish] to close the dialog box.
+
+This creates a new scheduled task that will automatically generate and email the Dashboard on the schedule that you specified. The automatically generated Dashboard will use the same parameter values that you entered when you originally opened the Dashboard.
+
+
+[#SetAlert]
+== Set an Alert
+An *alert* is a notification that a specified *data event* has occurred, for example, that total sales have fallen below some critical level. You can set an alert based on highlight conditions in a Dashboard, or based on Dashboard Gauge ranges.
+
+To configure an alert for a Dashboard, follow the steps below:
+
+. Press the {buttonSchedule} in the Portal.
+
+. Press the btn:[New Task] button below the Schedule table.
++
+image:schedule1.png[]
++
+This creates a new task with the name ‘Task1’, and opens the ‘Schedule Task’ page.
++
+image:schedule2.png[]
+
+. Change the task name as desired in the ‘Name’ field.
+
+. On the *Condition* tab, set the frequency with which the alert conditions should be tested. (See xref:#ScheduleConditions[] for more details on the available day and time conditions.) For example, if you want to test a Dashboard highlight condition every day, specify a ‘Daily’ condition.
+
+. On the *Action* tab, press btn:[Select] to specify the Dashboard that contains the alert condition you want to test.
++
+image:alert1.png[]
+
+. Select the actions that you want to perform if the alert is triggered. Generally, you will at least select the ‘Deliver To Emails’ option. (See xref:#ScheduleActions[] for more about the available actions.) Enter a ‘Subject’ and ‘Message’ appropriate for the nature of the alert.
+
+
+. *_Optional:_*  Specify values for any required parameters in the '`Creation Parameters`' table. See xref:#CreationParameters[] for more information about creation parameters.
+
+
+
+. In the ‘Alert’ panel at the bottom of the *Action* tab, check the ‘Execute action only under selected highlight conditions’ option. This displays a list of the available *highlight* and *range* conditions for the selected Dashboard.
++
+NOTE: The table lists highlight conditions for all Chart, Table, Image, and Text components, as well as range conditions for Dashboard Output components.
+
+
+. In the table, select the highlight or range conditions that you want to trigger the alert. When *any* of the selected conditions test true, the actions you specified above (e.g., ‘Deliver To Emails’) will be performed.
++
+image:alert2.png[]
+
+. Press btn:[Save] to save the scheduled task.
+
+. Press btn:[OK] to close the dialog box.
+
+[#CreateAdvancedSchedule]
+== Create an Advanced Scheduled Task
+If you need additional control over the schedule settings, use the Portal's {buttonSchedule}. Follow the steps below:
+
+. Press the {buttonSchedule} in the Portal.
+
+. Press the btn:[New Task] button below the Schedule table.
++
+image:schedule1.png[]
++
+This creates a new task with the name ‘Task1’, and opens the ‘Schedule Task’ dialog box.
++
+image:schedule2.png[]
+
+. Use the *Condition* tab to set the time interval for task execution. See xref:#ScheduleConditions[] below.
+
+. Use the *Action* tab to set the action performed by the task. See xref:#ScheduleActions[] below.
+
+. Use the *Options* tab to configure task options. See xref:#ScheduleOptions[] below.
++
+
+. Press btn:[OK] to save the task.
+
+
+== Manage Scheduled Tasks
+You can view and monitor all of your scheduled tasks under the {buttonSchedule} of the Portal. This table displays a list of the schedule tasks, showing start time, end time, status of the last run, and start time for the next run.
+
+image:schedule5.png[]
+
+The table provides the following operations:
+
+* Press the {buttonEdit} to modify the task specifications. This opens the Editor as described in xref:#CreateAdvancedSchedule[] above. Proceed to make any desired changes to xref:#ScheduleConditions[], xref:#ScheduleActions[], or xref:ScheduleOptions[].
+* Press the {buttonRunNow} to execute the task immediately.
+* Press the {buttonStopNow} to stop the task immediately.
+* Press the {buttonDelete} to delete the task. To *temporarily disable* a task, deselect the ‘Enabled’ checkbox on the *Options* tab. See xref:#ScheduleOptions[] for more information.
+
+To *move* the task into a different folder, follow these steps:
+
+NOTE: New folders can only be created by an administrator.
+
+. Select the task in the table, and press the btn:[Move] button below the table.
++
+image:schedule6.png[]
+
+. Choose the desired folder into which to place the task, and press btn:[OK].
+
+
+[#ScheduleConditions]
+== Schedule Conditions
+include::ROOT:partial$scheduleConditions.adoc[]
+
+
+[#ScheduleActions]
+== Schedule Actions
+A schedule *action* specifies the set of operations to be performed when the scheduled task runs.
+
+image:scheduleReport2.png[]
+
+The available actions  are described below. To specify multiple actions, press the btn:[Multiple Actions] button at the bottom right. This will display the schedule action list to which you can add, delete, or edit actions. To execute a scheduled task only when  certain data conditions are satisfied, see xref:#SetAlert[] on this page. If the Dashboard requires parameter values, assign these parameters in the 'Creation Parameters' table at the bottom of the page. See xref:#CreationParameters[] below.
+
+
+image:scheduleDashboard3.png[]
+
+The following options are available:
+
+
+.Enable Notification of Task Status
+[%collapsible]
+====
+****
+This option sends notifications to the email addresses that you specify as a comma-separated list in the 'Notify' field.  The email notification informs the recipient of whether the Dashboard was successfully generated or not.  Select ‘Notify only if failed’ to limit the notification only to the event of a task failure.
+
+image:schedulerNotification2.png[]
+
+To send an *SMS*  message to a phone, enter the provisioned email address supplied by the recipient’s service provider. (For example, to send a text message to Verizon number 1234567890, enter the email address `1234567890@vtext.com`.)
+****
+====
+
+
+.Enable Deliver to Emails
+[%collapsible]
+====
+****
+This option sends the Dashboard as an email attachment to the email addresses that you specify as a comma-separated list  in the ‘To’ field. Use the 'Format' menu to choose the format in which to generate the Dashboard: 'PDF', 'PowerPoint', or 'Excel'.
+
+CSV:: {EXPORTCSV}
+Excel:: {ExportExcel}
+
+NOTE: If the generated file is too large, it will be split into multiple emails. The ‘Bundled as zip’ option allows you to zip the attachment and optionally specify a password to encode the archive with WinZip 256-bit AES encryption.
+
+Other Options::
+* The ‘Match Layout’ option obtains the closest possible match between the appearance of the emailed copy and the original Dashboard.
+* The ‘Expand Components’ option expands scrolling tables and charts in the generated Dashboard so that all data is displayed.
+* The ‘Only Data Elements’ option limits the export to only the data-bearing components.
+* The ‘Include Link’ option  includes a URL link to the Dashboard in the email. The email recipient can click the link to open the Dashboard in a new browser tab if they possess the appropriate permissions for that Dashboard.
+
+
+Insert Parameters:: The '`Subject`' line and '`Attachment Name`' can include parameters for automatic insertion of Dashboard name and time and date of generation. These parameters use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:viewsheet:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
++
+|===
+|Subject or Filename |Generated As...
+
+|pass:[myRep_{1,date}.pdf]|myRep_Nov 14, 2007.pdf
+|pass:[{0}_{1,date}.pdf]|Production_Nov 14, 2007.pdf
+|pass:[myRep_{1,date,MMM-dd}.pdf]|myRep_Nov-14.pdf
+|pass:[myRep_{1,date,EEE-h-mm a}.pdf]|myRep_Wed-11-49 AM.pdf
+|pass:[myRep_{1,date,yy-MM-dd-HH-z}.pdf]|myRep_07-11-14-11-EST.pdf
+|===
+
++
+For example, for a Dashboard with alias ‘SalesDashboard’, the ‘Subject’ specification `pass:[Dashboard named {0}, generated at {1,time} on {1,date}]` would produce  an email subject line such as the following: `Dashboard named SalesDashboard, generated at {localtime} on {localdate}`. The Dashboard alias can be set by the Dashboard designer or an administrator, and is usually the same as the Dashboard name.
++
+NOTE: Because of filename restrictions,  you cannot use the `{1,time}` syntax for the  attachment name. However, you can use this syntax for the  subject line.
++
+To include Dashboard  *creation parameter* values in the filename or subject line, simply place each parameter name within curly braces. The parameter names you enter  must exactly match the parameter names in the ‘Creation Parameters’ panel of the *Actions* tab. (See xref:#CreationParameters[] below.)  For example, if a parameter called `stateParam` is assigned a value of “NJ” in the ‘Creation Parameters’ panel, then the attachment name `pass:[myRep_{1,date,MMM-dd}_{stateParam}.pdf]` will yield a generated filename of `myRep_Nov-14_NJ.pdf`.
+
+****
+====
+
+.Enable Save to Disk
+[%collapsible]
+====
+****
+This option saves a copy of the Dashboard to the server file system or to an FTP server. Follow the steps below:
+
+. To save to the server file system, enter a valid absolute path including filename in the '`Path`' field. If you see a ‘Location’ menu, select a desired server location, and then enter a path relative to the selected location. (The filename extension, e.g., `.pdf`, is added automatically.)
+
+
+. To save to an FTP server, check  the '`FTP/SFTP`' box and enter a valid '`Path`', '`Username`' and '`Password`'.
++
+IMPORTANT: For SFTP connections, the known hosts file, _.ssh/known_hosts_, is automatically read from the user’s home directory. Before running the scheduled task, an administrator should populate the _known_hosts_ file by first connecting (SSH) to the target server from each InetSoft server node.
+
+. Use the ‘Format’ menu to choose the format in which to generate the Dashboard: ‘PDF’, ‘PowerPoint’, ‘Excel’, or ‘CSV’.
++
+image:schedulerSaveToServer.png[]
++
+CSV:: {EXPORTCSV}
+Excel:: {exportexcel}
+
+. Press  btn:[Add]  to add the target file for the '`Save to Disk`' action.
+
+. *_Optional_*: Press btn:[Delete] to remove a target, or press btn:[Modify] to update the target properties.
+
+
+. *_Optional_*: Set other options:
++
+[square]
+* The ‘Match Layout’ option obtains the closest possible match between the appearance of the saved copy and the original Dashboard.
+* The ‘Expand Components’ option expands scrolling tables and charts in the generated Dashboard so that all data is displayed.
+* The ‘Only Data Elements’ option limits the export to only the data-bearing components.
+
+. *_Optional_*: To  include parameters into the file name for automatic insertion of Dashboard name and time and date of generation,  use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:viewsheet:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
++
+|===
+|Filename |Generated As...
+
+|pass:[myDash_{1,date}.pdf]|myDash_Nov 14, 2007.pdf
+|pass:[{0}_{1,date}.pdf]|Production_Nov 14, 2007.pdf
+|pass:[myDash_{1,date,MMM-dd}.pdf]|myDash_Nov-14.pdf
+|pass:[myDash_{1,date,EEE-h-mm a}.pdf]|myDash_Wed-11-49 AM.pdf
+|pass:[myDash_{1,date,yy-MM-dd-HH-z}.pdf]|myDash_07-11-14-11-EST.pdf
+|===
++
+NOTE: Because of filename restrictions,  you cannot use the `pass:[{1,time}]` syntax for the  name.
++
+To include Dashboard  *creation parameter* values in the filename, simply place each parameter name within curly braces. The parameter names you enter  must exactly match the parameter names in the ‘Creation Parameters’ panel of the *Actions* tab. (See xref:#CreationParameters[] below.)  For example, if a parameter called `stateParam` is assigned a value of “NJ” in the ‘Creation Parameters’ panel, then the filename `pass:[myRep_{1,date,MMM-dd}_{stateParam}.pdf]` will yield a generated filename of `myRep_Nov-14_NJ.pdf`.
+
+. Press btn:[Save] at the bottom of the screen.
+
+****
+====
+
+
+[#CreationParameters]
+== Creation Parameters
+To include parameters in the scheduled action, follow the steps below:
+
+include::ROOT:partial$settingCreationParams.adoc[]
+
+[#ScheduleOptions]
+== Schedule Options
+The settings available under the *Options* tab options are described below.
+
+image:schedule4.png[]
+
+****
+Enabled:: Temporarily enables or disables a task.
+Delete if not scheduled to run again:: For a task that is scheduled to run only once, deletes the task from the system upon completion.
+Start From and Stop On:: Execute the task only within the specified date range.
+Execute As:: Execute the task as a particular user so that user permissions (e.g., VPM filtering) can be applied during task execution. Any user who has permission to use the Scheduler can be selected from the menu.
+Locale:: Sets the locale for the scheduled task, which configures language and formatting.
+****

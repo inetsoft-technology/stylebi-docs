@@ -1,0 +1,35 @@
+= match(regex)
+:navtitle: match()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=see also]
+xref:CALC_find.adoc[] to perform  literal string search.
+
+
+Return the matches of the specified regular expression (regex) within a larger string as an array, or return `null` if not found.
+
+
+
+
+
+
+
+== Example
+Search for any numbers using the regex `/[0-9]+/g`.
+
+[source,javascript]
+var str = 'Joe Miller, 123-45-6789, age 79, was billed $4357 on April 2, 2017.'
+var arr = str.match(/[0-9]+/g); // returns array [123,45,6789,79,4357,2,2017]
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].match(/[0-9]+/g);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.match(/[0-9]+/g);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

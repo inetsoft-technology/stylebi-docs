@@ -1,0 +1,24 @@
+= Date.getUTCMonth()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to return the month of a date in universal time.   See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth[Date.getUTCMonth()] in the {JavaScriptRef} for details on usage.
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var month = d.getUTCMonth();
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getUTCMonth();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getUTCMonth();
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

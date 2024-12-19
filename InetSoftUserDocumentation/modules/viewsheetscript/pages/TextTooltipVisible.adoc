@@ -1,0 +1,42 @@
+= toolTipVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TextProperties.adoc[] for general information about the Text component.
+====
+
+
+Specifies whether the Text component displays a tooltip or not.
+
+
+
+
+
+
+
+
+== Type
+Boolean:: `true`: display tooltip (default) +
+`false`: hide tooltip
+
+
+
+== Example
+[source,javascript]
+Text1.toolTipVisible = false; // hide tooltip
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+toolTipVisible            // unqualified
+Text1.toolTipVisible      // qualified
+
+{secondForm}
+====
+
+

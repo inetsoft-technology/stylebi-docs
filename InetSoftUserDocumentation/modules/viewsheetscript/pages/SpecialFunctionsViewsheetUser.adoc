@@ -1,0 +1,13 @@
+= viewsheetUser
+
+include::partial$readOnly.adoc[]
+
+[WARNING,caption=See Also]
+xref:parameter.adoc[] to obtain other environment information in script.
+
+
+For a Dashboard saved in ‘Private Dashboard’ scope, returns the ID of the Dashboard’s owner. If the Dashboard is not saved in ‘Private Dashboard’ scope, the property has a value of `null`.
+
+== Example
+[source,javascript]
+alert('The Dashboard belongs to ' + viewsheetUser);

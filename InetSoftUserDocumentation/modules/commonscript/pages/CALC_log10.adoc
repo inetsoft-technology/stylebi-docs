@@ -1,0 +1,33 @@
+= CALC.log10(number)
+:navtitle: CALC.log10()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the logarithm of a positive number to the base 10. {CALCExcelFunctionPage}
+
+== Parameters
+number::			Positive real number
+
+== Example
+[source,javascript]
+----
+CALC.log10(100); // returns 2.0
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.log10(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.log10(Slider1.selectedObject)
+CALC.log10(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

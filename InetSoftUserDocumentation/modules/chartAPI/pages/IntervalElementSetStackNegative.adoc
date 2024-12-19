@@ -1,0 +1,73 @@
+= IntervalElement.setStackNegative(Boolean)
+:navtitle: IntervalElement.setStackNegative()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+
+Specifies whether negative and positive values stack independently on opposite sides of the axis, or whether stacking is cumulative (i.e., determined arithmetically).  {noGetter}
+
+
+
+
+
+== Parameters
+Boolean:: `true`: stack positive and negative values independently +
+`false`: stack positive and negative values arithmetically
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"],["NJ",200],["NJ",300],["NY",-300],["NY",100]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity"); //<2>
+var scale = new LinearScale("Quantity");
+var frame = new HeatColorFrame();
+frame.setField("Quantity");
+elem.setColorFrame(frame);
+elem.setStackGroup(true);
+elem.setStackNegative(false); //<3>
+elem.setCollisionModifier(GraphElement.STACK_SYMMETRIC);
+graph.addElement(elem); //<4>
+--
+
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use `setStackNegative` to stack arithmetically.
+<4> Use xref:EGraph_addElement.adoc[] to add the `IntervalElement` to the Chart.
+
+
+image:commonscript:IntervalElementsetStackNegative.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.setStackNegative(false);
+// To adjust the Y-axis to include all elements:
+graph.getCoordinate().getYScale().setScaleRange(new StackRange());
+--
+=====
+
+
+
+
+

@@ -1,0 +1,42 @@
+= Organize Data Sources
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following sections explain how to manage your data sources.
+
+[#CreateNewFolder]
+== Create a New  Folder
+To create a new folder for data sources or other data assets (logical models, physical views, VPMs), select the folder that you want to contain the new folder, and press the {buttonNewFolder}  in the toolbar.
+
+image:organizeDataSource1.png[]
+
+Enter the desired ‘Folder Name’, and press btn:[OK]. This creates a new folder in the specified location.
+
+image:organizeDataSource2.png[]
+
+== Move a Data Source
+To move a data sources or other data asset (logical model, physical view, VPM, folder) from one folder to another, press the {buttonMoreOptions} next to the asset that you want to move, and select ‘Move’.
+
+image:organizeDataSource3.png[]
+
+Select the folder that you want to move the asset to, and press btn:[OK]. The asset is moved to the selected folder.
+
+image:organizeDataSource4.png[]
+
+To move multiple assets at the same time, press the  ‘Turn Selection ON’ button, and select the desired assets before pressing the {buttonMoreOptions} button, or press the {buttonMoveSelected} in the toolbar.
+
+image:organizeDataSource5.png[]
+
+== Delete a Data Source
+To delete a data source or other asset (logical model, physical view, VPM), press the {buttonMoreOptions} next to the asset that you want to delete, and select ‘Delete’.
+
+image:organizeDataSource6.png[]
+
+NOTE: The system administrator may be able to recover  deleted assets.
+
+To delete multiple assets at the same time, press the  ‘Turn Selection ON’ button, and select the desired assets before pressing the {buttonMoreOptions} button, or press the {buttonDeleteSelected} in the toolbar.
+
+image:organizeDataSource5.png[]
+
+== Rename a Data Source
+To rename a data source or other asset (logical model, physical view, VPM), press the {buttonMoreOptions} next to the asset that you want to rename, and select ‘Rename’. Type the new name, and press btn:[OK].

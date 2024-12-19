@@ -1,0 +1,59 @@
+= GraphElement.setBorderColor(value)
+:navtitle: GraphElement.setBorderColor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies the element border color.  The corresponding “getter” function is `getBorderColor()`.
+
+
+
+
+
+
+
+
+
+
+== Parameter
+A {javaawtcolor} object
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var line = new StaticLineFrame(10);
+var elem = new IntervalElement("State", "Quantity"); //<2>
+elem.setLineFrame(line);
+elem.setBorderColor(java.awt.Color(0x000000)); //<3>
+graph.addElement(elem); //<4>
+--
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use `setBorderColor` to set the element color.
+<4> Use `addElement` to add the IntervalElement to the Chart.
+
+image:commonscript:GraphElementsetBorderColor.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var line = new StaticLineFrame(3);
+elem.setLineFrame(line);
+elem.setBorderColor(java.awt.Color(0x000000));
+
+--
+=====

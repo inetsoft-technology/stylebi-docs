@@ -1,0 +1,12 @@
+****
+The list below shows the “parent” for each type of resource capable of inheriting parent permissions.
+
+//Report:: Parent is the repository folder containing the report on the Repository tree (under the *Content* tab).
+Dashboard:: Parent is the repository folder containing the Dashboard on the Repository  tree  (under the *Content* tab).
+Folder:: Parent is the repository folder containing the folder on the Repository  tree   (under the *Content* tab).
+Datasource:: Parent is the root ‘Data Source’ node on the tree   (under the *Content* tab).
+Connection:: Parent is the same parent as the datasource on which the connection is defined.
+Data model:: Parent is the datasource on which the data model is defined.
+Data Worksheet:: Parent is the ‘Data Worksheet’ node on the tree     (under the *Content* tab).
+Library asset:: Parent is the ‘Library’ node on the tree    (under the *Content* tab).
+****

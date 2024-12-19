@@ -1,0 +1,27 @@
+= Container Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+* xref:ArrangeComponents.adoc[] for information on how to create a Container by grouping components.
+* {commonProperties}
+====
+
+
+The ‘Container Properties’ panel provides *General*, *Advanced*, and *Script* tabs. The next sections discuss the Container-specific properties available under these tabs.
+
+== General Tab
+The *General* tab in the ‘Container Properties’ panel is the same as that for the *Image* component, and allows you also to specify an image to be used as the group background. See xref:ImageProperties.adoc[] for details on how to select the image.
+
+
+
+image:Container Properties General.png[]
+
+== Advanced Tab
+The *Advanced* tab in the ‘Container Properties’ panel is the same as that for the *Image* component, and allows you to set the scaling properties of the group background image. See xref:ImageProperties.adoc[] for details on image scaling.
+
+image:Container Properties Advanced.png[]
+
+== Script Tab
+{commonScript}

@@ -1,0 +1,65 @@
+= Gauge Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+* xref:AddAKPI.adoc[] for information on how to use a Gauge.
+* {commonProperties}
+====
+
+The ‘Gauge Properties’ panel provides the following tabs: *General*, *Advanced*, *Data*,  *Script*. The next sections discuss the Gauge-specific properties available under these tabs.
+
+== General Tab
+The *General* tab in the ‘Gauge Properties’ dialog box provides the following unique properties.
+
+TIP: {dynamicProperties}
+
+
+Number Range::
+* *Minimum*: The starting value on the display.
+* *Maximum*: The ending value on the display.
+* *Minor Increment*: The minimum resolution on the display.
+* *Major Increment*: The points at which the values are displayed.
++
+NOTE: If you leave the Number Range properties blank, the Gauge will automatically create a scale appropriate to the data.
+
+Face:: The visual form of the element. Click on the desired skin to select it.
+Tooltip:: Value is displayed as tooltip when mouse hovers over the component. To display custom HTML in the tooltip, see xref:AddTipsToChart.adoc[].
+Shadow:: Adds a drop shadow to the component.
+
+image:Capture_024.png[]
+
+== Data Tab
+{commonData}
+
+== Advanced Tab
+The *Advanced* tab in the ‘Gauge Properties’ dialog box provides the following properties.
+
+TIP: {dynamicProperties}
+
+Range:: A set of colored zones to display on the Gauge. See xref:#SetColoredRangesforGauge[] below.
+Show Value:: Provides a digital display of the current value shown on a Gauge.
+
+image:Gauge properties advanced.png[]
+
+[#SetColoredRangesforGauge]
+=== Set Colored Ranges for a Gauge
+To set multiple ranges for a Gauge, follow the steps below:
+
+. Open the *Advanced* tab of the ‘Gauge Properties’ panel. In the ‘Range’ panel you will see three editable drop-down lists.
+
+. Enter a value for ‘Range 1 to’ and choose a color from the pop-up menu. This sets the region from the minimum value on the scale to the specified value.
+
+. Enter a value into ‘Range 2 to’ and choose a color from the pop-up menu. This sets the region from the end of ‘Range 1’ to the specified value.
+
+. Repeat the above steps to add any additional thresholds.
+
+. *_Optional:_*  Select ‘Gradient’ to smoothly blend the zone colors, if desired.
+
+. *_Optional:_*  If you have selected ‘Gradient’, choose a color for the final blend.
++
+image:Range Colors for Slider.png[]
+
+== Script Tab
+{commonScript}

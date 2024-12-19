@@ -1,0 +1,103 @@
+= StaticColorFrame.setNegativeColor(value)
+:navtitle: StaticColorFrame.setNegativeColor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+Specifies the static color to be used for negative field values . If a value is specified by  `setNegativeColor()`, then xref:StaticColorFrameSetColor.adoc[] defines the color of positive values, and `setNegativeColor()` defines the color of negative values. In this case, the inherited xref:VisualFrameSetField.adoc[] value is not used.  You can also set this using the `bindingInfo.colorFrame.color`  property syntax in *onRefresh* script . See xref:#Example2[] below.  The corresponding “getter” function is `getNegativeColor()`.
+
+
+
+
+== Paramater (Function Syntax)
+value:: a {JavaAwtColor} object
+
+== Value (Property Syntax)
+
+include::viewsheetscript:partial$colorSyntax.adoc[]
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",-300]];graph = new EGraph(); //<1>
+var elem = new IntervalElement("State", "Quantity");
+var frame = new StaticColorFrame(); //<2>
+frame.setField("Quantity");
+frame.setColor(java.awt.Color(0x00ff00));
+frame.setNegativeColor(java.awt.Color(0xff0000)); //<3>
+elem.setColorFrame(frame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:StaticColorFrame.adoc[] object.
+<3> Use `setNegativeColor` to specify the negative  color for the `StaticColorFrame`.
+<4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
+
+image:commonscript:StaticColorFrameNegative2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} and xref:GraphElementGetColorFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:ColorFrame.adoc[]  objects. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0);  //<1>
+var frame = elem.getColorFrame(); //<2>
+// Compact syntax: var frame = graph.getElement(0).getColorFrame();
+
+frame.setColor(java.awt.Color(0x00ff00));
+frame.setNegativeColor(java.awt.Color(0xff0000));
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Place ‘Order Date’  on the X-axis. Press the {buttonEditDimension} next to the ‘X’ region and set ‘Level’ to ‘Quarter’. Press the {buttonApply}.
+
+. Place ‘Total’ on the Y-axis. Press the {buttonEditMeasure} next to the ‘Y’ region and select ‘Change from Previous’ from the ‘Trend and Comparison’ menu. Press the {buttonApply}.
+
+. Place ‘Total’ also in the ‘Color’ region. Press the {buttonEditMeasure} next to the ‘Color’ region, and select ‘Change from Previous’ from the ‘Trend and Comparison’ menu. Press the {buttonApply}.
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.colorFrame = new StaticColorFrame;
+Chart1.bindingInfo.colorFrame.color = 0x00FF00;
+Chart1.bindingInfo.colorFrame.negativeColor = 0xFF0000;
+
+
+--
+
++
+image:commonscript:StaticColorFrameNegative3.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

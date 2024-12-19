@@ -1,0 +1,36 @@
+= bindingInfo.setTimeSeries(col, Boolean)
+:navtitle: setTimeSeries()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies that gaps in *Date* data should be retained. For example, if the data in the Crosstab is grouped by month, and there is no data for the month of June, the `setTimeSeries` property ensures that the month of June is still retained in the Crosstab.
+
+== Parameter
+col:: Name of field to set as time-series
+Boolean:: `true`: gaps are preserved for date data +
+`false`: gaps are removed
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.bindingInfo.setTimeSeries("Order:Date", true);
+
+image:commonscript:setTimeSeries_2.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.setTimeSeries             // unqualified
+Crosstab1.bindingInfo.setTimeSeries   // qualified
+
+{secondForm}
+====
+
+

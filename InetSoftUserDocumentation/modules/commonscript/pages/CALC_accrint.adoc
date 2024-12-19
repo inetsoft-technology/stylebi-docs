@@ -1,0 +1,50 @@
+= CALC.accrint(issue, interest, settlement, rate, par, freq [, basis])
+:navtitle: CALC.accrint()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *accrued interest* for a security that pays periodic interest. {CALCExcelFunctionPage}
+
+== Parameters
+issue::			Date object: The security’s issue date
+interest::			Date object: The security’s first interest date
+settlement:: Date object: The security’s settlement date
+rate::			The security’s annual coupon rate
+par::			The security’s par value
+freq::			The number of coupon payments per year
+basis::            {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+
+
+
+== Example
+Interest accrued for a $1000 par value security with a 10% annual rate and bi-annual payment, issue date of March 1, 2008, first interest date of August 31, 2008, and settlement date of May 1, 2008.
+[source,javascript]
+----
+CALC.accrint(new Date(2008,2,1), new Date(2008,7,31), new Date(2008,4,1), 0.1, 1000, 2)
+// returns 16.666666666666664
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.accrint(field['IssueDate'], field['InterestDate'], field['SettleDate'],  0.1, 1000, 2)
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+var InterestDate = new Date(2008,7,31);
+CALC.accrint(RangeSlider1.selectedObjects[0], InterestDate, RangeSlider1.selectedObjects[1],  0.1, 1000, 2)
+CALC.accrint(parameter.IssueDate, parameter.InterestDate, parameter.SettleDate,  0.1, 1000, 2)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,48 @@
+= LabelForm.setLabel(value)
+:navtitle: LabelForm.setLabel()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+Specifies the text of the label. (Use “\n” to insert newline.)  The corresponding “getter” function is `getLabel()`. Use xref:DefaultTextFrame.adoc[] to automatically use data values as element labels.
+
+
+
+
+
+
+
+== Parameter
+value::			a String containing label text
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new LabelForm(); //<2>
+form.setLabel("Hello\nWorld"); //<3>
+form.setValues(['NY', 100]);
+graph.addForm(form); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:LabelForm.adoc[] object.
+<3> Use `setLabel()` to set the label.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

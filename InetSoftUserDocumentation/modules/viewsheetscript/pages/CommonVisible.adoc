@@ -1,0 +1,46 @@
+= visible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,  caption=See Also]
+xref:viewsheet:GeneralTab.adoc[] for more information about visibility.
+
+
+Specifies the visibility of the component. This property can be used to dynamically hide elements in a Dashboard.
+
+== Type
+Boolean::
+`true`: display the component,				`false`: hide the component
+
+
+
+
+
+== Example
+.Hide or show text based on Gauge value
+[source,javascript]
+if (Gauge1.value > 200) {
+  Text1.text = 'Too high!';
+  Text1.visible = true;
+}
+else if (Gauge1.value < 50) {
+  Text1.text = 'Too low!';
+  Text1.visible = true;
+}
+else {
+  Text1.visible = false;
+}
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+visible               // unqualified
+Component1.visible    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,33 @@
+= layoutInfo.setRowGroup(row,col,name)
+:navtitle: setRowGroup()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Sets the row group for specified cell in a Freehand Table. See xref:viewsheet:AddFreehandTable.adoc[] for more information about ‘Row Group’.
+
+
+
+
+
+
+== Parameter
+row:: row index
+col:: column index
+name:: Cell name to use for row group or `'(default)'`
+
+
+
+
+== Example
+[source,javascript]
+FreehandTable1.layoutInfo.setRowGroup(1,0,'(default)');
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+layoutInfo.setRowGroup                 // unqualified
+FreehandTable1.layoutInfo.setRowGroup  // qualified
+
+{secondForm}
+====

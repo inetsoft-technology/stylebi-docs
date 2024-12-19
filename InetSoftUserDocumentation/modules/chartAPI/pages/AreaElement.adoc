@@ -1,0 +1,39 @@
+= AreaElement
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=Inherits from]
+====
+[square]
+* xref:LineElement.adoc[]
+* xref:GraphElement.adoc[]
+====
+
+The `AreaElement` object contains the visual elements for an area chart. To create a new `AreaElement` object, call the `AreaElement` constructor.
+
+[source,javascript]
+var elem = new AreaElement("State", "Quantity");
+
+You can pass a set of field names (e.g., ‘State’, ‘Quantity’) to the constructor, or specify these later using the xref:GraphElementAddDim.adoc[]  and  xref:GraphElementAddVar.adoc[] methods.
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+elem = new AreaElement("State", "Quantity");  //<2>
+graph.addElement(elem); //<3>
+--
+<1> {dataset}
+<2> Create the `AreaElement` object.
+<3> Use `addElement` to assign the `AreaElement` to the Chart.
+
+image:commonscript:AreaElement.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

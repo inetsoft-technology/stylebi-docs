@@ -1,0 +1,48 @@
+= selectedObject
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CheckRadioComboValues.adoc[] to access the values assigned to the component.
+* xref:CommonSelectLabel.adoc[] to access the label corresponding to the value.
+* xref:CommonSelectObjects.adoc[] to access the currently selected values  in multi-valued components.
+* xref:AccessComponentData.adoc[] for more information about `selectedObject`.
+* xref:WriteBackToDatabase.adoc#AccessMostRecentUserModification[Access the Most Recent User Modification] to retrieve the most recent modified object.
+====
+
+
+
+Specifies the selected *value* of the component (not the label). Applies to single-value input elements (Slider, Spinner, Radio Button, Combo Box) and the tabs of co-located components (Tabbed Interface).
+
+== Type
+Value of the selected option
+
+Examples::
+[source,javascript]
+----
+// If RadioButton data type is ‘String’:
+RadioButton1.selectedObject = 'NJ';
+
+// If ComboBox data type is ‘Date’:
+ComboBox1.selectedObject = new Date(2020,5,23);
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+selectedObject               // unqualified
+Component1.selectedObject    // qualified
+
+{secondForm}
+====
+
+
+
+

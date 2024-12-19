@@ -1,0 +1,43 @@
+= Math.exp(number)
+:navtitle: Math.exp()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_exp.adoc[] for the preferred version from the CALC library.
+====
+
+
+
+
+Returns the value of the natural exponential function, stem:[e^x], where stem:[e] is the base of the natural logarithm and stem:[x] is the specified `number`. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/exp[Math.exp()] method, and can be used with or without the `Math` qualifier, `exp()` or `Math.exp()`.
+
+
+
+== Example
+[source,javascript]
+----
+exp(3);  // returns 20.085
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+exp(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+exp(Slider1.selectedObject)
+exp(parameter.Value)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

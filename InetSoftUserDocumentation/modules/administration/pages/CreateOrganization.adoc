@@ -1,0 +1,112 @@
+= Create an Organization
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+An *organization* is assigned to a user when multi-tenancy is enabled (see xref:EnableMultiTenant.adoc[]), and the URL used  to access the StyleBI server provides the organization ID.  When an organization is identified in the URL, the users, groups, and roles  specified for that organization will be in effect for the session.
+
+Users within an organization only have access to assets scoped for that organization, although individual access can be restricted further  through the assignment of permissions.  (See xref:SetRepositoryPermissions.adoc[].)
+
+IMPORTANT:  *Organization Administrator* is a role that grants  administrator  privileges to a user within the user`'s specific  organization.   *Site Administrator* is a role that grants a user system-wide administrator  privileges,  including access to all organizations and system settings.
+
+
+To add a new organization, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Security* page in the left panel.
++
+image:Figure 23_1.png[]
+
+. Select ‘Enable Multi-Tenancy’. See xref:EnableMultiTenant.adoc[] for more information.
++
+image:EM_Security_Multitenant1.png[]
+
+. Select the *Users* tab.
++
+image:securityDefineUsers.png[]
+
+. From the ‘Provider Name’ menu, select the security provider under which to define organizations.
+
+
+
+
+. Press the btn:[New Organization] link below the navigation tree. (This option is available when multi-tenancy is enabled.  See xref:EnableMultiTenant.adoc[].)
++
+image:organization3.png[]
+
++
+This opens the '`New Organization`' dialog box.
+
+
+. In the '`Clone From Existing Organization`' menu, choose an existing organization from which you want to copy settings such as identities, permissions, organization-scoped properties, and  assets (Dashboards, Data Worksheets, data sources).  The '`Host Organization`' is the default organization that is administered by the Site Administrator. Select '`None`' to create  the organization without preexisting settings.
++
+image:organization2.png[]
+
++
+NOTE: To ensure security, you may  be prompted to confirm that you want to proceed with cloning.
++
+This creates an organization with a default name ‘organizationN’ (organization0, organization1, etc.).
++
+image:server18.png[]
+
+. *_Optional_*: Type in the ‘Name’ and '`ID`' fields to change the name and ID of the organization.
+
+. *_Optional:_* To select a Portal theme for the organization, choose the desired theme from the ‘Theme’ menu. (See xref:Presentation.adoc[] for information about how to create a theme.)
+
+
+. *_Optional_*: To add roles to an organization, select the desired role in the  ‘Members’ panel.
+
++
+image:server19.png[]
+
+. *_Optional:_* To inherit permission from another role, press the {buttonEMAdd} button in the ‘Inherit from’ area. Choose the desired role(s) in the ‘Add Role’ dialog box ({buttonCtrl}-click to select multiple roles), and press {buttonEMAdd}.  The new role will inherit all permissions from the roles selected in this list.
+
+. *_Optional:_* To add administrative permission for the
+organization (ability for other users to administer this organization), press the {buttonEMAdd} button in the ‘Administrator Permissions’ area. Choose the desired user(s), groups(s), or role(s) in the ‘Add Permission’ dialog box ({buttonCtrl}-click to select multiple items), and press {buttonEMAdd}.  Users, groups, or roles granted such administrative privileges will be able to use Enterprise Manager to remove the role or reassign users and groups to the role.
+
+
+. *_Optional_*: To impose user limits for the  organization,   press the btn:[Add] button in the '`Properties`' panel.
++
+image:server20.png[]
++
+This opens the '`Property Editor`', where you can set the following properties for the organization:
++
+image:server21.png[]
++
+[cols="1,4"]
+|===
+|Max Row Count| The maximum result size for queries during runtime execution of  Dashboards.
+|Max Column Count| The maximum number of columns permitted in Data Worksheet data blocks or Dashboard Tables.  Default is 200.
+|Max Cell Size| The maximum number of characters for  String-type data displayed in a Dashboard Table cell or Data Worksheet cell. Default is 200.
+|Max User Count| The maximum number of simultaneous users permitted on the server.
+|===
+
+
+
+. Press {buttonEMApply} to save your changes.
+
+
+. Repeat the above steps to add additional organizations.
+
+
+== Edit an Existing Organization
+To edit an organization, follow the steps below:
+
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Security* page in the left panel.
++
+image:Figure 23_1.png[]
+
+
+. Select the *Users* tab.
++
+image:securityDefineUsers.png[]
+
+. From the ‘Provider Name’ menu, select the security provider under which to define organizations.
+
+include::administration:partial$selectOrganization.adoc[]
+
+. Select the  organization on the tree.
+
+. Make any desired edits and press {buttonEMApply}.

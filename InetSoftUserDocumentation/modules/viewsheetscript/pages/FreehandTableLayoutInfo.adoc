@@ -1,0 +1,13 @@
+= layoutInfo
+
+The `layoutInfo` property provides access to a family of sub-properties that allow you to configure the behavior of cells within a Freehand Table.
+
+xref:viewsheetscript:FreehandTableLayoutInfoSetCellBinding.adoc[] +
+xref:viewsheetscript:FreehandTableLayoutInfoSetCellName.adoc[] +
+xref:viewsheetscript:FreehandTableLayoutInfoSetColGroup.adoc[] +
+xref:viewsheetscript:FreehandTableLayoutInfoSetExpansion.adoc[] +
+xref:viewsheetscript:FreehandTableLayoutInfoSetMergeCells.adoc[] +
+xref:viewsheetscript:FreehandTableLayoutInfoSetMergeColGroup.adoc[] +
+xref:viewsheetscript:FreehandTableLayoutInfoSetMergeRowGroup.adoc[] +
+xref:viewsheetscript:FreehandTableLayoutInfoSetRowGroup.adoc[] +
+xref:viewsheetscript:FreehandTableLayoutInfoSetSpan.adoc[] +

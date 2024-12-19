@@ -1,0 +1,49 @@
+= CALC.cumprinc(rate, nper, pv, start_period, end_period, type)
+:navtitle: CALC.cumprinc()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns a negative value representing the *cumulative principal* paid on a loan between `start_period` and `end_period`, inclusive. {CALCExcelFunctionPage}
+
+== Parameters
+rate::			Annual interest rate
+nper::			Total number of monthly periods
+pv::			Present value of loan
+start_period::			Integer representing the initial period in the calculation
+end_period::			Integer representing the final period in the calculation
+type::			Timing of payment: +
+`0`: payment at end of period +
+`1`: payment at start of period
+
+
+
+
+
+== Example
+Cumulative principal paid on a 30-year loan taken at an annual rate of 9% for periods 13 through 24, where each payment is made at the beginning of the period.
+
+
+[source,javascript]
+----
+CALC.cumprinc(0.09/12, 30 * 12, 125000, 13, 24, 1)
+// returns -927.1534723780389
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.cumprinc(0.09/12, 30 * 12, 125000, field['StartPeriod'], field['EndPeriod'], 1)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.cumprinc(0.09/12, 30 * 12, 125000, RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 1)
+CALC.cumprinc(0.09/12, 30 * 12, 125000, parameter.StartPeriod, parameter.EndPeriod, 1)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

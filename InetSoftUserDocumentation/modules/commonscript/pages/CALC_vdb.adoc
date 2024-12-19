@@ -1,0 +1,50 @@
+= CALC.vdb(cost, salvage, life, start_period, end_period, [factor, no_switch])
+:navtitle: CALC.vdb()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the depreciation of an asset over an arbitrary period using the *variable-declining balance* method. The rate of depreciation for a given year is `factor/life`.
+ {CALCExcelFunctionPage}
+
+== Parameters
+cost::			Initial cost of the asset
+salvage::			Salvage value at end of asset life
+life::			Number of years of depreciation
+start_period::			Real number representing the initial period in the calculation (in range `0` to `end_period`, inclusive)
+end_period::			Real number representing the final period in the calculation (in range `start_period` to `life`, inclusive)
+factor::			Optional rate at which the balance declines. Default = 2 (double-declining balance method).
+no_switch::			`true`: always use variable-declining balance calculation +
+`false`: switch to straight-line depreciation when result is greater than declining-balance calculation (default)
+
+
+
+
+
+
+== Example
+Depreciation over the first 5 years (period 0 to period 5) for an asset purchased at $2400, with salvage value of $300 after 10 years, and depreciation factor of 1.5.
+
+
+[source,javascript]
+----
+CALC.vdb(2400, 300, 10, 0, 5, 1.5); // returns 1335.10725 (approx $1335.11)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.vdb(field['Cost'], field['Salvage'], 10, 0, 5, 1.5)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.vdb(Slider1.selectedObject, Slider2.selectedObject, 10, 0, 5, 1.5)
+CALC.vdb(parameter.Cost, parameter.Salvage, 10, 0, 5, 1.5)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

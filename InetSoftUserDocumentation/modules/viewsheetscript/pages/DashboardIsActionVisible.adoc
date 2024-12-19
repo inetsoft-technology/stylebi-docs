@@ -1,0 +1,15 @@
+= isActionVisible(name)
+
+Returns the value of the specified property for an embedded Dashboard. See xref:viewsheet:ModularizeDashboard.adoc[] for more information about embedding.
+
+== Paramaters
+
+name:: name of property (String):  `'Open'` for user access to embedded Dashboard
+
+See xref:thisViewsheet.adoc[] for more information about the `'Open'` property.
+
+== Example
+[source,javascript]
+if (!Dashboard1.isActionVisible("Open")) {
+  alert('Embedded Dashboard cannot be opened.');
+}

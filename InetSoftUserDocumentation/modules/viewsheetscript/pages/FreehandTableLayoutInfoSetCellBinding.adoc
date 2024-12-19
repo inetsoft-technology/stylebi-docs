@@ -1,0 +1,41 @@
+= layoutInfo.setCellBinding(row, col, type, value)
+:navtitle: setCellBinding()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the value of the specified cell in a Freehand Table.
+
+== Parameter
+row:: row index
+col:: column index
+type:: `1`: plain text +
+`2`: field name +
+`3`: formula script
+value::			value for the cell
+
+
+
+== Example
+[source,javascript]
+----
+// Set cell value to static text (type=1):
+FreehandTable1.layoutInfo.setCellBinding(1,0,1,'label text');
+
+// Set cell value to a field name (type=2):
+FreehandTable1.layoutInfo.setCellBinding(1,0,2,'State');
+
+// Set cell value to results of a formula (type=3):
+FreehandTable1.layoutInfo.setCellBinding(1,0,3,"toList(q['Date'],'sort=asc, rounddate=year')");
+----
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+layoutInfo.setCellBinding                 // unqualified
+FreehandTable1.layoutInfo.setCellBinding  // qualified
+
+{secondForm}
+====

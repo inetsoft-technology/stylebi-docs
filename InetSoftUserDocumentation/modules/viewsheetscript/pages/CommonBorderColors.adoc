@@ -1,0 +1,29 @@
+= borderColors
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,  caption=See Also]
+xref:viewsheet:VisualFormat.adoc[] for more information about setting color.
+
+
+Specifies the element border colors as an array of four values in the following order: `[top,left,bottom,right]`. Each color can be of one of the types given below.
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+borderColors = [[255,0,0], 0x444444, 'blue', 'black'];
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+borderColors               // unqualified
+Component1.borderColors    // qualified
+
+{secondForm}
+====
+
+

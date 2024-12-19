@@ -1,0 +1,32 @@
+= exportFormat
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+
+Returns the format in which a Dashboard is currently being exported: `pdf`, `pptx`, `xlsx`, `html`, `png`. This property can be used to control the *visibility* of a component during export by placing it within an Expression  that sets the ‘Visible’ property of a component.
+
+image:exportFormat.png[]
+
+
+The `exportFormat` property obtains a value only when the Dashboard is actively being exported. At all other times, the value is `null`.
+
+NOTE: If you want a component have same the visibility setting for *all export types*, it is simpler to use the ‘Hide on Print and Export’ setting of the component’s ‘Visible’ property. See xref:viewsheet:GeneralTab.adoc[] for more information.
+
+
+== Type
+String: `'pdf'`, `'pptx'`, `'xlsx'`, `'html'`, or `'png'`
+
+== Example
+.Expression script placed on the 'Visible' property
+[source,javascript]
+if(exportFormat == 'pdf') {
+  'Hide';
+}
+else {
+  'Show';
+}
+
+
+

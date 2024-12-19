@@ -1,0 +1,160 @@
+= Annotate a Dashboard
+%experimetal%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheet:partial$availableToEndUsers.adoc[]
+
+You can add annotations to a Dashboard, to an individual Dashboard component, and even to an individual data point. The following sections explain how to do this.
+
+== Annotate the Dashboard
+To add annotations to the body of the Dashboard, follow the steps below:
+
+. Select the bookmark in which you want to save the annotation. (See xref:user:BookmarkDashboard.adoc[] for information on selecting a bookmark.)
+
+. Right-click in an empty region of the Dashboard, and select ‘Add Annotation’ from the context menu. This opens the annotation in the Annotation Editor.
+
++
+image:AnnotationViewsheet1_1.png[]
+
+. Enter the desired annotation text into the Editor, and use the  formatting tools in the toolbar to adjust the font, size, weight, color, etc.
+
++
+image:AnnotationViewsheet2_2.png[]
+
+. Press btn:[OK] to close the Annotation Editor. This adds the annotation to the Dashboard.
++
+image:AnnotationViewsheet3_1.png[]
+
+. Position and resize the annotation as desired. See xref:#RepositionAnnotation[] below.
+
+. Format the annotation box. See xref:#FormatAnnotationBox[] below.
+
+. Save the annotation by saving the current bookmark. (See xref:user:BookmarkDashboard.adoc[] for more information.)
++
+NOTE: Annotations are always saved together with a bookmark.
+
+== Annotate a Dashboard Component
+To add an annotation to one of the Data View components (Table, Chart, Crosstab), Output components (Gauge, Image, Text, etc.), or Shape components (Rectangle, etc.), follow the steps below:
+
+. Select the bookmark in which you want to save the annotation. (See xref:user:BookmarkDashboard.adoc[] for information on selecting a bookmark.)
+
+. Right-click on the Data View, Output, or Shape component, and select ‘Annotate Component’ from the context menu.
++
+image:AnnotationComponent1_1.png[]
++
+This opens the Annotation Editor. (For an Output component, the Editor displays a default annotation giving the component’s current aggregate.)
+
+. Enter the desired annotation text into the Editor, and use the formatting tools in the toolbar to adjust the font, size, weight, color, etc.
++
+image:AnnotationComponent3_1.png[]
+
+. Press btn:[OK] to close the Annotation Editor. This adds the annotation to the Dashboard and attaches a callout line to the designated component.
++
+image:AnnotationComponent4_1.png[]
+
+. Position and resize the annotation as desired. See xref:#RepositionAnnotation[].
+
+. Format the annotation box. See xref:#FormatAnnotationBox[].
+
+. Save the annotation by saving the current bookmark. (See xref:user:BookmarkDashboard.adoc[] for more information.)
++
+NOTE: Annotations are always saved together with a bookmark.
+
+[#AnnotateDataPoint]
+== Annotate a Data Point
+To add an annotation to a data point on a Chart, follow the steps below:
+
+. Select the bookmark in which you want to save the annotation. (See xref:user:BookmarkDashboard.adoc[] for information on selecting a bookmark.)
+
+. Right-click on the chart data point you wish to annotate, and select ‘Annotate Point’ from the context menu.
++
+image:AnnotationPoint1.png[]
++
+This opens the Annotation Editor, which displays the contents of the current data point tooltip.
++
+image:AnnotationPoint2.png[]
+
+. Enter the desired annotation text into the Editor, and use the formatting tools in the toolbar to adjust the font, size, weight, color, etc.
++
+image:AnnotationPoint3.png[]
+
+. Press btn:[OK] to close the Annotation Editor. This adds the annotation to the Dashboard and attaches a callout line to the designated data point.
++
+image:AnnotationPoint4.png[]
+
+. Position and resize the annotation as desired. See xref:#RepositionAnnotation[].
+
+. Format the annotation box. See xref:#FormatAnnotationBox[].
+
+. Save the annotation by saving the current bookmark. (See xref:user:BookmarkDashboard.adoc[] for more information.)
++
+NOTE: Annotations are always saved together with a bookmark.
+
+
+
+
+== Annotate a Table Cell
+To add an annotation to a data cell in a Table, follow the steps below:
+
+. Select the bookmark in which you want to save the annotation. (See xref:user:BookmarkDashboard.adoc[] for information on selecting a bookmark.)
+
+. Right-click on the table cell you wish to annotate, and select ‘Annotate Cell’ from the context menu.
++
+image:AnnotationComponent1_1.png[]
++
+This opens the Annotation Editor, which by default displays the contents of the current cell’s tooltip.
++
+image:AnnotationCell2_1.png[]
+
+. Enter the desired annotation text into the Editor, and use the formatting tools in the toolbar to adjust the font, size, weight, color, etc.
++
+image:AnnotationCell3_1.png[]
+
+. Press btn:[OK] to close the Annotation Editor. This adds the annotation to the Dashboard and attaches a callout line to the designated Table cell.
++
+image:AnnotationCell4_1.png[]
+
+. Position and resize the annotation as desired. See xref:#RepositionAnnotation[].
+
+. Format the annotation box. See xref:#FormatAnnotationBox[].
+
+. Save the annotation by saving the current bookmark. (See xref:user:BookmarkDashboard.adoc[] for more information.)
++
+NOTE: Annotations are always saved together with a bookmark.
+
+== Edit an  Annotation
+include::viewsheet:partial$annotationEditing.adoc[]
+
+[#FormatAnnotationBox]
+== Format an Annotation Box
+include::partial$annotationFormat.adoc[]
+
+
+[#RepositionAnnotation]
+== Reposition an Annotation
+
+include::viewsheet:partial$annotationPosition.adoc[]
+
+== Hide and Show Annotations
+When a Dashboard or component annotation is hidden, it appears on the Dashboard or component as a small “note” icon.
+
+
+image:AnnotationHidden_1.png[]
+
+Every annotation is associated with a particular *bookmark*. To display all annotations for a particular bookmark, follow the steps below:
+
+. Select the bookmark for which you want to see annotations. (See xref:user:BookmarkDashboard.adoc[] for information on selecting a bookmark.)
+
+. Press the  {buttonShowAnnotation} in the toolbar.
++
+image:AnnotationShow.png[]
++
+NOTE: If you *export* a Dashboard while annotations are visible, the annotations will be included in the export.
+
+To hide all annotations,  press the {buttonHideAnnotation} in the toolbar.
+
+[#SaveAnnotation]
+== Save an Annotation
+To save the annotation, simply save the current bookmark. (See xref:user:BookmarkDashboard.adoc[] for more information.)
+
+NOTE: Annotations are always saved together with a bookmark.

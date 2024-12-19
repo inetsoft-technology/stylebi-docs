@@ -1,0 +1,39 @@
+= Run a Query from Script
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+You can access data from an arbitrary query or Data Worksheet in script by using the xref:commonscript:runQuery.adoc[] command.
+
+.Examples: runQuery
+[source,javascript]
+----
+// Run the query for primary data block in a Data Worksheet:
+var q = runQuery('ws:global:{Folder1/Folder 2/.../}datasetName');
+
+// Run the query for non-primary data block in a Data Worksheet:
+var q = runQuery('ws:global:{Folder1/Folder 2/.../}datasetName:tableName');
+----
+NOTE: `runQuery()` does not retrieve data from data models.
+
+
+For Data Worksheets, qualify the name as `ws:global:path` or `ws:user_name:path` for global or user scope, respectively.
+
+The `runQuery()` command should generally be placed in the onInit Handler so that it only executes the first time the Dashboard loads. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information on how to add onInit script.) The result set is returned as a two-dimensional array whose first row contains the column headers. You can access the query values using standard array indexing.
+
+[source,javascript]
+----
+// Assign data in first column, first row to Text component:
+Text1.value = q[1][0];
+----
+
+To extract only  data that meets certain conditions, see xref:ReferenceQueryData.adoc[].
+
+Query parameters (if any) can be passed as part of the `runQuery` call. For example, to pass the Dashboard `start_time` parameter to the query as `start_time` and pass the current date/time as `end_time`:
+
+
+[source,javascript]
+var q = runQuery('ws:global:Examples/AllSales', [['start_time', parameter.start_time],['end_time', new Date()]]);
+
+The topics in the following sections explain different ways that you can extract data from a  Data Worksheet.
+

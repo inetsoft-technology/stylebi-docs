@@ -1,0 +1,64 @@
+= VisualFrame.setField(field)
+:navtitle: VisualFrame.setField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the field (column) associated with this xref:VisualFrame.adoc[].  The corresponding “getter” function is `getField()`.
+
+== Parameter
+field::			name of the column (String)
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new BrightnessColorFrame(); //<2>
+frame.setField("Quantity"); //<3>
+frame.setColor(java.awt.Color(0xff0000));
+elem.setColorFrame(frame); //<4>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create   the `VisualFrame` object.
+<3> Use `setField` to specify the field for the `VisualFrame`.
+<4> Use xref:GraphElementSetColorFrame.adoc[] to add the `VisualFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:VisualFrameSetField.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getElement.adoc[] ① and xref:chartAPI:GraphElementGetColorFrame.adoc[] ② to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[] and xref:chartAPI:ColorFrame.adoc[]. For example:
+
+
+
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getColorFrame(); //<2>
+// Compact syntax: var frame = graph.getElement(0).getColorFrame();
+
+frame.setField("Customer:Company");
+
+--
+=====
+
+

@@ -1,0 +1,52 @@
+= Coordinate.transpose()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Interchanges the axes. For example, in a rectangular coordinate system, the X-axis becomes the Y-axis, and the Y-axis becomes the X-axis.
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var sscale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var coord = new RectCoord(sscale,qscale); //<2>
+coord.transpose(); //<3>
+graph.setCoordinate(coord); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:Coordinate.adoc[] object.
+<3> Use `transpose` to transpose the axes.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:Coordinatetranspose.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ① to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+coord.transpose();
+
+--
+=====

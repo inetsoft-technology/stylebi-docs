@@ -1,0 +1,37 @@
+= tile
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+====
+
+Specifies that the image should be repeated (tiled) vertically and horizontally to fill the component boundaries.
+
+NOTE: The `tile` and xref:ImageScaleImage.adoc[] properties are mutually exclusive.
+
+
+
+
+== Type
+Boolean:: `true`: tile the image +
+`false`: do not tile
+
+
+
+== Example
+[source,javascript]
+Image1.tile = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+tile           // unqualified
+Image1.tile    // qualified
+
+{secondForm}
+====
+
+

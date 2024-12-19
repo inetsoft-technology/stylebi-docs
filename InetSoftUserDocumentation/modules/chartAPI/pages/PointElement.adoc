@@ -1,0 +1,42 @@
+= PointElement
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+The `PointElement` object contains the visual elements for a point (scatter) chart. To create a new `PointElement` object, call the `PointElement` constructor.
+
+[source,javascript]
+var elem = new PointElement("State", "Quantity");
+
+You can pass a set of field names (e.g., ‘State’, ‘Quantity’) to the constructor, or specify these later using the  xref:GraphElementAddDim.adoc[] and  xref:GraphElementAddVar.adoc[] methods.
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity"); //<2>
+graph.addElement(elem); //<3>
+
+
+--
+
+<1> {dataset}
+<2> Create the `PointElement` object.
+<3> Use xref:EGraph_addElement.adoc[] to add the `PointElement` to the Chart.
+
+
+image:commonscript:PointElement.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

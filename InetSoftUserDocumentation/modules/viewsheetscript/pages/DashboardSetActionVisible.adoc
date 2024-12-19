@@ -1,0 +1,19 @@
+= setActionVisible(name,Boolean)
+
+
+Sets the value of the specified property for an embedded Dashboard. See xref:viewsheet:ModularizeDashboard.adoc[] for more information about embedding.
+
+
+The ‘Open’ property determines whether the embedded Dashboard provides an ‘Open’ button to the end-user. (By default, this ‘Open’ button is visible whenever the embedded Dashboard contains hidden components.)
+
+image:commonscript:setActionVisibleOpen.png[]
+
+== Parameters
+
+name:: name of property (String): `'Open'`
+Boolean:: `false`: hide the '`Open`' button; `true`: show the '`Open`' button
+
+
+== Example
+[source,javascript]
+Dashboard1.setActionVisible("Open",false);

@@ -1,0 +1,25 @@
+= decodeURI(uri)
+:navtitle: decodeURI()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Produce a new URI with escape sequences or UTF-8 encoding replaced by the characters they represent.
+
+== Example
+[source,javascript]
+decodeURI("https://www.inetsoft.com/My%20Folder")
+// returns: https://www.inetsoft.com/My Folder
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+decodeURI(field['Char']);
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+decodeURI(parameter.Char);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

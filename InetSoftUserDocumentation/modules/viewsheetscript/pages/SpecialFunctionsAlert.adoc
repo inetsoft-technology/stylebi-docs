@@ -1,0 +1,40 @@
+= alert(message,level)
+:navtitle: alert()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:SpecialFunctionsConfirm.adoc[] to prompt the user with a choice dialog box.
+
+Opens a box on the screen to display the specified message. This function *does not* pause script execution.
+
+== Parameters
+message::			String containing the message to display
+level::			One of the following strings specifying the alert level:
++
+NOTE: The term “toast”  refers to the standard auto-expiring notification used for messages in the User Portal.
++
+[square]
+* `'OK'`: Light-color toast
+* `'TRACE'`: Dark-color toast
+* `'DEBUG'`: Same as `'TRACE'`
+* `'INFO'`: Light-color toast, write to console
+* `'WARNING'`: “Warning” modal dialog box with btn:[OK] button, write to console
+* `'ERROR'`: “Error” modal dialog box with btn:[OK] button, write to console
+* `'CONFIRM'`: “Confirm” modal dialog box with btn:[Yes] and btn:[No] buttons
+* `'OVERRIDE'`: “Override” modal dialog box with btn:[Yes] and btn:[No] buttons
+
+
+
+
+== Example
+[source,javascript]
+var arr = ['Sue','Robert','Eric'];
+alert(arr.join(","),'TRACE')
+
+image:administration:alertFunction_1.png[]
+
+
+
+
+

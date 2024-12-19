@@ -1,0 +1,52 @@
+= VineShapeFrame.setEndAngle(value)
+:navtitle: VineShapeFrame.setEndAngle()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:MultiShapeFrame.adoc[]
+* xref:VisualFrame.adoc[]
+====
+
+The angle to which the maximum angle in the data is mapped.   The corresponding “getter” function is `getEndAngle()`.
+
+TIP: The  scale maximum set by  xref:LinearScaleSetMax.adoc[] or xref:TimeScaleSetMax.adoc[] also affects the displayed angle.
+
+== Parameter
+value::			angle in degrees
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity", "m1", "m2", "m3"],["NJ", 200,90,25,50],["NY", 300,30,15,15]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var frame = new VineShapeFrame(); //<2>
+var mscale = new LinearScale();
+var rscale = new LinearScale();
+mscale.setMin(0);
+mscale.setMax(5);
+rscale.setMin(0);
+rscale.setMax(90);
+frame.setScales([rscale, mscale, mscale]);
+frame.setFields(["m1", "m2", "m3"]);
+frame.setStartAngle(0);
+frame.setEndAngle(90); //<3>
+elem.setShapeFrame(frame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `VineShapeFrame` object.
+<3> Use `setEndAngle` to set a 90° angle.
+<4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `VineShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:VineShapeFrameSetAngle.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

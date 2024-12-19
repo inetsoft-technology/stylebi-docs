@@ -1,0 +1,31 @@
+= parseFloat(string)
+:navtitle: parseFloat()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Parse a string into a decimal representation of a number.
+
+
+== Parameters
+string::			a string representation of a number
+
+
+== Example
+[source,javascript]
+var num = parseFloat("3231.24");
+
+
+
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+parseFloat(field['Char']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parseFloat(parameter.Char);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

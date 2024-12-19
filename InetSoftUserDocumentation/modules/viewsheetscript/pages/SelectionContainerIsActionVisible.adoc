@@ -1,0 +1,43 @@
+= isActionVisible(name)
+:navtitle: isActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:thisViewsheet.adoc#thisViewsheetIsActionVisible[thisViewsheet.IsActionVisible]  to return Dashboard toolbar button visibility.
+====
+
+
+Returns the visibility/accessibility of the specified end-user feature.
+
+== Parameters
+name:: Name of toolbar button (String): +
+`'Add Filter'` +
+`'Unselect All'`
+
+
+
+
+
+== Example
+[source,javascript]
+if (CurrentSelection1.isActionVisible('Unselect All')) {
+  Text1.text = 'Press the Clear button to clear all filters';
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+isActionVisible                       // unqualified
+CurrentSelection1.isActionVisible     // qualified
+
+{secondForm}
+====
+
+

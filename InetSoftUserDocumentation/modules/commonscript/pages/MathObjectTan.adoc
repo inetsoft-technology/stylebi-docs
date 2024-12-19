@@ -1,0 +1,47 @@
+= Math.tan(number)
+:navtitle: Math.tan()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_tan.adoc[] for the preferred version from the CALC library.
+====
+
+
+
+
+Return the tangent of an angle in radians.   This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan[Math.tan()] method, and can be used with or without the `Math` qualifier, `tan()` or `Math.tan()`.
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+tan(pi()/4);  // returns 0.9999999999999983
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+tan(field['Angle'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+tan(Slider1.selectedObject)
+tan(parameter.Angle)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

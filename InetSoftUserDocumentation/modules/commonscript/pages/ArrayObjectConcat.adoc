@@ -1,0 +1,43 @@
+= Array.concat(array1, array2, ...)
+:navtitle: Array.concat()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:commonscript:indexOf.adoc[] to detect an item in an array.
+* xref:commonscript:CALC_concatenate.adoc[] to concatenate strings.
+====
+
+Concatenate the specified arrays into a single array.
+
+== Example
+[source,javascript]
+----
+num1 = [1,2,3];
+num2 = [4,5,6];
+num3 = [7,8,9];
+nums = num1.concat(num2,num3) // returns [1,2,3,4,5,6,7,8,9]
+----
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Concat ‘Product’ columns  of Dashboard tables TableView1, TableView2:
+TableView1.table['Product'].concat(TableView2.table['Product'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Concat ‘Name’ columns of  ‘Food’ and ‘Health’ data blocks in Data Worksheet:
+Food['Name'].concat(Health['Name'])
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

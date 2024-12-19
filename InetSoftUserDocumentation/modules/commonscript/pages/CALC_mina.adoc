@@ -1,0 +1,37 @@
+= CALC.mina(array)
+:navtitle: CALC.mina()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the smallest value in array, where Booleans are valued as 1 if `true` and 0 if false, and string values are valued as 0. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of values (numeric, Boolean, or string)
+
+
+== Example
+Smallest value in set pass:[{4,5,8,8,4,true,3,yesterday}]:
+[source,javascript]
+----
+CALC.mina([4,5,8,8,4,true,3,'yesterday']);
+// returns 0.0 (value of string 'yesterday')
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.mina(TableView1.table['Col1'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.mina(Sales['Col1']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

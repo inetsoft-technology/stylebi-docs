@@ -1,0 +1,32 @@
+= Date.getUTCMilliseconds()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to return the milliseconds part of a date in universal time.    See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds[Date.getUTCMilliseconds()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var msecs = d.getUTCMilliseconds();
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getUTCMilliseconds();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getUTCMilliseconds();
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

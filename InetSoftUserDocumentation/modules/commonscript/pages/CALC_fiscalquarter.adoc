@@ -1,0 +1,40 @@
+= CALC.fiscalquarter(date, startMonth [,startDay,timeZone])
+:navtitle: CALC.fiscalquarter()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+For a fiscal calendar defined by an arbitrary start date, returns the fiscal quarter corresponding to the specified `date` as a number, e.g., “4”. The `startMonth` and optional `startDay` determine the starting point of the fiscal year.
+
+If the start of the fiscal year is on the 29th, 30th, or 31st day of a month, the actual last day of the month is used as the month boundary. For example, if you specify March 31 as the start of the fiscal year, this designates March 31 as the first day of month 1. However, the first day of month 2 *cannot* be April 31 because April has only 30 days. Therefore, the start of month 2 is the actual last day of the month, April 30.
+
+== Parameters
+date:: 			Date object to be converted to fiscal quarter.
+startMonth:: 			Integer specifying the starting month of the fiscal calendar.
+startDay::			Integer specifying the starting day of the fiscal calendar (defaults to 1).
+timeZone::			Time zone for fiscal year start date, a valid time zone identifier (e.g., `"GMT"`, `"GMT-8"`, `"America/New_York"`). Default is the JVM system default time zone.
+
+
+
+== Example
+[source,javascript]
+----
+//Today’s quarter in fiscal year beginning April 16:
+CALC.fiscalquarter(CALC.today(), 4, 16)
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.fiscalquarter(field['Order Date'], 4, 16)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.fiscalquarter(RangeSlider1.selectedObjects[0], 4, 16)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

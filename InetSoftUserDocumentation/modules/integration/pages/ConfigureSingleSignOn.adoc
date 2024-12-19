@@ -1,0 +1,207 @@
+= Configure Single Sign-On
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Single Sign-On (SSO) is the process of transparently passing user credentials from one application to another so that the user is only required to present login credentials a single time. This helps to create a seamless user experience.
+
+You can implement single sign-on (SSO) by injecting a principal object into the HTTP request object as part of the security filter chain. This allows StyleBI to automatically sign in the user without attempting to authenticate credentials. The StyleBI *SRPrincipal* object is used to hold the security information. You can create the SRPrincipal object yourself or let StyleBI create it for you. (See xref:AccessUserSession.adoc[] for additional information.)
+
+The following sections explain the security filter chain and methods of implementing SSO.
+
+== SSO Using OpenID
+To implement SSO using OpenID Connect, follow the steps below:
+
+. Open the *Security* page in Enterprise Manager, and select the SSO tab. From ‘Pick an SSO Provider’, select ‘OpenID Connect’.
++
+image:administration:SSO2.png[]
+
+. Use the ‘Default Role(s)’ menu to select default role or roles for new users signing in.
+
+. Set the ‘Single Sign-Out URL’ as desired. For Auth0, this may include a `returnTo` query parameter that redirects the user after logout. If this parameter is included then you must list that URL in the Auth0 application's *Allowed Logout URLs*.
+
+. Set the ‘Single Sign-Out Callback Path’ to `https://yourserver:port/context/sso/login`.
+
+. *_Optional:_* Enable ‘Allow Default Form Login’ to use the default login page when navigating directly to _/login.html_.
+
+. Enter the following properties:
++
+****
+OIDC Discovery URL::  URL for the Open ID Connect discovery document. Example for Auth0: `pass:[https://_domain_/.well-known/openid-configuration]`.
+Client ID:: The OAuth 2.0 client ID for the authentication request.
+Client Secret:: The OAuth 2.0 client secret for the authentication request.
+Scopes:: The scopes to request when performing the authorization. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
+Authorization Endpoint:: The endpoint that performs the authentication. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
+Token Endpoint:: The endpoint that returns the token response. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
+JWKS URL:: The URL of the key set used to verify token signatures. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
+JWK Certificate:: The PEM-encoded certificate for the key used to verify token signatures. This will  be ignored if the ‘JWKS URL’ is specified. If neither ‘JWK URL’ nor ‘JWKS URL’ are specified, token signatures will not be verified.
+Name Claim:: The name of the claim to be used for the username. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
+Role Claim:: The name of the claim to be used for the assigned role. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
+Group Claim:: The name of the claim to be used for the assigned group. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
+Organization Id Claim:: The name of the claim to be used for the assigned organization.
+****
+
+. Restart the InetSoft server.
+
+== SSO Using SAML
+To implement SSO using SAML, follow the steps below:
+
+. Open the *Security* page in Enterprise Manager, and select the *SSO* tab. From ‘Pick an SSO Provider’, select ‘SAML’.
++
+image:administration:SSO1.png[]
+
+. Use the ‘Default Role(s)’ menu to select default role or roles for new users signing in.
+
+. *_Optional:_* Enable ‘Allow Default Form Login’ to use the default login page when navigating directly to _/login.html_.
+
+. Enter the following properties:
++
+****
+spEntityId:: The entity ID of the SP (the InetSoft application). Entity IDs are URIs that identify SAML-based services.
+assertionUrl:: The Assertion Consumer Service URL (Application Callback URL in Auth0)  where the SAML token is returned, for example, `http://app_host:8080/saml/login`.
+idpEntityId:: The entity ID of the identity provider.
+idpSignOnUrl:: The login URL of the identity provider.
+idpPublicKey:: The public key of the identity provider.
+idpLogoutUrl:: The single-sign-out URL for the identity provider.
+****
+
+
+
+. Restart the InetSoft server.
+
+
+[#SSOUsingCustomFilter]
+== SSO Using Custom Filter
+
+If you are not using  SAML, OpenID, or Auth0, you can provide a custom filter that creates an SRPrincipal object with the information provided by the SSO mechanism. To implement a basic SSO filter, follow the steps below:
+
+. Decide whether you will compile a Java filter class or use an inline Groovy class. To compile a Java class follow the steps below:
+
+.. Create an SSO filter class based on this xref:ROOT:attachment$SampleFilter.java[SampleFilter] skeleton code. Add your own business logic in the `doFilter()` method where indicated.
++
+.See SampleFilter code...
+[%collapsible]
+====
+[source,java]
+----
+/*
+ * Copyright (c) 2019, InetSoft Technology Corp, All Rights Reserved.
+ *
+ * The software and information contained herein are copyrighted and
+ * proprietary to InetSoft Technology Corp. This software is furnished
+ * pursuant to a written license agreement and may be used, copied,
+ * transmitted, and stored only in accordance with the terms of such
+ * license and with the inclusion of the above copyright notice. Please
+ * refer to the file "COPYRIGHT" for further copyright and licensing
+ * information. This software and information or any other copies
+ * thereof may not be provided or otherwise made available to any other
+ * person.
+ */
+package inetsoft.sree;
+
+import java.io.IOException;
+import java.security.Principal;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletRequestWrapper;
+import inetsoft.sree.ClientInfo;
+import inetsoft.sree.RepletRepository;
+import inetsoft.sree.security.SRPrincipal;
+
+public class SampleFilter implements Filter {
+@Override
+public void init(FilterConfig config) throws ServletException {
+}
+
+   @Override
+   public  void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+  	throws IOException, ServletException
+   {
+  	HttpServletRequest httpRequest = (HttpServletRequest) request;
+  	HttpSession session = httpRequest.getSession(true);
+
+  	/* Code below can be replaced by your own business logic to determine the
+     	correct InetSoft User and create a new instance of the SRPrincipal Object.
+     	In this case, the parameter value is passed as the name "USERID".
+     	The simple logic used to create the SRPrincipal Object is for documentation
+     	purposes only and should not be used in a production environment.
+
+     	If the request does not contain the "USERID" parameter (lines 62-65),
+     	continue on with the filter chain, which will:
+     	a. Check if the SRPrincipal is found in the "session" or
+     	b. Prompt the user to login into the InetSoft long-in page.
+  	*/
+
+  	String userId = httpRequest.getParameter("USERID");
+
+  	if(userId == null ) {
+     	chain.doFilter(httpRequest, response);
+     	return;
+  	}
+
+  	SRPrincipal principal = new SRPrincipal(userId);
+
+  	/* Once the Principal object is created, we need to:
+     	a. Set the principal in the session (line 74).
+     	b. Place it in the request wrapper (lines 76-81).
+  	*/
+
+  	session.setAttribute(RepletRepository.PRINCIPAL_COOKIE, principal);
+
+  	HttpServletRequestWrapper wrapper = new HttpServletRequestWrapper(httpRequest) {
+     	@Override
+     	public Principal getUserPrincipal() {
+        	return principal;
+     	}
+  	};
+
+  	chain.doFilter(wrapper, response);
+   }
+
+   @Override
+   public void destroy() {
+   }
+}
+----
+====
+
+.. Compile the `SampleFilter` class into a JAR file and either mount  the JAR file, or create a custom Docker image into which you have copied the JAR file.
+
+
+
+.. Place the compiled `SampleFilter.class` file into the _/usr/local/inetsoft/classes/inetsoft/sree/_ directory in your installation (if it is not there already).
+include::partial$derivedDockerImage.adoc[]
+
+
+
+. Open the *Security* page in Enterprise Manager, and select the *SSO* tab. From ‘Pick an SSO Provider’, select ‘Custom’.
++
+image:administration:SSO4.png[]
+
+. Use the ‘Default Role(s)’ menu to select default role or roles for new users signing in.
+
+. Set the ‘Single Sign-Out URL’ as desired.
+
+. Set the ‘Single Sign-Out Callback Path’ to `https://yourserver:port/context/sso/login`.
+
+. *_Optional:_* Enable ‘Allow Default Form Login’ to use the default login page when navigating directly to _/login.html_.
+
+. Select ‘Java Class’ and enter the name of your filter class, e.g., `inetsoft.sree.SampleFilter`.
++
+image:administration:SSO6.png[]
+
++
+Alternatively, select ‘Inline Groovy’ and enter the class using the skeleton provided in the edit box.
++
+image:administration:SSO5.png[]
+
+. Press btn:[Apply] and restart the InetSoft server.
+
+
+NOTE: To access the security API and its helper functions for authentication and authorization, extend the https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/security/AbstractSecurityFilter.html[inetsoft.web.security.AbstractSecurityFilter] class described in the https://www.inetsoft.com/docs/2023/apidoc/[API Documentation].

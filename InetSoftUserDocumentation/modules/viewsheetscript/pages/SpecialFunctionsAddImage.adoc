@@ -1,0 +1,26 @@
+= addImage(label, image)
+:navtitle: addImage()
+
+
+[WARNING,caption=see also]
+xref:ChangeImageWithScript.adoc[] for another approach to dynamically setting images in Dashboards.
+
+Makes an image available in the ‘Uploaded’ folder of the ‘Image Properties’ dialog box.
+
+image:commonscript:addImage1.png[]
+
+After the image is added to the ‘Uploaded’ folder, you can display the image in any Image component by selecting its label the ‘Image Properties’ dialog box, or by assigning the label to the Image component’s xref:ImageImage.adoc[] property, as shown in the example below.
+
+== Parameters
+
+name:: Label under which the image should be listed in the ‘Uploaded’ folder
+image::			An image object, such as provided by xref:commonscript:getImage.adoc[]
+
+== Example
+
+.Make inetsoft.png available in Uploads  with label “Logo”
+[source,javascript]
+var img1 = getImage('https://visualizefree.com/images/inetsoft.png');
+addImage('Logo', img1);
+Image1.image = 'Logo'; // display in Image1 component
+

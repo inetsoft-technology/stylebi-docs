@@ -1,0 +1,41 @@
+= CALC.text(value, format)
+:navtitle: CALC.text()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Converts a numerical value to a string based on the specified format. {CALCExcelFunctionPage}
+
+== Parameters
+value::			Numerical value to convert to text
+format::			A  number format pattern constructed
+from the following symbols. See  xref:viewsheet:DataFormat.adoc#NumberFormat[Number Format] for more examples.
++
+include::partial$numberFormatTable.adoc[]
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.text(2800, '$0.00');  // returns $2800.00
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.text(field['Price'], '$0.00')
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.text(parameter.Price, '$0.00')
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

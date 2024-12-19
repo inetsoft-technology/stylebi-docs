@@ -1,0 +1,54 @@
+= labels
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:TabbedInterfaceProperties.adoc[] for more information on Tabbed Interface.
+====
+
+
+Specifies the text in the tab labels (as an array of Strings).
+
+
+
+
+
+
+
+
+
+== Type
+Array::	Tab label text
+
+
+
+
+
+
+== Example
+[source,javascript]
+Tab1.labels = ['Summary', 'Details'];
+if (RadioButton1.selectedObject == 'City') {
+  Tab1.labels[1] = 'City Details';
+}
+else {
+  Tab1.labels[1] = 'State Details';
+;]}
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+labels           // unqualified
+Tab1.labels      // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,41 @@
+= CALC.minverse(array)
+:navtitle: CALC.minverse()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the inverse of a nonsingular square matrix (two-dimensional `array`). {CALCExcelFunctionPage}
+
+== Parameters
+array::			A 2D array representing a nonsingular square matrix
+
+
+
+
+== Example
+stem:[ [[1,0,1\],[0,1,1\],[0,0,1\]\]^-1=[[1,0,-1\],[0,1,-1\],[0,0,1\]\]]
+[source,javascript]
+----
+var inv = CALC.minverse([[1,0,1],[0,1,1],[0,0,1]]);
+for (var i = 0;i <= 2; i++){
+  alert(inv[i].join(","))
+}
+
+// Returns:
+// 1,0,-1
+// 0,1,-1
+// 0,0,1
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.minverse(parameter.row1, parameter.row2, parameter.row3)
+----
+
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

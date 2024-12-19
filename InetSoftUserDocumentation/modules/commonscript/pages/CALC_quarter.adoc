@@ -1,0 +1,41 @@
+= CALC.quarter(date)
+:navtitle: CALC.quarter()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Returns the quarter (1, 2, 3, or 4) corresponding to the given `date`.
+
+
+
+
+== Parameters
+date::			a Date object
+
+
+
+== Example
+[source,javascript]
+----
+CALC.quarter(new Date(2005, 11, 28));  // returns 4
+
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.quarter(field['Order Date'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.quarter(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

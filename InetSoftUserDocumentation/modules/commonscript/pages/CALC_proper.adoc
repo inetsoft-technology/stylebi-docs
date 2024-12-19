@@ -1,0 +1,37 @@
+= CALC.proper(string)
+:navtitle: CALC.proper()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Capitalizes the first letter of each word in string. {CALCExcelFunctionPage}
+
+== Parameters
+string::			A string to convert to initial capitals
+
+
+
+== Example
+[source,javascript]
+----
+CALC.proper('my name is alex');  // returns My Name Is Alex
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.proper(field['Label'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.proper(parameter.Label)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

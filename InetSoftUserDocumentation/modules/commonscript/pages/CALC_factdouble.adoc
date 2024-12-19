@@ -1,0 +1,49 @@
+= CALC.factdouble(number)
+:navtitle: CALC.factdouble()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the double factorial stem:[n!!] of a number stem:[n], as shown below:
+
+
+.Double factorial definition
+[width=50%,cols="1,3"]
+|===
+|Number|Double factorial
+
+|stem:[n = 0]|stem:[n!! = 1]
+|stem:[n]  is even|stem:[n!! = n(n-2)(n-4)...(4)(2)]
+|stem:[n]  is odd|stem:[n!! = n(n-2)(n-4)...(3)(1)]
+|===
+
+== Parameters
+number::			Non-negative value (n) for which to compute double factorial (n!!). Any fractional component is ignored.
+
+
+
+== Example
+[source,javascript]
+----
+CALC.factdouble(6);  // returns 48.0
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.factdouble(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.factdouble(Slider1.selectedObject)
+CALC.factdouble(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

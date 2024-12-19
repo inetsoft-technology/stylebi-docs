@@ -1,0 +1,38 @@
+= rangeMax
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:RangeSliderProperties.adoc[] for more information on user selection editing.
+====
+
+Specifies the initial upper end (right side) of the selected range. This property should be set in the *onInit* handler  (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about handlers.)
+
+== Type
+Number::			Upper end of selected range
+
+
+
+
+== Example
+[source,javascript]
+RangeSlider1.max = 10;
+RangeSlider1.rangeMin = new java.util.Date(118, 3, 0);
+RangeSlider1.rangeMax = new java.util.Date(120, 2, 1);
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+rangeMax                  // unqualified
+RangeSlider1.rangeMax     // qualified
+
+{secondForm}
+====
+
+

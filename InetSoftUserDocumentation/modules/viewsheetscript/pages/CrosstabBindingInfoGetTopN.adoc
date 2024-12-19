@@ -1,0 +1,42 @@
+= bindingInfo.getTopN(field, header)
+:navtitle: getTopN()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the number of row or column groups in the ranking specified by  xref:CrosstabBindingInfoSetTopN.adoc[] or set by the ‘Rank’ option in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetTopN_1.png[]
+
+
+== Parameters
+field::			String: Name of a column to rank
+header::			`StyleConstant.ROW_HEADER` or `StyleConstant.COLUMN_HEADER`
+
+== Returns
+Integer::			Number of row or column groups
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var numGroups = Crosstab1.bindingInfo.getTopN('Category',StyleConstant.ROW_HEADER);
+Text1.text = 'Displaying top ' + numGroups + ' groups.'
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.getTopN             // unqualified
+Crosstab1.bindingInfo.getTopN   // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,29 @@
+= sizeLegend.title
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the legend title for a size-key legend.
+
+
+
+== Type
+String
+
+
+== Example
+
+[source,javascript]
+Chart1.sizeLegend.title = 'Salesperson';
+
+image:commonscript:sizeLegendTitle.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sizeLegend.title           // unqualified
+Chart1.sizeLegend.title    // qualified
+
+{secondForm}
+====

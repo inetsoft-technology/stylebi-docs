@@ -1,0 +1,80 @@
+= LineFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=created by]
+====
+[square]
+* xref:LinearLineFrame.adoc[]
+* xref:CategoricalLineFrame.adoc[]
+* xref:StaticLineFrame.adoc[]
+====
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+The `LineFrame` object contains the line design for visual chart objects. `LineFrame` objects allow you to represent additional data dimensions by using the physical attributes of chart elements, or to apply a fixed (static) line style. To create a `LineFrame`, use a constructor such as  xref:LinearLineFrame.adoc[] or xref:StaticLineFrame.adoc[]
+
+
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300], ["PA",100]]; //<1>
+graph = new EGraph();
+var elem = new LineElement("State", "Quantity");
+var frame = new StaticLineFrame(); //<2>
+frame.setLine(GLine.DASH_LINE);
+// or frame.setLine(new GLine(10,5));
+elem.setLineFrame(frame); //<3>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `LineFrame` object.
+<3> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:LineElement.adoc[].
+
+image:commonscript:LineFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[#Example2]
+== Example 2
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:LineFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.lineFrame = new LinearLineFrame;
+
+--
+
++
+image:commonscript:LinearLineFrame.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

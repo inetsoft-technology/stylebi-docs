@@ -1,0 +1,42 @@
+= RectCoord.getYScale()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+
+
+Retrieves the xref:Scale.adoc[] for the Y-axis.  The corresponding “setter” function is xref:RectCoordSetYScale.adoc[].
+
+
+
+
+== Returns
+scale::			a xref:Scale.adoc[] object
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var yscale = coord.getYScale(); //<2>
+var yspec = yscale.getAxisSpec(); //<3>
+// Compact syntax: var xspec = graph.getCoordinate().getYScale().getAxisSpec();
+yspec.setLineColor(java.awt.Color(0x00ff00)); //<4>
+
+
+--
+<1> Obtain handle to xref:Coordinate.adoc[] object.
+<2> Use `getYScale` to obtain a handle to the  xref:Scale.adoc[] object.
+<3> Obtain handle to xref:AxisSpec.adoc[] object.
+<4> Set desired properties.
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

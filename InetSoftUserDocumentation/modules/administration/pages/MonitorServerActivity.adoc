@@ -1,0 +1,163 @@
+= Monitor Server Activity
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To monitor and manage a variety of aspects of server activity, press the {buttonMonitoring} at the top of Enterprise Manager.
+
+image:Monitoring.png[]
+
+On the pages listed in the left panel you can view Dashboards and queries that are currently executing on the server, and can terminate undesired activity. You can also view currently active users, and terminate any undesired sessions.
+
+[#Summary]
+== Summary
+include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
+
+
+Use the *Summary* Monitoring page  to track server performance. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine. Click on a chart to view the detailed information provided by the corresponding ‘Monitoring’ page.
+
+
+image:Monitoring Summary.png[]
+
+
+
+The following information is available. The ‘Level’ column indicates the monitoring level required for the feature. The level is set by the `monitor.level` property. (See xref:AllProperties.adoc[] for information about how to set properties.)
+
+|===
+|Summary|Notes|Level
+
+|Heap memory usage|for all cluster nodes|None
+|CPU usage|for all cluster nodes|None
+|Garbage Collection Count|for all cluster nodes|None
+|Garbage Collection Time|for all cluster nodes|None
+|Server uptime| |LOW, MEDIUM, HIGH
+|Scheduler uptime| |LOW, MEDIUM, HIGH
+|Memory cache usage|for  data |MEDIUM, HIGH
+|Execution|for  Dashboards, queries|LOW, MEDIUM, HIGH
+|Disk cache usage|for  data|MEDIUM, HIGH
+|Swapping|“written” to disk cache, and “read” into memory cache|MEDIUM, HIGH
+|Top 5 users|by count of active  Dashboards|LOW, MEDIUM, HIGH
+|===
+
+The bottom of the *Summary* page provides details about the JVM currently being used by the server, including the Java Home Directory and Classpath. If a reverse proxy is in use, this is indicated  above the JVM information.  If no reverse proxy information appears in that location, this means that no reverse proxy was detected.
+
+image:JVM.png[]
+
+
+== Dashboards
+
+Use the *Dashboards* Monitoring page to access key information about *executing* Dashboards that are currently being processed by the server, as well as *open* Dashboards that are active in memory but are not currently being processed.
+
+
+In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
+
+image:Monitoring Viewsheets.png[]
+
+The page provides the following information:
+
+[cols="1,3"]
+|===
+|Name|The name of the Dashboard.
+|User|The user who opened the Dashboard.
+|Task|Scheduled task executing Dashboard.
+|Age|The time elapsed since the Dashboard was opened.
+|===
+
+To terminate a Dashboard, press the  {buttonSelect}  next to the Dashboard, and then press the btn:[Remove] button below the table.
+
+* For an executing Dashboard, btn:[Remove] terminates execution, and removes any cached data.
+* For an open Dashboard, btn:[Remove] deletes any cached data.
+
+== Queries
+Use the *Queries* Monitoring page  to access key information about queries currently executing on the server. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
+
+image:Monitoring Queries.png[]
+
+The page provides the following information:
+
+[cols="1,4"]
+|===
+|Name|The name of the query or  the Data Worksheet/data model executing the query.
+|User|The user who executed the query.
+|Task|The scheduled task that executed the query.
+|Thread|The thread within which the query is executing. Click the link to obtain a stack trace.
+|Asset|The name of the  Dashboard from which the query was executed.
+|Age|The length of time that the query has been executing.
+|===
+
+== Cache
+include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
+
+[WARNING,caption=See Also]
+xref:TailorServerPerformance.adoc[], for information on configuring caching.
+
+Use the *Cache* Monitoring page  to access key information for  the data cache. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
+
+image:Monitoring Cache.png[]
+
+The page provides the following information:
+
+[cols="1,3"]
+|===
+|Data Objects|The number of dataset rows cached in memory or disk.
+|Hits|The number of cache hits. A hit occurs when a query is performed against the cache and a match is found. (Requires the `monitor.level` property  to be set to ‘High’. See xref:AllProperties.adoc[].)
+|Misses|The number of cache misses. A miss occurs when a query is performed against the cache and no match is found. (Requires the `monitor.level` property  to be set to ‘High’. See xref:AllProperties.adoc[].)
+|Swapped|The number of bytes swapped from disk to memory, or from memory to disk. (Requires the `monitor.level` property  to be set to ‘Medium’. See xref:AllProperties.adoc[].)
+|===
+
+== Users
+
+IMPORTANT: Requires the `monitor.level` property  to be set to ‘High’. See xref:AllProperties.adoc[].
+
+Use the *Users* Monitoring page  to access key information about user logins, and allows you to terminate a given user session. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
+
+image:Monitoring Users.png[]
+
+The page provides the following information:
+[cols="1,3"]
+|===
+|Session ID|The unique session identifier.
+|User|The user who attempted to log in.
+|Address|The IP address from which the login was attempted.
+|Age|The elapsed time since start of session.
+|===
+
+To terminate a user session, click the {buttonSelect} next to the desired user, and then press the btn:[Remove] button.
+
+== Cluster
+include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
+
+Use the *Cluster* Monitoring page  to view cluster nodes.
+
+image:Monitoring Cluster.png[]
+
+== Logs
+include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
+
+[WARNING,caption=See Also]
+xref:Logging.adoc[], for information on how to  configure logging behavior.
+
+Use the *Logs* Monitoring page  to view and download server and scheduler logs.
+
+image:Figure 36.png[]
+
+To do this follow the steps below:
+
+. From the ‘Log file’ menu, select ‘sree.log’ for the InetSoft server log or ‘schedule.log’ for the Scheduler log. This will display the selected log.
++
+NOTE: If the log size has exceeded the ‘Maximum Log File Size’ set on the *Logging* page (see xref:Logging.adoc[]), you will see multiple log files listed.
+
+. Select the ‘All’ option to display the entire contents of the log file (maximum 3000 lines by default), or enter the ‘Number of Lines’ from the end of the file to display.
++
+image:LogNumberOfLines.png[]
+
+. Select ‘Enable Auto-refresh’ to allow the display to update automatically as new lines are written to the log.
+
+. To download a zip archive containing all log files, press the btn:[Download] button at the top of the page.
++
+image:LogDownload.png[]
+
+. To refresh the display with current log records, press the btn:[Refresh] button (only available when ‘Enable Auto-refresh’ is disabled).
+
+. To start a new log file, press the btn:[Rotate] button. This saves the current log file under an automatically-generated name such as _sree-IP_Address-index.log_. or _schedule-IP_Address-index.log_, and begins adding log records to a new log file.
+
+NOTE:  These log monitoring settings are not retained following a server restart.

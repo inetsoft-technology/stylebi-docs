@@ -1,0 +1,61 @@
+= RectForm.setBottomRightTuple(value)
+:navtitle: RectForm.setBottomRightTuple()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+Specifies the point in logical space for the bottom-right corner of the rectangle. The coordinates of the point are relative to the prevailing axis scaling.  The corresponding “getter” function is `getBottomRightTuple()`.
+
+
+
+
+== Parameter
+value::			an [X,Y] pair
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var rect = new RectForm(); //<2>
+rect.setTopLeftTuple([1,200]);
+rect.setBottomRightTuple([2,50]); //<3>
+rect.setColor(java.awt.Color(0xff0000));
+graph.addForm(rect); //<4>
+graph.addElement(new IntervalElement("State", "Quantity"));
+--
+<1> {dataset}
+<2> Create the  xref:RectForm.adoc[] object.
+<3> Use `setBottomRightTuple()` to set the bottom-right corner.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:RectFormSetBottomRightTuple.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was previously created with the Chart Editor, you do not need to add a Chart element. For example:
+
+[source,javascript]
+--
+var rect = new RectForm();
+rect.setTopLeftTuple([1,200]);
+rect.setBottomRightTuple([2,50]);
+rect.setColor(java.awt.Color(0xff0000));
+graph.addForm(rect);
+
+--
+=====
+

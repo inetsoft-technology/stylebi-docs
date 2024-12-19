@@ -1,0 +1,54 @@
+= getFormRows([type])
+:navtitle: getFormRows()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:WriteBackToDatabase.adoc#AccessMostRecentUserModification[Access the Most Recent User Modification] for general information about Table editing.
+====
+
+
+
+
+For an *Editable Table*, retrieves the rows that have been modified by the user. The optional `type` parameter specifies the set of rows to return, and can be provided in string form (e.g., `'added'`) or constant form (e.g., `ADDED`). Omit the parameter to return all rows in table.
+
+See xref:viewsheet:TableProperties.adoc[] or xref:TableForm.adoc[] for information on how to make a Table editable.
+
+== Parameters
+type:: `ADDED`: return new rows inserted by user +
+`CHANGED`: return old rows modified by user +
+`DELETED`: return old rows deleted by user +
+`OLD`: return all old rows
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var allRows = Table1.getFormRows();
+var addedRows = Table1.getFormRows(ADDED);
+var changedRows = Table1.getFormRows(CHANGED);
+var deletedRows = Table1.getFormRows(DELETED);
+var oldRows = Table1.getFormRows(OLD);
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+getFormRows                 // unqualified
+TableView1.getFormRows      // qualified
+
+{secondForm}
+====
+
+

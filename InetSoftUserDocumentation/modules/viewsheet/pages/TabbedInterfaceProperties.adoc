@@ -1,0 +1,23 @@
+= Tabbed Interface Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+* xref:ArrangeComponents.adoc[] for information on how to use Tabbed Interface.
+* {commonProperties}
+====
+
+The ‘Tab Properties’ panel provides only  *General* and *Script* tabs.
+
+TIP: Note: To open the Tabbed Interface ‘Properties’ dialog box, right-click in the tab region, and select ‘Properties’.
+
+== General Tab
+The *General* tab allows you to assign labels to the different tabs and modify their order.
+
+image:Tab Properties General Tab.png[]
+
+To change a tab label, select the desired tab in the ‘Tab’ list, enter the new label text in the ‘Label’ field, and press btn:[OK]. To change the position of the selected tab, press btn:[Move Up] or btn:[Move Down].
+
+== Script Tab
+{commonScript}

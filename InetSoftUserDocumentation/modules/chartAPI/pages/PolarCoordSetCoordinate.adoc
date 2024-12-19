@@ -1,0 +1,54 @@
+= PolarCoord.setCoordinate(coord)
+:navtitle: PolarCoord.setCoordinate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:ChangeChartCoordinates.adoc#PolarCoordinates[Polar Coordinates] for a walkthrough of polar coordinates.
+====
+
+Specifies the xref:RectCoord.adoc[] on which the polar coordinates should be based.  The corresponding “getter” function is `getCoordinate()`.
+
+== Parameter
+coord::			a xref:RectCoord.adoc[] object
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["Direction", "Score"], [(Math.PI/2),20], [(Math.PI/4),30], [(Math.PI),35]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("Direction", "Score");
+var xscale = new LinearScale("Direction");
+var yscale = new LinearScale("Score");
+yscale.setMin(0);
+yscale.setMax(40);
+xscale.setMin(0);
+xscale.setMax(1.95*Math.PI);
+xscale.setIncrement(Math.PI/8);
+var rect = new RectCoord(xscale,yscale); //<2>
+var polar = new PolarCoord(); //<3>
+polar.setCoordinate(rect); //<4>
+graph.setCoordinate(polar); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:RectCoord.adoc[] object.
+<3> Create the `PolarCoord`  object.
+<4> Use `setCoordinate` to assign the `RectCoord` object to the `PolarCoord`.
+<5> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:PolarCoordsSetCoord.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

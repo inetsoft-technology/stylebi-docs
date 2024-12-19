@@ -1,0 +1,37 @@
+= dropdown
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:SelectionListProperties.adoc[] and xref:viewsheet:SelectionTreeProperties.adoc[] more information on these components.
+
+
+Sets the Selection List to *dropdown* style, in which the Selection List is compactly represented by just its title bar. When the user moves the mouse over the List, the List automatically expands to display the available options.
+
+
+
+
+
+
+== Type
+Boolean::	`true`: show compact title-bar only display +
+`false`: show normal  display (default)
+
+
+== Example
+[source,javascript]
+SelectionList1.dropdown = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+dropdown                   // unqualified
+SelectionList1.dropdown    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,35 @@
+= subString(indexA,indexB)
+:navtitle: subString()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:CALC_left.adoc[], xref:CALC_right.adoc[], and xref:CALC_mid.adoc[] for an equivalent functions.
+
+
+
+Return a substring of a given string.
+
+== Parameters
+indexA:: Starting position of the substring in the original string. The index is zero-based.
+indexB:: Position following the last character in the substring. The index is zero-based.
+
+
+
+
+== Examples
+
+[source,javascript]
+var txt = 'Hello'.substring(1,3); // returns “el”
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].substring(1,3);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.substring(1,3);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

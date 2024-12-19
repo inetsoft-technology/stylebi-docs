@@ -1,0 +1,35 @@
+= value
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+If the Gauge component is bound to a data field (i.e., displaying an aggregate), `value` returns the value displayed by the component. If the Gauge component is not bound to a data field,  `value`  specifies the value to display.
+
+
+== Type
+Number
+
+
+
+
+
+== Example
+[source,javascript]
+if(Gauge1.value > 100) {
+  alert('Excessive value detected.')
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+value           // unqualified
+Gauge1.value    // qualified
+
+{secondForm}
+====

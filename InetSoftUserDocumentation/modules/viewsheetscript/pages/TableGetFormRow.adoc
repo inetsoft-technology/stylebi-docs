@@ -1,0 +1,38 @@
+= getFormRow(row)
+:navtitle: getFormRow()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:WriteBackToDatabase.adoc#AccessMostRecentUserModification[Access the Most Recent User Modification] for an example of using `getFormRow()`.
+====
+
+
+
+
+For an *Editable Table*, retrieves the edited row specified by the index. Often the index is provided by the xref:SpecialFunctionsEvent.adoc[] object for the Editable Table. See xref:viewsheet:TableProperties.adoc[] or xref:TableForm.adoc[] for information on making a Table editable.
+
+
+== Parameters
+row::			row index
+
+
+
+== Example
+[source,javascript]
+var changedRow = Table1.getFormRow(row);
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+getFormRow                 // unqualified
+TableView1.getFormRow      // qualified
+
+{secondForm}
+====
+
+

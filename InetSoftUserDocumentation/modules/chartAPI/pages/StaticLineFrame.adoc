@@ -1,0 +1,79 @@
+= StaticLineFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+The `StaticLineFrame` object contains a line frame defined by explicit line data in the xref:VisualFrameSetField.adoc[] column, or by the fixed line in xref:StaticLineFrameSetLine.adoc[]. To create a `StaticLineFrame` object, call the `StaticLineFrame` constructor.
+
+[source,javascript]
+var frame = new StaticLineFrame(GLine.LARGE_DASH);
+
+You can pass a `GLine` object or a field name (e.g., ‘Line’) to the constructor, or specify this later using the xref:StaticLineFrameSetLine.adoc[] or inherited xref:VisualFrameSetField.adoc[] property.
+
+
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+
+dataset = [["State","Quantity","Line"], ["NJ",200,Chart.THICK_LINE], ["NY",300,Chart.MEDIUM_DASH]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var sizeframe = new StaticSizeFrame(9);
+var lineframe = new StaticLineFrame(); //<2>
+lineframe.setField("Line");
+elem.setLineFrame(lineframe); //<3>
+elem.setSizeFrame(sizeframe);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `LineFrame` object.
+<3> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:StaticLineFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[#Example2]
+== Example 2
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:LineFrame.adoc[].
+
+. Bind a xref:viewsheet:LineChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.lineFrame = new StaticLineFrame;
+Chart1.bindingInfo.lineFrame.line = GLine.LARGE_DASH;
+
+--
+
++
+image:commonscript:StaticLineFrameOnLoad.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

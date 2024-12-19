@@ -1,0 +1,41 @@
+= CALC.max(array)
+:navtitle: CALC.max()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the largest value in `array`. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of numerical values
+
+
+
+
+
+== Example
+Largest value in set {4,5,8,7,8,4,5,3,7}:
+
+
+[source,javascript]
+----
+CALC.max([4,5,8,7,8,4,5,3,7]);  // returns 8.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.max(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.max(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,22 @@
+= Date Object Functions
+
+
+The JavaScript Date object stores the time and date and can be used to manipulate dates and perform date conversions. There are several ways to create a Date object. Invoked without arguments, the new *Date* object contains the time and date of its creation:
+
+[source,javascript]
+var now = new Date() // Thu Jun 12 15:14:51 EDT 2008
+
+You can also create a Date object by specifying elapsed milliseconds from January 1, 1970 (the Unix epoch) or from individual date parts:
+
+[source,javascript]
+----
+var due_date = new Date(800000000000);
+// Tue May 09 02:13:20 EDT 1995
+
+var due_date = new Date(1988,0,10);
+// Sun Jan 10 00:00:00 EST 1988
+----
+NOTE: Scripts also have access to the https://docs.oracle.com/javase/8/docs/api/index.html?java/util/Date.html[java.util.Date] object.
+
+The following topics describe  methods in the Date object for manipulating date fields.
+

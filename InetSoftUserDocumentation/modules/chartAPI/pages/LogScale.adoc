@@ -1,0 +1,41 @@
+= LogScale
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:LinearScale.adoc[]
+* xref:Scale.adoc[]
+====
+
+The `LogScale` object contains a logarithmic scale, i.e., a xref:Scale.adoc[] that logarithmically maps numerical data values to physical attributes (axis position, element size, etc.). To create a `LogScale` object, call the `LogScale` constructor.
+
+[source,javascript]
+var qscale = new LogScale('Last Year', 'This Year');
+
+You can pass the names of the fields (e.g., ‘Last Year’, ‘This Year’) for which the scale should be generated to the constructor, or specify these later using the inherited xref:ScaleSetFields.adoc[] property.
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",2000]]; //<1>
+graph = new EGraph();
+var qscale = new LogScale(); //<2>
+qscale.setFields(["Quantity"]);
+var elem = new IntervalElement("State", "Quantity");
+graph.setScale("Quantity", qscale); // <3>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create the `LogScale` object.
+<3> Use  xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart.
+
+
+image:commonscript:LogScale.png[]
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

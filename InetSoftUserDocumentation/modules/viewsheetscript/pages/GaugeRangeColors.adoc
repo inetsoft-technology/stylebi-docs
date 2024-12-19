@@ -1,0 +1,40 @@
+= rangeColors
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.
+====
+
+Specifies an array of one to three colors to be used for the Gauge ranges (color zones). The positions of the colors on the Gauge are determined by the xref:GaugeRanges.adoc[]  array. Colors can be specified by any of the methods shown for the  xref:CommonBackground.adoc[] property.
+
+
+== Type
+Array of colors in any of the following formats:
+
+include::partial$colorSyntax.adoc[]
+
+
+
+
+
+== Example
+[source,javascript]
+Gauge1.rangeColors = ['green','yellow','red'];
+Gauge1.ranges = [5,10,15];
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+rangeColors           // unqualified
+Gauge1.rangeColors    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,80 @@
+= Gantt Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A Gantt chart displays the timeline of a process, and usually consists of sequential or concurrent tasks arranged from top to bottom by start time.
+
+image:commonscript:gantt1.png[]
+
+To create a Gantt chart, follow the basic steps below.
+
+.Configure your data
+[IMPORTANT]
+====
+The data for a Gantt chart should be the start and end times for tasks, as well as any milestones, as shown below. See xref:dataworksheet:PrepareYourData.adoc[] for information on how to manipulate your data, if it is not currently in this form.
+
+image:commonscript:gantt3.png[]
+====
+
+[TIP]
+=====
+If you are *new to charting*, see the following section:
+
+include::partial$createChartIntro.adoc[]
+=====
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Gantt’  style.  Press the {buttonApply}.
++
+image:commonscript:gantt2.png[]
+
+
+. If the date fields are listed under the ‘Dimensions’ folder in the *Data Source* panel, convert each date field to a *measure*. To do this, right-click each date dimension in the ‘Dimensions’ folder and select ‘Convert to Measure’.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:ganttChartExpVS1.png[]
+
+
+. Drag the start date measure to the ‘Start’ region.
++
+image:commonscript:ganttChartExpVS2.png[]
+
+. Drag the end date measure to the ‘End’ region.
++
+image:commonscript:ganttChartExpVS3.png[]
+
+. Drag the milestone date measure  to the ‘Milestone’ region.
++
+image:commonscript:ganttChartExpVS4.png[]
+
+. From the *Data Source* panel, drag a desired *dimension* designating the different tasks to the ‘Y’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:ganttChartExpVS5.png[]
++
+TIP: {convertToDimension}
++
+Note that the order of the tasks may not be correct. To address this, proceed to the next step.
+
+. Press the {buttonEditDimension} next to the dimension.  Select the ‘Manual’ option in the ‘Sort’ menu, and press the {buttonEdit} to open the ‘Manual Ordering’ dialog box. To reorder an item in the ‘Manual Ordering’ dialog box, select the item and press  btn:[Up] or btn:[Down]. Press btn:[OK] to close the dialog box.
++
+image:commonscript:gantt9.png[]
++
+See xref:SortData.adoc[] for more information about setting dimension properties.
+
+. To display the milestones using a different color, select the milestone field from the menu above the ‘Color’ region, press the {buttonEditColor}, and choose the desired color.
++
+image:commonscript:ganttChartExpVS6.png[]
+
+. *_Optional:_* To change the size of the milestones, select the milestone field from the menu above the ‘Color’ region, press the ‘Edit Size’ button, and choose the desired size.
++
+image:commonscript:gantt10.png[]
+
+. *_Optional:_* To hide the legend, right-click the legend and select ‘Hide Legend’.
+
+. *_Optional:_* To format the dates on the axis, click on one of the axis labels and select the *Format* tab in the left panel. See xref:DataFormat.adoc[] for more information. See xref:AxisProperties.adoc[] for information on how to rotate the labels.
+
+. {finishEditing}
+
+include::partial$addTitlesLegend.adoc[]

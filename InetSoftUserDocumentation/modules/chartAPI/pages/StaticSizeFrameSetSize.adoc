@@ -1,0 +1,96 @@
+= StaticSizeFrame.setSize(value)
+:navtitle: StaticSizeFrame.setSize()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:SizeFrame.adoc[]
+* xref:VisualFrame.adoc[]
+====
+
+
+Specifies the static size for graphical elements in element script . For xref:PointElement.adoc[] and xref:LineElement.adoc[] graphs, this is the size (in pixels) of the elements. For xref:SchemaElement.adoc[] and xref:IntervalElement.adoc[] graphs, the value specified for the size property is relative to the inherited xref:SizeFrameSetMax.adoc[] value (default=30).
+
+For example, if size=50 and max=100, the graphical elements are displayed at one half of the maximum allowable size. If the data in the column set by the inherited xref:VisualFrameSetField.adoc[] function  are positive values, these data values are used instead of the `setSize()` setting. You can also set this using the `bindingInfo.sizeFrame.size`  property syntax in *onRefresh* script . See xref:#Example2[] below. The corresponding “getter” function is `getSize()`.
+
+== Parameter
+value::			Number of pixels, or relative size
+
+
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new StaticSizeFrame(); //<2>
+frame.setMax(100);
+frame.setSize(50); //<3>
+elem.setSizeFrame(frame);  //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `StaticSizeFrame` object.
+<3> Use `setSize` to set the size for the `StaticSizeFrame`.
+<4> Use xref:GraphElementSetSizeFrame.adoc[] to add the `StaticSizeFrame` to the xref:IntervalElement.adoc[].
++
+image:commonscript:StaticSizeFrame2SetSize.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} and xref:GraphElementGetSizeFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:SizeFrame.adoc[]  objects. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getSizeFrame(); //<2>
+frame.setSize(50);
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:SizeFrame.adoc[].
+
+. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setSizeField("Company",Chart.STRING);
+Chart1.bindingInfo.sizeFrame = new StaticSizeFrame;
+Chart1.bindingInfo.sizeFrame.size = 30;
+--
+
++
+image:commonscript:StaticSizeFrame_1.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

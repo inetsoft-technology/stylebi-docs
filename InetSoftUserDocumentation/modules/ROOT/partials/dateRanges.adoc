@@ -1,0 +1,36 @@
+
+The following predefined ranges are available for use with the *in range* operator.  Others may also be provided. See the explanations below the table.
+
+[cols=3,3,3]
+|===
+|Last year |This January|Last November
+|This year|This February|Last December
+|Last quarter|This March|Last week
+|This quarter|This April|This week
+|Last quarter last year|This May|Week before last week
+|This quarter last year|This June|Last 7 days
+|1st Quarter this year|This July|Last 8-14 days
+|2nd Quarter this year|This August|Last 4 weeks
+|3rd Quarter this year|This September|Last 5-8 weeks
+|4th Quarter this year|This October|Last 30 days
+|1st Quarter last year|This November|Last 31-60 days
+|2nd Quarter last year|This December|Today
+|3rd Quarter last year|Last January|Tomorrow
+|4th Quarter last year|Last February|Yesterday
+|1st half of this year|Last March|Year to date
+|2nd half of this year|Last April|Year to date last year
+|1st half of last year|Last May|Quarter to date
+|2nd half of last year|Last June|Quarter to date last year
+|Last month|Last July|Quarter to date last quarter
+|This month|Last August|Month to date
+|Last month last year|Last September|Month to date last year
+|This month last year|Last October|Month to date last month
+|===
+
+The explanation of the last five ranges is as follows:
+
+Year to date last year:: The same date range provided by the ‘Year to date’ option (i.e., beginning of year to present date), but offset to the previous year. For example, if today is Nov. 8, 2011, the range selected by ‘Year to date last year’ is Jan. 1, 2010–Nov. 8, 2010.
+Month to date last month:: The same date range provided by the ‘Month to date’ option (i.e., beginning of month to present date), but offset to the previous month. For example, if today is Nov. 8, 2011, the range selected by ‘Month to date last month’ is Oct. 1, 2011–Oct. 8, 2011.
+Quarter to date last quarter:: The same date range provided by the ‘Quarter to date’ option (i.e., beginning of quarter to present date), but offset to the previous quarter. For example, if today is Nov. 8, 2011, the range selected by ‘Quarter to date last quarter’ is July. 1, 2011–Aug. 8, 2011.
+Month to date last year:: The same date range provided by the ‘Month to date’ option (i.e., beginning of month to present date), but offset to the previous year. For example, if today is Nov. 8, 2011, the range selected by ‘Month to date last year’ is Nov. 1, 2010–Nov. 8, 2010.
+Quarter to date last year:: The same date range provided by the ‘Quarter to date’ option (i.e., beginning of quarter to present date), but offset to the previous year. For example, if today is Nov. 8, 2011, the range selected by ‘Quarter to date last quarter’ is Oct. 1, 2010–Nov. 8, 2010.

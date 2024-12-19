@@ -1,0 +1,33 @@
+= wrapping
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies whether text that exceeds its boundaries is wrapped or truncated. This property is available for the following components: Table, Embedded Table, Crosstab Table, Selection List, Selection Tree, and Text.
+
+== Type
+Boolean::
+`true`: wrap text,				`false`: truncate text
+
+
+
+
+
+
+== Example
+[source,javascript]
+Table1.wrapping = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+wrapping               // unqualified
+Component1.wrapping    // qualified
+
+{secondForm}
+====
+
+

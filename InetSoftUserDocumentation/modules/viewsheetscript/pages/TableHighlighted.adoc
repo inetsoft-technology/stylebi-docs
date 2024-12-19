@@ -1,0 +1,47 @@
+= highlighted(name)
+:navtitle: highlighted()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:ConditionalFormat.adoc[] for basic information on highlights.
+====
+
+
+
+Identifies whether a highlight with the specified name has been applied to the Table (i.e., whether the highlight condition has been satisfied.)
+
+== Parameter
+name::			name of the highlight
+
+
+
+
+
+== Example
+[source,javascript]
+----
+if(Table1.highlighted.lowSales) {
+  alert('lowSales highlight was applied')
+}
+----
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+highlighted                 // unqualified
+TableView1.highlighted      // qualified
+
+{secondForm}
+====
+
+

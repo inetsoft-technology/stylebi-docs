@@ -1,0 +1,908 @@
+= Presentation
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+This section discusses the various features that are available for tailoring the appearance of the User Portal.
+
+[#PresentationMultiTenancy]
+== Presentation for Multi-Tenancy
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+If you have multi-tenancy enabled (see xref:EnableMultiTenant.adoc[]), you can choose to make the settings described in the sections below either globally or for a particular organization.
+
+To make global settings, select the *Global Settings* tab, and then proceed as described in the sections  below.
+
+image:PresentationGlobalSettings.png[]
+
+To make settings for a particular organization, select the *Organization Settings* tab, and use the *Select Organization* menu to choose the desired organization. Then proceed as described in the sections  below.
+
+image:PresentationOrgSettings.png[]
+
+[#GeneralFormat]
+== General Format
+To format date/time representation and set default image format, follow the steps below.
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *General Format* page in the right panel.
++
+image:Figure 40.png[]
+
+. Set the desired date and time formats.
++
+TIP: To allow Scheduler condition '`Start Time`' to be set using a 12-hour (AM/PM) clock,  enter a '`Time Format`' string that ends with the "`a`" specification (e.g., `HH:mm:ss a`).  To allow the Scheduler condition '`Start Time`' to be set using a 24-hour clock, enter a '`Time Format`' that does not include the "`a`" specification (e.g., `HH:mm:ss`).
+
+. Set a desired image format. The ‘Image Format’ option determines the encoding format for graphics, such as painters (charts) displayed in the browser. PNG images generally have better quality and a smaller file size than JPEG images.
+
+[#ExportMenu]
+== Export Menu
+
+To set the export options available for  Dashboards, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Export Menu* page in the right panel.
++
+image:Figure 43.png[]
+
+. Enable the desired export formats for  Dashboards.
+
+
+. Press btn:[Apply].
+
+[#LookandFeel]
+== Look and Feel
+
+To set the global look-and-feel for the User Portal follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+. Select the *Look and Feel* page in the right panel.
++
+image:Global Look and Feel.png[]
+
+The following properties are available:
+
+Sort Repository Tree:: Specifies the sort order of items in the Repository listing.
+
+Default Dashboard CSS:: Allows you to specify a custom CSS file to use for Dashboard  component styles. To use custom CSS, uncheck the ‘Default Dashboard CSS’ option and click in the ‘Custom Dashboard CSS File’ field to specify the file. The CSS file can specify styles for alignment, font, border, and color. See xref:StyleWithCSS.adoc[] for more information.
+
+Default Fonts:: Allows you to upload custom fonts. To add custom fonts, uncheck the ‘Default Font’ option and press the ‘Edit Fonts’ button. In the ‘User Fonts’ dialog box, press btn:[Add] to load a new font by specifying the locations of the font’s TTF, EOT, SVG, and WOFF files, as well as the desired weight and style. You can add multiple font variations under the same name so that, for example, a bold or italic version of the font will be available when the user applies bold or italic formatting.
++
+image:Global Look and Feel2.png[]
+
+Custom Shapes::  To upload custom images for use with a Chart (see xref:viewsheet:BasicChartingSteps.adoc[]), press the btn:[Custom Shapes] button to open the '`Custom Shapes`' dialog box.  To upload a Zip file containing images, first enable the '`Extract archive files`' option.  Press  btn:[Select], and choose an  image file (png, gif, jpg) or archive. Press btn:[Upload] to upload the image or archive to the _portal/shapes_ directory of SREE Home. (See  xref:administration:Storage.adoc[] for   information about managing uploads.)
++
+image:CustomShapes.png[]
++
+In the Chart Editor, the icons are sorted alphabetically by file name. Custom shape images can be any size, and are scaled according to the ‘Size’ setting in the Chart Editor.
+
+User Format:: To upload custom number formats (custom symbols and multipliers), press  btn:[User Format] and supply a _userformat.xml_ file.  See xref:DefineCustomNumberFormats.adoc[] for information about the contents of this file.
+
+
+[#Themes]
+== Themes
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+A *theme* is a set of CSS properties that define the appearance (color and fonts) of the User Portal and Enterprise Manager. To create and manage themes, follow the steps below:
+
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Themes* tab at the top.
++
+image:theme0.png[]
+
+. See the  sections below to perform the desired functions:
++
+[square]
+* xref:#CreateNewTheme[]
+* xref:#ImportTheme[]
+* xref:#ExportTheme[]
+* xref:#DeleteTheme[]
+* xref:#AssignThemetoUserGroupRole[]
+
+[#CreateNewTheme]
+=== Create a New Theme
+. Press the {buttonNewCircle} to create a new theme.
++
+image:theme1.png[]
+
+
+
+. Enter the name for the new theme. (Do not click in the ‘Theme JAR File’ field.)  Press btn:[OK].
++
+image:theme2.png[]
+
+. *_Optional:_* On the *Theme* tab, select the ‘Default’ option to use the theme as the default Portal appearance. Press btn:[Apply].
+
+. Select the *CSS* tab.
++
+image:theme3.png[]
+
+. Edit the desired CSS property. (To find a property, type some of the property’s name in the ‘Filter’ field above the property list.) For colors, you can click the color chip to enter a color using a color picker, or press the {buttonEdit} to enter a hex color code.
+
++
+[#AvailablePortalCSSProperties]
+.See Available Portal CSS Properties...
+[%collapsible]
+====
+****
+The following sections describe the available CSS variables (classes) that you can set to create a theme for the User Portal.
+
+
+.Font
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-font-size-base|Base font size. Controls the font size of most of the text in the app.
+|--inet-font-family| Default font family
+|--inet-text-color|Default text color
+|--inet-icon-color|Default icon color
+|===
+
+
+.General Colors
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-primary-color|Primary color. Affects any component that uses the primary color for styling such as navigation bar, primary button, input focus outline, and others.
+|--inet-secondary-color| Secondary color. Affects any component that uses the secondary color for styling such as the secondary and default buttons, and others.
+|--inet-third-color| Third color. Affects any component that uses the third color for styling. Currently only used to style headers of Data Worksheet tables.
+|--inet-fourth-color| Fourth color. Affects any component that uses the fourth color for styling. Currently only used in the Data Worksheet Join Editor.
+|--inet-danger-color| Danger color. Used to style alerts and text that indicate a potentially negative action.
+|--inet-success-color| Success color. Used to style alerts and text that indicate a successful or positive action.
+|--inet-warning-color| Warning color. Used to style alerts and text that indicate a situation that might need attention.
+|--inet-info-color| Info color. Used to style alerts and text that indicate a neutral informative change or action.
+|--inet-light-color| Light color. Used to style the light button and various others.
+|--inet-dark-color| Dark color. Used to style various text.
+|===
+
+
+.Panels
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-main-panel-bg-color| The background color of the main panel and the HTML body. The main panel is the central section of the page where Dashboards are displayed.
+|--inet-side-panel-bg-color|The background color of side panels, for example, the Repository tree panel.
+|--inet-panel-border|The border around panels. This changes the layout significantly and eliminates the default panel borders. Example:  `8px solid white`.
+|--inet-report-panel-margin|CSS margin property of the main panel, used to control the position of the panel in the User Portal. Example: `0 0` positions the panel to the left.
+|--inet-portal-main-panel-bg-color|The background color of the main panel in the User Portal. Overrides the value of `--inet-main-panel-bg-color` for the User Portal.
+|--inet-portal-side-panel-bg-color| The background color of the side panel in User Portal. Overrides the value of `--inet-side-panel-bg-color` in the User Portal.
+|--inet-composer-main-panel-bg-color| The background color of the main panel in Visual Composer. Overrides the value of `--inet-main-panel-bg-color` in Visual Composer.
+|--inet-composer-side-panel-bg-color| The background color of the side panel in Visual Composer. Overrides the value of `--inet-side-panel-bg-color` in Visual Composer.
+|===
+
+.Hover: Style  for  mouse hovering over an element.
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-hover-primary-bg-color| The primary hover background color, used in most places as the background color for elements in the hover state.
+|--inet-hover-secondary-bg-color| The secondary hover background color, used in various places as the background color for elements in the hover state.
+|--inet-hover-text-color| The text color of elements in hover state.
+|===
+
+
+.Selected items
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-selected-item-bg-color| The selected background color for  selectable elements.
+|--inet-selected-item-text-color| The selected text color for  selectable elements.
+|===
+
+
+.Navbar: Style for the navigation bar at the top of the User Portal.
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-navbar-text-color|The navigation bar text and icon color.
+|--inet-navbar-bg-color| The navigation bar background color.
+|--inet-navbar-selected-border-color| The border color of the selected tab on the navigation bar.
+|--inet-navbar-logo-color| The color of the InetSoft logo on the navigation bar.
+|--inet-navbar-home-icon-color| The home icon color on the navigation bar.
+|--inet-navbar-home-bg-color|The home icon background color on the navigation bar.
+|--inet-navbar-hover-text-color| The text and icon color of the element being hovered on the navigation bar.
+|--inet-navbar-hover-bg-color| The background color of the element being hovered on the navigation bar.
+|--inet-portal-navbar-text-color| Overrides `--inet-navbar-text-color` in User Portal.
+|--inet-portal-navbar-bg-color| Overrides `--inet-navbar-bg-color` in User Portal.
+|--inet-portal-navbar-hover-text-color| Overrides `--inet-navbar-hover-text-color` in User Portal.
+|--inet-portal-navbar-hover-bg-color| Overrides `--inet-navbar-hover-bg-color` in User Portal.
+|--inet-composer-navbar-text-color| Overrides `--inet-navbar-text-color` in Visual Composer.
+|--inet-composer-navbar-bg-color| Overrides `--inet-navbar-bg-color` in Visual Composer.
+|--inet-composer-navbar-hover-text-color| Overrides `--inet-navbar-hover-text-color` in Visual Composer.
+|--inet-composer-navbar-hover-bg-color| Overrides `--inet-navbar-hover-bg-color` in Visual Composer.
+|===
+
+.Navigation tabs: Style for tabs such as those on the  *Schedule* page.
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-nav-tabs-text-color| The text color of the navigation tabs.
+|--inet-nav-tabs-bg-color| The background color of the navigation tabs.
+|--inet-nav-tabs-selected-border-color|The border color of a selected navigation tab.
+|===
+
+.Toolbars: Style for any action bar with buttons, including Dashboard  toolbar, Chart toolbar, etc.
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-toolbar-bg-color|The background color of the toolbar.
+|--inet-vs-toolbar-bg-color| The background color of the Dashboard toolbar.
+|--inet-repository-tree-toolbar-bg-color| The background color of the Repository toolbar in the User Portal and Visual Composer.
+
+|===
+
+.Data Worksheet
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-graph-assembly-bg-color| The background color of the data block.
+|--inet-graph-assembly-text-color|The text color of the data block body.
+|--inet-graph-assembly-header-text-color| The text color of the data block header.
+|--inet-graph-assembly-error-text-color| The text color of any warning or error message.
+|--inet-graph-connection-color|The color of lines that connect data blocks.
+|--inet-graph-connection-warning-color| The color of lines indicating an error condition.
+|--inet-schema-connection-color| The color of lines in the Join Editor.
+|--inet-schema-column-connected-bg-color| The background color of the join columns in the Join Editor.
+|--inet-schema-column-compatible-bg-color| The background color of compatible columns in the Join Editor.
+|--inet-schema-column-incompatible-bg-color| The background color of incompatible columns in the Join Editor.
+|--inet-ws-header-primary-bg-color| The header background color of selected data blocks.
+|--inet-ws-header-secondary-bg-color| The header background color of data blocks which are related to the selected data block.
+|--inet-ws-table-odd-row-bg-color| The background color of odd rows in the data block preview.
+|--inet-ws-table-even-row-bg-color| The background color of even rows in the data block preview.
+|===
+
+.Other
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-default-border-color |The default border color  used for many different elements.
+|--inet-drag-drop-highlight-color| The color associated with various drag-and-drop operations (e.g., the border color when dragging a column in a Data Worksheet, or when dragging a Dashboard component onto another component).
+|--inet-link-color| The text color of HTML links, most notably used by tabs in dialog boxes.
+|--inet-link-hover-color| The text color for hover on HTML links, most notably used by tabs in dialog boxes.
+|--inet-ruler-text-color| The text color of the ruler in Visual Composer.
+|--inet-ruler-bg-color| The background color of the ruler in Visual Composer.
+|--inet-ruler-border-color| The border color of the ruler in Visual Composer.
+|===
+
+
+.Dialog boxes
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-dialog-bg-color| The background color of dialog boxes.
+|--inet-dialog-title-text-transform| Can be used to apply a text-transform CSS property to a dialog box title. For example, set the value to "uppercase" to make the dialog box title text use all capital letters.
+|--inet-dialog-title-font-size| Font size of the dialog box title.
+|===
+
+
+.Inputs: Style of input elements such as  Form components, Filters, and dialog box menus.
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-input-bg-color|The background color of the input.
+|--inet-input-text-color| The text color of the input.
+|--inet-input-border-color| The border color of the input.
+|--inet-input-focus-text-color| The text color of the input upon focus.
+|--inet-input-focus-bg-color| The background color of the input upon focus.
+|--inet-input-disabled-bg-color| The background color of the input when disabled.
+|--inet-input-disabled-opacity| The opacity of the input when disabled.
+|===
+
+.Dropdowns
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-dropdown-bg-color|The background color of the drop-down menu.
+|--inet-dropdown-toggle-color| The color of the toggle (triangle) that designates the input as a drop-down menu.
+|===
+
+.Cards: A container component  used for positioning elements on the Schedule page and other locations.
+[cols="1,2"]
+|===
+|Variable|Description.
+
+|--inet-card-bg-color| The background color of the card.
+|===
+
+
+.Tables: Style for tables used on the  *Schedule* page, the Chart and Crosstab ‘Show Details’ dialog box, and other locations.
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-table-text-color| The text color of the table.
+|--inet-table-border-color| The border color of the table.
+|--inet-table-heading-text-color| The text color of the table header row.
+|--inet-table-heading-bg-color| The background color of the table header row.
+|===
+
+.Primary Button
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-button-primary-bg-color| The background color of the primary button.
+|--inet-button-primary-text-color| The text color of the primary button.
+|--inet-button-primary-border-color| The border color of the primary button.
+|--inet-button-primary-hover-bg-color| The background color upon hover of the primary button.
+|--inet-button-primary-hover-text-color| The text color upon hover of the primary button.
+|--inet-button-primary-hover-border-color| The border color upon hover of the primary button.
+|===
+
+.Secondary Button
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-button-secondary-bg-color| The background color of the secondary button.
+|--inet-button-secondary-text-color| The text color of the secondary button.
+|--inet-button-secondary-border-color| The border color of the secondary button.
+|--inet-button-secondary-hover-bg-color| The background color upon hover of the secondary button.
+|--inet-button-secondary-hover-text-color| The text color upon hover of the secondary button.
+|--inet-button-secondary-hover-border-color| The border color upon hover of the secondary button.
+|===
+
+.Default Button
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-button-default-bg-color| The background color of the default button.
+|--inet-button-default-text-color| The text color of the default button.
+|--inet-button-default-border-color| The border color of the default button.
+|--inet-button-default-hover-bg-color| The background color upon hover of the default button.
+|--inet-button-default-hover-text-color| The text color upon hover of the default button.
+|--inet-button-default-hover-border-color| The border color upon hover of the default button.
+|===
+
+.Light Button
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-button-light-bg-color| The background color of the light button.
+|--inet-button-light-text-color| The text color of the light button.
+|--inet-button-light-border-color| The border color of the light button.
+|--inet-button-light-hover-bg-color| The background color upon hover of the light button.
+|--inet-button-light-hover-text-color| The text color upon hover of the light button.
+|--inet-button-light-hover-border-color| The border color upon hover of the light button.
+|===
+
+.Script Editor
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-script-theme|Theme for Dashboard Script Editor: Eclipse, Darcula, or Material Palenight.
+|===
+****
+====
++
+[#AvailableEnterpriseManagerCSSProperties]
+.See Available Enterprise Manager CSS Properties...
+[%collapsible]
+====
+****
+The following sections describe the available CSS variables (classes) that you can set to create a theme for Enterprise Manager.
+
+The ‘Enterprise Dark’ option  sets the ‘Dark’ theme for Enterprise Manager. The ‘Primary’ option sets  the primary color of the theme, and '`Accent`' sets the accent color of the theme.
+
+.Font
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-em-font-family| Default font family
+|===
+
+.Navbar: Style for the navigation bar at the top of Enterprise Manager.
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-em-navbar-text-color|The navigation bar text and icon color.
+|--inet-em-navbar-bg-color|The navigation bar background color.
+|--inet-em-navbar-selected-border-color| The border color of the selected tab on the navigation bar.
+|--inet-em-navbar-logo-color| The color of the InetSoft logo on the navigation bar.
+|--inet-em-navbar-home-icon-color| The home icon color on the navigation bar.
+|--inet-em-navbar-home-bg-color|The home icon background color on the navigation bar.
+|===
+
+.Script Theme
+[cols="1,2"]
+|===
+|Variable|Description
+
+|--inet-em-script-theme|Theme for Enterprise Manager Script Editor: Eclipse, Darcula, or Material Palenight.
+|===
+
+****
+====
++
+image:theme4.png[]
+
+. Press btn:[Apply] to make the changes to the theme.
+
+. *_Optional:_* Press btn:[Clear All] to remove all the current CSS settings. Press btn:[Reset] to reverse any recent changes you made (before you press btn:[Apply]).
+
+[#ImportTheme]
+=== Import a Theme
+
+To import a theme from a JAR file, follow the steps below:
+
+. Press the {buttonNewCircle} to create a new theme.
++
+image:theme1.png[]
+
+. Enter the name for the new theme. Click in the ‘Theme JAR File’ to upload the JAR file containing the theme, and press btn:[OK].
++
+image:theme5.png[]
+
+. On the *Theme* tab, select the ‘Default’ option to use the theme as the default Portal appearance. Press btn:[Apply].
+
+. If you wish to modify the imported theme, select the *CSS* tab.
++
+image:theme3.png[]
+
+. Edit the desired CSS property. For colors, you can click the color chip to enter a color using a color picker, or press the  to enter a hex color code. (xref:#AvailablePortalCSSProperties[] and xref:#AvailableEnterpriseManagerCSSProperties[] for information about where the different styles are applied.)
++
+image:theme4.png[]
+
+. Press btn:[Apply] to make the changes to the theme.
+
+. **__Optional:__** Press btn:[Clear All] to remove all the current CSS settings. Press btn:[Reset] to reverse any recent changes you made (before you press btn:[Apply]).
+
+[#ExportTheme]
+=== Export a Theme
+To export a theme to a JAR file, select the theme that you want to export, and press the {buttonDownload} to save the theme into a JAR file.
+
+image:theme6.png[]
+
+[#DeleteTheme]
+=== Delete a Theme
+To delete a theme,  select the theme that you want to delete, and press the {buttonDelete}.
+
+image:theme7.png[]
+
+[#AssignThemetoUserGroupRole]
+=== Assign a Theme to a User, Group, or Role
+
+To assign a theme to a user, group, or role, use the '`Theme`' menu on the *Users* tab of the *Security* page. See xref:CreateUser.adoc[], xref:CreateGroup.adoc[], or xref:CreateRole.adoc[] for more information about configuring users, groups, or roles.
+
+IMPORTANT: The multi-tenant feature in Enterprise Edition must be *disabled*. If enabled, themes are defined on an organization basis rather than a user basis. See xref:EnableMultiTenant.adoc[] for more information.
+
+
+[#WelcomePage]
+== Welcome Page
+
+To set a home page that appears when the user selects the Repository tab of the User Portal, follow the steps below:
+
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Welcome Page* page in the right panel.
++
+image:welcomePage.png[]
+
+. You can specify a URL (same domain as InetSoft server) or a specific resource file such as an HTML or JSP file. HTML content can be localized by using the following tag:
+
+ $(text to be localized)#(inter)
+
+If you do not specify a custom welcome page, the Portal will display a generic welcome page.
+
+[#LoginBanner]
+== Login Banner
+To create a message to be displayed to the user on the login screen, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Login Banner* page in the right panel.
++
+image:loginBanner2.png[]
+
+. Select ‘Text’ or ‘HTML’ from the ‘Type’ menu.
+
+. Enter the text or HTML to be displayed to the user.
+
+. Press btn:[Apply].
+
+The text or HTML you specify is displayed below the password field of the Portal login page.
+
+image:loginBanner.png[]
+
+[#ComposerMessages]
+== Composer Messages
+When a user opens Visual Composer, the right panel displays four help messages about how to create and edit Data Worksheets and Dashboards.
+
+image:ComposerMessages2.png[]
+
+To customize these four messages, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Composer Messages* page in the right panel.
++
+image:ComposerMessages.png[]
+
+. Enter the desired text for the ‘Dashboard Create Message’, ‘Dashboard Edit Message’, ‘Data Worksheet Create Message’, and ‘Data Worksheet Edit Message’.
+
+. Press the btn:[Apply] button to save the settings.
+
+If you do not specify custom text for any of the messages, the corresponding default message will be displayed.
+
+
+[#DashboardSettings]
+== Dashboard Settings
+To enable Dashboards for users, follow these steps:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Dashboard Settings* page in the right panel.
++
+image:Dashboard Settings.png[]
+
+. Select ‘Enable Dashboards’ to enable the {buttonDashboard} in the User Portal.
+
+. Uncheck ‘Dashboard Tabs Top’ to display the tabs for multiple Dashboards at the bottom of the screen rather than at the top (default).
+
+. Press btn:[Apply] to enter the settings.
+
+[#DashboardToobar]
+== Dashboard Toolbar
+To set the options available on a Dashboard toolbar, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Dashboard Toolbar* page in the right panel.
++
+image:ViewsheetToolbarOptions.png[]
+
+. To hide a toolbar button, deselect the corresponding box in the ‘Visible’ column.
+
+. Press btn:[Apply].
+
+
+[#PortalIntegration]
+== Portal Integration
+
+[WARNING,caption=See Also]
+xref:integration:AdvancedServerIntegration.adoc[] for more advanced approaches to web integration.
+
+To customize the tabs and links at the top of the User Portal, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Portal Integration* page in the right panel.
++
+image:Figure 41.png[]
+
+. To add a new tab, press the btn:[Add Tab] button and specify the tab name and the URI for the corresponding page. The specified URI must have the same host name and port as the InetSoft server.
+
+. Enable or disable the desired options: The ‘Help’, ‘Preferences’, ‘Logout’, ‘Home’, and ‘Search’ options determine which of these features are available in the User Portal. The ‘Logout’ option is only in effect when security is enabled.
++
+image:UserPortalLinks.png[]
+
+. *_Optional_*: Enter  '`Custom Loading Text`' to specify text to display on the loading screen when the user logs into the User Portal.  The message is displayed under the "`Please wait, the application is loading`" message and logo.
+
+. *_Optional_*: Enter a '`Home Link`' to set the URL of the {buttonHome}  in the User Portal. (The default is the `index.html` landing page). This can be an absolute URL such as https://www.google.com, or a path relative to `/app/` such as  `composer`.
+
+[#TimeSettings]
+== Time Settings
+Set time-related system properties.  In a multi-tenant environment, these can be set  both under the *Global Settings* and *Organization Settings* tabs.
+
+image:TimeSettings.png[]
+
+Week Start Day:: The start day of the week for date components such as  Calendars. If not specified, the locale setting for the user determines the start day. (Equivalent property: `week.start`.)
+
+Local Timezone:: Set to a valid Java time zone ID to indicate the StyleBI server time zone (e.g., `US/Eastern`). If not defined, the default time zone is used. (Equivalent property: `local.timezone`.)
+
+Schedule Time 12 Hours:: Enable to use a 12-hour clock for scheduled task conditions. Disable to use 24-hour clock. (Equivalent property: `schedule.time.12hours`.)
+
+
+
+[#PDFSettings]
+== PDF Settings
+To set properties of PDF generation, follow these steps:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *PDF Settings* page in the right panel.
++
+image:Figure 45.png[]
+
+. Set the desired options (see below).
+
+. Press btn:[Apply].
+
+=== PDF Options
+Compress Options::
+[square]
+* *Compress Text*: Compress all text data.
+* *Compress Image*: Compress all image data.
+* *ASCII Only*: Generate only ASCII output in the PDF file. No ASCII data is encoded to seven bit data.
+Font Options::
+[square]
+* *Map Symbols*: Map symbol characters to symbol fonts. This is required if symbol characters are used in Dashboards.
+* *Embed CMap in PDF*:  Embed the CMap in the generated PDF file.
+* *Embed Font in PDF*: Embed the font in the generated PDF file.
+* *CID Font Path*: Path for CID fonts.
+* *AFM Font Path*: Path for TrueType/AFM fonts, a semicolon-separated list of directories. PDF generation will use only TrueType fonts on this path. On Windows NT, TrueType fonts are stored in the _c:\winnt\fonts directory_. On UNIX platforms, the  JRE obtains information about available TrueType fonts from the _fontconfig.properties_ file. The _fontconfig.properties_ file can be found in _JRE_HOME/lib_ for a JRE installation and _JDK_HOME/jre/lib_ for a JDK installation. Add any custom TrueType fonts to the _fontconfig.properties_ file. See the https://docs.oracle.com/javase/8/docs/technotes/guides/intl/fontconfig.html[Java documentation] for more information about the _fontconfig.properties_ file.
+
+Other Options::
+[square]
+* *Open Bookmark First*: Specifies that all the generated PDFs will have bookmarks displayed immediately upon opening them in Adobe Acrobat.
+* *Open Thumbnail First*: Specifies that all the generated PDFs will have thumbnails displayed immediately upon opening them in Adobe Acrobat.
+* *None*: Specifies that bookmarks and thumbnails should not be displayed.
+* *Embed PDF in Browser*: Specifies that when the user exports a  Dashboard to PDF format from within the User Portal, the PDF file will be immediately displayed by the browser (if Adobe Reader is installed), and the ‘Open/Save’ download dialog box will not be displayed.
+* *Keep Hyperlinks in PDF*: Specifies that hyperlinks will be created in the PDF file. Disabling this option will turn off hyperlink generation and speed up the PDF generation process.
+
+
+=== PDF Security
+To add security encryption to a PDF file exported by StyleBI, use the following script in the onRefresh handler.
+
+[source,javascript]
+docInfo.pdf.password.owner = '{owner_password}';
+// owner_password provides owner access to document 
+docInfo.pdf.password.user = '{user_password}';
+// user_password provides user access to document 
+docInfo.pdf.permission.print = true/false;
+// provides the ability to print  
+docInfo.pdf.permission.copy = true/false;
+// provides the ability to copy from the document
+
+To use encryption, you must have an implementation of the https://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html[Java Cryptography Extension] on your classpath. Sun provides a default implementation with the JRE. To use this, add the _pass:[{JAVA_HOME}/jre/lib/security]_ folder to your classpath.
+
+[#FontMapping]
+== Font Mapping
+The PDF generator is capable of handling CJK (Chinese, Japanese, Korean) characters in generated PDF files.
+
+.View a sample of currently supported CJK fonts...
+[%collapsible]
+====
+****
+AdobeMingStd-Light,
+AdobeMingStd-Light-Acro,
+AdobeMyungjoStd-Medium,
+AdobeMyungjoStd-Medium-Acro,
+AdobeSongStd-Light,
+AdobeSongStd-Light-Acro,
+HYGoThic-Medium-Acro,
+HYSMyeongJo-Medium-Acro,
+HYSMyeongJoStd-Medium-Acro,
+HeiseiKakuGo-W5-Acro,
+HeiseiMin-W3-Acro,
+KozGoPro-Medium,
+KozGoPro-Medium-Acro,
+KozMinPro-Regular-Acro,
+KozMinProVI-Regular,
+MHei-Medium-Acro,
+MSung-Light-Acro,
+MSungStd-Light-Acro,
+STSong-Light-Acro,
+STSongStd-Light-Acro
+****
+====
+
+To *support CJK characters*, follow the steps below:
+
+. Specify the ‘CID Font Path’ in the *PDF Settings* page. Enable the ‘Embed CMap in PDF’ and ‘Embed Font in PDF’ options as well. See xref:#PDFSettings[] above.
+
+. Specify the font mapping from the CJK-TrueType font to the CJK-CID font. Follow the steps below:
+
+.. Press the {buttonSettings} at the top of Enterprise Manager.
+
+.. Select the *Presentation* page in the left panel.
+
+
+.. Select the *Font Mapping* page in the right panel.
++
+image:fontMapping.png[]
+
+.. Press the btn:[Add] button.
+
+.. Enter the desired font mapping, and press btn:[Apply].
++
+[NOTE]
+====
+CJK fonts often use separate font files for the plain and bold versions of the font. It is therefore possible to map a CJK font to a different file depending on its weight. For example, the following setting maps all plain MS Mincho instances to a normal-weight version of the KozMin font-family, and maps all bold MS Mincho instances to a bold-weight version of the same font-family:
+
+[source]
+pdf.font.mapping=MS Mincho-plain\:KozMinProVI-Regular;MS Mincho-bold\:KozMinStd-Bold;
+
+If the font weight is omitted, the default is ‘-plain’.
+====
+
+To *support CJK fonts not listed above*, do the following:
+
+. Place the font files in the folder specified under _TrueType/CID Font Path_.
+
+. Extract the _cjkmap.properties_ file from your build JAR file (_inetsoft-core.jar_).
+
+. Place the _cjkmap.properties_ file within your classpath under _/inetsoft/reports/pdf_.
+
+. Make an entry for the CJK font as `pass:[{font name}={encoding}]`, e.g., `DFKMincho\ Std\ W5=kor`. (Escape  white space using a backslash).
+
+
++
+[NOTE]
+====
+In many cases the actual font name may not be the same as the font file name. To make sure you enter the right name in the properties file. Use the utility *TTFontInfo*. The correct name will appear under the `fontnames[3]` heading.
+
+[source]
+java -cp inetsoft-core.jar inetsoft.report.pdf.TTFontInfo {FontFileName With Absolute Path}
+  Example:
+java -cp inetsoft-core.jar inetsoft.report.pdf.TTFontInfo c:/CID/DFKMinchoStd-W5.otf 
+
+*Sample Output*:
+
+[source]
+Getting font names:[c:/CID/DFKMinchoStd-W5.otf]
+fontnames[0]=DFKMincho Std W5
+fontnames[1]=DFKMincho Std W5
+fontnames[2]=DFKMinchoStd-W5
+fontnames[3]=DFKMincho Std W5
+
+Notice how `fontnames[3]` yields the right font name to enter into the _cjkmap.properties_ file.
+====
+
+
+
+[#DataSourceVisibility]
+== Data Source Visibility
+
+To set specific data source types to visible or hidden   in the User Portal datasource catalog, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Data Source Visibility* page in the right panel.
++
+image:DataSourceTypeVisibility.png[]
+
+. To explicitly make a data source visible, press the  {buttonAddDataSource}  next to '`Visible Data Source Types`' and then select the data source to make accessible.
++
+image:DataSourceTypeVisibility2.png[]
+
+. To explicitly hide a data source, press the  {buttonAddDataSource}  next to '`Hidden Data Source Types`' and then select the data source to make inaccessible.
++
+image:DataSourceTypeVisibility3.png[]
+
+
+NOTE: If the *same*  data source type is included in *both* the visible and hidden lists, it will be *hidden*. The equivalent proprties are  `visible.datasource.types` and `hidden.datasource.types`.
+
+
+
+[#WebMap]
+== Web Map
+
+Map-type charts can display a background map provided by either Google Maps or Mapbox. To configure map charts to use these web-based map backgrounds, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Web Map* page in the right panel.
++
+image:EM_WebMap.png[]
+
+. To use the built-in (plain) map background, select ‘None’. Press the btn:[Apply] button.
+
+. To use *Mapbox* map backgrounds, follow the steps below:
+
+.. Select the ‘Mapbox’ option.
+
+.. Enter the ‘User’ and ‘Token’. You can create a token from the  https://account.mapbox.com/[Mapbox Account page]. When you create the token, you must enable the *Secret Scope* STYLES:LIST.
+
+.. Select the ‘Mapbox Style’. You must also have at least one *map style* defined in Mapbox. (You can define styles in https://studio.mapbox.com/[Mapbox Studio].)
+
+.. Press the btn:[Apply] button.
+
++
+To use *Google Map* backgrounds, follow the steps below:
+
+.. Select the ‘Google Maps’ option.
+
+.. Enter the ‘API Key’.  You can create an API key from the  https://cloud.google.com/[Google Cloud Platform site]. You must enable the *Maps Static API* and the *Geocoding API* on that site or the user will see an error such as the following: “This API project is not authorized to use this API.”
+
+.. Press the btn:[Apply] button.
+
+. *_Optional:_*  For the ‘Mapbox’ and ‘Google Maps’ options, select ‘Use Web Map By Default’ to enable the ‘Use Web Map as Background’ property for all Charts by default. (This property is found in the ‘Chart Properties’ dialog box of each Chart.) Press the btn:[Apply] button.
+
+
+
+
+
+[#SocialSharing]
+== Social Sharing
+To customize the Social Sharing feature available for  Dashboards, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *Social Sharing* page in the right panel.
++
+image:socialSharing1.png[]
+
+. Check the boxes to select the sharing options (Email, Facebook, LinkedIn, etc.) that should be available globally to users.
++
+TIP: To control the available options for individual users, groups, or roles, see xref:SetSecurityActions.adoc[]. To disable the {buttonSocialSharing} entirely, see xref:#DashboardToobar[] above.
+
+For *Google Hangouts Chat* and *Slack*, you will need to specify the *webhook URL*. Press the {buttonHelp} next to the webhook field for more information.
+
+image:socialSharing2.png[]
+
+
+
+*_Optional:_* Use the ‘Open Graph Site Name’, ‘Open Graph Title’, ‘Open Graph Description’, and ‘Open Graph Image URL’ fields to specify  `og:site_name`, `og:title`, `og:description`, and `og:image`, respectively. Open Graph tags determine how the shared link is displayed in Facebook and LinkedIn, and are shared for the entire application. See the https://developers.facebook.com/docs/sharing/webmasters/[Facebook developer documentation] for more information about Open Graph tags.
+
+NOTE: The ‘Open Graph Image URL’ can be relative to the application root (e.g., `/images/logo.png`) or can be an absolute URL (e.g., `pass:[http://example.com/.../logo.png]`).
+
+The ‘Open Graph Title’ and ‘Open Graph Description’ are used as the default `og:title` and `og:description` for a  Dashboard that is accessed via direct URL and does not include a title/alias or description. If a directly accessed  Dashboard *does* include a title/alias or description, then the title/alias or description is used to set `og:title` and `og:description`.
+
+
+

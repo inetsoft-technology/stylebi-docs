@@ -1,0 +1,52 @@
+= R  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing R  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:R.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonRQuery}.
+
++
+image:dataSourceR5.png[]
++
+This opens the ‘R  Query’ dialog box.
++
+image:dataSourceR6.png[]
+
+
+. Enter the desired R script. This can be simply the name of the data set (e.g., “iris”) or a more elaborate analysis script.
++
+NOTE: If the last statement in the script is a data frame, this data is returned in full by the script. For large data sets, this may result in high memory consumption. To avoid this, the script can also return a string containing the name of a variable that points to a data frame. The data will then be streamed from a temporary CVS file to the Data Worksheet, with reduced memory consumption.
+
+. *_Optional:_* In the ‘Pre-execution JavaScript’ field, enter a script to write data from data blocks and variables in the Data Worksheet into the R session. Use variable `r` to do this. For example, to create  data frame `in_data` in the R session containing the data from Worksheet data block ‘Query1’, use the following pre-execution script:
++
+ r.in_data = Query1;
++
+To create a variable `my_param` in the R session containing the value from Worksheet variable ‘InputVar’, use the following pre-execution script:
++
+ r.my_param = parameter.InputVar;
+
+. *_Optional:_* In the ‘Post-execution JavaScript’ field, enter a script to write data from the R session into a Worksheet Embedded Table. Use variable `r` to do this. For example, to write a data frame `residuals` from the R session into Worksheet Embedded Table ‘Residuals’, use the following post-execution script:
++
+ Residuals.table = r.residuals;
++
+To write the value of  variables `rmse` and `mape` from the R session into Worksheet Embedded Table ‘Accuracy’, use the following post-execution script:
++
+[source]
+Accuracy.table = [
+    [ "RMSE", "MAPE" ],
+    [ r.rmse, r.mape ]
+];
+
+
+
+include::partial$finalStepsQuery.adoc[]
+

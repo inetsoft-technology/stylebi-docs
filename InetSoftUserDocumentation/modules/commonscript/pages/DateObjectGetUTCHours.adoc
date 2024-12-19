@@ -1,0 +1,26 @@
+= Date.getUTCHours()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+JavaScript function to return the hours part of a date in universal time.  See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCHours[Date.getUTCHours()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var hours = d.getUTCHours();
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getUTCHours();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getUTCHours();
+
+include::partial$readMoreCalcFieldTypes.adoc[]

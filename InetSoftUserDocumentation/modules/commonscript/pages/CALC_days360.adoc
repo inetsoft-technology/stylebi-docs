@@ -1,0 +1,45 @@
+= CALC.days360(start_date, end_date[, method])
+:navtitle: CALC.days360()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Return the number of days between the `start_date` and the `end_date`, using 12 months of 30 days. {CALCExcelFunctionPage}
+
+
+
+
+==  Parameters
+start_date::			Date object: date from which to begin counting
+end_date::			Date object: date at which to end counting
+method (Boolean)::			`false` for US NASD method (default) +
+`true` for European
+
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.days360(new Date(2005,1,21), new Date(2006,0,18), false); // returns 327
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.days360(new Date(2005,1,21), field['Order Date'], false)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.days360(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,59 @@
+= GraphElement.setTextureFrame(frame)
+:navtitle: GraphElement.setTextureFrame()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the aesthetic texture of graphical elements. A xref:TextureFrame.adoc[] can texture-code chart elements by value, or simply specify a static texture style.  The corresponding “getter” function is xref:GraphElementGetTextureFrame.adoc[].
+
+
+
+
+
+
+== Parameter
+frame:: A xref:TextureFrame.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 300], ["NY", 200]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity"); //<2>
+var frame = new StaticTextureFrame(); //<3>
+frame.setTexture(GTexture.PATTERN_18);
+elem.setTextureFrame(frame); //<4>
+graph.addElement(elem); //<5>
+--
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Create a `TextureFrame` object.
+<4> Use `setTextureFrame` to assign the `TextureFrame` to the `IntervalElement`.
+<5> Use `addElement` to add the `IntervalElement` to the Chart.
+
+
+image:commonscript:GraphElementsetTextureFrame.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new StaticTextureFrame();
+frame.setTexture(GTexture.PATTERN_18);
+elem.setTextureFrame(frame);
+
+--
+=====

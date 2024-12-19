@@ -1,0 +1,29 @@
+= alpha
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,  caption=See Also]
+xref:viewsheet:VisualFormat.adoc[] for more information about setting color.
+
+Specifies the transparency/opacity of the component’s fill color as a value between 0 (completely transparent) and 100 (completely opaque).
+
+== Type
+Number
+
+
+== Example
+[source,javascript]
+alpha = 35.5;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+alpha               // unqualified
+Component1.alpha    // qualified
+
+{secondForm}
+====
+
+

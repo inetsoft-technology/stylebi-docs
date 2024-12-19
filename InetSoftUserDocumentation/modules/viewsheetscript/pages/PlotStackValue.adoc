@@ -1,0 +1,35 @@
+= stackValue
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+For a *stacked* Chart (press {buttonSelectChartStyle} and select the ‘Stack’ option), displays just the *total value* rather than individual groups values when the ‘Show Values’ property is enabled.
+
+
+
+
+
+== Type
+Boolean
+
+
+== Example
+
+[source,javascript]
+Chart1.stackValue = true;
+
+image:commonscript:stackValue.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+stackValue          // unqualified
+Chart1.stackValue   // qualified
+
+{secondForm}
+====

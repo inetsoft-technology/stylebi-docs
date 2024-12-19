@@ -1,0 +1,57 @@
+= RectCoord.setYScale2(scale)
+:navtitle: RectCoord.setYScale2()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+
+
+Specifies the xref:Scale.adoc[] for the secondary (right-side) Y-axis.  The corresponding “getter” function is xref:RectCoordGetYScale2.adoc[].
+
+
+
+
+== Parameter
+scale::			a xref:Scale.adoc[] object
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Total"], ["NJ",200,10000], ["NY",300,8000]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var elem2 = new PointElement("State", "Total");
+var cframe = new CategoricalColorFrame();
+cframe.init("Quantity", "Total");
+elem.setColorFrame(cframe);
+elem2.setColorFrame(cframe);
+var sscale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var qscale2 = new LinearScale("Total");
+var coord = new RectCoord();  //<2>
+coord.setXScale(sscale);
+coord.setYScale(qscale);
+coord.setYScale2(qscale2); //<3>
+graph.setCoordinate(coord); //<4>
+graph.addElement(elem);
+graph.addElement(elem2);
+
+--
+<1> {dataset}
+<2> Create xref:RectCoord.adoc[] object.
+<3> Use `setYScale2` to set the   xref:Scale.adoc[] for the secondary Y-axis.
+<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image:commonscript:RectCoordsetYScale2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

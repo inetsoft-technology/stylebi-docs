@@ -1,0 +1,207 @@
+= Export a Dashboard
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheet:partial$availableToEndUsers.adoc[]
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Export a dashboard...
+video::359123773[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+The following sections explain how to export a Dashboard in its entirety, as well as how to export data from a Dashboard.
+
+== Export an Entire Dashboard
+To export a static copy of the Dashboard into Excel, PowerPoint, PDF, HTML, or PNG format, follow the steps below:
+
+. Press the {buttonExport} in the Dashboard toolbar. This opens the ‘Export’ dialog box.
+
+
+. Choose the export type: ‘Excel’, ‘PowerPoint’, ‘PDF’, ‘HTML’, ‘PNG’, ‘CSV’, or ‘Snapshot’.
++
+image:Viewsheet Export Content Tab_1.png[]
++
+
+NOTE: The ‘Snapshot’ option (if available) is mainly used for troubleshooting purposes. It produces a portable version of the Dashboard that incorporates an embedded (static) copy of the underlying data. This “snapshot” Dashboard can be loaded into another server installation via incremental deployment. (See xref:administration:ImportExportAssets.adoc[] for more details.)
+
+. In the ‘Data Size’ panel, select ‘Match Layout’ to obtain the closest possible match between the appearance of the exported copy and the original Dashboard. Select ‘Expand Components’ to fully expand scrolling tables and scrolling charts to show all data. Select the ‘Only Data Elements’ option to limit the export to only the data-bearing components.
+
+. Select ‘Current View’ to include the current state of the Dashboard in the exported file.
+
+. {ExportCSV}
+
+. Select the bookmarks that you wish to include in the exported file. The selected views are converted to individual pages (PowerPoint and PDF) or sheets (Excel) in the exported copy.
+
+
+
+. Press btn:[OK] to close the dialog box and proceed with the export.
+
+[#ExportCrosstabData]
+== Export Crosstab Data
+To export the *aggregated data* displayed in a Crosstab, see xref:#ExportTableData[] data below. To  export the *detail data* on which the aggregations are based, follow the steps below:
+
+. Select the desired aggregates by clicking the appropriate cells, rows, or columns in the Crosstab. Hold down the {buttonCtrl} or {buttonShift} key  to select multiple cells.
+
+. Press the {buttonShowDetails} at the top-right of the Crosstab.
++
+image:Crosstab Show Details.png[]
++
+This opens a panel containing the detail data.
++
+image:Crosstab Show Details2.png[]
+
+. *Optional:*  To format values in the *Data* panel, press the {buttonFormat} in the header of the column you wish to format.
++
+image:Crosstab Show Details Format.png[]
++
+This opens the ‘Format’ dialog box, which allows you to set the format for the column. See xref:DataFormat.adoc[] for information about the available options.
++
+image:Show Details Format Dialog.png[]
++
+Formatting that you specify is saved with the Dashboard, and is automatically applied to the column whenever the ‘Show Details’ option is used, both in Visual Composer and the User Portal.
+
+
+. To apply a global table style, press the {buttonTableStyle}.
++
+image:Show Details Format_2.png[]
++
+This opens the ‘Table Style’ dialog box. Select a table style, and press btn:[OK].
++
+. To *sort* a column press the {buttonSort} in the column header. To *hide* a column, right-click the column header, and select ‘Hide Column’.
+
+. Press the {buttonExport} in the *Data* panel. Press btn:[Close] to close the *Data* panel.
++
+image:Crosstab Show Details Export.png[]
+
+[#ExportTableData]
+== Export Table Data
+To export the data contained in a Table or the *aggregate* data contained Crosstab, follow the steps below:
+
+TIP: To export the *detail data* from a Crosstab, see xref:#ExportCrosstabData[] above.
+
+. Click the {buttonExport} in the Table title bar. This opens the ‘Export’ dialog box.
++
+image:Table Export.png[]
+
+. In the ‘Export’ dialog box, enter a name for the exported Excel file, and press btn:[OK].
+
+This will save the table data as an Excel file in the browser’s default download location.
+
+[#ExportChartData]
+== Export Chart Data
+[WARNING,caption=See Also]
+xref:DrillDownIntoData.adoc[], for information on viewing underlying detail records.
+
+
+To display a chart’s aggregate data in tabular form, follow the steps below:
+
+. Press the {buttonShowSummary} at the top-right of the chart.
++
+image:Chart Show Chart Data.png[]
++
+This opens the *Data* panel.
++
+image:Chart Show Chart Details2.png[]
+
+. *_Optional:_* To format values in the *Data* panel, press the {buttonFormat} in the column header that you want to format.
++
+image:show Summary Format1.png[]
++
+This opens the ‘Format Type’ panel. Select the desired format for the column and press the {buttonApply}. See xref:DataFormat.adoc[] for information about the available options.
++
+image:Show Details Format Dialog_1.png[]
++
+Formatting that you specify is saved with the Dashboard, and is automatically applied to the column whenever the ‘Show Data’ option is used, both in Visual Composer and the User Portal.
+
+. To apply a global table style, press the {buttonTableStyle}.
++
+image:Show Details Format_2.png[]
++
+This opens the ‘Table Style’ dialog box. Select a table style, and press btn:[OK].
+
+. To *sort* a column press the {buttonSort} in the column header.  To *hide* a column, right-click the column header, and select ‘Hide Column’.
+
+. Press the {buttonExport} in the *Data* panel.
++
+image:Chart Show Chart Data Export.png[]
+
+[#ExportChartImage]
+== Export a Chart as  Image
+To save an individual Chart as an image, follow the steps below:
+
+. If you are editing the Dashboard in Visual Composer, press the {buttonPreview} in the toolbar to preview the Dashboard.
+
+. Right-click the Chart and select ‘Save As Image’ from the context menu.  When prompted, choose either SVG or PNG format.
++
+image:saveChartAsImage.png[]
+
+// XXXXXXXXXXXX where to put this?
+TIP: To copy  a chart label to the clipboard, click on the label.
+
+[#ExportDashboardwithEditableData]
+== Export a Dashboard with Editable Data
+
+IMPORTANT: Offline Dashboard editing features are available only if product is licensed for Dashboard Forms.
+
+Dashboards provide several features to assist in _offline data editing_. You can export data from Table and Input components into an Excel file, edit the data values and make input selections within the Excel file, and re-import the revised data and selections into the Dashboard at a later time. This allows you to edit a Dashboard _offline_, while not actively logged into the server.
+
+=== Dashboard Designer
+To configure a Dashboard so that users can export data to an Excel file for editing (and subsequent importing), follow the steps below:
+
+. For each table that you wish to make editable in Excel, right-click the table, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel.
+
+. Select the *General* tab, and enter a unique name for the table in the ‘Name’ field. (This name will be used to label the table in the Excel export, and to match the Excel table to the Dashboard table during subsequent importing.)
+
+. Select the *Advanced* tab, and check the ‘Enable Table Editing’ option. Select the desired editing features, ‘Add Rows’, ‘Delete Rows’, and/or ‘Edit Rows’. See xref:TableProperties.adoc[] for more information about these options.
+
+. Press btn:[OK] to close the ‘Table Properties’ panel.
+
+=== Dashboard User
+To export a Dashboard for editing (and subsequent importing), follow the steps below:
+
+. Press the {buttonExport} in the *Dashboard toolbar*.
++
+NOTE: Do not use the ‘Export’ button in the table title bar.
+
+. Select the ‘Excel’ export option in the '`Format`' menu.
+
+. Select the ‘Expand Components’ option.
++
+image:Export Viewsheet Excel.png[]
+
+. Under the *Location* tab, select the ‘Desktop’ option.
+
+. Press btn:[OK] to close the dialog box and export the Dashboard.
+
+This saves the Excel file (with the same name as the Dashboard) in the browser’s default download directory. You can now open the file in Excel, and edit the tables or modify input elements as desired. To re-import the modified Excel data back into the Dashboard, see xref:#ImportDashboardwithEditableData[] below.
+
+[#ImportDashboardwithEditableData]
+== Import a Dashboard with Editable Data
+
+[WARNING,caption=See Also]
+====
+* xref:dataworksheet:UploadData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for information on importing Excel data into a Data Worksheet.
+* xref:viewsheetscript:WriteBackToDatabase.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] , for information on committing modified table data to a database.
+====
+
+IMPORTANT: Offline Dashboard editing features are available only if product is licensed for Dashboard Forms.
+
+Dashboards provide several features to assist in _offline data editing_. You can export data from Table and Input components into an Excel file, edit the data values and make input selections within the Excel file, and re-import the revised data and selections into the Dashboard at a later time. This allows you to edit a Dashboard _offline_, while not actively logged into the server.
+
+To import data from Excel into a Dashboard, the following conditions must be satisfied:
+
+* The Excel file must be created by the export procedure described in xref:#ExportDashboardwithEditableData[] above. (If the Excel file was created by another process, the import will not succeed.)
+
+* Each editable Table and Input component in the Dashboard must have the same name (set by the ‘Name’ field in the ‘Properties’ dialog box) as the corresponding table or input in the Excel file. These names are used to match the Excel components with the corresponding Dashboard components.
+
+When you have verified the above conditions, follow the steps below to import the modified data from the Excel file:
+
+. Press the {buttonImportExcel} in the Dashboard toolbar. This opens the file selection dialog box.
+
+. Choose the Excel file that you want to import, and press ‘Open’.
+
+This uploads the Excel data into the Dashboard tables with corresponding names, and updates input elements with revised settings. Records that have been added or edited within Excel are highlighted for better visibility.

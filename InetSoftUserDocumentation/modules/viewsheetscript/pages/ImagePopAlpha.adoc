@@ -1,0 +1,33 @@
+= popAlpha
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:ImageProperties.adoc[] for general information about Image components.
+====
+
+Sets the transparency (alpha) of the component used as the “pop component”. (See xref:ImagePopComponent.adoc[].)
+
+
+== Type
+Integer::			Value between 0 (transparent) and 100 (opaque)
+
+
+
+
+== Example
+[source,javascript]
+Image1.popAlpha = 50;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+popAlpha           // unqualified
+Image1.popAlpha    // qualified
+
+{secondForm}
+====
+
+

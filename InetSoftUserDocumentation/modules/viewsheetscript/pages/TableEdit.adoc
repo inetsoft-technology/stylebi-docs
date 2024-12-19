@@ -1,0 +1,40 @@
+= edit
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TableProperties.adoc[] to set the property without using script.
+====
+
+
+
+
+
+
+Specifies that users can edit the values in existing  rows of an *Editable Table*. See xref:WriteBackToDatabase.adoc#AccessUserModifiedData[Access User-Modified Data] for more details. (Use xref:TableForm.adoc[] to make a Table editable.)
+
+
+== Type
+Boolean:: `true`: allow editing +
+`false`: do not allow editing
+
+
+
+== Example
+[source,javascript]
+TableView1.edit = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+edit                 // unqualified
+TableView1.edit      // qualified
+
+{secondForm}
+====
+
+

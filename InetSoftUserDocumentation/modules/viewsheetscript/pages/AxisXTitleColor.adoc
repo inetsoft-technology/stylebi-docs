@@ -1,0 +1,35 @@
+= xTitle.color
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the X-axis title color.
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.xTitle.color = [128,0,128];
+Chart1.xTitle.color = {r:128,g:0,b:128};
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+xTitle.color             // unqualified
+Chart1.xTitle.color      // qualified
+
+{secondForm}
+====
+

@@ -1,0 +1,68 @@
+= Filter Top or Bottom Groups
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+xref:dataworksheet:FilterData.adoc[], in xref:dataworksheet:PrepareYourData.adoc[], to filter top or bottom groups in a Data Worksheet.
+====
+
+You can filter a Chart or Crosstab to display only the top or bottom *dimension* groups according to a selected *measure*. This is also called “ranking”.
+
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+
+== Top/Bottom Chart Groups
+
+In some cases, you may want a chart to display only the *top* or *bottom* groups according to a selected measure. For example, _top five companies according to revenue_. To do this, set a *ranking filter* for the dimension. Follow the steps below:
+
+. Open the chart in the Chart Editor. (Press the {buttonEdit} at the top-right corner of the chart. If this opens the Visualization Recommender, press the {buttonFullEditor} button at the top right of the Recommender to open the Chart Editor.)
+. Press the {buttonEditDimension} next to the dimension for which you to apply the ranking filter.
++
+image:topNFilter1.png[]
+
+. From the 'Rank' menu, select 'Top' or 'Bottom', respectively, to select the top or bottom groups  based on the measure you specify in the next step.
++
+image:topNFilter2.png[]
+
+. Enter the number of top or bottom groups to select, and choose the measure on which to rank the groups.
++
+image:topNFilter3.png[]
+
+. *_Optional:_*  To sort the selected top or bottom groups in order of the aggregated measure, select an option from the 'Sort' menu: 'By Value (Asc)' or 'By Value (Desc)'. Then choose the measure on which to sort the groups.
++
+image:topNFilter4.png[]
++
+To specify an arbitrary sort order, select the ‘Manual’ option in the ‘Sort’ menu, and press the {buttonEdit} to open the ‘Manual Ordering’ dialog box. To reorder an item in the ‘Manual Ordering’ dialog box, select the item and press the btn:[Up] or btn:[Down] buttons. Press btn:[OK] to close the dialog box.
+
+. Enable ‘Group all others together’ to create an “Others” group representing an aggregate of the items that have not been ranked.
+
+. Press the {buttonapply} to apply the ranking filter and sorting.
++
+image:topNFilter5.png[]
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard provides an example of top-N filtering (ranking).
+
+image:viewsheet:galleryDataTip2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****
+
+== Top/Bottom Crosstab Groups
+In some cases, you may want a Crosstab to display only the *top* or *bottom* groups according to a selected measure. For example, _top five companies according to revenue_. To do this, set a *ranking filter* for the dimension. Follow the steps below:
+
+. Open the Crosstab in the Crosstab Editor. (Press the {buttonEdit} at the top-right corner of the Crosstab.)
+
+. Press the {buttonEditDimension} next to a row header or column header.
++
+image:crosstabSortRank.png[]
+
+. In the ‘Rank’ menu, select the ‘Top’ or ‘Bottom’ filter, and specify the (integer) number of top or bottom groups to select. In the adjacent menu, specify the measure by which groups should be ranked.
++
+Select ‘Group all others together’ to create an “Others” category which represents (in aggregate) all the groups excluded by the Top/Bottom ranking filter.
+
+. In the ‘Summarize’ menu (available for parent groups), specify whether group totals should be shown.
+
+. Press the {buttonApply} to close the panel.

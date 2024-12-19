@@ -1,0 +1,47 @@
+= CALC.yielddisc(settlement, maturity, pr, redemption, [basis])
+:navtitle: CALC.yielddisc()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the annual *yield* for a *discounted* security that does not pay interest. {CALCExcelFunctionPage}
+
+== Parameters
+settlement::			Date object: The security’s settlement date
+maturity::			Date object: Security’s maturity date (date when security expires)
+pr::			Security’s price per $100 face value
+redemption::			Security’s redemption value per $100 face value
+basis:: {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+== Example
+Yield for a bond with price of $99.79, redemption value of $100, settlement date of February 16, 2008, maturity date of March 1, 2008, and Actual/360 counting convention.
+
+
+[source,javascript]
+----
+CALC.yielddisc(new Date(2008, 1, 16), new Date(2008, 2,1), 99.79, 100, 2);
+// returns 0.054113638641144796 (approx 5.41%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.yielddisc(field['SettleDate'], field['MatureDate'], 99.79, 100, 2)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.yielddisc(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 99.79, 100, 2)
+CALC.yielddisc(parameter.SettleDate, parameter.MatureDate, 99.79, 100, 2)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

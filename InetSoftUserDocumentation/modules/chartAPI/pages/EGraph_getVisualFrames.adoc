@@ -1,0 +1,71 @@
+= Egraph.getVisualFrames()[idx]
+:navtitle: Egraph.getVisualFrames()[idx]
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[aquare]
+xref:chartAPI:RepresentMultipleMeasures.adoc[] to add multiple elements.
+====
+
+
+Returns the specified xref:chartAPI:VisualFrame.adoc[] object. See xref:chartAPI:ChartAesthetics.adoc[] to assign VisualFrames such as xref:chartAPI:ColorFrame.adoc[], xref:chartAPI:StaticShapeFrame.adoc[], and so on.
+
+
+== Parameter
+idx:: index of 			a xref:chartAPI:VisualFrame.adoc[] object
+
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new BrightnessColorFrame(); <1>
+frame.setField("Quantity");
+frame.setColor(java.awt.Color(0xff0000));
+elem.setColorFrame(frame);
+graph.addElement(elem);
+alert(Chart1.graph.getVisualFrames()[0].getColor()); <2>
+--
+<1> Create `Colorframe` object.
+<2> Use `getVisualFrames` to access `ColorFrame` information.
+
+
++
+image:commonscript:EGraphgetVisualFrames.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+
+[TIP]
+=====
+
+
+To use the property on a Chart that was previously created with the Chart Editor, simply call the function. For example:
+
+[source,javascript]
+--
+graph.getVisualFrames()[0].getColor();
+--
+=====
+
+
+
+
+

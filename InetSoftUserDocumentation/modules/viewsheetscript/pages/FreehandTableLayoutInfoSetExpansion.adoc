@@ -1,0 +1,34 @@
+= layoutInfo.setExpansion(row, col, type)
+:navtitle: setExpansion()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Sets the specified cell to expand to display an array of data (typically supplied by the xref:viewsheetscript:SpecialFreehandFunctions.adoc#toList[toList] function). See xref:viewsheet:AddFreehandTable.adoc[] for more information about ‘Expand Cell’.
+
+
+
+
+== Parameter
+row:: row index
+col:: column index
+type:: `1`: Horizontal expansion +
+`2`: Vertical expansion
+
+
+
+== Example
+[source,javascript]
+var q = runQuery('ws:global:Examples/AllSales');
+FreehandTable1.layoutInfo.setCellBinding(1,0,3,"toList(q['State'],'sort=asc')");
+FreehandTable1.layoutInfo.setExpansion(1,0,1); // horizontal expansion
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+layoutInfo.setExpansion                 // unqualified
+FreehandTable1.layoutInfo.setExpansion  // qualified
+
+{secondForm}
+====

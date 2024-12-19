@@ -1,0 +1,54 @@
+= LabelForm.setCollisionModifier(value)
+:navtitle: LabelForm.setCollisionModifier()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+Specifies how collisions (labels occupying the same location) should be handled.  The corresponding “getter” function is `getCollisionModifier()`.
+
+
+
+== Parameter
+value::			One of the following constants:
++
+[source]
+VLabel.MOVE_NONE  // no adjustment
+VLabel.MOVE_FREE  // move label any direction
+VLabel.MOVE_RIGHT // move label right
+VLabel.MOVE_UP    // move label up
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form1 = new LabelForm(); //<2>
+var form2 = new LabelForm(); //<2>
+form1.setLabel("label1");
+form1.setValues(['NY', 100]);
+form2.setLabel("label2");
+form2.setValues(['NY', 100]);
+form1.setCollisionModifier(VLabel.MOVE_FREE); //<3>
+graph.addForm(form1); //<4>
+graph.addForm(form2); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:LabelForm.adoc[] object.
+<3> Use `setCollisionModifier()` to allow free label movement.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:LabelFormSetCollision.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

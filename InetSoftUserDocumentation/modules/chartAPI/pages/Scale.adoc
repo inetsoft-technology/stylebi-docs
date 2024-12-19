@@ -1,0 +1,22 @@
+= Scale
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=created by]
+====
+[square]
+* xref:LinearScale.adoc[]
+* xref:LogScale.adoc[]
+* xref:PowerScale.adoc[]
+* xref:TimeScale.adoc[]
+* xref:CategoricalScale.adoc[]
+====
+
+The `Scale` object contains a scale defining the measurement of a dimension. The following pages explain its properties.
+
+
+
+image:commonscript:Scale.png[]
+
+
+

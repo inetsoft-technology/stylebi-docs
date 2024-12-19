@@ -1,0 +1,31 @@
+= daySelection
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:CalendarProperties.adoc[] for more information on user selection editing.
+
+Specifies that the user can select individual days of the week (when the Calendar is in ‘Monthly’ view mode). Otherwise, the user must select the week in its entirety.
+
+== Type
+Boolean::	`true`: enable individual day selection, `false`: disable day selection (default)
+
+
+
+== Example
+[source,javascript]
+Calendar1.daySelection = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+daySelection               // unqualified
+Calendar1.daySelection    // qualified
+
+{secondForm}
+====
+
+

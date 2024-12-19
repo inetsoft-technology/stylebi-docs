@@ -1,0 +1,53 @@
+= LabelForm.setAlignmentY(value)
+:navtitle: LabelForm.setAlignmentY()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+Specifies the vertical alignment of the label with respect to the specified Y location.  The corresponding “getter” function is `getAlignmentY()`.
+
+
+
+== Parameter
+value::			One of the following alignments:
++
+[source]
+Chart.TOP_ALIGNMENT
+Chart.MIDDLE_ALIGNMENT
+Chart.BOTTOM_ALIGNMENT
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form1 = new LabelForm(); //<2>
+var form2 = new LabelForm(); //<2>
+form1.setLabel("label1");
+form1.setPoint(new java.awt.Point(100, 100));
+form2.setLabel("label2");
+form2.setPoint(new java.awt.Point(100, 100));
+form2.setAlignmentY(Chart.TOP_ALIGNMENT); //<3>
+graph.addForm(form1); //<4>
+graph.addForm(form2); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:LabelForm.adoc[] object.
+<3> Use `setAlignmentY()` to set the vertical alignment.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:LabelFormSetYAlignment.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

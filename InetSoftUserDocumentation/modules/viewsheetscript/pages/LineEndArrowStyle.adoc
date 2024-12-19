@@ -1,0 +1,39 @@
+= endArrowStyle
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:ShapeProperties.adoc[] for more information about Line components.
+====
+
+Specifies the style of arrow to place at the end of the line.
+
+
+== Type
+xref:commonscript:StyleConstant.adoc[] integer::		`0`: No arrow +
+`StyleConstant.ARROW_LINE_1`: Solid arrow +
+`StyleConstant.ARROW_LINE_2`: Stick arrow +
+`StyleConstant.ARROW_LINE_3`: Outline arrow
+
+
+
+== Example
+[source,javascript]
+Line1.endArrowStyle = StyleConstant.ARROW_LINE_3;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+endArrowStyle           // unqualified
+Line1.endArrowStyle    // qualified
+
+{secondForm}
+====
+
+

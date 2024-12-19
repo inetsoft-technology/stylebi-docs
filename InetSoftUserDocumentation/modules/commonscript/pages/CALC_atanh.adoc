@@ -1,0 +1,35 @@
+= CALC.atanh(number)
+:navtitle: CALC.atanh()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Return the inverse hyperbolic tangent of a number in radians. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A numerical value between -1 and 1 (exclusive)
+
+
+== Example
+[source,javascript]
+----
+CALC.atanh(0.5);  // returns 0.5493061443340549
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.atanh(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.atanh(Slider1.selectedObject)
+CALC.atanh(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,15 @@
+= CALC.pi()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the number stem:[pi], accurate to 15 digits. {CALCExcelFunctionPage}
+
+
+== Example
+[source,javascript]
+----
+CALC.pi(); // returns 3.14159265358979
+----
+

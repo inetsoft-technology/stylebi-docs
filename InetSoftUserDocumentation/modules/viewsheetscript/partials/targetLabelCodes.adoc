@@ -1,0 +1,6 @@
+[source]
+{0}: Target value
+{1}: Target formula
+{2}: Field name
++
+The code can be followed by a format type and format string, for example,  `pass:[{0,number,$#,##0}]`. See xref:viewsheet:DataFormat.adoc[] for more information about formatting.

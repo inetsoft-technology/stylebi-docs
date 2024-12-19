@@ -1,0 +1,34 @@
+= layoutInfo.setColGroup(row,col,name)
+:navtitle: setColGroup()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Sets the column group for specified cell in a Freehand Table. See xref:viewsheet:AddFreehandTable.adoc[] for more information about ‘Column Group’.
+
+
+
+
+
+
+== Parameter
+row:: row index
+col:: column index
+name:: Cell name to use for column group or `'(default)'`
+
+
+
+
+== Example
+[source,javascript]
+FreehandTable1.layoutInfo.setColGroup(1,0,'state');
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+layoutInfo.setColGroup                 // unqualified
+FreehandTable1.layoutInfo.setColGroup  // qualified
+
+{secondForm}
+====

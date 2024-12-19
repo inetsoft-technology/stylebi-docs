@@ -1,0 +1,39 @@
+image:dataworksheet:newWorksheet3.png[]
+
+Choose the desired option for creating your data set: ‘Upload File’, ‘Mashup Data’, or an available data source query (e.g., ‘Orders Query’). The btn:[Cancel] button opens a blank Data Worksheet, which is the same as selecting ‘Mashup Data’.  The three options are described below.
+
+NOTE: To create a new data block by manually entering data, see xref:dataworksheet:EnterData.adoc[].
+
+****
+Upload File:: To create your Data Worksheet by *uploading* a file, select the {buttonUploadFile} option. This creates a blank Data Worksheet named ‘Untitled’ and opens the ‘Import Data File’ dialog box.
++
+image:dataworksheet:embeddedTable4.png[]
++
+See xref:dataworksheet:UploadData.adoc[] for information about how to use the upload options.
++
+Mashup Data:: To create your Data Worksheet by *mashing up data*, select the {buttonMashupData} option. This creates a blank Data Worksheet named ‘Untitled-X’. Proceed to xref:#CreateDataBlocks[] below.
++
+Data Source:: To create your Data Worksheet by *defining a query*, select a data source query option (e.g., ‘Orders Query’). This creates a blank Data Worksheet named ‘Untitled’ and opens the ‘Database Query’ dialog box.
++
+image:dataworksheet:newWorksheet4.png[]
++
+See xref:dataworksheet:QueryData.adoc[] for information about how to use the ‘Database Query’ dialog box.
+****
+
+[#CreateDataBlocks]
+== Create Data Blocks
+Proceed to add (additional) data blocks to the Data Worksheet. Drag the desired data (queries, fields, or tables) from the left panel.
+
+image:dataworksheet:transform1.png[]
+
+NOTE: You can drag fields from the  _same_ data model or _same_ table into a single data block. For example, you can drag any attributes from the sample ‘Order Model’ into a single data block.  However, to add fields from _different_ sources (different models, different queries, etc.) into a single data block, you must perform a join.  See xref:dataworksheet:JoinData.adoc[] for more details.
+
+You can also drag a data block (or individual columns of a data block) from another Data Worksheet. In this case, the inserted data block remains linked to the original Data Worksheet in which it is defined, and updates automatically in response to changes in the source Data Worksheet. To disable this auto-update behavior, press the {buttonAutoUpdate}  in the toolbar of the bottom panel.
+
+image:dataworksheet:auto-update1.png[]
+
+You can then force an update *on-demand* by right-clicking the data block (or by pressing the {buttonActions}) and selecting the ‘Update Mirror’ option. To restore the original auto-update behavior, press the {buttonAutoUpdate2}.
+
+*_Optional_*: To modify the properties of a column in a data block, such as its name, visibility, position, sort order, see xref:dataworksheet:ModifyColumn.adoc[]. To view the query represented by the data block, see xref:dataworksheet:PreviewQuery.adoc[].  To preview the data returned by the data block, see xref:dataworksheet:PreviewData.adoc[].
+
+You can now do data pipeline operations on this data, as described in the following sections (xref:dataworksheet:FilterData.adoc[], xref:dataworksheet:JoinData.adoc[], etc.), or you can proceed to create Dashboards based on this Data Worksheet. See xref:viewsheet:VisualizeYourData.adoc[] for information about constructing a Dashboard.

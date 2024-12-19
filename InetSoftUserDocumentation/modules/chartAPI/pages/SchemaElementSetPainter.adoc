@@ -1,0 +1,57 @@
+= SchemaElement.setPainter(painter)
+:navtitle: SchemaElement.setPainter()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+Specifies the `SchemaPainter` object to be used in drawing the visual chart elements.  The corresponding “getter” function is `getPainter()`.
+
+
+== Parameter
+painter::
+`BoxPainter`: Box and whiskers plot +
+`CandlePainter`: Candle plot +
+`StockPainter`: Stock chart
+
+
+
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Hi", "Lo", "Open", "Close"],["NJ", 200, 100, 120, 150],
+["NY", 300, 100, 200, 120]]; //<1>
+graph = new EGraph();
+var elem = new SchemaElement(); //<2>
+elem.addDim("State");
+elem.addSchema("Hi", "Close", "Lo"); //<3>
+elem.setPainter(new StockPainter());
+graph.addElement(elem); //<4>
+
+--
+
+<1> {dataset}
+<2> Create the `SchemaElement` object.
+<3> Use `addSchema`  to add fields to the `SchemaElement`.
+<4> Use xref:EGraph_addElement.adoc[] to add the `SchemaElement` to the Chart.
+
+
+image:commonscript:SchemaElementsetPainter_1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

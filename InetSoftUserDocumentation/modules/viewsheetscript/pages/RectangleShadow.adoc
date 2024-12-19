@@ -1,0 +1,34 @@
+= shadow
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:ShapeProperties.adoc[] for more information about Rectangle components.
+====
+
+Adds a drop shadow to the component.
+
+== Type
+Boolean:: `true`: add drop shadow +
+`false`: no drop shadow
+
+
+
+== Example
+[source,javascript]
+Rectangle1.shadow = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shadow           // unqualified
+Rectangle1.shadow     // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,45 @@
+= CALC.concatenate(array)
+:navtitle: CALC.concatenate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the strings in `array` joined into a single string. {CALCExcelFunctionPage}
+
+[TIP]
+====
+If the number of strings to concatenate is relatively small, you can also use the JavaScript concatenation operator. Example:
+
+[source,javascript]
+var str = 'madam' + 'i' + 'am' + 'adam';
+// returns madamiamadam
+
+====
+== Parameters
+array::			An array of strings
+
+
+
+== Example
+
+----
+CALC.concatenate(['madam','i','am','adam']);  // returns madamiamadam
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.concatenate([field['Label1'], field['Label2'], field['Label3']])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.concatenate([parameter.Label1, parameter.Label2, parameter.Label3])
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

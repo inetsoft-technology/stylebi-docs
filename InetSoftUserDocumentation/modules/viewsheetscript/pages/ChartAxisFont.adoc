@@ -1,0 +1,28 @@
+= axis.font
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the font of the dimension or measure axis labels.
+
+== Type
+{javaawtfont} or font description
+
+== Example
+[source,javascript]
+Chart1.axis['Company'].font = new java.awt.Font('Serif', java.awt.Font.BOLD, 12);
+Chart1.axis['Company'].font ='Lucida Sans Unicode-BOLD-14';
+
+image:commonscript:dimensionFont.png[]
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].font            // unqualified
+Chart1.axis['...'].font     // qualified
+
+{secondForm}
+====
+
+

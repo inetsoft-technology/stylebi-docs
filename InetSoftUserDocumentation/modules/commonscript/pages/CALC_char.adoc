@@ -1,0 +1,41 @@
+= CALC.char(number)
+:navtitle: CALC.char()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the unicode character specified by a decimal value.   {CALCExcelFunctionPage}
+
+NOTE: `CALC.character()` is an alias for `CALC.char()`.
+
+== Parameters
+number::			Positive integer specifying a character
+
+
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.char(77);  // returns M
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.char(field['Char'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.char(parameter.Char)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

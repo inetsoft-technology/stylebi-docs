@@ -1,0 +1,37 @@
+= rankPerGroup
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+When `true`, specifies that the top-N filter for a dimension (see xref:ChartBindingInfoSetTopN.adoc[]) should be relative to the parent dimension in the dimension hierarchy.
+
+For example, if the chart ‘X’ dimension is ‘Product Category’ and the ‘Color’ dimension is ‘Product Name’, and you request “top 3” of ‘Product Name’, set `rankPerGroup=true` to make the filter relative to the parent ‘Product Category’ grouping (yielding the top 3 products for each category). Set to `false` (default) to filter ‘Product Name’ without respect to the ‘Product Category’ grouping (yielding the top 3 products across all categories).
+
+
+
+
+
+== Type
+Boolean:: `true`: filter relative to the parent group +
+`false`: do not filter relative to the parent group
+
+== Example
+[source,javascript]
+Chart1.rankPerGroup = true;
+Chart2.rankPerGroup = false;
+
+
+
+image:commonscript:rankPerGroup.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+rankPerGroup          // unqualified
+Chart1.rankPerGroup   // qualified
+
+{secondForm}
+====

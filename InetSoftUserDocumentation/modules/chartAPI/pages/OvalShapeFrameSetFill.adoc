@@ -1,0 +1,74 @@
+= OvalShapeFrame.setFill(Boolean)
+:navtitle: OvalShapeFrame.setFill()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Specifies the fill for the oval elements.  You can also set this using the `bindingInfo.shapeFrame.fill`  property syntax in *onRefresh* script. See xref:#Example2[] below.
+
+== Parameter
+Boolean:: `true`: fill oval  +
+`false`: do not fill oval
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Total"], ["NJ",200,30], ["NY",300,15],["PA",150,5]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new OvalShapeFrame("Total"); //<2>
+frame.setFill(true); //<3>
+elem.setShapeFrame(frame); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `OvalShapeFrame` object.
+<3> Use `setFill` to fill the ovals.
+<4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:OvalShapeFrameSetFill.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ShapeFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.shapeFrame = new OvalShapeFrame;
+Chart1.bindingInfo.shapeFrame.fill = true;
+
+--
++
+image:commonscript:OvalShapeFrameFill.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

@@ -1,0 +1,17 @@
+= importClass(class)
+:navtitle: importClass()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Enable the use of the *unqualified* name for a class.
+
+== Example
+[source,javascript]
+----
+importClass(java.awt.Font);
+font = new Font("Verdana", Font.ITALIC, 24); <1>
+foreground = Color.red;
+----
+<1> Does not require the  `java.awt` qualifier

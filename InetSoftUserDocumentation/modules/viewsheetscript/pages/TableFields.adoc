@@ -1,0 +1,53 @@
+= fields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheetscript:TableQuery.adoc[] to specify the data block from which to draw the fields.
+====
+
+
+
+Specifies the fields of the data block to be displayed in the Table.
+
+== Type
+Array
+
+
+
+
+== Example
+
+[source,javascript]
+----
+TableView1.query = 'SalesByDate';
+TableView1.fields = ['State','Company','Total'];
+
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fields                // unqualified
+TableView1.fields     // qualified
+
+{secondForm}
+====
+
+image:tableFields.png[]
+
+
+
+
+
+
+
+
+
+

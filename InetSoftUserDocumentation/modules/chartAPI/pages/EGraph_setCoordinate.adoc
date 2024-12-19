@@ -1,0 +1,41 @@
+= Egraph.setCoordinate(coord)
+:navtitle: Egraph.setCoordinate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ChartCoordinates.adoc[] for information on modifying coordinates.
+====
+
+
+Sets the specified xref:chartAPI:Coordinate.adoc[]  for the Chart. See xref:chartAPI:ChartCoordinates.adoc[] for available coordinate types.  The corresponding “getter” function is xref:chartAPI:EGraph_getCoordinate.adoc[].
+
+
+
+== Paramater
+coord:: A xref:chartAPI:Coordinate.adoc[] object
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var sscale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var coord = new RectCoord(sscale,qscale); <1>
+coord.transpose();
+graph.setCoordinate(coord); <2>
+graph.addElement(elem);
+--
+<1> Create the  `Coordinate` object.
+<2> Use `setCoordinate` to add the `Coordinate` object to the Chart.
+
+image:commonscript:EGraphsetCoordinate.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

@@ -1,0 +1,32 @@
+= colorField
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::viewsheetscript:partial$readOnly.adoc[]
+
+
+
+
+Returns the name of the query field that is currently assigned to the ‘Color’ binding (xref:chartAPI:ColorFrame.adoc[]) at runtime. This property is read-only.  Use xref:ChartBindingInfoSetColorField.adoc[] to set the '`Color`' binding in script.
+
+== Type
+String
+
+== Example
+[source,javascript]
+if (Chart1.colorField == 'State') {
+  StateSelectionList1.visible = true;
+}
+else {
+  StateSelectionList1.visible = false;
+}
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorField           // unqualified
+Chart1.colorField    // qualified
+
+{secondForm}
+====

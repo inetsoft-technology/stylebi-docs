@@ -1,0 +1,77 @@
+= TimeScale.setMax(value)
+:navtitle: TimeScale.setMax()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+Specifies the latest date on the scale.  The corresponding “getter” function is `getMax()`.
+
+If you set the maximum scale value smaller than the largest data value (to crop the data), you should also set `elem.setInPlot(false)`. See xref:GraphElementSetInPlot.adoc[]. Otherwise, the chart will force the data to appear in its entirety, resulting in a partially unlabeled axis.
+
+
+== Parameter
+value::			a {JavaScriptDate} object
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var date1 = new Date();
+var date2 = new Date();
+var maxDate = new Date();
+date1.setFullYear(2008,0,1);
+date2.setFullYear(2009,0,1);
+maxDate.setFullYear(2011,0,1);
+dataset = [["Date", "Quantity"], [date1,200], [date2,300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("Date","Quantity");
+var tscale = new TimeScale(); //<2>
+tscale.setFields(["Date"]);
+tscale.setMax(maxDate); //<3>
+graph.setScale("Date", tscale); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:TimeScale.adoc[] object.
+<3> Use `setMax` to set the  desired maximum.
+<4> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+
+
+image:commonscript:TimeScale_1.png[]
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getElement.adoc[] {circle1}, xref:chartAPI:GraphElementGetColorFrame.adoc[] {circle2}, and xref:chartAPI:VisualFrameGetScale.adoc[] {circle3} to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[],  xref:chartAPI:ColorFrame.adoc[], and xref:chartAPI:Scale.adoc[]. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getColorFrame(); //<2>
+var scale = frame.getScale(); //<3>
+// Compact syntax: var scale = graph.getElement(0).getColorFrame().getScale();
+
+scale.setMax(4000);
+scale.setMin(700);
+--
+=====
+
+

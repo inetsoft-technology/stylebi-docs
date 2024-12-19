@@ -1,0 +1,73 @@
+= AxisSpec.setLineVisible(Boolean)
+:navtitle: AxisSpec.setLineVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies whether the axis lines are visible or hidden. {noGetter}
+
+
+
+
+
+
+
+
+== Parameter
+Boolean:: `true`: lines are visible +
+`false`: lines are hidden
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"],["NJ",20000],["NY",30000]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var qscale = new LinearScale("Quantity");
+var cscale = new CategoricalScale("State");
+var aspec1 = new AxisSpec(); //<2>
+var aspec2 = new AxisSpec(); //<2>
+aspec1.setLineVisible(true); //<3>
+aspec2.setLineVisible(false); //<4>
+qscale.setAxisSpec(aspec1);
+cscale.setAxisSpec(aspec2);
+graph.setScale("Quantity", qscale);
+graph.setScale("State", cscale);
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the `AxisSpec` objects.
+<3> Use `setLineVisible` to show lines.
+<4> Use `setLineVisible` to hide lines.
+
+image:commonscript:AxisSpecsetLineVisible.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); <1>
+var scale = coord.getYScale(); <2>
+var spec = scale.getAxisSpec(); <3>
+// Compact syntax: var spec = graph.getCoordinate().getYScale().getAxisSpec();
+
+spec.setLineVisible(false);
+--
+=====

@@ -1,0 +1,95 @@
+= Add Conditions
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+xref:AddFilterComponents.adoc[], for the recommended approach to filtering your data in most cases.
+====
+
+You can filter the values displayed in a Data View component (Chart, Table, Crosstab) or Output component (Gauge, Text) to match specified criteria by setting a _Condition_ on the component. For example, you can filter a Chart or a Table so that it displays only data for a particular sales employee or region.
+
+IMPORTANT: Condition-based filtering applies on the *component level*, and is different than filtering provided by Filter components such as Selection Lists and Range Sliders (see xref:AddFilterComponents.adoc[].) Filter components filter the Dashboard’s underlying  data block and therefore affect _all_ Data View and Output elements in the Dashboard that use the same  data block. In contrast, a Condition that you place on a particular component affects only that component.
+
+== Apply a Condition
+To apply a Condition to a Data View or Output component, follow these steps:
+
+. Right-click the element, and select ‘Conditions’ from the context menu. {rightClickOptions} This opens the ‘Conditions’ dialog box.
++
+image:dataworksheet:ConditionDialogBox.png[]
+
+. Select the operand and type of comparison from the menus at the top of the dialog box, for example, `[Company][is not][one of]`.
++
+TIP: Note: To filter out *null* values, you can use a condition such as `[Company][is not][equal to][null]`.
+
+
+. Press the {buttonChangeValueType}, and select ‘Value’, ‘Field’, ‘Expression’, ‘Variable’, or ‘Session Data’.
++
+[square]
+* If you select the ‘Field’ option, in the adjoining menu, choose the column for comparison. (The two columns will be compared row by row; rows that satisfy the condition will be preserved.)
+
+* If you select the ‘Value’ option, either enter the comparison value into the provided text field, or select ‘Browse Data’ to choose the comparison value from a list. (For the `[one of]` operator, {buttonCtrl}-click in the ‘Browse Data’ list to select multiple items.)
+
+* If you select the ‘Variable’ option, select one of the Form components listed in the menu to provide the value at runtime. (See xref:DynamicallySetProperties.adoc[] for further details.)
++
+[TIP]
+====
+If you are using the `[in range]` operator for a date field condition, the value assigned to the variable should be one of the permissible range strings, such as ‘Last Year’, ‘This Year’, etc.
+
+.Read more about the available date ranges…
+[%collapsible]
+=====
+include::ROOT:partial$dateRanges.adoc[]
+=====
+====
+You can also enter an arbitrary variable name (one which does not correspond to an existing Form component). In this case, the user will be prompted at runtime to enter a value for the parameter.  See xref:#ControlUserPrompting[] below for more information about prompting.
+
+
+* If you select the ‘Expression’ option, press the btn:[JS]/btn:[SQL] button to select JavaScript or SQL syntax, and then press the {buttonEditExpression}. This opens the Script Editor where you can enter your expression. (See xref:dataworksheet:CreateNewDataField.adoc[] for details on using expressions.)
+
+* If you select the ‘Session Data’ option, choose one of ‘User’, ‘Roles’, or ‘Groups’. These parameters return information about the user who is currently viewing the Dashboard; respectively, the user name, the array of roles to which the user belongs, and the array of groups to which the user belongs.
++
+NOTE: The adjacent menu automatically chooses the `[equal to]` or `[one of]` operator to match your selection.
+
+. When you have fully specified the condition, press btn:[Append].
+
+. To create a compound condition with multiple clauses, repeat Steps 2-4 above, using the `[and]` and `[or]` operators to compose the condition clauses. See below:
++
+include::ROOT:partial$compoundCondition.adoc[]
+
+. Press btn:[OK] to exit the ‘Condition’ dialog box. The component will now only display data that  satisfies the Condition.
+
+[#ControlUserPrompting]
+== Control User Prompting
+By default, a Dashboard will prompt the user for all parameters in the linked  data source (Data Worksheet, etc.) that have not already been assigned a value. In some cases, you may want to suppress the prompting for some or all of these parameters.
+
+=== Suppress Prompting for All Parameters
+To suppress prompting for ALL parameters, follow these steps:
+
+. Press the {buttonOptions} in the toolbar to open the ‘Dashboard Options’ dialog box.
+
+. *Disable* the ‘Prompt for Parameters’ option.
++
+image:OptionsPromptForParameters.png[]
+
+. Press btn:[OK] to close the dialog box.
+
+=== Supress Prompting for Some Paramaters
+To suppress prompting SOME parameters, follow these steps:
+
+. Press the {buttonOptions} in the toolbar to open the ‘Dashboard Options’ dialog box.
+. Press the btn:[Customize] button next to the ‘Prompt for Parameters’ option.
++
+image:Viewsheet Options Customize.png[]
++
+This open the ‘Customize Parameters’ dialog box.
+
+. To disable one or more parameters, select the parameters you wish to disable in the ‘Enabled Parameters’ panel, and press the btn:[Add] button. This moves the selected parameters to the ‘Disabled Parameters’ panel.
++
+image:CustomizeParametersDialog.png[]
++
+To re-enable one or more disabled parameters, select the parameters you wish to enable in the ‘Disabled Parameters’ panel, and press the btn:[Remove] button. This moves the selected parameters to the ‘Enabled Parameters’ panel.
+
+. Press btn:[OK] to close the ‘Customize Parameters’ dialog box.
+
+. Press btn:[OK] to close the ‘Dashboard Options’ dialog box.

@@ -1,0 +1,38 @@
+= maxRangeSize
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:RangeSliderProperties.adoc[] for more information on user selection editing.
+====
+
+Specifies the maximum slider range, the largest interval that the user is able to select when interactively adjusting the range. The units are the same as those of the xref:viewsheetscript:RangeSliderLength.adoc[] property.
+
+
+
+
+== Type
+Number:: Maximum slider range
+
+
+
+== Example
+
+[source,javascript]
+RangeSlider1.maxRangeSize = 10;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+maxRangeSize                  // unqualified
+RangeSlider1.maxRangeSize     // qualified
+
+{secondForm}
+====
+
+

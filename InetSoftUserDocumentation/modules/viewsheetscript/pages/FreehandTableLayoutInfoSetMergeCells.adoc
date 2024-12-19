@@ -1,0 +1,32 @@
+= layoutInfo.setMergeCells(row,col,Boolean)
+:navtitle: setMergeCells()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Sets the specified cell in a Freehand Table to be merged. See xref:viewsheet:AddFreehandTable.adoc[] for more information about ‘Merge Expanded Cells’.
+
+
+
+
+== Parameter
+row:: row index
+col:: column index
+Boolean::			`true` to enable cell expansion +
+`false` to disable cell expansion
+
+
+
+== Example
+[source,javascript]
+FreehandTable1.layoutInfo.setMergeCells(1,0,true);
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+layoutInfo.setMergeCells                 // unqualified
+FreehandTable1.layoutInfo.setMergeCells  // qualified
+
+{secondForm}
+====

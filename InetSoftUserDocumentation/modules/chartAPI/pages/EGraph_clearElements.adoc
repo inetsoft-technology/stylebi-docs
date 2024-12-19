@@ -1,0 +1,42 @@
+= EGraph.clearElements()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:RepresentMultipleMeasures.adoc[] to add multiple elements.
+====
+
+Removes all `GraphElement` and `GraphForm` objects from the chart.
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new LineForm();
+form.addPoint(new java.awt.Point(0,0));
+form.addPoint(new java.awt.Point(100,100));
+form.addPoint(new java.awt.Point(200,100));
+form.setFill(true);
+graph.addForm(form); //<2>
+graph.addElement(elem); //<3>
+graph.clearElements(); //<4>
+--
+<1> {dataset}
+<2> Add xref:LineForm.adoc[] object.
+<3> Add xref:IntervalElement.adoc[] object.
+<4> Use `clearElements` to clear `LineForm` and `IntervalElement`.
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

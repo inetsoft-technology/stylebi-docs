@@ -1,0 +1,34 @@
+= shapeLegends.title
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the legend title within a shape-key legend on charts that have *multiple* shape legends.
+
+
+
+
+
+
+== Type
+String
+
+
+== Examples
+
+[source,javascript]
+Chart1.shapeLegends['Sum(Product:Quantity Purchased)'].title = 'Salesperson Shape';
+Chart1.shapeLegends['Sum(Product:Total)'].title = 'Year Shape';
+
+
+image:commonscript:shapeLegendsTitle.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shapeLegends['...'].title           // unqualified
+Chart1.shapeLegends['...'].title    // qualified
+
+{secondForm}
+====

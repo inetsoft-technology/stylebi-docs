@@ -1,0 +1,49 @@
+= Enable Self-Signup
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+
+If the Self-Signup feature is enabled, users  who log in from the *base URL* (not a URL containing an organization) can  create their own account by pressing  the '`Create an Account`' link on the  login page.  Users who sign up this way will be added to a special *Self Organization* that contains only the user signing up.
+
+image:selfsignup3.png[]
+
+IMPORTANT: Users who log in from a URL containing an organization  (e.g., `organization.host:8080/login.html`) *do not* have the ability to self-signup.  The organization URL directs users to their organization-specified account.
+
+The self-signup option is only available if you enable the Self Signup feature. To enable self-signup, follow the steps below:
+
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Verify that the server email is configured.  See xref:ConfigureServerEmail.adoc[].
+. Select the *Security* page in the left panel.
+. Select ‘Enable Security’ to activate security settings.
++
+image:Figure 23_1.png[]
+
+. *_Optional_*: To allow users from multiple organizations to access the server, check '`Enable Multi-Tenancy`'.  See xref:EnableMultiTenant.adoc[] for more information.
+
+. Check '`Enable Self Signup`'. This enables the '`Create an Account`' option for users on the  login page.
++
+image:selfsignup1.png[]
+
+. To enable users to sign in with Google, select the *Sign In With Google* tab.
++
+image:selfsignup2.png[]
+
+. Select the *Enable* option.
+
+. Enter the OIDC Discovery URL and press btn:[Apply] or enter the required OpenID Connect properties.  See the https://developers.google.com/identity/openid-connect/openid-connect[OpenID Connect documentation] for more information about the settings.
+
+. Press the btn:[Apply] button at the bottom of the page.
+
+When a user attempts to log in using the Self-Signup feature, they will receive a confirmation email from "`Inetsoft StyleBI`" with a default subject and message.  If you want to change the  subject or message, set the `signup.mail.subject` and `signup.mail.message` properties.  (See xref:AllProperties.adoc[] for information about setting properties.)  You can use placeholder `pass:[{0}]` to insert the email address of the user, and `pass:[{1}]` to insert  the verification code.
+
+
+
+.Example: Customize sign-up email
+[source,properties]
+signup.mail.subject = CompanyName verification code
+signup.mail.message = CompanyName verification code, {0}: {1}
+
+

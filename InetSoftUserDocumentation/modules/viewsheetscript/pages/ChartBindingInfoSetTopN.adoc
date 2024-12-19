@@ -1,0 +1,37 @@
+= bindingInfo.setTopN(col, N)
+:navtitle: bindingInfo.setTopN()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoGetTopN.adoc[]  to obtain the binding information.
+
+Filters the top or bottom N groups for a specified field based on an aggregate measure.
+
+
+
+
+
+
+== Parameter
+col::			Name of filtered field
+N::			The number of top or bottom groups to filter
+
+
+
+
+
+
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.setTopN("Company",3)
+--
+image:commonscript:SetTopN.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]

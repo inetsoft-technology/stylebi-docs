@@ -1,0 +1,44 @@
+= Legend Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To edit a legend, right-click the legend, and select ‘Legend Properties’ from the context menu. {rightClickOptions} This opens the ‘Legend Properties’ panel, which provides the following tabs: *General*, *Scale.adoc*, *Alias*.
+
+TIP: To hide a legend, right-click the legend and choose ‘Hide Legend’ from the context menu. {rightClickOptions} To show all legends, right-click the chart and select ‘Show Legend’ from the context menu.
+
+== General Tab
+The *General* tab offers the following options.
+
+NOTE: {dynamicProperties}
+
+image:Chart Legend Format Dialog.png[]
+
+Title:: The text to display in the legend title bar.
+Visible:: Sets the visibility of the legend title bar.
+Legend Border:: The line style and color of the legend boundary.
+Legend Position:: Sets the position of the legend on the plot. Legend position can also be changed by dragging with the mouse.
+Ignore Null:: Ignore null values when generating the legend.
+
+== Scale Tab
+The *Scale.adoc* tab offers the following options for *measure* (numerical) legends.
+
+include::ROOT:partial$measureTip.adoc[]
+
+Logarithmic Scale:: Set logarithmic scaling for the legend scale. (The logarithm base is selected automatically.)
+Reverse:: Orient the scale with maximum at left, minimum at right (or maximum represented by smallest, minimum represented by largest, etc.).
+Include Zero:: For a ‘Size’ legend, specifies that zero should be included in the scaling such that the (hypothetical) minimum element size corresponds to a value of zero rather than the actual minimum data value.
+
+
+== Alias Tab
+The *Alias* tab is available for *dimension* (categorical) legends, and displays a table containing the mapping between original legend labels and new legend labels.
+
+include::ROOT:partial$dimensionTip.adoc[]
+
+To modify the labels of a legend, double-click the cells in the ‘Alias’ column that correspond to the legend labels that you wish to rename, and enter the desired replacement text. Press btn:[OK] to close the panel.
+
+image:legendFormatAlias.png[]
+
+This updates the legend labels with the specified replacement text.
+
+image:legendFormatAliasUpdated.png[]
+

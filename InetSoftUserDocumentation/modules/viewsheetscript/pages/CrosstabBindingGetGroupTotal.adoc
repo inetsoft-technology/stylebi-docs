@@ -1,0 +1,46 @@
+= bindingInfo.getGroupTotal(field, header)
+:navtitle: getGroupTotal()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns `true` if the subtotal for the specified group is being displayed, `false` otherwise. This property can be set by  xref:CrosstabBindingInfoSetGroupTotal.adoc[] or by the '`Summarize`' property in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetGroupTotal_1.png[]
+
+
+
+
+
+
+== Parameters
+field::			String: Name of grouped column
+header::			`StyleConstant.ROW_HEADER` or `StyleConstant.COLUMN_HEADER`
+
+
+
+
+
+== Example
+[source,javascript]
+var showTotal = Crosstab1.bindingInfo.getGroupTotal('Region',StyleConstant.ROW_HEADER);
+if(showTotal) {
+  Text1.text = 'Subtotals are displayed for Region.';
+}
+else {
+  Text1.text = 'Subtotals are not displayed.';
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.getGroupTotal             // unqualified
+Crosstab1.bindingInfo.getGroupTotal   // qualified
+
+{secondForm}
+====
+
+

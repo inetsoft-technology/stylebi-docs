@@ -1,0 +1,39 @@
+= bindingInfo.getTopNSummaryCol(field, header)
+:navtitle: getTopNSummaryCol()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the measure set for ranking  by xref:CrosstabBindingInfoSetTopNSummaryCol.adoc[] or by the '`Of`' property in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetTopNExp2_1.png[]
+
+
+== Parameters
+field::			String: Name of a column
+header::			`StyleConstant.ROW_HEADER` or `StyleConstant.COLUMN_HEADER`
+
+== Returns
+String::			Formula used for ranking
+
+
+
+
+
+== Example
+[source,javascript]
+var formula = Crosstab1.bindingInfo.getTopNSummaryCol('Category',StyleConstant.ROW_HEADER);
+Text1.text = 'Ranking by ' + formula + '.'
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.getTopNSummaryCol             // unqualified
+Crosstab1.bindingInfo.getTopNSummaryCol   // qualified
+
+{secondForm}
+====
+
+

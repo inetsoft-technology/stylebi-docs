@@ -1,0 +1,42 @@
+= CALC.fvschedule(principal, schedule)
+:navtitle: CALC.fvschedule()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *future value* of an initial principal after applying a specified series of compound interest rates. Use this function to calculate the future value of an investment with a variable or adjustable rate. {CALCExcelFunctionPage}
+
+== Parameters
+principal::			Present value
+schedule::			Array of interest rates to apply
+
+
+
+
+
+
+== Example
+Future value of a $5000 loan with variable rate of 5%, 6%, and 7% over the three-year term.
+
+[source,javascript]
+----
+CALC.fvschedule(5000, [0.05,0.06,0.07]); // returns 5954.55
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.fvschedule(field['Principal'], [0.05,0.06,0.07])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.fvschedule(Slider1.selectedObject, [0.05,0.06,0.07])
+CALC.fvschedule(parameter.Principal, [0.05,0.06,0.07])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

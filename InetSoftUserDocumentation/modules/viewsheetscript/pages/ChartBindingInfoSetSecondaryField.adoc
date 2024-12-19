@@ -1,0 +1,35 @@
+= bindingInfo.setSecondaryField(col1, col2, binding)
+:navtitle: bindingInfo.setSecondaryField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoGetSecondaryField.adoc[]  to obtain the binding information.
+
+Set the secondary field to be used in a bivariate aggregation method (e.g., correlation, covariance, etc.).
+
+
+
+
+
+
+== Parameter
+col1::			Name of existing primary field
+col2:: Name of secondary field
+binding::			Field binding, one of the following constants:
++
+include::commonscript:partial$fieldBindingConstant.adoc[]
+
+
+
+
+== Example
+For primary field `"Price"` bound to the xref:chartAPI:ColorFrame.adoc[].
+[source,javascript]
+--
+var formula = Chart1.bindingInfo.setSecondaryField("Price", "Discount", Chart.AESTHETIC_COLOR);
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

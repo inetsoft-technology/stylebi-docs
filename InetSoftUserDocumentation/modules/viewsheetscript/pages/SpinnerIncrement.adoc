@@ -1,0 +1,39 @@
+= increment
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+Specifies the interval between the values when a user increments or decrements the Spinner. For example, a value of 15 indicates the Spinner should traverse values of 0, 15, 30, 45, etc. (assuming that `min=0`).
+
+
+
+
+
+
+== Type
+Number::			Spinner increment
+
+
+
+
+== Example
+[source,javascript]
+Spinner1.increment = 20;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+increment               // unqualified
+Spinner1.increment      // qualified
+
+{secondForm}
+====
+
+

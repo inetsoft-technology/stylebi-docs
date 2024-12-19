@@ -1,0 +1,38 @@
+= CALC.pearson(array1, array2)
+:navtitle: CALC.pearson()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the *Pearson product moment correlation* coefficient of the values in `array1` and `array2`. The correlation coefficient indicates the degree of linear relationship between two variables. It ranges from -1 (perfect negative linear relationship) to +1 (perfect positive linear relationship). A value of 0 indicates no linear relationship.  {CALCExcelFunctionPage}  The result should be comparable to that obtained with xref:CALC_correl.adoc[].
+
+== Parameters
+array1::			Array of real values
+array2::			Array of real values
+
+
+== Example
+
+[source,javascript]
+----
+CALC.pearson([3,2,4,5,6],[9,7,12,15,17]);  // returns 0.9970544855015815
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Columns of Dashboard table TableView1:
+CALC.pearson(TableView1.table['Quantity'],TableView1.table['Price'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Columns of ‘Sales’ data block in Data Worksheet:
+CALC.pearson(Sales['Quantity'], Sales['Price']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

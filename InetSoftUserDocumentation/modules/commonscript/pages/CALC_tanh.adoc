@@ -1,0 +1,34 @@
+= CALC.tanh(number)
+:navtitle: CALC.tanh()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the hyperbolic tangent of a real number. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A real number
+
+== Example
+[source,javascript]
+----
+CALC.tanh(0.75)  // returns 0.6351489523872873
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.tanh(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.tanh(Slider1.Value)
+CALC.tanh(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,41 @@
+= tipAlpha
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Sets the transparency (alpha) of the data tip for the Table or Crosstab. A *data tip* is a graphical form of tooltip that  displays a specified Dashboard component  when the user hovers the mouse over cells in the Table. See xref:viewsheet:AddTipsToChart.adoc[] for more details about data tips.
+
+
+
+== Type
+Integer::			Value between `0` (transparent) and `100` (opaque)
+
+
+
+
+
+== Type
+String
+
+
+
+
+
+
+== Example
+[source,javascript]
+Table1.tipAlpha = 35; // mostly transparent
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+tipAlpha                 // unqualified
+TableView1.tipAlpha      // qualified
+
+{secondForm}
+====
+
+

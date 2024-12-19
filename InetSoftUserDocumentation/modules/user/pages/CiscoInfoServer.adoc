@@ -1,0 +1,44 @@
+= Cisco Info Server
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+IMPORTANT: {pluginDriverRequired}
+
+include::partial$dataSourceUserIntro.adoc[]
+
+. Select the ‘Cisco Info Server’ data source, and press btn:[Create]. This opens the data source definition screen.
++
+image:dataSourceNewCiscoInfoServer2.png[]
+
+. In the ‘Name’ field, enter a label for this database connection.
+
+. From the ‘Database Type’ menu, select ‘Custom’ (if not already selected).
+
+. Enter the name of the driver class in the ‘Driver Class’ field. The name of the driver class is usually provided by the driver vendor.
+
+. Enter the ‘JDBC URL’ that should be used to connect to the database, which has the following form. (You can obtain this from the database administrator.)
+
+ jdbc:compositesw:dbapi@{hostname}:{port}?domain={domain}&amp;dataSource={datasource}
+
+include::partial$connectionTestQuery.adoc[]
+
+. Enter the additional required connection information for your database, such as login credentials. You can obtain this information from your database administrator.
++
+include::user:partial$JDBCCommonWeb.adoc[]
++
+include::user:partial$testConnection.adoc[]
+
+
+. Press btn:[OK].
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceCiscoInfoServer3.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceCiscoInfoServer4.png[]
++
+include::user:partial$dataSourceFinalSteps.adoc[]

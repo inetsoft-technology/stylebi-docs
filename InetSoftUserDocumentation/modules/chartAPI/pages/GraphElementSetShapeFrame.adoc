@@ -1,0 +1,57 @@
+= GraphElement.setShapeFrame(frame)
+:navtitle: GraphElement.setShapeFrame()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the aesthetic shape treatment for the chart elements. A xref:ShapeFrame.adoc[] can shape-code chart elements by value, or simply specify a static shape style.  The corresponding “getter” function is xref:GraphElementGetShapeFrame.adoc[].
+
+
+
+
+
+== Parameter
+frame:: A xref:ShapeFrame.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+ dataset = [["State","Quantity","m1","m2", "m3"],["NJ",200,6,3,4],["NY",300,8,2,5]]; //<1>
+graph = new EGraph();
+var frame = new StarShapeFrame(); //<2>
+var elem = new PointElement("State", "Quantity"); //<3>
+frame.setFields(["m1", "m2", "m3"]);
+elem.setShapeFrame(frame); //<4>
+graph.addElement(elem); //<5>
+--
+<1> {dataset}
+<2> Create a `StarShapeFrame` object.
+<3> Create the `PointElement` object.
+<4> Use `setShapeFrame` to assign the `StarShapeFrame` to the `PointElement`.
+<5> Use `addElement` to add the `PointElement` to the Chart.
+
+
+image:commonscript:GraphElementsetShapeFrame.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = new StarShapeFrame();
+frame.setFields(["m1", "m2", "m3"]);
+elem.setShapeFrame(frame);
+--
+=====

@@ -1,0 +1,46 @@
+= CALC.networkdays(start_date, end_date[, holiday_array])
+:navtitle: CALC.networkdays()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the total number of working days between `start_date` and `end_date`. If either `start_date` or `end_date` is itself a working day, that day is also included in the total. {CALCExcelFunctionPage}
+
+
+
+== Parameters
+start_date::			Date object: date on which to begin counting
+end_date::			Date object: date on which to end counting
+holiday_array::			Optional array of dates to *exclude* from working day count
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+// Working days from Feb. 21, 1978 until today:
+var today = CALC.today();  // returns Tue Jun 25 14:08:02 EDT 2024
+CALC.networkdays(new Date(1978,1,21), today) // returns 12091
+----
+
+
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.networkdays(new Date(1978,1,21), field['Order Date'])
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.networkdays(new Date(1978,1,21), RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,33 @@
+= setLabelAliasOfColorLegend(value, alias)
+:navtitle: setLabelAliasOfColorLegend()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Replace the specified label in the color legend with an alias. {noGetter}
+
+== Parameters
+value::			Value to be replaced
+alias::			Replacement string
+
+
+
+
+== Examples
+
+[source,javascript]
+Chart1.setLabelAliasOfColorLegend('NJ','New Jersey');
+Chart1.setLabelAliasOfColorLegend('NY','New York');
+
+
+image:commonscript:setLabelAliasOfColorLegend.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setLabelAliasOfColorLegend(value, alias)           // unqualified
+Chart1.setLabelAliasOfColorLegend(value, alias)    // qualified
+
+{secondForm}
+====

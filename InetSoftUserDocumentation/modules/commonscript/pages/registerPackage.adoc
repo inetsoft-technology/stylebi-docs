@@ -1,0 +1,19 @@
+= registerPackage(string)
+:navtitle: registerPackage()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Register the specified package to enable the use of all the classes in the package. Packages can also be registered by setting the `javascript.java.packages` property.  {EMPropertyConfig}
+
+NOTE: All packages starting with `java`, `inetsoft`, `com`, or `org` are registered automatically.
+
+== Parameters
+string::			package name
+
+
+==  Example
+
+[source,javascript]
+registerPackage('inetsoft.report');

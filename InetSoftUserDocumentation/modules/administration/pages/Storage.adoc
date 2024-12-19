@@ -1,0 +1,398 @@
+= Storage
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+:deployAssets: To move assets such as Dashboards, queries, or data sources from one environment to another, see xref:ImportExportAssets.adoc[].
+
+IMPORTANT: {deployAssets}
+
+Asset storage is configured by the *docker-compose.yaml* file upon Docker container initialization. To view the current storage configuration, follow the steps below:
+
+include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
+
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *General* page in the left panel, and select the *Storage* page in the right panel.
++
+image:Figure 11.png[]
++
+The information The ‘Key-Value Storage Type’ field displays the method of storage for key-value settings, such as server properties. The default is MapDB. The ‘Blob Storage Type’ field displays the method of storage for binary objects, such as Dashboards. The default is file system. To change the type of storage, see below.
+
+[#ManageStoredAssets]
+== Manage Stored Assets
+
+IMPORTANT: {deployAssets}
+
+include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
+
+To manage stored assets, follow the steps below:
+
+
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Content* page in the left panel, and select the *Storage* tab.
++
+image:DataSpaceTab.png[]
+
+
+. To access a folder’s properties, click the desired folder name on the navigation tree. This opens the ‘Storage Folder Definition’ panel.
++
+image:Figure 12.png[]
+
+. Then perform the desired operation:
++
+[square]
+* To rename the folder, enter a name in the ‘Folder Name’ field and press btn:[Apply].
+* To delete a folder, press the btn:[Delete] button at the bottom-right.
+* To add a new file or folder to the selected folder, press the btn:[New File] or btn:[New Folder] button at the bottom-right.
+* To upload a file to server storage, press the btn:[Upload Files] button.
+* To download a folder to a Zip file, press the btn:[Download] button. (The downloaded folder can be uploaded into another environment using the btn:[Upload] button.)
+
+. To access a file’s properties, click the desired file name in the navigation tree. This opens the ‘Storage File Definition’ panel.
++
+image:Figure 13.png[]
++
+[square]
+* To rename the file, enter a name in the ‘File Name’ field and press btn:[Apply].
+* To update the contents of the file, click the  ‘Please select a file’ label and choose a file that contains the updated contents you wish to use. Then press btn:[Apply]. This overwrites the current contents in storage with the contents of the selected file.
+* To download the file from storage to the local file system, press the btn:[Download] button.
+* To delete the file from storage, press the btn:[Delete] button.
+* To modify the contents of the file, press the btn:[Edit Content] button.
++
+WARNING: It is *not recommended* to manually edit XML files in Enterprise Manager, as this may result in file corruption. Use  Visual Composer to make modifications to assets.
+
+[#ManageDriversandPlugins]
+== Manage Drivers and Plugins
+
+include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
+
+
+To retrieve data from a relational database or other data source, you will generally need to upload and deploy a driver or plugin to the server. The driver or plugin allows the server to connect to the particular data source. See {drivers} for a list of drivers and connectors that you may need to download for various data sources.
+
+To manage drivers and plugins, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Content* page in the left panel, and select the *Drivers and Plugins* tab at the top.
++
+image:Drivers_Plugins1.png[]
+
+. See the sections below to perform the desired operations.
+
+=== Upload a plugin to the server
+To upload an existing plugin to the server, follow the steps below:
+
+
+. Press the btn:[Select] button under ‘Select Plugins for Upload’, and
+select the desired plugin Zip file from the file system browser.
+
+. Press the btn:[Upload] button.
++
+image:Drivers_Plugins2.png[]
++
+The uploaded plugin is shown in the table below the buttons.
++
+image:Drivers_Plugins3.png[]
+
+. Restart the server (if this is required by the particular plugin).
+
+=== Upload a new driver to the server
+To upload a database driver to the server, you will package it as a plugin. Follow the steps below:
+
+. Press the ‘Create Driver’ button  under ‘Select Plugins for Upload’ to open the ‘Create Driver’ dialog box.
+
+. To upload drivers from *local storage*, follow the steps below:
++
+****
+.. Select the ‘Upload’ option.
++
+image:Drivers_Plugins6.png[]
+
+.. Press the btn:[Select] button select the desired JAR files, as well as any other files required by the database.
+
+.. Press btn:[Next], and choose the desired driver file or files to package into a plugin.
++
+image:Drivers_Plugins7.png[]
+
+.. Press ‘Next’, and enter the desired ‘Plugin ID’, ‘Plugin Name’, and ‘Plugin Version’. The ‘Plugin ID’ must be unique, and should typically be a namespaced value, such as `com.mycompany.jdbc.dbtype`. The ‘Plugin Version’ should conform to https://semver.org[semantic versioning standards]. The ‘Plugin Name’ is an arbitrary label.
++
+image:Drivers_Plugins8.png[]
+
+.. Press btn:[Finish] to create the plugin Zip file.
+****
+
+. To create a plugin from assets in a *Maven repository*, follow the steps below:
++
+****
+.. Select the ‘Maven’ option.Enter the ‘Maven Coordinates’ as `groupId:artifactId:packaging:version`.
++
+image:Drivers_Plugins9.png[]
+
+.. Press btn:[Next], and choose the desired driver file or files to package into a plugin.
++
+image:Drivers_Plugins10.png[]
+
+.. Press btn:[Next], and enter the desired ‘Plugin ID’, ‘Plugin Name’, and ‘Plugin Version’. The ‘Plugin ID’ must be unique, and should typically be a namespaced value, such as `com.mycompany.jdbc.dbtype`. The ‘Plugin Version’ should conform to https://semver.org[semantic versioning standards]. The ‘Plugin Name’ is an arbitrary label.
+
+.. Press btn:[Finish] to create the plugin Zip file.
+****
+
+=== Delete a plugin from the server
+To delete a plugin from the server, follow the steps below:
+
+. Check the box next to desired plugin, and press the btn:[Uninstall] button.
++
+image:Drivers_Plugins5.png[]
+
+. Restart the server.
+
+== Change the Storage Method
+You can configure the type of back-end storage by setting variables in the *docker-compose.yaml* file. If you have previously configured ‘File System’ storage, you can import the existing files into the database. See xref:administration:ManageContent.adoc[] for more information.
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+The sections below provide examples of common storage configurations.
+
+=== MapDB and local file system (default)
+The default configuration has MapDB as key-value storage and local file system as blob storage. Variable definitions  for *docker-compose.yaml* are shown below:
+
+NOTE: The local blob storage should only be used with a single server and single scheduler running on the same machine.
+
+.MapDB Docker Variables
+[source]
+INETSOFTCONFIG_KEYVALUE_TYPE="mapdb"
+INETSOFTCONFIG_KEYVALUE_MAPDB_DIRECTORY="/data_dir/kv"
+INETSOFTCONFIG_BLOB_TYPE="local"
+INETSOFTCONFIG_BLOB_FILESYSTEM_DIRECTORY="/data_dir/blob"
+
+
+In a cluster, or when the server and scheduler are on different machines, you should use the shared file system (NFS/Samba/CIFS) blob engine:
+
+.MapDB Docker Variables for Cluster
+[source]
+INETSOFTCONFIG_KEYVALUE_TYPE="mapdb"
+INETSOFTCONFIG_KEYVALUE_MAPDB_DIRECTORY="/data_dir/kv"
+INETSOFTCONFIG_BLOB_TYPE="filesystem"
+INETSOFTCONFIG_BLOB_CACHEDIRECTORY="/cache_dir/blob"
+INETSOFTCONFIG_BLOB_FILESYSTEM_DIRECTORY="/shared_dir/blob"
+
+
+include::ROOT:partial$inetsoftYamlNote.adoc[]
+
+.MapDB Properties for inetsoft.yaml
+[source,yaml]
+keyValue:
+  type: "mapdb"
+  mapdb:
+    directory: "/data_dir/kv"
+blob:
+  type: "local"
+  filesystem:
+    directory: "/data_dir/blob"
+
+
+
+
+
+=== AWS
+AWS uses DynamoDB for key-value storage and S3 for blob storage. (The S3 blob engine can be used with any S3-compatible object storage, such as a self-hosted MinIO installation.) Variable definitions  for *docker-compose.yaml* are shown below for AWS cloud-native implementations:
+
+
+.AWS Docker Variables
+[source]
+INETSOFTCONFIG_KEYVALUE_TYPE="dynamodb"
+INETSOFTCONFIG_KEYVALUE_DYNAMODB_REGION=us-east-1
+INETSOFTCONFIG_KEYVALUE_DYNAMODB_ACCESSKEYID=your_access_key
+INETSOFTCONFIG_KEYVALUE_DYNAMODB_SECRETACCESSKEY=your_secret_key
+INETSOFTCONFIG_KEYVALUE_DYNAMODB_TABLE=inetsoft
+INETSOFTCONFIG_KEYVALUE_DYNAMODB_PROVISIONEDREADTHROUGHPUT=300
+INETSOFTCONFIG_KEYVALUE_DYNAMODB_PROVISIONEDWRITETHROUGHPUT=300
+INETSOFTCONFIG_BLOB_TYPE=s3
+INETSOFTCONFIG_BLOB_CACHEDIRECTORY="/cachedir/blob"
+INETSOFTCONFIG_BLOB_S3_REGION=us-east-1
+INETSOFTCONFIG_BLOB_S3_ACCESSKEYID=your_access_key
+INETSOFTCONFIG_BLOB_S3_SECRETACCESSKEY=your_secret_key
+INETSOFTCONFIG_BLOB_S3_BUCKET=inetsoft
+
+include::ROOT:partial$inetsoftYamlNote.adoc[]
+
+.AWS Properties for inetsoft.yaml
+[source,yaml]
+keyValue:
+  type: dynamodb
+  dynamodb:
+    region: us-east-1
+    accessKeyId: your_access_key
+    secretAccessKey: your_secret_key
+    table: inetsoft
+    provisionedReadThroughput: 300
+    provisionedWriteThroughput: 300
+blob:
+  type: s3
+  cacheDirectory: "/cachedir/blob"
+  s3:
+    region: us-east-1
+    accessKeyId: your_access_key
+    secretAccessKey: your_secret_key
+    bucket: inetsoft
+
+
+=== Azure
+Azure uses CosmosDB for key-value storage and Azure Blob for blob storage. Variable definitions  for *docker-compose.yaml* are shown below for  Azure cloud-native implementations:
+
+
+.Azure Docker Variables
+[source]
+INETSOFTCONFIG_KEYVALUE_TYPE="cosmosdb"
+INETSOFTCONFIG_KEYVALUE_COSMOSDB_ACCOUNTHOST="https://localhost:8081"
+INETSOFTCONFIG_KEYVALUE_COSMOSDB_ACCOUNTKEY="your_account_key"
+INETSOFTCONFIG_KEYVALUE_COSMOSDB_DATABASE="inetsoft"
+INETSOFTCONFIG_KEYVALUE_COSMOSDB_CONTAINER="inetsoft"
+INETSOFTCONFIG_KEYVALUE_COSMOSDB_THROUGHPUT=400
+INETSOFTCONFIG_BLOB_TYPE="azure"
+INETSOFTCONFIG_BLOB_CACHEDIRECTORY="/cache_dir/blob"
+INETSOFTCONFIG_BLOB_AZURE_CONNECTIONSTRING="your_connection_string"
+INETSOFTCONFIG_BLOB_AZURE_CONTAINER="inetsoft"
+
+include::ROOT:partial$inetsoftYamlNote.adoc[]
+
+.Azure Properties for inetsoft.yaml
+[source,yaml]
+keyValue:
+  type: "cosmosdb"
+  cosmosdb:
+    accountHost: "https://localhost:8081"
+    accountKey: "your_account_key"
+    database: "inetsoft"
+    container: "inetsoft"
+    throughput: 400
+blob:
+  type: "azure"
+  cacheDirectory: "/cache_dir/blob"
+  azure:
+    connectionString: "your_connection_string"
+    container: "inetsoft"
+
+
+
+
+=== Google
+Google uses Firestore for key-value storage and GCS for blob storage.  Variable definitions  for *docker-compose.yaml* are shown below  for Google cloud-native implementations:
+
+
+.Google Docker Variables
+[source]
+INETSOFTCONFIG_KEYVALUE_TYPE="firestore"
+INETSOFTCONFIG_KEYVALUE_FILESTORE_SERVICEACCOUNTFILE="/path/to/credentials.json"
+INETSOFTCONFIG_KEYVALUE_FIRESTORE_COLLECTION=inetsoft
+INETSOFTCONFIG_BLOB_TYPE="gcs"
+INETSOFTCONFIG_BLOB_CACHEDIRECTORY="/cache_dir/blob"
+INETSOFTCONFIG_BLOB_GCS_SERVICEACCOUNTFILE="/path/to/credentials.json"
+INETSOFTCONFIG_BLOB_GCS_BUCKET=inetsoft
+
+include::ROOT:partial$inetsoftYamlNote.adoc[]
+
+.Google Properties for inetsoft.yaml
+[source,yaml]
+keyValue:
+  type: firestore
+  firestore:
+    serviceAccountFile: "/path/to/credentials.json"
+    collection: inetsoft
+blob:
+  type: gcs
+  cacheDirectory: "/cache_dir/blob"
+  gcs:
+    serviceAccountFile: "/path/to/credentials.json"
+    bucket: inetsoft
+
+=== Relational Database (JDBC)
+Variable definitions  for *docker-compose.yaml* are shown below for JDBC database key-value storage:
+
+
+.JDBC Docker Variables
+[source]
+INETSOFTCONFIG_KEYVALUE_TYPE="database"
+INETSOFTCONFIG_KEYVALUE_DATABASE_TYPE="H2"
+INETSOFTCONFIG_KEYVALUE_DATABASE_JDBCURL="jdbc:h2:/data_dir/kv/kv;MODE=Derby;AUTO_SERVER=TRUE;AUTO_SERVER_PORT=8192;AUTO_RECONNECT=TRUE"
+INETSOFTCONFIG_KEYVALUE_DATABASE_DRIVERCLASSNAME="org.h2.Driver"
+INETSOFTCONFIG_KEYVALUE_DATABASE_REQUIRESLOGIN=true
+INETSOFTCONFIG_KEYVALUE_DATABASE_USERNAME="inetsoft_admin"
+INETSOFTCONFIG_KEYVALUE_DATABASE_PASSWORD="\\masterWer7z5uT6zrmE3tVlPc9rZlW31XeWDA="
+INETSOFTCONFIG_KEYVALUE_DATABASE_TRANSACTIONISOLATIONLEVEL="READ_UNCOMMITTED"
+
+include::ROOT:partial$inetsoftYamlNote.adoc[]
+
+
+.JDBC Properties for inetsoft.yaml
+[source,yaml]
+keyValue:
+  type: "database"
+  database:
+    type: "H2"
+    jdbcUrl: "jdbc:h2:/data_dir/kv/kv;MODE=Derby;AUTO_SERVER=TRUE;AUTO_SERVER_PORT=8192;AUTO_RECONNECT=TRUE"
+    driverClassName: "org.h2.Driver"
+    requiresLogin: true
+    username: "inetsoft_admin"
+    password: "\\masterWer7z5uT6zrmE3tVlPc9rLXDZAkZlW31XeWDA="
+    transactionIsolationLevel: "READ_UNCOMMITTED"
+
+=== MongoDB
+Variable definitions  for *docker-compose.yaml* are shown below for MongoDB key-value storage:
+
+.MongoDB Docker Variables
+[source]
+INETSOFTCONFIG_KEYVALUE_TYPE="mongo"
+INETSOFTCONFIG_KEYVALUE_MONGO_HOSTS= - 'localhost:27017'
+INETSOFTCONFIG_KEYVALUE_MONGO_DATABASE=test
+INETSOFTCONFIG_KEYVALUE_MONGO_COLLECTION=inetsoft
+
+
+include::ROOT:partial$inetsoftYamlNote.adoc[]
+
+
+.JDBC Properties for inetsoft.yaml
+[source,yaml]
+keyValue:
+  type: "mongo"
+  mongo:
+    hosts: - 'localhost:27017'
+    database: test
+    collection: inetsoft
+
+
+
+== Back Up Stored Assets
+
+[WARNING,caption=See also]
+To selectively export assets to use in another server environment, see xref:administration:ImportExportAssets.adoc[].
+
+include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
+
+
+You can back-up stored assets as a Zip archive. Follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *General* page in the left panel, and select the *Storage* page in the right panel.
++
+image:Figure 11.png[]
+
+. Press the btn:[Backup Now] button. This opens the ‘Storage Backup’ dialog box.
++
+image:Figure 14.png[]
+
+. In the ‘Storage’ field, specify the backup file name, e.g., `data.zip`.
+
+. Press btn:[Save]. This saves the new zip archive (with an added date and time code, such as _data0121211709.zip_) in the configured file directory (default: _/var/lib/inetsoft/files_), which is set from _docker-compose.yaml_ with the `INETSOFTCONFIG_EXTERNALSTORAGE_FILESYSTEM_DIRECTORY` tag.
+
+
+
+
+
+
+The number of backup copies to retain is controlled by the property `asset.backup.count` (default=1). {EMPropertyConfig}
+
+
+

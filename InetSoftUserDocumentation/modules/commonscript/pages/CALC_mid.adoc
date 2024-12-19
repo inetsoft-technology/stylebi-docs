@@ -1,0 +1,37 @@
+= CALC.mid(String, start_num, num_chars)
+:navtitle: CALC.mid()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns `num_chars` consecutive characters from `string`, starting with the location given by `start_num`.  {CALCExcelFunctionPage} To extract a substring with arbitrary starting and ending indexes, use xref:StringObjectsubString.adoc[].
+
+== Parameters
+string::			A string from which to extract characters
+start_num::			Starting index of extracted string. (Index of first character is 1.)
+num_chars::			Number of consecutive characters to extract, starting from `start_num`
+
+== Example
+[source,javascript]
+----
+CALC.mid('abcdefghij', 2, 4);  // returns bcde
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.mid(field['Label'], 2, 4)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.mid(parameter.Label, 2, 4)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,49 @@
+= SQL Server
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+include::partial$dataSourceUserIntro.adoc[]
+
+
+. Select the ‘SQL Server’ data source, and press btn:[Create]. This opens the data source definition screen.
++
+image:dataSourceNewSQLServer2.png[]
+
+. In the ‘Name’ field, enter a label for this database connection.
+
+. From the ‘Database Type’ menu, select ‘SQL Server’ (if not already selected).
++
+NOTE:  The SQL Server database driver is packaged with InetSoft. If you see a warning that the driver is not available, contact your administrator.
+
+
+. If your administrator has provided a connection URL, enable ‘Custom URL’, and enter the  URL in the '`URL`' field. *If you do not have a URL*, disable ‘Custom URL’, and enter the additional required connection information:   ‘Host Name’, ‘Port’, ‘Instance Name’, ‘Database Name’, and login credentials.
++
+NOTE: When no ‘Database Name’ is specified, the ‘master’ database is used. For SQL Server on Azure, ‘Database Name’ is required.
++
+include::user:partial$customURLProperties.adoc[]
+
+
+include::user:partial$JDBCCommonWeb.adoc[]
++
+include::user:partial$testConnection.adoc[]
++
+include::user:partial$hikariConfig.adoc[]
+
+. Press btn:[OK].
+
+
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceSQLServer_2.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceSQLServer_3.png[]
++
+include::user:partial$dataSourceFinalSteps.adoc[]

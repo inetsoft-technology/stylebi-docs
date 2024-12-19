@@ -1,0 +1,48 @@
+= fillTimeGap
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+When you designate a dimension as a “time series” (see xref:ChartBindingInfoSetTimeSeries.adoc[]), the `fillTimeGap` property specifies how missing data is represented on the Chart. When `fillTimeGap` is `false`, the plotted lines simply ignore the missing data and connect adjacent points on the chart. When `fillTimeGap` is true, the behavior for missing data is determined by the xref:PlotFillZero.adoc[] property. See the examples below.
+
+== Type
+Boolean
+
+== Examples
+The following examples display a time-series which is missing data for the month of April 2019. To create this time-series, bind a chart to the '`Sales Explore`' Data Worksheet.
+
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+Place the ‘Date’ field on the X-axis (with ‘Level’ = ‘Month’) and place ‘Total’ on the Y-axis. To simulate missing data, add a condition to the Chart to filter out data from April 2019. Use the scripts below to modify the way the Chart represents the missing data for April 2019.
+
+[source,javascript]
+.Example 1: Ignore missing data
+Chart1.fillTimeGap = false
+
+image:commonscript:fillTimeGapFalse.png[]
+
+[source,javascript]
+.Example 2: Leave gap for missing data
+Chart1.fillTimeGap = true;
+Chart1.fillZero = false;
+
+image:commonscript:fillTimeGapNull.png[]
+
+
+[source,javascript]
+.Example 3: Insert zero for missing data
+Chart1.fillTimeGap = true;
+Chart1.fillZero = true;
+
+image:commonscript:fillTimeGapZero.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fillTimeGap          // unqualified
+Chart1.fillTimeGap   // qualified
+
+{secondForm}
+====

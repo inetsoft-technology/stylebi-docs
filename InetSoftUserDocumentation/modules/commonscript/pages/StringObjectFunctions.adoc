@@ -1,0 +1,21 @@
+= String Object Functions
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+String is a built-in type in JavaScript. It holds a sequence of characters in the Unicode character set. A string literal is created using a double quote or a single quote strings.
+
+[source,javascript]
+var txt = 'Hello world'; // or "Hello world"
+
+Two strings can be concatenated by using the `+` operator, as well as by using the `concat` function. For example:
+
+[source,javascript]
+----
+var txt = "Hello " + 'world';
+
+field['Salesperson.First Name'].concat(" ",field['Salesperson.Last Name'])
+----
+
+The following topics describe common string functions. Consult a JavaScript reference such as https://www.w3schools.com/js/js_string_methods.asp[W3Schools.com] for details about other string functions.
+

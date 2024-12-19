@@ -1,0 +1,36 @@
+= CALC.kurt(array)
+:navtitle: CALC.kurt()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the sample excess *kurtosis* of a data set, which indicates the peakedness or flatness of the data relative to the normal distribution. *Positive* kurtosis indicates relatively peaked, while *negative* kurtosis indicates relatively flat. {CALCExcelFunctionPage}
+
+== Parameters
+array::		Array of values
+
+
+== Example
+[source,javascript]
+----
+CALC.kurt([4,5,8,7,8,4,5,3,7]);
+// returns -1.6851311953352766 (relatively flat)
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.kurt(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.kurt(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

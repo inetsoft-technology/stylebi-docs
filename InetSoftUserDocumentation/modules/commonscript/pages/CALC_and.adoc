@@ -1,0 +1,39 @@
+= CALC.and(Boolean_1, Boolean_2, …, Boolean_n)
+:navtitle: CALC.and()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns `true` only if all arguments evaluate to `true`, otherwise returns `false`. {CALCExcelFunctionPage}
+
+== Parameters
+Boolean_1::			Boolean, or expression that evaluates to Boolean
+Boolean_2::			Boolean, or expression that evaluates to Boolean
+Boolean_n::			Boolean, or expression that evaluates to Boolean
+
+
+
+
+== Example
+[source,javascript]
+----
+CALC.and((0<3),(-1>2),(5<6)) // returns false
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.and(field['Paid'],  field['InStock'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.and(RadioButton1.selectedObject,  RadioButton1.selectedObject)
+CALC.and(parameter.Paid, parameter.InStock)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

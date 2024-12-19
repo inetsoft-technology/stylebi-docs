@@ -1,0 +1,14 @@
+= pviewsheet
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+
+
+For a Dashboard that is accessed via drilldown (hyperlink or auto-drill) from another Dashboard, the `pviewsheet` property provides access to the current settings of components within the parent Dashboard. See xref:viewsheet:DrillDownIntoData.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for more information about hyperlinks.
+
+For example, if the parent Dashboard contains a Selection List named ‘Company’, you can obtain the array of currently selected companies in the ‘Company’ Selection List within the drilldown Dashboard script by using the following syntax:
+
+[source,javascript]
+pviewsheet.Company.selectedObjects

@@ -1,0 +1,1 @@
+TIP: Numeric masks are described in the xref:viewsheet:DataFormat.adoc#NumberFormat[Number Format] section. If the format uses a multiplier such as K, M, or B (e.g., pass:["#,##0.0M"]), use `inetsoft.util.ExtendedDecimalFormat` in place of `java.text.DecimalFormat` to scale the values appropriately.

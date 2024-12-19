@@ -1,0 +1,45 @@
+= LinearScale.setIncrement(value)
+:navtitle: LinearScale.setIncrement()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+Specifies the interval between values on the xref:Scale.adoc[]. When the Scale is applied to an axis, this is the interval between values displayed on the axis.  The corresponding “getter” function is `getIncrement()`.
+
+== Parameter
+value::			Number specifying interval between values
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale("Quantity"); //<2>
+var elem = new IntervalElement("State", "Quantity");
+qscale.setIncrement(15); //<3>
+graph.setScale("Quantity", qscale); //<4>
+graph.addElement(elem);
+
+--
+
+<1> {dataset}
+<2> Create the xref:LinearScale.adoc[] object.
+<3> Use `setIncrement` to set the  desired increment.
+<4> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+
+image:commonscript:LinearScaleSetIncrement.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

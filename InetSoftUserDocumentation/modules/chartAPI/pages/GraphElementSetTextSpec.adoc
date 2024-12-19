@@ -1,0 +1,59 @@
+= GraphElement.setTextSpec(spec)
+:navtitle: GraphElement.setTextSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies the text attributes such as color, font, format, etc.  The corresponding “getter” function is xref:GraphElementGetTextSpec.adoc[].
+
+
+
+== Parameters
+spec:: A xref:TextSpec.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["CA", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity"); //<2>
+var frame = new DefaultTextFrame();
+frame.setField("Quantity");
+var spec = new TextSpec(); //<3>
+spec.setColor(java.awt.Color(0xff0000));
+elem.setTextFrame(frame);
+elem.setTextSpec(spec); //<4>
+graph.addElement(elem); //<5>
+--
+
+<1> {dataset}
+<2> Create the `PointElement` object.
+<3> Create a `TextSpec` object.
+<4> Use `setTextSpec` to assign the `TextSpec` to the `PointElement`.
+<5> Use `addElement` to add the `PointElement` to the Chart.
+
+
+image:commonscript:GraphElementsetTextSpec.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var spec = elem.getTextSpec("Sum(Product:Total)");
+spec.setColor(java.awt.Color(0xff0000));
+--
+=====
+
+

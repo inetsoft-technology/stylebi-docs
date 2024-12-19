@@ -1,0 +1,34 @@
+= Preview Data
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$rightClickOptions.adoc[]
+
+To preview the data that will be returned by a data block, follow the steps below:
+
+////
+ifdef::testdrive[]
+. Open your data set for editing. See Editing a Data Set. XXXX
+endif::[]
+////
+
+. Click on the data block to select it.
+. In the bottom panel, press the {buttonChangeView}, and select {buttonLiveDataView}. This displays a limited preview of the data in the  data block.
++
+image::agileTransform8.png[]
++
+. To suspend the preview limit, press the {buttonChangeDataMode} and uncheck ‘Enable Display Row Limit’.
++
+image::agileTransform9.png[]
++
+CAUTION: Removing the preview limit may slow the preview display. Note that even if you suspend the preview limit, the data set returned may still be limited by the administrator.
++
+. To limit the data displayed, press {buttonChangeDataMode} again and check ‘Enable Display Row Limit’.
++
+image:agileTransform12.png[]
++
+NOTE: The numerical value of the limit (maximum number of rows) is set by the administrator. The display row limit of a data block does not affect the results of operations, such as joins, in which the data block participates.
+
+
+
+
+
+

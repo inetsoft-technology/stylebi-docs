@@ -1,0 +1,19 @@
+= Keyboard Navigation
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+There are several different techniques by which you can navigate a Dashboard using the keyboard (or equivalent voice commands). The table below lists the essential techniques.
+
+[cols= "1,2"]
+|===
+| Key Combination| Operation
+
+|kbd:[Tab] or kbd:[Shift+Tab] | Move focus from one component to another
+|kbd:[⇩] or kbd:[⇧] | Move focus within a component (e.g., from Range Slider handle to Range Slider body)
+|kbd:[⇦] or kbd:[⇨] | Adjust a component setting (e.g., adjust Range Slider range)
+| kbd:[ {nbsp}{nbsp} Space {nbsp}{nbsp} ]|Make a selection (e.g., choose an item in a Selection List)
+| kbd:[⇦] or kbd:[⇨] | Move focus within component toolbar
+| kbd:[⇧] repeatedly|Move focus from component body to component toolbar
+|kbd:[⇩] | Move focus from component toolbar to component body
+|===

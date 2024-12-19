@@ -1,0 +1,86 @@
+= Create a Logical Model
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+IMPORTANT: Logical models can only be created for *relation database* data sources. (See xref:JDBC.adoc[] or xref:ConnectToDataSource.adoc[] for information on how to configure a relational database data source.)
+
+include::ROOT:partial$createVisualizationClose.adoc[]
+
+
+To create a logical model, you must first define a physical view. See xref:CreatePhysicalView.adoc[]. Then follow the steps below:
+
+. Press the top {buttonData}.
++
+image:dataModel1.png[]
+
+
+. In the ‘Navigation Tree’ in the left panel, expand the ‘Data Sources’ folder and the data source to which you want to add a data model. Select the ‘Data Model’ node, and press the {buttonNewLogicalModel}.
++
+image:dataModel35.png[]
+
+
+. Provide a name for the logical model and press btn:[OK].
++
+image:dataModel36.png[]
+
+. Press the {buttonAddElement}, and select ‘Add Entity’.
++
+image:dataModel37.png[]
+
+
+. Provide a name for the new entity and press btn:[Next].
++
+image:dataModel38.png[]
++
+[CAUTION]
+====
+An entity name can contain any characters. However, the following characters and character combinations have been observed to cause problems on certain databases in particular usages. If you use these characters in an entity name, thorough testing with your database is recommended.
+
+ ! ? [ ] < > ^ ` \ ' = " {D {d {T {t ( : $()
+====
+
+. In the ‘Add Attributes’ dialog box, select the fields (columns) that should be used as attributes for the entity. Press btn:[OK].
++
+image:dataModel39.png[]
++
+This adds the logical model entity and its attributes to the left panel.
++
+image:dataModel40.png[]
++
+[CAUTION]
+====
+An attribute name can contain any characters except a *period* (“.”). However, the following characters and character combinations have been observed to cause problems on certain databases in particular usages. If you use these characters in an attribute name, thorough testing with your database is recommended.
+
+ ! [ ] ? { & } : ^ ` \ ' " = / < > $()
+====
+
+. *_Optional:_*  To add additional attributes to an entity, follow the steps below:
+
+.. Press the {buttonAddElement}, and select ‘Add Attribute’.
++
+image:dataModel41.png[]
+
+.. In the ‘Add Attributes’ dialog box, select the entity to which you want to add attributes, and then choose the attributes to add. Press btn:[OK].
++
+image:dataModel42.png[]
+
+. *_Optional:_*  To add an expression or formula attribute to an entity, follow the steps below:
+
+.. Press the {buttonAddElement}, and select ‘Add Expression’.
++
+image:dataModel43.png[]
+
+.. In the ‘Add Expression’ dialog box, select the entity to which you want to add an expression, and provide a name for the new expression field. Enter the expression using SQL syntax. (You can select data fields and operators from the provided lists.) Then press btn:[OK].
++
+image:dataModel44.png[]
+
+. To edit the properties of an attribute, expand the entity in the left panel that contains the attribute, and click to select the attribute. Make the desired settings in the right panel.  (See xref:EditLogicalModel.adoc#ModifyAttributeProperties[Modify Attribute Properties] in xref:EditLogicalModel.adoc[]
+for more information.) Then press the {buttonSave}.
++
+image:dataModel45.png[]
+
+
+. Repeat the above steps to add additional entities and attributes.
+
+. Press the {buttonSave} to save the logical model.

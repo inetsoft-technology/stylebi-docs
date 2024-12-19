@@ -1,0 +1,35 @@
+= Create a New VPM
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+IMPORTANT: VPMs can only be created for relation database data sources.  (See xref:JDBC.adoc[] or  xref:ConnectToDataSource.adoc[] for information on how to configure a relational database data source.)
+
+To create a new VPM, follow the steps below:
+
+. Press the top {buttonData}.
++
+image:dataModel1.png[]
++
+. In the  left panel, expand the ‘Data Source’ folder, expand the desired data source connection, select ‘Virtual Private Models’, and press the {buttonNewVPM}.
++
+image:dataModel54.png[]
+
+. Provide a name for the model and press btn:[OK].
++
+image:dataModel55.png[]
+
+. To add new conditions to filter rows based on specified criteria, select the *Conditions* tab at the bottom of the screen. See xref:CreateVPMCondition.adoc[] for more information.
++
+image:dataModel56.png[]
+
+. To filter columns based on specified criteria, select the *Hidden Columns* tab at the bottom of the screen. See xref:CreateVPMHiddenColumn.adoc[] for more information.
++
+image:dataModel57.png[]
+
+. To test the VPM, select the *Test* tab at the bottom of the screen. See xref:TestVPM.adoc[] for more information.
++
+image:dataModel58.png[]
+
+. Press the {buttonSave} to save the VPM.

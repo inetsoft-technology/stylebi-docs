@@ -1,0 +1,43 @@
+= query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:GaugeFields.adoc[] to specify the data block from which to draw the fields.
+
+
+Specifies the data block to be used by the Gauge component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.
+
+image:dataworksheet:dataBlocks_6.png[]
+
+
+
+
+
+
+
+== Type
+String
+
+
+
+== Example
+[source,javascript]
+Gauge1.query = 'Sales';
+Gauge1.fields = ['Total'];
+Gauge1.formula = StyleConstant.AVERAGE_FORMULA;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+query           // unqualified
+Gauge1.query    // qualified
+
+{secondForm}
+====
+
+

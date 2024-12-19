@@ -1,0 +1,40 @@
+= autoSize
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TextProperties.adoc[] for general information about the Text component.
+====
+
+
+Enables the Text component to automatically adjust its height to display all the contents.
+
+
+
+
+
+
+== Type
+Boolean:: `true`: enable automatic height adjustment +
+`false`: disable automatic height adjustment
+
+
+
+== Example
+[source,javascript]
+Text1.autoSize = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+autoSize            // unqualified
+Text1.autoSize      // qualified
+
+{secondForm}
+====
+
+

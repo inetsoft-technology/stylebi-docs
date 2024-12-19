@@ -1,0 +1,54 @@
+= fields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheetscript:TextQuery.adoc[] to specify the data block from which to draw the fields.
+====
+
+Specifies the field of the data block to be displayed by the Text component. This is equivalent to selecting fields under the *Data* tab of the component ‘Properties’ dialog box.
+
+image:commonscript:bindingInfoTextFields.png[]
+
+
+When you use a bivariate aggregation method (e.g., correlation), the `fields` array should contain two field names. Otherwise, the array should contain just a single field name.
+
+
+== Type
+Array
+
+
+
+
+
+
+== Example
+
+.Univariate aggregation
+[source,javascript]
+Text1.query = 'Sales';
+Text1.fields = ['Total'];
+Text1.formula = StyleConstant.AVERAGE_FORMULA;
+
+.Bivariate aggregation
+[source,javascript]
+Text1.query = 'Sales';
+Text1.fields = ['Total','Quantity Purchased'];
+Text1.formula = StyleConstant.CORRELATION_FORMULA;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fields            // unqualified
+Text1.fields      // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,32 @@
+= shapeField
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::viewsheetscript:partial$readOnly.adoc[]
+
+
+
+Returns the name of the query field that is currently assigned to the ‘Shape’ binding (xref:chartAPI:ShapeFrame.adoc[]) at runtime. This property is read-only.  Use xref:ChartBindingInfoSetShapeField.adoc[] to set the '`Shape`' binding in script.
+
+== Type
+String
+
+== Example
+[source,javascript]
+if (Chart1.shapeField == 'State') {
+  StateSelectionList1.visible = true;
+}
+else {
+  StateSelectionList1.visible = false;
+}
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shapeField           // unqualified
+Chart1.shapeField    // qualified
+
+{secondForm}
+====

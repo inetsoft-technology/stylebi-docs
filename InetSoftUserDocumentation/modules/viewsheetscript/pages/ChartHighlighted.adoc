@@ -1,0 +1,43 @@
+= highlighted
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:ConditionalFormat.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for basic information on highlights.
+
+
+Identifies whether a highlight with the specified name has been applied to the chart (indicating that the highlight condition has been satisfied). To test a highlight named “highlight1”, use the following syntax:
+
+ highlighted.highlight1
+
+If the highlight has a space in the name, e.g., “highlight 1”, use the following alternate syntax:
+
+ highlighted['highlight 1']
+
+
+
+== Type
+Boolean:: `true`: highlight applied +
+`false`: highlight not applied
+
+
+
+== Example
+[source,javascript]
+if(Chart1.highlighted.lowSales) {
+  alert('lowSales highlight was applied')
+}
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+highlighted         // unqualified
+Chart1.highlighted  // qualified
+
+{secondForm}
+====
+
+

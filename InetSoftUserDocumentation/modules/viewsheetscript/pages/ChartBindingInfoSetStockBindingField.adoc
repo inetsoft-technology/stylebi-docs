@@ -1,0 +1,94 @@
+= bindingInfo.setStockBindingField(arr)
+:navtitle: bindingInfo.setStockBindingField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:ChartBindingInfoGetStockBindingField.adoc[]  to obtain the binding information.
+
+
+
+Configure the binding for a xref:viewsheet:StockChart.adoc[], also known as an open-hi-low-close (OHLC) chart. A stock chart displays four different measures, “low,” “high,” “opening,” and “closing,” and is most often used to plot trading information.
+
+== Parameter
+arr::			Array of properties for a stock chart measure:
++
+`[field1,measure,formula,option,field2]`
++
+The items in the array are described below:
+
++
+****
+field1::			Field containing data corresponding to `measure`.
+measure::		The measure represented by `field1`:
++
+[source,javascript]
+Chart.HIGH   // field1 defines the high values
+Chart.LOW:   // field1 defines the low values
+Chart.OPEN:  // field1 defines the opening values
+Chart.CLOSE: // field1 defines the closing values
+
+formula::			 xref:commonscript:StyleConstantSummarizationFormula.adoc[] constant (optional)
+option:: Specifies how percentages should be computed (optional):
++
+[source,javascript]
+Chart.PERCENTAGE_NONE
+Chart.PERCENTAGE_OF_GRANDTOTAL
+Chart.PERCENTAGE_OF_GROUP
+
+field2::			Optional second operand for a bivariate formula (e.g., correlation).
+****
+
+
+
+== Example
+To create a stock chart that displays the average high, low, opening, and closing prices by quarter, follow the steps below:
+
+. Create a   new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+. Select the  ‘Stock Prices’ query  as the data source.
++
+include::ROOT:partial$stockPricesQuery.adoc[]
+
+
+
+
+. Add a new Chart component.
+
+. Enter the following script in the  *onRefresh* handler of the  Dashboard.
++
+[source,javascript]
+--
+Chart1.query='Stock Prices';
+Chart1.chartStyle = Chart.CHART_STOCK;
+var data_high = ["Stock Prices.High",Chart.HIGH,Chart.AVERAGE_FORMULA];
+var data_low = ["Stock Prices.Low",Chart.LOW,Chart.AVERAGE_FORMULA];
+var data_close = ['Stock Prices.Close/Last',Chart.CLOSE,Chart.AVERAGE_FORMULA];
+var data_open = ['Stock Prices.Open',Chart.OPEN,Chart.AVERAGE_FORMULA];
+Chart1.bindingInfo.xFields = [['Date',Chart.DATE]];
+Chart1.bindingInfo.setGroupOrder('Date',Chart.QUARTER_INTERVAL);
+
+Chart1.bindingInfo.setStockBindingField(data_high);
+Chart1.bindingInfo.setStockBindingField(data_low);
+Chart1.bindingInfo.setStockBindingField(data_close);
+Chart1.bindingInfo.setStockBindingField(data_open);
+--
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+. Press the {buttonPreview} to preview the chart.
++
+image:commonscript:setStockBinding2.png[]
++
+TIP: You can also use the {buttonZoomIn} to limit the date range.
+
+. To observe the structure of the Chart more closely, set a condition on the chart to limit the date range (e.g., limit to the year of 2004).
++
+image:commonscript:setStockBinding3.png[]
+
+Note that for each quarter, the values of each of the measures (`High`, `Low`, `Close/Last`, `Open`) have been independently aggregated as specified by the corresponding formula parameter (in this case, `Chart.AVERAGE_FORMULA`  for each). The “high” and “low” measures are represented by the extremes of the vertical line, and the “open” and “close” measures are represented, respectively, by the left and right horizontal lines.
+
+TIP: Typically, different formulas are used for the different measures.  For example, *max* for the "high", *min* for the "low", *first* for the open, and *last* for the close.  See xref:viewsheet:CandleChart.adoc[] for an example that uses this approach.
+
+

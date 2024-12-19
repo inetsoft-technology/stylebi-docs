@@ -1,0 +1,79 @@
+= GShape.ImageShape.setAlignment(value)
+:navtitle: GShape.ImageShape.setAlignment()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies how the image should be aligned relative to the data point it marks.
+
+
+
+
+== Parameter
+value:: One of the following constants:
++
+[source]
+GShape.ImageShape.Alignment.CENTER
+GShape.ImageShape.Alignment.TOP
+GShape.ImageShape.Alignment.RIGHT
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+var shape = new GShape.ImageShape(); //<2>
+shape.setImage(logo); //<3>
+shape.setAlignment(GShape.ImageShape.Alignment.TOP); //<4>
+var frame = new CategoricalShapeFrame("State");
+for(var i=0; i<dataset.getRowCount();i++) {
+  frame.setShape(dataset.getData(0,i),shape); //<5>
+}
+elem.setShapeFrame(frame); //<6>
+var sizeframe = new StaticSizeFrame(100);
+elem.setSizeFrame(sizeframe);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `GShape.ImageShape` shape.
+<3> Use xref:GShapeImageShapeSetImage.adoc[] to assign the desired image to the `shape`.
+<4> Use `setAlignment()` to set top-alignment.
+<5> Use xref:StaticShapeFrameSetShape.adoc[] to assign the  `shape` to   the data.
+<6> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:IntervalElement.adoc[].
++
+image:commonscript:GShapeImageShapeAlignment.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} and xref:GraphElementGetShapeFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] object and xref:ShapeFrame.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getShapeFrame(); //<2>
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+var shape = new GShape.ImageShape();
+shape.setImage(logo);
+shape.setAlignment(GShape.ImageShape.Alignment.TOP);
+for(var i=0; i<dataset.getRowCount();i++) {
+  frame.setShape(dataset.getData(0,i),shape);
+}
+
+--
+=====
+
+

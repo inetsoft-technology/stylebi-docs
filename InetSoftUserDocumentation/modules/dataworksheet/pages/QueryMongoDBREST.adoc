@@ -1,0 +1,25 @@
+= MongoDB REST Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing MongoDB REST connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:MongoDBREST.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonMongoDBRESTQuery}. This opens the ‘MongoDB REST Query’ dialog box.
++
+image:MongoDBRESTQuery1.png[]
+
+. Enter the desired query using MongoDB JSON command format and an aggregation command.   See the https://docs.mongodb.com/guides/server/read_queries/[MongoDB documentation] for more information about the JSON syntax. See https://docs.mongodb.com/manual/reference/command/nav-aggregation/[Aggregation Commands] for available aggregation options.
++
+image:MongoDBRESTQuery2.png[]
+
+
+
+include::partial$finalStepsQuery.adoc[]

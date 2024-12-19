@@ -1,0 +1,117 @@
+= CategoricalColorFrame.init(val[,color])
+:navtitle: CategoricalColorFrame.init()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+Initialize the xref:ColorFrame.adoc[] with a set of categorical values and (optionally) colors.
+
+== Parameter
+val::			array of categorical initialization values, +
+or name of field containing categorical values
+color::			array of colors corresponding to value array
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Total"], ["NJ",200,10000], ["NY",300,8000]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var elem2 = new PointElement("State", "Total");
+var cframe = new CategoricalColorFrame(); //<2>
+cframe.init("Quantity", "Total"); //<3>
+elem.setColorFrame(cframe); //<4>
+elem2.setColorFrame(cframe); //<4>
+var sscale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var qscale2 = new LinearScale("Total");
+var coord = new RectCoord();
+coord.setXScale(sscale);
+coord.setYScale(qscale);
+coord.setYScale2(qscale2);
+graph.setCoordinate(coord);
+graph.addElement(elem);
+graph.addElement(elem2);
+--
+<1> {dataset}
+<2> Create the xref:ColorFrame.adoc[] object.
+<3> Use `init` to initialize `ColorFrame` with value only.
+<4> Use xref:GraphElementGetColorFrame.adoc[] to add the `ColorFrame` to the elements.
+
+image:commonscript:CategoricalColorFrameInit1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var elem2 = graph.getElement(1); //<1>
+var cframe = new CategoricalColorFrame();
+cframe.init(["Quantity","Total"],[java.awt.Color(0xff00ff),java.awt.Color(0x00ffff)]);
+elem.setColorFrame(cframe);
+elem2.setColorFrame(cframe);
+var sscale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var qscale2 = new LinearScale("Total");
+var coord = new RectCoord();
+coord.setXScale(sscale);
+coord.setYScale(qscale);
+coord.setYScale2(qscale2);
+graph.setCoordinate(coord);
+--
+=====
+
+
+[#Example2]
+== Example 2
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Total"], ["NJ",200,10000], ["NY",300,8000]]; //<2>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var elem2 = new PointElement("State", "Total");
+var cframe = new CategoricalColorFrame(); //<2>
+cframe.init(["Quantity","Total"],[java.awt.Color(0xff00ff),java.awt.Color(0x00ffff)]); //<3>
+elem.setColorFrame(cframe); //<4>
+elem2.setColorFrame(cframe); //<4>
+var sscale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var qscale2 = new LinearScale("Total");
+var coord = new RectCoord();
+coord.setXScale(sscale);
+coord.setYScale(qscale);
+coord.setYScale2(qscale2);
+graph.setCoordinate(coord);
+graph.addElement(elem);
+graph.addElement(elem2);
+--
+<1> {dataset}
+<2> Create the xref:ColorFrame.adoc[] object.
+<3> Use `init` to initialize `ColorFrame` with value and color.
+<4> Use xref:GraphElementGetColorFrame.adoc[] to add the `ColorFrame` to the elements.
+
+image:commonscript:CategoricalColorFrameInit2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

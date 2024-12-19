@@ -1,0 +1,37 @@
+= parseInt(string [,radix])
+:navtitle: parseInt()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Parse a string into integer. If the radix is omitted or undefined, it is assumed to be 10, unless the string begins with `0x` or `0X`, in which case 16 is assumed.
+
+== Parameters
+string::			a string representation of a number
+radix::			the number’s base (optional), an integer between 2 and 36; values outside this range return `null`
+
+
+
+
+
+== Examples
+[source,javascript]
+----
+var num = parseInt("0x1445"); // returns 5189 in base 10
+
+var num = parseInt("1445",16); // returns 5189 in base 10
+----
+
+
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+parseInt(field['Char']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parseInt(parameter.Char);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,49 @@
+= Add a VPM Condition Trigger
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+
+To add scripted logic to the VPM row condition, follow the steps below:
+
+. If necessary, create a VPM as explained in xref:CreateNewVPM.adoc[].
+
+. Select the *Conditions* tab at the bottom.
++
+image:dataModel77.png[]
+
+. Select the *Trigger* sub-tab.
++
+image:dataModel78.png[]
+
+. Enter the desired trigger script in the text box at the bottom. The trigger script should use standard JavaScript syntax, and should return the modified list of conditions (e.g., in string `condition`, in the last statement of the script).
++
+.Condition trigger script
+[example]
+====
+[source,javascript]
+if(condition.length > 0) {
+  condition += " and ";
+}
+condition += "sa.customers.state = 'CA'";
+condition;
+====
++
+The  following parameters are available for use in the script:
++
+.Condition Trigger Script Parameters
+****
+user:: The current user name
+roles:: Array of roles associated with this user
+groups:: Array of groups associated with this user
+parameter:: Dashboard or Worksheet parameters
+tables:: List of tables in the query
+columns:: Array of columns included in the query
+condition:: String containing the condition defined on the *Conditions* sub-tab in the VPM
+****
++
+
+
+
+. Press the {buttonSave} to save the VPM.

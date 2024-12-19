@@ -1,0 +1,43 @@
+= SAP
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[IMPORTANT,caption=required]
+====
+To connect to an SAP database, an administrator must first upload the correct drivers. The administrator must verify the following:
+
+* Verify that https://www.microsoft.com/en-us/download/details.aspx?id=26[.NET 1.1 runtime] is installed on the server machine.
+
+* Verify that the SAP client tools are installed on the  server machine. This includes the required DLLs,  `librfc32.dll` and `sapjcorfc.dll`, which need to be present in the _C:\Windows\System32_ directory.
+
+* Obtain the SAP driver JAR file, which may be named `sapjco.jar`.
+
+* Upload the SAP driver to the server.
+====
+
+include::partial$dataSourceUserIntro.adoc[]
+
+. Select the ‘SAP ABAP’, ‘SAP BAPI’, or ‘SAP Tables’ data source. This opens the SAP definition screen.
++
+image:dataSourceSAP2.png[]
+
+. In the ‘Name’ field, enter a label for this data source connection.
+
+. Enter the connection information for your SAP installation. See the https://help.sap.com/[SAP documentation] for further information about the connection parameters.
++
+. *_Optional:_* {multiTenantUser}
+
+. Press btn:[OK].
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceSAP3.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceSAP4.png[]
++
+In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
+
+After you have created a connection to the database, you can proceed to define a data set. See xref:dataworksheet:QuerySAP.adoc[].

@@ -1,0 +1,55 @@
+= Egraph.getForm(index)
+:navtitle: Egraph.getForm()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:AddChartDecoration.adoc[] for information on manually adding elements.
+* xref:chartAPI:RepresentMultipleMeasures.adoc[] to add multiple elements.
+====
+
+
+
+Returns a handle to the xref:chartAPI:GraphForm.adoc[] object specified by the `index`. This is useful in cases where the form was not explicitly assigned to a variable at creation time.  The corresponding “setter” function is xref:chartAPI:EGraph_addForm.adoc[].
+
+
+
+
+== Parameter
+index::			Integer index of form object
+
+
+
+
+== Example
+
+
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+graph.addForm(new LineForm()); //<2>
+var form = graph.getForm(0); //<3>
+form.addPoint(java.awt.Point(100,100));
+form.addPoint(java.awt.Point(200,200));
+form.setColor(java.awt.Color(0xff0000));
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create a xref:LineForm.adoc[] object.
+<3> Use `getForm()` to obtain a handle to the `LineForm` object.
+
+
++
+image:commonscript:EGraphgetForm.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

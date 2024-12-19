@@ -1,0 +1,31 @@
+= borders
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,  caption=See Also]
+xref:viewsheet:VisualFormat.adoc[] for more information about setting borders.
+
+
+Specifies the individual line styles for each border of the element, as an array of form `[top,left,bottom,right]`.
+
+== Type
+Array of xref:commonscript:StyleConstantLineStyle.adoc[]
+
+
+
+== Example
+[source,javascript]
+borders = [StyleConstant.DOUBLE_LINE,StyleConstant.NO_BORDER,StyleConstant.THIN_LINE,StyleConstant.NO_BORDER];
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+borders               // unqualified
+Component1.borders    // qualified
+
+{secondForm}
+====
+
+

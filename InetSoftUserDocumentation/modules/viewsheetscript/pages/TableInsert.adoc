@@ -1,0 +1,39 @@
+= insert
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TableProperties.adoc[] to set the property without using script.
+====
+
+
+Specifies that users can insert new rows  in  an *Editable Table*. See xref:WriteBackToDatabase.adoc#AccessUserModifiedData[Access User-Modified Data] for more details. (Use xref:TableForm.adoc[] to make a Table editable.)
+
+
+
+
+
+== Type
+Boolean:: `true`: allow row insertion +
+`false`: do not allow row insertion
+
+
+
+== Example
+[source,javascript]
+TableView1.insert = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+insert                 // unqualified
+TableView1.insert      // qualified
+
+{secondForm}
+====
+
+

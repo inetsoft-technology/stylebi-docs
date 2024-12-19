@@ -1,0 +1,55 @@
+= CALC.syd(cost, salvage, life, per)
+:navtitle: CALC.syd()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *sum-of-years’ digits* depreciation of an asset for a specified period. {CALCExcelFunctionPage}
+
+== Parameters
+cost::			Initial cost of the asset
+salvage::			Salvage value at end of asset life
+life::			Number of years of depreciation
+per::			Period for which to return depreciation (in range 1 to `life`, inclusive)
+
+
+== Example
+Depreciation on a $30,000 asset that has a lifetime of 10 years and end-of-life salvage value of $7,500.
+
+
+[source,javascript]
+----
+for(var period = 1; period <= 10; period++) {
+  alert('Period ' + period +': ' + CALC.syd(30000, 7500, 10, period))
+}
+
+// Returns:
+// Period 1: 4090.909090909091
+// Period 2: 3681.818181818182
+// Period 3: 3272.7272727272725
+// Period 4: 2863.6363636363635
+// Period 5: 2454.5454545454545
+// Period 6: 2045.4545454545455
+// Period 7: 1636.3636363636363
+// Period 8: 1227.2727272727273
+// Period 9: 818.1818181818181
+// Period 10: 409.09090909090907
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.syd(field['Cost'], field['Salvage'], 10, period);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.syd(Slider1.selectedObject, Slider2.selectedObject, 10, period);
+CALC.syd(parameter.Cost, parameter.Salvage, 10, period);
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

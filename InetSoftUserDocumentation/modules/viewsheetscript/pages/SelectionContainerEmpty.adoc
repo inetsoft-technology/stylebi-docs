@@ -1,0 +1,45 @@
+= empty
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SelectionContainerProperties.adoc[] for more information on user selection editing.
+====
+
+Returns `true` if the Selection Container contains no filters. Returns `false` if the Selection Container contains at least one filter,  whether added in Visual Composer or by any  user method. (See xref:viewsheet:UseFilterComponents.adoc#BundleFiltersinSelectionContainer[Bundle Filters in a Selection Container] for more information about the user methods.)
+
+
+
+
+
+== Type
+Boolean:: `true`: Selection Container is empty +
+`false`: Selection Container is not empty
+
+
+
+== Example
+[source,javascript]
+if(CurrentSelection1.empty) {
+  CurrentSelection1.visible = false;
+}
+else {
+  CurrentSelection1.visible = true;
+}
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+empty                       // unqualified
+CurrentSelection1.empty     // qualified
+
+{secondForm}
+====
+
+

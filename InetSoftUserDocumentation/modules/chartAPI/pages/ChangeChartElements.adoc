@@ -1,0 +1,78 @@
+= Change Chart Scaling
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+You can change the *static* appearance of chart elements by using a static xref:chartAPI:VisualFrame.adoc[]. For example, you can set static colors, sizes, and textures to enhance the aesthetic appearance of a chart.
+
+Consider the script below:
+[source,javascript]
+dataset = [["State","Quantity","Total"],["NJ",200,2500],["NY",300,1500]];
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+graph.addElement(elem);
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+image:commonscript:StaticColorFrameExample.png[]
+
+
+
+This creates a basic point (scatter) chart displaying the dimensions ‘State’ and ‘Quantity’. However, the points are rather small and hard to see. To increase the size of the points and assign them a bolder color, use a xref:chartAPI:StaticColorFrame.adoc[] and a xref:chartAPI:StaticSizeFrame.adoc[].
+
+Follow these steps:
+
+. Create a new `StaticColorFrame` object, and specify a static color (red).
++
+[source,javascript]
+var cframe = new StaticColorFrame();
+cframe.setColor(java.awt.Color(0xff0000)); // red
+
+. Create a new `StaticSizeFrame` object, and specify a static size.
++
+[source,javascript]
+var sframe = new StaticSizeFrame();
+sframe.setSize(10);
+
+. Assign the `StaticColorFrame` and `StaticSizeFrame` objects to the xref:chartAPI:GraphElement.adoc[] object.
++
+[source,javascript]
+elem.setColorFrame(cframe);
+elem.setSizeFrame(sframe);
++
+The points are now large and red.
++
+image:commonscript:StaticColorFrameExampleFinal.png[]
+
+Because these are *static* VisualFrames, the color and size are not keyed to the data. To represent data values using color, size, or other visual attributes, see xref:chartAPI:RepresentDatawithShapeColorSize.adoc[].
+
+
+.Complete Script
+****
+[source,javascript]
+--
+dataset = [["State","Quantity","Total"],["NJ",200,2500],["NY",300,1500]];
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var cframe = new StaticColorFrame();
+cframe.setColor(java.awt.Color(0xff0000)); // red
+var sframe = new StaticSizeFrame();
+sframe.setSize(10);
+elem.setColorFrame(cframe);
+elem.setSizeFrame(sframe);
+graph.addElement(elem);
+--
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use the xref:chartAPI:EGraph_getElement.adoc[] method ① to obtain a handle to the desired Chart element. For example:
+[source,javascript]
+var elem = graph.getElement(0); <1>
+var cframe = new StaticColorFrame();
+cframe.setColor(java.awt.Color(0xff0000)); // red
+var sframe = new StaticSizeFrame();
+sframe.setSize(10);elem.setColorFrame(cframe);
+elem.setSizeFrame(sframe);
+=====
+****
+
+

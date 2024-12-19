@@ -1,0 +1,14 @@
+. Add the following properties.   {EMPropertyConfig}
++
+[source]
+spark.hadoop.javax.jdo.option.ConnectionPassword = {hivepassword}
+spark.hadoop.javax.jdo.option.ConnectionURL = jdbc:mysql://192.168.5.143:3306/metastore
+spark.hadoop.javax.jdo.option.ConnectionUserName = {hiveuser}
+spark.sql.hive.metastore.jars = {SREEHome}\plugins\inetsoft-mv-spark\lib\*
+mv.hive.enabled = true
+
+. Add any required drivers to the folder specified in `spark.sql.hive.metastore.jars`. For the example above, which uses MySQL as the metastore datasource, place the MySQL driver in this location.
+
+. Set Hadoop Home as an environment variable:
++
+ set HADOOP_HOME = {Installation}\hadoop

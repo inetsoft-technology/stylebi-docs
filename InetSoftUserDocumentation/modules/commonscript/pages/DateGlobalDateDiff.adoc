@@ -1,0 +1,52 @@
+= dateDiff(interval, date1, date2)
+:navtitle: dateDiff()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the difference between   `date1`  and `date2` as measured by the specified interval.
+
+
+
+
+== Parameters
+interval:: 			The date interval for which the difference is 			to be calculated, one of the options below:
++
+[width=50%]
+|===
+|Interval String|Date Interval
+
+|yyyy|Year
+|q|Quarter
+|m|Month
+|y|Day of the year
+|d|Day of the month
+|w|Day of the week
+|ww|Week of the year
+|h|Hour
+|n|Minute
+|s|Second
+|===
+date1:: 			The first date to be compared
+date2:: 			The second date to be compared
+
+
+
+
+
+== Examples
+[source,javascript]
+----
+var newDate = dateAdd('m', 2, new Date());
+dateDiff('m', new Date(), newDate); // returns 2
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+dateDiff('m', field['Date'], new Date());
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+dateDiff('m', parameter.Date, new Date());
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

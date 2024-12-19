@@ -1,0 +1,35 @@
+= CALC.log(number, base)
+:navtitle: CALC.log()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the logarithm of a positive number to the specified base. {CALCExcelFunctionPage}
+
+== Parameters
+number::			Positive number
+base::			Base of the logarithm, a positive real number
+
+
+== Example
+[source,javascript]
+----
+CALC.log(64, 4); // returns 3.0
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.log(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.log(Slider1.selectedObject)
+CALC.log(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,29 @@
+= colorLegend.color
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the color for labels within a color-key legend.
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.colorLegend.color = [255,0,0];
+Chart1.colorLegend.color = {r:255,g:0,b:0}
+
+image:commonscript:colorLegendColor.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorLegend.color         // unqualified
+Chart1.colorLegend.color  // qualified
+
+{secondForm}
+====

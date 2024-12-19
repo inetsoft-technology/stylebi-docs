@@ -1,0 +1,30 @@
+For *read/response* parameters you can select the following options from the right-side menus:
+
+image:dataworksheet:pagination1.png[]
+
+Json Path:: Path to a parameter in the body of the JSON response.
+Header:: Parameter name in the header of the JSON response.
+Link Header:: For ‘Link Iteration’ pagination, read parameter value from the link header of the JSON response.
+
+
+For *write/request* parameters you can select the following options from the right-side menus:
+
+Query:: Parameter to be added to the request query, for example, `example.com/api/query?queryParam=queryParamValue`.
+
+Header:: Parameter to be added to the request header. Some or all of the following pagination options may be available:
++
+[square]
+* *Page Count*: Finds the total number of pages from the initial response and iterates through them page by page. The ‘Total Pages Parameter’ is the response parameter that contains the total page count, for example, `total_pages` (JsonPath). The ‘Page Number Parameter To Write’ is the request parameter to specify the requested page, for example,  `page` (Query). If ‘Zero-based Page Index’ is enabled, the page count starts with 0; otherwise, the page count starts with 1.
+
+* *Total Count And Offset*: Reads the total count from the response, and iterates through each page using the ‘Max Results Per Page’ to find the total number of pages. The ‘Total Count Parameter’ is a response parameter that contains the total entry count, for example, `listcount` (JsonPath). The ‘Offset Parameter To Write’ is a request parameter to specify the offset of the first item in the collection to return, for example, `offset` (Query). ‘Max Results Per Page’ specifies the number of entries that are returned for each request. The value of this property should match the value of the parameter in the API, most often named `limit`.
+
+* *Total Count And Page*: Reads the total count from the response, and iterates through each page using the ‘Max Results Per Page’ to find the total number of pages. The ‘Total Count Parameter’ is a response parameter that contains the total entry count, for example, `listcount` (JsonPath). The ‘Page Number Parameter To Write’ is a request parameter to specify the requested page, for example, `page` (Query). If ‘Zero-based Page Index’ is enabled, the page count starts with 0; otherwise, the page count starts with 1. ‘Max Results Per Page’ specifies the number of entries that are returned for each request. The value of this property should match the value of the parameter in the API, most often named `limit`.
+
+* *Iteration*: Iterates over multiple pages of the response, by checking for the existence of the next page, using an offset parameter to get the next page, and then repeating. The ‘Has-Next Parameter’ is a response parameter to check whether the next page exists. Usually this is the same as the parameter containing the next offset, for example,  `next_offset` (Json Path). the ‘Page Offset Parameter To Read’ is a response parameter containing the offset to the next page, for example, `next_offset` (Json Path). The ‘Page Offset Parameter To Write’ is a request parameter to request the next page starting with this offset, for example,  `offset`. ‘Enable Increment offset by 1 before writing’ if the offset from the response needs to be incremented before being added to the next pagination request. In most cases this should be disabled.
+
+* *Link Iteration*: Extracts and executes the next page’s URL link from the current response. The strategy terminates once next page’s URL is not present in the most recent response. The ‘Link Parameter’ is a response parameter that contains the next page URL, for example, `Link` (Link Header). The ‘Link Relation’ property is only available if ‘Link Header’ is specified for the ‘Link Parameter’. This specifies which relation should be used to get the next page URL. For example, the ‘Link Header’ parameter might contain different relations as shown below.
+
+ <https://api.github.com/search/code?q=addClass+user%3Amozilla&page=2>; rel="next",
+ <https://api.github.com/search/code?q=addClass+user%3Amozilla&page=34>; rel="last"
++
+In this case, the URL value of the next relation is desired, so ‘Link Relation’ would be `next`.

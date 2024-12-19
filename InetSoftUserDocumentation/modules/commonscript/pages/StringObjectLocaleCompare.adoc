@@ -1,0 +1,35 @@
+= localeCompare(compare_string)
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to compare sort order of this string and another string given by `compare_string`.   See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare[String.prototype.localeCompare()] in the {JavaScriptRef} for details on usage.
+
+== Parameters
+compare_string:: The string to compare to this string
+
+== Returns
+Negative number:: If this string comes *before* the `compare_string` in sorting
+Zero:: If strings are identical
+Positive number:: If this string comes *after* the `compare_string` in sorting
+
+
+
+
+
+== Example
+[source,javascript]
+var str = 'réservé';
+var strCompare = 'RESERVE';
+alert(str.localeCompare(strCompare)); // returns 1.0
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].localeCompare(strCompare);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.localeCompare(strCompare);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

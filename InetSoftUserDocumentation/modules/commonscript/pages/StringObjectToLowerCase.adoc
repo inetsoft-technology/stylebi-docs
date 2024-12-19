@@ -1,0 +1,28 @@
+= toLowerCase()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:CALC_lower.adoc[] for an equivalent function.
+
+Convert all characters to lowercase.
+
+
+
+
+
+== Example
+[source,javascript]
+var str = 'abCdefgHIJ';
+str.toLowerCase(); // returns abcdefghij
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].toLowerCase();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.toLowerCase();
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

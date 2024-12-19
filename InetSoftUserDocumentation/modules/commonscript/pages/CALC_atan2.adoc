@@ -1,0 +1,37 @@
+= CALC.atan2(numberX, numberY)
+:navtitle: CALC.atan2()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the inverse tangent of the point represented by the specified x and y co-ordinates, in radians. {CALCExcelFunctionPage}
+
+== Parameters
+numberX:: X coordinate
+numberY::			Y coordinate
+
+
+== Example
+[source,javascript]
+----
+CALC.atan2(1,1);  // 0.7853981633974483 (π/4 radians)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.atan2(field['XValue'], field['YValue'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.atan2(Slider1.selectedObject, Slider2.selectedObject)
+CALC.atan2(parameter.XValue, parameter.YValue)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

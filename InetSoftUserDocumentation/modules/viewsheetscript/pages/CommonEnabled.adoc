@@ -1,0 +1,29 @@
+= enabled
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,  caption=See Also]
+xref:viewsheet:GeneralTab.adoc[] for more information about enabling a component.
+
+Specifies whether the user can interact with the component. A disabled component appears dimmed when the user opens the Dashboard.
+
+== Type
+Boolean (`true`: enable, `false`: disable)
+
+
+== Example
+[source,javascript]
+enabled = false;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+enabled               // unqualified
+Component1.enabled    // qualified
+
+{secondForm}
+====
+
+

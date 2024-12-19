@@ -1,0 +1,23 @@
+= clearTargets()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Removes all target lines and bands from the chart.
+
+
+== Example
+[source,javascript]
+Chart1.clearTargets();
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+clearTargets           // unqualified
+Chart1.clearTargets    // qualified
+
+{secondForm}
+====

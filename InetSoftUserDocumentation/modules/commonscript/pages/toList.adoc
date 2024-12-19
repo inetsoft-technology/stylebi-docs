@@ -1,0 +1,52 @@
+= toList(list [,options])
+:navtitle: toList()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Remove duplicate entries from input array to yield a list of unique elements with optional sorting and grouping. See xref:viewsheetscript:SpecialFreehandFunctions.adoc#toList[toList] in xref:viewsheetscript:SpecialFreehandFunctions.adoc[] for application to Freehand Table.
+
+== Parameters
+list::			array to filter
+options::			a comma-separated *Options String* specifying 			property-value pairs below
+
+== Options String
+sort:: 			Return sorted values {`asc`,`desc`,`false`}
+sorton::			Measure by which to sort, e.g., `sum(Total)`, prior to filtering by `maxrows`
+sorton2::			Measure by which to sort, e.g., `sum(Total)`, after filtering by `maxrows`
+remainder:: Label for '`Others`' group in Top/Bottom-N			filtering. Omit option to suppress '`Others`'.
+maxrows:: Limit for the number of rows returned
+distinct:: 			Return only distinct values {`true`,`false`}. The default is `true`.
+date:: 			Return values grouped by date: {`year`/`quarter`/`month`/`week`/`day`/`hour`/`minute`/			`second`/`weekday`/`monthname`/`weekdayname`}
+rounddate::			Same as `date`, but returns an array of dates
+timeseries:: When `true`, specifies that gaps in Date data should be retained. For example, if the data is grouped by month, and there is no data for the month of June, `timeseries = true` ensures that the month of June is still retained. Default is `false`.
+
+
+
+
+
+
+
+==  Example
+[source,javascript]
+Array1 = [2,3,1,2,3,3,2,2,1,0];
+Array2 = toList(Array1,'sort=desc'); // returns [3,2,1,0]
+
+
+
+include::commonscript:partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column  of Dashboard table TableView1:
+toList(TableView1.table['Company'],'sort=desc');
+----
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of  ‘Sales’ data block in Data Worksheet:
+toList(Sales['Company'],'sort=desc');
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

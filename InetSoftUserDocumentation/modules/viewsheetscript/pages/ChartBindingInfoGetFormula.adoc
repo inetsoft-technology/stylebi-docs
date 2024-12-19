@@ -1,0 +1,40 @@
+= bindingInfo.getFormula(col,binding)
+:navtitle: bindingInfo.getFormula()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoSetFormula.adoc[]  to set the binding information.
+
+Returns the aggregation method used for a measure. The measure can be bound to the X or Y axis, or to one of the VisualFrames (xref:chartAPI:ColorFrame.adoc[],xref:chartAPI:SizeFrame.adoc[], xref:chartAPI:ShapeFrame.adoc[], xref:chartAPI:TextFrame.adoc[]).
+
+
+== Parameter
+col::			Field for which to obtain summary method
+binding:: The field’s binding, one of the following:
++
+include::commonscript:partial$fieldBindingConstant.adoc[]
+
+== Return
+The formula name (String)
+
+
+
+
+
+
+
+
+
+== Example
+For a field "Total" bound to the Y-axis:
+
+[source,javascript]
+--
+var formula = Chart1.bindingInfo.getFormula("Total",Chart.BINDING_FIELD);
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

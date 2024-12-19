@@ -1,0 +1,19 @@
+= importPackage(package)
+:navtitle: importPackage()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Enable the use of *unqualified* names for all the classes of the specified package by searching for unqualified names as classes qualified by the given package. The package can be a `java` package, an `inetsoft` package, or any other package beginning with `com` or `org`.
+
+
+
+== Example
+[source,javascript]
+----
+importPackage(java.awt);
+font = new Font("Verdana", Font.ITALIC, 24); <1>
+foreground = Color.red;
+----
+<1> Does not require the  `java.awt` qualifier

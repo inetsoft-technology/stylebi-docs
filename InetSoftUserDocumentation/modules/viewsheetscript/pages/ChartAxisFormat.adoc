@@ -1,0 +1,43 @@
+= axis.format
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the format for dimension or measure axis labels. The available formats are shown below:
+[square]
+* `Chart.DATE_FORMAT` for date display
+* `Chart.DECIMAL_FORMAT` for number display
+* `Chart.MESSAGE_FORMAT` for text display
+* `Chart.PERCENT_FORMAT` for fraction display
+* `Chart.CURRENCY_FORMAT` for locale-adapting currency display
+
+
+For the Date, Decimal, and Message formats, optionally specify the format and mask as items in an array.  See xref:viewsheet:DataFormat.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for more information about Dashboard formatting.
+
+== Type
+Constant (format) or Array ([format, mask])
+
+== Example (Number)
+[source,javascript]
+ Chart1.axis['Sum(Total)'].format = [Chart.DECIMAL_FORMAT,"#,###.00"];
+
+image:commonscript:dimensionFormatDecimal.png[]
+
+== Example (Text)
+[source,javascript]
+Chart1.axis['Company'].format = [Chart.MESSAGE_FORMAT,"{0} Inc."]
+Chart1.axis['Company'].rotation = 30;
+
+image:commonscript:dimensionFormatText.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].format            // unqualified
+Chart1.axis['...'].format     // qualified
+
+{secondForm}
+====
+

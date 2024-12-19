@@ -1,0 +1,27 @@
+= colorLegend.titleVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the visibility of the legend title bar for a color-key legend.
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.colorLegend.titleVisible = false;
+
+image:commonscript:colorLegendTitleVisible.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorLegend.titleVisible           // unqualified
+Chart1.colorLegend.titleVisible    // qualified
+
+{secondForm}
+====

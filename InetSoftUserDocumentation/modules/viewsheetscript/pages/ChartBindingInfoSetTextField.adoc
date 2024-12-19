@@ -1,0 +1,51 @@
+= bindingInfo.setTextField(col, type)
+:navtitle: bindingInfo.setTextField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+xref:viewsheetscript:ChartBindingInfoGetTextField.adoc[]  to obtain the binding information.
+
+====
+
+
+
+
+Bind the specified field to a xref:chartAPI:TextFrame.adoc[] (text coding).
+
+
+
+
+
+
+
+
+== Parameter
+col::			Field to be used for text-coding
+type:: One of the following:  `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
+
+
+
+
+
+
+== Examples
+.Dimension (categorical) field
+[source,javascript]
+--
+Chart1.bindingInfo.setTextField("Employee",Chart.STRING);
+--
+image:commonscript:bindingInfoSetTextDimension.png[]
+
+.Measure (numerical) field
+[source,javascript]
+--
+Chart1.bindingInfo.setTextField("Total",Chart.NUMBER);
+--
+image:commonscript:bindingInfoSetTextMeasure.png[]
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

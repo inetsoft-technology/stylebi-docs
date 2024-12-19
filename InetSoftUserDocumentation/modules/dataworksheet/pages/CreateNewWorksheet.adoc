@@ -1,0 +1,49 @@
+= Create a Data Worksheet
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$rightClickOptions.adoc[]
+
+Visual Composer allows you to create a Data Worksheet by performing data pipeline operations such as grouping, post-aggregate filtering, joins, and so on. Follow the steps below to create a Data Worksheet.
+
+
+include::ROOT:partial$createVisualizationStep2Worksheet.adoc[]
+
+
+
+== Create Data Worksheet from Portal
+Press the {buttonCreate}  at the top of the User Portal, and select {buttonWorksheet}.
+
+
+image::newWorksheet2.png[]
+
+Alternatively, press the top {buttonDataTab}  in the Portal.
+
+image::user:uploadDriver1.png[]
+
+Then select ‘Data Worksheet’ in the left panel and press the {buttonNewWorksheet} in the toolbar.
+
+image::user:PortalCreateWorksheet2.png[]
+
+This displays the ‘New Data Worksheet’ dialog box.  See xref:#NewDataWorksheetDialogBox[] below.
+
+
+== Create a Data Worksheet from Visual Composer
+If you are already in Visual Composer, you can create a new Dashboard by pressing the {buttonCreate} and selecting {buttonNewWorksheet}.  Then follow the directions for the '`Mashup`' option in xref:#NewDataWorksheetDialogBox[].
+
+image:user:CreateNewAsset.png[]
+
+== Create a New Folder
+To create a new asset folder in Visual Composer, see xref:viewsheet:CreateNewDashboard.adoc#CreateNewAssetFolder[Create a New Folder].
+
+
+
+[#NewDataWorksheetDialogBox]
+== New Data Worksheet Dialog Box
+The '`New Data Worksheet`' Dialog Box presents the following three options.
+
+include::ROOT:partial$newWorksheet2.adoc[]
+
+
+
+[#SaveDataWorksheet]
+== Save the Data Worksheet
+To save the Data Worksheet, press the {buttonSave} in the toolbar.

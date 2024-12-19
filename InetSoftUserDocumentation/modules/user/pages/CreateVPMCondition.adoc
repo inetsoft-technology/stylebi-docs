@@ -1,0 +1,99 @@
+= Create a VPM Condition
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+
+You can add a condition to a VPM to filter the rows retrieved from the database tables. Follow the steps below:
+
+. If necessary, create a VPM as explained in xref:CreateNewVPM.adoc[].
+
+. Select the *Conditions* tab at the bottom, and press the {buttonAddCondition}.
++
+image:dataModel59.png[]
+
+. Select the *Conditions* sub-tab.
++
+image:dataModel60.png[]
+
+. Choose whether the VPM will be triggered based on a particular *database table* referenced in a query or by a particular *physical view* referenced in a query:
++
+****
+Table:: To trigger the VPM whenever a query references a particular database *table*, select the ‘Table’ option. If the ‘Choose Table’ dialog box does not open automatically, press the btn:[Choose Table] button.
++
+image:dataModel61.png[]
++
+In the ‘Choose Table’ dialog box, select the database table that should trigger the VPM and press btn:[OK].
++
+image:dataModel62.png[]
+
+Physical View:: To trigger the VPM whenever a query is generated from a particular *physical view*, select the ‘Physical View’ option.  If the ‘Choose Physical View’ dialog box does not open automatically, press the btn:[Choose Physical View] button.
++
+image:dataModel63.png[]
++
+In the ‘Choose Physical View’ dialog box, select the physical view that should trigger the VPM and press btn:[OK].
++
+image:dataModel64.png[]
+****
+. Press the btn:[Edit clause] button. This opens the ‘Conditions’ dialog box.
++
+image:dataModel65.png[]
+
+. Specify the desired condition clause.
++
+image:dataModel66.png[]
++
+By default, the condition is based on field names and values. However, you can use the {buttonChangeValueType} on the left or right side to create other types of conditions.
++
+image:dataModel67.png[]
++
+.Value Type Options
+****
+Field:: Choose the desired field name to use the values of a data column in the condition.
+Expression:: Enter a regular expression using Perl5 regex syntax.
++
+.See a summary of Perl5 regex syntax…
+[%collapsible]
+====
+include::ROOT:partial$regexSyntax.adoc[]
+====
+
+Value:: Enter a fixed value. Use the {buttonBrowseData}, if available, to select the desired value from the specified field.
++
+image:dataModel68.png[]
+
+Variable:: Enter a desired variable name to create a parametrized condition where the parameter value will be supplied at runtime via script, session information, or user input.
+
+Session Data:: Use the logged-in user’s name, roles, or groups in the condition.
+
+Subquery:: Specify a distinct query to return the right-side of the condition.
+****
+
+
+. Make any desired edits to the condition:
+[square]
+* To delete an existing clause in the condition, click to select the clause, and press btn:[Delete].
+* To delete all clauses in the condition,  press the btn:[Clear] button.
+* To change the order of a clause in the condition,  click to select the clause, press the btn:[Move Up] or btn:[Move Down] button.
+* To change the operator between two clauses (e.g., “and”, “or”), click on the operator to select it, and press the btn:[Modify] button.
++
+image:dataModel75.png[]
+
+* To indent or a pair of clauses joined by an “and” or “or” operator,  click on the operator in the bottom panel, and press the btn:[Indent] or btn:[Unindent] button.
++
+image:dataModel76.png[]
++
+Logical operations within a given set of same-level indented clauses are performed prior to operations outside the indented clause set. (The indent represents the grouping operation of a “parenthesis” within a logical proposition.)
+
+. Press btn:[OK] to close the ‘Conditions’ dialog box.
+
+. Repeat the above steps to add any additional clauses to the condition.
+
+. To add scripted logic that triggers the condition, see xref:AddVPMConditionTrigger.adoc[].
+
+. Enter a name for the condition in the ‘Name’ field.
++
+image:dataModel69.png[]
+
+. Press the {buttonSave} to save the VPM.

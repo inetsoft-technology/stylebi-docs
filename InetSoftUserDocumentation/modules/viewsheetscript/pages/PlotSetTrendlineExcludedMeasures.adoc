@@ -1,0 +1,35 @@
+= setTrendLineExcludedMeasures(array)
+:navtitle: setTrendLineExcludedMeasures()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Remove the trend line from the measures specified in the array argument. (See xref:viewsheet:AddTargetLineTrendLine.adoc[] for information on how to set trend lines.)
+
+
+
+
+== Parameters
+array::			An array of measure names for which to hide the trend line
+
+
+
+
+== Examples
+
+[source,javascript]
+Chart1.setTrendLineExcludedMeasures(['Sum(Product:Total)','Count(Order:Num)'])
+
+
+image:commonscript:setTrendLineExcludedMeasures.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setTrendLineExcludedMeasures(array)           // unqualified
+Chart1.setTrendLineExcludedMeasures(array)    // qualified
+
+{secondForm}
+====

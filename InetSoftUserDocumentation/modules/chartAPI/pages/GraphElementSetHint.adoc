@@ -1,0 +1,58 @@
+= GraphElement.setHint(type,value)
+:navtitle: GraphElement.setHint()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Add an effect to a xref:GraphElement.adoc[] object.   The corresponding “getter” function is `getHint(type)`.
+
+
+
+== Parameter
+type:: One of the following constants:
++
+[source]
+GraphElement.HINT_EXPLODED  Element separation or explosion
+GraphElement.HINT_SHINE     Three-dimensional shading
+GraphElement.HINT_ALPHA     Transparency
+
+value::
+[square]
+* For `HINT_EXPLODED`: `'true'` or `'false'`
+* For `HINT_SHINE`: `'true'` or `'false'`
+* For `HINT_ALPHA`: float in range [0,1]
+
+
+== Examples
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"],["NY",200], ["NJ",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State","Quantity"); //<2>
+elem.setHint(GraphElement.HINT_SHINE,'true'); //<3>
+graph.addElement(elem); //<4>
+--
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use `setHint` to apply shading.
+<4> Use `addElement` to add the `IntervalElement` to the Chart.
+
+image:commonscript:GraphElementsetHint.png[]
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.setHint(GraphElement.HINT_SHINE,'true')
+--
+=====

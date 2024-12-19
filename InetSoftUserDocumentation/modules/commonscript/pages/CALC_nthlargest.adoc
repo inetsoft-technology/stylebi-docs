@@ -1,0 +1,40 @@
+= CALC.nthlargest(array,n)
+:navtitle: CALC.nthlargest()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the __n__th largest value in the specified `array`. Use n=1  to return the maximum, equivalent to xref:CALC_max.adoc[]. {CALCExcelFunctionPage}
+
+== Parameters
+array::				Array of values
+n::	Size rank (1=largest, 2=second largest, etc.)
+
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.nthlargest([1,1,3,3,4,5,2,1,4,3],2);  // 2nd largest
+// returns 4
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.nthlargest(TableView1.table['Quantity'],3)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.nthlargest(Sales['Quantity'],3);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

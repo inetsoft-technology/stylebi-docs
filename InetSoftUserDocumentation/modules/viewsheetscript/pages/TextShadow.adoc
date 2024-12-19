@@ -1,0 +1,42 @@
+= shadow
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TextProperties.adoc[] for general information about the Text component.
+====
+
+
+Adds a drop shadow to the component. (Drop shadow for a Text component is not preserved on export.)
+
+
+
+
+
+
+
+
+== Type
+Boolean:: `true`: add drop shadow +
+`false`: no drop shadow
+
+
+
+== Example
+[source,javascript]
+Text1.shadow = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shadow            // unqualified
+Text1.shadow      // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,36 @@
+= CALC.roman(number)
+:navtitle: CALC.roman()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Converts an Arabic numeral to Roman numeral, as text. {CALCExcelFunctionPage}
+
+== Parameters
+number::			An number in Arabic (standard) numerals
+
+
+
+== Example
+[source,javascript]
+----
+ExampleCALC.roman(77);  // returns LXXVII
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.roman(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.roman(Slider1.selectedObject)
+CALC.roman(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

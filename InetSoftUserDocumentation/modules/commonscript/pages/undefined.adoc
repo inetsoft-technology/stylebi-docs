@@ -1,0 +1,7 @@
+= undefined
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+The value undefined is returned if a non-existent object or property is referenced. It is also the value of a variable before it is initialized.

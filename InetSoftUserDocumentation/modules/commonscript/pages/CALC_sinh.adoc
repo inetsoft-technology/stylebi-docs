@@ -1,0 +1,34 @@
+= CALC.sinh(number)
+:navtitle: CALC.sinh()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the hyperbolic sine of any real number. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A real number
+
+== Example
+[source,javascript]
+----
+CALC.sinh(5.5)  // returns 122.34392274639096
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.sinh(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.sinh(Slider1.selectedObject)
+CALC.sinh(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

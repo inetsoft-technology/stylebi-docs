@@ -1,0 +1,81 @@
+= Use Charts
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheet:partial$availableToEndUsers.adoc[]
+
+Charts provide many features for customization and exploration. These features are described in the sections below.  After you modify a Chart, you can save your changes (if desired) in one of the following ways:
+
+* Save the entire Dashboard (if you have appropriate permissions).  See xref:SavePublicDashboard.adoc[].
+* Save the Chart as an Image. See xref:ExportDashboard.adoc#ExportChartImage[Export a Chart as an Image] in xref:ExportDashboard.adoc[].
+* Save a new *bookmark* that contains the  Chart modifications.  See xref:user:BookmarkDashboard.adoc[].
+* Export the entire Dashboard.  See xref:ExportDashboard.adoc[].
+
+== Chart Toolbar
+TIP: If the Chart mini-toolbar obscures Chart data, press the {buttonHideMiniToolbar} to temporarily hide it.
+
+The mini-toolbar at the top of a Chart often provides a variety of tools for navigating and adapting the Chart.  The table below lists the options that you might see in the toolbar.  Some options are available only when you select data on the Chart.
+
+
+image:user:UserChart1.png[]
+
+include::viewsheet:partial$selectChartData.adoc[]
+
+{buttonHideMiniToolbar}:: Temporarily hide the Chart toolbar.
+{buttonDrillDownFilter}:: Drill and filter at the same time.  See xref:DrillDownIntoData.adoc#DrillDownFilter[Drill Down and Filter] in xref:DrillDownIntoData.adoc[].
+{buttonChartBrush}:: Highlight selected data across multiple Charts.  See xref:DrillDownIntoData.adoc#BrushChart[Brush a Chart] in xref:DrillDownIntoData.adoc[].
+{buttonZoom}:: Zoom into the selected Chart data.  See xref:DrillDownIntoData.adoc#ZoomChart[Zoom a Chart] in xref:DrillDownIntoData.adoc[].
+{buttonChartExclude}:: Zoom into the non-selected Chart data. See xref:DrillDownIntoData.adoc#ZoomChart[Zoom a Chart] in xref:DrillDownIntoData.adoc[].
+{buttonShowSummary}:: Display the Chart aggregates in tabular form.  See xref:ExportDashboard.adoc#ExportChartData[Export Chart Data] in xref:ExportDashboard.adoc[].
+{buttonShowDetails}:: Show the pre-aggregate detail data in tabular form.  See xref:DrillDownIntoData.adoc#DrillChartDetailData[Drill to Chart Detail Data] in xref:DrillDownIntoData.adoc[].
+{buttonChartShowEnlarged}:: Temporarily increase the size of the Chart to full screen.
+{buttonEdit}:: Open the Chart Editor.  See xref:BasicChartingSteps.adoc[] for information on how to use the Editor.  This option may *not be available* for all Charts.
+{buttonMore} > Properties:: Open the '`Chart Properties`' dialog box.  See xref:ChartProperties.adoc[].  (Some options may not be available.)
+{buttonMore} > Format:: Opens the *Format* panel.  See xref:VisualFormat.adoc[]. (Some options may not be available.)
+{buttonMore} > Save As Image:: Export the Chart as an image.  See xref:ExportDashboard.adoc#ExportChartImage[Export a Chart as Image] in xref:ExportDashboard.adoc[].
+{buttonMore} > Resize Plot:: Change the spacing of Chart data elements.  See xref:BasicChartingSteps.adoc[].
+{buttonMore} > Date Comparison:: Perform a wide variety of date comparisons (e.g., last year vs. this year) on Chart data.  See xref:CompareDataByDate.adoc[].
+{buttonMore} > Show All Titles:: Display any Chart titles that have been hidden.
+{buttonMore} > Show All Axes:: Display any Chart axes that have been hidden.
+{buttonMore} > Show Legend:: Display any hidden legends.
+{buttonMore} > Annotate Component:: Add annotations to the Chart.  See xref:AddAnnotation.adoc[].
+
+
+== Right-Click Options
+You can right-click various areas of a Chart to get options specific to that region.
+
+=== Axis Title
+Right-click an axis title to view title-specific options such as the following:
+
+image:user:UserChart2.png[]
+
+Title Properties:: Opens the '`Title Properties`' dialog box.  See xref:AxisTitleProperties.adoc[].
+Format:: Opens the *Format* panel for the title.  See xref:VisualFormat.adoc[] and xref:DataFormat.adoc[]. (Some options may not be available.)
+Hide Title:: Hide the title.
+
+=== Axis
+Right-click an axis  to view axis-specific options such as the following:
+
+image:user:UserChart3.png[]
+
+Axis Properties:: Opens the '`Axis Properties`' dialog box for the axis.  See xref:AxisProperties.adoc[].
+Format:: Opens the *Format* panel for the axis.  See xref:VisualFormat.adoc[] and xref:DataFormat.adoc[]. (Some options may not be available.)
+Hide Axis:: Hide the axis.
+
+=== Data Point
+Right-click on Chart data to see the '`Annotate Point`' option.  See xref:AddAnnotation.adoc#AnnotateDataPoint[Annotate a Data Point] in xref:AddAnnotation.adoc[].
+
+== Legend
+Right-click a legend  to view legend-specific options such as the following:
+
+image:user:UserChart4.png[]
+
+Legend Properties:: Opens the '`Legend Properties`' dialog box for the axis.  See xref:LegendProperties.adoc[].
+Format:: Opens the *Format* panel for the legend.  See xref:VisualFormat.adoc[] and xref:DataFormat.adoc[]. (Some options may not be available.)
+Hide Legend:: Hide the legend.
+
+
+== Ad Hoc Editing
+Press the {buttonEdit} in the Chart mini-toolbar to open the Chart Editor.  This provides extensive capabilities for modifying the Chart.  See xref:BasicChartingSteps.adoc[] for information on how to use the Editor.
+
+NOTE: This {buttonEdit}  may *not be available* for all Charts.

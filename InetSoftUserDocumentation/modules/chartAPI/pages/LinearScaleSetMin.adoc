@@ -1,0 +1,71 @@
+= LinearScale.setMin(value)
+:navtitle: LinearScale.setMin()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+Specifies the minimum value of the xref:LinearScale.adoc[].  The corresponding “getter” function is `getMin()`.
+
+
+
+
+== Parameter
+value::			Number specifying the minimum scale value
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale("Quantity"); //<2>
+var elem = new IntervalElement("State", "Quantity");
+qscale.setMin(150); //<3>
+qscale.setMax(450); //<4>
+graph.setScale("Quantity", qscale); //<5>
+graph.addElement(elem);
+
+--
+
+<1> {dataset}
+<2> Create the xref:LinearScale.adoc[] object.
+<3> Use `setMin` to set the  desired minimum.
+<4> Use `setMax` to set the  desired maximum.
+<5> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+
+image:commonscript:LinearScaleSetMinMax.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetYScale.adoc[] ② to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:Scale.adoc[]. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var scale = coord.getYScale(); //<2>
+// Compact Syntax: var scale = graph.getCoordinate().getYScale();
+
+scale.setMin(2000000);
+scale.setMax(15000000);
+--
+=====
+
+

@@ -1,0 +1,58 @@
+= TriCoord.setScale(scale)
+:navtitle: TriCoord.setScale()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+Specifies the scale to use for all three axes. This can also be specified as an argument to the constructor.  The corresponding “getter” function is `getScale()`.
+
+
+== Parameter
+scale::			a xref:Scale.adoc[] object
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["Quantity","Total","Returns"],[50,50,100],[75,100,25],[100,100,0]]; //<1>
+graph = new EGraph();
+var elem = new PointElement();
+var qscale = new LinearScale("Quantity"); //<2>
+qscale.setMin(0);
+qscale.setMax(200);
+var spec = new AxisSpec();
+spec.setGridStyle(Chart.DOT_LINE);
+spec.setGridColor(java.awt.Color.red);
+qscale.setAxisSpec(spec);
+var coord = new TriCoord(); //<3>
+coord.setScale(qscale); //<4>
+elem.addDim("Quantity"); //<5>
+elem.addDim("Total"); //<6>
+elem.addVar("Returns"); //<7>
+graph.addElement(elem);
+graph.setScale("Quantity", qscale);
+graph.setScale("Total", qscale);
+graph.setScale("Returns", qscale);
+graph.setCoordinate(coord); //<8>
+
+--
+<1> {dataset}
+<2> Create the xref:Scale.adoc[] object.
+<3> Create the xref:TriCoord.adoc[] object from the `Scale` object.
+<4> Use setScale to assign the `Scale` to the `TriCoord`.
+<5> Add first measure (‘Quantity’),  represented on the bottom axis.
+<6> Add  second measure (‘Total’),  represented on the right axis.
+<7> Add third measure (‘Returns’),  represented on the left axis. #Note#: The third measure must be added using  xref:GraphElementAddVar.adoc[] rather than xref:GraphElementAddDim.adoc[].
+<8> Use xref:EGraph_setCoordinate.adoc[] to add the `RectCoord` to the Chart.
+
+image:commonscript:TriccordsetScale.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

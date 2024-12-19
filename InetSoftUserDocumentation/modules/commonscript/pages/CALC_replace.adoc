@@ -1,0 +1,46 @@
+= CALC.replace(old_string, start_num, num_chars, new_string)
+:navtitle: CALC.replace()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:StringObjectReplace.adoc[] to replace a string using a regular expression.
+
+Replaces a segment of `old_string` with the entirety of `new_string`. The segment replaced in `old_string` begins with index `start_num` and continues for `num_chars` characters. {CALCExcelFunctionPage}
+
+This function replaces text that occurs at a specific *location* in `old_string`. Use xref:CALC_substitute.adoc[] to replace an occurrence of a particular *substring* in `old_string`.
+
+== Parameters
+old_string::			A string in which to replace characters
+start_num::			Starting index in `old_string` for replacement. (Index of first character is 1.)
+num_chars::			Number of characters in `old_string` to replace
+new_string::			String containing replacement text
+
+
+
+== Example
+Replace the five characters “fghij” in string “abcdefghijkl” with the new string ‘*’.
+
+[source,javascript]
+----
+CALC.replace('abcdefghijkl', 6, 5, '*');  // returns abcde*kl
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.replace(field['Label'], 6, 5, '*')
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.replace(parameter.Label, 6, 5, '*')
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,47 @@
+= GShape.setFillColor(color)
+:navtitle: GShape.setFillColor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the fill color for a xref:GShape.adoc[] object.  The corresponding “getter” function is `getFillColor()`.
+
+
+
+== Parameters
+color:: {javaawtcolor}		 to fill the shape
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State","Quantity");
+var circle = GShape.CIRCLE.create(true, true); //<2>
+circle.setFillColor(java.awt.Color.RED); //<3>
+var shapeFrame = new StaticShapeFrame(circle); //<4>
+var sizeFrame = new StaticSizeFrame(10);
+elem.setSizeFrame(sizeFrame);
+elem.setShapeFrame(shapeFrame); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Use `create()` to create the shape.
+<3> Use `setFillColor()` to assign the color.
+<4> Pass the `shape` to the xref:StaticShapeFrame.adoc[] constructor.
+<5> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:IntervalElement.adoc[].
++
+image:commonscript:GShapeImageShape4.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+

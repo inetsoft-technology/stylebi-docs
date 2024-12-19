@@ -1,0 +1,25 @@
+= Edit a Connection
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To edit an existing database connection, follow the steps below.
+
+. Press the top {buttonData} in the Portal.
++
+image:uploadDriver1.png[]
+
+. Select the ‘Data Source’ folder and locate the desired data source.
+
+. Press the {buttonMoreOptions} next to the database connection that you want to edit, and select the ‘Edit’ option from the menu.
++
+image:dataSourceNew3.png[]
+
+. Proceed to edit the connection settings as described in xref:ConnectToDataSource.adoc[].
+
+. To *delete* the connection, select the ‘Delete’ option from the menu.
+
+. To *refresh* the connection, select the ‘Refresh’ option from the menu. This refreshes the cached table information (meta-data) stored by the server.
+
+. To *move* a data source to another folder, select the ‘Move’ option from the menu and specify the new location.
+
+To create a *new data source folder*, press the {buttonNewFolder} in the toolbar.

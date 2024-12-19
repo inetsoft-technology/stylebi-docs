@@ -1,0 +1,75 @@
+= Manage the Repository
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following sections explain how to manage you assets under the {buttonRepository} of the Portal.
+
+== Create a New Folder
+To create a new folder in the Repository, follow the steps below:
+
+. Press the {buttonRepository} at the top of the Portal.
+
+. Right-click on the folder that you want to contain the new folder, and select ‘New Folder’.
++
+image:organizeRepostory.png[]
++
+This opens the ‘Create Folder’ page.
++
+image:createFolder.png[]
+
+. Enter the desired ‘Folder Name’, and (optionally) supply an ‘Alias’ and ‘Description’. Then press btn:[OK].
++
+TIP: The ‘Alias’ is the name displayed in the Repository.
+
+This creates a new folder in the specified location.
+
+== Move an Asset
+To move Dashboards, or folders from one Repository folder to another, follow the steps below:
+
+. Press the {buttonRepository} at the top of the Portal.
+
+. Drag the asset to the desired folder.
++
+image:organizeRepostory1.png[]
+
+== Delete an Asset
+To delete a Dashboard, or folder from the Repository, follow the steps below:
+
+. Press the {buttonRepository} at the top of the Portal.
+
+. Right-click on the asset and select ‘Delete’.
++
+image:organizeRepostory2.png[]
+
+TIP: The system administrator may be able to recover  deleted assets.
+
+[#RenameAsset]
+== Rename an Asset
+To rename a Dashboard, or folder, follow the steps below:
+
+. Press the {buttonRepository} at the top of the Portal.
+
+. Right-click on the asset and select ‘Rename’.
+
+. Type the new name, and press kbd:[Enter] on the keyboard or simply click somewhere else.
+
+== Make an Asset  '`Favorite`'
+
+To mark an asset as a ‘favorite’, follow the steps below:
+
+. Press the {buttonRepository} at the top of the Portal.
+
+. Right-click on the asset in the Repository listing and select ‘Add to Favorites’.
++
+image:favorites1.png[]
+
+. To view your list of favorite assets, press the {buttonFavorites}.
++
+image:favorites2.png[]
+
+To remove an asset from the ‘Favorites’ list, right-click the asset (in either the full list or the ‘Favorites’ list), and select ‘Remove from Favorites’.
+
+== Materialize a Dashboard
+To create a materialized view for a Dashboard (to improve performance), see xref:viewsheet:ImprovePerformance.adoc[].
+
+

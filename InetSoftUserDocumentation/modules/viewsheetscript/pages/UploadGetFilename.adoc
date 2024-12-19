@@ -1,0 +1,43 @@
+= getFileName()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:UploadProperties.adoc[] for more information about the Upload component.
+====
+
+
+Returns the full server path to a file uploaded on the server using the Upload  component. The returned path and filename can be used, for example, to write the file to a database. See xref:WriteBackToDatabase.adoc[] for information on how to construct a script that writes to a database.
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+if (Upload1.isLoaded()) {
+  alert('File uploaded to ' + Upload1.getFileName())
+}
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+getFileName              // unqualified
+Upload1.getFileName      // qualified
+
+{secondForm}
+====
+
+

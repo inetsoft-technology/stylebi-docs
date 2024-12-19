@@ -1,0 +1,48 @@
+=  CategoricalScale.setFill(Boolean)
+:navtitle: CategoricalScale.setFill()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+Specifies that scale boundaries should be set equal to the extreme data values (leaving no gap at the axis edges).
+
+== Parameter
+Boolean:: `true`: fill axis to edges +
+`false`:  leave gap at edges
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300], ["CT", 50], ["PA", 175]]; //<1>
+graph = new EGraph();
+var elem = new AreaElement("State", "Quantity");
+var sscale = new CategoricalScale("State"); //<2>
+sscale.setFill(true); //<3>
+var qscale = new LinearScale("Quantity");
+var coord = new RectCoord(sscale, qscale); //<4>
+graph.setCoordinate(coord);
+graph.addElement(elem);
+
+
+--
+<1> {dataset}
+<2> Create the `CategoricalScale` object.
+<3> Use `setFill` to fill to edges of axis.
+<4> Assign the scale to a xref:Coordinate.adoc[] object.
+
+
+image:commonscript:CategoricalScaleSetFill.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

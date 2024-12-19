@@ -1,0 +1,42 @@
+= LinearScale
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+The `LinearScale` object contains a linear scale, i.e., a scale that linearly maps numerical values to physical attributes. To create a LinearScale object, call the `LinearScale` constructor.
+
+[source,javascript]
+var qscale = new LinearScale('Last Year','This Year');
+
+You can pass the names of the fields (e.g., ‘Last Year’, ‘This Year’) for which the scale should be generated to the constructor, or specify these later using the inherited xref:ScaleSetFields.adoc[] property.
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale(); //<2>
+qscale.setFields(["Quantity"]);
+var elem = new IntervalElement("State", "Quantity");
+graph.setScale("Quantity", qscale); //<3>
+graph.addElement(elem);
+
+--
+
+<1> {dataset}
+<2> Create the `LinearScale` object.
+<3> Use  xref:EGraph_setScale.adoc[] to add the Scale to the Chart.
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

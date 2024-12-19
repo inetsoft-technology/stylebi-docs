@@ -1,0 +1,40 @@
+= serverTimeZone
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for  properties shared with other components.
+* xref:viewsheet:RadioCheckBoxComboProperties.adoc[]for more information about Form components.
+====
+
+Specifies whether server or client time should be used when the ComboBox is configured to use a *calendar interface* for TimeInstant type data.  (See xref:viewsheet:RadioCheckBoxComboProperties.adoc[] for information on setting the ‘Calendar’ option.)  This property should be set in the *onInit* handler  (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about handlers.)
+
+
+
+
+== Type
+Boolean:: `true`: user server time  +
+`false`: use client time
+
+
+
+
+== Example
+[source,javascript]
+ComboBox1.serverTimeZone = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+serverTimeZone            // unqualified
+ComboBox1.serverTimeZone  // qualified
+
+{secondForm}
+====

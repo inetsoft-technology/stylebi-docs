@@ -1,0 +1,71 @@
+= OvalShapeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:MultiShapeFrame.adoc[]
+* xref:VisualFrame.adoc[]
+====
+
+The `OvalShapeFrame` object contains the shape styles for oval elements of varying aspect ratio. To create a `OvalShapeFrame` object, call the `OvalShapeFrame` constructor.
+
+[source,javascript]
+var frame = new OvalShapeFrame('Total');
+
+
+
+You can pass the name of a field (e.g., ‘Total’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also set this using the xref:viewsheetscript:ChartBindingInfoShapeFrame.adoc[]  syntax in *onRefresh* script . See xref:#Example2[] below.
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Total"], ["NJ",200,30], ["NY",300,15],["PA",150,5]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new OvalShapeFrame("Total"); //<2>
+elem.setShapeFrame(frame); //<3>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the `OvalShapeFrame` object.
+<3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `OvalShapeFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:OvalShapeFramme2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[#Example2]
+== Example 2
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ShapeFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.shapeFrame = new OvalShapeFrame();
+
+--
+
++
+image:commonscript:OvalShapeFrame.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

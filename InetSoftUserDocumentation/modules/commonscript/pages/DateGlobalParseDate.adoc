@@ -1,0 +1,39 @@
+= parseDate(String, format)
+:navtitle: parseDate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Parse a string into a date.
+
+
+== Parameters
+string::			String representation of the date
+format::			Boolean  `true` to parse a timeInstant object, or  a format pattern using the following symbols:
++
+include::partial$dateFormatTable.adoc[]
+
+
+
+
+
+
+
+
+== Examples
+[source,javascript]
+----
+parseDate('2006-08-07', 'yyyy-MM-dd');
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+parseDate(field['Char'], 'yyyy-MM-dd');
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parseDate(parameter.Char, 'yyyy-MM-dd');
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

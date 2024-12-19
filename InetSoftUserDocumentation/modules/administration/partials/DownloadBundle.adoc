@@ -1,0 +1,11 @@
+To determine the elements for which you need to provide a localization, it is helpful to download a sample  *SreeBundle* file. To do this, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *General* page in the left panel, and select the *Localization* page in the right panel.
++
+image:Figure 8.png[]
+
+. Press the btn:[Get User Bundle] button.
+
+This downloads a file called *user_bundle.properties* that contains a list of all  properties that can be localized, including Text IDs in  Dashboards, data source names, and so on.  By adding localized text for all the entries in the file, you can ensure that your localization is complete.

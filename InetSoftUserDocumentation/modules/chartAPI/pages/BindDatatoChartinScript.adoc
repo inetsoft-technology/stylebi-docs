@@ -1,0 +1,57 @@
+= Bind Data to Chart in Script
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$underConstructionAPIRef.adoc[]
+
+There are several ways to bind data to a Chart using script. The following sections present the various approaches.
+
+TIP: It is not necessary to use script to do this.  In fact, the easiest way to bind data to a Chart is to use the Chart Editor (see xref:viewsheet:AddAChart.adoc[]). After you have bound data to the Chart using the Chart Editor, you can proceed to modify the chart using script operations as described in xref:chartAPI:ModifyChartElement.adoc[].
+
+== Bind Data in Component-Level Script
+
+To bind data to a chart from an arbitrary query or Data Worksheet in element-level script, use the xref:commonscript:runQuery.adoc[] function and assign the result to the Chart’s xref:chartAPI:Data.adoc[] or xref:chartAPI:Dataset.adoc[] property.
+
+.Example: Data from arbitrary  Data Worksheet
+[source,javascript]
+Chart1.data = runQuery("ws:global:Examples/AllSales");
+graph = new EGraph();
+var elem = new IntervalElement("State", "Sales");
+graph.addElement(elem);
+
+CAUTION: Use `runQuery()` only in *component-level* script.
+
+
+You can see an example of this approach in xref:CreateChartwithChartAPI.adoc[]. If you want to access a data block in the Data Worksheet on which the current Dashboard is based, you can use the simpler data syntax shown below:
+
+.Example: Data from data block in Dashboard's own Data Worksheet
+[source,javascript]
+Chart1.data = Sales; // “Sales” is the data block name
+graph = new EGraph();
+var elem = new IntervalElement("State", "Sales");
+graph.addElement(elem);
+
+If the data block name contains spaces, use the syntax `viewsheet['data block name']`. See xref:viewsheetscript:AccessDataSourceData.adoc[] for more information about accessing Data Worksheet data in Dashboard script.
+
+
+== Bind Data from Array
+
+You can define a Chart dataset entirely in *component-level* script by setting a JavaScript array as the xref:chartAPI:Data.adoc[] or xref:chartAPI:Dataset.adoc[] property.
+[source,javascript]
+Chart1.data = [["State","Quantity"],["NJ",200],["NY",300]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+graph.addElement(elem);
+
+You can see an example of this approach in xref:chartAPI:ChangeChartScaling.adoc[].
+
+== Bind Data in Dashboard-Level Script
+
+You can  bind the Chart to one of the data blocks available to the Dashboard by using the Chart’s xref:viewsheetscript:ChartQuery.adoc[] property (for example, in *onRefresh* script).
+
+For example, assume that ‘Orders And Returns’ is the name of a data block. The following  *onRefresh* script binds this data block to the Chart.
+[source,javascript]
+Chart1.query = "Orders And Returns";
+Chart1.bindingInfo.xFields = [["Company",Chart.STRING]];
+Chart1.bindingInfo.yFields = [["Total",Chart.NUMBER]];
+
+You can see an example of this approach in xref:ModifyChartDataBinding.adoc[].

@@ -1,0 +1,17 @@
+= Configure Security
+
+
+Follow the  steps below to set up security for the server.
+
+NOTE: Some security operations can only be performed by the *site administrator*, and are not available to *organization administrators*.
+
+. Specify the mechanism for authentication and authorization.  See
+xref:SpecifySecurityProvider.adoc[].
+
+. *_Optional_*: Enable multi-tenancy if you plan to have multiple organizations access the server. See xref:EnableMultiTenant.adoc[].
+
+. Define users, groups, and roles: See xref:CreateUser.adoc[], xref:CreateGroup.adoc[], and xref:CreateRole.adoc[].
+
+. Set permissions: See xref:SetRepositoryPermissions.adoc[] and xref:SetSecurityActions.adoc[].
+
+The following sections discuss these steps in order.

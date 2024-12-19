@@ -1,0 +1,31 @@
+= pieExploded
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Separates the slices of a xref:viewsheet:PieChart.adoc[] by a small gap.
+
+
+
+== Type
+Boolean:: `true`: explode pie +
+`false`: do not explode pie
+
+== Example
+[source,javascript]
+Chart1.pieExploded = true
+
+
+image:commonscript:pieExploded.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+pieExploded          // unqualified
+Chart1.pieExploded   // qualified
+
+{secondForm}
+====

@@ -1,0 +1,90 @@
+= LineElement.setIgnoreNull(Boolean)
+:navtitle: LineElement.setIgnoreNull()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+
+Specifies whether null values should be ignored in order to prevent a gap in the line. {noGetter}
+
+
+
+
+
+
+== Parameters
+Boolean:: `true`: ignore nulls and draw a continuous line +
+`false`:  honor nulls and break line where a null value occurs
+
+
+
+
+
+== Example
+
+.Chart Component Script: Break Line at Null
+[source,javascript]
+--
+dataset = [["State","Quantity"],["Sun",100],["Mon",300],["Tue",null],
+["Wed",400],["Thur",600],["Fri",550],["Sat",200]]; //<1>
+graph = new EGraph();
+elem = new LineElement("State", "Quantity"); //<2>
+elem.setIgnoreNull(false); // <3>
+graph.addElement(elem);//<4>
+--
+
+<1> {dataset}
+<2> Create the `LineElement` object.
+<3> Use `setIgnoreNull` to honor the null.
+<4> Use xref:EGraph_addElement.adoc[] to add the `LineElement` to the Chart.
+
+
+image:commonscript:setIgnoreNull1.png[]
+
+
+.Chart Component Script: Continue Line at Null
+[source,javascript]
+--
+dataset = [["State","Quantity"],["Sun",100],["Mon",300],["Tue",null], \
+["Wed",400],["Thur",600],["Fri",550],["Sat",200]]; //<1>
+graph = new EGraph();
+elem = new LineElement("State", "Quantity"); //<2>
+elem.setIgnoreNull(true); //<3>
+graph.addElement(elem); //<4>
+--
+
+<1> {dataset}
+<2> Create the `LineElement` object.
+<3> Use `setIgnoreNull` to ignore the null.
+<4> Use xref:EGraph_addElement.adoc[] to add the `LineElement` to the Chart.
+
+
+image:commonscript:setIgnoreNull2.png[]
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.setIgnoreNull(true);
+
+--
+=====
+
+
+
+
+

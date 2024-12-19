@@ -1,0 +1,95 @@
+= DefaultTextFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:TextFrame.adoc[]
+====
+
+
+The `DefaultTextFrame` object contains data to display in text form, as well as a mapping between these values and any desired replacement text. To create a `DefaultTextFrame` object, call the `DefaultTextFrame` constructor.
+
+[source,javascript]
+var frame = new DefaultTextFrame('Quantity');
+
+You can pass a field name (e.g., ‘Quantity’) to the constructor in element script , or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. To stylize or reposition text created using a `DefaultTextFrame`, use the xref:GraphElementSetTextSpec.adoc[] and xref:GraphElementSetLabelPlacement.adoc[] options. You can also set this using the xref:viewsheetscript:ChartBindingInfoTextFrame.adoc[]  property syntax in *onRefresh* script . See xref:#Example3[] below.
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",203], ["NY",327]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var spec = new TextSpec();
+var frame = new DefaultTextFrame(); //<2>
+spec.setFont(java.awt.Font('Verdana',java.awt.Font.BOLD, 14));
+frame.setField("Quantity");
+elem.setTextFrame(frame); //<3>
+elem.setTextSpec(spec);
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create the `DefaultTextFrame` object.
+<3> Use xref:GraphElementSetTextFrame.adoc[] to add the `TextFrame` to the element.
+
+image:commonscript:DefaultTextFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+== Example 2
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var cframe = new CategoricalColorFrame();
+var tframe = new DefaultTextFrame(); //<2>
+var spec = cframe.getLegendSpec();
+cframe.setField("State");
+tframe.setText('NJ','New Jersey'); //<3>
+tframe.setText('NY','New York'); //<3>
+spec.setTextFrame(tframe); //<4>
+elem.setColorFrame(cframe);
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create the `DefaultTextFrame` object.
+<3> Use `setText` to set the text mapping in the `TextFrame`.
+<4> Use xref:LegendSpecSetTextFrame.adoc[] to add the `TextFrame` to the legend.
+
+image:commonscript:TextFrame2setText_1.png[]
+
+
+[#Example3]
+== Example 3
+
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:TextFrame.adoc[].
+
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setTextField("Company",Chart.STRING);
+Chart1.bindingInfo.textFrame = new DefaultTextFrame;
+
+--
+
+
+image:commonscript:DefaultTextFrame.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

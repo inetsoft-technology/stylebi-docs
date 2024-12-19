@@ -1,0 +1,37 @@
+= CALC.dollar(number, decimals)
+:navtitle: CALC.dollar()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Converts a numerical value to text format and applies a currency symbol. {CALCExcelFunctionPage}
+
+
+== Parameters
+number::			The value to convert to currency
+decimals::			Number of digits to right of decimal point in the result
+
+
+== Example
+
+----
+CALC.dollar(12345.789, 2);  // returns $12,345.79
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.dollar(field['Price'], 2)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.dollar(parameter.Price, 2)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

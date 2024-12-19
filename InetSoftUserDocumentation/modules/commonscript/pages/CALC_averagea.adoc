@@ -1,0 +1,39 @@
+= CALC.averagea(array)
+:navtitle: CALC.averagea()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the average (arithmetic mean) of the arguments.  {CALCExcelFunctionPage} Text and Boolean values are evaluated as follows:
+[square]
+* Text evaluates to `0`
+* `true` evaluates to `1`
+* `false` evaluates to `0`
+
+== Parameters
+array::			Array of numerical, text, and/or Boolean values to average
+
+
+== Example
+[source,javascript]
+----
+CALC.averagea([1,2,3,4,'asd',true,false]);  // returns 1.5714285714285714
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.averagea(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.averagea(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

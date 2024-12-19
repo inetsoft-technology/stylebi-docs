@@ -1,0 +1,37 @@
+= CALC.tan(number)
+:navtitle: CALC.tan()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the tangent of a number representing an angle in radians. {CALCExcelFunctionPage}
+
+== Parameters
+number::			An angle in radians
+
+
+
+== Example
+[source,javascript]
+----
+CALC.tan(pi()/4)  // returns 0.9999999999999983 (approximately 1)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.tan(field['Angle'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.tan(Slider1.selectedObject)
+CALC.tan(parameter.Angle)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

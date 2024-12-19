@@ -1,0 +1,37 @@
+= rangeSize
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:RangeSliderProperties.adoc[] for more information on user selection editing.
+====
+
+Specifies the minimum slider range for a numerical field, the smallest interval that the user is able to select when interactively adjusting the range.
+
+
+
+== Type
+Number::			Minimum slider range
+
+
+
+
+== Example
+[source,javascript]
+RangeSlider1.rangeSize = 1000;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+rangeSize                  // unqualified
+RangeSlider1.rangeSize     // qualified
+
+{secondForm}
+====
+
+

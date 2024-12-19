@@ -1,0 +1,46 @@
+= bindingInfo.isGroupOthers(field, header)
+:navtitle: isGroupOthers()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the value  set  by xref:CrosstabBindingInfoSetGroupOthers.adoc[] or by the '`Group all others together`' property in the Crosstab Editor.
+
+image:commonscript:bindingInfoSetGroupOthers_1.png[]
+
+
+
+
+
+
+
+== Parameters
+field::			String: Name of ranked column
+header::			`StyleConstant.ROW_HEADER` or `StyleConstant.COLUMN_HEADER`
+Boolean::			`true`: others are grouped together +
+`false`: others are not displayed
+
+
+
+== Example
+[source,javascript]
+var others = Crosstab1.bindingInfo.isGroupOthers('Name',StyleConstant.ROW_HEADER);
+if(others) {
+  Text1.text = 'Others are grouped together.';
+}
+else {
+  Text1.text = 'Others are not displayed.';
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.isGroupOthers             // unqualified
+Crosstab1.bindingInfo.isGroupOthers   // qualified
+
+{secondForm}
+====
+
+

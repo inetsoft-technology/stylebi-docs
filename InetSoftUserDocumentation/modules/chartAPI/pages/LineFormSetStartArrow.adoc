@@ -1,0 +1,48 @@
+= LineForm.setStartArrow(Boolean)
+:navtitle: LineForm.setStartArrow()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+Specifies whether an arrow should be drawn at the start of the line (i.e., at the first point specified for the xref:LineForm.adoc[]).  The corresponding “getter” function is `isStartArrow()`.
+
+== Parameter
+Boolean:: `true`: draw arrow +
+`false`: no arrow
+
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new LineForm(); //<2>
+form.addPoint(new java.awt.Point(0,0));
+form.addPoint(new java.awt.Point(100,100));
+form.setStartArrow(true); //<3>
+form.setColor(java.awt.Color(0xff0000));
+graph.addForm(form); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:LineForm.adoc[] object.
+<3> Use `setStartArrow()` to enable the start arrow.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:LineFormSetStartArrow.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

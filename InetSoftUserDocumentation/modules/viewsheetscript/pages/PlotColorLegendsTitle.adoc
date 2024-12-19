@@ -1,0 +1,28 @@
+= colorLegends.title
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the legend title within a color-key legend (on charts that have *multiple* color legends).
+
+== Type
+String
+
+
+== Examples
+
+[source,javascript]
+Chart1.colorLegends['Sum(Product:Quantity Purchased)'].title = 'Salesperson Color';
+Chart1.colorLegends['Sum(Product:Total)'].title = 'Year Color';
+
+image:commonscript:colorLegendsTitle.png[]
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorLegends['...'].title           // unqualified
+Chart1.colorLegends['...'].title    // qualified
+
+{secondForm}
+====

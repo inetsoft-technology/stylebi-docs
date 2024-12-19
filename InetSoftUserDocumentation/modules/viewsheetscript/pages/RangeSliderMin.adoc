@@ -1,0 +1,42 @@
+= min
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:RangeSliderProperties.adoc[] for more information on user selection editing.
+====
+
+Specifies the minimum slider value. If ‘Single Value’ is selected under the *Data* tab of the ‘Range Slider Properties’ dialog box, the `min` value is a single number or date (as appropriate for the data represented on the Slider). If ‘Composite Value’ is selected under the *Data* tab, the `min` value is an array.
+
+
+== Type
+Number, Date, or Array
+
+== Example
+.Number
+[source,javascript]
+RangeSlider1.min = 10;
+
+.Date
+[source,javascript]
+RangeSlider2.min = new Date("December 31, 2009");
+
+.Composite array
+[source,javascript]
+RangeSlider3.min = ["NJ", "Piscataway"];
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+min                  // unqualified
+RangeSlider1.min     // qualified
+
+{secondForm}
+====
+
+

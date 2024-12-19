@@ -1,0 +1,40 @@
+= Scale.setAxisSpec(spec)
+:navtitle: Scale.setAxisSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies the axis properties for the xref:Scale.adoc[].  The corresponding “getter” function is xref:ScaleGetAxisSpec.adoc[].
+
+
+== Parameter
+spec::			an xref:AxisSpec.adoc[] object
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale("Quantity"); //<2>
+var elem = new IntervalElement("State", "Quantity");
+var spec = new AxisSpec(); //<3>
+spec.setLineColor(java.awt.Color(0xff0000));
+qscale.setAxisSpec(spec); //<4>
+graph.setScale("Quantity", qscale); //<5>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create   the xref:Scale.adoc[] object.
+<3> Create the `AxisSpec` object.
+<4> Use `setAxisSpec` to assign the  `AxisSpec` to the `Scale`.
+<5> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+
+image:commonscript:ScaleSetAxisSpec.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

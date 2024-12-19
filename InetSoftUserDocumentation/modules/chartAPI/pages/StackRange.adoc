@@ -1,0 +1,40 @@
+= StackRange
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:ScaleRange.adoc[]
+====
+
+The `StackRange` object computes the range by “stacking” the data values. To create a `StackRange` object, call the `StackRange` constructor.
+
+[source,javascript]
+var range = new StackRange();
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new LinearScale("Quantity"); //<2>
+var elem = new IntervalElement("State", "Quantity");
+qscale.setScaleRange(new StackRange()); // adds 200+300 <3>
+graph.setScale("Quantity", qscale); //<4>
+graph.addElement(elem);
+
+
+--
+<1> {dataset}
+<2> Create the xref:Scale.adoc[] object.
+<3> Create the xref:StackRange.adoc[] object and assign to the `Scale`.
+<4> Use xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart.
+
+image:commonscript:LinearScaleSetRange_1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

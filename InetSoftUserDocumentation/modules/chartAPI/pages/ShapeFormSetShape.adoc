@@ -1,0 +1,80 @@
+= ShapeForm.setShape(shape)
+:navtitle: ShapeForm.setShape()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+Specifies the type of shape as a xref:GShape.adoc[] or xref:SVGShape.adoc[].  The corresponding “getter” function is `getShape()`.
+
+
+
+== Parameter
+shape::			xref:GShape.adoc[] +
+xref:SVGShape.adoc[] +
+xref:GShapeImageShape.adoc[]
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new ShapeForm(); //<2>
+form.setValues(['NJ',100]);
+form.setShape(GShape.FILLED_TRIANGLE); //<3>
+form.setColor(java.awt.Color(0xff0000));
+form.setSize(new java.awt.Dimension(50,50));
+graph.addForm(form); //<4>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the  xref:ShapeForm.adoc[] object.
+<3> Use `setShape()` to assign a xref:GShape.adoc[].
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:ShapeformSetShape1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+== Example 2
+
+
+.Chart Component Script
+[source,javascript]
+--
+
+
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
+var shape = new GShape.ImageShape();
+shape.setImage(logo);
+var form = new ShapeForm(); //<2>
+form.setValues(['NJ',100]);
+form.setShape(shape); //<3>
+form.setSize(new java.awt.Dimension(150,40));
+graph.addForm(form); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:ShapeForm.adoc[] object.
+<3> Use `setShape()` to assign an `ImageShape`.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:ShapeformSetShape2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

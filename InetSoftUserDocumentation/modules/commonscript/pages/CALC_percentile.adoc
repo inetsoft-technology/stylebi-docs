@@ -1,0 +1,42 @@
+= CALC.percentile(array, k)
+:navtitle: CALC.percentile()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the _k_-th percentile of values in array. The _k_-th percentile is the value below which fraction _k_ of the data are found. For example, _k_=0.5 represents the value below which half (50%) of the data are found, also known as the median.  This CALC function returns the same result as Excel’s PERCENTILE and PERCENTILE.INC functions.
+
+== Parameters
+array::			Array of real values
+k::			Desired percentile
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.percentile([9,7,5,3,1], 0.75);
+// returns 8.0 (75 percent of values fall below 8)
+
+CALC.percentile([9,7,5,3,1], 0.5);
+// returns 5.0 (50 percent of values fall below 5, the median)
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.percentile(TableView1.table['Quantity'],  0.75)
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.percentile(Sales['Quantity'],  0.75);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

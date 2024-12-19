@@ -1,0 +1,53 @@
+= insertRow(row)
+:navtitle: insertRow()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheetscript:WriteBackToDatabase#AccessMostRecentUserModification[Access Most Recent User Modification] to detect recent changes.
+====
+
+
+
+
+For an *Editable Table*, inserts a new blank row prior to the row specified by integer parameter `row`, and adds this new row to the array returned by `getFormRows(ADDED)`. See xref:viewsheet:TableProperties.adoc[] for information on making a Table editable.
+
+
+
+
+
+
+== Parameters
+row::			integer row index
+
+== Example
+[source,javascript]
+----
+// Add new row above row 4:
+TableView1.insertRow(4);
+
+// Set initial values in new row 4:
+TableView1.setObject(4,0,'Enter Name');
+TableView1.setObject(4,1,'Enter Price');
+TableView1.setObject(4,2,'Enter Quantity');
+TableView1.setObject(4,3,'Enter Total')
+
+----
+See xref:TableSetObject.adoc[] for more information about that function.
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+insertRow                 // unqualified
+TableView1.insertRow      // qualified
+
+{secondForm}
+====
+
+

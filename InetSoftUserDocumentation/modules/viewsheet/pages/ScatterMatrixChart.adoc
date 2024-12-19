@@ -1,0 +1,22 @@
+= Scatter Matrix Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$chartNewbieTip.adoc[]
+
+A scatter matrix is a grid of charts in which multiple *measures* are plotted against one another in a pair-wise manner.
+
+include::ROOT:partial$measureTip.adoc[]
+
+image:commonscript:scatterMatrix1.png[]
+
+
+To create a scatter matrix, simply add each measure into *_both_* the ‘X’ and ‘Y’ regions, and then place a *dimension* in the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
+
+include::ROOT:partial$dimensionTip.adoc[]
+
+For example, in the chart below, each of the four measures appears in *_both_* the ‘X’ and ‘Y’ regions, and the dimension is bound in the ‘Color’ region.
+
+image:commonscript:scatterMatrix2.png[]
+
+To hide an axis, right-click the axis and select ‘Hide Axis’ from the context menu. {rightClickOptions} See xref:AxisProperties.adoc[] in xref:DashboardReference.adoc[] for more information about  axis settings.

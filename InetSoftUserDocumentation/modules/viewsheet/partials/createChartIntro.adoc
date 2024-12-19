@@ -1,0 +1,28 @@
+include::ROOT:partial$buttonSnippets.adoc[]
+
+.Open a Chart for Editing...
+[%collapsible]
+====
+Follow the steps below to get started with a new Chart.  See xref:viewsheet:BasicChartingSteps.adoc[] for more details.
+
+. If necessary, create a new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+. From the *Toolbox* panel, drag a Chart component into the Dashboard.
++
+image:addingChart.png[]
+
+. Resize the Chart as desired by dragging the handles.
+image:resizeChartHandle_1.png[]
+
+. Press the ’Edit’ button in the center of the Chart or press the {buttonEdit} in the top-right corner.
++
+image:ChartEditButton.png[]
++
+This opens  the same Visualization Recommender available for creating a new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+. To bypass the Recommender, press the {buttonFullEditor} at the top right to open the Chart Editor.
++
+image:ChartEditorIntro.png[]
+====

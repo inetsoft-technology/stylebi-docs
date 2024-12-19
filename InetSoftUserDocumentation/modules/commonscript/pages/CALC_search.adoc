@@ -1,0 +1,42 @@
+= CALC.search(find_string, search_string, start_num)
+:navtitle: CALC.search()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:StringObjectLastIndexOf.adoc[] to find the final occurrence of a string.
+
+Returns the starting index of the first occurrence of `find_string` within `search_string`. The function returns `-1` if `find_string` is not found. {CALCExcelFunctionPage}
+
+== Parameters
+find_string::			The substring to locate within `search_string`
+search_string::			The string in which to search
+start_num::			Index in `search_string` at which to begin searching
+
+
+== Example
+[source,javascript]
+----
+CALC.search('e','statements', 6);  // returns 7
+
+
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.search('e', field['Label'], 6)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.search('e', parameter.Label, 6)
+----
+
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

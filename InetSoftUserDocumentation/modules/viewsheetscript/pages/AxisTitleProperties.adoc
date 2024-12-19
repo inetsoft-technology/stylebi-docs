@@ -1,0 +1,9 @@
+= Axis Title Properties
+
+
+The topics in this section describe properties are available for axis  titles.  Title properties should be prefixed by `xTitle`, `yTitle`, `x2Title`, or `y2Title`.
+
+== Example
+[source,javascript]
+Chart1.xTitle.text = "New Jersey Employees";
+Chart1.yTitle.text = "New Jersey Sales";

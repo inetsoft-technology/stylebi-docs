@@ -1,0 +1,45 @@
+= IntervalElement
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+The `IntervalElement` object contains the visual elements for bar charts and range visualization. To create a new `IntervalElement` object, call the IntervalElement constructor.
+
+[source,javascript]
+var elem = new IntervalElement("State", "Quantity");
+
+You can pass a set of fields as input to the constructor (e.g., ‘State’, ‘Quantity’), or specify these later using the  xref:GraphElementAddDim.adoc[] and  xref:GraphElementAddVar.adoc[] methods.
+
+
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity"); //<2>
+graph.addElement(elem); //<3>
+--
+
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use xref:EGraph_addElement.adoc[] to add the `IntervalElement` to the Chart.
+
+
+image:commonscript:IntervalElement.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

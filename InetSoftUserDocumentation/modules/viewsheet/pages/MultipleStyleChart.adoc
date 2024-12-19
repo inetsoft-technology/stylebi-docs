@@ -1,0 +1,52 @@
+= Multiple Style Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+You can assign distinct styles (e.g., line, bar, point) to individual measures on a chart.
+
+
+include::ROOT:partial$measureTip.adoc[]
+
+image:commonscript:multipleChartStyle.png[]
+
+To create such a multiple-style chart, follow the steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Create a Chart with multiple measures. See xref:MultipleMeasureChart.adoc[] for more information.
+
+. Press the {buttonSelectChartStyle}.
++
+image:commonscript:SelectChartStyleButton_1.png[]
+
+. In the chart styles panel, enable the ‘Multiple Styles’ option (below the chart style options), and press {buttonApply}.
++
+image:commonscript:MultipleStyles_1.png[]
+
+. Press the {buttonSelectChartStyle} next to the  measure you wish to change.
++
+image:commonscript:Chart Select Chart Type2_1.png[]
++
+This opens the chart styles panel for the specified measure.
++
+image:commonscript:SelectChartStyleButton2_1.png[]
+
+. Click a chart type to select it, and then press the {buttonApply}. (You can also double-click the desired chart type.) This applies the style individually to the specified measure.
++
+NOTE: Only  compatible style combinations can be selected. (For example, ‘Pie’  and ‘Line’  are not compatible styles, and *cannot* be selected together.)
+
+. {finishEditing}
+
+include::partial$addTitlesLegend.adoc[]
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard provides an example of a multiple style chart (Bar and Line together).
+
+image:viewsheet:galleryDataTip2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****

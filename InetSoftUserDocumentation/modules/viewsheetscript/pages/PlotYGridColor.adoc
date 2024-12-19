@@ -1,0 +1,34 @@
+= yGridColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the Y-axis grid color.
+
+
+
+
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.yGridColor = [255,0,0];
+Chart1.yGridColor = {r:255,g:0,b:0};
+
+
+image:commonscript:yGridColor.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+yGridColor          // unqualified
+Chart1.yGridColor   // qualified
+
+{secondForm}
+====

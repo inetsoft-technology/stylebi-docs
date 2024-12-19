@@ -1,0 +1,29 @@
+= contourBandwidth
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+The area over which to calculate density for a  xref:viewsheet:ScatterContourChart.adoc[] or xref:viewsheet:ContourMapChart.adoc[]. A larger number produces contours that span larger areas.
+
+== Type
+Integer
+
+== Example
+[source,javascript]
+Chart1.contourBandwidth = 10;
+
+image:commonscript:contourBandwidth.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+contourBandwidth         // unqualified
+Chart1.contourBandwidth  // qualified
+
+{secondForm}
+====

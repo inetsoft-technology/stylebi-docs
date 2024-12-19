@@ -1,0 +1,46 @@
+= Math.min(num1, num2 [, ..., numN])
+:navtitle: Math.min()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_min.adoc[] for the preferred version from the CALC library.
+====
+
+
+Return the minimum of the specified values. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min[Math.min()] method, and *must* be used with the `Math` qualifier, `Math.min()`.
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+Math.min(2,3);  // returns 2
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+Math.min(field['Col1'], field['Col2'], field['Col3'], ...)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+Math.min(parameter.param1, parameter.param2, parameter.param3, ...)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

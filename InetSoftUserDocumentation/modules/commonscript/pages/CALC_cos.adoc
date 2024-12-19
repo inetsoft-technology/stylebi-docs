@@ -1,0 +1,34 @@
+= CALC.cos(number)
+:navtitle: CALC.cos()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the cosine of a number representing an angle in radians. {CALCExcelFunctionPage}
+
+== Parameters
+number::			An angle in radians
+
+== Example
+[source,javascript]
+----
+CALC.cos(pi())  // returns -1.0
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.cos(field['Angle'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.cos(Slider1.selectedObject)
+CALC.cos(parameter.Angle)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

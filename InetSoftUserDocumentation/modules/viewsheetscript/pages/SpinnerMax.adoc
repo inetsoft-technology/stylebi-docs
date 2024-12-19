@@ -1,0 +1,36 @@
+= max
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+The largest value that the Spinner can represent. The user will not be able to use the Spinner to enter a larger value.
+
+
+
+== Type
+Number::			Value of highest Spinner input
+
+
+
+
+== Example
+[source,javascript]
+Spinner1.max = 250;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+max              // unqualified
+Spinner1.max     // qualified
+
+{secondForm}
+====
+
+

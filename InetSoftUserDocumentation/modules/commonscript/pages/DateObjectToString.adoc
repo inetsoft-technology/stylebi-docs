@@ -1,0 +1,29 @@
+= Date.toString()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to return a date in string format.   See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString[Date.toString()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var dstr = d.toString(); // returns Thu Feb 23 2023 17:25:40 GMT-0000 (UTC)
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.toString();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.toString();
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

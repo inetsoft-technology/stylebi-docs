@@ -1,0 +1,29 @@
+= bindingInfo.getSizeField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoSetSizeField.adoc[]  to set the binding information.
+
+Returns the field bound to the xref:chartAPI:SizeFrame.adoc[] (size coding).
+
+
+
+
+
+
+== Returns
+String::			Field name used for size-coding
+
+
+
+== Example
+[source,javascript]
+--
+var sfield = Chart1.bindingInfo.getSizeField();
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

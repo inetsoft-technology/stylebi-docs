@@ -1,0 +1,53 @@
+= TitleSpec.setLabel(value)
+:navtitle: TitleSpec.setLabel()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the title text.  The corresponding “getter” function is `getLabel()`.
+
+
+
+
+== Parameter
+value::			 String containing the label
+
+
+== Example
+
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var spec = new TitleSpec(); //<2>
+spec.setLabel("X Title"); //<3>
+graph.setXTitleSpec(spec); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:TitleSpec.adoc[] object.
+<3> Use `setLabel()` to assign the  label to the `TitleSpec`.
+<4> Use xref:EGraph_setXTitleSpec.adoc[] to assign the `TitleSpec` to the Chart.
+
+image:commonscript:EGraphaddsetXTitleSpec_1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getXTitleSpec.adoc[] {circle1} to obtain a handle to the desired xref:chartAPI:TitleSpec.adoc[]. For example:
+
+[source,javascript]
+--
+var spec = graph.getXTitleSpec(); //<1>
+spec.setLabel("X Title");
+
+--
+=====

@@ -1,0 +1,221 @@
+= Manage Scheduled Cycles
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Monitor and manage scheduled cycles using the `:schedule` or equivalent `:sch` command.  This command has actions to add and edit cycles, as well as actions to get the current status of cycles.
+
+
+include::partial$runCommand.adoc[]
+
+include::partial$adminConsoleOptionalParams.adoc[]
+
+
+[#ListCycles]
+== List Cycles
+The `list-cycles` action returns a list of all cycles. {connectRepositoryNote}
+
+=== Parameter
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+ :sch list-cycles --organizationid organization0
+
+
+== Create a New Cycle
+The `add-cycle` action creates a new cycle. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the cycle to create.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+conditions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.sree.web.api.schedule.ScheduleCondition] instances. The `ScheduleCondition` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Schedule
+import java.time.OffsetDateTime
+def condition1 = [
+  Schedule.timeCondition {
+    type 'EVERY_DAY'
+    hour 11
+    minute 25
+    second 0
+    weekdayOnly true
+    timeZone 'Asia/Shanghai'
+  }
+]
+def cycle1 = Schedule.cycle {
+  name 'test1'
+  startNotify true
+  startEmail 'joe@inetsoft.com'
+  endNotify false
+  endEmail 'null'
+  failureNotify false
+  failureEmail 'null'
+  exceedNotify false
+  exceedEmail 'null'
+  threshold 0
+}
+:sch add-cycle test cycle1 condition1 --organizationid organization0
+
+
+
+
+== Get Information About Cycle
+The `get-cycle` action returns information about an existing  cycle. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the cycle.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:sch get-cycle Cycle1 --organizationid organization0
+
+
+
+
+== Modify  Cycle Properties
+The `update-cycle` action allows you to modify the properties of an existing  cycle. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the cycle.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+task:: The name of a variable that contains an https://integration-stylebi-1.k8s.inetsoft.com/api/public/api-docs.html#post-/api/public/cycle[inetsoft.web.api.schedule.Cycle] instance. The `Cycle` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+
+
+=== Example
+.Rename  “test”  to “test123” and enable notification.
+[source,groovy]
+import inetsoft.shell.dsl.Schedule
+import java.time.OffsetDateTime
+def cycle1 = Schedule.cycle {
+  name 'test123'
+  startNotify true
+  startEmail 'joe@inetsoft.com'
+  endNotify false
+  endEmail 'null'
+  failureNotify false
+  failureEmail 'null'
+  exceedNotify false
+  exceedEmail 'null'
+  threshold 0
+}
+:sch update-cycle test cycle1 --organizationid organization0
+
+
+
+
+
+== Remove Cycle
+The `remove-cycle` action deletes an existing cycle. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the cycle.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:sch remove-cycle test --organizationid organization0
+
+
+
+
+
+
+
+== List Cycle Conditions
+The  `list-cycle-conditions` action returns the conditions assigned for a cycle. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the cycle.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+=== Example
+[source,groovy]
+:sch list-cycle-conditions test --organizationid organization0
+
+
+
+
+== Add New Condition to Cycle
+The `add-cycle-condition` action applies a new condition to a cycle. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the cycle.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+condition:: The name of a variable that contains a https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the condition to be added. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Schedule
+import java.time.OffsetDateTime
+def condition1 = Schedule.timeCondition {
+  type 'EVERY_DAY'
+  hour 11
+  minute 25
+  second 0
+  weekdayOnly true
+  timeZone 'Asia/Shanghai'
+}
+:sch add-cycle-condition test condition1 --organizationid organization0
+
+
+
+
+
+== Get Information About Cycle Condition
+The `get-cycle-condition` action returns information about the   condition for a chained cycle. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the cycle.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+index:: The zero-based index of the condition.
+
+=== Example
+[source,groovy]
+:sch get-cycle-condition test 0 --organizationid organization0
+
+
+
+
+== Modify  Cycle Condition
+The `update-cycle-condition` action allows you to modify an existing condition of a chained cycle.  {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the cycle.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+index:: The zero-based index of the condition.
+condition:: The name of a variable that contains an https://integration-stylebi-1.k8s.inetsoft.com/api/public/api-docs.html#post-/api/public/cycle/-cycle-/conditions[inetsoft.web.api.schedule.CycleCondition] object that defines the updated condition properties. The `CycleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+
+=== Example
+[source,groovy]
+import inetsoft.shell.dsl.Schedule
+import java.time.OffsetDateTime
+def condition1 = Schedule.timeCondition {
+  type 'EVERY_DAY'
+  hour 11
+  minute 25
+  second 0
+  weekdayOnly true
+  timeZone 'Asia/Shanghai'
+}
+:sch update-cycle-condition test 0 condition1 --organizationid organization0
+
+
+
+
+== Remove  Cycle Condition
+The `remove-cycle-condition` action removes an existing condition from a chained cycle. {connectRepositoryNote}
+
+=== Parameter
+name:: The name of the cycle.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+index:: The zero-based index of the condition.
+
+=== Example
+[source,groovy]
+:sch remove-cycle-condition test 0 --organizationid organization0
+
+
+

@@ -1,0 +1,36 @@
+= alignment
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,  caption=See Also]
+xref:viewsheet:VisualFormat.adoc[] for more information about alignments.
+
+Specifies the horizontal and vertical alignment of an element. Its value is a bitwise OR of a horizontal alignment option and a vertical alignment option.
+
+|===
+|Horizontal Alignment|Vertical Alignment
+
+|`StyleConstant.H_LEFT`|`StyleConstant.V_TOP`
+|`StyleConstant.H_CENTER`|`StyleConstant.V_CENTER`
+|`StyleConstant.H_RIGHT`|`StyleConstant.V_BOTTOM`
+|`StyleConstant.H_CURRENCY`|`StyleConstant.V_BASELINE`
+|===
+
+== Type
+integer
+
+
+
+== Example
+[source,javascript]
+alignment = StyleConstant.H_CENTER | StyleConstant.V_CENTER;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+alignment               // unqualified
+Component1.alignment    // qualified
+
+{secondForm}
+====

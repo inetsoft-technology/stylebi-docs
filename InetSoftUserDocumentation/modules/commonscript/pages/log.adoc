@@ -1,0 +1,23 @@
+= log(string)
+:navtitle: log()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheet:VisualComposerConsole.adoc[] for information about the *Console* panel.
+* xref:administration:Logging.adoc[] in xref:administration:ManageServer.adoc[] for information about the server log files.
+====
+
+Prints a log message to the server log.
+
+== Parameters
+string::			log message string
+
+
+==  Example
+
+[source,javascript]
+log('onLoad execution completed...');

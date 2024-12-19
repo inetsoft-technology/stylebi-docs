@@ -1,0 +1,43 @@
+= PowerScale
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:LinearScale.adoc[]
+* xref:Scale.adoc[]
+====
+
+The `PowerScale` object contains a scale that maps values to physical attributes by raising them to a specified exponent. To create a `PowerScale` object, call the `PowerScale` constructor.
+
+[source,javascript]
+var qscale = new PowerScale('Last Year', 'This Year');
+
+You can pass the names of the fields (e.g., ‘Last Year’, ‘This Year’) for which the scale should be generated to the constructor, or specify these later using the inherited xref:ScaleSetFields.adoc[] property.
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var qscale = new PowerScale(); //<2>
+qscale.setFields(["Quantity"]); //<3>
+var elem = new IntervalElement("State", "Quantity");
+qscale.setExponent(0.5);
+graph.setScale("Quantity", qscale); //<4>
+graph.addElement(elem);
+
+--
+
+<1> {dataset}
+<2> Create the `PowerScale` object.
+<3> Compute the  `PowerScale`  using the   "`Quantity`" field.
+<4> Use  xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart for the  "`Quantity`" field.
+
+
+image:commonscript:PowerScale.png[]
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

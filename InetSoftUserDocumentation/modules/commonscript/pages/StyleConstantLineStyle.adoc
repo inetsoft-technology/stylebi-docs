@@ -1,0 +1,37 @@
+= Line Style
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The line style constants can be used in all properties requiring line style constants, such as separator style, tab fill style, and table borders.
+
+[cols="1,2"]
+|===
+|Line Style|Description
+
+|StyleConstant.NO_BORDER|No line
+|StyleConstant.ULTRA_THIN_LINE|Very thin line,  ¼ point width
+|StyleConstant.THIN_THIN_LINE|Very thin line, ½  point width
+|StyleConstant.THIN_LINE|Thin line, 1 point width
+|StyleConstant.MEDIUM_LINE|Medium width line
+|StyleConstant.THICK_LINE|Thick width line
+|StyleConstant.DOUBLE_LINE|Double line
+|StyleConstant.RAISED_3D|Raised 3D line
+|StyleConstant.LOWERED_3D|Lowered 3D line
+|StyleConstant.DOUBLE_3D_RAISED|Raised double 3D line
+|StyleConstant.DOUBLE_3D_LOWERED|Lowered double 3D line
+|StyleConstant.DOT_LINE|Dotted line
+|StyleConstant.DASH_LINE|Dash line
+|StyleConstant.MEDIUM_DASH|Medium size dash line
+|StyleConstant.LARGE_DASH|Large size dash line
+|StyleConstant.BREAK_BORDER|A special line style that signals a page break in a table row. This line style can only be used in the table border.
+|===
+
+
+
+
+== Type
+Integer
+
+== Example
+[source,javascript]
+style = StyleConstant.DOT_LINE;

@@ -1,0 +1,409 @@
+= Group and Aggregate Data
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following sections explain how to  group and aggregate data in a Data Worksheet. When you perform grouping and aggregation in a Data Worksheet, *_only_* the aggregated data will be available for further manipulation and presentation. This approach may be most efficient when you want to use the aggregated data across many Dashboards.
+
+
+[NOTE]
+====
+To preserve the flexibility of presenting both the detail and aggregated data, you can perform the aggregation at the Dashboard level. To group and aggregate data in a Dashboard, see the sections below in xref:viewsheet:VisualizeYourData.adoc[].
+
+[square]
+* To group and aggregate data in  chart, see xref:viewsheet:GroupDataByDimension.adoc[].
+* To group and aggregate data in a  crosstab, see xref:viewsheet:AddTable.adoc[].
+* To group and aggregate data as a  KPI, see xref:viewsheet:AddAKPI.adoc[].
+====
+
+== Group and Aggregate in a Regular Data Block
+
+To group and aggregate data in a regular data block, follow the steps below:
+
+[.videotitle]
+.Watch Video
+[%collapsible]
+=====
+.Group and aggregate in a regular data block...
+video::300361890[vimeo,640,400]
+include::ROOT:partial$videoVersion.adoc[]
+=====
+
+//ifdef::si[]
+
+. Create the data block you want to group. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
+//endif::[]
+
+////
+ifdef::testdrive[]
+. Open your data set for editing. See Edit a Data Set. XXXX
+endif::[]
+////
+
+. Click on the data block to select it.
+. In the bottom panel, press the {buttonGroupAndAggregate}. This opens the *Group and Aggregate* panel.
++
+image:Grouping_WS1.png[]
+
+. Use the menus to select grouping fields and summary fields.  For summary fields, select the desired method of aggregation (‘Sum’, ‘Average’, etc.). For date-type fields, select the desired level of date grouping (‘Year’, ‘Month’, etc.).  *_Optional:_* Select ‘As time series’ to force the display of date groups even when the group has no data (null).
++
+image:grouping2_1.png[]
+
+. *_Optional:_*  To display the measure as a percentage, use the ‘Percentage’ menu to specify either ‘Grand Total’ or ‘Subtotal’, to compute the percentages based on global total or group totals, respectively.
+
+. Press btn:[OK] to close the dialog box. The data block is now grouped, and only the grouping and summary columns are returned in the result set.
++
+image:grouping3.png[]
+
+. To view the grouped and aggregated data, press the {buttonChangeView} in bottom panel, and choose {buttonLiveDataView}.
++
+image:grouping4.png[]
+
+. Save the Data Worksheet by pressing the {buttonSave} in the toolbar or press kbd:[Ctrl+S] on the keyboard.
+
+////
+ifdef::testdrive[]
+. Close the Visual Composer tab in the browser and return to the Portal. Proceed to XXXXX to create a visualization based on the data set.
+endif::[]
+////
+
+include::ROOT:partial$CreateDashboard.adoc[]
+
+== Group and Aggregate in a Crosstab Data Block
+A crosstab (pivot table) in a Data Worksheet can have one column header, one or more row headers, and one measure. The values at the row-column intersections of the crosstab table represent (aggregates) of the measure.
+
+NOTE: You can also create a crosstab (with more than one column header) in a Dashboard. See xref:viewsheet:AddTable.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].
+
+To create a crosstab from an existing data block, follow these steps.
+
+//ifdef::si[]
+
+. Create the data block you want to group. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
+//endif::[]
+
+////
+ifdef::testdrive[]
+. Open your data set for editing. See Edit a Data Set. XXXX
+endif::[]
+////
+
+. Click on the data block to select it.
+. In the bottom panel, press the {buttonGroupAndAggregate}.
++
+image:groupAndAggregateButton_1.png[]
++
+This opens the *Group and Aggregate* panel.
+
+. In the ‘Group and Aggregate’ panel, press btn:[Switch to Crosstab].
++
+image:CrosstabDialog2.png[]
++
+The ‘Group and Aggregate’ panel changes to the crosstab view.
++
+image:CrosstabDialog.png[]
+
+. In the ‘Row Header’ panel, select one or more fields from the left menus. For date-type fields, select the desired level of date grouping (‘Year’, ‘Month’, etc.). *_Optional:_* Select ‘As time series’ to force the display of date groups even when the group has no data (null).
+. In the ‘Column Header’ panel, select a field from the left menu. For date-type fields, select the desired level of date grouping (‘Year’, ‘Month’, etc.).  *_Optional:_* Select ‘As time series’ to force the display of date groups even when the group has no data (null).
++
+image:CrosstabDialog3.png[]
+
+. *_Optional:_*  For each selected field in the ‘Row Header’ and ‘Column Header’ panels, select a named grouping (user-defined grouping) from the corresponding right menu.  See xref:NamedGrouping[] for  information on how to create a new named grouping.
+
+. In the ‘Aggregate’ panel, select a measure column from the left menu. This is the column whose values will be summarized. Select the aggregation method from the right menu.
++
+If you select a bivariate aggregation measure (e.g., ‘Correlation’, ‘Weighted Average’, etc.), select the second operand (column) from the ‘with’ menu.
+. *_Optional:_*  To display the measure as a percentage of the grand total, select the ‘Percentage’ option. Press btn:[OK] to create the crosstab.
+
+
+. Save the Data Worksheet by pressing the {buttonSave} in the toolbar or press kbd:[Ctrl+S] on the keyboard.
+
+////
+ifdef::testdrive[]
+. Close the Visual Composer tab in the browser and return to the Portal. Proceed to XXXXX to create a visualization based on the data set.
+endif::[]
+////
+
+include::ROOT:partial$CreateDashboard.adoc[]
+
+[#UnpivotCrosstab]
+== Unpivot a Crosstab
+
+In some cases it is useful to _unpivot_ a data block from crosstab form into normal “flat” table form. This operation converts the column headers into an additional ‘Dimension’ column.
+
+
+NOTE: See xref:UploadData.adoc[] for information on how to unpivot a crosstab table during import.
+
+
+To unpivot a crosstab, follow the steps below:
+
+. Right-click the crosstab data block, and select ‘Unpivot’ from the context menu.  {rightClickOptions} This opens the ‘Unpivot Data’ panel.
+. In the ‘Levels of Row Headers’ field, enter the number of columns containing row headers.
+. Press btn:[OK] to close the panel.
+
+This creates a new data block that contains the same data from the original crosstab but in flat form (i.e., with column headers converted to an independent ‘Dimension’ column). The unpivoted data block remains linked to the original crosstab so that changes to data in the crosstab are automatically propagated to the new data block.
+
+To *change the level* of row headers at a later time, right-click the data block, and select ‘Edit Pivot Level’ from the context menu. To set the data type of a column, press the {buttonActions} in the column header and select ‘Column Type’. See xref:EnterData.adoc[] for more information about ‘Column Type’ settings.
+
+.Example: Unpivot a Crosstab
+****
+To understand how to unpivot a crosstab, first create a crosstab by following the steps below:
+
+. Create a new Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
+
+. From the left panel, drag the ‘Sales Explore’ Data Worksheet onto an empty region in the right panel. This creates the data block ‘Sales1’.
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
++
+image:importWorksheet_2.png[]
++
+You will use this table to create a crosstab.
+. Press the {buttonGroupAndAggregate} in the bottom panel. This opens the ‘Group and Aggregate’ panel.
++
+image:groupAndAggregateButtonExp.png[]
+
+. Press the btn:[Switch to Crosstab] button at the bottom of the panel.
++
+image:groupAndAggregateButtonExp2.png[]
++
+This displays the crosstab binding interface.
+. In the ‘Row Header’ region, select the following two fields: ‘Category’ and ‘Company’.
+. In the ‘Column Header’ region, select the ‘Date’ field.
+. In the menu next to the ‘Date’ field, select ‘Year’.
+. In the ‘Measure’ region, select the ‘Total’ field.
++
+image:Unpivot Crosstab1.png[]
+
+. Press btn:[OK]. This converts the data block to a crosstab.
+. In the bottom panel, press the {buttonChangeView} and select {buttonLiveDataView} from the menu. (See xref:PreviewData.adoc[].)
++
+image:dragCrosstab.png[]
+
+This crosstab has two levels of row headers (‘Category’ and ‘Company’), and one level of column headers (‘Order Date’, broken out by year).
+
+You will now *_unpivot_* the crosstab to create a flat table that contains the same data. Follow the steps below:
+
+. Right-click the data block and select ‘Unpivot’ from the context menu. {rightClickOptions} This opens the ‘Unpivot Data’ dialog box.
++
+image:Unpivot Crosstab3.png[]
+
+. In the ‘Unpivot Data’ dialog box, enter a value of “2” for the ‘Levels of row headers’ value. (The two levels are ‘Category’ and ‘Company’.)
++
+image:Unpivot Crosstab5.png[]
+
+. Press btn:[OK]. This creates a new data block containing the unpivoted (flattened) data.
+. In the bottom panel, press the {buttonChangeView} and select {buttonLiveDataView} from the menu. (See xref:PreviewData.adoc[].)
++
+image:Unpivot Crosstab4.png[]
+
+Observe that the unpivoting operation transforms the values of the column header in the crosstab (‘Date’) into a new column called ‘Dimension’. The new unpivoted table retains the row headers of the original crosstab in the first two columns (‘Category’ and ‘Company’), but now repeats each combination of ‘Category’ and ‘Company’ for each value of ‘Date’.
+
+The data presented in the unpivoted table is the same as the data presented in the original crosstab. However, the flattened version may be more conducive to certain data operations such as trending.
+****
+
+[#GroupDatabyNumericRange]
+== Group Data by Numeric Range
+You can group numerical data (without aggregating) by applying common labels to a specified numeric range using a numeric range column. A numeric range column groups numeric data into a predefined set of bins or ranges, for example:
+
+****
+- Less than 5
+- 5 to 10
+- 10 to 15
+- 15 to 20
+- Greater than 20
+****
+
+You can create a range column for any numeric column in a data block. To create a numeric range column, follow these steps:
+
+. Click the data block in the top panel to select it.
+. In the bottom panel, right-click the header of the column (*numeric-type column only*) for which you want to create a range column, and select the ‘New Range Column’ option from the context menu. {rightClickOptions}
++
+image:numericRangeDialog_2.png[]
++
+This opens the ‘Numeric Range Option’ panel. Here you can specify the different benchmarks defining the range.
++
+image:numericRangeDialog.png[]
+
+. Enter a name for the new range column.
++
+include::ROOT:partial$duplicateNames.adoc[]
+
+. Enter a benchmark value into the ‘Value Range’ field, and press the ‘Add’ button. Repeat until all desired benchmarks have been entered.
+. Select the ‘Less Than Min’ checkbox to create a bin for all values that fall below the minimum benchmark. If you do not select this option, those values are classified as “Others.”
+. Select the ‘Greater Than Max’ checkbox to create a bin for all values that fall above the maximum benchmark. If you do not select this option, those values are classified as “Others.”
+. Select the ‘Upper Inclusive’ checkbox to include the specified upper boundary of each range within the range. (Otherwise, the upper boundary is included in the adjacent range.)
+. Press btn:[OK] to close the dialog box.
+
+This creates a new column with values representing the specified ranges.
+
+.Example: Numeric Range Column
+****
+Consider the sample ‘ProductSales’ Data Worksheet, which contains a data block ‘SalesByDate’ that returns month-by-month sales. You can define a range column for the ‘Total’ field that places each amount into a predefined range or bin.
+
+. Open the ‘ProductSales’ Data Worksheet in Visual Composer.
++
+include::ROOT:partial$ProductSalesWorksheet.adoc[]
++
+//ifdef::si[]
+
+For information on how to open a Data Worksheet, see xref:EditDataWorksheet.adoc[].
+//endif::[]
+
+////
+ifdef::testdrive[]
+For information on how to open a Data Worksheet, see  Edit a Data Set.
+endif::[]
+////
+
+. Right-click the ‘SalesByDate’ data block and select ‘Set as Primary’ from the context menu. {rightClickOptions} This makes the ‘SalesByDate’ data block visible to other Data Worksheets.
+
+. Press the {buttonSave} to save  the ‘ProductSales’ Data Worksheet.
+
+. Create a new Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
+
+. Select the ‘ProductSales’ Data Worksheet in the left panel, and drag it into the new Data Worksheet. This adds the ‘SalesByDate’ data block to the new Data Worksheet, and renames it to ‘SalesByDate1’.
+. Click on the ‘SalesByDate1’ data block to select it.
+. In the bottom panel, right-click the ‘Total’ column, and select ‘New Range Column’. {rightClickOptions} This opens the ‘Numeric Range Option’ dialog box, which allows you to specify the desired thresholds.
++
+image:rangeColumnExp1.png[]
+. Enter the name “Revenue Range”.
+. Deselect the ‘Less Than Min’ and ‘Greater Than Max’ options.
+. Enter the first threshold, 0, into the ‘Value Range’ field and press btn:[Add].
+. Enter the next three thresholds, pressing btn:[Add] after each one: 10000, 50000, 100000.
++
+image:numericRangeDialogFilled.png[]
++
+This creates the three ranges: 0-10,000, 10,000-50,000, and 50,000-100,000.
+
+. In the field to the left of the ‘0-10,000’ range, enter the new label “Low”. Repeat to relabel the 10,000-50,000 range as “Medium” and the 50,000-100,000 range as “High”.
++
+image:numericRangeDialogRelable.png[]
+
+. Press btn:[OK] to close the panel.
+. Press the {buttonChangeView} and select {buttonLiveDataView} to preview the data block. (See xref:PreviewData.adoc[] for instructions.) Note that each cell in the ‘Total’ column has a corresponding range in the ‘Revenue Range’ column. The values that lie outside the specified ranges are labeled ‘Others’.
++
+image:numericRangeDialogResult.png[]
+. *_Optional:_*  Instead of defining a fixed minimum and maximum value (750,000-10,000,000), you can keep the numeric range open-ended. Follow the steps below:
+.. Open the ‘Numeric Range Option’ dialog box by pressing the {buttonNumericRange} in the range column header in the bottom panel.
++
+image:numericRangeDialogReopen.png[]
+.. Select the ‘Greater than Max’ option, enter a label, and press btn:[OK].
++
+image:numericRangeDialogLessThanMin.png[]
+.. Preview the data block and note that the values outside the specified range (formerly labeled ‘Others’) are now labeled ‘Insane’.
+****
+
+[#GroupDatabyDateRange]
+== Group Data by Date Range
+
+You can group date data (without aggregating) by applying common labels to a specified date range using a _date range column_. A date range column groups dates into a fixed set of date bins. You can create a range column for any date column in a data block.
+
+To create a *date range* column, follow these steps:
+
+. Click the data block in the top panel to select it.
+. In the bottom panel, right-click the header of the column (*date-type column only*) for which you want to create a range column, and select the ‘New Range Column’ option from the context menu. {rightClickOptions}
++
+image:dateRangeDialog1.png[]
++
+This opens the ‘Date Range Option’ panel. Here you can specify the date grouping.
++
+image:dateRangeDialog2.png[]
+. Enter a name for the new range column.
++
+include::ROOT:partial$duplicateNames.adoc[]
+. Select the desired partitioning. There are five date ranges available for the date range column:
++
+****
+* ‘Year’: A number in the range 0000-9999
+* ‘Quarter’: A number in the range 1-4
+* ‘Month’: A number in the range 0-11
+* ‘Day of Week’: A number in the range 1-7
+* ‘Day of Month’: A number in the range 1-31
+****
+
+. Press btn:[OK].
+
+[id=NamedGrouping]
+== Create a Named Grouping
+The default grouping procedure simply partitions a column based on its distinct values. For example, if a column contains state abbreviations CA, NY, and WA, then the default grouping produces one group for CA, one group for NY, and one group for WA. To create a different partition, use a named grouping. A _named grouping_ is a  user-defined grouping that   partitions the data into the desired groups according to a reusable set of custom conditions (i.e., rules).
+
+NOTE: You can also create a custom grouping in a Chart or Crosstab at the Dashboard level. See xref:viewsheet:GroupDataByDimension.adoc[] and xref:viewsheet:AddTable.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].
+
+To create a named grouping, follow these steps:
+
+. Press the {buttonCreateObject} in the toolbar, and select {buttonGrouping}.
+This opens the ‘Grouping’ dialog box.
++
+image:newObjectGrouping.png[]
+
+. In the ‘Name’ field, enter a name for the grouping assembly. This is the title of the grouping object in the Data Worksheet.
++
+include::ROOT:partial$duplicateNames.adoc[]
+
+. If you want the grouping to be accessible to all columns of a certain data type, select the desired data type from the ‘Type’ menu.
++
+For example, you could use the ‘starting with’ operator to define a grouping based on initial letter (i.e., A, B, C, etc.). If you specified type ‘String’ for this grouping, you could apply the grouping to any column of that type in a Data Worksheet. This would allow you to reuse the same alphabetical grouping for customer names, company names, product descriptions, and any other column that has ‘String’ type data.
+. If you want the grouping to be applicable only to a particular column or attribute of a particular data source, select the desired data source from the ‘Only for’ menu. Select the desired column from the ‘Attribute’ menu.
++
+You can select a column or attribute from any accessible data source, not restricted to those in the current Data Worksheet. The grouping defined for this column or attribute will then be available wherever the column or attribute is used in a Data Worksheet.
+
+. Specify the conditions that define membership in each group of the User defined Grouping:
++
+Press the {buttonEMAdd}  button to add a new group. This opens the ‘Add Condition List’ dialog box. (This is the same as the dialog box used for adding advanced conditions to data blocks. See xref:FilterData.adoc[] for information on how to construct a filter.)
+
+. In the ‘Group Name’ field, enter the name of the group you wish to define. (For example, “East Coast states”.)
+. Enter the conditions that define membership in this particular group, and press btn:[OK].
+. Repeat the above three steps for each group you want to add to the grouping.
+. In the ‘Grouping’ dialog box, choose ‘Group all others together’ to create a default group called “Others” that will contain all column values that do not satisfy any of the specified group conditions. Otherwise, select ‘Leave others in their own group’.
+. Press btn:[OK] to exit the ‘Grouping’ dialog box. This creates a new Named Grouping object in the Data Worksheet.
+
+. Save the Data Worksheet by pressing the {buttonSave} in the toolbar or press kbd:[Ctrl+S] on the keyboard.
+
+
+.Example: Create a Named Grouping
+****
+Suppose you want to create a group for all the states on the west coast, so that every time the customer data is displayed in a table or chart, customers from the west coast states are grouped together.
+
+Follow these steps to create the ‘WestCoast’ group.
+
+. Create a new Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
++
+. Press the {buttonCreateObject} in the toolbar, and select {buttonGrouping}.
+
++
+image:newObjectGrouping.png[]
++
+This opens the ‘Grouping’ dialog box.
++
+image:NewGroupingDialog.png[]
+
+. Enter “Geographic Grouping” in the ‘Name’ field.
+. For the ‘Type’, select ‘String’.
+. Press the {buttonEMAdd} button to specify the group conditions. This opens the ‘Add Condition List’ dialog box.
++
+image:AddConditionList.png[]
+
+. Specify ‘WestCoast’ as the Group Name.
+
+. Specify the following condition, and press btn:[Append].
+
+ [this][is][one of][WA,OR,CA]
++
+image:WestCoastConditions.png[]
+. Press  btn:[OK]  to exit the ‘Add Condition List’ dialog box and return to the ‘Grouping’ dialog.
++
+image:WestCoastGroupingDialog.png[]
+. Press btn:[OK].
+. Right-click on the ‘Geographic Grouping’ group and select ‘Set as Primary’. {rightClickOptions}
++
+image:WestCoastSetPrimary.png[]
+. Press the {buttonSave} in the toolbar or press kbd:[Ctrl+S] on the keyboard. This opens the ‘Save as Data Worksheet’ dialog box.
+. Specify “Geographic Grouping” as the name of the asset.
++
+image:saveWestCoast.png[]
+
+. Press btn:[OK] to save the newly created user-defined grouping. Notice that the grouping is shown in the left panel with a {buttonGroupIcon}, indicating that the asset a named group.
++
+image:WestCoastinTree.png[]
+****

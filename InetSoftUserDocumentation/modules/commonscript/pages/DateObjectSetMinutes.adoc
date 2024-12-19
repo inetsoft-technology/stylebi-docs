@@ -1,0 +1,28 @@
+= Date.setMinutes(value)
+:navtitle: Date.setMinutes()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to set the minutes part of a date in local time.        See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMinutes[Date.setMinutes()] in the {JavaScriptRef} for details on usage.
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+d.setMinutes(15);
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.setMinutes(15);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+var d = parameter.Date;
+d.setMinutes(15);
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

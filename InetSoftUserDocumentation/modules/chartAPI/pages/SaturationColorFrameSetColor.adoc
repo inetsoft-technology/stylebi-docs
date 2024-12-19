@@ -1,0 +1,84 @@
+= GradientColorFrame.setColor(value)
+:navtitle: GradientColorFrame.setColor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+
+Specifies the color whose saturation is varied. The data values in the associated column (specified by the inherited xref:VisualFrameSetField.adoc[] property) are mapped to a spectrum of saturations of the specified color.  You can also set this using the `bindingInfo.colorFrame.color`   property syntax in *onRefresh* script. See xref:#Example2[] below.  The corresponding “getter” function is `getColor()`.
+
+
+
+
+== Paramater (Function Syntax)
+value:: a {JavaAwtColor} object
+
+== Value (Property Syntax)
+
+include::viewsheetscript:partial$colorSyntax.adoc[]
+
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new SaturationColorFrame(); //<2>
+frame.setField("Quantity"); //<3>
+frame.setColor(java.awt.Color(0xff0000)); //<4>
+elem.setColorFrame(frame); //<5>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the xref:SaturationColorFrame.adoc[] object.
+<3> Use the inherited xref:VisualFrameSetField.adoc[] property to specify the field for the `SaturationColorFrame`.
+<4> Use `setColor` to specify the  color for the `SaturationColorFrame`.
+<5> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:SaturationColorFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new SaturationColorFrame;
+Chart1.bindingInfo.colorFrame.color = 0xFF0000;
+
+--
+
++
+image:commonscript:SaturationColorFrame.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

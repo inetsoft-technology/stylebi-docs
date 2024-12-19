@@ -1,0 +1,31 @@
+= valueColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:PlotValueFormats.adoc[] to set the color of a value on a multi-style chart.
+
+Sets the color for data values displayed in the chart plot area.
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.valueColor = [255,0,255];
+Chart1.valueColor = {r:255,g:0,b:255};
+
+image:commonscript:valueColor.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+valueColor         // unqualified
+Chart1.valueColor  // qualified
+
+{secondForm}
+====

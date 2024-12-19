@@ -1,0 +1,48 @@
+= gradientColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:ShapeProperties.adoc[] for more information about Line components.
+====
+
+
+Specifies the gradient fill for the Oval as an array.
+
+== Type
+Array::		`[enabled,type,angle,"color1 endColor1","color2 endColor2",...]`
++
+****
+The array items are as follows:
+
+enabled:: `true`: display gradient, `false`: hide gradient.
+type:: `'linear'` or `'radial'`
+angle:: The rotation of the gradient in degrees
+colorN:: Specification of the Nth color in one of the following formats:
++
+include::viewsheetscript:partial$colorSyntax.adoc[]
+endColorN:: The position in the gradient (between 0 and 100) where the Nth color ends. For linear gradient with no rotation, 0 represents the left side and 100 represents the right side. For radial gradient, 0 represents the center and 100 represents the periphery.
+****
+
+
+
+
+
+== Example
+[source,javascript]
+Oval1.gradientColor = [true,"linear",45, "red 20","yellow 50"];
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+gradientColor           // unqualified
+Oval1.gradientColor    // qualified
+
+{secondForm}
+====
+
+

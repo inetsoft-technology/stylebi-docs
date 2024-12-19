@@ -1,0 +1,37 @@
+= CALC.mround(number, factor)
+:navtitle: CALC.mround()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns number rounded to the nearest multiple of factor. {CALCExcelFunctionPage}
+
+== Parameters
+number::			Number to round
+factor::			Number multiplied to obtain rounding increments
+
+
+== Example
+[source,javascript]
+----
+CALC.mround(10, 3);     // returns 9
+CALC.mround(10.1, 3.3); // returns 9.899999999999999
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.mround(field['Value'], 3.3)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.mround(Slider1.selectedObject,3.3)
+CALC.mround(parameter.Value, 3.3)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

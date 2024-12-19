@@ -1,0 +1,21 @@
+= Help Scout Docs  Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Help Scout Docs  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:HelpScoutDocs.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonHelpScoutDocsQuery}. This opens the ‘Help Scout Docs  Query’ dialog box.
+
++
+image:helpScout1.png[]
++
+include::dataworksheet:partial$RESTwEndpoint.adoc[]
+

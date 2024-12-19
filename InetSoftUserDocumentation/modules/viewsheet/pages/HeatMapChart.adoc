@@ -1,0 +1,71 @@
+= Heat Map Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A heat map displays a *measure* using a colored grid, where the value of the aggregated measure for a given combination of *dimension* values is used to determine the color of the grid at that location.
+include::ROOT:partial$measureAndDimensionTip.adoc[]
+To create a heat map, place the desired dimensions on the ‘X’ and ‘Y’ axes, and place the desired measure in the ‘Color’ region of the Chart Editor.
+
+IMPORTANT: Do not place any measures on the ‘X’ and ‘Y’ axes, and do not place any fields in the ‘Size’ and ‘Shape’ regions of the Chart Editor.
+
+image:commonscript:HeatMapConfig5.png[]
+
+
+
+.Walkthrough: Heat Map
+****
+This example illustrates how to create a heat map that displays Quantity Purchased broken down by month of year and product.
+
+include::partial$chartNewbieTip.adoc[]
+
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewWorksheetNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Drag a Chart component from the *Toolbox* tree to the Dashboard, and press the {buttonEdit} at the top-right corner of the Chart to open the Chart Editor.
+
+. In the Chart Editor, drag the ‘Quantity Purchased’ measure   from the *Data Source* panel to the ‘Color’ region.
+
+. Drag the ‘Name’ dimension from the *Data Source* panel to the ‘Y’ region.
+
+. Drag the ‘Date’ dimension from the *Data Source* panel to the ‘X’ region.
++
+image:commonscript:HeatMapConfig.png[]
+
+. Press the {buttonEditDimension} next to the ‘Date’ field and set the ‘Level’ property to ‘Month of Year’. Press the {buttonApply}.
++
+image:commonscript:HeatMapConfig2.png[]
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+. Press the ‘Edit Color’ button next to the ‘Quantity Purchased’ measure, and choose the desired color spectrum to represent the aggregated values. (The built-in ‘Heat’ spectrum uses traditional shades of orange and brown, but you can use any other spectrum as well.)
++
+image:commonscript:HeatMapConfig3.png[]
+
+. Press the {buttonClose}.
+
+. {finishEditing}
+
+. Resize the chart to show the desired number of products.
++
+image:commonscript:HeatMapConfig4.png[]
+
+. To increase the density of the chart by using a finer grid, see xref:BasicChartingSteps.adoc#AdjustChartSpacing[Adjust Chart Spacing] in xref:BasicChartingSteps.adoc[].
+
+include::viewsheet:partial$addTitlesLegend.adoc[]
+
+****
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Call_Center_Team_Performance.zip[Call Center Team Performance] Dashboard (in the ‘Examples’ folder) provides an example of a heat map.
+
+image:viewsheet:galleryHeatMap2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Call_Center_Team_Performance.zip[Call Center Team Performance] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+
+****
+
+

@@ -1,0 +1,86 @@
+= isActionVisible(name)
+:navtitle: isActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:thisViewsheet.adoc#thisViewsheetIsActionVisible[thisViewsheet.isActionVisible()] to return Dashboard toolbar button visibility.
+
+
+
+Returns the visibility/accessibility of the specified end-user Chart feature.
+
+== Parameters
+name::			name of chart function (String):
++
+.Dragging
+[source]
+'AxisResize' (drag to resize axis)
+'LegendResize' (drag to resize legend)
+'LegendMove' (drag to move legend)
++
+.Buttons
+[source]
+'Brush'
+'Clear Brushing'
+'Edit'
+'Maximize'
+'Show Data'
+'Show Details'
+'Zoom'
+'Exclude Data'
+'Clear Zoom'
+'Enable Manual Refresh'
+'Enable Auto Refresh'
+'Refresh'
+'Drill Down Filter'
+'Hide MiniToolbar'
+'Menu Actions' ('More' button)
+'Sort Axis' (button next to axis)
+
++
+.Right-click menu options
+[source]
+'Resize Plot'
+'Properties'
+'Format'
+'Save Image As'
+'Annotate Component'
+'Annotate Point'
+'Axis Properties'
+'Hide Axis'
+'Title Properties'
+'Hide Title'
+'Group'
+'Filter'
+'Ungroup'
+'Rename'
+'Legend Properties'
+'Hide Legend'
+'Show All Titles'
+'Show All Axes'
+'Show Legend'
+
+
+
+== Example
+[source,javascript]
+if (Chart1.isActionVisible('Edit')==true) {
+  Text1.text = 'Click the Edit button to open Chart Editor';
+}
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+isActionVisible               // unqualified
+Calendar1.isActionVisible    // qualified
+
+{secondForm}
+====
+
+

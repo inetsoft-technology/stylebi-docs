@@ -1,0 +1,67 @@
+= Dot Plot Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A dot plot represents a measure by its individual data points (_without aggregation_).
+
+image:commonscript:Ad Hoc Dot9.png[]
+
+This type of chart can be useful when the dataset is very small, with fewer than approximately 20 data points for each dimension value.
+
+WARNING: If the dataset contains too many records, the chart will not be able to display all the data points.
+
+
+Follow the steps below to create a dot plot:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose ‘Point’ and enable the ‘Stack’ option at the bottom. Press {buttonApply}.
++
+image:commonscript:Ad Hoc Dot1.png[]
++
+NOTE: ‘Point’ is the default chart style when numerical dimensions are used.
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:Ad Hoc Dot2.png[]
++
+TIP: {convertToDimension}
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘Break By’ region.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:Ad Hoc Dot3.png[]
++
+TIP: {convertToMeasure}
++
+Alternatively, you can drag the measure field to the ‘Color’, ‘Shape’, or ‘Size’ regions of the bottom panel if you wish to distinguish the data points using a visual format.
+
+. Press the {buttonEditMeasure} next to the measure. Set the ‘Aggregate’ property to ‘None’, and press the {buttonApply}.
+
++
+image:commonscript:VS Dot4.png[]
+
+. *_Optional:_* {multipleMeasure}
+
+
+. *_Optional:_* To display a dimension value in the chart tooltip, drag the dimension from the data source panel to the ‘Break By’ region next to the existing measure field.
++
+image:commonscript:VS Dot5.png[]
++
+This will allow the chart tooltip to display both the measure and dimension values, as shown below (‘customer_id’ and ‘company_name’, in this example).
++
+image:commonscript:VS Dot6.png[]
+
+. *_Optional:_*  To make the points larger, press the ‘Edit’ button next to the ‘Size’ field in the bottom panel, and select a larger size. Click away from the panel to make the change to the chart.
++
+image:commonscript:Ad Hoc Dot8.png[]
+
+. {finishEditing}
+
+include::partial$addTitlesLegend.adoc[]
+

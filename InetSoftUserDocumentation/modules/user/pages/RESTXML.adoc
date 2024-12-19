@@ -1,0 +1,65 @@
+= REST XML
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$dataSourceUserIntro.adoc[]
+
+. Select the ‘REST XML’ data source, and press btn:[Create]. This opens the data source definition screen.
++
+image:dataSourceNewRESTXML2_1.png[]
+
+. In the ‘Name’ field, enter a label for this data source connection.
+
+. Enter the ‘URL’ for the web service.
+
+. Select an authentication method (if desired). The options are ‘Basic’ and ‘Two-step Token’.
++
+****
+Basic:: If you select ‘Basic’, follow the steps below:
+
+.. Enter a username and password.
+
+.. *_Optional:_* Press the btn:[Add] button below the ‘Query HTTP Parameters’ label to add parameter names and values. From the menu on the right side specify ‘Header’ or ‘Query’ to indicate where the parameters should be attached.
+
+Two-Step Token:: If you select ‘Two-step Token’, specify the required information for obtaining a token (step one) and requesting data using the token (step two). Follow the steps below:
+
+.. Enter a username and password.
+
+.. Enter the ‘Authentication URI’.
+
+.. Press the btn:[Add] button below the ‘Authentication HTTP Parameters’ label to add parameter names and values. From the menu on the right side specify ‘Header’ or ‘Query’ to indicate where the parameters should be attached.
+
+.. In the ‘Auth HTTP Method’, select either ‘GET’ or ‘POST’ for the first-step query. If you select ‘POST’, select a value from the ‘Content Type’ menu {contentType}, and enter the ‘Request Body’. For example:
++
+[source,json]
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+
+.. Enter the ‘Token Regex Pattern’. The regex you enter should extract the token from the response of this query. For example: `"token":"(.*?)"`.
+
+.. Under the ‘Query HTTP Parameters’ field, press the btn:[Add] button to add the retrieved token into a parameter for the second-step query, as illustrated below (for generic REST data source). You can use the predefined `pass:[{{token}}]` variable to represent the retrieved token value in the query.
+****
+
+
+
+
++
+. *_Optional:_* {multiTenantUser}
+
+. Press btn:[OK].
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceRESTXML_3.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceRESTXML_4.png[]
++
+In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
+
+After you have created a connection to the database, you can proceed to define a data set. See xref:dataworksheet:QueryRESTXML.adoc[].

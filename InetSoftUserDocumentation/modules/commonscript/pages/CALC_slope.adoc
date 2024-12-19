@@ -1,0 +1,39 @@
+= CALC.slope(array_y, array_x)
+:navtitle: CALC.slope()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Calculates the slope of the best-fit regression line through the values in `array_x` and `array_y`. {CALCExcelFunctionPage}
+
+== Parameters
+array_y::				Array of y values
+array_x::	Array of x values
+
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.slope([8,11,14,17],[1,2,3,4]);  // returns 3.0
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Columns of Dashboard table TableView1:
+CALC.slope(TableView1.table['YValues'],TableView1.table['XValues'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Columns of ‘Sales’ data block in Data Worksheet:
+CALC.slope(Sales['YValues'], Sales['XValues']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

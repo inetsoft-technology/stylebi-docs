@@ -1,0 +1,37 @@
+= maxVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:RangeSliderProperties.adoc[] for more information on user selection editing.
+====
+
+Specifies whether the slider’s maximum value is displayed.
+
+== Type
+Boolean::	`true`: Display maximum (default) +
+`false`: Hide maximum
+
+
+
+
+
+== Example
+
+[source,javascript]
+RangeSlider1.maxVisible = false;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+maxVisible                  // unqualified
+RangeSlider1.maxVisible     // qualified
+
+{secondForm}
+====
+
+

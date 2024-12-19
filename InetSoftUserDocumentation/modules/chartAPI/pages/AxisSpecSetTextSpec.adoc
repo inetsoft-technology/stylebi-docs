@@ -1,0 +1,63 @@
+= AxisSpec.setTextSpec(spec)
+:navtitle: AxisSpec.setTextSpec()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Controls the appearance of axis text.  The corresponding “getter” function is xref:chartAPI:AxisSpecGetTextSpec.adoc[].
+
+
+
+
+
+== Parameter
+frame::			A xref:chartAPI:TextSpec.adoc[] object
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var qscale = new LinearScale("Quantity");
+var aspec = new AxisSpec(); //<2>
+var textspec = new TextSpec(); //<3>
+textspec.setColor(java.awt.Color(0xff0000));
+aspec.setTextSpec(textspec); //<4>
+qscale.setAxisSpec(aspec);
+graph.setScale("Quantity", qscale);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Create the `TextSpec` object.
+<4> Use `setTextSpec` to assign the `TextSpec` to the axis.
+
+image:commonscript:AxisSpecsetTextSpec.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); <1>
+var scale = coord.getYScale(); <2>
+var spec = scale.getAxisSpec(); <3>
+// Compact syntax: var spec = graph.getCoordinate().getYScale().getAxisSpec();
+
+var textspec = new TextSpec();
+textspec.setColor(java.awt.Color(0xff0000));
+spec.setTextSpec(textspec);
+--
+=====

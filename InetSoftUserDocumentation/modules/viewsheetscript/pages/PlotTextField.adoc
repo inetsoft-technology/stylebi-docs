@@ -1,0 +1,34 @@
+= textField
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::viewsheetscript:partial$readOnly.adoc[]
+
+
+
+Returns the name of the query field that is currently assigned to the ‘Text’ binding (xref:chartAPI:TextFrame.adoc[]) at runtime. This property is read-only.  Use xref:ChartBindingInfoSetTextField.adoc[] to set the '`Text`' binding in script.
+
+
+
+== Type
+String
+
+== Example
+[source,javascript]
+if (Chart1.textField == 'State') {
+  StateSelectionList1.visible = true;
+}
+else {
+  StateSelectionList1.visible = false;
+}
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+textField           // unqualified
+Chart1.textField    // qualified
+
+{secondForm}
+====

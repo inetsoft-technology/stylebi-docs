@@ -1,0 +1,48 @@
+= CALC.pricedisc(settlement, maturity, discount, redemption, [basis])
+:navtitle: CALC.pricedisc()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the price per $100 face value of a *discounted* security (zero-coupon bond). {CALCExcelFunctionPage}
+
+== Parameters
+settlement::			Date object: The security’s settlement date
+maturity::			Date object: Security’s maturity date (date when security expires)
+discount::			Security’s discount rate
+redemption::			Security’s redemption value per $100 face value
+basis:: {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+
+
+== Example
+Price for a bond with par value of $100, discount rate of 5.75%, settlement date of February 15, 2008, maturity date of October 15, 2017, and US 30/360 counting convention.
+
+
+[source,javascript]
+----
+CALC.pricedisc(new Date(2008,1,15), new Date(2017,10,15), 0.0575, 100, 0)
+// returns 43.9375 (approx $43.94)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.pricedisc(field['SettleDate'], field['MatureDate'], 0.0575, 100, 0)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.pricedisc(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 0.0575, 100, 0)
+CALC.pricedisc(parameter.SettleDate, parameter.MatureDate, 0.0575, 100, 0)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

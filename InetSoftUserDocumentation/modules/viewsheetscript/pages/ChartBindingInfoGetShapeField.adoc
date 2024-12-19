@@ -1,0 +1,28 @@
+= bindingInfo.getShapeField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoSetShapeField.adoc[]  to set the binding information.
+
+Returns the field bound to the xref:chartAPI:ShapeFrame.adoc[] (shape coding).
+
+
+
+
+
+== Returns
+String::			Field name used for shape-coding
+
+
+
+== Example
+[source,javascript]
+--
+var sfield = Chart1.bindingInfo.getShapeField();
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

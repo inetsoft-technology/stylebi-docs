@@ -1,0 +1,24 @@
+= newInstance(name)
+:navtitle: newInstance()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Creates a new Java object.
+
+TIP: You should generally use the *new* keyword for  this purpose, but in some cases this may  not handle Java packages correctly.
+
+
+== Parameters
+name::			name of the class to instantiate (String)
+
+
+
+
+
+
+==  Example
+
+[source,javascript]
+var presenter = newInstance('inetsoft.report.painter.IconCounterPresenter');

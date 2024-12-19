@@ -1,0 +1,53 @@
+= CALC.iif(condition, value_if_true, value_if_false)
+:navtitle: CALC.iif()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns `value_if_true` if condition evaluates to `true`, and returns `value_if_false` if condition evaluates to `false`.  {CALCExcelFunctionPage} This is similar to the https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator[JavaScript ternary operator], which can also be used for this purpose.
+
+
+== Parameters
+condition::			Logical condition to test
+value_if_true::			Expression to evaluate if condition is `true`
+value_if_false::			Expression to evaluate if condition is `false`
+
+
+
+
+== Example
+[source,javascript]
+----
+for(var value = -2; value <= 2; value++) {
+  alert(CALC.iif(value == 0, "equal to 0", "not equal to 0"))
+}
+
+// Returns:
+// not equal to 0
+// not equal to 0
+// equal to 0
+// not equal to 0
+// not equal to 0
+
+
+----
+NOTE:  In JavaScript, the double `==` is used to test equality. The single `=` is the assignment operator.
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.iif(field['Revenue'] > field['Expenses'], "profit", "loss"));
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.iif(Gauge1.value > Gauge2.value, "profit", "loss"));
+CALC.iif(parameter.Revenue > parameter.Expenses, "profit", "loss"));
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]
+

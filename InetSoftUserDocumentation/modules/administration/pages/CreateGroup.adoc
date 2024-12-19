@@ -1,0 +1,74 @@
+= Create a Group
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A group is a collection of users, such as a project team, a department, or a geographical location. (You can create and edit groups in Enterprise Manager only when using the ‘Default’ authentication provider.) Groups are generally organizational in nature, while roles are functional in nature.
+
+== Create a New Group
+To create a new group, follow the steps below:
+
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Security* page in the left panel.
++
+image:Figure 23_1.png[]
+. Select the *Users* tab.
++
+image:securityDefineUsers.png[]
+
+. From the ‘Provider Name’ menu, select the security provider under which to define groups.
+
+include::administration:partial$selectOrganization.adoc[]
+
+. Press the ‘New Group’ link below the tree. This creates a group with the default name ‘groupN’ (group0, group1, etc.).
++
+image:server3.png[]
+
+. Type in the ‘Name’ field to change the name of the group.
+
+. To select a Portal theme for the group, choose the desired theme from the ‘Theme’ menu. (See xref:Presentation.adoc[] for information about how to create a theme.)
+include::ROOT:partial$enterpriseOnlyInline.adoc[]
++
+IMPORTANT: The multi-tenant feature in Enterprise Edition must be *disabled*.  See xref:EnableMultiTenant.adoc[] for more information.
+
+
+. *_Optional:_* To add the users or groups to a group, press the btn:[Add] button in the ‘Members’ area. Choose the desired group(s) in the ‘Add Group/User’ dialog box (kbd:[Ctrl]-click to select multiple groups or users), and press btn:[Add].
++
+image:securityDefineGroup.png[]
+
+. *_Optional:_* To add a role for users in the group, press the btn:[Add] button in the ‘Roles’ area. Choose the desired role(s) in the ‘Add Role’ dialog box (kbd:[Ctrl]-click to select multiple roles), and press btn:[Add].
+
+. *_Optional:_* To add administrative permission for the group (ability for other users to administer this group), press the btn:[Add] button in the ‘Administrator Permissions’ area. Choose the desired user(s), groups(s), or role(s) in the ‘Add Permission’ dialog box (kbd:[Ctrl]-click to select multiple items), and press btn:[Add].
+Users, groups, or roles granted such administrative privileges will be able to use Enterprise Manager to remove the group or reassign users and roles to the group.
+. Press {buttonEMApply} to save your changes.
+. Repeat the above steps to add additional groups.
+
+
+
+== Edit an Existing Group
+To edit a user, follow the steps below:
+
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Security* page in the left panel.
++
+image:Figure 23_1.png[]
+. Select the *Users* tab.
++
+image:securityDefineUsers.png[]
+
+. From the ‘Provider Name’ menu, select the security provider under which to define groups.
+
+include::partial$selectOrganization.adoc[]
+
+
+. Expand the ‘Groups’ node on the tree, and select the desired group.
+
+. Make the desired changes and press {buttonEMApply}.
+
+
+
+
+== Rules for Users, Groups, Roles
+include::partial$userRoleGroupNote.adoc[]
+

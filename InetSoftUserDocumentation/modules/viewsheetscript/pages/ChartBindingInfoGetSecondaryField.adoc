@@ -1,0 +1,37 @@
+= bindingInfo.getSecondaryField(col, binding)
+:navtitle: bindingInfo.getSecondaryField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoSetSecondaryField.adoc[]  to set the binding information.
+
+Get the secondary field used in a bivariate aggregation method (e.g., correlation, covariance, etc.).
+
+== Parameter
+col::			Field for which to obtain secondary field
+binding::			Field binding, one of the following constants:
++
+include::commonscript:partial$fieldBindingConstant.adoc[]
+
+
+
+
+
+
+== Returns
+String::			Field name
+
+
+
+== Example
+For primary field "`Price`" bound to the Y-axis:
+[source,javascript]
+--
+var col2 = Chart1.bindingInfo.getSecondaryField("Price", Chart.BINDING_FIELD);
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

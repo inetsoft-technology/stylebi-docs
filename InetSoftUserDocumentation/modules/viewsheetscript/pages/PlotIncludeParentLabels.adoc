@@ -1,0 +1,41 @@
+= includeParentLabels
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+For a xref:viewsheet:TreemapChart.adoc[] and xref:viewsheet:CirclePackingChart.adoc[] only, specifies that the labels of parents in the hierarchy should be displayed (along with the child labels).
+
+== Type
+Boolean
+
+== Examples
+
+
+
+
+
+[source,javascript]
+Chart1.includeParentLabels = true;
+
+image:commonscript:includeParentLabels1.png[]
+
+
+[source,javascript]
+Chart1.includeParentLabels = false;
+
+image:commonscript:includeParentLabels2.png[]
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+includeParentLabels          // unqualified
+Chart1.includeParentLabels   // qualified
+
+{secondForm}
+====

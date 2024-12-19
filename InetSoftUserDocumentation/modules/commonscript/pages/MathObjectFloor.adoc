@@ -1,0 +1,53 @@
+= Math.floor(number)
+:navtitle: Math.floor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:NumberObjectToPrecision.adoc[] for another function that computes the floor.
+* xref:commonscript:CALC_floor.adoc[] for the preferred version from the CALC library.
+====
+
+
+
+
+
+Return the largest integer less than or equal to the specified number. This is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor[Math.floor()] method, and *must* be used with the `Math` qualifier, `Math.floor()`.
+
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+Math.floor(15.2);  // returns 15.0
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+ Math.floor(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+Math.floor(Slider1.selectedObject)
+Math.floor(parameter.Value)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

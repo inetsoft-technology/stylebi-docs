@@ -1,0 +1,37 @@
+= Data Tab
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+The *Data* tab in the ‘Properties’ panel is common to many components. This tab allows you bind the component to the data source that supplies the data displayed by the component.
+
+NOTE: {dynamicProperties}
+
+image:viewsheet:Generic Data Tab.png[]
+
+NOTE: The *Data* tab has a different layout for Filter components. See xref:SelectionListProperties.adoc[] for more details.
+
+The *Data* tab has the standard properties shown below.
+
+Table:: The data model, table, or Data Worksheet data block to which the component is bound.
+// Note: This is generally not used for Visualize Free.
++
+TIP: You can also associate data with a component by dragging a field from the data source in the *Toolbox* panel onto the component.  This will automatically set the '`Table`' and '`Column`' properties.
+
+
+Target:: For Form components (Radio Button, Spinner, etc.), the Embedded Table or Variable in the Data Worksheet to which the form value is passed. (See xref:DynamicallySetProperties.adoc[] for further details.)
+//Note: This is generally not used for Visualize Free.
+
+Column:: The field in the selected table that supplies data to the component.
+
+Aggregate:: The method of data aggregation/summarization.
+
+
+With:: A second data field for aggregation methods requiring two operands.
+
+Value:: The scaling factor used to display data on output components:
+
+* *As Is*: No scaling.
+* *Thousands*: Displayed values are divided by 10^3^.
+* *Millions*: Displayed values are divided by 10^6^.
+* *Billions*: Displayed values are divided by 10^9^.

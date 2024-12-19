@@ -1,0 +1,46 @@
+= GraphForm.setColor(value)
+:navtitle: GraphForm.setColor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the line and fill color of the xref:GraphForm.adoc[].  The corresponding “getter” function is `getColor()`.
+
+
+
+
+
+== Parameter
+value::
+A {javaawtcolor} object
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new LineForm(); //<2>
+form.addPoint(new java.awt.Point(0,0));
+form.addPoint(new java.awt.Point(100,100));
+form.addPoint(new java.awt.Point(200,100));
+form.setColor(java.awt.Color(0xff0000)); //<3>
+graph.addForm(form); //<4>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:GraphForm.adoc[] object.
+<3> Use `setColor` to assign the color to the `GraphForm`.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:GraphFormSetColor.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

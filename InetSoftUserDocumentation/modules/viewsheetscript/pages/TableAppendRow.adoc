@@ -1,0 +1,47 @@
+= appendRow(row)
+:navtitle: appendRow()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+* xref:viewsheetscript:TableSetObject.adoc[] to write data into an Editable Table cell.
+* xref:viewsheetscript:WriteBackToDatabase#AccessMostRecentUserModification[Access Most Recent User Modification] to detect recent changes.
+* xref:SpecialFunctionsAppendRow.adoc[] to add a row to an Embedded Table in a Data Worksheet.
+====
+
+For an *Editable Table*, inserts a new blank row following the row specified by integer parameter `row`, and adds this new row to the array returned by `getFormRows(ADDED)`.  See xref:viewsheet:TableProperties.adoc[] for information on making a Table editable.
+
+== Parameters
+row::			integer row index
+
+== Example
+[source,javascript]
+----
+// Add new row below row 4:
+TableView1.appendRow(4);
+
+// Set initial values in new row (row 5):
+TableView1.setObject(5,0,'Enter Name');
+TableView1.setObject(5,1,'Enter Price');
+TableView1.setObject(5,2,'Enter Quantity');
+TableView1.setObject(5,3,'Enter Total');
+
+
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+appendRow                 // unqualified
+TableView1.appendRow      // qualified
+
+{secondForm}
+====
+
+

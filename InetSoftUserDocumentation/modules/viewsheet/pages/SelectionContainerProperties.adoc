@@ -1,0 +1,23 @@
+= Selection Container Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+* xref:AddFilterComponents.adoc[] for information on how to create a Selection Container.
+* {commonProperties}
+====
+
+The ‘Selection Container Properties’ panel provides only the *General* and *Script* tabs.
+
+== General Tab
+The *General* tab offers the following unique properties for the Selection Container.
+
+Show Current Selections:: Enables the Selection Container to display the current state of all Dashboard selection controls.
+Allow User to Add/Remove Selections:: Enables the end-user to add new filters to the Selection Container. Filters can be added by pressing the {buttonAddFilter} in the mini-toolbar, or by dragging columns from a Table component.
+
+
+image:SelectionContainerPropertiesDialogBox.png[]
+
+== Script Tab
+{commonScript}

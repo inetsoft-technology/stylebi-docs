@@ -1,0 +1,38 @@
+= bindingInfo.lineFrame
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:LineFrame.adoc[] outside of the data binding.
+* xref:viewsheetscript:ChartBindingInfoLines.adoc[] to set a static texture for a particular measure.
+* xref:viewsheetscript:ChartBindingInfoSetShapeField.adoc[] for information on binding a shape field.
+====
+
+
+
+Specifies the aesthetic treatment (line style) for the shape-coded data on a xref:viewsheet:LineChart.adoc[]. A xref:chartAPI:LineFrame.adoc[]  can texture-code chart elements by value, or simply specify a static texture style.
+
+
+
+
+== Type
+xref:chartAPI:LineFrame.adoc[]
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.lineFrame = new LinearLineFrame;
+--
+
+
+image:commonscript:bindingInfoLineFrame.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

@@ -1,0 +1,39 @@
+= image
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheetscript:ChangeImageWithScript.adoc[]  to dynamically change images.
+* xref:viewsheet:ImageProperties.adoc[] for more information on Images.
+====
+
+
+Specifies an image file either by an uploaded image name (e.g., `'image1.gif'`), a resource path on the server (e.g., `'/library/image1.gif'`), a URL (e.g., `“https://www.google.com/images/logos/ps_logo2.png”`), or a BLOB stored in a data block. See xref:viewsheet:ImageProperties.adoc[] for information on uploading images.
+
+
+
+
+== Type
+String:: name of image (e.g., `'/myImage.jpg'`)
+
+
+
+
+
+== Example
+[source,javascript]
+Image1.image = '/library/image1.gif';
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+image           // unqualified
+Image1.image    // qualified
+
+{secondForm}
+====
+
+

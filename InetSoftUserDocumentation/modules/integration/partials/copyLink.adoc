@@ -1,0 +1,8 @@
+[TIP]
+====
+The easiest way to obtain the correct URL for an asset is to open the asset in the Portal and use the {buttonSocialSharing} and {buttonSocialCopyButton}. You can copy the exact URL from this dialog box. (See xref:administration:Presentation.adoc#SocialSharing[Social Sharing] for more information about sharing.)
+
+image:administration:copyLinkDialog.png[]
+
+You can also use the encoded form of the path obtained from xref:commonscript:encodeURI.adoc[].
+====

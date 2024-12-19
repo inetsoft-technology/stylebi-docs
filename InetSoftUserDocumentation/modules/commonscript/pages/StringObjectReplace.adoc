@@ -1,0 +1,38 @@
+= replace(substr, newStr)
+:navtitle: replace()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=see also]
+xref:CALC_replace.adoc[] to perform  literal string replacement.
+
+
+Replace a specified sub-string within a larger string. The sub-string can be specified as a literal string or as a regular expression (regex).
+
+
+
+== Examples
+*Literal string replacement*: Replace sub-string “Client” with “User”.
+
+[source,javascript]
+var oldText = 'Client Joe Miller, ID 123456789'
+var newText = oldText.replace('Client','User'); // returns “User Joe Miller, ID 123456789”
+
+*Regex replacement*: Replace any number with a hyphen by using  regex `/[0-9]/g`.
+
+[source,javascript]
+var oldText = 'Client Joe Miller, ID 123456789'
+var newText = oldText.replace(/[0-9]/g,'-'); // returns “Client Joe Miller, ID ---------”
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].replace(/[0-9]/g,'-');
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.replace(/[0-9]/g,'-');
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

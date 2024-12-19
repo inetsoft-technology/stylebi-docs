@@ -1,0 +1,34 @@
+= drillEnabled
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:DrillDownIntoData.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for information on using the drill-down feature.
+
+Specifies whether the automatic drill-down feature is enabled for the Crosstab. If disabled, the ‘+’ and ‘–’ drill operators do not appear on the Crosstab.
+
+== Type
+Boolean:: `true`: enabled, `false`: disabled
+
+
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.drillEnabled = false;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+drillEnabled             // unqualified
+Crosstab1.drillEnabled   // qualified
+
+{secondForm}
+====
+
+

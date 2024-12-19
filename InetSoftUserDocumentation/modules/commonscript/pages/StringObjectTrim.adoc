@@ -1,0 +1,29 @@
+= trim(string)
+:navtitle: trim()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Remove whitespace characters from both sides of a string.
+
+
+
+
+
+
+== Example
+[source,javascript]
+var str = "     hello     ";
+trim(str); // returns "hello"
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+trim(field['Char']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+trim(parameter.Char);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

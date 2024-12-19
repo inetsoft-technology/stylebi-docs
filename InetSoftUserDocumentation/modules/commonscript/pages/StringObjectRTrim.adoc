@@ -1,0 +1,28 @@
+= rtrim(string)
+:navtitle: rtrim()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Remove trailing whitespace characters from a string.
+
+
+
+
+
+== Example
+[source,javascript]
+var str = "hello   ";
+rtrim(str); // returns "hello"
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+rtrim(field['Char']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+rtrim(parameter.Char);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

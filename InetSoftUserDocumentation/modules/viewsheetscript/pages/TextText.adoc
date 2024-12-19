@@ -1,0 +1,40 @@
+= text
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:viewsheet:TextProperties.adoc[] for general information about the Text component.
+* xref:viewsheet:AddTextOrHTML.adoc[] for information about displaying HTML.
+====
+
+
+Specifies the text contents of the Text component.
+
+
+== Type
+String
+
+
+
+
+
+
+== Example
+[source,javascript]
+Text1.text = "Hello World";
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+text            // unqualified
+Text1.text      // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,50 @@
+= setCellValue(tableName,row,col,value)
+:navtitle: setCellValue()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Writes a value into the specified row and column of the *Embedded Table*.  See xref:viewsheet:TableProperties.adoc[]  for information on how to make a Table editable.
+
+== Parameter
+tableName::			name of Embedded Table into which to write value
+row::			positive integer row index starting from 0 (header row)
+col::			positive integer col index starting from 0
+value::			value to write
+
+
+
+
+
+
+
+
+== Example
+The script below can be placed in the *onClick* handler of a Submit button. See xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script] for more information.
+
+[source,javascript]
+----
+setCellValue("Table1",2,2,"hello");
+saveWorksheet();
+
+// Refresh the Dashboard with saved data from the Data Worksheet
+refreshAfterSubmit=true;
+
+----
+See xref:SpecialFunctionsSaveWorksheet.adoc[] and xref:SubmitButtonRefreshAfterSubmit.adoc[] for more information about these functions.
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setCellValue                 // unqualified
+TableView1.setCellValue      // qualified
+
+{secondForm}
+====
+
+

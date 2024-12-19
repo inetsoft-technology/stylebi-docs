@@ -1,0 +1,26 @@
+= Profile a Dashboard
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+You can profile the execution of your Dashboards to determine which aspects of execution consume the most time. To do this, follow the steps below:
+
+. Press the {buttonAccount} at the top of the Portal and select {buttonProfile}.
++
+image:user:Profiling1.png[]
++
+When this option is enabled, Dashboards will display a ‘Profiling...’ link below the toolbar.
++
+image:Profiling2.png[]
+
+. Press the ‘Profiling...’ link to open the ‘Profile’ dialog box. This displays a break-down of execution time.
+
+. From the '`Group By`' menu, choose  the way you want to break out the data: '`Cycle Name`', '`Dashboard`', '`Logical Model`', '`Data Worksheet`', or '`Component`'.
++
+image:Profiling3.png[]
+. Enable ‘Show Detail Records’ link to view a tabular display of the execution information.
++
+image:Profiling4.png[]
+
+. *_Optional:_* Press the {buttonExport} to export the data.
+
+. Press btn:[OK] to dismiss the dialog box.

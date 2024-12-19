@@ -1,0 +1,13 @@
+= Step Area Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A step area chart is a type of xref:AreaChart.adoc[] that connects the  *measure* data points by using only the horizontal and vertical directions.
+
+include::ROOT:partial$measureTip.adoc[]
+
+image:commonscript:stepAreaChartExp1.png[]
+
+The Step Area Chart is functionally the same as the Step Line Chart. See xref:StepLineChart.adoc[] for full instructions on how to create this type of chart.
+
+TIP: When you press the {buttonSelectChartStyle}, simply select ‘Step Area’ instead of ‘Step Line’.

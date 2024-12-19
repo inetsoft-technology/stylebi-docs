@@ -1,0 +1,58 @@
+= GraphElement.setLabelPlacement(value)
+:navtitle: GraphElement.setLabelPlacement()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies the location of element labels.  The corresponding “getter” function is `getLabelPlacement()`.
+
+
+
+
+== Parameter
+value:: One of the following constants:
++
+[source]
+Chart.CENTER  center of element
+Chart.BOTTOM  below element
+Chart.TOP     above element
+Chart.RIGHT   right of element
+Chart.LEFT    left of element
+
+
+== Examples
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["CA", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity"); //<2>
+var frame = new DefaultTextFrame();
+frame.setField("Quantity");
+elem.setTextFrame(frame);
+elem.setLabelPlacement(Chart.BOTTOM); //<3>
+graph.addElement(elem); //<4>
+--
+<1> {dataset}
+<2> Create the `PointElement` object.
+<3> Use `setLabelPlacement` to position the `TextFrame` labels under the points.
+<4> Use `addElement` to add the `PointElement` to the Chart.
+
+image:commonscript:GraphElementsetLabelPlacement.png[]
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.setLabelPlacement(Chart.BOTTOM);
+--
+=====

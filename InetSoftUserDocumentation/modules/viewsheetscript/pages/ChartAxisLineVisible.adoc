@@ -1,0 +1,36 @@
+= axis.lineVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+
+
+Sets the visibility of the dimension or measure axis line.
+
+
+== Type
+Boolean
+
+
+
+== Example
+[source,javascript]
+Chart1.axis['Company'].lineVisible = false;
+
+image:commonscript:dimensionLineVisible.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].lineVisible             // unqualified
+Chart1.axis['...'].lineVisible      // qualified
+
+{secondForm}
+====
+

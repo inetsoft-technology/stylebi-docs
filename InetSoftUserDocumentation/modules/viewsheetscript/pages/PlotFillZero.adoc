@@ -1,0 +1,41 @@
+= fillZero
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+When you set xref:PlotFillTimeGap.adoc[] to `true`, the `fillZero` property determines whether gaps are represented as `null`, which leaves an empty space at the location, or as *zero*, which inserts a numerical value of 0 at the location.
+
+== Type
+Boolean
+
+== Examples
+
+
+
+
+
+[source,javascript]
+.Example 1: Leave gap (null) for missing data
+Chart1.fillTimeGap = true;
+Chart1.fillZero = false;
+
+image:commonscript:fillTimeGapNull_1.png[]
+
+
+[source,javascript]
+.Example 2: Insert zero for missing data
+Chart1.fillTimeGap = true;
+Chart1.fillZero = true;
+
+image:commonscript:fillTimeGapZero_1.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fillZero          // unqualified
+Chart1.fillZero   // qualified
+
+{secondForm}
+====

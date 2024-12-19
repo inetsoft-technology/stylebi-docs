@@ -1,0 +1,34 @@
+= Repository Contents
+
+The server repository  or *SREE Home* contains all the configuration files, including the following:
+
+inetsoft.yaml:: Top-level configuration file for back-end storage. This file also contains the audit database configuration, the Hazelcast cluster configuration, as well as other top-level initialization settings. See xref:Storage.adoc[] for more information about configuring back-end storage.
+sree.log:: Contains log events (plain text) for the SREE server.
+schedule.log:: Contains log events (plain text) for the Scheduler application.
+
+When you use Enterprise Manager to change settings, the new settings are saved to the current repository (SREE Home).
+
+//include::ROOT:partial$SREEHome.adoc[]
+
+////
+<<<<<<<<<<< CAN'T DO THIS ANYMORE >>>>>>>>>>>
+== Specify the Repository Directory
+To specify a different location for the SREE Home directory, set the context parameter `sree.home` in _/tomcat/webapps/ROOT/WEB-INF/web.xml_. For example, to use a directory called _C:/InetConfigFiles_ as the repository, add the  `sree.home` context parameter as shown:
+[source,xml]
+<context-param>
+  <param-name>sree.home</param-name>
+  <param-value>C:/InetConfigFiles</param-value>
+</context-param>
+
+To use a database to store the repository files, see xref:Storage.adoc[].
+////
+
+////
+<<<<<<<<<<< WE DON'T INSTALL EXAMPLES ANYMORE >>>>>>>>>>>
+== Create a Clean Repository Directory
+When you first install StyleBI, the default repository directory is populated with a number of example data sources, queries,  and other assets which are provided for learning purposes. In most cases, when you begin to develop your own reports and assets, you will find it helpful to use a repository that is not cluttered with these sample materials.
+
+To create a clean repository directory in the existing SREE Home location, first back up the server storage. (See xref:Storage.adoc[].) Then remove all of the files currently in the SREE Home directory, except for  _inetsoft.yaml_.
+
+To create a clean repository in a different location, see xref:_specify_the_repository_directory[] above to change the repository location, and add the _inetsoft.yaml_ file there.
+////

@@ -1,0 +1,30 @@
+= toUpperCase()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:CALC_upper.adoc[] for an equivalent function.
+
+Convert all characters to uppercase.
+
+
+
+
+
+
+== Example
+[source,javascript]
+var str = 'abCdefgHIJ';
+str.toUpperCase(); // returns ABCDEFGHIJ
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+field['Char'].toUpperCase();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Char.toUpperCase();
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

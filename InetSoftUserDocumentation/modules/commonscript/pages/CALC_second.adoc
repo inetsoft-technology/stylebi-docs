@@ -1,0 +1,43 @@
+= CALC.second(date)
+:navtitle: CALC.second()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+Returns the seconds corresponding to the given `date`. {CALCExcelFunctionPage}
+
+
+
+
+== Parameters
+date::			a Date object
+
+
+
+== Example
+[source,javascript]
+----
+var today = CALC.today();  // returns Tue Jun 25 14:16:07 EDT 2024 (example)
+CALC.second(today); // returns 7
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.second(field['Order Date'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.second(RangeSlider1.selectedObjects[0])
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

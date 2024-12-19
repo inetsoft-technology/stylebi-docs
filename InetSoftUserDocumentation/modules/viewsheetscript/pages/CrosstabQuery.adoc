@@ -1,0 +1,38 @@
+= query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the data block to be used by the Crosstab component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.
+
+image:dataworksheet:dataBlocks_1.png[]
+
+See the `Crosstab.bindingInfo` properties for additional data binding features.
+
+== Type
+String
+
+
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Category','Name'];
+Crosstab1.bindingInfo.colFields = ['Region','State'];
+Crosstab1.bindingInfo.measureFields = ['Total','Quantity Purchased'];
+
+image:commonscript:bindingInfoCrosstabExp1.png[]
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+query             // unqualified
+Crosstab1.query   // qualified
+
+{secondForm}
+====
+
+

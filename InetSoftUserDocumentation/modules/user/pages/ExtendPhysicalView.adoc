@@ -1,0 +1,43 @@
+= Extend a Physical View
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+In a multi-tenant environment, it may be useful to provide a different physical view to each tenant. Each physical view can provide access to tenant-specific database tables, as well as to a set of common tables that are shared by all physical views. To create a tenant-specific physical view, *_extend_* the existing physical view by adding tables from a tenant-specific connection.
+
+TIP: See xref:AddAdditionalConnection.adoc[], for information on how to add a tenant connection.
+
+include::ROOT:partial$createVisualizationClose.adoc[]
+
+
+Follow the steps below to extend a physical view:
+
+. Press the top {buttonData}.
++
+image:dataModel1.png[]
+
+. Expand the ‘Data Source’ folder in the left panel, select the ‘Data Model’ node. Press the  {buttonMoreOptions} or right-click the base physical view that you wish to extend, and select ‘Add Extended View’ from the context menu. This opens the ‘Extended View’ dialog box.
++
+image:dataModel85.png[]
+
+
+. In the ‘Extended View’ dialog box, choose a connection option for the new extended view, and press btn:[OK]. (You can select the default data source connection, or any of the tenant-specific connections.  See xref:AddAdditionalConnection.adoc[] for information on configuring connections.)
++
+image:dataModel86.png[]
++
+NOTE:  An extended physical view is associated with one (and only one) connection. Likewise, a connection can be associated with only one extended physical view.
+
++
+This adds the new extended view to the current data source, and opens the view for editing. The right panel displays the tables and joins defined in the *base physical view*.
++
+image:dataModel87.png[]
++
+NOTE: Tables and joins inherited from the base physical view *cannot* be modified within the extended view.
+
+
+. Drag tables from the left panel into the right panel, and create any desired joins between the new tables and the inherited tables. (See xref:CreatePhysicalView.adoc[] for more information about joining tables in a physical view.)
+
+. When you have finished defining the extended view, press the {buttonSave}.
+
+You can now use this extended physical view to create an extended logical model. See xref:ExtendLogicalModel.adoc[] for more information.

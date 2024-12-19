@@ -1,0 +1,25 @@
+= Date.getTimezoneOffset()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+JavaScript function to return the difference in minutes between a date evaluated in universal timezone and local timezone.    See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset[Date.getTimezoneOffset()] in the {JavaScriptRef} for details on usage.
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var diff = d.getTimezoneOffset();
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getTimezoneOffset();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getTimezoneOffset();
+
+include::partial$readMoreCalcFieldTypes.adoc[]

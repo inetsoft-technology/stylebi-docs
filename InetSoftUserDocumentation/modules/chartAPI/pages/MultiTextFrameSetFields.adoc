@@ -1,0 +1,48 @@
+= MultiTextFrame.setFields(arr)
+:navtitle: MultiTextFrame.setFields()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Specifies the columns containing the text specifications.  The corresponding “getter” function is `getFields()`.
+
+
+
+== Parameter
+arr::			Array of Strings
+
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+ dataset = [["State", "Name", "Quantity"], ["NJ", "New Jersey", 200], ["NY", "New York", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var mtframe = new MultiTextFrame(); //<2>
+mtframe.setFields("Name","Quantity"); //<3>
+elem.setTextFrame(mtframe); //<4>
+graph.addElement(elem);
+--
+
+<1> {dataset}
+<2> Create   the `MultiTextFrame` object.
+<3> Use `setFields` to specify the fields for the `MultiTextFrame`.
+<4> Use xref:GraphElementSetTextFrame.adoc[] to add the `MultiTextFrame` to the xref:IntervalElement.adoc[].
+
+image:commonscript:MultiTextFrameSetField.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

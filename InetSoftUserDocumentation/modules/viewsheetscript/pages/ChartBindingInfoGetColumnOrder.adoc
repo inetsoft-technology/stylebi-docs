@@ -1,0 +1,31 @@
+= bindingInfo.getColumnOrder(col)
+:navtitle: bindingInfo.getColumnOrder()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoSetColumnOrder.adoc[]  to set the binding information.
+
+Returns the sorting order for a specified dimension.
+
+
+
+== Parameter
+col::			Name of field for which to obtain sorting
+
+== Return
+Number:: 1=ascending +
+2=descending +
+0=none
+
+
+== Example
+[source,javascript]
+--
+var ord = Chart1.bindingInfo.getColumnOrder("Company")
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

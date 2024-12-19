@@ -1,0 +1,39 @@
+= shrink
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TableProperties.adoc[] to set the property without using script.
+====
+
+
+Reduces the *height* of the Table to match the number of records displayed. For example, if the original Table height (as designed) was 10 rows, and the user then makes filter selections that  restrict the result set to five rows, the Table’s bottom border will retract upward or “shrink” to eliminate any empty rows at the bottom of the Table.
+
+
+
+
+
+== Type
+Boolean:: `true`: shrink Table to fit contents +
+`false`: do not shrink Table
+
+
+
+== Example
+[source,javascript]
+TableView1.shrink = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shrink                 // unqualified
+TableView1.shrink      // qualified
+
+{secondForm}
+====
+
+

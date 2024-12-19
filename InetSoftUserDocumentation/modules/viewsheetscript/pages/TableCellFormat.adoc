@@ -1,0 +1,52 @@
+= cellFormat
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TableProperties.adoc[] for general information about the Table component.
+====
+
+
+
+
+Specifies the Table cell data format as a two dimensional array. The attribute can be referenced using the row number as the first index and the column header or number as the second index, `[row][col]`. Column and row indices start at 0.
+
+
+== Type
+Array:: Two-dimensional array of formats.  See xref:viewsheet:DataFormat.adoc[] for information on how to specify formats.
++
+include::commonscript:partial$dataFormats.adoc[]
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+cellFormat[5][3] = [StyleConstant.DATE_FORMAT, "yy-MMMM-dd"];
+cellFormat[2]['Total'] = [StyleConstant.DECIMAL_FORMAT, "#,###.00"];
+
+----
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+cellFormat                 // unqualified
+TableView1.cellFormat      // qualified
+
+{secondForm}
+====
+
+

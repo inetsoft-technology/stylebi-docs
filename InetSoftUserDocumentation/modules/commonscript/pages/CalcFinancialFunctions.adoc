@@ -1,0 +1,12 @@
+= Financial Functions
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following topics describe the financial functions provided by the CALC object.  {CALCExcelHeadingPage}
+
+[NOTE]
+====
+Many financial functions include an optional parameter *basis* to indicate the day count convention:
+
+include::partial$basisTable.adoc[]
+====

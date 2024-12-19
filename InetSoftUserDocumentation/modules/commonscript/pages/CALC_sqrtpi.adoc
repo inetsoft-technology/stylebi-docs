@@ -1,0 +1,37 @@
+= CALC.sqrtpi(number)
+:navtitle: CALC.sqrtpi()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the square root of a positive number multiplied by stem:[pi]: `sqrt(pi()*number)`. {CALCExcelFunctionPage}
+
+
+== Parameters
+number::			A positive number
+
+
+== Example
+[source,javascript]
+----
+CALC.sqrtpi(5.5)  // returns 4.156772737923478
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.sqrtpi(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.sqrtpi(Slider1.selectedObject)
+CALC.sqrtpi(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

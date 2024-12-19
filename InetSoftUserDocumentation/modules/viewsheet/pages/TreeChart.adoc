@@ -1,0 +1,89 @@
+= Tree Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A tree chart displays an organizational hierarchy defined by parent-child relationships.
+
+image:commonscript:treeChart1.png[]
+
+To create a  tree chart, follow the basic steps below:
+
+.Configure your data
+[IMPORTANT]
+====
+The chart should be based on a data set containing parent-child relationship such as that below.  See xref:dataworksheet:PrepareYourData.adoc[] for information on how to manipulate your data, if it is not currently in this form.
+
+image:commonscript:treeChartVS2.png[]
+
+
+====
+
+[TIP]
+=====
+If you are *new to charting*, see the following section:
+
+include::partial$createChartIntro.adoc[]
+=====
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Tree’  style.  Press the {buttonApply}.
++
+image:commonscript:treeChartVS1.png[]
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag the desired *parent dimension* to the ‘Source’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:treeChartVS3.png[]
++
+TIP: {convertToDimension}
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *child dimension* to the ‘Target’ region.
++
+image:commonscript:treeChartVS4.png[]
+
+
+. *_Optional:_* From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired dimension to the ‘X’ or ‘Y’ region to break out the diagram along this dimension.
++
+WARNING: This will create a disconnected graph for each dimension value, which may not be desirable.
++
+image:commonscript:treeChartVS5.png[]
+
+. *_Optional:_* To break-out the data set into groups using color, size, or text labeling, drag a dimension from the *Data Source* panel to the ‘Color’,  ‘Size’, or ‘Text’ regions. Press the ‘Edit’ button next to ‘Color’ or ‘Size’ to adjust the settings.
++
+image:commonscript:treeChartVS6.png[]
++
+NOTE: The applied node style is based on the values in the ‘Target’ field. If some nodes are only ‘Source’ nodes and not also ‘Target’ nodes, these nodes will inherit the *edge color*. To force such  source nodes to adopt the color of their first target  in the data set instead, enable ‘Apply Aesthetics to Source Nodes’ in the ‘Chart Properties’ dialog box. See xref:ChartProperties.adoc[] for more information about these properties.
+
+
+
+. *_Optional:_*  For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:viewsheetExp34.png[]
+
+
+. *_Optional:_* To represent the weight or strength of the connection between nodes, drag a weight  field  to the ‘Color’, ‘Shape’, or ‘Size’ region in the ‘Visual’ region.
+
+. To represent an aggregate on the chart nodes, from the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘Color’, ‘Size’, or ‘Text’  or region of the ‘Node’ panel.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:treeChartVS7.png[]
+
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+image:Chart Edit Y Axis_1.png[]
+
+. To set a fixed size or color for the *nodes* (if not being used to represent dimension or measure), press the ‘Edit Size’ or ‘Edit Color’ button and set the desired value in the ‘Node’ panel.
++
+image:commonscript:treeChartVS8.png[]
+
+. To set a fixed size or color for the *lines* (if not being used to represent dimension or measure), press the ‘Edit Size’ or ‘Edit Color’ button and set the desired value.
++
+image:commonscript:treeChartVS9.png[]
+
+
+
+. {finishEditing}
+
+include::partial$addTitlesLegend.adoc[]

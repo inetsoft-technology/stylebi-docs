@@ -1,0 +1,35 @@
+= increment
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+Specifies the interval between displayed labels on the Slider. For example, a value of 15 indicates that the Slider labels should be placed at positions of 0, 15, 30, 45, etc.
+
+
+== Type
+Number::			Spacing between Slider labels
+
+
+
+
+== Example
+[source,javascript]
+Slider1.increment = 15;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+increment                  // unqualified
+Slider1.increment     // qualified
+
+{secondForm}
+====
+
+

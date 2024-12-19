@@ -1,0 +1,59 @@
+= commit(type)
+:navtitle: commit()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+* xref:viewsheetscript:WriteBackToDatabase#AccessMostRecentUserModification[] to detect recent changes.
+* xref:viewsheet:TableProperties.adoc[]  for information on making a Table editable.
+====
+
+
+
+
+When a user adds or changes a row in an *Editable Table*, the new or modified row is highlighted in color. To clear the highlight on these rows and remove them from the corresponding array returned by xref:TableGetFormRows.adoc[], use the table’s `commit` function.
+
+
+
+== Parameters
+type:: Type of rows to commit: `ADDED`, `CHANGED`,			`DELETED`, or the index of a particular row
+
+
+
+== Example
+[source,javascript]
+----
+// Clear highlights on added rows, and remove them from
+// array returned by getFormRows(ADDED).
+Table1.commit(ADDED);
+
+// Clear highlights on changed rows, and remove them from
+// array returned by getFormRows(CHANGED).
+Table1.commit(CHANGED);
+
+// Remove deleted rows from array returned by
+// getFormRows(DELETED).
+Table1.commit(DELETED);
+
+// Remove the row returned by getFormRows(idx) from the
+// array of modified rows.
+Table1.commit(idx);
+
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+commit                 // unqualified
+TableView1.commit      // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,216 @@
+= Groovy DSL Scripting Framework
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+
+This section explains how to create your own scripts using the Groovy DSL. See the following sections (xref:ConnectToRepository.adoc[], xref:ManageDataSources.adoc[], etc.) for information on how to use built-in functions to perform common administrative tasks.
+
+== Run a Script
+To run a script against a *running server*, use the following Docker command:
+
+.Run a script on a running server
+[example]
+====
+[source]
+docker run --rm -v /local/directory/path/file.groovy:/arbitrary/container/path/file.groovy 636869400126.dkr.ecr.us-east-2.amazonaws.com/inetsoft/stylebi-enterprise:1.0 dsl /arbitrary/container/path/file.groovy
+====
+
+where:
+
+/local/directory/path/file.groovy::  Path to a _.groovy_ file on local machine to run (e.g. `C:\temp\sample.groovy`).
+
+/arbitrary/container/path/file.groovy::  Arbitrary path of a temporary directory and file to which the  _.groovy_ file should be mapped  in the container.
+
+
+== Access Command Line Arguments
+You can access command line arguments passed to the script runner by using the `commandLine` property.
+
+.Command line arguments
+[example]
+====
+Run the following script:
+
+ docker run --rm -v /local/directory/path/file.groovy:/arbitrary/container/path/file.groovy 636869400126.dkr.ecr.us-east-2.amazonaws.com/inetsoft/stylebi-enterprise:1.0 dsl /arbitrary/container/path/file.groovy arg1 arg2
+
+Access the command line arguments (arg1, arg2) with the `commandLine` property as follows:
+
+[source,groovy]
+inetsoft {
+    def scriptFile = commandLine[0]
+    def firstArg = commandLine[1]
+    def secondArg = commandLine[2]
+    println "Running script: $scriptFile"
+    println "First argument: $firstArg"
+    println "Second argument: $secondArg"
+}
+
+Output:
+
+ Running script: test.groovy
+ First argument: arg1
+ Second argument: arg2
+====
+
+[#ConnecttoRunningRepository]
+== Connect to a Running Repository (Recommended)
+This section explains how to connect to a repository for a server that is currently running. #This is the recommended approach.#
+
+The outermost function in the DSL is `inetsoft`. Use this closure to define the connection parameters and to pass a closure to the `connect` function.  See xref:ConnectToRepository.adoc[] for additional information.
+
+
+
+
+[source,groovy]
+inetsoft {
+  path 'http://example.com'
+  username 'admin'
+  password 'admin'
+  connect {
+    // code using the client API goes here
+  }
+  // no longer connected to the repository here
+  connect {
+    // this is a new connection
+  }
+}
+
+include::partial$groovyPath.adoc[]
+
+
+The DSL script above is the same as the following Groovy script that uses the client API directly:
+
+[source,groovy]
+import inetsoft.client.Client
+import inetsoft.client.ClientFactory
+String path = 'http://example.com'
+String username = 'admin'
+String password = 'admin'
+ClientFactory factory = new ClientFactory()
+Client client = factory.createLocalClient(path, username, password)
+try {
+  // code using the client API goes here
+}
+finally {
+  client.close()
+}
+// no longer connected to the repository here
+client = factory.createLocalClient(path, username, password)
+try {
+  // this is a new connection
+}
+finally {
+  client.close()
+}
+
+
+== Connect to a Non-Running Repository
+This section explains how to connect to a repository for a server that is *not* currently running.
+
+CAUTION: This is *not* the preferred approach.  See xref:#ConnecttoRunningRepository[] for the recommended approach.
+
+To connect to a non-running repository, use the folliowing command, where  `-v` is mounting the persistent storage volumes.
+
+ docker run --rm -v /local/directory/path/file.groovy:/arbitrary/container/path/file.groovy -v enterprise_inetsoft_blob:/var/lib/inetsoft/blob -v enterprise_inetsoft_kv:/var/lib/inetsoft/kv 636869400126.dkr.ecr.us-east-2.amazonaws.com/inetsoft/stylebi-enterprise:1.0 dsl /arbitrary/container/path/file.groovy
+
+
+== Use the Client Service APIs
+In the `connect` closure, the DSL provides shorthand functions for accessing the client service APIs. The following functions are available:
+
+[cols="1,3"]
+|===
+|Function|Accesses...
+
+|dataSource| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/client/DataSourceClientService.html[inetsoft.client.DataSourceClientService]
+|file|  https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/client/FileClientService.html[inetsoft.client.FileClientService]
+|printer|  https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/client/PrinterClientService.html[inetsoft.client.PrinterClientService]
+|schedule|  https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/client/ScheduleClientService.html[inetsoft.client.ScheduleClientService]
+|security|  https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/client/SecurityClientService.html[inetsoft.client.SecurityClientService]
+|===
+
+
+Within the service closure, all methods of the service can be called directly, as shown below:
+
+
+
+
+== Create a Data Structure with the DSL
+In the `connect` closure, the DSL provides shorthand functions for creating the data structures required by the client APIs. The following functions are available:
+
+[cols="1,3"]
+|===
+|Function|Accesses...
+
+|jdbc| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/JdbcDataSourceProperties.html[inetsoft.web.api.datasource.JdbcDataSourceProperties]
+|soap| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/SoapDataSourceProperties.html[inetsoft.web.api.datasource.SoapDataSourceProperties]
+|text| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/TextDataSourceProperties.html[inetsoft.web.api.datasource.TextDataSourceProperties]
+|tabular| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/TabularDataSourceProperties.html[inetsoft.web.api.datasource.TabularDataSourceProperties]
+|xml| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/XmlDataSourceProperties.html[inetsoft.web.api.datasource.XmlDataSourceProperties]
+|parameter| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/report/ReportParameter.html[inetsoft.web.api.report.ReportParameter]
+|permission| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/report/PermissionGrant.html[inetsoft.web.api.report.PermissionGrant]
+|task| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleTask.html[inetsoft.web.api.schedule.ScheduleTask]
+|timeCondition| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/TimeCondition.html[inetsoft.web.api.schedule.TimeCondition]
+|completionCondition| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/CompletionCondition.html[inetsoft.web.api.schedule.CompletionCondition]
+|viewsheetAction| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ViewsheetAction.html[inetsoft.web.api.schedule.ViewsheetAction]
+|===
+
+.Data structure (DSL)
+[example]
+====
+Within the service closure, all methods of the service can be called directly, as shown below.
+
+[source,groovy]
+inetsoft {
+  path 'http://www.example.com'
+  username 'admin'
+  password 'admin'
+  connect {
+    def t = task {
+      name 'My Task'
+      enabled false
+    }
+    schedule {
+      updateScheduleTask('My Task',t)
+    }
+  }
+}
+
+
+
+
+include::partial$groovyPath.adoc[]
+====
+
+
+.Data structure (API)
+[example]
+====
+The previous DSL script is the same as the following Groovy script that uses the client API directly:
+
+[source,groovy]
+import inetsoft.client.Client
+import inetsoft.client.ClientFactory
+import inetsoft.client.ScheduleClientService
+import inetsoft.web.api.schedule.ScheduleTask
+String path = 'http://www.example.com'
+String username = 'admin'
+String password = 'admin'
+ClientFactory factory = new ClientFactory()
+Client client = factory.createLocalClient(path, username, password)
+try {
+  ScheduleTask task = new ScheduleTask()
+  task.setName('My Task')
+  task.setEnabled(false)
+  ScheduleClientService schedule = client.getScheduleService()
+  schedule.updateScheduleTask('My Task', task)
+}
+finally {
+  client.close()
+}
+
+include::partial$groovyPath.adoc[]
+
+====
+More examples of the DSL data structure functions can be found in  xref:ManageDataSources.adoc[] and xref:ManageScheduledTasks.adoc[].
+

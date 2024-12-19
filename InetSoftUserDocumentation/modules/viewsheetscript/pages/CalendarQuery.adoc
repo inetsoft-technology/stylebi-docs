@@ -1,0 +1,33 @@
+= query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:CalendarFields.adoc[] to specify the fields to display in the Calendar.
+
+Specifies the data block to be used by the Calendar component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.
+
+
+image:dataworksheet:dataBlocks_4.png[]
+
+== Type
+String
+
+
+== Example
+[source,javascript]
+Calendar1.query = 'Sales';
+Calendar1.fields = ['Date'];
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+query              // unqualified
+Calendar1.query    // qualified
+
+{secondForm}
+====
+
+

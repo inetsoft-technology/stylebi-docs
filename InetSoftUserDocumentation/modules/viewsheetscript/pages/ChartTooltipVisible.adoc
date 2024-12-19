@@ -1,0 +1,34 @@
+= toolTipVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies whether the Chart displays tooltips or not.
+
+== Type
+Boolean:: `true`: display tooltips (default) +
+`false`: hide tooltips
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.toolTipVisible = false; // hide tooltips
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+toolTipVisible         // unqualified
+Chart1.toolTipVisible  // qualified
+
+{secondForm}
+====
+
+

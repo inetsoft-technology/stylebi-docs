@@ -1,0 +1,79 @@
+= StaticSizeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:SizeFrame.adoc[]
+* xref:VisualFrame.adoc[]
+====
+
+
+The `StaticSizeFrame` object contains a size frame defined by explicit size data in the xref:VisualFrameSetField.adoc[] column, or by the fixed size in xref:StaticSizeFrameSetSize.adoc[]. To create a `StaticSizeFrame` object, call the `StaticSizeFrame` constructor.
+
+[source,javascript]
+var frame = new StaticSizeFrame(10);
+
+
+You can pass the numerical size (e.g., 10) to the constructor, or specify this later using xref:StaticSizeFrameSetSize.adoc[]. You can also assign a `SizeFrame` using the xref:viewsheetscript:ChartBindingInfoSizeFrame.adoc[]  property in *onRefresh* script. See xref:#Example2[] below.
+
+
+
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Size"],["NJ",200,1], ["NY",300,10]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new StaticSizeFrame(); //<2>
+frame.setField("Size");
+elem.setSizeFrame(frame); //<3>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `StaticSizeFrame` object.
+<3> Use xref:GraphElementSetSizeFrame.adoc[] to add the `StaticSizeFrame` to the xref:IntervalElement.adoc[].
++
+image:commonscript:StaticSizeFrame2.png[]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+
+
+[#Example2]
+== Example 2
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:SizeFrame.adoc[].
+
+. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setSizeField("Company",Chart.STRING);
+Chart1.bindingInfo.sizeFrame = new StaticSizeFrame;
+Chart1.bindingInfo.sizeFrame.setSize(30);
+--
+
++
+image:commonscript:StaticSizeFrame.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

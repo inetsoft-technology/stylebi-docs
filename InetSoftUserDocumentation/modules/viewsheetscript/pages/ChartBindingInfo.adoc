@@ -1,0 +1,12 @@
+= bindingInfo
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+The topics in this section present functions related to the `bindingInfo` property of the Chart. The `bindingInfo` property provides access to the binding, grouping, and aggregation settings available within the Chart Editor.
+
+The `bindingInfo` properties also control the xref:chartAPI:ColorFrame.adoc[], xref:chartAPI:ShapeFrame.adoc[], xref:chartAPI:SizeFrame.adoc[], and xref:chartAPI:TextureFrame.adoc[] objects that determine visual styling for data represented on the chart (e.g., subseries).
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

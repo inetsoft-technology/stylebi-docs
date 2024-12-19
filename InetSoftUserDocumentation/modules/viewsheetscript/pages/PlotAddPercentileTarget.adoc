@@ -1,0 +1,78 @@
+= addPercentileTarget(measure, colors, values, options)
+:navtitle: addPercentileTarget()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Draws a set of horizontal or vertical lines on the chart to mark the specified percentiles.  See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.
+
+include::ROOT:partial$targetLinesGraphForm.adoc[]
+
+
+== Parameter
+measure::			Name of measure on which to draw percentile lines
+colors::			Color (see xref:PlotValueColor.adoc[]) or array of colors to fill areas between percentile lines
+values::			Percentage, or array of percentages, at which to draw lines
+options::			Name-value pairs of options (see xref:#Options[] below, e.g., `{fillAbove:0xff0000, fillBelow:0x00ff00}`)
+
+[#Options]
+== Options
+fillAbove::				Color (see xref:PlotValueColor.adoc[]) to fill the region above the upper percentile line
+fillBelow::				Color (see xref:PlotValueColor.adoc[]) to fill the region below the lower percentile line
+label::				String, or array of strings, to label the percentile line(s). The following codes can be inserted:
++
+include::partial$targetLabelCodes.adoc[]
+
+
+lineColor::				Color (see xref:PlotValueColor.adoc[]) to apply to all percentile lines
+lineStyle::				The line style (a  xref:commonscript:StyleConstantLineStyle.adoc[] constant) to apply to all percentile lines
+labelFont::				The font description (e.g., `'Lucida Sans Unicode-BOLD-14'`) to apply to all line labels
+labelColor::				The color (see xref:PlotValueColor.adoc[]) to apply to all line labels
+
+
+
+
+
+
+
+
+==  Examples
+.Single Percentile Line
+[source,javascript]
+--
+// The 'options' object is broken into several lines for clarity:
+var options = {fillAbove:[225,225,255],fillBelow:[225,225,225], \
+label:['{1}: {0,number,$#,##0}'],lineColor:'red',lineStyle:Chart.THICK_LINE, \
+labelFont:'Lucida Sans Unicode-BOLD-11',labelColor:'black'}
+Chart1.addPercentileTarget('Sum(Product:Total)','null',95,options)
+--
+
+image:commonscript:PlotAddTargetPercentile1.png[]
+
+.Multiple Percentile Lines
+[source,javascript]
+--
+// The 'options' object is broken into several lines for clarity:
+var options = {fillAbove:[225,225,255],fillBelow:[225,225,225], \
+label:['{1}: {0,number,$#,##0}','{1}: {0,number,$#,##0}','{1}: {0,number,$#,##0}'], \
+lineColor:'red',lineStyle:Chart.THICK_LINE, labelFont:'Lucida Sans Unicode-BOLD-11',labelColor:'black'};
+Chart1.addPercentileTarget('Sum(Product:Total)',[0xDDAAAA,0xDDCCCC],[50,75,90],options)
+--
+
+
+image:commonscript:PlotAddTargetPercentile2.png[]
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+addPercentileTarget         // unqualified
+Chart1.addPercentileTarget  // qualified
+
+{secondForm}
+====

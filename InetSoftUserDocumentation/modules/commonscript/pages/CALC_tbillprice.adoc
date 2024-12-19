@@ -1,0 +1,42 @@
+= CALC.tbillprice(settlement, maturity, discount)
+:navtitle: CALC.tbillprice()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the issue *price* per $100 face value for a Treasury bill using the 360-day year convention. The `settlement` and `maturity` dates must be within one calendar year of each other. {CALCExcelFunctionPage}
+
+== Parameters
+settlement::			Date object: T-bill’s settlement date
+maturity::			Date object: T-bill’s maturity date
+discount::			 T-bill’s discount rate
+
+
+
+== Example
+Issue price of a Treasury bill with 9.14% discount rate, settlement date of March 31, 2008, and maturity date of June 1, 2008.
+
+
+[source,javascript]
+----
+CALC.tbillprice(new Date(2008, 2, 31), new Date(2008, 5,1), 0.0914);
+// returns 98.42588888888889 (approx $98.43 per $100 face value)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.tbillprice(field['SettleDate'], field['MatureDate'], 0.0914);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.tbillprice(RangeSlider1.selectedObjects[0], RangeSlider1.selectedObjects[1], 0.0914);
+CALC.tbillprice(parameter.SettleDate, parameter.MatureDate, 0.0914);
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

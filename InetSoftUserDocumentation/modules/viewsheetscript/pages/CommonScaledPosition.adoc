@@ -1,0 +1,32 @@
+= scaledPosition
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+
+For cases when the ‘Scale to Screen’ option (see xref:viewsheet:DashboardOptions.adoc[]) is enabled, returns the final rendered position of the top-left corner of a component in terms of pixels.  The top-left corner of the Dashboard represents pixel location (0,0). This property returns `null` within the design view of Visual Composer and whenever ‘Scale to Screen’ is not enabled.
+
+== Type
+https://docs.oracle.com/javase/7/docs/api/index.html?java/awt/Point.html[java.awt.Point] object: `java.awt.Point(horizontal,vertical)`
+
+== Example
+[source,javascript]
+alert(Chart1.scaledPosition)
+// returns java.awt.Point[x=200,y=25]
+
+This indicates that the  top-left corner of Chart1 is at 200 pixels right, 25 pixels down.
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+scaledPosition               // unqualified
+Component1.scaledPosition    // qualified
+
+{secondForm}
+====
+
+

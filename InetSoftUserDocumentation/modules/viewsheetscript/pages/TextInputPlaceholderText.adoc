@@ -1,0 +1,38 @@
+= placeholderText
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:TextInputProperties.adoc[] for more information about the TextInput component.
+====
+
+
+Specifies the text to appear within the TextInput field whenever *no text* has been entered. (This is often a hint to the user about what data they should enter, for example, "`Enter the employee name`".) The placeholder text is automatically removed when the user begins entering data, and is *never  submitted* as the value of the TextInput component.
+
+
+== Type
+String or Number
+
+
+
+
+
+== Example
+[source,javascript]
+TextInput1.placeholderText = 'Enter the employee name';
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+placeholderText                // unqualified
+TextInput1.placeholderText     // qualified
+
+{secondForm}
+====
+
+

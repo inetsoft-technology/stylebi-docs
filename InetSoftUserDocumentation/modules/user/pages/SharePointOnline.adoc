@@ -1,0 +1,32 @@
+= SharePoint Online
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$dataSourceUserIntro.adoc[]
+
+. Select the ‘SharePoint Online’ data source, and press btn:[Create]. This opens the data source definition screen.
++
+image:dataSourceNewSharePointOnline2.png[]
+
+. In the ‘Name’ field, enter a label for this data source connection.
+
+. Enter the SharePoint username and password.
+
+. Enter the ‘Client ID’, ‘Tenant ID’, and ‘Client Secret’. See the https://docs.microsoft.com/en-us/sharepoint/sharepoint-online[SharePoint Online documentation] for information about these settings.
++
+. *_Optional:_* {multiTenantUser}
+
+. Press btn:[OK].
++
+include::ROOT:partial$createVisualizationStep2.adoc[]
+. Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
++
+image:dataSourceSharePointOnline3.png[]
++
+If the database is shown with an {buttonError}, this means that the connection was not successful.
++
+image:dataSourceSharePointOnline4.png[]
++
+In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
+
+After you have created a connection to the database, you can proceed to define a data set. See xref:dataworksheet:QuerySharePointOnline.adoc[].

@@ -1,0 +1,14 @@
+= Chart Style
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+The chart style constants specify how a Chart presents its data.
+
+== Type
+One of the constants below:
+
+include::ROOT:partial$chartStyle.adoc[]
+
+
+

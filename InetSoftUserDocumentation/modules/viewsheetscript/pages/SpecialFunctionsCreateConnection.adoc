@@ -1,0 +1,15 @@
+= createConnection('datasource', 'name', 'pw')
+:navtitle: createConnection()
+
+
+
+Creates a connection to a data source. (See xref:WriteBackToDatabase.adoc[] for full details.)  If the specified data source does not require credentials, replace the username and password with empty strings (`''`).
+
+== Parameters
+datasource::			Name of the datasource
+name::			Optional username
+pw::			Optional password
+
+== Example
+[source,javascript]
+var conn = createConnection('Orders','','');

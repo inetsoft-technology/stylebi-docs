@@ -1,0 +1,48 @@
+= CALC.mmult(array1, array2)
+:navtitle: CALC.mmult()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the product of two conformable matrices, `array1*array2`, each represented as a two-dimensional array. {CALCExcelFunctionPage}
+
+== Parameters
+array1::			A 2D array representing the left matrix
+array2::			A 2D array representing the right matrix
+
+
+
+
+
+
+== Example
+stem:[ [[1,2\],[3,4\]\][[5,6,7\],[8,9,0\]\]=[[21,24,7\],[47,54,21\]\]]
+[source,javascript]
+----
+var matrixA = [[1,2],[3,4]];
+var matrixB = [[5,6,7],[8,9,0]];
+var prod = CALC.mmult(matrixA, matrixB);
+for (var i=0; i<=1; i++){
+  alert(prod[i].join(","))
+}
+
+// Returns:
+// 21,24,7
+// 47,54,21
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+var matrixA = [parameter.rowA1,parameter.rowA2];
+var matrixB = [parameter.rowB1,parameter.rowB2];
+CALC.mmult(matrixA, matrixB);
+
+----
+
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

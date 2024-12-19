@@ -1,0 +1,41 @@
+= sortType
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for  properties shared with other components.
+* xref:viewsheet:RadioCheckBoxComboProperties.adoc[]for more information about Form components.
+====
+
+
+Specifies the sorting for items displayed in a Check Box, Radio Button, or ComboBox component.
+
+== Type
+xref:commonscript:StyleConstant.adoc[] object:: `StyleConstant.SORT_ASC`: Ascending order +
+`StyleConstant.SORT_DESC`: Descending order +
+`StyleConstant.SORT_NONE`: Original order
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+ComboBox1.sortType = StyleConstant.SORT_DESC;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sortType            // unqualified
+ComboBox1.sortType  // qualified
+
+{secondForm}
+====

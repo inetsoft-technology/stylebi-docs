@@ -1,0 +1,27 @@
+= Date.setTime(value)
+:navtitle: Date.setTime()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+JavaScript function to set the milliseconds from January 1, 1970 (Unix epoch) for a specified date (UTC).      See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setTime[Date.setTime()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+== Example
+[source,javascript]
+var date1 = new Date();
+var date2 = new Date('January 1, 2000');
+date1.setTime(date2.getTime());
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+date1.setTime(field['Date'].getTime());
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+date1.setTime(parameter.Date.getTime());
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

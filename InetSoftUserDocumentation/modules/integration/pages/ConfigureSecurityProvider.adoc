@@ -1,0 +1,74 @@
+= Configure Security Provider
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The security provider is responsible for authentication and authorization. Choose your security provider based on your SSO implementation and your security framework.
+
+== Select a Security Provider
+The following sections provide guidance on using the various security options.
+
+Default File-Based Security Provider:: The default security provider is provided as part of the StyleBI installation. Use the default file-based security provider in the following circumstances:
+
+* You do not have any existing security data store that you want to reuse for your  application.
+* You have an existing security data store, but it is not feasible to connect to this store via the InetSoft custom security interface. In this case, you will need to duplicate all your users, groups, and roles for use within StyleBI, and set corresponding permissions. You can do this via Enterprise Manager and/or security API calls. You will be responsible for keeping your existing data store and the StyleBI security provider in sync.
+* You have implemented complete session-based SSO (see xref:ConfigureSingleSignOn.adoc[]), and your security is predominantly defined at the group/role level. In this case you do not need to define any users in the security provider. Simply define your groups/roles and set corresponding permissions. You can do this via Enterprise Manager and/or security API calls.
+
+LDAP Security:: Use the LDAP File Security Provider if you have an LDAP data store (such as Active Directory), irrespective of the SSO mechanism that you select. See  xref:administration:ConfigureLDAPSecurity.adoc[] in xref:administration:ManageServer.adoc[].
++
+NOTE: The LDAP option is not available when multi-tenancy is enabled.  (See xref:administration:EnableMultiTenant.adoc[].)
+
+Custom DB-based or API-Based Security Provider::
++
+include::ROOT:partial$enterpriseOnly.adoc[]
++
+Implement a custom security provider if your setup requires the security provider to perform authentication of user credentials or user role/group mappings against an _external source_. For example, if your security data store is a database or another security framework and you have partial session-based SSO, use a custom security provider. The best approach is the _compoiste security provider_, which splits the responsibility for authentication and authorization tasks. To do this, implement your own authentication provider and use the built-in file-based authorization provider. See xref:administration:SpecifySecurityProvider.adoc[] in xref:administration:ManageServer.adoc[] for more infomation.
+
+
+
+
+
+
+== Security Provider Functions
+
+The security provider includes the following key functions for authentication and authorization:
+
+.Authentication
+[cols="1,3"]
+|===
+|Function| Description
+
+|authenticate()| Validates user login.
+|getUser()| Maps user to groups and roles.
+|getGroups(), getRoles()| Provide list of users, roles, and groups.
+|getOrganization()|Provide list of organizations.
+|===
+
+
+.Authorization
+[cols="1,3"]
+|===
+|Function| Description
+
+|getPermission(), setPermission()| Gets and sets InetSoft-specific permissions for users, groups, or roles.
+|===
+
+The SSO method that you use will determine which functions of the security provider are *bypassed*. The list below shows the conditions under which certain functions are invoked or bypassed.
+
+.SSO Authentication
+[cols="1,3"]
+|===
+|Function| Status
+
+|authenticate()| Bypassed
+|getUser()| Bypassed, depending on information in SRPrincipal object.
+|getGroups(), getRoles()| Invoked, when you set permissions via  Enterprise Manager.
+|getOrganization()|Invoked, when you set permissions via  Enterprise Manager.
+|===
+
+.SSO Authorization
+[cols="1,3"]
+|===
+|Function| Status
+
+|getPermission(), setPermission()| Invoked
+|===

@@ -1,0 +1,95 @@
+= Share to a Social Network
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::viewsheet:partial$availableToEndUsers.adoc[]
+
+
+To share a Dashboard to a social network, follow the steps below.
+
+. Open the Dashboard for viewing. (See xref:user:UseDashboard.adoc[].)
+
+. Press the {buttonSocialSharing} on the Dashboard toolbar.
++
+image:socialButton.png[]
+
+. Choose the desired sharing mechanism.  See the sections below.
+
+== Email
+TIP: For more advanced email features, see xref:EmailDashboard.adoc[].
+
+Follow the steps below:
+
+. Select the {buttonSocialEmail}. This opens the ‘Email’ dialog box.
++
+image:socialEmail.png[]
+
+. In the ‘To’ field, enter a semicolon-separated list of emails to which the Dashboard link should be sent.
+
+. In the ‘Subject’ field, enter a message for the email subject line.
+
+. In the ‘Message’ field, enter the body of the email message.
+
+. Press btn:[OK].
+
+
+
+== Facebook
+Follow the steps below:
+
+. Select the {buttonFacebook}. This opens a new browser window.
+
+. Log into Facebook if prompted.
+
+. Add a note to the post and press ‘Post to Facebook’.
++
+IMPORTANT: Sharing on Facebook *does not require* the InetSoft application to be accessible from the internet. However, if the application is not accessible Open Graph tags will not be used and only the domain name of the application will be displayed in the post. Sharing is not available when using “localhost” as the host name of the server.
+
+== Google Hangouts Chat
+Follow the steps below:
+
+. Select the {buttonGoogleHangoutsChat}. (If the option is not available, please contact an administrator to configure the option by supplying the webhook URL.)
+
+. In the ‘Google Hangouts Chat’ dialog box, edit the message to be displayed in the chat.
+
+. Press btn:[OK] to close the dialog box.
+
+== LinkedIn
+Follow the steps below:
+
+. Select the {buttonLinkedIn}. This opens a new browser window.
+
+. Log into LinkedIn if prompted.
+
+. Follow the steps on the LinkedIn page to post the Dashboard.
++
+IMPORTANT: Sharing on LinkedIn *requires* the InetSoft application to be accessible from the internet.
+
+== Slack
+Follow the steps below:
+
+. Select the {buttonSlack}. (If the option is not available, please contact an administrator to configure the option by supplying the webhook URL.)
+
+. In the ‘Slack’ dialog box, edit the message to be displayed in the chat.
+
+. Press btn:[OK] to close the dialog box.
+
+== X (Twitter)
+Follow the steps below:
+
+. Select the {buttonTwitter}. This opens a new browser window.
+
+. Log into X (Twitter) if prompted.
+
+. Follow the steps on the X (Twitter) page to post the Dashboard link.
+
+== Copy link
+Follow the steps below:
+
+. Select the {buttonCopyLink}. This opens a the ‘Copy Link’ dialog box.
++
+image:socialCopyLink.png[]
+
+. Press the {buttonSocialCopyButton} to copy either the link alone or the HTML embed code.
+
+. Press btn:[OK] to close the dialog box.

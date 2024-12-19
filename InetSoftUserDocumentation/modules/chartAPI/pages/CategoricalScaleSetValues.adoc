@@ -1,0 +1,51 @@
+=  CategoricalScale.setValues(value)
+:navtitle: CategoricalScale.setValues()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Scale.adoc[]
+====
+
+Specifies the categorical values in the scale, and their order.  The corresponding “getter” function is `getValues()`.
+
+
+
+== Parameter
+value:: Array of String
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var sscale = new CategoricalScale("State"); //<2>
+var qscale = new LinearScale("Quantity");
+var coord = new RectCoord(sscale, qscale); //<3>
+sscale.setValues(["NY","NJ"]); //<4>
+coord.transpose();
+graph.setCoordinate(coord); //<5>
+graph.addElement(elem);
+
+
+--
+<1> {dataset}
+<2> Create the `CategoricalScale` object.
+<3> Assign the scale to a xref:Coordinate.adoc[] object.
+<4> Use `setValues` to assign the values to the `CategoricalScale`.
+<5> Assign the xref:Coordinate.adoc[] to the Chart.
+
+
+image:commonscript:CategoricalScaleSetValues.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

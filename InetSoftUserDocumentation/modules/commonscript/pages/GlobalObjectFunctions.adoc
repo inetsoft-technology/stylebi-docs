@@ -1,0 +1,13 @@
+= Global Object Functions
+
+The Global object contains the properties and functions available for the entire scripting environment. The values and functions can be accessed anywhere as top-level properties and functions without any qualifier.
+
+== Example
+[source,javascript]
+----
+// convert a text field to an integer
+var val = parseInt(TextField1.text);
+
+// assign the half of the value to another text element
+Text2.text = (val * 1/2).toString();
+----

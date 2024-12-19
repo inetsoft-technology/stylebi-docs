@@ -1,0 +1,41 @@
+= bindingInfo.measureFields
+:navtitle: measureFields
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:CrosstabQuery.adoc[] to specify the data block from which the Crosstab  displays data.
+
+Specifies the data block fields to be used as measures. This is equivalent to adding fields into the ‘Aggregates’ region of the Crosstab Editor.
+
+image:commonscript:bindingInfoMeasures.png[]
+
+
+
+
+== Type
+Array
+
+
+== Example
+[source,javascript]
+Crosstab1.query = 'Sales';
+Crosstab1.bindingInfo.rowFields = ['Category','Name'];
+Crosstab1.bindingInfo.colFields = ['Region','State'];
+Crosstab1.bindingInfo.measureFields = ['Total','Quantity Purchased'];
+
+image:commonscript:bindingInfoCrosstabExp1_3.png[]
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.measureFields             // unqualified
+Crosstab1.bindingInfo.measureFields   // qualified
+
+{secondForm}
+====
+
+

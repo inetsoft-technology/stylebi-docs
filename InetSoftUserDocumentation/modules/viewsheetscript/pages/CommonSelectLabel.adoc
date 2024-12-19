@@ -1,0 +1,39 @@
+= selectedLabel
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CheckRadioComboLabels.adoc[] to access the labels displayed in the component.
+* xref:CommonSelectObject.adoc[] to access the value corresponding to the label.
+* xref:CommonSelectLabels.adoc[] to access the currently selected labels in multi-valued components.
+* xref:AccessComponentData.adoc[] for more information about `selectedLabel`.
+====
+
+Specifies the selected *label* of the component (not the value). Applies to single value input elements (Slider, Spinner, Radio Button, Combo Box).
+
+== Type
+String:: 		label of the selected option
+
+
+== Example
+[source,javascript]
+Text1.text = 'Displaying data for ' + RadioButton1.selectedLabel;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+selectedLabel               // unqualified
+Component1.selectedLabel    // qualified
+
+{secondForm}
+====
+
+
+
+

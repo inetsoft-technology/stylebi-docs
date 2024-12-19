@@ -1,0 +1,135 @@
+= Add a KPI
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The most common way to represent a Key Performance indicator (KPI) is by using a Gauge component for graphical representation or a Text component for digital representation. The following sections explain how to do this.
+
+== Add a Gauge KPI
+A Gauge component allows you to display a single aggregated value (for example, a grand total) in a visually prominent manner.
+
+=== Add the Gauge Component
+To add a Gauge component, follow the steps below:
+
+. If necessary, create a new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+. From the *Toolbox* panel, drag the Gauge component onto the Dashboard.
++
+image:agileDash41.png[]
+
+. From the data source at the top of the *Toolbox* panel, drag a *measure* onto the Gauge component. (A green highlight informs you when you can drop the field.)
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:agileDash42.png[]
++
+This binds the measure to the Gauge component so that the component displays the aggregated value of the measure.
+
+. Right-click on the Gauge component, and select ‘Properties’ from the context menu. This opens the ‘Gauge Properties’ panel.
+
+. Select the *General* tab of the ‘Gauge Properties’ panel, and choose a desired gauge face.
++
+image:outputProperties.png[]
+
+. Select the *Data* tab. From the 'Aggregate' menu, select the desired aggregation method.  *_Optional:_* To make the aggregate dynamic so that a user can change it, use the {buttonValueType}. (See xref:DynamicallySetProperties.adoc[] for more details.)
+
+. Press btn:[OK] to close the panel.
+
+. Enlarge the component as desired by dragging on any of the component borders.
++
+image:agileDash43.png[]
+
+=== Set Gauge Ranges (Optional)
+To set multiple ranges for a Gauge, follow the steps below:
+
+. Right-click on the Gauge component, and select ‘Properties’ from the context menu. This opens the ‘Gauge Properties’ panel.
+
+. Open the *Advanced* tab. In the ‘Range’ panel you will see three editable drop-down lists.
+
+. Enter a value for ‘Range 1 to’ and choose a color from the pop-up menu. This sets the region from the minimum value on the scale to the specified value.
+
+. Enter a value into ‘Range 2 to’ and choose a color from the pop-up menu. This sets the region from the end of ‘Range 1’ to the specified value.
+
+. Repeat the above steps to add any additional thresholds.
+
+. *_Optional:_*  Select ‘Gradient’ to smoothly blend the zone colors.   You can  choose a color for the final blend as well.
++
+image:Range Colors for Slider.png[]
+
+. Press btn:[OK] to apply the ranges.
+
+== Add a Text KPI
+In addition to displaying static text (see xref:AddTextOrHTML.adoc[]), a Text component allows you to display a single aggregated value (for example, a grand total). To use a Text component to display aggregate data, follow the steps below:
+
+. If necessary, create a new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+. From the *Toolbox* panel, drag a Text component onto the Dashboard.  This creates a new Text component.
+
+. From the data source at the top of the *Toolbox* panel, drag a *measure* onto the Text component. (A green outline informs you when you can drop the field.)
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:textComponentAggregateExp.png[]
++
+This binds the measure to the Text component so that the component displays the aggregated value of the measure.
+
+. *_Optional:_* Enlarge the Text component by dragging on any of the component borders.
+
+. *_Optional:_* Click the Text component to select it, and select the *Format* tab in the left panel.  Style the text as desired. (See xref:VisualFormat.adoc[] and xref:DataFormat.adoc[] for more details.)
++
+image:textComponentAggregateExp2.png[]
+
+. Right-click the Text element, and select 'Properties' form the context menu. This opens the 'Text Properties' panel.
+
+. Select the *Data* tab. From the 'Aggregate' menu, select the desired aggregation method.   To make the aggregate dynamic so that a user can change it, use the {buttonValueType}. See xref:DynamicallySetProperties.adoc[] for more details.
++
+image:textComponentAggregateExp4.png[]
+
+
+. Press btn:[OK].
+
+
+
+
+
+. *_Optional:_* To filter the aggregate data displayed in the KPI, right-click the Text component and select ‘Condition’ from the context menu. This opens the ‘Condition’  panel. Enter the desired condition and press btn:[OK]. To filter out *null* values, you can use a condition such as `[Company][is not][equal to][null]`.
+See xref:AddConditions.adoc[] for more information about conditions.
++
+TIP: It is generally preferable to use Filter components for filtering purposes.  See xref:FilterDashboard.adoc[].
++
+image:textComponentAggregateExp5.png[]
+
+
+
+
+== Compute a KPI with Script
+
+The easiest way to use a Gauge or Text component to display a KPI is to bind the Gauge or Text to an existing data field as described above. However, you can also compute a KPI using script.
+
+There are several ways to do this:
+
+Text or Gauge:: Create a calculated field (see xref:dataworksheet:CreateNewDataField.adoc[]), and bind the calculated field to the Gauge or Text in the usual way (see above).
+Text Only:: Enter an expression for the ‘Text’ property on the *General* tab of the ‘Text Properties’ panel to aggregate the desired data. See xref:TextProperties.adoc[] for more information.
+Text or Gauge:: Enter an expression on the  *Script* tab of the ‘Gauge Properties’ or ‘Text Properties’ panel to compute a desired value. Assign the computed value to keyword `value`. For example:
++
+[source,javascript]
+value = sum(Sales['Total'])
++
+image:gaugeValueScript.png[]
+
+
+
+For complete details on component scripting, see xref:viewsheetscript:AdvancedDashboardScripting.adoc[].
+include::ROOT:partial$excelFunctions.adoc[]
+
+
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Enrollment.zip[Enrollment] Dashboard provides an example of using Text KPIs.
+
+image:viewsheet:galleryTextKPI2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Enrollment.zip[Enrollment] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****

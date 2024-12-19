@@ -1,0 +1,38 @@
+= CALC.floor(number, significance)
+:navtitle: CALC.floor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns number rounded toward zero to the nearest multiple of significance. Positive numbers are rounded down, negative numbers are rounded up. {CALCExcelFunctionPage}
+
+== Parameters
+number::			Number to round
+significance::			Rounding interval (must have same sign as number)
+
+
+
+== Example
+[source,javascript]
+----
+CALC.floor(4.43, 0.05);  // returns 4.4
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.floor(field['Value'], 0.05)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.floor(Slider1.selectedObject,  0.05)
+CALC.floor(parameter.Value,  0.05)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

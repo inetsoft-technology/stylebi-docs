@@ -1,0 +1,67 @@
+= Bubble Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A bubble chart is a xref:PointChart.adoc[] in which the size of the points represents a second measure.
+
+image:commonscript:bubbleChartExp4b.png[]
+
+To create a bubble chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Point’  style. Press the {buttonApply}.
++
+image:commonscript:pointChartExp1.png[]
++
+NOTE: ‘Point’ is the default chart style when numerical dimensions are used.
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
++
+image:commonscript:pointChartExp2.png[]
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+TIP: {convertToDimension}
+
+. *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:viewsheetExp34.png[]
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:bubbleChartExp1.png[]
++
+TIP: {convertToMeasure}
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+image:Chart Edit Y Axis_1.png[]
+
+. To use the _size_ of the points to represent another measure, drag a desired measure from the data source to the 'Size' region.
++
+image:commonscript:bubbleChartExp2.png[]
+
+. *_Optional:_*  Use the 'Shape' and 'Color' regions to display other measures, as desired.
++
+image:commonscript:bubbleChartExp3.png[]
+
+
+. *_Optional:_* {multipleMeasure}
+
+. {finishEditing}
+
+include::partial$addTitlesLegend.adoc[]
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Global_Visual_Analysis.zip[Global Visual Analysis] Dashboard provides an example of using a bubble chart.
+
+image:viewsheet:galleryBubble2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Global_Visual_Analysis.zip[Global Visual Analysis] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****

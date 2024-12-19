@@ -1,0 +1,39 @@
+= EGraph.removeForm(idx)
+:navtitle: EGraph.removeForm()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Removes the specified xref:chartAPI:GraphForm.adoc[] from the Chart. See xref:chartAPI:ChartAnnotation.adoc[] for available forms.  `GraphForm` objects are indexed in the order that they are added to the chart, beginning with index 0.
+
+== Parameter
+idx::			a xref:chartAPI:GraphForm.adoc[] object
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new LineForm();
+form.addPoint(new java.awt.Point(0,0));
+form.addPoint(new java.awt.Point(100,100));
+form.addPoint(new java.awt.Point(200,100));
+form.setFill(true);
+graph.addForm(form); //<2>
+graph.addElement(elem);
+graph.removeForm(0); //<3>
+--
+<1> {dataset}
+<2> Add the xref:LineForm.adoc[] to Chart.
+<3> Use `removeForm()` to remove the `LineForm`.
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+

@@ -1,0 +1,68 @@
+= Step Line Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+A step line chart is a type of xref:LineChart.adoc[] that connects the measure  data points by using only the horizontal and vertical directions.
+
+.See Also...
+[TIP]
+====
+xref:JumpLineChart.adoc[], for an alternate discrete-level line chart.
+
+====
+
+image:commonscript:stepChartExp1.png[]
+
+To create a step line chart, follow the basic steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Step Line’ style.  Press the {buttonApply}.
++
+image:commonscript:stepChartExp2.png[]
+
+
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
++
+include::ROOT:partial$dimensionTip.adoc[]
++
+image:commonscript:stepChartExpVS1.png[]
++
+TIP: {convertToDimension}
+
+
+. To break-out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to  the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
++
+image:commonscript:stepChartExpVS2.png[]
+
+. To break-out the data into groups without applying any visual formatting, drag a dimension to the ‘Break By/Tooltip’ region.
+
+
+
+. *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
++
+image:viewsheetExp34.png[]
+
+. *_Optional:_* {multipleDimensionNoColor}
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image:commonscript:stepChartExpVS3.png[]
++
+TIP: {convertToMeasure}
+
+. Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
++
+image:Chart Edit Y Axis_1.png[]
+
+. To represent a measure by using tooltip information, drag the measure to the ‘Break By/Tooltip’ region.
+
+. *_Optional:_* {multipleMeasure} {addMeasuresUsingVisual}
+
+.  *_Optional:_* To specify an alternate order for drawing the lines between the data points,  drag a measure to the ‘Path’ region. The magnitude of the aggregates for the ‘Path’ measure will determine the order in which the chart points are connected. (The point with largest ‘Path’ aggregate is connected to the point with second-largest aggregate, and so on.)
+
+. {finishEditing}
+
+include::partial$addTitlesLegend.adoc[]

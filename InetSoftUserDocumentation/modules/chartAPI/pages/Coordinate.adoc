@@ -1,0 +1,17 @@
+= Coordinate
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=created by]
+====
+[square]
+* xref:PolarCoord.adoc[]
+* xref:RectCoord.adoc[]
+* xref:ParallelCoord.adoc[]
+* xref:FacetCoord.adoc[]
+====
+
+
+The `Coordinate` object contains the coordinates against which data can be represented. The following pages explain the available properties.
+

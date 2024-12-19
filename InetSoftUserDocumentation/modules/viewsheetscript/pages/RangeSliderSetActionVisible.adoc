@@ -1,0 +1,55 @@
+= setActionVisible(name,Boolean)
+:navtitle: setActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:thisViewsheet.adoc#thisViewsheetSetActionVisible[thisViewsheet.SetActionVisible]  to show or hide Dashboard toolbar buttons.
+====
+
+
+
+Sets the visibility/accessibility of end-user features. To disable a feature, set the value to `false`.
+
+
+
+
+== Parameters
+name::			Name of feature (String):
++
+[source]
+'Show Enlarged'
+'Show Actual Size'
+'Show' (in Selection Container)
+'Hide' (in Selection Container)
+'Remove' (right-click menu item in Selection Container)
+'Properties' (right-click menu item)
+'Edit' (right-click menu item for numerical Range Slider)
+
+Boolean::		`false`: hide the specified function +
+`true`: show the specified function
+
+
+
+
+
+
+== Example
+[source,javascript]
+RangeSlider1.setActionVisible("Edit", false);
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setActionVisible                  // unqualified
+RangeSlider1.setActionVisible     // qualified
+
+{secondForm}
+====
+
+

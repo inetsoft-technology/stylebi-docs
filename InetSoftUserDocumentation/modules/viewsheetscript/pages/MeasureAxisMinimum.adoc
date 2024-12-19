@@ -1,0 +1,33 @@
+= axis.minimum
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Sets the minimum value for a measure axis.
+
+== Type
+number
+
+
+
+
+== Example
+[source,javascript]
+Chart1.axis['Sum(Total)'].minimum = 500000
+
+image:commonscript:measureMinimum.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].minimum             // unqualified
+Chart1.axis['...'].minimum      // qualified
+
+{secondForm}
+====
+

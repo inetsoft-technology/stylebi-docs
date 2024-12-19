@@ -1,0 +1,55 @@
+= CALC.ddb(cost, salvage, life, period, [factor])
+:navtitle: CALC.ddb()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the depreciation of an asset for accounting year `period` using the *double-declining balance* method or some other factor. {CALCExcelFunctionPage} The rate of depreciation for a given year is `factor/life`. If `factor` is omitted, it is assumed to be 2 (the double-declining balance method).
+
+== Parameters
+cost::			Initial cost of the asset
+salvage::			Salvage value at end of asset life
+life::			Number of years of depreciation
+period::			Period (year index) for which to return depreciation (in range 1 to `life`, inclusive)
+factor::			Rate at which the balance declines (default=2)
+
+
+
+== Example
+Depreciation on a $1,000,000 asset that has a lifetime of 6 years and end-of-life salvage value of $100,000.
+
+
+
+[source,javascript]
+----
+var deprec = 0;
+for(var period = 1; period < 7; period++) {
+  deprec = CALC.ddb(1000000, 100000, 6, period);
+  alert('Period ' + period + ': Depreciation of ' + deprec);
+}
+
+// Returns:
+// Period 1: Depreciation of 333333.3333333333
+// Period 2: Depreciation of 222222.22222222225
+// Period 3: Depreciation of 148148.14814814815
+// Period 4: Depreciation of 98765.43209876546
+// Period 5: Depreciation of 65843.62139917696
+// Period 6: Depreciation of 31687.242798353895
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.ddb(field['Cost'], field['Salvage'], 6, period)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.ddb(RangeSlider1.selectedObjects[1], RangeSlider1.selectedObjects[0], 6, period)CALC.ddb(parameter.Cost, parameter.Salvage, 6, period)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

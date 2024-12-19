@@ -1,0 +1,49 @@
+= Start the Scheduler
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To start or stop the Scheduler application, or to view its operational status, follow the steps below:
+
+
+
+
+
+[TIP]
+====
+[square]
+To invoke a custom listener class at the start and end of each scheduled task, specify the fully-qualified name of the class as the value of the `schedule.task.listener` property. See xref:AllProperties.adoc[] for more information about setting properties.
+====
+
+
+
+== Start from Enterprise Manager
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Schedule* page in the left panel, and select the *Status* tab at the top.
++
+image:schedulerStatus.png[]
+
+. Press btn:[Start] to start the Scheduler application. Press btn:[Stop] to terminate the Scheduler application.  Press btn:[Restart] to stop and restart the Scheduler.
+
+. *_Optional_*: Press ‘Get Thread Dump’ to download a text file containing a thread dump of the Scheduler process. Press ‘Get Heap Dump’ to download an HPROF file containing a heap dump of the Scheduler process.
+
+[#StartfromCommandLine]
+== Start from Command Line
+include::ROOT:partial$communityOnly.adoc[]
+
+The Scheduler can also be used as a standalone application through the https://www.inetsoft.com/docs/2018/apidoc/index.html?overview-summary.html[ScheduleServer] class. It has a main method so that it can be run as a process:
+
+ java -Dsree.home=. inetsoft.sree.schedule.ScheduleServer
+
+If the classpath is not already set (e.g., by an environment variable), the classpath should also be specified, as follows:
+
+ java -cp {CLASSPATH}  -Dsree.home=. inetsoft.sree.schedule.ScheduleServer
+
+You can find an example `pass:[{CLASSPATH}]` in the ‘Scheduler Classpath’ field in Enterprise Manager to use as a guide.
+
+image:Scheduler Classpath.png[]
+
+The launching application can then get an instance of the Scheduler object:
+
+[source,java]
+Scheduler scheduler = Scheduler.getScheduler();

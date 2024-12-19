@@ -1,0 +1,36 @@
+= CALC.exp(number)
+:navtitle: CALC.exp()
+:page-stem:
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the value of the natural exponential function, stem:[e^x], where stem:[e] is the base of the natural logarithm and stem:[x] is the specified `number`. {CALCExcelFunctionPage}
+
+== Parameters
+number::			Exponent
+
+
+== Example
+[source,javascript]
+----
+CALC.exp(3.2);  // returns 24.532530197109352
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.exp(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.exp(Slider1.selectedObject)
+CALC.exp(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

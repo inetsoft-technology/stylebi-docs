@@ -1,0 +1,19 @@
+To select a single component on the Dashboard, click on the component with the mouse. This activates the component’s “move” handle and “resize” handles, which then allow you to position and size the component.
+
+image:viewsheet:Move Handle_1.png[]
+
+To simultaneously select *multiple components* on the Dashboard, use one of the following techniques.
+
+TIP: In some cases you may need to hold the {buttonCtrl} key and click on the component *title bar* or *“move” handle* to select or deselect the component.
+
+* Hold the {buttonCtrl} key and click on each component in turn to add it to the selection. (Hold the {buttonCtrl} key and click an already-selected component to remove it from the selection.)
+* Hold the {buttonShift} key and click on each component in turn to add it to the selection. (Hold the {buttonCtrl} key and click an already-selected component to remove it from the selection.)
+* Click in an empty region of the Dashboard, and *drag the mouse* to draw a selection region ("`lasso`") covering the desired components. When you release the mouse, all components that are partially or wholly covered by the selection region become selected.
++
+TIP: You can also use these techniques in combination with each other.
+
+For example, by dragging the mouse to create the selection region below, you can easily select all three components. You only need to include part of each component within the selection region.
+
+image:viewsheet:Drag Select Multiple Components.png[]
+
+Selecting multiple components allows you to move the components together, group the components, and set common properties (e.g., font).

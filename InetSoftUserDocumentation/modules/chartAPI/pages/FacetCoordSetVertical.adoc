@@ -1,0 +1,19 @@
+= FacetCoord.setVertical(Boolean)
+:navtitle: FacetCoord.setVertical()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+
+
+Specifies whether the inner coordinates are arranged vertically or horizontally. {noGetter}
+
+== Parameter
+Boolean:: `true`: stack vertically (default) +
+`false`: stack horizontally
+

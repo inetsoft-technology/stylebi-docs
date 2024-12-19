@@ -1,0 +1,30 @@
+= sizeLegends.noNull
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+For Charts with *multiple* Date/Time or Categorical size legends, set to `true` to suppress the display of `null` dimension values in the legend. When `false` (default), `null` values are represented without a label in the legend.
+
+
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.sizeLegends['Order Date'].noNull = true;
+Chart1.sizeLegends['Product:Name'].noNull = false;
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sizeLegends['...'].noNull          // unqualified
+Chart1.sizeLegends['...'].noNull   // qualified
+
+{secondForm}
+====

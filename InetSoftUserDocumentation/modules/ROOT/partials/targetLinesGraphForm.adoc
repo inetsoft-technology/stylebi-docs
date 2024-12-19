@@ -1,0 +1,1 @@
+TIP: Individual target lines are accessed in *script* as  xref:chartAPI:GraphForm.adoc[] objects. To remove a specific target line, use `graph.removeForm(index)`. Indexing for all GraphForm objects begins at `0` and proceeds in the order that objects were added to the chart. To remove all target lines, use xref:viewsheetscript:PlotClearTargets.adoc[].

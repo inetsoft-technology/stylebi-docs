@@ -1,0 +1,46 @@
+= Array.join(separator)
+:navtitle: Array.join()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:commonscript:indexOf.adoc[] to detect an item in an array.
+* xref:commonscript:StringObjectSplit.adoc[] to split a string into an array of elements.
+====
+
+
+Returns a string containing all the elements of the array separated by the specified separator.
+
+
+
+
+== Example
+[source,javascript]
+----
+var arr = ['A','B','C'];
+arr.join('&'); // returns string "A&B&C"
+----
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+TableView1.table['Name'].join('&');
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+Sales['Name'].join('&');
+
+----
+
+
+
+include::partial$readMoreCalcAggTypes.adoc[]

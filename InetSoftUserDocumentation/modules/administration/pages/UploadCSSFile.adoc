@@ -1,0 +1,36 @@
+= Upload a CSS File
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+You can specify a single global CSS file that applies to all Dashboards, as well as CSS files to apply to individual users, groups, or roles. To upload an existing CSS file to the server, follow the steps below. (For information on how to create a CSS file, see xref:CreateCSSDefinitionFile.adoc[].)
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
++
+If you have multi-tenancy enabled (see xref:EnableMultiTenant.adoc[]), you can choose to make the settings described  below either globally or for a particular organization. To make global settings, select the *Global Settings* tab, and then proceed as described in the sections  below.
++
+image:PresentationGlobalSettings.png[]
++
+To make settings for a particular organization, select the *Organization Settings* tab, and use the *Select Organization* menu to choose the desired organization.
++
+image:PresentationOrgSettings.png[]
++
+Then proceed with steps   below:
+
+
+
+. Select the *Look and Feel* page in the right panel.
++
+image:Global Look and Feel.png[]
+
+
+
+. Uncheck ‘Default Dashboard CSS’, and click in the ‘Custom Dashboard CSS File ’ field. This opens the standard file upload dialog box.
++
+image:uploadCSSFile.png[]
+
+. Locate the desired CSS file, and press btn:[Open].
+
+. Press btn:[Apply]. This uploads the specified CSS file to the server.
+

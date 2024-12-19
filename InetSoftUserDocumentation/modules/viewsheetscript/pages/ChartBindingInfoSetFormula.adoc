@@ -1,0 +1,53 @@
+= bindingInfo.setFormula(col, formula, binding)
+:navtitle: bindingInfo.setFormula()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoGetFormula.adoc[]  to obtain existing binding information.
+
+
+Sets the aggregation method for a measure (Chart series). The measure can be bound to the X or Y axis, or to one of the VisualFrames (xref:chartAPI:ColorFrame.adoc[],xref:chartAPI:SizeFrame.adoc[], xref:chartAPI:ShapeFrame.adoc[], xref:chartAPI:TextFrame.adoc[]).
+
+
+
+
+
+
+
+== Parameter
+col::			Field to summarize
+formula:: A xref:commonscript:StyleConstantSummarizationFormula.adoc[]
+binding:: The field’s binding, one of the following:
++
+include::commonscript:partial$fieldBindingConstant.adoc[]
+
+== Return
+The formula name (String)
+
+
+
+
+
+
+
+
+
+== Examples
+For a field "`Total`" bound to the Y-axis:
+[source,javascript]
+--
+Chart1.bindingInfo.setFormula("Total", Chart.MAX_FORMULA, Chart.BINDING_FIELD);
+
+--
+image:commonscript:bindingInfoSetFormula_3.png[]
+
+For a field "`Total`" bound to the ColorFrame:
+[source,javascript]
+--
+Chart1.bindingInfo.setFormula("Total", Chart.MAX_FORMULA, Chart.AESTHETIC_COLOR);
+--
+image:commonscript:bindingInfoSetFormulaColor.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]

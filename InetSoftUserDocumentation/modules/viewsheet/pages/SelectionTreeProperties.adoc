@@ -1,0 +1,45 @@
+= Selection Tree Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+====
+* xref:AddFilterComponents.adoc[] for information on how to create a Selection Tree.
+* {commonProperties}
+====
+
+The Selection Tree component’s ‘Properties’ dialog box provides *General*, *Data*, and *Script* tabs. The next sections discuss the component-specific properties available under these tabs.
+
+== General Tab
+The properties in the *General* tab in the ‘Selection Tree Properties’ panel are the same as those of the Selection List component.
+
+NOTE: For a Selection Tree, the ‘Single Selection’ property allows you to  select the hierarchy levels that should be constrained to single-selection. To place a level under single-selection restriction, select a field from the ‘Level’ menu, and press btn:[Add]. To remove a level from single-selection restriction, select the field in the list, and press btn:[Delete].
+
+image:Selection Tree Single Selection.png[]
+
+== Data Tab
+The *Data* tab in the ‘Selection Tree Properties’ panel provides the following Selection Tree-specific properties.
+
+TIP: {dynamicProperties}
+
+image:Selection Tree Deep Dialog.png[]
+
+
+Table:: The column or *dimension* that should be used to populate the Selection Tree.
++
+include::ROOT:partial$dimensionTip.adoc[]
+Level:: The order of dimension nesting in the Selection Tree. Outer hierarchy levels are listed above inner hierarchy levels.
+Columns:: Create the Selection Tree by using column information.
+Parent/Child IDs:: Create the Selection Tree by using recursive hierarchy.
+Auto Select Children:: For Selection Tree based on recursive hierarchy, specifies that user selection of a parent also selects all the parent’s children.
+Parent ID:: For Selection Tree based on recursive hierarchy, column that contains the parent node IDs.
+ID:: For Selection Tree based on recursive hierarchy, column that contains the child node IDs.
+Label:: For Selection Tree based on recursive hierarchy, column that contains the labels corresponding to the child node IDs.
+Measure:: The field to aggregate and display next to the Selection Tree values.
+Aggregate:: The method of aggregation to be used for the ‘Measure’ field.
+Text:: Specifies that the aggregated measure is displayed as plain text.
+Bar:: Specifies that the aggregate measure is displayed graphically as a proportional bar.
+
+
+== Script Tab
+{commonScript}

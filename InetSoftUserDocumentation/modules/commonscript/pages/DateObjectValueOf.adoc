@@ -1,0 +1,31 @@
+= Date.valueOf()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+JavaScript function to return the milliseconds from January 1, 1970 (Unix epoch) to the specified date.            See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf[Date.valueOf()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date(); // returns Mon Jun 24 09:23:49 EDT 2024
+var mseconds = d.valueOf(); // returns 1.719235429999E12
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.valueOf();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+var d = parameter.Date;
+d.valueOf();
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

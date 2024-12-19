@@ -1,0 +1,47 @@
+= CALC.yieldmat(settlement, maturity, issue, rate, pr, [basis])
+:navtitle: CALC.yieldmat()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the annual *yield* of a security that pays interest only at *maturity*. {CALCExcelFunctionPage}
+
+== Parameters
+settlement::			Date object: The security’s settlement date
+maturity::			Date object: Security’s maturity date (date when security expires)
+issue::			Date object: Security’s issue date
+rate::			Security’s interest rate at date of issue
+pr::			Security’s price per $100 face value
+basis:: {basis}:
++
+include::partial$basisTable.adoc[]
+
+
+
+== Example
+Yield for a 6.25% bond with price of $100.00, issue date of November 8, 2007, settlement date of March 15, 2008, maturity date of November 3, 2008, and US 30/360 counting convention.
+
+[source,javascript]
+----
+CALC.yieldmat(new Date(2008, 2, 15), new Date(2008, 10,3), new Date(2007, 10,8), 0.0625, 100.00, 0);
+// returns 0.06115169016476979 (approx 6.12%)
+
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.yieldmat(field['SettleDate'], field['MatureDate'], field['IssueDate'], 0.0625, 100.00, 0)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.yieldmat(field['SettleDate'], field['MatureDate'], field['IssueDate'], 0.0625, 100.00, 0)
+CALC.yieldmat(parameter.SettleDate, parameter.MatureDate, parameter.IssueDate, 0.0625, 100.00, 0)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

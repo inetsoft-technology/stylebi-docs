@@ -1,0 +1,3 @@
+. Enter a ‘Connection Test Query’. This can be any valid database query, and generally should be as simple as possible.
++
+TIP: The default test query for JDBC 4-compliant databases is `Select 1`, which simply checks if the database can be contacted. Another possible test query is `Select * from Database_Table`, where `Database_Table` is a table in the database schema. This query would check that data can be retrieved from the database.

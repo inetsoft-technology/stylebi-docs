@@ -1,0 +1,47 @@
+= selectedLabels
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CheckRadioComboLabels.adoc[] to access the labels displayed in the component.
+* xref:CommonSelectObjects.adoc[] to access the value corresponding to the labels.
+* xref:CommonSelectLabel.adoc[] to access the currently selected label in single-valued components.
+* xref:AccessComponentData.adoc[] for more information about `selectedLabels`.
+====
+
+
+
+
+Returns the selected *labels* (not the values) of the component as an array. Applies to multi-value input elements (Check Boxes).
+
+== Type
+Array:: 				array of selected option labels
+
+== Example
+[source,javascript]
+var num = CheckBox1.selectedLabels.length;
+var msg = 'You selected ' + num + ' objects: ';
+msg += CheckBox1.selectedLabels.join(', ');
+alert(msg)
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+selectedLabels               // unqualified
+Component1.selectedLabels    // qualified
+
+{secondForm}
+====
+
+
+
+

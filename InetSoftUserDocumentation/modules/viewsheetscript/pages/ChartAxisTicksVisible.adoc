@@ -1,0 +1,35 @@
+= axis.ticksVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the visibility of the axis tick marks for a dimension or measure.
+
+
+
+
+== Type
+Boolean
+
+
+
+== Example
+[source,javascript]
+Chart1.axis['Sum(Total)'].ticksVisible = false;
+Chart1.axis['Company'].ticksVisible = true
+
+
+image:commonscript:dimensionTicksVisible.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].ticksVisible             // unqualified
+Chart1.axis['...'].ticksVisible      // qualified
+
+{secondForm}
+====
+

@@ -1,0 +1,36 @@
+= GraphElement.getShapeFrame()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Retrieves the element’s xref:ShapeFrame.adoc[].  The corresponding “setter” function is xref:GraphElementSetColorFrame.adoc[].
+
+
+
+
+
+== Returns
+A xref:ShapeFrame.adoc[] object
+
+
+
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+var frame = elem.getShapeFrame(); //<2>
+frame.setField("Customer:Company"); //<3>
+--
+
+<1> Obtain a handle to the  `GraphElement` object.
+<2> Use `getShapeFrame` to obtain a handle to the `ShapeFrame` object.
+<3> Set the desired properties of the `ShapeFrame` object.
+
+TIP: To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

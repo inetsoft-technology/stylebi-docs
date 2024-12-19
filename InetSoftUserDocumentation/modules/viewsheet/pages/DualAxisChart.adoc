@@ -1,0 +1,60 @@
+= Dual Axis Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+By default, when you add two or more *measure* fields on the Y-axis, the selected datasets are plotted on adjacent sets of axes, as shown below in the Chart Editor:
+
+include::ROOT:partial$measureTip.adoc[]
+
+image:commonscript:Chart Secondary Axis1_1.png[]
+
+In some cases, you may want to use *dual Y-axes* to represent these measures, as shown below:
+
+image:commonscript:Chart Secondary Axis2.png[]
+
+
+To display a dataset on the right-side (secondary) Y-axis, follow the steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Add multiple measures to the chart. (See xref:MultipleMeasureChart.adoc[] for additional details.)
+
+. Press the {buttonSwitchSingleGraph} in the Chart Editor.
++
+image:commonscript:Chart Switch to Single.png[]
++
+This places all measuress on the same Y-axis rather than on adjacent axes.
++
+[TIP]
+====
+To return to the multiple axis style, open the Chart Editor and press the {buttonSwitchSeparateGraph}.
+
+image:commonscript:Chart Switch to Separate.png[]
+====
+
+. Press the {buttonEditMeasure} next to the measure that you wish to display against the secondary Y-axis.
+
+. Enable the ‘Secondary Axis’ option at the bottom of the panel.
++
+image:commonscript:SecondaryYAxis.png[]
+
+. Press the {buttonApply} to update the chart axes.
++
+image:commonscript:SecondaryYAxis2.png[]
+
+. {finishEditing}
+
+include::viewsheet:partial$addTitlesLegend.adoc[]
+
+
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Accounts_Receivable_Management.zip[Accounts Receivable Management] Dashboard provides an example of a dual axis chart.
+
+image:viewsheet:galleryDualAxis2.png[]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Accounts_Receivable_Management.zip[Accounts Receivable Management] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****

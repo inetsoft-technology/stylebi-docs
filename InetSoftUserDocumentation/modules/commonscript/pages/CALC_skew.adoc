@@ -1,0 +1,38 @@
+= CALC.skew(array)
+:navtitle: CALC.skew()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns the skewness of the data set in `array`, which indicates the asymmetry of the distribution around its mean. Positive skewness indicates that the right-side tail of the distribution is longer than the left, while negative skewness indicates that the left-side tail of the distribution is longer than the right. {CALCExcelFunctionPage}
+
+== Parameters
+array::		Array of values
+
+
+
+
+== Example
+
+[source,javascript]
+----
+CALC.skew([3,4,5,2,3,4,5,6,4,7]);  // returns 0.3595430714067974
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.skew(TableView1.table['Quantity'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.skew(Sales['Quantity']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

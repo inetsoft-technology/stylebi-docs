@@ -1,0 +1,56 @@
+= Multiple Measure Chart
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+.See Also...
+[TIP]
+====
+xref:MultipleStyleChart.adoc[], to assign different chart styles to different measures.
+====
+
+You can  display multiple *measures* by using visual properties (color, shape, size) or by using multiple axes. These approaches are described below.
+
+include::ROOT:partial$measureTip.adoc[]
+
+== Color, Shape, Size
+
+To display multiple measures using *color*, *size*,  *shape* or *label* representations,   drag a desired measure field from the *Data Source* panel to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region. See xref:BasicChartingSteps.adoc[] for more details.
+
+image:addingChart5.png[]
+
+
+
+== Single Axis
+
+By default, when you add two or more *measure* fields on the Y-axis, the selected data sets are plotted on adjacent sets of axes, as shown below:
+
+image:commonscript:Chart Secondary Axis1_2.png[]
+
+In some cases you may want to display the measures on the same axis. To do this, press the {buttonSwitchSingleGraph} in the Chart Editor.
+
+image:commonscript:chart1_1.png[]
+
+This fits both data sets on the same set of axes.
+
+[#Stack]
+== Stack
+For some chart types, you can choose to stack multiple  measures on top of each other. To do this, follow the steps below:
+
+. Press the {buttonSwitchSingleGraph} as shown above.
+
+. Press the {buttonSelectChartStyle}, and choose a style that supports measure stacking (Bar, Line, Area, Point, Step Line, or Step Area).
+
+. Select the ‘Stack’ option. This displays a ‘Stack Measures’ option.
+
+. Select the ‘Stack Measures’ option.
++
+image:stackMeasures.png[]
+
+. Press the {buttonApply}.
+
+== Dual Axis
+
+If the single axis is not appropriate for both measures, for example when one measure has much larger values than the other, you can create a secondary Y-axis on the right side of the chart. See xref:DualAxisChart.adoc[] for more details.
+
+image:commonscript:Chart Secondary Axis2.png[]

@@ -1,0 +1,5 @@
+= Basic Chart Properties
+
+
+
+The following sections present the top-level components required to build a Chart. These include the xref:chartAPI:Dataset.adoc[] object, which encapsulates data from a data source, and the xref:chartAPI:EGraph.adoc[] object, which represents the global Chart object. The xref:chartAPI:TextSpec.adoc[], xref:chartAPI:AxisSpec.adoc[], xref:chartAPI:LegendSpec.adoc[], and xref:chartAPI:TitleSpec.adoc[] objects are used by various other components to set formatting for text, axes, legends, and titles.

@@ -1,0 +1,37 @@
+= CALC.counta(array)
+:navtitle: CALC.counta()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Counts the number of non-null and non-empty elements in array. {CALCExcelFunctionPage}
+
+== Parameters
+array::			Array of numeric or non-numeric values
+
+
+
+== Example
+[source,javascript]
+----
+CALC.counta(['asd',null,3,2,,5,6]);  // returns 5
+
+----
+
+
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+// Column of Dashboard table TableView1:
+CALC.counta(TableView1.table['Col1'])
+----
+
+
+include::partial$worksheetScriptData.adoc[]
+[source,javascript]
+----
+// Column of ‘Sales’ data block in Data Worksheet:
+CALC.counta(Sales['Col1']);
+----
+
+include::partial$readMoreCalcAggTypes.adoc[]

@@ -1,0 +1,49 @@
+= Math.sqrt(number)
+:navtitle: Math.sqrt()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:commonscript:CALC_sqrt.adoc[] for the preferred version from the CALC library.
+====
+
+
+
+
+Return the square root of a number.  This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt[Math.sqrt()] method, and can be used with or without the `Math` qualifier, `sqrt()` or `Math.sqrt()`.
+
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+sqrt(36.89);  // returns 6.0737
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+sqrt(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+sqrt(Slider1.selectedObject)
+sqrt(parameter.Value)
+
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

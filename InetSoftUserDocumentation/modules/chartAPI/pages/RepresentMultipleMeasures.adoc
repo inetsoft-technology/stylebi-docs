@@ -1,0 +1,40 @@
+= Represent Multiple Measure
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:RepresentDatawithShapeColorSize.adoc[] to visually break out data as sub-series.
+====
+
+To represent multiple measures on a single chart, simply define a xref:GraphElement.adoc[] object for each measure, and add the `GraphElement` to the Chart.
+
+Consider the following script.
+[source,javascript]
+dataset = [["State", "Quantity 1", "Quantity 2"],["NJ",200,500], ["NY",300,1000],["PA",370,440], ["CT",75,20]];
+graph = new EGraph();
+var elem1 = new IntervalElement("State", "Quantity 1");
+graph.addElement(elem1);
+
+This creates a basic Bar Chart displaying the dimensions ‘State’ and ‘Quantity 1’.
+
+image:commonscript:MultipleMeasuresExample.png[]
+
+To add the measure ‘Quantity 2’ to the chart as line element, follow the steps below:
+
+. Create a new xref:LineElement.adoc[] to represent the graph of ‘Quantity 2’ vs. ‘State’.
++
+[source,javascript]
+var elem2 = new LineElement("State", "Quantity 2");
+
+. Assign this new element to the `EGraph` object.
++
+[source,javascript]
+graph.addElement(elem2);
+
++
+image:commonscript:MultipleMeasuresExample2.png[]
+
+
+A legend is created automatically. To modify the legend, make changes to the VisualFrame’s xref:LegendSpec.adoc[] property. See xref:ChangeLegendProperties.adoc[].
+

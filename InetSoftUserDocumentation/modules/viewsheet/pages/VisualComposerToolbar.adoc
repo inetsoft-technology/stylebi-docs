@@ -1,0 +1,40 @@
+= Visual Composer Toolbar
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The Visual Composer toolbar provides the following buttons for editing Dashboards:
+
+{buttonCreate}  > {buttonNewWorksheet}:: Create a new Data Worksheet. (In some versions, this button is called ‘New Data Set’.) See xref:dataworksheet:CreateNewWorksheet.adoc[].
+// See Edit a Data Set.
+
+{buttonCreate}  > {buttonNewDashboard}:: Create a new Dashboard based on a Data Worksheet, data model, or database table. See xref:CreateNewDashboard.adoc[].
+
+{buttonSave}:: Save the changes to Dashboard (kbd:[Ctrl+S] on keyboard).
+
+{buttonSaveAs}:: Save the Dashboard under a new name or scope.
+
+{buttonPreview}:: View the Dashboard as the user does.
+
+{buttonRefresh}:: Reload the Dashboard and re-execute scripts.
+
+{buttonUndo}:: Undo the last operation (kbd:[Ctrl+Z] on keyboard).
+
+{buttonRedo}:: Redo the last operation that was undone (kbd:[Ctrl+Y] on keyboard).
+
+{buttonPaste}:: Paste cut or copied component into Dashboard.
+
+{buttonCut}:: Remove selected component and place in clipboard.
+
+{buttonCopy}:: Copy selected component to clipboard.
+
+{buttonCopyFormat}:: Copy text formatting from one object to another.
+
+{buttonSnapping}:: Set snap positioning for Dashboard components. (See xref:viewsheet:ArrangeComponents.adoc[].)
+
+{buttonArrange}:: Set alignment and spacing for Dashboard components. (See xref:viewsheet:ArrangeComponents.adoc[].)
+
+{buttonZoomDash}:: View the dashboard at a different level of magnification.
+
+{buttonOptions}:: Settings for the Dashboard as a whole.
+
+{buttonFullScreen}:: Expand Visual Composer to use the full screen.

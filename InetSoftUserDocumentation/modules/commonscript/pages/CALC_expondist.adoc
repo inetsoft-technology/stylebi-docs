@@ -1,0 +1,44 @@
+= CALC.expondist(x, lambda, cumulative)
+:navtitle: CALC.expondist()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the value of the *exponential* distribution for specified value of random variable `x` and rate parameter `lambda`. Value `x` typically represents the time interval between events in a Poisson process. {CALCExcelFunctionPage}
+
+
+== Parameters
+x::			Time interval for which to compute probability
+lambda::			Rate parameter (number of events per unit time)
+cumulative (Boolean)::			`true`: computes cumulative distribution function +
+`false`: computes probability density function
+
+
+
+
+== Example
+Probability that the interval between successive events is at most 0.2 seconds for a Poisson process with a constant rate of 10 events per second.
+
+[source,javascript]
+----
+CALC.expondist(0.2, 10, true);
+// returns 0.8646647167633873 (approximately 86.5%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.expondist(field['Time'], 10, true)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.expondist(Slider1.selectedObject, 10, true)
+CALC.expondist(parameter.Time, 10, true)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,27 @@
+= Date.getMonth()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to return the month of a date in local time.  See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth[Date.getMonth()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var month = d.getMonth();
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getMonth();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getMonth();
+
+include::partial$readMoreCalcFieldTypes.adoc[]

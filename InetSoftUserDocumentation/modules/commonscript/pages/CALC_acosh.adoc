@@ -1,0 +1,35 @@
+= CALC.acosh(number)
+:navtitle: CALC.acosh()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the inverse hyperbolic cosine of a number. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A numerical value greater than or equal to 1
+
+
+== Example
+[source,javascript]
+----
+CALC.acosh(10) // returns 2.993222846126381
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.acosh(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.acosh(Slider1.selectedObject)
+CALC.acosh(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

@@ -1,0 +1,70 @@
+= AxisSpec.setAxisStyle(value)
+:navtitle: AxisSpec.setAxisStyle()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the axis style.  The corresponding “getter” function is `getAxisStyle()`.
+
+
+
+== Parameter
+value:: One of the following constants:
++
+[source,javascript]
+AxisSpec.AXIS_SINGLE  // (axes on left/bottom)
+AxisSpec.AXIS_SINGLE2 // (axis on top/right)
+AxisSpec.AXIS_DOUBLE  // (both axes, left/bot labels)
+AxisSpec.AXIS_DOUBLE2 // (both axes, top/right labels)
+AxisSpec.AXIS_CROSS   // (axis at zero-position)
+AxisSpec.AXIS_NONE    // (axis not drawn)
+
+
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"],["NJ",20000],["NY",30000]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var qscale = new LinearScale("Quantity");
+var aspec = new AxisSpec(); //<2>
+aspec.setAxisStyle(AxisSpec.AXIS_DOUBLE2); //<3>
+qscale.setAxisSpec(aspec); //<4>
+graph.setScale("Quantity", qscale);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Use `setAxisStyle` to assign the style.
+<4> Assign the `AxisSpec` object to the `LinearScale` object.
+
+image:commonscript:TextSpecsetAxisStyle.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); <1>
+var scale = coord.getYScale(); <2>
+var spec = scale.getAxisSpec(); <3>
+// Compact syntax: var spec = graph.getCoordinate().getYScale().getAxisSpec();
+
+spec.setAxisStyle(AxisSpec.AXIS_DOUBLE2);
+
+--
+=====

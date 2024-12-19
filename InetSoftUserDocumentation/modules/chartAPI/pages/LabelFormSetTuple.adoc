@@ -1,0 +1,48 @@
+= LabelForm.setTuple(value)
+:navtitle: LabelForm.setTuple()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+Specifies the point in logical space for the label text. The coordinates of the point are relative to the prevailing axis scaling.  The corresponding “getter” function is `getTuple()`.
+
+
+
+
+
+== Parameter
+value::			An [X,Y] pair
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]];  //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new LabelForm(); //<2>
+form.setLabel("label1");
+form.setTuple([0, 100]); //<3>
+graph.addForm(form); //<4>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the  xref:LabelForm.adoc[] object.
+<3> Use `setTuple()` to set the axis location for the label.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:LabelFormSetTuple.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

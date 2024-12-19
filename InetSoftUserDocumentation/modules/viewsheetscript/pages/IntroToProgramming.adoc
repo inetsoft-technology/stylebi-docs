@@ -1,0 +1,418 @@
+= Introduction to Programming
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+You can add advanced interactivity to your Dashboards by attaching scripts to components or events (e.g., Dashboard loading). Dashboard scripts use JavaScript syntax  (https://www.ecma-international.org/publications/standards/Ecma-262.htm[ECMA-262]) and support most standard JavaScript functions. The JavaScript function libraries are enhanced with additional functions that provide programmatic access to Dashboard properties and behaviors.
+
+The following sections provide a brief overview of Dashboard programming with JavaScript. A basic JavaScript reference is provided in xref:commonscript:UserFunctions.adoc[]. To find more complete information about the JavaScript language, please refer to a JavaScript book or tutorial website (e.g., https://www.w3schools.com/js). If you are already familiar with the JavaScript language, you can skip ahead to xref:viewsheetscript:AddScriptToDashboard.adoc[], which explains the different areas of a Dashboard to which you can add script.
+
+== Server-Side vs. Client-Side Script
+In Web development, JavaScript is used to add client-side scripting to HTML pages. Scripts are embedded into the contents of a Web page and executed inside the client browser. Traditionally, these client-side scripts deal exclusively with user-browser interactions, and have limited server-side actions (e.g., HTTP requests).
+
+In contrast, Dashboard scripting is server-side scripting. The scripts contained in a Dashboard are executed as part of the Dashboard generation process on the server. StyleBI scripts can also control certain client-side interactions through event handlers and hyperlinks.
+
+== Object-Oriented Concepts
+JavaScript is an object-oriented programming (OOP) language, and provides various objects and methods, as well as the ability to create user-defined methods. To use JavaScript effectively, it is important to understand the following concepts:
+
+Properties:: Properties are predefined attributes associated with an object. You can ‘get’ or ‘set’ these properties to observe or alter the corresponding aspects of the object.
+Methods:: Methods are predefined functions associated with an object. In general, these functions operate on the object itself.
+Events:: Events are predefined actions that are recognized by an object, such as a mouse movement or clicking.
+
+== Script Language Basics
+JavaScript syntax is very similar to that of C++ and Java. It uses the same construct for all loops and has similar syntax for operators. The following sections cover the basics of programming with JavaScript.
+
+include::partial$scriptAccessDashboardData.adoc[]
+
+=== Comments and Names
+JavaScript uses double slashes `//` to start a single line comment and `/* */` to enclose a multi-line comment.
+
+.Example: Comments
+[source,javascript]
+----
+// single line comment
+/* multi-line comment */
+----
+
+The semicolon is used as a statement separator:
+
+.Example: Semicolon
+[source,javascript]
+var n = 0;
+k = parseInt(123);
+
+Variable names can only contain alphanumeric characters plus the underscore character (`_`). They cannot start with a digit and cannot use reserved JavaScript words. All symbols in JavaScript are *case-sensitive*.
+
+=== Declaration and Assignement
+JavaScript is a weakly-typed language. This means variables are not assigned a type. A variable can be assigned any value. The type of the variable is determined by the value currently assigned to it. Consequently, a local variable does not need to be declared before it is used.
+
+.Example: Variable definition and assignement
+[source,javascript]
+----
+var variable_name= "Hello"; //  Recommended
+message1 = "Hello"; // Will also work
+var count = 100;
+----
+
+If a variable is used as a Dashboard-level variable, it must be declared using the *var* keyword.
+
+[source,javascript]
+----
+// put this in onRefresh handler
+var pageTotal = 0;
+----
+
+After the variable is declared, it can be used everywhere as a shared Dashboard variable.
+
+=== Object Type and Scope
+JavaScript is an object-based language. This means that every value in JavaScript is an object. As with any Object Oriented language, the properties and methods are associated with each object and need to be invoked by qualifying the names with the object name.
+
+.Example: Access object properties
+[source,javascript]
+----
+// the following statements are equivalent
+var name = first_name.concat(last_name);
+name = first_name + last_name;
+----
+
+As is the case in C++ and Java, if a script is running inside an object scope, it can reference its properties and methods without qualifying the name. There is a global scope in JavaScript, which provides the common methods. Since every script is running inside a global scope, those methods do not need to be qualified.
+
+.Example: Using qualifiers
+[source,javascript]
+----
+// parseInt() is a global method
+var num = parseInt(parameter['count']);
+
+// toFixed() is a number method, so it needs to be qualified
+var int_num = num.toFixed(0);
+----
+
+=== Number Type
+The JavaScript number type can store both integers and doubles.
+
+[source,javascript]
+----
+var total = 2 + 3;
+text = total; // integer 5
+
+var total = 2 + 3.1;
+text = total; // double 5.1
+----
+
+To force a number to be treated as an integer, use xref:commonscript:NumberObjecttoFixed.adoc[]  with a decimal point of zero:
+
+[source,javascript]
+text = total.toFixed(0); // this generates a string 5
+
+Number constants can be in decimal format, hexadecimal format if it starts with ‘0x’, and octal format if it starts with ‘0’.
+
+[source,javascript]
+decimal_number = 255 // Decimal is the default
+hex_number = 0xfff
+p_number = 2.456 // Floating point number
+
+Numbers can be used in computation using the usual operators, `\+`, `*`, `/`, `-`. The increment and decrement operators (`++`, `--`) are also available in JavaScript.
+
+=== Boolean Type
+A Boolean has a value of `true` or `false`.
+
+[source,javascript]
+while(true) {
+}
+
+All undefined values are treated as `false` Boolean values when used in the context of a condition. You can check if a value is defined by using the value in the `if()` condition:
+
+[source,javascript]
+if(parameter['start_time']) {
+    // do something
+}
+
+=== String Type
+Enclose String constants with a single or double quote:
+[source,javascript]
+var mystring = "InetSoft Technology Corp."
+mystring = 'InetSoft Technology Corp.'
+
+Strings can be concatenated using the plus operator:
+[source,javascript]
+var str = 'Total: ' + total;
+
+If a value concatenated to a string is of a different type, it is converted to a string automatically. Strings have many methods. The most common methods include the following:
+
+* xref:commonscript:StringObjectsubString.adoc[]
+* xref:commonscript:StringObjectToLowerCase.adoc[]
+* xref:commonscript:StringObjectToUpperCase.adoc[]
+* xref:commonscript:StringObjectIndexOf.adoc[]
+
+.Example: String functions
+[source,javascript]
+var str = 'abcd';
+str = str.toUpperCase(); // converts to ABCD
+var bIdx = str.indexOf('B'); //return 1
+str = str.substring(1, 2); // return 'B'
+
+Strings have built-in support for regular expressions. You can find a regular expression in a string using the xref:commonscript:StringObjectMatch.adoc[] or   xref:commonscript:StringObjectSearch.adoc[] methods:
+
+.Example: Regular expressions
+[source,javascript]
+str = 'this is a test of regular expression';
+re = /test/; // create a regular expression
+var idx = str.search(re); // return the position of the regular expression
+
+== Date Type
+Date is represented as milliseconds since EPOC (Equipment Point of Connection). Creating a date object with no parameter gives the current time:
+
+[source,javascript]
+var now = new Date();
+
+A date can be converted to a string using a global function, xref:commonscript:DateGlobalFormatDate.adoc[].
+
+[source,javascript]
+str = formatDate(now, 'yyyy-MM-dd'); // 2002-02-21
+
+The date format is described in xref:viewsheet:DataFormat.adoc[].
+
+=== Arrays
+An array  is a list contained in a single variable. Each item in the list is known as an array element and is enclosed in square brackets (`[]`). When you create an array, it is initialized with the specified values as its elements. Its length is set to the number of elements specified. The following example creates the `coffeelist` array with three elements and a length of three:
+
+[source,javascript]
+coffeelist = ["French Roast", "Columbian", "Kona"];
+
+Multidimensional arrays are represented by an array of arrays. A multidimensional array (rows and columns) may be created as follows:
+
+[source,javascript]
+monthly_rain = [['Jan', 'Feb', 'Mar'],[100,10,30],[30,10,300],[10,10,10]];
+
+=== Conditionals
+The `if/else` statement requires a Boolean expression to decide between two alternative actions.
+
+.Example: if/else
+[source,javascript]
+if (field['total'] > 0) {
+    reg = event.region;
+}
+else {
+    reg = event.firstRegion;
+}
+
+The `else if` construct allows you to test additional cases, similar to  xref:#Switch[].
+
+.Examples: if/else if/else
+[source,javascript]
+----
+var day = CALC.weekdayname(CALC.today())
+
+if (day == 'Thursday') {
+  Text1.text = 'Note: ' + day + ' hours are 10am-4pm.';
+}
+else if (day == 'Friday') {
+  Text1.text = 'Note: ' + day + ' hours are 10am-12pm.';
+}
+else if (day == 'Sunday') {
+  Text1.text = 'Note: ' + day + ' office closed.';
+}
+else {
+  Text1.text = 'Note: ' + day + ' hours are 9am-5pm.';
+}
+----
+
+=== For
+A *for loop* is an iteration statement that instructs the computer to repeat an action a specific number of times.
+
+.Example: For loop
+[source,javascript]
+----
+// for (initial, condition-check, increment)
+var total = 0;
+for (var j = 1; j < TableView1.table.length; j++) {
+    total += TableView1.table[j][3];
+}
+----
+The first expression in the loop (`j = 1`) initializes the loop variable. The second expression (`j < TableView1.table.length`) is a condition used to check whether to continue the loop (i.e., continue while the condition evaluates `true`). The third expression (`pass:[j++]`) is the variable increment that is evaluated at the end of every iteration. The `j++` notation is the same as `j=j+1`, i.e., increment by one.
+
+=== While
+A  *while loop* is an iteration statement that instructs the computer to repeat an action until a specified condition becomes `false`.
+
+.Example: While loop
+[source,javascript]
+var n = 5;
+Text1.text = "The factorial of " + n;
+var fact = 1;
+// Compute n!, where n is a non-negative integer
+while (n > 1) {
+    fact = fact * n;
+    n = n - 1;
+}
+Text1.text += " is " + fact;
+
+The `break` command can be used inside any loop to terminate the loop and `continue` can be used to skip to the next iteration.
+
+[#Switch]
+=== Switch
+A *switch* statement chooses a branch to be executed based on a value. One or more values can be listed on each case. A `break` must be included at the end of each case to terminate the switch statement.
+
+
+.Example: Switch
+[source,javascript]
+----
+switch(field['option']) {
+case 'A':
+    text = 'Add';
+    break;
+case 'R':
+    text = 'Remove';
+    break;
+default:
+    text = "N/A";
+    break;
+}
+----
+
+The `default` label at the end serves as a catch-all phrase. If the switch value does not match any of the listed values, the default section is processed.
+
+=== Function
+JavaScript, like most programming languages, has facilities for creating subprograms to modularize or divide programs into distinct functions. When required, a `function` can be called to carry out a particular task. JavaScript functions behave a little differently than you might expect:
+
+* There is no value reference distinction
+* There is no data type distinction
+* Return values do not have data types and are optional
+
+
+.Example: Function
+[source,javascript]
+----
+function max(a,b) {
+  if (a > b)
+    return(a); // -- Return a because it is larger
+  else
+    return(b); // -- Return b because it is larger
+}
+----
+
+// To create and save a custom JavaScript function, see Using the Script Library in XXXXXXXXXXXXXXXX .
+
+== Useful Text Functions
+Two common string operations are changing case and searching for substrings.
+
+=== Change Case
+To change a string to upper/lower case, use xref:commonscript:CALC_upper.adoc[] and xref:commonscript:CALC_lower.adoc[], respectively.
+
+.Example: Change case
+[source,javascript]
+var s = 'John Lennon';
+Text1.text = s.toLowerCase();
+
+To change the header cells of a table to upper case, add the following lines to the table-level script:
+
+.Example: Change column headers
+[source,javascript]
+for(var col = 0; col < Table1.table.size; col++) {
+  Table1.table[0][col] = Table1.table[0][col].toUpperCase();
+}
+
+=== Search within String
+To find one string within another string, use xref:commonscript:StringObjectIndexOf.adoc[]. The `indexOf()` function returns the starting index of the substring within the parent string. If the substring is not found, it returns a value of -1.
+
+.Example: String search
+[source,javascript]
+var state = 'New Jersey';
+if(state.indexOf('New') > -1) {
+  Text1.text = 'With New';
+}
+else {
+  Text1.text = 'Without New';
+}
+
+Other string search functions include xref:commonscript:StringObjectSearch.adoc[], xref:commonscript:StringObjectMatch.adoc[], and xref:commonscript:CALC_find.adoc[].
+
+== Useful Date Functions
+
+This section discusses several basic date functions.
+
+=== Finding Date Difference
+Use  xref:commonscript:DateGlobalDateDiff.adoc[] to find the difference between two dates in days/months/years.
+
+.Example: Compute  difference between dates
+[source,javascript]
+dateDiff('d', fromDate, toDate); // days
+dateDiff('m', fromDate, toDate); // months
+dateDiff('yyyy', fromDate, toDate); // years
+
+For example, if you have a table bound to a query which contains the date field ‘Birth Date’, you can create a formula field (in the data binding dialog) that calculates the age of this Birth Date in years by subtracting the birthday from the current date, as shown below:
+
+[source,javascript]
+dateDiff('yyyy', field['Birth Date'], CALC.today())
+
+=== Find Past/Future Date
+The xref:commonscript:DateGlobalDateAdd.adoc[] function is used to find a date which is _n_ number of days/months/years before/after another date.
+
+.Examples: Past/future date
+[source,javascript]
+----
+// 1 day before today
+dateAdd('d', -1, CALC.today());
+
+// 5 months after today
+dateAdd('m', 5, CALC.today());
+
+// 3 years before Order Date
+dateAdd('yyyy', -3, field['Order Date']);
+----
+For example,  the following  query takes in two date parameters: ‘StartDate’ and ‘EndDate’. You want the query to always fetch data which is 15 days before the today and 15 days after today.
+
+[source,javascript]
+var sd = dateAdd('d', -15, CALC.today());
+var ed = dateAdd('d',  15, CALC.today());
+var q = runQuery('ws:global:Examples/AllSales', [['StartDate', sd],['EndDate', ed]]);
+
+=== Extract Date Component
+When extracting calendar elements within a date (year, month, quarter, etc.) use the date functions within the CALC function library.
+
+.Examples: Extract dates
+[source,javascript]
+----
+//extracting the current date and time
+var todDate = CALC.today(); //e.g., Feb-21-2007
+
+//extracting the year
+var y = CALC.year(todDate); // 2007
+
+//extracting the quarter
+var q = CALC.quarter(todDate); // 1
+
+//extracting the day of the week
+var dow = CALC.weekdayname(todDate); // Wednesday
+
+//extracting the date
+var d = CALC.day(todDate); // 21
+
+//extracting the month
+var m = CALC.month(todDate); // 2
+----
+
+=== Format a Date
+Date fields can be formatted in script using the xref:commonscript:DateGlobalFormatDate.adoc[] function.
+
+.Examnples: Date formatting
+[source,javascript]
+var d = CALC.today();  // e.g., Feb-21-2007
+Text1.text = 'Today is: ' + formatDate(d, 'MM-dd-yy'); // Today is: 02/21/07
+
+== Protect Dashboard from Errors
+Because scripts are executed when the Dashboard is generated on the server, a script error can cause Dashboard generation to fail. To prevent this from happening, you should wrap error-prone code inside a “try-catch” block, which allows you to trap errors before they affect Dashboard execution. See xref:commonscript:ScriptStatements#TryCatch[try-catch] in xref:commonscript:ScriptStatements.adoc[] for more information.
+
+== Debug a Script
+When you attempt to debug a Dashboard script, it is often helpful to view the current values of variables and objects. To do this, use the `alert()` function, which opens a message box to display a specified string.
+[source,javascript]
+alert('string to display')
+
+NOTE: The `alert()` function *does not* pause script execution.
+
+
+.Example: alert()
+[source,javascript]
+var arr = ['Sue','Robert','Eric'];
+alert(arr.join(","))
+
+image:administration:alertFunction.png[]
+
+You can also use the `alert()` dialog box to display critical information to a user (e.g., that the user’s selections have resulted in an empty dataset being returned).

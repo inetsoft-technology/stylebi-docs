@@ -1,0 +1,49 @@
+= CSS Component Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The table below lists the available properties and values for styling Dashboard non-tabular components. (To apply CSS styles to Tables, Crosstabs, and Freehand Tables, see xref:CSSTableStyleProperties.adoc[].) For a list of Dashboard component regions that can be styled using these properties, see xref:viewsheet:VisualFormat.adoc[] and  xref:CSSDashboardRegions.adoc[].
+
+CSS properties in the table below can be applied using either Component xref:CreateCSSDefinitionFile.adoc#CSSType[CSS Type] (e.g., “GaugeTickLabel”), xref:CreateCSSDefinitionFile.adoc#CSSClass[CSS Class], xref:CreateCSSDefinitionFile.adoc#CSSID[CSS ID], or by using xref:CreateCSSDefinitionFile.adoc#CSSGlobalDefault[CSS Global Default]. Notes in the *Restrictions* column below apply to both Component and Global Types unless otherwise indicated.
+
+[cols="1,1,3"]
+|===
+|Property|Available Values|Restrictions
+
+|text-align|‘left’, ‘right’, ‘center’| Does not apply to Shape, Chart Y-axis title or labels, ChartPalette, Tabbed Interface, GaugeTickLabel, GaugeValueFill, Chart (component), Gauge (component).
+|vertical-align|‘top’, ‘middle’, ‘bottom’| For charts, applies only to Chart Y-axis titles. Does not apply to Shape, TextInput, Tabbed Interface, GaugeTickLabel, GaugeValueFill, Chart (component), Gauge (component).
+|visibility|‘visible’, ‘hidden’|  Applies to Chart Title, Chart Axis Title, Table Title, Freehand Table Title, Crosstab Title, Selection List Title, Selection Tree Title, Calendar Title, Selection Container Title, CheckBox Title, RadioButton Title.
+|width|number| Applies to all components.
+|height|number| Applies to all components and component Titles.
+|padding|number|Applies to global (`*`) and Chart. See xref:CreateCSSDefinitionFile.adoc#CSSGlobalDefault[CSS Global Default].
+|padding-left|number| Applies to Chart, Text, Gauge, Selection List, Selection Container.
+|padding-right|number| Applies to Chart, Text, Gauge, Selection List, Selection Container.
+|padding-top|number| Applies to Chart, Text, Gauge.
+|padding-bottom|number| Applies to Chart, Text, Gauge, Selection List, Selection Container.
+|word-wrap|‘normal’, ‘break-word’| Does not apply to Shape, Chart, Image, Tabbed Interface, GaugeTickLabel, GaugeValueFill, Chart (component), Gauge (component).
+|font-style|‘normal’, ‘italic’| Does not apply to Shape, Image, ChartPalette, GaugeValueFill, Gauge (component).
+|font-weight|‘normal’, ‘bold’| Does not apply to Shape, Image, ChartPalette, GaugeValueFill, Gauge (component).
+|font-size|‘xx-small’, ‘x-small’, ‘small’, ‘medium’, ‘large’, ‘x-large’, ‘xx-large’, or size in pixels| Does not apply to Shape, Image, ChartPalette, GaugeValueFill, Gauge (component).
+|font-family|Font name| Does not apply to Shape, Image, ChartPalette, GaugeValueFill, Gauge (component).
+|font|Shorthand: font-style font-weight font-size font-family| Does not apply to Shape, Image, ChartPalette, GaugeValueFill, Gauge (component).
+|text-decoration|‘underline’, ‘line-through’| Does not apply to Shape, Image, Gauge, GaugeTickLabel, GaugeValueLabel, GaugeValueFill, ChartPalette, Gauge (component).
+|colorColor |value (hex, rgb, color string)| Does not apply to Image, Gauge (component).
+|background-color|Color value (hex, rgb, color string)| Does not apply to GaugeTickLabel, GaugeValueLabel, GaugeValueFill, Line, ChartPalette.
+|opacity|Float in range [0.0, 1.0]|  Does not apply to ChartPalette, GaugeTickLabel, GaugeValueLabel, GaugeValueFill, Line.
+|border-style|Line style: ‘none’, ‘dotted’, ‘dashed’, ‘solid’, ‘double’; Single value (all borders); Two values (top/bottom left/right); Three values (top right/left bottom); Four values (top right bottom left)| Does not apply to Chart regions except for ChartLegend and Chart (component). Does not apply to ChartPalette, Line, Rectangle, Oval, GaugeTickLabel, GaugeValueLabel, GaugeValueFill, ComboBox drop-down. Use TableStyle CSS (xref:CSSTableStyleProperties.adoc[])  for component-level table formatting.
+|border-top-style; border-right-style; border-bottom-style;border-left-style|Line style: ‘none’, ‘dotted’, ‘dashed’, ‘solid’, ‘double’|See `border-style.
+|border-top-color; border-right-color; border-bottom-color; border-left-color|Color value (hex, rgb, or color string)|See border-color.
+|border-color|Color value (hex, rgb, or color string); Single value (all borders); Two values (top/bottom right/left); Three values (top right/left bottom); Four-values (top right bottom left)|See border-style.
+|border-top; border-right; border-bottom; border-left|Shorthand: border-top-style border-top-color; border-right-style border-right-color; border-bottom-style border-bottom-color; border-left-style border-left-color|See border-style and border-color.
+|border-radius|number (px or %)| Applies only to Rectangle component.
+|border|Shorthand: border-style border-color|See border-style and border-color.
+|line_x; line_y; line_diagonal; line_quadrant|NONE, ULTRA_THIN_LINE, THIN_THIN_LINE, etc. |Applies only to ChartPlot.
+|line_x_color; line_y_color; line_diagonal_color; line_quadrant_color; facet_grid_color; pareto_line_color|Color value (hex, rgb, color string)|Applies only to ChartPlot.
+|facet_grid_visible|`true` or `false`|Applies only to ChartPlot.
+|explode_pie|`true` or `false`|Applies only to ChartPlot for Pie Chart.
+|map_color|Map default color value (hex, rgb, or color string)|Applies only to ChartPlot.
+|legend_gap|number (px)|Applies only to ChartLegend.
+|label_gap|number (px)|Applies only to ChartAxisLabels and ChartAxisTitle.
+|label_rotation|integer multiple of 45|Applies only to ChartAxisLabels.
+|frame_size|integer|Applies only to ChartSizeFrame.
+|===

@@ -1,0 +1,29 @@
+= Customize Portal Login Page
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+To customize the Portal login page, follow the steps below:
+
+CAUTION: Customizations that you make to the login page are not supported by InetSoft and are not guaranteed to be compatible with future versions.
+
+. Modify the  xref:ROOT:attachment$login.html[login.html] page to suit your needs.
+
+. Place the customized *login.html* file in the following directory.
+
++
+__pass:[/usr/local/inetsoft/classes/inetsoft/web/resources/] __
+
++
+include::partial$derivedDockerImage.adoc[]
++
+TIP: Make sure you maintain the *id* attributes of all `<input>` and `<button>` elements in the *login.html* file if you plan to alter the CSS styles.
+
+. Modify the  xref:ROOT:attachment$login.css[login.css] file  to suit your needs.
+
+. Place the customized *login.css* file in a _css_ folder  relative to the location of the *login.html* file. For example:
++
+__pass:[ /usr/local/inetsoft/classes/inetsoft/web/resources/css] __
++
+include::partial$derivedDockerImage.adoc[]
++
+NOTE: Customizations that you make in the *login.html* and *login.css* files apply only to the Portal and not to Enterprise Manager. If you want to customize the JavaScript that performs login and validation, please contact {technicalSupport} for assistance.

@@ -1,0 +1,44 @@
+= formatNumber(number, format, round)
+:navtitle: formatNumber()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Formats a number according to the format string.
+
+== Parameters
+number::				The number to format
+format::				A number format pattern
++
+.See a list  of available number format symbols...
+[%collapsible]
+====
+For examples of how  to construct formats using these symbols, see xref:viewsheet:DataFormat.adoc#NumberFormat[Number Format] in xref:viewsheet:VisualizeYourData.adoc[].
+
+
+include::commonscript:partial$numberFormatTable.adoc[]
+====
+
+round::				Specifies how the number should be rounded
++
+.See a list  of available rounding options...
+[%collapsible]
+====
+include::commonscript:partial$roundingSetting.adoc[]
+====
+
+== Examples
+[source,javascript]
+formatNumber(3, '#,###.00','ROUND_HALF_UP');
+
+include::partial$expressionColOrCalcField.adoc[]
+
+[source,javascript]
+formatNumber(field['Char'],  '#,###.00','ROUND_HALF_UP');
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+formatNumber(parameter.Char,  '#,###.00','ROUND_HALF_UP');
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

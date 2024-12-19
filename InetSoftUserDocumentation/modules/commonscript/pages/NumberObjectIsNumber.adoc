@@ -1,0 +1,29 @@
+= isNumber(value)
+:navtitle: isNumber()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns `true` if the argument has a numerical type, `false` otherwise.
+
+
+== Parameters
+value:: 			A value to test
+
+
+== Examples
+[source,javascript]
+isNumber(2.3); // returns true
+isNumber('hello') // returns false
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+isNumber(field['Char']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+isNumber(parameter.Char);
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

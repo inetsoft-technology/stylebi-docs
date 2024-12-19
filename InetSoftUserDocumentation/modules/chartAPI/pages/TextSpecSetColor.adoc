@@ -1,0 +1,67 @@
+= TextSpec.setColor(value)
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies the text color.  The corresponding “getter” function is `getColor()`.
+
+
+
+
+== Parameter
+value::
+A {javaawtcolor} object
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var titlespec = new TitleSpec();
+var textspec = new TextSpec(); //<2>
+textspec.setColor(java.awt.Color(0xff0000)); //<3>
+titlespec.setLabel("X Title");
+titlespec.setTextSpec(textspec); //<4>
+graph.setXTitleSpec(titlespec);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the  xref:TextSpec.adoc[] object.
+<3> Use `setColor()` to assign the color to the `TextSpec`.
+<4> Use xref:TitleSpec_setTextSpec.adoc[] to assign the `TextSpec` to the `TitleSpec`.
+
+image:commonscript:TitleSpecsetTextSpec_1.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+
+
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getXTitleSpec.adoc[] ① and xref:chartAPI:TitleSpec_getTextSpec.adoc[] ② to obtain a handle to the desired xref:chartAPI:TitleSpec.adoc[] and xref:chartAPI:TextSpec.adoc[]. For example:
+
+
+
+
+
+[source,javascript]
+--
+var titlespec = graph.getXTitleSpec(); //<1>
+var textspec = titlespec.getTextSpec(); //<2>
+// Compact syntax: var textspec = graph.getXTitleSpec().getTextSpec();
+
+textspec.setColor(java.awt.Color(0xff0000));
+--
+=====

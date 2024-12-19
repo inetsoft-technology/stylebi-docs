@@ -1,0 +1,54 @@
+= CALC.xirr(values, dates, [guess])
+:navtitle: CALC.xirr()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the *internal rate of return* for a schedule of cash flows that is not necessarily periodic, based on 365-day year. {CALCExcelFunctionPage}
+
+== Parameters
+values::			Array of numbers representing a series of payments. Must contain at least one positive value and one negative value. Typically, for an investment, the first value is the (negative) amount of the investment, and subsequent values are (positive) payments.
+dates::			Array of dates on which payments are made. The  array can list the payment dates in any order so long as the *first item* is the *earliest date* in the series.
+guess::			Optional “guess” for the rate.
+
+
+
+
+
+
+== Example
+Rate of return for a $10,000 investment made on January 1, 2008, where the following subsequent payment are made:
+
+* $2,750 on March 1, 2008
+* $4,250 on October 30, 2008
+* $3,250 on February 15, 2009
+* $2,750 on April 1, 2009
+
+
+[source,javascript]
+----
+var date1 = new Date(2008, 0, 1);
+var date2 = new Date(2008, 2, 1);
+var date3 = new Date(2008, 9, 30);
+var date4 = new Date(2009, 1, 15);
+var date5 = new Date(2009, 3, 1);
+CALC.xirr([-10000, 2750, 4250, 3250, 2750], [date1, date2, date3, date4, date5], 0.01);
+// returns 0.37336253351883153 (approx 37.3%)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.xirr([field['Cost'], field['Payment1'], field['Payment2'], field['Payment3'], field['Payment4']],[field['InvestDate'], field['PayDate1'], field['PayDate2'], field['PayDate3'], field['PayDate4']], 0.01)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.xirr([parameter.Cost, parameter.Payment1, parameter.Payment2, parameter.Payment3, parameter.Payment4],[parameter.InvestDate, parameter.PayDate1, parameter.PayDate2, parameter.PayDate3, parameter.PayDate4], 0.01)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

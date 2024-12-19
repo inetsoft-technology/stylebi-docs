@@ -1,0 +1,26 @@
+= Date.getUTCSeconds()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to return the seconds part of a date in universal time. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds[Date.getUTCSeconds()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var secs = d.getUTCSeconds();
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.getUTCSeconds();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.getUTCSeconds();
+
+include::partial$readMoreCalcFieldTypes.adoc[]

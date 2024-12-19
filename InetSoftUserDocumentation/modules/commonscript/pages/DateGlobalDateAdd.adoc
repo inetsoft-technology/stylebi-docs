@@ -1,0 +1,49 @@
+= dateAdd(interval, amount, date)
+:navtitle: dateAdd()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Returns a new date that is created by adding the specified amount of time to the specified interval of the given date.
+
+== Parameters
+interval:: 			The date interval to be modified, one of the options below:
++
+|===
+|Interval String|Date Interval
+
+|yyyy|Year
+|q|Quarter
+|m|Month
+|y|Day of the year
+|d|Day of the month
+|w|Day of the week
+|ww|Week of the year
+|h|Hour
+|n|Minute
+|s|Second
+|===
+amount:: 			The amount of time to be added to the interval
+date:: 			The date to be modified
+
+
+
+
+
+== Examples
+[source,javascript]
+----
+// Set newDate to be two months from the current date:
+var newDate = dateAdd('m', 2, new Date())
+----
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+dateAdd('m', 2, field['Date']);
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+dateAdd('m', 2, parameter.Date);
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

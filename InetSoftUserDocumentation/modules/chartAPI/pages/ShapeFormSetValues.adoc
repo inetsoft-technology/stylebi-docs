@@ -1,0 +1,49 @@
+= ShapeForm.addValues(value)
+:navtitle: ShapeForm.addValues()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+Specifies the location of the shape in logical space. The coordinates of the location are relative to prevailing axis scaling prior to transformation. So, for a categorical X-axis (e.g., ‘NJ’, ‘NY’, ‘PA’, etc.), the X-value of the location should specify a categorical value (e.g., ‘NJ’).  The corresponding “getter” function is `getValues()`.
+
+
+
+
+
+
+
+== Parameter
+value::			An [X,Y] pair
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new ShapeForm(); //<2>
+form.setValues(['NJ',100]); //<3>
+form.setShape(GShape.FILLED_TRIANGLE);
+form.setColor(java.awt.Color(0xff0000));
+form.setSize(new java.awt.Dimension(50,50));
+graph.addForm(form); //<4>
+graph.addElement(elem);
+
+--
+<1> {dataset}
+<2> Create the  xref:ShapeForm.adoc[] object.
+<3> Use `setValues()` to set `form` location.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:ShapeformSetValues.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

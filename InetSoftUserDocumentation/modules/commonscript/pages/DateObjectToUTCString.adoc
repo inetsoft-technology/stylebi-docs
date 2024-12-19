@@ -1,0 +1,30 @@
+= Date.toUTCString()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+JavaScript function to return a date in string format.  See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString[Date.toUTCString()] in the {JavaScriptRef} for details on usage.
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+var d = new Date();
+var dstr = d.toUTCString(); // returns Thu, 23 Feb 2023 17:45:52 GMT
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+var d = new Date(field['Order.Date'].getTime());
+d.toUTCString();
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+parameter.Date.toUTCString();
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

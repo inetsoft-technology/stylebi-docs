@@ -1,0 +1,94 @@
+= StaticShapeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+The `StaticShapeFrame` object contains a shape frame defined by explicit shape data in the xref:VisualFrameSetField.adoc[] column, or by the fixed shape in xref:StaticShapeFrameSetShape.adoc[]. To create a `StaticShapeFrame` object, call the `StaticShapeFrame` constructor.
+
+[source,javascript]
+var frame = new StaticShapeFrame('GShape.CIRCLE');
+
+You can pass a xref:GShape.adoc[] or xref:SVGShape.adoc[] object (e.g., `GShape.CIRCLE`, `SVGShape.FACE_BLANK`) or a field name (e.g., ‘Shape’) to the constructor, or specify this later using the xref:StaticShapeFrameSetShape.adoc[] or inherited xref:VisualFrameSetField.adoc[] functions.
+
+
+== Example 1
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity","Shape"], ["NJ",200,"STAR"], ["NY",300,"CIRCLE"]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State", "Quantity");
+var sizeframe = new StaticSizeFrame(5);
+var shapeframe = new StaticShapeFrame(); //<2>
+shapeframe.setField("Shape");
+elem.setShapeFrame(shapeframe); //<3>
+elem.setSizeFrame(sizeframe);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `StaticShapeFrame` object.
+<3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `StaticShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:StaticShapeFrame2.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+== Example 2
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new PointElement("State","Quantity");
+var shapeFrame = new StaticShapeFrame(SVGShape.FACE_HAPPY); //<2>
+var sizeFrame = new StaticSizeFrame(10);
+elem.setSizeFrame(sizeFrame);
+elem.setShapeFrame(shapeFrame); //<3>
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `StaticShapeFrame` object.
+<3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `StaticShapeFrame` to the xref:PointElement.adoc[].
+
+image:commonscript:StaticShapeFrameSVG.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[#Example3]
+== Example 3
+
+
+This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ShapeFrame.adoc[].
+
+. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Company",Chart.STRING);
+Chart1.bindingInfo.shapeFrame = new StaticShapeFrame;
+Chart1.bindingInfo.shapeFrame.setShape(GShape.ARROWBAR);
+
+--
+
++
+image:commonscript:StaticShapeFrame.png[]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+

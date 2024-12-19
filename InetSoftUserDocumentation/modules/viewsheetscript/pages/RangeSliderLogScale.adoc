@@ -1,0 +1,39 @@
+= logScale
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:RangeSliderProperties.adoc[] for more information on user selection editing.
+====
+
+Specifies that the slider for a numerical field should use a logarithmic scale. The base of the log is determined automatically.
+
+
+
+== Type
+Boolean::	`true`: Use log scale +
+`false`: Use linear scale (default)
+
+
+
+
+
+
+== Example
+[source,javascript]
+RangeSlider1.logScale = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+logScale                  // unqualified
+RangeSlider1.logScale     // qualified
+
+{secondForm}
+====
+
+

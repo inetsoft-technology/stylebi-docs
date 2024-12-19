@@ -1,0 +1,57 @@
+= addConfidenceIntervalTarget(measure, colors, values, options)
+:navtitle: addConfidenceIntervalTarget()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Draws a set of horizontal or vertical confidence intervals on the chart. See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.
+
+
+include::ROOT:partial$targetLinesGraphForm.adoc[]
+
+== Parameter
+measure::			Name of measure on which to draw confidence intervals
+colors::			Color (see xref:PlotValueColor.adoc[]) or array of colors to fill area of confidence intervals
+values::			Confidence level as a percentage (e.g., '99' for 99% confidence interval)
+options::			Object literal containing name-value pairs of options (see xref:#Options[] below, e.g., `{fillAbove:0xff0000, fillBelow:0x00ff00}`)
+
+[#Options]
+== Options
+fillAbove::				Color (see xref:PlotValueColor.adoc[]) to fill the region above the upper confidence line
+fillBelow::				Color (see xref:PlotValueColor.adoc[]) to fill the region below the lower confidence line
+label::				String to label the confidence line(s). The following codes can be inserted:
++
+include::partial$targetLabelCodes.adoc[]
+
+
+lineColor::				Color (see xref:PlotValueColor.adoc[]) to apply to all confidence lines
+lineStyle::				The line style (a xref:commonscript:StyleConstantLineStyle.adoc[] constant) to apply to all confidence lines
+labelFont::				The font description (e.g., `'Lucida Sans Unicode-BOLD-14'`) to apply to all line labels
+labelColor::				The color (see xref:PlotValueColor.adoc[]) to apply to all line labels
+
+
+== Example
+[source,javascript]
+--
+// The 'options' object is broken into several lines for clarity:
+var options = {fillAbove:[225,225,225],fillBelow:[225,225,225], \
+label:['{1}: {0,number,$#,##0}','{1}: {0,number,$#,##0}'], \
+lineColor:'red',lineStyle:Chart.THICK_LINE,labelFont:'Lucida Sans Unicode-BOLD-11',labelColor:'black'};
+Chart1.addConfidenceIntervalTarget('Sum(Product:Total)',0xDDAAAA,99,options);
+--
+
+image:commonscript:PlotAddTargetCI.png[]
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+addConfidenceIntervalTarget         // unqualified
+Chart1.addConfidenceIntervalTarget  // qualified
+
+{secondForm}
+====

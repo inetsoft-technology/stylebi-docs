@@ -1,0 +1,46 @@
+= bindingInfo.getPercentageType(measure)
+:navtitle: getPercentageType()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the percent setting set by xref:CrosstabBindingInfoSetPercentageType.adoc[] for one of the measures specified by  xref:CrosstabBindingInfoMeasureFields.adoc[], or set as the percent representation for a measure in '`Trend and Comparison`' property of the Crosstab Editor.
+
+image:commonscript:bindingInfoSetFormula_2.png[]
+
+
+
+
+
+
+
+== Parameters
+measure::			String: Name of a measure
+
+== Returns
+Integer::		`0`: No percent representation +
+ `2`: Percent of grand total
+
+
+
+
+
+== Example
+[source,javascript]
+if(Crosstab1.bindingInfo.getPercentageType('Total')==StyleConstant.PERCENTAGE_OF_GRANDTOTAL){
+  Crosstab2.bindingInfo.setPercentageType('Total',StyleConstant.PERCENTAGE_OF_GRANDTOTAL);
+}
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bindingInfo.getPercentageType             // unqualified
+Crosstab1.bindingInfo.getPercentageType   // qualified
+
+{secondForm}
+====
+
+

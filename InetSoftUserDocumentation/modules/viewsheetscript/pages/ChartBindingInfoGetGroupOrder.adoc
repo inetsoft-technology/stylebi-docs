@@ -1,0 +1,49 @@
+= bindingInfo.getGroupOrder(col,binding)
+:navtitle: bindingInfo.getGroupOrder()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:viewsheetscript:ChartBindingInfoSetGroupOrder.adoc[]  to set the binding information.
+
+Returns the grouping level for a specified Date dimension.
+
+
+== Parameters
+col::			Name of field for which to obtain grouping
+binding:: The field’s binding, one of the following:
++
+include::commonscript:partial$fieldBindingConstant.adoc[]
+
+== Return
+Number::
+[source,javascript]
+
+5 = Chart.YEAR_INTERVAL
+4 = Chart.QUARTER_INTERVAL
+3 = Chart.MONTH_INTERVAL
+2 = Chart.WEEK_INTERVAL
+1 = Chart.DAY_INTERVAL
+8 = Chart.HOUR_INTERVAL
+7 = Chart.MINUTE_INTERVAL
+6 = Chart.SECOND_INTERVAL
+513 = Chart.QUARTER_OF_YEAR_PART
+514 = Chart.MONTH_OF_YEAR_PART
+515 = Chart.WEEK_OF_YEAR_PART
+518 = Chart.DAY_OF_MONTH_PART
+519 = Chart.DAY_OF_WEEK_PART
+521 = Chart.HOUR_OF_DAY_PART
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.getGroupOrder("Order Date", Chart.BINDING_FIELD)
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

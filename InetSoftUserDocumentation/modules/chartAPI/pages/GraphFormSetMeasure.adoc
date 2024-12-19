@@ -1,0 +1,54 @@
+= GraphForm.setMeasure(col)
+:navtitle: GraphForm.setMeasure()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Specifies the measure for which the form should be displayed. If the Chart contains a measure of this name, the xref:GraphForm.adoc[] object is displayed. Otherwise, it is not displayed. This is useful for xref:FacetCoord.adoc[] Charts, when the `GraphForm` should be displayed only for the Chart that represents a particular measure.  The corresponding “getter” function is `getMeasure()`.
+
+
+
+
+
+
+
+== Parameter
+col::			name of a column (String)
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity", "Sales"], ["NJ", 200, 800], ["NY", 300, 600]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var elem2 = new IntervalElement("State", "Sales");
+var form = new LabelForm(); //<2>
+form.setValues(['NJ',200]);
+form.setLabel("NJ Sales");
+form.setAlignmentX(Chart.CENTER_ALIGNMENT);
+form.setMeasure("Sales"); //<3>
+graph.addForm(form); //<4>
+var scale = new CategoricalScale("State");
+var qscale = new LinearScale("Quantity");
+var sscale = new LinearScale("Sales");
+var qcoord = new RectCoord(scale, qscale);
+var scoord = new RectCoord(scale, sscale);
+var facet = new FacetCoord();
+facet.setInnerCoordinates([qcoord, scoord]);
+graph.setCoordinate(facet);
+graph.addElement(elem);
+graph.addElement(elem2);
+--
+<1> {dataset}
+<2> Create the  xref:GraphForm.adoc[] object.
+<3> Use `setMeasure()` to display the `GraphForm` only for the '`Sales`' measure.
+<4> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+
+image:commonscript:GraphFormSetMeasure.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+

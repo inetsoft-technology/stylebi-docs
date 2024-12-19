@@ -1,0 +1,36 @@
+= bindingInfo.lines
+%experimental%
+%navtitle%: setTimeSeries()
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:LineFrame.adoc[] outside of the data binding.
+* xref:viewsheetscript:ChartBindingInfoLineFrame.adoc[] for information on assigning value-keyed frames.
+====
+
+
+
+
+Specifies a xref:chartAPI:StaticLineFrame.adoc[] (fixed line style) for a particular measure on a xref:viewsheet:LineChart.adoc[].
+
+
+
+== Type
+xref:chartAPI:StaticLineFrame.adoc[]
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.lines['Sum(Total)'] = new StaticLineFrame(GLine.LARGE_DASH);
+
+--
+
+
+image:commonscript:bindingInfoLines.png[]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

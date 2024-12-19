@@ -1,0 +1,24 @@
+= Google Analytics GA4 Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Google Analytics  connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:GoogleAnalyticsGA4.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonGoogleAnalyticsGA4Query}. This opens the ‘Google Analytics GA4 Query’ dialog box.
++
+image:dataSourceGoogleAnalyticsGA45.png[]
+
+. Enter the desired query parameters into the provided fields. For more information about query parameters, see the https://developers.google.com/analytics/devguides/reporting/core/dimsmets[Dimensions and Metrics Explorer] for the version 4.0 API.
++
+image:dataSourceGoogleAnalyticsGA47.png[]
++
+include::dataworksheet:partial$finalStepsQuery.adoc[]
+

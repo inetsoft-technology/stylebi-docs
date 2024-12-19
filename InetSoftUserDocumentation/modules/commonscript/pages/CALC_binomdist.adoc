@@ -1,0 +1,44 @@
+= CALC.binomdist(number_s, trials, probability_s, [cumulative])
+:navtitle: CALC.binomdist()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the individual term binomial distribution probability. {CALCExcelFunctionPage}
+
+== Parameters
+number_s::			Number of successes in trials
+trials::			Number of independent trials
+probability_s::			Probability of success on each trial
+cumulative (Boolean)::
+[square]
+* `true`: Computes cumulative distribution function (probability of at most `number_s` successes) +
+* `false` (default): Computes probability mass function (probability of `number_s` successes)
+
+
+
+== Example
+Probability that a fair coin tossed 10 times will land on “heads” six or fewer times.
+
+[source,javascript]
+----
+CALC.binomdist(6, 10, 0.5, true);  // returns 0.828125
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.binomdist(field['Successes'], field['Trials'], 0.5, true)
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.binomdist(Slider1.selectedObject, Slider2.selectedObject, 0.5, true)
+CALC.binomdist(parameter.Successes, parameter.Trials, 0.5, true)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

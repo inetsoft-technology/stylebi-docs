@@ -1,0 +1,15 @@
+= RectForm
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphForm.adoc[]
+====
+
+
+The `RectForm` object contains information for rectangles manually drawn on the chart. To create a `RectForm` object, call the `RectForm` constructor.
+
+[source, javascript]
+var rect = new RectForm();

@@ -1,0 +1,31 @@
+= Edit a Dashboard
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To open an existing Dashboard for editing, you can open the Dashboard for viewing in the Portal (see xref:user:UseDashboard.adoc[]) and press the {buttonEdit} in the Dashboard toolbar.
+
+
+
+NOTE: Dashboards under ‘Private Dashboard’ are visible only to their creator.
+
+Alternatively, follow the steps below:
+
+. Open Visual Composer.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+. In the left *Assets* panel of Visual Composer,  do one of the following:
++
+TIP: Press the {buttonRecent} at the top of the left panel to display Dashboards and Data Worksheets you have used recently. Press the button again to return to the full asset listing.
+
+* Double-click the Dashboard you want to edit.
+* Drag the Dashboard you want to edit into the right panel.
+* Right-click the Dashboard you want to edit and select ‘Open Sheet’ from the context menu.
++
+image:Open Sheet.png[]
++
+To open the Dashboard without data, choose ‘Open in Metadata mode’. (You can also access Metadata mode from the ‘Options’ dialog box. See xref:DashboardOptions.adoc[] for more information.)
+
+
+
+If you press the btn:[Cancel] button in the Dashboard loading dialog box, the Dashboard is automatically displayed in meta-data mode. See xref:DashboardOptions.adoc[] for more information about meta-data mode.

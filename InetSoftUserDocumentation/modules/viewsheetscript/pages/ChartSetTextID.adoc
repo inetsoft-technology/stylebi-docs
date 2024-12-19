@@ -1,0 +1,42 @@
+= setTextID(title, textID)
+:navtitle: setTextID()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=see also]
+xref:viewsheet:LocalizeDashboard.adoc[] for more information on localization.
+
+Assigns the specified `textID` to the specified chart `title`.  The corresponding “getter” function is xref:ChartGetTextID.adoc[].
+
+== Parameter
+title::			One of the following strings:
++
+[source,javascript]
+'X Axis Title'
+'Y Axis Title'
+'Secondary X Axis Title'
+'Secondary Y Axis Title'
+
+textID::			String identifier to be mapped in the _SreeBundle_ localization file
+
+
+
+
+== Example
+[source,javascript]
+Chart1.setTextID("X Axis Title","XTitleID");
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+setTextID             // unqualified
+Chart1.setTextID      // qualified
+
+{secondForm}
+====
+

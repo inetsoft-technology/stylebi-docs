@@ -1,0 +1,24 @@
+= Zendesk Sell Query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+To create a new data set from an existing Zendesk Sell connection, follow the steps below:
+
+. If you have not yet configured the database connection, see xref:user:ZendeskSell.adoc[]. Then proceed with the steps below.
+
++
+include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
+
+. Open the Data Worksheet that will contain the data. (See xref:dataworksheet:CreateNewWorksheet.adoc[] or xref:dataworksheet:EditDataWorksheet.adoc[].)
+
+. Press the {buttonObject}, and select {buttonZendeskSellQuery}. This opens the ‘Zendesk Sell Query’ dialog box.
+
++
+image:zendesksell1.png[]
+
+
+
+
+include::dataworksheet:partial$RESTwEndpoint.adoc[]
+

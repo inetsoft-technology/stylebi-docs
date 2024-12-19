@@ -1,0 +1,35 @@
+= CALC.asin(number)
+:navtitle: CALC.asin()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the inverse sine of a number in radians. {CALCExcelFunctionPage}
+
+== Parameters
+number::			A numerical value between -1 and 1
+
+
+== Example
+[source,javascript]
+----
+CALC.asin(1); // returns 1.5707963267948966 (π/2 radians)
+----
+
+
+include::partial$expressionColOrCalcField.adoc[]
+[source,javascript]
+CALC.asin(field['Value'])
+
+include::partial$dashboardScriptData.adoc[]
+[source,javascript]
+----
+CALC.asin(Slider1.selectedObject)
+CALC.asin(parameter.Value)
+----
+
+
+
+
+
+include::partial$readMoreCalcFieldTypes.adoc[]

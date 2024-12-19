@@ -1,0 +1,25 @@
+Scripts to compute values for Gauge and Text components often use array-type functions similar to Microsoft Excel^®^. For example:
+
+xref:commonscript:CALC_sum.adoc[]:: Sum the values in a data column.
++
+[source,javascript]
+CALC.sum(SalesByDate['Total'])
+
+
+
+xref:commonscript:CALC_sumif.adoc[]:: Sum values in column `array1` when a specific condition is met by corresponding values in `array2`.
++
+[source,javascript]
+CALC.sumif(Sales['Total'],'>50',Sales['Quantity Purchased'])
+
+xref:commonscript:CALC_max.adoc[]:: Return the maximum value in a data column.
++
+[source,javascript]
+CALC.max(SalesByDate['Total'])
+
+xref:commonscript:CALC_counta.adoc[]:: Return the number of non-null values in a data column.
++
+[source,javascript]
+CALC.counta(SalesByDate['City'])
+
+See xref:viewsheetscript:AccessDataSourceData.adoc#ReferenceDatasourceData[Reference Datasource Data] for more information on the syntax for accessing data columns. See xref:commonscript:CalcObjectFunctions.adoc[] for additional script functions.

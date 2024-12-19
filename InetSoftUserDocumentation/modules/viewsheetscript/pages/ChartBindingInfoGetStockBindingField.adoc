@@ -1,0 +1,43 @@
+= bindingInfo.getStockBindingField(measure)
+:navtitle: bindingInfo.getStockBindingField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:ChartBindingInfoSetStockBindingField.adoc[]  to set the binding information.
+
+
+Return the field used as the specified measure on a xref:viewsheet:StockChart.adoc[] (OHLC) chart, together with associated binding information.
+
+
+
+
+
+
+== Parameter
+measure:: The measure to return:
++
+[source, javascript]
+Chart.HIGH:  // measure defining the high values
+Chart.LOW:   // measure defining the low values
+Chart.OPEN:  // measure defining the opening values
+Chart.CLOSE: // measure defining the closing values
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+--
+Chart1.bindingInfo.getStockBindingField(Chart.LOW);
+// returns (for example): lowPrice[lowPrice, null, Average, 0]
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]
