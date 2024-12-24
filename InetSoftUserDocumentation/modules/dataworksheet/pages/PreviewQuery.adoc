@@ -5,11 +5,6 @@ include::ROOT:partial$rightClickOptions.adoc[]
 
 To view the SQL statements that a data block will attempt to execute (the query plan), follow the steps below:
 
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Editing a Data Set. XXXX
-endif::[]
-////
 . Click on the data block to select it.
 . Right-click the data block, and select ‘Show Plan’ from the context menu.  {rightClickOptions}
 +

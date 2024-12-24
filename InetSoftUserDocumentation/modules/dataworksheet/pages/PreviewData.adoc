@@ -4,11 +4,6 @@ include::ROOT:partial$rightClickOptions.adoc[]
 
 To preview the data that will be returned by a data block, follow the steps below:
 
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Editing a Data Set. XXXX
-endif::[]
-////
 
 . Click on the data block to select it.
 . In the bottom panel, press the {buttonChangeView}, and select {buttonLiveDataView}. This displays a limited preview of the data in the  data block.

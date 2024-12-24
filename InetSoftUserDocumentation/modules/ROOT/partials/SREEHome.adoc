@@ -1,11 +1,9 @@
-//ifdef::si[]
 
 NOTE: The location of SREE Home is set by context parameter in  _/tomcat/webapps/ROOT/WEB-INF/web.xml_ in the installation directory.
 
 Windows default:: _C:\ProgramData\InetSoft Technology\InetSoft\\{productVersion\}\server-config_
 Mac default:: _/Library/Application Support/InetSoft Technology/InetSoft/\{productVersion\}/server-config_
 Linux default:: _/usr/share/InetSoft Technology/InetSoft/\{productVersion\}/server-config_
-//endif::[]
 
 ////
 ifdef::testdrive[]

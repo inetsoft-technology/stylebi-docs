@@ -143,6 +143,7 @@ image:JoinedTable.png[]
 image:JoinedPreview.png[]
 ****
 
+[#CrossJoin]
 == Cross Join
 Data blocks that do not share the same data model or database table can be joined together with a cross join. A cross-joined data block contains the cross-product (Cartesian product) of the data in the base tables. This means that every row in the first table is paired together with every row in the second table. The length of the new joined data block is the product of the two base data block lengths.
 
@@ -208,6 +209,7 @@ image:previewCrossJoin.png[]
 Note that the ‘Query2’ data block returns the cross-product of the ‘customers1’ and ‘Query1’ data blocks. That is, the result represents every row of ‘Query1’ paired with every row of ‘customers1’.
 ****
 
+[#MergeJoin]
 == Merge Join
 A _merge join_ is a special type of join that creates no logical relationship between the two base data blocks. The base data blocks are simply merged horizontally into a single data block by collecting their columns together and placing corresponding rows side by side.
 

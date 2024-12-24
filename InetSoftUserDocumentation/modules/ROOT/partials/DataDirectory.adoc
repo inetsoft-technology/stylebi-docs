@@ -1,17 +1,6 @@
-//ifdef::si[]
 
 NOTE: The data directory is located in the following location:
 
 Windows default:: _C:\ProgramData\InetSoft Technology\InetSoft\\{productVersion\}_
 Mac default:: _/Library/Application Support/InetSoft Technology/InetSoft/\{productVersion\}_
 Linux default:: _/usr/share/InetSoft Technology/InetSoft/\{productVersion\}_
-//endif::[]
-
-////
-ifdef::testdrive[]
-NOTE: The data directory is located in the following location:
-Windows default:: _C:\ProgramData\InetSoft Technology\Style Scope\\{productVersion\}_
-Mac default:: _/Library/Application Support/InetSoft Technology/Style Scope/\{productVersion\}_
-Linux default:: _/usr/share/InetSoft Technology/Style Scope/\{productVersion\}_
-endif::[]
-////

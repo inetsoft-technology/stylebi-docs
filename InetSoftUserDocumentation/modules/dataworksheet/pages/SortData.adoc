@@ -34,6 +34,7 @@ image:sortColumnsBig.png[]
 +
 When a column is sorted, its sort order is indicated by a {buttonAscSort} or {buttonDescSort} next to the column header in the bottom panel.
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar or press kbd:[Ctrl+S] on the keyboard.
+
 ////
 ifdef::testdrive[]
 . Close the Visual Composer tab in the browser and return to the Portal.
@@ -42,6 +43,7 @@ endif::[]
 
 include::ROOT:partial$CreateDashboard.adoc[]
 
+[#SortMultipleColumns]
 == Sort on Multiple Columns
 To sort a data block on multiple columns, follow the steps below:
 
@@ -54,16 +56,8 @@ video::300540111[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
 =====
 
-//ifdef::si[]
 
 . Create the data block that you want to sort. See xref:CreateNewWorksheet.adoc[] for information on how to create a data block.
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Editing a Data Set. XXXXXX
-endif::[]
-////
 
 . Click the data block to select it.
 . Press the {buttonSort} in the bottom panel. This opens the ‘Sort Column’ panel.
@@ -77,11 +71,7 @@ The hierarchical sort order of a column is determined by the vertical position o
 . For each column, select  ‘Ascending’ or ‘Descending’  to determine the sorting direction.
 . Press btn:[OK] to close the panel and apply the sorting. When a column is sorted, its sort order is indicated by a {buttonAscSort} or {buttonDescSort} next to the column header in the bottom panel.
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar or press kbd:[Ctrl+S] on the keyboard.
-////
-ifdef::testdrive[]
-. Close the Visual Composer tab in the browser and return to the Portal.
-endif::[]
-////
+
 
 include::ROOT:partial$CreateDashboard.adoc[]
 

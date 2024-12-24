@@ -153,6 +153,14 @@ On the Dashboard, make selections in the CheckBox component, and observe how thi
 image:ParameterHighlightFinal.png[]
 ****
 
+
+== Control Data Worksheet Variable with Form Component
+To control the value of a xref:dataworksheet:CreateNewVariable.adoc[Variable] in a Data Worksheet using a Dashboard Form component, see xref:dataworksheet:FilterData.adoc#UseVariableinCondition[Use a Variable (Parameter) in a Condition] in xref:dataworksheet:PrepareYourData.adoc[].
+
+== Control Data Worksheet Embedded Table with Form Component
+To control the values within an xref:dataworksheet:EnterData.adoc[Embedded Table] in a Data Worksheet using a Dashboard Form component, see xref:dataworksheet:EnterData.adoc#ModifyEmbeddedDatafromDashboard[Modify Embedded Data from a Dashboard] in xref:dataworksheet:PrepareYourData.adoc[].
+
+
 [#ControlPropertieswithExpression]
 == Control Properties with Expression
 

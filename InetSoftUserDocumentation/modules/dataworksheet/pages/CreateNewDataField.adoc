@@ -107,16 +107,8 @@ In general, SQL expressions perform better than JavaScript expressions because S
 +
 . Press btn:[OK] to close the Formula Editor. This adds the new calculated field to the data source at the top of the *Toobox* panel.
 +
-//ifdef::si[]
 
 image:viewsheet:NewCalculatedField4.png[]
-//endif::[]
-
-////
-ifdef::testdrive[]
-image:testdrive:agileDash61.png[]
-endif::[]
-////
 
 
 You can display this calculated field in Output Components (see xref:viewsheet:AddAKPI.adoc[]) or Data View Components (see xref:viewsheet:AddAChart.adoc[] and xref:viewsheet:AddTable.adoc[]) in the same way that would display any other data field.

@@ -330,11 +330,6 @@ This example shows how Chart hyperlinks can be used to drill to a sample ‘Orde
 IMPORTANT: You may need to download the xref:ROOT:attachment$OrderList.zip[Order List Example] into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 
 
-////
-ifdef::testdrive[]
-NOTE: This data source is not available in Test Drive.
-endif::[]
-////
 
 . In the ‘Hyperlink’ dialog box, press the ‘Asset Link’ button.
 

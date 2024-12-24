@@ -28,16 +28,8 @@ video::300361890[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
 =====
 
-//ifdef::si[]
 
 . Create the data block you want to group. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Edit a Data Set. XXXX
-endif::[]
-////
 
 . Click on the data block to select it.
 . In the bottom panel, press the {buttonGroupAndAggregate}. This opens the *Group and Aggregate* panel.
@@ -60,14 +52,10 @@ image:grouping4.png[]
 
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar or press kbd:[Ctrl+S] on the keyboard.
 
-////
-ifdef::testdrive[]
-. Close the Visual Composer tab in the browser and return to the Portal. Proceed to XXXXX to create a visualization based on the data set.
-endif::[]
-////
 
 include::ROOT:partial$CreateDashboard.adoc[]
 
+[#GroupandAggregateCrosstabDataBlock]
 == Group and Aggregate in a Crosstab Data Block
 A crosstab (pivot table) in a Data Worksheet can have one column header, one or more row headers, and one measure. The values at the row-column intersections of the crosstab table represent (aggregates) of the measure.
 
@@ -75,16 +63,8 @@ NOTE: You can also create a crosstab (with more than one column header) in a Das
 
 To create a crosstab from an existing data block, follow these steps.
 
-//ifdef::si[]
 
 . Create the data block you want to group. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Edit a Data Set. XXXX
-endif::[]
-////
 
 . Click on the data block to select it.
 . In the bottom panel, press the {buttonGroupAndAggregate}.
@@ -116,11 +96,6 @@ If you select a bivariate aggregation measure (e.g., ‘Correlation’, ‘Weigh
 
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar or press kbd:[Ctrl+S] on the keyboard.
 
-////
-ifdef::testdrive[]
-. Close the Visual Composer tab in the browser and return to the Portal. Proceed to XXXXX to create a visualization based on the data set.
-endif::[]
-////
 
 include::ROOT:partial$CreateDashboard.adoc[]
 
@@ -243,16 +218,8 @@ Consider the sample ‘ProductSales’ Data Worksheet, which contains a data blo
 +
 include::ROOT:partial$ProductSalesWorksheet.adoc[]
 +
-//ifdef::si[]
 
 For information on how to open a Data Worksheet, see xref:EditDataWorksheet.adoc[].
-//endif::[]
-
-////
-ifdef::testdrive[]
-For information on how to open a Data Worksheet, see  Edit a Data Set.
-endif::[]
-////
 
 . Right-click the ‘SalesByDate’ data block and select ‘Set as Primary’ from the context menu. {rightClickOptions} This makes the ‘SalesByDate’ data block visible to other Data Worksheets.
 

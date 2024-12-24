@@ -70,12 +70,6 @@ Clauses are evaluated in order of indentation, the most indented clauses being e
 . *_Optional:_* To view the filtered data, enable ‘Live Data View’. (See xref:PreviewData.adoc[].)
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar, or press kbd:[Ctrl+S] on the keyboard.
 
-////
-ifdef::testdrive[]
-. Close the Visual Composer tab in the browser and return to the Portal.
-Proceed to Create a New Dashboard XXXXX to create a visualization based on the data set.
-endif::[]
-////
 
 You can now use this Data Worksheet as the data source for a Dashboard. See xref:viewsheet:VisualizeYourData.adoc[] to create a Dashboard.
 
@@ -128,16 +122,8 @@ video::299114159[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
 =====
 
-//ifdef::si[]
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Edit a Data Set. XXXX
-endif::[]
-////
 
 . Apply the desired grouping and aggregation to the data block. (See xref:GroupAggregateData.adoc[] for more details.)
 . Click on the data block to select it.
@@ -180,15 +166,10 @@ Clauses are evaluated in order of indentation, the most indented clauses being e
 . *_Optional:_* To view the filtered data, enable ‘Live Data View’. (See xref:PreviewData.adoc[].)
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar, or press kbd:[Ctrl+S] on the keyboard.
 
-////
-ifdef::testdrive[]
-. Close the Visual Composer tab in the browser and return to the Portal.
-Proceed to Create a New Dashboard XXXXX to create a visualization based on the data set.
-endif::[]
-////
 
 You can now use this Data Worksheet as the data source for a Dashboard. See xref:viewsheet:VisualizeYourData.adoc[] to create a Dashboard.
 
+[#FilterTopBottomData]
 == Filter Top and Bottom Data
 A condition that filters the top-N or bottom-N records or groups based on a specified measure is called a _ranking condition_.
 
@@ -205,16 +186,9 @@ video::299259014[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
 =====
 
-//ifdef::si[]
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
-//endif::[]
 
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Edit a Data Set. XXXX
-endif::[]
-////
 
 . Apply the desired grouping and aggregation to the data block. (See xref:GroupAggregateData.adoc[]  for more details.)
 . Click on the data block to select it.
@@ -243,21 +217,16 @@ To delete a clause in the condition, select the clause and press the btn:[Fewer]
 . To view the filtered data, enable ‘Live Data View’. (See xref:PreviewData.adoc[].)
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar, or press kbd:[Ctrl+S] on the keyboard.
 
-////
-ifdef::testdrive[]
-. Close the Visual Composer tab in the browser and return to the Portal.
-Proceed to Create a New Dashboard XXXXX to create a visualization based on the data set.
-endif::[]
-////
 
 You can now use this Data Worksheet as the data source for a Dashboard. See xref:viewsheet:VisualizeYourData.adoc[] to create a Dashboard.
 
-[id=FilterUsingDynamicConditions]
+[#FilterUsingDynamicConditions]
 == Filter Using Dynamic Conditions
 There are several different ways to make a data block filtering condition more dynamic by incorporating user input, session data, and so on. The following sections explain these approaches.
 
 NOTE: If you want to apply dynamic conditions at the Dashboard level (rather than at the data level), see xref:viewsheet:FilterDashboard.adoc[].
 
+[#UseVariableinCondition]
 === Use a Variable (Parameter) in a Condition
 You can use a _variable_ or _parameter_ as the test value in a filter condition. By default, the user of the Dashboard  will be prompted  to enter the value of any parameters required by Data Worksheet conditions. The parameter value can also be supplied from other sources  (Dashboard parameter or input component, user session data,  Dashboard script.)
 
@@ -273,16 +242,8 @@ video::299764998[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
 =====
 
-//ifdef::si[]
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Edit a Data Set. XXXX
-endif::[]
-////
 
 . *_Optional:_*  To reference a  _Variable_ object in the condition,  create a new Variable or drag an existing Variable from the *Asset* panel into the right panel.  See xref:CreateNewVariable.adoc[] for more about how to create the Variable object.
 +
@@ -336,7 +297,7 @@ The Data Worksheet will now prompt for the value of the variable/parameter, and 
 
 NOTE: If you need to *suppress* the parameter prompt in a Dashboard (for example, if you are setting the parameter using script), use the ‘Prompt for Parameters’ property in the xref:viewsheet:DashboardOptions.adoc[] dialog box.
 
-
+[#UseSessionDatainCondition]
 === Use Session Data in a Condition
 To use a session variable (user, group, or role) as the test value in a filter condition, follow the steps below.
 
@@ -352,16 +313,8 @@ video::299756339[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
 =====
 
-//ifdef::si[]
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Edit a Data Set. XXXX
-endif::[]
-////
 
 . Click to select the data block that you want to filter.
 . Press the {buttonDefineCondition} button in the bottom panel.
@@ -385,7 +338,7 @@ image:SessionData in ConditionChosen.png[]
 Note that the adjacent menu automatically chooses the ‘equal to’ or ‘one of’ operator to match your selection.
 . Press btn:[OK] to close the ‘Condition’ panel.
 
-
+[#UseFieldinCondition]
 === Use a Field in a Condition
 You can create a filter condition that compares values from two columns (fields) in the same row of data block. To use a data block field in a filter condition, follow these steps:
 
@@ -399,16 +352,8 @@ video::299756339[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
 =====
 
-//ifdef::si[]
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Edit a Data Set. XXXX
-endif::[]
-////
 
 . Click to select the data block that you want to filter.
 . Press the {buttonDefineCondition} button in the bottom panel.
@@ -431,6 +376,7 @@ image:Field in Condition2.png[]
 The condition compares corresponding values in the selected columns (left-most menu and right-most menu), and returns only rows that satisfy the condition.
 . Press btn:[OK] to close the ‘Condition’ panel.
 
+[#UseExpressioninCondition]
 === Use an Expression in a Condition
 To use a SQL or a JavaScript expression in a filtering condition, follow these steps:
 
@@ -444,16 +390,8 @@ video::299522969[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
 =====
 
-//ifdef::si[]
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Edit a Data Set. XXXX
-endif::[]
-////
 
 . Click to select the data block that you want to filter.
 . Press the {buttonDefineCondition} button in the bottom panel.
@@ -506,16 +444,8 @@ For example, to retrieve orders placed before today, you can use one of the foll
 You can use a subquery to specify a filter condition that is constructed dynamically at runtime based on data supplied by a desired query. To enter a subquery in a filter condition, follow these steps:
 
 
-//ifdef::si[]
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open your data set for editing. See Edit a Data Set. XXXX
-endif::[]
-////
 
 . In the *Asset* panel, find the query that you want to use as a subquery in the condition. Drag it from the *Asset* panel into the Data Worksheet. This creates a new data bock with the name of the query.
 +

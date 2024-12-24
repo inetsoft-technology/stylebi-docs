@@ -45,20 +45,8 @@ line.
 +
 CSV:: {ExportCSV}
 Excel:: {ExportExcel}
-
-//ifdef::si[]
-
 +
 image:Viewsheet Export Content Tab.png[]
-//endif::[]
-
-
-////
-ifdef::testdrive[]
-+
-image:testdrive:agileDash39.png[]
-endif::[]
-////
 
 . In the  ‘Data Size’ panel, select ‘Match Layout’ to obtain the closest possible match between the appearance of the emailed copy and the original Dashboard. Select ‘Expand Components’ to expand scrolling tables and charts in the emailed Dashboard so that all data is displayed. Select the ‘Only Data Elements’ option to limit the export to only the data-bearing components.
 

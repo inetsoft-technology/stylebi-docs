@@ -98,6 +98,7 @@ Use Form controls to allow the user to modify the data displayed on  data view c
 == Enable User Editing
 Provide the user with access to the Chart Editor and Crosstab Editor so that the user can change the properties of a Chart or Crosstab to suit their own needs, thus  eliminating the need for multiple Charts and Crosstabs. End-user access to these tools is enabled by default. See xref:EndUserChartControl.adoc[] for more information.
 
+[#ScaleComponentsScreen]
 == Scale Components to the Screen
 By default, a Dashboard is displayed in the Portal at the same size that you designed it.  However, this may not be convenient for a user whose screen or browser window is significantly smaller or larger than the Dashboard dimensions. To address these issues, set the Dashboard to automatically scale to the user's browser window.
 

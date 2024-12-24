@@ -85,6 +85,7 @@ To *remove an existing row* from an Embedded Table, follow these steps:
 . Press the {buttonChangeView} in the bottom panel and select {buttonEditAction}.
 . Right-click a table row you want to delete in the bottom panel, and choose ‘Remove Row’ from the context menu. This removes the row you clicked, and shifts subsequent rows upward in the table.
 
+[#ConvertDataBlocktoEmbeddedTable]
 == Convert a Data Block to an Embedded Table
 To convert a regular data block to an Embedded Table, right-click the title bar of the data block, and select ‘Convert to Embedded Table’. {rightClickOptions}
 
@@ -126,19 +127,10 @@ image:EmbeddedTableEditable.png[]
 ****
 
 == Import Data into an Embedded Table
-//ifdef::si[]
 
-To upload a text or Excel data into a new Embedded Table, see xref:UploadData.adoc[].
-//endif::[]
+To upload a text or Excel data into a new Embedded Table, see xref:UploadData.adoc[]. To upload a text or Excel data into an existing Embedded Table, follow the steps below.
 
-////
-ifdef::testdrive[]
-To upload a text or Excel data into a new Embedded Table, see Upload an Excel or Text File. XXXX
-endif::[]
-////
-
-To upload a text or Excel data into an existing Embedded Table, follow the steps below.
-Note: Any existing data and column names in the Embedded Table will be overwritten by the imported data.
+NOTE: Any existing data and column names in the Embedded Table will be overwritten by the imported data.
 
 [.videotitle]
 .Watch Video
@@ -172,6 +164,7 @@ NOTE: You can only unpivot a crosstab that has a single level of column headers.
 .. Press btn:[OK]. The delimited text is imported into the existing Embedded Table, replacing any previous data.
 .. Press the {buttonSave} in the toolbar to save the Data Worksheet with the embedded data.
 
+[#ModifyEmbeddedDatafromDashboard]
 == Modify Embedded Data from a Dashboard
 A user can modify the values in an Embedded Table (or the value of a Variable) in the Data Worksheet by using a Dashboard Form component  or Dashboard Embedded Table (a Table with the ‘Embedded Table’ option enabled).
 
@@ -187,16 +180,9 @@ video::300402540[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
 =====
 
-//ifdef::si[]
+
 
 . Open the Dashboard for editing. (See xref:viewsheet:EditADashboard.adoc[].)
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open the Dashboard for editing. (See XXXXXX.)
-endif::[]
-////
 
 . Right-click on the Form control in the Dashboard, and select ‘Properties’.
 
@@ -227,16 +213,8 @@ The control is now linked to the Data Worksheet’s Embedded Table or Variable, 
 To configure a Dashboard *Table* to control of a Data Worksheet Embedded Table (or Variable), follow these steps:
 
 
-//ifdef::si[]
 
 . Open the Dashboard for editing. (See xref:viewsheet:EditADashboard.adoc[].)
-//endif::[]
-
-////
-ifdef::testdrive[]
-. Open the Dashboard for editing. (See XXXXXX.)
-endif::[]
-////
 
 . Create a Table based on a Data Worksheet Embedded Table. (To do this, assign fields from an Embedded Table in the Data Worksheet to a Dashboard Table component.)
 . Right-click on the Table in the Dashboard, and select ‘Properties’.
