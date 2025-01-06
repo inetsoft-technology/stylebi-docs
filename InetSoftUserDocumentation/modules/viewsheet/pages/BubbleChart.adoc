@@ -2,6 +2,17 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+
+
+[.videotitle]
+.Watch Video: Creating a Chart (Group Without Format)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16556983[vimeo,640,400]
+=====
+
 A bubble chart is a xref:PointChart.adoc[] in which the size of the points represents a second measure.
 
 image:commonscript:bubbleChartExp4b.png[]

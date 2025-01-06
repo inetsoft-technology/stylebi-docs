@@ -5,12 +5,13 @@ include::ROOT:partial$buttonSnippets.adoc[]
 The following sections explain how to add a  Crosstab, which allows you to display aggregated data in tabular  form. To create a crosstab, follow the steps below:
 
 [.videotitle]
-.Watch Video
+.Watch Video: Grouping Data in a Dashboard (Add a Crosstab)
+
 [%collapsible]
 =====
-.Add a Crosstab...
-video::359390270#chapter=16506257[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16506257[vimeo,640,400]
 =====
 
 . If necessary, create a new Dashboard.
@@ -50,12 +51,12 @@ TIP: If you want to use a single Form component (e.g., ComboBox) to dynamically 
 ****
 
 [.videotitle]
-.Watch Video
+.Watch Video: Grouping Data in a Dashboard (Sort and Rank)
 [%collapsible]
 =====
-.Add a Crosstab...
-video::359390270#chapter=16506274[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16506274[vimeo,640,400]
 =====
 
 .. Press the {buttonEditDimension} next to a row header or column header.
@@ -70,12 +71,13 @@ image:Manual Ordering Dialog.png[]
 .. For a Date-type field, select the desired level of date grouping (‘Year’, ‘Month’, etc.) from the ‘Level’ menu.  *_Optional:_* Select ‘As time series’ to force the display of date groups even when the group has no data. In this case the cell is filled either with a null value or with a zero (if the 'Fill Blank Cell With Zero' option is enabled on the *Advanced* tab of the ‘Table Properties’ dialog box).
 +
 [.videotitle]
-.Watch Video
+.Watch Video: Grouping Data in a Dashboard (Set Date Grouping Level)
+
 [%collapsible]
 =====
-.Set Date Grouping Level...
-video::359390270#chapter=16505740[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16505740[vimeo,640,400]
 =====
 
 .. In the ‘Rank’ menu, select the ‘Top’ or ‘Bottom’ filter, and specify the (integer) number of top or bottom groups to select. In the adjacent menu, specify the *measure* by which groups should be ranked.
@@ -92,12 +94,12 @@ Select ‘Group all others together’ to create an “Others” category which 
 . Press the {buttonEditMeasure} next to a measure, and select the desired method from the ‘Aggregate’ menu.
 +
 [.videotitle]
-.Watch Video
+.Watch Video: Grouping Data in a Dashboard (Aggregate in Crosstab)
 [%collapsible]
 =====
-.Set Date Grouping Level...
-video::359390270#chapter=16506565[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16506565[vimeo,640,400]
 =====
 +
 image:Crosstab Measure Options_1.png[]
@@ -120,12 +122,12 @@ NOTE: Named groups cannot be defined for date fields.
 .Create Named Groups
 ****
 [.videotitle]
-.Watch Video
+.Watch Video: Grouping Data in a Dashboard (Combine Groups in Crosstab)
 [%collapsible]
 =====
-.Set Date Grouping Level...
-video::359390270#chapter=16508525[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16508525[vimeo,640,400]
 =====
 
 .. Hold the {buttonCtrl} and click to select the individual crosstab header labels (from the same heading level) that you want to combine into a single group.

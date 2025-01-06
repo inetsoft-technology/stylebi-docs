@@ -10,7 +10,7 @@ You can access  component data and filter selections using script. The following
 == Form Components
 You can access the state of common Form components within the Dashboard by using the `selectedObject`, `selectedObjects`, `selectedLabel`, and `selectedLabels` properties.
 
-xref:viewsheetscript:CommonSelectObject.adoc[], xref:viewsheetscript:CommonSelectLabel.adoc[]:: The selected value or label of the component: Applies to *single-value* input elements (Slider, Spinner, RadioButton, ComboBox) and the tabs of co-located components in a Tabbed Interface. For example, to return the value or label selected in a Radio Button control, use the following syntax:
+xref:viewsheetscript:CommonSelectedObject.adoc[], xref:viewsheetscript:CommonSelectedLabel.adoc[]:: The selected value or label of the component: Applies to *single-value* input elements (Slider, Spinner, RadioButton, ComboBox) and the tabs of co-located components in a Tabbed Interface. For example, to return the value or label selected in a Radio Button control, use the following syntax:
 +
 .Example: selectedLabel
 [source,javascript]
@@ -18,7 +18,7 @@ radioButton1.selectedObjectradioButton1.selectedLabel
 +
 Tabbed Interface also has a property `selectedIndex` which returns the numeric representation of the active tab.
 
-xref:viewsheetscript:CommonSelectObjects.adoc[], xref:viewsheetscript:CommonSelectLabels.adoc[]::
+xref:viewsheetscript:CommonSelectedObjects.adoc[], xref:viewsheetscript:CommonSelectedLabels.adoc[]::
 The selected values or labels of the component, as an array: Applies to *multiple-value* input elements (CheckBox). For example, to return the first selected item or label in a CheckBox:
 +
 .Example: selectedObjects, selectedLabels
@@ -120,7 +120,7 @@ Note that when you choose ‘Select Date Range’, only the Range Slider is enab
 == Filter Components
 You can access the state of Filter components within the Dashboard by using the  `selectedObjects`, `selectedLabels`, and `drillMember` keywords.
 
-xref:viewsheetscript:CommonSelectObjects.adoc[], xref:viewsheetscript:CommonSelectLabels.adoc[]::
+xref:viewsheetscript:CommonSelectedObjects.adoc[], xref:viewsheetscript:CommonSelectedLabels.adoc[]::
 An array of values or labels selected in a component: Applies to Selection List, Selection Tree, Range Slider, Calendar. (Range Slider and Calendar provide `selectedObjects` only). For example, to return the first selected item or label in a Selection List:
 +
 .Example: selectedObjects, selectedLabels

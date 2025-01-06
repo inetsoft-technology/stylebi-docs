@@ -6,18 +6,21 @@ You can create a new data field with one of the following two approaches.
 
 == Create an Expression Column in a Data Worksheet
 
+[.videotitle]
+.Watch Video: Create a New Data Field in a Data Block
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::299108619[vimeo,640,400]
+=====
+
 An *expression column* is a data set column that you define using either JavaScript or SQL (for SQL data sources). The expression is evaluated for each row of the data set. Creating an expression column in a Data Worksheet allows you to reference the field in any  Dashboard that uses the Data Worksheet. SQL expressions can often also be executed more efficiently  (for SQL data sources) than JavaScript expressions.
 
 To add an expression column to a data block, follow the steps below:
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Create a new data field in a data block...
-video::299108619[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 
 . Create the data block to which you want to add an expression column. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
@@ -56,18 +59,22 @@ include::ROOT:partial$CreateDashboard.adoc[]
 
 [id=CreateCalcField]
 == Create a Calculated Field in a Dashboard
+
+[.videotitle]
+.Watch Video: Add a New Data Field to a Dashboard
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::298164978[vimeo,640,400]
+=====
+
 If your data source does not provide data in the correct form for display on the Dashboard, use a *calculated field* to create the desired data field. Unlike the expression column described above, a calculated field is available only to the Dashboard in which defined, and it can operate both on detail data and on data that is being aggregated within the Dashboard (for example, in charts and crosstabs).
 
 To create a new calculated field, follow the steps below:
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Create a calculated field in a dashboard...
-video::298164978[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 
 . Edit the Dashboard to which you want to add an expression field. See xref:viewsheet:EditADashboard.adoc[].

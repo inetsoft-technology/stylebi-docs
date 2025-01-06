@@ -52,6 +52,15 @@ For Test Drive and Visualize Free, the description appears in the Dashboard info
 Server-Side Update:: Automatically refreshes Dashboard data at the period specified by the ‘Refresh Interval’. To customize the refresh behavior, see xref:administration:Presentation.adoc#CustomizeServerSideUpdate[Customize Server-Side Update]. If a materialized view has been created for the Dashboard, server-side update is inactive. (See xref:administration:MaterializedView.adoc[]  for more information on materialized views.)
 
 List on Portal Tree:: Determines whether the current Dashboard will be visible in the User Portal, subject to permissions set by administrator.
++
+[.videotitle]
+.Watch Video: Add Drill Down Hyperlinks (Hide Detail Dashboard)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306732112#chapter=16555289[vimeo,640,400]
+=====
 // TEST DRIVE If a Dashboard is not currently visible in the Portal, you can open it from within Visual Composer. See [%=System.Title%] for more information.
 
 

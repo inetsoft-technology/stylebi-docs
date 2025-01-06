@@ -1,20 +1,30 @@
 = Basic Charting Steps
 %experimental%
-include::ROOT:partial$CreateNewDashboardNote.adoc[]
+include::ROOT:partial$buttonSnippets.adoc[]
 
 
 The following sections explain how to add a Chart to your Dashboard.
 
 [.videotitle]
-.Watch Video
+.Watch Video: Creating a Chart
 [%collapsible]
 =====
-.Basic charting steps...
-video::359085988[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988[vimeo,640,400]
 =====
 
 == Understanding  Dimensions and Measures
+
+[.videotitle]
+.Watch Video: Creating a Chart (Dimensions and Measures)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555681[vimeo,640,400]
+=====
+
 A chart visualizes a _dataset_, which is a table containing rows and columns. Columns (also called fields) in the dataset are classified as either *_dimensions_* or *_measures_* in the Chart Editor.
 
 image:addingChart1.png[]
@@ -34,6 +44,16 @@ include::partial$chartNewbieTip.adoc[]
 
 . *_Optional:_*  Set the style of the chart. To do this, press the {buttonSelectChartStyle}. Choose a desired style, such as ‘Line’ or ‘Bar’, and press the {buttonApply}.
 +
+[.videotitle]
+.Watch Video: Creating a Chart (Set the Chart Style)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555884[vimeo,640,400]
+=====
+
++
 image:viewsheetExp37.png[]
 +
 NOTE: To set different styles for different datasets, see xref:MultipleStyleChart.adoc[].
@@ -42,17 +62,53 @@ To create a stacked chart, enable the ‘Stack’ option at the bottom of the pa
 
 . From the ‘Dimensions’ folder of the data source, drag a desired dimension to the ‘X’ region.
 +
+[.videotitle]
+.Watch Video: Creating a Chart (Group and Summarize)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555701[vimeo,640,400]
+=====
+
+
++
 image:addingChart2a.png[]
 +
 TIP: If you selected a ‘Pie’ style, you should place the dimension field in either the ‘Color’ or ‘Shape’ region rather than the ‘X’ region.
 +
 include::viewsheet:partial$bindToComponent.adoc[]
 
-. To break-out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
+. To break out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
++
+[.videotitle]
+.Watch Video: Creating a Chart (Use Color, Shape, Size)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555854[vimeo,640,400]
+=====
 +
 image:addingChart3.png[]
 +
 Note that the effect of color, shape, and size coding varies by chart style. For example, in a bar-type chart the ‘Shape’ representation affects the style of the fill pattern, whereas in a point-type chart the ‘Shape’ representation affects the image of the point.
++
+To change the color, shape, or size assignment, press the corresponding '`Edit Color`', '`Edit Shape`', or '`Edit Size`' buttons.
+
++
+[.videotitle]
+.Watch Video: Creating a Chart (Change Dimension Color)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16556408[vimeo,640,400]
+=====
++
+image:EditColor.png[]
+
+
 . *_Optional:_* To upload a custom image to use as a shape, press the {buttonAddShape}, and select the desired file.
 +
 image:addShapeButton.png[]
@@ -61,10 +117,29 @@ NOTE: An administrator can make custom shapes available by placing the image fil
 
 
 . To break-out the data into groups _without_ applying any visual formatting, drag a dimension to the ‘Break By/Tooltip’ region.
++
+[.videotitle]
+.Watch Video: Creating a Chart (Group Without Format)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16556431[vimeo,640,400]
+=====
 
 . *_Optional:_*  For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
+[.videotitle]
+.Watch Video: Creating a Chart (Date Grouping)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16556440[vimeo,640,400]
+=====
++
 image:viewsheetExp34.png[]
+
 . From the ‘Measures’ folder of the data source panel, drag measure the ‘Y’ region. This places the selected field onto the chart as a measure. You can add multiple measures to a chart. (See xref:MultipleMeasureChart.adoc[].)
 +
 image:addingChart4.png[]
@@ -73,11 +148,50 @@ TIP: {convertToMeasure}
 
 . To represent a measure using color, shape, size, or labeling, drag the desired measure field from the data source to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
 +
+[.videotitle]
+.Watch Video: Creating a Chart (Show Values)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555934[vimeo,640,400]
+=====
+
++
 image:addingChart5.png[]
 +
 Note that the effect of color, shape, and size coding varies by chart style. For example, in a bar-type chart the ‘Shape’ representation affects the density of the fill pattern, whereas in a point-type chart the ‘Shape’ representation affects the geometry of the point or the fraction filled.
++
+To change the color, shape, or size assignment, press the corresponding '`Edit Color`', '`Edit Shape`', or '`Edit Size`' buttons.
+
++
+[.videotitle]
+.Watch Video: Creating a Chart (Change Measure Color)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16556423[vimeo,640,400]
+=====
++
+image:EditColor2.png[]
+
+
+
 
 . Press the {buttonEditMeasure} next to any measure, and select the desired aggregation method for the measure.
+
++
+[.videotitle]
+.Watch Video: Creating a Chart (Change Aggregation)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16556376[vimeo,640,400]
+=====
+
+
 +
 .Read more about the available aggregation methods…
 [%collapsible]
@@ -90,12 +204,36 @@ image:Chart Edit Y Axis_1.png[]
 Use the ‘Trend and Comparison’ menu to perform calculations based on chart aggregates, such as running total or percent change.  See xref:TrendCompareData.adoc[] for full details.
 
 . To represent a measure by using tooltip information, drag the measure to the ‘Break By/Tooltip’ region.
+
++
+[.videotitle]
+.Watch Video: Creating a Chart (Aggregate Without Format)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16556449[vimeo,640,400]
+=====
+
+
 . {finishEditing}
 
 == Adjust  Chart Axes
-To hide an axis, right-click the axis and select ‘Hide Axis’ from the context menu. {rightClickOptions}
+To hide an axis, right-click the axis and select ‘Hide Axis’ from the context menu. {rightClickOptions} To format axis labels, use the *Format* panel.  (See xref:DataFormat.adoc[].)
+
+[.videotitle]
+.Watch Video: Creating a Chart (Format Chart Labels)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555943[vimeo,640,400]
+=====
 
 To make other adjustments to an axis, right-click the axis and select ‘Axis Properties’ from the context menu. See xref:AxisProperties.adoc[] in xref:DashboardReference.adoc[] for more information about these axis settings.
+
+
+
 
 == Add a Chart Title
 To add a title above a chart, follow the steps below:
@@ -136,6 +274,16 @@ Title:: The text to display in the legend title bar.
 Visible:: Sets the visibility of the legend title bar.
 Legend Border:: The line style and color of the legend boundary.
 Legend Position:: Sets the position of the legend on the plot. Legend position can also be changed by dragging with the mouse.
++
+[.videotitle]
+.Watch Video: Creating a Chart (Change Legend Position)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555914[vimeo,640,400]
+=====
+
 +
 image:Chart Legend Move.png[]
 Ignore Null:: Ignore null values when generating the legend.

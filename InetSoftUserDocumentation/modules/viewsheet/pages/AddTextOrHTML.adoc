@@ -2,7 +2,18 @@
 %experimetal%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+[.videotitle]
+.Watch Video: Creating a Dashboard (Add Text)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359874333#chapter=16573525[vimeo,640,400]
+=====
+
 You can add text, such as titles or descriptions, to any region of a Dashboard.  Text can contain UTF-8 (unicode) characters as well as HTML markup.
+
+TIP: To assemble the text string using script in the *Script* tab, see the xref:viewsheetscript:TextText.adoc[] property. To assemble the text string using Expression script on the '`Text`' property in the '`Text Properties`' dialog box, see xref:DynamicallySetProperties.adoc#ControlPropertieswithExpression[Control Properties with Expression].
 
 == Add Regular Text
 To add regular text into a Dashboard, follow the steps below:
@@ -24,6 +35,16 @@ The *optional* second parameter specifies the format type (e.g., `number`), and 
 ====
 
 . *_Optional:_* Click the Text component to select it, and select the *Format* tab in the left panel. Style the text as desired. (See xref:VisualFormat.adoc[]   for more details.)
++
+[.videotitle]
+.Watch Video: Creating a Dashboard (Format Text)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359874333#chapter=16573561[vimeo,640,400]
+=====
+
 +
 image:textComponentAggregateExp2.png[]
 
@@ -66,3 +87,6 @@ Your browser does not support the video tag.
 </body>
 </html>
 ====
+
+== Display an Aggregate as Text
+To display an aggregated measure as text, see xref:AddAKPI.adoc[].

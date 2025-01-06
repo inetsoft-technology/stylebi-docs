@@ -4,14 +4,13 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 [.videotitle]
-.Watch Video
+.Watch Video: Create a Custom Map
 [%collapsible]
 =====
-.Create a custom map...
-video::306605213[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
-=====
 
+video::306605213[vimeo,640,400]
+=====
 
 If you have *shapefile* data that describes particular geographical regions, you can use this shapefile to create a custom map chart for those regions. The following sections describe the general procedure for converting a shapefile into a map that can be used by the InetSoft server. This process uses the open-source application OpenJUMP, available from the http://www.openjump.org/[OpenJUMP website].
 

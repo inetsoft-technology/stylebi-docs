@@ -1,9 +1,15 @@
 = parameter
 
 
-The `parameter` property allows you to read and write Variables that have been defined in a Data Worksheet (see xref:dataworksheet:FilterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[]) or Form components that have been defined in a Dashboard (see xref:viewsheet:DynamicallySetProperties.adoc[] in xref:viewsheet:VisualizeYourData.adoc[]).
+The `parameter` property allows you to read and write parameters that exist in the context of the Dashboard and user session.  Parameters can be created in several ways, including the following:
+[square]
+* Variables that have been defined in a Data Worksheet (see xref:dataworksheet:FilterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[])
+* Form components that have been defined in a Dashboard (see xref:viewsheet:DynamicallySetProperties.adoc[] in xref:viewsheet:VisualizeYourData.adoc[])
+* Parameters passed into the Dashboard via hyperlink (see xref:viewsheet:DrillDownIntoData.adoc#DrillwithChartHyperlinks[Drill with Chart Hyperlinks], for example)
+* Session parameters such as those listed below (see xref:#parameterGroups[]  for example)
+* Parameters defined in the Dashboard itself, either explicitly in script by using the `parameter` keyword, or implicitly by their use in the '`Variable`' option of a Condition (see xref:viewsheet:AddConditions.adoc[] for example)
 
-The syntax is
+The syntax for accessing a paramater is
 [source,javascript]
 parameter.variableName
 
@@ -23,7 +29,7 @@ parameter.RadioButton1
 [source,javascript]
 parameter.myParamName = 'Hello';
 
-
+[#parameterGroups]
 == parameter._GROUPS_
 include::partial$readOnly.adoc[]
 

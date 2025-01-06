@@ -2,16 +2,18 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-To group data on a chart by using chart axis labels or color, shape, size, or text, see xref:BasicChartingSteps.adoc[]. The following sections explain some special ways of grouping chart data.
-
 [.videotitle]
-.Watch Video
+.Watch Video: Grouping Data in a Dashboard (Group Using Color, Shape, Size)
 [%collapsible]
 =====
-.Group data by dimension...
-video::359390270[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16509488[vimeo,640,400]
 =====
+
+To group data on a chart by using chart axis labels or color, shape, size, or text, see xref:BasicChartingSteps.adoc[]. The following sections explain some special ways of grouping chart data.
+
+
 
 NOTE: To perform calculations and create aggregates based on grouped data, see xref:dataworksheet:CreateNewDataField.adoc[].
 
@@ -141,7 +143,19 @@ include::ROOT:partial$dimensionTip.adoc[]
 image:VS Group Visual13.png[]
 . Press the {buttonApply} to apply the formatting.
 
-== Group dates by Week, Month, Year, Quarter, etc.
+== Group Dates by Week, Month, Year, Quarter, etc.
+
+[.videotitle]
+.Watch Video: Grouping Data in a Dashboard (Date Grouping in Chart)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16509499[vimeo,640,400]
+=====
+
+
+
 . Open the Chart Editor. (Press the {buttonEdit} at the top-right corner of the chart.)
 . For a date *dimension*, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
@@ -152,6 +166,17 @@ include::ROOT:partial$dimensionTip.adoc[]
 
 [#MergeChartLabelsintoGroups]
 == Merge Chart Labels into Larger Groups
+
+[.videotitle]
+.Watch Video: Grouping Data in a Dashboard (Combine Groups in Chart)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16510408[vimeo,640,400]
+=====
+
+
 You can agglomerate data from different chart groups (axis groups, legend groups) into larger categories called _named groups_. For example, you can combine X-axis labels designating individual states MA, CT, NY, NJ, etc., into larger groups such as ‘New England’ and ‘Mid-Atlantic’.
 
 NOTE: Named groups cannot be defined for date fields.
@@ -233,6 +258,15 @@ image:Named Group 4.png[]
 
 [#RankTopBottom]
 == Rank Top or Bottom Chart Groups
+[.videotitle]
+.Watch Video: Creating a Chart (Sort and Rank)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555966[vimeo,640,400]
+=====
+
 In some cases, you may want a chart to display only the *top* or *bottom* groups according to a selected *measure*. For example, "top five companies according to revenue". To do this, set a _ranking filter_ for the *dimension*.
 
 include::ROOT:partial$dimensionTip.adoc[]

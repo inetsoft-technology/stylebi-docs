@@ -9,17 +9,19 @@ Instead of creating a data block from database tables or data model fields (see 
 
 == Create an Embedded Table
 
+[.videotitle]
+.Watch Video:  Enter Embedded Data
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::299093804[vimeo,640,400]
+=====
+
 include::ROOT:partial$createVisualizationClose.adoc[]
 To create a new Embedded Table, follow the steps below:
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Manually enter data  into a data block...
-video::299093804[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 . If a Data Worksheet is not already open, create a new Data Worksheet.
 include::ROOT:partial$CreateNewWorksheetNote.adoc[]
@@ -87,16 +89,19 @@ To *remove an existing row* from an Embedded Table, follow these steps:
 
 [#ConvertDataBlocktoEmbeddedTable]
 == Convert a Data Block to an Embedded Table
-To convert a regular data block to an Embedded Table, right-click the title bar of the data block, and select ‘Convert to Embedded Table’. {rightClickOptions}
 
 [.videotitle]
-.Watch Video
+.Watch Video: Convert  to Embedded Table
 [%collapsible]
 =====
-.Convert a data block to an Embedded Table...
-video::299081891[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::299081891[vimeo,640,400]
 =====
+
+To convert a regular data block to an Embedded Table, right-click the title bar of the data block, and select ‘Convert to Embedded Table’. {rightClickOptions}
+
+
 
 .Example: Convert Data Block to Embedded Table
 ****
@@ -128,18 +133,12 @@ image:EmbeddedTableEditable.png[]
 
 == Import Data into an Embedded Table
 
+
 To upload a text or Excel data into a new Embedded Table, see xref:UploadData.adoc[]. To upload a text or Excel data into an existing Embedded Table, follow the steps below.
 
 NOTE: Any existing data and column names in the Embedded Table will be overwritten by the imported data.
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Upload  data into an Embedded Table...
-video::300562831[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 . Select an existing Embedded Table.
 . In the bottom panel, Press the {buttonImportDataFile}.
@@ -168,17 +167,20 @@ NOTE: You can only unpivot a crosstab that has a single level of column headers.
 == Modify Embedded Data from a Dashboard
 A user can modify the values in an Embedded Table (or the value of a Variable) in the Data Worksheet by using a Dashboard Form component  or Dashboard Embedded Table (a Table with the ‘Embedded Table’ option enabled).
 
-=== Control from Dashboard Form Component
-To configure a Dashboard *Form component* to control  a Data Worksheet Embedded Table (or Variable), follow these steps:
+=== Update from Dashboard Form Component
 
 [.videotitle]
-.Watch Video
+.Watch Video: Update Embedded Data from Dashboard
 [%collapsible]
 =====
-.Modify embedded data from a dashboard...
-video::300402540[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::300402540[vimeo,640,400]
 =====
+
+To configure a Dashboard *Form component* to control  a Data Worksheet Embedded Table (or Variable), follow these steps:
+
+
 
 
 
@@ -209,7 +211,7 @@ NOTE: The ‘Row’ menu displays the format “row: row value.” For example, 
 
 The control is now linked to the Data Worksheet’s Embedded Table or Variable, and changes you make using the control will alter the values in the specified Embedded Table cells or Variable. To set the options displayed by the Form control, see xref:viewsheet:RadioCheckBoxComboProperties.adoc[] in  xref:viewsheet:DashboardReference.adoc[].
 
-=== Control from Dashboard Embedded Table
+=== Update from Dashboard Embedded Table
 To configure a Dashboard *Table* to control of a Data Worksheet Embedded Table (or Variable), follow these steps:
 
 

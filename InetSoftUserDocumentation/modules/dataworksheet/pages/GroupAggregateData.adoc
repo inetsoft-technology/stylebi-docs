@@ -17,17 +17,17 @@ To preserve the flexibility of presenting both the detail and aggregated data, y
 
 == Group and Aggregate in a Regular Data Block
 
-To group and aggregate data in a regular data block, follow the steps below:
-
 [.videotitle]
-.Watch Video
+.Watch Video: Group and Aggregate Data
+
 [%collapsible]
 =====
-.Group and aggregate in a regular data block...
-video::300361890[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::300361890[vimeo,640,400]
 =====
 
+To group and aggregate data in a regular data block, follow the steps below:
 
 . Create the data block you want to group. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
 
@@ -57,6 +57,17 @@ include::ROOT:partial$CreateDashboard.adoc[]
 
 [#GroupandAggregateCrosstabDataBlock]
 == Group and Aggregate in a Crosstab Data Block
+
+[.videotitle]
+.Watch Video: Group and Aggregate Data in a Crosstab
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::299960242[vimeo,640,400]
+=====
+
 A crosstab (pivot table) in a Data Worksheet can have one column header, one or more row headers, and one measure. The values at the row-column intersections of the crosstab table represent (aggregates) of the measure.
 
 NOTE: You can also create a crosstab (with more than one column header) in a Dashboard. See xref:viewsheet:AddTable.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].

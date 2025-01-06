@@ -208,9 +208,20 @@ These procedures pass the desired user data (e.g., companies) directly into the 
 
 [#IncrementallyUpdateMaterializedView]
 == Incrementally Update a Materialized View
+
+[.videotitle]
+.Watch Video: Create a High-Performance Cache (Incremental Materialized View)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306739307#chapter=16546780[vimeo,640,400]
+=====
+
+
 You can schedule a materialized view to be regenerated on a predefined schedule by assigning a “cycle” to the view. (See xref:#CreateMaterializedView[] above for more information.) This allows the materialized view to be updated with new data from the database. However, for a large data set, repeatedly regenerating the materialized view in its entirety may be inefficient.
 
-To improve performance, you can elect to update the materialized view incrementally based on a set of specified conditions. For example, you can selectively update the materialized view with data which has posted subsequent to the previous materialization. Likewise, you can delete selected records from the materialized view if they meet a specified condition, such as an expiration date.
+To improve performance, you can elect to update the materialized view incrementally based on a set of specified conditions. For example, you can selectively update the materialized view with data which has posted after the previous materialization. Likewise, you can delete selected records from the materialized view if they meet a specified condition, such as an expiration date.
 
 You can specify an incremental update condition both for mergeable queries (e.g., relational database queries) and for non-mergeable queries (e.g., non-relational database queries, un-parsable queries, etc.), as described below.
 

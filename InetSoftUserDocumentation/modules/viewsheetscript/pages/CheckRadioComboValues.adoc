@@ -9,7 +9,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [square]
 * xref:CommonProperties.adoc[] for  properties shared with other components.
 * xref:viewsheet:RadioCheckBoxComboProperties.adoc[]for more information about Form components.
-* xref:CommonSelectObjects.adoc[] to access the current user selection.
+* xref:CommonSelectedObjects.adoc[] to access the current user selection.
 ====
 
 Specifies the values (as an array) for a Check Box, Radio Button, or ComboBox component. This property can be used only within component-level script   (see xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script]), and the  xref:CheckRadioComboLabels.adoc[] property must specify an array of the same length.

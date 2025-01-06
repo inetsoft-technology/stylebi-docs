@@ -31,16 +31,19 @@ Data Tip View:: A Dashboard component is displayed when mouse hovers over the Cr
 Flyover Views:: Allows you to select a set of Dashboard components which will be adaptively filtered as the user hovers the mouse or clicks on the Crosstab. (Select ‘On Click Only’ if you want the filtered components to update when the user clicks.) See xref:DrillDownIntoData.adoc[] for more details.
 
 == Hierarchy Tab
-The *Hierarchy* tab in the ‘Crosstab Properties’ panel allows you to specify the hierarchy for a custom drill-down. The procedure for this is the same as that for a Chart. See xref:ChartProperties.adoc[] for details. For information on how to navigate a crosstab with drill-downs, see xref:DrillDownIntoData.adoc[].
 
 [.videotitle]
-.Watch Video
+.Watch Video: Grouping Data in a Dashboard (Add Hierarchy to Crosstab)
 [%collapsible]
 =====
-.Set Date Grouping Level...
-video::359390270#chapter=16508711[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16508711[vimeo,640,400]
 =====
+
+The *Hierarchy* tab in the ‘Crosstab Properties’ panel allows you to specify the hierarchy for a custom drill-down. The procedure for this is the same as that for a Chart. See xref:ChartProperties.adoc[] for details. For information on how to navigate a crosstab with drill-downs, see xref:DrillDownIntoData.adoc[].
+
+
 
 == Script Tab
 {commonScript}

@@ -5,9 +5,22 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::viewsheet:partial$availableToEndUsers.adoc[]
 
+
+
+
 A *target line* is a horizontal or vertical line drawn on the Chart that denotes an ideal value (goal or threshold) or representative value (average, minimum, etc.). A *target band* is a horizontal or vertical band drawn on the Chart that denotes either an ideal range (e.g., goal zone) or representative range (e.g., span of maximum to minimum). A *statistical measure* is a line or region drawn on the Chart to represent one or more statistical quantities derived from the data (confidence intervals, percentiles, etc.). A *trend line* (curve fit) is curve that is fit to the data based on a selected model (linear, quadratic, etc.).
 
 == Add a Target Line
+
+[.videotitle]
+.Watch Video: Creating a Chart (Add Target Lines)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16558857[vimeo,640,400]
+=====
+
 A _target line_ is a horizontal or vertical line drawn on the Chart that generally denotes either an ideal value (goal or threshold) or representative value (average, minimum, etc.). Regions above and below the target value can be assigned independent colors.
 
 image:commonscript:TargetLine5_3.png[]
@@ -315,6 +328,16 @@ include::ROOT:partial$targetLinesGraphForm.adoc[]
 
 [#AddTrendLine]
 == Add a Trend Line
+
+[.videotitle]
+.Watch Video: Creating a Chart (Add Trend Lines)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16558630[vimeo,640,400]
+=====
+
 To add a *trend line* (curve fit), follow the steps below:
 
 . Right-click on the chart and select ‘Properties’. {rightClickOptions} This opens the ‘Chart Properties’ dialog box.

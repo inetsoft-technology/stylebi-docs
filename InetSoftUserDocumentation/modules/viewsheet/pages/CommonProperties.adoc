@@ -1,6 +1,16 @@
 = Common Properties
 include::ROOT:partial$buttonSnippets.adoc[]
 
+[.videotitle]
+.Watch Video: Creating a Dashboard (Component Properties)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359874333#chapter=16573514[vimeo,640,400]
+=====
+
+
 To set the properties of a Dashboard component, right-click the component in the Dashboard, and select ‘Properties’ from the context menu. This opens the ‘Properties’ panel for the component.
 
 To set the properties of a Container component, right-click in an empty region between the components in the group, and select ‘Properties’ from the context menu. This opens the ‘Properties’ panel for the Container component. {rightClickOptions}

@@ -2,24 +2,18 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
-
-In most cases, data sources will already be configured for you by an administrator. However, you can also import a plain text file, CSV file, or Excel file into a Data Worksheet.
-
-[TIP]
-====
-If you already have a Data Worksheet and want to create a Dashboard with that data, see xref:viewsheet:VisualizeYourData.adoc[].
-====
-
-Follow the steps below to import a file into a Data Worksheet.
-
 [.videotitle]
-.Watch Video
+.Watch Video: Import Data
 [%collapsible]
 =====
-.Upload data into a new data block...
-video::300375356[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::300375356[vimeo,640,400]
 =====
+
+In most cases, data sources will already be configured for you by an administrator. However, you can also import a plain text file, CSV file, or Excel file into a Data Worksheet. Follow the steps below to import a file into a Data Worksheet.
+
+
 
 include::ROOT:partial$createVisualizationStep1Upload.adoc[]
 

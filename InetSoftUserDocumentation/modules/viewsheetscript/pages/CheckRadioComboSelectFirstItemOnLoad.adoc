@@ -1,0 +1,37 @@
+= selectFirstItemOnLoad
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for  properties shared with other components.
+* xref:viewsheet:RadioCheckBoxComboProperties.adoc[] for more information about Form components.
+====
+
+
+For a CheckBox component, selects the first item when the Dashboard loads (if no items are preselected).
+
+== Type
+Boolean::  `true`: selects first item  +
+`false`: no selection
+
+
+
+
+== Example
+[source,javascript]
+CheckBox1.selectFirstItemOnLoad = true;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+selectFirstItemOnLoad            // unqualified
+CheckBox1.selectFirstItemOnLoad  // qualified
+
+{secondForm}
+====

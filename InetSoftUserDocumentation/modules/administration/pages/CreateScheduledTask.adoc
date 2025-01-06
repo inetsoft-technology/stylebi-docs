@@ -40,6 +40,17 @@ Locale:: A different locale can be specified for each individual task by using t
 
 [#CreateScheduledCycle]
 == Create a Scheduled Cycle
+
+[.videotitle]
+.Watch Video: Create a High-Performance Cache (Create New Cycle)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306739307#chapter=16546550[vimeo,640,400]
+=====
+
+
 A *scheduled cycle* is a time condition that can be used to automate materialized view generation (see xref:MaterializedView.adoc[]).  It is the "`Conditions`" part of a scheduled task alone, without the "`Actions`" part.
 
 To create a new cycle, follow the steps below.

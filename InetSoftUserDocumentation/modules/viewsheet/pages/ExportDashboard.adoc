@@ -5,17 +5,29 @@ include::ROOT:partial$buttonSnippets.adoc[]
 include::viewsheet:partial$availableToEndUsers.adoc[]
 
 [.videotitle]
-.Watch Video
+.Watch Video: Exporting Data from a Dashboard
 [%collapsible]
 =====
-.Export a dashboard...
-video::359123773[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::359123773[vimeo,640,400]
 =====
+
 
 The following sections explain how to export a Dashboard in its entirety, as well as how to export data from a Dashboard.
 
 == Export an Entire Dashboard
+
+[.videotitle]
+.Watch Video: Exporting Data from a Dashboard (Export Entire Dashboard)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359123773#chapter=16572216[vimeo,640,400]
+=====
+
+
 To export a static copy of the Dashboard into Excel, PowerPoint, PDF, HTML, or PNG format, follow the steps below:
 
 . Press the {buttonExport} in the Dashboard toolbar. This opens the ‘Export’ dialog box.
@@ -79,6 +91,16 @@ image:Crosstab Show Details Export.png[]
 
 [#ExportTableData]
 == Export Table Data
+
+[.videotitle]
+.Watch Video: Exporting Data from a Dashboard (Export Table Data)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359123773#chapter=16572346[vimeo,640,400]
+=====
+
 To export the data contained in a Table or the *aggregate* data contained Crosstab, follow the steps below:
 
 TIP: To export the *detail data* from a Crosstab, see xref:#ExportCrosstabData[] above.
@@ -94,7 +116,16 @@ This will save the table data as an Excel file in the browser’s default downlo
 [#ExportChartData]
 == Export Chart Data
 [WARNING,caption=See Also]
-xref:DrillDownIntoData.adoc[], for information on viewing underlying detail records.
+xref:DrillDownIntoData.adoc[], for information on exporting  underlying *detail records*.
+
+[.videotitle]
+.Watch Video: Exporting Data from a Dashboard (Export Chart Data)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359123773#chapter=16572293[vimeo,640,400]
+=====
 
 
 To display a chart’s aggregate data in tabular form, follow the steps below:

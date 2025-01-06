@@ -2,16 +2,57 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-A Freehand Table is an advanced component that provides greater layout flexibility than a Table or Crosstab, and also allows the use of formulas in table cells. To create a new Freehand Table, follow the steps below:
+
+
+A Freehand Table is an advanced component that provides greater layout flexibility than a Table or Crosstab, and also allows the use of formulas in table cells.
+
+[#ConvertToFreehandTable]
+== Convert a Table or Crosstab
 
 [.videotitle]
-.Watch Video
+.Watch Video: Add Formulas to  Table (Convert to Freehand Table)
 [%collapsible]
 =====
-.Add a Freehand Table...
-video::306617295[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::306617295#chapter=16540130[vimeo,640,400]
 =====
+
+
+You can create a Freehand Table by converting a Table or Crosstab. (This conversion cannot be reversed.) Follow the steps below:
+
+. Create a Table or Crosstab that is as close as possible to the result that you want.   See xref:AddTable.adoc[] and xref:AddCrosstab.adoc[] for more details about these components.
+
++
+TIP: The Table Editor and Crosstab Editor are simpler than the Freehand Table Editor, so it is recommended to use these tools for as much of the table design as possible.
+
+. Right-click on the Table or Crosstab and select '`Convert to Freehand Table`'. {rightClickOptions}
++
+image:ConvertToFreehand1.png[]
++
+The Table or Crosstab is now a Freehand Table, and can only be edited with the Freehand Table Editor.
+
+. Press the {buttonEdit} to open the Freehand Table Editor.
++
+image:ConvertToFreehand2.png[]
+
+. Proceed to  edit the Freehand Table using the Editor as described in xref:#CreateNewFreehandTable[] below.
+
+
+
+[#CreateNewFreehandTable]
+== Create a New Freehand Table
+
+[.videotitle]
+.Watch Video: Add Formulas to a Table (Create New Freehand Table)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306617295#chapter=16541283[vimeo,640,400]
+=====
+
+To create a new Freehand Table, follow the steps below:
 
 . Drag a Freehand Table from the *Toolbox* panel into the Dashboard.
 +
@@ -104,19 +145,57 @@ image:Freehand Table Group7.png[]
 +
 Select the aggregation method from the right menu.
 If you select a bivariate aggregation measure (e.g., ‘Correlation’, ‘Weighted Average’, etc.), select the second operand (column) from the ‘with’ menu. *_Optional:_*  To display the measure as a percentage of the grant total, select the ‘Percentage’ option.
++
+[.videotitle]
+.Watch Video: Add Formulas to a Table (Set Aggregation)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306617295#chapter=16540190[vimeo,640,400]
+=====
 
 . Press btn:[OK].
 
 . For any field that returns an array of values, Select ‘Expand Cell’ and set the expansion direction (‘Horizontal’ or ‘Vertical’).
 +
+[.videotitle]
+.Watch Video: Add Formulas to a Table (Set Cell Expansion)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306617295#chapter=16540189[vimeo,640,400]
+=====
++
 image:Freehand Table Binding New2.png[]
 
 . *_Optional:_*  To populate a cell using script, press the ‘Edit’ button at the bottom of the dialog box. This opens the Script Editor and allows you to create a calculation based on cell values, parameter values, component values, or values from any accessible  Data Worksheet.
++
+[.videotitle]
+.Watch Video: Add Formulas to a Table
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306617295#chapter=16541286[vimeo,640,400]
+=====
 +
 image:Freehand Table Formula1.png[]
 +
 .Reference a Cell
 ****
+
+[.videotitle]
+.Watch Video: Add Formulas to a Table (Reference Table Values)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306617295#chapter=16541385[vimeo,640,400]
+=====
+
+
 Refer to the value in a cell of the table by using syntax `$cell_name`, where _cell_name_ is the name assigned in the ‘Cell Name’ field for the cell being referenced.
 
 image:Freehand Table Cell Reference.png[]
@@ -130,12 +209,39 @@ To access the underlying data block, use the keyword `data`. For example, `toLis
 
 TIP: Remember to set the ‘Expand Cell’ option for any expression that returns an array of values.
 
-To reference data from other data blocks in the underlying Data Worksheet, see xref:viewsheetscript:AccessDataSourceData.adoc#ReferenceDatasourceData[Reference Datasource Data]. To reference data from an arbitrary  Data Worksheet, use `runQuery()` in the *onRefresh* handler. See xref:viewsheetscript:RunQueryFromScript.adoc[] for more information on using `runQuery()`.
+See the following sections for more information on how to reference data within a Freehand Table:
+
+[square]
+* xref:viewsheetscript:ReferenceQueryData.adoc[] for a variety or data referencing techniques.
+* xref:viewsheetscript:AccessDataSourceData.adoc#ReferenceDatasourceData[Reference Datasource Data] to reference data from other data blocks in the underlying Data Worksheet.
+* xref:viewsheetscript:RunQueryFromScript.adoc[] for more information on using `runQuery()` to reference data from an arbitrary  Data Worksheet.
 ****
 
 . To add rows and columns, right-click on a cell in the table diagram and select the desired option from the context menu.
 +
+[.videotitle]
+.Watch Video: Add Formulas to a Table (Add Rows or Columns)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306617295#chapter=16540156[vimeo,640,400]
+=====
+
+
++
 image:Freehand Table Binding New3.png[]
+
+. To add formatting to any cell (column or row), select the desired cell or cells, and then select the *Format* tab in the left panel.  See xref:VisualFormat.adoc[] and xref:DataFormat.adoc[] for more information about formatting options.
++
+[.videotitle]
+.Watch Video: Add Formulas to a Table (Set Date Format)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306617295#chapter=16541209[vimeo,640,400]
+=====
 
 . {finishEditing}
 

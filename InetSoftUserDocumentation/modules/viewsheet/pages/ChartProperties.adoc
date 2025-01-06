@@ -107,19 +107,24 @@ Project Forward:: Specifies the number of axis units that the trend line should 
 
 [#HierachyTab]
 == Hierarchy Tab
+
+[.videotitle]
+.Watch Video: Grouping Data in a Dashboard (Add Hierarchy to a Chart)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16510486[vimeo,640,400]
+=====
+
 [WARNING,caption=See Also]
 ====
 xref:DrillDownIntoData.adoc[], for information on using default drill-down features.
 ====
 The *Hierarchy* tab in the ‘Chart Properties’ dialog box allows you to specify the hierarchy for a custom drill-down. To create a custom drill-down hierarchy, follow the steps below:
 
-[.videotitle]
-.Watch Video: Add hierarchy to a Chart
-[%collapsible]
-=====
-video::359390270#chapter=16510486[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
+
 
 . Right-click the Chart, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Chart Properties’ panel.
 

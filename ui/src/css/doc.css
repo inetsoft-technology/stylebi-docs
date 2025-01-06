@@ -452,7 +452,7 @@
 .doc .videoblock {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 /*
@@ -744,8 +744,14 @@
 }
 
 /* Custom Color video title */
-.doc details.videotitle {
+.doc details.videotitle,
+.doc details.videotitle > summary.title {
   color: #ed711c;
+}
+
+.doc details.videotitle p {
+  font-size: 0.65rem;
+  font-style: italic;
 }
 
 .doc details > summary {

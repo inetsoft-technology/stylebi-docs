@@ -9,9 +9,19 @@ xref:AddFilterComponents.adoc[], for the recommended approach to filtering your 
 
 You can filter the values displayed in a Data View component (Chart, Table, Crosstab) or Output component (Gauge, Text) to match specified criteria by setting a _Condition_ on the component. For example, you can filter a Chart or a Table so that it displays only data for a particular sales employee or region.
 
-IMPORTANT: Condition-based filtering applies on the *component level*, and is different than filtering provided by Filter components such as Selection Lists and Range Sliders (see xref:AddFilterComponents.adoc[].) Filter components filter the Dashboard’s underlying  data block and therefore affect _all_ Data View and Output elements in the Dashboard that use the same  data block. In contrast, a Condition that you place on a particular component affects only that component.
+IMPORTANT: Condition-based filtering applies on the *component level*, and is different from filtering provided by Filter components such as Selection Lists and Range Sliders (see xref:AddFilterComponents.adoc[].) Filter components filter the Dashboard’s underlying  data block and therefore affect _all_ Data View and Output elements in the Dashboard that use the same  data block. In contrast, a Condition that you place on a particular component affects only that component.
 
 == Apply a Condition
+
+[.videotitle]
+.Watch Video: Filtering a Dashboard (Add Static Condition)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359331010#chapter=16567698[vimeo,640,400]
+=====
+
 To apply a Condition to a Data View or Output component, follow these steps:
 
 . Right-click the element, and select ‘Conditions’ from the context menu. {rightClickOptions} This opens the ‘Conditions’ dialog box.
@@ -31,6 +41,15 @@ TIP: Note: To filter out *null* values, you can use a condition such as `[Compan
 * If you select the ‘Value’ option, either enter the comparison value into the provided text field, or select ‘Browse Data’ to choose the comparison value from a list. (For the `[one of]` operator, {buttonCtrl}-click in the ‘Browse Data’ list to select multiple items.)
 
 * If you select the ‘Variable’ option, select one of the Form components listed in the menu to provide the value at runtime. (See xref:DynamicallySetProperties.adoc[] for further details.)
++
+[.videotitle]
+.Watch Video: Filtering a Dashboard (Make Condition Dynamic)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359331010#chapter=16567722[vimeo,640,400]
+=====
 +
 [TIP]
 ====

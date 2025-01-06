@@ -2,6 +2,14 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+[.videotitle]
+.Watch Video: Creating a Chart (Use Secondary Axis)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555828[vimeo,640,400]
+=====
 
 
 By default, when you add two or more *measure* fields on the Y-axis, the selected datasets are plotted on adjacent sets of axes, as shown below in the Chart Editor:

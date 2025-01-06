@@ -4,6 +4,16 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::viewsheet:partial$availableToEndUsers.adoc[]
 
+
+[.videotitle]
+.Watch Video: Add Drill Down Hyperlinks (Drill Down Methods)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306732112#chapter=16550994[vimeo,640,400]
+=====
+
 There are a variety of ways that you can drill down into your data. The following sections explain the basic different approaches.
 
 [#BrushChart]
@@ -191,6 +201,15 @@ To disable the drilling feature for a particular Crosstab, deselect the ‘Enabl
 == Drill to Chart Detail Data
 To reveal the detail records corresponding to a Chart’s summarized data, follow the steps below:
 
+[.videotitle]
+.Watch Video: Exporting Data from a Dashboard (Export Detail Data)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359123773#chapter=16572319[vimeo,640,400]
+=====
+
 . Select the data to display by clicking the appropriate element(s) in the Chart.
 +
 include::viewsheet:partial$selectChartData.adoc[]
@@ -291,12 +310,12 @@ To add hyperlinks to a Table or Crosstab, right-click on a cell and select '`Hyp
 You can attach hyperlinks  to  Chart graphical elements (e.g., the bars in a bar chart) or labels. To create hyperlinks on a Chart, follow the steps below:
 
 [.videotitle]
-.Watch Video
+.Watch Video: Add Drill-Down Hyperlinks (Add Hyperlinks to a Chart)
 [%collapsible]
 =====
-.Drill down with hyperlinks...
-video::306732112[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::306732112#chapter=16550996[vimeo,640,400]
 =====
 
 . Right-click on a Chart element to add hyperlinks to the chart elements (e.g., bars), or right-click on a chart dimension label to add hyperlinks to the labels. {rightClickOptions}
@@ -366,11 +385,29 @@ image:Hyperlink Parameter Dialog.png[]
 
 . *_Optional:_* Repeat the above steps to add additional parameters.
 
-. *_Optional:_*  Enable ‘Send Dashboard parameters’ to pass all existing Dashboard parameters to the target  Dashboard. The Dashboard parameter names must exactly match those defined in the target  Dashboard. See xref:viewsheetscript:parameter.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] for more information about Dashboard parameters.
+. *_Optional:_*  Enable ‘Send Dashboard parameters’ to pass all existing Dashboard parameters to the target  Dashboard, including Form component values. The Dashboard parameter names must exactly match those defined in the target  Dashboard. See xref:viewsheetscript:parameter.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] for more information about Dashboard parameters.
++
+[.videotitle]
+.Watch Video: Add Drill Down Hyperlinks (Pass Form Values)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306732112#chapter=16555175[vimeo,640,400]
+=====
 
 . *_Optional:_*  Select ‘Disable parameter prompt’ to suppress the parameter dialog box that might ordinarily be produced by a parameterized  Dashboard upon launch. (Prompting is automatically suppressed for parameters passed in the hyperlink itself.)
 
 . *_Optional:_*  Select ‘Send selections as parameters’ to send the values of any Dashboard Filter components (Selection Lists, Range Sliders, etc.) to the target  Dashboard. These values are passed into parameters in the target  Dashboard that have the same name as the Filter component, as shown below:
++
+[.videotitle]
+.Watch Video: Add Drill Down Hyperlinks (Pass Filter Values)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::306732112#chapter=16551231[vimeo,640,400]
+=====
 +
 .Send selections as parameters
 [example]
@@ -442,6 +479,16 @@ TIP: To include parameters as part of the URL path, see the *Tip*  about the '`L
 
 [#DrillwithFlyover]
 == Drill  with a Flyover
+
+[.videotitle]
+.Watch Video: Filtering a Dashboard (Flyover Filter)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359331010#chapter=16567745[vimeo,640,400]
+=====
+
 A _flyover view_ filters the information displayed in selected Dashboard components when the user moves the mouse over (or clicks on) particular regions of a chart, table, or crosstab. This effectively allows a Chart, Table, or Crosstab to behave as a selection element. Flyover is similar to a *data tip* (see xref:AddTipsToChart.adoc[]), except that the filtered components remain in their original positions (rather than following the mouse).
 
 For example, you may want the Table below to display sales only for the particular product(s) that the user selects on the Chart. A flyover view allows the user to hover the pointer over the Chart to filter the table as desired.
@@ -546,7 +593,7 @@ To explore this sample Dashboard, download and import the  xref:ROOT:attachment$
 == Drill Down and Filter
 When a Chart or Crosstab displays data with a defined hierarchy in the *Hierarchy* tab (see xref:ChartProperties.adoc[] and xref:CrosstabProperties.adoc[]), you may want to simultaneously drill and filter the data. For example, if the Chart or Crosstab displays sales totals by product category, you may want to drill down into a particular category and view the totals for the individual products in that specific category.
 
-NOTE: This is different than the operations described in xref:#DrillThroughChart[] and xref:#DrillThroughCrosstab[] above, which drill to the next level of hierarchy but *do not* filter.
+NOTE: This is different from the operations described in xref:#DrillThroughChart[] and xref:#DrillThroughCrosstab[] above, which drill to the next level of hierarchy but *do not* filter.
 
 If you have configured a ‘Category’ > ‘Product’ hierarchy for a Chart, then you can drill and filter by following the steps below:
 

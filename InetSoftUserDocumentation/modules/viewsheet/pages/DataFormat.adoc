@@ -2,6 +2,16 @@
 %experimetal%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+
+[.videotitle]
+.Watch Video: Creating a Dashboard (Format Data)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359874333#chapter=16573664[vimeo,640,400]
+=====
+
 The ‘Format’ setting allows you to specify a data format. Formatting is available for the following data types: Date, Number, Currency, Text, Percent.  (To open the *Format* panel, see xref:VisualFormat.adoc[].)
 
 image:Table format_3.png[]

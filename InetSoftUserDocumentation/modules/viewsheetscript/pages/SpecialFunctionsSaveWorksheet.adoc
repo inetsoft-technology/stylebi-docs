@@ -19,4 +19,4 @@ saveWorksheet();
 // Refresh the Dashboard with saved data from the Data Worksheet:
 refreshAfterSubmit = true;
 ----
-See xref:TableApplyChanges.adoc[] and xref:SubmitButtonRefreshAfterSubmit.adoc[] for more information about these functions.
+See xref:TableApplyChanges.adoc[] and xref:CommonRefreshAfterSubmit.adoc[] for more information about these functions.

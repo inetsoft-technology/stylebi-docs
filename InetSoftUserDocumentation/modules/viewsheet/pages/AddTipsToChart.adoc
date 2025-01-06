@@ -114,6 +114,17 @@ To explore this sample Dashboard, download and import the  xref:ROOT:attachment$
 
 [#CustomTooltip]
 == Custom Tooltip
+
+
+[.videotitle]
+.Watch Video: Creating a Chart (Customize Tooltip)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16556463[vimeo,640,400]
+=====
+
 You can create a custom tooltip by using HTML markup to style the tooltip text for Chart, Text, Gauge, and Image components. The tooltip can incorporate data values in {JavaTextMessageFormat} format.
 
 To create a custom tooltip, follow the steps below:

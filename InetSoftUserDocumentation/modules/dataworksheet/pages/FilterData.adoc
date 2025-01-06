@@ -14,18 +14,22 @@ When you perform filtering in a  Data Worksheet, *only* the filtered data will b
 
 [#FilterDetailData]
 == Filter Detail Data
+
+[.videotitle]
+.Watch Video: Filter Detail Data
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::299240869[vimeo,640,400]
+=====
+
 To filter the detail (pre-aggregate) data in a data block, follow the steps below. Note: If you want Dashboard users to dynamically filter the data in a Dashboard, see xref:viewsheet:FilterDashboard.adoc[] instead.
 
 include::ROOT:partial$dataRowLimit.adoc[]
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Filter detail data...
-video::299240869[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
@@ -109,18 +113,23 @@ Note that only totals greater than $1000 are returned.
 
 [#FilterAggregatedData]
 == Filter Aggregated Data
+
+[.videotitle]
+.Watch Video: Filter Aggregate Data
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::299114159[vimeo,640,400]
+=====
+
+
 To filter data that has been grouped and aggregated in a data block, follow the steps below.
 
 NOTE: If you want Dashboard users to dynamically filter data in a Dashboard, see xref:viewsheet:FilterDashboard.adoc[]  in instead.
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Filter aggregate data...
-video::299114159[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
@@ -171,20 +180,24 @@ You can now use this Data Worksheet as the data source for a Dashboard. See xref
 
 [#FilterTopBottomData]
 == Filter Top and Bottom Data
+
+[.videotitle]
+.Watch Video: Filter Top or Bottom Data
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::299259014[vimeo,640,400]
+=====
+
 A condition that filters the top-N or bottom-N records or groups based on a specified measure is called a _ranking condition_.
 
 NOTE: If you want to configure ranking in a specific Chart or Crosstab, see xref:viewsheet:FilterDashboard.adoc[] instead.
 
 To create a ranking condition on a data block, follow the steps below:
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Filter top or bottom data...
-video::299259014[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
@@ -228,19 +241,23 @@ NOTE: If you want to apply dynamic conditions at the Dashboard level (rather tha
 
 [#UseVariableinCondition]
 === Use a Variable (Parameter) in a Condition
+
+[.videotitle]
+.Watch Video: Filter Data Using Parameters
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::299764998[vimeo,640,400]
+=====
+
 You can use a _variable_ or _parameter_ as the test value in a filter condition. By default, the user of the Dashboard  will be prompted  to enter the value of any parameters required by Data Worksheet conditions. The parameter value can also be supplied from other sources  (Dashboard parameter or input component, user session data,  Dashboard script.)
 
 To use a variable or parameter in a filter condition, follow these steps:
 
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Use a variable or parameter in a filter condition...
-video::299764998[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
@@ -299,19 +316,22 @@ NOTE: If you need to *suppress* the parameter prompt in a Dashboard (for example
 
 [#UseSessionDatainCondition]
 === Use Session Data in a Condition
+
+[.videotitle]
+.Watch Video: Filter Data Using Session Information
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::299759448[vimeo,640,400]
+=====
+
 To use a session variable (user, group, or role) as the test value in a filter condition, follow the steps below.
 
 IMPORTANT: While session-based conditions can be used to control data access, you should implement comprehensive data security  by using a VPM.  See xref:SecureData.adoc[].
 
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Use session data in a filter condition...
-video::299756339[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
 
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
@@ -340,17 +360,21 @@ Note that the adjacent menu automatically chooses the ‘equal to’ or ‘one o
 
 [#UseFieldinCondition]
 === Use a Field in a Condition
+
+[.videotitle]
+.Watch Video: Filter Data Using a Field Comparison
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::299756339[vimeo,640,400]
+=====
+
 You can create a filter condition that compares values from two columns (fields) in the same row of data block. To use a data block field in a filter condition, follow these steps:
 
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Use a field in a filter condition...
-video::299756339[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
@@ -378,18 +402,17 @@ The condition compares corresponding values in the selected columns (left-most m
 
 [#UseExpressioninCondition]
 === Use an Expression in a Condition
-To use a SQL or a JavaScript expression in a filtering condition, follow these steps:
-
 
 [.videotitle]
-.Watch Video
+.Watch Video: Filter Data Using an Expression
 [%collapsible]
 =====
-.Use an expression in a filter condition...
-video::299522969[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::299522969[vimeo,640,400]
 =====
 
+To use a SQL or a JavaScript expression in a filtering condition, follow the steps below:
 
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
 

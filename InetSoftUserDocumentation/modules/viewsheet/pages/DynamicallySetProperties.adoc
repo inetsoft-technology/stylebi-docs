@@ -9,6 +9,20 @@ The following sections explain how you can use Form controls and expressions to 
 
 [#ControlPropertieswithFormComponents]
 == Control Properties with Form Components
+
+
+
+[.videotitle]
+.Watch Video: Grouping Data in a Dashboard (User-Controlled Chart Grouping)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359390270#chapter=16510595[vimeo,640,400]
+=====
+
+
+
 To parametrize a component property using a Form component, follow these steps:
 
 . Create and configure the Form component. Follow the steps below:
@@ -47,6 +61,8 @@ The specified Form control will now control the setting of the selected property
 
 .Example: Use a RadioButton to Control a Property
 ****
+
+
 In this example, you will add a RadioButton that allows the user to set the Y-axis field of a Chart to either ‘Quantity Purchased’ or ‘Total Revenue’.
 
 . Create a new Dashboard based on the ‘ProductSales’ Data Worksheet.
@@ -70,6 +86,18 @@ image:Capture_006.png[]
 ****
 
 == Control  Conditions with Form Components
+
+
+[.videotitle]
+.Watch Video: Filtering a Dashboard (Make Condition Dynamic)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359331010#chapter=16567722[vimeo,640,400]
+=====
+
+
 Form components allow a user to manipulate a filter or highlight Condition applied to a Data View component (Chart, Table, Crosstab).
 
 [IMPORTANT]

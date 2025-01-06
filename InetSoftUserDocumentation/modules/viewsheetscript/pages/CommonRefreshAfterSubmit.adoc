@@ -1,0 +1,40 @@
+= refreshAfterSubmit
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+When `true` (default), refreshes the Dashboard after submission. This is useful when you want Dashboard components to be immediately updated with the submitted data (for example, when  new values are submitted from an Editable Table or Form component to the Data Worksheet).
+
+
+
+
+
+
+
+
+== Type
+Boolean::	`true`: refresh the Dashboard after submission +
+`false`: do not refresh the Dashboard
+
+
+
+
+
+
+== Example
+[source,javascript]
+refreshAfterSubmit = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+refreshAfterSubmit              // unqualified
+Component1.refreshAfterSubmit      // qualified
+
+{secondForm}
+====
+
+

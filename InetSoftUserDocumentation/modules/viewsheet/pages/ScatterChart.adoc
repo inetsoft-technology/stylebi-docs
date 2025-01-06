@@ -2,6 +2,17 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+
+
+[.videotitle]
+.Watch Video: Creating a Chart (Group Without Format)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16557152[vimeo,640,400]
+=====
+
 A Scatter Chart is a xref:PointChart.adoc[] in which both the X and Y axes represent *measures*. (A scatter chart can also be enhanced with a 'Size' measure to create a xref:BubbleChart.adoc[]. See below.)
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]

@@ -8,8 +8,8 @@ include::partial$readOnly.adoc[]
 ====
 [square]
 * xref:CheckRadioComboLabels.adoc[] to access the labels displayed in the component.
-* xref:CommonSelectObjects.adoc[] to access the value corresponding to the labels.
-* xref:CommonSelectLabel.adoc[] to access the currently selected label in single-valued components.
+* xref:CommonSelectedObjects.adoc[] to access the value corresponding to the labels.
+* xref:CommonSelectedLabel.adoc[] to access the currently selected label in single-valued components.
 * xref:AccessComponentData.adoc[] for more information about `selectedLabels`.
 ====
 

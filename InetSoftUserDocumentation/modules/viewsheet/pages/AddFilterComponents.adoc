@@ -14,6 +14,16 @@ The following sections explain how to add these components.
 
 [#FilterWithSelectionList]
 == Filter  with a Selection List
+
+[.videotitle]
+.Watch Video: Filtering a Dashboard (Filter Categorical Data)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359331010#chapter=16564161[vimeo,640,400]
+=====
+
 The most common way to filter the values of a *dimension* in a Dashboard is with a Selection List.  You can also use a Selection List to filter a *measure*, although this is  generally useful only for measures with a limited number of discrete values.
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
@@ -46,6 +56,16 @@ See xref:UseFilterComponents.adoc[] for information on how to use a Selection Li
 
 [#FilterHierarchicalDataSelectionTree]
 == Filter Hierarchical Data with Selection Tree
+
+[.videotitle]
+.Watch Video: Filtering a Dashboard (Filter Hierarchical Data)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359331010#chapter=16564214[vimeo,640,400]
+=====
+
 Like a Selection List, a Selection Tree filters the data in all Tables, Charts, and Output components that are based on the same data block as the Selection Tree.
 To add a Selection Tree, follow the steps below:
 
@@ -181,6 +201,17 @@ image:SelectionTreeRecursive2.png[]
 
 [#FilterDateNumericalDataRangeSlider]
 == Filter Date/Numerical Data with Range Slider
+
+
+[.videotitle]
+.Watch Video: Filtering a Dashboard (Filter Dates with a Slider)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359331010#chapter=16559038[vimeo,640,400]
+=====
+
 A Range Slider component allows you to select a date range or numerical range from a measure, as shown below.
 
 image:RangeSlider_1.png[]
@@ -211,6 +242,16 @@ image:Range Slider Edit1_2.png[]
 
 
 == Filter Dates  with a Calendar
+
+[.videotitle]
+.Watch Video: Filtering a Dashboard (Filter Dates with a Calendar)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359331010#chapter=16559047[vimeo,640,400]
+=====
+
 A Calendar allows you to restrict data to a particular range of dates, either continuous or non-continuous. A Calendar is similar in purpose to a Range Slider (see xref:#FilterDateNumericalDataRangeSlider[]), but provides functionality beyond simple range selection. For example, a Calendar also allows you to compare date ranges in a Chart or Crosstab.
 
 To add a Calendar, follow the steps below.
@@ -232,6 +273,16 @@ See xref:UseFilterComponents.adoc[] for information on how to use a Calendar to 
 
 
 == Combine Multiple Filters into a Selection Container
+
+[.videotitle]
+.Watch Video: Filtering a Dashboard (Selection Container)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359331010#chapter=16567148[vimeo,640,400]
+=====
+
 A Selection Container can display a variety of filter components such as Selection Lists and Range Sliders in a single region of the Dashboard.
 
 include::viewsheet:partial$selectionContainer.adoc[]
@@ -312,7 +363,7 @@ image:multipleFilter2.png[]
 
 . Press btn:[OK].
 
-Data values from the compatible columns in the added data blocks are merged into the existing Filter component, and the Filter component will filter all of the specified compatible data blocks (in addition to the data block bound to the Filter).
+Data values from the compatible columns in the added data blocks are merged into the existing Filter component, and the Filter component will filter all the specified compatible data blocks (in addition to the data block bound to the Filter).
 
 .Example: Filter Multiple Data Blocks
 ****

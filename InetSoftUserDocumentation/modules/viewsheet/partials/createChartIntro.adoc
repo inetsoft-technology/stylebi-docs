@@ -3,6 +3,17 @@ include::ROOT:partial$buttonSnippets.adoc[]
 .Open a Chart for Editing...
 [%collapsible]
 ====
+
+
+[.videotitle]
+.Watch Video: Create a Chart (Open the Chart Editor)
+[%collapsible]
+======
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555675[vimeo,640,400]
+======
+
 Follow the steps below to get started with a new Chart.  See xref:viewsheet:BasicChartingSteps.adoc[] for more details.
 
 . If necessary, create a new Dashboard.
@@ -13,6 +24,7 @@ include::ROOT:partial$CreateNewDashboardNote.adoc[]
 image:addingChart.png[]
 
 . Resize the Chart as desired by dragging the handles.
++
 image:resizeChartHandle_1.png[]
 
 . Press the ’Edit’ button in the center of the Chart or press the {buttonEdit} in the top-right corner.

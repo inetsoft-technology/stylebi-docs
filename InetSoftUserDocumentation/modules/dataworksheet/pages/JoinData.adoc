@@ -8,18 +8,22 @@ NOTE: To create a vertical composition of two or more data blocks see xref:Conca
 
 [id=InnerOuterInequalityJoin]
 == Inner Join, Outer Join, Inequality Join
+
+[.videotitle]
+.Watch Video: Create an Inner or Outer Join
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::300392678[vimeo,640,400]
+=====
+
 A joined data block contains all the columns from the base data blocks, but retains only the rows that satisfy a set of join conditions. The join conditions are relations between pairs of columns from the base data blocks.
 
 To join data blocks using an inner join, outer join, or inequality join, follow the steps below:
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Create an inner join, outer join, inequality join...
-video::300392678[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 
 . Create the data block you want to join. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
@@ -38,8 +42,9 @@ This creates a new joined data block and opens the Join Editor.
 image:JoiningTablesActionResult.png[]
 .. Proceed to define the joins in the Join Editor as explained below.
 
-. To  join data blocks by using  the *{buttonJoin}*, first follow these steps:
 +
+To  join data blocks by using  the *{buttonJoin}*, first follow these steps:
+
 .. Select the data blocks you want to join together. (You can hold the {buttonShift} key and click on the data blocks to select both, or drag with the mouse to “lasso” the data blocks.)
 .. Press the {buttonJoin} in the toolbar, and select  {buttonInnerOuterJoin}.
 +
@@ -145,18 +150,22 @@ image:JoinedPreview.png[]
 
 [#CrossJoin]
 == Cross Join
+
+[.videotitle]
+.Watch Video: Create a Cross Join
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::300389967[vimeo,640,400]
+=====
+
 Data blocks that do not share the same data model or database table can be joined together with a cross join. A cross-joined data block contains the cross-product (Cartesian product) of the data in the base tables. This means that every row in the first table is paired together with every row in the second table. The length of the new joined data block is the product of the two base data block lengths.
 
 To cross-join two data blocks in a Data Worksheet, follow these steps:
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Create a cross join...
-video::300389967[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 
 . Create the data block you want to join. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
@@ -211,18 +220,22 @@ Note that the ‘Query2’ data block returns the cross-product of the ‘custom
 
 [#MergeJoin]
 == Merge Join
+
+[.videotitle]
+.Watch Video: Create a Merge Join
+
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::300398343[vimeo,640,400]
+=====
+
 A _merge join_ is a special type of join that creates no logical relationship between the two base data blocks. The base data blocks are simply merged horizontally into a single data block by collecting their columns together and placing corresponding rows side by side.
 
 To create a merge join, follow these steps:
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Create a merge join...
-video::300398343[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
+
 
 
 
@@ -275,17 +288,21 @@ Notice that since the ‘Wireless Mouse1’ table has more rows than the ‘Fast
 
 [id=ChangeJoinType]
 == Change the Join Type
-To change the join type of a joined data block, follow these steps. (You can change the join type for all joined data blocks *_except_* for merge-joins, because merge-joins do not define a relationship.)
-
 
 [.videotitle]
-.Watch Video
+.Watch Video: Change a Join
+
 [%collapsible]
 =====
-.Change the join type...
-video::300385527[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::300385527[vimeo,640,400]
 =====
+
+To change the join type for a joined data block, follow these steps. (You can change the join type for all joined data blocks *_except_* for merge-joins, because merge-joins do not define a relationship.)
+
+
+
 
 . Right-click the joined data block and select ‘Edit Join’. {rightClickOptions} This opens the Join Editor.
 +

@@ -1,0 +1,32 @@
+= scaledSize
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+
+For cases when the ‘Scale to Screen’ option (see xref:viewsheet:DashboardOptions.adoc[]) is enabled, returns the final rendered size of  a component in terms of pixels.   This property returns `null` within the design view of Visual Composer and whenever ‘Scale to Screen’ is not enabled.
+
+== Type
+{javaawtDimension} object: `java.awt.Dimension(width,height)`
+
+
+== Example
+[source,javascript]
+alert(Chart1.scaledSize)
+// returns java.awt.Dimension[width=200,height=40]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+scaledSize               // unqualified
+Component1.scaledSize    // qualified
+
+{secondForm}
+====
+
+

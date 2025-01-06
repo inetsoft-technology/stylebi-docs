@@ -40,6 +40,15 @@ Aggregate:: The method of aggregation to be used for the ‘Measure’ field.
 Text:: Specifies that the aggregated measure is displayed as plain text.
 Bar:: Specifies that the aggregate measure is displayed graphically as a proportional bar.
 
+[.videotitle]
+.Watch Video: Filtering a Dashboard (Specify measure in Tree)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359331010#chapter=16564267[vimeo,640,400]
+=====
+
 
 == Script Tab
 {commonScript}

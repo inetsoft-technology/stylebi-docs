@@ -11,16 +11,20 @@ To sort data in a Data Worksheet, see the sections below. You can sort data on a
 ====
 
 == Sort on Single Column
-To sort a data block on a single column, follow the steps below:
 
 [.videotitle]
-.Watch Video
+.Watch Video: Sort On a Single Column
+
 [%collapsible]
 =====
-.Sort on a single column...
-video::300553188[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::300553188[vimeo,640,400]
 =====
+
+
+To sort a data block on a single column, follow the steps below:
+
 
 
 . Create the data block that you want to sort. See xref:CreateNewWorksheet.adoc[] for information on how to create a data block.
@@ -48,12 +52,13 @@ include::ROOT:partial$CreateDashboard.adoc[]
 To sort a data block on multiple columns, follow the steps below:
 
 [.videotitle]
-.Watch Video
+.Watch Video: Sort on Multiple Columns
+
 [%collapsible]
 =====
-.Sort on multiple columns...
-video::300540111[vimeo,640,400]
 include::ROOT:partial$videoVersion.adoc[]
+
+video::300540111[vimeo,640,400]
 =====
 
 

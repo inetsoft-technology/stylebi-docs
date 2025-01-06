@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 Once you have executed the query (xref:RunQueryFromScript.adoc[]), you can access specific ranges of the query result set. The data-referencing syntax explained in the following sections allows you to also group and filter the results, and to create expressions.
 
 == Reference  Freehand Table Cells
-Typically, when you access query data using the methods described below, you will display this data within the cells of a Freehand Table.  The following sections provide several examples of how to do this.
+Typically, when you access query data using the methods described below, you will display this data within the cells of a Freehand Table.  (See xref:viewsheet:AddFreehandTable.adoc[]) for more information about this component. The following sections provide several examples of how to do this.
 
 Note that you can assign a name to any cell within a Freehand Table. This allows you to use the cell’s name to reference the value of the cell from within another formula. Refer to the value in a cell by using syntax `$cell_name`, where `cell_name` is the name assigned in the ‘Cell Name’ field for the cell being referenced.
 

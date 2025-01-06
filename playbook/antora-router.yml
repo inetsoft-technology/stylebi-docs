@@ -678,10 +678,11 @@ routes:
   CommonFormatSpec: InetSoftUserDocumentation:viewsheetscript:CommonFormatSpec.adoc
   CommonPosition: InetSoftUserDocumentation:viewsheetscript:CommonPosition.adoc
   CommonScaledPosition: InetSoftUserDocumentation:viewsheetscript:CommonScaledPosition.adoc
-  CommonSelectLabel: InetSoftUserDocumentation:viewsheetscript:CommonSelectLabel.adoc
-  CommonSelectLabels: InetSoftUserDocumentation:viewsheetscript:CommonSelectLabels.adoc
-  CommonSelectObject: InetSoftUserDocumentation:viewsheetscript:CommonSelectObject.adoc
-  CommonSelectObjects: InetSoftUserDocumentation:viewsheetscript:CommonSelectObjects.adoc
+  CommonScaledSize: InetSoftUserDocumentation:viewsheetscript:CommonScaledSize.adoc
+  CommonSelectedLabel: InetSoftUserDocumentation:viewsheetscript:CommonSelectedLabel.adoc
+  CommonSelectedLabels: InetSoftUserDocumentation:viewsheetscript:CommonSelectedLabels.adoc
+  CommonSelectedObject: InetSoftUserDocumentation:viewsheetscript:CommonSelectedObject.adoc
+  CommonSelectedObjects: InetSoftUserDocumentation:viewsheetscript:CommonSelectedObjects.adoc
   CommonTitle: InetSoftUserDocumentation:viewsheetscript:CommonTitle.adoc
   CommonTitleVisible: InetSoftUserDocumentation:viewsheetscript:CommonTitleVisible.adoc
   CommonSize: InetSoftUserDocumentation:viewsheetscript:CommonSize.adoc
@@ -940,6 +941,8 @@ routes:
   CheckRadioComboSortType: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboSortType.adoc
   CheckRadioComboSubmitOnChange: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboSubmitOnChange.adoc
   CheckRadioComboValues: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboValues.adoc
+  CheckRadioComboRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
+  CheckRadioComboSelectFirstItemOnLoad: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboSelectFirstItemOnLoad.adoc
   CrosstabBindingInfoColFields: InetSoftUserDocumentation:viewsheetscript:CrosstabBindingInfoColFields.adoc
   CrosstabBindingGetColumnOrder: InetSoftUserDocumentation:viewsheetscript:CrosstabBindingGetColumnOrder.adoc
   CrosstabBindingGetFormula: InetSoftUserDocumentation:viewsheetscript:CrosstabBindingGetFormula.adoc
@@ -1079,12 +1082,14 @@ routes:
   SliderMinVisible: InetSoftUserDocumentation:viewsheetscript:SliderMinVisible.adoc
   SliderSnap: InetSoftUserDocumentation:viewsheetscript:SliderSnap.adoc
   SliderSubmitOnChange: InetSoftUserDocumentation:viewsheetscript:SliderSubmitOnChange.adoc
+  SliderRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
   SliderTickVisible: InetSoftUserDocumentation:viewsheetscript:SliderTickVisible.adoc
   SpinnerIncrement: InetSoftUserDocumentation:viewsheetscript:SpinnerIncrement.adoc
   SpinnerMax: InetSoftUserDocumentation:viewsheetscript:SpinnerMax.adoc
   SpinnerMin: InetSoftUserDocumentation:viewsheetscript:SpinnerMin.adoc
   SpinnerSubmitOnChange: InetSoftUserDocumentation:viewsheetscript:SpinnerSubmitOnChange.adoc
-  SubmitButtonRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:SubmitButtonRefreshAfterSubmit.adoc
+  SpinnerRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
+  SubmitButtonRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
   TabbedInterfaceLabels: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceLabels.adoc
   TabbedInterfaceSelectedIndex: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceSelectedIndex.adoc
   TableAppendRow: InetSoftUserDocumentation:viewsheetscript:TableAppendRow.adoc
@@ -1150,6 +1155,7 @@ routes:
   TextInputDefaultText: InetSoftUserDocumentation:viewsheetscript:TextInputDefaultText.adoc
   TextInputPlaceholderText: InetSoftUserDocumentation:viewsheetscript:TextInputPlaceholderText.adoc
   TextInputSubmitOnChange: InetSoftUserDocumentation:viewsheetscript:TextInputSubmitOnChange.adoc
+  TextInputRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
   TextInputValue: InetSoftUserDocumentation:viewsheetscript:TextInputValue.adoc
   UploadGetFilename: InetSoftUserDocumentation:viewsheetscript:UploadGetFilename.adoc
   UploadIsLoaded: InetSoftUserDocumentation:viewsheetscript:UploadIsLoaded.adoc
