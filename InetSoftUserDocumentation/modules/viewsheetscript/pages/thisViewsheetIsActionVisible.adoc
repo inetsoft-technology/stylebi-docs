@@ -1,0 +1,20 @@
+= thisViewsheet.isActionVisible(name)
+:navtitle: isActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Returns the visibility setting for the specified toolbar button.
+
+== Parameters
+name:: name of toolbar button or export option (String):
++
+*Buttons*: `'Annotation', 'Back', 'Bookmark', 'Close', 'Edit', 'Email', 'Export', 'Full Screen', 'Import', 'Next','Previous', 'Print', 'Refresh', 'Schedule', 'Social Sharing', 'Toolbar', 'Zoom In'`
++
+*Export options*: `'CSV', 'Excel', 'HTML', 'PDF', 'PNG', 'PowerPoint', 'Snapshot'`
+
+== Example
+[source,javascript]
+if (!thisViewsheet.isActionVisible("Export")) {
+  alert('Some features are disabled.');
+}

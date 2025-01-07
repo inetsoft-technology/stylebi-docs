@@ -4,7 +4,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=See Also]
-xref:thisViewsheet.adoc#thisViewsheetSetActionVisible[thisViewsheet.setActionVisible()] to show or hide Dashboard toolbar buttons.
+xref:thisViewsheetSetActionVisible.adoc[] to show or hide Dashboard toolbar buttons.
 
 
 Sets the visibility/accessibility of end-user Chart features. To disable a feature, set the value to `false`.

@@ -124,6 +124,7 @@ The page provides the following information:
 To terminate a user session, click the {buttonSelect} next to the desired user, and then press the btn:[Remove] button.
 
 == Cluster
+include::ROOT:partial$enterpriseOnly.adoc[]
 include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
 
 Use the *Cluster* Monitoring page  to view cluster nodes.

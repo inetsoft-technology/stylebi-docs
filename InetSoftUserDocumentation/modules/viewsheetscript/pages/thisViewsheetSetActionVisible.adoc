@@ -1,0 +1,26 @@
+= thisViewsheet.setActionVisible(name,Boolean)
+:navtitle: setActionVisible()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the visibility of Dashboard toolbar buttons and export options. To hide a button or export option, set the value to false. This function should generally be placed in the onInit Handler. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
+NOTE: The `setActionVisible` property for individual components is documented with the other component properties.
+
+== Parameters
+name:: name of toolbar button or export option (String):
++
+*Buttons*: `'Annotation', 'Back', 'Bookmark', 'Close', 'Edit', 'Email', 'Export', 'Full Screen', 'Import', 'Next','Previous', 'Print', 'Refresh', 'Schedule', 'Social Sharing', 'Toolbar', 'Zoom In'`
++
+*Export options*: `'CSV', 'Excel', 'HTML', 'PDF', 'PNG', 'PowerPoint', 'Snapshot'`
+
+
+Boolean:: `false`: hide the specified button, `true`: show the specified button
+
+== Example
+[source,javascript]
+thisViewsheet.setActionVisible("Export", false);
+
+TIP: Use the `'Toolbar'` option to control the visibility of the entire toolbar: `thisViewsheet.setActionVisible("Toolbar", false)`.
+

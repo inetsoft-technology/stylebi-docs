@@ -1,0 +1,13 @@
+= thisViewsheet.viewsheetName
+:navtitle: viewsheetName
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+include::partial$readOnly.adoc[]
+
+Returns the name of the Dashboard.  See xref:administration:Repository.adoc[] in xref:administration:ManageServer.adoc[] for information on how to set the name of a Dashboard.
+
+== Example
+[source,javascript]
+alert('The actual name of this Dashboard is  ' + thisViewsheet.viewsheetName);

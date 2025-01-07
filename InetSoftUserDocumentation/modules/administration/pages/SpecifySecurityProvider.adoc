@@ -51,13 +51,21 @@ LDAP:: This specifies a third-party LDAP server (e.g., Active Directory) that co
 [square]
 * Assign permissions for components, capabilities, and assets as explained in xref:SetRepositoryPermissions.adoc[] and xref:SetSecurityActions.adoc[].
 * Create users, groups, and roles using the LDAP platform.
-Database:: This specifies queries to retrieve user/role/group information a database schema, and can be used for *authentication* only. For more information, see xref:ConfigureDatabaseSecurity.adoc[].
+Database::
+This specifies queries to retrieve user/role/group information a database schema, and can be used for *authentication* only. For more information, see xref:ConfigureDatabaseSecurity.adoc[].
++
+include::ROOT:partial$enterpriseOnly.adoc[]
 +
 [square]
 * Assign permissions for components, capabilities, and assets as explained in xref:SetRepositoryPermissions.adoc[] and xref:SetSecurityActions.adoc[].
 * Create users, groups, and roles using the database platform.
 
-Custom:: This specifies a Java class that implements the ‘Security Provider’ interface, and can be used for both authentication and authorization.  Enter the custom configuration in the ‘JSON Configuration’ panel. Security classes have the following methods that you can overwrite to suit your needs:
+
+Custom:: This specifies a Java class that implements the ‘Security Provider’ interface, and can be used for both authentication and authorization.
++
+include::ROOT:partial$enterpriseOnly.adoc[]
++
+Enter the custom configuration in the ‘JSON Configuration’ panel. Security classes have the following methods that you can overwrite to suit your needs:
 +
 [source,java]
 void readConfiguration(com.fasterxml.jackson.databind.JsonNode configuration)

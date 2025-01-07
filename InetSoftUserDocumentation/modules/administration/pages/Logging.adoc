@@ -24,6 +24,9 @@ image:Figure 10.png[]
 The following properties are available:
 
 Log Type:: Allows you to select between '`Default File`' and '`Fluent Bit/Fluentd`'.
++
+include::ROOT:partial$enterpriseOnly.adoc[]
+
 
 Output to Standard Output:: When enabled, sends log messages to the standard output stream.
 

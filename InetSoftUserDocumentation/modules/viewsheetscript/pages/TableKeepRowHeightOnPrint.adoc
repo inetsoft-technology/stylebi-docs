@@ -1,0 +1,43 @@
+= keepRowHeightOnPrint
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=see also]
+xref:viewsheet:AddFreehandTable.adoc[] for more information about Freehand Tables.
+
+
+Preserves the   row heights of the Table *as displayed* when a print layout is used for export.   (See xref:viewsheet:CreateDeviceLayout.adoc[].)
+
+== Type
+Boolean:: `true`: preserve displayed row heights +
+`false`:  automatically adjust row heights for print (default)
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+// Preserve row heights
+TableView1.keepRowHeightOnPrint = true
+
+
+----
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+keepRowHeightOnPrint                 // unqualified
+TableView1.keepRowHeightOnPrint      // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,13 @@
+= thisViewsheet.viewsheetAlias
+:navtitle: viewsheetAlias
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+
+Returns the Dashboard alias.  See xref:administration:Repository.adoc[] in xref:administration:ManageServer.adoc[] for information on how to set an alias for a Dashboard. See xref:parameter.adoc[] to obtain other environment information in script.
+
+== Example
+[source,javascript]
+alert('This Dashboard is displayed in the repository as ' + thisViewsheet.viewsheetAlias);

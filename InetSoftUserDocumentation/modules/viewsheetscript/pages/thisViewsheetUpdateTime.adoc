@@ -1,0 +1,19 @@
+= thisViewsheet.updateTime
+:navtitle: updateTime
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+
+Returns the date/time at which data was most recently obtained by the Dashboard.
+
+* If a materialized view is in effect for the Dashboard (see xref:administration:MaterializedView.adoc[] in xref:administration:ManageServer.adoc[]), `thisViewsheet.updateTime` returns the date/time at which the most recent materialized view was generated for the Dashboard.
+* If a materialized view is not in effect, `thisViewsheet.updateTime` returns the date/time of the most recent query execution for the Dashboard.
+
+== Type
+Date:: Date/time at which data was obtained
+
+== Example
+[source,javascript]
+Text1.text = 'Last Updated at ' + formatDate(thisViewsheet.updateTime,'MMM dd, h:mm a');

@@ -1,0 +1,41 @@
+= thisViewsheet.scheduleAction(Boolean[,emails])
+:navtitle: scheduleAction()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies whether the Dashboard should be executed as part of a scheduled task. Set to `true` to allow the Dashboard to run as scheduled. Set to `false` to override the scheduled task setting and suppress Dashboard execution. See xref:user:ScheduleDashboard.adoc[] in xref:user:UsePortal.adoc[] and xref:administration:Schedule.adoc[] in xref:administration:ManageServer.adoc[] for more information about scheduling.
+
+== Parameters
+Boolean:: `true` (default): execute task, `false`: do not execute task
+emails:: Array of emails
+
+You can use the `scheduleAction` function to conditionalize the execution of a scheduled Dashboard task based on actual Dashboard data. Use the optional second parameter, `emails`, to dynamically set the list of emails for the ‘Deliver To Emails’ scheduled action. Use xref:#taskName[] to obtain the name of the currently executing task.
+
+The email list that you provide in the emails array supersedes any emails specified on the Scheduler *Action* tab (both for user-scheduled tasks and administrator-scheduled tasks), and automatically enables the ‘Deliver To Emails’ task action.
+
+NOTE: While the `scheduleAction` function facilitates the creation of "`alerts`", an easier method of setting alerts is also available. See xref:administration:CreateScheduledTask.adoc#CreateAlert[Create Alert] in xref:administration:ManageServer.adoc[]  and xref:user:ScheduleDashboard.adoc[] in xref:user:UseDashboard.adoc[] for more information.
+
+
+== Examples
+The following script uses the value of a Gauge component to determine whether the Dashboard task should execute as scheduled.
+
+.Evaluate dashboard for execution
+[source,javascript]
+if (Gauge1.value > 10000) {
+  thisViewsheet.scheduleAction(true)
+}
+else {
+  thisViewsheet.scheduleAction(false)
+}
+
+If the scheduled action is a user notification (for example), then the user will receive the alert only when the value of the Gauge component exceeds the threshold.
+
+.Evaluate dashboard for execution and deliver emails
+[source,javascript]
+if (Gauge1.value > 10000) {
+  emails = ['joe@inetsoft.com', 'sue@inetsoft.com', 'mark@inetsoft.com'];}
+else {
+  emails = ['joe@inetsoft.com'];
+}
+thisViewsheet.scheduleAction(true, emails);

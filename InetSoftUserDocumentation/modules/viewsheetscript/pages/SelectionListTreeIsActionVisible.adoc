@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 ====
 [square]
 * xref:CommonProperties.adoc[] for properties shared with other components.
-* xref:thisViewsheet.adoc#thisViewsheetIsActionVisible[thisViewsheet.IsActionVisible]  to return Dashboard toolbar button visibility.
+* xref:thisViewsheetIsActionVisible.adoc[]  to return Dashboard toolbar button visibility.
 ====
 
 Returns the visibility/accessibility of the specified end-user Selection List or Selection Tree feature.
