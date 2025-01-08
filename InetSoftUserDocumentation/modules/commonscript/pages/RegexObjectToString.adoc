@@ -1,0 +1,14 @@
+= toString()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Returns the string representation of a regular expression object. This function is an implementation of the standard JavaScript RegExp https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString[toString()] method.
+
+== Example
+[source,javascript]
+----
+var reg = new RegExp('a+b+c');
+alert(reg.toString());  // returns "/a+b+c/"
+----

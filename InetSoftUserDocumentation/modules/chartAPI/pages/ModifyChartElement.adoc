@@ -49,7 +49,7 @@ The chart shows maximum and minimum totals for each employee, and the chart shap
 +
 Note that the interior fill, ‘Average(Total)’, is the same for both datasets, so it is not needed in both locations. In the next steps, you will change the ‘Min(Total)’ markers to a solid red arrow-shape. You will also increase the size of the ‘Max(Total)’ markers so that the fill level is more visible. To make these changes, you will use Chart API functions.
 +
-TIP: Chart API script which operates on the Chart’s `Egraph` property should be placed in *element-level* script.
+TIP: Chart API script which operates on the Chart’s `EGraph` property should be placed in *element-level* script.
 
 . Open the Script Editor: Right-click the Chart and select ‘Properties’ from the context menu. Then select the *Script* tab.
 

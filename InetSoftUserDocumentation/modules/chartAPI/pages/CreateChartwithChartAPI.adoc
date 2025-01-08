@@ -15,7 +15,7 @@ In this example, you will create a new Chart, define the Chart data, and display
 
 . Open the Script Editor: Right-click the Chart and select ‘Properties’ from the context menu. Then select the *Script* tab.
 +
-NOTE: Chart API script (which operates on the Chart’s 'Egraph' property) should be placed in element-level script.
+NOTE: Chart API script (which operates on the Chart’s 'EGraph' property) should be placed in element-level script.
 
 
 . *Define the data*: Define the dataset for the Chart using the Chart’s xref:chartAPI:Data.adoc[] property.

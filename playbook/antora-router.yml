@@ -354,6 +354,7 @@ routes:
   StringObjectToLocaleUpperCase: InetSoftUserDocumentation:commonscript:StringObjectToLocaleUpperCase.adoc
   RegexObjectExec: InetSoftUserDocumentation:commonscript:RegexObjectExec.adoc
   RegexObjectTest: InetSoftUserDocumentation:commonscript:RegexObjectTest.adoc
+  RegexObjectToString: InetSoftUserDocumentation:commonscript:RegexObjectToString.adoc  
   NumberObjectIsNumber: InetSoftUserDocumentation:commonscript:NumberObjectIsNumber.adoc
   NumberObjectNumberToString: InetSoftUserDocumentation:commonscript:NumberObjectNumberToString.adoc
   NumberObjectToExponential: InetSoftUserDocumentation:commonscript:NumberObjectToExponential.adoc
@@ -390,7 +391,7 @@ routes:
   parse: InetSoftUserDocumentation:commonscript:DateObjectParse.adoc
   toDateString: InetSoftUserDocumentation:commonscript:DateObjectToDateString.adoc
   toLocaleString: InetSoftUserDocumentation:commonscript:DateObjectToLocaleString.adoc
-  toString: InetSoftUserDocumentation:commonscript:DateObjectToString.adoc
+  DateObjectToString: InetSoftUserDocumentation:commonscript:DateObjectToString.adoc
   toTimeString: InetSoftUserDocumentation:commonscript:DateObjectToTimeString.adoc
   toLocaleDateString: InetSoftUserDocumentation:commonscript:DateObjectToLocaleDateString.adoc
   toLocaleTimeString: InetSoftUserDocumentation:commonscript:DateObjectToLocaleTimeString.adoc
@@ -1163,3 +1164,145 @@ routes:
   UploadIsLoaded: InetSoftUserDocumentation:viewsheetscript:UploadIsLoaded.adoc
   UploadSubmitOnChange: InetSoftUserDocumentation:viewsheetscript:UploadSubmitOnChange.adoc
   CreateScriptFunction: InetSoftUserDocumentation:viewsheetscript:CreateScriptFunction.adoc
+  42Matters: InetSoftUserDocumentation:user:42Matters.adoc
+  ActianMatrix: InetSoftUserDocumentation:user:ActianMatrix.adoc
+  ActianVector: InetSoftUserDocumentation:user:ActianVector.adoc
+  ActiveCampaign: InetSoftUserDocumentation:user:ActiveCampaign.adoc
+  AdobeAnalytics: InetSoftUserDocumentation:user:AdobeAnalytics.adoc
+  Aerospike: InetSoftUserDocumentation:user:Aerospike.adoc
+  Airtable: InetSoftUserDocumentation:user:Airtable.adoc
+  AmazonAuroraRDSMySQL: InetSoftUserDocumentation:user:AmazonAuroraRDSMySQL.adoc
+  AmazonAuroraRDSPostgresSQL: InetSoftUserDocumentation:user:AmazonAuroraRDSPostgresSQL.adoc
+  ApacheDrill: InetSoftUserDocumentation:user:ApacheDrill.adoc
+  ApacheHive: InetSoftUserDocumentation:user:ApacheHive.adoc
+  Appfigures: InetSoftUserDocumentation:user:Appfigures.adoc
+  Asana: InetSoftUserDocumentation:user:Asana.adoc
+  AsterDatanCluster: InetSoftUserDocumentation:user:AsterDatanCluster.adoc
+  AWSEMR: InetSoftUserDocumentation:user:AWSEMR.adoc
+  AWSRedshift: InetSoftUserDocumentation:user:AWSRedshift.adoc
+  AzureBlob: InetSoftUserDocumentation:user:AzureBlob.adoc
+  AzureSearch: InetSoftUserDocumentation:user:AzureSearch.adoc
+  Box: InetSoftUserDocumentation:user:Box.adoc
+  CampaignMonitor: InetSoftUserDocumentation:user:CampaignMonitor.adoc
+  Cassandra: InetSoftUserDocumentation:user:Cassandra.adoc
+  Chargebee: InetSoftUserDocumentation:user:Chargebee.adoc
+  Chargify: InetSoftUserDocumentation:user:Chargify.adoc
+  ChartMogul: InetSoftUserDocumentation:user:ChartMogul.adoc
+  CiscoInfoServer: InetSoftUserDocumentation:user:CiscoInfoServer.adoc
+  ConstantContact: InetSoftUserDocumentation:user:ConstantContact.adoc
+  Copper: InetSoftUserDocumentation:user:Copper.adoc
+  Clockify: InetSoftUserDocumentation:user:Clockify.adoc
+  DataGovJSON: InetSoftUserDocumentation:user:DataGovJSON.adoc
+  dataworld: InetSoftUserDocumentation:user:dataworld.adoc
+  DataStaxEnterprise: InetSoftUserDocumentation:user:DataStaxEnterprise.adoc
+  DB2: InetSoftUserDocumentation:user:DB2.adoc
+  Derby: InetSoftUserDocumentation:user:Derby.adoc
+  DerbyEmbedded: InetSoftUserDocumentation:user:DerbyEmbedded.adoc
+  Dremio: InetSoftUserDocumentation:user:Dremio.adoc
+  Exasol: InetSoftUserDocumentation:user:Exasol.adoc
+  FacebookAdInsights: InetSoftUserDocumentation:user:FacebookAdInsights.adoc
+  FacebookPageInsights: InetSoftUserDocumentation:user:FacebookPageInsights.adoc
+  FileMaker: InetSoftUserDocumentation:user:FileMaker.adoc
+  Firebase: InetSoftUserDocumentation:user:Firebase.adoc
+  Freshdesk: InetSoftUserDocumentation:user:Freshdesk.adoc
+  Freshsales: InetSoftUserDocumentation:user:Freshsales.adoc
+  Freshservice: InetSoftUserDocumentation:user:Freshservice.adoc
+  Fusebill: InetSoftUserDocumentation:user:Fusebill.adoc
+  Github: InetSoftUserDocumentation:user:Github.adoc
+  GitLab: InetSoftUserDocumentation:user:GitLab.adoc
+  GoogleAnalytics: InetSoftUserDocumentation:user:GoogleAnalytics.adoc
+  GoogleAnalyticsGA4: InetSoftUserDocumentation:user:GoogleAnalyticsGA4.adoc
+  GoogleBigQuery: InetSoftUserDocumentation:user:GoogleBigQuery.adoc
+  GoogleCalendar: InetSoftUserDocumentation:user:GoogleCalendar.adoc
+  GoogleCloudSQL: InetSoftUserDocumentation:user:GoogleCloudSQL.adoc
+  GoogleSearchConsole: InetSoftUserDocumentation:user:GoogleSearchConsole.adoc
+  GoogleSpreadsheets: InetSoftUserDocumentation:user:GoogleSpreadsheets.adoc
+  GoSquared: InetSoftUserDocumentation:user:GoSquared.adoc
+  GraphQL: InetSoftUserDocumentation:user:GraphQL.adoc
+  Harvest: InetSoftUserDocumentation:user:Harvest.adoc
+  HelpScoutDocs: InetSoftUserDocumentation:user:HelpScoutDocs.adoc
+  HPCC: InetSoftUserDocumentation:user:HPCC.adoc
+  HubSpot: InetSoftUserDocumentation:user:HubSpot.adoc
+  IBMAS400: InetSoftUserDocumentation:user:IBMAS400.adoc
+  Impala: InetSoftUserDocumentation:user:Impala.adoc
+  InfluxDB: InetSoftUserDocumentation:user:InfluxDB.adoc
+  Informix: InetSoftUserDocumentation:user:Informix.adoc
+  Ingres: InetSoftUserDocumentation:user:Ingres.adoc
+  Insightly: InetSoftUserDocumentation:user:Insightly.adoc
+  Intervals: InetSoftUserDocumentation:user:Intervals.adoc
+  JDBC: InetSoftUserDocumentation:user:JDBC.adoc
+  Jira: InetSoftUserDocumentation:user:Jira.adoc
+  Jive: InetSoftUserDocumentation:user:Jive.adoc
+  jTDS: InetSoftUserDocumentation:user:jTDS.adoc
+  Keap: InetSoftUserDocumentation:user:Keap.adoc
+  Lighthouse: InetSoftUserDocumentation:user:Lighthouse.adoc
+  Linkedin: InetSoftUserDocumentation:user:Linkedin.adoc
+  LiveAgent: InetSoftUserDocumentation:user:LiveAgent.adoc
+  LucidDB: InetSoftUserDocumentation:user:LucidDB.adoc
+  Mailchimp: InetSoftUserDocumentation:user:Mailchimp.adoc
+  MapR: InetSoftUserDocumentation:user:MapR.adoc
+  MariaDB: InetSoftUserDocumentation:user:MariaDB.adoc
+  MarkLogic: InetSoftUserDocumentation:user:MarkLogic.adoc
+  MemSQL: InetSoftUserDocumentation:user:MemSQL.adoc
+  MicrosoftAccess: InetSoftUserDocumentation:user:MicrosoftAccess.adoc
+  Mixpanel: InetSoftUserDocumentation:user:Mixpanel.adoc
+  mondaycom: InetSoftUserDocumentation:user:mondaycom.adoc
+  MonetDB: InetSoftUserDocumentation:user:MonetDB.adoc
+  MongoDBREST: InetSoftUserDocumentation:user:MongoDBREST.adoc
+  MySQL: InetSoftUserDocumentation:user:MySQL.adoc
+  Netezza: InetSoftUserDocumentation:user:Netezza.adoc
+  Nicereply: InetSoftUserDocumentation:user:Nicereply.adoc
+  OData: InetSoftUserDocumentation:user:OData.adoc
+  OneDrive: InetSoftUserDocumentation:user:OneDrive.adoc
+  Oracle: InetSoftUserDocumentation:user:Oracle.adoc
+  OracleBI: InetSoftUserDocumentation:user:OracleBI.adoc
+  OracleJDEdwards: InetSoftUserDocumentation:user:OracleJDEdwards.adoc
+  OraclePeopleSoft: InetSoftUserDocumentation:user:OraclePeopleSoft.adoc
+  OrientDB: InetSoftUserDocumentation:user:OrientDB.adoc
+  Phoenix: InetSoftUserDocumentation:user:Phoenix.adoc
+  Pipedrive: InetSoftUserDocumentation:user:Pipedrive.adoc
+  PipelineCRM: InetSoftUserDocumentation:user:PipelineCRM.adoc
+  PivotalEMCGreenplum: InetSoftUserDocumentation:user:PivotalEMCGreenplum.adoc
+  PostgreSQL: InetSoftUserDocumentation:user:PostgreSQL.adoc
+  Presto: InetSoftUserDocumentation:user:Presto.adoc
+  ProgressOpenEdge: InetSoftUserDocumentation:user:ProgressOpenEdge.adoc
+  Prometheus: InetSoftUserDocumentation:user:Prometheus.adoc
+  QuickbooksReports: InetSoftUserDocumentation:user:QuickbooksReports.adoc
+  R: InetSoftUserDocumentation:user:R.adoc
+  Remedyforce: InetSoftUserDocumentation:user:Remedyforce.adoc
+  RESTJSON: InetSoftUserDocumentation:user:RESTJSON.adoc
+  RESTXML: InetSoftUserDocumentation:user:RESTXML.adoc
+  Salesforce: InetSoftUserDocumentation:user:Salesforce.adoc
+  SalesforceReportsandDashboards: InetSoftUserDocumentation:user:SalesforceReportsandDashboards.adoc
+  SAP: InetSoftUserDocumentation:user:SAP.adoc
+  SAPHana: InetSoftUserDocumentation:user:SAPHana.adoc
+  SEOmonitor: InetSoftUserDocumentation:user:SEOmonitor.adoc
+  ServiceNow: InetSoftUserDocumentation:user:ServiceNow.adoc
+  SharePointOnline: InetSoftUserDocumentation:user:SharePointOnline.adoc
+  Shopify: InetSoftUserDocumentation:user:Shopify.adoc
+  SiebelCRM: InetSoftUserDocumentation:user:SiebelCRM.adoc
+  Smartsheet: InetSoftUserDocumentation:user:Smartsheet.adoc
+  Snowflake: InetSoftUserDocumentation:user:Snowflake.adoc
+  SpliceMachine: InetSoftUserDocumentation:user:SpliceMachine.adoc
+  SQLAnywhere: InetSoftUserDocumentation:user:SQLAnywhere.adoc
+  SQLServer: InetSoftUserDocumentation:user:SQLServer.adoc
+  SQLServerExpress: InetSoftUserDocumentation:user:SQLServerExpress.adoc
+  SQLite: InetSoftUserDocumentation:user:SQLite.adoc
+  Square: InetSoftUserDocumentation:user:Square.adoc
+  Stripe: InetSoftUserDocumentation:user:Stripe.adoc
+  SurveyMonkey: InetSoftUserDocumentation:user:SurveyMonkey.adoc
+  Sybase: InetSoftUserDocumentation:user:Sybase.adoc
+  TeamDesk: InetSoftUserDocumentation:user:TeamDesk.adoc
+  Teradata: InetSoftUserDocumentation:user:Teradata.adoc
+  TextExcelDirectory: InetSoftUserDocumentation:user:TextExcelDirectory.adoc
+  Toggl: InetSoftUserDocumentation:user:Toggl.adoc
+  Twilio: InetSoftUserDocumentation:user:Twilio.adoc
+  TwilioSendGrid: InetSoftUserDocumentation:user:TwilioSendGrid.adoc
+  Twitter: InetSoftUserDocumentation:user:Twitter.adoc
+  Vertica: InetSoftUserDocumentation:user:Vertica.adoc
+  WordPress: InetSoftUserDocumentation:user:WordPress.adoc
+  Xero: InetSoftUserDocumentation:user:Xero.adoc
+  YouTubeAnalytics: InetSoftUserDocumentation:user:YouTubeAnalytics.adoc
+  Zendesk: InetSoftUserDocumentation:user:Zendesk.adoc
+  ZendeskSell: InetSoftUserDocumentation:user:ZendeskSell.adoc
+  ZohoCRM: InetSoftUserDocumentation:user:ZohoCRM.adoc

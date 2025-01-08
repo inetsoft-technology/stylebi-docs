@@ -901,6 +901,7 @@
 **** xref:viewsheetscript:SelectionListTreeSuppressBlank.adoc[]
 **** xref:viewsheetscript:SelectionListTreeSortType.adoc[]
 **** xref:viewsheetscript:SelectionListTreeSubmitOnChange.adoc[]
+
 *** xref:viewsheetscript:Slider.adoc[]
 **** xref:viewsheetscript:SliderCurrentVisible.adoc[]
 **** xref:viewsheetscript:SliderIncrement.adoc[]
@@ -1463,7 +1464,7 @@
 ** xref:commonscript:RegexObjectFunctions.adoc[]
 *** xref:commonscript:RegexObjectExec.adoc[]
 *** xref:commonscript:RegexObjectTest.adoc[]
-
+*** xref:commonscript:RegexObjectToString.adoc[]
 * xref:chartAPI:ChartScriptTutorial.adoc[]
 ** xref:chartAPI:ModifyChartProperties.adoc[]
 ** xref:chartAPI:ModifyChartDataBinding.adoc[]
