@@ -85,7 +85,7 @@ else {
 
 [#TryCatch]
 == try-catch
-The “try-catch” construction allows you to catch a script error before it causes report execution to fail. To catch an error, place the desired sequence of code inside a `try` block. If any line of this `try` code generates an error, program execution immediately jumps to the code in the `catch` block.
+The “try-catch” construction allows you to catch a script error before it causes Dashboard execution to fail. To catch an error, place the desired sequence of code inside a `try` block. If any line of this `try` code generates an error, program execution immediately jumps to the code in the `catch` block.
 
 [source,javascript]
 try {
