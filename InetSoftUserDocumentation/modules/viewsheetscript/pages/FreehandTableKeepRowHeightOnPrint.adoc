@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 [WARNING,caption=see also]
-xref:viewsheet:AddTable.adoc[] for more information about  Tables.
+xref:viewsheet:AddFreehandTable.adoc[] for more information about Freehand Tables.
 
 
 Preserves the   row heights of the Table *as displayed* when a print layout is used for export.   (See xref:viewsheet:CreateDeviceLayout.adoc[].)
@@ -23,7 +23,7 @@ Boolean:: `true`: preserve displayed row heights +
 [source,javascript]
 ----
 // Preserve row heights
-TableView1.keepRowHeightOnPrint = true
+FreehandTable1.keepRowHeightOnPrint = true
 
 
 ----
@@ -34,8 +34,8 @@ TableView1.keepRowHeightOnPrint = true
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-keepRowHeightOnPrint                 // unqualified
-TableView1.keepRowHeightOnPrint      // qualified
+keepRowHeightOnPrint                  // unqualified
+FreehandTable1.keepRowHeightOnPrint   // qualified
 
 {secondForm}
 ====

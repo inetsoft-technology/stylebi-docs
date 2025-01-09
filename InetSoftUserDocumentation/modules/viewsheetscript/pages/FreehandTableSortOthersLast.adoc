@@ -1,0 +1,36 @@
+= sortOthersLast
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+
+If set to `true` (default), when   ‘Group all others together’ is enabled for Top/Bottom ranking in the Group ‘Edit’ panel of the Freehand Table Editor,  this  places the ‘Others’ group _after_ all the ranked groups, regardless of the specified dimension sorting.  (See xref:viewsheet:AddFreehandTable.adoc#SortandRank[Sort and Rank]  for information about dimension ranking in a Freehand Table.)
+
+If set to `false`, the  '`Others`' group is placed according to the specified '`Sort`' setting in the ‘Edit’ panel.
+
+== Type
+Boolean:: `true`: Place '`Others`' last +
+`false`: Place '`Others`' according to specified '`Sort`' setting
+
+
+
+== Example
+[source,javascript]
+sortOthersLast = false;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sortOthersLast                  // unqualified
+FreehandTable1.sortOthersLast   // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,42 @@
+= trendLine
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the mathematical formula for the trend line (e.g., linear, quadratic, etc).
+
+
+
+
+== Type
+One of the following constants:
+[source,javascript]
+Chart.CUBIC
+Chart.EXPONENTIAL
+Chart.LINEAR
+Chart.LOGARITHMIC
+Chart.NONE;
+Chart.POWER
+Chart.QUADRATIC
+
+
+
+== Example
+[source,javascript]
+trendLine = Chart.QUADRATIC;
+trendLineStyle = Chart.DASH_LINE;
+
+image:commonscript:trendlineColor.png[]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+trendLine          // unqualified
+Chart1.trendLine   // qualified
+
+{secondForm}
+====

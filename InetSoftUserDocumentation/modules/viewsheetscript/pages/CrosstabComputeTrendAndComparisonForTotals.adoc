@@ -1,0 +1,33 @@
+= computeTrendAndComparisonForTotals
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+When `true`, apply the '`Trend and Comparison`' setting   to automatically-computed grand totals as well as to the specified aggregates.  See xref:viewsheet:TrendCompareData.adoc[] for more information about the available settings.  Default is `false`.
+
+
+== Type
+Boolean:: `true`: Apply  '`Trend and Comparison`' to totals +
+`false`: Do not apply  '`Trend and Comparison`' to totals
+
+
+
+== Example
+[source,javascript]
+computeTrendAndComparisonForTotals = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+computeTrendAndComparisonForTotals             // unqualified
+Crosstab1.computeTrendAndComparisonForTotals   // qualified
+
+{secondForm}
+====
+
+
