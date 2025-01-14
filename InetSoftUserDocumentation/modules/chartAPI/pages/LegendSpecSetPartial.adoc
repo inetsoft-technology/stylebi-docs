@@ -62,7 +62,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 
-To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getElement.adoc[] ① and xref:chartAPI:GraphElementGetColorFrame.adoc[] ② to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[] and xref:chartAPI:ColorFrame.adoc[]. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetElement.adoc[] ① and xref:chartAPI:GraphElementGetColorFrame.adoc[] ② to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[] and xref:chartAPI:ColorFrame.adoc[]. For example:
 
 [source,javascript]
 --

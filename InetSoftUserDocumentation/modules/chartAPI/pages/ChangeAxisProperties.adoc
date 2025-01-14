@@ -3,7 +3,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-To alter the appearance of chart axes, use the Chart’s  xref:chartAPI:EGraph_setScale.adoc[] method to assign a new xref:chartAPI:Scale.adoc[] object. For example, you can replace a linear scale with a logarithmic scale, show or hide tick marks, display axis labels at top or right, change the label font and color, etc.
+To alter the appearance of chart axes, use the Chart’s  xref:chartAPI:EGraphSetScale.adoc[] method to assign a new xref:chartAPI:Scale.adoc[] object. For example, you can replace a linear scale with a logarithmic scale, show or hide tick marks, display axis labels at top or right, change the label font and color, etc.
 
 Consider the following Chart component script:
 [source,javascript]
@@ -103,7 +103,7 @@ graph.addElement(elem);
 --
 [NOTE]
 =====
-To change properties on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetYScale2.adoc[] ②  to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+To change properties on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetYScale2.adoc[] ②  to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 [source,javascript]
 --
 var coord = graph.getCoordinate(); <1>

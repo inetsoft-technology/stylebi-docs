@@ -36,7 +36,7 @@ graph.addForm(form); //<3>
 --
 <1> Create the  xref:GraphForm.adoc[] object.
 <2> Use `setLineEquation()` to set the curve fit.
-<3> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+<3> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
 image:commonscript:GraphFormSetEquation.png[]
 

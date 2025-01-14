@@ -31,7 +31,7 @@ spec.setColor(java.awt.Color(0xff0000)); //<3>
 <2> Use `getTextSpec` to obtain a handle to the `TextSpec` for the `Product:Total` measure.
 <3> Set the desired properties of the `TextSpec` object.
 
-TIP: To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+TIP: To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

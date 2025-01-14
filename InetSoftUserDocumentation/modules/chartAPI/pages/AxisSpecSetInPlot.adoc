@@ -61,7 +61,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 
-To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 
 [source,javascript]
 --

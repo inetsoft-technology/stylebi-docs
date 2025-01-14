@@ -25,7 +25,7 @@ var frame = elem.getColorFrame(); //<2>
 var spec = frame.getLegendSpec(); //<3>
 spec.setBorderColor(java.awt.Color(0xff0000)); //<4>
 --
-<1> Use xref:EGraph_getElement.adoc[] to obtain a handle to the xref:GraphElement.adoc[].
+<1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the xref:GraphElement.adoc[].
 <2>  Use xref:GraphElementGetColorFrame.adoc[] to obtain a handle to the xref:ColorFrame.adoc[].
 <3> Use `getLegendSpec` to obtain a handle to the xref:LegendSpec.adoc[].
 <4> Set desired properties of the legend.

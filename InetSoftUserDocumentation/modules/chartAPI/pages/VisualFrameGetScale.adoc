@@ -26,7 +26,7 @@ var scale = frame.getScale(); //<3>
 scale.setMax(4000); //<4>
 scale.setMin(700); //<4>
 --
-<1> Use xref:EGraph_getElement.adoc[] to obtain a handle to the xref:GraphElement.adoc[].
+<1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the xref:GraphElement.adoc[].
 <2>  Use xref:GraphElementGetColorFrame.adoc[] to obtain a handle to the xref:ColorFrame.adoc[].
 <3> Use `getScale` to obtain a handle to the xref:Scale.adoc[].
 <4> Set desired properties of the `Scale`.

@@ -33,7 +33,7 @@ Note that in this Chart the xref:chartAPI:IntervalElement.adoc[] object implicit
 [source,javascript]
 var scale = new LogScale("Quantity");
 
-. Assign the new Scale to the Y-axis of the Chart object using the xref:chartAPI:EGraph_setScale.adoc[] method.
+. Assign the new Scale to the Y-axis of the Chart object using the xref:chartAPI:EGraphSetScale.adoc[] method.
 +
 [source,javascript]
 graph.setScale("Quantity",scale);
@@ -172,7 +172,7 @@ graph.addElement(elem);
 
 [TIP]
 =====
-To change the property on a Chart that was *previously created* with the Chart Editor, use the xref:chartAPI:EGraph_getElement.adoc[] method ① to obtain a handle to the desired Chart element. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use the xref:chartAPI:EGraphGetElement.adoc[] method ① to obtain a handle to the desired Chart element. For example:
 [source,javascript]
 --
 var elem = graph.getElement(0); <1>

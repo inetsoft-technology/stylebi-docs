@@ -51,7 +51,7 @@ tframe.setText('NJ','New Jersey');
 tframe.setText('NY','New York');
 legend.setTextFrame(tframe);
 
-. Place the legend above the chart. Use the xref:chartAPI:EGraph_setLegendLayout.adoc[] property to do this.
+. Place the legend above the chart. Use the xref:chartAPI:EGraphSetLegendLayout.adoc[] property to do this.
 +
 [source,javascript]
 graph.setLegendLayout(Chart.TOP);
@@ -84,7 +84,7 @@ graph.addElement(elem);
 --
 [TIP]
 =====
-To change properties on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getElement.adoc[] ①, xref:chartAPI:GraphElementGetColorFrame.adoc[] ②, and xref:chartAPI:VisualFrameGetLegendSpec.adoc[] ③ to obtain a handle to the desired  element, `ColorFrame`, `LegendSpec`, and so on. For example:
+To change properties on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetElement.adoc[] ①, xref:chartAPI:GraphElementGetColorFrame.adoc[] ②, and xref:chartAPI:VisualFrameGetLegendSpec.adoc[] ③ to obtain a handle to the desired  element, `ColorFrame`, `LegendSpec`, and so on. For example:
 [source,javascript]
 --
 var elem = graph.getElement(0); <1>

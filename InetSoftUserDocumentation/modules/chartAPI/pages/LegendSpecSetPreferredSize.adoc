@@ -6,11 +6,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [WARNING,caption=See Also]
 ====
 [square]
-* xref:chartAPI:EGraph_setLegendLayout.adoc[] to place the legend in a predefined location.
+* xref:chartAPI:EGraphSetLegendLayout.adoc[] to place the legend in a predefined location.
 ====
 
 
-Specifies the legend size (pixels) for cases when xref:EGraph_setLegendLayout.adoc[] is set to `Chart.IN_PLACE`.  The corresponding “getter” function is `getPreferredSize()`.
+Specifies the legend size (pixels) for cases when xref:EGraphSetLegendLayout.adoc[] is set to `Chart.IN_PLACE`.  The corresponding “getter” function is `getPreferredSize()`.
 
 == Parameter
 value::			a {javaawtDimension} object
@@ -63,7 +63,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 
-To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getElement.adoc[] ① and xref:chartAPI:GraphElementGetColorFrame.adoc[] ② to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[] and xref:chartAPI:ColorFrame.adoc[]. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetElement.adoc[] ① and xref:chartAPI:GraphElementGetColorFrame.adoc[] ② to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[] and xref:chartAPI:ColorFrame.adoc[]. For example:
 
 [source,javascript]
 --

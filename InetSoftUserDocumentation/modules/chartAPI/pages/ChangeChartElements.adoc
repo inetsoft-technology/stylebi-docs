@@ -64,7 +64,7 @@ graph.addElement(elem);
 --
 [TIP]
 =====
-To change the property on a Chart that was *previously created* with the Chart Editor, use the xref:chartAPI:EGraph_getElement.adoc[] method ① to obtain a handle to the desired Chart element. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use the xref:chartAPI:EGraphGetElement.adoc[] method ① to obtain a handle to the desired Chart element. For example:
 [source,javascript]
 var elem = graph.getElement(0); <1>
 var cframe = new StaticColorFrame();

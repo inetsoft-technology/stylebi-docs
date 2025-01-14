@@ -38,7 +38,7 @@ graph.addElement(elem); //<4>
 <1> {dataset}
 <2> Create the `LineElement` object.
 <3> Use `setStartArrow` to place the arrow.
-<4> Use xref:EGraph_addElement.adoc[] to add the `LineElement` to the Chart.
+<4> Use xref:EGraphAddElement.adoc[] to add the `LineElement` to the Chart.
 
 
 image:commonscript:LineElementsetStartArrow.png[]
@@ -49,7 +49,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]
 =====
-To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
 --

@@ -22,6 +22,8 @@ applyTargetToDependencies::
 [square]
 * `true` to copy dependencies into specified target folder
 * `false` to copy dependencies into original locations
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
 
 === Examples
 
@@ -65,6 +67,8 @@ path:: The path to the local Zip file where the export should be written.
 includes:: List of Ant-like patterns that identify the assets to be exported, as a comma-separated string or as the name of a variable containing a Groovy List of pattern strings.
 excludes:: List of Ant-like patterns that identify the assets to be excluded from the list defined by the `includes` parameter, as a comma-separated string or as the name of a variable containing a Groovy List of pattern strings.
 exclude dependencies:: List of Ant-like patterns that identify the dependencies to be excluded from the list defined by the `includes` parameter, as a comma-separated string or as the name of a variable containing a Groovy List of pattern strings.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
 
 === Examples
 .Export all

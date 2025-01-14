@@ -10,7 +10,7 @@ xref:chartAPI:ChangeChartScaling.adoc[] for information on setting scales.
 ====
 
 
-Returns a handle to the xref:chartAPI:Scale.adoc[] object specified by the `field`  parameter. This is useful in cases where the scale was not explicitly assigned to a variable at creation time.  The corresponding “setter” function is xref:chartAPI:EGraph_getScale.adoc[].
+Returns a handle to the xref:chartAPI:Scale.adoc[] object specified by the `field`  parameter. This is useful in cases where the scale was not explicitly assigned to a variable at creation time.  The corresponding “setter” function is xref:chartAPI:EGraphGetScale.adoc[].
 
 
 == Parameters

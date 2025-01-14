@@ -10,7 +10,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 ====
 
 
-Sets the specified xref:chartAPI:Coordinate.adoc[]  for the Chart. See xref:chartAPI:ChartCoordinates.adoc[] for available coordinate types.  The corresponding “getter” function is xref:chartAPI:EGraph_getCoordinate.adoc[].
+Sets the specified xref:chartAPI:Coordinate.adoc[]  for the Chart. See xref:chartAPI:ChartCoordinates.adoc[] for available coordinate types.  The corresponding “getter” function is xref:chartAPI:EGraphGetCoordinate.adoc[].
 
 
 

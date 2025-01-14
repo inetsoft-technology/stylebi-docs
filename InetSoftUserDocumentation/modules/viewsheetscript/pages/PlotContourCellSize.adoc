@@ -1,0 +1,30 @@
+= contourCellSize
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies the size of the cells that make up the grid on which contour weights are computed for a  xref:viewsheet:ScatterContourChart.adoc[] or xref:viewsheet:ContourMapChart.adoc[]. Higher values specify larger cells, and hence broader clusters. Lower values specify smaller cells, and hence smaller clusters.
+
+
+== Type
+Number
+
+
+== Example
+
+
+[source,javascript]
+Chart1.contourCellSize = 4.7;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+contourCellSize          // unqualified
+Chart1.contourCellSize   // qualified
+
+{secondForm}
+====

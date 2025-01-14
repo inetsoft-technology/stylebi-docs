@@ -32,7 +32,7 @@ frame.setText('NY','New York'); //<3>
 <2> Use `getTextFrame` to obtain a handle to the `TextFrame` object.
 <3> Set the desired properties of the `TextFrame` object.
 
-TIP: To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+TIP: To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

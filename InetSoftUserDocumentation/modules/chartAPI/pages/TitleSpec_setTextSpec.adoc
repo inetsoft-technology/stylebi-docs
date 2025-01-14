@@ -41,7 +41,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]
 =====
-To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraph_getXTitleSpec.adoc[] {circle1} to obtain a handle to the desired xref:TitleSpec.adoc[] object. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetXTitleSpec.adoc[] {circle1} to obtain a handle to the desired xref:TitleSpec.adoc[] object. For example:
 
 [source,javascript]
 --

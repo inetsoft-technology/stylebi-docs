@@ -40,7 +40,7 @@ graph.setCoordinate(coord); //<4>
 <1> {dataset}
 <2> Create the xref:LinearScale.adoc[] objects.
 <3> Create the `ParallelCoord` from the `LinearScale` objects.
-<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+<4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
 image:commonscript:ParallelCoordssetCoords.png[]
 

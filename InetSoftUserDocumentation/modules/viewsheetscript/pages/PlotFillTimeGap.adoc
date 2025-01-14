@@ -13,7 +13,7 @@ The following examples display a time-series which is missing data for the month
 
 include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
-Place the ‘Date’ field on the X-axis (with ‘Level’ = ‘Month’) and place ‘Total’ on the Y-axis. To simulate missing data, add a condition to the Chart to filter out data from April 2019. Use the scripts below to modify the way the Chart represents the missing data for April 2019.
+Place the ‘Date’ field on the X-axis (with ‘Level’ = ‘Month’) and place ‘Total’ on the Y-axis. To *simulate missing data*, add a condition to the Chart to filter out data from April 2019. (See xref:viewsheet:AddConditions.adoc[].) Use the scripts below to modify the way the Chart represents the missing data for April 2019.
 
 [source,javascript]
 .Example 1: Ignore missing data
@@ -23,8 +23,14 @@ image:commonscript:fillTimeGapFalse.png[]
 
 [source,javascript]
 .Example 2: Leave gap for missing data
-Chart1.fillTimeGap = true;
-Chart1.fillZero = false;
+--
+Chart1.fillTimeGap = true; //<1>
+Chart1.fillZero = false; //<2>
+Chart1.fillGapWithDash=false; //<3>
+--
+<1> Leave gap for missing data.
+<2> Do not fill gap with 0.
+<3> Set to `true` to display *dashed line* in gap.  See xref:PlotFillGapWithDash.adoc[].
 
 image:commonscript:fillTimeGapNull.png[]
 

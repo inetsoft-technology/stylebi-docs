@@ -1,5 +1,5 @@
-= EGraph.setYTitleSpec(spec)
-:navtitle: EGraph.setYTitleSpec()
+= EGraph.setY2TitleSpec(spec)
+:navtitle: EGraph.setY2TitleSpec()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -7,7 +7,8 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Specifies the Y-axis title information for Y-axis to the *left* of the  Chart.  The corresponding “getter” function is xref:chartAPI:EGraph_getYTitleSpec.adoc[].
+
+Specifies the Y-axis title information for Y-axis to the *right* of the  Chart.  The corresponding “getter” function is xref:chartAPI:EGraphGetY2TitleSpec.adoc[].
 
 == Parameter
 spec::			A xref:chartAPI:TitleSpec.adoc[] object
@@ -28,15 +29,15 @@ graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
 var spec = new TitleSpec(); //<2>
 spec.setLabel("Y Title");
-graph.setYTitleSpec(spec); //<3>
+graph.setY2TitleSpec(spec); //<3>
 graph.addElement(elem);
 --
 <1> {dataset}
 <2> Create the xref:TitleSpec.adoc[] object.
-<3> Use `setYTitleSpec()` to add the `TitleSpec` to Chart.
+<3> Use `setY2TitleSpec` to add the `TitleSpec` to Chart.
 
 
-image:commonscript:EGraphaddsetYTitleSpec.png[]
+image:commonscript:EGraphaddsetY2TitleSpec.png[]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -45,12 +46,12 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 [TIP]
 =====
 
-To change the property on a Chart that was previously created with the Chart Editor, use xref:chartAPI:EGraph_getYTitleSpec.adoc[] ① to get a handle to the `TitleSpec` object. For example:
+To change the property on a Chart that was previously created with the Chart Editor, use xref:chartAPI:EGraphGetY2TitleSpec.adoc[] ① to get a handle to the `TitleSpec` object. For example:
 
 
 [source,javascript]
 --
-var spec = graph.getYTitleSpec();
+var spec = graph.getY2TitleSpec();
 spec.setLabel("Y Title");
 --
 =====

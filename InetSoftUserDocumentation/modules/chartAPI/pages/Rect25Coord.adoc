@@ -37,7 +37,7 @@ graph.addElement(elem);
 <1> {dataset}
 <2> Create the xref:Scale.adoc[] objects.
 <3> Create the xref:Rect25Coord.adoc[] object from the `Scale` objects.
-<4> Use xref:EGraph_setCoordinate.adoc[] to add the `RectCoord` to the Chart.
+<4> Use xref:EGraphSetCoordinate.adoc[] to add the `RectCoord` to the Chart.
 
 image:commonscript:Rect25Coord.png[]
 

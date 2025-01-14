@@ -42,7 +42,7 @@ graph.addElement(elem);
 <3> Use `setSharedRange` to share scaling by row and column.
 <4> Use the scales to create a new xref:RectCoord.adoc[] object.
 <5> Create the xref:FacetCoord.adoc[] object.
-<6> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+<6> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
 image:commonscript:ScaleSetSharedRange.png[]
 

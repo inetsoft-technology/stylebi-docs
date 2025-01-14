@@ -46,7 +46,7 @@ graph.addElement(elem);
 <2> Create the  xref:LabelForm.adoc[] object.
 <3> Create the  xref:TextSpec.adoc[] object.
 <4> Use `setTextSpec()` to assign the `TextSpec`.
-<5> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+<5> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
 image:commonscript:LabelFormSetTextSpec.png[]
 

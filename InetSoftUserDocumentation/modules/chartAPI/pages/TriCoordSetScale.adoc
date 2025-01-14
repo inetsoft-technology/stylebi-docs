@@ -50,7 +50,7 @@ graph.setCoordinate(coord); //<8>
 <5> Add first measure (‘Quantity’),  represented on the bottom axis.
 <6> Add  second measure (‘Total’),  represented on the right axis.
 <7> Add third measure (‘Returns’),  represented on the left axis. #Note#: The third measure must be added using  xref:GraphElementAddVar.adoc[] rather than xref:GraphElementAddDim.adoc[].
-<8> Use xref:EGraph_setCoordinate.adoc[] to add the `RectCoord` to the Chart.
+<8> Use xref:EGraphSetCoordinate.adoc[] to add the `RectCoord` to the Chart.
 
 image:commonscript:TriccordsetScale.png[]
 

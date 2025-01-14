@@ -35,7 +35,7 @@ graph.addElement(elem); //<3>
 
 <1> {dataset}
 <2> Create the `LineElement` object.
-<3> Use xref:EGraph_addElement.adoc[] to add the `LineElement` to the Chart.
+<3> Use xref:EGraphAddElement.adoc[] to add the `LineElement` to the Chart.
 
 
 image:commonscript:LineElement.png[]

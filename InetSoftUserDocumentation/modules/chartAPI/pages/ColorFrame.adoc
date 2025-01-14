@@ -46,7 +46,7 @@ var frame = new StaticColorFrame(); //<2>
 frame.setColor(java.awt.Color(0xFF00FF));
 elem.setColorFrame(frame); //<3>
 --
-<1> Use xref:EGraph_getElement.adoc[] to obtain a handle to the desired xref:GraphElement.adoc[] object.
+<1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the desired xref:GraphElement.adoc[] object.
 <2> Create the xref:ColorFrame.adoc[] object.
 <3> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
 

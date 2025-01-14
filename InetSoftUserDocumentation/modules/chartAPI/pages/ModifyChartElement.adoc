@@ -67,7 +67,7 @@ var colframe = new StaticColorFrame(java.awt.Color(0xFF0000));
 var sizframe = new StaticSizeFrame(10);
 --
 
-. Obtain a handle to each of the two datasets (element sets) by using the xref:EGraph_getElement.adoc[] method.
+. Obtain a handle to each of the two datasets (element sets) by using the xref:EGraphGetElement.adoc[] method.
 +
 [source,javascript]
 --

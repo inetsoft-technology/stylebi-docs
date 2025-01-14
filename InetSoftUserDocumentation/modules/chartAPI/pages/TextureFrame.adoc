@@ -51,7 +51,7 @@ var frame = new StaticTextureFrame(); //<2>
 frame.setTexture(GTexture.PATTERN_5);
 elem.setTextureFrame(frame); //<3>
 --
-<1> Use xref:EGraph_getElement.adoc[] to get a handle to the xref:PointElement.adoc[].
+<1> Use xref:EGraphGetElement.adoc[] to get a handle to the xref:PointElement.adoc[].
 <2> Create the `StaticTextureFrame` object.
 <3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `StaticTextureFrame` to the xref:PointElement.adoc[].
 

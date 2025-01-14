@@ -29,6 +29,8 @@ include::partial$connectionTestQuery.adoc[]
 include::user:partial$JDBCCommonWeb.adoc[]
 +
 include::user:partial$testConnection.adoc[]
++
+include::user:partial$hikariConfig.adoc[]
 
 
 . Press btn:[OK].

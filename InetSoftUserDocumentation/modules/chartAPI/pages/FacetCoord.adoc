@@ -45,7 +45,7 @@ graph.addElement(elem);
 <1> {dataset}
 <2> Create the xref:RectCoord.adoc[] objects.
 <3> Create the `FacetCoord` from the `RectCoord` objects.
-<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+<4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
 image:commonscript:FacetCoordExample2.png[]
 

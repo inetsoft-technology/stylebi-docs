@@ -57,7 +57,7 @@ graph.addElement(elem);
 <1> {dataset}
 <2> Create the `PolarCoord`  object.
 <3> Use `setType` to  display  angle only.
-<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+<4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
 image:commonscript:PolarCoordsExample2_1.png[]
 
@@ -67,7 +67,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]
 =====
-To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ①   to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ①   to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object. For example:
 
 [source,javascript]
 --

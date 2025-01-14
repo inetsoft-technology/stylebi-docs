@@ -32,7 +32,7 @@ graph.addElement(elem);
 <2> Create the  xref:GraphForm.adoc[] object.
 <3> Use `setXOffset()` to set the horizontal offset.
 <4> Use `setYOffset()` to set the vertical offset.
-<5> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+<5> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
 image:commonscript:GraphFormSetXOffset.png[]
 

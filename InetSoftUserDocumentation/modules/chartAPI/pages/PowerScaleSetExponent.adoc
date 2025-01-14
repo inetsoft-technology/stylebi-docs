@@ -38,7 +38,7 @@ graph.addElement(elem);
 <2> Create the `PowerScale` object.
 <3> Compute the  `PowerScale`  using the   "`Quantity`" field.
 <4> Use `setExponent` to display value stem:[x] as stem:[x^0.5].
-<5> Use  xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart for the  "`Quantity`" field.
+<5> Use  xref:EGraphSetScale.adoc[] to add the `Scale` to the Chart for the  "`Quantity`" field.
 
 
 image:commonscript:PowerScale_1.png[]

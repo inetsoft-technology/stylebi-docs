@@ -40,7 +40,7 @@ graph.addElement(elem);
 <3> Create the xref:StackRange.adoc[] object.
 <4> Use `setStackNegative` to suppress stacking for negative values.
 <5> Assign the `ScaleRange` to the `Scale`.
-<6> Use xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart.
+<6> Use xref:EGraphSetScale.adoc[] to add the `Scale` to the Chart.
 
 image:commonscript:ScaleRangeSetStackNegative.png[]
 

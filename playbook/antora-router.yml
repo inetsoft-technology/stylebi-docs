@@ -664,7 +664,6 @@ routes:
   CALC_trim: InetSoftUserDocumentation:commonscript:CALC_trim.adoc
   CALC_upper: InetSoftUserDocumentation:commonscript:CALC_upper.adoc
   CALC_value: InetSoftUserDocumentation:commonscript:CALC_value.adoc
-  createBulletGraph: InetSoftUserDocumentation:chartAPI:createBulletGraph.adoc
   CommonAlignment: InetSoftUserDocumentation:viewsheetscript:CommonAlignment.adoc
   CommonAlpha: InetSoftUserDocumentation:viewsheetscript:CommonAlpha.adoc
   CommonBackground: InetSoftUserDocumentation:viewsheetscript:CommonBackground.adoc
@@ -724,6 +723,7 @@ routes:
   ChartSeparatedStyle: InetSoftUserDocumentation:viewsheetscript:ChartSeparatedStyle.adoc
   ChartSetActionVisible: InetSoftUserDocumentation:viewsheetscript:ChartSetActionVisible.adoc
   ChartSingleStyle: InetSoftUserDocumentation:viewsheetscript:ChartSingleStyle.adoc
+  ChartSortOthersLast: InetSoftUserDocumentation:viewsheetscript:ChartSortOthersLast.adoc 
   ChartTipAlpha: InetSoftUserDocumentation:viewsheetscript:ChartTipAlpha.adoc
   ChartTipView: InetSoftUserDocumentation:viewsheetscript:ChartTipView.adoc
   ChartTitle: InetSoftUserDocumentation:viewsheetscript:ChartTitle.adoc
@@ -793,13 +793,16 @@ routes:
   PlotContourBandwidth: InetSoftUserDocumentation:viewsheetscript:PlotContourBandwidth.adoc
   PlotContourEdgeAlpha: InetSoftUserDocumentation:viewsheetscript:PlotContourEdgeAlpha.adoc
   PlotContourLevels: InetSoftUserDocumentation:viewsheetscript:PlotContourLevels.adoc
+  PlotContourCellSize: InetSoftUserDocumentation:viewsheetscript:PlotContourCellSize.adoc  
   PlotDiagonalColor: InetSoftUserDocumentation:viewsheetscript:PlotDiagonalColor.adoc
   PlotDiagonalStyle: InetSoftUserDocumentation:viewsheetscript:PlotDiagonalStyle.adoc
   PlotFacetGrid: InetSoftUserDocumentation:viewsheetscript:PlotFacetGrid.adoc
   PlotFacetGridColor: InetSoftUserDocumentation:viewsheetscript:PlotFacetGridColor.adoc
   PlotFillTimeGap: InetSoftUserDocumentation:viewsheetscript:PlotFillTimeGap.adoc
   PlotFillZero: InetSoftUserDocumentation:viewsheetscript:PlotFillZero.adoc
+  PlotFillGapWithDash: InetSoftUserDocumentation:viewsheetscript:PlotFillGapWithDash.adoc  
   PlotGeoFields: InetSoftUserDocumentation:viewsheetscript:PlotGeoFields.adoc
+  PlotGlossyEffect: InetSoftUserDocumentation:viewsheetscript:PlotGlossyEffect.adoc  
   PlotIncludeParentLabels: InetSoftUserDocumentation:viewsheetscript:PlotIncludeParentLabels.adoc
   PlotInPlot: InetSoftUserDocumentation:viewsheetscript:PlotInPlot.adoc
   PlotLegendBorder: InetSoftUserDocumentation:viewsheetscript:PlotLegendBorder.adoc
@@ -856,6 +859,7 @@ routes:
   PlotStackMeasures: InetSoftUserDocumentation:viewsheetscript:PlotStackMeasures.adoc
   PlotStackValue: InetSoftUserDocumentation:viewsheetscript:PlotStackValue.adoc
   PlotTextField: InetSoftUserDocumentation:viewsheetscript:PlotTextField.adoc
+  PlotTrendline: InetSoftUserDocumentation:viewsheetscript:PlotTrendline.adoc  
   PlotTrendlineColor: InetSoftUserDocumentation:viewsheetscript:PlotTrendlineColor.adoc
   PlotTrendlineStyle: InetSoftUserDocumentation:viewsheetscript:PlotTrendlineStyle.adoc
   PlotTrendPerColor: InetSoftUserDocumentation:viewsheetscript:PlotTrendPerColor.adoc
@@ -879,6 +883,8 @@ routes:
   PlotYGridStyle: InetSoftUserDocumentation:viewsheetscript:PlotYGridStyle.adoc
   PlotZoom: InetSoftUserDocumentation:viewsheetscript:PlotZoom.adoc
   PlotZoomLevel: InetSoftUserDocumentation:viewsheetscript:PlotZoomLevel.adoc
+  PlotWordCloudFontScale: InetSoftUserDocumentation:viewsheetscript:PlotWordCloudFontScale.adoc 
+  PlotDateComparisonEnabled: InetSoftUserDocumentation:viewsheetscript:PlotDateComparisonEnabled.adoc   
   ChartBindingInfoAddMapping: InetSoftUserDocumentation:viewsheetscript:ChartBindingInfoAddMapping.adoc
   ChartBindingInfoBreakdownFields: InetSoftUserDocumentation:viewsheetscript:ChartBindingInfoBreakdownFields.adoc
   ChartBindingInfoColorframe: InetSoftUserDocumentation:viewsheetscript:ChartBindingInfoColorframe.adoc
@@ -1310,3 +1316,34 @@ routes:
   Zendesk: InetSoftUserDocumentation:user:Zendesk.adoc
   ZendeskSell: InetSoftUserDocumentation:user:ZendeskSell.adoc
   ZohoCRM: InetSoftUserDocumentation:user:ZohoCRM.adoc
+  createBulletGraph: InetSoftUserDocumentation:chartAPI:createBulletGraph.adoc
+  ChartDataSet: InetSoftUserDocumentation:chartAPI:Dataset.adoc
+  EGraphSetXTitleSpec: InetSoftUserDocumentation:chartAPI:EGraphSetXTitleSpec.adoc
+  EGraphSetYTitleSpec: InetSoftUserDocumentation:chartAPI:EGraphSetYTitleSpec.adoc
+  EGraphAddElement: InetSoftUserDocumentation:chartAPI:EGraphAddElement.adoc
+  EGraphAddForm: InetSoftUserDocumentation:chartAPI:EGraphAddForm.adoc
+  EGraphClearElements: InetSoftUserDocumentation:chartAPI:EGraphClearElements.adoc
+  EGraphClearForms: InetSoftUserDocumentation:chartAPI:EGraphClearForms.adoc
+  EGraphGetCoordinate: InetSoftUserDocumentation:chartAPI:EGraphGetCoordinate.adoc
+  EGraphGetElement: InetSoftUserDocumentation:chartAPI:EGraphGetElement.adoc
+  EGraphGetElementCount: InetSoftUserDocumentation:chartAPI:EGraphGetElementCount.adoc
+  EGraphGetForm: InetSoftUserDocumentation:chartAPI:EGraphGetForm.adoc
+  EGraphGetFormCount: InetSoftUserDocumentation:chartAPI:EGraphGetFormCount.adoc
+  EGraphGetLegendLayout: InetSoftUserDocumentation:chartAPI:EGraphGetLegendLayout.adoc
+  EGraphGetLegendPreferredSize: InetSoftUserDocumentation:chartAPI:EGraphGetLegendPreferredSize.adoc
+  EGraphGetScale: InetSoftUserDocumentation:chartAPI:EGraphGetScale.adoc
+  EGraphGetVisualFrames: InetSoftUserDocumentation:chartAPI:EGraphGetVisualFrames.adoc
+  EGraphGetX2TitleSpec: InetSoftUserDocumentation:chartAPI:EGraphGetX2TitleSpec.adoc
+  EGraphGetXTitleSpec: InetSoftUserDocumentation:chartAPI:EGraphGetXTitleSpec.adoc
+  EGraphGetY2TitleSpec: InetSoftUserDocumentation:chartAPI:EGraphGetY2TitleSpec.adoc
+  EGraphGetYTitleSpec: InetSoftUserDocumentation:chartAPI:EGraphGetYTitleSpec.adoc 
+  EGraphRemoveElement: InetSoftUserDocumentation:chartAPI:EGraphRemoveElement.adoc
+  EGraphRemoveForm: InetSoftUserDocumentation:chartAPI:EGraphRemoveForm.adoc  
+  EGraphSetCoordinate: InetSoftUserDocumentation:chartAPI:EGraphSetCoordinate.adoc
+  EGraphSetLegendLayout: InetSoftUserDocumentation:chartAPI:EGraphSetLegendLayout.adoc
+  EGraphSetLegendPreferredSize: InetSoftUserDocumentation:chartAPI:EGraphSetLegendPreferredSize.adoc
+  EGraphSetScale: InetSoftUserDocumentation:chartAPI:EGraphSetScale.adoc
+  EGraphSetX2TitleSpec: InetSoftUserDocumentation:chartAPI:EGraphSetX2TitleSpec.adoc  
+  EGraphSetXTitleSpec: InetSoftUserDocumentation:chartAPI:EGraphSetXTitleSpec.adoc  
+  EGraphSetY2TitleSpec: InetSoftUserDocumentation:chartAPI:EGraphSetY2TitleSpec.adoc  
+  EGraphSetYTitleSpec: InetSoftUserDocumentation:chartAPI:EGraphSetYTitleSpec.adoc    

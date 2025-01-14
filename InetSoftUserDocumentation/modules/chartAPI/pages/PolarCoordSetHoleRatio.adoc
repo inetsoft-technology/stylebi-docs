@@ -52,7 +52,7 @@ graph.setCoordinate(polar); //<4>
 <1> Get a handle to the xref:Coordinate.adoc[] object.
 <2> Create the `PolarCoord`  object.
 <3> Use `setHoleRatio` to set the hole to ¼ of the outer plot radius.
-<4> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+<4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
 image:commonscript:PolarCoordsExampleSeyHoleRatio.png[]
 

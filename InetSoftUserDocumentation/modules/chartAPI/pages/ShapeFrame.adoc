@@ -46,7 +46,7 @@ frame.setShape(GShape.ARROWBAR);
 elem.setShapeFrame(frame);  //<3>
 
 --
-<1> Use xref:EGraph_getElement.adoc[] to get a handle to the xref:PointElement.adoc[].
+<1> Use xref:EGraphGetElement.adoc[] to get a handle to the xref:PointElement.adoc[].
 <2> Create the `StaticShapeFrame` object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `StaticShapeFrame` to the xref:PointElement.adoc[].
 

@@ -42,7 +42,7 @@ graph.addElement(elem); //<4>
 <1> {dataset}
 <2> Create the `SchemaElement` object.
 <3> Use `setPainter`  to choose the `SchemaPainter`.
-<4> Use xref:EGraph_addElement.adoc[] to add the `SchemaElement` to the Chart.
+<4> Use xref:EGraphAddElement.adoc[] to add the `SchemaElement` to the Chart.
 
 
 image:commonscript:SchemaElementsetPainter_1.png[]

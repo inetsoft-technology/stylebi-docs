@@ -35,7 +35,7 @@ graph.addElement(elem);
 <1> {dataset}
 <2> Create the `PowerScale` object.
 <3> Compute the  `PowerScale`  using the   "`Quantity`" field.
-<4> Use  xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart for the  "`Quantity`" field.
+<4> Use  xref:EGraphSetScale.adoc[] to add the `Scale` to the Chart for the  "`Quantity`" field.
 
 
 image:commonscript:PowerScale.png[]

@@ -41,7 +41,7 @@ var elem = new IntervalElement("State", "Sales");
 +
 The xref:chartAPI:IntervalElement.adoc[] is a particular type of `GraphElement` that creates “bars” or “intervals” as the representational elements. Other `GraphElements`, such as xref:chartAPI:PointElement.adoc[]  and xref:chartAPI:LineElement.adoc[], generate other kinds of chart types, such as scatter plots and line plots, respectively.
 
-. *Add the created elements to the Chart object*. Pass the `GraphElement` object to the Chart’s xref:chartAPI:EGraph_addElement.adoc[] method. This adds the “bar” elements to the existing Chart object.
+. *Add the created elements to the Chart object*. Pass the `GraphElement` object to the Chart’s xref:chartAPI:EGraphAddElement.adoc[] method. This adds the “bar” elements to the existing Chart object.
 +
 [source,javascript]
 graph.addElement(elem);

@@ -37,7 +37,7 @@ graph.addElement(elem);
 <3> Create the xref:StackRange.adoc[] object.
 <4> Use `setGroupField` to compute the stacking based on the '`State`' field.
 <5> Assign the `ScaleRange` to the `Scale`.
-<6> Use xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart.
+<6> Use xref:EGraphSetScale.adoc[] to add the `Scale` to the Chart.
 
 image:commonscript:ScaleRangeSetGroup.png[]
 

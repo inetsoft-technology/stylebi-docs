@@ -14,7 +14,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Sets the specified xref:chartAPI:Scale.adoc[] for the given axis. See xref:chartAPI:ChartCoordinates.adoc[] for available scales.  The corresponding “getter” function is xref:chartAPI:EGraph_getScale.adoc[].
+Sets the specified xref:chartAPI:Scale.adoc[] for the given axis. See xref:chartAPI:ChartCoordinates.adoc[] for available scales.  The corresponding “getter” function is xref:chartAPI:EGraphGetScale.adoc[].
 
 == Parameters
 field::			name of axis to receive scale (String)

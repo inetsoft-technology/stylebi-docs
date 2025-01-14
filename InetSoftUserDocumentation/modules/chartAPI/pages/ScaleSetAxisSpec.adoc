@@ -31,7 +31,7 @@ graph.addElement(elem);
 <2> Create   the xref:Scale.adoc[] object.
 <3> Create the `AxisSpec` object.
 <4> Use `setAxisSpec` to assign the  `AxisSpec` to the `Scale`.
-<5> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+<5> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
 image:commonscript:ScaleSetAxisSpec.png[]
 

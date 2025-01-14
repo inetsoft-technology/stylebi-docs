@@ -1,22 +1,24 @@
-= EGraph.setLegendPreferredSize(value)
-:navtitle: EGraph.setLegendPreferredSize()
+= EGraph.getLegendLayout()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
 
-
-Specifies the Chart legend’s height or width in pixels.  The corresponding “getter” function is xref:chartAPI:EGraph_getLegendPreferredSize.adoc[].
-
-== Parameter
-value:: Integer number of pixels
+Returns the chart legend’s position as a  constant (below).  The corresponding “getter” function is xref:chartAPI:EGraphGetLegendLayout.adoc[].
 
 
 
 
 
-== Example
+
+
+
+== Returns
+One of the following constants:
+include::viewsheetscript:partial$legendPosition.adoc[]
+
+
 .Chart Component Script
 [source,javascript]
 --
@@ -26,13 +28,15 @@ var elem = new IntervalElement("State", "Quantity");
 var frame = new CategoricalColorFrame();
 frame.setField("State");
 elem.setColorFrame(frame);
-graph.setLegendPreferredSize(150); //<2>
+graph.setLegendLayout(Chart.BOTTOM); //<2>
 graph.addElement(elem);
+alert(graph.getLegendLayout()); //<3>
 --
 <1> {dataset}
-<2> Use `setLegendPreferredSize()` to set the legend size.
+<2> Set the legend layout.
+<3> Use `getLegendLayout` to get the layout constant.
 
-image:commonscript:EGraphaddsetLegendPreferredSize.png[]
+image:commonscript:EGraphaddsetLegendLayout.png[]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -40,11 +44,13 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 [TIP]
 =====
 
+
+
 To use the property on a Chart that was previously created with the Chart Editor, simply call the function. For example:
 
 [source,javascript]
 --
-graph.setLegendPreferredSize(150);
+graph.setLegendLayout(Chart.BOTTOM);
 --
 =====
 

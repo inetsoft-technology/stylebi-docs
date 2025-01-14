@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Returns a xref:chartAPI:TitleSpec.adoc[] object containing title information for the X-axis *below* the chart.  The corresponding “setter” function is xref:chartAPI:EGraph_setXTitleSpec.adoc[].
+Returns a xref:chartAPI:TitleSpec.adoc[] object containing title information for the X-axis *below* the chart.  The corresponding “setter” function is xref:chartAPI:EGraphSetXTitleSpec.adoc[].
 
 
 

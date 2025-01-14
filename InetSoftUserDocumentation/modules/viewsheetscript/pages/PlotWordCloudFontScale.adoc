@@ -1,0 +1,30 @@
+= wordCloudFontScale
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+For a xref:viewsheet:WordcloudChart.adoc[], multiplies the specified ‘Size’ setting in the Editor to increase the maximum font size of words in the cloud.
+
+
+== Type
+Number between 1.0 and 5.0
+
+
+
+== Example
+[source,javascript]
+Chart1.wordCloudFontScale = 1.5;
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+wordCloudFontScale          // unqualified
+Chart1.wordCloudFontScale   // qualified
+
+{secondForm}
+====

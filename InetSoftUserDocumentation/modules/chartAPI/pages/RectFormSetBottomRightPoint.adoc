@@ -48,7 +48,7 @@ graph.addElement(elem);
 <2> Create the  xref:RectForm.adoc[] object.
 <3> Use `setBottomRightPoint()` to set `rect1` points in pixels.
 <4> Use `setBottomRightPoint()` to set `rect2` points proportionally.
-<5> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+<5> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
 image:commonscript:RectFormSetBottomRightPoint.png[]
 

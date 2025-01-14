@@ -24,7 +24,7 @@ graph.addForm(form); //<4>
 <1> Create a  xref:LineForm.adoc[] object.
 <2> Create the `ExponentialLineEquation`.
 <3> Use    xref:GraphFormSetLineEquation.adoc[] to apply a the `ExponentialLineEquation`.
-<4> Use xref:EGraph_addForm.adoc[] to add the `LineForm` to the Chart.
+<4> Use xref:EGraphAddForm.adoc[] to add the `LineForm` to the Chart.
 
 image:commonscript:ExponentialLineEquation.png[]
 

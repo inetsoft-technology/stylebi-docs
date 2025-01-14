@@ -22,7 +22,7 @@ graph.addForm(form); //<4>
 <1> Create a  xref:LineForm.adoc[] object.
 <2> Create the `LogarithmicLineEquation`.
 <3> Use    xref:GraphFormSetLineEquation.adoc[] to apply a the `LogarithmicLineEquation`.
-<4> Use xref:EGraph_addForm.adoc[] to add the `LineForm` to the Chart.
+<4> Use xref:EGraphAddForm.adoc[] to add the `LineForm` to the Chart.
 
 image:commonscript:GraphFormSetEquation.png[]
 

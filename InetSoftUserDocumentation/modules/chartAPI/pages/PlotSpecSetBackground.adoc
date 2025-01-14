@@ -49,7 +49,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 =====
 
 
-To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] {circle1} and xref:chartAPI:CoordinateGetPlotSpec.adoc[] {circle2} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:PlotSpec.adoc[]. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetCoordinate.adoc[] {circle1} and xref:chartAPI:CoordinateGetPlotSpec.adoc[] {circle2} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:PlotSpec.adoc[]. For example:
 
 [source,javascript]
 --

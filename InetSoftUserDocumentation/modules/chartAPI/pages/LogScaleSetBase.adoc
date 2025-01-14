@@ -34,7 +34,7 @@ graph.addElement(elem);
 <1> {dataset}
 <2> Create the xref:LogScale.adoc[] object.
 <3> Use `setBase` to set the log base.
-<4> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+<4> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
 image:commonscript:LogScaleSetBase.png[]
 
@@ -44,7 +44,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]
 =====
-To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraph_getCoordinate.adoc[] ① and  xref:chartAPI:RectCoordGetYScale.adoc[]  to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object and xref:chartAPI:Scale.adoc[] object. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ① and  xref:chartAPI:RectCoordGetYScale.adoc[]  to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object and xref:chartAPI:Scale.adoc[] object. For example:
 
 [source,javascript]
 --

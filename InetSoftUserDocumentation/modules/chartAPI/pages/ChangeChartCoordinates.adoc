@@ -49,14 +49,14 @@ graph.setScale("Score",yscale);
 
 [TIP]
 ====
-If needed, you can obtain a handle to the existing  RectCoord object by using xref:chartAPI:EGraph_getCoordinate.adoc[]:
+If needed, you can obtain a handle to the existing  RectCoord object by using xref:chartAPI:EGraphGetCoordinate.adoc[]:
 [source,javascript]
 var coord = graph.getCoordinate();
 ====
 
 [#AssignRectangularCoordinatesExplicitly]
 === Assign Rectangular Coordinates Explicitly
-You can explicitly define the `RectCoord` object, if needed. The script below is the same as the script in xref:#AssignRectangularCoordinatesAutomatically[], but uses two scales to explicitly define a set of rectangular coordinates. These coordinates are then explicitly assigned to the chart using xref:chartAPI:EGraph_setCoordinate.adoc[].
+You can explicitly define the `RectCoord` object, if needed. The script below is the same as the script in xref:#AssignRectangularCoordinatesAutomatically[], but uses two scales to explicitly define a set of rectangular coordinates. These coordinates are then explicitly assigned to the chart using xref:chartAPI:EGraphSetCoordinate.adoc[].
 
 [source,javascript]
 --
@@ -99,7 +99,7 @@ Polar coordinates represent data in terms of an angle and magnitude (radius). Th
 
 [#ConvertRectangulartoPolarCoordinates]
 === Convert Rectangular to Polar Coordinates
-To create polar coordinates, you first need to create a set of rectangular coordinates with the xref:chartAPI:RectCoord.adoc[] constructor or access existing rectangular coordinates with xref:chartAPI:EGraph_getCoordinate.adoc[]. Consider the script from the previous section, xref:#AssignRectangularCoordinatesAutomatically[].
+To create polar coordinates, you first need to create a set of rectangular coordinates with the xref:chartAPI:RectCoord.adoc[] constructor or access existing rectangular coordinates with xref:chartAPI:EGraphGetCoordinate.adoc[]. Consider the script from the previous section, xref:#AssignRectangularCoordinatesAutomatically[].
 
 image:commonscript:RectCoordExample_1.png[]
 
@@ -286,7 +286,7 @@ image:commonscript:PieChartExample3_1.png[]
 var polar = new PolarCoord(rect);
 polar.setType(PolarCoord.THETA);
 
-. Use the Chart’s xref:chartAPI:EGraph_setCoordinate.adoc[] method to apply the new polar coordinates.
+. Use the Chart’s xref:chartAPI:EGraphSetCoordinate.adoc[] method to apply the new polar coordinates.
 +
 [source,javascript]
 graph.setCoordinate(polar);

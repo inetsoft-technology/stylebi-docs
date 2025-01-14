@@ -1,0 +1,37 @@
+= fillGapWithDash
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+When you designate a dimension as a “time series” (see xref:ChartBindingInfoSetTimeSeries.adoc[]) and set xref:PlotFillTimeGap.adoc[]  to `true`,  `fillGapWithDash` will  linearly interpolate missing data using a *dashed line*.
+
+
+== Type
+Boolean:: `true`: Display dashed line +
+`false`: Hide dashed line
+
+
+== Example
+The following example displays a time-series which is missing data for the month of August  2024. To create this time-series, bind a chart to the '`Sales Explore`' Data Worksheet.
+
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+Place the ‘Date’ field on the X-axis (with ‘Level’ = ‘Month’) and place ‘Total’ on the Y-axis. To *simulate missing data*, add a condition to the Chart to filter out data from August  2024. (See xref:viewsheet:AddConditions.adoc[].)  Add the script below to modify the way the Chart represents the missing data for August  2024.
+
+[source,javascript]
+Chart1.fillTimeGap=true;
+Chart1.fillGapWithDash=true;
+
+image:commonscript:fillGapWithDash.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fillGapWithDash          // unqualified
+Chart1.fillGapWithDash   // qualified
+
+{secondForm}
+====

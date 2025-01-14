@@ -49,7 +49,7 @@ frame.setSize(30);
 elem.setSizeFrame(frame); //<3>
 
 --
-<1> Use xref:EGraph_getElement.adoc[] to get a handle to the xref:PointElement.adoc[].
+<1> Use xref:EGraphGetElement.adoc[] to get a handle to the xref:PointElement.adoc[].
 <2> Create the `StaticSizeFrame` object.
 <3> Use xref:GraphElementSetSizeFrame.adoc[] to add the `StaticSizeFrame` to the xref:PointElement.adoc[].
 +

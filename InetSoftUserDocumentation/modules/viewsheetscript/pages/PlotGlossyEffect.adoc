@@ -1,0 +1,27 @@
+= glossyEffect
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Applies a 3D effect to the Chart as a whole. (Not available for all Chart styles.)
+
+== Type
+Boolean
+
+== Example
+[source,javascript]
+Chart1.glossyEffect = true;
+
+
+image:commonscript:glossyEffect.png[]
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+glossyEffect          // unqualified
+Chart1.glossyEffect   // qualified
+
+{secondForm}
+====

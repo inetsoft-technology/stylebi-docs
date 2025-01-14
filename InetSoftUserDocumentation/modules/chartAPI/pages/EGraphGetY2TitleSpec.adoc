@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Returns a xref:chartAPI:TitleSpec.adoc[] object containing title information for the Y-axis on the *right* of the Chart.  The corresponding “setter” function is xref:chartAPI:EGraph_setY2TitleSpec.adoc[].
+Returns a xref:chartAPI:TitleSpec.adoc[] object containing title information for the Y-axis on the *right* of the Chart.  The corresponding “setter” function is xref:chartAPI:EGraphSetY2TitleSpec.adoc[].
 
 
 == Returns

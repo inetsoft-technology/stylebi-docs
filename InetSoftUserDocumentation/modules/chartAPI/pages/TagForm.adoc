@@ -41,7 +41,7 @@ graph.addElement(elem);
 <2> Create the  `TagForm` object.
 <3> Use  inherited  xref:LabelFormSetLabel.adoc[] function to set label text.
 <4> Use  inherited  xref:LabelFormSetValues.adoc[] function to set label position.
-<5> Use xref:EGraph_addForm.adoc[] to add the `GraphForm` to the Chart.
+<5> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
 image:commonscript:TagForm.png[]
 

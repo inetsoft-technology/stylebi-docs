@@ -28,7 +28,7 @@ graph.addElement(elem);
 <2> Create   the xref:Scale.adoc[] object.
 <3> Use `setFields` to apply the  `Scale` to the '`Quantity`' field.
 <4> Use the `Scale` to create a new xref:Coordinate.adoc[].
-<5> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+<5> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
 image:commonscript:ScaleFields.png[]
 

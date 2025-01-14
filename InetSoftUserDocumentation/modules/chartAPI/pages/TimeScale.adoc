@@ -41,7 +41,7 @@ graph.addElement(elem);
 
 <1> {dataset}
 <2> Create the `TimeScale` object.
-<3> Use  xref:EGraph_setScale.adoc[] to add the `Scale` to the Chart.
+<3> Use  xref:EGraphSetScale.adoc[] to add the `Scale` to the Chart.
 
 image:commonscript:TimeScale.png[]
 

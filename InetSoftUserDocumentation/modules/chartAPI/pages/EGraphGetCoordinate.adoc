@@ -10,7 +10,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 ====
 
 
-Returns a handle to the graph’s xref:chartAPI:Coordinate.adoc[] object. This is useful in cases where the coordinates were not explicitly assigned to a variable at creation time.  The corresponding “setter” function is xref:chartAPI:EGraph_setCoordinate.adoc[].
+Returns a handle to the graph’s xref:chartAPI:Coordinate.adoc[] object. This is useful in cases where the coordinates were not explicitly assigned to a variable at creation time.  The corresponding “setter” function is xref:chartAPI:EGraphSetCoordinate.adoc[].
 
 
 

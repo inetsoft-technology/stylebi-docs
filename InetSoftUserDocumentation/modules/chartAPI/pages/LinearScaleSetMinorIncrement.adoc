@@ -42,7 +42,7 @@ graph.addElement(elem);
 <2> Create the xref:LinearScale.adoc[] object.
 <3> Use `setIncrement` to set the  desired major increment.
 <4> Use `setMinorIncrement` to set the  desired minor increment.
-<5> Use xref:EGraph_setScale.adoc[] to assign the `Scale` to the Chart.
+<5> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
 image:commonscript:LinearScaleSetMinorIncrement.png[]
 
@@ -55,7 +55,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 =====
 
 
-To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraph_getCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetYScale.adoc[] ② to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:Scale.adoc[]. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetYScale.adoc[] ② to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:Scale.adoc[]. For example:
 
 [source,javascript]
 --

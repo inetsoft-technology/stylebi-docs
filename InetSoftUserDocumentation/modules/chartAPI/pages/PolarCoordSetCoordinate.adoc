@@ -46,7 +46,7 @@ graph.addElement(elem);
 <2> Create the xref:RectCoord.adoc[] object.
 <3> Create the `PolarCoord`  object.
 <4> Use `setCoordinate` to assign the `RectCoord` object to the `PolarCoord`.
-<5> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+<5> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
 image:commonscript:PolarCoordsSetCoord.png[]
 

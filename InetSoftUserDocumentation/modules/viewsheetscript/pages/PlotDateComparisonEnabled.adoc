@@ -1,0 +1,30 @@
+= dateComparisonEnabled
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Enables the Date Comparison feature for the Chart. See xref:viewsheet:CompareDataByDate.adoc[] for more details.
+
+
+== Type
+Boolean:: `true`: Enable the Date Comparison feature +
+`false`: Disable the Date Comparison feature
+
+
+== Example
+[source,javascript]
+Chart1.dateComparisonEnabled = false;
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+dateComparisonEnabled          // unqualified
+Chart1.dateComparisonEnabled   // qualified
+
+{secondForm}
+====

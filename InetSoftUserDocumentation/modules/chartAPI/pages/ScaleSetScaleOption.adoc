@@ -44,7 +44,7 @@ graph.addElement(elem);
 <2> Create   the xref:Scale.adoc[] objects.
 <3> Use the `Scale` to create a new xref:Coordinate.adoc[].
 <4> Use `setScaleOption` to use zero in scale range.
-<5> Use xref:EGraph_setCoordinate.adoc[] to add the `Coordinate` to the Chart.
+<5> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
 image:commonscript:ScaleSetOption.png[]
 
