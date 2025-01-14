@@ -186,6 +186,15 @@ image:commonscript:DrillMemberExample6.png[]
 +
 image:commonscript:DrillMemberExample3.png[]
 +
+[TIP]
+--
+Instead of using the '`Expression`' option from the {buttonValueType} button, you can select the '`Variable`' option.
+
+image:commonscript:DrillMemberExample7.png[]
+
+Then select  `SelectionTree1.drillMember` from the menu.  This produces the same result as the '`Expression`' described above.
+--
++
 The xref:viewsheetscript:SelectionListTreeDrillMember.adoc[]  property returns the name of the field that resides one level (in the Selection Tree hierarchy) below the *lowest* level that the user has selected. Thus, if the user has selected one or more _states_ in the Selection Tree, `SelectionTree1.drillMember` returns the string ‘City’.
 
 .. Press btn:[OK] to close the Formula Editor. The output of `SelectionTree1.drillMember` is now assigned to the Chart X-axis binding.
