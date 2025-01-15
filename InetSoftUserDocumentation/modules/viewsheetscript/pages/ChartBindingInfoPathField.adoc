@@ -34,10 +34,12 @@ Chart1.query = "Data";
 Chart1.chartStyle = Chart.CHART_MAP;
 Chart1.bindingInfo.yFields = [['Lat',Chart.NUMBER]];
 Chart1.bindingInfo.xFields = [['Long',Chart.NUMBER]];
-Chart1.bindingInfo.pathField = ['Long',Chart.NUMBER]; <1>
+Chart1.bindingInfo.pathField = ['Long',Chart.NUMBER]; //<1>
+Chart1.bindingInfo.setTextField('Name',Chart.STRING); //<2>
 Chart1.mapType = Chart['MAP_TYPE_U.S.'];
 --
-<1> Sets 'Long' as the path field. Path will be drawn through ascending longitude values.
+<1> Sets '`Long`' as the path field. Path will be drawn through ascending longitude values.
+<2> Use xref:ChartBindingInfoSetTextField.adoc[] to place names on the points.
 
 image:commonscript:bindingInfoPathField.png[]
 

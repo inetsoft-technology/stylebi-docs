@@ -1,0 +1,50 @@
+= value
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CheckRadioComboValues.adoc[] to specify  or access the values assigned to the component.
+* xref:CommonSelectedObject.adoc[] and xref:CommonSelectedObjects.adoc[] are functional equivalents  of  `value`.
+====
+
+
+
+Returns the selected *value* or *values* of the component (not the labels).
+
+== Type
+[square]
+* *Value* of the selected option for single-value Form components (Slider, Spinner, RadioButton, ComboBox).
+* *Array of values* for the selected options for a multiple-value Form component (CheckBox).
+
+== Examples
+[source,javascript]
+----
+// RadioButton:
+alert(RadioButton1.value) // returns value of selection
+
+// CheckBox with two or more items selected:
+alert(CheckBox1.value[0]) // returns value of first selection
+alert(CheckBox1.value[1]) // returns value of second selection
+alert(CheckBox1.value[2]) // returns null
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+value               // unqualified
+Component1.value    // qualified
+
+{secondForm}
+====
+
+
+
+
