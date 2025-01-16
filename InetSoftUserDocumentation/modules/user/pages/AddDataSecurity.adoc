@@ -7,3 +7,6 @@ A Virtual Private Model (VPM) is an optional component that provides a highly fl
 A VPM consists of _conditions_, _hidden columns_, _lookups_, and their associated _triggers_. Conditions and hidden columns allow you to filter rows and columns, respectively. Triggers provide fine-grained control on conditions and hidden columns by role, group, and individual user. Multiple VPMs can be specified for a given data source, and these are joined in an ‘and’ fashion.
 
 The following sections explain how to create and edit a VPM.
+
+[square]
+include::ROOT:partial$MINITOC_AddDataSecurity.adoc[]
