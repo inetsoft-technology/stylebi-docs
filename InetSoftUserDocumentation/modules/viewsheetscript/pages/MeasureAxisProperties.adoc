@@ -3,6 +3,9 @@
 
 The topics in this section describe *measure*  axis  properties. (See xref:ChartAxisProperties.adoc[]  for  properties of all axes.) Measure properties should be prefixed by `axis['Measure Name']`.
 
+include::ROOT:partial$MINITOC_MeasureAxisProperties.adoc[]
+
 == Example
 [source,javascript]
 Chart1.axis['Sum(Total)'].increment = 300000
+

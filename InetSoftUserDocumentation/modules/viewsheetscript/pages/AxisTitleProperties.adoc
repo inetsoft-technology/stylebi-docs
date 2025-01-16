@@ -3,6 +3,9 @@
 
 The topics in this section describe properties are available for axis  titles.  Title properties should be prefixed by `xTitle`, `yTitle`, `x2Title`, or `y2Title`.
 
+[square]
+include::ROOT:partial$MINITOC_AxisTitleProperties.adoc[]
+
 == Example
 [source,javascript]
 Chart1.xTitle.text = "New Jersey Employees";
