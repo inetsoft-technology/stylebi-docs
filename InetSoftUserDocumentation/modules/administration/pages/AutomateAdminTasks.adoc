@@ -9,3 +9,6 @@ InetSoft provides a Groovy DSL that wraps the https://www.inetsoft.com/docs/2023
 TIP: The Groovy DSL is *not required* to use the client API. The Java API may be used directly from any JVM language. For remote repositories, you can use any language with the public web APIs. The web APIs are RESTful with JSON as the data transfer mechanism. The advantage of using the DSL is that you do not need to configure the classpath when running the client script or application, and the scripts are less verbose.
 
 See xref:GroovyDSLScriptingFramework.adoc[] for instructions on how to create scripts that access API methods. See the following sections for built-in administration functions that you can run from the command line.
+
+[square]
+include::ROOT:partial$MINITOC_AutomateAdminTasks.adoc[]

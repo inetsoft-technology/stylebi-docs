@@ -13,3 +13,5 @@ Alternatively, you can  create a regular expression using the RegExp constructor
 var re = new RegExp('.*JavA.*', 'i');
 
 A regular expression can be used in the xref:StringObjectMatch.adoc[], xref:StringObjectReplace.adoc[], and xref:StringObjectSearch.adoc[] methods to find the regular expression in a string, or can be evaluated against a string using one of the  RegExp methods described  in the following topics.
+
+include::ROOT:partial$MINITOC_RegexObjectFunctions.adoc[]

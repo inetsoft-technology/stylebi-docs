@@ -1,4 +1,5 @@
 = Math Object Functions
+:page-stem:
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -12,16 +13,19 @@ The Math object provides the following numerical constants:
 |===
 |Constant|Description
 
-|Math.E| Euler’s number, e ≈ 2.718281828459045
-|Math.LN10| The natural log of 10, ln10 ≈ 2.302585092994046
-|Math.LN2| The natural log of 2, ln2 ≈ 0.6931471805599453
-|Math.LOG10E| The base 10 log of e, log10e  ≈ 0.4342944819032518
-|Math.LOG2E|  The base 2 log of e, log2e  ≈ 1.4426950408889634
-|Math.PI| The value π ≈ 3.141592653589793. See also xref:commonscript:CALC_pi.adoc[].
-|Math.SQRT1_2| The square root of 1/2 ≈ 0.7071067811865476
-|Math.SQRT2| The square root of 2 ≈ 1.4142135623730951
+|Math.E| Euler’s number, stem:[e ≈ 2.718281828459045].
+|Math.LN10| The natural log of 10, stem:[ln(10) ≈ 2.302585092994046].
+|Math.LN2| The natural log of 2, stem:[ln(2) ≈ 0.6931471805599453].
+|Math.LOG10E| The base 10 log of e, stem:[log_10(e)  ≈ 0.4342944819032518].
+|Math.LOG2E|  The base 2 log of e, stem:[log_2(e)  ≈ 1.4426950408889634].
+|Math.PI| The value stem:[π ≈ 3.141592653589793]. See also xref:commonscript:CALC_pi.adoc[].
+|Math.SQRT1_2| The square root of 1/2, stem:[sqrt(0.5) ≈ 0.7071067811865476].
+|Math.SQRT2| The square root of 2, stem:[sqrt(2) ≈ 1.4142135623730951].
 |===
 
 The following topics describe  functions provided by the Math object.
+
+[square]
+include::ROOT:partial$MINITOC_MathObjectFunctions.adoc[]
 
 

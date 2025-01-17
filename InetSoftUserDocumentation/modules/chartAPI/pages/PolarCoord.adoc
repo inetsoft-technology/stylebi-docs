@@ -19,7 +19,10 @@ The `PolarCoord` object contains polar coordinates against which data can be rep
 [source,javascript]
 var polar = new PolarCoord(rect);
 
-You can pass a xref:RectCoord.adoc[] object to the constructor (e.g., ‘rect’), or specify this later using the xref:PolarCoordSetCoordinate.adoc[] property.
+You can pass a xref:RectCoord.adoc[] object to the constructor (as above), or specify this later using the xref:PolarCoordSetCoordinate.adoc[] property.  The following special methods are available:
+
+[square]
+include::ROOT:partial$MINITOC_PolarCood.adoc[]
 
 
 == Example

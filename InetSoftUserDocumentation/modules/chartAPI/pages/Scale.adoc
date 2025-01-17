@@ -12,11 +12,13 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:CategoricalScale.adoc[]
 ====
 
-The `Scale` object contains a scale defining the measurement of a dimension. The following pages explain its properties.
+The `Scale` object contains a scale defining the measurement of a dimension.
 
 
 
 image:commonscript:Scale.png[]
 
-
+The following pages explain its properties.
+[square]
+include::ROOT:partial$MINITOC_Scale.adoc[]
 

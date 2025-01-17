@@ -15,7 +15,9 @@ var qscale = new LinearScale('Last Year','This Year');
 
 You can pass the names of the fields (e.g., ‘Last Year’, ‘This Year’) for which the scale should be generated to the constructor, or specify these later using the inherited xref:ScaleSetFields.adoc[] property.
 
-
+The following special methods are provided:
+[square]
+include::ROOT:partial$MINITOC_LinearScale.adoc[]
 
 == Example
 

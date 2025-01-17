@@ -12,7 +12,16 @@ xref:chartAPI:BindDatatoChartinScript.adoc[] for various approaches to binding d
 ====
 
 
-The `dataSet` object allows you to set the values to be displayed on the graph. It has the form of a two-dimensional array, where each column represents a distinct measure. You can specify the `dataset` by one of the following methods:
+The `dataSet` object allows you to set the values to be displayed on the graph. It has the form of a two-dimensional array, where each column represents a distinct measure, and offers the following methods:
+
+
+[square]
+include::ROOT:partial$MINITOC_Dataset.adoc[]
+
+
+
+
+You can specify the `dataset` by one of the following methods:
 
 [square]
 * Set the Chart binding using the Chart Editor.
@@ -44,6 +53,5 @@ graph.addElement(elem);
 --
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
-
 
 

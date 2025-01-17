@@ -11,3 +11,6 @@ var val = parseInt(TextField1.text);
 // assign the half of the value to another text element
 Text2.text = (val * 1/2).toString();
 ----
+
+[square]
+include::ROOT:partial$MINITOC_GlobalObjectFunctions.adoc[]

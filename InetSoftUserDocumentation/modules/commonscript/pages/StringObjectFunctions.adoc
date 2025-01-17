@@ -19,3 +19,4 @@ field['Salesperson.First Name'].concat(" ",field['Salesperson.Last Name'])
 
 The following topics describe common string functions. Consult a JavaScript reference such as https://www.w3schools.com/js/js_string_methods.asp[W3Schools.com] for details about other string functions.
 
+include::ROOT:partial$MINITOC_StringObjectFunctions.adoc[]

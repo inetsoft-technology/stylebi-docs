@@ -14,10 +14,12 @@ The `SchemaElement` object contains user-defined visual elements that can be add
 [source,javascript]
 var elem = new SchemaElement("State", "Quantity");
 
-You can pass a set of field names (e.g., ‘State’, ‘Quantity’) to the constructor, or specify these later using the  xref:GraphElementAddDim.adoc[] and  xref:GraphElementAddVar.adoc[] methods.
+You can pass a set of field names (e.g., ‘State’, ‘Quantity’) to the constructor, or specify these later using the inherited xref:GraphElementAddDim.adoc[] and  xref:GraphElementAddVar.adoc[] methods.
 
+The following special methods are provided:
 
-
+[square]
+include::ROOT:partial$MINITOC_SchemaElement.adoc[]
 
 
 

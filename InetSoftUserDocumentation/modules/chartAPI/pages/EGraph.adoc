@@ -15,3 +15,6 @@ The EGraph object represents the graph definition. To create a new `EGraph` obje
 graph = new EGraph();
 
 The topics in this section preset the properties of the `EGraph` object.
+
+[square]
+include::ROOT:partial$MINITOC_EGraph.adoc[]

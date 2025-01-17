@@ -14,9 +14,12 @@ The `LineElement` object contains the visual elements for a line chart. To creat
 [source,javascript]
 var elem = new LineElement("State", "Quantity");
 
-You can pass one, two, or three field names (e.g., ‘State’, ‘Quantity’) to the constructor, or specify these later using the  xref:GraphElementAddDim.adoc[] and  xref:GraphElementAddVar.adoc[] methods.
+You can pass one, two, or three field names (e.g., ‘State’, ‘Quantity’) to the constructor, or specify these later using the  inherited xref:GraphElementAddDim.adoc[] and  xref:GraphElementAddVar.adoc[] methods.
 
+The following special methods are provided:
 
+[square]
+include::ROOT:partial$MINITOC_LineElement.adoc[]
 
 
 

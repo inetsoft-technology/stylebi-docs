@@ -14,9 +14,12 @@ The `IntervalElement` object contains the visual elements for bar charts and ran
 [source,javascript]
 var elem = new IntervalElement("State", "Quantity");
 
-You can pass a set of fields as input to the constructor (e.g., ‘State’, ‘Quantity’), or specify these later using the  xref:GraphElementAddDim.adoc[] and  xref:GraphElementAddVar.adoc[] methods.
+You can pass a set of fields as input to the constructor (e.g., ‘State’, ‘Quantity’), or specify these later using the inherited   xref:GraphElementAddDim.adoc[] and  xref:GraphElementAddVar.adoc[] methods.
 
+The following special methods are provided:
 
+[square]
+include::ROOT:partial$MINITOC_IntervalElement.adoc[]
 
 
 

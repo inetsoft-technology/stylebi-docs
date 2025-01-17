@@ -25,8 +25,10 @@ for(var i = 0; i < states.length; i++) {
   }
 }
 
-Array objects also provide the  methods described in the following topics.
+Array objects also provide the following methods.
 
+[square]
+include::ROOT:partial$MINITOC_ArrayObjectFunctions.adoc[]
 
 
 

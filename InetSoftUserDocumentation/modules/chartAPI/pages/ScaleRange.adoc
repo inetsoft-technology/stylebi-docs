@@ -9,5 +9,5 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:LinearRange.adoc[]
 ====
 
-The `ScaleRange` object contains the calculation strategy for finding the scale range.
+The `ScaleRange` object contains the calculation strategy for finding the scale range.  It provides the xref:ScaleRangeSetAbsoluteValue.adoc[] method.
 

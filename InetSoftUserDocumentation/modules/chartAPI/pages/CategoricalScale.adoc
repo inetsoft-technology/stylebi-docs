@@ -15,7 +15,9 @@ var qscale = new CategoricalScale('State');
 
 You can pass the names of the fields (e.g., ‘State’) for which the scale should be generated to the constructor, or specify these later using the inherited xref:ScaleSetFields.adoc[] method.
 
-
+The following special methods are provided:
+[square]
+include::ROOT:partial$MINITOC_CategoricalScale.adoc[]
 
 == Example
 

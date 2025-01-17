@@ -19,8 +19,11 @@ The `FacetCoord` object contains a set of inner and outer coordinates on which m
 [sourcejavascript]
 var rect = new FacetCoord(outerCoord,innerCoord);
 
-You can pass a pair of xref:RectCoord.adoc[] objects (e.g., ‘outerCoord’, ‘innerCoord’, etc.) to the constructor, or specify these later using the xref:FacetCoordSetInnerCoordinates.adoc[] and xref:FacetCoordSetOuterCoordinates.adoc[]  properties.
+You can pass a pair of xref:RectCoord.adoc[] objects (e.g., ‘outerCoord’, ‘innerCoord’, etc.) to the constructor, or specify these later using the inherited xref:FacetCoordSetInnerCoordinates.adoc[] and xref:FacetCoordSetOuterCoordinates.adoc[]  properties.
 
+The following special methods are provided:
+[square]
+include::ROOT:partial$MINITOC_FacetCoord.adoc[]
 
 == Example
 

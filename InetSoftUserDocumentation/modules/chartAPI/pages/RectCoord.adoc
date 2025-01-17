@@ -21,6 +21,10 @@ var rect = new RectCoord(xscale,yscale);
 
 You can pass a set of Scale objects (e.g., ‘xscale’, ‘yscale’, etc.) to the constructor, or specify this later using the xref:RectCoordSetXScale.adoc[] and xref:RectCoordSetYScale.adoc[] properties.
 
+The following special methods are available.
+
+[square]
+include::ROOT:partial$MINITOC_RectCoord.adoc[]
 
 
 == Example
