@@ -5,3 +5,6 @@ These topics describe options for configuring the server environment, including 
 image:EM_GeneralPage.png[]
 
 IMPORTANT: In a multi-tenant environment, only the Site Administrator can access the *General* settings.  See xref:EnableMultiTenant.adoc[] for more information about multi-tenancy.
+
+[square]
+include::ROOT:partial$MINITOC_ServerEnvironment.adoc[]

@@ -14,3 +14,6 @@
 The following topics present  properties that are unique to the Text component.
 
 NOTE: Script placed on a Text element does not re-execute when the user makes Dashboard selections. To re-execute the script, place the script in the *onRefresh* handler. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about the onRefresh handler.)
+
+[square]
+include::ROOT:partial$MINITOC_Text.adoc[]

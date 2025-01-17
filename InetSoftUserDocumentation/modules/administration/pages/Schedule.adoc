@@ -6,3 +6,6 @@ The Scheduler is an application that automatically generates  Dashboards on an a
 NOTE: The Scheduler is a stand-alone application. It runs independently of the  application server (Tomcat, WebLogic, WebSphere, etc.) as a separate process. Therefore, even if the  server becomes unresponsive, the Scheduler continues to run. The Scheduler runs as an RMI server and can also be accessed programmatically. See xref:ConfigureScheduler.adoc[] for information on how to start or stop the Scheduler.
 
 The topics in this section explain how to use the Scheduler.
+
+[square]
+include::ROOT:partial$MINITOC_Schedule.adoc[]

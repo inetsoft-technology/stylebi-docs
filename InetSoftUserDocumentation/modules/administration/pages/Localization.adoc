@@ -1,9 +1,11 @@
 = Localization
 
-Localization is a feature that allows StyleBI to adapt to different language environments, and is implemented for two contexts:
+Localization is a feature that allows StyleBI to adapt to different language environments, and is implemented for three contexts:
 
-* User Portal interface
-* Dashboards
+[square]
+* xref:LocalizeUserPortalInterface.adoc[]
+* xref:LocalizeDashboard.adoc[]
+* xref:LocalizeDataSource.adoc[]
 
 When users log into the User Portal or administrators log into Enterprise Manager they can specify a *locale* (language-country combination), based on which the InetSoft server dynamically modifies the interface (Portal tabs, Enterprise Manager tabs, repository tree) as well as  Dashboard components (Text elements, Chart axis titles, Table header columns, etc.).
 

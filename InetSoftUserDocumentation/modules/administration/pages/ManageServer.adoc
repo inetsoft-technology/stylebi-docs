@@ -1,5 +1,12 @@
 = Manage the Server
 
-The following sections discuss several key aspects of managing the InetSoft server, including configuring security, scheduling tasks, and deploying assets.
+The following sections discuss several key aspects of managing the InetSoft server, including the following:
 
-NOTE: Only users who have administrator privileges can change server settings.
+[square]
+* xref:administration:GetStartedWithEnterpriseManager.adoc[]
+* xref:administration:ConfigureSecurity.adoc[]
+* xref:administration:Schedule.adoc[]
+* xref:administration:AdvancedTopics.adoc[]
+* xref:administration:AutomateAdminTasks.adoc[]
+
+IMPORTANT: Only users who have administrator privileges can change server settings.

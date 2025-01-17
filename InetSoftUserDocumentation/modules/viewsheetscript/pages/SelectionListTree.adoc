@@ -9,4 +9,7 @@
 
 
 
-The following properties are available for Selection List and Selection Tree components. The Selection Tree shares all of the properties of the Selection List with the exception of `singleSelection`.
+The following properties are available for Selection List and Selection Tree components (`drillMember` and `drillMembers` for Selection Tree only.)
+
+[square]
+include::ROOT:partial$MINITOC_SelectionListTree.adoc[]
