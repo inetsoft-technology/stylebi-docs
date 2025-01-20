@@ -8,4 +8,6 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:GraphForm.adoc[]
 ====
 
-The `ShapeForm` object contains information for shapes manually drawn on the chart.
+The `ShapeForm` object contains information for shapes manually drawn on the chart.  It provides the following methods:
+[square]
+include::ROOT:partial$MINITOC_ShapeForm.adoc[]

@@ -16,6 +16,7 @@ var frame = new BrightnessColorFrame('Quantity');
 
 You can pass a field name to the constructor (e.g., “Quantity”), or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:viewsheetscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script. See xref:#Example2[].
 
+`BrightnessColorFrame` provides a special xref:BrightnessColorFrameSetColor.adoc[] property.
 
 
 == Example 1

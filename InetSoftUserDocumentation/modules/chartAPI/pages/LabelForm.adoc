@@ -16,6 +16,9 @@ var form = new LabelForm();
 
 The label border color and style are set by the inherited xref:GraphFormSetColor.adoc[] and xref:GraphFormSetLine.adoc[] functions. See  xref:DefaultTextFrame.adoc[] to automatically use data values as element labels.
 
+`LabelForm` provides the following methods:
+[square]
+include::ROOT:partial$MINITOC_LabelForm.adoc[]
 
 
 

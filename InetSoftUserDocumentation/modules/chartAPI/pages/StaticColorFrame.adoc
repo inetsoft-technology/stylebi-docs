@@ -19,8 +19,7 @@ var frame = new StaticColorFrame(java.awt.Color(0xFF00FF)); //<2>
 <1> Call constructor without specifying a color.
 <2> Call constructor with specified color.
 
-You can pass a color value directly to the constructor or specify it later using the in xref:StaticColorFrameSetColor.adoc[] function.
-
+You can pass a color value directly to the constructor or specify it later using the in xref:StaticColorFrameSetColor.adoc[] method. `StaticColorFrame` also provides the special xref:StaticColorFrameSetNegativeColor.adoc[]  method.
 
 
 

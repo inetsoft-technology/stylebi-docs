@@ -14,9 +14,11 @@ You can provide the image location as input to the constructor, for example:
 [source,javascript]
 var shape = new GShape.ImageShape("https://.../image.gif");
 
-You can also specify this later using the `GShape.ImageShape.image` property  syntax in *onRefresh* script. See xref:#Example3[] below.
+You can also specify this later using xref:GShapeImageShapeSetImage.adoc[] method in *Component* script, or using the `GShape.ImageShape.image` property in *onRefresh* script. See xref:#Example3[] below.
 
-
+`GShape.ImageShape` provides the following methods:
+[square]
+include::ROOT:partial$MINITOC_GShapeImageShape.adoc[]
 
 
 

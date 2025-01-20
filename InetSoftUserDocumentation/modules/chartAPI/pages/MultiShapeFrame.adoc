@@ -21,5 +21,6 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:VisualFrame.adoc[]
 ====
 
-The `MultiShapeFrame` object contains the shape styles for visual chart objects on multiple dimensions.
+The `MultiShapeFrame` object contains the shape styles for visual chart objects on multiple dimensions. It provides the special xref:MultiShapeFrameSetScales.adoc[] and xref:MultiShapeFrameSetFields.adoc[] methods.
+
 

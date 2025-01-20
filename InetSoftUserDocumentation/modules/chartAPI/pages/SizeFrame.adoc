@@ -20,13 +20,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 The `SizeFrame` object contains the size scale for visual chart objects. You can use a `SizeFrame` object to represent data dimensions with size (size coding), or to apply a fixed (static) size. To create a `SizeFrame`, use a constructor such as  xref:LinearSizeFrame.adoc[]   or xref:StaticSizeFrame.adoc[].
 
-
-
-
-
-
-
 You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `SizeFrame` using the xref:viewsheetscript:ChartBindingInfoSizeFrame.adoc[]  property in *onRefresh* script. See xref:#Example2[] below.
+
+`SizeFrame` provides the following special methods:
+[square]
+include::ROOT:partial$MINITOC_SizeFrame.adoc[]
 
 
 

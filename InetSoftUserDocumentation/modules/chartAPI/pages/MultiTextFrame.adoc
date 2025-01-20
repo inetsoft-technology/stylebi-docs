@@ -1,4 +1,4 @@
-= MultiShapeFrame
+= MultiTextFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -10,5 +10,5 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:VisualFrame.adoc[]
 ====
 
-The `MultiTextFrame` object contains a mapping between values and multiple articles of displayed text.
+The `MultiTextFrame` object contains a mapping between values and multiple articles of displayed text.  It provides the special xref:MultiTextFrameSetFields.adoc[] method.
 

@@ -17,4 +17,4 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-The `TextFrame` object contains a mapping between values and displayed text.
+The `TextFrame` object contains a mapping between values and displayed text.  It provides the special xref:TextFrameSetText.adoc[] method.

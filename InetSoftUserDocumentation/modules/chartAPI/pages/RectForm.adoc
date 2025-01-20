@@ -13,3 +13,7 @@ The `RectForm` object contains information for rectangles manually drawn on the 
 
 [source, javascript]
 var rect = new RectForm();
+
+`RectForm` provides the following methods:
+[square]
+include::ROOT:partial$MINITOC_RectForm.adoc[]

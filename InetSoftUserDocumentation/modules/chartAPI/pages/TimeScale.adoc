@@ -15,6 +15,9 @@ var qscale = new TimeScale('Date');
 
 You can pass the names of the fields (e.g., ‘Date’) for which the scale should be generated to the constructor, or specify these later using the inherited xref:ScaleSetFields.adoc[] property.
 
+The following special methods are provided:
+[square]
+include::ROOT:partial$MINITOC_TimeScale.adoc[]
 
 
 == Example

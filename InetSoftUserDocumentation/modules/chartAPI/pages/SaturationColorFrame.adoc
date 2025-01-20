@@ -16,3 +16,5 @@ var frame = new SaturationColorFrame('Quantity');
 
 
 You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:viewsheetscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script.
+
+`SaturationColorFrame` provides the special xref:SaturationColorFrameSetColor.adoc[] method.

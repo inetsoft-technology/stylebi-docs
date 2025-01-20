@@ -18,6 +18,9 @@ var frame = new PolygonShapeFrame('Total');
 
 You can pass the name of a field (e.g., ‘Total’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also set this using the xref:viewsheetscript:ChartBindingInfoShapeFrame.adoc[]  syntax in *onRefresh* script . See xref:#Example2[] below.
 
+`PolygonShapeFrame` provides the special xref:PolygonShapeFrameSetFill.adoc[] method.
+
+
 
 
 

@@ -18,10 +18,11 @@ var frame = new VineShapeFrame("m1","m2","m3");
 
 You can pass the name of a field (e.g., ‘m1’, ‘m2’, ‘m3’) to the constructor, or specify this later using the inherited xref:MultiShapeFrameSetFields.adoc[] property. The dimensions are specified in the following order: `[angle, magnitude, radius]`.
 
-
 Angle:: The angle of the stem line
 Magnitude:: The length of the stem line
 Radius:: The radius of the circle
+
+`VineShapeFrame` provides the special xref:VineShapeFrameSetStartAngle.adoc[] and xref:VineShapeFrameSetEndAngle.adoc[] methods.
 
 
 

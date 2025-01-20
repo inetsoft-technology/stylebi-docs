@@ -15,6 +15,7 @@ var frame = new TriangleShapeFrame('Total');
 
 You can pass the name of a field (e.g., ‘Total’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ShapeFrame` using the `bindingInfo.shapeFrame` property in *onRefresh* script. See xref:#Example2[] below.
 
+`TriangleShapeFrame` provides the special xref:TriangleShapeFrameSetFill.adoc[] method.
 
 
 

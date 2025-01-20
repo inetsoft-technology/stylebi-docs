@@ -15,6 +15,8 @@ var frame = new CategoricalTextureFrame('State');
 
 You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `TextureFrame` using the xref:viewsheetscript:ChartBindingInfoTextureFrame.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
 
+`CategoricalTextureFrame` provides the special xref:chartAPI:CategoricalTextureFrameSetTexture.adoc[] method.
+
 
 == Example 1
 

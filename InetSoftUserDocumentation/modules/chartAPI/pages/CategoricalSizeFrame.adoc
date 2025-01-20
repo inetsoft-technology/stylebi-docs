@@ -15,6 +15,7 @@ var frame = new CategoricalSizeFrame('State');
 
 You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `SizeFrame` using the xref:viewsheetscript:ChartBindingInfoSizeFrame.adoc[]  property in *onRefresh* script. See xref:#Example2[] below.
 
+`CategoricalSizeFrame` provides the special xref:chartAPI:CategoricalSizeFrameSetSize.adoc[] method.
 
 
 

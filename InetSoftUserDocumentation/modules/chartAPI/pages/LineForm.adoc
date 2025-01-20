@@ -13,3 +13,7 @@ The `LineForm` object contains information for lines manually drawn on the chart
 
 [source, javascript]
 var line = new LineForm();
+
+`LineForm` provides the following methods:
+[square]
+include::ROOT:partial$MINITOC_LineForm.adoc[]

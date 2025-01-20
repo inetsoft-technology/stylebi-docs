@@ -16,7 +16,9 @@ var frame = new CategoricalColorFrame('State');
 
 You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:viewsheetscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script. See xref:#Example2[]  below.
 
-
+The following special methods are provided:
+[square]
+include::ROOT:partial$MINITOC_CategoricalColorFrame.adoc[]
 
 
 == Example 1

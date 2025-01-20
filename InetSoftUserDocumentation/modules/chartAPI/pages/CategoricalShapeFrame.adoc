@@ -15,6 +15,7 @@ var frame = new CategoricalShapeFrame('State');
 
 You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ShapeFrame` using the `bindingInfo.shapeFrame` property in *onRefresh* script. See xref:#Example2[] below.
 
+`CategoricalShapeFrame` provides the special xref:chartAPI:CategoricalShapeFrameSetShape.adoc[] method.
 
 
 == Example 1
