@@ -54,13 +54,21 @@ include::partial$paginationREST.adoc[]
 =====
 ****
 
-. *_Optional_*: If you need to look up a value by using a URL provided by the JSON query, follow the steps below:
+. *_Optional_*: If you need to look up a value by using a URL provided by a specific field of the JSON query, follow the steps below:
 
 .. Press the btn:[Add Lookup Query] button.
-.. In the '`Lookup URL Suffix`' field, enter `pass:[{param1}]`, `pass:[{param2}]`, `pass:[{param3}]`, etc.  This placeholder will be replaced in the URL by the corresponding '`Key`' field value.
+.. In the '`Lookup URL Suffix`' field, enter the name of a parameter, for example `pass:[{param1}]`.  This placeholder will be replaced in the URL by the corresponding '`Key`' field value.
 .. Enter the JSON path.
 .. Enable  the '`Ignore Base Data Source URL`' option.
-.. Repeat the above steps to add additional parameters.
+.. Press the btn:[Add Lookup Query] button and repeat the above steps to add additional parameters.
++
+.Lookup Query
+[example]
+====
+The Lookup Query below queries the URL provided by the `properties.forecast` field of the base query.
+
+image:JSON_LookupQuery.png[]
+====
 
 . *_Optional:_* {datasourceSelectTabular}
 

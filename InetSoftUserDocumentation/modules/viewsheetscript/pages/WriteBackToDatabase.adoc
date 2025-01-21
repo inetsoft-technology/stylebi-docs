@@ -436,7 +436,7 @@ The Submit Button onClick script below provides a complete example, which update
 ====
 The following sample Dashboard, based on the `sales_employees` table in the ‘Orders’ database, contains an editable table with five columns. The Dashboard table, also named `sales_employees`, contains all the columns from `sales_employees` table in the Orders data source.
 
-NOTE: The ‘Orders’ data source in this example is a different from the sample embedded ‘Orders’ Derby database that is used by the  xref:ROOT:attachment$StyleBIExamples.zip[Style BI Examples].  The embedded Derby database is *not* writable, and cannot be used for this example.
+NOTE: The ‘Orders’ data source in this example is a different from the sample embedded ‘Orders’  database that is used by the examples in  https://github.com/inetsoft-technology/stylebi/blob/main/community-examples/examples.zip[examples.zip].  That database is *not* writable, and cannot be used for this example.
 
 
 User editing is enabled only for the `first_name`, `last_name`, and `quota` columns. (See xref:viewsheet:TableProperties.adoc[] for details on configuring table and column editing features.)

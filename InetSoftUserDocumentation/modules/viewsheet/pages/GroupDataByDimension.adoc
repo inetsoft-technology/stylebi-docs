@@ -208,6 +208,7 @@ In the following example, you will create a chart that displays total sales by s
 include::ROOT:partial$CreateNewDashboardNote.adoc[]
 +
 include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
 . Drag a Chart element from the *Toolbox* panel into the Dashboard.
 . Press the {buttonEdit} on the Chart to open the Wizard. Press the {buttonFullEditor} at the top right to open the Chart Editor.
 . Expand the ‘Sales’ data block. From the ‘Dimensions’ node, drag the ‘State’ field to the ‘X’ region of the Chart Editor.
