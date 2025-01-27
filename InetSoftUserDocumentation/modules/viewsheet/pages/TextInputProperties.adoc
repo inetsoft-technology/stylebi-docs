@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
 ====
-* xref:viewsheetscript:WriteBackToDatabase.adoc[] for information on how to write Form input to the database.
+* xref:WriteBackToStorage.adoc[] for information on how to write Form input to the database.
 * {commonProperties}
 ====
 
@@ -23,7 +23,7 @@ Inset Border Style::	Specifies a dimensional “inset” (rather than flat) appe
 Multiple Lines::	When enabled, allows the user to enter multiple lines of text into the text area.
 
 == Option Tab
-The *Option* tab in the ‘TextInput Properties’ panel allows you to select an *Input Editor* which specifies the control interface and validation for user input. See xref:viewsheetscript:WriteBackToDatabase.adoc#ValidateUserInput[Validate User Input] for details on the available editors.
+The *Option* tab in the ‘TextInput Properties’ panel allows you to select an *Input Editor* which specifies the control interface and validation for user input. See xref:WriteBackToStorage.adoc#ValidateUserInput[Validate User Input] for details on the available editors.
 
 == Script Tab
 {commonScript}

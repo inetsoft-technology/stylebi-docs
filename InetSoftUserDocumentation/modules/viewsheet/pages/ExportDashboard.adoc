@@ -216,7 +216,7 @@ This saves the Excel file (with the same name as the Dashboard) in the browserâ€
 [WARNING,caption=See Also]
 ====
 * xref:dataworksheet:UploadData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for information on importing Excel data into a Data Worksheet.
-* xref:viewsheetscript:WriteBackToDatabase.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] , for information on committing modified table data to a database.
+* xref:WriteBackToStorage.adoc[]  for information on saving modified table data to the Data Worksheet.
 ====
 
 IMPORTANT: Offline Dashboard editing features are available only if product is licensed for Dashboard Forms.

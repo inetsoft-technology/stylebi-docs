@@ -1,16 +1,13 @@
-= Write Back to Database
+= Write Back to Storage
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-You can configure a Table to be *editable* by users, and create a script that writes user modifications back to the database. The following sections explain how to do this.
+You can configure an Embedded Table to be *editable* by users and  save user modifications back to the Data Worksheet. The following sections explain how to do this.  See xref:TableProperties.adoc[] to designate a Table as an Embedded Table.
 
 [#SetTableEditable]
 == Set a Table to be  Editable
 
-An *editable* table is a table whose data can be modified by the user and written back to the database. The following sections explain how to create an Editable Table.
-
-NOTE: An Editable Table is different from an Embedded Table, where the entered data is saved with the underlying Data Worksheet. (See xref:dataworksheet:EnterData.adoc[] for more information about Embedded Tables.)
-
+An *editable* table is a table whose data can be modified by the user and written back to the Data Worksheet. The following sections explain how to create an Editable Table.
 
 
 === Set a Table as  Editable
@@ -20,9 +17,7 @@ To set a table as *editable*, follow the steps below:
 
 . Select the *Advanced* tab in the ‘Table Properties’ panel.
 
-. Select the ‘Enable Table Editing’ option, and choose the actions available to the user: ‘Add Rows’, ‘Delete Rows’, and/or ‘Edit Rows’. (See xref:viewsheet:TableProperties.adoc[] for more details.)
-+
-IMPORTANT: Column editing options are available only if product is licensed for Dashboard Forms.
+. Select the ‘Enable Table Editing’ option, and choose the actions available to the user: ‘Add Rows’, ‘Delete Rows’, and/or ‘Edit Rows’. (See xref:TableProperties.adoc[] for more details.)
 
 
 . Press btn:[OK] to close the ‘Table Properties’ panel.
@@ -46,12 +41,12 @@ image:viewsheet:Column Editor Options.png[]
 
 Each type of column editor provides settings which allow you to restrict the values that a user may enter into the column. This allows you to perform validation checking on user input. See xref:#ValidateUserInput[] for the available settings.
 
-You can apply formatting to an editable column in the usual manner (see xref:viewsheet:DataFormat.adoc[]). Formatting is applied to existing column data as well as to any data that a user adds or edits in the column.
+You can apply formatting to an editable column in the usual manner (see xref:DataFormat.adoc[]). Formatting is applied to existing column data as well as to any data that a user adds or edits in the column.
 
 === Set Visibility for a Column
-You can choose to hide specific table columns, for example when the table includes a primary key column (used to write data back to the database) that should not be displayed to the user. See xref:viewsheet:AddTable.adoc[] or xref:viewsheet:AddCrosstab.adoc[] for information about how to hide table columns.
+You can choose to hide specific table columns, for example when the table includes a primary key column (used to write data back to the database) that should not be displayed to the user. See xref:AddTable.adoc[] or xref:AddCrosstab.adoc[] for information about how to hide table columns.
 
-To retrieve the value of a hidden column, use the script function xref:TableGetHiddenColumnValue.adoc[]. See xref:#AccessUserModifiedData[] for more details.
+To retrieve the value of a hidden column, use the script function xref:viewsheetscript:TableGetHiddenColumnValue.adoc[]. See xref:#AccessUserModifiedData[] for more details.
 
 
 [#ValidateUserInput]
@@ -80,7 +75,7 @@ To populate the menu from a *manually-created list*, follow these steps:
 
 . Repeat the above steps to insert more elements.
 +
-image:Radio embedded.png[]
+image:viewsheetscript:Radio embedded.png[]
 
 . Press btn:[OK] to close the dialog box.
 
@@ -91,7 +86,7 @@ To populate the menu from the *Dashboard data source*, follow these steps:
 
 . Select a data block from the list on the left side. Select the appropriate fields from the ‘Label’ and ‘Value’ menus.
 +
-image:Radio query.png[]
+image:viewsheetscript:Radio query.png[]
 
 . Press btn:[OK] to close the dialog box.
 
@@ -131,7 +126,7 @@ The ‘Integer Editor’ provides the user with standard integer field input. Th
 
 NOTE: Alphabetical characters and decimal points are not permitted. To enter decimals, use the Float Editor.
 
-image:Column Number Editor.png[]
+image:viewsheetscript:Column Number Editor.png[]
 
 
 The following options are available in the dialog box:
@@ -148,11 +143,11 @@ The ‘Password Editor’ option is the same as the ‘Text Editor’  option, b
 === Text Data
 The ‘Text Editor’ provides the user with standard text field input. This allows a user to simply type values into an editable table cell or a TextInput component.
 
-image:Column Text Editor.png[]
+image:viewsheetscript:Column Text Editor.png[]
 
 To mask the entered text, use the '`Password Editor`' option instead of the ‘Text Editor’ option.
 
-image:Column Password Editor.png[]
+image:viewsheetscript:Column Password Editor.png[]
 
 The following options are available in the dialog box:
 
@@ -232,16 +227,9 @@ The following sections explain how to access user-modified data so that it can b
 
 === Access User-Modified Data in Table
 
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Write back to database...
-video::306611787[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
 
-When you configure a Dashboard table to be *editable* (see xref:viewsheet:TableProperties.adoc[]), this allows users to insert, delete, or modify data in the table. Changes that the user makes to the table, however, do not persist after the Dashboard is closed. To allow user modifications to persist beyond the current session, you must commit the modified records to the database. (The following section, xref:#WriteToDatabase[], provides a full example.) The `getFormRows` table function provides you with records that have been modified.
+
+When you configure a Dashboard table to be *editable* (see xref:TableProperties.adoc[]), this allows users to insert, delete, or modify data in the table. The `getFormRows` table function provides you with records that have been modified.
 
 Table1.getFormRows(ADDED):: Provides a two-dimensional array containing the new rows that have been inserted by the user. The length of the array is equal to the number of inserted rows, and the width of the array is equal to the number of columns in the table.
 
@@ -251,7 +239,7 @@ Table1.getFormRows(DELETED):: Provides a two-dimensional array containing the ro
 
 Table1.getFormRow(idx):: Provides the row designated by index `idx`.
 
-These functions are typically called within the onClick handler of a Submit Button (see xref:viewsheet:SubmitButtonProperties.adoc[]).  See xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script] for information about the onClick handler.
+These functions are typically called within the onClick handler of a Submit Button (see xref:SubmitButtonProperties.adoc[]).  See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script] for information about the onClick handler.
 
 
 When a user adds or changes a row in an editable table, the new or modified row is highlighted in color. To clear the highlight on these rows and remove them from the corresponding array returned by `getFormRows`, use the table’s xref:viewsheetscript:TableCommit.adoc[] function.
@@ -265,16 +253,15 @@ Table1.commit(idx):: Removes the row returned by `getFormRows(idx)` from the arr
 
 
 === Access User-Modified Data from TextInput
-To acquire the data that a user has entered in a TextInput component (see xref:viewsheet:TextInputProperties.adoc[]), simply reference the component’s `value` property:
+To acquire the data that a user has entered in a TextInput component (see xref:TextInputProperties.adoc[]), simply reference the component’s `value` property:
 
 [source,javascript]
 TextInput1.value
 
-To commit this acquired data to the database, see xref:#WriteToDatabase[].
 
 [#AccessMostRecentUserModification]
 === Access Most Recent User Modification
-When a user makes a modification to an Editable Table or Form component, the change triggers the Dashboard’s onRefresh Handler script to re-execute. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about this handler.) The onRefresh handler offers an xref:viewsheetscript:SpecialFunctionsEvent.adoc[] object that  you can use to detect the user’s action and make an appropriate response. The event object provides access to the following Dashboard event:
+When a user makes a modification to an Editable Table or Form component, the change triggers the Dashboard’s onRefresh Handler script to re-execute. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about this handler.) The onRefresh handler offers an xref:viewsheetscript:SpecialFunctionsEvent.adoc[] object that  you can use to detect the user’s action and make an appropriate response. The event object provides access to the following Dashboard event:
 
 For an *Form* Component, the `event` object provides the *name* and *type* of the component in which the user has just made a selection. For an *Editable Table*, the `event` object provides the following properties:
 
@@ -287,7 +274,7 @@ source:: A reference to the table object which can be used to access table prope
 .Recalculating table data
 [example]
 ====
-The following example illustrates how you can use the xref:SpecialFunctionsEvent.adoc[] object to dynamically update table data in response to user modifications. You will create a table that contains the fields ‘Name’, ‘Price’, ‘Quantity’, and ‘Total’. You will enable the user to modify the ‘Price’ and ‘Quantity’ fields, and use script to automatically update the ‘Total’ field with the corresponding data (i.e., the product of ‘Price’ and ‘Quantity’).
+The following example illustrates how you can use the xref:viewsheetscript:SpecialFunctionsEvent.adoc[] object to dynamically update table data in response to user modifications. You will create a table that contains the fields ‘Name’, ‘Price’, ‘Quantity’, and ‘Total’. You will enable the user to modify the ‘Price’ and ‘Quantity’ fields, and use script to automatically update the ‘Total’ field with the corresponding data (i.e., the product of ‘Price’ and ‘Quantity’).
 
 To create this example, follow the steps below:
 
@@ -308,7 +295,7 @@ Product.Total
 
 . Resize the table as desired.
 +
-image:UpdateEditableTable1.png[]
+image:viewsheetscript:UpdateEditableTable1.png[]
 
 . Right-click the table and select ‘Properties’. {rightClickOptions} This opens the ‘Table Properties’ panel.
 
@@ -356,188 +343,9 @@ Observe that `event.row` and `event.column` are used together with `getFormRow` 
 
 . Preview the Dashboard.
 
-Edit various values in the ‘Price’ and ‘Quantity Purchased’ columns, and observe how the ‘Total’ column is automatically updated. Note, however, that changes a user makes to the table (including calculated values) do not persist across sessions unless they are committed to the database. See xref:#WriteToDatabase[] for more details.
+Edit various values in the ‘Price’ and ‘Quantity Purchased’ columns, and observe how the ‘Total’ column is automatically updated. Note, however, that changes a user makes to the table (including calculated values) do not persist across sessions unless they are saved to the Data Worksheet by using the '`Write Back to Storage`' option.
 ====
 
 
 
 
-
-[#WriteToDatabase]
-== Write to Database
-
-The previous section, xref:#AccessUserModifiedData[], described how you can acquire the records in a table which have been modified (inserted, deleted, or changed) by the user. If you want the user’s changes to persist across sessions, you must commit these changes to the database. This is known as database write-back.
-
-[.videotitle]
-.Watch Video
-[%collapsible]
-=====
-.Write back to database...
-video::306611787[vimeo,640,400]
-include::ROOT:partial$videoVersion.adoc[]
-=====
-
-NOTE: A *simpler* way to persistently store user-entered data is by saving the data into a Data Worksheet *Embedded Table* (rather than into a database). See xref:dataworksheet:EnterData.adoc[] and xref:viewsheet:SliderSpinnerProperties.adoc[] for more details.
-
-In most cases, you should commit records to the database by placing a script within the onClick handler of a Submit Button. The script should perform the following operations:
-
-. Create a connection to the database:
-+
-[source,javascript]
-var conn = createConnection('datasource','username','password');
-+
-If the specified data source does not require credentials, replace the username and password with empty strings (`''`).
-
-. Prepare the desired SQL statement, using placeholders for values to be inserted.
-+
-[source,javascript]
-var pstmt = conn.prepareStatement("insert into table1 values (?,?,?)");
-+
-The quoted string should be a valid SQL statement which will perform the desired database operation when values are inserted each placeholder (`?`) in the next step.
-
-
-. Insert values for SQL placeholders. In most cases, these values will be taken from the arrays returned by the table functions `getFormRows(ADDED)`, `getFormRows(CHANGED)`, and `getFormRows(DELETED)`. (See xref:#AccessUserModifiedData[] for more information.)
-
-+
-.Example: Insert placeholder values
-[source,javascript]
-pstmt.setInt(1,rowsAdded[i][0]);    // first substitution
-pstmt.setString(2,rowsAdded[i][1]); // second substitution
-pstmt.setString(3,rowsAdded[i][2]); // third substitution
-+
-The integer parameter in each of the above functions is a reference to the corresponding placeholder (`?`) in the SQL statement; for example, the parameter value `1` indicates a substitution for the first `?`, `2` indicates a substitution for the second `?`, and `3` indicates a substitution for the third `?`. The row of the array is indexed by variable `i` above because the array is generally accessed iteratively within a loop structure.
-
-. Update the database tables by executing the SQL statement:
-+
-[source,javascript]
-pstmt.executeUpdate();
-+
-Note that this does not yet commit any changes to the database. Changes are not committed until the `commit` function is called (next step).
-
-. Commit the changes:
-+
-[source,javascript]
-conn.commit();
-
-. If necessary (in case of an error), roll back the changes:
-+
-[source,javascript]
-conn.rollback();
-
-. Close the connection to the data source:
-+
-[source,javascript]
-conn.close();
-
-The Submit Button onClick script below provides a complete example, which updates a database table with rows which have been added, deleted, and changed.
-
-.Committing user edits to database
-[example]
-====
-The following sample Dashboard, based on the `sales_employees` table in the ‘Orders’ database, contains an editable table with five columns. The Dashboard table, also named `sales_employees`, contains all the columns from `sales_employees` table in the Orders data source.
-
-NOTE: The ‘Orders’ data source in this example is a different from the sample embedded ‘Orders’  database that is used by the examples in  https://github.com/inetsoft-technology/stylebi/blob/main/community-examples/examples.zip[examples.zip].  That database is *not* writable, and cannot be used for this example.
-
-
-User editing is enabled only for the `first_name`, `last_name`, and `quota` columns. (See xref:viewsheet:TableProperties.adoc[] for details on configuring table and column editing features.)
-
-image:Submit Button Script.png[]
-
-
-The following script acquires the rows that were added, deleted, or changed, and then commits the modifications back to the database. The script is placed in the onClick handler of the Submit button.
-
-.Example: Submit onClick script
-[source,javascript]
-----
-try{
-  // Create the connection to data source (no credentials)
-  var conn=createConnection('Orders','','');
-
-  // Find new rows added by user
-  var rowsAdded = sales_employees.getFormRows(ADDED);
-
-  // Find existing rows changed by user
-  var rowsChanged = sales_employees.getFormRows(CHANGED);
-
-  // Find existing rows deleted by user
-  var rowsDeleted = sales_employees.getFormRows(DELETED);
-
-  //---------- ADDING ROWS ----------//
-  if(rowsAdded!=null){
-
-    // Iterate through array of added rows
-    for(var i = 0; i<rowsAdded.length; i++){
-
-      // Prepare SQL statement with placeholders
-      var pstmt=conn.prepareStatement("insert into sales_employees values (?,?,?,?,?)");
-
-      // Insert placeholder values from ith row of array
-      pstmt.setInt(1,rowsAdded[i][0]); // row i, column 1
-      pstmt.setString(2,rowsAdded[i][1]); // row i, column 2
-      pstmt.setString(3,rowsAdded[i][2]); // row i, column 3
-      pstmt.setInt(4,rowsAdded[i][3]); // row i, column 4
-      pstmt.setInt(5,rowsAdded[i][4]); // row i, column 5
-
-      // Execute the SQL statement
-      pstmt.executeUpdate();
-
-      // Commit the changes
-      conn.commit();
-    }
-  }
-
-  //---------- DELETING ROWS ----------//
-  if(rowsDeleted!=null){
-
-    // Iterate through array of deleted rows
-    for(var i = 0; i<rowsDeleted.length; i++){
-
-      // Prepare SQL statement with placeholders
-      var pstmt = conn.prepareStatement("delete from sales_employees where employee_id=?");
-
-      // Insert placeholder value from ith row of array
-      pstmt.setInt(1,rowsDeleted[i][0]); // row i, column 1
-
-      // Execute the SQL statement
-      pstmt.executeUpdate();
-
-      // Commit the changes
-      conn.commit();
-    }
-  }
-
-  //---------- CHANGING ROWS ----------//
-  if(rowsChanged!=null){
-
-    // Iterate through array of changed rows
-    for(var i = 0; i<rowsChanged.length; i++){
-
-      // Prepare SQL statement with placeholders
-      var pstmt = conn.prepareStatement("update sales_employees set first_name=?, last_name=?, quota=? where employee_id=?");
-
-      // Insert placeholder values from ith row of array
-      pstmt.setString(1,rowsChanged[i][1]); // row i, column 2
-      pstmt.setString(2,rowsChanged[i][2]); // row i, column 3
-      pstmt.setInt(3,rowsChanged[i][3]); // row i, column 4
-      pstmt.setInt(4,rowsChanged[i][0]); // row i, column 1
-
-      // Execute the SQL statement
-      pstmt.executeUpdate();
-
-      // Commit the changes
-      conn.commit();
-    }
-  }
-}
-
-// In case of error, roll-back changes.
-catch(e) {
-  conn.rollback();
-}
-
-// Close the data source connection
-finally{
-  conn.close();
-}
-----
-====

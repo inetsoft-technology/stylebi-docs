@@ -3,7 +3,7 @@
 
 
 
-Creates a connection to a data source. (See xref:WriteBackToDatabase.adoc[] for full details.)  If the specified data source does not require credentials, replace the username and password with empty strings (`''`).
+Creates a connection to a data source. (See xref:viewsheet:WriteBackToStorage.adoc[] for full details.)  If the specified data source does not require credentials, replace the username and password with empty strings (`''`).
 
 == Parameters
 datasource::			Name of the datasource

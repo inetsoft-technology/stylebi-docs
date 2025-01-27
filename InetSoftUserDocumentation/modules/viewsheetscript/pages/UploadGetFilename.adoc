@@ -12,7 +12,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 ====
 
 
-Returns the full server path to a file uploaded on the server using the Upload  component. The returned path and filename can be used, for example, to write the file to a database. See xref:WriteBackToDatabase.adoc[] for information on how to construct a script that writes to a database.
+Returns the full server path to a file uploaded on the server using the Upload  component. The returned path and filename can be used, for example, to write the file to a database. See xref:viewsheet:WriteBackToStorage.adoc[] for information on how to construct a script that writes to a database.
 
 
 

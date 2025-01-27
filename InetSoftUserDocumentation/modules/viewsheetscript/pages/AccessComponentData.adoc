@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::viewsheetscript:partial$seeAlsoComponentData.adoc[]
 
-You can access  component data and filter selections using script. The following sections explain how to do this. For information on how to detect the most recent user interaction, see xref:viewsheetscript:WriteBackToDatabase.adoc#AccessUserModifiedData[Access  User-Modified Data] in xref:WriteBackToDatabase.adoc[].
+You can access  component data and filter selections using script. The following sections explain how to do this. For information on how to detect the most recent user interaction, see xref:viewsheet:WriteBackToStorage.adoc#AccessUserModifiedData[Access  User-Modified Data] in xref:viewsheet:WriteBackToStorage.adoc[].
 
 [#FormComponents]
 == Form Components
@@ -223,7 +223,7 @@ You can access Chart data in scripts by referencing the Chart’s `data` or `tab
 [#TableCrosstabComponents]
 == Table/Crosstab Components
 [WARNING,caption=See Also]
-xref:WriteBackToDatabase.adoc#AccessUserModifiedData[Access  User-Modified Data] in xref:WriteBackToDatabase.adoc[] information on how to access an *Editable Table*.
+xref:viewsheet:WriteBackToStorage.adoc#AccessUserModifiedData[Access  User-Modified Data] in xref:viewsheet:WriteBackToStorage.adoc[] information on how to access an *Editable Table*.
 
 The key properties for accessing the values in a Table or Crosstab are xref:viewsheetscript:TableData.adoc[] and xref:viewsheetscript:TableTable.adoc[].
 

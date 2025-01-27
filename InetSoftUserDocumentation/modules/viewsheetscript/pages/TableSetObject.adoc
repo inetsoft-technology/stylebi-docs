@@ -8,7 +8,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 ====
 [square]
 * xref:AccessComponentData.adoc[] for information about `selectedObject`.
-* xref:WriteBackToDatabase.adoc#AccessMostRecentUserModification[Access the Most Recent User Modification] to retrieve the most recent modified object.
+* xref:viewsheet:WriteBackToStorage.adoc#AccessMostRecentUserModification[Access the Most Recent User Modification] to retrieve the most recent modified object.
 ====
 
 

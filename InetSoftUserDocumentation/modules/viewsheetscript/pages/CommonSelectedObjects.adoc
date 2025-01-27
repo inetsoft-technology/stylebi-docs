@@ -10,7 +10,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:CommonSelectedLabels.adoc[] to access the labels corresponding to the values.
 * xref:CommonSelectedObject.adoc[] to access the currently selected value  in single-valued components.
 * xref:AccessComponentData.adoc[] for more information about `selectedObjects`.
-* xref:WriteBackToDatabase.adoc#AccessMostRecentUserModification[Access the Most Recent User Modification] to retrieve the most recent modified object.
+* xref:viewsheet:WriteBackToStorage.adoc#AccessMostRecentUserModification[Access the Most Recent User Modification] to retrieve the most recent modified object.
 ====
 
 

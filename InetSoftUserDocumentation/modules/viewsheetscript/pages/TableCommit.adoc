@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=See Also]
 ====
-* xref:viewsheetscript:WriteBackToDatabase#AccessMostRecentUserModification[] to detect recent changes.
+* xref:viewsheet:WriteBackToStorage#AccessMostRecentUserModification[] to detect recent changes.
 * xref:viewsheet:TableProperties.adoc[]  for information on making a Table editable.
 ====
 
