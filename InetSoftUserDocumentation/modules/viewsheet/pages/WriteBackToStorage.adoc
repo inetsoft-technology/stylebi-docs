@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 You can configure an Embedded Table to be *editable* by users and  save user modifications back to the Data Worksheet. The following sections explain how to do this.  See xref:TableProperties.adoc[] to designate a Table as an Embedded Table.
 
 [#SetTableEditable]
-== Set a Table to be  Editable
+== Set a Table to be Editable
 
 An *editable* table is a table whose data can be modified by the user and written back to the Data Worksheet. The following sections explain how to create an Editable Table.
 
