@@ -25,7 +25,7 @@ Before you configure the LDAP security provider in StyleBI, read the recommendat
 
 * If the administrator password on the LDAP server is changed, you will not be able to log into Enterprise Manager in the usual way. Instead, log into Enterprise Manager by using the administrator’s Distinguished Name (DN) together with the new LDAP administrator password. This allows Enterprise Manager to connect to the LDAP server and update the security configuration. You can then log into Enterprise Manager using the usual administrator credentials.
 
-* When you enable an LDAP security provider authentication you can no longer log into the EM using the default ‘admin/admin’ credentials. Instead, you must log in as a user with an ‘Administrator’ role (group). If there is no role (group) named ‘Administrator’ in your system, you can set the role by adding the `role.administrator` property, e.g., `role.administrator=SRAdmin`. (See xref:AllProperties.adoc[] for more information about setting properties.)
+* When you enable an LDAP security provider authentication you can no longer log into the EM using the default ‘admin/admin’ credentials. Instead, you must log in as a user with an ‘Administrator’ role (group).
 
 * The performance of any `AbstractSecurityProvider` security implementation (including LDAP security) can be enhanced by setting `security.cache=true`. (See xref:AllProperties.adoc[] for more information about setting properties.)
 
