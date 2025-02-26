@@ -128,7 +128,7 @@ asset.sample.maxrows:: The row limit used for subqueries (inner select queries) 
 csv.import.max:: Sets the maximum size in bytes for CSV files imported into a Data Worksheet Embedded Table (see xref:dataworksheet:UploadData.adoc[]).
 DistinctTableLens.maxrow:: Sets the maximum number of distinct values to display in a Condition '`Browse Data`' menu.
 excel.sheet.maxrows:: Sets the integer row limit for every table within an Excel export. A message is displayed below each limited table to indicate that the data in the table has been truncated.
-http.session.maxActive:: Maximum number of active sessions (default=10000). If a new session is created when the number of active sessions exceeds this property, the oldest session is invalidated.  You must restart the server after changing this property.
+http.session.maxActive:: Maximum number of active sessions (default=10000). If a new session is created when the number of active sessions exceeds this property, the oldest session is invalidated.
 http.session.maxPerClient:: Maximum number of sessions that a client (user/host) may have (default=5), not including `localhost`. If a new session is created when the number of active sessions exceeds this property, the oldest session for that client is invalidated.
 http.session.maxWebsocketPerUser:: Maximum number of websocket connections that a single HTTP session may have (default=20). If a new connection is requested when the number of active connections exceeds this property, the connection fails and a SockJS downgrade will occur (XHR streaming, long polling, etc.).
 http.session.timeout:: HTTP session timeout in seconds (default =1800 seconds). If the session timeout is set in the _web.xml_ file, that setting takes precedence over this property.  You must restart the server after changing this property.
@@ -324,12 +324,8 @@ The following table lists a variety of server engine properties. Server engine p
 
 asset.backup.count:: Number of copies of the storage backup to retain. (Default=1.) See xref:Storage.adoc[] for more information.
 assetData.thread.count:: The maximum number of Dashboards that can simultaneously execute queries  (for ‘cpu’ and ‘session’ keys only). Increase this value if a set of Dashboards with long-running queries is blocking the execution of other Dashboards. (Default is 12 times the CPU count.)
-cluster.defaultProxy:: Specifies a default value for an empty ‘Repository Servlet URL’ field on the ‘Server Status’ page.
-cluster.servers.https:: Specifies a comma-separated list of cluster nodes that should use HTTPS. Values should be specified as `host\:port`. For example, `cluster.servers.https=192.168.6.111\:8443`.
 composer.comm.error:: Set to `true` (default) to warn user about server connection errors when using Dashboards. Set to `false` to suppress these warnings.
 cpu.affinity.mask:: Controls which CPU cores the server process uses for execution. For example, `cpu.affinity.mask=0,2,4` restricts the server to use only CPU 0, CPU 2, and CPU 4.
-dependency.checker.enabled:: `true` (default) for automatic detection and re-synchronization of  dependencies.
-dependency.checker.interval:: Interval between checks for changes in  dependencies, in milliseconds (default=30000).
 html.directory:: Directory used to hold HTML temporary files (images).
 html.retry.interval:: Milliseconds between retry, when waiting for a Dashboard.
 html.session.timeout:: Inactivity timeout period for each  viewing session (in milliseconds). Default is 1200000 (20 minutes). When an open asset is inactive for the specified timeout period, the asset will be closed and the following message displayed: “Session timeout. Please re-open.”
@@ -339,13 +335,8 @@ repository.asset.backup.time:: Sets the time for automatic backup of Data Worksh
 repository.user.timeout:: Inactivity timeout period for each user session (in milliseconds) for a server with session license. Default is 600000 (10 minutes). The user is logged out only when the session is inactive for the specified timeout period AND another concurrent user requires the session.
 rmi.localhost.ip:: Set to `true` to use localhost rather than the specific IP address for connection to RMI servers (Scheduling and Monitoring). Default is `false`.
 server.type:: Describes the server type: `rmi`, `servlet`, etc.
-soap.data.service.timeout:: Specifies the request timeout (in milliseconds) for a `SoapDataService` request. Default is 2 hours.
 sree.bundle:: The name of the  localization bundle.
-stylereport.library.path:: List of _.srl_ files specified using the file’s full path. Use this when specifying multiple _.srl_ files.
-stylereport.locale.encode:: Load the locale property file used by Catalog, so other language text can be properly loaded.
-stylereport.locale.properties:: Locale mapping property file name.
-stylereport.locale.resource:: Locale mapping file resource name.
-stylereport.useCustomDriver:: `true` to use custom driver. Default is `false`.
+
 
 == Time and Date Properties
 The following table lists a variety of time and date properties.
