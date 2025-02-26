@@ -138,7 +138,6 @@ log.detail.level:: A logging level, one of the following: `debug` (debugging mes
 log.level.inetsoft.performance:: Set `log.level.inetsoft.performance=INFO` to record performance information in the log at ‘Info’ level.
 log.output.file:: Log file path.
 log.output.stderr:: `true` to send output to the stderr.
-log.view.maximum:: The maximum number of lines to return when the ‘All’ option is selected on the ‘Log View’ page.
 report.log.count:: Sets the number of backup log files.
 report.log.max:: Sets the maximum log file size.
 
