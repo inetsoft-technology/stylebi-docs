@@ -57,9 +57,7 @@ map.selection.enabled:: When `false`, prevents user  selections on a map from di
 The following table lists a variety of properties related to data source interactions.
 
 datasource.registry.path:: List of `.xml` files that are used to define all of the available data sources.
-datasource.selectedSource:: Specifies the datasource for which to refresh metadata.
 db.caseSensitive:: When `true`, wraps all column identifiers within query with double quotes to preserve identifier case. Default is `false`.
-driver.directory:: A comma-separated list of directory paths to search for driver files. Default is `sree.home/drivers`. Only the final directory in the list can be edited (add or remove driver files) in Enterprise Manager. Other directories on the list are read-only in Enterprise Manager.
 formula.avg.keep.type:: Set to `true` to keep the data type of an average formula the same data type as the input in order to match SQL behavior (e.g., truncating the average result to integer if the input field is of integer data type).
 olap.cancel.enabled:: Set to `true` (default) to enable query cancellation for OLAP databases. This feature cancels currently executing queries when a user makes updates to their selections. Set to `false` to prevent errors on databases that do not support query cancellation.
 query.cache.data:: Set to `true` (default) to cache query result sets for reuse across Data Worksheets and Dashboards.
@@ -72,24 +70,12 @@ string.compare.caseSensitive:: Default grouping and ordering is now case-insensi
 The following table lists properties related to exporting  Dashboards.
 
 excel.chart.imageonly:: When `false` (default), displays all dashboard Chart data views on additional Excel sheets. This may increase the size of the export.
-excel.close.factor:: For Excel export, a factor determining whether nearby  elements are placed in adjacent cells or spaced apart. A smaller factor creates more space between elements in the exported spreadsheet.
-excel.colwidth.max:: For export to Excel (best data editing), specifies the maximum permitted Excel column width. If an element width exceeds the maximum, it is represented in Excel by merging multiple columns with widths given by `excel.colwidth.normal`.
-excel.colwidth.normal:: For export to Excel (best data editing), specifies the column width to use for merged columns when an element’s width exceeds `excel.colwidth.max`. A value of `-1` indicates that no merging should be performed.
-excel.export.grid.show:: When `true`, specifies that gridlines will be shown in the Excel export, and that default text backgrounds are transparent. When `false`, gridlines are suppressed and default text backgrounds are white.
-excel.font.ratio:: Sets the proportion by which font size is globally reduced for Excel exports. (Font size reduction can often improve the appearance of Excel exports.) For example, setting `excel.font.ratio=0.85` uniformly reduces font sizes within the export to 85% of their size in the original. To set this proportion on a font-by-font basis, use the property `template excel.font.<fontname>.ratio`, e.g., `excel.font.arial.ratio=0.80`.
-excel.rowheight.max:: For export to Excel (best data editing), specifies the maximum permitted Excel row height. If an element height exceeds the maximum, it is represented in Excel by merging multiple rows with heights given by `excel.rowheight.normal`.
-excel.rowheight.normal:: For export to Excel (best data editing), specifies the row height to use for merged rows when an element’s height exceeds `excel.rowheight.max`. A value of `-1` indicates that no merging should be performed.
 excel.sheet.maxrows:: Sets the integer row limit for every table within an Excel export. A message is displayed below each limited table to indicate that the data in the table has been truncated.
 excel.table.datatab:: When `true` (default), displays all dashboard Table data views on additional Excel sheets. This may increase the size of the export.
 excel.vs.export.grid.show:: When `true` (default), specifies that gridlines will be shown in the Excel export for a Dashboard, and that default text backgrounds are transparent. When `false`, gridlines are suppressed and default text backgrounds are white. This property applies only when the ‘Expand Components’ export property is enabled, and affects only the main export tab (not the individual data tabs).
 export.csv.delimiter:: Delimiter used when exporting a CSV file.
-export.csv.quote:: Quote character used when exporting a CSV file.
-export.Excel.isHeaderFooterInPageSetup:: If `true`, top and bottom margins, and headers and footers will be set in Excel’s “Page Setup”.
-export.menu.options:: A comma separated list of option numbers. Only the options on the list are added to the export menu. e.g: `PDF, EXCEL, EXCEL_SHEET, EXCEL_DATA, RTF, RTF_LAYOUT, HTML, HTML_NO_PAGINATION, HTML_BUNDLE, HTML_BUNDLE_NO_PAGINATION, CSV, SVG, TEXT, REPORT.`
 export.text.table.maxRowAlign:: Set the number of rows to look at when determining the column width to use in Text exports.
 export.expandComponents:: For Dashboard email and export operations, sets the default export option to '`Expand Components`' rather than  '`Match Layout`'.
-html.export.embed:: Set to `true` to embed the output of the export (from the ‘Export’ dialog box) into the same frame and replace the existing contents.
-rtf.hyperlink.indicator:: Set to `false` to remove hyperlink underlining in RTF format.
 table.export.format:: When set to `csv`, table data exported from a Dashboard or Data Worksheet will use CSV format. Some formatting may be lost. When set to `xls`, exported data will use Excel format, spanning multiple Excel sheets if needed, and preserving all formatting. If the property is left unspecified, tables with greater than 10000 rows are exported in CSV format, otherwise in Excel format.
 
 
@@ -153,22 +139,17 @@ log.level.inetsoft.performance:: Set `log.level.inetsoft.performance=INFO` to re
 log.output.file:: Log file path.
 log.output.stderr:: `true` to send output to the stderr.
 log.view.maximum:: The maximum number of lines to return when the ‘All’ option is selected on the ‘Log View’ page.
-log.custom.config:: Enables custom logging, equivalent to ‘Use Custom Log Configuration’. See xref:Logging.adoc[] for more information.
-log.level.com.hazelcast:: Sets log level for `com.hazelcast`.
 report.log.count:: Sets the number of backup log files.
 report.log.max:: Sets the maximum log file size.
 
 == Mail Properties
 The following table lists a variety of email properties.  See xref:ConfigureServerEmail.adoc[] for related properties in Enterprise Manager.
 
-mail.attachment.max:: Maximum size for a PDF attachment on an email. If the PDF file is larger than the maximum size, the PDF is split into multiple parts.
 mail.from.address:: ‘From’ email address used in email messages. Set to `true` to allow users to enter a ‘From’ address that is different from their own email address. Default is `false`.
 mail.smtp.host:: Mail SMTP host name.
 mail.smtp.port:: Specifies the SMTP port number. The default for non-SSL use is port 25. The default for SSL use is port 465.
-mail.split.message:: Message used when a PDF file is split into multiple parts.
 mail.subject.format:: Format for the mail subject line. It is a message format ({JavaTextMessageFormat}). There are two parameters used in generating the subject line. The first parameter is the alias, and the second parameter is the date and time. For example, a possible format could be  `pass:[Dashboard {0} generated at {1,time} on {1,date}]`.
 mail.tls:: When set to `true`, specifies that a `STARTTLS` command should be issued. The default is `false`.
-system.admin.address:: Email address of system administrator for the  error page.
 
 == Materialized View Properties
 The following table lists configuration properties for materialized views. See xref:MaterializedView.adoc[] for more information about materialized views.
@@ -286,9 +267,6 @@ schedule.condition.taskDefaultTime:: Determines whether the user needs to explic
 schedule.log.file:: Scheduler log file path.
 schedule.memory.min:: Minimum memory usage for the Scheduler.
 schedule.memory.max:: Maximum memory usage for the Scheduler.
-schedule.reload.auto:: Set to true to automatically reload schedule file when it is modified.
-schedule.reload.interval:: Interval (in milliseconds) for checking schedule file changes. Default is 2000.
-schedule.task.file:: Schedule a XML file path.
 schedule.task.listener:: Specifies the fully-qualified name of a listener class to be executed at the start and end of every scheduled task.
 schedule.time.12hours:: When `true`, uses a 12-hour clock for scheduled task conditions. Default is `false` (24-hour clock).
 scheduler.classpath:: The path that will be prepended to the system classpath when the Scheduler process is started.
@@ -299,20 +277,15 @@ schedule.task.timeout:: The maximum duration in milliseconds for a scheduled tas
 The following table lists a variety of security properties.  See xref:SpecifySecurityProvider.adoc[] and xref:TailorServerPerformance.adoc[] for related properties.
 
 anonymous.userdata.save:: Set to `false` to prevent storage of preferences for the anonymous user.
-em.user.max:: For LDAP security, the maximum number of users that will be listed in the user tree (under the *User* tab or *Security* tabs). The default is 1000.
 enable.changePassword:: Set to `false` to disable users’ ability to change passwords in the User Portal (using the default security provider).
 login.loginAs:: Set to `on` to permit an administrator to log in as a particular user. This adds a ‘Log in As’ action to the *Actions* tab of the *Security* page (see xref:SetSecurityActions.adoc[]) that determines which users are allowed to access this function. If a user is granted permission for the ‘Log in As’ action, they will see a ‘Login as’ field on the Portal login screen,  and can log in as any user for which they are assigned “Administrator Permissions”.  See  xref:LoginAsDifferentUser.adoc[] for more information.
 openid.property.provider:: Fully-qualified class name of an implementation of `inetsoft.web.security.sso.OpenIDPropertyProvider` that provides the OpenID Connect configuration for a given HTTP request.
 openid.postprocessor:: Fully-qualified class name of an implementation of `inetsoft.web.security.sso.OpenIDPostprocessor` that modifies the SRPrincipal created by the SSO filter given the set of claims returned from the IdP.
 role.administrator:: Only users with this role can log into the EM and administer the  server. For an LDAP/AD security provider it maps to a Security Group. It defaults to ‘Administrator’. Example: `role.administrator=SRAdmin`.
-security.acl.file:: Access the control file used by the default security service.
 security.cache:: Caches data when using LDAP security for improved performance.
 security.allow.iframe:: Set to `false` (default) to prevent the Enterprise Manager and User Portal login pages from being displayed within an IFrame. This is equivalent to setting the HTTP header property `X-Frame-Options` to `DENY`, and should be used in conjunction with Single Sign-On (SSO). See xref:integration:ConfigureSingleSignOn.adoc[] in xref:integration:AdvancedServerIntegration.adoc[]   for more information. Set to `true` when embedding the login pages within an IFrame. (The server must be using SSL in this case.)
-security.ldap.groupbase:: The base DN for groups. For iPlanet, default is `ou=Groups`, and for ADS, default is `cn=Users`.
 security.ldap.rolebase:: The base DN for roles. For iPlanet, default is `ou=People`, and for ADS, default is `cn=Users`.
-security.ldap.subtree:: Set to `true` to enable recursive search of specified LDAP user base. Default is `false`.
 security.ldap.userbase:: The base DN for users. For iPlanet, default is `ou=People`, and for ADS, default is `cn=Users`.
-security.use.cookie:: Set to `false` to disable the use of cookies in security service.
 sso.default.roles:: Sets the default roles for new user logging in via SSO.
 vpm.enforcement.policy:: Determines the scope of VPM enforcement: Set to `all` to generate an error if any query is not addressed by a VPM. Set to `user` to generate an error if any user query is not addressed by a VPM. (A “user query” is any query that is generated at runtime from a data model or a Data Worksheet) Set to `default` to permit the execution of queries that are not addressed by a VPM.
 
@@ -340,8 +313,5 @@ sree.bundle:: The name of the  localization bundle.
 The following table lists a variety of time and date properties.
 
 crosstab.dateTime.expandAll.level:: Sets the maximum expansion of date fields in a Crosstab. Options are `Year`, `QuarterOfYear`, `MonthOfYear` (default), `DayOfMonth`, `HourOfDay`, `MinuteOfHour`, `SecondOfMinute`.
-fiscal.start.day:: The day in the `fiscal.start.month` on which the fiscal year begins.
-fiscal.start.month:: The month in which the fiscal year begins.
 local.timezone:: Set to a valid Java time zone ID to indicate the StyleBI server time zone (e.g., `US/Eastern`). If not defined, the default time zone is used.
-use.locale.weekGrouping:: When set to `true`, charts and crosstabs use Monday as the first day of the week for the ‘Week’ date grouping level. When set to `false` (default), charts and crosstabs use Sunday as the first day of the week for the ‘Week’ date grouping level. This setting applies *only* for user locales in which Monday is considered the first day of the week. It does not apply to the ‘Day of Week’ date grouping level, which automatically uses Monday as the first day of the week in appropriate locales.
 week.start::   The start day of the week for date components such as  Calendars (e.g., `week.start=tuesday`). If not specified, the locale setting for the user determines the start day.

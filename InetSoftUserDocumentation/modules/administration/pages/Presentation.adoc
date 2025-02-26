@@ -36,7 +36,6 @@ image:Figure 40.png[]
 +
 TIP: To allow Scheduler condition '`Start Time`' to be set using a 12-hour (AM/PM) clock,  enter a '`Time Format`' string that ends with the "`a`" specification (e.g., `HH:mm:ss a`).  To allow the Scheduler condition '`Start Time`' to be set using a 24-hour clock, enter a '`Time Format`' that does not include the "`a`" specification (e.g., `HH:mm:ss`).
 
-. Set a desired image format. The ‘Image Format’ option determines the encoding format for graphics, such as painters (charts) displayed in the browser. PNG images generally have better quality and a smaller file size than JPEG images.
 
 [#ExportMenu]
 == Export Menu
