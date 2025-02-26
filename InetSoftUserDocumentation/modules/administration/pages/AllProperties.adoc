@@ -116,12 +116,6 @@ The following table lists a variety of image properties.  See xref:Presentation.
 image.antialias:: PNG images are antialiased by default when using j2d. Set this property to `false` to turn off antialias. (Antialias gets rid of “jaggies”.)
 image.filtered:: Default is `false` (recommended). Turns PNG compression on or off. This property is ignored if JPEG images are used.
 image.type:: `PNG` or `JPEG`. PNG can only be used with version 4.0 or newer browsers. Generally PNG results in an image with a smaller file size, and better quality than JPEG.
-html.image.count:: Specifies the maximum number of images cached on the  server. Reducing the number of cached images can help alleviate certain server memory issues.
-html.image.scale:: Set to `true` to scale images using x/y ratio; otherwise, natural size is used, regardless of the size setting.
-html.image.xratio:: When generating HTML, images are converted to JPEG using a resizing ratio of 1.0. This sometimes causes the image to be distorted. This default can be changed by setting this property.
-html.image.yratio:: When generating HTML, images are converted to JPEG using a resizing ratio of 1.0. This sometimes causes the image to be distorted. This default can be changed by setting this property.
-rtf.image.scale:: Boolean that determines whether the image is exported in its original size in RTF format.
-stylereport.dither:: True to dither image when printing to black/white printer. Default is `false`.
 stylereport.ditherImage:: `true` to force all images to be dithered before printing. Default is `false`.
 
 [#LimitsandSafeguards]
