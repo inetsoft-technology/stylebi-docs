@@ -645,7 +645,6 @@ image:TimeSettings.png[]
 
 Week Start Day:: The start day of the week for date components such as  Calendars. If not specified, the locale setting for the user determines the start day. (Equivalent property: `week.start`.)
 
-Local Timezone:: Set to a valid Java time zone ID to indicate the StyleBI server time zone (e.g., `US/Eastern`). If not defined, the default time zone is used. (Equivalent property: `local.timezone`.)
 
 Schedule Time 12 Hours:: Enable to use a 12-hour clock for scheduled task conditions. Disable to use 24-hour clock. (Equivalent property: `schedule.time.12hours`.)
 

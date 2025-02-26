@@ -313,5 +313,5 @@ sree.bundle:: The name of the  localization bundle.
 The following table lists a variety of time and date properties.
 
 crosstab.dateTime.expandAll.level:: Sets the maximum expansion of date fields in a Crosstab. Options are `Year`, `QuarterOfYear`, `MonthOfYear` (default), `DayOfMonth`, `HourOfDay`, `MinuteOfHour`, `SecondOfMinute`.
-local.timezone:: Set to a valid Java time zone ID to indicate the StyleBI server time zone (e.g., `US/Eastern`). If not defined, the default time zone is used.
+mysql.local.timezone:: Set to a valid Java time zone ID to indicate the StyleBI server time zone (e.g., `US/Eastern`). If not defined, the default time zone is used.
 week.start::   The start day of the week for date components such as  Calendars (e.g., `week.start=tuesday`). If not specified, the locale setting for the user determines the start day.
