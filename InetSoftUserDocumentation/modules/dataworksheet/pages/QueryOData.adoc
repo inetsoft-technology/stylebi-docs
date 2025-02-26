@@ -18,9 +18,12 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 image:dataSourceOData5.png[]
 
 
-. Select an entity in the ‘Entity’ menu.
+. Select an entity in the ‘Entity’ menu. (To access *unbound* functions, *do not* select an entity. See below.)
 
-. *_Optional_*: Enter a '`Function`' for which to query (e.g.,  `GetNearestAirport`).
+. *_Optional_*: Enter a '`Function`'  to query (e.g.,  `GetNearestAirport`).
++
+NOTE: If you have selected an entity in the '`Entities`' menu, the '`Function`' menu lists the available *bound* functions for the selected entity. If no entity is selected, the menu lists the *unbound* functions.
+
 
 . *_Optional:_*  Select ‘Expand Arrays’ to expand a record that contains an array into multiple records.
 

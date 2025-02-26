@@ -17,7 +17,9 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 +
 image:OneDrive1.png[]
 +
-. Press the btn:[Load] button and select the desired file, or enteer the file path in the '`Path`' field.
+. Enter a path in the ‘Path’ field.  For example, if the REST endpoint is https://graph.microsoft.com/v1.0/me/drive/root:/MyFolder/MyFile.csv, ‘Path’ should specify everything following `/root:/` in the request, in this case `MyFolder/MyFile.csv`. Permitted file extensions are `txt`, `csv`, `xls`, `xlsx`.
+
+. *_Optional:_* Press   the btn:[Load File] button if you want to preview the data.
 +
 image:OneDrive2.png[]
 +
