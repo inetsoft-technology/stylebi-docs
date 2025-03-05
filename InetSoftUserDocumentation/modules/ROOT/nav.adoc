@@ -224,19 +224,19 @@ include::partial$MINITOC_AxisSpec.adoc[]
 include::partial$MINITOC_Dataset.adoc[]
 
 *** xref:chartAPI:DefaultDataSet.adoc[]
-** xref:chartAPI:EGraph.adoc[]
+*** xref:chartAPI:EGraph.adoc[]
 include::partial$MINITOC_EGraph.adoc[]
 
-** xref:chartAPI:LegendSpec.adoc[]
+*** xref:chartAPI:LegendSpec.adoc[]
 include::partial$MINITOC_LegendSpec.adoc[]
 
-** xref:chartAPI:PlotSpec.adoc[]
+*** xref:chartAPI:PlotSpec.adoc[]
 include::partial$MINITOC_PlotSpec.adoc[]
 
-** xref:chartAPI:TextSpec.adoc[]
+*** xref:chartAPI:TextSpec.adoc[]
 include::partial$MINITOC_TextSpec.adoc[]
 
-** xref:chartAPI:TitleSpec.adoc[]
+*** xref:chartAPI:TitleSpec.adoc[]
 include::partial$MINITOC_TitleSpec.adoc[]
 
 ** xref:chartAPI:ChartElements.adoc[]
