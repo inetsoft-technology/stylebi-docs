@@ -101,8 +101,8 @@ The following table lists a variety of image properties.  See xref:Presentation.
 
 image.antialias:: PNG images are antialiased by default when using j2d. Set this property to `false` to turn off antialias. (Antialias gets rid of “jaggies”.)
 image.filtered:: Default is `false` (recommended). Turns PNG compression on or off. This property is ignored if JPEG images are used.
-image.type:: `PNG` or `JPEG`. PNG can only be used with version 4.0 or newer browsers. Generally PNG results in an image with a smaller file size, and better quality than JPEG.
-stylereport.ditherImage:: `true` to force all images to be dithered before printing. Default is `false`.
+
+Graphics.Image.ScaleSmooth:: Set to `true` to give priority to image smoothness over scaling speed. Set to `false` (default)  to give priority to speed.
 
 [#LimitsandSafeguards]
 == Limits and Safeguards
@@ -117,7 +117,9 @@ excel.sheet.maxrows:: Sets the integer row limit for every table within an Excel
 http.session.maxActive:: Maximum number of active sessions (default=10000). If a new session is created when the number of active sessions exceeds this property, the oldest session is invalidated.
 http.session.maxPerClient:: Maximum number of sessions that a client (user/host) may have (default=5), not including `localhost`. If a new session is created when the number of active sessions exceeds this property, the oldest session for that client is invalidated.
 http.session.maxWebsocketPerUser:: Maximum number of websocket connections that a single HTTP session may have (default=20). If a new connection is requested when the number of active connections exceeds this property, the connection fails and a SockJS downgrade will occur (XHR streaming, long polling, etc.).
-http.session.timeout:: HTTP session timeout in seconds (default =1800 seconds). If the session timeout is set in the _web.xml_ file, that setting takes precedence over this property.  You must restart the server after changing this property.
+
+http.session.timeout:: HTTP session timeout in seconds (default is 1800, which is 30 minutes). If no user activity is detected within this time period, the user will be shown a "session timeout" countdown allowing them the opportunity to keep the session alive if desired. (If the session timeout is set in the _web.xml_ file, that setting takes precedence over this property.)
+
 join.table.maxrows:: Sets the maximum number of rows to retain in any Data Block that is created by joining two or more Data Blocks in a Data Worksheet. The limit does *not* apply to joins performed in the ‘Database Query’ dialog box (see xref:dataworksheet:QueryData.adoc[]). By default, the user will be shown only a single warning each session if the limit is violated. To warn the user for each individual violation, set `always.warn.joinMaxRows=true`.
 olap.table.maxrow:: Determines how many rows to retrieve when creating unique values for selection lists. Default is 10000.
 query.analysis.maxrow:: Number of rows that the Visualization Recommender should use when suggesting components to display data. Default=5000. (The Visualization Recommender is displayed when the user selects ‘Open Wizard’  in the ‘New Dashboard’ dialog box.)
@@ -283,10 +285,9 @@ openid.postprocessor:: Fully-qualified class name of an implementation of `inets
 role.administrator:: Only users with this role can log into the EM and administer the  server.
 security.cache:: Caches data when using LDAP security for improved performance.
 security.allow.iframe:: Set to `false` (default) to prevent the Enterprise Manager and User Portal login pages from being displayed within an IFrame. This is equivalent to setting the HTTP header property `X-Frame-Options` to `DENY`, and should be used in conjunction with Single Sign-On (SSO). See xref:integration:ConfigureSingleSignOn.adoc[] in xref:integration:AdvancedServerIntegration.adoc[]   for more information. Set to `true` when embedding the login pages within an IFrame. (The server must be using SSL in this case.)
-security.ldap.rolebase:: The base DN for roles. For iPlanet, default is `ou=People`, and for ADS, default is `cn=Users`.
-security.ldap.userbase:: The base DN for users. For iPlanet, default is `ou=People`, and for ADS, default is `cn=Users`.
-sso.default.roles:: Sets the default roles for new user logging in via SSO.
+sso.default.roles:: Sets the default roles for new user logging in via SSO.  Not applicable in a multi-tenant environment.  (See xref:EnableMultiTenant.adoc[] for more details on multi-tenancy.)
 vpm.enforcement.policy:: Determines the scope of VPM enforcement: Set to `all` to generate an error if any query is not addressed by a VPM. Set to `user` to generate an error if any user query is not addressed by a VPM. (A “user query” is any query that is generated at runtime from a data model or a Data Worksheet) Set to `default` to permit the execution of queries that are not addressed by a VPM.
+security.exposedefaultorgtoall:: When set to `true`, indicates that *all* organizations can see the Host Organization`'s Dashboards.  (The '`Host Organization`' is the default organization that is administered by the Site Administrator. See xref:CreateOrganization.adoc[] for more details.)  When set to `true` for a specific organization, e.g., `security.org0.exposedefaultorgtoall=true`, only the specific organization (`org0`) can see the Host Organization`'s Dashboards.
 
 
 == Server Engine Properties
@@ -296,9 +297,8 @@ asset.backup.count:: Number of copies of the storage backup to retain. (Default=
 assetData.thread.count:: The maximum number of Dashboards that can simultaneously execute queries  (for ‘cpu’ and ‘session’ keys only). Increase this value if a set of Dashboards with long-running queries is blocking the execution of other Dashboards. (Default is 12 times the CPU count.)
 composer.comm.error:: Set to `true` (default) to warn user about server connection errors when using Dashboards. Set to `false` to suppress these warnings.
 cpu.affinity.mask:: Controls which CPU cores the server process uses for execution. For example, `cpu.affinity.mask=0,2,4` restricts the server to use only CPU 0, CPU 2, and CPU 4.
-html.directory:: Directory used to hold HTML temporary files (images).
-html.retry.interval:: Milliseconds between retry, when waiting for a Dashboard.
 html.session.timeout:: Inactivity timeout period for each  viewing session (in milliseconds). Default is 1200000 (20 minutes). When an open asset is inactive for the specified timeout period, the asset will be closed and the following message displayed: “Session timeout. Please re-open.”
+html.image.directory:: Location to which images should be uploaded for  the  xref:viewsheet:ImageProperties.adoc#GeneralTab[Static Image] property of Image components. The  path should be specified relative to the root storage location.
 javascript.java.packages:: List of JavaScript packages accessible to the scripting environment.
 repository.asset.backup.enable:: Enables automatic backup of Data Worksheets and Dashboards. See xref:Storage.adoc[] to set this property in Enterprise Manager.
 repository.asset.backup.time:: Sets the time for automatic backup of Data Worksheets and Dashboards. See xref:Storage.adoc[] to set this property in Enterprise Manager.

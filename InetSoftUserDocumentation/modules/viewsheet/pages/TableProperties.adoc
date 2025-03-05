@@ -19,7 +19,7 @@ image:TableProperties.png[]
 
 Table Styles:: A *table style* is a set of predefined formats (fonts, alignments, backgrounds etc.) that is directly applied to any table. The ‘Table Styles’ panel provides access to a Style Library containing a large number of predefined table styles. To select a table style, expand the desired category node (e.g. ‘Grid’, ‘Columns’, ‘Rows’, etc.) and click on one of the styles. A preview is of the style is displayed on the right side.  See xref:CreateTableStyle.adoc[] to create a custom style.
 
-Submit On Change:: For *Embedded Table* only. (See the ‘Embedded Table’ setting under the xref:#AdvancedTab[].) When this option is enabled (default), any changes that you make to entries in the Embedded Table are immediately submitted to the linked Embedded Table in the underlying Data Worksheet, which immediately updates any dependent data views in the Dashboard.
+Submit On Change:: This option is only available if the table was originally created as an *Embedded Table*. (See xref:dataworksheet:EnterData.adoc[] for more information about how to create an Embedded Table.)   When this option is enabled (default), any changes that you make to entries in the Embedded Table are immediately submitted to the linked Embedded Table in the underlying Data Worksheet, which immediately updates any dependent data views in the Dashboard.
 +
 TIP: See xref:dataworksheet:EnterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for information about how to create an Embedded Table.
 +
@@ -34,7 +34,7 @@ The *Advanced* tab in the ‘Table Properties’ panel provides the following Ta
 image:Table Dialog Advanced Tab.png[]
 
 Shrink to Fit:: When enabled, this reduces the height of the table to match the number of records displayed. For example, if the original table height (as designed) was 10 rows, and the user then makes selections which restrict the result set to five rows, the table’s bottom border will retract or “shrink” to eliminate any empty rows at the bottom of the table.
-Embedded Table:: When enabled, specifies that the table is an Embedded Table. This makes the table cells editable by the user and removes any hyperlinks. (This option is only available if the table was originally created as an *Embedded Table*. See xref:dataworksheet:EnterData.adoc[] for more information about how to create an Embedded Table.)
+
 Enable Table Editing:: This option allows users to modify an Embedded Table by inserting, removing, or changing data records. To perform validation checks on data entered by users, see xref:WriteBackToStorage.adoc#ValidateUserInput[Validate User Input]. Modified table data can be stored across sessions in the Data Worksheet by setting the '`Write Back to Storage`' option.
 
 Add Rows:: Allows a user to add new rows to the table. To add a new row, the user should right-click a row in the table and select ‘Insert Row’ or ‘Append Row’ from the context menu to respectively add a row before or after the clicked row. {rightClickOptions} Added rows are not retained across sessions unless they are saved  to the Data Worksheet by setting the '`Write Back to Storage`' option. See xref:WriteBackToStorage.adoc#ValidateUserInput[Validate User Input] for information about validation.
