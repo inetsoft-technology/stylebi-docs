@@ -258,47 +258,48 @@ include::partial$MINITOC_SchemaElement.adoc[]
 *** xref:chartAPI:CategoricalScale.adoc[]
 include::partial$MINITOC_CategoricalScale.adoc[]
 
-
-** xref:chartAPI:Coordinate.adoc[]
+*** xref:chartAPI:Coordinate.adoc[]
 include::partial$MINITOC_Coordinate.adoc[]
 
-** xref:chartAPI:FacetCoord.adoc[]
+*** xref:chartAPI:FacetCoord.adoc[]
 include::partial$MINITOC_FacetCoord.adoc[]
 
-** xref:chartAPI:LinearRange.adoc[]
+*** xref:chartAPI:LinearRange.adoc[]
 *** xref:chartAPI:LinearScale.adoc[]
 include::partial$MINITOC_LinearScale.adoc[]
 
-** xref:chartAPI:LogScale.adoc[]
-*** xref:chartAPI:LogScaleSetBase.adoc[]
+*** xref:chartAPI:LogScale.adoc[]
+**** xref:chartAPI:LogScaleSetBase.adoc[]
 
-** xref:chartAPI:ParallelCoord.adoc[]
-*** xref:chartAPI:ParallelCoordSetScales.adoc[]
-** xref:chartAPI:PolarCoord.adoc[]
+*** xref:chartAPI:ParallelCoord.adoc[]
+**** xref:chartAPI:ParallelCoordSetScales.adoc[]
+
+*** xref:chartAPI:PolarCoord.adoc[]
 include::partial$MINITOC_PolarCood.adoc[]
 
 *** xref:chartAPI:PowerScale.adoc[]
-*** xref:chartAPI:PowerScaleSetExponent.adoc[]
+**** xref:chartAPI:PowerScaleSetExponent.adoc[]
 
-** xref:chartAPI:RectCoord.adoc[]
+*** xref:chartAPI:RectCoord.adoc[]
 include::partial$MINITOC_RectCoord.adoc[]
 
 *** xref:chartAPI:Rect25Coord.adoc[]
-** xref:chartAPI:Scale.adoc[]
+
+*** xref:chartAPI:Scale.adoc[]
 include::partial$MINITOC_Scale.adoc[]
 
-** xref:chartAPI:ScaleRange.adoc[]
-*** xref:chartAPI:ScaleRangeSetAbsoluteValue.adoc[]
+*** xref:chartAPI:ScaleRange.adoc[]
+**** xref:chartAPI:ScaleRangeSetAbsoluteValue.adoc[]
 
-** xref:chartAPI:StackRange.adoc[]
-*** xref:chartAPI:StackRangeSetGroupField.adoc[]
-*** xref:chartAPI:StackRangeSetNegative.adoc[]
+*** xref:chartAPI:StackRange.adoc[]
+**** xref:chartAPI:StackRangeSetGroupField.adoc[]
+**** xref:chartAPI:StackRangeSetNegative.adoc[]
 
-** xref:chartAPI:TimeScale.adoc[]
+*** xref:chartAPI:TimeScale.adoc[]
 include::partial$MINITOC_TimeScale.adoc[]
 
-** xref:chartAPI:TriCoord.adoc[]
-*** xref:chartAPI:TriCoordSetScale.adoc[]
+*** xref:chartAPI:TriCoord.adoc[]
+**** xref:chartAPI:TriCoordSetScale.adoc[]
 
 * xref:chartAPI:ChartAesthetics.adoc[]
 include::partial$MINITOC_ChartAesthetics.adoc[]
