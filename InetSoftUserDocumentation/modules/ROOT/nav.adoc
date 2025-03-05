@@ -301,25 +301,25 @@ include::partial$MINITOC_TimeScale.adoc[]
 *** xref:chartAPI:TriCoord.adoc[]
 **** xref:chartAPI:TriCoordSetScale.adoc[]
 
-* xref:chartAPI:ChartAesthetics.adoc[]
+** xref:chartAPI:ChartAesthetics.adoc[]
 include::partial$MINITOC_ChartAesthetics.adoc[]
 
-* xref:chartAPI:ChartAnnotation.adoc[]
+** xref:chartAPI:ChartAnnotation.adoc[]
 include::partial$MINITOC_ChartAnnotation.adoc[]
 
 
-* xref:chartAPI:UtilityObjects.adoc[]
-** xref:chartAPI:GLine.adoc[]
-** xref:chartAPI:ExponentialLineEquation.adoc[]
-** xref:chartAPI:GShape.adoc[]
+** xref:chartAPI:UtilityObjects.adoc[]
+*** xref:chartAPI:GLine.adoc[]
+*** xref:chartAPI:ExponentialLineEquation.adoc[]
+*** xref:chartAPI:GShape.adoc[]
 include::partial$MINITOC_Gshape.adoc[]
 
-** xref:chartAPI:GTexture.adoc[]
-** xref:chartAPI:LogarithmicLineEquation.adoc[]
-** xref:chartAPI:PolynomialLineEquation.adoc[]
-** xref:chartAPI:PowerLineEquation.adoc[]
-** xref:chartAPI:SVGShape.adoc[]
-** xref:chartAPI:SpecialChartFunctions.adoc[]
+*** xref:chartAPI:GTexture.adoc[]
+*** xref:chartAPI:LogarithmicLineEquation.adoc[]
+*** xref:chartAPI:PolynomialLineEquation.adoc[]
+*** xref:chartAPI:PowerLineEquation.adoc[]
+*** xref:chartAPI:SVGShape.adoc[]
+*** xref:chartAPI:SpecialChartFunctions.adoc[]
 include::partial$MINITOC_SpecialChartFunctions.adoc[]
 
 
