@@ -224,13 +224,11 @@ routes:
   AutoDrillPortal: InetSoftUserDocumentation:user:EditLogicalModel.adoc#AddAutoDrill
   CreatingDataSet42Matters: InetSoftUserDocumentation:dataworksheet:Query42Matters.adoc
   CreatingDataSetActiveCampaign: InetSoftUserDocumentation:dataworksheet:QueryActiveCampaign.adoc
-  CreatingDataSetAdobeAnalytics: InetSoftUserDocumentation:dataworksheet:QueryAdobeAnalytics.adoc
   CreatingDataSetAirtable: InetSoftUserDocumentation:dataworksheet:QueryAirtable.adoc
   CreatingDataSetAppfigures: InetSoftUserDocumentation:dataworksheet:QueryAppfigures.adoc
   CreatingDataSetAsana: InetSoftUserDocumentation:dataworksheet:QueryAsana.adoc
   CreatingDataSetAzureBlob: InetSoftUserDocumentation:dataworksheet:QueryAzureBlob.adoc
   CreatingDataSetAzureSearch: InetSoftUserDocumentation:dataworksheet:QueryAzureSearch.adoc
-  CreatingDataSetBox: InetSoftUserDocumentation:dataworksheet:QueryBox.adoc
   CreatingDataSetCampaignMonitor: InetSoftUserDocumentation:dataworksheet:QueryCampaignMonitor.adoc
   CreatingDataSetCassandra: InetSoftUserDocumentation:dataworksheet:QueryCassandra.adoc
   CreatingDataSetChargebee: InetSoftUserDocumentation:dataworksheet:QueryChargebee.adoc
@@ -248,10 +246,9 @@ routes:
   CreatingDataSetFreshdesk: InetSoftUserDocumentation:dataworksheet:QueryFreshdesk.adoc
   CreatingDataSetFreshSales: InetSoftUserDocumentation:dataworksheet:QueryFreshsales.adoc
   CreatingDataSetFreshservice: InetSoftUserDocumentation:dataworksheet:QueryFreshservice.adoc
-  CreatingDataSetFusebill: InetSoftUserDocumentation:dataworksheet:QueryFusebill.adoc
   CreatingDataSetGitHub: InetSoftUserDocumentation:dataworksheet:QueryGithub.adoc
   CreatingDataSetGitLab: InetSoftUserDocumentation:dataworksheet:QueryGitLab.adoc
-  CreatingDataSetGoogleAnalytics: InetSoftUserDocumentation:dataworksheet:QueryGoogleAnalytics.adoc
+  CreatingDataSetGoogleAnalytics: InetSoftUserDocumentation:dataworksheet:QueryGoogleAnalyticsGA4.adoc
   CreatingDataSetGoogleCalendar: InetSoftUserDocumentation:dataworksheet:QueryGoogleCalendar.adoc
   CreatingDataSetGoogleSearchConsole: InetSoftUserDocumentation:dataworksheet:QueryGoogleSearchConsole.adoc
   CreatingDataSetGoogleSpreadsheets: InetSoftUserDocumentation:dataworksheet:QueryGoogleSpreadsheets.adoc
@@ -281,7 +278,6 @@ routes:
   CreatingDataSetPrometheus: InetSoftUserDocumentation:dataworksheet:QueryPrometheus.adoc
   CreatingDataSetQuickBooksReports: InetSoftUserDocumentation:dataworksheet:QueryQuickbooksReports.adoc
   CreatingDataSetR: InetSoftUserDocumentation:dataworksheet:QueryR.adoc
-  CreatingDataSetRemedyforce: InetSoftUserDocumentation:dataworksheet:QueryRemedyforce.adoc
   CreatingDataSetRESTJSON: InetSoftUserDocumentation:dataworksheet:QueryRESTJSON.adoc
   CreatingDataSetRESTXML: InetSoftUserDocumentation:dataworksheet:QueryRESTXML.adoc
   CreatingDataSetSalesforce: InetSoftUserDocumentation:dataworksheet:QuerySalesforce.adoc
@@ -1185,7 +1181,6 @@ routes:
   ActianMatrix: InetSoftUserDocumentation:user:ActianMatrix.adoc
   ActianVector: InetSoftUserDocumentation:user:ActianVector.adoc
   ActiveCampaign: InetSoftUserDocumentation:user:ActiveCampaign.adoc
-  AdobeAnalytics: InetSoftUserDocumentation:user:AdobeAnalytics.adoc
   Aerospike: InetSoftUserDocumentation:user:Aerospike.adoc
   Airtable: InetSoftUserDocumentation:user:Airtable.adoc
   AmazonAuroraRDSMySQL: InetSoftUserDocumentation:user:AmazonAuroraRDSMySQL.adoc
@@ -1199,7 +1194,6 @@ routes:
   AWSRedshift: InetSoftUserDocumentation:user:AWSRedshift.adoc
   AzureBlob: InetSoftUserDocumentation:user:AzureBlob.adoc
   AzureSearch: InetSoftUserDocumentation:user:AzureSearch.adoc
-  Box: InetSoftUserDocumentation:user:Box.adoc
   CampaignMonitor: InetSoftUserDocumentation:user:CampaignMonitor.adoc
   Cassandra: InetSoftUserDocumentation:user:Cassandra.adoc
   Chargebee: InetSoftUserDocumentation:user:Chargebee.adoc
@@ -1224,10 +1218,8 @@ routes:
   Freshdesk: InetSoftUserDocumentation:user:Freshdesk.adoc
   Freshsales: InetSoftUserDocumentation:user:Freshsales.adoc
   Freshservice: InetSoftUserDocumentation:user:Freshservice.adoc
-  Fusebill: InetSoftUserDocumentation:user:Fusebill.adoc
   Github: InetSoftUserDocumentation:user:Github.adoc
   GitLab: InetSoftUserDocumentation:user:GitLab.adoc
-  GoogleAnalytics: InetSoftUserDocumentation:user:GoogleAnalytics.adoc
   GoogleAnalyticsGA4: InetSoftUserDocumentation:user:GoogleAnalyticsGA4.adoc
   GoogleBigQuery: InetSoftUserDocumentation:user:GoogleBigQuery.adoc
   GoogleCalendar: InetSoftUserDocumentation:user:GoogleCalendar.adoc
@@ -1286,7 +1278,6 @@ routes:
   Prometheus: InetSoftUserDocumentation:user:Prometheus.adoc
   QuickbooksReports: InetSoftUserDocumentation:user:QuickbooksReports.adoc
   R: InetSoftUserDocumentation:user:R.adoc
-  Remedyforce: InetSoftUserDocumentation:user:Remedyforce.adoc
   RESTJSON: InetSoftUserDocumentation:user:RESTJSON.adoc
   RESTXML: InetSoftUserDocumentation:user:RESTXML.adoc
   Salesforce: InetSoftUserDocumentation:user:Salesforce.adoc
