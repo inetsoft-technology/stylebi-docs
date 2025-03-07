@@ -1,5 +1,5 @@
 = PlotSpec.setYMin(value)
-:navtitle: PlotSpec.setYMin()
+:navtitle: setYMin()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -37,7 +37,7 @@ graph.addElement(elem);
 --
 <1> {dataset}
 <2> Create the xref:PlotSpec.adoc[] object.
-<3> Use xref:PlotSpec_setBackgroundImage.adoc[]  to assign a background image to plot area.
+<3> Use xref:PlotSpecSetBackgroundImage.adoc[]  to assign a background image to plot area.
 <4> Use `setYMin()` to set the bottom edge Y position for background image.
 <5> Use xref:CoordinateSetPlotSpec.adoc[]  to assign the `PlotSpec` to the `Coordinate`.
 

@@ -551,7 +551,7 @@ include::partial$scriptThatModifiesGraph.adoc[]
 image:commonscript:PlotSpecSetBackground.png[]
 
 === Set Background Image
-Use the xref:chartAPI:PlotSpec_setBackgroundImage.adoc[] function to display an image as the plot background. The following example uses a *static* Google map image as a background by aligning the map coordinates with the chart coordinates.
+Use the xref:chartAPI:PlotSpecSetBackgroundImage.adoc[] function to display an image as the plot background. The following example uses a *static* Google map image as a background by aligning the map coordinates with the chart coordinates.
 
 [IMPORTANT]
 ====

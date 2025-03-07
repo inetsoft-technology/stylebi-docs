@@ -1,4 +1,5 @@
 = TitleSpec.getTextSpec()
+:navtitle: getTextSpec()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -6,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Retrieves the title xref:chartAPI:TextSpec.adoc[].  The corresponding “setter” function is xref:chartAPI:TitleSpec_setTextSpec.adoc[].
+Retrieves the title xref:chartAPI:TextSpec.adoc[].  The corresponding “setter” function is xref:chartAPI:TitleSpecSetTextSpec.adoc[].
 
 
 

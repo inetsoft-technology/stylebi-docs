@@ -1,12 +1,12 @@
 = TitleSpec.setTextSpec(spec)
-:navtitle: TitleSpec.setTextSpec()
+:navtitle: setTextSpec()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
 
-Specifies the title text attributes, such as color, font, format, etc.  The corresponding “getter” function is xref:TitleSpec_getTextSpec.adoc[].
+Specifies the title text attributes, such as color, font, format, etc.  The corresponding “getter” function is xref:TitleSpecGetTextSpec.adoc[].
 
 == Parameter
 spec:: a xref:chartAPI:TextSpec.adoc[] object

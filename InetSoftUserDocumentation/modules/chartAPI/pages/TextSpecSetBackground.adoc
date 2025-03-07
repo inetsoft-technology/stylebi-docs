@@ -1,4 +1,5 @@
 = TextSpec.setBackground(value)
+:navtitle: setBackground()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -47,7 +48,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 [TIP]
 =====
 
-To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetXTitleSpec.adoc[] ① and xref:chartAPI:TitleSpec_getTextSpec.adoc[] ② to obtain a handle to the desired xref:chartAPI:TitleSpec.adoc[] and xref:chartAPI:TextSpec.adoc[]. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetXTitleSpec.adoc[] ① and xref:chartAPI:TitleSpecGetTextSpec.adoc[] ② to obtain a handle to the desired xref:chartAPI:TitleSpec.adoc[] and xref:chartAPI:TextSpec.adoc[]. For example:
 
 
 

@@ -1,4 +1,5 @@
 = TextSpec.setColor(value)
+:navtitle: setColor()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -37,7 +38,7 @@ graph.addElement(elem);
 <1> {dataset}
 <2> Create the  xref:TextSpec.adoc[] object.
 <3> Use `setColor()` to assign the color to the `TextSpec`.
-<4> Use xref:TitleSpec_setTextSpec.adoc[] to assign the `TextSpec` to the `TitleSpec`.
+<4> Use xref:TitleSpecSetTextSpec.adoc[] to assign the `TextSpec` to the `TitleSpec`.
 
 image:commonscript:TitleSpecsetTextSpec_1.png[]
 
@@ -50,7 +51,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 
-To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetXTitleSpec.adoc[] ① and xref:chartAPI:TitleSpec_getTextSpec.adoc[] ② to obtain a handle to the desired xref:chartAPI:TitleSpec.adoc[] and xref:chartAPI:TextSpec.adoc[]. For example:
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetXTitleSpec.adoc[] ① and xref:chartAPI:TitleSpecGetTextSpec.adoc[] ② to obtain a handle to the desired xref:chartAPI:TitleSpec.adoc[] and xref:chartAPI:TextSpec.adoc[]. For example:
 
 
 
