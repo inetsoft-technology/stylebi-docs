@@ -28,45 +28,7 @@ image:refreshMenu.png[]
 +
 This refreshes the Dashboard to reflect changes to the underlying data source and embedded components.
 
-[#SelectComponents]
-== Select Components
-To select a *single component* on the Dashboard, click on the component with the mouse. This activates the component’s “move” handle and “resize” handles, which then allow you to position and size the component.
-
-image:Move Handle_1.png[]
-
-To simultaneously select *multiple components* on the Dashboard, use one of the following techniques:
-
-TIP: In some cases you may need to hold the {buttonCtrl} key and click on the component *title bar* or “move” *handle* to select  or deselect the component.
+== Arrange Components
+To arrange and group components, see xref:ArrangeComponents.adoc[].
 
 
-* Hold the {buttonCtrl} and click on each component in turn to add it to the selection. (Hold the {buttonCtrl} and click an already-selected component to remove it from the selection.)
-* Hold the {buttonShift} and click on each component in turn to add it to the selection. (Hold the {buttonCtrl} and click an already-selected component to remove it from the selection.)
-* Click in an empty region of the Dashboard, and *drag the mouse* to draw a selection region (_lasso_) covering the desired components. When you release the mouse, all components that are partially or wholly covered by the selection region become selected.
-+
-For example, by dragging the mouse to create the selection region below, you can easily select all three components. You only need to include part of each component within the selection region.
-+
-image:Drag Select Multiple Components.png[]
-
-Selecting multiple components allows you to move the components together, group the components (see xref:GroupComponents[]), and set common properties (e.g., font).
-
-
-[#GroupComponents]
-== Group Components
-When you need to position a set of components together, it is helpful to combine the components into a *_group_*. Components within a group always retain their relative positions when you move the group  as a unit.
-
-NOTE: Selection Containers cannot be grouped.
-
-To create a group, follow these steps:
-
-. Select the components you wish to group. (See xref:SelectComponents[].) You can also select existing groups.
-. Right-click any selected component, and choose ‘Group’ from the context menu.
-+
-image:groupComponents.png[]
-
-This creates a new Container component to contain the selected components. The components within a Container remain fully functional, and you can adjust the component settings and properties in the usual manner.
-
-TIP: You can select and move a component within the group in the normal manner. To *move the group as a unit*, _click twice_ on a component within the group to select the whole group.
-
-A Container component contains only individual components, not other Container components. Therefore, if you group together two existing groups, the existing Containers are deleted, and a single new Container is created to contain all of the individual components from the two preexisting groups.
-
-To undo a grouping, right-click the group and select ‘Ungroup’ from the context menu.
