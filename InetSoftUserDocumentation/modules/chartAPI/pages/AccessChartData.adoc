@@ -1,7 +1,6 @@
 = Access Chart Data
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
-include::ROOT:partial$underConstructionAPIRef.adoc[]
 
 
 You can access Chart data in scripts by referencing the Chart’s xref:viewsheetscript:ChartData.adoc[]  property. The `data` object contains the aggregate values displayed on the Chart (the same values shown by the {buttonShowSummary} in a Dashboard Chart). The `data` object is accessible as a two-dimensional array, where each column represents a distinct dataset (measure). The first column of the array, `data[i][0]`, contains the X-axis labels. The first row of the array, `data[0][i]`, contains the dataset or measure titles.

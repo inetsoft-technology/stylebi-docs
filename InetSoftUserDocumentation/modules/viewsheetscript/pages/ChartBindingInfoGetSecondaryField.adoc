@@ -1,5 +1,5 @@
 = bindingInfo.getSecondaryField(col, binding)
-:navtitle: bindingInfo.getSecondaryField()
+:navtitle: getSecondaryField()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 

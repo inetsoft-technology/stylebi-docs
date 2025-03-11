@@ -1,5 +1,5 @@
 = bindingInfo.addMapping(col, value, geocode)
-:navtitle: bindingInfo.addMapping()
+:navtitle: addMapping()
 %experimental%
 %navtitle%: setTimeSeries()
 include::ROOT:partial$buttonSnippets.adoc[]

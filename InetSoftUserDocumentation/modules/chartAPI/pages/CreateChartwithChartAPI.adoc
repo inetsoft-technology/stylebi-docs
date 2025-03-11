@@ -1,7 +1,6 @@
 = Create a Chart with API
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
-include::ROOT:partial$underConstructionAPIRef.adoc[]
 
 The previous sections, xref:chartAPI:ModifyChartDataBinding.adoc[] and xref:chartAPI:ModifyChartElement.adoc[], explained how to modify the data binding and element properties of an *existing* Chart. This section explains how to create a new Chart (from the ground-up) using Chart API commands.
 

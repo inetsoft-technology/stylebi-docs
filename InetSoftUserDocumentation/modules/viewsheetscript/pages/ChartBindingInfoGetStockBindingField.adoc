@@ -1,5 +1,5 @@
 = bindingInfo.getStockBindingField(measure)
-:navtitle: bindingInfo.getStockBindingField()
+:navtitle: getStockBindingField()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 

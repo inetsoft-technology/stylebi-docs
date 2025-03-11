@@ -2,29 +2,8 @@
 
 The `bindingInfo` property provides access to a family of sub-properties that allow you to configure the data displayed in the Crosstab.
 
-xref:viewsheetscript:CrosstabBindingInfoColFields.adoc[] +
-xref:viewsheetscript:CrosstabBindingGetColumnOrder.adoc[] +
-xref:viewsheetscript:CrosstabBindingGetFormula.adoc[] +
-xref:viewsheetscript:CrosstabBindingGetGroupOrder.adoc[] +
-xref:viewsheetscript:CrosstabBindingGetGroupTotal.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoGetPercentageType.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoGetTopN.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoGetTopNSummaryCol.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoIsGroupOthers.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoIsTimeSeries.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoIsTopNReverse.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoMeasureFields.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoPercentageMode.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoRowFields.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoSetColumnOrder.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoSetFormula.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoSetGroupOrder.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoSetGroupOthers.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoSetGroupTotal.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoSetPercentageType.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoSetTimeSeries.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoSetTopN.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoSetTopNReverse.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoSetTopNSummaryCol.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoShowColumnTotal.adoc[] +
-xref:viewsheetscript:CrosstabBindingInfoShowRowTotal.adoc[] +
+
+
+
+include::ROOT:partial$MINITOC_CrosstabBindingInfo.adoc[]
+

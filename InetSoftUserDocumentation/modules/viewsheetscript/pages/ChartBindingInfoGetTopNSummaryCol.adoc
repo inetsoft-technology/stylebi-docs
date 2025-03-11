@@ -1,5 +1,5 @@
 = bindingInfo.getTopNSummaryCol(col)
-:navtitle: bindingInfo.getTopNSummaryCol()
+:navtitle: getTopNSummaryCol()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
