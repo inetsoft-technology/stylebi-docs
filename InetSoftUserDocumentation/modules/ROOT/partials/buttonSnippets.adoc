@@ -50,6 +50,8 @@
 :buttonDelete: ‘Delete’  button image:ROOT:buttons/trash.svg[role=button]
 :buttonDeleteSelected: ‘Delete Selected’  button image:ROOT:buttons/trash.svg[role=button]
 :buttonMoveSelected: ‘Move Selected’  button image:ROOT:buttons/folder-move.svg[role=button]
+:buttonMoveUp: ‘Move Up’  button image:ROOT:buttons/upward.svg[role=button]
+:buttonMoveDown: ‘Move Down’  button image:ROOT:buttons/downward.svg[role=button]
 :buttonDuplicateContent: ‘Duplicate Content’ button image:ROOT:buttons/content-duplicate.svg[24,24,role=button]
 :buttonLogin: ‘Log In’ image:ROOT:buttons/logout.svg[role=button]
 :buttonAccount: ‘Setting’ button image:ROOT:buttons/account.svg[role=button]

@@ -88,6 +88,9 @@ image:Freehand Table Group1.png[]
 [#SortandRank]
 .Sort and Rank
 ****
+[WARNING,caption=see also]
+xref:#ApplyBasicSorting[] below, to sort ungrouped data.
+
 .. In the ‘Sort’ menu, specify how the values in the field should be ordered. ‘Ascending’ and ‘Descending’ sort the values in alphabetical or reverse-alphabetical order. ‘By Value (Asc)’ and ‘By Value (Desc)’ sort the values according to the aggregate *measure* selected in the adjacent menu.
 +
 include::ROOT:partial$measureTip.adoc[]
@@ -247,3 +250,25 @@ video::306617295#chapter=16541209[vimeo,640,400]
 
 Proceed to format and style the Freehand Table as you would for any Table.  See xref:AddTable.adoc#ConfigureTableAppearance[Configure Table Appearance] for more information about how to apply styles.
 
+[#ApplyBasicSorting]
+== Apply Basic Sorting
+[WARNING, caption=see also]
+xref:#SortandRank[] above to sort groups within a Freehand Table.
+
+Freehand Tables do not have the {buttonSort} that you find in the column headers of Regular Tables.  To perform simple column sorting on a Freehand Table, follow the steps below:
+
+. Right-click the Freehand Table and select '`Sorting`' from the menu. {rightClickOptions}
++
+image:viewsheet:Freehand Table Sort3.png[]
++
+This opens the '`Sorting`' dialog box.
+
+. Press the {buttonSort} next to field you want to sort.
++
+image:viewsheet:Freehand Table Sort5.png[]
++
+Press  once to sort the items in ascending numerical or alphabetical order. Press the button again to sort in descending numerical or reverse alphabetical order. Press the button a third time to reset the original order. When a column is sorted, its sort order is indicated by a {buttonAscSort} or {buttonDescSort} next to the field name.
+
+. *_Optional_*: For fields with a sort option selected, change the sort priority by pressing the {buttonMoveUp} or {buttonMoveDown}.
+
+. Press btn:[OK] to close the dialog box and apply the sorting.
