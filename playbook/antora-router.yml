@@ -80,6 +80,7 @@ routes:
   AddCrosstabCreateNamedGroups: InetSoftUserDocumentation:viewsheet:AddCrosstab.adoc#CreateNamedGroups  
   CreatingFreehand: InetSoftUserDocumentation:viewsheet:AddFreehandTable.adoc
   CreatingFreehandSortandRank: InetSoftUserDocumentation:viewsheet:AddFreehandTable.adoc#SortandRank
+  CreatingFreehandBasicSorting: InetSoftUserDocumentation:viewsheet:AddFreehandTable.adoc#ApplyBasicSorting
   CustomizeParameters: InetSoftUserDocumentation:viewsheet:DashboardOptions.adoc
   ChangingDataSource: InetSoftUserDocumentation:viewsheet:DashboardOptions.adoc
   PrintLayout: InetSoftUserDocumentation:viewsheet:CreateDeviceLayout.adoc
@@ -1167,6 +1168,8 @@ routes:
   TextInputSubmitOnChange: InetSoftUserDocumentation:viewsheetscript:TextInputSubmitOnChange.adoc
   TextInputRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
   TextInputValue: InetSoftUserDocumentation:viewsheetscript:TextInputValue.adoc
+  Parameter: InetSoftUserDocumentation:viewsheetscript:parameter.adoc
+  ThisParameter: InetSoftUserDocumentation:viewsheetscript:thisParameter.adoc
   ThisViewsheetIsActionVisible: InetSoftUserDocumentation:viewsheetscript:thisViewsheetIsActionVisible.adoc
   ThisViewsheetSetActionVisible: InetSoftUserDocumentation:viewsheetscript:thisViewsheetSetActionVisible.adoc
   ThisViewsheetUpdateTime: InetSoftUserDocumentation:viewsheetscript:thisViewsheetUpdateTime.adoc
