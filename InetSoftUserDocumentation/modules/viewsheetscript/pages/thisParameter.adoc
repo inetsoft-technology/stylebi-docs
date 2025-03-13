@@ -1,0 +1,35 @@
+= thisParameter
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[CAUTION,caption=see also]
+xref:parameter.adoc[] for a list of methods to create Dashboard parameters.
+
+The `thisParameter` property allows you to read and write parameters that exist in the context of an *embedded  Dashboard*.  See xref:viewsheet:ModularizeDashboard.adoc[] for information about embedding one Dashboard within another dashboard.
+
+
+
+
+The syntax for using `thisParameter` is
+[source,javascript]
+DashboardName.thisParameter.variableName
+
+where `DashboardName` is the name *assigned* to the embedded Dashboard in the '`Dashboard Properties`' dialog box, and  `variableName` is the name of the parameter defined in the embedded Dashboard.
+
+image:viewsheet:DashboardPropertiesExp1.png[]
+
+TIP: To open the '`Dashboard Properties`' dialog box, right-click on the embedded Dashboard (within the host Dashboard), and select '`Properties`' from the menu. {rightClickOptions}
+
+== Examples
+.Read value of `stateSelector` parameter in embedded Dashboard 'StateDash'
+[source,javascript]
+StateDash.thisParameter.stateSelector
+
+.Read value of RadioButton1 Form component in embedded Dashboard 'StateDash'
+[source,javascript]
+StateDash.thisParameter.RadioButton1
+
+
+.Define new parameter for embedded Dashboard 'StateDash'
+[source,javascript]
+StateDash.thisParameter.myParamName = 'Hello';

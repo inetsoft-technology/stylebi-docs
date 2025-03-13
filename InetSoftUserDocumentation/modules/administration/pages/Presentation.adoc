@@ -272,6 +272,8 @@ The following sections describe the available CSS variables (classes) that you c
 |--inet-ws-header-secondary-bg-color| The header background color of data blocks which are related to the selected data block.
 |--inet-ws-table-odd-row-bg-color| The background color of odd rows in the data block preview.
 |--inet-ws-table-even-row-bg-color| The background color of even rows in the data block preview.
+|--inet-graph-assembly-header-selected-text-color| The color of the text in the data block title bar.
+|--inet-graph-assembly-header-selected-bg-color| The background color of the data block title bar.
 |===
 
 .Other
