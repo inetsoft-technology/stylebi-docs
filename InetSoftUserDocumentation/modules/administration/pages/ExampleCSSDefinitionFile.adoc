@@ -13,6 +13,7 @@ To create the example CSS file, follow the steps below:
 [source,css]
 ----
 /* Global format for all Dashboard text */ <1>
+* {
    font-family: "Verdana";
 }
 
