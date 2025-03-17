@@ -2,6 +2,8 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+include::ROOT:partial$APIKeyForOpenSource.adoc[]
+
 include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Google Spreadsheets’ data source, and press btn:[Create]. This opens the data source definition screen.

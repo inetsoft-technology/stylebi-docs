@@ -379,15 +379,23 @@ You can back-up stored assets as a Zip archive. Follow the steps below:
 +
 image:Figure 11.png[]
 
-. Press the btn:[Backup Now] button. This opens the ‘Storage Backup’ dialog box.
+. To immediately back up assets, follow the steps below:
+
+.. Press the btn:[Back Up Now] button. This opens the ‘Storage Backup’ dialog box.
 +
 image:Figure 14.png[]
 
-. In the ‘Storage’ field, specify the backup file name, e.g., `data.zip`.
+.. In the ‘Storage’ field, specify the backup file name, e.g., `data.zip`.
 
-. Press btn:[Save]. This saves the new zip archive (with an added date and time code, such as _data0121211709.zip_) in the configured file directory (default: _/var/lib/inetsoft/files_), which is set from _docker-compose.yaml_ with the `INETSOFTCONFIG_EXTERNALSTORAGE_FILESYSTEM_DIRECTORY` tag.
+.. Press btn:[Save]. This saves the new zip archive (with an added date and time code, such as _data0121211709.zip_) in the configured file directory (default: _/var/lib/inetsoft/files_), which is set from _docker-compose.yaml_ with the `INETSOFTCONFIG_EXTERNALSTORAGE_FILESYSTEM_DIRECTORY` tag.
 
+. To schedule assets to be automatically backed up at a regular interval, follow the steps below:
 
+.. Press the btn:[Schedule Backup] button.  This opens the *Tasks* tab for the built-in `pass:[__asset file backup__]` task.
++
+image:scheduleBackup2.png[]
+
+.. Specify the desired interval under the *Conditions* tab and press the btn:[Save] button at the bottom of the page.  See xref:SchedulerConditions.adoc[] for more information about specifying a time interval.
 
 
 

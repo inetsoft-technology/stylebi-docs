@@ -3,7 +3,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
-
+== Add License Key
 To *add* a License Key in Enterprise Manager, follow these steps below:
 
 . Press the {buttonSettings} at the top of Enterprise Manager.
@@ -15,8 +15,12 @@ image:EM_GeneralLicense.png[]
 . Press the btn:[Add] button.
 . Enter the new license key and press btn:[OK].
 
-To *edit* an existing license key, select the desired license key  and press the ‘Edit’ button. Enter a new license key and press btn:[OK].
+== Edit License Key
+
+To *edit* an existing license key, select the desired license key  and press  btn:[Edit]. Enter a new license key and press btn:[OK].
 
 image:editLicense.png[]
+
+== Delete License Key
 
 To delete a license key, select the desired license key  and press btn:[Delete].

@@ -1,0 +1,63 @@
+= Administer API Key
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$communityOnly.adoc[]
+
+To connect to a data source that uses *OAuth*, you must first create an API Key. *OAuth* data sources include the following:
+
+|===
+|xref:user:GoogleSpreadsheets.adoc[] | xref:user:GoogleCalendar.adoc[] | xref:user:GoogleSearchConsole.adoc[] |xref:user:OData.adoc[]
+|xref:user:OneDrive.adoc[]|xref:user:RESTJSON.adoc[]/xref:user:RESTXML.adoc[] (with '`OAuth`' authentication)|xref:user:ConstantContact.adoc[]|xref:user:Firebase.adoc[]
+|xref:user:Github.adoc[]|xref:user:GraphQL.adoc[]|xref:user:HubSpot.adoc[]|xref:user:Keap.adoc[]
+|xref:user:Linkedin.adoc[]|xref:user:QuickbooksReports.adoc[]|xref:user:Shopify.adoc[]|xref:user:SurveyMonkey.adoc[]
+|xref:user:Twitter.adoc[]|xref:user:WordPress.adoc[]|xref:user:Xero.adoc[]|xref:user:YouTubeAnalytics.adoc[]
+|===
+
+If an API Key has *not* been defined (as described below), the user will be shown an error message when they attempt to create the new data source.
+
+[#AddAPIKey]
+== Add  API Key
+To *add* an API Key in Enterprise Manager, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *General* page in the left panel.
+. Select the *API Key* page in the right panel.
++
+image:EM_GeneralLicense.png[]
+
+. In the '`API Key`' panel, press  btn:[Generate API Key].
+
+. Select the desired service: Google, GitHub, or Facebook.
++
+image:APIKey1.png[]
+
+. Follow the prompts to log into the service.  The API Key will then be displayed on the screen.
++
+image:APIKey2.png[]
+
+. Copy the API Key.
+
+. Return to Enterprise Manager, and press btn:[Add Key Manually]. Enter the key into the provided field.
++
+image:APIKey3.png[]
+
+. Press the btn:[Save] button next to the API Key field.
+
+
+== Edit API Key
+To *edit* an existing API Key, follow the steps below:
+
+. Locate the '`API Key`' panel  as described above in xref:#AddAPIKey[].
+. Press  the   btn:[Edit] button below the API Key.
++
+image:APIKey4.png[]
+
+. Enter a new API Key and press btn:[Save].
++
+image:APIKey3.png[]
+
+== Delete API Key
+To delete the API Key, follow the steps below:
+
+. Locate the '`API Key`' panel  as described above in xref:#AddAPIKey[].
+. Press  the   btn:[Delete] button below the API Key.
