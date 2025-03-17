@@ -19,13 +19,7 @@ image:TableProperties.png[]
 
 Table Styles:: A *table style* is a set of predefined formats (fonts, alignments, backgrounds etc.) that is directly applied to any table. The ‘Table Styles’ panel provides access to a Style Library containing a large number of predefined table styles. To select a table style, expand the desired category node (e.g. ‘Grid’, ‘Columns’, ‘Rows’, etc.) and click on one of the styles. A preview is of the style is displayed on the right side.  See xref:CreateTableStyle.adoc[] to create a custom style.
 
-Submit On Change:: This option is only available if the table was originally created as an *Embedded Table*. (See xref:dataworksheet:EnterData.adoc[] for more information about how to create an Embedded Table.)   When this option is enabled (default), any changes that you make to entries in the Embedded Table are immediately submitted to the linked Embedded Table in the underlying Data Worksheet, which immediately updates any dependent data views in the Dashboard.
-+
-TIP: See xref:dataworksheet:EnterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for information about how to create an Embedded Table.
-+
-When ‘Submit On Change’ is disabled, changes that you make to entries in the Embedded Table are not submitted until you press the {buttonApply} in the table title bar. Press the {buttonReset} to restore the table’s entries to their most recently submitted state.
-+
-image:Embedded Table Toolbar.png[]
+
 
 [#AdvancedTab]
 == Advanced Tab

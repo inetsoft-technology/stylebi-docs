@@ -222,10 +222,3 @@ To configure a Dashboard *Table* to control of a Data Worksheet Embedded Table (
 . Right-click on the Table in the Dashboard, and select ‘Properties’.
 . Select the *Advanced* tab in the ‘Properties’ panel. Enable the ‘Embedded Table’ option, and the ‘Enable Table Editing’ option.
 . Press btn:[OK] to close the panel.
-. *_Optional:_* By default, user-modifications to the table are individually submitted immediately upon entry. To batch-submit modifications, right-click on the Table and select ‘Properties’. Select the *General* tab and disable the ‘Submit on Change’ option. Note that this option is only available when the ‘Embedded Table’ option is enabled on the *Advanced* tab.
-+
-image:viewsheet:TableSubmitOnChange.png[]
-+
-If ‘Submit On Change’ is disabled, the user can batch-submit changes by pressing the {buttonApply} in the Table mini-toolbar.
-+
-NOTE: You can also batch-submit user modifications using script. See xref:viewsheetscript:DashboardTableApplyChanges.adoc[] in xref:viewsheetscript:DashboardObjectReference.adoc[].

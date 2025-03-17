@@ -3,17 +3,9 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 include::ROOT:partial$communityOnly.adoc[]
 
-To connect to a data source that uses *OAuth*, you must first create an API Key. *OAuth* data sources include the following:
+To connect to a data source that uses *OAuth*, you must first create an API Key. See xref:#OAuthDataSources[] below for the data sources that require the API key.
 
-|===
-|xref:user:GoogleSpreadsheets.adoc[] | xref:user:GoogleCalendar.adoc[] | xref:user:GoogleSearchConsole.adoc[] |xref:user:OData.adoc[]
-|xref:user:OneDrive.adoc[]|xref:user:RESTJSON.adoc[]/xref:user:RESTXML.adoc[] (with '`OAuth`' authentication)|xref:user:ConstantContact.adoc[]|xref:user:Firebase.adoc[]
-|xref:user:Github.adoc[]|xref:user:GraphQL.adoc[]|xref:user:HubSpot.adoc[]|xref:user:Keap.adoc[]
-|xref:user:Linkedin.adoc[]|xref:user:QuickbooksReports.adoc[]|xref:user:Shopify.adoc[]|xref:user:SurveyMonkey.adoc[]
-|xref:user:Twitter.adoc[]|xref:user:WordPress.adoc[]|xref:user:Xero.adoc[]|xref:user:YouTubeAnalytics.adoc[]
-|===
-
-If an API Key has *not* been defined (as described below), the user will be shown an error message when they attempt to create the new data source.
+NOTE: If an API Key has *not* been created (as described below), the user will be shown an error message when they attempt to create the new data source.
 
 [#AddAPIKey]
 == Add  API Key
@@ -61,3 +53,20 @@ To delete the API Key, follow the steps below:
 
 . Locate the '`API Key`' panel  as described above in xref:#AddAPIKey[].
 . Press  the   btn:[Delete] button below the API Key.
+
+
+[#OAuthDataSources]
+== OAuth Data Sources
+*OAuth* data sources include the following:
+
+
+|===
+|xref:user:GoogleSpreadsheets.adoc[] | xref:user:GoogleCalendar.adoc[] | xref:user:GoogleSearchConsole.adoc[]
+|xref:user:OData.adoc[]|xref:user:OneDrive.adoc[]|xref:user:RESTJSON.adoc[] (with '`OAuth`')
+|xref:user:RESTXML.adoc[] (with '`OAuth`')|xref:user:ConstantContact.adoc[]
+|xref:user:Firebase.adoc[]
+|xref:user:Github.adoc[]|xref:user:GraphQL.adoc[]|xref:user:HubSpot.adoc[]
+|xref:user:Keap.adoc[]|xref:user:Linkedin.adoc[]|xref:user:QuickbooksReports.adoc[]
+|xref:user:Shopify.adoc[]|xref:user:SurveyMonkey.adoc[]|xref:user:Twitter.adoc[]
+|xref:user:WordPress.adoc[]|xref:user:Xero.adoc[]|xref:user:YouTubeAnalytics.adoc[]
+|===

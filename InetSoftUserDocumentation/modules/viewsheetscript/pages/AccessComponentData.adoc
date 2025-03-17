@@ -30,7 +30,7 @@ You can manually type these references into your script, or enter them automatic
 
 image:viewsheet:ComponentSelectedObject.png[]
 
-The less-commonly used xref:viewsheetscript:TextInput.adoc[] and xref:viewsheetscript:Upload.adoc[] Form components provide different methods for data access: TextInput provides a `value` property to return the current text, while Upload provides a `getFileName()` function to retrieve the name of the user-selected file.
+The less-commonly used xref:viewsheetscript:TextInput.adoc[]   provides a `value` property to return the current text.
 
 .Access a RadioButton setting
 [example]
