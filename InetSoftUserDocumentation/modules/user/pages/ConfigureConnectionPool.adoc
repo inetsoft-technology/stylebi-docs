@@ -1,0 +1,31 @@
+= Configure Connection Pool
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Connection pooling is managed by https://github.com/brettwooldridge/HikariCP?tab=readme-ov-file#gear-configuration-knobs-baby[HikariCP].  To specify connection pool settings, follow the steps below:
+
+
+. Press the top {buttonData} in the Portal.
++
+image:uploadDriver1.png[]
+
+. Select the ‘Data Source’ folder and select the data source for which you want to set connection pool properties.
+
+. In the ‘Connection Pool Properties’ panel of the data source definition page, press btn:[New].
++
+image:administration:ConnectionPooling1.png[]
+
+. In the '`Property Editor`', add a https://github.com/brettwooldridge/HikariCP?tab=readme-ov-file#gear-configuration-knobs-baby[HikariConfig] name/value pair and press btn:[OK].
++
+image:ConnectionPooling2.png[]
+
+. Repeat the above steps to add additional properties.
+
+. Press btn:[OK] at the bottom of the data source definition page.
+
+To edit a property/value pair, select the property in the list, and press btn:[Edit].  To remove a property, select it and press btn:[Delete].
+
+
+

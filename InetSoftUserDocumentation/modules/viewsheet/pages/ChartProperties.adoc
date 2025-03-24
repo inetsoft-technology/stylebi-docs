@@ -64,7 +64,7 @@ Show Reference Line:: Displays horizontal and vertical reference lines when the 
 Stack Value:: Displays a single aggregate value for each primary (X-axis) grouping, rather than for each individual subseries grouping.
 Keep Element in Plot:: Automatically extend the chart boundaries to display chart elements (including target lines) that exceed the specified axis maximum.
 Font Scale:: For *Word Cloud* Charts only, multiplies the specified ‘Size’ setting to increase the maximum font size of words in the cloud.
-Show Points:: For a *Line* and *Radar* charts, adds markers at the locations of the individual data points.
+Show Points:: For a *Line* and *Radar* chart, adds markers at the locations of the individual data points.
 Show Lines:: For *Point*-type charts, displays line segments connecting the points on the chart. To display a fitted line, use the ‘Trend Line’ option instead. (See xref:#LineTab[].)
 As One Line:: For Point-type charts with a dimension set in the *Color*, *Shape*, *Size*, or *Text* regions, connects the points with a *single line* rather than using separate lines for the different dimension values. Requires ‘Show Lines’ to be enabled.
 Fill Missing Data with Dashed Line:: For *Line* and *Radar* charts, and for *Point* charts with ‘Show Lines’ enabled, linearly interpolates missing data using a dashed line.
@@ -100,6 +100,7 @@ include::ROOT:partial$measureAndDimensionTip.adoc[]
 Use the ‘For Measures’ menu to select a subset of measures for which to display trend lines.
 
 Project Forward:: Specifies the number of axis units that the trend line should extend beyond the final data point.  Projection requires that axis values be a linear and complete series of either numbers or dates.
+[square]
 * *Not available* for the following chart types: Waterfall, Pie, 3D Pie, Radar, Filled Radar, Map.
 * *Not available* for the following data types: String, Boolean.
 
