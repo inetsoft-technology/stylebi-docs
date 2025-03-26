@@ -52,9 +52,12 @@
   background-image: url(../img/home.svg);
 }
 
+/* InetSoft: Add position and right */
 .edit-this-page {
   display: block;
   padding-right: 0.5rem;
+  position: absolute;
+  right: 1em;
 }
 
 @media screen and (min-width: 1024px) {
