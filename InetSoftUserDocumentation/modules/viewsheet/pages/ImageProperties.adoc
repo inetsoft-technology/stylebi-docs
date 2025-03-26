@@ -38,7 +38,7 @@ The *Advanced* tab in the ‘Image Properties’ dialog box provides the followi
 Dynamic Image Selection:: Specifies a method for dynamically setting the image. See xref:viewsheetscript:ChangeImageWithScript.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] , for more information.
 Scale Image:: When selected, specifies that images should be scaled to the containing component boundary. The following options are available:
 * *Maintain Aspect Ratio*: The image’s width to height ratio is preserved when the image is resized, preventing the image from being distorted.
-* *Scale.adoc*: The image is divided into nine regions, which scale independently. See xref:AddBackground.adoc[] for more information about 9-cell scaling.
+* *Scale (9-Cell Grid)*: The image is divided into nine regions, which scale independently. See xref:AddBackground.adoc[] for more information about 9-cell scaling.
 Tile:: Tiles (repeats) the image horizontally and vertically within the component boundaries.
 Preview:: Displays a thumbnail of the image as it will appear with the applied scaling.
 Pop Component:: Select an individual component or group Container to display as a pop-up interface when the user clicks the image. (See '`Pop Location`' below to set the location.) Otherwise, the selected component is not visible in the Dashboard.

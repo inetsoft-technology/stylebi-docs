@@ -22,9 +22,7 @@ Single Value:: Filter data based on one field from the data block (default). Onl
 Composite Values:: Filter data based on the composition of two or more fields from the data block. All data types are supported. Simply select two or more columns to form the composite value for filtering.
 +
 image:Slider Composite Value.png[]
-
-
-
++
 ****
 Example: Range Slider Composite Value:: Consider a  data block with the following two columns:
 +
