@@ -166,7 +166,7 @@ The above examples use literal values (e.g., ‘NJ’, ‘New Brunswick’) in t
 You can filter values in a column based on a conditional expression. Use `?` as the delimiter between the filtering expression and the column name. For example, to extract all the values in the ‘company_name’ field where the corresponding value in the ‘customer_id’ field is between 20 and 30, use the following formula:
 
 [source,javascript]
-q['company_name?customer_id &gt; 20 &amp;&amp; customer_id &lt; 30'];
+q['company_name?customer_id > 20 && customer_id < 30'];
 
 Note, however, that while expression filtering can often be used to achieve the same result as field filtering, field filtering is better optimized. See xref:#ExtractQueryDatawithFieldFiltering[] for more details.
 
