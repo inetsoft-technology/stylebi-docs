@@ -5,12 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [CAUTION,caption=see also]
 xref:parameter.adoc[] for a list of methods to create Dashboard parameters.
 
-The `thisParameter` property allows you to read and write parameters that exist in the context of an *embedded  Dashboard*.  See xref:viewsheet:ModularizeDashboard.adoc[] for information about embedding one Dashboard within another dashboard.
-
-
-
-
-The syntax for using `thisParameter` is
+The `thisParameter` property allows you to read and write parameters that exist in the context of an *embedded  Dashboard*.  See xref:viewsheet:ModularizeDashboard.adoc[] for information about embedding one Dashboard within another dashboard. The syntax for using `thisParameter` is
 [source,javascript]
 DashboardName.thisParameter.variableName
 

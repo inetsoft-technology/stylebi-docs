@@ -34,7 +34,7 @@ var a = toArray(Table1.tableLens);
 var a = toArray('1,2,3');
 ----
 
-You can use the returned JavaScript array to access table data in the usual manner: For example, `a[1][2]` is the data in 2nd row, 3rd column.
+You can use the returned JavaScript array to access table data in the usual manner. For example, `a[1][2]` is the data in 2nd row, 3rd column.
 
 [#rowList]
 == rowList()
@@ -74,11 +74,9 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . Press the {buttonOptions} in the toolbar, and select the *Script* tab. Select the ‘onInit’ option at the bottom and enter the following script:
 +
-
-=====
 [source,javascript]
 var q = runQuery('ws:global:Examples/Sales Explore')
-=====
+
 
 +
 image:viewsheet:freehandExp22.png[]

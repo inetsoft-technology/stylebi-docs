@@ -643,4 +643,4 @@ To specify a referenced group using a JavaScript expression, prefix the expressi
 [source,javascript]
 $company['state:=iif($type == "T", $state, $province)']
 
-The syntax of the iif function used above is xref:commonscript:CALC_iif.adoc[].
+The syntax of the `iif` function used above is xref:commonscript:CALC_iif.adoc[].
