@@ -2,10 +2,13 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-[WARNING,caption=See Also]
-xref:viewsheet:CalendarProperties.adoc[] for more information on user selection editing.
+
+
+
+IMPORTANT: This property is retained for backwards compatibility.  To perform date comparisons, see xref:viewsheet:CompareDataByDate.adoc[].
 
 Specifies whether the two panels of a Calendar in xref:CalendarDoubleCalendar.adoc[] mode represent a period comparison or a simple date range.
+
 
 == Type
 Boolean::	`true`: display date comparison +
@@ -25,7 +28,7 @@ Calendar1.period = true;
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-period               // unqualified
+period              // unqualified
 Calendar1.period    // qualified
 
 {secondForm}

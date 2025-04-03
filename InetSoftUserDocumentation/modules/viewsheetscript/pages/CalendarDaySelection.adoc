@@ -8,7 +8,8 @@ xref:viewsheet:CalendarProperties.adoc[] for more information on user selection 
 Specifies that the user can select individual days of the week (when the Calendar is in ‘Monthly’ view mode). Otherwise, the user must select the week in its entirety.
 
 == Type
-Boolean::	`true`: enable individual day selection, `false`: disable day selection (default)
+Boolean::	`true`: enable individual day selection +
+`false`: disable day selection (default)
 
 
 

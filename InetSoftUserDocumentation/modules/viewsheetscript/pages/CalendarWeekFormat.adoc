@@ -26,7 +26,7 @@ Calendar1.weekFormat = "EEEE";
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-weekFormat               // unqualified
+weekFormat              // unqualified
 Calendar1.weekFormat    // qualified
 
 {secondForm}

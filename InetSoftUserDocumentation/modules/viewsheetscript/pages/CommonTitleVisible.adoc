@@ -9,7 +9,8 @@ xref:viewsheet:GeneralTab.adoc[] for more information about visibility.
 Specifies the visibility of the component title bar. This property is only available for components that possess a title bar.
 
 == Type
-Boolean:: `true`: display the title bar,				`false`: hide the title bar
+Boolean:: `true`: display the title bar +
+`false`: hide the title bar
 
 
 

@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 xref:CalendarFields.adoc[] to specify the fields to display in the Calendar.
 
 
-Specifies the data blocks to be merged in the Calendar component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.) See xref:viewsheet:AddFilterComponents.adoc[] for more information about merging compatible data blocks.
+Specifies the data blocks to be *merged* in the Calendar component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.) See xref:viewsheet:AddFilterComponents.adoc#FilterMultipleDataBlocks[Filter Multiple Data Blocks] for more information about merging data blocks.  The selected data blocks must be *compatible* in the sense described there.
 
 
 image:dataworksheet:dataBlocks_2.png[]
@@ -25,7 +25,7 @@ Calendar1.fields = ['State'];
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-queries               // unqualified
+queries              // unqualified
 Calendar1.queries    // qualified
 
 {secondForm}

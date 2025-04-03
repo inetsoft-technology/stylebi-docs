@@ -39,7 +39,7 @@ if (Calendar1.isActionVisible('Apply')==true) {
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-isActionVisible               // unqualified
+isActionVisible              // unqualified
 Calendar1.isActionVisible    // qualified
 
 {secondForm}

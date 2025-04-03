@@ -30,7 +30,7 @@ parameter.RadioButton1
 parameter.myParamName = 'Hello';
 
 [#parameterGroups]
-== parameter._GROUPS_
+== pass:[parameter._GROUPS_]
 include::partial$readOnly.adoc[]
 
 Returns an array of groups to which the current user belongs.
@@ -42,7 +42,7 @@ Array of Strings:: Groups to which current user belongs
 [source,javascript]
 alert('User belongs to: ' + parameter._GROUPS_.join(', '))
 
-== parameter._ROLES_
+== pass:[parameter._ROLES_]
 include::partial$readOnly.adoc[]
 
 Returns an array of roles possessed by the current user.
@@ -54,17 +54,41 @@ Array of Strings::	Roles possesed by current user
 [source,javascript]
 alert('User roles: ' + parameter._ROLES_.join(', '))
 
-== parameter._USER_
+== pass:[parameter._USER_]
 include::partial$readOnly.adoc[]
 
-Returns the user name of the current user.
+Returns the username of the current user.
 
 === Type
-String:: User name of current user
+String:: Username of current user
 
 === Example
 [source,javascript]
 alert('Logged in as ' + parameter._USER_)
+
+== pass:[parameter.__LINK_HOST__]
+include::partial$readOnly.adoc[]
+
+Returns the hostname of the  server hosting the dashboard.
+
+=== Type
+String:: Server hostname
+
+=== Example
+[source,javascript]
+alert('This server is named ' + parameter.__LINK_HOST__)
+
+== pass:[parameter.__LINK_URI__]
+include::partial$readOnly.adoc[]
+
+Returns the URI at which the current dashboard is being accessed.
+
+=== Type
+String:: Dashboard URI
+
+=== Example
+[source,javascript]
+alert('This dashboard URI is ' + parameter.__LINK_URI__)
 
 == parameter.__principle__
 include::partial$readOnly.adoc[]

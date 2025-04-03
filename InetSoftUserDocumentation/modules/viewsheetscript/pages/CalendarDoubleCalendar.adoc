@@ -9,7 +9,8 @@ xref:viewsheet:CalendarProperties.adoc[] for more information on user selection 
 Specifies the calendar view type. The single-panel view shows one month or one year (depending on xref:CalendarYearView.adoc[] setting), while the double-panel view shows two months or two years (depending on xref:CalendarYearView.adoc[] setting).
 
 == Type
-Boolean::	`true`: double-panel calendar,			`false`: one-panel calendar
+Boolean::	`true`: double-panel calendar +
+`false`: one-panel calendar
 
 
 

@@ -7,10 +7,8 @@ Specifies whether text that exceeds its boundaries is wrapped or truncated. This
 
 == Type
 Boolean::
-`true`: wrap text,				`false`: truncate text
-
-
-
+`true`: wrap text +
+`false`: truncate text
 
 
 
