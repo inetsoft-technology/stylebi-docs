@@ -5,7 +5,7 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 
 Manage repository contents in script by using the `:files` or equivalent `:file` command. This allows import, export, and backup of repository assets. To upload and download non-repository files, see xref:SetUpServer.adoc[].
 
-include::partial$runCommand.adoc[]
+include::partial$runCommandSiteAdmin.adoc[]
 
 == Import Assets into the Repository
 The `import-assets` action imports assets such as  Dashboards and data sources  into the connected repository. (These assets should have been previously exported into a Zip file by Enterprise Manager or the Administration Console.) {connectRepositoryNote}

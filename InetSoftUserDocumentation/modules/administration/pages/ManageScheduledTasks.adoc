@@ -6,7 +6,7 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 Monitor and manage scheduled tasks using the `:schedule` or equivalent `:sch` command.  This command has actions to add, edit, run, and remove schedule tasks, as well as actions to get the current status of schedule tasks.
 
 
-include::partial$runCommand.adoc[]
+include::partial$runCommandSiteAdmin.adoc[]
 
 include::partial$adminConsoleOptionalParams.adoc[]
 

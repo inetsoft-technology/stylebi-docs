@@ -3,7 +3,11 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-Sets the format for dimension or measure axis labels. The available formats are shown below:
+
+Sets the format for dimension or measure axis labels.
+include::partial$axisShortcut.adoc[]
+The available formats are shown below:
+
 [square]
 * `Chart.DATE_FORMAT` for date display
 * `Chart.DECIMAL_FORMAT` for number display

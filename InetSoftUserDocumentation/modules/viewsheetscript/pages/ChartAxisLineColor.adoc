@@ -4,6 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 Sets the color of the dimension or measure axis line.
+include::partial$axisShortcut.adoc[]
 
 == Type
 include::partial$colorSyntax.adoc[]
