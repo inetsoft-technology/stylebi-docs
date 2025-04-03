@@ -90,7 +90,7 @@ String:: Dashboard URI
 [source,javascript]
 alert('This dashboard URI is ' + parameter.__LINK_URI__)
 
-== parameter.__principle__
+== pass:[parameter.__principle__]
 include::partial$readOnly.adoc[]
 
 
