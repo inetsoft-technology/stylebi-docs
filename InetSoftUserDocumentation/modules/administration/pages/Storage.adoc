@@ -196,6 +196,9 @@ blob:
 
 
 === AWS
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
 AWS uses DynamoDB for key-value storage and S3 for blob storage. (The S3 blob engine can be used with any S3-compatible object storage, such as a self-hosted MinIO installation.) Variable definitions  for *docker-compose.yaml* are shown below for AWS cloud-native implementations:
 
 
@@ -239,6 +242,9 @@ blob:
 
 
 === Azure
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+
 Azure uses CosmosDB for key-value storage and Azure Blob for blob storage. Variable definitions  for *docker-compose.yaml* are shown below for  Azure cloud-native implementations:
 
 
@@ -278,6 +284,9 @@ blob:
 
 
 === Google
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+
 Google uses Firestore for key-value storage and GCS for blob storage.  Variable definitions  for *docker-compose.yaml* are shown below  for Google cloud-native implementations:
 
 
@@ -292,6 +301,7 @@ INETSOFTCONFIG_BLOB_GCS_SERVICEACCOUNTFILE="/path/to/credentials.json"
 INETSOFTCONFIG_BLOB_GCS_BUCKET=inetsoft
 
 include::ROOT:partial$inetsoftYamlNote.adoc[]
+
 
 .Google Properties for inetsoft.yaml
 [source,yaml]
