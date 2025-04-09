@@ -1,9 +1,9 @@
-= colorLegends.format
+= shapeLegends.format
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-Sets the format for data values displayed within a color-key legend (on charts that have *multiple* color legends).
+Sets the format for data values displayed within a shape-key legend (on charts that have *multiple* shape legends).
 
 
 == Type
@@ -15,18 +15,18 @@ For the Date, Decimal, and Message formats, use the xref:CommonFormatSpec.adoc[]
 == Examples
 
 [source,javascript]
-Chart1.colorLegends['Sum(Product:Quantity Purchased)'].format = [Chart.MESSAGE_FORMAT,"{0} Inc."];
-Chart1.colorLegends['Sum(Product:Total)'].format = [Chart.DECIMAL_FORMAT,"$#,##0M"];
+Chart1.shapeLegends['Sum(Product:Quantity Purchased)'].format = [Chart.MESSAGE_FORMAT,"{0} Inc."];
+Chart1.shapeLegends['Sum(Product:Total)'].format = [Chart.DECIMAL_FORMAT,"$#,##0M"];
 
-image:commonscript:colorLegendsFormat.png[]
+image:commonscript:shapeLegendsFormat.png[]
 
 
 [TIP]
 ====
 Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-colorLegends['...'].format          // unqualified
-Chart1.colorLegends['...'].format   // qualified
+shapeLegends['...'].format          // unqualified
+Chart1.shapeLegends['...'].format   // qualified
 
 {secondForm}
 ====
