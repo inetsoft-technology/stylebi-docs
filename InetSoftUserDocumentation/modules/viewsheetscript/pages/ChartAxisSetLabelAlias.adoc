@@ -1,5 +1,5 @@
-= setLabelAlias(value,alias)
-:navtitle: setLabelAlias()
+= axis.setLabelAlias(value,alias)
+:navtitle: axis.setLabelAlias()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -7,6 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 Replace the specified label on the axis with an alias.
+include::partial$axisShortcut.adoc[]
 
 == Parameters
 value::			Value (string) to be replaced

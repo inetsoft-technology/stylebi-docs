@@ -69,7 +69,7 @@ alert('Logged in as ' + parameter._USER_)
 == pass:[parameter.__LINK_HOST__]
 include::partial$readOnly.adoc[]
 
-Returns the hostname of the  server hosting the dashboard.
+Returns the hostname and port of the  server hosting the dashboard.
 
 === Type
 String:: Server hostname
@@ -78,17 +78,24 @@ String:: Server hostname
 [source,javascript]
 alert('This server is named ' + parameter.__LINK_HOST__)
 
+image:viewsheetscript:parameterLINKHOST.png[]
+
 == pass:[parameter.__LINK_URI__]
 include::partial$readOnly.adoc[]
 
-Returns the URI at which the current dashboard is being accessed.
+Returns the root URL at which the current dashboard is being accessed.
 
 === Type
 String:: Dashboard URI
 
 === Example
 [source,javascript]
-alert('This dashboard URI is ' + parameter.__LINK_URI__)
+
+alert('This dashboard is served from ' + parameter.__LINK_URI__)
+
+
+image:viewsheetscript:parameterLINKURI.png[]
+
 
 == pass:[parameter.__principle__]
 include::partial$readOnly.adoc[]

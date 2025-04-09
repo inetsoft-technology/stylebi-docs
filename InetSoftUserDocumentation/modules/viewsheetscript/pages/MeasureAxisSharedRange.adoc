@@ -11,6 +11,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 xref:chartAPI:FacetCoord.adoc[] for an example of creating a facet chart.
 
 For a *facet chart* (a chart with multiple bound X-fields and Y-fields), specifies whether the same scale range should be used across all sub-graphs in a facet, or whether a sub-graph’s scaling should be shared only with sub-graphs in the same row (for Y-axis scaling) or same column (for X-axis scaling).
+include::partial$axisShortcut.adoc[]
 
 == Type
 Boolean

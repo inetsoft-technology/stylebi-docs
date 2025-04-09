@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 When `true` (default), truncates long labels to prevent overlap with other labels (using ellipses “...” to indicate omitted text). When `false`, hides long labels to prevent overlap with other labels.
-
+include::partial$axisShortcut.adoc[]
 
 
 
