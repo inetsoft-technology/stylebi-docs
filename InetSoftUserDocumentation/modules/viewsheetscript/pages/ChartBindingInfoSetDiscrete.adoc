@@ -5,7 +5,8 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Sets the specified column as ‘discrete’.
+Sets the specified column as ‘discrete’. The  ‘discrete’ option allows a measure to behave as a dimension on the chart.
+
 
 
 == Parameter

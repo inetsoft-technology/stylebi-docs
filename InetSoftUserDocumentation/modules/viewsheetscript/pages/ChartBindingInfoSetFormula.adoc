@@ -8,7 +8,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 xref:viewsheetscript:ChartBindingInfoGetFormula.adoc[]  to obtain existing binding information.
 
 
-Sets the aggregation method for a measure (Chart series). The measure can be bound to the X or Y axis, or to one of the VisualFrames (xref:chartAPI:ColorFrame.adoc[],xref:chartAPI:SizeFrame.adoc[], xref:chartAPI:ShapeFrame.adoc[], xref:chartAPI:TextFrame.adoc[]).
+Sets the aggregation method for a measure (Chart series). The measure can be bound to the X or Y axis, or to one of the VisualFrames (xref:chartAPI:ColorFrame.adoc[], xref:chartAPI:SizeFrame.adoc[], xref:chartAPI:ShapeFrame.adoc[], xref:chartAPI:TextFrame.adoc[]).
 
 
 

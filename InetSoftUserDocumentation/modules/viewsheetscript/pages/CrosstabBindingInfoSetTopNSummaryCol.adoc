@@ -9,8 +9,7 @@ Sets the measure to use in ranking groups. This is equivalent to setting the ‘
 image:commonscript:bindingInfoSetTopNExp2.png[]
 
 
-This function should always be used in conjunction with xref:CrosstabBindingInfoSetTopN.adoc[] and  bindingInfo.setTopNReverse(field,header,boolean).
-// XXXXXXXXXXXXXXXXXXXXXXXX
+This function should always be used in conjunction with xref:CrosstabBindingInfoSetTopN.adoc[] and  xref:CrosstabBindingInfoSetTopNReverse.adoc[].
 
 
 == Parameters

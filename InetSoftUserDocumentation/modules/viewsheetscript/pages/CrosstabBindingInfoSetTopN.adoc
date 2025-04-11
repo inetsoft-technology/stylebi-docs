@@ -10,7 +10,7 @@ Sets the number of row or column groups to preserve in the ranking. This is equi
 image:commonscript:bindingInfoSetTopN.png[]
 
 
-This function should always be used in conjunction with   bindingInfo.setTopNSummaryCol(field,header,measure) and  bindingInfo.setTopNReverse(field,header,boolean).
+This function should always be used in conjunction with  xref:CrosstabBindingInfoSetTopNSummaryCol.adoc[] and  xref:CrosstabBindingInfoSetTopNReverse.adoc[].
 
 
 == Parameters

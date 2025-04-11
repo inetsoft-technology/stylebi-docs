@@ -14,7 +14,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Specifies the aesthetic treatment (line style) for the shape-coded data on a xref:viewsheet:LineChart.adoc[]. A xref:chartAPI:LineFrame.adoc[]  can texture-code chart elements by value, or simply specify a static texture style.
+Specifies the aesthetic treatment (line style) for the shape-coded data on a xref:viewsheet:LineChart.adoc[]. A xref:chartAPI:LineFrame.adoc[]  can shape-code chart elements by value, or simply specify a static line style.
 
 
 

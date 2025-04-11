@@ -13,8 +13,8 @@ Boolean
 == Examples
 
 [source,javascript]
-Chart1.sizeLegends['Sum(Product:Quantity Purchased)'].titleVisible=true;
-Chart1.sizeLegends['Sum(Product:Total)'].titleVisible=false;
+Chart1.sizeLegends['Sum(Product:Quantity Purchased)'].titleVisible = true;
+Chart1.sizeLegends['Sum(Product:Total)'].titleVisible = false;
 
 
 image:commonscript:sizeLegendsTitleVisible.png[]

@@ -12,7 +12,7 @@ https://download.oracle.com/javase/7/docs/api/index.html?java/awt/Font.html[java
 
 == Example
 [source,javascript]
- Chart1.sizeLegend.font = new java.awt.Font('Serif', java.awt.Font.BOLD, 12);
+Chart1.sizeLegend.font = new java.awt.Font('Serif', java.awt.Font.BOLD, 12);
 Chart1.sizeLegend.font = 'Comic Sans MS-BOLD-12';
 
 
