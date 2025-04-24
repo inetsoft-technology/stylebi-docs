@@ -147,47 +147,6 @@ image:JoinedTable.png[]
 image:JoinedPreview.png[]
 ****
 
-[#EditaJoinedDataBlock]
-=== Edit a Joined Data Block
-
-The sections below explain additional operations that you can perform on joined data blocks.
-
-==== Open the Join Editor
-To reopen the Join Editor for a joined data block, right-click the joined data block (e.g., '`Query1`'), and select '`Edit Join`' from the menu. {rightClickOptions} Then proceed to xref:#UsetheJoinEditor[] as explained above.
-
-image:mashup5_1.png[]
-
-[#ViewtheJoinedDataset]
-==== View the Joined Dataset
-To view the data in the joined data block, click to select the joined data block (e.g., '`Query1`') and press the {buttonChangeView} in the bottom panel. Select {buttonLiveDataView}.
-
-image:mashup5.png[]
-
-[#RemoveDuplicateColumns]
-==== Remove Duplicate Columns
-
-To remove duplicate columns (e.g., the join columns), press the {buttonShowHide} for the columns you wish to hide. (You can do this in either {buttonLiveDataView} or {buttonMetaDataView}.)
-
-image:mashup6_1.png[]
-
-
-==== Rename Columns
-To change column names, double-click the column header and edit the text.  See xref:ModifyColumn.adoc[] for more details.
-
-include::ROOT:partial$duplicateNames.adoc[]
-
-==== Rename the Joined Data Block
-To rename the joined data block, double-click the title bar and type a new name, or right-click the title bar and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel. Enter the desired name in the ‘Name’ field, and press btn:[OK].
-
-image:mashup7.png[]
-
-==== Mark Data Block as Primary
-
-It is good practice to mark the final result of your Data Worksheet as the *primary* data block. This ensures that this data block  will be listed first among the data blocks available to any Dashboard based on this Data Worksheet.
-
-To do this, right-click the joined data block (e.g., ‘Orders and Returns’ below), and select ‘Set As Primary’ from the context menu. {rightClickOptions}
-
-image:mashup8_1.png[]
 
 
 
@@ -333,8 +292,53 @@ image:previewMergeJoin.png[]
 Notice that since the ‘Wireless Mouse1’ table has more rows than the ‘Fast Go Game1’ table, the number of rows of the ‘Query1’ table is equal to the number of rows of the ‘Wireless Mouse1’ table. The ‘Fast Go Game1’ data is padded with an empty row.
 ****
 
+
+
+[#EditaJoinedDataBlock]
+== Edit a Joined Data Block
+
+The sections below explain additional operations that you can perform on joined data blocks.
+
+=== Open the Join Editor
+To reopen the Join Editor for a joined data block, right-click the joined data block (e.g., '`Query1`'), and select '`Edit Join`' from the menu. {rightClickOptions} Then proceed to xref:#UsetheJoinEditor[] as explained above.
+
+image:mashup5_1.png[]
+
+[#ViewtheJoinedDataset]
+=== View the Joined Dataset
+To view the data in the joined data block, click to select the joined data block (e.g., '`Query1`') and press the {buttonChangeView} in the bottom panel. Select {buttonLiveDataView}.
+
+image:mashup5.png[]
+
+[#RemoveDuplicateColumns]
+=== Remove Duplicate Columns
+
+To remove duplicate columns (e.g., the join columns), press the {buttonShowHide} for the columns you wish to hide. (You can do this in either {buttonLiveDataView} or {buttonMetaDataView}.)
+
+image:mashup6_1.png[]
+
+
+=== Rename Columns
+To change column names, double-click the column header and edit the text.  See xref:ModifyColumn.adoc[] for more details.
+
+include::ROOT:partial$duplicateNames.adoc[]
+
+=== Rename the Joined Data Block
+To rename the joined data block, double-click the title bar and type a new name, or right-click the title bar and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel. Enter the desired name in the ‘Name’ field, and press btn:[OK].
+
+image:mashup7.png[]
+
+=== Mark the Data Block as Primary
+
+It is good practice to mark the final result of your Data Worksheet as the *primary* data block. This ensures that this data block  will be listed first among the data blocks available to any Dashboard based on this Data Worksheet.
+
+To do this, right-click the joined data block (e.g., ‘Orders and Returns’ below), and select ‘Set As Primary’ from the context menu. {rightClickOptions}
+
+image:mashup8_1.png[]
+
+
 [id=ChangeJoinType]
-== Change the Join Type
+=== Change the Join Type
 
 [.videotitle]
 .Watch Video: Change a Join
@@ -401,7 +405,7 @@ Note that the right outer join returns all of the records from the ‘All Sales1
 ****
 
 
-== Change the Join Order
+=== Change the Join Order
 To change the order in which the tables are joined (for example, which table is considered the “left” table in a “left outer join”), follow the steps below:
 
 . Open the Join Editor as described above in xref:ChangeJoinType[].
@@ -413,7 +417,7 @@ image:Join Reorder Tables.png[]
 image:Join Reorder Tables2.png[]
 . Press btn:[Done] to close the Editor.
 
-== Add Tables to a Join
+=== Add Tables to a Join
 To add additional data blocks to an existing join follow these steps:
 
 . Right-click the joined data block and select ‘Edit Join’.  This opens the Join Editor.
@@ -427,7 +431,7 @@ image:ChangeJoinTypeAction2.png[]
 
 include::ROOT:partial$CreateDashboard.adoc[]
 
-== Locate the Source of a Join Column
+=== Locate the Source of a Join Column
 In a Data Worksheet that includes many joins, you may sometimes need help to find the original *source* data block of a particular column. To do this, follow the steps below:
 
 . Click to select the data block that contains the column that you want to trace. (Usually this data block is the result of one or more joins.)
