@@ -317,6 +317,7 @@ blob:
     serviceAccountFile: "/path/to/credentials.json"
     bucket: inetsoft
 
+
 === Relational Database (JDBC)
 Variable definitions  for *docker-compose.yaml* are shown below for JDBC database key-value storage:
 
