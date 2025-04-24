@@ -4,8 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
 ====
+[square]
 * xref:DynamicallySetProperties.adoc[] for information on how to use Form components.
 * {commonProperties}
+* xref:viewsheetscript:CheckRadioCombo.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
+
 ====
 
 

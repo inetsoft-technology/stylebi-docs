@@ -28,7 +28,7 @@ Line1.lineStyle = StyleConstant.THIN_LINE;
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
 lineStyle           // unqualified
-Image1.lineStyle    // qualified
+Line1.lineStyle    // qualified
 
 {secondForm}
 ====

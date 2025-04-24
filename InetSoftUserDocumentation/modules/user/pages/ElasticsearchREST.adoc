@@ -2,6 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+
+IMPORTANT: {pluginDriverRequired}
+
+
 include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Elasticsearch REST’ data source, and press btn:[Create]. This opens the data source definition screen.

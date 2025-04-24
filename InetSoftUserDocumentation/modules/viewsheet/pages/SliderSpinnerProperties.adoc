@@ -4,8 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
 ====
+[square]
 * xref:DynamicallySetProperties.adoc[] for information on how to use Form components.
 * {commonProperties}
+* xref:viewsheetscript:Slider.adoc[] and xref:viewsheetscript:Spinner.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
+
 ====
 
 The ‘Properties’ panels for Slider and Spinner components provides the following tabs: *General*, *Data*,  *Advanced*, *Script*. The next sections discuss the form-specific properties available under these tabs.

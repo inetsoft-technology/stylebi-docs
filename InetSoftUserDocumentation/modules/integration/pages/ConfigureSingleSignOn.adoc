@@ -27,14 +27,14 @@ image:administration:SSO2.png[]
 . Enter the following properties:
 +
 ****
-OIDC Discovery URL::  URL for the Open ID Connect discovery document. Example for Auth0: `pass:[https://_domain_/.well-known/openid-configuration]`.
+OIDC Discovery URL (Optional)::  URL for the Open ID Connect discovery document. Example for Auth0: `pass:[https://_domain_/.well-known/openid-configuration]`.
 Client ID:: The OAuth 2.0 client ID for the authentication request.
 Client Secret:: The OAuth 2.0 client secret for the authentication request.
 Scopes:: The scopes to request when performing the authorization. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
 Authorization Endpoint:: The endpoint that performs the authentication. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
 Token Endpoint:: The endpoint that returns the token response. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
 JWKS URL:: The URL of the key set used to verify token signatures. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
-JWK Certificate:: The PEM-encoded certificate for the key used to verify token signatures. This will  be ignored if the ‘JWKS URL’ is specified. If neither ‘JWK URL’ nor ‘JWKS URL’ are specified, token signatures will not be verified.
+JWK Certificate:: The PEM-encoded certificate for the key used to verify token signatures. This will  be ignored if the ‘JWKS URL’ is specified.
 Name Claim:: The name of the claim to be used for the username. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
 Role Claim:: The name of the claim to be used for the assigned role. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.
 Group Claim:: The name of the claim to be used for the assigned group. If the ‘OIDC Discovery URL’ is specified, this will auto-complete with the scopes defined in the discovery document.

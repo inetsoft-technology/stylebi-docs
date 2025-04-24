@@ -31,7 +31,7 @@ Slider1.labelVisible = false;
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-labelVisible                  // unqualified
+labelVisible             // unqualified
 Slider1.labelVisible     // qualified
 
 {secondForm}

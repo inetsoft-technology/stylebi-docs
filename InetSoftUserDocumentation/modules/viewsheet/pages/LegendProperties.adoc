@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+[WARNING,caption=see also]
+====
+xref:viewsheetscript:PlotProperties.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
+====
+
 To edit a legend, right-click the legend, and select ‘Legend Properties’ from the context menu. {rightClickOptions} This opens the ‘Legend Properties’ panel, which provides the following tabs: *General*, *Scale.adoc*, *Alias*.
 
 TIP: To hide a legend, right-click the legend and choose ‘Hide Legend’ from the context menu. {rightClickOptions} To show all legends, right-click the chart and select ‘Show Legend’ from the context menu.

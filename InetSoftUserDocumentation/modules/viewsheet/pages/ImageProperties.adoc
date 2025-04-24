@@ -4,9 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
 ====
+[square]
 * xref:AddBackground.adoc[] for information on how to use an Image.
-* xref:viewsheetscript:ChangeImageWithScript.adoc[] to dynamically change an Image.
 * {commonProperties}
+* xref:viewsheetscript:Image.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
+* xref:viewsheetscript:ChangeImageWithScript.adoc[] to dynamically change an Image.
 ====
 
 The ‘Image Properties’ panel provides the following tabs: *General*, *Advanced*, *Data*,  *Script*. The next sections discuss the Image-specific properties available under these tabs.

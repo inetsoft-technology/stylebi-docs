@@ -31,7 +31,7 @@ Slider1.currentVisible = false;
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-currentVisible                  // unqualified
+currentVisible             // unqualified
 Slider1.currentVisible     // qualified
 
 {secondForm}

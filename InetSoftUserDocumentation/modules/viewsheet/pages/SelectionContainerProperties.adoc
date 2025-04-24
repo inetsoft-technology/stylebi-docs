@@ -4,8 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
 ====
+[square]
 * xref:AddFilterComponents.adoc[] for information on how to create a Selection Container.
 * {commonProperties}
+* xref:viewsheetscript:SelectionContainer.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
+
 ====
 
 The ‘Selection Container Properties’ panel provides only the *General* and *Script* tabs.

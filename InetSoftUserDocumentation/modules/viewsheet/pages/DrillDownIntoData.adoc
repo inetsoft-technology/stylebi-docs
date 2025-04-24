@@ -318,6 +318,8 @@ include::ROOT:partial$videoVersion.adoc[]
 video::306732112#chapter=16550996[vimeo,640,400]
 =====
 
+IMPORTANT: If you have identical filters in the origin  dashboard and target (hyperlinked) dashboard, and you want these filters to be *synchronized*, you should configure shared filters in *both dashboards*. See xref:ModularizeDashboard.adoc#SynchronizingDashboardFilters[Synchronizing Dashboard Filters] in xref:ModularizeDashboard.adoc[] more details.
+
 . Right-click on a Chart element to add hyperlinks to the chart elements (e.g., bars), or right-click on a chart dimension label to add hyperlinks to the labels. {rightClickOptions}
 
 

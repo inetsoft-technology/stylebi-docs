@@ -20,7 +20,7 @@ Integer::			index of active tab
 
 == Example
 [source,javascript]
- if (Tab1.selectedIndex == 0) {
+if (Tab1.selectedIndex == 0) {
   Gauge1.visible = true;
 }
 else {

@@ -4,8 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
 ====
+[square]
 * xref:TableProperties.adoc[] for properties of a regular Table.
 * {commonProperties}
+* xref:viewsheetscript:Crosstab.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
+
 ====
 
 The ‘Crosstab Properties’ panel provides *General*, *Advanced*, *Hierarchy*, and *Script* tabs. The next sections discuss the Crosstab-specific properties available under these tabs.
@@ -15,21 +18,12 @@ The *General* tab in the ‘Crosstab Properties’ panel is the same as for regu
 
 [#AdvancedTab]
 == Advanced Tab
-The *Advanced* tab in the ‘Crosstab Properties’ panel provides the following Crosstab-specific properties.
+The *Advanced* tab in the ‘Crosstab Properties’ panel provides the following properties.  Some properties apply to Freehand Table as well.
 
 image:Crosstab Properties Advanced.png[]
 
-Fill Blank Cell With Zero:: Places a zero value in *measure* cells corresponding to row and column heading combinations for which no records exist. Otherwise, these cells are simply left blank.
-Summary Cells Side By Side:: Places multiple aggregated measures side-by-side, rather than stacking them vertically.
-Enable Drilling:: Allows the user to drill up and down in date or dimension fields. See xref:DrillDownIntoData.adoc[] for more information.
-Enable Ad Hoc Editing:: Allow end users to access the Crosstab Editor and edit the table.
-Enable Date Comparison:: Enables the Date Comparison feature for the Crosstab. See xref:CompareDataByDate.adoc[] for more details.
-Sort Others Last:: Available when ‘Group all others together’ is enabled for Top/Bottom ranking in the ‘Edit Dimension’ panel of the Crosstab Editor. (See xref:AddCrosstab.adoc[]  for information about dimension ranking.) When enabled, this property places the ‘Others’ group _after_ all the ranked groups, regardless of the specified dimension sorting.
-Merge Expanded Cells:: Merge automatically expanded cells into a single cell. This is a useful way to simplify the table when expanded cells all contain the same text, or when borders between the cells are undesirable.
-Compute Trend and Comparison for Totals:: Apply the '`Trend and Comparison`' setting to automatically-computed grand totals as well as to the specified aggregates.  See xref:TrendCompareData.adoc[] for more information about the available settings.
-Shrink to Fit:: When enabled, this reduces the height of the table to match the number of records displayed. For example, if the original table height (as designed) was 10 rows, and the user then makes selections which restrict the result set to five rows, the bottom table border retracts or “shrinks” to eliminate any empty rows at the bottom of the table.
-Data Tip View:: A Dashboard component is displayed when mouse hovers over the Crosstab. The component is filtered based on the hover region. See xref:AddTipsToChart.adoc[] for more details.
-Flyover Views:: Allows you to select a set of Dashboard components which will be adaptively filtered as the user hovers the mouse or clicks on the Crosstab. (Select ‘On Click Only’ if you want the filtered components to update when the user clicks.) See xref:DrillDownIntoData.adoc[] for more details.
+
+include::partial$CrosstabAdvancedProperties.adoc[]
 
 == Hierarchy Tab
 

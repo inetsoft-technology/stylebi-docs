@@ -4,8 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
 ====
+[square]
 * xref:AddAKPI.adoc[] for information on how to use a Gauge.
 * {commonProperties}
+* xref:viewsheetscript:Gauge.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
+
 ====
 
 The ‘Gauge Properties’ panel provides the following tabs: *General*, *Advanced*, *Data*,  *Script*. The next sections discuss the Gauge-specific properties available under these tabs.

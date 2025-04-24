@@ -172,6 +172,13 @@ video::306617295#chapter=16540189[vimeo,640,400]
 =====
 +
 image:Freehand Table Binding New2.png[]
++
+If the cell expansion results in *duplicated entries*, enable the '`Merge Expanded Cell`' option in the bottom left panel. This is a useful way to simplify the table when expanded cells all contain the same text, or when borders between the cells are undesirable.
++
+image:Freehand Table Merge Expanded.png[]
++
+If the cells are not merged correctly by default, you may need to explicitly select the '`Row Group`' or '`Column Group`' for the merge.  These settings determine which particular fields the merge should follow  in the row and columns directions.
+
 
 . *_Optional:_*  To populate a cell using script, press the ‘Edit’ button at the bottom of the dialog box. This opens the Script Editor and allows you to create a calculation based on cell values, parameter values, component values, or values from any accessible  Data Worksheet.
 +

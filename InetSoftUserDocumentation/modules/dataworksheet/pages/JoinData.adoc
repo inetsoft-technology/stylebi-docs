@@ -21,57 +21,75 @@ video::300392678[vimeo,640,400]
 
 A joined data block contains all the columns from the base data blocks, but retains only the rows that satisfy a set of join conditions. The join conditions are relations between pairs of columns from the base data blocks.
 
-To join data blocks using an inner join, outer join, or inequality join, follow the steps below:
+To join data blocks using an inner join, outer join, or inequality join, you can either xref:#UsetheJoinHandle[] or xref:#UsetheJoinButton[].  Then proceed to xref:#UsetheJoinEditor[] to specify the join fields and join types.
 
+[#UsetheJoinHandle]
+=== Use the Join Handle
 
+To use the {buttonJoinHandle}, follow the steps below:
 
+. Create the data blocks you want to join. (See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.)
 
-. Create the data block you want to join. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
-
-
-. To join data blocks *by dragging fields*,  follow these steps:
-.. Click on one of the data blocks that you want to join. This displays a {buttonJoinHandle} on each side of the data block.
+. Click on one of the data blocks that you want to join. This displays a {buttonJoinHandle} on each side of the data block.
 +
 image:joinHandles.png[]
-.. Click on one of the join handles (left or right) and drag it onto a join handle on the data block that you want to join.
+. Click on one of the join handles (left or right) and drag it onto a join handle on the data block that you want to join.
 +
 image:JoiningTablesAction.png[]
-+
-This creates a new joined data block and opens the Join Editor.
-+
+
+This creates a new joined data block and opens the Join Editor. Proceed to xref:#UsetheJoinEditor[] to define the joins.
+
 image:JoiningTablesActionResult.png[]
-.. Proceed to define the joins in the Join Editor as explained below.
 
-+
-To  join data blocks by using  the *{buttonJoin}*, first follow these steps:
 
-.. Select the data blocks you want to join together. (You can hold the {buttonShift} key and click on the data blocks to select both, or drag with the mouse to “lasso” the data blocks.)
-.. Press the {buttonJoin} in the toolbar, and select  {buttonInnerOuterJoin}.
+[#UsetheJoinButton]
+=== Use the Join Button
+
+To use the {buttonJoin}, follow the steps below:
+
+. Create the data blocks you want to join. (See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.)
+
+. Select the data blocks you want to join together. (You can hold the {buttonShift} or {buttonCtrl} key and click on the data blocks to select two or more, or drag with the mouse to “lasso” the data blocks.)
+
+. Press the {buttonJoin} in the toolbar, and select  {buttonInnerOuterJoin}.
 +
 image:mashup2_1.png[]
-+
-This opens the Join Editor.
-+
-image:JoiningTablesActionResult.png[]
-..  Proceed to define the joins in the Join Editor as explained below.
 
-. Specify an inner join condition by dragging a join field from one data block onto the corresponding join field in the other data block. Repeat to create join conditions on as many fields as needed.
+This creates a new joined data block and opens the Join Editor. Proceed to xref:#UsetheJoinEditor[] to define the joins.
+
+image:JoiningTablesActionResult.png[]
+
+
+[#UsetheJoinEditor]
+=== Use the Join Editor
+
+To use the Join Editor to define joins, follow the steps below:
+
+NOTE: Some joins may have been created by default. To delete a default join, click  the join symbol in the link and select ‘Remove Join Condition’ from the context menu.
+
+
+. Specify an *inner join* condition by dragging a join field from one data block onto the corresponding join field in the other data block. Repeat to create join conditions on as many fields as needed.
 +
 image:mashup3_1.png[]
 +
-NOTE: Some joins may have been created by default. To delete a join, click  the join symbol in the link and select ‘Remove Join Condition’ from the context menu.
-+
-In the example below, the first join condition specifies that the values in the ‘Name’ column from the ‘Orders’ data block should be matched to the values in the ‘Name’ column from the ‘Returns’ data block. The second join condition specifies that the values in the ‘Order Num’ column from the ‘Orders’ data block should be matched to the values in the ‘Order Num’ column from the ‘Returns’ data block.
-+
-image:mashup3_2.png[]
+IMPORTANT: Join columns must have the same *data type* (e.g., both Integer, both String, etc.). Otherwise, you may see a "`join type is invalid`" error.
 +
 By default, an “equality” join condition is used, producing the so-called inner join or “equi-join,” and is indicated by an “equals” (=) symbol.
++
+****
+In the example below, the first join condition specifies that the values in the ‘Name’ column from the ‘Orders’ data block should be matched to the values in the ‘Name’ column from the ‘Returns’ data block. The second join condition specifies that the values in the ‘Order Num’ column from the ‘Orders’ data block should be matched to the values in the ‘Order Num’ column from the ‘Returns’ data block.
+
+image:mashup3_2.png[]
+****
++
 
 . *_Optional:_* To change an inner join to an outer join, right-click on the join link and choose the desired outer join.
 +
 image:mashup3_3.png[]
 +
-NOTE: An *outer join* is a generalization of the inner join: In addition to the matching rows preserved by the equi-join, the left outer join returns all the rows in the left table, while the right outer join returns all the rows in the right table. The full outer join returns all the rows of both tables. Note: When you specify an outer join, the additional rows included from a table (beyond those selected by the equi-join) do not have matching rows in the other table. Therefore, outer-join tables generally exhibit empty cells corresponding to these unmatched rows.
+An *outer join* is a generalization of the inner join: In addition to the matching rows preserved by the equi-join, the left outer join returns all the rows in the left table, while the right outer join returns all the rows in the right table. The full outer join returns all the rows of both tables.
++
+NOTE: When you specify an outer join, the additional rows included from a data block (beyond those selected by the equi-join) do not have matching rows in the other data block. Therefore, outer-join data blocks generally exhibit *empty cells* corresponding to these unmatched rows.
 
 . *_Optional:_* To change an inner join to an inequality join, right-click on the join link and choose the desired inequality (&gt;, &lt;, &gt;=, &lt;=, etc.)
 
@@ -83,35 +101,16 @@ image:JoiningTablesAction4.png[]
 +
 image:mashup3_4.png[]
 +
-This creates the joined data block ('Query1').
+This creates the joined data block ('`Query1`').
 +
 image:mashup4_1.png[]
 
-. To view the data in the joined data block, click to select the joined data block ('Query1') and press the {buttonChangeView} in the bottom panel. Select {buttonLiveDataView}.
-+
-image:mashup5.png[]
-+
-. To remove duplicate columns (e.g., the join columns), press the {buttonShowHide} for the columns you wish to hide. (You can do this in either {buttonLiveDataView} or {buttonMetaDataView}.)
-+
-image:mashup6_1.png[]
-
-. To change column names, double-click the column header and edit the text.  See xref:ModifyColumn.adoc[] for more details.
-+
-include::ROOT:partial$duplicateNames.adoc[]
-
-. To rename the joined data block, double-click the title bar and type a new name, or right-click the title bar and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel. Enter the desired name in the ‘Name’ field, and press btn:[OK].
-+
-image:mashup7.png[]
-
-. Right-click the joined data block (‘Orders and Returns’), and select ‘Set As Primary’ from the context menu. {rightClickOptions}
-+
-image:mashup8_1.png[]
-+
-It is good practice to mark the final result of your Data Worksheet as the *primary* data block. This ensures that this data block  will be listed first among the data blocks available to any Dashboard based on this Data Worksheet.
-
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar or kbd:[Ctrl+S] on the keyboard.
 
+
 include::ROOT:partial$CreateDashboard.adoc[]
+To make further modifications to the new data block, see xref:#EditaJoinedDataBlock[] below. You can also proceed to join this new data block to any other data blocks using the same procedure above.
+
 
 .Example: Inner Join
 ****
@@ -147,6 +146,54 @@ image:JoinedTable.png[]
 +
 image:JoinedPreview.png[]
 ****
+
+[#EditaJoinedDataBlock]
+=== Edit a Joined Data Block
+
+The sections below explain additional operations that you can perform on joined data blocks.
+
+==== Open the Join Editor
+To reopen the Join Editor for a joined data block, right-click the joined data block (e.g., '`Query1`'), and select '`Edit Join`' from the menu. {rightClickOptions} Then proceed to xref:#UsetheJoinEditor[] as explained above.
+
+image:mashup5_1.png[]
+
+[#ViewtheJoinedDataset]
+==== View the Joined Dataset
+To view the data in the joined data block, click to select the joined data block (e.g., '`Query1`') and press the {buttonChangeView} in the bottom panel. Select {buttonLiveDataView}.
+
+image:mashup5.png[]
+
+[#RemoveDuplicateColumns]
+==== Remove Duplicate Columns
+
+To remove duplicate columns (e.g., the join columns), press the {buttonShowHide} for the columns you wish to hide. (You can do this in either {buttonLiveDataView} or {buttonMetaDataView}.)
+
+image:mashup6_1.png[]
+
+
+==== Rename Columns
+To change column names, double-click the column header and edit the text.  See xref:ModifyColumn.adoc[] for more details.
+
+include::ROOT:partial$duplicateNames.adoc[]
+
+==== Rename the Joined Data Block
+To rename the joined data block, double-click the title bar and type a new name, or right-click the title bar and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel. Enter the desired name in the ‘Name’ field, and press btn:[OK].
+
+image:mashup7.png[]
+
+==== Mark Data Block as Primary
+
+It is good practice to mark the final result of your Data Worksheet as the *primary* data block. This ensures that this data block  will be listed first among the data blocks available to any Dashboard based on this Data Worksheet.
+
+To do this, right-click the joined data block (e.g., ‘Orders and Returns’ below), and select ‘Set As Primary’ from the context menu. {rightClickOptions}
+
+image:mashup8_1.png[]
+
+
+
+
+
+
 
 [#CrossJoin]
 == Cross Join

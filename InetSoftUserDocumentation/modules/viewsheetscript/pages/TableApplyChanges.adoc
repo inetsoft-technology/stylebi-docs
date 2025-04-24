@@ -3,11 +3,6 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-
-
-
-
-
 For an *Embedded Table* in a Dashboard, writes the user-modified data into the corresponding Embedded Table in the Data Worksheet. See xref:viewsheet:TableProperties.adoc[] for information on making a Table editable.
 
 
@@ -23,7 +18,7 @@ Table1.applyChanges();
 saveWorksheet();
 
 // Refresh the Dashboard with saved data from the Data Worksheet:
-refreshAfterSubmit=true;
+refreshAfterSubmit = true;
 
 ----
 

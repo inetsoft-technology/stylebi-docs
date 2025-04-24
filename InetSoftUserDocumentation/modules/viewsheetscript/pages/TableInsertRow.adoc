@@ -29,13 +29,13 @@ row::			integer row index
 TableView1.insertRow(4);
 
 // Set initial values in new row 4:
-TableView1.setObject(4,0,'Enter Name');
+TableView1.setObject(4,0,'Enter Name'); //<1>
 TableView1.setObject(4,1,'Enter Price');
 TableView1.setObject(4,2,'Enter Quantity');
 TableView1.setObject(4,3,'Enter Total')
 
 ----
-See xref:TableSetObject.adoc[] for more information about that function.
+<1> See xref:TableSetObject.adoc[] for more information about this  function.
 
 
 

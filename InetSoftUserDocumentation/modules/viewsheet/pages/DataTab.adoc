@@ -2,6 +2,8 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+[WARNING,caption=seel also]
+{SeeAlsoCommonProperties}
 
 The *Data* tab in the ‘Properties’ panel is common to many components. This tab allows you bind the component to the data source that supplies the data displayed by the component.
 

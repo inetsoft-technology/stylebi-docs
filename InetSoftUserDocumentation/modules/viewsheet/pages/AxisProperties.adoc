@@ -1,9 +1,13 @@
 = Axis Properties
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
 [WARNING,caption=see also]
 ====
-xref:AxisTitleProperties.adoc[] to set properties of the axis title.
+[square]
+* xref:AxisTitleProperties.adoc[] to set properties of the axis title.
+* xref:viewsheetscript:ChartAxisProperties.adoc[] and  xref:viewsheetscript:MeasureAxisProperties.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
+
 ====
 
 

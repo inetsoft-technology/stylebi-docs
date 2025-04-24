@@ -15,7 +15,7 @@ xref:viewsheetscript:AccessComponentData.adoc#TableCrosstabComponents[Table/Cros
 
 Two-dimensional array holding the table or crosstab cell data as displayed (after any grouping and aggregation). If no grouping or summarization is defined on a table, the `table` property is the same as the  xref:TableData.adoc[]  property. Otherwise, `data` holds the raw data and `table` holds the summarized data. The data can be referenced using the row number as the first array index and the column number or name as the second array index.
 
-This property is read-only. To write data to an *Editable Table*, use  xref:viewsheetscript:TableSetObject.adoc[].
+This property is read-only. To write data to an *Editable Table*, use  xref:viewsheetscript:TableSetObject.adoc[] or xref:TableSetCellValue.adoc[].
 
 
 == Type

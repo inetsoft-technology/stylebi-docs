@@ -4,7 +4,9 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
 ====
-xref:AxisProperties.adoc[] to set properties of the axis labels.
+[square]
+* xref:AxisProperties.adoc[] to set properties of the axis labels.
+* xref:viewsheetscript:AxisTitleProperties.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
 ====
 
 The following sections explain how to edit and format an axis title.

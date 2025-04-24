@@ -4,8 +4,10 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
 ====
+[square]
 * xref:AddAChart.adoc[]  for more information about how to use a Chart.
 * {commonProperties}
+* xref:viewsheetscript:Chart.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
 ====
 
 To open the  ‘Chart Properties’ panel, right-click body of the chart, and select ‘Properties’ from the context menu. {rightClickOptions}  The ‘Chart Properties’ panel provides the following tabs: *General*, *Advanced*, *Line*, *Hierarchy*, *Script*.

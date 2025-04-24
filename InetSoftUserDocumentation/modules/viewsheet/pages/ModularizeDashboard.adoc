@@ -63,6 +63,9 @@ IMPORTANT: Components that have the same ID (within the Dashboard or across Dash
 image:viewsheet:Deploy shared filters.png[]
 . Press btn:[OK] to exit the dialog box.
 . Repeat the same process for other Dashboards (nested Dashboard or hyperlinked Dashboards).
++
+IMPORTANT: You must configure shared filters using the above steps for *each dashboard* you want to be synchronized.
+
 
 Use identical IDs for components you wish to synchronize with one another. For example, to synchronize an ‘Employee’ Selection List in a “parent” Dashboard with an ‘Employee’ Selection List in a nested “child” Dashboard, follow the steps below:
 

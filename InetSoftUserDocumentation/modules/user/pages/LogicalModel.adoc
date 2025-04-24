@@ -7,3 +7,5 @@ A *logical model* presents a business-oriented, easy-to-understand view of a sin
 NOTE:  A physical view can  be exposed to end users *only* through a logical model.
 
 The following sections explain how to design and configure a logical model.
+[square]
+include::ROOT:partial$MINITOC_LogicalModel.adoc[]

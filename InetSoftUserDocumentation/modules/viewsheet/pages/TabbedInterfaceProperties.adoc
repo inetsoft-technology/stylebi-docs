@@ -4,8 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
 ====
+[square]
 * xref:ArrangeComponents.adoc[] for information on how to use Tabbed Interface.
 * {commonProperties}
+* xref:viewsheetscript:TabbedInterface.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
+
 ====
 
 The ‘Tab Properties’ panel provides only  *General* and *Script* tabs.

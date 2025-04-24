@@ -19,8 +19,8 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 Place the ‘Date’ field on the X-axis (with ‘Level’ = ‘Month’) and place ‘Total’ on the Y-axis. To *simulate missing data*, add a condition to the Chart to filter out data from August  2024. (See xref:viewsheet:AddConditions.adoc[].)  Add the script below to modify the way the Chart represents the missing data for August  2024.
 
 [source,javascript]
-Chart1.fillTimeGap=true;
-Chart1.fillGapWithDash=true;
+Chart1.fillTimeGap = true;
+Chart1.fillGapWithDash = true;
 
 image:commonscript:fillGapWithDash.png[]
 
