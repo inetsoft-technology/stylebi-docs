@@ -299,43 +299,13 @@ Notice that since the ‘Wireless Mouse1’ table has more rows than the ‘Fast
 
 The sections below explain additional operations that you can perform on joined data blocks.
 
+[#OpentheJoinEditor]
 === Open the Join Editor
-To reopen the Join Editor for a joined data block, right-click the joined data block (e.g., '`Query1`'), and select '`Edit Join`' from the menu. {rightClickOptions} Then proceed to xref:#UsetheJoinEditor[] as explained above.
+To reopen the Join Editor for a joined data block, right-click the joined data block (e.g., '`Query1`'), and select '`Edit Join`' from the menu. {rightClickOptions}
 
-image:mashup5_1.png[]
+image:ChangeJoinTypeAction.png[]
 
-[#ViewtheJoinedDataset]
-=== View the Joined Dataset
-To view the data in the joined data block, click to select the joined data block (e.g., '`Query1`') and press the {buttonChangeView} in the bottom panel. Select {buttonLiveDataView}.
-
-image:mashup5.png[]
-
-[#RemoveDuplicateColumns]
-=== Remove Duplicate Columns
-
-To remove duplicate columns (e.g., the join columns), press the {buttonShowHide} for the columns you wish to hide. (You can do this in either {buttonLiveDataView} or {buttonMetaDataView}.)
-
-image:mashup6_1.png[]
-
-
-=== Rename Columns
-To change column names, double-click the column header and edit the text.  See xref:ModifyColumn.adoc[] for more details.
-
-include::ROOT:partial$duplicateNames.adoc[]
-
-=== Rename the Joined Data Block
-To rename the joined data block, double-click the title bar and type a new name, or right-click the title bar and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel. Enter the desired name in the ‘Name’ field, and press btn:[OK].
-
-image:mashup7.png[]
-
-=== Mark the Data Block as Primary
-
-It is good practice to mark the final result of your Data Worksheet as the *primary* data block. This ensures that this data block  will be listed first among the data blocks available to any Dashboard based on this Data Worksheet.
-
-To do this, right-click the joined data block (e.g., ‘Orders and Returns’ below), and select ‘Set As Primary’ from the context menu. {rightClickOptions}
-
-image:mashup8_1.png[]
-
+Then proceed to xref:#UsetheJoinEditor[] as explained above, or see  xref:#ChangeJoinType[],  xref:#ChangetheJoinOrder[], and  xref:#AddTablestoJoin[].
 
 [id=ChangeJoinType]
 === Change the Join Type
@@ -350,22 +320,16 @@ include::ROOT:partial$videoVersion.adoc[]
 video::300385527[vimeo,640,400]
 =====
 
-To change the join type for a joined data block, follow these steps. (You can change the join type for all joined data blocks *_except_* for merge-joins, because merge-joins do not define a relationship.)
+NOTE: You can change the join type for all joined data blocks *_except_* for merge-joins, because merge-joins do not define a relationship.
 
+To change the join type for a joined data block, open the Join Editor for the data block.  (See xref:#OpentheJoinEditor[].)  In the Join Editor, right-click on a join link and select the desired type of join from the menu, and press btn:[Done].
 
-
-
-. Right-click the joined data block and select ‘Edit Join’. {rightClickOptions} This opens the Join Editor.
-+
-image:ChangeJoinTypeAction.png[]
-. In the Join Editor, right-click on a join link and select the desired type of join from the menu, and press btn:[Done].
-+
 image:JoinTypeWorksheetExplorer.png[]
-+
-The ‘Inner Join’ or returns rows from the two data blocks that match based on the selected join column. The ‘Left Outer Join’ additionally returns all rows in the left data block (including those without a match in the right data block), while the ‘Right Outer Join’ additionally returns all the rows in the right data block  (including those without a match in the left data block). The ‘Full Outer Join’ returns all the rows of both data blocks  (including those without  matches).
-+
+
+The *Inner Join*  returns rows from the two data blocks that match based on the selected join column. The *Left Outer Join* additionally returns all rows in the left data block (including those without a match in the right data block), while the *Right Outer Join* additionally returns all the rows in the right data block  (including those without a match in the left data block). The *Full Outer Join* returns all the rows of both data blocks  (including those without  matches).
+
 When an outer join is specified, the additional rows included from a data block (in addition to those selected by the inner join) do not have matching rows in the other data block. Therefore, outer-join data blocks generally exhibit empty cells corresponding to the unmatched rows.
-+
+
 The ‘=’ operator produces the “equi-join,” which is the same as the ‘Inner Join’. The inequality operators (&gt;, &lt;, &gt;=, &lt;=, &lt;&gt;) produce their respective inequality joins.
 
 .Example: Change Join Type
@@ -404,11 +368,12 @@ image:previewLeftJoinedCustomerIDs.png[]
 Note that the right outer join returns all of the records from the ‘All Sales1’ data block, even if they do not have a corresponding entry in the  ‘Fast Go Game1’ data block.
 ****
 
-
+[#ChangetheJoinOrder]
 === Change the Join Order
 To change the order in which the tables are joined (for example, which table is considered the “left” table in a “left outer join”), follow the steps below:
 
-. Open the Join Editor as described above in xref:ChangeJoinType[].
+. Open the Join Editor for the data block. (See  xref:#OpentheJoinEditor[].)
+
 . Press the btn:[Reorder Tables] button at the bottom of the left panel. This opens the ‘Reorder Tables’ dialog box.
 +
 image:Join Reorder Tables.png[]
@@ -417,21 +382,56 @@ image:Join Reorder Tables.png[]
 image:Join Reorder Tables2.png[]
 . Press btn:[Done] to close the Editor.
 
+[#AddTablestoJoin]
 === Add Tables to a Join
 To add additional data blocks to an existing join follow these steps:
 
-. Right-click the joined data block and select ‘Edit Join’.  This opens the Join Editor.
-+
-image:ChangeJoinTypeAction.png[]
+. Open the Join Editor for the data block. (See  xref:#OpentheJoinEditor[].)
+
 . In the Join Editor, drag any additional tables from the left panel into the right panel.
 +
 image:ChangeJoinTypeAction2.png[]
+
 . Create the joins between the new table and the existing tables as described in xref:InnerOuterInequalityJoin[] above.
+
 . Press btn:[Done] to close the Editor.
 
-include::ROOT:partial$CreateDashboard.adoc[]
 
-=== Locate the Source of a Join Column
+[#ViewtheJoinedDataset]
+=== View the Joined Dataset
+To view the data in the joined data block, click to select the joined data block (e.g., '`Query1`') and press the {buttonChangeView} in the bottom panel. Select {buttonLiveDataView}.
+
+image:mashup5.png[]
+
+[#RemoveDuplicateColumns]
+=== Remove Duplicate Columns
+
+To remove duplicate columns (e.g., the join columns), press the {buttonShowHide} for the columns you wish to hide. (You can do this in either {buttonLiveDataView} or {buttonMetaDataView}.)
+
+image:mashup6_1.png[]
+
+
+=== Rename Columns
+To change column names, double-click the column header and edit the text.  See xref:ModifyColumn.adoc[] for more details.
+
+include::ROOT:partial$duplicateNames.adoc[]
+
+=== Rename the Data Block
+To rename the joined data block, double-click the title bar and type a new name, or right-click the title bar and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel. Enter the desired name in the ‘Name’ field, and press btn:[OK].
+
+image:mashup7.png[]
+
+=== Set as Primary Data Block
+
+It is good practice to mark the final result of your Data Worksheet as the *primary* data block. This ensures that this data block  will be listed first among the data blocks available to any Dashboard based on this Data Worksheet.
+
+To do this, right-click the joined data block (e.g., ‘Orders and Returns’ below), and select ‘Set As Primary’ from the context menu. {rightClickOptions}
+
+image:mashup8_1.png[]
+
+
+
+=== Locate the Column Source
 In a Data Worksheet that includes many joins, you may sometimes need help to find the original *source* data block of a particular column. To do this, follow the steps below:
 
 . Click to select the data block that contains the column that you want to trace. (Usually this data block is the result of one or more joins.)
