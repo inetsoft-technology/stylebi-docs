@@ -2,9 +2,13 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+[WARNING,caption=see also]
+xref:ConcatenateData.adoc[] to create a *vertical composition* of two or more data blocks.
+
 Joins  allow you to mash up data from different data blocks, which may represent different database tables, queries, or data models. A _joined data block_ is a *horizontal composition* of two or more data blocks with a specified relationship (equality or inequality) between the rows of the base data blocks. The following sections explain how to create and edit joins.
 
-NOTE: To create a vertical composition of two or more data blocks see xref:ConcatenateData.adoc[].
+
+
 
 [id=InnerOuterInequalityJoin]
 == Inner Join, Outer Join, Inequality Join
@@ -168,6 +172,8 @@ video::300389967[vimeo,640,400]
 =====
 
 Data blocks that do not share the same data model or database table can be joined together with a cross join. A cross-joined data block contains the cross-product (Cartesian product) of the data in the base tables. This means that every row in the first table is paired together with every row in the second table. The length of the new joined data block is the product of the two base data block lengths.
+
+CAUTION: You may see a *warning* when you create a cross join.   This alerts you that a cross join is capable of producing a dataset large enough to significantly degrade performance. Use cross joins with extreme caution.
 
 To cross-join two data blocks in a Data Worksheet, follow these steps:
 
@@ -435,7 +441,7 @@ image:mashup8_1.png[]
 In a Data Worksheet that includes many joins, you may sometimes need help to find the original *source* data block of a particular column. To do this, follow the steps below:
 
 . Click to select the data block that contains the column that you want to trace. (Usually this data block is the result of one or more joins.)
-. Hold down the {buttonShift} and {buttonCtrl} keys and hover the mouse over the desired column in the bottom panel. This highlights the corresponding join with a dashed line to indicate the origin of the column.
+. Hold down the {buttonShift} and {buttonCtrl} keys and *hover* the mouse over the desired column in the bottom panel. This highlights the corresponding join with a dashed line to indicate the origin of the column.
 +
 image:worksheetNavigation.png[]
 
