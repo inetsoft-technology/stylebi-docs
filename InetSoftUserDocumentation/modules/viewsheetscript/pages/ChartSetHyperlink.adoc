@@ -7,7 +7,13 @@ Adds hyperlinks to a chart dataset. Use `setParameterField` to specify values to
 
 == Parameter
 col::			dataset index, first dataset is `1`
-hyperlink:: string or 			`inetsoft.report.Hyperlink.Ref` object
+hyperlink:: String, Array, or {InetSoftReportHyperlink}. For Array  syntax:
+
+[square]
+* The first argument is the URL or Dashboard name
+* The second argument is an optional parameter array
+* The third argument is `REPORT_LINK`,  `WEB_LINK` (default), or `MESSAGE_LINK` to transmit a message in the hyperlink
+* The last argument is the target frame
 
 == Example 1
 [source,javascript]

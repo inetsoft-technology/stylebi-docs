@@ -49,11 +49,12 @@ image:Report Permissions.png[]
 [IMPORTANT]
 .Notes on Repository Permissions
 ====
-
+[square]
 * The ‘Derive permissions from parent folder’ option for a  Dashboard or folder specifies that permissions will be derived from the parent folder, as described below. If there are no explicit permissions set for its immediate parent, its permission inheritance will recurse higher up in the hierarchy of folders, until the root folder is reached.
 * 'Write' permission on a *folder* indicates that  Dashboards or sub-folders can be added to the folder, deleted from the folder, or modified within the folder.
 * 'Delete' permission on a *folder* indicates that the folder itself can be deleted, but does not entail individual delete permission for  Dashboards or sub-folders within the folder. To assign delete permission to all contents of a folder, set the ‘Write’ permission on the parent folder.
 * 'Write' permission on an individual *Dashboard* indicates that the   Dashboard can be modified, but does not entail delete permission for the  Dashboard.  To assign delete permission to a  Dashboard, set the ‘Delete’ permission on the individual  Dashboard.
 * Every user has full ‘Read’/’Write’/’Delete’ permissions to their own ‘My Dashboards’ folder.
 * If explicit permissions are set on an individual  Dashboard or  folder (i.e.,  ‘Derive permissions from parent folder’ is disabled), the explicit permissions govern the asset and the parent permissions are ignored.
+* If a user experiences a `Read Access Denied` error, this generally indicates that permissions on the *asset* or *parent folder* are not set correctly for the user.
 ====

@@ -11,14 +11,18 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies a hyperlink to a  Dashboard or URL.  The examples below illustrate how to use an array to pass parameters in the hyperlink.
 
-In the array syntax below, the first argument is the URL or Dashboard name, the second argument is an optional parameter array, the third argument is `REPORT_LINK` or `WEB_LINK` (default), and the last argument is the target frame.
 
 
 
 
 == Type
-String or {InetSoftReportHyperlink}
+String, Array, or {InetSoftReportHyperlink}. For Array  syntax:
 
+[square]
+* The first argument is the URL or Dashboard name
+* The second argument is an optional parameter array
+* The third argument is `REPORT_LINK`,  `WEB_LINK` (default), or `MESSAGE_LINK` to transmit a message in the hyperlink
+* The last argument is the target frame
 
 
 
