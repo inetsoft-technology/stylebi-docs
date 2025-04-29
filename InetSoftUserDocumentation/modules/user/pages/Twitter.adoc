@@ -12,7 +12,7 @@ image:dataSourceNewTwitter2.png[]
 
 . In the ‘Name’ field, enter a label for this connection.
 
-. Press the btn:[Authorize] button to populate the ‘OAuth Token’ field.
+. Press the btn:[Authorize] button to populate the ‘OAuth Token’ field.   If you need to generate a token manually, see https://docs.x.com/tutorials/postman-getting-started#using-oauth-2-0-to-generate-a-user-access-token[Using OAuth 2.0 to generate a user access token] in the https://docs.x.com/home[X Developer Platform docs].
 +
 . *_Optional:_* {multiTenantUser}
 

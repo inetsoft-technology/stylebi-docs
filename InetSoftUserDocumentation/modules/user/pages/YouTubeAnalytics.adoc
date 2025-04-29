@@ -4,6 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
+== Create the Connection
 include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘YouTube Analytics’ data source, and press btn:[Create]. This opens the data source definition screen.
@@ -12,7 +13,7 @@ image:dataSourceNewYouTubeAnalytics2.png[]
 
 . In the ‘Name’ field, enter a label for this connection.
 
-. Enter the ‘Client ID’ and ‘Client Secret’.
+. Enter the ‘Client ID’ and ‘Client Secret’.  If you do not have a client ID and secret, you will need to create an app to generate these credentials.  See xref:#GenerateCredentials[] below.
 
 . Press the btn:[Authorize] button to populate the token fields.
 +
@@ -32,3 +33,28 @@ image:dataSourceYouTubeAnalytics4.png[]
 In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
 
 After you have created a connection to the database, you can proceed to define a data set. See xref:dataworksheet:QueryYouTubeAnalytics.adoc[].
+
+[#GenerateCredentials]
+== Generate  Credentials
+To create the  '`Client ID`' and '`Client Secret`' credentials for the YouTube Analytics connection, follow the steps below:
+
+. Use the   email associated with your YouTube  account/channel to create a new *Google Cloud project*.  See https://developers.google.com/workspace/guides/create-project[Create a Google Cloud project] for full details.
+
+. Navigate to menu:APIs & Services[Enabled APIs and services] and enable the '`YouTube Analytics API`'.
+
+. Press btn:[Create credentials].  For '`Credential Type`', select '`User Data`'  and press btn:[Next].
+
+. Enter the requested information for the *OAuth Consent Screen*.  See https://developers.google.com/workspace/guides/configure-oauth-consent[Configure the OAuth consent screen and choose scopes] for full details.
+
+. Press btn:[Add or remove scopes] and assign `.../auth/yt-analytics.readonly` scope.
+
+. For *OAuth Client ID*, select '`Web application`' as the '`Application type`'.
+
+. For *Authorized redirect URIs*, set the redirect URI to https://data.inetsoft.com/oauth.
+
+. Press btn:[Create].
+
+. Press btn:[Done].
+
+. Navigate to the *Credentials* page and click on the client name to obtain your '`Client ID`' and '`Client Secret`'.
+

@@ -62,11 +62,19 @@ include::ROOT:partial$dateRanges.adoc[]
 =====
 ====
 You can also enter an arbitrary variable name (one which does not correspond to an existing Form component). In this case, the user will be prompted at runtime to enter a value for the parameter.  See xref:#ControlUserPrompting[] below for more information about prompting.
++
+[IMPORTANT]
+====
+If *no value* is provided for a variable (parameter), it will have a *null* value.  This will cause the condition to be ignored, which generally results in *all* records  being returned.  If this is not the desired behavior, you can either test for null parameter values using xref:commonscript:isNull.adoc[] in  *onRefresh* script (see xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script]) and substitute a non-null value, or you can add an `[is not][equal to][null]` condition clause, as shown below:
 
+image:dataworksheet:nullVariable.png[]
+
+Use the ‘Expression’ option as described below to enter a right-hand side  expression such as `null`.
+====
 
 * If you select the ‘Expression’ option, press the btn:[JS]/btn:[SQL] button to select JavaScript or SQL syntax, and then press the {buttonEditExpression}. This opens the Script Editor where you can enter your expression. (See xref:dataworksheet:CreateNewDataField.adoc[] for details on using expressions.)
 
-* If you select the ‘Session Data’ option, choose one of ‘User’, ‘Roles’, or ‘Groups’. These parameters return information about the user who is currently viewing the Dashboard; respectively, the user name, the array of roles to which the user belongs, and the array of groups to which the user belongs.
+* If you select the ‘Session Data’ option, choose one of ‘User’, ‘Roles’, or ‘Groups’. These parameters return information about the user who is currently viewing the Dashboard; respectively, the username, the array of roles to which the user belongs, and the array of groups to which the user belongs.
 +
 NOTE: The adjacent menu automatically chooses the `[equal to]` or `[one of]` operator to match your selection.
 

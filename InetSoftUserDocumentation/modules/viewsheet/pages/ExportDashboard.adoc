@@ -45,6 +45,8 @@ NOTE: The ‘Snapshot’ option (if available) is mainly used for troubleshootin
 . Select ‘Current View’ to include the current state of the Dashboard in the exported file.
 
 . {ExportCSV}
++
+NOTE: Leading zeros may not be visible if you open the exported file in Excel.
 
 . Select the bookmarks that you wish to include in the exported file. The selected views are converted to individual pages (PowerPoint and PDF) or sheets (Excel) in the exported copy.
 

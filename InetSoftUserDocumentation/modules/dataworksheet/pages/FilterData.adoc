@@ -310,9 +310,16 @@ In the Combo Box, do one of the following:
 image:Variable in ConditionTyped.png[]
 . Press ‘OK’ to close the  ‘Condition’ panel.
 
-The Data Worksheet will now prompt for the value of the variable/parameter, and will continue to do so each time the Data Worksheet is freshly  accessed.  The user will also be prompted for the parameter value by any Dashboard that utilizes the Data Worksheet, _unless_ the Dashboard contains a Form component that sets the value of the parameter.
+The Data Worksheet will now prompt for the value of the variable/parameter, and will continue to do so each time the Data Worksheet is freshly  accessed.  The user will also be prompted for the parameter value by any Dashboard that utilizes the Data Worksheet, _unless_ the Dashboard contains a Form component that sets the value of the parameter. If you need to *suppress* the parameter prompt in a Dashboard (for example, if you are setting the parameter using script), use the ‘Prompt for Parameters’ property in the xref:viewsheet:DashboardOptions.adoc[] dialog box.
 
-NOTE: If you need to *suppress* the parameter prompt in a Dashboard (for example, if you are setting the parameter using script), use the ‘Prompt for Parameters’ property in the xref:viewsheet:DashboardOptions.adoc[] dialog box.
+[IMPORTANT]
+====
+If *no value* is provided for a variable (parameter), it will have a *null* value.  This will cause the condition to be ignored, which generally results in *all* records  being returned.  If this is not the desired behavior, you can either test for null parameter values using xref:commonscript:isNull.adoc[] in  *onRefresh* script (see xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script]) and substitute a non-null value, or you can add an `[is not][equal to][null]` condition clause, as shown below:
+
+image:nullVariable.png[]
+
+See xref:#UseExpressioninCondition[] to enter a right-hand side  expression such as `null`.
+====
 
 [#UseSessionDatainCondition]
 === Use Session Data in a Condition
