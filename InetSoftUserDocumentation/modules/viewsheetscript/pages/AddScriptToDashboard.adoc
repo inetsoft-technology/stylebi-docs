@@ -122,6 +122,8 @@ To attach a script to a Dashboard component, follow the steps below.
 +
 image:viewsheet:ScriptEditorText.png[]
 +
+Code that you add with the *Script* option  will execute when the component loads.  Code that you add with the *onClick* option will execute when the user clicks on the component, which is especially useful for a xref:SubmitButton.adoc[].
++
 CAUTION: Do not attach an *onClick* script to a component that already has a *hyperlink*.
 
 
@@ -238,6 +240,23 @@ The vertical alignment property can be combined with the horizontal alignment pr
 alignment = StyleConstant.H_CENTER | StyleConstant.V_CENTER;
 
 The four vertical alignment options are `V_TOP`, `V_CENTER`, `V_BOTTOM`, and `V_BASELINE`.
+
+[#AddUserTriggeredScript]
+== Add User-Triggered Script
+
+To execute  scripted actions only upon user demand, you can add your code to the *onClick* script of an  xref:Image.adoc[], xref:Text.adoc[], or xref:SubmitButton.adoc[] component.  (See xref:#AddComponentScript[] for instructions.)  The onClick script executes only when the user *clicks* on the component.
+
+
+
+For example, the following *onClick* script for a Submit Button will clear the selections from the specified Selection List filters  when the user clicks the button:
+
+[source,javascript]
+--
+SelectionList1.selectedObjects = []; //<1>
+SelectionList2.selectedObjects = [];
+SelectionList3.selectedObjects = [];
+--
+<1> See xref:CommonSelectedObjects.adoc[] for more information about this property.
 
 [#AddDashboardScript]
 == Add Dashboard-Level Script

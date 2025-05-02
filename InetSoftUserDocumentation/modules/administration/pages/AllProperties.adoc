@@ -232,6 +232,8 @@ portal.home.link:: Sets the URL of the ‘Home’ button in the User Portal. (Th
 
 portal.customLoadingText:: Specifies text to display on the loading screen when the user logs into the User Portal.  The message is displayed under the "Please wait, the application is loading" message and logo.
 
+portal.customLogo.enabled:: When set to `true`, this reveals the '`Default Favicon`' property  xref:Presentation.adoc#LookandFeel[Look and Feel] page.  Default is `false`.  Uncheck the '`Default Favicon`' property to upload a custom favicon.
+
 olap.table.originalContent:: Set to `true` (default) to display the value of a cube dimension in a Selection List with all its hierarchical components, otherwise set to `false`. (Applies to Chart labels and Selection Lists.)
 
 olap.drillthrough.maxrows:: Determines how many rows to display for a '`Show Details`' operation against an OLAP cube. Default is 10.

@@ -9,4 +9,18 @@
 ====
 
 
-The  Submit Button has only the xref:CommonProperties.adoc[].
+The  Submit Button has only the xref:CommonProperties.adoc[]. Pressing a Submit button in a Dashboard will automatically submit the values of components for which the '`Submit on Change`' option is *disabled*.  See xref:viewsheet:DynamicallySetProperties.adoc#SubmitFormSettingsinBatch[Submit Form Settings in Batch] and xref:viewsheet:AddFilterComponents.adoc#SubmitFiltersinBatch[Submit Filters in Batch] for more information.
+
+The Submit Button can also be  used to batch-execute script operations *on demand*, when the user clicks the button.  For this usage, add your code to  the *onClick* script in the *Script* tab of the Submit Button.  (See xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
+
+For example, the following *onClick* script will clear the selections from the specified Selection List filters  when the user clicks the button:
+
+[source,javascript]
+--
+SelectionList1.selectedObjects = []; //<1>
+SelectionList2.selectedObjects = [];
+SelectionList3.selectedObjects = [];
+--
+<1> See xref:CommonSelectedObjects.adoc[] for more information about this property.
+
+When you use a Submit Button this way, you should change the button '`Label`' to display something more representative of the button`'s action, such as "`Clear All Filters`" in the above example.  (See xref:viewsheet:SubmitButtonProperties.adoc[] for more information about the '`Label`' property.)

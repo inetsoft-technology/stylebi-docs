@@ -80,6 +80,11 @@ Default Fonts:: Allows you to upload custom fonts. To add custom fonts, uncheck 
 +
 image:Global Look and Feel2.png[]
 
+Default Favicon:: This option is available only when the `portal.customLogo.enabled` is set to  `true`.  {EMPropertyConfig} Uncheck the '`Default Favicon`' property to upload a custom favicon in PNG format.
+
+
+
+
 Custom Shapes::  To upload custom images for use with a Chart (see xref:viewsheet:BasicChartingSteps.adoc[]), press the btn:[Custom Shapes] button to open the '`Custom Shapes`' dialog box.  To upload a Zip file containing images, first enable the '`Extract archive files`' option.  Press  btn:[Select], and choose an  image file (png, gif, jpg) or archive. Press btn:[Upload] to upload the image or archive to the _portal/shapes_ directory of SREE Home. (See  xref:administration:Storage.adoc[] for   information about managing uploads.)
 +
 image:CustomShapes.png[]

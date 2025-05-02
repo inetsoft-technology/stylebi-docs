@@ -245,6 +245,7 @@ NOTE: An expression script can reference properties of its hosting component wit
 
 Expressions must always return permissible values for the corresponding property. For example, if a property requires an integer, an expression that sets that property must evaluate to an integer. If a property requires one of a fixed set of options, e.g., {‘Rows’, ‘Columns’}, then the expression that sets that property must evaluate identically to one of those strings (‘Rows’ or ‘Columns’).
 
+[#SubmitFormSettingsinBatch]
 == Submit Form Settings in Batch
 To submit settings from all Form components in batch by using a Submit button, follow the steps below:
 
