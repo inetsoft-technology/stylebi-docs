@@ -26,7 +26,9 @@ Use Metadata:: Suppress the display of live data during Dashboard design. With �
 +
 image:UseMetadataView.png[]
 +
-NOTE: If you press the btn:[Cancel] button in the Dashboard loading dialog box, the Dashboard is automatically displayed in meta-data mode.
+While metadata view can be useful for layout  purposes, Filter components such as Selection Lists and Calendars will not function normally because they do not have access to the data.
++
+TIP: If you press the btn:[Cancel] button in the Dashboard loading dialog box, the Dashboard is automatically displayed in meta-data mode.
 
 Prompt for parameters:: Enables user prompting for any parameters defined in the linked data source. Disable ‘Prompt for parameters’ to completely suppress prompting. This may be necessary when  parameter values are being supplied from another source (script, hyperlink, session data, etc.) and the user should therefore not be prompted to enter values.
 +

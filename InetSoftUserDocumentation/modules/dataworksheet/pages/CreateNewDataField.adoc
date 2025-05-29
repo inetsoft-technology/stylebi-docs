@@ -4,6 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 You can create a new data field with one of the following two approaches.
 
+[#CreateExpressionColumninDataWorksheet]
 == Create an Expression Column in a Data Worksheet
 
 [.videotitle]
@@ -45,9 +46,11 @@ include::ROOT:partial$duplicateNames.adoc[]
 +
 image:dataworksheet:agileTransform5.png[]
 +
-*Date*-type fields supply the following date parts: Year, QuarterOfYear, MonthOfYear, DayOfMonth, and DayOfWeek. *Time*-type fields supply the following date parts: HourOfDay, MinuteOfHour, SecondOfMinute. *TimeInstant*-type fields supply all the previous date parts.
+If you select the '`Script`' option, *Date*-type fields supply the following date parts: Year, QuarterOfYear, MonthOfYear, DayOfMonth, and DayOfWeek. *Time*-type fields supply the following date parts: HourOfDay, MinuteOfHour, SecondOfMinute. *TimeInstant*-type fields supply all the previous date parts.
 +
 image:dataworksheet:DateParts2.png[]
++
+TIP: To compute date parts  using a *fiscal calendar*,  use  fiscal functions such as xref:commonscript:CALC_fiscalweek.adoc[CALC_fiscalweek] and xref:commonscript:CALC_fiscalmonth.adoc[CALC_fiscalmonth] in the Formula Editor.
 +
 . Press btn:[OK] to close the Editor and create the new column.
 +

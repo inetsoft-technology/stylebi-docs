@@ -8,7 +8,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [square]
 * xref:CheckRadioComboValues.adoc[] to access the values assigned to the component.
 * xref:CommonSelectedLabel.adoc[] to access the label corresponding to the value.
-* xref:CommonSelectedObjects.adoc[] to access the currently selected values  in multi-valued components.
+* xref:CommonSelectedObjects.adoc[] to access the currently selected values  in multivalued components.
 * xref:AccessComponentData.adoc[] for more information about `selectedObject`.
 * xref:viewsheet:WriteBackToStorage.adoc#AccessMostRecentUserModification[Access the Most Recent User Modification] to retrieve the most recent modified object.
 ====

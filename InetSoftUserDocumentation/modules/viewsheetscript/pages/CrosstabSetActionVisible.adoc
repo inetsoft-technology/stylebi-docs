@@ -4,7 +4,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=See Also]
-xref:thisViewsheet.adoc#thisViewsheetSetActionVisible[thisViewsheet.isActionVisible()] to return Dashboard toolbar button visibility.
+xref:thisViewsheetSetActionVisible.adoc[] to show or hide Dashboard toolbar buttons.
 
 
 
@@ -14,13 +14,19 @@ Sets the visibility/accessibility of end-user Crosstab features. To disable a fe
 NOTE: The 'Sort Column' setting overrides the `sort.crosstab.aggregate` and `sort.crosstab.dimension` property settings in Enterprise Manager.
 
 == Parameters
-name::			name of Crosstab function (String):
+name::			Name of Crosstab function (String):
 +
 [source]
-'Menu Actions' ('More' button)
-'Export'
-'Show Details' (Freehand Table)
-'Sort Column'  (column header 'Sort' button)
+--
+'Menu Actions' <1>
+'Export' <2>
+'Show Details' <3>
+'Sort Column' <4>
+--
+<1> The {buttonMore}.
+<2> The {buttonExport}. Applies also when the Crosstab is used as a xref:viewsheet:AddTipsToChart.adoc#DataTip[Data Tip].
+<3> For xref:viewsheet:AddFreehandTable.adoc[Freehand Table.]
+<4> The column header {buttonSort}.
 
 Boolean:: `false`: hide the specified function +
 `true`: show the specified function

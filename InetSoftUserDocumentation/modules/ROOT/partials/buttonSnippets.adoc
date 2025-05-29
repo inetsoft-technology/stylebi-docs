@@ -416,6 +416,8 @@
 :secondForm: For xref:AddScriptToDashboard.adoc#AddDashboardScript[onInit/onRefresh scripts], and for component and xref:AddScriptToDashboard.adoc#AddPropertyScript[property scripts] on other components, the second (qualified) form is required.
 :noGetter: Note: There is no corresponding “getter” function.
 :minimumReq: StyleBI requires a minimum hardware configuration of an i5-equivalent processor on a x86-64 platform with 8GB RAM. (Browsers should have JavaScript enabled.) Installation of StyleBI requires Docker to be installed on the machine. See  https://docs.docker.com/engine/install/[Install Docker Engine] for  requirements specific to your platform and OS.
+:SampleYAML: A sample  https://github.com/inetsoft-technology/stylebi/blob/87947efcb72d0df0903cce97c4f6665734b0c280/community-examples/docker-compose.yaml[docker-compose.yaml] file can be found in the Github https://github.com/inetsoft-technology/stylebi/tree/87947efcb72d0df0903cce97c4f6665734b0c280/community-examples[community-examples] repository.
+
 
 // See Also links from Properties to Dashboard Object Ref
 :SeeAlsoCommonProperties: xref:viewsheetscript:CommonProperties.adoc[] in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.

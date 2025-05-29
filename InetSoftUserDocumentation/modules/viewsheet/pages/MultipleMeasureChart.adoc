@@ -49,6 +49,8 @@ image:stackMeasures.png[]
 
 . Press the {buttonApply}.
 
+include::ROOT:partial$stackNote.adoc[]
+
 == Dual Axis
 
 If the single axis is not appropriate for both measures, for example when one measure has much larger values than the other, you can create a secondary Y-axis on the right side of the chart. See xref:DualAxisChart.adoc[] for more details.

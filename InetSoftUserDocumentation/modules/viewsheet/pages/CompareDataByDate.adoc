@@ -50,7 +50,7 @@ TIP: You can also use Form components to set the number and period by pressing t
 .Compare custom periods...
 [%collapsible]
 ====
-.. Select the ‘Custom Periods’ tab if not already selected.
+.. Select the *Custom Periods* tab if not already selected.
 +
 image:commonscript:dateComparison10.png[]
 
@@ -61,6 +61,8 @@ image:commonscript:dateComparison5.png[]
 You must specify at least two ranges. To add additional ranges, press the {buttonAddButton}. To remove a range, press the {buttonRemove} next to the range.
 +
 TIP: You can also use Form components to set the dates by pressing the {buttonValueType} and selecting the ‘Variable’ or Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
+
+
 ====
 
 . Under *Compare Data Of*, use the menus to set the desired comparison. You can perform the following three types of comparisons:

@@ -5,32 +5,16 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 IMPORTANT: Stop your server before making these changes.
 
-The default URL for the repository is http://hostname:8080/app/portal/tab/report, where  “8080” is the port number. To assign a name to the webapp or change the port number, follow the instructions below.
+The default URL for the repository is http://hostname:8080/app/portal/tab/report, where  `8080` is the default port number. To change the webapp port, modify the `ports` setting in the _docker-compose.yaml_ file, as shown below.
 
-== Change the Webapp Name
-To change the InetSoft web application name (*ROOT* by default), follow the steps below:
 
-. Rename the physical _ROOT_ folder in the _tomcat\webapps_ directory of the installation folder as desired, for example, to  *myapp*.
 
-. Enter the desired webapp name (`myapp`) in the properties below. ({EMPropertyConfig})
-+
- replet.repository.servlet=/myapp
- replet.adm.servlet=/myapp/em
- Dashboard.configpath=C\:\\Program Files\\InetSoft2023\\tomcat\\webapps\\myapp
-+
-If the physical folder has the special name “ROOT”, the webapp name is omitted in these properties. For example:
-+
- replet.repository.servlet=
- replet.adm.servlet=/em
- Dashboard.configpath=C\:\\Program Files\\InetSoft2023\\tomcat\\webapps\\ROOT
+.Example (YAML snippet): Assign port 80
+[source,yaml]
+server:
+    image: "${STYLEBI_DOCKER_IMAGE:-ghcr.io/inetsoft-technology/stylebi-community:latest}"
+    restart: unless-stopped
+    ports:
+      - "80:8080"
 
-. Update the _context.xml_ file in the _/META-INF_ directory to replace the *path* value in the first line with the new webapp name.
-
- <Context docBase="C:\Program Files\InetSoft2023/tomcat/webapps/ROOT" path="/myapp">
-+
-NOTE: If you use a name for the webapp other than `ROOT`, you will need to include the webapp name in URLs, e.g., http://hostname:8080/myapp/app/portal/tab/report.
-
-== Changing the Port Number
-To change the webapp port (8080 by default), if you are using the default Tomcat webapp server, edit the following property in the _tomcat\conf\catalina.properties_ file in the installation directory:
-
- inetsoft.tomcat.http.port=8080
+TIP: {SampleYAML}

@@ -67,7 +67,7 @@ image:Materialized View Notice_1.png[]
 +
 If you selected ‘Run in Background’, the materialized view will be scheduled to begin generation. You can check the status of the task under the *Schedule* page.
 
-To manage existing materialized views, see xref:#ManageMaterializedViews[].
+To manage existing materialized views, see xref:#ManageMaterializedViews[]. To verify whether a particular dashboard is using a materialized view or database access, consult the server logs generated on the '`Debug`' level. (See xref:Logging.adoc[] for information about how to adjust the logging level.)
 
 [#ManageMaterializedViews]
 == Manage Materialized Views

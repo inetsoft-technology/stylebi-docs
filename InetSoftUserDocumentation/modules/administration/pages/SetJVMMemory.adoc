@@ -1,12 +1,13 @@
 = Set Docker Container Memory
 include::ROOT:partial$buttonSnippets.adoc[]
 
-During *initial creation* of the Docker container only, use `-Xmx` and `-Xms` in the `JAVA_MEMORY_OPTS` environment variable in `docker-compose.yaml` to adjust the memory available to the Docker container.
+During *initial creation* of the Docker container only, use `-Xmx` and `-Xms` in the `JAVA_MEMORY_OPTS` environment variable in _docker-compose.yaml_ to adjust the memory available to the Docker container.
 
 .Example:
 [source,yaml]
 JAVA_MEMORY_OPTS: "-Xms6g -Xmx6g"
 
+TIP: {SampleYAML}
 
 On *Linux*, Docker is constrained by the host machine's memory.  On *Windows*, using Docker Desktop with WSL,  memory is constrained by the memory allocated for WSL in the `` %USERPROFILE%\.wslconfig`` file. For example, the following setting limits the machine to 6GB of memory, which  cannot be exceeded by any Docker container:
 

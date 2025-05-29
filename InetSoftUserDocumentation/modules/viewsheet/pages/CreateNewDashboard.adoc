@@ -15,7 +15,8 @@ include::user:partial$createVisualizationStep3.adoc[]
 image:viewsheet:portalDesignTab.png[]
 +
 This opens the ‘New Dashboard’ dialog box.
-. In the ‘New Dashboard’ dialog box, select the desired data source (Data Worksheet,  data model, or database table).
+. In the ‘New Dashboard’ dialog box, select the desired data source: Data Worksheet,  data model, or database table.  Note that database tables are only visible if '`Physical Table`' permission is granted. See xref:administration:SetSecurityActions.adoc[] for more details.
+
 +
 image:viewsheetExp1_1.png[]
 +

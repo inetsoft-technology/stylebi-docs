@@ -2,7 +2,8 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-
+[WARNING, caption=see also]
+xref:viewsheetscript:AccessComponentData.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] for information on how to reference cells in a Freehand Table.
 
 A Freehand Table is an advanced component that provides greater layout flexibility than a Table or Crosstab, and also allows the use of formulas in table cells.
 

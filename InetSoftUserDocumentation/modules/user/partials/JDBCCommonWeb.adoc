@@ -21,3 +21,5 @@ If you select the ‘Schema.Table’ option, the SQL string will refer to tables
 ====
 If you  select the ‘Table’ option, the SQL string will refer to tables by  the table name alone, e.g., `CATEGORIES`, `PRODUCTS`, and so on.
 ====
++
+CAUTION: If the   '`Table Name`'  setting does not match the structure of your queries, you may see an error such as "`Table name specified more than once`".

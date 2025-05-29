@@ -139,6 +139,9 @@ video::359085988#chapter=16556440[vimeo,640,400]
 =====
 +
 image:viewsheetExp34.png[]
++
+TIP: To group dates using a *fiscal calendar*, create Calculated Fields  for the desired date ranges (fiscal week, month, etc.) by using the corresponding fiscal functions, such as xref:commonscript:CALC_fiscalweek.adoc[CALC_fiscalweek] and xref:commonscript:CALC_fiscalmonth.adoc[CALC_fiscalmonth], and then use those Calculated Fields as the desired dimensions on the Chart.  See  xref:dataworksheet:CreateNewDataField.adoc#CreateCalcField[Create a Calculated Field in a Dashboard] for more details.
+
 
 . From the ‘Measures’ folder of the data source panel, drag measure the ‘Y’ region. This places the selected field onto the chart as a measure. You can add multiple measures to a chart. (See xref:MultipleMeasureChart.adoc[].)
 +

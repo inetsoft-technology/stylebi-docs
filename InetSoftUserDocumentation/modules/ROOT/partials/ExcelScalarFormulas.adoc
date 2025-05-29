@@ -6,6 +6,11 @@ xref:commonscript:CALC_monthname.adoc[]:: Obtain the name of the month from a da
 [source,javascript]
 CALC.monthname(field['Date'])
 +
+xref:commonscript:CALC_fiscalweek.adoc[CALC.fiscalweek(date, startMonth, startDay)]:: Obtain the number of the fiscal week for a year starting on a specified date (e.g.,  April 16).
++
+[source,javascript]
+CALC.fiscalweek(CALC.today(), 4, 16)
++
 xref:commonscript:DateGlobalDateAdd.adoc[]:: Add or subtract a specified number of days, months, or years from a date field.
 +
 [source,javascript]

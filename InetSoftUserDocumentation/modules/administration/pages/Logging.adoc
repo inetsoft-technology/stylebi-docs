@@ -36,7 +36,13 @@ Maximum Log File Size:: The maximum size (KB) to which the log file should be al
 
 Number of Backup Log Files:: Specifies the number of rotated log files to maintain (e.g., *sree-IP-1.log*, *sree-IP-2.log*, etc.). Backup log files are created when the size of the log exceeds the ‘Maximum Log File Size’ property or the log is rotated manually.
 
-Default Log Detail Level:: There are four available detail levels: *Debug* provides internal execution-tracing information for debugging purposes. This may be needed when diagnosing a problem in collaboration with InetSoft Technical Support. *Info* reports information about the state of the server, such as the security provider in use. *Warning* reports errors that do not prevent normal operation, but indicate a possible problem that should be investigated. *Error* reports issues that prevent normal operation. It is recommended that you set the detail level to ‘Warning’ or ‘Info’ for regular use.
+Default Log Detail Level:: There are four available detail levels. It is recommended that you set the  level to ‘Warning’ or ‘Info’ for routine use.
++
+[square]
+* *Debug* provides internal execution-tracing information for debugging purposes. This will allow you to record  user-entered parameters, query details, materialized view usage, as well as much other information. This logging level can produce very verbose output, which may be needed when diagnosing a problem in collaboration with InetSoft Technical Support.
+* *Info* reports information about the state of the server, such as the security provider in use, as well as warnings and errors.
+* *Warning* reports issues that do not prevent normal operation, but indicate a possible problem that should be investigated.
+* *Error* reports issues that prevent normal operation.
 
 You can assign custom log levels to particular assets. For example, you can set a ‘Warning’ log level for the ‘Default Log Detail Level’ property, but still set a ‘Debug’ log level for a particular Dashboard. To set a custom log level, follow the steps below:
 

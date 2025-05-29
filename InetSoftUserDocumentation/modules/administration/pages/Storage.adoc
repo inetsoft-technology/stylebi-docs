@@ -5,7 +5,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 IMPORTANT: {deployAssets}
 
-Asset storage is configured by the *docker-compose.yaml* file upon Docker container initialization. To view the current storage configuration, follow the steps below:
+Asset storage is configured by the _docker-compose.yaml_ file upon Docker container initialization.  {SampleYAML}
+
+
+
+To view the current storage configuration, follow the steps below:
 
 include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
 
@@ -148,14 +152,16 @@ image:Drivers_Plugins5.png[]
 . Restart the server.
 
 == Change the Storage Method
-You can configure the type of back-end storage by setting variables in the *docker-compose.yaml* file. If you have previously configured ‘File System’ storage, you can import the existing files into the database. See xref:administration:ManageContent.adoc[] for more information.
+You can configure the type of back-end storage by setting variables in the _docker-compose.yaml_ file. If you have previously configured ‘File System’ storage, you can import the existing files into the database. See xref:administration:ManageContent.adoc[] for more information.
 
 //include::ROOT:partial$SREEHome.adoc[]
+
+TIP: {SampleYAML}
 
 The sections below provide examples of common storage configurations.
 
 === MapDB and local file system (default)
-The default configuration has MapDB as key-value storage and local file system as blob storage. Variable definitions  for *docker-compose.yaml* are shown below:
+The default configuration has MapDB as key-value storage and local file system as blob storage. Variable definitions  for _docker-compose.yaml_ are shown below:
 
 NOTE: The local blob storage should only be used with a single server and single scheduler running on the same machine.
 
@@ -199,7 +205,7 @@ blob:
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 
-AWS uses DynamoDB for key-value storage and S3 for blob storage. (The S3 blob engine can be used with any S3-compatible object storage, such as a self-hosted MinIO installation.) Variable definitions  for *docker-compose.yaml* are shown below for AWS cloud-native implementations:
+AWS uses DynamoDB for key-value storage and S3 for blob storage. (The S3 blob engine can be used with any S3-compatible object storage, such as a self-hosted MinIO installation.) Variable definitions  for _docker-compose.yaml_ are shown below for AWS cloud-native implementations:
 
 
 .AWS Docker Variables
@@ -245,7 +251,7 @@ blob:
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 
-Azure uses CosmosDB for key-value storage and Azure Blob for blob storage. Variable definitions  for *docker-compose.yaml* are shown below for  Azure cloud-native implementations:
+Azure uses CosmosDB for key-value storage and Azure Blob for blob storage. Variable definitions  for _docker-compose.yaml_ are shown below for  Azure cloud-native implementations:
 
 
 .Azure Docker Variables
@@ -287,7 +293,7 @@ blob:
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 
-Google uses Firestore for key-value storage and GCS for blob storage.  Variable definitions  for *docker-compose.yaml* are shown below  for Google cloud-native implementations:
+Google uses Firestore for key-value storage and GCS for blob storage.  Variable definitions  for _docker-compose.yaml_ are shown below  for Google cloud-native implementations:
 
 
 .Google Docker Variables
@@ -319,7 +325,7 @@ blob:
 
 
 === Relational Database (JDBC)
-Variable definitions  for *docker-compose.yaml* are shown below for JDBC database key-value storage:
+Variable definitions  for _docker-compose.yaml_ are shown below for JDBC database key-value storage:
 
 
 .JDBC Docker Variables
@@ -352,7 +358,7 @@ keyValue:
     transactionIsolationLevel: "READ_UNCOMMITTED"
 
 === MongoDB
-Variable definitions  for *docker-compose.yaml* are shown below for MongoDB key-value storage:
+Variable definitions  for _docker-compose.yaml_ are shown below for MongoDB key-value storage:
 
 .MongoDB Docker Variables
 [source]

@@ -27,20 +27,30 @@ This property is *readable and writable* for Selection Lists, Selection Trees, a
 Array::				array of selected option values
 
 == Examples
-.Example: Reading Selection List
+.Example: Reading a Selection List
 [source,javascript]
+--
 var num = SelectionList1.selectedObjects.length;
 var msg = 'You selected ' + num + ' objects: ';
-msg += SelectionList1.selectedObjects.join(', ');
-alert(msg)
+msg += SelectionList1.selectedObjects.join(', '); // <1>
+alert(msg) //<2>
+--
+<1> Append the comma-separated list of selected items to the `msg` string.
+<2> Display the  `msg` string.
 
-.Example: Setting Selection List
+.Example: Setting a Selection List
 [source,javascript]
 SelectionList1.selectedObjects=['CA','MA','TX'];
 
-.Example: Setting Calendar
+.Example: Setting a Calendar
 [source,javascript]
-Calendar1.selectedObjects = [Calendar1.min, dateAdd('m',3,Calendar1.min)];
+--
+Calendar1.selectedObjects = [Calendar1.min, dateAdd('m',3,Calendar1.min)]; //<1>
+Calendar2.selectedObjects = [CALC.today()]; //<2>
+--
+<1> Select a three-month range starting from the earliest date on the Calendar.
+<2> For a Calendar in *day-selection* mode, select today`'s date.
+
 
 
 

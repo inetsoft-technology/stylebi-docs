@@ -177,6 +177,8 @@ public void init(FilterConfig config) throws ServletException {
 
 .. Place the compiled `SampleFilter.class` file into the _/usr/local/inetsoft/classes/inetsoft/sree/_ directory in your installation (if it is not there already).
 include::partial$derivedDockerImage.adoc[]
++
+TIP: {SampleYAML}
 
 
 

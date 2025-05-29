@@ -10,21 +10,22 @@ You can access  component data and filter selections using script. The following
 == Form Components
 You can access the state of common Form components within the Dashboard by using the `selectedObject`, `selectedObjects`, `selectedLabel`, and `selectedLabels` properties.
 
-xref:viewsheetscript:CommonSelectedObject.adoc[], xref:viewsheetscript:CommonSelectedLabel.adoc[]:: The selected value or label of the component: Applies to *single-value* input elements (Slider, Spinner, RadioButton, ComboBox) and the tabs of co-located components in a Tabbed Interface. For example, to return the value or label selected in a Radio Button control, use the following syntax:
+xref:viewsheetscript:CommonSelectedObject.adoc[], xref:viewsheetscript:CommonSelectedLabel.adoc[]:: The selected value or label of the component: Applies to *single-value* input elements (Slider, Spinner, RadioButton, ComboBox) and the tabs of co-located components in a Tabbed Interface.  For example, if RadioButton1 has a value '`NY`' with corresponding label '`New York`', you can choose this value and display the label as follows:
 +
-.Example: selectedLabel
+.Example: selectedObject, selectedLabel
 [source,javascript]
-radioButton1.selectedObjectradioButton1.selectedLabel
+RadioButton1.selectedObject = 'NY'
+alert('You selected: ' + RadioButton1.selectedLabel);
 +
 Tabbed Interface also has a property `selectedIndex` which returns the numeric representation of the active tab.
 
 xref:viewsheetscript:CommonSelectedObjects.adoc[], xref:viewsheetscript:CommonSelectedLabels.adoc[]::
-The selected values or labels of the component, as an array: Applies to *multiple-value* input elements (CheckBox). For example, to return the first selected item or label in a CheckBox:
+The selected values or labels of the component, as an array: Applies to *multiple-value* input elements (CheckBox).
 +
 .Example: selectedObjects, selectedLabels
 [source,javascript]
-checkBox1.selectedObjects[0];
-checkBox1.selectedLabels[0];
+var firstChoice = CheckBox1.selectedObjects[0];
+var firstLabel = CheckBox1.selectedLabels[0];
 
 You can manually type these references into your script, or enter them automatically by clicking the appropriate node on the ‘Component’ tree of the Script Editor.
 

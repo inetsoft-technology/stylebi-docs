@@ -12,6 +12,8 @@ If multi-tenancy is not enabled (see xref:EnableMultiTenant.adoc[] for more info
 
 . Enter `inetsoft.sree.security.CustomAuthenticationProvider` in the  '`Authentication Class`' field.
 
+
+
 . Enter the desired JSON  content from into the '`JSON Configuration`' field.  The default organization is `host-org`.  For example:
 +
 .Expand to see example JSON content

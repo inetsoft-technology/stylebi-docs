@@ -12,11 +12,12 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-A Point Chart displays a measure as a collection of points.
+A Point Chart displays a measure as a collection of points. This is the default chart style when numerical dimensions are used.
+
 
 image:commonscript:pointChartExp5.png[]
 
-To create a point chart, follow the basic steps below:
+To create a point chart, follow the basic steps below.
 
 include::partial$chartNewbieTip.adoc[]
 
@@ -24,7 +25,8 @@ include::partial$chartNewbieTip.adoc[]
 +
 image:commonscript:pointChartExp1.png[]
 +
-NOTE: ‘Point’ is the default chart style when numerical dimensions are used.
+include::ROOT:partial$stackNote.adoc[]
+
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
 +
@@ -35,7 +37,7 @@ image:commonscript:pointChartExp2.png[]
 +
 TIP: {convertToDimension}
 
-. To break-out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to  the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
+. To break out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to  the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
 +
 image:commonscript:pointChartExp3.png[]
 

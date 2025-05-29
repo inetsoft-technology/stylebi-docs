@@ -13,7 +13,8 @@ include::partial$chartNewbieTip.adoc[]
 . Press the {buttonSelectChartStyle}. Choose the ‘Line’ style.  (To create a stacked line chart, enable the ‘Stack’ option at the bottom of the panel.) Press the {buttonApply}.
 +
 image:commonscript:lineChartExp1.png[]
-
++
+include::ROOT:partial$stackNote.adoc[]
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
 +
