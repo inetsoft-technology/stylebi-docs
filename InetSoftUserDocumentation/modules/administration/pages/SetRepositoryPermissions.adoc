@@ -2,7 +2,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-To set permissions for Dashboards,  data sources, repository folders, etc., follow the steps below.
+To set permissions for Dashboards,  data sources, multi-tenant connections, repository folders, etc., follow the steps below.  Use the same steps to view existing permissions for any of these assets.
 
 NOTE: Repository folders are logical groupings, and do not represent file system directories.
 

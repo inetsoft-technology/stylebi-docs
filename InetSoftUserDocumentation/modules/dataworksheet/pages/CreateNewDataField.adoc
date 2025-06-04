@@ -38,9 +38,11 @@ image:dataworksheet:agileTransform3.png[]
 +
 include::ROOT:partial$duplicateNames.adoc[]
 +
-. At the top of the Formula Editor, select either ‘SQL’ or ‘Script’. Select ‘SQL’ (if available) to write the expression using your database’s SQL syntax. Select ‘Script’ to write the expression using JavaScript.
+. At the top of the Formula Editor, select either ‘SQL’ or ‘Script’. Select ‘SQL’ (if available) to write the expression using your database’s SQL syntax. Select ‘Script’ to write the expression using JavaScript.  *Note*: This setting must match the expression syntax that you enter or the expression column will generate an error.
 
 . From the ‘Return Data Type’ menu, select the appropriate data type for the values that the expression will return.
++
+CAUTION: Setting an incorrect ‘Return Data Type’ may cause the expression to return unexpected results.
 
 . Type the desired expression into the script area. To add a field into the expression, click on the field name in the ‘Fields’ listing. To reference the data contained in other cells of the data block, see xref:dataworksheet:AccessDataInExpression.adoc[].
 +

@@ -21,15 +21,17 @@ In some cases, you may want a chart to display only the *top* or *bottom* groups
 +
 image:topNFilter1.png[]
 
-. From the 'Rank' menu, select 'Top' or 'Bottom', respectively, to select the top or bottom groups  based on the measure you specify in the next step.
+. From the '`Rank`' menu, select '`Top`' or '`Bottom`', respectively, to select the top or bottom groups  based on the measure you specify in the next step.
 +
 image:topNFilter2.png[]
 
 . Enter the number of top or bottom groups to select, and choose the measure on which to rank the groups.
 +
 image:topNFilter3.png[]
++
+TIP: Ranking is relative to the parent group. So if the Chart displays sales for products within different categories,  "`top 3 products`"  means  "`top 3 products within each category`". Thus, the chart as a whole may display *more* than just three products. If you want to display the top three products across *all* categories  (i.e., just three products in the Chart legend), group the data by product in a Data Worksheet (see xref:dataworksheet:GroupAggregateData.adoc[]), and apply a ranking filter (see xref:dataworksheet:FilterData.adoc[]) to select the top products.  Join this result to the original data to obtain the dataset for just the top products, irrespective of category (see xref:dataworksheet:JoinData.adoc[]).  Then create a Chart based on this result.
 
-. *_Optional:_*  To sort the selected top or bottom groups in order of the aggregated measure, select an option from the 'Sort' menu: 'By Value (Asc)' or 'By Value (Desc)'. Then choose the measure on which to sort the groups.
+. *_Optional:_*  To sort the selected top or bottom groups in order of the aggregated measure, select an option from the '`Sort`' menu: '`By Value (Asc)`' or '`By Value (Desc)`'. Then choose the measure on which to sort the groups.
 +
 image:topNFilter4.png[]
 +

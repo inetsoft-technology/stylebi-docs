@@ -46,4 +46,10 @@ include::ROOT:partial$newWorksheet2.adoc[]
 
 [#SaveDataWorksheet]
 == Save the Data Worksheet
-To save the Data Worksheet, press the {buttonSave} in the toolbar.
+To save the Data Worksheet, press the {buttonSave} in the toolbar. Provide a '`Name`', choose a *Scope*, and  press btn:[OK].
+
+[square]
+* To make the Data Worksheet accessible to other users, save it *outside* the '`Private Data Worksheet`' scope.
+* To save into a *private location*, select the ‘Private Data Worksheet’ scope. The Data Worksheet will only be accessible to its creator.
++
+IMPORTANT: A *public* Dashboard cannot use a *private* Data Worksheet as a data source.  Such improper scoping may generate an  "`assembly could not be referenced`" error. (A private Dashboard *is* permitted to use a public Data Worksheet.)

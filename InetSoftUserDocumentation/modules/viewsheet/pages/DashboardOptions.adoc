@@ -15,8 +15,7 @@ The *Options* tab of  the ‘Dashboard Options’ dialog box provides the follow
 
 Data Source:: The Data Worksheet,  data model, or table to which the current Dashboard is linked. Press btn:[Select] to choose a data source. Data Worksheets are listed under the   ‘Data Worksheet’ and ‘Private Data Worksheet’ nodes. The Dashboard will have access to all of the data blocks in the selected Data Worksheet. Queries, data models, and database tables   are listed under the ‘Data Source’ node.  The Dashboard has access to all of the fields in the selected asset.
 +
-[TIP,caption=test drive]
-For Test Drive and Visualize Free, data sets are listed under the  ‘Data Sets’ node.  No assets are listed under the 'Data Source' node. Press ‘Clear’ to unbind the data source.
+
 +
 CAUTION: If a Dashboard contains components that are already bound to a data source, those components will *stop functioning* when you change the Dashboard  data source. However, the components will remain functional if the tables and columns in the new data source are named identically to the tables and columns in the old data source.
 

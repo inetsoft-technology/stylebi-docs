@@ -5,9 +5,10 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 To open an existing Dashboard for editing, you can open the Dashboard for viewing in the Portal (see xref:user:UseDashboard.adoc[]) and press the {buttonEdit} in the Dashboard toolbar.
 
+IMPORTANT: It is generally recommended that you edit dashboards in a *development* or *test* environment rather than in your *production* environment.  If an edit causes undesirable Dashboard behavior, you will be able to identify and  troubleshoot the issue before it reaches production. Note that the "`Modification History`" audit report (see xref:administration:Audit.adoc[] in xref:administration:ManageServer.adoc[])  identifies  users who make any edits to a Dashboard, but  does not record the specifics of the modifications. Therefore, it is also advisable to mainatain backups.  (See xref:administration:ManageContent.adoc[])
 
 
-NOTE: Dashboards under ‘Private Dashboard’ are visible only to their creator.
+
 
 Alternatively, follow the steps below:
 
@@ -26,6 +27,9 @@ TIP: Press the {buttonRecent} at the top of the left panel to display Dashboards
 image:Open Sheet.png[]
 +
 To open the Dashboard without data, choose ‘Open in Metadata mode’. (You can also access Metadata mode from the ‘Options’ dialog box. See xref:DashboardOptions.adoc[] for more information.)
++
+NOTE: Dashboards under ‘Private Dashboard’ are visible only to their creator.
+
 
 
 
