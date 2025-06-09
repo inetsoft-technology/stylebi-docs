@@ -54,7 +54,10 @@ image:schedulerAdminSaveToServer.png[]
 To save to the server file system, press the {buttonAddFilePath}  button and specify a valid absolute path including filename.  (The filename extension, e.g., `.pdf`, is added automatically.) The filename can include parameters for automatic insertion of Dashboard name and time/date of  generation (see xref:#InsertParameters[] below).
 
 
-To save to an FTP server, check  the '`FTP/SFTP`' box and enter a valid '`Path`', '`Username`' and '`Password`'.
+To save to an FTP server, check  the '`FTP/SFTP`' box and enter a valid '`Path`', '`Username`' and '`Password`'. To *append* rather than *overwrite* using SFTP, add `?append=true` to the end of the URL.  For example:
+
+[source]
+sftp://hostname:8080/myExcelFile?append=true
 
 
 

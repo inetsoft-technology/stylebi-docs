@@ -27,7 +27,7 @@ arr::			Array of Strings
 .Chart Component Script
 [source,javascript]
 --
- dataset = [["State", "Name", "Quantity"], ["NJ", "New Jersey", 200], ["NY", "New York", 300]]; //<1>
+dataset = [["State", "Name", "Quantity"], ["NJ", "New Jersey", 200], ["NY", "New York", 300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
 var mtframe = new MultiTextFrame(); //<2>
@@ -46,3 +46,7 @@ image:commonscript:MultiTextFrameSetField.png[]
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
+
+
+// use delimiter to concatenate the values, or set message format.
+//text.setDelimiter("\n");

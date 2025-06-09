@@ -1,0 +1,62 @@
+= MultiTextFrame.setDelimiter(str)
+:navtitle: setDelimiter()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Specifies a delimiter used to separate values in the xref:MultiTextFrame.adoc[] for display.  For better control over the display of values, use xref:MultiTextFrameSetMessageFormat.adoc[] instead.
+
+
+
+== Parameter
+str::			A delimiter
+
+
+
+// use delimiter to concatenate the values, or set message format.
+//text.setDelimiter("\n");
+
+
+== Example
+
+Use `MultiTextFrame` to place multiple measures/dimensions as labels on a Chart.  Follow the steps below:
+
+. Create the desired Chart.
+
+. If there are fields that you want to use as labels (that are *not* already on the '`X`' or '`Y`' axis or used in the *Visual* panel for '`Color`', '`Shape`', '`Size`', or '`Text`')  add those fields  in the  '`Break By`' region.
++
+In the  example below, '`Order Date`' and '`Price`' are displayed on the axes, and '`Region`' is assigned as the '`Text`' binding.  Because we want a label for '`Total`' as well, this field has been placed in  the  '`Break By`' region.
++
+image:commonscript:MultiTextFrameSetField1.png[]
+
+
+. Add the following script to the Chart component. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
+.Chart Component Script
+[source,javascript]
+--
+var tframe = new MultiTextFrame(); //<1>
+tframe.setFields("Customer:Region", "Sum(Product:Price)", "Sum(Product:Total)"); //<2>
+tframe.setDelimiter("\n"); //<3>
+graph.getElement(0).setTextFrame(tframe); //<4>
+--
+<1> Create the xref:MultiTextFrame.adoc[] object.
+<2> Use xref:MultiTextFrameSetFields.adoc[] to assign the fields you want to use as labels.
+<3> Use `setDelimiter()` to separate the label text with newline.
+<4> Use xref:GraphElementSetTextFrame.adoc[] to add the `MultiTextFrame` to the xref:IntervalElement.adoc[].
+
+. Press btn:[OK].  The labels are displayed on the Chart.
+
+. *_Optional:_* Use the *Format* tab to change the label color to make them more visible.  (See xref:viewsheet:VisualFormat.adoc[].)
++
+image:commonscript:MultiTextFrameSetDelimiter.png[]
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

@@ -8,7 +8,7 @@ Formats a date according to a simple date format and returns the result as a str
 
 == Parameters
 date::				Java or JavaScript date object
-string::	Date pattern string, using the symbols below:
+string::	`'LONG'`, `'FULL'`, `'MEDIUM'`,  `'SHORT'`, or a date pattern string, using the symbols below:
 
 +
 include::partial$dateFormatTable.adoc[]
@@ -16,11 +16,13 @@ include::partial$dateFormatTable.adoc[]
 
 
 == Examples
+.Sample usage
 [source,javascript]
-----
-formatDate(new Date(), "hh 'o''clock' a, zzzz");
-----
-Some format string patterns are shown below:
+--
+var dateToday = formatDate(new Date(), "hh 'o''clock' a, zzzz");
+--
+
+Some format string pattern examples are shown below:
 
 |===
 |Date and time pattern|Result
@@ -29,6 +31,17 @@ Some format string patterns are shown below:
 |`EEE, MMM d, ‘ ‘ yy`|Mon, Aug 7, ‘06
 |`h:mm a`|12:08 PM
 |`hh ‘o’ ‘clock’ a, zzzz`|12 o’clock PM, Pacific Daylight Time
+|===
+
+The predefined options (`'LONG'`,`'FULL'`,`'MEDIUM'`,`'SHORT'`) are *locale-adapting* formats, which means they will display in a manner determined by the user's locale, for example, "`Wednesday, May 22, 2025`" in an English locale and "`2025年5月22日`" in a Chinese locale.
+
+|===
+|Predefined string |Result
+
+|`FULL`| Thursday, June 5, 2025
+| `LONG`| June 5, 2025
+|`MEDIUM`| Jun 5, 2025
+|`SHORT`| 6/5/25
 |===
 
 

@@ -1,0 +1,62 @@
+= MultiTextFrame.setMessageFormat(str)
+:navtitle: setMessageFormat()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+Specifies the formatting for the xref:MultiTextFrame.adoc[].
+
+
+
+== Parameter
+str::			String using {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the first field in the `MultiTextFrame`,  `pass:[{1}]` represents the second field in the `MultiTextFrame`, and so on. You can specify a format for each field using the patterns described in xref:viewsheet:DataFormat.adoc[].
+
+
+
+
+
+
+== Example
+
+Use `MultiTextFrame` to place multiple measures/dimensions as labels on a Chart.  Follow the steps below:
+
+. Create the desired Chart.
+
+. If there are fields that you want to use as labels (that are *not* already on the '`X`' or '`Y`' axis or used in the *Visual* panel for '`Color`', '`Shape`', '`Size`', or '`Text`')  add those fields  in the  '`Break By`' region.
++
+In the  example below, '`Order Date`' and '`Price`' are displayed on the axes, and '`Region`' is assigned as the '`Text`' binding.  Because we want a label for '`Total`' as well, this field has been placed in  the  '`Break By`' region.
++
+image:commonscript:MultiTextFrameSetField1.png[]
+
+
+. Add the following script to the Chart component. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
+.Chart Component Script
+[source,javascript]
+--
+var tframe = new MultiTextFrame(); //<1>
+tframe.setFields("Customer:Region", "Sum(Product:Price)", "Sum(Product:Total)"); //<2>
+tframe.setMessageFormat(new java.text.MessageFormat("Region: {0}\nPrice: {1}\nTotal: {2}")); //<3>
+graph.getElement(0).setTextFrame(tframe); //<4>
+--
+<1> Create the xref:MultiTextFrame.adoc[] object.
+<2> Use xref:MultiTextFrameSetFields.adoc[] to assign the fields you want to use as labels.
+<3> Use `setMessageFormat()` to format the label text as desired.
+<4> Use xref:GraphElementSetTextFrame.adoc[] to add the `MultiTextFrame` to the xref:IntervalElement.adoc[].
+
+. Press btn:[OK].  The labels are displayed on the Chart.
+
+. *_Optional:_* Use the *Format* tab to change the label color to make them more visible.  (See xref:viewsheet:VisualFormat.adoc[].)
++
+image:commonscript:MultiTextFrameSetField2.png[]
+
+
+
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

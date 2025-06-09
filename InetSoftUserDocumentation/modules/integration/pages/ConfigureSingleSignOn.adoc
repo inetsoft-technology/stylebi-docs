@@ -5,9 +5,11 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 
 Single Sign-On (SSO) is the process of transparently passing user credentials from one application to another so that the user is only required to present login credentials a single time. This helps to create a seamless user experience.
 
+IMPORTANT: SSO only provides the authentication service.  For authorization, see xref:administration:SetRepositoryPermissions.adoc[] and xref:administration:SetSecurityActions.adoc[].
+
 You can implement single sign-on (SSO) by injecting a principal object into the HTTP request object as part of the security filter chain. This allows StyleBI to automatically sign in the user without attempting to authenticate credentials. The StyleBI *SRPrincipal* object is used to hold the security information. You can create the SRPrincipal object yourself or let StyleBI create it for you. (See xref:AccessUserSession.adoc[] for additional information.)
 
-The following sections explain the security filter chain and methods of implementing SSO.
+The following   methods are available for  implementing SSO.
 
 == SSO Using OpenID
 To implement SSO using OpenID Connect, follow the steps below:

@@ -38,6 +38,12 @@ image:Grouping_WS1.png[]
 
 . Use the menus to select grouping fields and summary fields.  For summary fields, select the desired method of aggregation (‘Sum’, ‘Average’, etc.). For date-type fields, select the desired level of date grouping (‘Year’, ‘Month’, etc.).  *_Optional:_* Select ‘As time series’ to force the display of date groups even when the group has no data (null).
 +
+.Read more about the available aggregation methods…
+[%collapsible]
+====
+include::ROOT:partial$AggregationMethods.adoc[]
+====
++
 image:grouping2_1.png[]
 +
 TIP: To group dates using a *fiscal calendar*, create Expression Columns  for the desired date ranges (fiscal week, month, etc.) by using the corresponding fiscal functions, such as xref:commonscript:CALC_fiscalweek.adoc[CALC_fiscalweek] and xref:commonscript:CALC_fiscalmonth.adoc[CALC_fiscalmonth], and then use those Expression Columns as the grouping fields.  See  xref:CreateNewDataField.adoc#CreateExpressionColumninDataWorksheet[Create an Expression Column in a Data Worksheet] for more details.

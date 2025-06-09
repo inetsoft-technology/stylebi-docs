@@ -128,7 +128,7 @@ query.cache.timeout:: With `query.cache.data` enabled, specifies the amount of t
 query.preview.maxrow:: Sets the maximum number of rows retrieved for design-time requests. This includes  Data Worksheet ‘Live Data View’ and Dashboard design views in Visual Composer. See xref:TailorServerPerformance.adoc[] for more information.
 query.preview.timeout:: Sets the timeout interval (seconds) for queries in Data Worksheet and Dashboard live data mode.
 query.runtime.maxrow:: Sets the global maximum size for all queries during  Dashboard runtime execution. Data limits set at  Dashboard level are not permitted to exceed this global limit.
-query.runtime.timeout:: Sets the global timeout (seconds) for all queries during Dashboard runtime execution.
+query.runtime.timeout:: Sets the global timeout (seconds) for all queries during Dashboard runtime execution.  If the timeout is too short, this can cause a data-read error in some cases.
 rest.cache.timeout.millis:: Sets the timeout (milliseconds) for REST queries to be cached. Use a value greater than 0 to prevent repeated execution of similar REST queries. If a request is made before the cache entry expires, the cached response will be used instead of executing a new HTTP request. (Default is 0, no caching of REST queries.)
 script.execution.timeout:: A safety-net for script execution time, especially for infinite loops. Times-out the script if execution time exceeds specified value (in seconds).
 table.output.maxrow:: Sets the global maximum row limit for all Tables, Crosstabs, and Freehand Tables during Dashboard runtime execution. This property controls the size of the final displayed table, following any grouping and aggregation.

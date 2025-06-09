@@ -522,9 +522,11 @@ To set a home page that appears when the user selects the Repository tab of the 
 +
 image:welcomePage.png[]
 
-. You can specify a URL (same domain as InetSoft server) or a specific resource file such as an HTML or JSP file. HTML content can be localized by using the following tag:
+. You can specify a '`URI`' (same domain as InetSoft server) or a specific '`Resource`' file such as an HTML or JSP file, which must be placed in the _/usr/local/inetsoft/classes/_ directory. HTML content can be *localized* by using the following tag:
 
  $(text to be localized)#(inter)
+
+. Restart the server.
 
 If you do not specify a custom welcome page, the Portal will display a generic welcome page.
 

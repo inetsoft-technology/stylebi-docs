@@ -211,7 +211,10 @@ This option saves a copy of the Dashboard to the server file system or to an FTP
 . To save to the server file system, enter a valid absolute path including filename in the '`Path`' field. If you see a ‘Location’ menu, select a desired server location, and then enter a path relative to the selected location. (The filename extension, e.g., `.pdf`, is added automatically.)
 
 
-. To save to an FTP server, check  the '`FTP/SFTP`' box and enter a valid '`Path`', '`Username`' and '`Password`'.
+. To save to an FTP server, check  the '`FTP/SFTP`' box and enter a valid '`Path`', '`Username`' and '`Password`'.To *append* rather than *overwrite* a file using SFTP, add `?append=true` to the end of the URL.  For example:
++
+[source]
+sftp://hostname:8080/myExcelFile?append=true
 +
 IMPORTANT: For SFTP connections, the known hosts file, _.ssh/known_hosts_, is automatically read from the user’s home directory. Before running the scheduled task, an administrator should populate the _known_hosts_ file by first connecting (SSH) to the target server from each InetSoft server node.
 

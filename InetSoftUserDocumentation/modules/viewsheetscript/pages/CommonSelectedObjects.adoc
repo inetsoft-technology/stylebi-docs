@@ -23,11 +23,14 @@ NOTE: For a Calendar, `selectedObjects` specifies the selected range on the Cale
 
 This property is *readable and writable* for Selection Lists, Selection Trees, and Calendars, and is *read-only* for other components. Script that reads the value of the `selectedObjects` property can be placed either on the component or in the onInit Handler or onRefresh Handler, while script that writes the `selectedObjects` property *must* be placed in the onInit Handler or onRefresh Handler. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about these handlers.)
 
+TIP: To avoid *overwriting* an existing setting (saved by the designer, or saved by the user in a bookmark),  test to see if the component value has already been set before using `selectedObjects`.  See the third example below.
+
+
 == Type
 Array::				array of selected option values
 
 == Examples
-.Example: Reading a Selection List
+.Example 1: Read a Selection List
 [source,javascript]
 --
 var num = SelectionList1.selectedObjects.length;
@@ -38,19 +41,22 @@ alert(msg) //<2>
 <1> Append the comma-separated list of selected items to the `msg` string.
 <2> Display the  `msg` string.
 
-.Example: Setting a Selection List
+.Example 2: Set a Selection List
 [source,javascript]
 SelectionList1.selectedObjects=['CA','MA','TX'];
 
-.Example: Setting a Calendar
+.Example 3: Set two Calendars
 [source,javascript]
 --
 Calendar1.selectedObjects = [Calendar1.min, dateAdd('m',3,Calendar1.min)]; //<1>
-Calendar2.selectedObjects = [CALC.today()]; //<2>
+
+if(Calendar2.selectedObjects[1] == null){
+  Calendar2.selectedObjects = [CALC.today()]; //<2>
+}
+
 --
 <1> Select a three-month range starting from the earliest date on the Calendar.
-<2> For a Calendar in *day-selection* mode, select today`'s date.
-
+<2> For a Calendar in *day-selection* mode, select today`'s date  *ONLY IF* not already set
 
 
 

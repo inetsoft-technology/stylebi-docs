@@ -17,17 +17,23 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies the selected *value* of the component (not the label). Applies to single-value input elements (Slider, Spinner, Radio Button, Combo Box) and the tabs of co-located components (Tabbed Interface).
 
+TIP: To avoid *overwriting* an existing setting (saved by the designer, or saved by the user in a bookmark),  test to see if the component value has already been set before using `selectedObject`.  See xref:CommonSelectedObjects.adoc[] for an example of such a test.
+
+
+
 == Type
 Value of the selected option
 
 Examples::
 [source,javascript]
 ----
-// If RadioButton data type is ‘String’:
+// Set a RadioButton with data type  ‘String’:
 RadioButton1.selectedObject = 'NJ';
 
-// If ComboBox data type is ‘Date’:
+// Set a ComboBox with data type  ‘Date’:
 ComboBox1.selectedObject = new Date(2020,5,23);
+
+
 ----
 
 

@@ -10,5 +10,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:VisualFrame.adoc[]
 ====
 
-The `MultiTextFrame` object contains a mapping between values and multiple articles of displayed text.  It provides the special xref:MultiTextFrameSetFields.adoc[] method.
+The `MultiTextFrame` object contains a mapping between values and multiple articles of displayed text.
+
+[source,javascript]
+var frame = new MultiTextFrame('m1', 'm2', 'm3');
+
+You can pass a set of field names (e.g., ‘m1’, ‘m2’, ‘m3’) to the constructor, or specify this later using the  xref:MultiTextFrameSetFields.adoc[] property.
+
 

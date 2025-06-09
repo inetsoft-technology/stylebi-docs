@@ -35,7 +35,7 @@ Press the btn:[Customize] button to selectively disable prompting for certain pa
 
 Selection Association:: Specifies that selections the user makes in one Filter component (Selection List, Selection Tree, etc.) should be reflected in the values shown within other Filter components (e.g., by highlighting values included in result set, hiding incompatible values, etc.). Disabling this feature may improve performance for Dashboards that have a very large number of filters.
 
-Max Rows Warning:: When selected, provides a warning to the user that results have been truncated due to a maximum row setting. See xref:dataworksheet:DataBlockProperties.adoc[] to configure the row maximum.
+Max Rows Warning:: When selected, provides a warning to the user that results have been truncated due to a maximum row setting. The warning will also be printed on exported Dashboards whose results have been truncated. See xref:dataworksheet:DataBlockProperties.adoc[] to configure the row maximum.
 
 Create MV On-demand:: Specifies that a new materialized view should be automatically created on-the-fly if the Dashboard does not have an existing materialized view, either because the materialized view was never populated with data or because the Dashboard underwent modifications that rendered an existing materialized view unusable. The materialized view will supply data to the Dashboard both at design time and at runtime. (This option must be enabled by an administrator.)
 
