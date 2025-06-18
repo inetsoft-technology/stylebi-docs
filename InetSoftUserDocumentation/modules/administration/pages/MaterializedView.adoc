@@ -104,7 +104,11 @@ image:Materialized View Manage Filter_1.png[]
 +
 image:Materialized View Manage Column Select.png[]
 
-. To *update* a materialized view with new data, select the desired materialized view in the table and press btn:[Update]. To *delete* a materialized view (for example, if changes have been made to the underlying database schemas), select the materialized view in the table and press btn:[Delete].
+. To *update* a materialized view with new data, select the desired materialized view in the table and press btn:[Update].
+
+. To *delete* a materialized view (for example, if changes have been made to the underlying database schemas), select the materialized view in the table and press btn:[Delete].
++
+TIP: If you experience a problem when a Dashboard attempts to retrieve data from a materialized view, *delete* the materialized view,   *recreate* it, and assign it to a cycle.  See xref:#CreateMaterializedView[] for details.
 
 [#MaterializedViewOptions]
 == Materialized View Options

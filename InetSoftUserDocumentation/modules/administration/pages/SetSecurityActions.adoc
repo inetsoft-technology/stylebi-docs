@@ -28,7 +28,12 @@ Chart Types:: Access to different chart types in the Chart Editor.
 Dashboard Toolbar:: Access to various buttons on the Dashboard toolbar. (See xref:user:UseDashboard.adoc[] for more information.)
 Enterprise Manager:: Access to various pages in Enterprise Manager.
 +
-IMPORTANT: The following options are not available when multi-tenancy is enabled (see xref:administration:EnableMultiTenant.adoc[]): menu:Monitoring[Cache], menu:Monitoring[Clustering], menu:Monitoring[Summary], menu:Monitoring[Logs], menu:Settings[All Properties], menu:Settings[General], menu:Settings[Logging], menu:EM[Notification].
+[IMPORTANT]
+=====
+[square]
+* Only provide Enterprise Manager access to users who you *trust* to modify the server environment.
+* The following options are not available when multi-tenancy is enabled (see xref:administration:EnableMultiTenant.adoc[]): menu:Monitoring[Cache], menu:Monitoring[Clustering], menu:Monitoring[Summary], menu:Monitoring[Logs], menu:Settings[All Properties], menu:Settings[General], menu:Settings[Logging], menu:EM[Notification].
+=====
 
 Internal Scheduled Tasks:: Access to various predefined scheduled tasks.
 Portal Tabs:: Access to various Portal tabs. (See xref:user:UsePortal.adoc[] for more information about the Portal.)

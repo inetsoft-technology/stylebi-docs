@@ -74,19 +74,21 @@ You can insert other text into the format string, for example: `pass:[Total is $
 ====
 .For the number 124521.63:
 ----
- #,###.## = 124,521.63    <1>
- #,###.000 = 124,521.630  <2>
+#,###.## = 124,521.63    //<1>
+#,###.000 = 124,521.630  //<2>
+0000000 = 0124522        //<3>
 ----
 <1> Insert comma every three places
 <2> Pad to hundredths by using ‘0’ to right of decimal
+<3> Zero-pad left side and round
 
 
 .For  the number 745850.78:
 [source]
 ----
- #,###.## = 745,850.78       <1>
- #.# = 745850.8              <2>
- #,###.000 = 745,850.780     <3>
+#,###.## = 745,850.78       //<1>
+#.# = 745850.8              //<2>
+#,###.000 = 745,850.780     //<3>
 ----
 <1> Insert comma every three places
 <2> Round to tenths by using ‘#’ to right of decimal

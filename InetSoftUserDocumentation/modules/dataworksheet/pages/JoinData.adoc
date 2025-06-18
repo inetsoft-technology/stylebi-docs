@@ -54,6 +54,9 @@ To use the {buttonJoin}, follow the steps below:
 . Create the data blocks you want to join. (See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.)
 
 . Select the data blocks you want to join together. (You can hold the {buttonShift} or {buttonCtrl} key and click on the data blocks to select two or more, or drag with the mouse to “lasso” the data blocks.)
++
+TIP: In general, you should avoid joining more than two data blocks at the same time.
+
 
 . Press the {buttonJoin} in the toolbar, and select  {buttonInnerOuterJoin}.
 +

@@ -76,9 +76,11 @@ Sort Repository Tree:: Specifies the sort order of items in the Repository listi
 
 Default Dashboard CSS:: Allows you to specify a custom CSS file to use for Dashboard  component styles. To use custom CSS, uncheck the ‘Default Dashboard CSS’ option and click in the ‘Custom Dashboard CSS File’ field to specify the file. The CSS file can specify styles for alignment, font, border, and color. See xref:StyleWithCSS.adoc[] for more information.
 
-Default Fonts:: Allows you to upload custom fonts. To add custom fonts, uncheck the ‘Default Font’ option and press the ‘Edit Fonts’ button. In the ‘User Fonts’ dialog box, press btn:[Add] to open the '`Add/Edit Font Face`' dialog box and load a new font by specifying the locations of the font’s TTF, EOT, SVG, and WOFF files, as well as the desired weight and style. You can add multiple font variations under the same name so that, for example, a bold or italic version of the font will be available when the user applies bold or italic formatting.
+Default Fonts:: Allows you to upload custom fonts. To add custom fonts, uncheck the ‘Default Font’ option and press the ‘Edit Fonts’ button. In the ‘User Fonts’ dialog box, press btn:[Add] to open the '`Add/Edit Font Face`' dialog box and load a new font by specifying the locations of the font’s TTF, EOT, SVG, and WOFF files, as well as the desired weight and style. You can add multiple font variations under the same name so that, for example, a bold or italic version of the font will be available when the user applies bold or italic formatting. Verify that each parent folder for the desired fonts is listed in the '`CID Font Path`' (see  xref:#PDFSettings[]).
 +
 image:Global Look and Feel2.png[]
+
+
 
 Default Favicon:: This option is available only when the `portal.customLogo.enabled` is set to  `true`.  {EMPropertyConfig} Uncheck the '`Default Favicon`' property to upload a custom favicon in PNG format.
 

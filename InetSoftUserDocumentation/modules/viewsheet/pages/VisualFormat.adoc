@@ -21,7 +21,12 @@ Certain components have multiple regions that can be selected and formatted inde
 
 After you have selected the desired component or component region, proceed to adjust the settings in the *Format* panel, as described in the sections below.
 
-NOTE: A more specific format overrides a more general format. For example, a title bar format overrides a general component format.
+[NOTE]
+====
+[square]
+* A more specific format overrides a more general format. For example, a title bar format overrides a general component format.
+* If you select multiple components,  only the *Format* options that apply to *all* selected components will be available.
+====
 
 == Set Font
 

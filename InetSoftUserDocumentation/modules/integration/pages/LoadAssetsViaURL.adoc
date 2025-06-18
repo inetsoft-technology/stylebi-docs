@@ -93,6 +93,9 @@ To embed a Dashboard within an IFrame, use the URLs provided above, for example,
 <iframe src="https://www.example.com/app/viewer/view/global/DashboardPath/DashboardName allowfullscreen>
 </iframe>
 
+include::partial$securityAllowIFrame.adoc[]
+
+
 === Communicate with Parent Page of IFrame
 If the Dashboard is being displayed within an IFrame, you can allow the Dashboard to communicate with its parent window by using a *hyperlink* in the Dashboard to trigger a  JavaScript https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent[MessageEvent] in the parent window. (The parent window *does not* need to have the same domain as the InetSoft server.) The hyperlink in the Dashboard should begin with the prefix "`*message:*`", for example, "`*message: Hyperlink was clicked*`".
 
