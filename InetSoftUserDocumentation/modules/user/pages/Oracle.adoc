@@ -46,3 +46,6 @@ If the database is shown with an {buttonError}, this means that the connection w
 image:dataSourceOracle3.png[]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]
+
+TIP: Oracle databases do not allow certain grouping operations on CLOB data types.  Attempting to aggregate  a CLOB column may therefore cause a `SQLSyntaxErrorException`. In this case, modify the CLOB column in the database to type `VARCHAR2`, or cast the column to `VARCHAR2` in a Data Worksheet or Data Model expression using `CAST(ColumnName AS VARCHAR2(4000))`. See xref:dataworksheet:CreateNewDataField.adoc#CreateExpressionColumninDataWorksheet[Create an Expression Column] or xref:user:CreateLogicalModel.adoc[].
+

@@ -24,6 +24,8 @@ To assign a uniform background to the entire Dashboard, follow the steps below:
 +
 image:formatTab1.png[]
 
+NOTE: When you apply a custom background, some components may display with white borders.  Use the *Format* tab (see xref:VisualFormat.adoc[]) or `border-color`  property (see xref:administration:CSSComponentProperties.adoc[]) to assign the desired border color.
+
 == Use Shape or Image as Background
 You can use an Image or a Shape component as a background for any portion of a Dashboard. For example, you can place an Image behind a set of components to provide the appearance of a frame or panel.
 

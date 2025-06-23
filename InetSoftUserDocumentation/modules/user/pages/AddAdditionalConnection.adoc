@@ -4,7 +4,9 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 
-A single data source can support multiple connections. This is useful in a multi-tenant environment, as it enables you to assign different connections to different users. To add a new connection, follow the steps below:
+A single data source can support multiple connections. This is useful in a multi-tenant environment, as it enables you to assign different connections to different users. This also provides a way to parameterize a data source, allowing access to the same data source with different parameters for each connection.
+
+To add a new connection, follow the steps below:
 
 . Press the top {buttonData} in the Portal.
 +

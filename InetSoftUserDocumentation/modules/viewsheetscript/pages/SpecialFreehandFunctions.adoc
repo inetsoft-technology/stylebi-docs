@@ -153,11 +153,15 @@ sorton:: Sort the values according to a specified measure. Sorting by `sorton` i
 +
 [source,javascript]
 toList(q,'field=Company,sorton=sum(Total)');
++
+IMPORTANT: When using the `sorton` option, the first argument of `toList` should be the *full table/query*.
 
 sorton2:: Sort the values according to a specified measure. Sorting by `sorton2` is applied after Top/Bottom-N filtering implemented by `maxrows`. For example, where query variable `q` contains the full table:
 +
 [source,javascript]
 toList(q,'field=Company,sorton2=sum(Total)');
++
+IMPORTANT: When using the `sorton2` option, the first argument of `toList` should be the *full table/query*.
 
 remainder:: Specifies the label for the ‘Others’ group when Top/Bottom-N filtering is in effect. If not specified, the ‘Others’ group is not displayed.
 maxrows = num:: Limits the number of rows returned.

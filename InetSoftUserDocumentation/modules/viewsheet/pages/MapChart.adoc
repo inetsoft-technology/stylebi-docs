@@ -80,7 +80,9 @@ image:commonscript:bindGeographicFieldSetAgg.png[]
 +
 image:commonscript:bindGeographicFieldRanking_1.png[]
 
-. *_Optional:_*  To create a particular trajectory through the points on the chart, drag a path field to the ‘P’ region. The values of this field are used to assign the sort order for the plotted data so that connecting lines are drawn between points that are adjacent in the path sort order.
+. *_Optional:_*  To create a particular trajectory through the points on the chart, drag a path field to the ‘Path’ region. The values of this field are used to assign the sort order for the plotted data so that connecting lines are drawn between points that are adjacent in the path sort order.
++
+TIP: If your data set contains origin and destination in separate columns, you should combine these into a single column
 
 . {finishEditing}
 

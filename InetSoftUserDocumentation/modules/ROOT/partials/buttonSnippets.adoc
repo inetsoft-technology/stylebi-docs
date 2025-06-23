@@ -399,7 +399,7 @@
 :dataset: See xref:chartAPI:Dataset.adoc[] to use a data block  instead of an array literal.
 
 :ExportCSV: For ‘CSV’ format, select ‘Export All Tables’ to include all Dashboard tables in the export. To include only specific tables, uncheck ‘Export All Tables’ and select the desired tables to export from the ‘Assemblies’ list.  In the ‘Delimiter’ field, enter the character to be used to separate entries in the CSV file. (The default delimiter character is a comma.) For tab-delimitation, select the ‘Tab Delimited’ option. Enter a value in the ‘Quote’ field to use this character to quote exported values. Select ‘Keep Header’ to include the column headers in the export.
-:ExportExcel: For ‘Excel’ format, select ‘Export All Tabbed Tables’ to export tables within different tabs of a Tabbed Interface into separate Excel tabs. (See xref:viewsheet:ArrangeComponents.adoc[] for more information about Tabbed Interfaces.)
+:ExportExcel: For ‘Excel’ format, select ‘Export All Tabbed Tables’ to export tables within different tabs of a Tabbed Interface into separate Excel tabs. (See xref:viewsheet:ArrangeComponents.adoc[] for more information about Tabbed Interfaces.) If you select a bookmark, this will be used as the name of the first tab.
 :timeRangeCondition: The ‘Time Range’ option allows you to specify a general range when the task should be started. This option may improve performance in cases when tasks from many users are scheduled to execute at around the same time.
 :commonProperties: xref:CommonProperties.adoc[] for  information about ‘Properties’ settings that are the same for all components.
 :commonScript: See xref:ScriptTab.adoc[] for information about this common tab.

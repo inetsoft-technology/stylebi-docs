@@ -90,11 +90,47 @@ NOTE: For full information about specifying conditions, see xref:FilterData.adoc
 
 . *_Optional:_*  To make manual edits to the SQL string that will be sent to the database, press the btn:[Edit] button next to the ‘SQL’  area to open the ‘SQL’ panel for editing. Make the desired edits.
 +
+IMPORTANT: If you make manual edits to the SQL string, you will no longer be able to modify the query using the 'Columns', 'Joins', and 'Conditions' panels.
++
 image:agileData15_1.png[]
 +
-Press the btn:[Parse Now] button to parse the SQL string. Note, however, that due to database variations, the parser may not be able to parse all valid SQL statements.
+To add variables into a query condition, see xref:#AddVariablestoSQLString[]. To add a materialized view update codition, see xref:#AddMVUpdateConditiontoSQLString[].
+
+. Press the btn:[Parse Now] button to parse the SQL string. Note, however, that due to database variations, the parser may not be able to parse all valid SQL statements.
+
+
+[#AddVariablestoSQLString]
+=== Add Variables to SQL String
+You can add query variables to the SQL string using the ``$(var)``construct, where `var` is an arbitrary variable name. This variable will be translated into a SQL variable and the value will be provided at runtime.
+
+You can also specify a special string replacement variable (parameter) with the `$(@var)` construct. This allows you to dynamically construct the SQL string, through scripting, in order to satisfy complex business requirements. For example, you can dynamically determine the table from which to select data at runtime. To do this, define a partial SQL string, such as
+
+[source,sql]
+select id from $(@var)
+
+Then create a runtime script to replace the variable `var` with a table name such as `customers` or `prospects`.  You can place this script in the *onInit* handler  (see xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script]).
+
+[#AddMVUpdateConditiontoSQLString]
+=== Add MV Update Condition to SQL String
+
+In cases where you want to create an incremental update for a materialized view based on a non-mergeable query (e.g., non-relational database query or un-parsable query), you will need to add the update condition to the SQL string. To do this, follow the steps below:
+
+. Add the desired update condition to the query definition itself.  For example:
 +
-IMPORTANT: If you make manual edits to the SQL string, you will no longer be able to modify the query using the 'Columns', 'Joins', and 'Conditions' panels.
+[source,sql]
+SELECT ... FROM T1 WHERE (...) AND DATE_COL = $(MV.LastUpdateTime)
++
+The update condition can use the special variables `pass:[MV.LastUpdateTime]`, `pass:[MV.{Column Name}.Min]`, and `pass:[MV.{Column Name}.Max]`, where `pass:[{Column Name}]` is the materialized view column name with non-alphanumeric characters replaced by underscores. For example, a materialized view column named `Year(Order Date)` should use parameter names `MV.Year_Order_Date_.Min` and `MV.Year_Order_Date_.Max`. (See xref:dataworksheet:FilterData.adoc[]   for more information about these parameters.)
+
+
+. In the *MV Update* tab of the Data Worksheet data block, enable the ‘Always append updates’ option. (See xref:dataworksheet:FilterData.adoc[]  for more information about the *MV Update* tab.) This ensures that the results of the non-mergeable query will be appended to the existing materialized view. Note that this assumes that the tables being queried contain *only* new data to be appended to the existing materialized view.
+
+
+
+
+
+
+
 
 
 [#AdvancedQuery]
