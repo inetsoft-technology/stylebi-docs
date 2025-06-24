@@ -47,6 +47,9 @@ Free Form SQL:: Permission to create a data set by entering a SQL string in the 
 Materialize Assets:: Access to the ‘Materialize’ menu option for Dashboards in the Portal Repository tree, as well as for Enterprise Manager. (See xref:viewsheet:ImprovePerformance.adoc[] and xref:administration:MaterializedView.adoc[]  for more information.)
 My Dashboards:: Access to the ‘My Dashboards’ folder in the Portal Repository tree for storage of private assets.
 Physical Table:: Access to database tables via the ‘TABLE’ folder of the ‘Data Source’ tree in a Data Worksheet.
++
+TIP: If you want a user to see only specific tables, set your database permissions to allow that user access to only the desired  tables.
+
 Portal Repository Tree - Drag and Drop:: Permission to drag-and-drop assets in the Portal Repository tree. (See xref:user:ManageRepository.adoc[] for more information.)
 Profile:: Permission to profile the performance of a Dashboard  via the Portal {buttonProfile} action. (See xref:user:ProfileDashboard.adoc[] for more information.)
 Upload Drivers:: Permission to upload database drivers when creating a new data source using the {buttonDataSource} option under the Portal {buttonCreate} and on the *Drivers and Plugins* page in Enterprise Manager. (See xref:user:ConnectToData.adoc[] and xref:administration:Storage.adoc#ManageDriversandPlugins[Manage Drivers and Plugins] for more information.)
