@@ -72,6 +72,9 @@ IMPORTANT: Join paths that are displayed in red indicate the presence of a join 
 [#ResolveLoops]
 == Resolve Loops
 
+[WARNING,caption=see also]
+xref:#IdentifyQueryTraps[] for physical view designs that can cause unexpected results.
+
 When a join path is displayed in red, this indicates that a join cycle (join ambiguity) exists.
 +
 image:dataModel11.png[]
@@ -212,3 +215,91 @@ image:dataModel34.png[]
 The new aliased tables in the physical view will appear among the tables available for constructing the logical model (see xref:LogicalModel.adoc[]). With the elimination of the cycle, there is no remaining ambiguity in the join structure.
 
 CAUTION:  When you design your logical model from a physical view with aliased tables, *you must be careful* when selecting fields as model attributes. For example, the `Return_SA.SUPPLIERS` table will in general return *different data* than the  `Order_SA.SUPPLIERS` table when fields from these tables are used in a data model. Even though these two tables are identical aliases of the original `SUPPLIERS` table , they are joined to the other tables in different ways, which results in different data selections.
+
+[#IdentifyQueryTraps]
+== Identify Query Traps
+
+A _query trap_ is a construct in a physical view that can generate undesired query results which might confuse users or lead to inaccurate analyses. The sections below discuss  query traps that you should avoid when you design a physical view.
+
+NOTE: These traps usually do not occur in a *star schema* because this schema type has uniform 1-to-n relationships from dimension table to fact table, and all measures are located in the fact table.
+
+
+
+=== Loop Trap
+Loops are  multiple possible paths between tables in the physical view. Loops are always highlighted in red in the physical view.  To resolve a loop trap, see xref:#ResolveLoops[] above.
+
+
+=== Higher Level Aggregate Trap
+It is always acceptable to aggregate *measures* at a lower level, but aggregating  higher-level measures  can cause erroneous results.  This is the _higher level aggregate trap_.
+
+include::ROOT:partial$measureTip.adoc[]
+
+Consider the two tables below.  The `Order` table contains an order ID field and the total amount of that order.  The `Item` table contains an  order ID field and item ID field.   The `Order` table contains "`higher-level`" information than the `Item` table because it pertains to the entire order.
+
+[width=20%]
+|===
+|Order
+
+|Order_ID
+|Order_Amount
+|===
+
+[width=20%]
+|===
+|Item
+
+|Order_ID
+|Item_ID
+|===
+
+The `Order` table has a *one-to-many* relationship with the `Item` table in this case, since there are many items on each order.  This means that if these tables are joined together in a physical view, and you aggregate the `Order_Amount` by `Item_ID`, the order amount  will be counted multiple times, resulting in an inflated value.
+
+*HOW TO IDENTIFY*: You can identify this trap  by relationship cardinality. If the  measure you want to aggregate is in a table that has a *one-to-many* relationship with another table, this error can occur. This type of trap reflects an inherent deficiency in the database  schema. In the example above, the schema is not providing the order amount on the item granularity level. You can address this trap as follows:
+
+[square]
+* If you need this aggregate, you should enhance the schema so that the measure is provided at the *lower level* of granularity. In the example above, change the database schema to record the order amount  in the `Item` table, broken down by item.
+
+* If you *do not* need the aggregate, create two different physical views (and two data models) so that a user cannot make selections that will result in double counting. If you need to create a Dashboard that displays information from both tables, use a Data Worksheet to mashup data from the two models as desired.  See xref:dataworksheet:MashupData.adoc[] for more information.
+
+
+
+=== Higher Level Join Trap
+When you create an  association between tables at too high  a level, this can cause incorrect results to be returned.  This is the _higher level join trap_.
+
+Consider the three tables below.  The `Product` table contains a customer ID field and the products ordered by that customer.  The `Customer` table contains customer information.   The `Issue` table contains a customer ID field and the support issues submitted by that customer.
+
+[width=20%]
+|===
+|Product
+
+|Customer_ID
+|Product
+|===
+
+[width=20%]
+|===
+|Customer
+
+|Customer_ID
+|Customer_Name
+|===
+
+[width=20%]
+|===
+|Issue
+
+|Customer_ID
+|Issue
+|===
+
+
+The `Customer` table has a *one-to-many* relationship with both the `Product` table and the `Issue` table in this case, since a single customer orders many products and a single customer submits many issues.  If these tables are joined together in a physical view, it may give the user the impression that they can select the `Product` and `Issue` fields to create a list of *issues by product*.  This is not possible, however, because these tables are joined through the higher-level `Customer` table, and there is no relationship  defined at the  product and issue levels.  The returned result  will be simply a list of *all* products and *all* issues for each customer.
+
+
+*HOW TO IDENTIFY*: You can identify this trap by relationship cardinality: If a table is related to multiple other tables by *one-to-many* relationships, this trap can occur. You can address this trap as follows:
+
+[square]
+* If you need the specific result ("`issues by product`", in this example), you should add a direct join between the two tables containing these fields (e.g., between the `Product` and `Issues` tables). If adding this join creates a cycle, see xref:#ResolveLoops[] for methods of breaking the cycle.
+
+* If you *do not* need the specific result ("`issues by product`", in this example), create two different physical views (and two data models) so that a user does not select those fields together and create a misleading result. If you need to create a Dashboard that displays information from both tables, use a Data Worksheet to mashup data from the two models as desired.  See xref:dataworksheet:MashupData.adoc[] for more information.
+

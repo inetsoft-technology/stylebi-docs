@@ -41,6 +41,8 @@ image:dataModel5.png[]
 .. To display the columns within a table, press the {buttonShowColumns}.
 
 . Add joins to create relations between the tables. To add an individual join between tables, follow the steps below. To automatically add joins between many tables, see xref:EditPhysicalView.adoc#AutomaticallyCreateJoins[Automatically Create Joins] in xref:EditPhysicalView.adoc[].
++
+CAUTION: Physical views are susceptible to *query traps* that can cause unexpected results.  See xref:EditPhysicalView.adoc#IdentifyQueryTraps[Identify Query Traps] for more information.
 
 
 .. Click the first table in the left panel that you want to join. Drag the {buttonJoinHandle}  from the first table onto the  of the second table. This opens the Join Editor.
