@@ -122,11 +122,11 @@ In the `connect` closure, the DSL provides shorthand functions for accessing the
 |===
 |Function|Accesses...
 
-|dataSource| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/client/DataSourceClientService.html[inetsoft.client.DataSourceClientService]
-|file|  https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/client/FileClientService.html[inetsoft.client.FileClientService]
-|printer|  https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/client/PrinterClientService.html[inetsoft.client.PrinterClientService]
-|schedule|  https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/client/ScheduleClientService.html[inetsoft.client.ScheduleClientService]
-|security|  https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/client/SecurityClientService.html[inetsoft.client.SecurityClientService]
+|dataSource| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/client/DataSourceClientService.html[inetsoft.client.DataSourceClientService]
+|file|  https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/client/FileClientService.html[inetsoft.client.FileClientService]
+|printer|  https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/client/PrinterClientService.html[inetsoft.client.PrinterClientService]
+|schedule|  https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/client/ScheduleClientService.html[inetsoft.client.ScheduleClientService]
+|security|  https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/client/SecurityClientService.html[inetsoft.client.SecurityClientService]
 |===
 
 
@@ -142,17 +142,17 @@ In the `connect` closure, the DSL provides shorthand functions for creating the 
 |===
 |Function|Accesses...
 
-|jdbc| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/JdbcDataSourceProperties.html[inetsoft.web.api.datasource.JdbcDataSourceProperties]
-|soap| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/SoapDataSourceProperties.html[inetsoft.web.api.datasource.SoapDataSourceProperties]
-|text| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/TextDataSourceProperties.html[inetsoft.web.api.datasource.TextDataSourceProperties]
-|tabular| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/TabularDataSourceProperties.html[inetsoft.web.api.datasource.TabularDataSourceProperties]
-|xml| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/datasource/XmlDataSourceProperties.html[inetsoft.web.api.datasource.XmlDataSourceProperties]
-|parameter| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/report/ReportParameter.html[inetsoft.web.api.report.ReportParameter]
-|permission| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/report/PermissionGrant.html[inetsoft.web.api.report.PermissionGrant]
-|task| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleTask.html[inetsoft.web.api.schedule.ScheduleTask]
-|timeCondition| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/TimeCondition.html[inetsoft.web.api.schedule.TimeCondition]
-|completionCondition| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/CompletionCondition.html[inetsoft.web.api.schedule.CompletionCondition]
-|viewsheetAction| https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ViewsheetAction.html[inetsoft.web.api.schedule.ViewsheetAction]
+|jdbc| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/datasource/JdbcDataSourceProperties.html[inetsoft.web.api.datasource.JdbcDataSourceProperties]
+|soap| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/datasource/SoapDataSourceProperties.html[inetsoft.web.api.datasource.SoapDataSourceProperties]
+|text| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/datasource/TextDataSourceProperties.html[inetsoft.web.api.datasource.TextDataSourceProperties]
+|tabular| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/datasource/TabularDataSourceProperties.html[inetsoft.web.api.datasource.TabularDataSourceProperties]
+|xml| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/datasource/XmlDataSourceProperties.html[inetsoft.web.api.datasource.XmlDataSourceProperties]
+|parameter| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/report/ReportParameter.html[inetsoft.web.api.report.ReportParameter]
+|permission| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/report/PermissionGrant.html[inetsoft.web.api.report.PermissionGrant]
+|task| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleTask.html[inetsoft.web.api.schedule.ScheduleTask]
+|timeCondition| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/TimeCondition.html[inetsoft.web.api.schedule.TimeCondition]
+|completionCondition| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/CompletionCondition.html[inetsoft.web.api.schedule.CompletionCondition]
+|viewsheetAction| https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ViewsheetAction.html[inetsoft.web.api.schedule.ViewsheetAction]
 |===
 
 .Data structure (DSL)

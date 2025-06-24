@@ -148,7 +148,7 @@ To edit a server path, click on the path label in the list. Scheduled save actio
 
 
 == Execute Custom Scheduler Code
-To execute custom code before or after a scheduled task executes, implement the https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/sree/schedule/TaskListener.html[inetsoft.sree.schedule.TaskListener] interface. There are two methods in the interface.
+To execute custom code before or after a scheduled task executes, implement the https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/sree/schedule/TaskListener.html[inetsoft.sree.schedule.TaskListener] interface. There are two methods in the interface.
 
 taskStarted:: Invoked when the task begins
 taskCompleted:: Invoked when the task ends

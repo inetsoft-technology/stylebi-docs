@@ -28,7 +28,7 @@ The `add-cycle` action creates a new cycle. {connectRepositoryNote}
 === Parameter
 name:: The name of the cycle to create.
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
-conditions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.sree.web.api.schedule.ScheduleCondition] instances. The `ScheduleCondition` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+conditions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.sree.web.api.schedule.ScheduleCondition] instances. The `ScheduleCondition` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 === Example
 [source,groovy]
@@ -144,7 +144,7 @@ The `add-cycle-condition` action applies a new condition to a cycle. {connectRep
 === Parameter
 name:: The name of the cycle.
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
-condition:: The name of a variable that contains a https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the condition to be added. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+condition:: The name of a variable that contains a https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the condition to be added. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 === Example
 [source,groovy]

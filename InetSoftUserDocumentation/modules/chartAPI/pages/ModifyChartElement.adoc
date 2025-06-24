@@ -2,7 +2,6 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-include::ROOT:partial$underConstructionAPITut.adoc[]
 
 
 The Chart API provides access to charting engine commands using Java object syntax. You can use these commands to directly modify the graphical elements displayed by a Chart, as explained below.  To create a Chart _entirely_ using script (rather than modifying an existing Chart), see xref:CreateChartwithChartAPI.adoc[].

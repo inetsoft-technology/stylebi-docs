@@ -29,8 +29,8 @@ The `add` action creates a new scheduled task. {connectRepositoryNote}
 name:: The name of the task to create.
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 enabled:: `true` if the task should be enabled upon creation.
-conditions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.sree.web.api.schedule.ScheduleCondition] instances. The `ScheduleCondition` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
-actions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.sree.web.api.schedule.ScheduleAction] instances. The `ScheduleAction` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+conditions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.sree.web.api.schedule.ScheduleCondition] instances. The `ScheduleCondition` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+actions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.sree.web.api.schedule.ScheduleAction] instances. The `ScheduleAction` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 === Example
 [source,groovy]
@@ -85,7 +85,7 @@ The `update` action allows you to modify the properties of an existing scheduled
 name:: The name of the task.
 owner:: The owner of the task
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
-task:: The name of a variable that contains an https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleTask.html[inetsoft.web.api.schedule.ScheduleTask] instance. The `ScheduleTask` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+task:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleTask.html[inetsoft.web.api.schedule.ScheduleTask] instance. The `ScheduleTask` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 
 === Example
@@ -159,7 +159,7 @@ The `add-condition` action applies a new condition to a schedule task. {connectR
 name:: The name of the task.
 owner:: The owner of the task
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
-condition:: The name of a variable that contains a https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the condition to be added. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+condition:: The name of a variable that contains a https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the condition to be added. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 === Example
 [source,groovy]
@@ -194,7 +194,7 @@ name:: The name of the task.
 owner:: The owner of the task
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 index:: The zero-based index of the condition.
-condition:: The name of a variable that contains an https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the updated condition properties. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+condition:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the updated condition properties. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 === Example
 [source,groovy]
@@ -239,7 +239,7 @@ The `add-action` action allows you to add a new action to a schedule task. {conn
 name:: The name of the task.
 owner:: The owner of the task
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
-action:: The name of a variable that contains an https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.web.api.schedule.ScheduleAction]  object that defines the updated action properties. The `ScheduleAction` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+action:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.web.api.schedule.ScheduleAction]  object that defines the updated action properties. The `ScheduleAction` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 === Example
 [source,groovy]
@@ -285,7 +285,7 @@ name:: The name of the task.
 owner:: The owner of the task
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 index:: The zero-based index of the action.
-action:: The name of a variable that contains an https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.web.api.schedule.ScheduleAction] object that defines the updated condition properties. The `ScheduleAction` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+action:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.web.api.schedule.ScheduleAction] object that defines the updated condition properties. The `ScheduleAction` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 === Example
 [source,groovy]

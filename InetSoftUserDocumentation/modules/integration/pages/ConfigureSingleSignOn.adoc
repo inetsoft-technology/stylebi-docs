@@ -208,4 +208,4 @@ image:administration:SSO5.png[]
 . Press btn:[Apply] and restart the InetSoft server.
 
 
-NOTE: To access the security API and its helper functions for authentication and authorization, extend the https://www.inetsoft.com/docs/2023/apidoc/index.html?inetsoft/web/security/AbstractSecurityFilter.html[inetsoft.web.security.AbstractSecurityFilter] class described in the https://www.inetsoft.com/docs/2023/apidoc/[API Documentation].
+NOTE: To access the security API and its helper functions for authentication and authorization, extend the https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/security/AbstractSecurityFilter.html[inetsoft.web.security.AbstractSecurityFilter] class described in the https://www.inetsoft.com/docs/stylebi/apidoc/[API Documentation].
