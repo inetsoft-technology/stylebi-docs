@@ -234,6 +234,10 @@ portal.customLoadingText:: Specifies text to display on the loading screen when 
 
 portal.customLogo.enabled:: When set to `true`, this reveals the '`Default Favicon`' property  xref:Presentation.adoc#LookandFeel[Look and Feel] page.  Default is `false`.  Uncheck the '`Default Favicon`' property to upload a custom favicon.
 
+portal.logout.url:: The URL to which the user is directed when they  select '`Log Out`'. If  SSO is in effect, this redirect occurs after  the user is directed to  `sso.logout.url`.
+
+
+
 olap.table.originalContent:: Set to `true` (default) to display the value of a cube dimension in a Selection List with all its hierarchical components, otherwise set to `false`. (Applies to Chart labels and Selection Lists.)
 
 olap.drillthrough.maxrows:: Determines how many rows to display for a '`Show Details`' operation against an OLAP cube. Default is 10.
@@ -287,6 +291,8 @@ openid.postprocessor:: Fully-qualified class name of an implementation of `inets
 role.administrator:: Only users with this role can log into the EM and administer the  server.
 security.cache:: Caches data when using LDAP security for improved performance.
 security.allow.iframe:: Set to `false` (default) to prevent the Enterprise Manager and User Portal login pages from being displayed within an IFrame. This is equivalent to setting the HTTP header property `X-Frame-Options` to `DENY`, and should be used in conjunction with Single Sign-On (SSO). See xref:integration:ConfigureSingleSignOn.adoc[] in xref:integration:AdvancedServerIntegration.adoc[]   for more information. Set to `true` when embedding the login pages within an IFrame, which sets `X-Frame-Options` to `SAMEORIGIN`. This may be necessary to allow pages to display correctly in the IFrame. (The server must be using SSL in this case.)
+
+sso.logout.url:: The URL to which the user is directed when they  select '`Log Out`'. After SSO logout occurs, the user is redirected to the URL defined at `portal.logout.url`.
 
 
 sso.default.roles:: Sets the default roles for new user logging in via SSO.  Not applicable in a multi-tenant environment.  (See xref:EnableMultiTenant.adoc[] for more details on multi-tenancy.)
