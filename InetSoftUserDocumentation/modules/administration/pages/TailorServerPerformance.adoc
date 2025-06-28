@@ -24,6 +24,8 @@ The options on the *Performance* page  should be set according to the server’s
 Query Timeout:: The ‘Query Timeout’ setting specifies the global timeout (seconds) for all queries during Dashboard runtime execution. The timeout setting may not be honored by all databases. The corresponding property is `query.runtime.timeout`.
 
 Query Maximum Row Count:: The ‘Query Maximum Row Count’ setting specifies the global maximum size for all queries during runtime execution for  Dashboards. Data limits set at  Dashboard level are not permitted to exceed this global limit. The corresponding  property is `query.runtime.maxrow`.
++
+IMPORTANT: {maxRowSortWarning}
 
 Query Design Time Timeout:: The ‘Query Design Time Timeout’ setting specifies the maximum amount of time allowed for design-time requests. This includes  Data Worksheet ‘Live Data View’ and Dashboard design views in Visual Composer. The timeout setting may not be honored by all databases. The corresponding property  is `query.preview.timeout`.
 

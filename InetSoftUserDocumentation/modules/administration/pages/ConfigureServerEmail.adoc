@@ -18,7 +18,6 @@ IMPORTANT: In a multi-tenant environment, only the Site Administrator can access
 == Email Template
 You can use an *email template* for both scheduled emails (see xref:SchedulerActions.adoc[]) and emails sent from the User Portal.  To do this, place a Mustache HTML template named *email-template.html* in the *SREE Home* directory.
 
-//include::ROOT:partial$SREEHome.adoc[]
 
 This template contains a single key, `message`, whose value  is the HTML body of the email message. It should be injected in the template using a triple-mustache, as shown below:
 

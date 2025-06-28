@@ -8,31 +8,6 @@ The audit feature tracks Dashboard and data access, as well as asset dependencie
 
 include::administration:partial$keystore.adoc[]
 
-////
-// OBSOLETE IN STYLE BI
-The following sections explain how to configure auditing.
-
-== Enable Auditing
-To enable auditing, edit the  *inetsoft.yaml* file in the *SREE Home* directory. An example configuration for a MySQL database is shown below:
-
-[source,yaml]
-audit:
-    type: "database"
-database:
-    type: "MYSQL"
-jdbcUrl: "jdbc:mysql://192.168.2.154:3306/inetsoft?useSSL=false"
-driverClassName: "com.mysql.jdbc.Driver"
-driverClasspath:
-    - "E:/inetsoft/dbdrivers/mysql-connector-java-5.1.48.jar"
-requiresLogin: true
-username: "inetsoft"
-password: "secret"
-transactionIsolationLevel: "READ_UNCOMMITTED"
-
-
-
-See xref:#ViewAuditReports[] below to view the generated audit reports.
-////
 
 == View an Audit Report
 To view an audit report, follow the steps below:
@@ -59,3 +34,21 @@ Modification History:: Report of assets modified over a selected period.
 Required Assets:: Report of assets that are required by a selected asset.
 Schedule History:: Report of Scheduler activities over a selected period.
 User Session:: Report of user session times.
+
+[#ConfiguretheAuditDatabase]
+== Configure the Audit Database
+
+You can configure the Audit database in the _docker-compose.yaml_ file. The following listing shows sample variables should be added to _docker-compose.yaml_ file before container creation:
+
+.Sample variables for audit database configuration
+[source,yaml]
+INETSOFTCONFIG_AUDIT_TYPE: "database"
+INETSOFTCONFIG_AUDIT_DATABASE_TYPE: "H2"
+INETSOFTCONFIG_AUDIT_DATABASE_JDBCURL: "jdbc:h2:/example/database/path;MODE=Derby;AUTO_SERVER=TRUE;AUTO_SERVER_PORT=8192;AUTO_RECONNECT=TRUE"
+INETSOFTCONFIG_AUDIT_DATABASE_DRIVERCLASSNAME: "org.h2.Driver"
+INETSOFTCONFIG_AUDIT_DATABASE_DRIVERCLASSPATH: "/path/to/database/driver/h2-2.1.210.jar"
+INETSOFTCONFIG_AUDIT_DATABASE_REQUIRELOGIN: true
+INETSOFTCONFIG_AUDIT_DATABASE_USERNAME: "inetsoft_admin"
+INETSOFTCONFIG_AUDIT_DATABASE_PASSWORD: "password"
+INETSOFTCONFIG_AUDIT_DATABASE_TRANSACTIONISOLATIONLEVEL: "READ_UNCOMMITTED"
+

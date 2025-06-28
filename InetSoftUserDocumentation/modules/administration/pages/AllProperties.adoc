@@ -3,9 +3,8 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 :availableDataSources: JDBC, Microsoft Access, Oracle, Oracle BI, SQL Server, MySQL, DB2, jTDS, Ingres, Sybase, Derby, Derby Embedded, Informix, SQL Anywhere, PostgreSQL, Dremio, Impala, Vertica, Teradata, SAP HANA, Snowflake, Actian Matrix, Actian Vector, Amazon Aurora/RDS MySQL, Amazon Aurora/RDS PostgreSQL, AWS EMR, AWS Redshift, Aster Data nCluster, Cisco Info Server, Exasol, Google Cloud SQL, IBM AS400, MapR, MariaDB, MemSQL, MonetDB, Pivotal Greenplum, Progress OpenEdge, DataStax Enterprise, FileMaker, LucidDB, Netezza, Oracle JD Edwards, SQLite, SQL Server Express, MarkLogic, Google BigQuery, Oracle PeopleSoft (DB2), Oracle PeopleSoft (Oracle), Oracle PeopleSoft (SQL Server), Siebel CRM (Oracle), Siebel CRM (SQL Server), HPCC, Splice Machine, OrientDB, Aerospike, Apache Drill, Presto, PHOENIX, Text/Excel Directory, Google Spreadsheets, SAP ABAP, SAP BAPI, SAP Tables, R, Facebook Ad Insights, Google Analytics, Sharepoint Online, Apache Hive, Data.gov JSON, OData, MongoDB, Cassandra, Couchbase, Redis, Cosmosdb, Salesforce, REST JSON, REST XML, Rest.ActiveCampaign, Rest.Airtable, Rest.Appfigures, Rest.Asana, Rest.AzureBlob, Rest.AzureSearch, Rest.CampaignMonitor, Rest.Chargebee, Rest.Chargify, Rest.ChartMogul, Rest.ConstantContact, Rest.Copper, Rest.DataDotWorld, Rest.Firebase, Rest.FortyTwoMatters, Rest.Freshdesk, Rest.Freshsales, Rest.Freshservice, Rest.GitHub, Rest.GitLab, GoSquared, Rest.GoogleCalendar, GraphQL, Rest.Harvest, Rest.HelpScoutDocs, Rest.HubSpot, Rest.InfluxDB, Rest.Insightly, Rest.Intervals, Rest.Jira, Rest.Jive, Rest.Lighthouse, Rest.Linkedin, Rest.LiveAgent, Rest.Mailchimp, Rest.Mixpanel, monday.com, Rest.Nicereply, Rest.Pipedrive, Rest.PipelineDeals, Rest.Prometheus, Rest.SEOmonitor, Rest.SalesforceReports, Rest.SendGrid, Rest.ServiceNow, Shopify, Rest.Smartsheet, Rest.Square, Rest.Stripe, Rest.SurveyMonkey, Rest.TeamDesk, Rest.Toggl, Rest.Twilio, Rest.Twitter, Rest.WordPress, Rest.Xero, Rest.YouTubeAnalytics, Rest.Zendesk, Rest.ZendeskSell, Rest.ZohoCRM
 
-To set a property manually, follow the steps below.   File paths  in properties can be absolute, or relative to the repository directory. Relative paths can use the *SREE Home* environment variable, for example, `$(sree.home)/filename.xml`.
+To set a property manually, follow the steps below.   File paths  in properties can be absolute, or relative to the repository directory. Relative paths can use the `sree.home` environment variable to specify the storage root, for example, `$(sree.home)/filename.xml`.
 
-//include::ROOT:partial$SREEHome.adoc[]
 
 WARNING: Entering illegitimate property values can prevent the software from operating correctly.
 
@@ -48,9 +47,8 @@ graph.circle.packing:: For Circle Packing Charts, set to `circle` to produce per
 map.border.color:: Specifies the border color between geographical regions on a map chart. Color can be specified as a hex string (e.g., `#008000` or `008000`) or as a case-insensitive https://www.w3schools.com/cssref/css_colors.asp[CSS color name] (e.g., `LightCyan`).
 map.default.color:: Specifies the default color for map shapes that contain data, and applies when no static color is selected in the ‘Visual’ panel. Color can be specified as a hex string (e.g., `#008000` or `008000`) or as a case-insensitive https://www.w3schools.com/cssref/css_colors.asp[CSS color name] (e.g., `LightCyan`). This is the default for the ‘Map Default Color’ property in the ‘Chart Properties’ settings.
 map.empty.color:: Specifies the default color for map shapes that do not contain data. Color can be specified as a hex string (e.g., `#008000` or `008000`) or as a case-insensitive https://www.w3schools.com/cssref/css_colors.asp[CSS color name] (e.g., `LightCyan`).
-map.mapping.dir:: Directory where map files are stored. Default is *map* in SREE Home.
+map.mapping.dir:: Directory where map files are stored. Default is *_map_* in Storage root.  See xref:Storage.adoc[] for more information.
 
-//include::ROOT:partial$SREEHome.adoc[]
 map.selection.enabled:: When `false`, prevents user  selections on a map from displaying a solid outline. (Default is `true`.)
 
 == Data Source Properties
@@ -127,7 +125,12 @@ query.cache.limit:: With `query.cache.data` enabled, specifies the number of que
 query.cache.timeout:: With `query.cache.data` enabled, specifies the amount of time (ms) that result sets for Data Worksheet and Dashboard queries persist in the cache. Default:  10 minutes.
 query.preview.maxrow:: Sets the maximum number of rows retrieved for design-time requests. This includes  Data Worksheet ‘Live Data View’ and Dashboard design views in Visual Composer. See xref:TailorServerPerformance.adoc[] for more information.
 query.preview.timeout:: Sets the timeout interval (seconds) for queries in Data Worksheet and Dashboard live data mode.
+
 query.runtime.maxrow:: Sets the global maximum size for all queries during  Dashboard runtime execution. Data limits set at  Dashboard level are not permitted to exceed this global limit.
++
+IMPORTANT: {maxRowSortWarning}
+
+
 query.runtime.timeout:: Sets the global timeout (seconds) for all queries during Dashboard runtime execution.  If the timeout is too short, this can cause a data-read error in some cases.
 rest.cache.timeout.millis:: Sets the timeout (milliseconds) for REST queries to be cached. Use a value greater than 0 to prevent repeated execution of similar REST queries. If a request is made before the cache entry expires, the cached response will be used instead of executing a new HTTP request. (Default is 0, no caching of REST queries.)
 script.execution.timeout:: A safety-net for script execution time, especially for infinite loops. Times-out the script if execution time exceeds specified value (in seconds).
@@ -151,6 +154,7 @@ mail.smtp.host:: Mail SMTP host name.
 mail.smtp.port:: Specifies the SMTP port number. The default for non-SSL use is port 25. The default for SSL use is port 465.
 mail.subject.format:: Format for the mail subject line. It is a message format ({JavaTextMessageFormat}). There are two parameters used in generating the subject line. The first parameter is the alias, and the second parameter is the date and time. For example, a possible format could be  `pass:[Dashboard {0} generated at {1,time} on {1,date}]`.
 mail.tls:: When set to `true`, specifies that a `STARTTLS` command should be issued. The default is `false`.
+mail.smtp.ssl.protocols:: Specifies an alternate SMTP protocol. Example:  `mail.smtp.ssl.protocols=TLSv1.2`.
 
 == Materialized View Properties
 The following table lists configuration properties for materialized views. See xref:MaterializedView.adoc[] for more information about materialized views.

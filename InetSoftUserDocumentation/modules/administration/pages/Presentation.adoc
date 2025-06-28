@@ -87,7 +87,7 @@ Default Favicon:: This option is available only when the `portal.customLogo.enab
 
 
 
-Custom Shapes::  To upload custom images for use with a Chart (see xref:viewsheet:BasicChartingSteps.adoc[]), press the btn:[Custom Shapes] button to open the '`Custom Shapes`' dialog box.  To upload a Zip file containing images, first enable the '`Extract archive files`' option.  Press  btn:[Select], and choose an  image file (png, gif, jpg) or archive. Press btn:[Upload] to upload the image or archive to the _portal/shapes_ directory of SREE Home. (See  xref:administration:Storage.adoc[] for   information about managing uploads.)
+Custom Shapes::  To upload custom images for use with a Chart (see xref:viewsheet:BasicChartingSteps.adoc[]), press the btn:[Custom Shapes] button to open the '`Custom Shapes`' dialog box.  To upload a Zip file containing images, first enable the '`Extract archive files`' option.  Press  btn:[Select], and choose an  image file (png, gif, jpg) or archive. Press btn:[Upload] to upload the image or archive to the _portal/shapes_ directory. (See  xref:administration:Storage.adoc[] for   information about managing uploads.)
 +
 image:CustomShapes.png[]
 +

@@ -104,9 +104,8 @@ image:VS Group Visual9.png[]
 +
 image:addShapeButton.png[]
 +
-NOTE: An administrator can make custom shapes available by placing the image files (png, gif, jpg) in the _portal/shapes_ directory of SREE Home. (See xref:administration:Presentation.adoc#LookandFeel[Look and Feel] and xref:administration:Storage.adoc[] for  information on how to upload a file to this location.) The icons are sorted alphabetically by file name. Custom shape images can be any size, and are scaled according to the ‘Size’ setting in the Chart Editor.
+NOTE: An administrator can make custom shapes available by placing the image files (png, gif, jpg) in the _portal/shapes_ directory. (See xref:administration:Presentation.adoc#LookandFeel[Look and Feel] and xref:administration:Storage.adoc[] for  information on how to upload a file to this location.) The icons are sorted alphabetically by file name. Custom shape images can be any size, and are scaled according to the ‘Size’ setting in the Chart Editor.
 
-//include::ROOT:partial$SREEHome.adoc[]
 
 . Press the {buttonApply} to apply the shape setting.
 

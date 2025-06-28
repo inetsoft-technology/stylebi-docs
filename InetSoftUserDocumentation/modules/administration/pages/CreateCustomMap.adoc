@@ -339,9 +339,9 @@ To manually create shapes by merging existing shapes (e.g., to create larger reg
 
 . Select menu:InetSoft[Export layer], and make the following settings:
 
-.. For the ‘Map file’, press the btn:[Browse] button. Select a *different location* than your current location of *SREE Home*  so that you do not overwrite the existing _mapdata.xml_ file. For example, create a new “maps” folder into which to save the export.
+.. For the ‘Map file’, press the btn:[Browse] button. (You may want to create a new “maps” folder into which to save the export.)
 
-//include::ROOT:partial$SREEHome.adoc[]
+
 
 .. For the ‘Map type’, enter a map name (e.g., ‘US2’).
 
@@ -414,9 +414,8 @@ To edit map data from StyleBI in the OpenJUMP application, follow the steps belo
 +
 image:OpenJUMPExp19.png[]
 
-. Navigate to the server repository (*SREE Home*) directory, and select the _mapdata.xml_ file. Press btn:[Next].
+. Locate the _mapdata.xml_ file that you want to edit. Press btn:[Next].
 
-//include::ROOT:partial$SREEHome.adoc[]
 
 
 . Select the ‘Map type’ and ‘Layer name’ that you want to edit. (See xref:#ExportCustomMap[] for information about the map type and layer name.)

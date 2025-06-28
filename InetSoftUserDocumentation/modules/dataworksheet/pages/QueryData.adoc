@@ -90,7 +90,12 @@ NOTE: For full information about specifying conditions, see xref:FilterData.adoc
 
 . *_Optional:_*  To make manual edits to the SQL string that will be sent to the database, press the btn:[Edit] button next to the ‘SQL’  area to open the ‘SQL’ panel for editing. Make the desired edits.
 +
-IMPORTANT: If you make manual edits to the SQL string, you will no longer be able to modify the query using the 'Columns', 'Joins', and 'Conditions' panels.
+[IMPORTANT]
+====
+[square]
+* If you make manual edits to the SQL string, you will no longer be able to modify the query using the '`Columns`', '`Joins`', and '`Conditions`' panels.
+* If you add a condition to a manually-edited query, the condition will be applied in post-processing, *after* the dataset has been retrieved  from the database.
+====
 +
 image:agileData15_1.png[]
 +

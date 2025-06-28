@@ -8,9 +8,8 @@ If multi-tenancy is enabled (see xref:EnableMultiTenant.adoc[]), the *Logging* p
 ====
 
 
-Enterprise Manager provides the ability to log messages generated during server and Scheduler execution. Logged messages are appended to a text file (default are *sree.log* for the server and *schedule.log* for the Scheduler, both in *SREE Home*) and optionally written to the standard output stream. For information on viewing log files, see xref:MonitorServerActivity.adoc[].
+Enterprise Manager provides the ability to log messages generated during server and Scheduler execution. Logged messages are appended to a text file (default are *sree.log* for the server and *schedule.log* for the Scheduler, both in _/var/lib/inetsoft/config_) and optionally written to the standard output stream. For information on viewing log files, see xref:MonitorServerActivity.adoc[].
 
-//include::ROOT:partial$SREEHome.adoc[]
 
 To configure logging settings, follow the steps below:
 

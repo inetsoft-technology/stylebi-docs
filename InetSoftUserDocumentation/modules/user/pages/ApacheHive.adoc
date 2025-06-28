@@ -3,12 +3,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-[IMPORTANT]
-====
-The Hive data source requires additional *administrator configuration*:
 
-include::user:partial$additionalConfigHive.adoc[]
-====
 
 
 include::partial$dataSourceUserIntro.adoc[]

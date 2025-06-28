@@ -10,7 +10,6 @@ There are two steps to incorporating a D3.js chart in a Dashboard.
 == Step 1: Create  HTML page with  D3.js chart
 Create an HTML page with the D3.js chart and place it into the _web-assets_ folder in the *SREE Home* location. The HTML should be similar to that below:
 
-//include::ROOT:partial$SREEHome.adoc[]
 
 [source,html]
 <html lang="en">

@@ -9,31 +9,16 @@ include::partial$runCommand.adoc[]
 
 IMPORTANT: To connect to a non-running server, you will need to launch the Administration Console with  appropriate flags.  See xref:ConnectToRepository.adoc[].
 
-////
-// Documentation #67942 SAYS THIS IS DELETED ***********
-== Convert SREE Home to New Storage Format
-The `upgrade-storage` action converts the SREE Home (server repository) of from the format of version 2021 and earlier to the new storage structure of version 2022 and later. See https://www.inetsoft.com/wiki/bin/view/Main/HowToUpgrade2022[How to Upgrade to 2022] for detailed instructions on upgrading to version 2022.
 
-=== Parameters
-oldSREEHome:: Absolute path to *SREE Home* of the previous version
-newSREEHome:: Absolute path to new *SREE Home*, which should be an empty directory
-
-//include::ROOT:partial$SREEHome.adoc[]
-
-=== Example
-[source,groovy]
-:setup upgrade-storage 'C:/ProgramData/InetSoft\ Technology/InetSoft/2021/server-config' 'C:/NewSREEHome'
-////
 
 == Set a Property
 The `set-property` action sets a specified server property.
 
 === Parameters
-directory:: Path to *SREE Home*
+directory:: Path to *inetsoft* directory
 property:: Name of the property to set
 value:: Value of the property
 
-//include::ROOT:partial$SREEHome.adoc[]
 
 === Examples
 [source,groovy]
@@ -62,10 +47,9 @@ inetsoft {
 The `get-property` action gets a specified server property.
 
 === Parameters
-directory:: Path to *SREE Home*
+directory:: Path to *inetsoft* directory
 property:: Name of the property to get
 
-//include::ROOT:partial$SREEHome.adoc[]
 
 === Example
 [source,groovy]
@@ -88,11 +72,10 @@ inetsoft {
 The `upload-file`  action allows you to move files into server storage. (See xref:ManageContent.adoc[] for information about importing to the repository.) {connectRepositoryNote}
 
 === Parameters
-directory:: Path to SREE Home
+directory:: Path to *inetsoft* directory
 file:: Path to local file
 targetPath:: Desired location of file in server storage. This is the path displayed on the *Storage* page in Enterprise Manager. (See xref:Storage.adoc[] for more information.)
 
-//include::ROOT:partial$SREEHome.adoc[]
 
 === Example
 
@@ -104,7 +87,7 @@ This can also be accomplished in a DSL script using the `write`  method. The `wr
 
 [source,groovy]
 inetsoft {
-  setup('/path_to_sree_home') {
+  setup('/path_to_inetsoft') {
   storage {
     write('data_space/text.txt', new File('/arbitrary/container/path/uploadFile.txt'))
   }
@@ -116,11 +99,10 @@ inetsoft {
 The `download-file`  action allows you to move files out of server storage. (See xref:ManageContent.adoc[] for information about exporting from the repository.) {connectRepositoryNote}
 
 === Parameters
-directory:: Path to SREE Home
+directory:: Path to *inetsoft* directory
 sourcePath:: Path to file in server storage. This is the path displayed on the *Storage* page in Enterprise Manager. (See xref:Storage.adoc[] for more information.)
 files:: Path to local file to be written
 
-//include::ROOT:partial$SREEHome.adoc[]
 
 === Example
 
@@ -143,7 +125,7 @@ inetsoft {
 
 
 == Restore Assets to Server
-The `restore` action restores backed-up server storage from a Zip file.   To backup assets to Zip file, see xref:ManageContent.adoc[]. {connectRepositoryNote}
+The `restore` action restores backed-up server storage from a Zip file.   To back up assets to Zip file, see xref:ManageContent.adoc[]. {connectRepositoryNote}
 
 CAUTION: The server should not be running during the restore operation.
 
