@@ -4,6 +4,8 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 The *Repository* is the collection of   Dashboards deployed on the server.   Dashboards can be organized into folders, and folders can be hierarchically nested. If  security is enabled, users and roles can be given read and write permission for  folders or individual  Dashboards.
 
+TIP: To refresh the repository listing, reload the page in the browser.
+
 To manage  the repository, follow the steps below:
 
 . Press the {buttonSettings} at the top of Enterprise Manager.

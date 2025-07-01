@@ -19,11 +19,12 @@ image:Figure 22.png[]
 
 . Click on the desired audit report,  enter the requested parameters, and press btn:[OK] to execute the report.
 
+[#AvailableReports]
 == Available Reports
 The following audit reports are available:
 
 Bookmark History:: Report of Dashboard bookmarks created by users.
-Dependent Assets:: Report of assets that depend on a selected asset.
+Dependent Assets:: Report of assets that depend on a selected asset. This report is updated with new information when the built-in '`Update Asset Dependencies`' scheduled task runs. See xref:CreateScheduledTask.adoc#MonitorScheduledTasks[Monitor Scheduled Tasks] to see task status, and to run the task on demand.
 Export History:: Report of  Dashboards that have been exported by users.
 Identity Information:: Report of modifications to user identity information.
 Inactive Resource:: Report of resources not used over a selected period.
@@ -31,14 +32,19 @@ Inactive Users:: Report of users who have not logged in over a selected period.
 Logon Errors:: Report of login errors over a selected period.
 Logon History:: Report of session logins and logouts over a selected period.
 Modification History:: Report of assets modified over a selected period.
-Required Assets:: Report of assets that are required by a selected asset.
+Required Assets:: Report of assets that are required by a selected asset. This report is updated with new information when the built-in '`Update Asset Dependencies`' scheduled task runs. See xref:CreateScheduledTask.adoc#MonitorScheduledTasks[Monitor Scheduled Tasks] to see task status, and to run the task on demand.
 Schedule History:: Report of Scheduler activities over a selected period.
 User Session:: Report of user session times.
 
 [#ConfiguretheAuditDatabase]
 == Configure the Audit Database
 
-You can configure the Audit database in the _docker-compose.yaml_ file. The following listing shows sample variables should be added to _docker-compose.yaml_ file before container creation:
+You can configure the Audit database in the *docker-compose.yaml* file. This may be useful if you want to generate custom audit dashboards from the audit data. You can connect to the custom JDBC URL as you would connect to any other JDBC data source. (See xref:user:JDBC.adoc[] in xref:user:UsePortal.adoc[].)
+
+NOTE: It is not possible to create custom audit dashboards from the default Audit database. You can only access the default database through the xref:#AvailableReports[] above.
+
+
+The following listing shows sample variables that should be added to _docker-compose.yaml_  before container creation to use the custom database for audit records.
 
 .Sample variables for audit database configuration
 [source,yaml]
@@ -51,4 +57,5 @@ INETSOFTCONFIG_AUDIT_DATABASE_REQUIRELOGIN: true
 INETSOFTCONFIG_AUDIT_DATABASE_USERNAME: "inetsoft_admin"
 INETSOFTCONFIG_AUDIT_DATABASE_PASSWORD: "password"
 INETSOFTCONFIG_AUDIT_DATABASE_TRANSACTIONISOLATIONLEVEL: "READ_UNCOMMITTED"
+
 

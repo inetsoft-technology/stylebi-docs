@@ -106,7 +106,10 @@ Graphics.Image.ScaleSmooth:: Set to `true` to give priority to image smoothness 
 == Limits and Safeguards
 The following table lists a variety of limits and safeguards. See xref:TailorServerPerformance.adoc[] for related properties.
 
-ways.warn.joinMaxRows:: If set to `false` (default), the user will be shown a single warning for the session when the `join.table.maxrows` limit is violated. (See below.) Set to `true` to warn the user for each individual violation.
+
+selectionList.maxrow:: The maximum number of items to be displayed in a Selection List or Selection Tree (default 50000).
+
+always.warn.joinMaxRows:: If set to `false` (default), the user will be shown a single warning for the session when the `join.table.maxrows` limit is violated. (See below.) Set to `true` to warn the user for each individual violation.
 asset.max.idle:: Sets the duration (in milliseconds) that a Dashboard remains active in the Portal when no user interactions are detected. Default is 2 hours (7,200,000 milliseconds). There is no timeout for Dashboards that are open for editing in Visual Composer. Dashboards open in the Portal are automatically closed after three minutes if the web browser is closed.
 asset.sample.maxrows:: The row limit used for subqueries (inner select queries) performed before aggregation or joining. In some cases, subqueries that return too few results may not possess any rows that match the specified join condition. In these case, a higher subquery limit may be necessary to ensure that the final query returns results.
 csv.import.max:: Sets the maximum size in bytes for CSV files imported into a Data Worksheet Embedded Table (see xref:dataworksheet:UploadData.adoc[]).

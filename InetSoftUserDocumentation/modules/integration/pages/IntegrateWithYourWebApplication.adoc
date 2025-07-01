@@ -11,3 +11,5 @@ The following  primary tasks are required to integrate StyleBI into a 3rd party-
 * xref:CustomizeServerSideUpdate.adoc[]
 
 The topics in this section guide you through this process.
+
+IMPORTANT: HTTPS is supported through the use of a reverse proxy with SSL termination. This can be implemented using NGINX (recommended) or HAProxy.

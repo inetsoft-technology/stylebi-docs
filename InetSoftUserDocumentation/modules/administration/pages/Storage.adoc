@@ -380,7 +380,7 @@ keyValue:
     collection: inetsoft
 
 
-
+[#BackUpStoredAssets]
 == Back Up Stored Assets
 
 [WARNING,caption=See also]
@@ -405,7 +405,7 @@ image:Figure 14.png[]
 
 .. In the ‘Storage’ field, specify the backup file name, e.g., `data.zip`.
 
-.. Press btn:[Save]. This saves the new zip archive (with an added date and time code, such as _data0121211709.zip_) in the configured file directory (default: _/var/lib/inetsoft/files_), which is set from _docker-compose.yaml_ with the `INETSOFTCONFIG_EXTERNALSTORAGE_FILESYSTEM_DIRECTORY` tag.
+.. Press btn:[Save]. This saves the new Zip archive (with an added date and time code, such as _data0121211709.zip_) in the configured file directory (default: _/var/lib/inetsoft/files_), which is set from _docker-compose.yaml_ with the `INETSOFTCONFIG_EXTERNALSTORAGE_FILESYSTEM_DIRECTORY` tag.
 
 . To schedule assets to be automatically backed up at a regular interval, follow the steps below:
 
@@ -414,6 +414,11 @@ image:Figure 14.png[]
 image:scheduleBackup2.png[]
 
 .. Specify the desired interval under the *Conditions* tab and press the btn:[Save] button at the bottom of the page.  See xref:SchedulerConditions.adoc[] for more information about specifying a time interval.
+
++
+The Zip archive is saved into the _backup_ directory of the configured file directory (default: _/var/lib/inetsoft/files_) with the filename `data-<timestamp>.zip` (e.g., _/var/lib/inetsoft/files/backup/data-20250623212535.zip_). The file directory can be set from _docker-compose.yaml_ with the `INETSOFTCONFIG_EXTERNALSTORAGE_FILESYSTEM_DIRECTORY` tag.
+
+
 
 
 

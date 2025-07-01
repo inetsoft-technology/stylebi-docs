@@ -14,7 +14,7 @@ To run a script against a *running server*, use the following Docker command:
 [example]
 ====
 [source]
-docker run --rm -v /local/directory/path/file.groovy:/arbitrary/container/path/file.groovy 636869400126.dkr.ecr.us-east-2.amazonaws.com/inetsoft/stylebi-enterprise:1.0 dsl /arbitrary/container/path/file.groovy
+docker run --rm -v /local/directory/path/file.groovy:/arbitrary/container/path/file.groovy ghcr.io/inetsoft-technology/stylebi-enterprise:latest dsl /arbitrary/container/path/file.groovy
 ====
 
 where:
@@ -32,7 +32,7 @@ You can access command line arguments passed to the script runner by using the `
 ====
 Run the following script:
 
- docker run --rm -v /local/directory/path/file.groovy:/arbitrary/container/path/file.groovy 636869400126.dkr.ecr.us-east-2.amazonaws.com/inetsoft/stylebi-enterprise:1.0 dsl /arbitrary/container/path/file.groovy arg1 arg2
+ docker run --rm -v /local/directory/path/file.groovy:/arbitrary/container/path/file.groovy ghcr.io/inetsoft-technology/stylebi-enterprise:latest dsl /arbitrary/container/path/file.groovy arg1 arg2
 
 Access the command line arguments (arg1, arg2) with the `commandLine` property as follows:
 
@@ -110,9 +110,11 @@ This section explains how to connect to a repository for a server that is *not* 
 
 CAUTION: This is *not* the preferred approach.  See xref:#ConnecttoRunningRepository[] for the recommended approach.
 
-To connect to a non-running repository, use the folliowing command, where  `-v` is mounting the persistent storage volumes.
+To connect to a non-running repository, use the following command, where  `-v` is mounting the persistent storage volumes.
 
- docker run --rm -v /local/directory/path/file.groovy:/arbitrary/container/path/file.groovy -v enterprise_inetsoft_blob:/var/lib/inetsoft/blob -v enterprise_inetsoft_kv:/var/lib/inetsoft/kv 636869400126.dkr.ecr.us-east-2.amazonaws.com/inetsoft/stylebi-enterprise:1.0 dsl /arbitrary/container/path/file.groovy
+ docker run --rm -v /local/directory/path/file.groovy:/arbitrary/container/path/file.groovy -v inetsoft_blob:/var/lib/inetsoft/blob -v inetsoft_kv:/var/lib/inetsoft/kv ghcr.io/inetsoft-technology/stylebi-enterprise:latest dsl /arbitrary/container/path/file.groovy
+
+TIP: Volume names `inetsoft_blob` and `inetsoft_kv` may vary based on the host environment.
 
 
 == Use the Client Service APIs

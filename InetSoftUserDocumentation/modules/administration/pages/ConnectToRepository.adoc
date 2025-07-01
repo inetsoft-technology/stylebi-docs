@@ -12,16 +12,19 @@ You must use the *Administration Console* to  connect to a repository before run
 To run the  *Administration Console*, use the following command:
 
 
- docker run -it --rm 636869400126.dkr.ecr.us-east-2.amazonaws.com/inetsoft/stylebi-enterprise:1.0 shell
+ docker run -it --rm ghcr.io/inetsoft-technology/stylebi-enterprise:latest shell
 
 
 To connect to a *non-running* server (not recommended) add the  `-v` flag as shown below:
 
- docker run -it --rm -v enterprise_inetsoft_blob:/var/lib/inetsoft/blob -v enterprise_inetsoft_kv:/var/lib/inetsoft/kv 636869400126.dkr.ecr.us-east-2.amazonaws.com/inetsoft/stylebi-enterprise:1.0 shell
+ docker run -it --rm -v inetsoft_blob:/var/lib/inetsoft/blob -v inetsoft_kv:/var/lib/inetsoft/kv ghcr.io/inetsoft-technology/stylebi-enterprise:latest shell
+
+TIP: Volume names `inetsoft_blob` and `inetsoft_kv` may vary based on the host environment.
+
 
 To download or upload files from a *running server* (where '_/local/directory/path_' is the directory where the file is to be uploaded from or downloaded to), add the  `-v` flag as shown below:
 
- docker run -it --rm -v /local/directory/path:/arbitrary/container/path 636869400126.dkr.ecr.us-east-2.amazonaws.com/inetsoft/stylebi-enterprise:1.0 shell
+ docker run -it --rm -v /local/directory/path:/arbitrary/container/path ghcr.io/inetsoft-technology/stylebi-enterprise:latest shell
 
 
 

@@ -46,6 +46,8 @@ image:server1.png[]
 
 . Specify an email address for the user in the ‘Email’ field.
 
+. *_Optional_*:  Select a locale for the user from the '`Locale`' menu.  See xref:RegisterLocale.adoc[]  for information on how to define  the locales that appear in this menu.  See xref:Localization.adoc[] for full information on localization.
+
 . To select a Portal theme for the user, choose the desired theme from the ‘Theme’ menu. (See xref:Presentation.adoc[] for information about how to create a theme.)
 include::ROOT:partial$enterpriseOnlyInline.adoc[]
 +

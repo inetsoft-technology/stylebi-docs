@@ -16,7 +16,7 @@ IMPORTANT: In a multi-tenant environment, only the Site Administrator can access
 
 
 == Email Template
-You can use an *email template* for both scheduled emails (see xref:SchedulerActions.adoc[]) and emails sent from the User Portal.  To do this, place a Mustache HTML template named *email-template.html* in the *SREE Home* directory.
+You can use an *email template* for both scheduled emails (see xref:SchedulerActions.adoc[]) and emails sent from the User Portal.  To do this, place a Mustache HTML template named *email-template.html* at the root of internal storage. (See xref:Storage.adoc#ManageStoredAssets[Manage Stored Assets] for information about uploading assets to server storage.)
 
 
 This template contains a single key, `message`, whose value  is the HTML body of the email message. It should be injected in the template using a triple-mustache, as shown below:
@@ -35,6 +35,16 @@ Mail Host (Required):: Specifies one or more valid SMTP servers, separated by co
 From Email Address:: Specifies the fixed email address from which all emails are sent.
 
 Opportunistic TLS:: Enable Opportunistic TLS encryption.
+
+SMTP Authentication Type:: Select the desired authentication type:
++
+[square]
+* None
+* SMTP Authentication: Enter username and password.
+* SASL XOAuth2: Use for Microsoft 365.
+* Google OAuth2 SMTP: Use for Google.  See xref:#ConfigureGoogleSMTPAuthentication[] below for more information.
+
+
 
 Mail Session JNDI URL:: If a JNDI URL is provided, the server will first try to obtain a session from the JNDI directory when sending emails. If this fails, it will create a new session based on the setting provided for the ‘Mail Host’ property.
 +
@@ -71,3 +81,34 @@ This will produce an email subject line such as the following:
 
 The time and date  will be the actual time and date of Dashboard generation.
 ====
+
+[#ConfigureGoogleSMTPAuthentication]
+== Configure Google SMTP Authentication
+
+To use OAuth SMTP Authentication for Google, follow the steps below:
+
+. Use the   email associated with the user  GMail  account to create a new *Google Cloud project*.  See https://developers.google.com/workspace/guides/create-project[Create a Google Cloud project] for full details.
+
+. Navigate to menu:APIs & Services[Enabled APIs and services] and enable the '`GMail API`'.
+. Press btn:[Create credentials].  For '`Credential Type`', select '`User Data`'  and press btn:[Next].
+
+. Enter the requested information for the *OAuth Consent Screen*.  See https://developers.google.com/workspace/guides/configure-oauth-consent[Configure the OAuth consent screen and choose scopes] for full details.
+
+. For *OAuth Client ID*, select '`Web application`' as the '`Application type`'.
+
+. For *Authorized redirect URIs*, set the redirect URI to https://data.inetsoft.com/oauth.
+
+. Press btn:[Create].
+
+. Press btn:[Done].
+
+. Navigate to the *Credentials* page and click on the client name to obtain your '`Client ID`' and '`Client Secret`'.
+
+. In Enterprise Manager, change '`SMTP Authentication Type`' to '`Google OAuth2 SMTP`' and enter the credentials.
+
+. Enable '`Opportunistic TLS`'.
+
+. Press btn:[Sign in with Google] and accept the permissions.
+
+. Press btn:[Apply].
+

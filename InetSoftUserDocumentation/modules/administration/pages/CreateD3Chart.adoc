@@ -8,36 +8,35 @@ This page explains how to incorporate a https://d3js.org/[D3.js] chart in a Dash
 There are two steps to incorporating a D3.js chart in a Dashboard.
 
 == Step 1: Create  HTML page with  D3.js chart
-Create an HTML page with the D3.js chart and place it into the _web-assets_ folder in the *SREE Home* location. The HTML should be similar to that below:
+Create an HTML page with the D3.js chart and place it into the  *web-assets* folder in internal storage. Create the folder if it does not yet exist.  (See xref:Storage.adoc#ManageStoredAssets[Manage Stored Assets] for information about uploading assets to server storage.) The HTML should be similar to that below:
 
 
 [source,html]
+--
 <html lang="en">
 <head>
   <meta charset="utf-8">
     <title>D3 Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="js/d3-inetsoft.js"></script>
+  <script src="js/d3-inetsoft.js"></script> //<1>
 </head>
 <body>
   <div id="#chart"></div>
   <script>
-    function loadData(table) {
-    // D3 code goes here, consuming the table data from the dashboard
+    function loadData(table) { //<2>
+    // D3 code goes here, consuming
+    // table data from the dashboard
   }
   // D3DataTable is the identifier of the table in the dashboard
-  d3.inetsoft('D3DataTable', loadData);
+  d3.inetsoft('D3DataTable', loadData); //<3>
   </script>
 </body>
 </html>
-
-
-Note the following features:
-
-* The `d3-inetsoft.js` plugin should be included as an external script.
-* Your D3.js code should be inserted in the `loadData()` function.
-* The first parameter of `d3.inetsoft()` function is the ‘Name’ of the *data table* in the Dashboard. See Step 2 below for more information about the data table.
+--
+<1> The `d3-inetsoft.js` plugin should be included as an external script.
+<2> Your D3.js code should be inserted in the `loadData()` function.
+<3> The first parameter of `d3.inetsoft()` function is the ‘Name’ of the *data table* in the Dashboard. See Step 2 below for more information about the data table.
 
 == Step 2: Create  Dashboard with  Data Table and Embedded HTML
 Follow the steps below to create the Dashboard that will host the D3.js chart:

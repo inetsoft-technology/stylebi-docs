@@ -7,11 +7,11 @@ Localization is a feature that allows StyleBI to adapt to different language env
 * xref:LocalizeDashboard.adoc[]
 * xref:LocalizeDataSource.adoc[]
 
-When users log into the User Portal or administrators log into Enterprise Manager they can specify a *locale* (language-country combination), based on which the InetSoft server dynamically modifies the interface (Portal tabs, Enterprise Manager tabs, repository tree) as well as  Dashboard components (Text elements, Chart axis titles, Table header columns, etc.).
+When a user logs into the User Portal, or when an administrator logs into Enterprise Manager, they can specify a *locale* (language-country combination) that has been defined as described  in  xref:RegisterLocale.adoc[]. Based on the selected locale, the InetSoft server dynamically modifies the interface (Portal tabs, Enterprise Manager tabs, repository tree) as well as  Dashboard components (Text elements, Chart axis titles, Table header columns, etc.).
 
 Two independent mapping files are required for localization:
 
 “srinter”:: A mapping file that controls localization for interface text in the User Portal and Enterprise Manager (tabs, tree nodes, dialog boxes, etc.).
 “SreeBundle”:: A mapping file that controls localization for  Dashboard text (text in Tables, Charts, etc.) and data model/query names.
 
-The topics in this section discuss the contents of these two files, and explain how to register a new locale.
+The topics in the following  sections discuss the contents of these two files, and explain how to register a new locale.
