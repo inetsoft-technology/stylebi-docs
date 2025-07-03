@@ -115,6 +115,9 @@ select id from $(@var)
 
 Then create a runtime script to replace the variable `var` with a table name such as `customers` or `prospects`.  You can place this script in the *onInit* handler  (see xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script]).
 
+IMPORTANT: Parameters in the query that have a *null* value may cause  a SQL error.  You should therefore check   (for example, using  Dashboard xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[onLoad] script) to ensure that all parameters referenced in the query have legitimate values.
+
+
 [#AddMVUpdateConditiontoSQLString]
 === Add MV Update Condition to SQL String
 
