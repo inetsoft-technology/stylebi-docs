@@ -84,8 +84,8 @@ The `update` action allows you to modify the properties of an existing scheduled
 === Parameter
 name:: The name of the task.
 owner:: The owner of the task
-organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 task:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleTask.html[inetsoft.web.api.schedule.ScheduleTask] instance. The `ScheduleTask` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional, must be final parameter if present)
 
 
 === Example
@@ -100,7 +100,7 @@ def task1 = Schedule.task {
   description 'test update'
   enabled false
 }
-:sch update 'My Task' admin --organizationid organization0 task1
+:sch update 'My Task' admin  task1 --organizationid organization0
 
 
 == Remove Scheduled Task
@@ -158,8 +158,9 @@ The `add-condition` action applies a new condition to a schedule task. {connectR
 === Parameter
 name:: The name of the task.
 owner:: The owner of the task
-organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 condition:: The name of a variable that contains a https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the condition to be added. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional, must be final parameter if present)
+
 
 === Example
 [source,groovy]
@@ -169,7 +170,7 @@ def condition = Schedule.timeCondition {
   type 'AT'
   date OffsetDateTime.parse('2019-01-01T00:00:00Z')
 }
-:schedule add-condition 'My Task' admin --organizationid organization0 condition
+:schedule add-condition 'My Task' admin  condition --organizationid organization0
 
 
 
@@ -179,12 +180,12 @@ The `get-condition` action returns information about an existing task condition.
 === Parameter
 name:: The name of the task.
 owner:: The owner of the task
-organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 index:: The zero-based index of the condition.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional, must be final parameter if present)
 
 === Example
 [source,groovy]
-:schedule get-condition 'My Task' admin --organizationid organization0 0
+:schedule get-condition 'My Task' admin  0 --organizationid organization0
 
 == Modify  Scheduled Task Condition
 The `update-condition` action allows you to modify an existing condition of a schedule task.  {connectRepositoryNote}
@@ -192,9 +193,10 @@ The `update-condition` action allows you to modify an existing condition of a sc
 === Parameter
 name:: The name of the task.
 owner:: The owner of the task
-organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 index:: The zero-based index of the condition.
 condition:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the updated condition properties. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional, must be final parameter if present)
+
 
 === Example
 [source,groovy]
@@ -204,7 +206,7 @@ def condition = Schedule.timeCondition {
   type 'AT'
   date OffsetDateTime.parse('2019-01-01T00:00:00Z')
 }
-:schedule update-condition 'My Task' admin --organizationid organization0 0 condition
+:schedule update-condition 'My Task' admin  0 condition --organizationid organization0
 
 
 == Remove  Condition from Schedule Task
@@ -213,12 +215,12 @@ The `remove-condition` action removes an existing condition from a schedule task
 === Parameter
 name:: The name of the task.
 owner:: The owner of the task
-organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 index:: The zero-based index of the condition.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional, must be final parameter if present)
 
 === Example
 [source,groovy]
-:schedule remove-condition 'My Task' admin --organizationid organization0 1
+:schedule remove-condition 'My Task' admin  1 --organizationid organization0
 
 == List  Actions of Scheduled Task
 The  `list-actions` action returns the actions performed by a scheduled task. {connectRepositoryNote}
@@ -238,8 +240,8 @@ The `add-action` action allows you to add a new action to a schedule task. {conn
 === Parameter
 name:: The name of the task.
 owner:: The owner of the task
-organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 action:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.web.api.schedule.ScheduleAction]  object that defines the updated action properties. The `ScheduleAction` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional, must be final parameter if present)
 
 === Example
 [source,groovy]
@@ -260,7 +262,7 @@ format 'EXCEL'
 subject 'updated'
 message 'updated'
 }
-:sch add-action 'My Task' admin --organizationid organization0 action2
+:sch add-action 'My Task' admin  action2 --organizationid organization0
 
 
 
@@ -270,12 +272,12 @@ The `get-action` action returns information about an existing action. {connectRe
 === Parameter
 name:: The name of the task.
 owner:: The owner of the task
-organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 index:: The zero-based index of the action.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional, must be final parameter if present)
 
 === Example
 [source,groovy]
-:schedule get-action 'My Task' admin --organizationid organization0 0
+:schedule get-action 'My Task' admin 0 --organizationid organization0
 
 == Modify  Scheduled Task Action
 The `update-action` action allows you to modify an existing action of a schedule task. {connectRepositoryNote}
@@ -283,9 +285,9 @@ The `update-action` action allows you to modify an existing action of a schedule
 === Parameter
 name:: The name of the task.
 owner:: The owner of the task
-organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 index:: The zero-based index of the action.
 action:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.web.api.schedule.ScheduleAction] object that defines the updated condition properties. The `ScheduleAction` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional, must be final parameter if present))
 
 === Example
 [source,groovy]
@@ -306,7 +308,7 @@ def action2 = Schedule.viewsheetAction {
   subject 'updated'
   message 'updated'
 }
-:schedule update-action 'My Task' admin --organizationid organization0 0 action2
+:schedule update-action 'My Task' admin  0 action2 --organizationid organization0
 
 
 
@@ -316,10 +318,10 @@ The `remove-action` action removes an existing action from a schedule task. {con
 === Parameter
 name:: The name of the task.
 owner:: The owner of the task
-organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 index:: The zero-based index of the action.
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional, must be final parameter if present))
 
 === Example
 [source,groovy]
-:schedule remove-action 'My Task' admin --organizationid organization0 1
+:schedule remove-action 'My Task' admin  1 --organizationid organization0
 
