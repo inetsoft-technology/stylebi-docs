@@ -3,10 +3,14 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 A heat map displays a *measure* using a colored grid, where the value of the aggregated measure for a given combination of *dimension* values is used to determine the color of the grid at that location.
+
 include::ROOT:partial$measureAndDimensionTip.adoc[]
+
 To create a heat map, place the desired dimensions on the ‘X’ and ‘Y’ axes, and place the desired measure in the ‘Color’ region of the Chart Editor.
 
-IMPORTANT: Do not place any measures on the ‘X’ and ‘Y’ axes, and do not place any fields in the ‘Size’ and ‘Shape’ regions of the Chart Editor.
+IMPORTANT: Do not place any measures on the ‘X’ and ‘Y’ axes, and do not place any fields in the ‘Size’ and ‘Shape’ regions of the Chart Editor. You can place a *measure* in the '`Text`' region  if desired. (Placing a *dimension* in the '`Text`' region will create a xref:WordcloudChart.adoc[] instead.)  {convertToMeasure}
+
+
 
 image:commonscript:HeatMapConfig5.png[]
 

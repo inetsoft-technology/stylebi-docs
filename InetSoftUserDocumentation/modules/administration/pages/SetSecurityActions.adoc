@@ -46,7 +46,8 @@ Edit Mobile Devices:: Permission to edit mobile device screen layouts. (See xref
 Free Form SQL:: Permission to create a data set by entering a SQL string in the ‘Database Query’ dialog box of a Data Worksheet. (See xref:dataworksheet:QueryData.adoc[] for more information.)
 Materialize Assets:: Access to the ‘Materialize’ menu option for Dashboards in the Portal Repository tree, as well as for Enterprise Manager. (See xref:viewsheet:ImprovePerformance.adoc[] and xref:administration:MaterializedView.adoc[]  for more information.)
 My Dashboards:: Access to the ‘My Dashboards’ folder in the Portal Repository tree for storage of private assets.
-Physical Table:: Access to database tables via the ‘TABLE’ folder of the ‘Data Source’ tree in a Data Worksheet.
+
+Physical Table:: Access to database tables via the ‘TABLE’ folder of the ‘Data Source’ tree in a Data Worksheet. This also controls access to the ‘_Database_ Query’ option for Data Worksheet. (See xref:dataworksheet:QueryData.adoc[] for more information.)
 +
 TIP: If you want a user to see only specific tables, set your database permissions to allow that user access to only the desired  tables.
 

@@ -53,3 +53,5 @@ To save the Data Worksheet, press the {buttonSave} in the toolbar. Provide a '`N
 * To save into a *private location*, select the ‘Private Data Worksheet’ scope. The Data Worksheet will only be accessible to its creator.
 +
 IMPORTANT: A *public* Dashboard cannot use a *private* Data Worksheet as a data source.  Such improper scoping may generate an  "`assembly could not be referenced`" error. (A private Dashboard *is* permitted to use a public Data Worksheet.)
+
+TIP: {autoSave}

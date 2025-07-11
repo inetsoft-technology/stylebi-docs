@@ -25,6 +25,7 @@ If a Data Worksheet is already open, you can add a query-based data block by pre
 
 image:databaseQuery1.png[]
 
+If you do not see the ‘_Database_ Query’ option, this indicates that you do not have '`Physical Table`' permissions.  See xref:administration:SetSecurityActions.adoc[] for more information.
 ====
 
 . Continue to construct the query with xref:#BasicQuery[] or xref:#AdvancedQuery[] below.

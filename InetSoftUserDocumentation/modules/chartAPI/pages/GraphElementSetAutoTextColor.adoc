@@ -1,0 +1,59 @@
+= GraphElement.setAutoTextColor(Boolean)
+:navtitle: setAutoTextColor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Specifies that the text color for labels on a xref:viewsheet:BarChart.adoc[] (text that appears within the colored bars) should be automatically adjusted to enhance readability.
+
+
+
+
+
+
+== Parameter
+Boolean:: `true`: automatically adjust text color +
+`false`: do not automatically adjust text color (default)
+
+
+
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity"); //<2>
+var scale = new LinearScale("Quantity");
+scale.setMax(100); //<3>
+graph.setScale("Quantity",scale);
+elem.setInPlot(false); //<4>
+graph.addElement(elem); //<5>
+
+--
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use xref:LinearScaleSetMax.adoc[] to set a fixed maximum for the '`Quantity`' scale.
+<4> Use `setInPlot` to prevent resizing the plot area.
+<5> Use `addElement` to add the `IntervalElement` to the Chart.
+
+
+image:commonscript:GraphElementsetInPlot.png[]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0); //<1>
+elem.setInPlot(false);
+--
+=====

@@ -1,6 +1,9 @@
-= Set Docker Container Memory
+= Set Container Memory
 include::ROOT:partial$buttonSnippets.adoc[]
 
+The following sections describe how to set certain Docker and JVM options.
+
+== Set Docker Container Memory
 During *initial creation* of the Docker container only, use `-Xmx` and `-Xms` in the `JAVA_MEMORY_OPTS` environment variable in _docker-compose.yaml_ to adjust the memory available to the Docker container.
 
 .Example:
@@ -19,5 +22,18 @@ memory=6GB
 ----
 
 To change the Docker container memory at a later time, stop the existing container and start a new container with the desired memory setting.
+
+== Add New JVM Options
+During *initial creation* of the Docker container only, use the `JAVA_TOOL_OPTIONS` line in the _docker-compose.yaml_ file to add new JVM options. You can add multiple options to the same line, separated with a space.
+
+.Example:
+[source,yaml]
+----
+environment:
+  JAVA_MEMORY_OPTS: "-Xms6g -Xmx6g"
+  JAVA_TOOL_OPTIONS: "-Djava.io.tmpdir=/tmp/directory/ -XX:+PrintGCDetails"
+----
+
+TIP: {SampleYAML}
 
 

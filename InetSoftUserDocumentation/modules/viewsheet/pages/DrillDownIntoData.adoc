@@ -499,6 +499,8 @@ image:Flyover Final.png[]
 
 The filtered flyover component and the component that triggers the flyover can be based on the same data block or on different data blocks. In the latter case, the flyover component is filtered based on any matching fields in the two data blocks.
 
+TIP: To access the current flyover filter condition in script, use xref:viewsheetscript:CommonDataConditions.adoc[].
+
 .Walkthrough: Flyover View
 ****
 In this example, you will create a chart that displays quantity purchased by company. When the user hovers over (or clicks) a given company on the chart, this will automatically filter an associated Table and Gauge to display data for only that company.

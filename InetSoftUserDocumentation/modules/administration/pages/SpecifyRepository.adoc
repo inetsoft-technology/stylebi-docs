@@ -11,3 +11,4 @@ sree.log:: Contains log events (plain text) for the InetSoft server.
 
 schedule.log:: Contains log events (plain text) for the Scheduler application.
 
+CAUTION: Hand-editing configuration files is *not  recommended* unless such editing is specifically prescribed in the documentation. (For example, xref:Storage.adoc[] describes adding properties to _inetsoft.yaml_.)

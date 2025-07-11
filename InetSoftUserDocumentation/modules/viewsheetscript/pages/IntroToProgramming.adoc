@@ -127,10 +127,10 @@ if(parameter['start_time']) {
 }
 
 === String Type
-Enclose String constants with a single or double quote:
+Enclose String constants with a single or double quote.  Use `\n` to introduce a carriage return (line feed).
 [source,javascript]
-var mystring = "InetSoft Technology Corp."
-mystring = 'InetSoft Technology Corp.'
+var comp = "InetSoft Technology Corp."
+var comp2 = 'InetSoft Technology \n Corp.'
 
 Strings can be concatenated using the plus operator:
 [source,javascript]
@@ -288,7 +288,7 @@ function max(a,b) {
 }
 ----
 
-// To create and save a custom JavaScript function, see Using the Script Library in XXXXXXXXXXXXXXXX .
+To create and save a custom JavaScript function, see Using the Script Library in xref:CreateScriptFunction.adoc[].
 
 == Useful Text Functions
 Two common string operations are changing case and searching for substrings.

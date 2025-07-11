@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 
-The audit feature tracks Dashboard and data access, as well as asset dependencies. When auditing is enabled, all Dashboard and database access is logged in the audit database. Note that auditing requires you to  enable a security provider (see xref:SpecifySecurityProvider.adoc[]).
+The audit feature tracks Dashboard and data access, as well as asset dependencies. When auditing is enabled, all Dashboard and database access is logged in the audit database and written to the server logs. (See xref:MonitorServerActivity.adoc#Logs[Logs] for more information.) Note that auditing requires you to  enable a security provider (see xref:SpecifySecurityProvider.adoc[]).
 
 include::administration:partial$keystore.adoc[]
 
