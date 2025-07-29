@@ -4,6 +4,9 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Date grouping levels are used for Chart and Crosstab binding.
 
+== Type
+xref:commonscript:StyleConstant.adoc[] object:: One of the (integer) constants below:
+
 [cols="1,2"]
 |===
 |Level|Description
@@ -30,5 +33,3 @@ Date grouping levels are used for Chart and Crosstab binding.
 
 
 
-== Type
-Integer

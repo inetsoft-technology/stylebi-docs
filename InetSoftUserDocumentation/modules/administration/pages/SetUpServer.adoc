@@ -36,7 +36,7 @@ This can also be used in script form:
 inetsoft {
   setup('/var/lib/inetsoft') {
     properties {
-      put 'license.key', 'S000-000-ERX-000000000000000-000000000000'
+      put 'license.key', 'S000-000-ERX-00000000-00000000'
     }
   }
 }

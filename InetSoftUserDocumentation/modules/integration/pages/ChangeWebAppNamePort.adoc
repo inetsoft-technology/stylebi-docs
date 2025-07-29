@@ -3,7 +3,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-IMPORTANT: Stop your server before making these changes.
+IMPORTANT: Stop your server before making these changes. The container needs to be recreated for the port change to take effect.
 
 The default URL for the repository is http://hostname:8080/app/portal/tab/report, where  `8080` is the default port number. To change the webapp port, modify the `ports` setting in the _docker-compose.yaml_ file, as shown below.
 

@@ -22,6 +22,8 @@ NOTE: NOTE:  The Oracle database driver is packaged with InetSoft. If you see a 
 
 . If your administrator has provided a connection URL, enable ‘Custom URL’, and enter the  URL in the '`URL`' field. *If you do not have a URL*, disable ‘Custom URL’, and enter the additional required connection information:   ‘Host Name’, ‘Port’, ‘SID’, and login credentials.
 +
+TIP: To connect to a service name instead of an SID,  use the '`Custom`' option.
++
 include::user:partial$customURLProperties.adoc[]
 
 

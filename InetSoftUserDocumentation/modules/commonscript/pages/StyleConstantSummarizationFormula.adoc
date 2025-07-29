@@ -5,6 +5,9 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 The summarization formulas below are available for Crosstab and Chart scripting.
 
+== Type
+xref:commonscript:StyleConstant.adoc[] object:: One of the (integer) constants below:
+
 |===
 |NONE_FORMULA|NTHMOSTFREQUENT_FORMULA
 |AVERAGE_FORMULA|NTHSMALLEST_FORMULA
@@ -23,12 +26,6 @@ The summarization formulas below are available for Crosstab and Chart scripting.
 
 
 
-
-
-
-
-== Type
-Integer
 
 == Example
 [source,javascript]

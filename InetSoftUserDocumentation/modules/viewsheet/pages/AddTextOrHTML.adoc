@@ -48,7 +48,7 @@ video::359874333#chapter=16573561[vimeo,640,400]
 +
 image:textComponentAggregateExp2.png[]
 
-== Add HTML
+== Display HTML
 There are two ways to display HTML content within a Dashboard. One method is to use the *Basic HTML presenter*, which is available for data elements such as Text and Tables. See xref:VisualFormat.adoc[] for more information.
 
 You can also display HTML content within any element that displays text (e.g., Table cell, Text component, Selection List, etc.) by simply surrounding the HTML markup with `<html>...</html>` tags. For example, the following markup placed within a Text element creates a list within the Text element:
@@ -87,6 +87,9 @@ Your browser does not support the video tag.
 </body>
 </html>
 ====
+
+include::ROOT:partial$webAssets.adoc[]
+
 
 == Display an Aggregate as Text
 To display an aggregated measure as text, see xref:AddAKPI.adoc[].

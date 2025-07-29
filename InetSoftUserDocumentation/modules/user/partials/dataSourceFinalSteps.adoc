@@ -1,5 +1,6 @@
 Check the settings to make sure they are correct for your database. See xref:user:EditConnection.adoc[] for information on how to change connection settings.
 +
-TIP: An error such as "`Driver class not found`" generally indicates that you do not have the correct database driver installed.  See xref:administration:Storage.adoc#ManageDriversandPlugins[Manage Drivers and Plugins] in xref:administration:ManageServer.adoc[]  or consult an administrator.
+TIP: An error such as "`Driver class not found`" generally indicates that you do not have the correct database driver installed.  See xref:administration:Storage.adoc#ManageDriversandPlugins[Manage Drivers and Plugins] in xref:administration:ManageServer.adoc[]  or consult an administrator. Other connection errors may be caused if a proxy is blocking the connection to the data source.
+
 
 After you have created a connection to the database, you can create a data set as described in  xref:dataworksheet:CreateNewWorksheet.adoc[] and xref:dataworksheet:QueryData.adoc[].

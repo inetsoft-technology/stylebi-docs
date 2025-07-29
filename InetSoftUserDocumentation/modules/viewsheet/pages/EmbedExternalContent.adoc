@@ -8,7 +8,7 @@ xref:AddTextOrHTML.adoc[], to insert HTML markup containing an IFrame tag.
 ====
 
 
-To embed external content within an automatically generated  IFrame, follow the steps below:
+To embed external content within an *automatically generated*  IFrame, follow the steps below:
 
 . If necessary, create a new Dashboard.
 include::ROOT:partial$CreateNewDashboardNote.adoc[]
@@ -24,7 +24,16 @@ image:viewsheetExp51.png[]
 +
 image:embedURL.png[]
 
-. In the ‘Text’ field, enter the URL that you want to display within the embedded IFrame, for example, `http://www.inetsoft.com`.
+. In the ‘Text’ field, enter the URL that you want to display within the embedded IFrame, for example, `http://www.inetsoft.com`. If you want to pass *parameters*, simply add them to the URL as label-value pairs.
++
+
+For example, to pass a parameter to a Dashboard named "`DashboardChild`"  in the automatically generated IFrame, use a URL such as:
++
+ http://host:8080/app/viewer/view/1%5E128%5E%5EDashboardChild?param=Duke
++
+See xref:integration:LoadAssetsViaURL.adoc[] for more information about how to construct a URL to a Dashboard.  The  "`DashboardChild`"  Dashboard can then use parameter `param` within a condition or within a script.
++
+include::ROOT:partial$webAssets.adoc[]
 
 . Press btn:[OK].
 

@@ -76,9 +76,16 @@ Sort Repository Tree:: Specifies the sort order of items in the Repository listi
 
 Default Dashboard CSS:: Allows you to specify a custom CSS file to use for Dashboard  component styles. To use custom CSS, uncheck the ‘Default Dashboard CSS’ option and click in the ‘Custom Dashboard CSS File’ field to specify the file. The CSS file can specify styles for alignment, font, border, and color. See xref:StyleWithCSS.adoc[] for more information.
 
-Default Fonts:: Allows you to upload custom fonts. To add custom fonts, uncheck the ‘Default Font’ option and press the ‘Edit Fonts’ button. In the ‘User Fonts’ dialog box, press btn:[Add] to open the '`Add/Edit Font Face`' dialog box and load a new font by specifying the locations of the font’s TTF, EOT, SVG, and WOFF files, as well as the desired weight and style. You can add multiple font variations under the same name so that, for example, a bold or italic version of the font will be available when the user applies bold or italic formatting. Verify that each parent folder for the desired fonts is listed in the '`CID Font Path`' (see  xref:#PDFSettings[]).
+Default Fonts:: Allows you to upload custom fonts. To add custom fonts, uncheck the ‘Default Font’ option and press the ‘Edit Fonts’ button. In the ‘User Fonts’ dialog box, press btn:[Add] to open the '`Add/Edit Font Face`' dialog box and load a new font by specifying the locations of the font’s TTF, EOT, SVG, and WOFF files, as well as the desired weight and style.
 +
 image:Global Look and Feel2.png[]
++
+You can add multiple font variations under the same name so that, for example, a bold or italic version of the font will be available when the user applies bold or italic formatting. Verify that each parent folder for the desired fonts is listed in the '`CID Font Path`' (see  xref:#PDFSettings[]). Note that fonts for   *asset exports* will not be available unless the font file is located in a '`CID Font Path`' directory.
+
++
+TIP: You *do not* need to restart the app after adding fonts, but you should advise users to clear their browser cache in order to see the new fonts.
+
+
 
 
 
@@ -689,7 +696,7 @@ Font Options::
 [square]
 * *Map Symbols*: Map symbol characters to symbol fonts. This is required if symbol characters are used in Dashboards.
 * *Embed CMap in PDF*:  Embed the CMap in the generated PDF file.
-* *Embed Font in PDF*: Embed the font in the generated PDF file.
+* *Embed Font in PDF*: Embed the font in the generated PDF file. Enable this option if fonts are not rendering correctly.
 * *CID Font Path*: Path for CID fonts.
 * *AFM Font Path*: Path for TrueType/AFM fonts, a semicolon-separated list of directories. PDF generation will use only TrueType fonts on this path. On Windows NT, TrueType fonts are stored in the _c:\winnt\fonts directory_. On UNIX platforms, the  JRE obtains information about available TrueType fonts from the _fontconfig.properties_ file. The _fontconfig.properties_ file can be found in _JRE_HOME/lib_ for a JRE installation and _JDK_HOME/jre/lib_ for a JDK installation. Add any custom TrueType fonts to the _fontconfig.properties_ file. See the https://docs.oracle.com/javase/8/docs/technotes/guides/intl/fontconfig.html[Java documentation] for more information about the _fontconfig.properties_ file.
 

@@ -228,7 +228,8 @@ See the following sections for more information on how to reference data within 
 * xref:viewsheetscript:RunQueryFromScript.adoc[] for more information on using `runQuery()` to reference data from an arbitrary  Data Worksheet.
 ****
 
-. To add rows and columns, right-click on a cell in the table diagram and select the desired option from the context menu.
+. To *add* rows and columns, right-click on a cell in the table diagram and select the desired option from the context menu ('`Insert Rows/Columns`', '`Insert Row`', '`Append Row`', '`Insert Column`', '`Append Column`'). To *remove* a row or column,  right-click on a cell in the table diagram and select the desired option from the context menu ('`Delete Row`' or  '`Delete Column`').
+
 +
 [.videotitle]
 .Watch Video: Add Formulas to a Table (Add Rows or Columns)
@@ -242,6 +243,8 @@ video::306617295#chapter=16540156[vimeo,640,400]
 
 +
 image:Freehand Table Binding New3.png[]
++
+To *combine* multiple cells into a single cell, {buttonCtrl}-click to select the desired cells in the table diagram, then right-click and select '`Merge Cells`'.  This is useful when the addition of new rows or columns creates undesired blank cells. Merge these cells together so that a single label or value can be placed in the merged cell.  This is typically used  for static cells; see above for information on merging *expanding cells*.
 
 . To add formatting to any cell (column or row), select the desired cell or cells, and then select the *Format* tab in the left panel.  See xref:VisualFormat.adoc[] and xref:DataFormat.adoc[] for more information about formatting options.
 +

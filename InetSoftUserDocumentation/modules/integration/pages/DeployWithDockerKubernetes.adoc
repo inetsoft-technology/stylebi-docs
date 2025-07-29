@@ -2,11 +2,13 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+include::ROOT:partial$enterpriseOnly.adoc[]
 
 InetSoft provides first-class support for Docker/OCI (Open Container Initiative) containers and Kubernetes. Kubernetes is a container orchestration system that provides the following benefits:
 
 * Automated (consistent, and repeatable) deployment of containers
 * Automatic scaling of containers
+
 * Automatic system and resource management, including storage, networking, and security
 * Support for DevOps for easy integration into CI/CD pipelines
 * Support by many cloud infrastructures, including Amazon (EKS), Azure (AKS), and Google Cloud (GKE)

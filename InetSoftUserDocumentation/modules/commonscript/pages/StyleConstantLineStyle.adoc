@@ -4,6 +4,9 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 The line style constants can be used in all properties requiring line style constants, such as separator style, tab fill style, and table borders.
 
+== Type
+xref:commonscript:StyleConstant.adoc[] object:: One of the (integer) constants below:
+
 [cols="1,2"]
 |===
 |Line Style|Description
@@ -28,9 +31,6 @@ The line style constants can be used in all properties requiring line style cons
 
 
 
-
-== Type
-Integer
 
 == Example
 [source,javascript]

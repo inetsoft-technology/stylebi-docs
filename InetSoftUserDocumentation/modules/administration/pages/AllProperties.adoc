@@ -281,6 +281,9 @@ The following table lists a variety of scheduling properties. See xref:Configure
 
 ftp.knownhosts.path:: Location of the known hosts file for SFTP connections. Default is *.ssh/known_hosts* in user’s home directory.
 schedule.condition.taskDefaultTime:: Determines whether the user needs to explicitly supply a '`Start Time`' when creating a scheduled task.  Set to `false` to suppress the default value and force the user to enter an explicit value.  Set to `true` to allow the '`Start Time`' to be populated with a default value.
+schedule.java.opts:: Specifies additional Java options and parameters to be passed to the Scheduler instance.
+
+
 schedule.log.file:: Scheduler log file path.
 schedule.memory.min:: Minimum memory usage for the Scheduler.
 schedule.memory.max:: Maximum memory usage for the Scheduler.

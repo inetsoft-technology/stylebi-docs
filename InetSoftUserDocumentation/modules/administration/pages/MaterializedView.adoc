@@ -56,7 +56,7 @@ image:Materialized View Candidates Select_1.png[]
 
 . From the ‘Set Cycle’ menu, choose the cycle on which these materialized view should be regenerated. (See  xref:Schedule.adoc[]  for more information about defining cycles.)
 
-. *_Optional:_*  Select ‘Generate Data’ if you want to immediately perform the full materialization process for the selected Dashboards upon pressing the btn:[Create/Update] button. (This may take a significant amount of time, during which the materialized view is constructed and data files are saved.)
+. *_Optional:_*  Select ‘Generate Data’ if you want to immediately perform the full materialization process for the selected Dashboards upon pressing the btn:[Create/Update] button. (This may take a significant amount of time, during which the materialized view is constructed and data files are saved. The  data  file names are generated automatically and cannot be changed.)
 
 +
 If you do not want to wait for materialized view generation to complete, select both ‘Generate Data’ and ‘Run in Background’. This automatically creates a scheduled task to generate the materialized view. You can check the status of the task under the *Schedule* page. (See xref:CreateScheduledTask.adoc[].)  If you *do not* select the ‘Generate Data’ option, materialized views will be created immediately, but will not be populated with data until the assigned cycle next executes.
@@ -71,6 +71,7 @@ To manage existing materialized views, see xref:#ManageMaterializedViews[]. To v
 
 [#ManageMaterializedViews]
 == Manage Materialized Views
+TIP: You can also access materialized view status from the Web API  endpoints.  See xref:integration:AccessInetSoftAPIMethods.adoc[] and xref:user:RESTJSON.adoc[] for details on how to access API endpoints from a datasource.
 
 To manage existing materialized views, follow the steps below:
 
@@ -92,7 +93,7 @@ Last Modified::	Time at which the materialized view was most recently updated. T
 Status::	Current state of the materialized view: ‘Successful’, ‘Failed’, ‘Pending’, or ‘Generating’. ‘Pending’ indicates that the materialized is scheduled to generate automatically on a cycle.
 Cycle::	Cycle on which the materialized view is scheduled to generate. Use the ‘Set Cycle’ menu to change the cycle. See xref:Schedule.adoc[] for information about how to create a cycle.
 Incremental::	Indicates that the materialized view has an incremental update condition. See xref:#IncrementallyUpdateMaterializedView[] for information on how to set update conditions.
-Size (MB)::	The combined size of all of the materialized view data files, not including the back-up.
+Size (MB)::	The combined size of all the materialized view data files, not including the back-up.
 Valid::	Indicates that the current materialized view is compatible with the Dashboard. If the materialized view is no longer valid (due to subsequent Dashboard modifications), select the invalid materialized view in the table and press btn:[Update].
 ****
 

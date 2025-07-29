@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-In a Freehand Table expression, returns `true` when the values in the list match any group cells in the context.
+In a Freehand Table expression, returns `true` when the values in the list match any group cells in the context.  See xref:viewsheetscript:FreehandTable.adoc[] for more information.
 
 == Parameter
 list::			An array of pairs. The first item of each pair is the group name, the second item is the column.

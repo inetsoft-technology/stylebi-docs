@@ -29,6 +29,8 @@ else {
 * If you chose '`Variable`',  select the Form component that will provide the name of the image.  See xref:viewsheet:DynamicallySetProperties.adoc#ControlPropertieswithFormComponents[Control Properties with Form Components] for more information.
 +
 TIP: You can specify an image by the uploaded image name (e.g., `'image1.gif'`), a resource path on the server (e.g., `'/library/image1.gif'`), or a URL (e.g., https://www.google.com/images/logos/ps_logo2.png).
++
+include::ROOT:partial$webAssets.adoc[]
 
 
 . Press btn:[OK] to close the Formula Editor, and then press the btn:[OK] to close the ‘Image Properties’ panel.

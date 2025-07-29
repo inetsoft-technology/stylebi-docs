@@ -4,7 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
+TIP: You can set up the https://www.inetsoft.com/docs/stylebi/web-api/[InetSoft Web API] as REST JSON Data Source using the steps below.  This will allow you to use the Web API endpoints to access information such as materialized view status.
+
 include::partial$dataSourceUserIntro.adoc[]
+
+
 
 . Select the ‘REST JSON’ data source, and press btn:[Create]. This opens the data source definition screen.
 +

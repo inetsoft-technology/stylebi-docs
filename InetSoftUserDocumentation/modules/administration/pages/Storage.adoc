@@ -51,6 +51,9 @@ image:Figure 12.png[]
 * To delete a folder, press the btn:[Delete] button at the bottom-right.
 * To add a new file or folder to the selected folder, press the btn:[New File] or btn:[New Folder] button at the bottom-right.
 * To upload a file to server storage, press the btn:[Upload Files] button.
++
+TIP: To make an asset accessible via URL, upload it to the *web-assets* directory in _Storage_. (Create the _web-assets_ folder if it does not exist.) For example, upload _image.png_ to the  _web-assets_ folder to make it accessible at http://host:8080/image.png.
+
 * To download a folder to a Zip file, press the btn:[Download] button. (The downloaded folder can be uploaded into another environment using the btn:[Upload] button.)
 
 . To access a file’s properties, click the desired file name in the navigation tree. This opens the ‘Storage File Definition’ panel.

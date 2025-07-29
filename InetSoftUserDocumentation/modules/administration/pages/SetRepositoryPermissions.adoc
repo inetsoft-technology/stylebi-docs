@@ -28,9 +28,9 @@ image:dashboardSecurityTab.png[]
 include::ROOT:partial$ParentPermissions.adoc[]
 =====
 
-. Select ‘Access requires both User and Role permission’ to specify that access to the Dashboard or folder is granted only if the current user has *both* user *and* role permissions; i.e., both the user’s name (or group) and at least one of the user’s roles appear in the ‘Selected Entities’ table.
+. Select ‘Access requires BOTH User and Role permission’ to specify that access to the Dashboard or folder is granted only if the current user has *both* user *and* role permissions; i.e., both the user’s name (or group) and at least one of the user’s roles appear in the ‘Selected Entities’ table.
 +
-Select ‘Access requires either User or Role permission’ to specify that access to the Dashboard or folder is granted if the current user has *either* user *or* role permissions; i.e., either the user’s name (or group) or at least one of the user’s roles appear in the ‘Selected Entities’ table.
+Select ‘Access requires EITHER User or Role permission’ to specify that access to the Dashboard or folder is granted if the current user has *either* user *or* role permissions; i.e., either the user’s name (or group) or at least one of the user’s roles appear in the ‘Selected Entities’ table.
 +
 IMPORTANT: This is an organization-wide setting, and will be applied to all assets within the same organization.
 

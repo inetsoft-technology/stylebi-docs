@@ -1,4 +1,4 @@
-= Create a Task, Cycle, Alert
+= Create a Task, Cycle, or Alert
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -191,6 +191,15 @@ To monitor scheduled tasks, first open the menu:Schedule[Tasks] page.  (See xref
 image:Figure 34.png[]
 
 To temporarily disable or enable a task, use the checkbox under the ‘Enabled’ column.
+
+The '`Distribution`' chart provides a breakdown of daily tasks, including both enabled  and disabled tasks.
+
+image:ScheduleTaskDistribution.png[]
+
+You can click a bar on the chart to zoom in.  Press the {buttonBack}  button at the top-right to return to the original view.
+
+image:ScheduleTaskDistribution2.png[]
+
 
 === Run a Task
 To run a task immediately, click the box next to the task name to select it. Then press the {buttonMoreOptions} and select ‘Run Now’.

@@ -18,10 +18,14 @@ indexB:: Position following the last character in the substring. The index is ze
 
 
 == Examples
-
+.Example: Return first two letters of a string
 [source,javascript]
 var txt = 'Hello'.substring(1,3); // returns “el”
 
+.Example: Remove final punctuation from a string
+[source,javascript]
+var txt = 'Hello.';
+txt.substring(0,txt.length-1); // returns "Hello"
 
 include::partial$expressionColOrCalcField.adoc[]
 [source,javascript]

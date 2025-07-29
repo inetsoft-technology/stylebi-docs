@@ -43,6 +43,8 @@ image:server1.png[]
 . *_Optional:_* Enter an ‘Alias’ for the user. This is the name that will be displayed in the Portal for the user.
 
 . Select ‘Active’ from the right-side menu to allow the user to log into the Portal.
++
+NOTE: When a user is *not* marked as '`Active`', the user  cannot log in, but all assets and scheduled tasks continue to function  normally.
 
 . Specify an email address for the user in the ‘Email’ field.
 
