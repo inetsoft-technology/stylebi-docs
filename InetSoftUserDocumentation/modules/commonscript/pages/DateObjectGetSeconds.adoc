@@ -4,6 +4,8 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 JavaScript function to return the seconds part of a date.   See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getSeconds[Date.getSeconds()] in the {JavaScriptRef} for details on usage.
 
+include::ROOT:partial$dateObjects.adoc[]
+
 
 == Example
 [source,javascript]

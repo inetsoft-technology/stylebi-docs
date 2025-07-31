@@ -107,11 +107,12 @@ Graphics.Image.ScaleSmooth:: Set to `true` to give priority to image smoothness 
 The following table lists a variety of limits and safeguards. See xref:TailorServerPerformance.adoc[] for related properties.
 
 
-selectionList.maxrow:: The maximum number of items to be displayed in a Selection List or Selection Tree (default 50000).
 
 always.warn.joinMaxRows:: If set to `false` (default), the user will be shown a single warning for the session when the `join.table.maxrows` limit is violated. (See below.) Set to `true` to warn the user for each individual violation.
 asset.max.idle:: Sets the duration (in milliseconds) that a Dashboard remains active in the Portal when no user interactions are detected. Default is 2 hours (7,200,000 milliseconds). There is no timeout for Dashboards that are open for editing in Visual Composer. Dashboards open in the Portal are automatically closed after three minutes if the web browser is closed.
 asset.sample.maxrows:: The row limit used for subqueries (inner select queries) performed before aggregation or joining. In some cases, subqueries that return too few results may not possess any rows that match the specified join condition. In these case, a higher subquery limit may be necessary to ensure that the final query returns results.
+crossJoin.maxCellCount:: Sets the limit for number of cells in  the result set  of a cross join.  (Default is 500000000.)
+
 csv.import.max:: Sets the maximum size in bytes for CSV files imported into a Data Worksheet Embedded Table (see xref:dataworksheet:UploadData.adoc[]).
 DistinctTableLens.maxrow:: Sets the maximum number of distinct values to display in a Condition '`Browse Data`' menu.
 excel.sheet.maxrows:: Sets the integer row limit for every table within an Excel export. A message is displayed below each limited table to indicate that the data in the table has been truncated.
@@ -123,7 +124,6 @@ http.session.timeout:: HTTP session timeout in seconds (default is 1800, which i
 
 join.table.maxrows:: Sets the maximum number of rows to retain in any Data Block that is created by joining two or more Data Blocks in a Data Worksheet. The limit does *not* apply to joins performed in the ‘Database Query’ dialog box (see xref:dataworksheet:QueryData.adoc[]). By default, the user will be shown only a single warning each session if the limit is violated. To warn the user for each individual violation, set `always.warn.joinMaxRows=true`.
 
-crossJoin.maxCellCount:: Sets the limit for number of cells in  the result set  of a cross join.  (Default is 500000000.)
 
 olap.table.maxrow:: Determines how many rows to retrieve when creating unique values for selection lists. Default is 10000.
 query.analysis.maxrow:: Number of rows that the Visualization Recommender should use when suggesting components to display data. Default=5000. (The Visualization Recommender is displayed when the user selects ‘Open Wizard’  in the ‘New Dashboard’ dialog box.)
@@ -139,6 +139,8 @@ IMPORTANT: {maxRowSortWarning}
 
 query.runtime.timeout:: Sets the global timeout (seconds) for all queries during Dashboard runtime execution.  If the timeout is too short, this can cause a data-read error in some cases.
 rest.cache.timeout.millis:: Sets the timeout (milliseconds) for REST queries to be cached. Use a value greater than 0 to prevent repeated execution of similar REST queries. If a request is made before the cache entry expires, the cached response will be used instead of executing a new HTTP request. (Default is 0, no caching of REST queries.)
+selectionList.maxrow:: The maximum number of items to be displayed in a Selection List or Selection Tree (default 50000).
+
 script.execution.timeout:: A safety-net for script execution time, especially for infinite loops. Times-out the script if execution time exceeds specified value (in seconds).
 table.output.maxrow:: Sets the global maximum row limit for all Tables, Crosstabs, and Freehand Tables during Dashboard runtime execution. This property controls the size of the final displayed table, following any grouping and aggregation.
 
@@ -282,6 +284,8 @@ The following table lists a variety of scheduling properties. See xref:Configure
 ftp.knownhosts.path:: Location of the known hosts file for SFTP connections. Default is *.ssh/known_hosts* in user’s home directory.
 schedule.condition.taskDefaultTime:: Determines whether the user needs to explicitly supply a '`Start Time`' when creating a scheduled task.  Set to `false` to suppress the default value and force the user to enter an explicit value.  Set to `true` to allow the '`Start Time`' to be populated with a default value.
 schedule.java.opts:: Specifies additional Java options and parameters to be passed to the Scheduler instance.
+schedule.auto.start::  Set to `true` (default) to allow the scheduler to be started automatically on initialization of the repository servlet. (This property is only utilized when running from *source*). If you need to specify additional parameters to the Java executable when using this  auto-start option, add a `schedule.java.opts` property. (See above.)
+
 
 
 schedule.log.file:: Scheduler log file path.

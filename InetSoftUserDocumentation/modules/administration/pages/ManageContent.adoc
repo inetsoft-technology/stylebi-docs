@@ -97,7 +97,7 @@ def excluded = [
 ====
 
 == Backup Assets in Server Storage
-The backup action backs up all server storage into a Zip file. To restore, see xref:SetUpServer.adoc[]. {connectRepositoryNote}
+The backup action backs up all server storage into a Zip file. This is a full system backup and  includes *all assets, settings, users, and security configurations*.  To restore, see xref:SetUpServer.adoc[]. {connectRepositoryNote}
 
 === Parameter
 path:: The path to the local Zip file to contain the backed up files.

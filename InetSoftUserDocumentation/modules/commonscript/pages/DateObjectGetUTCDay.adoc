@@ -5,6 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 JavaScript function to return the day of the week (with Sunday having index 0) for a date in universal time.  See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCDay[Date.getUTCDay()] in the {JavaScriptRef} for details on usage.
 
+include::ROOT:partial$dateObjects.adoc[]
 
 
 

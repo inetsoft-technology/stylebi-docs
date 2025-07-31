@@ -10,7 +10,7 @@ If multi-tenancy is enabled (see xref:EnableMultiTenant.adoc[]), the *Logging* p
 
 Enterprise Manager provides the ability to log messages generated during server and Scheduler execution. Logged messages are appended to a text file (default are *sree.log* for the server and *schedule.log* for the Scheduler, both in _/var/lib/inetsoft/config_) and optionally written to the standard output stream. For information on viewing log files, see xref:MonitorServerActivity.adoc[].
 
-
+== Configure Log Settings
 To configure logging settings, follow the steps below:
 
 . Press the {buttonSettings} at the top of Enterprise Manager.
@@ -43,9 +43,10 @@ Default Log Detail Level:: There are four available detail levels. It is recomme
 * *Warning* reports issues that do not prevent normal operation, but indicate a possible problem that should be investigated.
 * *Error* reports issues that prevent normal operation.
 
+== Add Custom Log Levels
 You can assign custom log levels to particular assets. For example, you can set a ‘Warning’ log level for the ‘Default Log Detail Level’ property, but still set a ‘Debug’ log level for a particular Dashboard. To set a custom log level, follow the steps below:
 
-. Press the btn:[Add] button below the table. This adds a new log level.
+. Press the btn:[Add] button below the '`Custom Log Levels`' table. This adds a new log level.
 +
 image:CustomLogLevelAdd.png[]
 
@@ -54,6 +55,9 @@ image:CustomLogLevelAdd.png[]
 image:CustomLogLevelType.png[]
 
 . In the ‘Name’ field, enter the name of the asset for which you want to set a custom log level.
+
+. If multi-tenancy is  enabled (see xref:EnableMultiTenant.adoc[] for more information), select the desired '`Organization`'.
+
 
 . Select the desired logging level for this particular asset. (See above for level information.)
 +

@@ -6,6 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 JavaScript function to return the milliseconds from January 1, 1970 (Unix epoch) to the specified date (UTC).   See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime[Date.getTime()] in the {JavaScriptRef} for details on usage.
 
 
+include::ROOT:partial$dateObjects.adoc[]
 
 
 

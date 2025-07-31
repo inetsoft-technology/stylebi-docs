@@ -5,6 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 JavaScript function to return the hours part of a date in universal time.  See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCHours[Date.getUTCHours()] in the {JavaScriptRef} for details on usage.
 
 
+include::ROOT:partial$dateObjects.adoc[]
 
 
 

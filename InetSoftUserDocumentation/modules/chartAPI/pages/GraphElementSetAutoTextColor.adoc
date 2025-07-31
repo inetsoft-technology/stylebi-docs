@@ -25,24 +25,32 @@ Boolean:: `true`: automatically adjust text color +
 .Chart Component Script
 [source,javascript]
 --
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+dataset = [["State","Quantity"],["NJ",200], ["NJ",300],["NY",300],["NY",100]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity"); //<2>
 var scale = new LinearScale("Quantity");
-scale.setMax(100); //<3>
-graph.setScale("Quantity",scale);
-elem.setInPlot(false); //<4>
+var frame = new HeatColorFrame();
+frame.setField("Quantity");
+elem.setColorFrame(frame);
+var tframe = new DefaultTextFrame('Quantity');
+var textspec = new TextSpec();
+textspec.setFont(java.awt.Font('Verdana',java.awt.Font.BOLD, 14));
+elem.setTextSpec(textspec);
+elem.setTextFrame(tframe); //<3>
+elem.setAutoTextColor(true); //<4>
+elem.setStackGroup(true);
+elem.setCollisionModifier(GraphElement.STACK_SYMMETRIC);
 graph.addElement(elem); //<5>
 
 --
 <1> {dataset}
-<2> Create the `IntervalElement` object.
-<3> Use xref:LinearScaleSetMax.adoc[] to set a fixed maximum for the '`Quantity`' scale.
-<4> Use `setInPlot` to prevent resizing the plot area.
+<2> Create the `IntervalElement` object (Bar Chart).
+<3> Use xref:GraphElementSetTextFrame.adoc[] to display the labels.
+<4> Use `setAutoTextColor` to automatically adjust label color.
 <5> Use `addElement` to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:GraphElementsetInPlot.png[]
+image:commonscript:GraphElementSetAutoTextColor.png[]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -54,6 +62,7 @@ To change the property on a Chart that was *previously created* with the Chart E
 [source,javascript]
 --
 var elem = graph.getElement(0); //<1>
-elem.setInPlot(false);
+elem.setAutoTextColor(true);
+
 --
 =====

@@ -6,6 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 JavaScript function to set the seconds part of a date in local time.          See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setSeconds[Date.setSeconds()] in the {JavaScriptRef} for details on usage.
 
+include::ROOT:partial$dateObjects.adoc[]
 
 
 

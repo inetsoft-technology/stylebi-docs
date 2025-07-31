@@ -26,9 +26,7 @@ Scheduler Classpath::	The classpath that will be prepended to the system classpa
 
 Schedule Options::	Select options available to a user when they schedule tasks, such as ‘Notification Email’, etc. The ‘Enable Email Browser’ option allows the user to choose emails from a list for email actions.
 
-Auto Start::	Allows the scheduler to be started automatically on initialization of repository servlet. If you need to  specify additional parameters to the Java executable when using the  ‘Auto Start’ and ‘Auto Stop’ options, add a `schedule.java.opts` property. {empropertyconfig}
 
-Auto Stop::	Allows the scheduler to be stopped automatically when the repository servlet terminates.
 
 Share Tasks Between Users in Same Group::	Allows users in the same group to access a scheduled task.  Enable the subordinate '`Modify By Owner Only`' option to prevent users other than the task creator from deleting or editing a task.
 

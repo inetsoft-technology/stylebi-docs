@@ -8,6 +8,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 JavaScript function to set the  month for a date in universal time.          See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth[Date.setUTCMonth()] in the {JavaScriptRef} for details on usage.
 
 
+include::ROOT:partial$dateObjects.adoc[]
 
 
 

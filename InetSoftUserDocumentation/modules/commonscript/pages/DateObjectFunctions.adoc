@@ -3,6 +3,9 @@
 
 The JavaScript Date object stores the time and date and can be used to manipulate dates and perform date conversions. There are several ways to create a Date object. Invoked without arguments, the new *Date* object contains the time and date of its creation:
 
+include::ROOT:partial$dateObjects.adoc[]
+
+
 [source,javascript]
 var now = new Date() // Thu Jun 12 15:14:51 EDT 2008
 

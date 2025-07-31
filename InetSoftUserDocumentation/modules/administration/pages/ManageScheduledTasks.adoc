@@ -28,30 +28,31 @@ The `add` action creates a new scheduled task. {connectRepositoryNote}
 === Parameter
 name:: The name of the task to create.
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
-enabled:: `true` if the task should be enabled upon creation.
 conditions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.sree.web.api.schedule.ScheduleCondition] instances. The `ScheduleCondition` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 actions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleAction.html[inetsoft.sree.web.api.schedule.ScheduleAction] instances. The `ScheduleAction` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+options:: An optional `scheduleOptions` structure.  See example below.
 
 === Example
 [source,groovy]
 import inetsoft.shell.dsl.Schedule
 import java.time.OffsetDateTime
 import inetsoft.sree.security.IdentityID
+import inetsoft.enterprise.web.api.schedule.ScheduleTask
 conditions = [
   Schedule.timeCondition {
     type 'AT'
     date OffsetDateTime.parse('2019-01-01T00:00:00Z')
   },
   Schedule.completionCondition {
-    task 'Other Task'
+    task 'Task1'
+    owner 'admin'
   }
 ]
-ps = [state: 'NJ', startDate: '2019-01-01 00:00:00']
 ems = [ 'joe@inetsoft.com', 'annie@inetsoft.com' ]
-adminUser = new IdentityID("admin", "host-org")
+adminUser = new IdentityID('admin', 'organization0')
 actions = [
   Schedule.viewsheetAction {
-    viewsheet '1^128^__NULL__^Examples/Census^host-org'
+    viewsheet '1^128^__NULL__^Examples/Census^organization0'
     bookmarkName '(Home)'
     bookmarkNames(['(Home)'])
     bookmarkUsers([adminUser])
@@ -61,10 +62,20 @@ actions = [
     sender 'reportserver@inetsoft.com'
     format 'PDF'
     subject 'Monthly Earnings'
+    emailLink true
     message 'Please review and take the necessary actions prior to month end.'
   }
 ]
-:schedule add Task --organizationid organization0 true conditions actions
+options = Schedule.scheduleOptions {
+  enabled true
+  deleteIfNotScheduledToRun false
+  startDate OffsetDateTime.parse('2020-02-01T00:00:00Z').toInstant().toEpochMilli()
+  endDate OffsetDateTime.parse('2099-01-01T00:00:00Z').toInstant().toEpochMilli()
+  description 'admin test description'
+  locale 'Default'
+  executeAsID new ScheduleTask.ExecuteAsID(ScheduleTask.ExecuteAsID.Type.USER, adminUser)
+}
+:schedule add Task admin conditions actions --options options --organizationid organization0
 
 == Get Information About  Scheduled Task
 The `get` action returns information about an existing scheduled task. {connectRepositoryNote}

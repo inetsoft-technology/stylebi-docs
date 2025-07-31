@@ -6,6 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 JavaScript function to set the  year for a date in local time.    See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear[Date.setFullYear()] in the {JavaScriptRef} for details on usage.
 
+include::ROOT:partial$dateObjects.adoc[]
 
 
 

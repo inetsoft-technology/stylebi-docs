@@ -4,6 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 JavaScript function to return the minutes part of a date in local time. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes[Date.getMinutes()] in the {JavaScriptRef} for details on usage.
 
+include::ROOT:partial$dateObjects.adoc[]
 
 == Example
 [source,javascript]

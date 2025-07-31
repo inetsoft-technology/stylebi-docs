@@ -16,16 +16,6 @@ To invoke a custom listener class at the start and end of each scheduled task, s
 
 
 
-== Start from Enterprise Manager
-. Press the {buttonSettings} at the top of Enterprise Manager.
-
-. Select the *Schedule* page in the left panel, and select the *Status* tab at the top.
-+
-image:schedulerStatus.png[]
-
-. Press btn:[Start] to start the Scheduler application. Press btn:[Stop] to terminate the Scheduler application.  Press btn:[Restart] to stop and restart the Scheduler.
-
-. *_Optional_*: Press ‘Get Thread Dump’ to download a text file containing a thread dump of the Scheduler process. Press ‘Get Heap Dump’ to download an HPROF file containing a heap dump of the Scheduler process.
 
 [#StartfromCommandLine]
 == Start from Command Line
@@ -47,3 +37,16 @@ The launching application can then get an instance of the Scheduler object:
 
 [source,java]
 Scheduler scheduler = Scheduler.getScheduler();
+
+
+== Check Scheduler Status
+To  check the Scheduler status, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Schedule* page in the left panel, and select the *Status* tab at the top.
++
+image:schedulerStatus.png[]
+
+
+. *_Optional_*: Select the desired Scheduler node, and press ‘Get Thread Dump’ to download a text file containing a thread dump of the Scheduler process. Press ‘Get Heap Dump’ to download an HPROF file containing a heap dump of the Scheduler process.

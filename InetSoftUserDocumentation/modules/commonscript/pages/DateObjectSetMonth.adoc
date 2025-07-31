@@ -5,6 +5,9 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 JavaScript function to set the  month for a date in local time.         See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMonth[Date.setMonth()] in the {JavaScriptRef} for details on usage.
 
+include::ROOT:partial$dateObjects.adoc[]
+
+
 == Example
 [source,javascript]
 var d = new Date();

@@ -5,6 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 JavaScript function to set the milliseconds from January 1, 1970 (Unix epoch) for a specified date (UTC).      See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setTime[Date.setTime()] in the {JavaScriptRef} for details on usage.
 
+include::ROOT:partial$dateObjects.adoc[]
 
 
 

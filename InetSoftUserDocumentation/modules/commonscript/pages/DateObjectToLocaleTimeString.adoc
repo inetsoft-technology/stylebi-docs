@@ -4,6 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 JavaScript function to return the time portion of a date in locale-sensitive string format.   See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString[Date.toLocaleTimeString()] in the {JavaScriptRef} for details on usage.
 
+include::ROOT:partial$dateObjects.adoc[]
 
 
 

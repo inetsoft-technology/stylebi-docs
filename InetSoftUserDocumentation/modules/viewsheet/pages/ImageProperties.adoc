@@ -22,6 +22,8 @@ TIP: {dynamicProperties}
 
 Static Image:: Select an existing server image, or press btn:[Upload] to upload an image to the server. The ‘Skins’ folder provides a few predefined images which are useful as backgrounds. The ‘Theme Background’ has the special property of automatically adapting to match the prevailing color scheme of the User Portal.
 +
+IMPORTANT: All images uploaded to the Image component will be sent to the client browser and held in memory, even if they are not being displayed.
++
 ‘Alpha’ sets the transparency of image. An ‘Alpha’ value of 100% indicates complete opacity. An ‘Alpha’ value of less that 100% allows underlying components to be partially visible through the image.
 
 Tooltip:: Value of bound data aggregate is displayed as tooltip when mouse hovers over the component. To display custom HTML in the tooltip, see xref:AddTipsToChart.adoc[].

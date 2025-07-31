@@ -5,8 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 JavaScript function to return the day of the month corresponding to the Date object. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate[Date.getDate()] in the {JavaScriptRef} for details on usage.
 
 
-
-
+include::ROOT:partial$dateObjects.adoc[]
 
 
 

@@ -6,6 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 JavaScript function to set the minutes part of a date in local time.        See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMinutes[Date.setMinutes()] in the {JavaScriptRef} for details on usage.
 
+include::ROOT:partial$dateObjects.adoc[]
 
 
 == Example

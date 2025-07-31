@@ -7,6 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 JavaScript function to return the time portion of a date in string format.     See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString[Date.toTimeString()] in the {JavaScriptRef} for details on usage.
 
 
+include::ROOT:partial$dateObjects.adoc[]
 
 
 

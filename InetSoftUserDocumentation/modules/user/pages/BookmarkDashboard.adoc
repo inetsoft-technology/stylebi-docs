@@ -111,7 +111,7 @@ image:viewsheet:BookmarkDelete2.png[]
 
 . Press btn:[OK].
 
-NOTE: You can only delete a bookmark for which you have write permission. (The ‘Home’ bookmark cannot be deleted.)
+NOTE: You can only delete a bookmark for which you are the owner. An administrator can also follow xref:administration:LoginAsDifferentUser.adoc[] to delete a bookmark. (The ‘Home’ bookmark cannot be deleted.)
 
 == Modify Bookmark Name and Sharing
 To change the name or sharing settings for a bookmark, follow the steps below:
