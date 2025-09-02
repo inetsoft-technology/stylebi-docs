@@ -13,7 +13,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Returns a handle to the xref:chartAPI:GraphForm.adoc[] object specified by the `index`. This is useful in cases where the form was not explicitly assigned to a variable at creation time.  The corresponding “setter” function is xref:chartAPI:EGraphAddForm.adoc[].
+Returns a handle to the xref:chartAPI:GraphForm.adoc[] object specified by the `index`. This is useful in cases where the form was not explicitly assigned to a variable at creation time.  To add a Form, use xref:chartAPI:EGraphAddForm.adoc[].
 
 
 

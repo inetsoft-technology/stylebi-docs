@@ -63,7 +63,22 @@ def excluded = [
 The `export-assets` action exports assets from the connected repository to the local file system. The exported Zip file can then be imported into a different environment by using Enterprise Manager or the Administration Console.{connectRepositoryNote}
 
 === Parameters
-path:: The path to the local Zip file where the export should be written.
+path:: The path to the local Zip file where the export should be written.  The following internal paths are available:
++
+[source]
+/global/bean
+/global/dashboard
+/global/script
+/global/tablestyle
+/global/viewsheet
+/global/vpm
+/global/snapshot
+/global/worksheet
+/global/datasource
+/global/logicalmodel
+/global/partition (physical view)
+/global/query
+
 includes:: List of Ant-like patterns that identify the assets to be exported, as a comma-separated string or as the name of a variable containing a Groovy List of pattern strings.
 excludes:: List of Ant-like patterns that identify the assets to be excluded from the list defined by the `includes` parameter, as a comma-separated string or as the name of a variable containing a Groovy List of pattern strings.
 exclude dependencies:: List of Ant-like patterns that identify the dependencies to be excluded from the list defined by the `includes` parameter, as a comma-separated string or as the name of a variable containing a Groovy List of pattern strings.

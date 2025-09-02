@@ -12,7 +12,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Removes the specified GraphElement from the chart. See xref:chartAPI:ChartElements.adoc[] for available elements.  Element objects are indexed in the order that they are added to the chart, beginning with index 0.
+Removes the specified GraphElement from the chart. See xref:chartAPI:ChartElements.adoc[] for available elements.  Element objects are indexed in the order that they are added to the chart, beginning with index 0.  To add an Element, use xref:EGraphAddElement.adoc[].
 
 
 

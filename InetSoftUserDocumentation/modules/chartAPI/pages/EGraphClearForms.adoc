@@ -9,7 +9,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:chartAPI:RepresentMultipleMeasures.adoc[] to add multiple elements.
 ====
 
-Removes all `GraphForm` objects from the chart.
+Removes all `GraphForm` objects from the chart. The inverse operation is xref:EGraphAddForm.adoc[].
 
 
 

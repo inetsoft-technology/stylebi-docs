@@ -4,7 +4,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-Removes the specified xref:chartAPI:GraphForm.adoc[] from the Chart. See xref:chartAPI:ChartAnnotation.adoc[] for available forms.  `GraphForm` objects are indexed in the order that they are added to the chart, beginning with index 0.
+Removes the specified xref:chartAPI:GraphForm.adoc[] from the Chart. See xref:chartAPI:ChartAnnotation.adoc[] for available forms.  `GraphForm` objects are indexed in the order that they are added to the chart, beginning with index 0.  To add a Form, use xref:EGraphAddForm.adoc[].
 
 == Parameter
 idx::			a xref:chartAPI:GraphForm.adoc[] object

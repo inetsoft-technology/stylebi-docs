@@ -25,5 +25,7 @@ TIP: Make sure you maintain the *id* attributes of all `<input>` and `<button>` 
 __pass:[ /usr/local/inetsoft/classes/inetsoft/web/resources/css] __
 +
 include::partial$derivedDockerImage.adoc[]
-+
+
+. To reference other assets such as images in  the _login.html_ and _login.css_ files, see xref:administration:Storage.adoc[] in xref:administration:ManageServer.adoc[].
+
 NOTE: Customizations that you make in the *login.html* and *login.css* files apply only to the Portal and not to Enterprise Manager. If you want to customize the JavaScript that performs login and validation, please contact {technicalSupport} for assistance.

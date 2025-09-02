@@ -9,7 +9,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:chartAPI:RepresentMultipleMeasures.adoc[] to add multiple elements.
 ====
 
-Adds the specified xref:chartAPI:GraphElement.adoc[] to the chart. See xref:chartAPI:ChartElements.adoc[] for available elements.
+Adds the specified xref:chartAPI:GraphElement.adoc[] to the chart. See xref:chartAPI:ChartElements.adoc[] for available elements.  The inverse operations are xref:EGraphRemoveElement.adoc[] and xref:EGraphClearElements.adoc[].
 
 
 == Parameter

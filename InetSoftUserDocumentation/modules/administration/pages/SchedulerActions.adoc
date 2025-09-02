@@ -10,6 +10,8 @@ A Dashboard action executes one or more Dashboards, and delivers them as emails,
 
 image:user:schedulerCreationParamaters.png[]
 
+IMPORTANT: If the generated Dashboard does not reflect the most *recent data*, the Scheduler may be using a cached dataset. In this case, you can either increase the separation of your scheduled tasks or reduce the '`Data Cache Timeout`'.  See xref:TailorServerPerformance.adoc[] for details about this property.
+
 Use the *Bookmarks* section to add the bookmarks that you wish to include. (For Excel output, bookmarks are exported to separate Excel tabs.)
 
 image:schedulerChooseBookmarks.png[]

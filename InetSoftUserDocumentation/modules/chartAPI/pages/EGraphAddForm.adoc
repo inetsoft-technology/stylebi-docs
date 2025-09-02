@@ -4,7 +4,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-Adds the specified GraphForm to the chart. See xref:chartAPI:ChartAnnotation.adoc[] for available forms.
+Adds the specified GraphForm to the chart. See xref:chartAPI:ChartAnnotation.adoc[] for available forms. The inverse operations are xref:EGraphRemoveForm.adoc[] and xref:EGraphClearForms.adoc[].
 
 
 

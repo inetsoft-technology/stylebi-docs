@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Returns the chart legend’s position as a  constant (below).  The corresponding “getter” function is xref:chartAPI:EGraphGetLegendLayout.adoc[].
+Returns the chart legend’s position as a  constant (below).  The corresponding “setter” function is xref:chartAPI:EGraphSetLegendLayout.adoc[].
 
 
 

@@ -1,6 +1,4 @@
 
-// INSTALL
-//* xref:install:InstallationStructure.adoc[]
 
 
 // Connect to data
@@ -138,6 +136,7 @@ include::partial$MINITOC_TextInput.adoc[]
 
 
 // ADMIN
+* xref:install:InstallationStructure.adoc[]
 * xref:administration:ManageServer.adoc[]
 ** xref:administration:SetJVMMemory.adoc[]
 ** xref:administration:GetStartedWithEnterpriseManager.adoc[]

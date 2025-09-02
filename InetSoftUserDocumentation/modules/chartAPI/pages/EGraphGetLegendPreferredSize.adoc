@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Returns the chart legend’s height or width in pixels set by xref:chartAPI:EGraphSetLegendPreferredSize.adoc[].
+Returns the chart legend’s height or width in pixels set by xref:chartAPI:EGraphSetLegendPreferredSize.adoc[]. The corresponding “setter” function is xref:chartAPI:EGraphSetLegendPreferredSize.adoc[].
 
 
 

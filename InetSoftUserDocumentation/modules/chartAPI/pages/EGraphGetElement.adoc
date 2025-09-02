@@ -11,7 +11,7 @@ xref:chartAPI:RepresentMultipleMeasures.adoc[] to add multiple elements.
 ====
 
 
-Returns a handle to the xref:chartAPI:GraphElement.adoc[] object specified by the index. This is useful in cases where the element was not explicitly assigned to a variable at creation time.
+Returns a handle to the xref:chartAPI:GraphElement.adoc[] object specified by the index. This is useful in cases where the element was not explicitly assigned to a variable at creation time. To add an element, use xref:EGraphAddElement.adoc[].
 
 
 == Parameter

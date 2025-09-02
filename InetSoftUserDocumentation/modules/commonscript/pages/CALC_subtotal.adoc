@@ -9,17 +9,17 @@ Returns the subtotal of an array based on the specified aggregation function. {C
 functionNumber::				Aggregation function, represented by number:
 +
 ****
-. Average of items
-. Count of items
-. Count of non-null items
-. Maximum value of items
-. Minimum value of items
-. Product of items
-. Sample standard deviation of items
-. Population standard deviation of items
-. Sum of items
-. Sample variance of items
-. Population variance of items
+1. Average of items
+2. Count of items
+3. Count of non-null items
+4. Maximum value of items
+5. Minimum value of items
+6. Product of items
+7. Sample standard deviation of items
+8. Population standard deviation of items
+9. Sum of items
+10. Sample variance of items
+11. Population variance of items
 ****
 array::				Array of numbers
 

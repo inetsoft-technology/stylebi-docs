@@ -10,7 +10,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 ====
 
 
-Specifies the shape rotation in degrees.  The corresponding “getter” function is 1.
+Specifies the shape rotation in degrees.  The corresponding “getter” function is `getRotation()`.
 
 
 
