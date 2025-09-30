@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 
-InetSoft provides a Groovy DSL that wraps the https://www.inetsoft.com/docs/stylebi/apidoc/[public client API]. This makes it easy to automate administration and deployment tasks. The DSL is a wrapper for the interfaces in the https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/client/package-summary.html[inetsoft.client] package and the data structures in the https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/package-summary.html[inetsoft.web.api] package used by those interfaces.
+InetSoft provides a Groovy DSL that wraps the https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/[public client API]. This makes it easy to automate administration and deployment tasks. The DSL is a wrapper for the interfaces in the https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/inetsoft/enterprise/client/package-summary.html[inetsoft.enterprise.client] package and the data structures in the https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/inetsoft/enterprise/web/api/package-summary.html[inetsoft.enterprise.web.api] package used by those interfaces.
 
 TIP: The Groovy DSL is *not required* to use the client API. The Java API may be used directly from any JVM language. For remote repositories, you can use any language with the public web APIs. The web APIs are RESTful with JSON as the data transfer mechanism. The advantage of using the DSL is that you do not need to configure the classpath when running the client script or application, and the scripts are less verbose.
 

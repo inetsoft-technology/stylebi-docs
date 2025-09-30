@@ -7,14 +7,14 @@ To start or stop the Scheduler application, or to view its operational status, f
 
 
 
-
 [TIP]
 ====
 [square]
 To invoke a custom listener class at the start and end of each scheduled task, specify the fully-qualified name of the class as the value of the `schedule.task.listener` property. See xref:AllProperties.adoc[] for more information about setting properties.
 ====
 
-
+== Start from Docker
+In a typical environment, you can start the Scheduler by starting the Scheduler Docker container.
 
 
 [#StartfromCommandLine]

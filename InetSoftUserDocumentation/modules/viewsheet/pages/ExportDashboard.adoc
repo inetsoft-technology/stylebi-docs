@@ -174,13 +174,11 @@ To save an individual Chart as an image, follow the steps below:
 +
 image:saveChartAsImage.png[]
 
-// XXXXXXXXXXXX where to put this?
 TIP: To copy  a chart label to the clipboard, click on the label.
 
 [#ExportDashboardwithEditableData]
 == Export a Dashboard with Editable Data
 
-IMPORTANT: Offline Dashboard editing features are available only if product is licensed for Dashboard Forms.
 
 Dashboards provide several features to assist in _offline data editing_. You can export data from Table and Input components into an Excel file, edit the data values and make input selections within the Excel file, and re-import the revised data and selections into the Dashboard at a later time. This allows you to edit a Dashboard _offline_, while not actively logged into the server.
 
@@ -191,7 +189,7 @@ To configure a Dashboard so that users can export data to an Excel file for edit
 
 . Select the *General* tab, and enter a unique name for the table in the ‘Name’ field. (This name will be used to label the table in the Excel export, and to match the Excel table to the Dashboard table during subsequent importing.)
 
-. Select the *Advanced* tab, and check the ‘Enable Table Editing’ option. Select the desired editing features, ‘Add Rows’, ‘Delete Rows’, and/or ‘Edit Rows’. See xref:TableProperties.adoc[] for more information about these options.
+. Select the *Advanced* tab, and check the ‘Enable Table Editing’ option. Select the desired editing features, ‘Add Rows’, ‘Delete Rows’, and/or ‘Edit Rows’. If you want Table edits to  persist across sessions, enable '`Write Back to Storage`'. See xref:TableProperties.adoc[] for more information about all these options.
 
 . Press btn:[OK] to close the ‘Table Properties’ panel.
 
@@ -223,7 +221,6 @@ This saves the Excel file (with the same name as the Dashboard) in the browser�
 * xref:WriteBackToStorage.adoc[]  for information on saving modified table data to the Data Worksheet.
 ====
 
-IMPORTANT: Offline Dashboard editing features are available only if product is licensed for Dashboard Forms.
 
 Dashboards provide several features to assist in _offline data editing_. You can export data from Table and Input components into an Excel file, edit the data values and make input selections within the Excel file, and re-import the revised data and selections into the Dashboard at a later time. This allows you to edit a Dashboard _offline_, while not actively logged into the server.
 
@@ -238,5 +235,7 @@ When you have verified the above conditions, follow the steps below to import th
 . Press the {buttonImportExcel} in the Dashboard toolbar. This opens the file selection dialog box.
 
 . Choose the Excel file that you want to import, and press ‘Open’.
-
++
 This uploads the Excel data into the Dashboard tables with corresponding names, and updates input elements with revised settings. Records that have been added or edited within Excel are highlighted for better visibility.
+
+. Press the {buttonApply} in each Table toolbar to save the updated information.

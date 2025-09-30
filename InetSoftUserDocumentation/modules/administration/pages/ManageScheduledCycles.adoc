@@ -28,7 +28,7 @@ The `add-cycle` action creates a new cycle. {connectRepositoryNote}
 === Parameter
 name:: The name of the cycle to create.
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
-conditions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.sree.web.api.schedule.ScheduleCondition] instances. The `ScheduleCondition` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+conditions:: The name of a variable containing a Groovy List of https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/inetsoft/enterprise/web/api/schedule/ScheduleCondition.html[inetsoft.enterprise.web.api.schedule.ScheduleCondition] instances. The `ScheduleCondition` structure can be generated using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 === Example
 [source,groovy]
@@ -75,13 +75,13 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 
 
-== Modify  Cycle Properties
+== Modify Cycle Properties
 The `update-cycle` action allows you to modify the properties of an existing  cycle. {connectRepositoryNote}
 
 === Parameter
 name:: The name of the cycle.
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
-task:: The name of a variable that contains an https://integration-stylebi-1.k8s.inetsoft.com/api/public/api-docs.html#post-/api/public/cycle[inetsoft.web.api.schedule.Cycle] instance. The `Cycle` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+task:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/inetsoft/enterprise/web/api/schedule/DataCycle.html[inetsoft.enterprise.web.api.schedule.DataCycle] instance. The `Cycle` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 
 === Example
@@ -144,7 +144,7 @@ The `add-cycle-condition` action applies a new condition to a cycle. {connectRep
 === Parameter
 name:: The name of the cycle.
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
-condition:: The name of a variable that contains a https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/schedule/ScheduleCondition.html[inetsoft.web.api.schedule.ScheduleCondition] object that defines the condition to be added. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+condition:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/inetsoft/enterprise/web/api/schedule/ScheduleCondition.html[inetsoft.enterprise.web.api.schedule.ScheduleCondition] object that defines the condition to be added. The `ScheduleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 === Example
 [source,groovy]
@@ -179,14 +179,14 @@ index:: The zero-based index of the condition.
 
 
 
-== Modify  Cycle Condition
+== Modify Cycle Condition
 The `update-cycle-condition` action allows you to modify an existing condition of a chained cycle.  {connectRepositoryNote}
 
 === Parameter
 name:: The name of the cycle.
 organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
 index:: The zero-based index of the condition.
-condition:: The name of a variable that contains an https://integration-stylebi-1.k8s.inetsoft.com/api/public/api-docs.html#post-/api/public/cycle/-cycle-/conditions[inetsoft.web.api.schedule.CycleCondition] object that defines the updated condition properties. The `CycleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
+condition:: The name of a variable that contains an https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/inetsoft/enterprise/web/api/schedule/ScheduleCondition.html[inetsoft.enterprise.web.api.schedule.ScheduleCondition] object that defines the updated condition properties. The `CycleCondition` structure can be created using the DSL. (See xref:GroovyDSLScriptingFramework.adoc[] for more information.)
 
 === Example
 [source,groovy]

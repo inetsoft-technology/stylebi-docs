@@ -2,6 +2,8 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-`GTexture` pattern, such as `GTexture.PATTERN_5`. Available patterns are shown below.
+`GTexture` pattern, such as `GTexture.PATTERN_5`. Available patterns are shown below.   See xref:StaticTextureFrame.adoc[] for information on using static textures.
+
+
 
 image:commonscript:GTexture.png[]

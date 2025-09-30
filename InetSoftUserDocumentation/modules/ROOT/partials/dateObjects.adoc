@@ -1,1 +1,1 @@
-NOTE: Date object functions operate *only* on JavaScript `Date` objects, created with the xref:commonscript:DateObjectDate.adoc[] constructor.
+NOTE: Date object functions operate *only* on JavaScript `Date` objects, created with the xref:commonscript:DateObjectDate.adoc[] constructor. If an object is not a JavaScript `Date` object, the corresponding Java function will be used instead of the JavaScript function.

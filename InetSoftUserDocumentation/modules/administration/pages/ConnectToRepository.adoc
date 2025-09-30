@@ -12,8 +12,15 @@ You must use the *Administration Console* to  connect to a repository before run
 To run the  *Administration Console*, use the following command:
 
 
- docker run -it --rm ghcr.io/inetsoft-technology/stylebi-enterprise:latest shell
+ docker run -it -e INETSOFT_MASTER_PASSWORD=some_arbitrary_token --rm ghcr.io/inetsoft-technology/stylebi-enterprise:latest shell
 
+[IMPORTANT]
+====
+The environment used to run the Administration Console must be configured with the *same* `INETSOFT_MASTER_PASSWORD` variable used in the primary Docker container.  One way to do this is to add the following switch to the startup command:
+
+ -e INETSOFT_MASTER_PASSWORD=arbitrary_token
+
+====
 
 To connect to a *non-running* server (not recommended) add the  `-v` flag as shown below:
 
@@ -33,7 +40,10 @@ The `:connect` command makes the connection to a repository.
 
 === Parameter
 path:: 			File-system path to a local repository or URL of a remote repository.
-user:: The user name used to authenticate with the repository. If security is not enabled, this should be “admin”.
++
+IMPORTANT: Do not use *localhost* in the URL. The Administration Console runs in its own container and cannot obtain the reference.  For local connections, use the IP address of the host machine.
+
+user:: The username used to authenticate with the repository. If security is not enabled, this should be “admin”.
 organization:: In a multi-tenant environment, the user's organization ID.  (See xref:EnableMultiTenant.adoc[].)  If omitted, the Host Organization is assumed.
 password:: The password used to authenticate with the repository.
 
@@ -42,6 +52,7 @@ password:: The password used to authenticate with the repository.
 ====
  :connect http://www.example.com admin admin
 ====
+
 
 == Disconnect from a Repository
 

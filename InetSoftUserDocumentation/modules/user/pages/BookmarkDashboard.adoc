@@ -89,7 +89,7 @@ image:viewsheet:AddBookmark.png[]
 
 . Press the {buttonRemove} next to the bookmark that you want to delete.
 
-NOTE: You can only delete a bookmark for which you have write permission. (The ‘Home’ bookmark cannot be deleted.)
+NOTE: You can only delete a bookmark for which you are the owner. An administrator can also follow xref:administration:LoginAsDifferentUser.adoc[] to delete a bookmark. (The ‘Home’ bookmark cannot be deleted.)
 
 == Delete All Bookmarks
 To delete all bookmarks based on their age since creation or last access, follow the steps below:

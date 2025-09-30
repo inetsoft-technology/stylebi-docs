@@ -151,7 +151,7 @@ For most components, the border setting determines the appearance of the compone
 . Click the element to select it, and select the *Format* tab in the left panel. This opens the *Format* panel.
 +
 *_Optional:_* For a *Table component*, click on the region of the table to which you want to apply the property:
-
+[square]
 * Click a data cell to apply the property to all data cells in the column.
 * Click on the column header cell to apply the property to only the column header.
 * Click the title bar to apply the property to only the title bar.
@@ -162,6 +162,16 @@ If you do not select a region, the property is applied to the whole Table. This 
 . In the ‘Border’ pop-up panel, select the desired line color from the ‘Color’ menu, then the line style  and boundary to which you want to apply the line style.
 +
 TIP: Select the border *color* before the *style*.
++
+In cases where cells *share a border*, the following rules determine the border style and color:
++
+[square]
+* If either cell is a detail cell, prioritize the other cell's style
+* If the top cell is a header or a trailer, prioritize its style
+* If the bottom cell is a header or trailer, prioritize its style
+* If both cells are the same type, prioritize the color with the higher RGB value
+
+
 
 . Press the {buttonApply}.
 

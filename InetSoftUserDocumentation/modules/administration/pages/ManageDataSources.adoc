@@ -30,7 +30,7 @@ The `update` action allows you to edit the definition of a data source. {connect
 
 === Parameter
 name:: The name of the data source.
-properties:: The name of a variable containing the task definition structure. The `inetsoft.shell.dsl.DataSource` DSL facilitates task definition. There are five supported data source types: `jdbc`, `soap`, `tabular`, `text`, and `xml`. The DSL properties are the same as the corresponding data structures in the https://www.inetsoft.com/docs/stylebi/apidoc/index.html?inetsoft/web/api/datasource/package-summary.html[API documentation].
+properties:: The name of a variable containing the task definition structure. The `inetsoft.shell.dsl.DataSource` DSL facilitates task definition. There are five supported data source types: `jdbc`, `soap`, `tabular`, `text`, and `xml`. The DSL properties are the same as the corresponding data structures in the https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/inetsoft/enterprise/web/api/datasource/package-summary.html[API documentation].
 
 
 === Example
