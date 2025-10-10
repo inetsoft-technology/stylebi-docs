@@ -8,8 +8,9 @@ The `parameter` property allows you to read and write parameters that exist in t
 * Parameters passed into the Dashboard via hyperlink (see xref:viewsheet:DrillDownIntoData.adoc#DrillwithChartHyperlinks[Drill with Chart Hyperlinks], for example)
 * Session parameters such as those listed below (see xref:#parameterGroups[]  for example)
 * Parameters defined in the Dashboard itself, either explicitly in script by using the `parameter` keyword, or implicitly by their use in the '`Variable`' option of a Condition (see xref:viewsheet:AddConditions.adoc[] for example)
+* Parameters passed into an embedded Dashboard from a parent Dashboard using xref:thisParameter.adoc[]
 
-The syntax for accessing a paramater is
+The syntax for accessing a parameter is
 [source,javascript]
 parameter.variableName
 

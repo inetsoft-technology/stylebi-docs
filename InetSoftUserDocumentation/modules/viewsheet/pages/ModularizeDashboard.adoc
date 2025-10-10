@@ -49,6 +49,8 @@ You can _synchronize_ selection and form components within a Dashboard  or acros
 * If you want to create a single filter component that filters multiple data blocks in a Data Worksheet, see xref:AddFilterComponents.adoc#FilterMultipleDataBlocks[Filter Multiple Data Blocks] in xref:AddFilterComponents.adoc[] instead.
 
 * If you want to embed a single Dashboard *multiple times* within a host Dashboard, and pass different parameters to each instance, embed the Dashboard (each time) within a distinct IFrame.  See xref:EmbedExternalContent.adoc[] for more details.
+
+* If you want a Form component on the *parent* Dashboard to control a Form component on a *child* Dashboard, but not the reverse (i.e., child Dashboard setting *does not* influence parent Dashboard), add  xref:viewsheetscript:setInputSelectedObject.adoc[] to the *Script* tab in the embedded '`Dashboard Properties`' dialog box.
 ====
 
 To synchronize Filter components and Form components, assign them the same ‘Shared Filter’ ID. Only elements that have the same data type and same data binding should be synchronized. Follow the steps below:

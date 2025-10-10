@@ -15,6 +15,8 @@ image:viewsheet:DashboardPropertiesExp1.png[]
 
 TIP: To open the '`Dashboard Properties`' dialog box, right-click on the embedded Dashboard (within the host Dashboard), and select '`Properties`' from the menu. {rightClickOptions}
 
+If you place the script that accesses `thisParameter.variableName` in the  *Script* tab of the '`Dashboard Properties`' dialog box (shown above), you do not need to qualify it with the Dashboard name.
+
 == Examples
 .Read value of `stateSelector` parameter in embedded Dashboard 'StateDash'
 [source,javascript]
