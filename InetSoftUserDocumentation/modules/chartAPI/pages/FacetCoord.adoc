@@ -16,7 +16,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 The `FacetCoord` object contains a set of inner and outer coordinates on which multidimensional data can be represented as nested charts. To create a FacetCoord object, call the `FacetCoord` constructor:
 
-[sourcejavascript]
+[source,javascript]
 var rect = new FacetCoord(outerCoord,innerCoord);
 
 You can pass a pair of xref:RectCoord.adoc[] objects (e.g., ‘outerCoord’, ‘innerCoord’, etc.) to the constructor, or specify these later using the inherited xref:FacetCoordSetInnerCoordinates.adoc[] and xref:FacetCoordSetOuterCoordinates.adoc[]  properties.

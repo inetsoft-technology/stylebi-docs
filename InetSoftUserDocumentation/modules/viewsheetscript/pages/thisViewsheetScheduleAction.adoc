@@ -10,7 +10,7 @@ Specifies whether the Dashboard should be executed as part of a scheduled task. 
 Boolean:: `true` (default): execute task, `false`: do not execute task
 emails:: Array of emails
 
-You can use the `scheduleAction` function to conditionalize the execution of a scheduled Dashboard task based on actual Dashboard data. Use the optional second parameter, `emails`, to dynamically set the list of emails for the ‘Deliver To Emails’ scheduled action. Use xref:#taskName[] to obtain the name of the currently executing task.
+You can use the `scheduleAction` function to conditionalize the execution of a scheduled Dashboard task based on actual Dashboard data. Use the optional second parameter, `emails`, to dynamically set the list of emails for the ‘Deliver To Emails’ scheduled action. Use xref:thisViewsheetTaskName.adoc[] to obtain the name of the currently executing task.
 
 The email list that you provide in the emails array supersedes any emails specified on the Scheduler *Action* tab (both for user-scheduled tasks and administrator-scheduled tasks), and automatically enables the ‘Deliver To Emails’ task action.
 
