@@ -20,7 +20,7 @@ In a typical environment, you can start the Scheduler by starting the Scheduler 
 == Start from Command Line
 include::ROOT:partial$communityOnly.adoc[]
 
-The Scheduler can also be used as a standalone application through the https://www.inetsoft.com/docs/2018/apidoc/index.html?overview-summary.html[ScheduleServer] class. It has a main method so that it can be run as a process:
+The Scheduler can also be used as a standalone application through the https://www.inetsoft.com/docs/stylebi/apidoc/inetsoft/sree/schedule/ScheduleServer.html[ScheduleServer] class. It has a main method so that it can be run as a process:
 
  java -Dsree.home=. inetsoft.sree.schedule.ScheduleServer
 
