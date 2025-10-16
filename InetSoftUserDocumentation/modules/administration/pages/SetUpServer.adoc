@@ -69,7 +69,7 @@ inetsoft {
 
 [#UploadFilestoStorage]
 == Upload Files to Storage
-The `upload-file`  action allows you to move files into server storage. (See xref:ManageContent.adoc[] for information about importing to the repository.) {connectRepositoryNote}
+The `upload-file`  action allows you to move files into server storage. (See xref:ManageContent.adoc[] for information about importing to the repository.)
 
 === Parameters
 directory:: Path to *inetsoft* directory
@@ -96,7 +96,7 @@ inetsoft {
 
 
 == Download Files from Storage
-The `download-file`  action allows you to move files out of server storage. (See xref:ManageContent.adoc[] for information about exporting from the repository.) {connectRepositoryNote}
+The `download-file`  action allows you to move files out of server storage. (See xref:ManageContent.adoc[] for information about exporting from the repository.)
 
 === Parameters
 directory:: Path to *inetsoft* directory
@@ -125,10 +125,16 @@ inetsoft {
 
 
 == Restore Assets to Server
-The `restore` action restores backed-up server storage from a Zip file.   To back up assets to Zip file, see xref:ManageContent.adoc[]. {connectRepositoryNote}
+The `restore` action restores backed-up server storage from a Zip file.   To back up assets to Zip file, see xref:ManageContent.adoc[].
 
-CAUTION: The server should not be running during the restore operation.
+[CAUTION]
+====
+[square]
+* The server should not be running during the restore operation.
+* To avoid data conflicts, restore should only be performed when there are no existing KV or Blob stores.
 
+
+====
 
 === Parameter
 path:: The path to the local Zip file that contains the backed-up files.
@@ -141,7 +147,7 @@ Restore server storage from _backup.zip_.
 
 
 == List Drivers
-The `list-drivers` action returns a list of drivers contained in the specified JAR file, which should be uploaded as described in xref:#UploadFilestoStorage[]. {connectRepositoryNote}
+The `list-drivers` action returns a list of drivers contained in the specified JAR file, which should be uploaded as described in xref:#UploadFilestoStorage[].
 
 === Parameter
 jarFiles:: A JAR file in the bin directory containing drivers.
@@ -153,7 +159,7 @@ import inetsoft.shell.dsl.SetupDelegate
 
 
 == Package Drivers as a Plugin
-The `create-driver-plugin` packages database drivers into a plugin Zip file with the specified name. {connectRepositoryNote}
+The `create-driver-plugin` packages database drivers into a plugin Zip file with the specified name.
 
 === Parameter
 pluginID:: A unique ID, typically be a namespaced value, such as `com.mycompany.jdbc.dbtype`.

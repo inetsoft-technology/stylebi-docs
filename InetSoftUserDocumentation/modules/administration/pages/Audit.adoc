@@ -44,9 +44,28 @@ You can configure the Audit database in the *docker-compose.yaml* file. This may
 NOTE: It is not possible to create custom audit dashboards from the default Audit database. You can only access the default database through the xref:#AvailableReports[] above.
 
 
-The following listing shows sample variables that should be added to _docker-compose.yaml_  before container creation to use the custom database for audit records.
+The following listing shows sample variables that should be added to _docker-compose.yaml_  before container creation to use the custom database for audit records.  The following custom databases are supported: Cosmos DB, DynamoDB, H2, Firestore, and MongoDB.
 
-.Sample variables for audit database configuration
+
+.Cosmos DB sample variables for audit database configuration
+[source,yaml]
+INETSOFTCONFIG_AUDIT_TYPE: "cosmosdb"
+INETSOFTCONFIG_AUDIT_COSMOSDB_ACCOUNTHOST: "https://cosmosdb:8081"
+INETSOFTCONFIG_AUDIT_COSMOSDB_ACCOUNTKEY: "your_account_key"
+INETSOFTCONFIG_AUDIT_COSMOSDB_DATABASE: "inetsoft"
+INETSOFTCONFIG_AUDIT_COSMOSDB_CONTAINER: "inetsoft"
+INETSOFTCONFIG_AUDIT_COSMOSDB_THROUGHPUT: 400
+
+.DynamoDB sample variables for audit database configuration
+[source,yaml]
+INETSOFTCONFIG_AUDIT_TYPE: "dynamodb"
+INETSOFTCONFIG_AUDIT_DYNAMODB_ENDPOINT: http://dynamodb:8000
+INETSOFTCONFIG_AUDIT_DYNAMODB_REGION: "us-east-1"
+INETSOFTCONFIG_AUDIT_DYNAMODB_TABLE: "inetsoft-app-audit-table"
+INETSOFTCONFIG_AUDIT_DYNAMODB_ACCESSKEYID: keyid
+INETSOFTCONFIG_AUDIT_DYNAMODB_SECRETACCESSKEY: secretkey
+
+.H2 sample variables for audit database configuration
 [source,yaml]
 INETSOFTCONFIG_AUDIT_TYPE: "database"
 INETSOFTCONFIG_AUDIT_DATABASE_TYPE: "H2"
@@ -57,5 +76,22 @@ INETSOFTCONFIG_AUDIT_DATABASE_REQUIRELOGIN: true
 INETSOFTCONFIG_AUDIT_DATABASE_USERNAME: "inetsoft_admin"
 INETSOFTCONFIG_AUDIT_DATABASE_PASSWORD: "password"
 INETSOFTCONFIG_AUDIT_DATABASE_TRANSACTIONISOLATIONLEVEL: "READ_UNCOMMITTED"
+
+.Firestore sample variables for audit database configuration
+[source,yaml]
+INETSOFTCONFIG_AUDIT_TYPE: "firestore"
+INETSOFTCONFIG_AUDIT_FIRESTORE_SERVICEACCOUNTFILE: "/path/to/credentials.json"
+INETSOFTCONFIG_AUDIT_FIRESTORE_COLLECTION: inetsoft-audit-store
+
+.MongoDB sample variables for audit database configuration
+[source,yaml]
+INETSOFTCONFIG_AUDIT_TYPE: "mongo"
+INETSOFTCONFIG_AUDIT_MONGO_HOSTS: 'mongodb:27017'
+INETSOFTCONFIG_AUDIT_MONGO_DATABASE: test
+INETSOFTCONFIG_AUDIT_MONGO_COLLECTION: inetsoft
+
+
+
+
 
 
