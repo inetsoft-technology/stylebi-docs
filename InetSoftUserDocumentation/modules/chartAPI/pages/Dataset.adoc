@@ -7,12 +7,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=See Also]
 ====
-[square]
 xref:chartAPI:BindDatatoChartinScript.adoc[] for various approaches to binding data to a chart.
 ====
 
 
-The `dataSet` object allows you to set the values to be displayed on the graph. It has the form of a two-dimensional array, where each column represents a distinct measure, and offers the following methods:
+The `dataset` object allows you to set the values to be displayed on the graph. It has the form of a two-dimensional array, where each column represents a distinct measure, and offers the following methods:
 
 
 [square]
