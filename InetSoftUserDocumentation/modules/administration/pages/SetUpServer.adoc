@@ -131,7 +131,7 @@ The `restore` action restores backed-up server storage from a Zip file.   To bac
 ====
 [square]
 * The server should not be running during the restore operation.
-* To avoid data conflicts, restore should only be performed when there are no existing KV or Blob stores.
+* To avoid data conflicts, restore should only be performed when there are no existing KV or Blob stores. (See xref:Storage.adoc#ChangetheStorageMethod[Change the Storage Method] for more information.)
 
 
 ====

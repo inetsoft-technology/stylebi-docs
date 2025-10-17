@@ -154,6 +154,7 @@ image:Drivers_Plugins5.png[]
 
 . Restart the server.
 
+[#ChangetheStorageMethod]
 == Change the Storage Method
 You can configure the type of back-end storage by setting variables in the _docker-compose.yaml_ file. If you have previously configured ‘File System’ storage, you can import the existing files into the database. See xref:administration:ManageContent.adoc[] for more information.
 
