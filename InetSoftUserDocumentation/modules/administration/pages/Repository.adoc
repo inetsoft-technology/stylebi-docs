@@ -175,6 +175,7 @@ image:Edit Dashboard Admin VS.png[]
 
 The new Dashboard is now listed in the ‘Portal Dashboard Tab’ folder, and will be visible to the users who have appropriate permissions. To delete a Dashboard, select the Dashboard and press the {buttonDelete} above the repository list.
 
+[#ManageDataWorksheets]
 == Manage Data Worksheets
 To add a Data Worksheet to the Repository, use Visual Composer to save the Data Worksheet into a global scope (see xref:dataworksheet:EditDataWorksheet.adoc[]) or import the Data Worksheet (see xref:ImportExportAssets.adoc[]).
 

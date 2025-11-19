@@ -123,9 +123,29 @@ inetsoft {
   }
 }
 
+[#BackupAssetsfromServer]
+== Backup Assets from Server
+The `backup` action backs up all server storage into a Zip file from a non-running server. This is a *full system backup* and includes all assets, settings, users, and security configurations.
+
+IMPORTANT: The server should not be running during the backup operation.
+
+
+=== Parameters
+directory:: Path to *inetsoft* directory
+path:: The path to the local Zip file to contain the backed up files.
+
+
+=== Example
+Backup server storage into `backup.zip` in _/arbitrary/container/path/_ on the local machine/container.
+
+
+[source,groovy]
+:setup backup /arbitrary/container/path/backup.zip
+
+
 
 == Restore Assets to Server
-The `restore` action restores backed-up server storage from a Zip file.   To back up assets to Zip file, see xref:ManageContent.adoc[].
+The `restore` action restores backed-up server storage from a Zip file.   To back up assets to Zip file, see xref:#BackupAssetsfromServer[] or xref:ManageContent.adoc[].
 
 [CAUTION]
 ====
@@ -137,6 +157,7 @@ The `restore` action restores backed-up server storage from a Zip file.   To bac
 ====
 
 === Parameter
+directory:: Path to *inetsoft* directory
 path:: The path to the local Zip file that contains the backed-up files.
 
 === Example

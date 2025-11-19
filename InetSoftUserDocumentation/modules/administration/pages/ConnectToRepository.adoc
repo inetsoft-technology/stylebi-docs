@@ -41,7 +41,9 @@ The `:connect` command makes the connection to a repository.
 === Parameter
 path:: 			File-system path to a local repository or URL of a remote repository.
 +
-IMPORTANT: Do not use *localhost* in the URL. The Administration Console runs in its own container and cannot obtain the reference.  For local connections, use the IP address of the host machine.
+IMPORTANT: The Administration Console runs in its own container and cannot resolve *localhost* to other containers. For local connections, use the IP address of the host machine and ensure the Administration Console container is attached to the same Docker network as the target container.
+
+
 
 user:: The username used to authenticate with the repository. If security is not enabled, this should be “admin”.
 organization:: In a multi-tenant environment, the user's organization ID.  (See xref:EnableMultiTenant.adoc[].)  If omitted, the Host Organization is assumed.
