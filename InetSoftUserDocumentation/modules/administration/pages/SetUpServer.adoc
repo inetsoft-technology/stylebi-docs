@@ -140,9 +140,7 @@ Backup server storage into `backup.zip` in _/arbitrary/container/path/_ on the l
 
 
 [source,groovy]
-:setup backup /arbitrary/container/path/backup.zip
-
-
+:setup backup '/var/lib/inetsoft' '/arbitrary/container/path/backup.zip'
 
 == Restore Assets to Server
 The `restore` action restores backed-up server storage from a Zip file.   To back up assets to Zip file, see xref:#BackupAssetsfromServer[] or xref:ManageContent.adoc[].
