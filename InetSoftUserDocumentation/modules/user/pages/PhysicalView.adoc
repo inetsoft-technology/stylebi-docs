@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 The basis of a data model is the *physical view*, which specifies a set of database tables and the joins that relate them. The physical view does not represent a *particular* query that retrieves specific fields, but rather outlines the full join structure that will enable arbitrary queries to be generated *automatically* when a dashboard accesses a set of attributes from the data model.
 
-TIP: If you make a change to the structure of the database schema, press the ‘Refresh Metadata’ button on the toolbar to update the physical view.
+TIP: If you make a change to the structure of the database schema, press the btn:[Refresh Metadata] button on the datasource definition page. (For example, see xref:JDBC.adoc[].)
 
 
 A physical view is not directly accessed by dashboard designers or end users. Designers and users have access only to the *logical models* defined from the physical view. (See xref:LogicalModel.adoc[].) Your goal in creating a physical view is to specify the appropriate relationships between the database tables containing the data required by users. The following sections explain how to do this:
