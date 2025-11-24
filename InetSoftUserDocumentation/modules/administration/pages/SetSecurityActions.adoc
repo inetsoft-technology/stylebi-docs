@@ -42,7 +42,9 @@ Social Sharing:: Access to the various options under the {buttonSocialSharing} i
 Visual Composer:: Access to Visual Composer, for example via the {buttonWorksheet} or {buttonCreateDashboard} options under the Portal {buttonCreate}. Visual Composer permission is required to edit Dashboards and Data Worksheets.
 Create New Data Source:: Permission to select {buttonDataSource} from the {buttonCreate} in the Portal. Requires also permission for the Portal Data tab (see ‘Portal Tabs’ above). (See xref:user:ConnectToData.adoc[] for more information.)
 Cross Join:: Permission to create cross joins via the {buttonCrossJoin} option in a Data Worksheet and to create cross-joins in a physical view. Restricting access to cross joins may help prevent the accidental creation of large queries that impact performance.
+Edit Dashboard Calculated Fields::  Permission to create Calculated Fields in a Dashboard.  This is enabled by default for users who have Dashboard edit permission.
 Edit Mobile Devices:: Permission to edit mobile device screen layouts. (See xref:viewsheet:CreateDeviceLayout.adoc[] for more information about device layouts.)
+Edit Worksheet Expression Columns:: Permission to create Expression Columns in a Data Worksheet. This is enabled by default for users who have Data Worksheet edit permission.
 Free Form SQL:: Permission to create a data set by entering a SQL string in the ‘Database Query’ dialog box of a Data Worksheet. (See xref:dataworksheet:QueryData.adoc[] for more information.)
 Materialize Assets:: Access to the ‘Materialize’ menu option for Dashboards in the Portal Repository tree, as well as for Enterprise Manager. (See xref:viewsheet:ImprovePerformance.adoc[] and xref:administration:MaterializedView.adoc[]  for more information.)
 My Dashboards:: Access to the ‘My Dashboards’ folder in the Portal Repository tree for storage of private assets.
