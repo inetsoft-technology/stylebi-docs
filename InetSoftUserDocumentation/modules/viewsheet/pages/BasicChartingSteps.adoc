@@ -79,6 +79,8 @@ TIP: If you selected a ‘Pie’ style, you should place the dimension field in 
 +
 include::viewsheet:partial$bindToComponent.adoc[]
 
+. To rotate the Chart (interchange the X and Y axes), press the {buttonSwapXY}.  You can also do this by interchanging the fields in the '`X`' region and  '`Y`' region of the Editor.
+
 . To break out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
 +
 [.videotitle]

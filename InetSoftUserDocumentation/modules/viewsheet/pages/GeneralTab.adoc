@@ -15,12 +15,12 @@ image:General Tab.png[]
 Name::	This name is used to refer to the component in binding and scripting. For purposes of scripting, the name should contain no spaces.
 Visible in External Dashboards::	If checked, the component will be visible when this Dashboard is embedded in another Dashboard (see xref:ModularizeDashboard.adoc[]).
 Visible::
-* *Show*: Element is visible.
-* *Hide*: Element is invisible.
-* *Hide on Print and Export*: Element is visible on screen but hidden when exported.
+* *Show*: Component is visible.
+* *Hide*: Component is invisible.
+* *Hide on Print and Export*: Component is visible on screen but hidden when exported.
 Enabled::
-* *true*: Element is interactive.
-* *false*: Element is not interactive.
+* *true*: Component is interactive.
+* *false*: Component is not interactive.
 +
 NOTE: For Filter components, when ‘Enabled’ is ‘false’, existing selections in the component do not affect Dashboard data.
 Title:: The text that appears in the title bar (for components which have one). The ‘Visible’ option determines whether the title bar itself is displayed. Besides the ‘Title’ field, you can also edit title bar text by double-clicking the title bar itself.

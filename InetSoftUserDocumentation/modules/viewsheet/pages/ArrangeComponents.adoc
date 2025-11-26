@@ -96,7 +96,7 @@ image:Capture_012_1.png[]
 +
 image:Capture_014_1.png[]
 
-Note that each component is placed at the top-left corner within its own tab. To display a component at a different location within its tab, first group the component together with a background (e.g., an Image or Shape component), and then use the group as the contents of the tab.  See xref:#GroupComponents[] for information on how to create a group.
+Note that each component is placed in the top-left corner within its own tab. To display a component at a different location within its tab, first group the component together with a background (e.g., an Image or Shape component), and then use the group as the contents of the tab.  See xref:#GroupComponents[] for information on how to create a group.
 
 To apply a unique style to the active (currently selected) tab, click on a tab to make it active, and then apply the desired styling from the *Format* panel. (See xref:TabbedInterfaceProperties.adoc[]   for additional information.)
 
@@ -109,7 +109,9 @@ In some cases, you may want display a component only when the user takes a speci
 
 [#AdaptComponentVisibility]
 == Adapt Component Visibility
-Use Form controls to allow the user to selectively hide and show various components on the Dashboard. For example, you can provide a Form component that lets the user choose whether to see data displayed in a Table or Chart (by dynamically controlling the 'Visible' property of a Table and Chart that occupy the same space on the Dashboard). See xref:DynamicallySetProperties.adoc[]  for more information.
+To *hide* a Dashboard component, set the '`Visible`' property on the *General* tab of the Properties dialog box  to '`Hide`'.  See xref:GeneralTab.adoc[] for more details.
+
+Use Form controls to allow the user to selectively hide and show various components on the Dashboard. For example, you can provide a Form component that lets the user choose whether to see data displayed in a Table or Chart (by dynamically controlling the '`Visible`' property of a Table and Chart that occupy the same space on the Dashboard). See xref:DynamicallySetProperties.adoc[]  for more information.
 
 == Adapt Component Data Display
 Use Form controls to allow the user to modify the data displayed on  data view components such as  Charts or Crosstabs. For example, rather than adding several different Charts to the Dashboard, provide  Form components that let the user choose from a set of dimensions and measures to display on a single Chart (by dynamically controlling the fields bound in the 'X' and 'Y' regions of the Chart Editor). See xref:DynamicallySetProperties.adoc[]  for more information.
