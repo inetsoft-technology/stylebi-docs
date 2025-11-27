@@ -1,6 +1,5 @@
 package inetsoft.test.vsscript.cases
 
-import inetsoft.test.core.ActionEventsUtil
 import inetsoft.test.modules.VSScriptTest
 import spock.lang.Ignore
 import spock.lang.Specification
@@ -11,16 +10,12 @@ class Viewsheet_Spec extends Specification {
    }
 
    def 'TestCase-background' () {
-      // Import the viewsheet under assets when needed
-      ActionEventsUtil actionEventsUtil = new ActionEventsUtil()
-      String path = VSScriptTest.getAssetsFilePath("chart.zip")
-      actionEventsUtil.importAssetsFile(path)
-
       given:
-      caseName = specificationContext.currentIteration.name
+      // Import the viewsheet under assets when needed
+      VSScriptTest.importAssets("chart.zip")
 
       when:
-      vsScriptTest = new VSScriptTest('1^128^__NULL__^chart', caseName)
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^chart', specificationContext.currentIteration.name)
       // printVS(scriptName, jsFilePath, handler, assemblyNames)
       // jsFilePath: relative path to JS file in partials directory (e.g., "background.js")
       // handler: the HANDLER value (e.g., "ONREFRESH", "ONINIT", or assembly name)
@@ -31,5 +26,4 @@ class Viewsheet_Spec extends Specification {
    }
 
    static VSScriptTest vsScriptTest
-   String caseName
 }

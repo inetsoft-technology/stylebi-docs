@@ -303,6 +303,15 @@ class VSScriptTest {
    }
 
    /**
+    * Import the specified assets zip so cases can reference its content.
+    */
+   static void importAssets(String fileName) {
+      ActionEventsUtil actionEventsUtil = new ActionEventsUtil()
+      String path = getAssetsFilePath(fileName)
+      actionEventsUtil.importAssetsFile(path)
+   }
+
+   /**
     * compare all image file
     */
    void compareImage() {

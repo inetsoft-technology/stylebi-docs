@@ -60,18 +60,16 @@ This section provides a complete walkthrough for creating a new test case from s
 ```groovy
 def 'TestCase-your-test-name' () {
    // Step 3a: Import your dashboard ZIP file
-   ActionEventsUtil actionEventsUtil = new ActionEventsUtil()
-   String path = VSScriptTest.getAssetsFilePath("myDashboard.zip")
-   actionEventsUtil.importAssetsFile(path)
+   VSScriptTest.importAssets("myDashboard.zip")
 
    given:
-   caseName = specificationContext.currentIteration.name
 
    when:
    // Step 3b: Create VSScriptTest instance
    // The first parameter is the viewsheet identifier (you'll need to find this)
    // The second parameter is the case name
-   vsScriptTest = new VSScriptTest('1^128^__NULL__^myDashboard', caseName)
+   vsScriptTest = new VSScriptTest('1^128^__NULL__^myDashboard',
+           specificationContext.currentIteration.name)
    
    // Step 3c: Execute the script
    // Parameters: scriptName, jsFilePath, handler, assemblyNames
@@ -139,7 +137,7 @@ If you don't want to import a dashboard in each test case:
 
 3. **Your test case can skip the import step**
    - The default environment will be restored automatically
-   - You can omit the `ActionEventsUtil.importAssetsFile()` call
+   - You can omit the `VSScriptTest.importAssets()` call
 
 ## Quick Reference: `printVS` Arguments
 
