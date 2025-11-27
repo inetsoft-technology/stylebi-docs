@@ -9,6 +9,8 @@
 
 ## Test Execution Workflow
 
+0. Update `pom.xml`  
+   Set the `root.dir` property to the absolute path of your local `modules/scriptexample` directory (for example, `E:\stylebi-docs\InetSoftUserDocumentation\modules\scriptexample`) so the tests can locate assets and resources.
 1. `.\mvnw.cmd clean`  
    Removes previous build outputs to ensure the next steps run against a fresh workspace.
 2. `.\mvnw.cmd package -pl commons`  
