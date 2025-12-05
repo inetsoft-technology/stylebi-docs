@@ -78,6 +78,8 @@ image:addingChart2a.png[]
 TIP: If you selected a ‘Pie’ style, you should place the dimension field in either the ‘Color’ or ‘Shape’ region rather than the ‘X’ region.
 +
 include::viewsheet:partial$bindToComponent.adoc[]
++
+*Optional:* You can drag  multiple  dimensions to the ‘X’ region. Dimensions will be represented automatically  against  the *top* or *bottom* X-axis depending on the order that  you place them in the ‘X’ region.  You can change that order by dragging the fields within the '`X`' region.
 
 . To rotate the Chart (interchange the X and Y axes), press the {buttonSwapXY}.  You can also do this by interchanging the fields in the '`X`' region and  '`Y`' region of the Editor.
 

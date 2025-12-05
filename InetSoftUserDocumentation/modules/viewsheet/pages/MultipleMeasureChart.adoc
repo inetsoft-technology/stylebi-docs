@@ -20,7 +20,7 @@ To display multiple measures using *color*, *size*,  *shape* or *label* represen
 image:addingChart5.png[]
 
 
-
+[#SingleAxis]
 == Single Axis
 
 By default, when you add two or more *measure* fields on the Y-axis, the selected data sets are plotted on adjacent sets of axes, as shown below:
@@ -32,6 +32,10 @@ In some cases you may want to display the measures on the same axis. To do this,
 image:commonscript:chart1_1.png[]
 
 This fits both data sets on the same set of axes.
+
+In either case, you can change the visual appearance (color, shape, size) of the measures independently by pressing the '`Edit Color`', '`Edit Shape`', or '`Edit Size`' buttons in the *Visual* panel.
+
+image:viewsheet:multipleMeasure1.png[]
 
 [#Stack]
 == Stack
@@ -51,8 +55,16 @@ image:stackMeasures.png[]
 
 include::ROOT:partial$stackNote.adoc[]
 
+To change the visual appearance (color, shape, size) of the measures independently, press the '`Edit Color`', '`Edit Shape`', or '`Edit Size`' buttons in the *Visual* panel.
+
+image:viewsheet:multipleMeasure1.png[]
+
 == Dual Axis
 
 If the single axis is not appropriate for both measures, for example when one measure has much larger values than the other, you can create a secondary Y-axis on the right side of the chart. See xref:DualAxisChart.adoc[] for more details.
 
 image:commonscript:Chart Secondary Axis2.png[]
+
+To change the visual appearance (color, shape, size) of the measures independently, press the '`Edit Color`', '`Edit Shape`', or '`Edit Size`' buttons in the *Visual* panel.
+
+image:viewsheet:multipleMeasure1.png[]

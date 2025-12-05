@@ -21,7 +21,7 @@ CAUTION: If a Dashboard contains components that are already bound to a data sou
 
 Convert Source to a Data Worksheet:: Converts the existing data source to a new Data Worksheet named “_Dashboard_Name_  Worksheet”. The Dashboard will subsequently use this Data Worksheet as the data source.
 
-Use Metadata:: Suppress the display of live data during Dashboard design. With ‘Use Metadata’ enabled, data-view and filter components in the design view display  _meta-data_ rather than the  actual data. (This can be helpful when the Dashboard creates long-running queries or when the data source is not immediately available.)
+Use Metadata:: Suppress the display of live data to help speed Dashboard design. With ‘Use Metadata’ enabled, data-view and filter components in the design view display  _meta-data_ rather than the  actual data. (This can be helpful when the Dashboard creates long-running queries or when the data source is not immediately available.)
 +
 image:UseMetadataView.png[]
 +

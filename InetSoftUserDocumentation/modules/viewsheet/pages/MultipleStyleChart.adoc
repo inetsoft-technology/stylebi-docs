@@ -2,7 +2,8 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-
+[CAUTION,caption=see also]
+xref:ChartProperties.adoc[] for the *Show Points* option for  xref:LineChart.adoc[] and  xref:RadarChart.adoc[].
 
 
 You can assign distinct styles (e.g., line, bar, point) to individual measures on a chart.
@@ -28,7 +29,7 @@ image:commonscript:MultipleStyles_1.png[]
 
 . Press the {buttonSelectChartStyle} next to the  measure you wish to change.
 +
-image:commonscript:Chart Select Chart Type2_1.png[]
+image:commonscript:ChartSelectChartType2_1.png[]
 +
 This opens the chart styles panel for the specified measure.
 +
@@ -39,6 +40,10 @@ image:commonscript:SelectChartStyleButton2_1.png[]
 NOTE: Only  compatible style combinations can be selected. (For example, ‘Pie’  and ‘Line’  are not compatible styles, and *cannot* be selected together.)
 
 . {finishEditing}
+
+. To change the *visual appearance* (color, shape, size) of the measures independently, expand the menu in the *Visual* panel and select the measure you want to modify (or press the {buttonChevronPrevious} or {buttonChevronNext} to cycle through the measures). Select '`all`' to modify all measures. Then press the desired the '`Edit Color`', '`Edit Shape`', or '`Edit Size`' buttons.
++
+image:viewsheet:MultipleStyles1.png[]
 
 include::partial$addTitlesLegend.adoc[]
 

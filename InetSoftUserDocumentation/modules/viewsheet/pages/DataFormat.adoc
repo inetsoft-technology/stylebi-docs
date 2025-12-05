@@ -63,7 +63,7 @@ For example, to add commas to a number, use a format such as `pass:[#,###,###.00
 TIP: Decimal formatting only works if the value is truly a numeric type. If the numeric value you wish to format is actually text, convert the type using JavaScript so that formatting can be applied.
 
 
-Add the suffix “K”, “M”, or “B” to the pattern string to automatically divide the numerical value by 10^3^, 10^6^, or 10^9^, respectively.
+Add the suffix “K”, “M”, or “B” (thousands, millions, billions) to the pattern string to automatically divide the numerical value by 10^3^, 10^6^, or 10^9^, respectively.
 
 image:Format Number KMB.png[]
 
