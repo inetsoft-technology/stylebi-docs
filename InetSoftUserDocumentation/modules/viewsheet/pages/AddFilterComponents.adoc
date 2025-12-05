@@ -8,7 +8,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:UseFilterComponents.adoc[], for information on how to *use* Filter components to filter the Dashboard.
 ====
 
-You can add a variety of different Filter components to a Dashboard. These components filter the data received from the underlying data source, and so affect any components in the Dashboard that display data from the data source.
+You can add a variety of different Filter components to a Dashboard. These user-adjustable components filter the data received from the underlying data source, and so affect any components in the Dashboard that display data from the data source. (To attach a fixed filter to a *specific* component, see xref:AddConditions.adoc[].)
 
 The following sections explain how to add these components.
 
