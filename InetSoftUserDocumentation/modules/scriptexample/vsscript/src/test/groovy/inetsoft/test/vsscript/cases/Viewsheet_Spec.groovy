@@ -9,17 +9,17 @@ class Viewsheet_Spec extends Specification {
       VSScriptTest.initHome(this.class.getName())
    }
 
-   def 'TestCase-background' () {
+   def 'TestCase-AccessChartData' () {
       given:
       // Import the viewsheet under assets when needed
-      VSScriptTest.importAssets("chart.zip")
+      VSScriptTest.importAssets("AccessChartData.zip")
 
       when:
-      vsScriptTest = new VSScriptTest('1^128^__NULL__^chart', specificationContext.currentIteration.name)
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AccessChartData', specificationContext.currentIteration.name)
       // printVS(scriptName, jsFilePath, handler, assemblyNames)
-      // jsFilePath: relative path to JS file in partials directory (e.g., "background.js")
+      // jsFilePath: relative path to JS file in partials directory (e.g., "AccessChartDataExp.js")
       // handler: the HANDLER value (e.g., "ONREFRESH", "ONINIT", or assembly name)
-      vsScriptTest.printVS('background', 'background.js', 'Chart1', ['Chart1'] as String[])
+      vsScriptTest.printVS('AccessChartData', 'AccessChartDataExp.js', 'Chart1', ['Chart1'] as String[])
       then:
       vsScriptTest.compareImage()
 

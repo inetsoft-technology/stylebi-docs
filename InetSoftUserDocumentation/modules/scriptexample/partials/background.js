@@ -1,1 +1,0 @@
-background = java.awt.Color.PINK;
