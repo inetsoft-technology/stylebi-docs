@@ -19,7 +19,7 @@ ui:
       static_files:
       - .nojekyll
   - path: .nojekyll
-  
+
 antora:
   extensions:
   - require: '@antora/lunr-extension'
@@ -29,12 +29,3 @@ asciidoc:
   attributes:
     testdrive: false
     si: true
-    
-    
-
-  supplemental_files:
-  - path: ui.yml
-    contents: |
-      static_files:
-      - .nojekyll
-  - path: .nojekyll
