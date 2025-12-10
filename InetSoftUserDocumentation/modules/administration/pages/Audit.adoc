@@ -21,7 +21,7 @@ image:Figure 22.png[]
 
 [#AvailableAudits]
 == Available Audit Data
-The following audit data are available:
+The following audit datasets are available:
 
 Bookmark History:: Listing of Dashboard bookmarks created by users.
 Dependent Assets:: Listing of assets that depend on a selected asset. (Data source connections are *not* checked.) This listing is updated with new information when the built-in '`Update Asset Dependencies`' scheduled task runs. See xref:CreateScheduledTask.adoc#MonitorScheduledTasks[Monitor Scheduled Tasks] to see task status, and to run the task on demand.
