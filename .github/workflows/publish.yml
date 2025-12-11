@@ -32,6 +32,9 @@ jobs:
       uses: actions/setup-node@v5
       with:
         node-version: '18'
+    - name: Install UI components
+      working-directory: ui
+      run: npm install      
     - name: Create UI Bundle
       working-directory: ui
       run: npx gulp bundle
