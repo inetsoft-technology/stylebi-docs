@@ -6,13 +6,13 @@ site:
 content:
    #edit_url: 'https://repo.inetsoft.com/docs/inetsoft/files/master/{path}'
    sources: 
-   - url: ..\
+   - url: ../
      branches: 'main'
      start_path: InetSoftUserDocumentation
 
 ui:
   bundle:
-    url: ..\ui\build\ui-bundle.zip
+    url: ../ui/build/ui-bundle.zip
 
 antora:
   extensions:

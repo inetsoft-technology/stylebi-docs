@@ -31,7 +31,7 @@ class Viewsheet_Spec extends Specification {
       VSScriptTest.importAssets("ShapeFormSetPoint1.zip")
 
       when:
-      vsScriptTest = new VSScriptTest('1%5E128%5E__NULL__%5EDocScriptExamples/ShapeFormSetPoint1%5Ehost-org', specificationContext.currentIteration.name)
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/ShapeFormSetPoint1^host-org', specificationContext.currentIteration.name)
       // printVS(scriptName, jsFilePath, handler, assemblyNames)
       // jsFilePath: relative path to JS file in partials directory (e.g., "AccessChartDataExp.js")
       // handler: the HANDLER value (e.g., "ONREFRESH", "ONINIT", or assembly name)
