@@ -2,8 +2,6 @@ name: Publish to GitHub Pages with Lunr Search Extension
 on:
   push:
     branches: [main]
-    paths:
-      - 'playbook/**'  # Optional: Trigger only on changes to playbook folder
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 concurrency:
