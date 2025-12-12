@@ -8,7 +8,6 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:TableProperties.adoc[] for properties of a regular Table.
 * {commonProperties}
 * xref:viewsheetscript:FreehandTable.adoc[]  in xref:viewsheetscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
-
 ====
 
 The ‘Freehand Table Properties’ panel provides *General*, *Advanced*,  and *Script* tabs. The next sections discuss the Freehand Table-specific properties available under these tabs.
