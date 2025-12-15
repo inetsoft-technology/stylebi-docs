@@ -191,33 +191,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>com.inetsoft.stylebi.build</groupId>
-                <artifactId>keygen-maven-plugin</artifactId>
-                <version>${project.version}</version>
-                <configuration>
-                    <type>SESSION</type>
-                    <standalone>true</standalone>
-                    <days>30</days>
-                    <version>13.2</version>
-                    <count>10</count>
-                    <components>
-                        <component>REPORT</component>
-                        <component>DASHBOARD</component>
-                        <component>WORKSHEET</component>
-                        <component>ADHOC</component>
-                        <component>FORM</component>
-                    </components>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>keygen</id>
-                        <goals>
-                            <goal>keygen</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
