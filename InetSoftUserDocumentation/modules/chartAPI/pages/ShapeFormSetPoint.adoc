@@ -12,14 +12,9 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies the pixel location or proportional location where the shape is placed. (Positive values specify distance from left/bottom. Negative values specify distance from right/top.)  The corresponding “getter” function is `getPoint()`.
 
-
-
-
-
 == Parameter
 value::			a subclass of {javaawtgeomPoint2D} +
 (e.g., {javaawtPoint} for pixels, {javaawtgeomPoint2DDouble} for proportion)
-
 
 
 == Example
