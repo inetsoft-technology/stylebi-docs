@@ -1,0 +1,18 @@
+dataset = [["State", "Quantity"],["NJ", 200],["NY", 300],["PA", 370],["CT", 75]];
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var lineform = new LineForm();
+lineform.addValues(['CT', 150]);
+lineform.addValues(['CT', 100]);
+lineform.setColor(java.awt.Color(0xff0000));
+lineform.setEndArrow(true);
+var labelform = new LabelForm();
+labelform.setValues(['CT', 150]);
+var labelSpec = new TextSpec();
+labelSpec.setColor(java.awt.Color(0xff0000));
+labelform.setTextSpec(labelSpec);
+labelform.setLabel("Note: Low\nInventory");
+labelform.setAlignmentX(Chart.CENTER_ALIGNMENT);
+graph.addForm(lineform);
+graph.addForm(labelform);
+graph.addElement(elem);

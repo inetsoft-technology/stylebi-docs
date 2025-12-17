@@ -1,0 +1,14 @@
+var lineform = new LineForm();
+lineform.addValues(['PA', 10000]);
+lineform.addValues(['PA', 8000]);
+lineform.setColor(java.awt.Color(0xff0000));
+lineform.setEndArrow(true);
+var labelform = new LabelForm();
+labelform.setValues(['PA', 500000]);
+var labelSpec = new TextSpec();
+labelSpec.setColor(java.awt.Color(0xff0000));
+labelform.setTextSpec(labelSpec);
+labelform.setLabel("Note: Low\nInventory");
+labelform.setAlignmentX(Chart.CENTER_ALIGNMENT);
+graph.addForm(lineform);
+graph.addForm(labelform);

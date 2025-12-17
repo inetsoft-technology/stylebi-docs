@@ -5,10 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 To draw decorative elements (lines, shapes, text, etc.) on the chart, use a xref:GraphForm.adoc[] object. Consider the following example:
 
 [source,javascript]
-dataset = [["State", "Quantity"],["NJ", 200],["NY", 300], ["PA", 370],["CT", 75]];
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-graph.addElement(elem);
+include::scriptexample:partial$AddChartDecoration1.js[]
 
 include::partial$scriptThatModifiesGraph.adoc[]
 
@@ -21,35 +18,28 @@ To add a small note indicating that the lowest value was due to an inventory pro
 . Create a new xref:LineForm.adoc[] object, and specify location values to point at the ‘CT’ bar.
 +
 [source,javascript]
-var lineform = new LineForm();
-lineform.addValues([['CT', 150],['CT', 100]]);
+include::scriptexample:partial$AddChartDecoration2.js[lines=4..6]
 
 . Set the line color to red, and draw an arrow at the end.
 +
 [source,javascript]
-lineform.setColor(java.awt.Color(0xff0000));
-lineform.setEndArrow(true);
+include::scriptexample:partial$AddChartDecoration2.js[lines=7..8]
 
 . Create a new xref:LabelForm.adoc[] object, and specify location values to position it above the ‘CT’ bar.
 +
 [source,javascript]
-var labelform = new LabelForm();
-labelform.setValues(['CT', 150]);
+include::scriptexample:partial$AddChartDecoration2.js[lines=9..10]
 
 . Set the label contents, set the text color to red, and center-align. To set the text color, create a new xref:TextSpec.adoc[] object and assign it to the `LabelForm`.
 +
 [source,javascript]
-var labelSpec = new TextSpec();
-labelSpec.setColor(java.awt.Color(0xff0000));
-labelform.setTextSpec(labelSpec);
-labelform.setLabel("Note: Low\nInventory");
-labelform.setAlignmentX(Chart.CENTER_ALIGNMENT);
+include::scriptexample:partial$AddChartDecoration2.js[lines=11..15]
+
 
 . Assign the `LineForm` and `LabelForm` objects to the Chart's xref:EGraph.adoc[] object.
 +
 [source,javascript]
-graph.addForm(lineform);
-graph.addForm(labelform);
+include::scriptexample:partial$AddChartDecoration2.js[lines=16..17]
 
 +
 image:commonscript:DecorativeElementExample2.png[]
@@ -58,42 +48,14 @@ image:commonscript:DecorativeElementExample2.png[]
 .Complete Script
 ****
 [source,javascript]
-dataset = [["State", "Quantity"],["NJ", 200],["NY", 300],["PA", 370],["CT", 75]];
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var lineform = new LineForm();lineform.addValues(['CT', 150]);
-lineform.addValues(['CT', 100]);
-lineform.setColor(java.awt.Color(0xff0000));
-lineform.setEndArrow(true);
-var labelform = new LabelForm();
-labelform.setValues(['CT', 150]);
-var labelSpec = new TextSpec();
-labelSpec.setColor(java.awt.Color(0xff0000));
-labelform.setTextSpec(labelSpec);
-labelform.setLabel("Note: Low\nInventory");
-labelform.setAlignmentX(Chart.CENTER_ALIGNMENT);
-graph.addForm(lineform);
-graph.addForm(labelform);
-graph.addElement(elem);
+include::scriptexample:partial$AddChartDecoration2.js[]
+
 
 [NOTE]
 =====
 To set properties for a Chart that has already been created in the Chart Editor, there is no need to create the xref:IntervalElement.adoc[]. In this case, a script such as the one below is sufficient:
 
 [source,javascript]
-var lineform = new LineForm();
-lineform.addValues(['PA', 10000]);
-lineform.addValues(['PA', 8000]);
-lineform.setColor(java.awt.Color(0xff0000));
-lineform.setEndArrow(true);
-var labelform = new LabelForm();
-labelform.setValues(['PA', 10000]);
-var labelSpec = new TextSpec();
-labelSpec.setColor(java.awt.Color(0xff0000));
-labelform.setTextSpec(labelSpec);
-labelform.setLabel("Note: Low\nInventory");
-labelform.setAlignmentX(Chart.CENTER_ALIGNMENT);
-graph.addForm(lineform);
-graph.addForm(labelform);
+include::scriptexample:partial$AddChartDecoration3.js[]
 =====
 ****
