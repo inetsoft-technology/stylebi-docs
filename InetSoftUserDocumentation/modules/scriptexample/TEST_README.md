@@ -7,6 +7,23 @@
 - `commons`: Provides the reusable core test code and builds the jar that the execution suites depend on.
 - `vsscript`: Hosts the concrete test cases plus any suite-level configuration and runners.
 
+## Initial Setup
+You will need a GitHub account and a [classic personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) in order to access the Maven repository. When creating the classic personal access token, the `read:packages` scope will need to be enabled. You do not need any special permissions to access the Maven repository, but GitHub [requires](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#installing-a-package) an account to access public Package repositories.
+
+Create or update the `~/.m2/settings.xml` file (`C:\Users\USERNAME\.m2\settings.xml` on Windows) with the following contents, replacing `YOUR_GITHUB_USERNAME` and `YOUR_GITHUB_PASSWORD` with your GitHub username and personal access token, respectively:
+
+```xml
+<settings>
+  <servers>
+    <server>
+      <id>gh-stylebi</id>
+      <username>YOUR_GITHUB_USERNAME</username>
+      <password>YOUR_GITHUB_ACCESS_TOKEN</password>
+    </server>
+  </servers>
+</settings>
+```
+
 ## Test Execution Workflow
 
 0. Update `pom.xml`  
@@ -156,6 +173,6 @@ If you don't want to import a dashboard in each test case:
 ## Example: Complete Test Case
 
 See `vsscript/src/test/groovy/inetsoft/test/vsscript/cases/Viewsheet_Spec.groovy` for a working example that:
-- Imports `chart.zip` from the assets folder
-- Applies `background.js` script to `Chart1` assembly
+- Imports `AccessChartData.zip` from the assets folder
+- Applies `AccessChartDataExp.js` script to `Chart1` assembly
 - Exports and compares the result
