@@ -75,8 +75,8 @@ class Viewsheet_Spec extends Specification {
       then:
       vsScriptTest.compareImage()    
    }
-   
-   def 'TestCase-AddChartDecoration23' () {
+
+   def 'TestCase-AddChartDecoration3' () {
       given:
       VSScriptTest.importAssets("AddChartDecoration3.zip")
 
