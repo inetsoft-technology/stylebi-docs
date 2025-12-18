@@ -241,7 +241,7 @@ class VSScriptTest {
 
    /**
     * Get assets file path from classpath or project structure
-    * @param fileName name of the asset file (e.g., "AccessChartData.zip")
+    * @param fileName name of the asset file (e.g., "AccessChartDataExp.zip")
     * @return file path as string
     */
    static def getAssetsFilePath(String fileName) {
