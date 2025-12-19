@@ -32,15 +32,7 @@ AxisSpec.AXIS_NONE    // (axis not drawn)
 .Chart Component Script
 [source,javascript]
 --
-dataset = [["State","Quantity"],["NJ",20000],["NY",30000]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var qscale = new LinearScale("Quantity");
-var aspec = new AxisSpec(); //<2>
-aspec.setAxisStyle(AxisSpec.AXIS_DOUBLE2); //<3>
-qscale.setAxisSpec(aspec); //<4>
-graph.setScale("Quantity", qscale);
-graph.addElement(elem);
+include::scriptexample:partial$AxisSpecSetAxisStyle1.js[]
 --
 <1> {dataset}
 <2> Create the `AxisSpec` object.
@@ -59,12 +51,7 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 [source,javascript]
 --
-var coord = graph.getCoordinate(); <1>
-var scale = coord.getYScale(); <2>
-var spec = scale.getAxisSpec(); <3>
-// Compact syntax: var spec = graph.getCoordinate().getYScale().getAxisSpec();
-
-spec.setAxisStyle(AxisSpec.AXIS_DOUBLE2);
+include::scriptexample:partial$AxisSpecSetAxisStyle2.js[]
 
 --
 =====

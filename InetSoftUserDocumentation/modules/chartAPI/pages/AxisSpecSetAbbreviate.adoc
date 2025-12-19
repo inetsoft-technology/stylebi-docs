@@ -18,22 +18,7 @@ Boolean:: `true`: drop common prefixes +
 .Chart Component Script
 [source,javascript]
 --
-var date1 = new Date();
-var date2 = new Date();
-date1.setFullYear(2008,0,1);
-date2.setFullYear(2008,10,1);
-dataset = [["Date", "Quantity"], [date1,200], [date2,300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("Date", "Quantity");
-var tscale = new TimeScale("Date");
-var aspec = new AxisSpec(); //<2>
-var tspec = new TextSpec();
-tspec.setFormat(java.text.SimpleDateFormat('yyyy-MMM'));
-aspec.setTextSpec(tspec);
-aspec.setAbbreviate(true); //<3>
-tscale.setAxisSpec(aspec);
-graph.setScale("Date", tscale);
-graph.addElement(elem);
+include::scriptexample:partial$AxisSpecSetAbbreviate1.js[]
 --
 <1> {dataset}
 <2> Create the `AxisSpec` object.
@@ -50,14 +35,6 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 [source,javascript]
 --
-var coord = graph.getCoordinate(); <1>
-var xscale = coord.getXScale(); <2>
-var xspec = xscale.getAxisSpec(); <3>
-// Compact syntax: var xspec = graph.getCoordinate().getXScale().getAxisSpec();
-
-var tspec = new TextSpec();
-tspec.setFormat(java.text.SimpleDateFormat('yyyy-MMM'));
-xspec.setTextSpec(tspec);
-xspec.setAbbreviate(true);
+include::scriptexample:partial$AxisSpecSetAbbreviate2.js[]
 --
 =====

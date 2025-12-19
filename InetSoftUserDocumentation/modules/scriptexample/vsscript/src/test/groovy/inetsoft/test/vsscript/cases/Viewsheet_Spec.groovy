@@ -12,7 +12,7 @@ class Viewsheet_Spec extends Specification {
    def 'TestCase-AccessChartData' () {
       given:
       // Import the viewsheet under assets when needed
-      VSScriptTest.importAssets("AccessChartData.zip")
+      VSScriptTest.importAssets("AccessChartDataExp.zip")
 
       when:
       vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AccessChartData', specificationContext.currentIteration.name)
@@ -86,7 +86,61 @@ class Viewsheet_Spec extends Specification {
       then:
       vsScriptTest.compareImage()    
    }
+   
+   def 'TestCase-AreaElement1' () {
+      given:
+      VSScriptTest.importAssets("AreaElement1.zip")
 
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AreaElement1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AreaElement1', 'AreaElement1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }
+   
+   def 'TestCase-AxisSpecSetAbbreviate1' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetAbbreviate1.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetAbbreviate1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetAbbreviate1', 'AxisSpecSetAbbreviate1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }
+   
+   def 'TestCase-AxisSpecSetAbbreviate2' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetAbbreviate2.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetAbbreviate2^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetAbbreviate2', 'AxisSpecSetAbbreviate2.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }   
+
+   def 'TestCase-AxisSpecSetAxisStyle1' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetAxisStyle1.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetAxisStyle1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetAxisStyle1', 'AxisSpecSetAxisStyle1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }   
+   
+   def 'TestCase-AxisSpecSetAxisStyle2' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetAxisStyle2.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetAxisStyle2^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetAxisStyle2', 'AxisSpecSetAxisStyle2.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }      
 
    static VSScriptTest vsScriptTest
 }
