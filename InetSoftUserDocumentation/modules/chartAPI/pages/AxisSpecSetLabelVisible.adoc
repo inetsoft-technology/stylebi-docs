@@ -7,34 +7,16 @@ include::ROOT:partial$buttonSnippets.adoc[]
 Specifies whether the axis labels are visible or hidden. {noGetter}
 
 
-
-
-
 == Parameter
 Boolean:: `true`: labels are visible +
 `false`: labels are hidden
 
 
-
-
-
 == Example
-
-
 .Chart Component Script
 [source,javascript]
 --
-dataset = [["State","Quantity"],["NJ",20000],["NY",30000]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var qscale = new LinearScale("Quantity");
-var aspec = new AxisSpec(); //<2>
-aspec.setLabelVisible(false); //<3>
-qscale.setAxisSpec(aspec);
-graph.setScale("Quantity", qscale);
-graph.addElement(elem);
-
-
+include::scriptexample:partial$AxisSpecSetLabelVisible1.js[]
 --
 <1> {dataset}
 <2> Create the `AxisSpec` object.
@@ -47,18 +29,10 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]
 =====
-
-
-
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 
 [source,javascript]
 --
-var coord = graph.getCoordinate(); <1>
-var scale = coord.getYScale(); <2>
-var spec = scale.getAxisSpec(); <3>
-// Compact syntax: var xspec = graph.getCoordinate().getXScale().getAxisSpec();
-
-spec.setLabelVisible(false);
+include::scriptexample:partial$AxisSpecSetLabelVisible2.js[]
 --
 =====

@@ -142,5 +142,148 @@ class Viewsheet_Spec extends Specification {
       vsScriptTest.compareImage()    
    }      
 
+   def 'TestCase-AxisSpecSetGridAsShape1' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetGridAsShape1.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetGridAsShape1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetGridAsShape1', 'AxisSpecSetGridAsShape1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }   
+
+   def 'TestCase-AxisSpecSetGridColor1' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetGridColor1.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetGridColor1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetGridColor1', 'AxisSpecSetGridColor1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }   
+   
+   def 'TestCase-AxisSpecSetGridColor2' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetGridColor2.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetGridColor2^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetGridColor2', 'AxisSpecSetGridColor2.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }     
+
+   def 'TestCase-AxisSpecSetGridOnTop1' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetGridOnTop1.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetGridOnTop1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetGridOnTop1', 'AxisSpecSetGridOnTop1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }      
+   
+   def 'TestCase-AxisSpecSetGridOnTop2' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetGridOnTop2.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetGridOnTop2^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetGridOnTop2', 'AxisSpecSetGridOnTop2.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }    
+
+   def 'TestCase-AxisSpecSetGridStyle1' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetGridStyle1.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetGridStyle1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetGridStyle1', 'AxisSpecSetGridStyle1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }       
+
+   def 'TestCase-AxisSpecSetGridStyle2' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetGridStyle2.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetGridStyle2^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetGridStyle2', 'AxisSpecSetGridStyle2.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }           
+   
+   def 'TestCase-AxisSpecSetInPlot1' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetInPlot1.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetInPlot1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetInPlot1', 'AxisSpecSetInPlot1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }    
+
+   def 'TestCase-AxisSpecSetInPlot2' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetInPlot2.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetInPlot2^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetInPlot2', 'AxisSpecSetInPlot2.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }     
+   
+   def 'TestCase-AxisSpecSetLabelGap1' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetLabelGap1.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetLabelGap1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetLabelGap1', 'AxisSpecSetLabelGap1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }        
+   
+   def 'TestCase-AxisSpecSetLabelGap2' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetLabelGap2.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetLabelGap2^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetLabelGap2', 'AxisSpecSetLabelGap2.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }           
+   
+   def 'TestCase-AxisSpecSetLabelVisible1' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetLabelVisible1.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetLabelVisible1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetLabelVisible1', 'AxisSpecSetLabelVisible1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }    
+   
+   def 'TestCase-AxisSpecSetLabelVisible2' () {
+      given:
+      VSScriptTest.importAssets("AxisSpecSetLabelVisible2.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/AxisSpecSetLabelVisible2^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('AxisSpecSetLabelVisible2', 'AxisSpecSetLabelVisible2.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()    
+   }      
+   
    static VSScriptTest vsScriptTest
 }

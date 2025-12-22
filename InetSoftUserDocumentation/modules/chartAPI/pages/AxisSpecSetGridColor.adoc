@@ -8,35 +8,15 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies the color of the axis grid lines.  The corresponding “getter” function is `getGridColor()`.
 
-
-
-
-
-
-
 == Parameter
 A {javaawtcolor} object
 
 
-
-
 == Example
-
-
 .Chart Component Script
 [source,javascript]
 --
-dataset = [["State","Quantity"],["NJ",20000],["NY",30000]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var qscale = new LinearScale("Quantity");
-var aspec = new AxisSpec(); //<2>
-aspec.setGridColor(java.awt.Color(0xff0000)); //<3>
-aspec.setGridStyle(Chart.DASH_LINE);
-qscale.setAxisSpec(aspec);
-graph.setScale("Quantity", qscale);
-graph.addElement(elem);
-
+include::scriptexample:partial$AxisSpecSetGridColor1.js[]
 --
 <1> {dataset}
 <2> Create the `AxisSpec` object.
@@ -54,12 +34,6 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 [source,javascript]
 --
-var coord = graph.getCoordinate(); <1>
-var scale = coord.getYScale(); <2>
-var spec = scale.getAxisSpec(); <3>
-// Compact syntax: var spec = graph.getCoordinate().getYScale().getAxisSpec();
-
-spec.setGridColor(java.awt.Color(0xff0000));
-
+include::scriptexample:partial$AxisSpecSetGridColor2.js[]
 --
 =====
