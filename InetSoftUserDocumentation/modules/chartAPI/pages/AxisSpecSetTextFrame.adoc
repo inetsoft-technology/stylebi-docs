@@ -17,19 +17,7 @@ frame::			A xref:chartAPI:TextFrame.adoc[] object
 .Chart Component Script
 [source,javascript]
 --
-dataset = [["State","Quantity"],["NJ",20000],["NY",30000]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var cscale = new CategoricalScale("State");
-var tframe = new DefaultTextFrame(); //<2>
-tframe.setText('NJ','New Jersey');
-tframe.setText('NY','New York');
-var aspec = new AxisSpec(); //<3>
-aspec.setTextFrame(tframe); //<4>
-cscale.setAxisSpec(aspec);
-graph.setScale("State", cscale);
-graph.addElement(elem);
-
+include::scriptexample:partial$AxisSpecSetTextFrame1.js[]
 --
 <1> {dataset}
 <2> Create the `TextFrame` object.
@@ -43,21 +31,10 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]
 =====
-
-
-
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 
 [source,javascript]
 --
-var coord = graph.getCoordinate(); <1>
-var scale = coord.getXScale(); <2>
-var spec = scale.getAxisSpec(); <3>
-// Compact syntax: var spec = graph.getCoordinate().getXScale().getAxisSpec();
-
-var tframe = new DefaultTextFrame();
-tframe.setText('NJ','New Jersey');
-tframe.setText('NY','New York');
-spec.setTextFrame(tframe);
+include::scriptexample:partial$AxisSpecSetTextFrame2.js[]
 --
 =====
