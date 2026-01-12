@@ -13,7 +13,7 @@ Enable the use of *unqualified* names for all the classes of the specified packa
 [source,javascript]
 ----
 importPackage(java.awt);
-font = new Font("Verdana", Font.ITALIC, 24); <1>
+font = new Font("Verdana", Font.ITALIC, 24); //<1>
 foreground = Color.red;
 ----
 <1> Does not require the  `java.awt` qualifier

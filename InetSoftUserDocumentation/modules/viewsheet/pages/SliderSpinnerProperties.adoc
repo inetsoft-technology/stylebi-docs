@@ -34,7 +34,7 @@ The *Data* tab in the ‘Properties’ panel for Slider and Spinner components p
 Target:: An xref:dataworksheet:EnterData.adoc[Embedded Table] or xref:dataworksheet:CreateNewVariable.adoc[Variable] in the Data Worksheet. The ‘Browse’ button to the right allows you to interactively select the row and column of the Embedded Table.
 Column:: The column of the Data Worksheet Embedded Table into which the form value should be passed.
 Row:: The row of the Data Worksheet Embedded Table into which the form value should be passed. (The ‘Row’ menu displays the format “row: row value.”)
-Write Back to Storage:: Allows user-modified data in a Data Worksheet Embedded Table linked to the Slider or Spinner to persist across sessions by saving the modified data together with the underlying Data Worksheet.
+Write Back to Storage:: Allows user-modified data in a Data Worksheet Embedded Table linked to the Slider or Spinner to persist across sessions by saving the modified data together with the underlying Data Worksheet.  See xref:WriteBackToStorage.adoc[] for additional information.
 
 == Advanced Tab
 The *Advanced* tab in the ‘Slider Properties’ and ‘Spinner Properties’ panel provides the following specific properties.

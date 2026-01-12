@@ -14,12 +14,11 @@ The following sections explain how and where you can add script to your Dashboar
 == Script Evaluation Order
 Unlike conventional JavaScript on web pages, JavaScript that you embed in a Dashboard is executed as part of the Dashboard generation process on the server, not the client browser. However, scripts can control client-side interactions through event handlers and hyperlinks. The overall sequence of Dashboard script evaluation is as follows.
 
-1: Execute the *onInit* handler:: The onInit handler executes only once, when the Dashboard is first loaded. It can be used to initialize variables and define parameters.  See xref:#AddDashboardScript[] for more information.
+1: Execute the *onInit* handler:: The onInit handler executes only once, when the Dashboard is first loaded. It can be used to initialize variables and define parameters. It *cannot* access user input or component data. See xref:#AddDashboardScript[] for more information.
 
-2: Execute the *onRefresh* handler:: The onRefresh handler re-executes each time the Dashboard is refreshed by a user operation. See xref:#AddDashboardScript[] for more information.
+2: Execute the *onRefresh* handler:: The onRefresh handler re-executes each time the Dashboard is refreshed by a user operation.  See xref:#AddDashboardScript[] for more information.
 
-
-4: Execute all *component-level* scripts:: Component scripts and property expressions are re-executed whenever the particular component is refreshed due to a user operation (on the component itself, or on a related component).  See xref:#AddPropertyScript[] xref:#AddComponentScript[] and for more information. For a given component, property expressions are  evaluated prior to the component script.
+3: Execute all *component-level* scripts:: Component scripts and property expressions are re-executed whenever the particular component is refreshed due to a user operation (on the component itself, or on a related component).  See xref:#AddPropertyScript[] xref:#AddComponentScript[] and for more information. For a given component, property expressions are  evaluated prior to the component script.
 +
 CAUTION: Because the order in which individual component scripts are initially executed is *undetermined*, you should avoid setting properties of one component from within a script attached to a different component.  *In general*, components scripts are evaluated starting from the top of the Dashboard.
 
@@ -193,7 +192,7 @@ The final parameter specifies the size of the font. InetSoft provides an *extend
 |===
 |Font Style|Description
 
-|Underline|Draw an underline below the text. The line style should be an available xref:commonscript:StyleConstant.adoc#LineStyle[Line Style].
+|Underline|Draw an underline below the text. The line style should be an available xref:commonscript:StyleConstantLineStyle.adoc[].
 |Strikethrough|Draw a line through the text in the middle.
 |Superscript|Draw the text at the upper corner of the previous text.
 |Subscript|Draw the text at the lower corner of the previous text.
@@ -229,7 +228,7 @@ As for all component properties, you should change the visibility of a component
 * xref:commonscript:StyleConstant.adoc[] for commonly-used constant values.
 * xref:viewsheet:TextProperties.adoc[], for more information about Text properties.
 ====
-The Alignment property controls both the horizontal and vertical alignment of the component. The horizontal alignment is specified by the alignment constants `H_LEFT`, `H_CENTER`, and `H_RIGHT`. (See xref:commonscript:StyleConstant.adoc#Alignment[Alignment] for more details.)
+The Alignment property controls both the horizontal and vertical alignment of the component. The horizontal alignment is specified by the alignment constants `H_LEFT`, `H_CENTER`, and `H_RIGHT`. (See xref:commonscript:StyleConstantAlignment.adoc[] for more details.)
 
 [source,javascript]
 alignment = StyleConstant.H_CENTER;

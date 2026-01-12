@@ -11,7 +11,7 @@ Enable the use of the *unqualified* name for a class.
 [source,javascript]
 ----
 importClass(java.awt.Font);
-font = new Font("Verdana", Font.ITALIC, 24); <1>
+font = new Font("Verdana", Font.ITALIC, 24); // <1>
 foreground = Color.red;
 ----
 <1> Does not require the  `java.awt` qualifier
