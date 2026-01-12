@@ -154,6 +154,7 @@ log.output.stderr:: `true` to send output to the stderr.
 report.log.count:: Sets the number of backup log files.
 report.log.max:: Sets the maximum log file size.
 
+[#MailProperties]
 == Mail Properties
 The following table lists a variety of email properties.  See xref:ConfigureServerEmail.adoc[] for related properties in Enterprise Manager.
 

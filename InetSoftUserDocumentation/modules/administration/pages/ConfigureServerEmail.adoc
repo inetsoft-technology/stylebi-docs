@@ -30,7 +30,7 @@ The template will be applied to all email message bodies. For more information a
 
 [#EmailProperties]
 == Email Properties
-Mail Host (Required):: Specifies one or more valid SMTP servers, separated by commas. The SMTP servers must be able to accept connections on the specified ports. The SMTP port can be configured with the xref:AllProperties.adoc#_mail_properties[mail.smtp.port] property. If the servers require secure protocol, enable the '`Secure SMTP`' option.
+Mail Host (Required):: Specifies one or more valid SMTP servers, separated by commas. The SMTP servers must be able to accept connections on the specified ports. The SMTP port can be configured with the `mail.smtp.port` property.  (See xref:AllProperties.adoc#MailProperties[Mail Properties].) If the servers require secure protocol, enable the '`Secure SMTP`' option.
 
 From Email Address:: Specifies the fixed email address from which all emails are sent.
 
