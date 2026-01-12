@@ -432,7 +432,7 @@ The Zip archive is saved into the _backup_ directory of the configured file dire
 
 
 
-The number of backup copies to retain is controlled by the property `asset.backup.count` (default=1). {EMPropertyConfig}
+The number of backup copies to retain is controlled by the property `asset.backup.count` (default=3). {EMPropertyConfig} Note that large backup count may consume significant storage space and should be monitored regularly.
 
 
 

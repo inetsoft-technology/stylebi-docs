@@ -326,7 +326,7 @@ security.exposedefaultorgtoall:: When set to `true`, indicates that *all* organi
 == Server Engine Properties
 The following table lists a variety of server engine properties. Server engine properties include specifications relating to configuration file locations and names.
 
-asset.backup.count:: Number of copies of the storage backup to retain. (Default=1.) See xref:Storage.adoc[] for more information.
+asset.backup.count:: Number of copies of the storage backup to retain. (Default=3.) See xref:Storage.adoc[] for more information.  Note that large backup count may consume significant storage space and should be monitored regularly.
 assetData.thread.count:: The maximum number of Dashboards that can simultaneously execute queries  (for ‘cpu’ and ‘session’ keys only). Increase this value if a set of Dashboards with long-running queries is blocking the execution of other Dashboards. (Default is 12 times the CPU count.)
 composer.comm.error:: Set to `true` (default) to warn user about server connection errors when using Dashboards. Set to `false` to suppress these warnings.
 cpu.affinity.mask:: Controls which CPU cores the server process uses for execution. For example, `cpu.affinity.mask=0,2,4` restricts the server to use only CPU 0, CPU 2, and CPU 4.
