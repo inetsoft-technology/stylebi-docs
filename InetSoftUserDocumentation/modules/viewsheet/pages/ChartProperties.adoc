@@ -70,6 +70,7 @@ Apply Aesthetics to Source Nodes:: For *Network*, *Circular Network*, and *Tree*
 Show Reference Line:: Displays horizontal and vertical reference lines when the user moves the mouse over a data point.
 Stack Value:: Displays a single aggregate value for each primary (X-axis) grouping, rather than for each individual subseries grouping.
 Keep Element in Plot:: Automatically extend the chart boundaries to display chart elements (including target lines) that exceed the specified axis maximum.
+Include Parent Labels:: For xref:CirclePackingChart.adoc[] and xref:TreemapChart.adoc[], this includes the parent category names in the circle labels.
 Font Scale:: For *Word Cloud* Charts only, multiplies the specified ‘Size’ setting to increase the maximum font size of words in the cloud.
 Show Points:: For a *Line* and *Radar* chart, adds markers at the locations of the individual data points.
 Show Lines:: For *Point*-type charts, displays line segments connecting the points on the chart. To display a fitted line, use the ‘Trend Line’ option instead. (See xref:#LineTab[].)
