@@ -50,6 +50,8 @@ Background:: The fill color of the plot area on the Chart.
 +
 TIP: To make the Chart background fully *transparent* (so that the Dashboard background is visible through the Chart), you should make the plot  '`Background`'  transparent here, and also make the component background transparent.  See xref:VisualFormat.adoc[] for more information.
 
+Border Color:: For xref:CirclePackingChart.adoc[], sets the border color for the circles.
+
 Pareto Line Color:: The color of the cumulative total line when a field is bound in the ‘Color’ region. If there is no ‘Color’ binding, the Pareto line is the same color as the bars.
 Alpha:: Sets transparency for the Chart elements. If disabled, the default transparency for the particular chart type is used.
 Banding:: Adds alternating colored bands to a specified categorical or timescale axis. Select the desired band color from the color picker. The band ‘Size’ setting is an integer indicating the number of category groups (for a categorical axis) or the number of date groups (for a timescale axis) to be spanned by each band.
