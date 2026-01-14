@@ -604,7 +604,11 @@ image:Dashboard Settings.png[]
 
 . Select ‘Enable Dashboards’ to enable the {buttonDashboard} in the User Portal.
 
-. Uncheck ‘Dashboard Tabs Top’ to display the tabs for multiple Dashboards at the bottom of the screen rather than at the top (default).
+. *_Optional:_* Uncheck ‘Dashboard Tabs Top’ to display the tabs for multiple Dashboards at the bottom of the screen rather than at the top (default).
+
+. *_Optional:_* Select '`Drill Tabs Top`' to display tabs of drill-down Dashboards at the top of the screen.  (See xref:viewsheet:DrillDownIntoData.adoc#DrillwithChartHyperlinks[Drill with Chart Hyperlinks] for more details on drill-down features.)
+
+
 
 . Press btn:[Apply] to enter the settings.
 
