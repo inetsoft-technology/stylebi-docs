@@ -22,3 +22,7 @@ asciidoc:
   attributes:
     testdrive: false
     si: true
+    
+runtime:
+  log:
+    format: pretty    

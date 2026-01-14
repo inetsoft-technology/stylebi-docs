@@ -207,7 +207,7 @@ The following table lists some commonly used presenters.
 |2D Code|Two-dimensional QR Code for alphanumeric data. *Options*: ‘Width’ sets the width of the code in pixels.
 |Clockwise Rotation|Rotates contents by 90 degrees in clockwise direction.
 |Counterclockwise Rotation|Rotates contents by 90 degrees in counter-clockwise direction.
-|Multi-Header|Displays multiple crosstab headers in a single cell.
+|Multi-Header|Displays multiple headers in a single cell for a  xref:AddFreehandTable.adoc[Freehand Table] component. When a cell contains a formula result in  array format, separated by commas (for example: `['a','b']`), selecting the Multi-Header presenter will display the cell`'s value as multiple crosstab headers within a single cell.
 |Button|Adds a 3D border. *Options*: ‘Color’ sets the button color, ‘Bezel Width’ sets the width of the button border.
 |Shadow|Adds a shadow. *Options*: ‘Shading’ sets the background color, ‘Shadow Width’ sets the thickness of the shadow, and ‘Text Color’ sets the font color.
 |Image|Displays the images specified by the URLs in the column cells.
