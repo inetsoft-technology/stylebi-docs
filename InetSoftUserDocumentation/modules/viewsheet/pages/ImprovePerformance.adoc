@@ -7,6 +7,8 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 The best method for boosting Dashboard performance is to create a _materialized view_. A materialized view is a caching strategy that pre-aggregates and stores the data required by a Dashboard  so that the Dashboard can respond more quickly at runtime. When a materialized view exists for a Dashboard, the server attempts to query the cached materialized view rather than querying the database. This can significantly  increase Dashboard responsiveness in many cases.
 
+IMPORTANT: If a VPM is in use, materialized views can only be created in Enterprise Manager.  See xref:administration:MaterializedView.adoc[] in xref:administration:ManageServer.adoc[] for more details.
+
 == Create Materialized View
 
 [.videotitle]
