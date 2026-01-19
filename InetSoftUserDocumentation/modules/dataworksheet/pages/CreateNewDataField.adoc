@@ -177,7 +177,7 @@ include::ROOT:partial$AggregationMethods.adoc[]
 +
 image:viewsheet:CalcFieldExample10.png[]
 +
-. *_Optional:_*  Press the ‘New Aggregate’ button again, and repeat the above steps to add as many additional aggregates as desired.
+. *_Optional:_*  Press the ‘New Aggregate’ button again, and repeat the above steps to add as many additional aggregates as desired. To *delete* an aggregate from the list, press the {buttonActions} to the right of the aggregate, and select '`Delete`'.
 . Once you have defined the required aggregates in the top-left panel, enter the desired calculation (using the aggregate fields) in the formula field at the bottom of the dialog box.
 +
 NOTE: Click an aggregate field in the top-left panel to add it to the expression.
