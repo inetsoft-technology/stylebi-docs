@@ -30,7 +30,7 @@ The *Advanced* tab in the ‘Table Properties’ panel provides the following Ta
 
 image:Table Dialog Advanced Tab.png[]
 
-Shrink to Fit:: When enabled, this reduces the *height* of the table to match the number of records displayed, and reduces the *width* of the final column to fit the contents. For example, if the original table height (as designed) was 10 rows, and the user then makes selections which restrict the result set to five rows, the table’s bottom border will retract or “shrink” to eliminate any empty rows at the bottom of the table.
+Shrink to Fit:: When enabled, this reduces the *height* of the table to match the number of records displayed, and allows final column *width* to be set manually. For example, if the original table height (as designed) was 10 rows, and the user then makes selections which restrict the result set to five rows, the table’s bottom border will retract or “shrink” to eliminate any empty rows at the bottom of the table.
 
 Enable Table Editing:: This option allows users to modify an Embedded Table by inserting, removing, or changing data records. To perform validation checks on data entered by users, see xref:WriteBackToStorage.adoc#ValidateUserInput[Validate User Input]. Modified table data can be stored across sessions in the Data Worksheet by setting the '`Write Back to Storage`' option.
 
