@@ -13,11 +13,17 @@ You can  display multiple *measures* by using visual properties (color, shape, s
 
 include::ROOT:partial$measureTip.adoc[]
 
+[#ColorShapeSize]
 == Color, Shape, Size
 
-To display multiple measures using *color*, *size*,  *shape* or *label* representations,   drag a desired measure field from the *Data Source* panel to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region. See xref:BasicChartingSteps.adoc[] for more details.
+To display multiple measures using *color*, *size*,  *shape* or *label* representations,   drag a desired measure field from the *Data Source* panel to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.  See xref:BasicChartingSteps.adoc[] for more details.
 
 image:addingChart5.png[]
+
+To change the visual appearance (color, shape, size) of the measures independently, press the '`Edit Color`', '`Edit Shape`', or '`Edit Size`' buttons in the *Visual* panel.  This allows you to use different sizes and different shapes such as triangles and circles to represent your measures.
+
+image:viewsheet:multipleMeasure1.png[]
+
 
 
 [#SingleAxis]
@@ -65,6 +71,3 @@ If the single axis is not appropriate for both measures, for example when one me
 
 image:commonscript:Chart Secondary Axis2.png[]
 
-To change the visual appearance (color, shape, size) of the measures independently, press the '`Edit Color`', '`Edit Shape`', or '`Edit Size`' buttons in the *Visual* panel.
-
-image:viewsheet:multipleMeasure1.png[]

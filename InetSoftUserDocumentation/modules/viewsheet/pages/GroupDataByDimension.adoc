@@ -80,6 +80,9 @@ image:fixedColorMapping2.png[]
 
 == Group by Shape
 
+[WARNING,caption=see also]
+xref:MultipleMeasureChart.adoc#ColorShapeSize[Color, Shape, Size] in xref:MultipleMeasureChart.adoc[] to edit the shapes used for measures.
+
 To group using *shape*, follow the steps below:
 
 . Drag the *dimension* that you want to group from the data source panel to the ‘Shape’ field in the bottom left panel.
