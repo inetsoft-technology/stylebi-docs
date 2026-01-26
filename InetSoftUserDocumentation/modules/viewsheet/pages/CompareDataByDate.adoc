@@ -4,6 +4,14 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::viewsheet:partial$availableToEndUsers.adoc[]
 
+ifdef::ai[]
+Summary — Date Comparison (Usage, Function, Limits)
+
+This section describes how Charts and Crosstabs compare data across multiple date ranges. The feature supports comparing standard periods (years, quarters, months, weeks) or custom date ranges, and offers three comparison modes (all periods, same period, period-to-date). Results can be shown as values, changes, or percentage changes.
+
+Important limitation: A Date-type field is required; color or axis will be used to distinguish date groups depending on the existing chart settings.
+endif::ai[]
+
 Charts and Crosstabs provide an easy way to *compare* data across different date ranges. For example:
 
 * Compare this quarter’s sales to the previous two quarters
