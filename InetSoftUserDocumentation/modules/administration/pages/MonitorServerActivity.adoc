@@ -29,8 +29,9 @@ The following information is available. The ‘Level’ column indicates the mon
 |CPU usage|for all cluster nodes|None
 |Garbage Collection Count|for all cluster nodes|None
 |Garbage Collection Time|for all cluster nodes|None
-|Server uptime| |LOW, MEDIUM, HIGH
-|Scheduler uptime| |LOW, MEDIUM, HIGH
+|Server Uptime| |LOW, MEDIUM, HIGH
+|Scheduler Uptime| |LOW, MEDIUM, HIGH
+|Version Number|StyleBI server version|None
 |Memory cache usage|for  data |MEDIUM, HIGH
 |Execution|for  Dashboards, queries|LOW, MEDIUM, HIGH
 |Disk cache usage|for  data|MEDIUM, HIGH
