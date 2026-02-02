@@ -4,7 +4,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-Returns the visibility setting for the specified toolbar button.
+Returns the visibility setting for the specified toolbar button and associated feature.
 
 == Parameters
 name:: name of toolbar button or export option (String):

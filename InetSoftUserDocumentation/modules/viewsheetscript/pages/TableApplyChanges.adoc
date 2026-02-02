@@ -5,6 +5,8 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 For an *Embedded Table* in a Dashboard, writes the user-modified data into the corresponding Embedded Table in the Data Worksheet. See xref:viewsheet:TableProperties.adoc[] for information on making a Table editable.
 
+NOTE: You do not need to use this function to save Table data if '`Write Back to Storage`' is enabled in xref:viewsheet:TableProperties.adoc[].
+
 
 
 

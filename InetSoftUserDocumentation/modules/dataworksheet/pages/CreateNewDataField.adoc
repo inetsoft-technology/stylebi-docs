@@ -17,7 +17,7 @@ include::ROOT:partial$videoVersion.adoc[]
 video::299108619[vimeo,640,400]
 =====
 
-An *expression column* is a data set column that you define using either JavaScript or SQL (for SQL data sources). The expression is evaluated for each row of the data set. Creating an expression column in a Data Worksheet allows you to reference the field in any  Dashboard that uses the Data Worksheet. SQL expressions can often also be executed more efficiently  (for SQL data sources) than JavaScript expressions.
+An *expression column* is a data set column that you define using either JavaScript or SQL (for SQL data sources). The expression is evaluated for each row of the data set. (You can use the `row` keyword to access the current row number within the expression.) Creating an expression column in a Data Worksheet allows you to reference the field in any  Dashboard that uses the Data Worksheet. SQL expressions can often also be executed more efficiently  (for SQL data sources) than JavaScript expressions.
 
 To add an expression column to a data block, follow the steps below:
 
@@ -52,7 +52,7 @@ If you select the '`Script`' option, *Date*-type fields supply the following dat
 +
 image:dataworksheet:DateParts2.png[]
 +
-TIP: To compute date parts  using a *fiscal calendar*,  use  fiscal functions such as xref:commonscript:CALC_fiscalweek.adoc[CALC_fiscalweek] and xref:commonscript:CALC_fiscalmonth.adoc[CALC_fiscalmonth] in the Formula Editor.
+TIP: To compute date parts  using a *fiscal calendar*,  use  fiscal functions such as xref:commonscript:CALC_fiscalweek.adoc[CALC.fiscalweek] and xref:commonscript:CALC_fiscalmonth.adoc[CALC.fiscalmonth] in the Formula Editor.
 +
 . Press btn:[OK] to close the Editor and create the new column.
 +

@@ -3,10 +3,13 @@
 [WARNING,caption=See Also]
 xref:viewsheet:TableProperties.adoc[] for information on making a table editable.
 
-Saves the data currently loaded in Data Worksheet Embedded Tables associated with the Dashboard. This allows you to store data that a User has manually entered using a Dashboard Embedded Table or Form component that writes to a Data Worksheet Embedded Table.
+Saves the data currently loaded in Data Worksheet Embedded Tables associated with the Dashboard. This allows you to store data that a User has manually entered using a Dashboard Embedded Table or Form component that writes to a Data Worksheet Embedded Table. See xref:viewsheet:TableProperties.adoc[] for information on making a Table editable.
+
+NOTE: You do not need to use this function to save Table data if '`Write Back to Storage`' is enabled in xref:viewsheet:TableProperties.adoc[].
+
 
 == Example
-The script below can be placed in the *onClick* handler of a Submit button. See xref:AddScriptToDashboard.adoc#AddComponentScript[Add Componen Script] for more information.
+The script below can be placed in the *onClick* handler of a Submit button. See xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script] for more information.
 
 [source,javascript]
 ----

@@ -3,9 +3,6 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-
-
-
 Writes a value into the specified row and column of the *Embedded Table*.  See xref:viewsheet:TableProperties.adoc[]  for information on how to make a Table editable.
 
 == Parameter
@@ -13,12 +10,6 @@ tableName::			name of Embedded Table into which to write value
 row::			positive integer row index starting from 0 (header row)
 col::			positive integer col index starting from 0
 value::			value to write
-
-
-
-
-
-
 
 
 == Example
