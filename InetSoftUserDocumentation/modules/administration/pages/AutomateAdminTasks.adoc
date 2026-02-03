@@ -4,6 +4,13 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary — Administration Console Commands Overview
+The Administration Console provides a set of built-in commands for connecting to repositories and managing core server resources.
+Supported commands include repository connection control (:connect, :disconnect), data source management (:datasource, :ds), physical and logical data models (:physicalmodel, :pm, :logicalmodel, :lm), worksheet and viewsheet operations (:worksheet, :ws, :viewsheet, :vs), content file import/export (:files, :file), system setup tasks (:setup, :su), scheduling and job management (:schedule, :sch), and server security configuration (:security, :sec).
+endif::ai[]
+
 InetSoft provides a Groovy DSL that wraps the https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/[public client API]. This makes it easy to automate administration and deployment tasks. The DSL is a wrapper for the interfaces in the https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/inetsoft/enterprise/client/package-summary.html[inetsoft.enterprise.client] package and the data structures in the https://www.inetsoft.com/docs/stylebi/apidoc/enterprise/inetsoft/enterprise/web/api/package-summary.html[inetsoft.enterprise.web.api] package used by those interfaces.
 
 TIP: The Groovy DSL is *not required* to use the client API. The Java API may be used directly from any JVM language. For remote repositories, you can use any language with the public web APIs. The web APIs are RESTful with JSON as the data transfer mechanism. The advantage of using the DSL is that you do not need to configure the classpath when running the client script or application, and the scripts are less verbose.
