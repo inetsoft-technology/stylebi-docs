@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: This document explains how to add and configure a Table, including styling, resizing, aligning, and formatting columns. Most of these operations—especially applying Table Styles—also apply to Crosstab and Freehand table, ensuring consistent formatting across all table types.
+endif::ai[]
+
 [.videotitle]
 .Watch Video: Creating a Dashboard (Add a Table)
 [%collapsible]

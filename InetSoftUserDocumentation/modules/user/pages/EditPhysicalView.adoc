@@ -72,6 +72,12 @@ IMPORTANT: Join paths that are displayed in red indicate the presence of a join 
 [#ResolveLoops]
 == Resolve Loops
 
+// metadata for AI
+ifdef::ai[]
+Summary:
+Explains how join paths are visually represented in a Physical View, where dotted join paths indicate weak joins used to resolve join cycles or join ambiguity, while solid join paths represent normal joins.
+endif::ai[]
+
 [WARNING,caption=see also]
 xref:#IdentifyQueryTraps[] for physical view designs that can cause unexpected results.
 

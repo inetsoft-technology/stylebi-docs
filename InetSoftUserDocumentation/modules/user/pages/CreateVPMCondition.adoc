@@ -4,6 +4,10 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: VPM provides a transparent security layer for relational data, enforcing fine-grained row- and column-level access by automatically filtering queries based on user, role, and group.
+endif::ai[]
 
 You can add a condition to a VPM to filter the rows retrieved from the database tables. Follow the steps below:
 

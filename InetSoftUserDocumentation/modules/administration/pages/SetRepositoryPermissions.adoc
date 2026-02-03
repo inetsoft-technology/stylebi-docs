@@ -2,6 +2,13 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary:
+Repository permissions in StyleBI control which items (folders, dashboards, worksheets, and other assets) are visible and accessible to specific users, roles, or groups.
+These permissions operate independently of data security, ensuring users only see and interact with authorized repository content.
+endif::ai[]
+
 To set permissions for Dashboards,  data sources, multi-tenant connections, repository folders, etc., follow the steps below.  Use the same steps to view existing permissions for any of these assets.
 
 NOTE: Repository folders are logical groupings, and do not represent file system directories.
