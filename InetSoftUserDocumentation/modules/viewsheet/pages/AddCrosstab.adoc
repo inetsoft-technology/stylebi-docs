@@ -44,6 +44,8 @@ TIP: You can change the order of multiple dimensions or measures by dragging the
 +
 TIP: If you want to use a single Form component (e.g., ComboBox) to dynamically set both the measure field and aggregation method, you can enter strings such as `Ave('Total')` or `Sum('Total')` as the values in the Form element,  and then use the Form element as a ‘Variable’ to set the measure in the ‘Aggregates’ panel. (See xref:DynamicallySetProperties.adoc[] for information on how to do this.) With this approach, you also need to press the {buttonEditMeasure} next to the Variable-based measure in the ‘Aggregates’ panel, and set the ‘Aggregate’ property to ‘None’.
 
+. *_Optional:_* To *hide* a particular column, right-click the column in the Crosstab  Editor, and select '`Hide Column`'.  To *show* all hidden columns, right-click any column in the Crosstab  Editor, and select '`Show Columns`'.
+
 . *_Optional:_*  Specify group sorting  and ranking. Follow the steps below:
 +
 [#SortandRank]
