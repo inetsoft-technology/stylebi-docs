@@ -2,6 +2,12 @@
 %experimetal%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary:
+Use form components as user input to dynamically control dashboard behavior,including visual properties, data conditions, variables, and embedded content,without using script.
+endif::ai[]
+
 Every component in a Dashboard has certain properties that can be made *_dynamic_*, or dependent on other components. These properties can be set either by a Form component or by a scripted expression. For example, you can use a RadioButton to specify the Y-axis field in a Chart, or use a logical expression to specify the highlight (conditional format) on cells of a Table.
 
 The following sections explain how you can use Form controls and expressions to parameterize component formatting and data presentation, as well as data filtering.

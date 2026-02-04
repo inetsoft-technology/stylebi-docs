@@ -2,7 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-
+// metadata for AI
+ifdef::ai[]
+Summary:
+Use Dynamic Properties in the dashboard to dynamically update both the appearance and data bindings of charts, including dimensions (grouping fields), measures (metrics), axes, and series, based on user input or selection, without using script.
+endif::ai[]
 
 In addition to using basic chart tools  to explore a chart (see xref:DrillDownIntoData.adoc[]), users can also dynamically modify a chart by changing the fields displayed on the X and Y axes, changing aggregation methods, adding target lines, and so on.
 

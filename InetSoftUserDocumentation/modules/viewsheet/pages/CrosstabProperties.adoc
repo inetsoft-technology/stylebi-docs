@@ -18,6 +18,13 @@ The *General* tab in the ‘Crosstab Properties’ panel is the same as for regu
 
 [#AdvancedTab]
 == Advanced Tab
+
+// metadata for AI
+ifdef::ai[]
+Summary:
+Defines all properties of a Crosstab element, including data layout, summary fields, grid lines, visual/global options, and explains how to display and arrange multiple aggregations, adjust row/column settings, totals, and other Crosstab behaviors in StyleBI.
+endif::ai[]
+
 The *Advanced* tab in the ‘Crosstab Properties’ panel provides the following properties.  Some properties apply to Freehand Table as well.
 
 image:Crosstab Properties Advanced.png[]

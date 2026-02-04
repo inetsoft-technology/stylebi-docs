@@ -4,6 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: VPM provides a transparent security layer for relational data, enforcing fine-grained row- and column-level access by automatically filtering queries based on user, role, and group.
+endif::ai[]
+
 IMPORTANT: VPMs can only be created for relation database data sources.  (See xref:JDBC.adoc[] or  xref:ConnectToDataSource.adoc[] for information on how to configure a relational database data source.)
 
 To create a new VPM, follow the steps below:

@@ -2,6 +2,12 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary:
+Security Actions (Action Permissions) in StyleBI governs access to various UI features and functionalities, such as portal tabs, worksheets, dashboards, and specialized actions like chart types, bookmarks, and SQL editing. Administrators can use these actions to restrict access and visibility based on user roles, ensuring proper security without detailing every individual action.
+endif::ai[]
+
 The procedure for setting object permissions (Actions) is the same for all components.  For example, to set permissions for the ‘Bookmark’ feature, follow the steps below:
 
 . Press the {buttonSettings} at the top of Enterprise Manager.

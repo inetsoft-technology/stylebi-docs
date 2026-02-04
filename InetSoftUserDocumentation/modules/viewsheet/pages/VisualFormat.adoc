@@ -2,6 +2,13 @@
 %experimetal%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary:
+Visual Format defines presentation-level formatting rules for controlling the visual appearance of displayed values and elements in dashboad.
+It supports consistent styling, number formats, and conditional visual rules across different visual levels, including detailed and aggregated results, without affecting data access or permissions.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 * xref:ConditionalFormat.adoc[], to apply visual highlights to data based on conditions.
