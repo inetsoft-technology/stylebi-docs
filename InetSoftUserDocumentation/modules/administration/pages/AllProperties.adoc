@@ -296,7 +296,7 @@ schedule.task.listener:: Specifies the fully-qualified name of a listener class 
 schedule.time.12hours:: When `true`, uses a 12-hour clock for scheduled task conditions. Default is `false` (24-hour clock).
 scheduler.classpath:: The path that will be prepended to the system classpath when the Scheduler process is started.
 scheduleTask.thread.count:: Maximum number of task execution threads in the Scheduler (for ‘cpu’ and ‘session’ keys only). Default is 6 times the CPU count.
-schedule.task.timeout:: The maximum duration in milliseconds for a scheduled task running in a cloud provider. The default is 600000 milliseconds (10 minutes). The timeout ensures that a task job container cannot persist indefinitely and accumulate costs.  When the timeout is reached, the  job container is terminated regardless of whether the task is in a failed state or  running successfully.
+schedule.task.timeout:: The maximum duration in milliseconds for  scheduled tasks and  materialized view creation. Default is 0 (no timeout). The timeout ensures that a task cannot persist   indefinitely.  When the timeout is reached, the job  is terminated regardless of whether the task is in a failed state or running successfully.
 
 == Security Properties
 The following table lists a variety of security properties.  See xref:SpecifySecurityProvider.adoc[] and xref:TailorServerPerformance.adoc[] for related properties.

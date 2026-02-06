@@ -146,6 +146,8 @@ Locale:: Sets the locale for the scheduled task, which configures language and f
 
 
 == Backup Action
+IMPORTANT: The backup action is available only in Enterprise Manager.
+
 A backup action automatically backs up selected assets from the repository on the selected schedule. To create a backup task, follow the steps below:
 
 . Enter a path to the backup file in the ‘Path’ field.
