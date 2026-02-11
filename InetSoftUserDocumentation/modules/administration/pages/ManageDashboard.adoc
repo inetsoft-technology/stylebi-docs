@@ -1,0 +1,253 @@
+= Manage Dashboards
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+Manage Dashboards in script by using the `:viewsheet` or equivalent `:vs` command. See xref:viewsheet:CreateNewDashboard.adoc[] for  information about Dashboards in the User Portal.
+
+
+include::partial$adminConsoleOptionalParams.adoc[]
+
+
+== List Available Dashboards
+The `list` action lists the available Dashboards. {connectRepositoryNote}
+
+=== Parameters
+
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+=== Examples
+[source,groovy]
+--
+// List all Dashboards in environment
+:vs list
+
+// List all Dashboards in organization0
+:vs list --organizationid organization0
+--
+
+
+== List Open Dashboards
+The `list-open` action lists the currently open Dashboards. {connectRepositoryNote}
+
+
+=== Examples
+[source,groovy]
+--
+// List all open Dashboards in environment
+:vs list-open
+--
+
+
+== Get Dashboard Bookmarks
+The `bookmarks` action lists the bookmarks in the specified Dashboard. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Dashboard ID
+
+=== Examples
+[source,groovy]
+--
+// List bookmarks for Census Dashboard
+:vs bookmarks "1^128^__NULL__^Examples/Census^host-org"
+--
+
+==  Open a Dashboard
+The `open` action opens the specified Dashboard. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Dashboard ID
+parameters:: Parameter  values to pass to Dashboard (optional)
+
+
+=== Examples
+[source,groovy]
+--
+// Open Census Dashboard
+:vs open "1^128^__NULL__^Examples/Census"
+
+// Open Census Dashboard with specified parameter
+:vs open "1^128^__NULL__^Examples/Census" numberOfDays 10
+--
+
+== Get Dashboard
+The `get` action obtains a handle to an open Dashboard. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Runtime Dashboard ID
+
+=== Examples
+[source,groovy]
+--
+// Get handle to Dashboard 2
+:vs get 2
+--
+
+
+== Close Dashboard
+The `close` action closes an open     Dashboard. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Runtime Dashboard ID
+
+
+=== Examples
+[source,groovy]
+--
+// Close Dashboard 2
+:vs close 2
+--
+
+==  Mail a Dashboard
+The `mail` action sends a Dashboard to a recipient in the specified format. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Dashboard ID
+format:: Format for the Dashboard attachment ('EXCEL', 'PDF', or 'POWERPOINT').
+recipients:: The email addresses of the recipients. (At least one is required.)
+sender:: The email address of the sender.
+subject:: The subject line of the email.
+message:: The body of the email.
+
+
+
+=== Examples
+[source,groovy]
+--
+// Mail Census Dashboard
+:vs mail "1^128^__NULL__^Examples/Census" 'PDF' 'joe@org1.com' 'me@org2.com' 'very important info' 'This is the Dashboard you requested.'
+--
+
+==  Export a Dashboard
+The `export` action downloads the Dashboard  in the specified format. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Dashboard ID
+format:: Format for the Dashboard file ('EXCEL', 'PDF', or 'POWERPOINT').
+file:: A name for the downloaded file.
+bookmarks:: Array of bookmarks to include in exported Dashboard. (optional)
+
+
+
+=== Examples
+[source,groovy]
+--
+// Export Census Dashboard
+:vs export "1^128^__NULL__^Examples/Census" 'PDF' 'census.pdf' --bookmarks ['bookmark1','bookmark2']
+--
+
+==  Asynchronously Export a Dashboard
+The `async-export` action downloads the Dashboard  in the specified format. The export is non-blocking and the status must be polled to determine when it is complete. (See xref:#GetAsynchronousExportStatus[].) {connectRepositoryNote}
+
+=== Parameters
+
+id:: Dashboard ID
+format:: Format for the Dashboard file ('EXCEL', 'PDF', or 'POWERPOINT').
+bookmarks:: Array of bookmarks to include in exported Dashboard. (optional)
+
+
+=== Examples
+[source,groovy]
+--
+// Export Census dashboard asynchronously
+:vs export "1^128^__NULL__^Examples/Census" 'PDF'  --bookmarks ['bookmark1','bookmark2']
+--
+
+==  Remove an Asynchronous Export Action
+The `remove-export` action removes an existing asynchronous export action, cancelling it if necessary. {connectRepositoryNote}
+
+=== Parameters
+id:: Export ID
+
+=== Examples
+[source,groovy]
+--
+// Remove export "vs-export-1"
+:vs remove-export "vs-export-1"
+--
+
+[#GetAsynchronousExportStatus]
+==  Get Asynchronous Export Status
+The `get-export-status` action returns the status of an asynchronous export as `true` (completed) or `false` (failed). {connectRepositoryNote}
+
+=== Parameters
+id:: Export ID
+
+=== Examples
+[source,groovy]
+--
+// Get status for export "vs-export-1"
+:vs get-export-status "vs-export-1"
+--
+
+
+==  Rename a Dashboard
+The `rename` action renames the specified Dashboard. {connectRepositoryNote}
+
+=== Parameters
+id:: Dashboard ID
+path:: Path for renamed Dashboard
+global:: `true` for global scope, `false` for user scope
+owner:: If `global` is false, the name of the owner (user)
+organizationid:: Organization ID for multi-tenant environment.  (See xref:EnableMultiTenant.adoc[].) (optional)
+
+
+=== Examples
+[source,groovy]
+--
+// Rename Examples/Census to Admin/CensusData
+:vs rename "1^128^__NULL__^Examples/Census^host-org" "Admin/CensusData" false --owner user0 --organizationid organization0
+--
+
+== Delete a Dashboard
+The `delete` action deletes a Dashboard from the repository. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Runtime Dashboard ID
+
+
+=== Examples
+[source,groovy]
+--
+// Delete Examples/Census Dashboard
+:vs delete "1^128^__NULL__^Examples/Census^host-org"
+--
+
+
+== Add a Pinned Dashboard
+The `add-favorite` action adds a pinned dashboard to the Portal for the current user. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Runtime Dashboard ID
+
+
+=== Examples
+[source,groovy]
+--
+// Pin the Census Dashboard
+:vs add-favorite "1^128^__NULL__^Examples/Census^host-org"
+--
+
+== Remove a Pinned Dashboard
+The `remove-favorite` action removes the specified pinned dashboard from  the Portal for the current user. {connectRepositoryNote}
+
+=== Parameters
+
+id:: Runtime Dashboard ID
+
+
+=== Examples
+[source,groovy]
+--
+// Pin the Census Dashboard
+:vs remove-favorite "1^128^__NULL__^Examples/Census^host-org"
+--
