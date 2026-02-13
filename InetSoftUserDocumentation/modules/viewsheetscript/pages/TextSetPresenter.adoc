@@ -6,53 +6,53 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Sets the contents of a Text component to the specified Presenter. Built-in presenters include the following:
 
-[source]
-inetsoft.report.painter.Abstract2DCodePresenter
-inetsoft.report.painter.AbstractBarcodePresenter
-inetsoft.report.painter.Bar2Presenter
-inetsoft.report.painter.Barcode2of7Presenter
-inetsoft.report.painter.Barcode3of9Presenter
-inetsoft.report.painter.BarcodeCodabarPresenter
-inetsoft.report.painter.BarcodeCode39Presenter
-inetsoft.report.painter.BarcodeCode128APresenter
-inetsoft.report.painter.BarcodeCode128BPresenter
-inetsoft.report.painter.BarcodeCode128CPresenter
-inetsoft.report.painter.BarcodeCode128Presenter
-inetsoft.report.painter.BarcodeEAN128Presenter
-inetsoft.report.painter.BarcodeGTINPresenter
-inetsoft.report.painter.BarcodeMonarchPresenter
-inetsoft.report.painter.BarcodeNW7Presenter
-inetsoft.report.painter.BarcodePDF417Presenter
-inetsoft.report.painter.BarcodeSCC14Presenter
-inetsoft.report.painter.BarcodeSINPresenter
-inetsoft.report.painter.BarcodeSSCC18Presenter
-inetsoft.report.painter.BarcodeUCC128Presenter
-inetsoft.report.painter.BarcodeUSD3Presenter
-inetsoft.report.painter.BarcodeUSD4Presenter
-inetsoft.report.painter.BarcodeUSPSPresenter
-inetsoft.report.painter.BarPresenter
-inetsoft.report.painter.BooleanPresenter
-inetsoft.report.painter.BulletGraphPresenter
-inetsoft.report.painter.BulletPainter
-inetsoft.report.painter.ButtonPresenter
-inetsoft.report.painter.CCWRotatePresenter
-inetsoft.report.painter.ComponentPainter
-inetsoft.report.painter.CWRotatePresenter
-inetsoft.report.painter.HeaderPresenter
-inetsoft.report.painter.HTMLPresenter
-inetsoft.report.painter.HTMLSource
-inetsoft.report.painter.IconCounterPresenter
-inetsoft.report.painter.ImagePainter
-inetsoft.report.painter.LegendPresenter
-inetsoft.report.painter.ImagePresenter
-inetsoft.report.painter.PresenterPainter
-inetsoft.report.painter.QRCodePresenter
-inetsoft.report.painter.RotatedPainter
-inetsoft.report.painter.RotatePresenter
-inetsoft.report.painter.RulerPresenter
-inetsoft.report.painter.ShadowPresenter
-inetsoft.report.painter.TrafficLightPresenter
-
+|===
+|inetsoft.report.painter.Abstract2DCodePresenter| Base class for all 2D code presenters.
+|inetsoft.report.painter.AbstractBarcodePresenter|Base class for all barcode presenter.
+|inetsoft.report.painter.Bar2Presenter|Presents a positive or negative number as a horizontal bar. Commonly used in  table cells.
+|inetsoft.report.painter.Barcode2of7Presenter|Displays a string in the Codabar 2 of 7 symbology.
+|inetsoft.report.painter.Barcode3of9Presenter| Displays a string in the Codabar 3 of 9 symbology
+|inetsoft.report.painter.BarcodeCodabarPresenter|Displays a string in the Codabar symbology.
+|inetsoft.report.painter.BarcodeCode39Presenter|Displays a string in the Code 39 symbology.
+|inetsoft.report.painter.BarcodeCode128APresenter|Displays a string in the Code 128A symbology.
+|inetsoft.report.painter.BarcodeCode128BPresenter|Displays a string in the Code 128B symbology.
+|inetsoft.report.painter.BarcodeCode128CPresenter|Displays a string in the Code 128C symbology.
+|inetsoft.report.painter.BarcodeCode128Presenter|Displays a string in the Code 128 symbology.
+|inetsoft.report.painter.BarcodeEAN128Presenter|Displays a string in the  EAN128  symbology.
+|inetsoft.report.painter.BarcodeGTINPresenter|Displays a string in the GTIN symbology.
+|inetsoft.report.painter.BarcodeMonarchPresenter|Displays a string in the Monarch  symbology.
+|inetsoft.report.painter.BarcodeNW7Presenter|Displays a string in the NW7  symbology.
+|inetsoft.report.painter.BarcodePDF417Presenter|Displays a string in the PDF417  symbology.
+|inetsoft.report.painter.BarcodeSCC14Presenter|Displays a string in the SCC14   symbology.
+|inetsoft.report.painter.BarcodeSINPresenter|Displays a string in the SIN  symbology.
+|inetsoft.report.painter.BarcodeSSCC18Presenter|Displays a string in the SSCC18  symbology.
+|inetsoft.report.painter.BarcodeUCC128Presenter|Displays a string in the UCC128  symbology.
+|inetsoft.report.painter.BarcodeUSD3Presenter|Displays a string in the USD3  symbology.
+|inetsoft.report.painter.BarcodeUSD4Presenter|Displays a string in the USD4  symbology.
+|inetsoft.report.painter.BarcodeUSPSPresenter|Displays a string in the USPS  symbology.
+|inetsoft.report.painter.BarPresenter|Presents a *positive* number as a horizontal bar. Commonly used in table cells.
+|inetsoft.report.painter.BooleanPresenter|Presents the value of boolean data as two different icons: By default, a check mark is used to represent the `true` value, and an empty box is used to represent the `false` value.  You can supply alternate icons if needed. Often  used in a table to display boolean values as check marks.
+|inetsoft.report.painter.BulletGraphPresenter|Displays a bullet graph, which is similar to a gauge but has a simpler look-and-feel.
+|inetsoft.report.painter.BulletPainter|NA
+|inetsoft.report.painter.ButtonPresenter|Displays a string value inside a 3D button border.
+|inetsoft.report.painter.CCWRotatePresenter|Rotates text 90 degrees counterclockwise in a table cell.
+|inetsoft.report.painter.ComponentPainter|Wraps around an AWT component and provides a Painter object that is suitable to be used in the Dashboard. By default, the painter calls `Component.paintAll()` for lightweight components and calls `Component.printAll()` for heavyweight components. However,  these  methods may not work for all  components. If the default method does not work for a component, the application can supply  a different printing method: `printAll()`,  `paintAll()`, `print()`, or `paint()`.  See {InetsoftComponentPainter} for more details.
+|inetsoft.report.painter.CWRotatePresenter|Rotates text 90 degrees clockwise in a table cell.
+|inetsoft.report.painter.HeaderPresenter|Displays a table header cell with two or three labels separated by diagonal lines.
+|inetsoft.report.painter.HTMLPresenter|Displays basic HTML.
+|inetsoft.report.painter.HTMLSource|NA.
+|inetsoft.report.painter.IconCounterPresenter|Presents an integer  as a number of icons,  commonly used for ratings or other small scale numbers. A custom image can be used.
+|inetsoft.report.painter.ImagePainter|NA.
+|inetsoft.report.painter.LegendPresenter|NA
+|inetsoft.report.painter.ImagePresenter|Displays a basic image.
+|inetsoft.report.painter.PresenterPainter|NA
+|inetsoft.report.painter.QRCodePresenter|Displays a string as the QR code.
+|inetsoft.report.painter.RotatedPainter|Rotates a painter output 90 degrees clockwise.
+|inetsoft.report.painter.RotatePresenter|Rotates text in a table cell.
+|inetsoft.report.painter.RulerPresenter|Draws a ruler (coordinate axis) which can display a value.
+|inetsoft.report.painter.ShadowPresenter|Displays a string value inside a 3D shadow border.
+|inetsoft.report.painter.TrafficLightPresenter|Displays an integer number as one of the following colors based on its range: red, yellow, or green. By default,  high range uses the red light.
+|===
 
 
 == Parameters
