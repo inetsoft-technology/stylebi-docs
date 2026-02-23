@@ -41,6 +41,10 @@ This creates a new scheduled task that will automatically generate and email the
 
 [#SetAlert]
 == Set an Alert
+
+[WARNING,caption=see also]
+xref:viewsheetscript:ChartHighlighted.adoc[Chart.highlighted], xref:viewsheetscript:TableHighlighted.adoc[Table.highlighted], xref:viewsheetscript:ImageHighlighted.adoc[Image.highlighted], xref:viewsheetscript:TextHighlighted.adoc[Text.highlighted] to determine in Dashboard script whether an highlight has been applied or not.
+
 An *alert* is a notification that a specified *data event* has occurred, for example, that total sales have fallen below some critical level. You can set an alert based on highlight conditions in a Dashboard, or based on Dashboard Gauge ranges.
 
 To configure an alert for a Dashboard, follow the steps below:

@@ -17,52 +17,60 @@ Sets the visibility/accessibility of end-user Chart features. To disable a featu
 name::			name of chart function (String):
 +
 .Dragging
-[source]
-'AxisResize' (drag to resize axis)
-'LegendResize' (drag to resize legend)
-'LegendMove' (drag to move legend)
+[cols="1,3"]
+|===
+|`'AxisResize'` |Enable or disable dragging to resize axis
+|`'LegendResize'` |Enable or disable resizing legend
+|`'LegendMove'`| Enable or disable moving legend
+|===
+
 +
 .Buttons
-[source]
-'Brush'
-'Clear Brushing'
-'Edit'
-'Maximize'
-'Show Data' (Show Summary Data)
-'Show Details'
-'Zoom'
-'Exclude Data'
-'Clear Zoom'
-'Enable Manual Refresh'
-'Enable Auto Refresh'
-'Refresh'
-'Drill Down Filter'
-'Hide MiniToolbar'
-'Menu Actions' ('More' button)
-'Sort Axis' (button next to axis)
+[cols="1,3"]
+|===
+|`'Brush'`| Enable or disable the {buttonChartBrush}
+|`'Clear Brushing'`| Enable or disable the {buttonChartClearBrush}
+|`'Edit'`| Enable or disable the {buttonEdit} for Chart Editor
+|`'Maximize'`| Enable or disable the {buttonChartShowEnlarged}
+|`'Show Data'` | Enable or disable the {buttonShowSummary}
+|`'Show Details'`| Enable or disable the {buttonShowDetails}
+|`'Zoom'`| Enable or disable the {buttonZoom}
+|`'Exclude Data'`| Enable or disable the {buttonChartExclude}
+|`'Clear Zoom'`| Enable or disable the {buttonChartClearZoom}
+|`'Enable Manual Refresh'`| Enable or disable the '`Enable Manual Refresh`' button in the Ad Hoc Chart Editor
+|`'Enable Auto Refresh'`| Enable or disable the '`Enable Auto Refresh`' button in the Ad Hoc Chart Editor
+|`'Refresh'`| Enable or disable the {buttonRefresh} in the Ad Hoc Chart Editor
+|`'Drill Down Filter'`| Enable or disable the {buttonDrillDownFilter}
+|`'Hide MiniToolbar'`| Enable or disable the Chart mini-toolbar
+|`'Menu Actions'` | Enable or disable the {buttonMore}
+|`'Sort Axis'`| Enable or disable the {buttonSort} for the axis
+|===
 
 +
 .Right-click menu options
-[source]
-'Resize Plot'
-'Properties'
-'Format'
-'Save Image As'
-'Annotate Component'
-'Annotate Point'
-'Axis Properties'
-'Hide Axis'
-'Title Properties'
-'Hide Title'
-'Group'
-'Filter'
-'Ungroup'
-'Rename'
-'Legend Properties'
-'Hide Legend'
-'Show All Titles'
-'Show All Axes'
-'Show Legend'
+[cols="1,3"]
+|===
+|`'Resize Plot'`| '`Resize`' Plot right-click menu option
+|`'Properties'`|'`Properties`' right-click menu option
+|`'Format'`|'`Format`' right-click menu option
+|`'Save Image As'`|'`Save Image As`' right-click menu option
+|`'Annotate Component'`|'`Annotate Component`' right-click menu option
+|`'Annotate Point'`|'`Annotate Point`' right-click menu option
+|`'Axis Properties'`|'`Axis Properties`' right-click menu option
+|`'Hide Axis'`|'`Hide Axis`' right-click menu option
+|`'Title Properties'`|'`Title Properties`' right-click menu option
+|`'Hide Title'`|'`Hide Title`' right-click menu option
+|`'Group'`|'`Group`' right-click menu option
+|`'Filter'`|'`Filter`' right-click menu option
+|`'Ungroup'`|'`Ungroup`' right-click menu option
+|`'Rename'`|'`Rename`' right-click menu option
+|`'Legend Properties'`|'`Legend Properties`' right-click menu option
+|`'Hide Legend'`|'`Hide Legend`' right-click menu option
+|`'Show All Titles'`|'`Show All Titles`' right-click menu option
+|`'Show All Axes'`|'`Show All Axes`' right-click menu option
+|`'Show Legend'`|'`Show Legend`' right-click menu option
+|===
+
 
 Boolean:: `false`: hide the specified function +
 `true`: show the specified function
@@ -79,7 +87,7 @@ Chart1.setActionVisible("Show Details", false);
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-setActionVisible               // unqualified
+setActionVisible           // unqualified
 Chart1.setActionVisible    // qualified
 
 {secondForm}

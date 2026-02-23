@@ -8,7 +8,8 @@ include::ROOT:partial$buttonSnippets.adoc[]
 xref:viewsheet:ConditionalFormat.adoc[] for basic information on highlights.
 ====
 
-Identifies whether a highlight with the specified name has been applied to the Image (i.e., whether the highlight condition has been satisfied.)
+Identifies whether a highlight with the specified name has been applied to the Image (i.e., whether the highlight condition has been satisfied.) You can use this to alert the user that a highlight has been triggered.
+
 
 == Parameter
 name::			name of the highlight

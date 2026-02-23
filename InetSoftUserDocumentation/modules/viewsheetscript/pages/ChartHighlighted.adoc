@@ -14,7 +14,7 @@ If the highlight has a space in the name, e.g., “highlight 1”, use the follo
 
  highlighted['highlight 1']
 
-
+You can use this to alert the user that a highlight has been triggered.
 
 == Type
 Boolean:: `true`: highlight applied +

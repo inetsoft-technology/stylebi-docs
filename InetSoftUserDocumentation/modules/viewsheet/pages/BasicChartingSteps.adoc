@@ -40,7 +40,8 @@ In some cases you may need to use a dimension as a measure, or a measure as a di
 
 include::partial$chartNewbieTip.adoc[]
 
-
+include::partial$availableToEndUsers.adoc[]
+See xref:EndUserChartControl.adoc[] for information about how to make the Ad Hoc Chart Editor available to end users. In the Ad Hoc Chart Editor, press the '`Enable Manual Refresh`' button in the mini-toolbar to update the chart only when the {buttonRefresh} button is pressed.  Press the '`Enable Auto Refresh`' button to update the Chart when any changes are made in the Editor.
 
 . *_Optional:_*  Set the style of the chart. To do this, press the {buttonSelectChartStyle}. Choose a desired style, such as ‘Line’ or ‘Bar’, and press the {buttonApply}.
 +
