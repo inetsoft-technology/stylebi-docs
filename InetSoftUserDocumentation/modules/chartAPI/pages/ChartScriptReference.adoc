@@ -1,4 +1,24 @@
 = Chart Script Reference
 
 
-The topics in this Reference describe JavaScript objects and properties   available for use in Chart scripts. See xref:chartAPI:ChartScriptTutorial.adoc[] for guidance on how to use these functions.
+The topics in this Reference describe Chart API JavaScript objects and properties   available for use in Chart scripts. See xref:chartAPI:ChartScriptTutorial.adoc[] for guidance on how to use these functions.
+
+[square]
+* xref:chartAPI:ObjectHierarchy.adoc[]
+* xref:chartAPI:BasicChartProperties.adoc[]
+* xref:chartAPI:ChartElements.adoc[]
+* xref:chartAPI:ChartCoordinates.adoc[]
+* xref:chartAPI:ChartAesthetics.adoc[]
+* xref:chartAPI:ChartAnnotation.adoc[]
+* xref:chartAPI:UtilityObjects.adoc[]
+
+[IMPORTANT]
+====
+Charts are unique among all  components in that you can access many Chart properties via both simple script properties and low-level Chart API methods.
+
+[square]
+* For information on low-level Chart API methods, see the sections above. The API provides full control over all aspects of Chart data and presentation, but may yield more complex and verbose scripts.
+* For information on using simple scriptable Chart properties, see xref:viewsheetscript:Chart.adoc[].  This approach produces scripts that are easier to read and maintain.
+
+Note that scripted Charts are not good candidates for user-modification, so you should *deselect* ‘Enable Ad Hoc Editing’ in the Chart Properties dialog box.
+====

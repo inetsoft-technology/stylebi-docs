@@ -2,7 +2,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-There are three levels at which you can attach script in a Dashboard:
+If you need to modify a Dashboard at runtime, or implement  more complex business logic, you can add script to your Dashboard. There are three levels at which you can attach script in a Dashboard:
 
 Property level:: Attach script as a property expression to dynamically modify property values (e.g., visibility, color, etc.) of the host component. See xref:#AddPropertyScript[].
 
@@ -10,6 +10,17 @@ Component level:: Attach script to an individual component (Chart, Gauge, etc.) 
 Dashboard level:: Attach script in one of two global domains, the *onInit* handler or the *onRefresh* handler. See xref:#AddDashboardScript[] for more information.
 
 The following sections explain how and where you can add script to your Dashboard.
+
+[IMPORTANT]
+====
+Charts are unique among all  components in that you can access many Chart properties via both simple script properties and low-level Chart API methods.
+
+[square]
+* For information on using simple scriptable Chart properties, see xref:Chart.adoc[].  This approach produces scripts that are easier to read and maintain.
+* For information on low-level Chart API methods, see xref:chartAPI:ChartScriptReference.adoc[]. The API provides full control over all aspects of Chart data and presentation, but may yield more complex and verbose scripts.
+
+Note that scripted Charts are not good candidates for user-modification, so you should *deselect* ‘Enable Ad Hoc Editing’ in the Chart Properties dialog box for scripted Charts.
+====
 
 == Script Evaluation Order
 Unlike conventional JavaScript on web pages, JavaScript that you embed in a Dashboard is executed as part of the Dashboard generation process on the server, not the client browser. However, scripts can control client-side interactions through event handlers and hyperlinks. The overall sequence of Dashboard script evaluation is as follows.
@@ -34,6 +45,8 @@ To permit scripts to access Java packages other than those listed, an administra
 You can enter a script in any property field that provides the {buttonValueType} with an ‘Expression’ option.
 
 image:viewsheet:Expression Select Popup.png[]
+
+This is especially useful when you want to automatically and dynamically adjust a property based on some other option that the user selects.  *Example:* If the user selects a particular measure for a Chart from a ComboBox (e.g., '`Products Sold`'), use the {buttonValueType} with  ‘Expression’ option for  measure`'s '`Aggregate`' property to add script to that returns an appropriate summarization method (e.g., '`Count`') for the '`Aggregate`' property.
 
 To add a script to a component expression field, follow the steps below:
 
