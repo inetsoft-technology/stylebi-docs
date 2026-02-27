@@ -2,19 +2,39 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-The following sections explain how to  group and aggregate data in a Data Worksheet. When you perform grouping and aggregation in a Data Worksheet, *_only_* the aggregated data will be available for further manipulation and presentation. This approach may be most efficient when you want to use the aggregated data across many Dashboards.
+Grouping and aggregation,  also known as summarization, is an essential part of presenting information to business audiences.  By use of effective grouping and aggregation, you can reduce massive datasets to a handful of key trends and indicators, facilitating business  insight and action.  The sections below explain how to effectively aggregate your data.
 
+== Where to Group and Aggregate
+You can group and aggregate data at the  data pipeline level (Data Worksheet) or presentation level (Dashboard).
 
-[NOTE]
-====
-To preserve the flexibility of presenting both the detail and aggregated data, you can perform the aggregation at the Dashboard level. To group and aggregate data in a Dashboard, see the sections below in xref:viewsheet:VisualizeYourData.adoc[].
-
+Data Worksheet Level::
+To group and aggregate data at the Data Worksheet level, see the sections below.
++
 [square]
-* To group and aggregate data in  chart, see xref:viewsheet:GroupDataByDimension.adoc[].
-* To group and aggregate data in a  crosstab, see xref:viewsheet:AddTable.adoc[].
-* To group and aggregate data as a  KPI, see xref:viewsheet:AddAKPI.adoc[].
-====
+* xref:#GroupAggregateRegularDataBlock[]
+* xref:#GroupandAggregateCrosstabDataBlock[]
+* xref:#GroupDatabyNumericRange[]
+* xref:#GroupDatabyDateRange[]
+* xref:#NamedGrouping[]
 
++
+When you perform grouping and aggregation in a Data Worksheet, *_only_* the aggregated data will be available for further manipulation and presentation. This approach may be most efficient when you want to use the aggregated data across many Dashboards.
+
+
+Dashboard Level::
+To group and aggregate data at the Dashboard level, see the following sections in xref:viewsheet:VisualizeYourData.adoc[]. This provides the user with the greatest flexibility to adjust the grouping and aggregation to suit their needs.
+[square]
+* To group and aggregate data in  Chart, see xref:viewsheet:GroupDataByDimension.adoc[].
+* To group and aggregate data in a  crosstab, see xref:viewsheet:AddCrosstab.adoc[].
+* To group and aggregate data as a  KPI, see xref:viewsheet:AddAKPI.adoc[].
+
+
+
+
+
+
+
+[#GroupAggregateRegularDataBlock]
 == Group and Aggregate in a Regular Data Block
 
 [.videotitle]
