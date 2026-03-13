@@ -1,0 +1,33 @@
+= axis.increment
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Sets the numerical increment for measure axis labels.
+include::partial$axisShortcut.adoc[]
+
+== Type
+number
+
+
+
+
+== Example
+[source,javascript]
+Chart1.axis['Sum(Product:Total)'].increment = 300000
+
+image:commonscript:axisIncrement.png[]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].increment             // unqualified
+Chart1.axis['...'].increment      // qualified
+
+{secondForm}
+====
+
