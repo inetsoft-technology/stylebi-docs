@@ -285,5 +285,27 @@ class Viewsheet_Spec extends Specification {
       vsScriptTest.compareImage()    
    }      
    
+   def 'TestCase-ShapeFormSetRotation1' () {
+      given:
+      VSScriptTest.importAssets("ShapeFormSetRotation1.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/ShapeFormSetRotation1^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('ShapeFormSetRotation1', 'ShapeFormSetRotation1.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()
+   }
+
+   def 'TestCase-ShapeFormSetRotation2' () {
+      given:
+      VSScriptTest.importAssets("ShapeFormSetRotation2.zip")
+
+      when:
+      vsScriptTest = new VSScriptTest('1^128^__NULL__^DocScriptExamples/ShapeFormSetRotation2^host-org', specificationContext.currentIteration.name)
+      vsScriptTest.printVS('ShapeFormSetRotation2', 'ShapeFormSetRotation2.js', 'Chart1', ['Chart1'] as String[])
+      then:
+      vsScriptTest.compareImage()
+   }
+
    static VSScriptTest vsScriptTest
 }

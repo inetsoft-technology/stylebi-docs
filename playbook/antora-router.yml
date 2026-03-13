@@ -702,6 +702,37 @@ routes:
   CalendarYearView: InetSoftUserDocumentation:viewsheetscript:CalendarYearView.adoc
   ChartGetTextID: InetSoftUserDocumentation:viewsheetscript:ChartGetTextID.adoc
   ChartGraph: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphAddElement: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphAddForm: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphClearElements: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphClearForms: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphCoordinate: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetCoordinate: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetElement: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetElementCount: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetForm: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetFormCount: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetLegendLayout: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetLegendPreferredSize: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetScale: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetVisualFrames: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetX2TitleSpec: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetXTitleSpec: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetY2TitleSpec: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphGetYTitleSpec: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphLegendLayout: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphLegendPreferredSize: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphRemoveElement: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphRemoveForm: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphSetLegendLayout: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphSetLegendPreferredSize: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphSetScale: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphSetX2TitleSpec: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphSetYTitleSpec: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphX2TitleSpec: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphXTitleSpec: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphY2TitleSpec: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
+  ChartGraphYTitleSpec: InetSoftUserDocumentation:viewsheetscript:ChartGraph.adoc
   ChartQuery: InetSoftUserDocumentation:viewsheetscript:ChartQuery.adoc
   ChartSetHyperlink: InetSoftUserDocumentation:viewsheetscript:ChartSetHyperlink.adoc
   ChartSetTextID: InetSoftUserDocumentation:viewsheetscript:ChartSetTextID.adoc
@@ -725,7 +756,10 @@ routes:
   ChartTipView: InetSoftUserDocumentation:viewsheetscript:ChartTipView.adoc
   ChartTitle: InetSoftUserDocumentation:viewsheetscript:ChartTitle.adoc
   ChartTooltip: InetSoftUserDocumentation:viewsheetscript:ChartTooltip.adoc
+  ChartToolTip: InetSoftUserDocumentation:viewsheetscript:ChartTooltip.adoc
   ChartTooltipVisible: InetSoftUserDocumentation:viewsheetscript:ChartTooltipVisible.adoc
+  ChartColorField: InetSoftUserDocumentation:viewsheetscript:ChartColorField.adoc
+  ChartGlossyEffect: InetSoftUserDocumentation:viewsheetscript:ChartGlossyEffect.adoc
   ChartAxisFont: InetSoftUserDocumentation:viewsheetscript:ChartAxisFont.adoc
   ChartAxisFormat: InetSoftUserDocumentation:viewsheetscript:ChartAxisFormat.adoc
   ChartAxisLabelColor: InetSoftUserDocumentation:viewsheetscript:ChartAxisLabelColor.adoc
@@ -737,6 +771,13 @@ routes:
   ChartAxisSetLabelAlias: InetSoftUserDocumentation:viewsheetscript:ChartAxisSetLabelAlias.adoc
   ChartAxisTicksVisible: InetSoftUserDocumentation:viewsheetscript:ChartAxisTicksVisible.adoc
   ChartAxisTruncate: InetSoftUserDocumentation:viewsheetscript:ChartAxisTruncate.adoc
+  ChartAxisIncrement: InetSoftUserDocumentation:viewsheetscript:ChartAxisIncrement.adoc
+  ChartAxisLogarithmic: InetSoftUserDocumentation:viewsheetscript:ChartAxisLogarithmic.adoc
+  ChartAxisMaximum: InetSoftUserDocumentation:viewsheetscript:ChartAxisMaximum.adoc
+  ChartAxisMinimum: InetSoftUserDocumentation:viewsheetscript:ChartAxisMinimum.adoc
+  ChartAxisMinorIncrement: InetSoftUserDocumentation:viewsheetscript:ChartAxisMinorIncrement.adoc
+  ChartAxisReversed: InetSoftUserDocumentation:viewsheetscript:ChartAxisReversed.adoc
+  ChartAxisSharedRange: InetSoftUserDocumentation:viewsheetscript:ChartAxisSharedRange.adoc
   MeasureAxisIncrement: InetSoftUserDocumentation:viewsheetscript:MeasureAxisIncrement.adoc
   MeasureAxisLogarithmic: InetSoftUserDocumentation:viewsheetscript:MeasureAxisLogarithmic.adoc
   MeasureAxisMaximum: InetSoftUserDocumentation:viewsheetscript:MeasureAxisMaximum.adoc
@@ -764,6 +805,15 @@ routes:
   AxisY2TitleRotation: InetSoftUserDocumentation:viewsheetscript:AxisY2TitleRotation.adoc
   AxisY2TitleText: InetSoftUserDocumentation:viewsheetscript:AxisY2TitleText.adoc
   AxisY2TitleVisible: InetSoftUserDocumentation:viewsheetscript:AxisY2TitleVisible.adoc
+  ChartX2TitleFont: InetSoftUserDocumentation:viewsheetscript:ChartX2TitleFont.adoc
+  ChartX2TitleRotation: InetSoftUserDocumentation:viewsheetscript:ChartX2TitleRotation.adoc
+  ChartX2TitleText: InetSoftUserDocumentation:viewsheetscript:ChartX2TitleText.adoc
+  ChartX2TitleVisible: InetSoftUserDocumentation:viewsheetscript:ChartX2TitleVisible.adoc
+  ChartYTitleColor: InetSoftUserDocumentation:viewsheetscript:ChartYTitleColor.adoc
+  ChartYTitleFont: InetSoftUserDocumentation:viewsheetscript:ChartYTitleFont.adoc
+  ChartYTitleRotation: InetSoftUserDocumentation:viewsheetscript:ChartYTitleRotation.adoc
+  ChartYTitleText: InetSoftUserDocumentation:viewsheetscript:ChartYTitleText.adoc
+  ChartYTitleVisible: InetSoftUserDocumentation:viewsheetscript:ChartYTitleVisible.adoc
   PlotAddConfidenceIntervalTarget: InetSoftUserDocumentation:viewsheetscript:PlotAddConfidenceIntervalTarget.adoc
   PlotAddPercentageTarget: InetSoftUserDocumentation:viewsheetscript:PlotAddPercentageTarget.adoc
   PlotAddPercentileTarget: InetSoftUserDocumentation:viewsheetscript:PlotAddPercentileTarget.adoc
@@ -882,6 +932,8 @@ routes:
   PlotZoomLevel: InetSoftUserDocumentation:viewsheetscript:PlotZoomLevel.adoc
   PlotWordCloudFontScale: InetSoftUserDocumentation:viewsheetscript:PlotWordCloudFontScale.adoc 
   PlotDateComparisonEnabled: InetSoftUserDocumentation:viewsheetscript:PlotDateComparisonEnabled.adoc   
+  ChartBindingInfo: InetSoftUserDocumentation:viewsheetscript:ChartBindingInfo.adoc
+  ChartBindingInfoColorFrame: InetSoftUserDocumentation:viewsheetscript:ChartBindingInfoColorframe.adoc
   ChartBindingInfoAddMapping: InetSoftUserDocumentation:viewsheetscript:ChartBindingInfoAddMapping.adoc
   ChartBindingInfoBreakdownFields: InetSoftUserDocumentation:viewsheetscript:ChartBindingInfoBreakdownFields.adoc
   ChartBindingInfoColorframe: InetSoftUserDocumentation:viewsheetscript:ChartBindingInfoColorframe.adoc
@@ -982,7 +1034,9 @@ routes:
   CrosstabQuery: InetSoftUserDocumentation:viewsheetscript:CrosstabQuery.adoc
   CrosstabSetActionVisible: InetSoftUserDocumentation:viewsheetscript:CrosstabSetActionVisible.adoc
   CrosstabSummarySideBySide: InetSoftUserDocumentation:viewsheetscript:CrosstabSummarySideBySide.adoc
-  CrosstabSortOthersLast: InetSoftUserDocumentation:viewsheetscript:CrosstabSortOthersLast.adoc  
+  CrosstabSortOthersLast: InetSoftUserDocumentation:viewsheetscript:CrosstabSortOthersLast.adoc
+  CrosstabBindingInfo: InetSoftUserDocumentation:viewsheetscript:CrosstabBindingInfo.adoc
+  CrosstabTipAlpha: InetSoftUserDocumentation:viewsheetscript:TableTipAlpha.adoc
   FreehandTableFillBlankWithZero: InetSoftUserDocumentation:viewsheetscript:FreehandTableFillBlankWithZero.adoc
   FreehandTableKeepRowHeightOnPrint: InetSoftUserDocumentation:viewsheetscript:FreehandTableKeepRowHeightOnPrint.adoc  
   FreehandTableLayoutInfo: InetSoftUserDocumentation:viewsheetscript:FreehandTableLayoutInfo.adoc
@@ -1029,12 +1083,14 @@ routes:
   ImageTooltip: InetSoftUserDocumentation:viewsheetscript:ImageTooltip.adoc
   ImageTooltipVisible: InetSoftUserDocumentation:viewsheetscript:ImageTooltipVisible.adoc
   ImageValue: InetSoftUserDocumentation:viewsheetscript:ImageValue.adoc
+  ImagePopCompoonent: InetSoftUserDocumentation:viewsheetscript:ImagePopComponent.adoc
   LineBeginArrowStyle: InetSoftUserDocumentation:viewsheetscript:LineBeginArrowStyle.adoc
   LineEndArrowStyle: InetSoftUserDocumentation:viewsheetscript:LineEndArrowStyle.adoc
   LineLineStyle: InetSoftUserDocumentation:viewsheetscript:LineLineStyle.adoc
   OvalGradientColor: InetSoftUserDocumentation:viewsheetscript:OvalGradientColor.adoc
   OvalLineStyle: InetSoftUserDocumentation:viewsheetscript:OvalLineStyle.adoc
   OvalShadow: InetSoftUserDocumentation:viewsheetscript:OvalShadow.adoc
+  OvalShadlow: InetSoftUserDocumentation:viewsheetscript:OvalShadow.adoc
   RangeSliderComposite: InetSoftUserDocumentation:viewsheetscript:RangeSliderComposite.adoc
   RangeSliderCurrentVisible: InetSoftUserDocumentation:viewsheetscript:RangeSliderCurrentVisible.adoc
   RangeSliderFields: InetSoftUserDocumentation:viewsheetscript:RangeSliderFields.adoc
@@ -1102,6 +1158,8 @@ routes:
   SubmitButtonRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
   TabbedInterfaceLabels: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceLabels.adoc
   TabbedInterfaceSelectedIndex: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceSelectedIndex.adoc
+  TabLabels: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceLabels.adoc
+  TabSelectedIndex: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceSelectedIndex.adoc
   TableAppendRow: InetSoftUserDocumentation:viewsheetscript:TableAppendRow.adoc
   TableApplyChanges: InetSoftUserDocumentation:viewsheetscript:TableApplyChanges.adoc
   TableCol: InetSoftUserDocumentation:viewsheetscript:TableCol.adoc
@@ -1132,6 +1190,7 @@ routes:
   TableSetCellValue: InetSoftUserDocumentation:viewsheetscript:TableSetCellValue.adoc
   TableSetColumnWidth: InetSoftUserDocumentation:viewsheetscript:TableSetColumnWidth.adoc
   TableSetColumnWidthAll: InetSoftUserDocumentation:viewsheetscript:TableSetColumnWidthAll.adoc
+  setColumnWidthAll: InetSoftUserDocumentation:viewsheetscript:TableSetColumnWidthAll.adoc
   TableSetHyperlink: InetSoftUserDocumentation:viewsheetscript:TableSetHyperlink.adoc
   TableSetObject: InetSoftUserDocumentation:viewsheetscript:TableSetObject.adoc
   TableSetPresenter: InetSoftUserDocumentation:viewsheetscript:TableSetPresenter.adoc
@@ -1143,6 +1202,9 @@ routes:
   TableTableSize: InetSoftUserDocumentation:viewsheetscript:TableTableSize.adoc
   TableTableLens: InetSoftUserDocumentation:viewsheetscript:TableTableLens.adoc
   TableStyle: InetSoftUserDocumentation:viewsheetscript:TableStyle.adoc
+  TableDataPath: InetSoftUserDocumentation:viewsheetscript:TableDataLength.adoc
+  TableTabblelens: InetSoftUserDocumentation:viewsheetscript:TableTableLens.adoc
+  TableTableStyle: InetSoftUserDocumentation:viewsheetscript:TableStyle.adoc
   TableTipAlpha: InetSoftUserDocumentation:viewsheetscript:TableTipAlpha.adoc
   TableTipView: InetSoftUserDocumentation:viewsheetscript:TableTipView.adoc
   TableValue: InetSoftUserDocumentation:viewsheetscript:TableValue.adoc
@@ -1163,6 +1225,7 @@ routes:
   TextTooltip: InetSoftUserDocumentation:viewsheetscript:TextTooltip.adoc
   TextTooltipVisible: InetSoftUserDocumentation:viewsheetscript:TextTooltipVisible.adoc
   TextValue: InetSoftUserDocumentation:viewsheetscript:TextValue.adoc
+  TextScaledSize: InetSoftUserDocumentation:viewsheetscript:CommonScaledSize.adoc
   TextInputDefaultText: InetSoftUserDocumentation:viewsheetscript:TextInputDefaultText.adoc
   TextInputPlaceholderText: InetSoftUserDocumentation:viewsheetscript:TextInputPlaceholderText.adoc
   TextInputSubmitOnChange: InetSoftUserDocumentation:viewsheetscript:TextInputSubmitOnChange.adoc
@@ -1175,8 +1238,21 @@ routes:
   ThisViewsheetUpdateTime: InetSoftUserDocumentation:viewsheetscript:thisViewsheetUpdateTime.adoc
   ThisViewsheetViewsheetAlias: InetSoftUserDocumentation:viewsheetscript:thisViewsheetViewsheetAlias.adoc
   ThisViewsheetViewsheetName: InetSoftUserDocumentation:viewsheetscript:thisViewsheetViewsheetName.adoc
-  ThisViewsheetViewsheetPath: InetSoftUserDocumentation:viewsheetscript:thisViewsheetViewsheetPath.adoc 
+  ThisViewsheetViewsheetPath: InetSoftUserDocumentation:viewsheetscript:thisViewsheetViewsheetPath.adoc
+  thisViewsheetIsActionVisible: InetSoftUserDocumentation:viewsheetscript:thisViewsheetIsActionVisible.adoc
+  thisViewsheetScheduleAction: InetSoftUserDocumentation:viewsheetscript:thisViewsheetScheduleAction.adoc
+  thisViewsheetSetActionVisible: InetSoftUserDocumentation:viewsheetscript:thisViewsheetSetActionVisible.adoc
+  thisViewsheetTaskName: InetSoftUserDocumentation:viewsheetscript:thisViewsheetTaskName.adoc
+  thisViewsheetUpdateTime: InetSoftUserDocumentation:viewsheetscript:thisViewsheetUpdateTime.adoc
+  thisViewsheetViewsheetAlias: InetSoftUserDocumentation:viewsheetscript:thisViewsheetViewsheetAlias.adoc
+  thisViewsheetViewsheetName: InetSoftUserDocumentation:viewsheetscript:thisViewsheetViewsheetName.adoc
+  thisViewsheetViewsheetPath: InetSoftUserDocumentation:viewsheetscript:thisViewsheetViewsheetPath.adoc
   CreateScriptFunction: InetSoftUserDocumentation:viewsheetscript:CreateScriptFunction.adoc
+  Dataset: InetSoftUserDocumentation:chartAPI:Dataset.adoc
+  VSPropertiesBorderColors: InetSoftUserDocumentation:viewsheetscript:CommonBorderColors.adoc
+  VSPropertiesScaledPosition: InetSoftUserDocumentation:viewsheetscript:CommonScaledPosition.adoc
+  VSPropertiesScaledSize: InetSoftUserDocumentation:viewsheetscript:CommonScaledSize.adoc
+  VSPropertiesTitleVisible: InetSoftUserDocumentation:viewsheetscript:CommonTitleVisible.adoc
   42Matters: InetSoftUserDocumentation:user:42Matters.adoc
   Actian: InetSoftUserDocumentation:user:Actian.adoc
   ActiveCampaign: InetSoftUserDocumentation:user:ActiveCampaign.adoc
