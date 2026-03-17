@@ -1,3 +1,21 @@
 = Chart Coordinates
 
 The following pages  discusses objects related to setting chart coordinates and their scaling properties. See xref:ChangeChartScaling.adoc[] for a tutorial introduction.
+
+[square]
+*** xref:chartAPI:CategoricalScale.adoc[]
+*** xref:chartAPI:Coordinate.adoc[]
+*** xref:chartAPI:FacetCoord.adoc[]
+*** xref:chartAPI:LinearRange.adoc[]
+*** xref:chartAPI:LinearScale.adoc[]
+*** xref:chartAPI:LogScale.adoc[]
+*** xref:chartAPI:ParallelCoord.adoc[]
+*** xref:chartAPI:PolarCoord.adoc[]
+*** xref:chartAPI:PowerScale.adoc[]
+*** xref:chartAPI:RectCoord.adoc[]
+*** xref:chartAPI:Rect25Coord.adoc[]
+*** xref:chartAPI:Scale.adoc[]
+*** xref:chartAPI:ScaleRange.adoc[]
+*** xref:chartAPI:StackRange.adoc[]
+*** xref:chartAPI:TimeScale.adoc[]
+*** xref:chartAPI:TriCoord.adoc[]

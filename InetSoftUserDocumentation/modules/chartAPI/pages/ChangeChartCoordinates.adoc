@@ -272,7 +272,7 @@ image:commonscript:PieChartExample2_1.png[]
 +
 Note that a `null` value is assigned for the (unused) X-dimension when creating the xref:chartAPI:IntervalElement.adoc[] and xref:chartAPI:RectCoord.adoc[] objects.
 
-. Convert the Chart into a Stacked Bar Chart with just one bar by using the xref:chartAPI:GraphElement_setCollisionModifier.adoc[] property. Create a xref:chartAPI:StackRange.adoc[] object to make sure there is enough room for the stacked elements.
+. Convert the Chart into a Stacked Bar Chart with just one bar by using the xref:chartAPI:GraphElementSetCollisionModifier.adoc[] property. Create a xref:chartAPI:StackRange.adoc[] object to make sure there is enough room for the stacked elements.
 +
 [source,javascript]
 elem.setCollisionModifier(GraphElement.STACK_SYMMETRIC);

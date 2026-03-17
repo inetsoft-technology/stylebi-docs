@@ -2,7 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(xargs grep -l \"SelectionContainerIsActionVisible\")",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(grep -oE \"include::partial$MINITOC_[^.]+\\\\.adoc\\\\[\\\\]\" /c/src/stylebi-docs/InetSoftUserDocumentation/modules/ROOT/nav.adoc)",
+      "Bash(cat /c/src/stylebi-docs/InetSoftUserDocumentation/modules/ROOT/partials/MINITOC_*.adoc)",
+      "Bash(find /c/src/stylebi-docs/InetSoftUserDocumentation/modules/*/pages -name \"*.adoc\" -type f)",
+      "Bash(find /c/src/stylebi-docs/InetSoftUserDocumentation/modules/*/pages -name \"*.adoc\" -type f -empty)",
+      "Bash(__NEW_LINE_4306b983ec2bd89e__ find:*)",
+      "Bash(xargs grep:*)",
+      "Bash(find modules/*/pages -name \"*.adoc\" -type f)",
+      "Bash(explorer \"C:\\\\src\\\\stylebi-docs\\\\InetSoftUserDocumentation\")",
+      "Bash(cmd.exe /c start \"\" \"C:\\\\src\\\\stylebi-docs\\\\InetSoftUserDocumentation\")"
     ]
   }
 }
