@@ -118,7 +118,7 @@ image:EditColor.png[]
 +
 image:addShapeButton.png[]
 +
-NOTE: An administrator can make custom shapes available by placing the image files (png, gif, jpg) in the _portal/shapes_ directory. (See xref:administration:Presentation.adoc#LookandFeel[Look and Feel] and xref:administration:Storage.adoc[] for  information on how to upload a file to this location.) The icons are sorted alphabetically by file name. Custom shape images can be any size, and are scaled according to the ‘Size’ setting in the Chart Editor.
+NOTE: An administrator can make custom shapes available by placing the image files (png, gif, jpg, svg) in the _portal/shapes_ directory. (See xref:administration:Presentation.adoc#LookandFeel[Look and Feel] and xref:administration:Storage.adoc[] for  information on how to upload a file to this location.) The icons are sorted alphabetically by file name. Custom shape images can be any size, and are scaled according to the ‘Size’ setting in the Chart Editor.
 
 
 . To break out the data into groups _without_ applying any visual formatting, drag a dimension to the ‘Break By/Tooltip’ region.

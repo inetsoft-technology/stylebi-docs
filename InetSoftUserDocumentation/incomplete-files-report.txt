@@ -1,0 +1,56 @@
+INCOMPLETE / EMPTY .ADOC FILES REPORT
+Generated: 2026-03-18 (revised)
+Repository: InetSoftUserDocumentation
+Scope: All modules/*/pages/*.adoc files
+======================================================================
+
+SUMMARY
+-------
+Total pages/ .adoc files scanned : 1,807
+Empty files (0 bytes)            :     0
+Stub files (1-2 non-blank lines) :     7
+                                  ------
+Total flagged                    :     7  (0.4%)
+
+Clean modules (0 issues): ROOT, administration, chartAPI, commonscript,
+                           dataworksheet, install, integration,
+                           scriptexample, temp, testdrive, user,
+                           viewsheet, viewsheetscript
+
+NOTE ON "FILES ENDING WITH ==== / ===": An earlier version of this
+report flagged 581 files as "ending with a bare section header."
+This was a false positive. In AsciiDoc, a line containing only
+==== or ===== (no title text) is a BLOCK DELIMITER (closing an
+example block, sidebar, etc.), not a section header. A re-scan
+filtering for lines matching the pattern ^=+ \S (equals signs
+followed by a space and title text) returned zero matches.
+All 581 files are correctly structured.
+
+
+======================================================================
+CATEGORY 1: STUB FILES (7 files)
+Files with only 1-2 non-blank lines (title only or title + 1 sentence)
+======================================================================
+
+chartAPI (4)
+  - BasicChartProperties.adoc          title + 1 intro sentence
+  - ChartCoordinates.adoc              title + 1 intro sentence
+  - ChartElements.adoc                 title + 1 intro sentence
+  - GraphElement_setCollisionModifier.adoc  title only (1 line)
+
+dataworksheet (1)
+  - QueryJDBC.adoc                     title + 1 intro sentence
+
+viewsheet (2)
+  - EnhanceVisualization.adoc          title + 1 intro sentence
+  - ScriptTab.adoc                     title + 1 intro sentence
+
+
+======================================================================
+NOTES
+======================================================================
+- To find stub files (fewer than 3 non-blank lines), run:
+    find modules/<module>/pages -name "*.adoc" | while read f; do
+      count=$(grep -cv '^\s*$' "$f")
+      [ "$count" -le 2 ] && echo "$f ($count lines)"
+    done
