@@ -84,6 +84,8 @@ Levels:: Specifies the number of contours used to represent each region in a Sca
 Bandwidth:: Specifies the area over which to calculate density for a  *Scatter Contour* or *Contour Map* Chart. A larger number produces contours that span larger areas.
 Edge Alpha:: Specifies the transparency of the contour edge for a  *Scatter Contour* or *Contour Map* Chart. The transparency of the contour center is determined by the  Chart ‘Alpha’ property. A higher value makes the edges more visible.
 Cell Size:: Specifies the size of the cells that make up the grid on which contour weights are computed for a  *Scatter Contour* or *Contour Map* Chart. Higher values specify larger cells, and hence broader clusters. Lower values specify smaller cells, and hence smaller clusters.
+Bar Corner Radius:: For xref:BarChart.adoc[]  only, sets the radius for rounding the bar corners. The range is 0.0 (no rounding) to 0.5 (maximum rounding). The default is 0.3.
+Round All Corners:: For xref:BarChart.adoc[] type only, specifies (when enabled) that the '`Bar Corner Radius`' should be applied to all four corners of the bar.  When disabled (default), only the corners furthest from the axis are rounded.
 Target Lines:: Specify marker lines, bands, or statistical regions to be placed in the plot area. See xref:TrendCompareData.adoc[] for more information.
 
 [#LineTab]

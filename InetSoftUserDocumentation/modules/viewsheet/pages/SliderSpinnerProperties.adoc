@@ -47,6 +47,14 @@ Show Labels:: The labels to display on the Slider:
 * *Maximum*: Show the maximum slider value at the right of the slider. (Enabled by default when ‘Labels’ is enabled.)
 Snap to Increment:: Specifies that the Slider handle should snap to the increment specified on the *General* tab.
 
+== Label Tab
+The *Label* tab in the ‘Properties’ panel provides the following unique properties for Slider and Spinner.
+
+Show Label:: Displays a label for the component when selected.
+Label Text:: The contents of the label. You can enter static text, or use Form components or script to set the contents by pressing the   {buttonValueType} and selecting the ‘Variable’ or Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
+Label Position:: The position of the label relative to the component.
+Gap:: The gap in pixels between the component and the label.
+
 == Script Tab
 {commonScript}
 

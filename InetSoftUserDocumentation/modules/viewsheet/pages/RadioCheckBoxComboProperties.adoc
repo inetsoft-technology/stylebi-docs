@@ -37,5 +37,13 @@ image:Capture_062.png[]
 == Data Tab
 The  *Data* tab in the ‘Properties’ panel for Radio Button, Check Box, or Combo Box is the same as for Sliders and Spinners.  See xref:SliderSpinnerProperties.adoc[].
 
+== Label Tab
+The *Label* tab in the ‘Properties’ panel provides the following unique properties for Combo Box.
+
+Show Label:: Displays a label for the Combo Box when selected.
+Label Text:: The contents of the label. You can enter static text, or use Form components or script to set the contents by pressing the   {buttonValueType} and selecting the ‘Variable’ or Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
+Label Position:: The position of the label relative to the component.
+Gap:: The gap in pixels between the component and the label.
+
 == Script Tab
 {commonScript}

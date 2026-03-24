@@ -2,6 +2,19 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
+This section explains how to create a query by using the '`Database Query`' dialog box.
+
+== When to Use
+This approach may produce the most efficient queries in the following cases:
+
+[square]
+* You are *not* using a data model
+* You are *not* mashing up data from multiple datasources
+* You have already created queries for other applications, and want to copy over the SQL strings intact
+
+If you *are* using a data model, or need to mashup diverse datasources, it may be simpler to use the approach described in xref:MashupData.adoc[].
+
+== Basic Steps
 To create a data set by defining a new query in the User Portal, follow the steps below.  These instructions show how to do this for a *generic* relational database.  For other data sources, see xref:QuerySpecificDataSource.adoc[].
 
 . Log into the User Portal.

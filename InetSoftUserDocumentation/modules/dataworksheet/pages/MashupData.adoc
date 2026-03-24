@@ -2,7 +2,19 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
+This section describes how to create a new data block by simple drag-and-drop operations.
 
+== When to Use
+This approach is especially useful in the following cases:
+
+[square]
+* You are creating a data set from a *data model*. In this case, you do not need to define any joins because all  joins are already defined in the data model.
+* You need to mash up data from different data sources.
+
+If you do *not* have a data model, and need to create joins on a single datasource, the approach described in xref:QueryData.adoc[] may produce the desired data set more efficiently than the approach described here.
+
+
+== Basic Steps
 [.videotitle]
 .Watch Video: Create a New Data Block
 
@@ -12,6 +24,9 @@ include::ROOT:partial$videoVersion.adoc[]
 
 video::299100195[vimeo,640,400]
 =====
+
+
+
 
 To create a data set in the User Portal by mashing up data with drag-and-drop operations, follow the steps below:
 

@@ -1,6 +1,41 @@
 = Prepare Your Data
 
-If your data set requires additional manipulation (e.g., additional filtering, grouping, sorting), or if you need to mashup data from multiple data sources, use a *Data Worksheet*. The following sections explain the features that Data Worksheets provide for data transformation and mashup.
+[WARNING,caption=see also]
+====
+[square]
+* xref:viewsheet:FilterDashboard.adoc[] to add user-controlled filters at the Dashboard level.
+* xref:viewsheet:GroupDataByDimension.adoc[] to group data at the Dashboard level.
+* xref:viewsheet:SortData.adoc[] to sort data at the Dashboard level.
+====
+
+If you need to   manipulate your dataset (e.g.,  filter, group, sort), or if you need to mashup data from multiple data sources, use a *Data Worksheet*. The following sections explain the features that Data Worksheets provide for data transformation and mashup.
+
+
+== Overview
+This module contains the following key sections, and is relevant to  designers and end-users:
 
 [square]
-include::ROOT:partial$MINITOC_PrepareYourData.adoc[]
+** xref:user:NeedDataModel.adoc[] Read this section if you are using a relational database, and want to understand whether a *data model*  may provide more flexible   access to your data.  A data model *predefines all joins* between tables so that users and designers can freely access all columns.
+** xref:dataworksheet:CreateNewWorksheet.adoc[]: Create a new Data Worksheet using Visual Composer.
+** xref:dataworksheet:EditDataWorksheet.adoc[]: Edit an existing Data Worksheet in Visual Composer.
+** xref:dataworksheet:UploadData.adoc[]: Import data from a file into a Data Worksheet to allow further manipulation.  This is useful for smaller data sets that are not stored in a database.
+** xref:dataworksheet:EnterData.adoc[]: Manually type data into a Data Worksheet data block or table to be saved with the Data Worksheet.  This is useful for very small data sets that are not stored in files or databases, and for entering parameter values into a table.
+** xref:dataworksheet:QueryData.adoc[]: Create a SQL query using a wizard or by hand-coding the SQL.  This approach in many cases produces the most efficient queries when a data model is *not* being used.
+** xref:dataworksheet:MashupData.adoc[]: Build a data set by joining, filtering, and sorting data blocks using drag-and-drop operations.  This approach is most useful when you are using a data model, or plan to mashup different data sources.
+** xref:dataworksheet:ModifyColumn.adoc[]: Perform operations on a data block column such as hiding, renaming, repositioning, changing data type.
+** xref:dataworksheet:FilterData.adoc[]: Apply filtering conditions to a data block to restrict the data returned by the query. Conditions can be static or dynamic based on parameters, session data, or user input.
+** xref:dataworksheet:GroupAggregateData.adoc[]: Group and summarize data in a data block to produce a more compact data set.
+** xref:dataworksheet:CopyData.adoc[]: Create a copy or a mirror copy of a data block.
+** xref:dataworksheet:JoinData.adoc[]: Create inner joins, outer joins,  inequality joins, and multiple joins between data blocks. This is useful for Data Worksheets that do *not* use a data model or that incorporate multiple data sources.
+** xref:dataworksheet:ConcatenateData.adoc[]: Create unions, intersections, and differences between data blocks.
+** xref:dataworksheet:SortData.adoc[]: Sort data in a single column or in multiple columns of a data block.
+** xref:dataworksheet:PreviewData.adoc[]: Display a preview of the data that will be retrieved by a data block and available for use in a Dashboard.
+** xref:dataworksheet:PreviewQuery.adoc[]: Display the actual query (SQL string)  that a data block will generate for submission to the database.
+** xref:dataworksheet:CreateNewDataField.adoc[]: Create a derived field by using SQL or JavaScript operations on existing data.
+** xref:dataworksheet:AccessDataInExpression.adoc[]: Learn the syntax that allows you to access data from a data block within a scripted expression in a Data Worksheet.
+** xref:dataworksheet:CreateNewVariable.adoc[]: Create a reusable Variable object to represent a parameter in a Data Worksheet.  The value of the Variable can be set by a user from within the Dashboard that uses this Data Worksheet.
+** xref:dataworksheet:PivotData.adoc[]: Convert flat tabular data to a crosstab representation.
+** xref:dataworksheet:SecureData.adoc[]: Create a Virtual Private Model (VPM) to restrict data access based on user identity or any other conditions.
+** xref:dataworksheet:DataBlockProperties.adoc[]: Learn about common properties of a data block.
+** xref:dataworksheet:DataWorksheetProperties.adoc[]: Learn about common properties of a  Data Worksheet.
+** xref:dataworksheet:QuerySpecificDataSource.adoc[]: Learn  how to create  a query for your particular datasource.

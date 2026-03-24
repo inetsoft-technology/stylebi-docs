@@ -48,7 +48,15 @@
       "Bash(grep -roh --include=*.java table.[a-zA-Z0-9._]* C:/src/stylebi)",
       "Bash(grep -rn --include=*.java \"xmapTask\\\\|assetData\" C:/src/stylebi)",
       "Bash(grep -rn --include=*.java \"olap.table.maxrow\\\\|rest.cache.timeout\" C:/src/stylebi)",
-      "Bash(head -5 __NEW_LINE_a94cb0d88cc578f4__ echo ---export.text.table.maxRowAlign--- grep -rn \"export.text.table\\\\|maxRowAlign\" C:/src/stylebi)"
+      "Bash(head -5 __NEW_LINE_a94cb0d88cc578f4__ echo ---export.text.table.maxRowAlign--- grep -rn \"export.text.table\\\\|maxRowAlign\" C:/src/stylebi)",
+      "Bash(grep -E \"\\\\.\\(md|adoc|txt|json|yaml|yml\\)$\")",
+      "Bash(grep -v \"\\\\.md$\")",
+      "Bash(find C:/src/AI/node/docs/modules/viewsheetscript/partials -name *.md)",
+      "Bash(find C:/src/AI/node/docs/modules/scriptexample -name *.groovy)",
+      "Bash(find C:/src/AI/node/docs/modules/chartAPI/partials -name *.md)",
+      "Bash(find C:/src/AI/node/docs/modules/user/partials -name *.md)",
+      "Bash(find C:/src/AI/node/docs/modules/dataworksheet/partials -name *.md)",
+      "Bash(find C:/src/AI/node/docs/modules/integration/partials -name *.md)"
     ]
   }
 }
