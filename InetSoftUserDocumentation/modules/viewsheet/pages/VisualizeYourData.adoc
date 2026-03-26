@@ -1,9 +1,31 @@
 = Visualize Your Data
 
-A *Dashboard* is a tool that allows you to dynamically filter a data set  and visualize the output on tables, charts, and gauges. By visualizing your data with a Dashboard, you can rapidly discover meaningful trends and associations that yield actionable business intelligence.
 
-The following sections explain how to build a Dashboard.
+
+A *Dashboard* is a data presentation tool that you  create in *Visual Composer*  to dynamically filter a data set and visualize the output on tables, charts, and gauges. By visualizing your data with a Dashboard, you can rapidly discover meaningful trends and associations that yield actionable business intelligence.
+
+include::ROOT:partial$AboutVisualComposer.adoc[]
+
+
+== Overview
+This module contains the following key sections, and is relevant to  designers and end-users:
 
 [square]
-include::ROOT:partial$MINITOC_VisualizeYourData1.adoc[]
-include::ROOT:partial$MINITOC_VisualizeYourData2.adoc[]
+** xref:viewsheet:CreateNewDashboard.adoc[]: Create a new Dashboard using Visual Composer.  The Dashboard can draw data from a Data Worksheet or a data model.
+** xref:viewsheet:EditADashboard.adoc[]: Edit an existing Dashboard in Visual Composer.
+** xref:viewsheet:AddComponentsToDashboard.adoc[]: Add components such as Filters, Form components, Charts, Tables, and KPIs to build a complete Dashboard.
+** xref:viewsheet:ArrangeComponents.adoc[]: Position components in a Dashboard, economize real estate, and configure a Dashboard to display well on different devices.
+** xref:viewsheet:AddAChart.adoc[]: Add a Chart to your Dashboard, set the Chart type, adjust axis representation, add dimensions and measures, configure target lines and curve fits,  add tooltips and other informative displays, and enable end-user Chart control.
+** xref:viewsheet:AddTable.adoc[]: Add a Table to your Dashboard, set column properties, and styles.
+** xref:viewsheet:AddCrosstab.adoc[]: Add a Crosstab to your Dashboard, which groups dimensions and aggregates measures in tabular form.  Set aggregation methods, custom groups, and grand totals.
+** xref:viewsheet:AddFreehandTable.adoc[]: Add a Freehand Table to a Dashboard, which allows you to  script  individual Table cells, access data from other components, and  control the way rows and columns expand.  This is recommended only for advanced users.
+** xref:viewsheet:CreateTableStyle.adoc[]: Define a custom reusable Table style, which incorporates borders, colors, fonts in a single asset.
+** xref:viewsheet:CompareDataByDate.adoc[]: For Charts and Crosstabs  containing Date-type dimensions, perform a variety of date comparisons such as month-over-month, year-to-date, and isolated date range comparisons.
+** xref:viewsheet:AddAKPI.adoc[]: Add textual and graphical key performance indicators (KPIs).  KPIs are effective at communicating summary information at a glance.
+** xref:viewsheet:DrillDownIntoData.adoc[]: Dive deeper into your data with a variety of techniques such as zoom, hyperlink, flyover, brush, exclude, hierarchy, and show details.
+** xref:viewsheet:FilterDashboard.adoc[]: Add filters so that users can limit the data displayed on the Dashboard in dynamic and interesting ways.  Filters can be static or dynamic and  can filter at the detail or aggregate level.
+** xref:viewsheet:SortData.adoc[]: Sort data in Charts or Tables based on alphanumeric order or based on aggregate values.
+** xref:viewsheet:DynamicallySetProperties.adoc[]: Enhance a Dashboard with greater interactivity by using Form components and script to modify properties in response to user input or other parameters and conditions.
+** xref:viewsheet:WriteBackToStorage.adoc[]: Configure the Dashboard to save modified data together with the Data Worksheet.  This allows you to persist changes across sessions.
+** xref:viewsheet:ImprovePerformance.adoc[]: Create a *materialized view* to facilitate rapid dashboard interactions.  Materialized view is an advanced caching mechanism for dashboards that display large datasets.
+** xref:viewsheet:EnhanceVisualization.adoc[]: Add formats, colors, and other visual aids to a Dashboard to make it look professional and user-friendly.

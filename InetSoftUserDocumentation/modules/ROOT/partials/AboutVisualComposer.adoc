@@ -1,0 +1,10 @@
+[TIP,caption=What is visual composer?]
+====
+Visual Composer a web-based tool for creating *both* Data Worksheets and Dashboards.  The workflow for Visual Composer is the following:
+
+. Create a Data Worksheet to assemble and process your data. The Data Worksheet is the *data layer*.  See xref:dataworksheet:CreateNewWorksheet.adoc[].
+. Create a Dashboard to display your data using Charts, Tables, and other visual elements. The Dashboard is the *presentation layer*.  See xref:viewsheet:CreateNewDashboard.adoc[].
+
+If you are using a *data model* and do not need extensive data manipulation,  you do *not need* to create a Data Worksheet.  You can build your Dashboard directly from the data model.
+====
+
