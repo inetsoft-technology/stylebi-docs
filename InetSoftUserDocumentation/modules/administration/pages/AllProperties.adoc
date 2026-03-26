@@ -204,14 +204,37 @@ viewsheet.font.size:: Specifies the default font size for all Dashboards. A plai
 vs.font.asDefault:: When set to `true`, uses the Dashboard default font for a Table rather than the Table Style font. When set to `false` (default), uses the specified Table Style font.
 
 == Portal Properties
-The following table lists a variety of User Portal properties.  See xref:Presentation.adoc[] and xref:TailorServerPerformance.adoc[]   for the related  pages in Enterprise Manager.
+The following table lists a variety of User Portal properties.  See xref:Presentation.adoc[] and xref:TailorServerPerformance.adoc[] for the related  pages in Enterprise Manager.
+
+share.email.enabled:: Enables the {buttonSocialEmail} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `true`.
+
+share.facebook.enabled:: Enables the {buttonFacebook} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `true`.
+
+share.linkedin.enabled:: Enables the {buttonLinkedIn} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `true`.
+
+share.twitter.enabled:: Enables the {buttonTwitter} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `true`.
+
+share.link.enabled:: Enables the {buttonCopyLink} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `true`.
+
+share.slack.enabled:: Enables the {buttonSlack} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `false`. Requires `share.slack.url` to also be set, otherwise the option remains hidden.
+
+share.slack.url:: The Slack incoming webhook URL for a channel. When a user shares the Dashboard using the {buttonSlack}, the server POSTs a JSON SlackMessage to this URL containing  the Dashboard link.
+
+share.googlechat.enabled:: Enables the {buttonGoogleHangoutsChat} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `false`. Requires `share.googlechat.url` to also be set, otherwise the option remains hidden.
+
+share.googlechat.url:: The Google Hangouts Chat incoming webhook URL. When a user shares the Dashboard using the {buttonGoogleHangoutsChat}, the server POSTs a card-style JSON message to this URL containing a `<users/all>` mention and a clickable '`Click here to view`' link.
+
+share.opengraph.title::  The fallback `og:title` `<meta>` tag injected into the User Portal's HTML `<head>` for  social sharing previews. Default is "`Business Intelligence Software | Dashboard Reporting`".
+
+share.opengraph.description:: The fallback `og:description` `<meta>` tag injected into the User Portal's HTML `<head>` for  social sharing previews. Default is "`InetSoft is a pioneer in the field of data intelligence…`".
+
+share.opengraph.sitename:: The fallback `og:site_name` `<meta>` tag injected into the User Portal's HTML `<head>` for  social sharing previews. Default is "`InetSoft.com`".
+
+share.opengraph.image:: The fallback `og:image` URL `<meta>` tag injected into the User Portal's HTML `<head>` for  social sharing previews. Default is `/images/logo.png`.  (Relative paths are resolved to the server`'s base URL.)
 
 accessibility.enabled:: Set to `true` to enable features for Rehabilitation Act Section 508 compliance.
 
 asset.ignore.filtering:: When `true` (default), this displays a warning message to the Dashboard designer when a Data Worksheet data block returns no data. The warning indicates that conditions on *all* data blocks will be dropped in Dashboard design view (only) to help facilitate formatting. When `false`, all conditions are kept in place (which may make Dashboard formatting more difficult).
-
-
-
 
 flash.wmode:: Controls z-index assignment of HTML layers for Dashboards within IFrames. It can be assigned one of the following values: `window`, `opaque`, `transparent`. The `window` setting allows the browser to determine how the IFrame and Dashboard are displayed on the page. The `opaque` setting presents the IFrame and Dashboard with opaque background in their designated layer. The `transparent` setting presents the IFrame and Dashboard with transparent background in their designated layer.
 
