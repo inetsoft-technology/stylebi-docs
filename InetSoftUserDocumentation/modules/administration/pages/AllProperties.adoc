@@ -54,12 +54,12 @@ map.selection.enabled:: When `false`, prevents user  selections on a map from di
 == Data Source Properties
 The following table lists a variety of properties related to data source interactions.
 
-datasource.registry.path:: List of `.xml` files that are used to define all of the available data sources.
+datasource.registry.file:: List of `.xml` files that are used to define all the available data sources.
 db.caseSensitive:: When `true`, wraps all column identifiers within query with double quotes to preserve identifier case. Default is `false`.
 formula.avg.keep.type:: Set to `true` to keep the data type of an average formula the same data type as the input in order to match SQL behavior (e.g., truncating the average result to integer if the input field is of integer data type).
 olap.cancel.enabled:: Set to `true` (default) to enable query cancellation for OLAP databases. This feature cancels currently executing queries when a user makes updates to their selections. Set to `false` to prevent errors on databases that do not support query cancellation.
 query.cache.data:: Set to `true` (default) to cache query result sets for reuse across Data Worksheets and Dashboards.
-query.registry.path:: List of `.xml` files that are used to define all the available queries.
+query.registry.file:: List of `.xml` files that are used to define all the available queries.
 query.variable.unique:: If query variables are declared as unique, variables with the same name across different queries are treated as one variable. Otherwise, each query contains its own set of variables.
 remove.outerJoin.only:: When `false`, the query engine removes joined tables with no columns in the ‘select’ and ‘where’ clauses, such as when a condition is dropped due to null parameter.
 string.compare.caseSensitive:: Default grouping and ordering is now case-insensitive, which is consistent with most databases. Set this property to `true` to revert to pre-9.1 behavior.
@@ -343,5 +343,5 @@ sree.bundle:: The name of the  localization bundle.
 The following table lists a variety of time and date properties.
 
 crosstab.dateTime.expandAll.level:: Sets the maximum expansion of date fields in a Crosstab. Options are `Year`, `QuarterOfYear`, `MonthOfYear` (default), `DayOfMonth`, `HourOfDay`, `MinuteOfHour`, `SecondOfMinute`.
-mysql.local.timezone:: Set to a valid Java time zone ID to indicate the StyleBI server time zone (e.g., `US/Eastern`). If not defined, the default time zone is used.
+mysql.server.timezone:: Set to a valid Java time zone ID to indicate the StyleBI server time zone (e.g., `US/Eastern`). If not defined, the default time zone is used.
 week.start::   The start day of the week for date components such as  Calendars (e.g., `week.start=tuesday`). If not specified, the locale setting for the user determines the start day.
