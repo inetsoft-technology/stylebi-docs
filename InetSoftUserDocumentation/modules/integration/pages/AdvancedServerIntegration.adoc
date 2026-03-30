@@ -2,7 +2,12 @@
 
 IMPORTANT: Only users who have administrator privileges can change server settings.
 
-The topics in these sections explain how to integrate InetSoft into your own environment.
+The topics in these sections explain how to integrate InetSoft into your own environment.  These sections are intended for administrators.
 
 [square]
-include::ROOT:partial$MINITOC_AdvancedServerIntegration.adoc[]
+*** xref:integration:ChangeWebAppNamePort.adoc[]:  Cahnge the port on which you access the webapp.
+*** xref:integration:IntegrateWithYourWebApplication.adoc[]: Integrate InetSoft with your own application, including single sign-on and Portal customization.
+*** xref:integration:DesignMultiTenantEnvironment.adoc[]: Using InetSoft's multi-tenant features to expose differentiated data to multiple  clients.
+*** xref:integration:AccessInetSoftAPIMethods.adoc[]: Access InetSoft functions from external application vis the published API.
+*** xref:integration:AccessUserSession.adoc[]: Methods for accessing user session information through the SRPrincipal object.
+*** xref:integration:CommonPortalFrameworks.adoc[]: Information about integrating with Microsoft IIS Web Server and SharePoint Portal Framework.

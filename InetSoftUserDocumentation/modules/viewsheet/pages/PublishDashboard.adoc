@@ -5,4 +5,6 @@ include::ROOT:partial$buttonSnippets.adoc[]
 The following sections explain how to arrange components on a Dashboard for publication.
 
 [square]
-include::ROOT:partial$MINITOC_PublishDashboard.adoc[]
+** xref:viewsheet:CreateDeviceLayout.adoc[]: Define or select a device class based on screen size, and specify how a Dashboard should be displayed for that device class.
+** xref:viewsheet:ModularizeDashboard.adoc[]: Build a complex Dashboard from several smaller Dashboards.  This allows you to compartmentalize functions and integrate data from multiple sources into a single presentation.  Modularization also facilitates team development and maintainability.
+** xref:viewsheet:LocalizeDashboard.adoc[]: Translate a Dashboard into one or more alternate languages.  The Dashboard is then displayed to the user in the appropriate language based on the user's locale setting.

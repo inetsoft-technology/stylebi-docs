@@ -19,7 +19,7 @@ Methods:: Methods are predefined functions associated with an object. In general
 Events:: Events are predefined actions that are recognized by an object, such as a mouse movement or clicking.
 
 == Script Language Basics
-JavaScript syntax is very similar to that of C++ and Java. It uses the same construct for all loops and has similar syntax for operators. The following sections cover the basics of programming with JavaScript.
+JavaScript's syntax is very similar to that of C++ and Java. It uses the same construct for all loops and has similar syntax for operators. The following sections cover the basics of programming with JavaScript.
 
 include::partial$scriptAccessDashboardData.adoc[]
 
@@ -42,18 +42,21 @@ k = parseInt(123);
 
 Variable names can only contain alphanumeric characters plus the underscore character (`_`). They cannot start with a digit and cannot use reserved JavaScript words. All symbols in JavaScript are *case-sensitive*.
 
-=== Declaration and Assignement
+=== Declaration and Assignment
 JavaScript is a weakly-typed language. This means variables are not assigned a type. A variable can be assigned any value. The type of the variable is determined by the value currently assigned to it. Consequently, a local variable does not need to be declared before it is used.
 
-.Example: Variable definition and assignement
+.Example: Variable definitions and assignments
 [source,javascript]
 ----
-var variable_name= "Hello"; //  Recommended
-message1 = "Hello"; // Will also work
-var count = 100;
+var variable_name= "Hello"; // recommended
+message1 = "Hello";         // will also work
+var count = 100;            // integer
+var array1 = [1, 2, 3];     // array
+var val;                    // definition without assignment
 ----
 
-If a variable is used as a Dashboard-level variable, it must be declared using the *var* keyword.
+If a variable is used as a Dashboard-level variable, it must be declared using the *var* keyword. After the variable is declared, it can be used everywhere as a shared Dashboard variable.
+
 
 [source,javascript]
 ----
@@ -61,7 +64,36 @@ If a variable is used as a Dashboard-level variable, it must be declared using t
 var pageTotal = 0;
 ----
 
-After the variable is declared, it can be used everywhere as a shared Dashboard variable.
+Arithmetic operators and bitwise operators can be combined with the assignment operator as a shorthand for performing a computation and assigning the results to a variable.
+
+[source,javascript]
+x += y;  // same as "x = x + y"
+
+
+
+
+
+
+=== Comparison Operators
+A comparison operator compares two values and returns `true` or `false` depending on the comparison result.
+
+[cols="1,3"]
+|===
+|Operator|Description
+
+|==|Equal
+|!=|Not equal
+|>|Greater than
+|>=|Greater than or equal to
+|<|Less than
+|<=|Less than or equal to
+|===
+
+Note that these operators *cannot* be used to compare Date objects. Use date functions instead, such as `dateDiff()` or `CALC.dateValue()`. See xref:commonscript:DateObjectFunctions.adoc[] for more information about date functions.
+
+
+
+
 
 === Object Type and Scope
 JavaScript is an object-based language. This means that every value in JavaScript is an object. As with any Object Oriented language, the properties and methods are associated with each object and need to be invoked by qualifying the names with the object name.
@@ -85,6 +117,21 @@ var num = parseInt(parameter['count']);
 // toFixed() is a number method, so it needs to be qualified
 var int_num = num.toFixed(0);
 ----
+
+A ‘with’ statement establishes an object as the default object for a set of statements.
+
+[source,javascript]
+with(object) {
+  // statements;
+}
+
+The properties and methods of the object can be referenced without qualifying the names with the object name:
+
+.Example: with
+[source,javascript]
+with(Text1) {
+  text = "contents of this text element";
+}
 
 === Number Type
 The JavaScript number type can store both integers and doubles.
@@ -158,7 +205,7 @@ str = 'this is a test of regular expression';
 re = /test/; // create a regular expression
 var idx = str.search(re); // return the position of the regular expression
 
-== Date Type
+=== Date Type
 Date is represented as milliseconds since EPOC (Equipment Point of Connection). Creating a date object with no parameter gives the current time:
 
 [source,javascript]
@@ -182,10 +229,32 @@ Multidimensional arrays are represented by an array of arrays. A multidimensiona
 [source,javascript]
 monthly_rain = [['Jan', 'Feb', 'Mar'],[100,10,30],[30,10,300],[10,10,10]];
 
-=== Conditionals
-The `if/else` statement requires a Boolean expression to decide between two alternative actions.
+== Control Structures
+Control structures allow you to control the flow of a script based on logic that you specify.
 
-.Example: if/else
+=== Conditionals
+The `if/else` statement tests a Boolean expression to decide between two alternative actions.  The `if` conditional structure executes the statements within the ‘if’ block only when the specified condition is `true`. Alternative conditions can be tested by using one or more optional ‘else if’ blocks (similar to  xref:#Switch[]). An optional final ‘else’ block will be executed if all other conditions evaluate `false`.
+
+
+[source,javascript]
+if(condition0) {
+  // statements to execute if condition0 is true
+}
+else if(condition1) {
+  // statements to execute if condition1 is true
+}
+else if(condition2) {
+  // statements to execute if condition2 is true
+}
+else if(condition3) {
+  // statements to execute if condition3 is true
+}
+else {
+  // statements to execute if all above conditions are false
+}
+
+
+.Example 1: if/else single test
 [source,javascript]
 if (field['total'] > 0) {
     reg = event.region;
@@ -194,9 +263,8 @@ else {
     reg = event.firstRegion;
 }
 
-The `else if` construct allows you to test additional cases, similar to  xref:#Switch[].
 
-.Examples: if/else if/else
+.Example 2: if/else-if/else multiple test
 [source,javascript]
 ----
 var day = CALC.weekdayname(CALC.today())
@@ -215,24 +283,70 @@ else {
 }
 ----
 
+
+[#TryCatch]
+=== try-catch
+The “try-catch” construction allows you to catch a script error before it causes Dashboard execution to fail. To catch an error, place the desired sequence of code inside a '`try`' block. If any line of this '`try`' code generates an error, program execution immediately jumps to the code in the '`catch`' block.
+
+[source,javascript]
+try {
+  // Code to try
+}
+catch(err) {
+  // Alternative code for case of error
+  log(err.stack);
+}
+finally {
+  // Code to execute in either case
+}
+
+The `err` parameter contains the exception message that was generated by the '`try`' block. Use the `stack` property to log explicit information about script errors, as shown above. The '`finally`' block contains code to be executed whether an error occurred or not. The '`catch`' block and '`finally`' block are optional, but cannot both be omitted.
+
 === For
-A *for loop* is an iteration statement that instructs the computer to repeat an action a specific number of times.
+A *for loop* is an iteration statement that instructs the computer to repeat an action a specific number of times. the ‘for’ loop consists of three optional expressions, enclosed in parentheses and separated by semicolons.
+
+
+[source,javascript]
+for([init-expression];[condition];[increment-expression]) {
+  //statements;
+}
+
+The `init-expression` is evaluated before the loop starts. It is normally used to declare and initialize a counter variable. The `condition` statement is evaluated at the beginning of every loop. If the condition is `true`, the statements are executed. Otherwise, the loop terminates. The `increment-expression` is executed after the body statements. It is normally used to increment the counter variable.
 
 .Example: For loop
 [source,javascript]
 ----
-// for (initial, condition-check, increment)
 var total = 0;
 for (var j = 1; j < TableView1.table.length; j++) {
     total += TableView1.table[j][3];
 }
 ----
-The first expression in the loop (`j = 1`) initializes the loop variable. The second expression (`j < TableView1.table.length`) is a condition used to check whether to continue the loop (i.e., continue while the condition evaluates `true`). The third expression (`pass:[j++]`) is the variable increment that is evaluated at the end of every iteration. The `j++` notation is the same as `j=j+1`, i.e., increment by one.
+
+The first expression in the loop (`j=1`) initializes the loop variable. The second expression (`j<TableView1.table.length`) is a condition used to check whether to continue the loop (i.e., continue while the condition evaluates `true`). The third expression (`pass:[j++]`) is the variable increment that is evaluated at the end of every iteration. The `j++` notation is the same as `j=j+1`, i.e., increment by one.
+
+A special ‘for’ loop allows iteration through all properties of an object. If the object is an array, each item in the array is treated as a property.
+
+.Example 2: Object iteration
+[source,javascript]
+var props = "";
+for(var item in obj) {
+  props += item + " = " + obj[item];
+}
+
 
 === While
 A  *while loop* is an iteration statement that instructs the computer to repeat an action until a specified condition becomes `false`.
 
-.Example: While loop
+[source,javascript]
+while(condition) {
+  statements;
+}
+
+The condition is evaluated at the beginning of every loop. If the condition is `true`, the body of the loop is executed. Otherwise, the loop is terminated.
+
+
+
+.Example 1: while loop
 [source,javascript]
 var n = 5;
 Text1.text = "The factorial of " + n;
@@ -244,11 +358,39 @@ while (n > 1) {
 }
 Text1.text += " is " + fact;
 
-The `break` command can be used inside any loop to terminate the loop and `continue` can be used to skip to the next iteration.
+
+
+A variation of the ‘while’ statement is ‘do...while’. Instead of evaluating the condition at the beginning of the loop, ‘do...while’ statement evaluates the condition at the end of a loop. This guarantees the loop is at least executed once.
+
+.Example 2: do-while loop
+[source,javascript]
+do {
+  // statements
+}
+while(condition);
+
+A loop can be terminated in the body by inserting a ‘break’ statement. A ‘break’ statement causes the execution to immediately transfer to the point following the end of the loop. Similarly, a ‘continue’ statement interrupts the execution of a loop and transfer the execution to the end of the loop block.
+
 
 [#Switch]
 === Switch
-A *switch* statement chooses a branch to be executed based on a value. One or more values can be listed on each case. A `break` must be included at the end of each case to terminate the switch statement.
+A *switch* statement chooses a branch to be executed based on a value. One or more values can be listed on each case.
+
+[source,javascript]
+switch(expression) {
+case label1:
+  //statements;
+  break;
+case label2:
+  //statements;
+  break;
+//...
+default:
+  //statements;
+}
+
+A '`break`' must be included at the end of each case to terminate the switch statement. The `default` label at the end serves as a catch-all phrase. If the switch value does not match any of the listed values, the default section is processed.
+
 
 
 .Example: Switch
@@ -267,28 +409,66 @@ default:
 }
 ----
 
-The `default` label at the end serves as a catch-all phrase. If the switch value does not match any of the listed values, the default section is processed.
+
+
+
+
+
+
+
 
 === Function
-JavaScript, like most programming languages, has facilities for creating subprograms to modularize or divide programs into distinct functions. When required, a `function` can be called to carry out a particular task. JavaScript functions behave a little differently than you might expect:
+JavaScript, like most programming languages, has facilities for creating subprograms to modularize or divide operations into distinct functions. Once you define such a function, you can  call it from other parts of your script to perform the specified operations, as needed. See xref:viewsheetscript:CreateScriptFunction.adoc[] for more details on how to define a function.
 
+
+JavaScript functions behave a little differently than you might expect:
+[square]
 * There is no value reference distinction
 * There is no data type distinction
 * Return values do not have data types and are optional
 
 
-.Example: Function
+
+.Example 1: Function to return maximum of two values
 [source,javascript]
 ----
-function max(a,b) {
+// Define function 'max'
+function max(a,b) {  //<1>
   if (a > b)
     return(a); // -- Return a because it is larger
   else
     return(b); // -- Return b because it is larger
 }
-----
 
-To create and save a custom JavaScript function, see Using the Script Library in xref:CreateScriptFunction.adoc[].
+// Call function 'max'
+var maxValue = max(10,11);
+----
+<1> See xref:viewsheetscript:CreateScriptFunction.adoc[] for more details on how to define a function.
+
+
+
+
+.Example 2: Function to sum values in a numerical array
+[source,javascript]
+----
+// Define function 'sumarray'
+function sumarray(arr) {  //<1>
+  var total = 0;
+  for(var idx = 0; idx < arr.length; idx++) {
+    total += arr[idx];
+  }
+  return total;
+}
+
+// Call function 'sumarray'
+var myArray = [2,3,4,5,6];
+var myTotal = sumarray(myArray);
+----
+<1> See xref:viewsheetscript:CreateScriptFunction.adoc[] for more details on how to define a function.
+
+
+
+
 
 == Useful Text Functions
 Two common string operations are changing case and searching for substrings.
@@ -398,7 +578,7 @@ var d = CALC.today();  // e.g., Feb-21-2007
 Text1.text = 'Today is: ' + formatDate(d, 'MM-dd-yy'); // Today is: 02/21/07
 
 == Protect Dashboard from Errors
-Because scripts are executed when the Dashboard is generated on the server, a script error can cause Dashboard generation to fail. To prevent this from happening, you should wrap error-prone code inside a “try-catch” block, which allows you to trap errors before they affect Dashboard execution. See xref:commonscript:ScriptStatements#TryCatch[try-catch] in xref:commonscript:ScriptStatements.adoc[] for more information.
+Because scripts are executed when the Dashboard is generated on the server, a script error can cause Dashboard generation to fail. To prevent this from happening, you should wrap error-prone code inside a “try-catch” block, which allows you to trap errors before they affect Dashboard execution. See xref:#TryCatch[]  for more information.
 
 == Debug a Script
 When you attempt to debug a Dashboard script, it is often helpful to view the current values of variables and objects. To do this, use the `alert()` function, which opens a message box to display a specified string.

@@ -25,7 +25,7 @@ This module contains the following key sections, and is relevant to  designers a
 ** xref:viewsheet:DrillDownIntoData.adoc[]: Dive deeper into your data with a variety of techniques such as zoom, hyperlink, flyover, brush, exclude, hierarchy, and show details.
 ** xref:viewsheet:FilterDashboard.adoc[]: Add filters so that users can limit the data displayed on the Dashboard in dynamic and interesting ways.  Filters can be static or dynamic and  can filter at the detail or aggregate level.
 ** xref:viewsheet:SortData.adoc[]: Sort data in Charts or Tables based on alphanumeric order or based on aggregate values.
-** xref:viewsheet:DynamicallySetProperties.adoc[]: Enhance a Dashboard with greater interactivity by using Form components and script to modify properties in response to user input or other parameters and conditions.
+** xref:viewsheet:DynamicallySetProperties.adoc[]: Enhance a Dashboard with greater interactivity by using Form components and scripting to modify properties in response to user input or other parameters and conditions.
 ** xref:viewsheet:WriteBackToStorage.adoc[]: Configure the Dashboard to save modified data together with the Data Worksheet.  This allows you to persist changes across sessions.
-** xref:viewsheet:ImprovePerformance.adoc[]: Create a *materialized view* to facilitate rapid dashboard interactions.  Materialized view is an advanced caching mechanism for dashboards that display large datasets.
+** xref:viewsheet:ImprovePerformance.adoc[]: Create a *materialized view* to facilitate rapid dashboard interactions.  Materialized view is an advanced caching mechanism for Dashboards that retrieve large datasets.
 ** xref:viewsheet:EnhanceVisualization.adoc[]: Add formats, colors, and other visual aids to a Dashboard to make it look professional and user-friendly.

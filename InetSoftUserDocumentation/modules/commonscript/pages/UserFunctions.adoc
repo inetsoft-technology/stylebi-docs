@@ -11,3 +11,25 @@
 JavaScript is an object-oriented programming language for performing computations and manipulating computational objects within a host environment.
 
 The following sections offer a brief introduction to common JavaScript language constructs and typical usage.  For more detailed information on JavaScript, please consult the https://www.ecma-international.org/publications/standards/Ecma-262.htm[ECMA-262 specification] or a JavaScript book. You can also find information on JavaScript syntax and constructs on the https://devedge-temp.mozilla.org/central/javascript/index_en.html[Mozilla web site].
+
+** xref:commonscript:JavaObjects.adoc[]: Access Java objects using JavaScript.
+** xref:commonscript:StyleConstant.adoc[]
+
+** xref:commonscript:GlobalObjectFunctions.adoc[]
+
+** xref:commonscript:StringObjectFunctions.adoc[]
+
+** xref:commonscript:NumberObjectFunctions.adoc[]
+
+** xref:commonscript:DateGlobalFunctions.adoc[]
+
+** xref:commonscript:DateObjectFunctions.adoc[]
+
+** xref:commonscript:ArrayObjectFunctions.adoc[]
+
+** xref:commonscript:MathObjectFunctions.adoc[]
+
+** xref:commonscript:CalcObjectFunctions.adoc[]
+
+
+** xref:commonscript:RegexObjectFunctions.adoc[]

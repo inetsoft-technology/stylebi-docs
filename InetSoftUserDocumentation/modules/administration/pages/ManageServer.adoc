@@ -1,12 +1,12 @@
 = Manage the Server
 
-The following sections discuss several key aspects of managing the InetSoft server, including the following:
+The following sections are intended for  administrators, and discuss several key aspects of managing the InetSoft server, including the following:
 
 [square]
-* xref:administration:GetStartedWithEnterpriseManager.adoc[]
-* xref:administration:ConfigureSecurity.adoc[]
-* xref:administration:Schedule.adoc[]
-* xref:administration:AdvancedTopics.adoc[]
-* xref:administration:AutomateAdminTasks.adoc[]
+* xref:administration:GetStartedWithEnterpriseManager.adoc[]: Learn the basic features of Enterprise manager, which is the InetSoft administration application.
+* xref:administration:ConfigureSecurity.adoc[]: Choose a security provider for authentication and authorization, configure multi-tenancy, define users, groups, and roles, and assign permissions.
+* xref:administration:Schedule.adoc[]: Create scheduled tasks to automate the execution of Dashboards, create exports, and send notifications.
+* xref:administration:AdvancedTopics.adoc[]:  Server environment, localization,  caching and storage, CSS, logging, custom maps, and other advanced topics.
+* xref:administration:AutomateAdminTasks.adoc[]: Command line interface for running administrative tasks.  This can be useful running batch operations, or in some cases to perform operations when the server is not running.
 
 IMPORTANT: Only users who have administrator privileges can change server settings.
