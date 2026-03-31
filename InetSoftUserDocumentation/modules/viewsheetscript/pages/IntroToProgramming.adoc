@@ -9,7 +9,7 @@ The following sections provide a brief overview of Dashboard programming with Ja
 == Server-Side vs. Client-Side Script
 In Web development, JavaScript is used to add client-side scripting to HTML pages. Scripts are embedded into the contents of a Web page and executed inside the client browser. Traditionally, these client-side scripts deal exclusively with user-browser interactions, and have limited server-side actions (e.g., HTTP requests).
 
-In contrast, Dashboard scripting is server-side scripting. The scripts contained in a Dashboard are executed as part of the Dashboard generation process on the server. StyleBI scripts can also control certain client-side interactions through event handlers and hyperlinks.
+In contrast, Dashboard scripting is *server-side scripting*. The scripts contained in a Dashboard are executed as part of the Dashboard generation process on the server. StyleBI scripts can also control certain client-side interactions through event handlers and hyperlinks.
 
 == Object-Oriented Concepts
 JavaScript is an object-oriented programming (OOP) language, and provides various objects and methods, as well as the ability to create user-defined methods. To use JavaScript effectively, it is important to understand the following concepts:
@@ -19,9 +19,10 @@ Methods:: Methods are predefined functions associated with an object. In general
 Events:: Events are predefined actions that are recognized by an object, such as a mouse movement or clicking.
 
 == Script Language Basics
-JavaScript's syntax is very similar to that of C++ and Java. It uses the same construct for all loops and has similar syntax for operators. The following sections cover the basics of programming with JavaScript.
 
 include::partial$scriptAccessDashboardData.adoc[]
+
+JavaScript's syntax is very similar to that of C++ and Java. It uses the same construct for all loops and has similar syntax for operators. The following sections cover the basics of programming with JavaScript.
 
 === Comments and Names
 JavaScript uses double slashes `//` to start a single line comment and `/* */` to enclose a multi-line comment.
@@ -89,7 +90,7 @@ A comparison operator compares two values and returns `true` or `false` dependin
 |<=|Less than or equal to
 |===
 
-Note that these operators *cannot* be used to compare Date objects. Use date functions instead, such as `dateDiff()` or `CALC.dateValue()`. See xref:commonscript:DateObjectFunctions.adoc[] for more information about date functions.
+Note that these operators *cannot* be used to compare Date objects. Use date functions instead, such as `dateDiff()` or `CALC.dateValue()`. See xref:commonscript:DateObjectFunctions.adoc[] and xref:#UsefulDateFunctions[] below for more information about date functions.
 
 
 
@@ -125,7 +126,7 @@ with(object) {
   // statements;
 }
 
-The properties and methods of the object can be referenced without qualifying the names with the object name:
+The properties and methods of the object can then be referenced without qualifying the names with the object name:
 
 .Example: with
 [source,javascript]
@@ -150,7 +151,7 @@ To force a number to be treated as an integer, use xref:commonscript:NumberObjec
 [source,javascript]
 text = total.toFixed(0); // this generates a string 5
 
-Number constants can be in decimal format, hexadecimal format if it starts with ‘0x’, and octal format if it starts with ‘0’.
+Number constants can be in decimal format, hexadecimal format they   start with ‘0x’, and octal format if they start with ‘0’.
 
 [source,javascript]
 decimal_number = 255 // Decimal is the default
@@ -164,6 +165,7 @@ A Boolean has a value of `true` or `false`.
 
 [source,javascript]
 while(true) {
+  // keep doing something
 }
 
 All undefined values are treated as `false` Boolean values when used in the context of a condition. You can check if a value is defined by using the value in the `if()` condition:
@@ -183,12 +185,7 @@ Strings can be concatenated using the plus operator:
 [source,javascript]
 var str = 'Total: ' + total;
 
-If a value concatenated to a string is of a different type, it is converted to a string automatically. Strings have many methods. The most common methods include the following:
-
-* xref:commonscript:StringObjectsubString.adoc[]
-* xref:commonscript:StringObjectToLowerCase.adoc[]
-* xref:commonscript:StringObjectToUpperCase.adoc[]
-* xref:commonscript:StringObjectIndexOf.adoc[]
+If a value concatenated to a string is of a different type, it is converted to a string automatically. Strings have many methods. Some common ones are shown in xref:#UsefulTextFunctions[].
 
 .Example: String functions
 [source,javascript]
@@ -229,11 +226,11 @@ Multidimensional arrays are represented by an array of arrays. A multidimensiona
 [source,javascript]
 monthly_rain = [['Jan', 'Feb', 'Mar'],[100,10,30],[30,10,300],[10,10,10]];
 
-== Control Structures
+=== Control Structures
 Control structures allow you to control the flow of a script based on logic that you specify.
 
-=== Conditionals
-The `if/else` statement tests a Boolean expression to decide between two alternative actions.  The `if` conditional structure executes the statements within the ‘if’ block only when the specified condition is `true`. Alternative conditions can be tested by using one or more optional ‘else if’ blocks (similar to  xref:#Switch[]). An optional final ‘else’ block will be executed if all other conditions evaluate `false`.
+==== Conditionals
+The '`if/else`' statement tests a Boolean expression to decide between two alternative actions.  The  statements within the ‘if’ block execute only when the specified condition is `true`. Alternative conditions can be tested by using one or more optional ‘else if’ blocks (similar to  xref:#Switch[]). An optional final ‘else’ block will be executed if all other conditions evaluate `false`.
 
 
 [source,javascript]
@@ -285,7 +282,7 @@ else {
 
 
 [#TryCatch]
-=== try-catch
+==== Try-Catch
 The “try-catch” construction allows you to catch a script error before it causes Dashboard execution to fail. To catch an error, place the desired sequence of code inside a '`try`' block. If any line of this '`try`' code generates an error, program execution immediately jumps to the code in the '`catch`' block.
 
 [source,javascript]
@@ -302,7 +299,7 @@ finally {
 
 The `err` parameter contains the exception message that was generated by the '`try`' block. Use the `stack` property to log explicit information about script errors, as shown above. The '`finally`' block contains code to be executed whether an error occurred or not. The '`catch`' block and '`finally`' block are optional, but cannot both be omitted.
 
-=== For
+==== For
 A *for loop* is an iteration statement that instructs the computer to repeat an action a specific number of times. the ‘for’ loop consists of three optional expressions, enclosed in parentheses and separated by semicolons.
 
 
@@ -324,7 +321,7 @@ for (var j = 1; j < TableView1.table.length; j++) {
 
 The first expression in the loop (`j=1`) initializes the loop variable. The second expression (`j<TableView1.table.length`) is a condition used to check whether to continue the loop (i.e., continue while the condition evaluates `true`). The third expression (`pass:[j++]`) is the variable increment that is evaluated at the end of every iteration. The `j++` notation is the same as `j=j+1`, i.e., increment by one.
 
-A special ‘for’ loop allows iteration through all properties of an object. If the object is an array, each item in the array is treated as a property.
+A special ‘for’ loop allows iteration through all properties of an object, as shown below. If the object is an array, each item in the array is treated as a property.
 
 .Example 2: Object iteration
 [source,javascript]
@@ -334,7 +331,7 @@ for(var item in obj) {
 }
 
 
-=== While
+==== While
 A  *while loop* is an iteration statement that instructs the computer to repeat an action until a specified condition becomes `false`.
 
 [source,javascript]
@@ -373,7 +370,7 @@ A loop can be terminated in the body by inserting a ‘break’ statement. A ‘
 
 
 [#Switch]
-=== Switch
+==== Switch
 A *switch* statement chooses a branch to be executed based on a value. One or more values can be listed on each case.
 
 [source,javascript]
@@ -417,7 +414,7 @@ default:
 
 
 
-=== Function
+=== Custom Functions
 JavaScript, like most programming languages, has facilities for creating subprograms to modularize or divide operations into distinct functions. Once you define such a function, you can  call it from other parts of your script to perform the specified operations, as needed. See xref:viewsheetscript:CreateScriptFunction.adoc[] for more details on how to define a function.
 
 
@@ -469,7 +466,7 @@ var myTotal = sumarray(myArray);
 
 
 
-
+[#UsefulTextFunctions]
 == Useful Text Functions
 Two common string operations are changing case and searching for substrings.
 
@@ -502,8 +499,9 @@ else {
   Text1.text = 'Without New';
 }
 
-Other string search functions include xref:commonscript:StringObjectSearch.adoc[], xref:commonscript:StringObjectMatch.adoc[], and xref:commonscript:CALC_find.adoc[].
+Other common string search functions include xref:commonscript:StringObjectSearch.adoc[], xref:commonscript:StringObjectMatch.adoc[], and xref:commonscript:CALC_find.adoc[].
 
+[#UsefulDateFunctions]
 == Useful Date Functions
 
 This section discusses several basic date functions.
@@ -581,7 +579,11 @@ Text1.text = 'Today is: ' + formatDate(d, 'MM-dd-yy'); // Today is: 02/21/07
 Because scripts are executed when the Dashboard is generated on the server, a script error can cause Dashboard generation to fail. To prevent this from happening, you should wrap error-prone code inside a “try-catch” block, which allows you to trap errors before they affect Dashboard execution. See xref:#TryCatch[]  for more information.
 
 == Debug a Script
-When you attempt to debug a Dashboard script, it is often helpful to view the current values of variables and objects. To do this, use the `alert()` function, which opens a message box to display a specified string.
+
+If a Dashboard generates errors, you can use the Visual Composer Console (see xref:viewsheet:VisualComposerConsole.adoc[]) to analyze the errors.  Errors will also be recorded in the server logs. See xref:administration:Logging.adoc[] for more information.
+
+
+When you attempt to debug a Dashboard script, it is often helpful to view the current values of variables and objects. To do this, use the xref:viewsheetscript:SpecialFunctionsAlert.adoc[] function, which opens a "`toast`" message box to display a specified string.
 [source,javascript]
 alert('string to display')
 
@@ -595,4 +597,5 @@ alert(arr.join(","))
 
 image:administration:alertFunction.png[]
 
-You can also use the `alert()` dialog box to display critical information to a user (e.g., that the user’s selections have resulted in an empty dataset being returned).
+The `alert()` dialog box is also useful for displaying critical information to a user (for example, if the user’s selections have resulted in an empty dataset).  You can also use the  xref:viewsheetscript:SpecialFunctionsConfirm.adoc[] function to display information to a user, which also prompts the user to either continue or abort the operation.
+
