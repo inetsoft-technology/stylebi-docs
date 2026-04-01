@@ -10,26 +10,27 @@
 
 JavaScript is an object-oriented programming language for performing computations and manipulating computational objects within a host environment.
 
-The following sections offer a brief introduction to common JavaScript language constructs and typical usage.  For more detailed information on JavaScript, please consult the https://www.ecma-international.org/publications/standards/Ecma-262.htm[ECMA-262 specification] or a JavaScript book. You can also find information on JavaScript syntax and constructs on the https://devedge-temp.mozilla.org/central/javascript/index_en.html[Mozilla web site].
+The following sections offer a brief introduction to common JavaScript language constructs and typical usage.  For more detailed information on JavaScript, please consult the https://www.ecma-international.org/publications/standards/Ecma-262.htm[ECMA-262 specification] or a JavaScript book. You can also find information on JavaScript syntax and constructs on the https://devedge-temp.mozilla.org/central/javascript/index_en.html[Mozilla website].
 
+[square]
 ** xref:commonscript:JavaObjects.adoc[]: Access Java objects using JavaScript.
-** xref:commonscript:StyleConstant.adoc[]
 
-** xref:commonscript:GlobalObjectFunctions.adoc[]
+** xref:commonscript:StyleConstant.adoc[]: Predefined constants that can be used to set grouping, alignment, data type, Chart style, line style, aggregation method, and point shape.
 
-** xref:commonscript:StringObjectFunctions.adoc[]
+** xref:commonscript:GlobalObjectFunctions.adoc[]: Properties and functions available for the entire scripting environment, which can be accessed anywhere without any qualifier.
 
-** xref:commonscript:NumberObjectFunctions.adoc[]
+** xref:commonscript:StringObjectFunctions.adoc[]: Built-in functions that operate on strings (text), including string search, concatenations, replacements, truncations, and case shift.
 
-** xref:commonscript:DateGlobalFunctions.adoc[]
+** xref:commonscript:NumberObjectFunctions.adoc[]: Functions for converting a number to a string representation.
 
-** xref:commonscript:DateObjectFunctions.adoc[]
+** xref:commonscript:DateGlobalFunctions.adoc[]: Functions that operate on dates, and are useful for computing date differences, determining future or past dates, and for formatting dates.
 
-** xref:commonscript:ArrayObjectFunctions.adoc[]
+** xref:commonscript:DateObjectFunctions.adoc[]: Methods that operate on Date objects, and allow you to set and get parts of a Date.
 
-** xref:commonscript:MathObjectFunctions.adoc[]
+** xref:commonscript:ArrayObjectFunctions.adoc[]: Methods that operate on arrays, and allow you to manipulate or extract elements in an array.
 
-** xref:commonscript:CalcObjectFunctions.adoc[]
+** xref:commonscript:MathObjectFunctions.adoc[]: Methods that operate on numbers and provide common mathematical operations, such as rounding and trigonometry.
 
+** xref:commonscript:CalcObjectFunctions.adoc[]: A large function library containing implementations of Microsoft Excel^®^ spreadsheet functions.
 
-** xref:commonscript:RegexObjectFunctions.adoc[]
+** xref:commonscript:RegexObjectFunctions.adoc[]: Functions that facilitate the use of regular expressions (regex).

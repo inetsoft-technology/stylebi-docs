@@ -10,4 +10,18 @@
 This tutorial provides a set of Chart examples to illustrate some common chart scripting tasks, such as color-coding data, changing labels and axes, and positioning chart annotations.
 
 [square]
-include::ROOT:partial$MINITOC_ChartScriptTutorial.adoc[]
+** xref:chartAPI:ModifyChartProperties.adoc[]: Use simple script commands to modify a Chart.
+** xref:chartAPI:ModifyChartDataBinding.adoc[]: Use Chart script to change the data fields displayed on a Chart.
+** xref:chartAPI:ModifyChartElement.adoc[]: Use Chart script to change the color, shape, or size representation of data on a Chart.
+** xref:chartAPI:CreateChartwithChartAPI.adoc[]: Use Chart script to create a Chart from scratch without using the Chart Editor.
+** xref:chartAPI:BindDatatoChartinScript.adoc[]: Use Chart script to select the data that should appear on Chart.
+** xref:chartAPI:AccessChartData.adoc[]: Use Chart script to read the data that is displayed on the Chart.
+** xref:chartAPI:ChangeChartCoordinates.adoc[]: Use Chart script to switch between rectangular, polar, and parallel coordinates, and set a coordinate background.
+** xref:chartAPI:ChangeChartLabels.adoc[]: Use Chart script to modify Chart labels.
+** xref:chartAPI:ChangeChartScaling.adoc[]: Use Chart script to switch between linear and log scales and set axis minimums and maximums.
+** xref:chartAPI:ChangeChartElements.adoc[]: Use Chart script to change the appearance of element, such as color, shape, size.
+** xref:chartAPI:ChangeAxisProperties.adoc[]: Use Chart script to change the appearance of Chart axes, such as color, thickness, style, etc.
+** xref:chartAPI:ChangeLegendProperties.adoc[]: Use Chart script to change the properties of a Chart legend, such as color, font, border, etc.
+** xref:chartAPI:RepresentDatawithShapeColorSize.adoc[]: Use Chart script to choose how data should be mapped to Chart elements, for example, by using the size, color, or shape of Chart elements.
+** xref:chartAPI:RepresentMultipleMeasures.adoc[]: Use Chart script to add additional measures onto a Chart.
+** xref:chartAPI:AddChartDecoration.adoc[]: Use Chart script to add custom labeling to a Chart.

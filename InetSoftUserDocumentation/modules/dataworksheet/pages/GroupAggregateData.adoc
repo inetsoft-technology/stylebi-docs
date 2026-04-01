@@ -349,6 +349,7 @@ include::ROOT:partial$duplicateNames.adoc[]
 . If you want the grouping to be accessible to all columns of a certain data type, select the desired data type from the ‘Type’ menu.
 +
 For example, you could use the ‘starting with’ operator to define a grouping based on initial letter (i.e., A, B, C, etc.). If you specified type ‘String’ for this grouping, you could apply the grouping to any column of that type in a Data Worksheet. This would allow you to reuse the same alphabetical grouping for customer names, company names, product descriptions, and any other column that has ‘String’ type data.
+
 . If you want the grouping to be applicable only to a particular column or attribute of a particular data source, select the desired data source from the ‘Only for’ menu. Select the desired column from the ‘Attribute’ menu.
 +
 You can select a column or attribute from any accessible data source, not restricted to those in the current Data Worksheet. The grouping defined for this column or attribute will then be available wherever the column or attribute is used in a Data Worksheet.
