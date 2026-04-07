@@ -1,11 +1,60 @@
 // this is a comment
 = InetSoft Documentation
 
-InetSoft StyleBI  allows you to explore, analyze, monitor, report, and collaborate on business and operational data, all in real time.
+InetSoft StyleBI  allows you to explore, analyze, monitor, report, and collaborate on business and operational data, all in real time.  StyleBI is engineered to scale with your enterprise needs, and to seamlessly integrate with a wide variety of data sources and delivery platforms.
 
-The  topics in the left panel explain how to use the User Portal to create data sources, Data Worksheets, and Dashboards, as well as how to manage the server with Enterprise Manager.
+== About This Documentation
 
-[IMPORTANT]
+This user documentation explains how to use the User Portal to create data sources, Data Worksheets, and Dashboards, as well as how to manage the server with Enterprise Manager.  It contains the following main modules:
+
+[square]
+* xref:user:ConnectToData.adoc[]: Add a  *datasource* to provide a persistent connection to your data, so that changes that you make to your data by updating, modifying, or deleting records are automatically reflected in all Dashboards that use the data source.
+
+* xref:dataworksheet:PrepareYourData.adoc[]: Create  a *Data Worksheet*  using *Visual Composer* to manipulate your dataset (e.g.,  filter, group, sort, transform) or  mashup data from multiple data sources.
+
+* xref:viewsheet:VisualizeYourData.adoc[]: Create a *Dashboard* using  *Visual Composer*  to dynamically filter a data set and visualize the output on tables, charts, and gauges.
+
+* xref:user:ConfigureSelfService.adoc[]: Configure self-service features to enable users to most effectively create their own  dashboards.
+
+* xref:viewsheet:PublishDashboard.adoc[]: Arrange components on a Dashboard for publication across a variety of devices and languages.
+
+* xref:viewsheet:DashboardReference.adoc[]: Descriptions of all properties available in Dashboard component dialog boxes.
+
+* xref:viewsheetscript:AdvancedDashboardScripting.adoc[]: Add    flexibility to Dashboard applications with programmatic logic.
+
+* xref:administration:ManageServer.adoc[]: Use Enterprise Manager  to manage the InetSoft server with features such as monitoring, logging, configuration, file management, and security.
+
+* xref:commonscript:UserFunctions.adoc[]: Brief introduction to common JavaScript language constructs and typical usage.
+
+* xref:chartAPI:ChartScriptTutorial.adoc[] and xref:chartAPI:ChartScriptReference.adoc[]:  Examples and reference pages for the Chart API, which allows you to access deep Chart functions to create custom Charts using scripted logic.
+
+* xref:user:UsePortal.adoc[]: Navigate the User Portal as an end-user, and perform common Dashboard functions such as exporting, bookmarking, annotating, and sharing.
+
+
+== About the API Documentation
+
+If you want to call StyleBI functions from within your own application, see the following InetSoft API references.  These references are intended for developers and integration engineers. Consult the  InetSoft Support Team for guidance in using these APIs  in your application.
+
+Java API::
+https://www.inetsoft.com/docs/stylebi/apidoc/
+
+Web API::
+https://www.inetsoft.com/docs/stylebi/web-api/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== About StyleBI Installation
 StyleBI can be installed on any platform that supports Docker. For information on how to install Docker, see the https://docs.docker.com/engine/install/[Install Docker Engine] documentation.    For information on how to install StyleBI in a Docker container, see the StyleBI https://github.com/inetsoft-technology/stylebi/blob/main/README.md[README] file on GitHub.
 
 
