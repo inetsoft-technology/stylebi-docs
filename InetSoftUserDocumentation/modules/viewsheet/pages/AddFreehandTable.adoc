@@ -7,6 +7,16 @@ xref:viewsheetscript:AccessComponentData.adoc[] in xref:viewsheetscript:Advanced
 
 A Freehand Table is an advanced component that provides greater layout flexibility than a Table or Crosstab, and also allows the use of formulas in table cells.
 
+== Why Create a Freehand Table?
+A Freehand Table is an advanced component that enables you to perform  groupings and layouts *that are not possible*  in a Crosstab or Regular Table.  Most Freehand Tables strongly resemble Crosstabs, but have the following features that you *cannot* create in a Crosstab.
+
+[square]
+Multiple groupings that are NOT hierarchical::  For example, a Crosstab can display the hierarchical grouping menu:Region[State>City].  But a single Crosstab cannot display *independent* groupings for *State* and *City* that are NOT hierarchical.  You can only do this in a Freehand Table.
+
+Cells that compute formulas:: For example, a Crosstab can display row totals or column totals.  But if you want a column that compares values from  this Table to values in a *different* Table or other component, you will need to create a  formula cell that performs the desired  computation.  You can only do this in a Freehand Table.
+
+Because Freehand Tables  are usually very similar to Crosstab Tables, it is easiest to create a Crosstab Table that is as "`close as possible`" to your desired result, and then *convert* the Crosstab to a Freehand Table, and  make the final adjustments.  See xref:#ConvertToFreehandTable[] for instructions on how to do this.
+
 [#ConvertToFreehandTable]
 == Convert a Table or Crosstab
 
