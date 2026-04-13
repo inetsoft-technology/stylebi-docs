@@ -19,7 +19,7 @@ include::partial$dataSourceUserIntro.adoc[]
 +
 *If you do not have a URL*, disable ‘Custom URL’, and enter the additional required connection information: ‘Host Name’, ‘Port’, ‘Database Name’, and login credentials.
 +
-image:dataSourceMySQL3.png[]
+image:dataSourceMySQL3.png[alt="Amazon Aurora RDS MySQL data source definition screen"]
 +
 include::user:partial$customURLProperties.adoc[]
 
@@ -36,10 +36,10 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceMySQL4.png[]
+image:dataSourceMySQL4.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceMySQL5.png[]
+image:dataSourceMySQL5.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

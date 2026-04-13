@@ -8,7 +8,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Shopify’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceShopify1.png[]
+image:dataSourceShopify1.png[alt="Shopify data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this data source connection.
 
@@ -27,11 +27,11 @@ NOTE: Selecting scopes that are not compatible with your Shopify account may cau
 include::ROOT:partial$createVisualizationStep2.adoc[]
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceShopify2.png[]
+image:dataSourceShopify2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceShopify3.png[]
+image:dataSourceShopify3.png[alt="connection error icon"]
 +
 In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
 

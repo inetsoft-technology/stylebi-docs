@@ -10,7 +10,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘SQL Server’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewSQLServer2.png[]
+image:dataSourceNewSQLServer2.png[alt="SQL Server data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -40,10 +40,10 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceSQLServer_2.png[]
+image:dataSourceSQLServer_2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceSQLServer_3.png[]
+image:dataSourceSQLServer_3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

@@ -11,7 +11,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘PostgreSQL’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewPostgreSQL2.png[]
+image:dataSourceNewPostgreSQL2.png[alt="PostgreSQL data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -42,10 +42,10 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourcePostgreSQL2.png[]
+image:dataSourcePostgreSQL2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourcePostgreSQL3.png[]
+image:dataSourcePostgreSQL3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

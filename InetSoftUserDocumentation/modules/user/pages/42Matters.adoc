@@ -6,7 +6,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘42Matters’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNew42Matters2.png[]
+image:dataSourceNew42Matters2.png[alt="42Matters data source definition screen"]
 
 . Enter a value for the ‘Access Token’. See the https://42matters.com/docs/overview[42Matters API Documentation] for more information. Select ‘Free Trial’ if you are using a trial account.
 +
@@ -18,18 +18,13 @@ image:dataSourceNew42Matters2.png[]
 include::ROOT:partial$createVisualizationStep2.adoc[]
 
 
-
-
-
-
-
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSource42Matters3.png[]
+image:dataSource42Matters3.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSource42Matters4.png[]
+image:dataSource42Matters4.png[alt="connection error icon"]
 +
 In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
 

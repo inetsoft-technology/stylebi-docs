@@ -8,7 +8,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Databricks’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewDatabricks.png[]
+image:dataSourceNewDatabricks.png[alt="Databricks data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -36,10 +36,10 @@ include::partial$hikariConfig.adoc[]
 include::ROOT:partial$createVisualizationStep2.adoc[]
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceDatabricks2.png[]
+image:dataSourceDatabricks2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceDatabricks3.png[]
+image:dataSourceDatabricks3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

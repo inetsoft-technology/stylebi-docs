@@ -13,7 +13,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Root Folder’ location. The root folder is the server folder containing the server file (or files) to which you want to connect.
 +
-image:dataSourceTextExcel3.png[]
+image:dataSourceTextExcel3.png[alt="Text/Excel Directory data source definition screen"]
 +
 include::partial$testConnection.adoc[]
 
@@ -22,11 +22,11 @@ include::partial$testConnection.adoc[]
 include::ROOT:partial$createVisualizationStep2.adoc[]
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceTextExcel4.png[]
+image:dataSourceTextExcel4.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceTextExcel4b.png[]
+image:dataSourceTextExcel4b.png[alt="connection error icon"]
 +
 In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
 

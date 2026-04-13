@@ -21,7 +21,7 @@ NOTE:  The PostgreSQL database driver is packaged with InetSoft. If you see a wa
 +
 *If you do not have a URL*, disable ‘Custom URL’, and enter the additional required connection information: ‘Host Name’, ‘Port’, ‘Database Name’, and login credentials.
 +
-image:datasourcePostgres1.png[]
+image:datasourcePostgres1.png[alt="Amazon Aurora RDS PostgreSQL data source definition screen"]
 +
 include::user:partial$customURLProperties.adoc[]
 
@@ -35,10 +35,10 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourcePostgreSQL2.png[]
+image:dataSourcePostgreSQL2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourcePostgreSQL3.png[]
+image:dataSourcePostgreSQL3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

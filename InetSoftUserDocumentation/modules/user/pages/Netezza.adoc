@@ -11,7 +11,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Netezza’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewNetezza2.png[]
+image:dataSourceNewNetezza2.png[alt="Netezza data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -44,10 +44,10 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceNetezza2.png[]
+image:dataSourceNetezza2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceNetezza3.png[]
+image:dataSourceNetezza3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

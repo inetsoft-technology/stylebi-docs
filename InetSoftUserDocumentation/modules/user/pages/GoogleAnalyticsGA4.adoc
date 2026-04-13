@@ -6,7 +6,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Google Analytics’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceGoogleAnalytics2.png[]
+image:dataSourceGoogleAnalytics2.png[alt="Google Analytics GA4 data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this data source connection.
 
@@ -28,11 +28,11 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceGoogleAnalytics3.png[]
+image:dataSourceGoogleAnalytics3.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceGoogleAnalytics4.png[]
+image:dataSourceGoogleAnalytics4.png[alt="connection error icon"]
 +
 In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
 

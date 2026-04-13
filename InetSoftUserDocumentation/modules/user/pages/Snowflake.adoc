@@ -8,7 +8,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Snowflake’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceSnowflake1.png[]
+image:dataSourceSnowflake1.png[alt="Snowflake data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -36,10 +36,10 @@ include::partial$hikariConfig.adoc[]
 include::ROOT:partial$createVisualizationStep2.adoc[]
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceSnowflake2.png[]
+image:dataSourceSnowflake2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceSnowflake3.png[]
+image:dataSourceSnowflake3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

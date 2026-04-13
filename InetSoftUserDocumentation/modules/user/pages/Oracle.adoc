@@ -11,7 +11,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Oracle’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewOracle2.png[]
+image:dataSourceNewOracle2.png[alt="Oracle data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -41,11 +41,11 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceOracle2.png[]
+image:dataSourceOracle2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceOracle3.png[]
+image:dataSourceOracle3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]
 

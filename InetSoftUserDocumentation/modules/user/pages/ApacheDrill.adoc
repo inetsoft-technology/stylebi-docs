@@ -9,7 +9,7 @@ include::partial$dataSourceUserIntro.adoc[]
 . Select the ‘Apache Drill’ data source, and press btn:[Create]. This opens the data source definition screen.
 
 +
-image:dataSourceNewApacheDrill2.png[]
+image:dataSourceNewApacheDrill2.png[alt="Apache Drill data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -37,10 +37,10 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceApacheDrill2.png[]
+image:dataSourceApacheDrill2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceApacheDrill3.png[]
+image:dataSourceApacheDrill3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

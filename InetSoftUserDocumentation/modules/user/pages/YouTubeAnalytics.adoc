@@ -9,7 +9,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘YouTube Analytics’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewYouTubeAnalytics2.png[]
+image:dataSourceNewYouTubeAnalytics2.png[alt="YouTube Analytics data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this connection.
 
@@ -24,11 +24,11 @@ image:dataSourceNewYouTubeAnalytics2.png[]
 include::ROOT:partial$createVisualizationStep2.adoc[]
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceYouTubeAnalytics3.png[]
+image:dataSourceYouTubeAnalytics3.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceYouTubeAnalytics4.png[]
+image:dataSourceYouTubeAnalytics4.png[alt="connection error icon"]
 +
 In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
 

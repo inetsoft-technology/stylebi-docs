@@ -11,7 +11,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘jTDS’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewjTDS2.png[]
+image:dataSourceNewjTDS2.png[alt="jTDS data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -43,10 +43,10 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourcejTDS2.png[]
+image:dataSourcejTDS2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourcejTDS3.png[]
+image:dataSourcejTDS3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

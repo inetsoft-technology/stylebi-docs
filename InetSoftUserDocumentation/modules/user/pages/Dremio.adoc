@@ -8,7 +8,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Dremio’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNew2.png[]
+image:dataSourceNew2.png[alt="Dremio data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -38,10 +38,10 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceSQLServer2.png[]
+image:dataSourceSQLServer2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceSQLServer3.png[]
+image:dataSourceSQLServer3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

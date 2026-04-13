@@ -8,7 +8,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Aster Data nCluster’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewAsterDatanCluster2.png[]
+image:dataSourceNewAsterDatanCluster2.png[alt="Aster Data nCluster data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -35,10 +35,10 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceAsterDatanCluster2.png[]
+image:dataSourceAsterDatanCluster2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceAsterDatanCluster3.png[]
+image:dataSourceAsterDatanCluster3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

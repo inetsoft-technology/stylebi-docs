@@ -8,7 +8,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Twitter’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewTwitter2.png[]
+image:dataSourceNewTwitter2.png[alt="Twitter (X) data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this connection.
 
@@ -21,11 +21,11 @@ image:dataSourceNewTwitter2.png[]
 include::ROOT:partial$createVisualizationStep2.adoc[]
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceTwitter2.png[]
+image:dataSourceTwitter2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceTwitter3.png[]
+image:dataSourceTwitter3.png[alt="connection error icon"]
 +
 In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
 

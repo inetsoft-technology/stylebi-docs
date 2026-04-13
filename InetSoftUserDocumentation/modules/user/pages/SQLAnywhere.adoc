@@ -8,7 +8,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘SQL Anywhere’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewSQLAnywhere2.png[]
+image:dataSourceNewSQLAnywhere2.png[alt="SQL Anywhere data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -37,10 +37,10 @@ include::partial$hikariConfig.adoc[]
 include::ROOT:partial$createVisualizationStep2.adoc[]
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceSQLAnywhere2.png[]
+image:dataSourceSQLAnywhere2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceSQLAnywhere3.png[]
+image:dataSourceSQLAnywhere3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

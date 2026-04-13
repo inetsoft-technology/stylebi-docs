@@ -10,7 +10,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Apache Hive’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewApacheHive.png[]
+image:dataSourceNewApacheHive.png[alt="Apache Hive data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this data source connection.
 
@@ -26,7 +26,7 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceApacheHive6.png[]
+image:dataSourceApacheHive6.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful. In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
 

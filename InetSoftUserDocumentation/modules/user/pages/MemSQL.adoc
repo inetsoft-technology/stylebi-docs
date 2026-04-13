@@ -11,7 +11,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘MemSQL’ data source, and press btn:[Create]. This opens the data source definition screen.
 +
-image:dataSourceNewMemSQL2.png[]
+image:dataSourceNewMemSQL2.png[alt="MemSQL data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this database connection.
 
@@ -38,10 +38,10 @@ include::ROOT:partial$createVisualizationStep2.adoc[]
 
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceMemSQL2.png[]
+image:dataSourceMemSQL2.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceMemSQL3.png[]
+image:dataSourceMemSQL3.png[alt="connection error icon"]
 +
 include::user:partial$dataSourceFinalSteps.adoc[]

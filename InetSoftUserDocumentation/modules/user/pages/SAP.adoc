@@ -19,7 +19,7 @@ include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘SAP ABAP’, ‘SAP BAPI’, or ‘SAP Tables’ data source. This opens the SAP definition screen.
 +
-image:dataSourceSAP2.png[]
+image:dataSourceSAP2.png[alt="SAP data source definition screen"]
 
 . In the ‘Name’ field, enter a label for this data source connection.
 
@@ -32,11 +32,11 @@ image:dataSourceSAP2.png[]
 include::ROOT:partial$createVisualizationStep2.adoc[]
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
-image:dataSourceSAP3.png[]
+image:dataSourceSAP3.png[alt="connection successful icon"]
 +
 If the database is shown with an {buttonError}, this means that the connection was not successful.
 +
-image:dataSourceSAP4.png[]
+image:dataSourceSAP4.png[alt="connection error icon"]
 +
 In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
 
