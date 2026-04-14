@@ -101,7 +101,7 @@ The global (`pass:[*]`) definition used in xref:#CreateCSSFile[] above affects a
 }
 ----
 
-image:CSSExp_global.png[]
+image:CSSExp_global.png[alt="global CSS font applied to dashboard components"]
 
 See xref:CreateCSSDefinitionFile.adoc#CSSGlobalDefault[CSS Global Default] for further information about the global format.
 
@@ -118,7 +118,7 @@ Chart {
    background:Azure;
 }
 ----
-image:CSSExp_Chart.png[]
+image:CSSExp_Chart.png[alt="CSS chart background color applied to dashboard"]
 
 The `TableTitle` definition in xref:#CreateCSSFile[] affects the title bar of all Table-type components (in all  Dashboards).
 [source,css]
@@ -128,7 +128,7 @@ TableTitle {
    color: green;
 }
 ----
-image:CSSExp_tableTitle.png[]
+image:CSSExp_tableTitle.png[alt="CSS green color applied to table title bar"]
 
 The `ChartAxisTitle` definition in xref:#CreateCSSFile[] affects the title text of all chart axes (in all  Dashboards).
 [source,css]
@@ -138,7 +138,7 @@ ChartAxisTitle {
    background: yellow;
 }
 ----
-image:CSSExp_ChartAxisTitle.png[]
+image:CSSExp_ChartAxisTitle.png[alt="CSS yellow background on chart axis titles"]
 
 It can be overwritten by more specific axis formatting, such as the X-axis formatting below.
 
@@ -150,7 +150,7 @@ ChartAxisTitle[axis=x] {
    background:DarkKhaki;
 }
 ----
-image:CSSExp_ChartAxisTitleX.png[]
+image:CSSExp_ChartAxisTitleX.png[alt="CSS dark khaki background on chart X-axis title"]
 
 See  xref:CreateCSSDefinitionFile.adoc#CSSType[CSS Type] for further information about component type styling.
 
@@ -174,7 +174,7 @@ The `Header2` class definition in xref:#CreateCSSFile[] affects only components 
 }
 ----
 
-image:CSSExp_Header2.png[]
+image:CSSExp_Header2.png[alt="Header2 CSS class styling applied to component"]
 
 The `AxisText` class definition in xref:#CreateCSSFile[] affects all components that have CSS Class “AxisText” assigned to them.
 [source,css]
@@ -185,7 +185,7 @@ The `AxisText` class definition in xref:#CreateCSSFile[] affects all components 
    font-weight: bold;
 }
 ----
-image:CSSExp_ChartAxisText.png[]
+image:CSSExp_ChartAxisText.png[alt="AxisText CSS class bold font on chart axis"]
 
 The `Table#SalesTable` definition in xref:#CreateCSSFile[] affects only components of type Table that have CSS ID “SalesTable” assigned to them.
 [source,css]
@@ -195,7 +195,7 @@ Table#SalesTable {
    background-color: #FFEEBB;
 }
 ----
-image:CSSExp_TableClass.png[]
+image:CSSExp_TableClass.png[alt="CSS ID SalesTable background color applied"]
 
 The `.YellowRows TableStyle[region=Body][pattern=OddRow]` definition in xref:#CreateCSSFile[] affects only components of type Table that have CSS Class “YellowRows” assigned to them. This styles the odd rows within the body of the table.
 [source,css]
@@ -205,7 +205,7 @@ The `.YellowRows TableStyle[region=Body][pattern=OddRow]` definition in xref:#Cr
    background-color: yellow;
 }
 ----
-image:CSSExp_TableStyleClass.png[]
+image:CSSExp_TableStyleClass.png[alt="YellowRows class styling odd rows yellow"]
 
 See xref:CreateCSSDefinitionFile.adoc#CSSTableStyle[CSS TableStyle] for information about TableStyles.
 

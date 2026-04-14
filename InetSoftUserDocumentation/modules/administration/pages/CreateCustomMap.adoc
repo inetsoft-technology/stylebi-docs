@@ -44,14 +44,14 @@ To prepare and export a shape file for use with InetSoft, follow the steps below
 
 . Select the shapefile that you wish to export, and press btn:[Finish]. (In this example, *world.shp* is a shapefile containing the political boundaries of all countries in the world.)
 +
-image:OpenJUMPExp1.png[]
+image:OpenJUMPExp1.png[alt="open shapefile in OpenJUMP application"]
 
 
 . Consolidate the logical map features. *Consolidation* merges all shapes for a atomic entity (e.g., a single country) into a single feature. To do this, follow the steps below:
 
 .. Select  menu:InetSoft[Consolidate Features]. This opens the ‘Consolidate Features’ dialog box.
 +
-image:OpenJUMPExp2.png[]
+image:OpenJUMPExp2.png[alt="Consolidate Features dialog box in OpenJUMP"]
 
 .. In the ‘Layer’ menu, select the desired geographical layer.
 
@@ -59,7 +59,7 @@ image:OpenJUMPExp2.png[]
 
 .. Press btn:[OK]. This creates the consolidated map, which is listed under the ‘Result’ node in the OpenJUMP project tree.
 +
-image:OpenJUMPExp3.png[]
+image:OpenJUMPExp3.png[alt="consolidated map listed in OpenJUMP project tree"]
 
 .. *_Optional:_* To conserve memory, delete the original ‘world’ layer from the ‘Working’ node of the OpenJUMP project tree. To do this, right click on the ‘world’ entry, and choose ‘Remove Selected Layers’.
 
@@ -71,7 +71,7 @@ image:OpenJUMPExp3.png[]
 
 .. Select the desired ‘Layer’, and set the ‘Minimum’, ‘Maximum’, and ‘Interval’ properties of the histogram.
 +
-image:OpenJUMPExp4.png[]
+image:OpenJUMPExp4.png[alt="Area Histogram dialog with min max and interval settings"]
 +
 For example, a minimum of 10%, maximum of 100%, and interval of 10% generates histogram values for the following percentages: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100.
 
@@ -79,17 +79,17 @@ For example, a minimum of 10%, maximum of 100%, and interval of 10% generates hi
 
 .. To view the histogram, press the ‘Output Window’ button in the OpenJUMP toolbar.
 +
-image:OpenJUMPExp5.png[]
+image:OpenJUMPExp5.png[alt="press Output Window button in OpenJUMP toolbar"]
 +
 The histogram indicates the percentage of the polygons in the map which would be removed for a given area threshold. Use the histogram to identify the proper area threshold for removing polygons. For example, the histogram below indicates that by removing all polygons smaller than an area threshold of 0.046081, you could effectively remove 90% of polygons in the map.
 +
-image:OpenJUMPExp6.png[]
+image:OpenJUMPExp6.png[alt="area histogram showing polygon removal percentages"]
 +
 In this example, areas in the range of 0.04 units are probably not visually significant compared to other areas, the largest of which is approximately 6000 units. Therefore, by using a polygon removal threshold of 0.04 you can eliminate the majority of polygons without detectably altering the displayed map.
 
 .. Select menu:InetSoft[Remove small polygons]. This opens the ‘Remove Small Polygons’ dialog box.
 +
-image:OpenJUMPExp7.png[]
+image:OpenJUMPExp7.png[alt="Remove Small Polygons dialog box"]
 +
 NOTE: The most significant (largest) polygon of a map feature (e.g., country) is always retained regardless of the threshold.
 
@@ -97,7 +97,7 @@ NOTE: The most significant (largest) polygon of a map feature (e.g., country) is
 
 .. Press btn:[OK] to initiate the polygon removal. This creates a new map layer (“world consolidated areas removed” in the example).
 +
-image:OpenJUMPExp8.png[]
+image:OpenJUMPExp8.png[alt="new map layer after polygon removal in project tree"]
 
 .. *_Optional:_* To remove the original layer (“world consolidated”), right-click the “world consolidated” node, and choose ‘Remove Selected Layers’ from the context menu.
 +
@@ -105,19 +105,19 @@ TIP: You may need to experiment with different area thresholds to determine whic
 
 .. To view the report for the polygon removal operation, press the ‘Output Window’ button in the OpenJUMP toolbar.
 +
-image:OpenJUMPExp9.png[]
+image:OpenJUMPExp9.png[alt="polygon removal operation report in Output Window"]
 
 . To help reduce the memory required for the map, determine the maximum precision to be used. Follow the steps below:
 
 .. Select menu:InetSoft[Find Precision]. This opens the ‘Find Precision’ dialog box.
 +
-image:OpenJUMPExp10.png[]
+image:OpenJUMPExp10.png[alt="Find Precision dialog box in OpenJUMP"]
 
 .. Select the desired layer, and press btn:[OK].
 
 .. Press the ‘Output Window’ button in the OpenJUMP toolbar to view current precision. (The precision is expressed as the number of decimal places used to represent the map coordinates.)
 +
-image:OpenJUMPExp11.png[]
+image:OpenJUMPExp11.png[alt="current map coordinate precision in Output Window"]
 +
 If the precision is unnecessarily high, you can reduce it in the next step. (A precision of six decimal places is more than adequate for most cases.)
 
@@ -127,7 +127,7 @@ If the precision is unnecessarily high, you can reduce it in the next step. (A p
 
 .. Select the desired layer, and enter a value for ‘Precision’. (A precision of six decimal places is more than adequate for most cases.)
 +
-image:OpenJUMPExp12.png[]
+image:OpenJUMPExp12.png[alt="Noding dialog with layer and precision settings"]
 
 .. Press btn:[OK]. This snaps all coordinates to the specified precision and corrects some common topological errors.
 
@@ -139,7 +139,7 @@ image:OpenJUMPExp12.png[]
 
 .. Select the desired ‘Layer’, and set the ‘Minimum’, ‘Maximum’, and ‘Interval’ properties of the threshold histogram.
 +
-image:OpenJUMPExp13.png[]
+image:OpenJUMPExp13.png[alt="Point Threshold Histogram dialog with layer and interval settings"]
 +
 For example, a minimum of 99%, maximum of 100%, and interval of 0.1% generates histogram values for the following percentages: 99.0, 99.1, 99.2, 99.3, 99.4, 99.5, 99.6, 99.7, 99.8, 99.9, 100.
 
@@ -150,7 +150,7 @@ For example, a minimum of 99%, maximum of 100%, and interval of 0.1% generates h
 
 .. To view the histogram, press the ‘Output Window’ button in the OpenJUMP toolbar.
 +
-image:OpenJUMPExp14.png[]
+image:OpenJUMPExp14.png[alt="boundary point significance histogram in Output Window"]
 +
 The histogram indicates the percentage of boundary points which would be removed for a given point “significance” threshold. Use the histogram to identify the proper point significance threshold for border simplification. For example, the histogram above indicates that by removing all points with significance smaller than 1.094881, you would effectively remove 99.4% of the boundary points.
 +
@@ -160,7 +160,7 @@ In this example, points with significance in the range of 1.0 are probably not v
 
 .. Select menu:InetSoft[Simplify lines and polygons]. This opens the ‘Simplify’ dialog box.
 +
-image:OpenJUMPExp15.png[]
+image:OpenJUMPExp15.png[alt="Simplify dialog with layer algorithm and threshold settings"]
 .. Select the desired ‘Layer’, and choose the same ‘Algorithm’ that you used in the previous step.
 
 .. Enter a ‘Threshold’ value. Boundary points with significance smaller than the threshold will be removed from the map. (In this case, a value of 1.0 will result in the removal of approximately 99% of the map’s points.)

@@ -6,10 +6,10 @@ IMPORTANT: The broadcast feature requires that a security provider be specified.
 
 To send an alert to all currently logged-in users, press the {buttonSendNotification} at the top of Enterprise Manager.
 
-image:BroadcastButton.png[]
+image:BroadcastButton.png[alt="press Send Notification button in Enterprise Manager"]
 
 This opens the ‘Broadcast’ dialog box, where you can enter a message to be relayed to users.
 
-image:BroadcastDialogBox.png[]
+image:BroadcastDialogBox.png[alt="enter broadcast message in dialog box"]
 
 When you have entered the desired message, press btn:[Send]. The message will be displayed to active users within about one minute after sending. You can use this mechanism to warn of system-wide scheduled maintenance, for example.

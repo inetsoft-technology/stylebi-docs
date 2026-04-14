@@ -42,7 +42,7 @@ The structure of the LDAP schema must be defined in the Enterprise Manager. To a
 
 . Select the *Security* page in the left panel.
 +
-image:Figure 23_1.png[]
+image:Figure 23_1.png[alt="select Security page in left panel"]
 
 . Select ‘Enable Security’ to activate security settings.
 
@@ -50,7 +50,7 @@ image:Figure 23_1.png[]
 
 . Choose the appropriate LDAP server implementation from the ‘LDAP Server’ menu. Make sure the main LDAP server is correctly installed and configured, and supply the necessary connection information. See  xref:#ActiveDirectory[] and xref:#GenericLDAP[] for more details.
 +
-image:LDAP Settings.png[]
+image:LDAP Settings.png[alt="configure LDAP server connection settings"]
 
 . Enable ‘Search User Subtree’ to perform a recursive search on the specified user base.
 
@@ -67,7 +67,7 @@ Once the directory server environment is configured, you can assign permissions 
 
 To use an Active Directory server for authentication, select ‘LDAP’ from the ‘Authentication’ menu on the ‘Security Provider’ page, and select ‘Active Directory’ from the ‘LDAP Server’ menu. (See xref:SpecifySecurityProvider.adoc[] for more information about the ‘Security Provider’ page.)
 
-image:Figure 25.png[]
+image:Figure 25.png[alt="select Active Directory from LDAP Server menu"]
 
 
 When configuring an Active Directory server to perform authentication for StyleBI, take note of the following points:
@@ -93,23 +93,23 @@ When configuring an Active Directory server to perform authentication for StyleB
 ====
 In the following example, consider the following Active Directory schema. The property list below indicate how to fill out the ‘Security Provider’ page for this schema.
 
-image:ActiveDirectorySampleSchema.png[]
+image:ActiveDirectorySampleSchema.png[alt="sample Active Directory schema structure"]
 
 Root DN:: The ‘Root DN’ (here, `dc=vm`) is automatically appended to all units within InetSoft and need not be included in any other entry.
 +
-image:ActiveDirectorySampleSchema5.png[]
+image:ActiveDirectorySampleSchema5.png[alt="set Root DN field in security provider"]
 
 User Search Base/Group Search Base:: To search all units below the ‘Departments’ unit, set ‘User Search Base’ and ‘Group Search Base’ to `ou=Departments`. (If you want to include only the ‘Accounts’ and ‘Sales’ units, set `ou=Accounts,ou=Departments;ou=Sales,ou=Departments`.)
 +
-image:ActiveDirectorySampleSchema1.png[]
+image:ActiveDirectorySampleSchema1.png[alt="set User and Group Search Base to Departments unit"]
 
 Role Search Base:: To search the ‘InetSoftRoles’ unit, set ‘Role Search Base’ to `ou=InetSoftRoles,ou=Roles`.
 +
-image:ActiveDirectorySampleSchema2.png[]
+image:ActiveDirectorySampleSchema2.png[alt="set Role Search Base to InetSoftRoles unit"]
 
 Administrator ID:: The ‘Administrator ID’ in this case is `cn=James Brown,ou=Admin`. Any account with sufficient read permissions can be used (preferably a service account). It does not need to be an Active Directory domain administrator, and does not need to be in the user search base.
 +
-image:ActiveDirectorySampleSchema3.png[]
+image:ActiveDirectorySampleSchema3.png[alt="enter Administrator ID distinguished name"]
 
 The ‘Security Provider’ page for these setting appears as follows:
 

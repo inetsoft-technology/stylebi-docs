@@ -17,7 +17,7 @@ To configure logging settings, follow the steps below:
 
 . Select the *Logging* page in the left panel.
 +
-image:Figure 10.png[]
+image:Figure 10.png[alt="logging settings page in Enterprise Manager"]
 
 
 The following properties are available:
@@ -48,11 +48,11 @@ You can assign custom log levels to particular assets. For example, you can set 
 
 . Press the btn:[Add] button below the '`Custom Log Levels`' table. This adds a new log level.
 +
-image:CustomLogLevelAdd.png[]
+image:CustomLogLevelAdd.png[alt="add new custom log level entry"]
 
 . In the ‘Context’ menu, select the type of asset (e.g.,  Dashboard, query, etc.) to which you want to assign a distinct log level.
 +
-image:CustomLogLevelType.png[]
+image:CustomLogLevelType.png[alt="select asset type in context menu"]
 
 . In the ‘Name’ field, enter the name of the asset for which you want to set a custom log level.
 
@@ -61,7 +61,7 @@ image:CustomLogLevelType.png[]
 
 . Select the desired logging level for this particular asset. (See above for level information.)
 +
-image:CustomLogLevelLevel.png[]
+image:CustomLogLevelLevel.png[alt="select logging level for custom log entry"]
 
 . Press btn:[OK], and then press btn:[Apply].
 

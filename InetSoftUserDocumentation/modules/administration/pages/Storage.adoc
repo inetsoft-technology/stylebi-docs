@@ -18,7 +18,7 @@ include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
 
 . Select the *General* page in the left panel, and select the *Storage* page in the right panel.
 +
-image:Figure 11.png[]
+image:Figure 11.png[alt="view Storage configuration page in General settings"]
 +
 The information The ‘Key-Value Storage Type’ field displays the method of storage for key-value settings, such as server properties. The default is MapDB. The ‘Blob Storage Type’ field displays the method of storage for binary objects, such as Dashboards. The default is file system. To change the type of storage, see below.
 
@@ -37,12 +37,12 @@ To manage stored assets, follow the steps below:
 
 . Select the *Content* page in the left panel, and select the *Storage* tab.
 +
-image:DataSpaceTab.png[]
+image:DataSpaceTab.png[alt="select Storage tab on Content page"]
 
 
 . To access a folder’s properties, click the desired folder name on the navigation tree. This opens the ‘Storage Folder Definition’ panel.
 +
-image:Figure 12.png[]
+image:Figure 12.png[alt="Storage Folder Definition panel"]
 
 . Then perform the desired operation:
 +
@@ -58,7 +58,7 @@ TIP: To make an asset accessible via URL, upload it to the *web-assets* director
 
 . To access a file’s properties, click the desired file name in the navigation tree. This opens the ‘Storage File Definition’ panel.
 +
-image:Figure 13.png[]
+image:Figure 13.png[alt="Storage File Definition panel"]
 +
 [square]
 * To rename the file, enter a name in the ‘File Name’ field and press btn:[Apply].
@@ -83,7 +83,7 @@ To manage drivers and plugins, follow the steps below:
 
 . Select the *Content* page in the left panel, and select the *Drivers and Plugins* tab at the top.
 +
-image:Drivers_Plugins1.png[]
+image:Drivers_Plugins1.png[alt="Drivers and Plugins tab in Content page"]
 
 . See the sections below to perform the desired operations.
 
@@ -96,11 +96,11 @@ select the desired plugin Zip file from the file system browser.
 
 . Press the btn:[Upload] button.
 +
-image:Drivers_Plugins2.png[]
+image:Drivers_Plugins2.png[alt="upload plugin Zip file to server"]
 +
 The uploaded plugin is shown in the table below the buttons.
 +
-image:Drivers_Plugins3.png[]
+image:Drivers_Plugins3.png[alt="uploaded plugin shown in plugins table"]
 
 . Restart the server (if this is required by the particular plugin).
 
@@ -114,17 +114,17 @@ To upload a database driver to the server, you will package it as a plugin. Foll
 ****
 .. Select the ‘Upload’ option.
 +
-image:Drivers_Plugins6.png[]
+image:Drivers_Plugins6.png[alt="select Upload option in Create Driver dialog"]
 
 .. Press the btn:[Select] button select the desired JAR files, as well as any other files required by the database.
 
 .. Press btn:[Next], and choose the desired driver file or files to package into a plugin.
 +
-image:Drivers_Plugins7.png[]
+image:Drivers_Plugins7.png[alt="choose driver JAR files to package into plugin"]
 
 .. Press ‘Next’, and enter the desired ‘Plugin ID’, ‘Plugin Name’, and ‘Plugin Version’. The ‘Plugin ID’ must be unique, and should typically be a namespaced value, such as `com.mycompany.jdbc.dbtype`. The ‘Plugin Version’ should conform to https://semver.org[semantic versioning standards]. The ‘Plugin Name’ is an arbitrary label.
 +
-image:Drivers_Plugins8.png[]
+image:Drivers_Plugins8.png[alt="enter Plugin ID Name and Version fields"]
 
 .. Press btn:[Finish] to create the plugin Zip file.
 ****
@@ -134,11 +134,11 @@ image:Drivers_Plugins8.png[]
 ****
 .. Select the ‘Maven’ option.Enter the ‘Maven Coordinates’ as `groupId:artifactId:packaging:version`.
 +
-image:Drivers_Plugins9.png[]
+image:Drivers_Plugins9.png[alt="enter Maven Coordinates in Create Driver dialog"]
 
 .. Press btn:[Next], and choose the desired driver file or files to package into a plugin.
 +
-image:Drivers_Plugins10.png[]
+image:Drivers_Plugins10.png[alt="choose driver files from Maven repository to package"]
 
 .. Press btn:[Next], and enter the desired ‘Plugin ID’, ‘Plugin Name’, and ‘Plugin Version’. The ‘Plugin ID’ must be unique, and should typically be a namespaced value, such as `com.mycompany.jdbc.dbtype`. The ‘Plugin Version’ should conform to https://semver.org[semantic versioning standards]. The ‘Plugin Name’ is an arbitrary label.
 

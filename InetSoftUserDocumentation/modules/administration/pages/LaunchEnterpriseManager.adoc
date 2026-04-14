@@ -6,13 +6,13 @@ Enterprise Manager is a web-based tool that allows you to administer the InetSof
 
 . Point a web browser to the StyleBI webapp homepage and select  ‘Enterprise Manager’.
 +
-image:InetSoft Home Screen.png[]
+image:InetSoft Home Screen.png[alt="StyleBI webapp homepage with Enterprise Manager link"]
 +
 This opens the Enterprise Manager login screen.  Alternatively, enter the Enterprise Manager URL: `pass:[http://{servername}:{port}/em]`.
 
 . Enter your login credentials, and press ‘Login’.
 +
-image:Enterprise Manager Login Screen.png[]
+image:Enterprise Manager Login Screen.png[alt="Enterprise Manager login screen"]
 +
 The default login/password is `admin/admin`. For security reasons, login information expires after five minutes. If you receive a ‘Login Expired’ warning, simply re-enter your credentials to log in.
 

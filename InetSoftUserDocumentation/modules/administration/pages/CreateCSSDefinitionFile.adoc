@@ -73,7 +73,7 @@ The Type definition applies styles universally to all elements of a particular t
 
 For Dashboard components, the ‘Type’ is displayed in the *CSS* pop-up in the *Format* panel. See xref:viewsheet:VisualFormat.adoc[] for a list of all available CSS component types.
 
-image:viewsheet:CSS Table Detail.png[]
+image:viewsheet:CSS Table Detail.png[alt="view CSS type in Format panel"]
 
 [#CSSTableStyle]
 == CSS Table Style
@@ -131,7 +131,7 @@ ChartPalette[index='2'] {
   color: red;
 }
 
-image:cssColorPaletteGradient.png[]
+image:cssColorPaletteGradient.png[alt="gradient color palette applied to chart"]
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 

@@ -6,7 +6,7 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 
 To use a database for authentication (i.e., verifying user credentials), select the ‘Database’ option from the ‘Authentication’ menu on the ‘Security Provider’ page. (See xref:SpecifySecurityProvider.adoc[].) Enter the following settings:
 
-image:server22.png[]
+image:server22.png[alt="configure database authentication settings"]
 
 IMPORTANT: If multi-tenancy is enabled (see xref:EnableMultiTenant.adoc[]) but the database does not contain organization information, leave the "`Organization`" queries blank.  All members are then processed as belonging to the default Host Organization.
 

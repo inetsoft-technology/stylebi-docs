@@ -7,7 +7,7 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 
 If the Self-Signup feature is enabled, users  who log in from the *base URL* (not a URL containing an organization) can  create their own account by pressing  the '`Create an Account`' link on the  login page.  Users who sign up this way will be added to a special *Self Organization* that contains only the user signing up.
 
-image:selfsignup3.png[]
+image:selfsignup3.png[alt="create an account link on login page"]
 
 IMPORTANT: Users who log in from a URL containing an organization  (e.g., `organization.host:8080/login.html`) *do not* have the ability to self-signup.  The organization URL directs users to their organization-specified account.
 
@@ -19,17 +19,17 @@ The self-signup option is only available if you enable the Self Signup feature. 
 . Select the *Security* page in the left panel.
 . Select ‘Enable Security’ to activate security settings.
 +
-image:Figure 23_1.png[]
+image:Figure 23_1.png[alt="enable security on security settings page"]
 
 . *_Optional_*: To allow users from multiple organizations to access the server, check '`Enable Multi-Tenancy`'.  See xref:EnableMultiTenant.adoc[] for more information.
 
 . Check '`Enable Self Signup`'. This enables the '`Create an Account`' option for users on the  login page.
 +
-image:selfsignup1.png[]
+image:selfsignup1.png[alt="enable self signup checkbox on security page"]
 
 . To enable users to sign in with Google, select the *Sign In With Google* tab.
 +
-image:selfsignup2.png[]
+image:selfsignup2.png[alt="sign in with Google tab settings"]
 
 . Select the *Enable* option.
 

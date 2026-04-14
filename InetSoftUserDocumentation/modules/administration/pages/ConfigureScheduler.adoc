@@ -9,7 +9,7 @@ To configure the Scheduler, follow the steps below:
 
 . Select the *Schedule* page in the left panel, and select the *Settings* tab at the top.
 +
-image:Figure 32.png[]
+image:Figure 32.png[alt="select Schedule Settings tab in Enterprise Manager"]
 
 The following sections explain the settings available for scheduled tasks.
 
@@ -61,11 +61,11 @@ To edit the Scheduler classpath, follow the steps below:
 
 . Press the btn:[Edit] button below the classpath string.
 +
-image:Scheduler Classpath 1.png[]
+image:Scheduler Classpath 1.png[alt="press Edit button to modify scheduler classpath"]
 +
 This opens the ‘Schedule Classpath ‘ dialog box.
 +
-image:Scheduler Classpath 2.png[]
+image:Scheduler Classpath 2.png[alt="Schedule Classpath dialog box"]
 
 . To add a new entry to the classpath, press the btn:[New] button . Then type the desired path, and press btn:[OK].
 
@@ -77,14 +77,14 @@ image:Scheduler Classpath 2.png[]
 
 . To edit the full path string, press the btn:[Edit Text] button. This opens the ‘Edit Classpath’ dialog box.
 +
-image:Scheduler Classpath 3.png[]
+image:Scheduler Classpath 3.png[alt="Edit Classpath dialog box for full path editing"]
 +
 Make the desired edits and press btn:[OK]. Press btn:[OK] again to exit the ‘Schedule Classpath ‘ dialog box.
 
 == Set Task Notifications
 To configure notifications for Scheduler status, scroll down to the ‘Notification’ panel. This allows the server to send a one-time message if a Scheduled task or the Scheduler application stops abnormally. A ‘Mail Host’ and ‘From Email Address’ must be specified on the ‘Mail Configuration’ page (see xref:ConfigureServerEmail.adoc[]).
 
-image:schedulerNotification.png[]
+image:schedulerNotification.png[alt="configure Scheduler notification email settings"]
 
 The following options are available:
 
@@ -104,11 +104,11 @@ To create a new time range, follow the steps below:
 
 . Press the btn:[Add] button in the ‘Time Ranges’ panel.
 +
-image:schedulerTimeRangeDef.png[]
+image:schedulerTimeRangeDef.png[alt="press Add button in Time Ranges panel"]
 
 . In the ‘Time Range’ dialog box, enter a name for the time range, and specify the start and end times.
 +
-image:schedulerTimeRangeDef2.png[]
+image:schedulerTimeRangeDef2.png[alt="configure Time Range dialog with start and end times"]
 
 . *_Optional:_* Select ‘Default’ to make this the default time range.
 . *_Optional:_* Select the *Security* tab in the dialog box, and assign permissions for this particular time range to different users, groups, or roles.
@@ -124,11 +124,11 @@ To restrict the server paths on which a scheduled task can save files, follow th
 
 . Press the btn:[Add] button in the ‘Server Save Paths’ panel.
 +
-image:serverSavePaths.png[]
+image:serverSavePaths.png[alt="press Add button in Server Save Paths panel"]
 
 . In the ‘Server Save Path’ dialog box, enter a label for the path, and specify the corresponding server path.
 +
-image:serverSavePaths2.png[]
+image:serverSavePaths2.png[alt="configure Server Save Path dialog with label and path"]
 +
 To save to an FTP server, check  the '`FTP/SFTP`' box and enter a valid '`Path`', '`Username`' and '`Password`'.
 +

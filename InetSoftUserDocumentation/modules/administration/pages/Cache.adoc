@@ -10,7 +10,7 @@ When the user opens a  Dashboard, the StyleBI engine generates  objects and data
 
 . Select the *General* page in the left panel, and select the *Caching* page in the right panel.
 +
-image:Cache Config.png[]
+image:Cache Config.png[alt="open Caching page in General settings"]
 
 . Enter the location of the cache directory in the ‘Directory’ field. (This can also be specified by the `replet.cache.directory` property.  See xref:AllProperties.adoc[].) The default is _/var/lib/inetsoft/temp/cache_.
 

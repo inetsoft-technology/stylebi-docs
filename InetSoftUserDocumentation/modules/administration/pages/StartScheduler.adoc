@@ -30,7 +30,7 @@ If the classpath is not already set (e.g., by an environment variable), the clas
 
 You can find an example `pass:[{CLASSPATH}]` in the ‘Scheduler Classpath’ field in Enterprise Manager to use as a guide.
 
-image:Scheduler Classpath.png[]
+image:Scheduler Classpath.png[alt="view Scheduler Classpath field in Enterprise Manager"]
 
 The launching application can then get an instance of the Scheduler object:
 
@@ -45,7 +45,7 @@ To  check the Scheduler status, follow the steps below:
 
 . Select the *Schedule* page in the left panel, and select the *Status* tab at the top.
 +
-image:schedulerStatus.png[]
+image:schedulerStatus.png[alt="view Scheduler status on Status tab"]
 
 
 . *_Optional_*: Select the desired Scheduler node, and press ‘Get Thread Dump’ to download a text file containing a thread dump of the Scheduler process. Press ‘Get Heap Dump’ to download an HPROF file containing a heap dump of the Scheduler process.

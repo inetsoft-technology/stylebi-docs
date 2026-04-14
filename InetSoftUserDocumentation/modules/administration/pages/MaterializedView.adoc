@@ -14,13 +14,13 @@ To create a materialized view for a Dashboard, follow the steps below:
 
 . Select the *Content* page in the left panel, and select the *Repository* tab.
 +
-image:Figure 15.png[]
+image:Figure 15.png[alt="select Repository tab in Content page"]
 
 . Click to select the desired Dashboard in the tree.  *_Optional:_* Hold the {buttonCtrl} and click to select more than one Dashboard to create materialized views for multiple Dashboards at the same time.
 
 . Select the *MV* tab (if you have selected just a single Dashboard) or press the {buttonMaterialize} above the list (for one or more selected Dashboards).
 +
-image:Materialized View Create page_1.png[]
+image:Materialized View Create page_1.png[alt="select MV tab for dashboard materialized view"]
 
 . Choose either ‘Full Data’ or ‘Minimum Data’.
 +
@@ -32,11 +32,11 @@ Minimum Data:: ‘Minimum Data’ restricts the materialization to include only 
 
 . *_Optional:_*  If you are using VPMs, select ‘Apply VPM’ if you want to apply existing VPMs when creating the materialized view. If your VPM filters data based on particular users, enable ‘Create Materialized View for all users in group’. This allows a custom materialized view to be generated for each user, if needed. (See xref:#SecurityandMaterializedViews[] below for more details.) To keep a materialized view free from the effects of any existing VPMs, select ‘Bypass VPM’.
 +
-image:Materialized View Apply VPM.png[]
+image:Materialized View Apply VPM.png[alt="apply or bypass VPM options panel"]
 
 . Press the btn:[Analyze] button. This opens the ‘Materialized View Candidates’ page containing a list of Dashboard assets that can be materialized.
 +
-image:Materialized View Candidates_1.png[]
+image:Materialized View Candidates_1.png[alt="materialized view candidates list page"]
 +
 [NOTE]
 ====
@@ -51,7 +51,7 @@ image:Materialized View Candidates_1.png[]
 . Select the Dashboard assets in the table for which you want to create a materialized view.
 
 +
-image:Materialized View Candidates Select_1.png[]
+image:Materialized View Candidates Select_1.png[alt="select dashboard assets in candidates table"]
 
 
 . From the ‘Set Cycle’ menu, choose the cycle on which these materialized view should be regenerated. (See  xref:Schedule.adoc[]  for more information about defining cycles.)
@@ -63,7 +63,7 @@ If you do not want to wait for materialized view generation to complete, select 
 
 . Press btn:[Create/Update] to proceed with the options as specified above. If you selected ‘Generate Data’ only, this will immediately start the generation process. You will be notified upon completion.
 +
-image:Materialized View Notice_1.png[]
+image:Materialized View Notice_1.png[alt="materialized view generation completion notice"]
 +
 If you selected ‘Run in Background’, the materialized view will be scheduled to begin generation. You can check the status of the task under the *Schedule* page.
 
@@ -79,7 +79,7 @@ To manage existing materialized views, follow the steps below:
 
 . Select the *Content* page in the left panel, and select the *Materialized Views* tab at the top.
 +
-image:Materialized View Manage page_1.png[]
+image:Materialized View Manage page_1.png[alt="materialized views management table listing"]
 +
 The table lists all existing materialized views.
 +
@@ -99,11 +99,11 @@ Valid::	Indicates that the current materialized view is compatible with the Dash
 
 . To restrict the items shown in the table by status, cycle, or user, make the desired selections from the top menus.
 +
-image:Materialized View Manage Filter_1.png[]
+image:Materialized View Manage Filter_1.png[alt="filter materialized views by status cycle or user"]
 
 . To restrict the columns shown in the table, expand the ‘Select Columns’ menu on the right side. Choose the columns you want to display.
 +
-image:Materialized View Manage Column Select.png[]
+image:Materialized View Manage Column Select.png[alt="select columns to display in MV table"]
 
 . To *update* a materialized view with new data, select the desired materialized view in the table and press btn:[Update].
 
@@ -122,7 +122,7 @@ To configure options for materialized views, follow the steps below:
 
 . Select the *General* page in the left panel, and select *Materialized Views* page in the right panel.
 +
-image:Materialized View Node_1.png[]
+image:Materialized View Node_1.png[alt="materialized views global options page"]
 
 
 

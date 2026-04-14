@@ -15,23 +15,23 @@ To *add* an API Key in Enterprise Manager, follow the steps below:
 . Select the *General* page in the left panel.
 . Select the *API Key* page in the right panel.
 +
-image:APIKey5.png[]
+image:APIKey5.png[alt="open API Key page in General settings"]
 
 . In the '`API Key`' panel, press  btn:[Generate API Key].
 
 . Select the desired service: Google, GitHub, or Facebook.
 +
-image:APIKey1.png[]
+image:APIKey1.png[alt="select OAuth service to generate API key"]
 
 . Follow the prompts to log into the service.  The API Key will then be displayed on the screen.
 +
-image:APIKey2.png[]
+image:APIKey2.png[alt="API key displayed after OAuth login"]
 
 . Copy the API Key.
 
 . Return to Enterprise Manager, and press btn:[Add Key Manually]. Enter the key into the provided field.
 +
-image:APIKey3.png[]
+image:APIKey3.png[alt="enter API key manually in field"]
 
 . Press the btn:[Save] button next to the API Key field.
 
@@ -42,11 +42,11 @@ To *edit* an existing API Key, follow the steps below:
 . Locate the '`API Key`' panel  as described above in xref:#AddAPIKey[].
 . Press  the   btn:[Edit] button below the API Key.
 +
-image:APIKey4.png[]
+image:APIKey4.png[alt="press Edit button below API key"]
 
 . Enter a new API Key and press btn:[Save].
 +
-image:APIKey3.png[]
+image:APIKey3.png[alt="enter new API key and save"]
 
 == Delete API Key
 To delete the API Key, follow the steps below:
