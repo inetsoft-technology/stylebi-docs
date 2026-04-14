@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 You can arrange the Pinned Dashboards displayed by the {buttonDashboard} of the User Portal, and add your own Pinned Dashboards under this button.
 
-image:user:Opening Sample Viewsheet2.png[]
+image:user:Opening Sample Viewsheet2.png[alt="Pinned Dashboards in User Portal"]
 
 == Deploy a Pinned Dashboard
 
@@ -14,11 +14,11 @@ To deploy a Dashboard, follow the steps below:
 
 . Press the {buttonDashboardConfiguration}, and select the  {buttonAdd} option.
 +
-image:user:Dashboard Button.png[]
+image:user:Dashboard Button.png[alt="press Dashboard Configuration and select Add"]
 +
 This opens the ‘New Pin’ dialog box.
 +
-image:user:newDashboard.png[]
+image:user:newDashboard.png[alt="New Pin dialog box"]
 
 . In the ‘Dashboard Name’ field, enter a name for the new Dashboard. This name will be displayed on the Dashboard’s tab in the Portal.
 
@@ -26,11 +26,11 @@ image:user:newDashboard.png[]
 
 . Choose the desired Dashboard from the ‘Select Dashboard’ list.
 +
-image:Edit Dashboard User VS.png[]
+image:Edit Dashboard User VS.png[alt="choose Dashboard from Select Dashboard list"]
 
 . Press btn:[OK]. This deploys the Dashboard as a Pinned Dashboard.
 +
-image:user:My Viewsheet Dashboard.png[]
+image:user:My Viewsheet Dashboard.png[alt="press OK to deploy Pinned Dashboard"]
 
 
 
@@ -44,7 +44,7 @@ To edit an existing Pinned Dashboard, follow the steps below:
 
 . Press the {buttonDashboardConfiguration}, and select the {buttonEditAction} option.
 +
-image:user:Edit Dashboard User.png[]
+image:user:Edit Dashboard User.png[alt="press Dashboard Configuration and select Edit"]
 +
 This opens the ‘Edit Dashboard’ dialog box, which is the same as the ‘New Dashboard’ dialog box described above. Follow the instructions above to make the desired edits to the Dashboard name and description, or to select a new Dashboard to display.
 
@@ -57,7 +57,7 @@ To delete an existing Pinned Dashboard, follow the steps below:
 
 . Press the {buttonDashboardConfiguration} , and select the {buttonDeleteAction} option.
 +
-image:user:deleteDashboard.png[]
+image:user:deleteDashboard.png[alt="press Dashboard Configuration and select Delete"]
 
 == Reposition a Pinned Dashboard
 To reposition an existing Pinned Dashboard, follow the steps below:
@@ -68,10 +68,10 @@ To reposition an existing Pinned Dashboard, follow the steps below:
 
 . Press the {buttonDashboardConfiguration}, and select the {buttonArrangeAction}  option. This opens the ‘Arrange Dashboards’ dialog box.
 +
-image:user:arrangeDashboard.png[]
+image:user:arrangeDashboard.png[alt="press Dashboard Configuration and select Arrange"]
 
 . Press the ‘up’ or ‘down’ arrow in the ‘Arrange Order’ column to alter the Dashboard’s position in the sequence of Portal tabs. Uncheck the ‘Enable’ option to hide the Dashboard’s tab.
 +
-image:user:arrangeDashboard2.png[]
+image:user:arrangeDashboard2.png[alt="press up or down arrow to reposition Dashboard"]
 
 . Press btn:[OK] to close the dialog box.

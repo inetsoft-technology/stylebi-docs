@@ -9,17 +9,17 @@ Connection pooling is managed by https://github.com/brettwooldridge/HikariCP?tab
 
 . Press the top {buttonData} in the Portal.
 +
-image:uploadDriver1.png[]
+image:uploadDriver1.png[alt="press Data button in the Portal"]
 
 . Select the ‘Data Source’ folder and select the data source for which you want to set connection pool properties.
 
 . In the ‘Connection Pool Properties’ panel of the data source definition page, press btn:[New].
 +
-image:administration:ConnectionPooling1.png[]
+image:administration:ConnectionPooling1.png[alt="press New in Connection Pool Properties panel"]
 
 . In the '`Property Editor`', add a https://github.com/brettwooldridge/HikariCP?tab=readme-ov-file#gear-configuration-knobs-baby[HikariConfig] name/value pair and press btn:[OK].
 +
-image:ConnectionPooling2.png[]
+image:ConnectionPooling2.png[alt="add property and press OK"]
 
 . Repeat the above steps to add additional properties.
 

@@ -10,22 +10,22 @@ To add a new connection, follow the steps below:
 
 . Press the top {buttonData} in the Portal.
 +
-image:uploadDriver1.png[]
+image:uploadDriver1.png[alt="press Data button in the Portal"]
 
 . Select the ‘Data Source’ folder and select the data source for which you want to create an additional connection.
 
 . In the ‘Additional Connections’ panel of the data source definition page, press btn:[New].
 +
-image:additionalConnection1.png[]
+image:additionalConnection1.png[alt="press New in Additional Connections panel"]
 
 . Enter the required information in the ‘New Additional Connection’ dialog box. (Follow the same procedure you used to set up the default connection; see xref:ConnectToDataSource.adoc[] for details.) For JDBC data sources, the additional connection can be any JDBC data source. For other data sources, the additional connection must be to a data source of the same type.
 
 . Press btn:[OK]. This adds the new connection to the connection list.
 +
-image:additionalConnection2.png[]
+image:additionalConnection2.png[alt="press OK to add new connection"]
 . *_Optional:_*  Select ‘Disable Default Connection’ (JDBC data sources only) to prevent users who do not have explicit connection privileges from obtaining any data connection. Deselect this option to permit unassigned users to connect to the default connection.
 +
-image:additionalConnection3.png[]
+image:additionalConnection3.png[alt="select Disable Default Connection option"]
 
 . Press the {buttonSave} on the toolbar to save the changes to the data source.
 

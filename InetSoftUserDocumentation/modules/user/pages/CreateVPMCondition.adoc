@@ -15,42 +15,42 @@ You can add a condition to a VPM to filter the rows retrieved from the database 
 
 . Select the *Conditions* tab at the bottom, and press the {buttonAddCondition}.
 +
-image:dataModel59.png[]
+image:dataModel59.png[alt="select Conditions tab and press Add Condition"]
 
 . Select the *Conditions* sub-tab.
 +
-image:dataModel60.png[]
+image:dataModel60.png[alt="select Conditions sub-tab"]
 
 . Choose whether the VPM will be triggered based on a particular *database table* referenced in a query or by a particular *physical view* referenced in a query:
 +
 ****
 Table:: To trigger the VPM whenever a query references a particular database *table*, select the ‘Table’ option. If the ‘Choose Table’ dialog box does not open automatically, press the btn:[Choose Table] button.
 +
-image:dataModel61.png[]
+image:dataModel61.png[alt="select Table option and press Choose Table"]
 +
 In the ‘Choose Table’ dialog box, select the database table that should trigger the VPM and press btn:[OK].
 +
-image:dataModel62.png[]
+image:dataModel62.png[alt="select database table and press OK"]
 
 Physical View:: To trigger the VPM whenever a query is generated from a particular *physical view*, select the ‘Physical View’ option.  If the ‘Choose Physical View’ dialog box does not open automatically, press the btn:[Choose Physical View] button.
 +
-image:dataModel63.png[]
+image:dataModel63.png[alt="select Physical View option and press Choose Physical View"]
 +
 In the ‘Choose Physical View’ dialog box, select the physical view that should trigger the VPM and press btn:[OK].
 +
-image:dataModel64.png[]
+image:dataModel64.png[alt="select physical view and press OK"]
 ****
 . Press the btn:[Edit clause] button. This opens the ‘Conditions’ dialog box.
 +
-image:dataModel65.png[]
+image:dataModel65.png[alt="press Edit clause button"]
 
 . Specify the desired condition clause.
 +
-image:dataModel66.png[]
+image:dataModel66.png[alt="specify condition clause"]
 +
 By default, the condition is based on field names and values. However, you can use the {buttonChangeValueType} on the left or right side to create other types of conditions.
 +
-image:dataModel67.png[]
+image:dataModel67.png[alt="use Change Value Type to change condition type"]
 +
 .Value Type Options
 ****
@@ -65,7 +65,7 @@ include::ROOT:partial$regexSyntax.adoc[]
 
 Value:: Enter a fixed value. Use the {buttonBrowseData}, if available, to select the desired value from the specified field.
 +
-image:dataModel68.png[]
+image:dataModel68.png[alt="use Browse Data to select value"]
 
 Variable:: Enter a desired variable name to create a parametrized condition where the parameter value will be supplied at runtime via script, session information, or user input.
 
@@ -82,11 +82,11 @@ Subquery:: Specify a distinct query to return the right-side of the condition.
 * To change the order of a clause in the condition,  click to select the clause, press the btn:[Move Up] or btn:[Move Down] button.
 * To change the operator between two clauses (e.g., “and”, “or”), click on the operator to select it, and press the btn:[Modify] button.
 +
-image:dataModel75.png[]
+image:dataModel75.png[alt=”click operator and press Modify”]
 
 * To indent or a pair of clauses joined by an “and” or “or” operator,  click on the operator in the bottom panel, and press the btn:[Indent] or btn:[Unindent] button.
 +
-image:dataModel76.png[]
+image:dataModel76.png[alt=”click operator and press Indent or Unindent”]
 +
 Logical operations within a given set of same-level indented clauses are performed prior to operations outside the indented clause set. (The indent represents the grouping operation of a “parenthesis” within a logical proposition.)
 
@@ -98,6 +98,6 @@ Logical operations within a given set of same-level indented clauses are perform
 
 . Enter a name for the condition in the ‘Name’ field.
 +
-image:dataModel69.png[]
+image:dataModel69.png[alt="enter name for condition"]
 
 . Press the {buttonSave} to save the VPM.

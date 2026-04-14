@@ -10,11 +10,11 @@ To open the User Portal, follow the steps below:
 . On the main landing page, press the  '`Dashboard Portal`' link.
 
 +
-image:StyleBILandingPage.png[]
+image:StyleBILandingPage.png[alt="press Dashboard Portal link"]
 
 . Login to the server.  If security is enabled on the server, you must log in before you can use the Portal. Enter your username and password in the provided ‘User’ and ‘Password’ fields. (Ask your system administrator if you don’t know your username and password.) If you are prompted to enter a ‘Locale’, select the correct option for your location.
 +
-image:user:DefaultUserLogin.png[]
+image:user:DefaultUserLogin.png[alt="enter username and password to log in"]
 +
 
 
@@ -22,7 +22,7 @@ image:user:DefaultUserLogin.png[]
 +
 This opens the User Portal.
 +
-image:InetSoft Portal Tabs.png[]
+image:InetSoft Portal Tabs.png[alt="User Portal opens"]
 +
 The specific options available in the User Portal will depend on what permissions you have been granted by the administrator.
 +
@@ -41,7 +41,7 @@ include::ROOT:partial$createVisualizationClose.adoc[]
 ====
 If you are using the Portal for the first time, you can also press the Portal Dashboards link to deploy your first Dashboard.
 
-image:UserPortalFirstTimePortalDashboards.png[]
+image:UserPortalFirstTimePortalDashboards.png[alt="press Portal Dashboards link"]
 ====
 {buttonRepository}:: View all available Dashboards in the repository.  See xref:ManageRepository.adoc[] for information on how to organize the Repository.
 {buttonCreate}:: Create data sources, Data Worksheets, and Dashboards. See xref:ConnectToData.adoc[], xref:dataworksheet:CreateNewWorksheet.adoc[], and xref:viewsheet:CreateNewDashboard.adoc[] for more information.

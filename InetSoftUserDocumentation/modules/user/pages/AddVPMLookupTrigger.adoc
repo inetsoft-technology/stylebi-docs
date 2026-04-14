@@ -11,11 +11,11 @@ You can use scripted logic to enable or disable the VPM. Follow the steps below:
 
 . Select the *Lookup* tab at the bottom.
 +
-image:dataModel81.png[]
+image:dataModel81.png[alt="select Lookup tab"]
 
 . Select the *Trigger* sub-tab.
 +
-image:dataModel82.png[]
+image:dataModel82.png[alt="select Trigger sub-tab"]
 
 . Enter the desired trigger script in the text box at the bottom. The trigger script should use standard JavaScript syntax, and should return `true` to enable VMP  or `false` to disable VPM.
 +

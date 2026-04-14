@@ -12,26 +12,26 @@ To create a logical model, you must first define a physical view. See xref:Creat
 
 . Press the top {buttonData}.
 +
-image:dataModel1.png[]
+image:dataModel1.png[alt="press Data button"]
 
 
 . In the ‘Navigation Tree’ in the left panel, expand the ‘Data Sources’ folder and the data source to which you want to add a data model. Select the ‘Data Model’ node, and press the {buttonNewLogicalModel}.
 +
-image:dataModel35.png[]
+image:dataModel35.png[alt="press New Logical Model button"]
 
 
 . Provide a name for the logical model and press btn:[OK].
 +
-image:dataModel36.png[]
+image:dataModel36.png[alt="name logical model and press OK"]
 
 . Press the {buttonAddElement}, and select ‘Add Entity’.
 +
-image:dataModel37.png[]
+image:dataModel37.png[alt="press Add Element and select Add Entity"]
 
 
 . Provide a name for the new entity and press btn:[Next].
 +
-image:dataModel38.png[]
+image:dataModel38.png[alt="name new entity and press Next"]
 +
 [CAUTION]
 ====
@@ -42,11 +42,11 @@ An entity name can contain any characters. However, the following characters and
 
 . In the ‘Add Attributes’ dialog box, select the fields (columns) that should be used as attributes for the entity. Press btn:[OK].
 +
-image:dataModel39.png[]
+image:dataModel39.png[alt="select fields as entity attributes"]
 +
 This adds the logical model entity and its attributes to the left panel.
 +
-image:dataModel40.png[]
+image:dataModel40.png[alt="entity and attributes added to left panel"]
 +
 [CAUTION]
 ====
@@ -59,26 +59,26 @@ An attribute name can contain any characters except a *period* (“.”). Howeve
 
 .. Press the {buttonAddElement}, and select ‘Add Attribute’.
 +
-image:dataModel41.png[]
+image:dataModel41.png[alt="press Add Element and select Add Attribute"]
 
 .. In the ‘Add Attributes’ dialog box, select the entity to which you want to add attributes, and then choose the attributes to add. Press btn:[OK].
 +
-image:dataModel42.png[]
+image:dataModel42.png[alt="select entity and add attributes"]
 
 . *_Optional:_*  To add an expression or formula attribute to an entity, follow the steps below:
 
 .. Press the {buttonAddElement}, and select ‘Add Expression’.
 +
-image:dataModel43.png[]
+image:dataModel43.png[alt="press Add Element and select Add Expression"]
 
 .. In the ‘Add Expression’ dialog box, select the entity to which you want to add an expression, and provide a name for the new expression field. Enter the expression using SQL syntax. (You can select data fields and operators from the provided lists.) Then press btn:[OK].
 +
-image:dataModel44.png[]
+image:dataModel44.png[alt="add expression to entity"]
 
 . To edit the properties of an attribute, expand the entity in the left panel that contains the attribute, and click to select the attribute. Make the desired settings in the right panel.  (See xref:EditLogicalModel.adoc#ModifyAttributeProperties[Modify Attribute Properties] in xref:EditLogicalModel.adoc[]
 for more information.) Then press the {buttonSave}.
 +
-image:dataModel45.png[]
+image:dataModel45.png[alt="select attribute and press Save"]
 
 
 . Repeat the above steps to add additional entities and attributes.

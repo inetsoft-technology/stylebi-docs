@@ -4,18 +4,18 @@ Local Storage:: To upload drivers from *local storage*, follow the steps below:
 
 .. Select the ‘Upload’ option.
 +
-image:user:Drivers_Plugins1.png[]
+image:user:Drivers_Plugins1.png[alt="select Upload option"]
 
 .. Press the btn:[Add] button select the desired JAR files, as well as any other files required by the database.
 
 .. Press btn:[Next], and choose the desired driver file or files to package into a plugin.
 +
-image:user:Drivers_Plugins2.png[]
+image:user:Drivers_Plugins2.png[alt="press Next and choose driver files"]
 
 
 .. Press btn:[Next], and enter the desired ‘Plugin ID’, ‘Plugin Name’, and ‘Plugin Version’. The ID must be unique, and should typically be a namespaced value, such as `com.mycompany.jdbc.dbtype`. The Version should conform to https://semver.org/[semantic versioning standards].
 +
-image:user:Drivers_Plugins3.png[]
+image:user:Drivers_Plugins3.png[alt="press Next and enter Plugin ID and name"]
 
 .. Press btn:[Finish] to create the plugin Zip file.
 
@@ -25,11 +25,11 @@ Maven Repository:: To create a plugin from assets in a *Maven repository*, follo
 
 .. Enter the ‘Maven Coordinates’: `groupId:artifactId:packaging:version`.
 +
-image:user:Drivers_Plugins4.png[]
+image:user:Drivers_Plugins4.png[alt="enter Maven Coordinates"]
 
 .. Press btn:[Next], and choose the desired driver file or files to package into a plugin.
 +
-image:user:Drivers_Plugins5.png[]
+image:user:Drivers_Plugins5.png[alt="press Next and choose driver files"]
 
 .. Press btn:[Next], and enter the desired ‘Plugin ID’, ‘Plugin Name’, and ‘Plugin Version’. The ID must be unique, and should typically be a namespaced value, such as `com.mycompany.jdbc.dbtype`. The Version should conform to https://semver.org/[semantic versioning standards].
 

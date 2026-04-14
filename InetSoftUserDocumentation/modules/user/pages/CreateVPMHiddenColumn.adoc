@@ -11,17 +11,17 @@ You can specify that certain columns in database tables should be restricted by 
 
 . Select the *Hidden Columns* tab at the bottom.
 +
-image:dataModel70.png[]
+image:dataModel70.png[alt="select Hidden Columns tab"]
 
 . Select the column(s) that you want to hide, and press the {buttonAddArrow}.
 +
-image:dataModel71.png[]
+image:dataModel71.png[alt="select columns and press Add"]
 +
 The columns listed in the ‘Hidden Columns’ pane are automatically hidden from all users, except for those who are associated with at least one of the roles listed in the ‘Grant to’ pane.
 
 . Add the desired roles to the ‘Grant to’ pane by select the roles in the ‘Available Roles’ panel and pressing the {buttonAddArrow}.
 +
-image:dataModel72.png[]
+image:dataModel72.png[alt="add roles to Grant to pane"]
 
 . To add scripted logic that triggers the column hiding, see xref:AddVPMHiddenColumnTrigger.adoc[].
 

@@ -13,7 +13,7 @@ To modify an existing logical model, follow the steps below:
 
 . Expand the data source for which the logical model is defined, select the ‘Data Model’ node, and click on the logical model to open it for editing.
 +
-image:dataModel92.png[]
+image:dataModel92.png[alt="click logical model to open for editing"]
 
 . To make modifications, see the sections below.
 
@@ -24,7 +24,7 @@ To add new entities and attributes to the logical model, follow the appropriate 
 == Change an Entity Name
 To change the name of an entity, click on the entity. Enter a new name in the right panel.
 
-image:dataModel93.png[]
+image:dataModel93.png[alt="click entity and enter new name"]
 
 [CAUTION]
 ====
@@ -42,7 +42,7 @@ To modify properties of an attribute in a logical model, follow the steps below:
 
 . Expand an entity in the model, and click to select the attribute that you want to modify.
 +
-image:dataModel46.png[]
+image:dataModel46.png[alt="expand entity and select attribute"]
 
 
 . Adjust the desired properties:
@@ -111,15 +111,15 @@ To add auto-drills to a data model, follow the steps below:
 
 . Expand an entity in the model, and click to select the attribute that you want to modify.
 +
-image:dataModel47.png[]
+image:dataModel47.png[alt="expand entity and select attribute to drill"]
 
-. Press the ‘Edit Auto Drill’ btn:[...] button next to the ‘Auto Drill’ field. This opens the ‘Edit Auto Drill‘ dialog box.
+. Press the ‘Edit Auto Drill’ btn:[...] button next to the ‘Auto Drill’ field. This opens the ‘Edit Auto Drill’ dialog box.
 +
-image:dataModel48.png[]
+image:dataModel48.png[alt="press Edit Auto Drill button"]
 
 . In the ‘Edit Auto Drill’ dialog box, press the {buttonAddDrill} to create a new auto-drill. The new drill is assigned a default name such as ‘drill0’, ‘drill1’, etc.
 +
-image:dataModel49.png[]
+image:dataModel49.png[alt="press Add Drill to create new auto-drill"]
 
 
 . Rename the new drill by entering a name in the ‘Name’ field.
@@ -128,13 +128,13 @@ image:dataModel49.png[]
 
 . To add a hyperlink that targets a *dashboard*, select the ‘Asset Link’ option, and select the desired dashboard from the ‘Link’ menu.
 +
-image:dataModel50.png[]
+image:dataModel50.png[alt="select Asset Link and choose dashboard"]
 +
 NOTE: Typically, the dashboard that the drill targets will contain a condition that filters the data based on the value passed in the drill hyperlink. For example, in this case the dashboard might contain a parameterized condition such as  `Company is equal to $(customer)`, where the value of variable `customer` will be supplied by the auto-drill hyperlink. (See how to add a parameter below.)
 
 . To add a hyperlink to a *web page* , select the ‘Web Link’ option, and enter the desired URL. See below for information about embedding parameters in the URL.
 +
-image:dataModel51.png[]
+image:dataModel51.png[alt="select Web Link and enter URL"]
 
 
 . *_Optional:_*  If you want the target dashboard or web page to be displayed in a particular browser window, deselect the ‘Self’ option, and enter the name of the desired window in the ‘Target Frame’ field.  (The specified name becomes the DOM ‘name’ attribute.) Enter `_blank` to open the dashboard or web page in a new browser window or tab. To specify that the target dashboard or web page should open in the User Portal frame, replacing the previous dashboard, select the ‘Self’ checkbox.
@@ -143,7 +143,7 @@ image:dataModel51.png[]
 
 . *_Optional:_* If you want to use the hyperlinked text or value to retrieve a *related value* from a Data Worksheet, press the ‘Query Selection’ button btn:[...] next to the ‘Data Worksheet’ field.
 +
-image:dataModel97.png[]
+image:dataModel97.png[alt="press Query Selection button"]
 
 . From the ‘Query Selection’ dialog box, select the Data Worksheet whose primary data block contains the values to retrieve. The primary data block should generally have a condition on it that filters the query to return a single value based on the link the user clicks. (See  xref:dataworksheet:QueryData.adoc[] for information on how to create an independent query with a condition.)
 +
@@ -157,7 +157,7 @@ SA.PRODUCTS.PRODUCT_NAME is equal to $(userProductChoice)
 
 where `userProductChoice` is the name of a variable. If you select this Data Worksheet in the ‘Query Selection’ dialog box, you can also select the field of the data model that should be passed into the `userProductChoice` variable when the user clicks the hyperlink.
 
-image:dataModel95.png[]
+image:dataModel95.png[alt="select Data Worksheet and field"]
 
 The Data Worksheet will apply the condition based on this value and return the related value (in this example, the corresponding product ID), which you can then pass as a parameter in the hyperlink. (See below.)
 ====
@@ -170,11 +170,11 @@ The Data Worksheet will apply the condition based on this value and return the r
 
 .. If you want the auto-drill hyperlink to pass the *hyperlinked value* to the drill-down dashboard or web page, select ‘Field’ under ‘Parameter Source’. In the ‘Parameter Value’ field, select `this.column` to indicate that the value passed in the hyperlink will be the hyperlinked text itself. For example, if the hyperlinked text is ‘Interstate Reseller’, the parameter value passed in the hyperlink when the user clicks will be ‘Interstate Reseller’.
 +
-image:dataModel53.png[]
+image:dataModel53.png[alt="select Field as parameter source"]
 +
 If you are using  ‘Query’ look-up (see above), you can choose the *value returned by the  query* to pass in the hyperlink.
 +
-image:dataModel96.png[]
+image:dataModel96.png[alt="choose query value as parameter"]
 +
 By default, parameters are passed in the hyperlink URL as *key-value* pairs, e.g., `?key=value`.
 +

@@ -11,11 +11,11 @@ To add scripted logic to the VPM hidden column, follow the steps below:
 
 . Select the *Hidden Columns* tab at the bottom.
 +
-image:dataModel79.png[]
+image:dataModel79.png[alt="select Hidden Columns tab"]
 
 . Select the *Trigger* sub-tab.
 +
-image:dataModel80.png[]
+image:dataModel80.png[alt="select Trigger sub-tab"]
 
 . Enter the desired trigger script in the text box at the bottom. The trigger script should use standard JavaScript syntax, and should return an array of hidden columns (e.g., array `hiddenColumns` in the last statement of the script).
 +

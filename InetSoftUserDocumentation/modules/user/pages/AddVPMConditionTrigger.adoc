@@ -11,11 +11,11 @@ To add scripted logic to the VPM row condition, follow the steps below:
 
 . Select the *Conditions* tab at the bottom.
 +
-image:dataModel77.png[]
+image:dataModel77.png[alt="select Conditions tab"]
 
 . Select the *Trigger* sub-tab.
 +
-image:dataModel78.png[]
+image:dataModel78.png[alt="select Trigger sub-tab"]
 
 . Enter the desired trigger script in the text box at the bottom. The trigger script should use standard JavaScript syntax, and should return the modified list of conditions (e.g., in string `condition`, in the last statement of the script).
 +

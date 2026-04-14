@@ -14,7 +14,7 @@ To quickly and easily schedule a Dashboard for automatic generation and delivery
 
 . Select ‘Create New Bookmark’ and provide a name for the new bookmark, or select ‘Use Current Bookmark’. (See xref:BookmarkDashboard.adoc[] for more information about bookmarks.)
 +
-image:scheduleDashboard1.png[]
+image:scheduleDashboard1.png[alt="select Create New Bookmark or Use Current Bookmark"]
 
 . Press btn:[Next].
 
@@ -27,7 +27,7 @@ Excel:: {exportexcel}
 
 . Select a ‘Daily’, ‘Weekly’, or ‘Monthly’, option and specify the additional details (e.g., time) when the Dashboard should be generated. {timeRangeCondition}
 +
-image:scheduleDashboard2.png[]
+image:scheduleDashboard2.png[alt="select Daily, Weekly, or Monthly schedule"]
 
 
 . Select the desired time zone from the ‘Time Zone’ menu.
@@ -53,11 +53,11 @@ To configure an alert for a Dashboard, follow the steps below:
 
 . Press the btn:[New Task] button below the Schedule table.
 +
-image:schedule1.png[]
+image:schedule1.png[alt="press New Task button"]
 +
 This creates a new task with the name ‘Task1’, and opens the ‘Schedule Task’ page.
 +
-image:schedule2.png[]
+image:schedule2.png[alt="new Task1 in Schedule Task page"]
 
 . Change the task name as desired in the ‘Name’ field.
 
@@ -65,7 +65,7 @@ image:schedule2.png[]
 
 . On the *Action* tab, press btn:[Select] to specify the Dashboard that contains the alert condition you want to test.
 +
-image:alert1.png[]
+image:alert1.png[alt="press Select to specify Dashboard"]
 
 . Select the actions that you want to perform if the alert is triggered. Generally, you will at least select the ‘Deliver To Emails’ option. (See xref:#ScheduleActions[] for more about the available actions.) Enter a ‘Subject’ and ‘Message’ appropriate for the nature of the alert.
 
@@ -81,7 +81,7 @@ NOTE: The table lists highlight conditions for all Chart, Table, Image, and Text
 
 . In the table, select the highlight or range conditions that you want to trigger the alert. When *any* of the selected conditions test true, the actions you specified above (e.g., ‘Deliver To Emails’) will be performed.
 +
-image:alert2.png[]
+image:alert2.png[alt="select highlight or range conditions for alert"]
 
 . Press btn:[Save] to save the scheduled task.
 
@@ -95,11 +95,11 @@ If you need additional control over the schedule settings, use the Portal's {but
 
 . Press the btn:[New Task] button below the Schedule table.
 +
-image:schedule1.png[]
+image:schedule1.png[alt="press New Task button"]
 +
 This creates a new task with the name ‘Task1’, and opens the ‘Schedule Task’ dialog box.
 +
-image:schedule2.png[]
+image:schedule2.png[alt="new Task1 in Schedule Task page"]
 
 . Use the *Condition* tab to set the time interval for task execution. See xref:#ScheduleConditions[] below.
 
@@ -114,7 +114,7 @@ image:schedule2.png[]
 == Manage Scheduled Tasks
 You can view and monitor all of your scheduled tasks under the {buttonSchedule} of the Portal. This table displays a list of the schedule tasks, showing start time, end time, status of the last run, and start time for the next run.
 
-image:schedule5.png[]
+image:schedule5.png[alt="scheduled tasks list in Portal"]
 
 The table provides the following operations:
 
@@ -129,7 +129,7 @@ NOTE: New folders can only be created by an administrator.
 
 . Select the task in the table, and press the btn:[Move] button below the table.
 +
-image:schedule6.png[]
+image:schedule6.png[alt="select task and press Move button"]
 
 . Choose the desired folder into which to place the task, and press btn:[OK].
 
@@ -143,12 +143,12 @@ include::ROOT:partial$scheduleConditions.adoc[]
 == Schedule Actions
 A schedule *action* specifies the set of operations to be performed when the scheduled task runs.
 
-image:scheduleReport2.png[]
+image:scheduleReport2.png[alt="schedule action options"]
 
 The available actions  are described below. To specify multiple actions, press the btn:[Multiple Actions] button at the bottom right. This will display the schedule action list to which you can add, delete, or edit actions. To execute a scheduled task only when  certain data conditions are satisfied, see xref:#SetAlert[] on this page. If the Dashboard requires parameter values, assign these parameters in the 'Creation Parameters' table at the bottom of the page. See xref:#CreationParameters[] below.
 
 
-image:scheduleDashboard3.png[]
+image:scheduleDashboard3.png[alt="press Multiple Actions button"]
 
 The following options are available:
 
@@ -157,9 +157,9 @@ The following options are available:
 [%collapsible]
 ====
 ****
-This option sends notifications to the email addresses that you specify as a comma-separated list in the 'Notify' field.  The email notification informs the recipient of whether the Dashboard was successfully generated or not.  Select ‘Notify only if failed’ to limit the notification only to the event of a task failure.
+This option sends notifications to the email addresses that you specify as a comma-separated list in the ‘Notify’ field.  The email notification informs the recipient of whether the Dashboard was successfully generated or not.  Select ‘Notify only if failed’ to limit the notification only to the event of a task failure.
 
-image:schedulerNotification2.png[]
+image:schedulerNotification2.png[alt="enter email addresses in Notify field"]
 
 To send an *SMS*  message to a phone, enter the provisioned email address supplied by the recipient’s service provider. (For example, to send a text message to Verizon number 1234567890, enter the email address `1234567890@vtext.com`.)
 ****
@@ -224,7 +224,7 @@ IMPORTANT: For SFTP connections, the known hosts file, _.ssh/known_hosts_, is au
 
 . Use the ‘Format’ menu to choose the format in which to generate the Dashboard: ‘PDF’, ‘PowerPoint’, ‘Excel’, or ‘CSV’.
 +
-image:schedulerSaveToServer.png[]
+image:schedulerSaveToServer.png[alt="choose format from Format menu"]
 +
 CSV:: {EXPORTCSV}
 Excel:: {exportexcel}
@@ -273,7 +273,7 @@ include::ROOT:partial$settingCreationParams.adoc[]
 == Schedule Options
 The settings available under the *Options* tab options are described below.
 
-image:schedule4.png[]
+image:schedule4.png[alt="Options tab settings"]
 
 ****
 Enabled:: Temporarily enables or disables a task.

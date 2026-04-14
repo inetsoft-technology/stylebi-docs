@@ -6,20 +6,20 @@ You can profile the execution of your Dashboards to determine which aspects of e
 
 . Press the {buttonAccount} at the top of the Portal and select {buttonProfile}.
 +
-image:user:Profiling1.png[]
+image:user:Profiling1.png[alt="press Setting and select Open with Profiling"]
 +
 When this option is enabled, Dashboards will display a ‘Profiling...’ link below the toolbar.
 +
-image:Profiling2.png[]
+image:Profiling2.png[alt="Profiling link appears below toolbar"]
 
 . Press the ‘Profiling...’ link to open the ‘Profile’ dialog box. This displays a break-down of execution time.
 
-. From the '`Group By`' menu, choose  the way you want to break out the data: '`Cycle Name`', '`Dashboard`', '`Logical Model`', '`Data Worksheet`', or '`Component`'.
+. From the ‘`Group By`’ menu, choose  the way you want to break out the data: ‘`Cycle Name`’, ‘`Dashboard`’, ‘`Logical Model`’, ‘`Data Worksheet`’, or ‘`Component`’.
 +
-image:Profiling3.png[]
+image:Profiling3.png[alt="choose Group By option"]
 . Enable ‘Show Detail Records’ link to view a tabular display of the execution information.
 +
-image:Profiling4.png[]
+image:Profiling4.png[alt="enable Show Detail Records"]
 
 . *_Optional:_* Press the {buttonExport} to export the data.
 

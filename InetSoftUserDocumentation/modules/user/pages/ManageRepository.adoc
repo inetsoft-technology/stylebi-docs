@@ -11,11 +11,11 @@ To create a new folder in the Repository, follow the steps below:
 
 . Right-click on the folder that you want to contain the new folder, and select ‘New Folder’.
 +
-image:organizeRepostory.png[]
+image:organizeRepostory.png[alt="right-click folder and select New Folder"]
 +
 This opens the ‘Create Folder’ page.
 +
-image:createFolder.png[]
+image:createFolder.png[alt="Create Folder dialog opens"]
 
 . Enter the desired ‘Folder Name’, and (optionally) supply an ‘Alias’ and ‘Description’. Then press btn:[OK].
 +
@@ -30,7 +30,7 @@ To move Dashboards, or folders from one Repository folder to another, follow the
 
 . Drag the asset to the desired folder.
 +
-image:organizeRepostory1.png[]
+image:organizeRepostory1.png[alt="drag asset to desired folder"]
 
 == Delete an Asset
 To delete a Dashboard, or folder from the Repository, follow the steps below:
@@ -39,7 +39,7 @@ To delete a Dashboard, or folder from the Repository, follow the steps below:
 
 . Right-click on the asset and select ‘Delete’.
 +
-image:organizeRepostory2.png[]
+image:organizeRepostory2.png[alt="right-click asset and select Delete"]
 
 TIP: The system administrator may be able to recover  deleted assets.
 
@@ -61,11 +61,11 @@ To mark an asset as a ‘favorite’, follow the steps below:
 
 . Right-click on the asset in the Repository listing and select ‘Add to Favorites’.
 +
-image:favorites1.png[]
+image:favorites1.png[alt="right-click asset and select Add to Favorites"]
 
 . To view your list of favorite assets, press the {buttonFavorites}.
 +
-image:favorites2.png[]
+image:favorites2.png[alt="press Favorites button"]
 
 To remove an asset from the ‘Favorites’ list, right-click the asset (in either the full list or the ‘Favorites’ list), and select ‘Remove from Favorites’.
 

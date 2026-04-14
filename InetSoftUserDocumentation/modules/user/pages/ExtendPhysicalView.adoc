@@ -15,23 +15,23 @@ Follow the steps below to extend a physical view:
 
 . Press the top {buttonData}.
 +
-image:dataModel1.png[]
+image:dataModel1.png[alt="press Data button"]
 
 . Expand the ‘Data Source’ folder in the left panel, select the ‘Data Model’ node. Press the  {buttonMoreOptions} or right-click the base physical view that you wish to extend, and select ‘Add Extended View’ from the context menu. This opens the ‘Extended View’ dialog box.
 +
-image:dataModel85.png[]
+image:dataModel85.png[alt="press More Options, select Add Extended View"]
 
 
 . In the ‘Extended View’ dialog box, choose a connection option for the new extended view, and press btn:[OK]. (You can select the default data source connection, or any of the tenant-specific connections.  See xref:AddAdditionalConnection.adoc[] for information on configuring connections.)
 +
-image:dataModel86.png[]
+image:dataModel86.png[alt="choose connection option and press OK"]
 +
 NOTE:  An extended physical view is associated with one (and only one) connection. Likewise, a connection can be associated with only one extended physical view.
 
 +
 This adds the new extended view to the current data source, and opens the view for editing. The right panel displays the tables and joins defined in the *base physical view*.
 +
-image:dataModel87.png[]
+image:dataModel87.png[alt="extended view opens for editing"]
 +
 NOTE: Tables and joins inherited from the base physical view *cannot* be modified within the extended view.
 
