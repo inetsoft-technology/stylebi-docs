@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 A circular network chart displays a network structure defined by pairwise peer relationships, and arranged with the nodes spaced along the circumference of a circle.  It is an alternative representation of a xref:NetworkChart.adoc[].
 
-image:commonscript:circularNetwork1.png[]
+image:commonscript:circularNetwork1.png[alt="circular network chart with nodes along circle circumference"]
 
 To create a circular network chart, follow the basic steps below:
 
@@ -13,7 +13,7 @@ To create a circular network chart, follow the basic steps below:
 ====
 The chart should be based on a data set containing peer relationships such as that below, with optional relationship weighting (e.g., ‘Years’ below). See xref:dataworksheet:PrepareYourData.adoc[] for information on how to manipulate your data, if it is not currently in this form.
 
-image:commonscript:networkChart2.png[]
+image:commonscript:networkChart2.png[alt="data set showing peer relationships with weighting column"]
 ====
 
 [TIP]
@@ -25,20 +25,20 @@ include::partial$createChartIntro.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose the ‘Circular Network’  style.  Press the {buttonApply}.
 +
-image:commonscript:circularNetwork1VS.png[]
+image:commonscript:circularNetwork1VS.png[alt="select Circular Network chart style in chart editor"]
 
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag the first peer  *dimension* to the ‘Source’ region.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:networkChart2VS.png[]
+image:commonscript:networkChart2VS.png[alt="drag peer dimension to Source region in chart editor"]
 +
 TIP: {convertToDimension}
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag the second peer  *dimension* to the ‘Target’ region.
 +
-image:commonscript:networkChart3VS.png[]
+image:commonscript:networkChart3VS.png[alt="drag peer dimension to Target region in chart editor"]
 
 . *_Optional:_* From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired dimension to the ‘X’ or ‘Y’ region to break out the diagram along this dimension.
 +
@@ -46,13 +46,13 @@ WARNING: This will create a disconnected graph for each dimension value, which m
 
 . *_Optional:_* To distinguish the nodes along a dimension by using color, drag a dimension from the *Data Source* panel to the ‘Color’ region in the ‘Node’ panel. Press the ‘Edit Color’ button to choose the dimension colors.
 +
-image:commonscript:circularNetwork5VS.png[]
+image:commonscript:circularNetwork5VS.png[alt="drag dimension to Color region to distinguish nodes by color"]
 +
 NOTE: The applied node style is based on the values in the ‘Target’ field. If some nodes are only ‘Source’ nodes and not also ‘Target’ nodes, these nodes will inherit the *edge color*. To force such  source nodes to adopt the color of their first target  in the data set instead, enable ‘Apply Aesthetics to Source Nodes’ in the ‘Chart Properties’ dialog box. See xref:ChartProperties.adoc[] for more information about these properties.
 
 . *_Optional:_*  For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
-image:viewsheetExp34.png[]
+image:viewsheetExp34.png[alt="set date grouping level in edit dimension panel"]
 
 . *_Optional:_* {multipleDimensionNoColor}
 
@@ -62,23 +62,23 @@ include::ROOT:partial$measureTip.adoc[]
 
 . To represent the weight or strength of the connection between nodes, drag a weight  field (e.g., ‘Years’) to the ‘Color’ or ‘Size’ region.
 +
-image:commonscript:circularNetwork6VS.png[]
+image:commonscript:circularNetwork6VS.png[alt="drag weight field to Color or Size region for connection strength"]
 
 . Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
 +
-image:commonscript:circularNetwork6bVS.png[]
+image:commonscript:circularNetwork6bVS.png[alt="press Edit Measure to select aggregation method for measure"]
 
 . To set a fixed size or color for the *nodes* (if not being used to represent dimension or measure), press the ‘Edit Size’ or ‘Edit Color’ button and set the desired value in the ‘Node’ panel.
 +
-image:commonscript:circularNetwork8VS.png[]
+image:commonscript:circularNetwork8VS.png[alt="set fixed size and color for nodes in Node panel"]
 
 . To set a fixed size or color for the *lines* (if not being used to represent dimension or measure), press the ‘Edit Size’ or ‘Edit Color’ button and set the desired value.
 +
-image:commonscript:circularNetwork9VS.png[]
+image:commonscript:circularNetwork9VS.png[alt="set fixed size and color for connection lines"]
 
 . To add labels to the nodes, drag a dimension to the ‘Text’ region.
 +
-image:commonscript:circularNetwork10VS.png[]
+image:commonscript:circularNetwork10VS.png[alt="drag dimension to Text region to label chart nodes"]
 
 . {finishEditing}
 

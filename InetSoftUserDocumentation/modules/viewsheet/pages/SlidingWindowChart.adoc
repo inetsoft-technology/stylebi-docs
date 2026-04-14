@@ -9,7 +9,7 @@ xref:CompareDataByDate.adoc[], to perform a variety of comparisons on date-based
 
 A sliding window chart displays an aggregate that is computed based on overlapping windows of data. This is most commonly used to display time-dependent summaries such as *moving averages*.
 
-image:commonscript:movingAverageChartExpw.png[]
+image:commonscript:movingAverageChartExpw.png[alt="sliding window moving average chart"]
 
 To create a running total chart, follow the basic steps below:
 
@@ -17,20 +17,20 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose a desired style.   Press the {buttonApply}.
 +
-image:commonscript:barChartExp1.png[]
+image:commonscript:barChartExp1.png[alt="press Select Chart Style, choose style"]
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:barChartExp4.png[]
+image:commonscript:barChartExp4.png[alt="drag dimension to X or Y region"]
 
 +
 TIP: {convertToDimension}
 
 . *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
-image:viewsheetExp34.png[]
+image:viewsheetExp34.png[alt="set Level to desired date grouping"]
 
 . *_Optional:_* {multipleDimensionNoColor} {addDimensionsUsingVisual}
 
@@ -40,25 +40,25 @@ image:viewsheetExp34.png[]
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:pctChangeChartExp1.png[]
+image:commonscript:pctChangeChartExp1.png[alt="drag measure to X or Y region"]
 
 +
 TIP: {convertToMeasure}
 
 . Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
 +
-image:Chart Edit Y Axis_1.png[]
+image:Chart Edit Y Axis_1.png[alt="press Edit Measure, select aggregation method"]
 
 . From the ‘Trend and Comparison’ menu, select ‘Moving Average’.
 +
-image:commonscript:movingAverageChartExp1.png[]
+image:commonscript:movingAverageChartExp1.png[alt="select Moving Average from Trend and Comparison"]
 
 .  For more precise control, select the ‘Custom’ option, and press btn:[Edit]. Then choose ‘Sliding’ from  the ‘Calculation’ dialog box.
 +
 ****
 The ‘Sliding’ calculation allows you to express each group’s value as an accumulation of neighboring aggregate values in the series, specified by a rectangular sliding window. This generally has the effect of smoothing (low-pass filtering) the displayed data.
 
-image:commonscript:MovingCalculationDialog_1.png[]
+image:commonscript:MovingCalculationDialog_1.png[alt="Sliding calculation dialog box"]
 
 The method of accumulation is specified by the ‘Aggregate’ menu in the ‘Calculation’ dialog box.  The ‘Previous’ and ‘Next’ values specify the span of the sliding window as the number of preceding and succeeding groups, respectively, to include in the calculation. All included groups have equal weight in the calculation.
 
@@ -88,6 +88,6 @@ Assume the chart displays sales totals for March, April, May, June, July, August
 
 . {finishEditing}
 
-image:commonscript:movingAverageChartExpw.png[]
+image:commonscript:movingAverageChartExpw.png[alt="completed sliding window chart"]
 
 include::partial$addTitlesLegend.adoc[]

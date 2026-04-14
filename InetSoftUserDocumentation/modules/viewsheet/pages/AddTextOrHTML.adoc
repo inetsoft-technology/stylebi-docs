@@ -23,7 +23,7 @@ include::ROOT:partial$CreateNewDashboardNote.adoc[]
 
 . From the *Toolbox* panel, drag a Text component into the Dashboard. (If you see the following ‘Layout Option’ dialog box, select ‘Move component here’ and press btn:[OK].)
 +
-image:viewsheetExp51.png[]
+image:viewsheetExp51.png[alt="drag text component into dashboard"]
 
 . Double-click on the Text component to edit the text contents. Enter the desired text.
 +
@@ -46,7 +46,7 @@ video::359874333#chapter=16573561[vimeo,640,400]
 =====
 
 +
-image:textComponentAggregateExp2.png[]
+image:textComponentAggregateExp2.png[alt="style text using format tab"]
 
 == Display HTML
 There are two ways to display HTML content within a Dashboard. One method is to use the *Basic HTML presenter*, which is available for data elements such as Text and Tables. See xref:VisualFormat.adoc[] for more information.

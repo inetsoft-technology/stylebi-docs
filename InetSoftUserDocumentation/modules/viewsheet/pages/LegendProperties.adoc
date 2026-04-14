@@ -16,7 +16,7 @@ The *General* tab offers the following options.
 
 NOTE: {dynamicProperties}
 
-image:Chart Legend Format Dialog.png[]
+image:Chart Legend Format Dialog.png[alt="legend properties panel"]
 
 Title:: The text to display in the legend title bar.
 Visible:: Sets the visibility of the legend title bar.
@@ -41,9 +41,9 @@ include::ROOT:partial$dimensionTip.adoc[]
 
 To modify the labels of a legend, double-click the cells in the ‘Alias’ column that correspond to the legend labels that you wish to rename, and enter the desired replacement text. Press btn:[OK] to close the panel.
 
-image:legendFormatAlias.png[]
+image:legendFormatAlias.png[alt="double-click Alias column to rename labels"]
 
 This updates the legend labels with the specified replacement text.
 
-image:legendFormatAliasUpdated.png[]
+image:legendFormatAliasUpdated.png[alt="legend labels updated with replacement text"]
 

@@ -18,7 +18,7 @@ A Scatter Chart is a xref:PointChart.adoc[] in which both the X and Y axes repre
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 
 
-image:commonscript:galleryScatter8.png[]
+image:commonscript:galleryScatter8.png[alt="scatter chart example"]
 
 To create a scatter chart, follow the basic steps below:
 
@@ -26,12 +26,12 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose the ‘Point’  style.    Press the {buttonApply}.
 +
-image:commonscript:pointChartExp1.png[]
+image:commonscript:pointChartExp1.png[alt="select point chart style"]
 
 
 . From the ‘Dimensions’ folder of the Data Source panel, drag a desired *dimension* to the 'Color', 'Shape', or 'Size' region.
 +
-image:commonscript:galleryScatter1.png[]
+image:commonscript:galleryScatter1.png[alt="drag dimension to color region"]
 +
 TIP: {convertToDimension}
 
@@ -41,7 +41,7 @@ TIP: {convertToDimension}
 . From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
 
 +
-image:commonscript:galleryScatter2.png[]
+image:commonscript:galleryScatter2.png[alt="drag measure to X or Y region"]
 +
 TIP: {convertToMeasure}
 
@@ -49,25 +49,25 @@ TIP: {convertToMeasure}
 +
 IMPORTANT: For a scatter plot you may not want any aggregation at all. In this case, select ‘None’ as the aggregation method.
 +
-image:commonscript:galleryScatter3.png[]
+image:commonscript:galleryScatter3.png[alt="select aggregation method for measure"]
 
 . From the ‘Measures’ folder of the *Data Source* panel, drag a *second measure* to the ‘X’ or ‘Y’ region. (Use the region that does not already contain the first measure.)
 +
-image:commonscript:galleryScatter4.png[]
+image:commonscript:galleryScatter4.png[alt="drag second measure to chart region"]
 
 . Press the {buttonEditMeasure} next to the second measure, and select the desired aggregation method for the measure. Press the {buttonApply}.
 +
-image:commonscript:galleryScatter5.png[]
+image:commonscript:galleryScatter5.png[alt="set aggregation for second measure"]
 +
 This creates the desired scatter chart.
 +
-image:commonscript:galleryScatter6.png[]
+image:commonscript:galleryScatter6.png[alt="completed scatter chart with two measures"]
 
 . *_Optional:_*  To resize the legend to a single column, drag the left border of the legend to the right.
 
 . *_Optional:_* {multipleMeasure} {addMeasuresUsingVisual}
 +
-image:commonscript:galleryScatter7.png[]
+image:commonscript:galleryScatter7.png[alt="scatter chart with multiple measures"]
 
 . {finishEditing}
 
@@ -78,7 +78,7 @@ include::partial$addTitlesLegend.adoc[]
 The sample xref:ROOT:attachment$Census.zip[Census] Dashboard (in the ‘Examples’ folder) provides an example of a scatter chart.
 
 
-image:viewsheet:galleryMultipleMeasure3.png[]
+image:viewsheet:galleryMultipleMeasure3.png[alt="Census dashboard scatter chart example"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Census.zip[Census] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 

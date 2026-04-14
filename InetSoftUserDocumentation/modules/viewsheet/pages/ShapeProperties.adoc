@@ -21,7 +21,7 @@ The *Shape* tab in the ‘Properties’ dialog box for shape components provides
 
 TIP: {dynamicProperties}
 
-image:Line Properties Shape Tab.png[]
+image:Line Properties Shape Tab.png[alt="shape tab line style and color properties"]
 
 Line: Style, Line: Color::	Sets the line type (thickness, etc.) and color for shape borders. Available for all shapes.
 Fill: Color, Fill: Alpha::	Sets the color and transparency of Oval and Rectangle shape interiors. An ‘Alpha’ value of 100% indicates complete opacity. An ‘Alpha’ value of less that 100% allows underlying components to be partially visible through the shape.

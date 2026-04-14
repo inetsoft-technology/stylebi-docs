@@ -19,24 +19,24 @@ include::ROOT:partial$CreateNewDashboardNote.adoc[]
 
 . Drag the Crosstab element from the *Toolbox* panel into the Dashboard.
 +
-image:addCrosstab_1.png[]
+image:addCrosstab_1.png[alt="drag crosstab element into dashboard"]
 
 . Press the {buttonEdit} at the top-right corner of the Crosstab to open the Crosstab Editor.
 +
-image:Crosstab Edit Button_1.png[]
+image:Crosstab Edit Button_1.png[alt="press Edit button to open crosstab editor"]
 +
 . From the *Data Source* panel, drag the desired columns or cube dimensions into the ‘Columns’ and ‘Rows’ regions.
 
 +
 NOTE: The panel displays all OLAP cubes defined on the data source.
 +
-image:Crosstab Binding_1.png[]
+image:Crosstab Binding_1.png[alt="drag dimensions into columns and rows regions"]
 +
 include::viewsheet:partial$bindToComponent.adoc[]
 
 . Drag the desired columns or cube measures into the  ‘Aggregates’ region.
 +
-image:Crosstab 2_1.png[]
+image:Crosstab 2_1.png[alt="drag measures into aggregates region"]
 +
 TIP: You can change the order of multiple dimensions or measures by dragging them left or right in the Editor.
 
@@ -63,12 +63,12 @@ video::359390270#chapter=16506274[vimeo,640,400]
 
 .. Press the {buttonEditDimension} next to a row header or column header.
 +
-image:crosstabSortRank.png[]
+image:crosstabSortRank.png[alt="press Edit Dimension next to row or column header"]
 .. In the ‘Sort’ menu, specify how the values in the field should be ordered. ‘Ascending’ and ‘Descending’ sort the values in alphabetical or reverse-alphabetical order. ‘By Value (Asc)’ and ‘By Value (Desc)’ sort the values according to the aggregate measure selected in the adjacent menu.
 +
 To specify an arbitrary sort order, select the ‘Manual’ option in the ‘Sort’ menu, and press the  to open the ‘Manual Ordering’ dialog box. To reorder an item in the ‘Manual Ordering’ dialog box, select the item and press the btn:[Up] or btn:[Down] buttons. Press btn:[OK] to close the dialog box.
 +
-image:Manual Ordering Dialog.png[]
+image:Manual Ordering Dialog.png[alt="manual ordering dialog box"]
 
 .. For a Date-type field, select the desired level of date grouping (‘Year’, ‘Month’, etc.) from the ‘Level’ menu.  *_Optional:_* Select ‘As time series’ to force the display of date groups even when the group has no data. In this case the cell is filled either with a null value or with a zero (if the 'Fill Blank Cell With Zero' option is enabled on the *Advanced* tab of the ‘Table Properties’ dialog box).
 +
@@ -107,7 +107,7 @@ include::ROOT:partial$videoVersion.adoc[]
 video::359390270#chapter=16506565[vimeo,640,400]
 =====
 +
-image:Crosstab Measure Options_1.png[]
+image:Crosstab Measure Options_1.png[alt="press Edit Measure and select aggregate method"]
 +
 To display a bivariate aggregation measure (e.g., ‘Correlation’, ‘Weighted Average’, etc.), select the second operand (column) from the ‘with’ menu. To display a univariate measure (‘Sum’, ‘Count’, etc.) as a percentage, select the basis for percentage in the ‘Percentage of’ menu. Press the {buttonApply} to close the panel.
 +
@@ -139,28 +139,28 @@ video::359390270#chapter=16508525[vimeo,640,400]
 
 .. Right-click on one of the selected labels, and select ‘Group’ from the context menu. {rightClickOptions} This opens the ‘Group Name’ dialog box.
 +
-image:Named Group 5.png[]
+image:Named Group 5.png[alt="right-click selected labels and select Group"]
 +
 TIP: You can group existing groups to make larger groups.
 
 .. Enter a name for the new group in the ‘Group Name’ dialog box, and press btn:[OK].
 +
-image:Named Group 2.png[]
+image:Named Group 2.png[alt="enter name in group name dialog box"]
 This replaces the selected labels with the label for the named grouping, and agglomerates the data corresponding to the original labels under the new label.
 +
-image:Named Group 6.png[]
+image:Named Group 6.png[alt="crosstab with named group labels applied"]
 
 .. Repeat the above steps to add additional named groups.
 
 To decompose an existing name group, right-click on the header label and select ‘Ungroup’ from the context menu. {rightClickOptions}
 
-image:Named Group 7.png[]
+image:Named Group 7.png[alt="right-click header label and select Ungroup"]
 
 ****
 
 . *_Optional:_* To display a grand total for rows or columns, select '`Show`' for the desired '`Row Total`' or '`Column Total`' option in the left panel.
 +
-image:CrosstabRowTotal.png[]
+image:CrosstabRowTotal.png[alt="select Show for row total or column total"]
 
 Proceed to format and style the Crosstab as you would for any Table.  See xref:AddTable.adoc#ConfigureTableAppearance[Configure Table Appearance] for more information about how to apply styles.
 

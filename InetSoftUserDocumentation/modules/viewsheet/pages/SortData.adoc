@@ -12,13 +12,13 @@ NOTE: Sorting actions for certain tables may be administratively restricted.
 
 To sort a Table column or Crosstab column, hover the mouse over the right side of header or data cell and press the {buttonSort}.
 
-image:SortColumn.png[]
+image:SortColumn.png[alt="hover over header and press Sort button"]
 
 Press the button once to sort in ascending (alphabetical) order. Press the button a second time to sort in descending (reverse-alphabetical) order. Press the button a third time to restore the original order.
 
 For a Crosstab, hover the mouse over a cell to display the current sort order for the field. This may show an  {buttonAscSort}, a {buttonDescSort}, an {buttonAscSortByValue}, or a {buttonDescSortByValue}.  See xref:AddCrosstab.adoc[] for more information about setting sorting in a Crosstab.
 
-image:SortColumnByValue.png[]
+image:SortColumnByValue.png[alt="hover over crosstab cell to display sort order"]
 
 
 
@@ -27,6 +27,6 @@ To sort Chart *dimension* groups based on a *measure*, hover the mouse over the 
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 
-image:sortButtonChart.png[]
+image:sortButtonChart.png[alt="hover over measure axis to press Sort button"]
 
 When multiple dimensions are represented on the chart (as in the image above), the {buttonSort} operates on the innermost dimension.

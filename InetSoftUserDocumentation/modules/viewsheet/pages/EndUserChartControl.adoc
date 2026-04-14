@@ -34,7 +34,7 @@ To provide end users with access to the Ad Hoc Chart Editor, follow the steps be
 
 . Select the ‘Enable Ad Hoc Editing’ option.
 +
-image:enableAdHocEditing.png[]
+image:enableAdHocEditing.png[alt="select enable ad hoc editing option"]
 
 If this option is not selected, users will not have access to the Chart Editor. However, other features (brushing, show details, export, zooming, etc.) will remain available.
 
@@ -65,14 +65,14 @@ include::ROOT:partial$ProductSalesWorksheet.adoc[]
 
 . Press the {buttonChangeValueType} next to ‘Quantity Purchased’, and choose the ‘Variable’ option. The menu displays the available variable names.
 +
-image:Crosstab Select Variable.png[]
+image:Crosstab Select Variable.png[alt="press Change Value Type and choose Variable option"]
 
 
 . From the list of variables, choose `$(RadioButton)`.
 
 . Now press the radio buttons. Note that the chart displays the Y-axis field that you choose using the radio button control.
 +
-image:Capture_006.png[]
+image:Capture_006.png[alt="chart displays y-axis field from radio button selection"]
 ****
 
 

@@ -30,7 +30,7 @@ include::viewsheet:partial$selectChartData.adoc[]
 ****
 Consider the following two charts.
 
-image:brushing0.png[]
+image:brushing0.png[alt="two charts for brushing walkthrough"]
 
 Use brushing to answer the following questions. (Expand the sections to see the answers.)
 
@@ -40,13 +40,13 @@ Use brushing to answer the following questions. (Expand the sections to see the 
 ====
 . Double-click the ‘Sue’ label in the legend to brush Sue Marston’s sales in both charts.
 +
-image:brushing1.png[]
+image:brushing1.png[alt="brush Sue Marston sales in both charts"]
 +
 It is now obvious that Sue’s greatest sales month was April of 2019, when she sold almost $277,000.
 
 . Press the {buttonChartClearBrush} to return to the normal view.
 +
-image:brushing2.png[]
+image:brushing2.png[alt="press Clear Brushing button"]
 ====
 
 .Overall sales were high in August 2020. Which state saw the greatest sales during this month?
@@ -54,12 +54,12 @@ image:brushing2.png[]
 ====
 . In the second chart, click to select the data point for August 2020.
 +
-image:brushing3.png[]
+image:brushing3.png[alt="select data point for August 2020"]
 
 . Press the {buttonChartBrush} on the chart toolbar to highlight all the data corresponding to this month.
 
 +
-image:brushing4.png[]
+image:brushing4.png[alt="press Brush Chart button to highlight data"]
 +
 It is clear that Texas had the majority of sales in August 2020.
 ====
@@ -68,11 +68,11 @@ It is clear that Texas had the majority of sales in August 2020.
 ====
 . In the first chart, hold the {buttonCtrl} key and click to select Sue’s sales both in NJ and NY.
 +
-image:brushing5.png[]
+image:brushing5.png[alt="select Sue sales in NJ and NY"]
 
 . Press the {buttonChartBrush} on the chart toolbar to highlight all of Sue’s sales corresponding to these states.
 +
-image:brushing6.png[]
+image:brushing6.png[alt="brush chart to highlight Sue sales"]
 +
 It is clear that Sue’s sales in NJ and NY reached a peak in June 2018.
 ====
@@ -92,13 +92,13 @@ include::viewsheet:partial$selectChartData.adoc[]
 
 . Press the {buttonZoom} in the mini-toolbar. This zooms the chart to display only the data selected.
 +
-image:Chart Zoom Basic.png[]
+image:Chart Zoom Basic.png[alt="press Zoom Chart button to zoom chart"]
 
 . Repeat the above steps to zoom in further.
 
 . To return to the original chart view, press the {buttonChartClearZoom}.
 +
-image:Chart Zoom Clear.png[]
+image:Chart Zoom Clear.png[alt="press Clear Zoom button"]
 
 
 === Select Groups to Exclude
@@ -110,13 +110,13 @@ include::viewsheet:partial$selectChartData.adoc[]
 
 . Press the {buttonChartExclude} in the toolbar. This removes the selected data from the chart.
 +
-image:ExcludeData.png[]
+image:ExcludeData.png[alt="press Exclude Data button"]
 
 . Repeat the above steps to exclude further data.
 
 . To return to the original chart view, press the {buttonChartClearZoom}.
 +
-image:ExcludeData2.png[]
+image:ExcludeData2.png[alt="press Clear Zoom to restore chart"]
 
 [#DrillThroughChart]
 == Drill Through a Chart
@@ -128,17 +128,17 @@ To drill down into a date or cube dimension on a chart axis, follow these steps:
 +
 IMPORTANT: The {buttonDrillDown} is only visible when you hover over the axis.
 +
-image:DrillDown.png[]
+image:DrillDown.png[alt="drill down button on chart axis"]
 
 . Press the {buttonDrillDown} to drill down to the next level of the date or dimension.
 
 . Repeat the above steps to drill down to deeper levels of the hierarchy.
 +
-image:DrillDown2.png[]
+image:DrillDown2.png[alt="drill down to deeper hierarchy level"]
 
 . To drill up to a higher level of the date or dimension hierarchy, hover the mouse over the chart axis that you want to display at reduced resolution. This displays a {buttonDrillUp} at the left side of the axis.
 +
-image:DrillDown3.png[]
+image:DrillDown3.png[alt="drill up button on chart axis"]
 
 . Press the {buttonDrillUp} to drill up to the higher level of the date or dimension hierarchy.
 +
@@ -146,11 +146,11 @@ image:DrillDown3.png[]
 ====
 When you drill down into a discretely grouped date axis (e.g., date grouping level set to ‘Quarter of Year’, ‘Month of Year’, etc.), this creates a facet chart by repeatedly adding the date field as an additional dimension with a finer grouping level.
 
-image:DrillDown4.png[]
+image:DrillDown4.png[alt="facet chart from drilling discrete date"]
 
 However, when you drill down into  a continuously grouped date axis (e.g.,  date grouping level set to ‘Quarter’, ‘Month’, etc.), this changes the grouping level of the existing dimension rather than adding an additional dimension.
 
-image:DrillDown5.png[]
+image:DrillDown5.png[alt="continuous date drill down result"]
 
 The exception to this rule is the ‘Year’ level, which behaves as a discrete grouping and generates a facet chart upon drill down (as illustrated in the steps above).
 
@@ -169,31 +169,31 @@ To drill down into a date or cube dimension on a Crosstab header, follow these s
 +
 IMPORTANT: The {buttonDrillDown} is only visible when you hover over the Crosstab.
 +
-image:DrillDownCross.png[]
+image:DrillDownCross.png[alt="drill down button on crosstab header"]
 
 . Press the {buttonDrillDown} to drill down to the next level of the date or dimension.
 
 . Repeat the above steps to drill down to deeper levels of the hierarchy.
 +
-image:DrillDownCross2.png[]
+image:DrillDownCross2.png[alt="drill down to deeper crosstab hierarchy"]
 
 . To drill up to a higher level of the date or dimension hierarchy, hover the mouse over the crosstab. This displays a {buttonDrillUp} at the left side of expanded headers.
 +
-image:DrillDownCross3.png[]
+image:DrillDownCross3.png[alt="drill up button on crosstab headers"]
 
 . Press the {buttonDrillUp} to drill up to the higher level of the date or dimension hierarchy.
 
 . To fully expand thfe hierarchy for a dimension value, right-click the value and select the appropriate ‘Expand Hierarchy’ option. To collapse an expanded hierarchy, select ‘Collapse Hierarchy’.
 +
-image:expandHierarchy1.png[]
+image:expandHierarchy1.png[alt="right-click to expand hierarchy"]
 
 . To fully expand all the hierarchies for a dimension (column or row header), right-click a value of the dimension and select the appropriate ‘Expand Field’ option. To collapse an expanded hierarchy, select ‘Collapse Field’.
 +
-image:expandHierarchy2.png[]
+image:expandHierarchy2.png[alt="right-click to expand field"]
 
 . To fully expand *_all_*   hierarchies in the entire crosstab, right-click the table title and select ‘Expand Hierarchy’. To collapse *_all_* hierarchies in an expanded table, select ‘Collapse Hierarchy’.
 +
-image:expandHierarchy3.png[]
+image:expandHierarchy3.png[alt="right-click to expand all hierarchies"]
 
 To disable the drilling feature for a particular Crosstab, deselect the ‘Enable Drilling’ option in the *Advanced* tab of the ‘Crosstab Properties’ dialog box. To specify a custom drill hierarchy  for any set of hierarchical fields, including custom date levels, use the *Hierarchy* tab.  See xref:CrosstabProperties.adoc[] for more details.
 
@@ -217,33 +217,33 @@ include::viewsheet:partial$selectChartData.adoc[]
 
 . Press the {buttonShowDetails} in the Chart mini-toolbar.
 +
-image:Chart Show Chart Details.png[]
+image:Chart Show Chart Details.png[alt="press Show Details button"]
 +
 This opens the *Data* panel, which displays the detail data.
 +
-image:Chart Show Chart Details2.png[]
+image:Chart Show Chart Details2.png[alt="data panel shows chart detail data"]
 
 . *_Optional:_* To format values in the *Data* panel, press the {buttonFormat} in the column header that you want to format.
 +
-image:show Summary Format1.png[]
+image:show Summary Format1.png[alt="press Format button in column header"]
 +
 This opens the ‘Format Type’ panel. Select the desired format for the column and press the {buttonApply}. See xref:DataFormat.adoc[] for information about the available options.
 +
-image:Show Details Format Dialog_1.png[]
+image:Show Details Format Dialog_1.png[alt="select format type and press Apply"]
 +
 Formatting that you specify is saved with the Dashboard, and is automatically applied to the column whenever the ‘Show Details’ option is used, both in Visual Composer and the User Portal.
 
 . To apply a global table style, press the {buttonTableStyle}.
 +
-image:Show Details Format_2.png[]
+image:Show Details Format_2.png[alt="press Table Style button"]
 +
 This opens the ‘Table Style’ dialog box. Select a table style, and press btn:[OK].
 +
-image:Show Details Format_3.png[]
+image:Show Details Format_3.png[alt="select table style and press OK"]
 
 . *_Optional:_*  To export the data, press the {buttonExport} in the *Data* panel.  See xref:ExportDashboard.adoc[] for more details about exporting.
 +
-image:Chart Show Chart Details Export.png[]
+image:Chart Show Chart Details Export.png[alt="press Export button in data panel"]
 
 . Press btn:[Close] to collapse the *Data* panel.
 
@@ -264,35 +264,35 @@ You can select data in a Crosstab in the following ways:
 
 . Press the {buttonShowDetails} in the Crosstab mini-toolbar.
 +
-image:CrosstabDetails.png[]
+image:CrosstabDetails.png[alt="press Show Details in crosstab toolbar"]
 +
 This displays the detail data in the *Data* panel.
 +
-image:CrosstabDetails3.png[]
+image:CrosstabDetails3.png[alt="data panel shows crosstab detail data"]
 +
 You can continue to select different cells without clicking ‘Show Details’ again. (You may need to collapse the *Data* panel to resume making selections on the Crosstab.)
 
 . *_Optional:_* To format values in the data panel, press the {buttonFormat} in the column header that you want to format.
 +
-image:show Summary Format1.png[]
+image:show Summary Format1.png[alt="press Format button in column header"]
 +
 This opens the ‘Format Type’ panel, which allows you to set the format for the column. See xref:DataFormat.adoc[] for information about the available options.
 +
-image:Show Details Format Dialog_1.png[]
+image:Show Details Format Dialog_1.png[alt="select format type and press Apply"]
 +
 Formatting that you specify is saved with the Dashboard, and is automatically applied to the column whenever the ‘Show Details’ option is used, both in Visual Composer and the User Portal.
 
 . To apply a global table style, press the {buttonTableStyle}.
 +
-image:Show Details Format_2.png[]
+image:Show Details Format_2.png[alt="press Table Style button"]
 +
 This opens the ‘Table Style’ dialog box. Select a table style, and press btn:[OK].
 +
-image:Show Details Format_3.png[]
+image:Show Details Format_3.png[alt="select table style and press OK"]
 
 . *_Optional:_* To export the data to Excel, press the {buttonExport} at the top left. See xref:ExportDashboard.adoc[] for more details about exporting.
 +
-image:CrosstabDetails2.png[]
+image:CrosstabDetails2.png[alt="press Export button to export data"]
 
 . Press btn:[Close] to exit the *Data* panel.
 
@@ -325,7 +325,7 @@ IMPORTANT: If you have identical filters in the origin  dashboard and target (hy
 
 . Select ‘Hyperlink’ from the context menu. This opens the ‘Hyperlink’ dialog box.
 +
-image:Hyperlink Chart.png[]
+image:Hyperlink Chart.png[alt="hyperlink dialog box for chart"]
 
 . In the ‘Hyperlink’ dialog box, define the desired hyperlink. See the  sections below for examples of how to configure  hyperlinks for the desired target:
 +
@@ -371,7 +371,7 @@ NOTE: The 'Self' setting is not applied during preview in Visual Composer.
 +
 This will cause the hyperlinked Dashboard to open in a window called “NewFrame” (i.e., this is the browser DOM ‘name’ attribute). If you want the Dashboard to open in the original Dashboard frame, replacing the existing Dashboard, leave the ‘Self’ checkbox selected.
 +
-image:Hyperlink Dialog Example2.png[]
+image:Hyperlink Dialog Example2.png[alt="set target frame in hyperlink dialog"]
 
 . Press the btn:[Add] button in the bottom panel. This opens the ‘Parameter’ dialog box.
 +
@@ -381,7 +381,7 @@ TIP: To delete an existing parameter, select the parameter and press btn:[Remove
 
 . Select the ‘Company’ field from the ‘Value for Parameter’ menu. This is the name of the table column whose value should be passed into the Dashboard parameter when the user clicks the hyperlink.
 +
-image:Hyperlink Parameter Dialog.png[]
+image:Hyperlink Parameter Dialog.png[alt="select Company field for parameter value"]
 
 . Press btn:[OK].
 
@@ -425,7 +425,7 @@ video::306732112#chapter=16551231[vimeo,640,400]
 
 . Press btn:[OK] to complete the hyperlink configuration.
 +
-image:Hyperlink Dialog Example.png[]
+image:Hyperlink Dialog Example.png[alt="completed hyperlink configuration"]
 
 For this example, clicking one of the hyperlinks will now launch the ‘OrderList’ Dashboard in a new browser window, and the ‘OrderList’ Dashboard will display _only_ the orders for the specific company the user clicked.
 
@@ -459,7 +459,7 @@ NOTE: The 'Self' setting is not applied during preview in Visual Composer.
 
 . Select ‘Company’ from the ‘Value for Parameter’ menu.
 +
-image:Hyperlink Web 3.png[]
+image:Hyperlink Web 3.png[alt="select Company as parameter value"]
 
 . Press btn:[OK] to close the ‘Parameter’ dialog box.
 
@@ -467,7 +467,7 @@ image:Hyperlink Web 3.png[]
 
 . The final configuration of the ‘Hyperlink’ dialog box is shown below.
 +
-image:Hyperlink Web 4.png[]
+image:Hyperlink Web 4.png[alt="final hyperlink dialog configuration"]
 
 . Press btn:[OK] to close the ‘Hyperlink’ dialog box.
 
@@ -495,7 +495,7 @@ A _flyover view_ filters the information displayed in selected Dashboard compone
 
 For example, you may want the Table below to display sales only for the particular product(s) that the user selects on the Chart. A flyover view allows the user to hover the pointer over the Chart to filter the table as desired.
 
-image:Flyover Final.png[]
+image:Flyover Final.png[alt="flyover view filtering table by chart selection"]
 
 The filtered flyover component and the component that triggers the flyover can be based on the same data block or on different data blocks. In the latter case, the flyover component is filtered based on any matching fields in the two data blocks.
 
@@ -530,7 +530,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 .. Drag the selected fields onto the Table component. This adds the three columns to the Table. Resize the Table as desired.
 +
-image:Flyover Table Gauge.png[]
+image:Flyover Table Gauge.png[alt="table with columns added from data block"]
 
 .. Right-click the Table, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel.
 
@@ -550,13 +550,13 @@ image:Flyover Table Gauge.png[]
 
 .. Press the {buttonEditDimension}, and use the ‘Ranking’ option to display only the top 10 companies. Press the {buttonApply}.
 +
-image:Chart Data Tip Top 10_2.png[]
+image:Chart Data Tip Top 10_2.png[alt="ranking option to show top 10 companies"]
 
 .. {finishEditing}
 
 .. Resize the chart as desired.
 +
-image:Chart w Data Tip_2.png[]
+image:Chart w Data Tip_2.png[alt="resized chart in dashboard"]
 
 . Right-click the Chart, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Chart Properties’ panel.
 
@@ -564,7 +564,7 @@ image:Chart w Data Tip_2.png[]
 
 .. In the ‘Flyover’ panel, click to select the two available components: ‘CompanyTable’ and ‘QuantityGauge’.
 +
-image:Flyover List.png[]
+image:Flyover List.png[alt="select flyover components in chart properties"]
 
 .. *_Optional:_* Select ‘On Click Only’ if you want the filtered components (‘CompanyTable’ and ‘QuantityGauge’) to update only when the user clicks on the chart. Otherwise, the components will update whenever the user hovers the mouse over the chart.
 
@@ -574,7 +574,7 @@ NOTE: Data tips are not active in the design view. Preview the Dashboard to see 
 
 . Press the {buttonPreview} to preview the Dashboard, and hover the mouse (or click) over different companies (data or axis labels) in the Chart. Observe that both the Table and Gauge are filtered to display only the corresponding data.
 +
-image:Flyover Final.png[]
+image:Flyover Final.png[alt="flyover filtering table and gauge by company"]
 
 . To lock the selection to a particular company (or set of companies), click on the Chart to select the desired company (or hold the {buttonCtrl} key  and click to select a set of companies). This will lock the filter in place until the selection is removed.
 
@@ -588,7 +588,7 @@ NOTE: You can use a single component in both a  data tip (see xref:AddTipsToChar
 ****
 The sample xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard provides an example of a flyover filter.
 
-image:viewsheet:galleryDataTip2.png[]
+image:viewsheet:galleryDataTip2.png[alt="executive sales summary dashboard flyover example"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****
@@ -605,18 +605,18 @@ If you have configured a ‘Category’ > ‘Product’ hierarchy for a Chart, t
 +
 include::viewsheet:partial$selectChartData.adoc[]
 +
-image:DrillAndFilter1.png[]
+image:DrillAndFilter1.png[alt="select category groups on chart"]
 
 . Press the {buttonDrillDownFilter} in the Chart toolbar.
 +
-image:DrillAndFilter2.png[]
+image:DrillAndFilter2.png[alt="press Drill Down Filter button"]
 +
 This drills to the ‘Product’ level and filters the Chart to display only the data in the selected ‘Category’. A drill icon indicates that a drill is in effect.
 +
-image:DrillAndFilter3.png[]
+image:DrillAndFilter3.png[alt="chart drilled and filtered to product level"]
 +
 IMPORTANT: All other Dashboard components that display this dataset will also be filtered. In this respect, the {buttonDrillDownFilter} behaves like a Filter component (Selection List, etc.).
 
 . To reverse the drill and filter operation, select a group on the Chart, and then press the {buttonDrillUpFilter} in the Chart toolbar.
 +
-image:DrillAndFilter4.png[]
+image:DrillAndFilter4.png[alt="press Drill Up Filter to reverse drill"]

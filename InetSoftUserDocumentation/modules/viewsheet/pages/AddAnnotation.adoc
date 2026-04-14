@@ -14,16 +14,16 @@ To add annotations to the body of the Dashboard, follow the steps below:
 . Right-click in an empty region of the Dashboard, and select ‘Add Annotation’ from the context menu. This opens the annotation in the Annotation Editor.
 
 +
-image:AnnotationViewsheet1_1.png[]
+image:AnnotationViewsheet1_1.png[alt="right-click dashboard and select Add Annotation"]
 
 . Enter the desired annotation text into the Editor, and use the  formatting tools in the toolbar to adjust the font, size, weight, color, etc.
 
 +
-image:AnnotationViewsheet2_2.png[]
+image:AnnotationViewsheet2_2.png[alt="enter annotation text in editor"]
 
 . Press btn:[OK] to close the Annotation Editor. This adds the annotation to the Dashboard.
 +
-image:AnnotationViewsheet3_1.png[]
+image:AnnotationViewsheet3_1.png[alt="annotation added to dashboard"]
 
 . Position and resize the annotation as desired. See xref:#RepositionAnnotation[] below.
 
@@ -40,17 +40,17 @@ To add an annotation to one of the Data View components (Table, Chart, Crosstab)
 
 . Right-click on the Data View, Output, or Shape component, and select ‘Annotate Component’ from the context menu.
 +
-image:AnnotationComponent1_1.png[]
+image:AnnotationComponent1_1.png[alt="right-click component and select Annotate Component"]
 +
 This opens the Annotation Editor. (For an Output component, the Editor displays a default annotation giving the component’s current aggregate.)
 
 . Enter the desired annotation text into the Editor, and use the formatting tools in the toolbar to adjust the font, size, weight, color, etc.
 +
-image:AnnotationComponent3_1.png[]
+image:AnnotationComponent3_1.png[alt="enter annotation text and format in editor"]
 
 . Press btn:[OK] to close the Annotation Editor. This adds the annotation to the Dashboard and attaches a callout line to the designated component.
 +
-image:AnnotationComponent4_1.png[]
+image:AnnotationComponent4_1.png[alt="annotation added with callout line to component"]
 
 . Position and resize the annotation as desired. See xref:#RepositionAnnotation[].
 
@@ -68,19 +68,19 @@ To add an annotation to a data point on a Chart, follow the steps below:
 
 . Right-click on the chart data point you wish to annotate, and select ‘Annotate Point’ from the context menu.
 +
-image:AnnotationPoint1.png[]
+image:AnnotationPoint1.png[alt="right-click chart data point, select Annotate Point"]
 +
 This opens the Annotation Editor, which displays the contents of the current data point tooltip.
 +
-image:AnnotationPoint2.png[]
+image:AnnotationPoint2.png[alt="annotation editor with data point tooltip contents"]
 
 . Enter the desired annotation text into the Editor, and use the formatting tools in the toolbar to adjust the font, size, weight, color, etc.
 +
-image:AnnotationPoint3.png[]
+image:AnnotationPoint3.png[alt="enter annotation text for data point"]
 
 . Press btn:[OK] to close the Annotation Editor. This adds the annotation to the Dashboard and attaches a callout line to the designated data point.
 +
-image:AnnotationPoint4.png[]
+image:AnnotationPoint4.png[alt="annotation added with callout line to data point"]
 
 . Position and resize the annotation as desired. See xref:#RepositionAnnotation[].
 
@@ -100,19 +100,19 @@ To add an annotation to a data cell in a Table, follow the steps below:
 
 . Right-click on the table cell you wish to annotate, and select ‘Annotate Cell’ from the context menu.
 +
-image:AnnotationComponent1_1.png[]
+image:AnnotationComponent1_1.png[alt="right-click table cell and select Annotate Cell"]
 +
 This opens the Annotation Editor, which by default displays the contents of the current cell’s tooltip.
 +
-image:AnnotationCell2_1.png[]
+image:AnnotationCell2_1.png[alt="annotation editor with cell tooltip contents"]
 
 . Enter the desired annotation text into the Editor, and use the formatting tools in the toolbar to adjust the font, size, weight, color, etc.
 +
-image:AnnotationCell3_1.png[]
+image:AnnotationCell3_1.png[alt="enter annotation text for table cell"]
 
 . Press btn:[OK] to close the Annotation Editor. This adds the annotation to the Dashboard and attaches a callout line to the designated Table cell.
 +
-image:AnnotationCell4_1.png[]
+image:AnnotationCell4_1.png[alt="annotation added with callout line to table cell"]
 
 . Position and resize the annotation as desired. See xref:#RepositionAnnotation[].
 
@@ -139,7 +139,7 @@ include::viewsheet:partial$annotationPosition.adoc[]
 When a Dashboard or component annotation is hidden, it appears on the Dashboard or component as a small “note” icon.
 
 
-image:AnnotationHidden_1.png[]
+image:AnnotationHidden_1.png[alt="hidden annotation shown as note icon"]
 
 Every annotation is associated with a particular *bookmark*. To display all annotations for a particular bookmark, follow the steps below:
 
@@ -147,7 +147,7 @@ Every annotation is associated with a particular *bookmark*. To display all anno
 
 . Press the  {buttonShowAnnotation} in the toolbar.
 +
-image:AnnotationShow.png[]
+image:AnnotationShow.png[alt="press Show Annotations button in toolbar"]
 +
 NOTE: If you *export* a Dashboard while annotations are visible, the annotations will be included in the export.
 

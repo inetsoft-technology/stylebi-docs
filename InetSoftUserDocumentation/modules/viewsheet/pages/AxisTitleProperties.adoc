@@ -16,7 +16,7 @@ To edit the text of an axis title, right-click the title text on a Chart axis, a
 
 TIP: {dynamicProperties}
 
-image:Chart Title Format Dialog.png[]
+image:Chart Title Format Dialog.png[alt="title properties panel with title field"]
 
 
 In the ‘Title’ field, enter the title for the axis. (The title text you enter will *persist* even if you later change the field displayed on that axis.) To add the default axis name into your custom title, insert a placeholder such as `pass:[{0}]` in the title.
@@ -36,6 +36,6 @@ TIP: To *hide* an axis title, right-click the title text on the chart, and selec
 == Format an Axis Title
 To format an axis title, click the title text on the Chart to select it, and select the *Format* tab at the bottom of the left panel.
 
-image:Format Title.png[]
+image:Format Title.png[alt="format tab selected to style axis title"]
 
 Select a font, color, alignment, etc., for the axis title. See xref:VisualFormat.adoc[] for more information about these options.

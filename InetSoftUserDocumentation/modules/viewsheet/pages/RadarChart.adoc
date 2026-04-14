@@ -6,7 +6,7 @@ A Radar Chart (also called a spider chart or web chart) typically allows you to 
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 
-image:commonscript:radarChartExp8.png[]
+image:commonscript:radarChartExp8.png[alt="radar chart showing measures along multiple axes"]
 
 To create a radar chart, follow the basic steps below:
 
@@ -14,7 +14,7 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}.  Choose the ‘Radar’  or ‘Filled Radar’ style.     Press the {buttonApply}.
 +
-image:commonscript:radarChartExp1.png[]
+image:commonscript:radarChartExp1.png[alt="choose Radar or Filled Radar chart style and press Apply"]
 
 . Determine whether your data contains a *single measure* or *multiple measures*.
 
@@ -26,11 +26,11 @@ image:commonscript:radarChartExp1.png[]
 
 .. From the ‘Measures’ folder of the *Data Source* panel, drag two or more measures (typically, three or more) to the ‘Y’ region. This places the selected fields onto the chart as measures.
 +
-image:commonscript:radarChartExp2.png[]
+image:commonscript:radarChartExp2.png[alt="drag multiple measures to Y region for radar chart"]
 
 .. To break-out the data set into groups using color, shape, size, or text labeling, drag a *dimension* from the *Data Source* panel to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
 +
-image:commonscript:radarChartExp4.png[]
+image:commonscript:radarChartExp4.png[alt="drag dimension to Color Shape Size or Text region"]
 
 ****
 
@@ -40,24 +40,24 @@ image:commonscript:radarChartExp4.png[]
 ****
 .. From  the *Data Source* panel, drag a single measure  to the ‘Y’ region.
 +
-image:commonscript:radarChartExp10.png[]
+image:commonscript:radarChartExp10.png[alt="drag single measure to Y region in Chart Editor"]
 
 .. From  the *Data Source* panel, drag the *dimension* whose values will define the axes to the ‘Break By’ field.
 +
-image:commonscript:radarChartExp11.png[]
+image:commonscript:radarChartExp11.png[alt="drag dimension to Break By field to define radar axes"]
 
 .. To break-out the data set into further groups using color, shape, size, or text labeling, drag a dimension from the *Data Source* panel to the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
 +
-image:commonscript:radarChartExp12.png[]
+image:commonscript:radarChartExp12.png[alt="drag dimension to Color Shape Size or Text for grouping"]
 ****
 
 . *_Optional:_*  Right-click on the Y-axis title and select ‘Hide Title’ from the context menu.
 +
-image:commonscript:radarChartExp3.png[]
+image:commonscript:radarChartExp3.png[alt="right-click Y-axis title and select Hide Title"]
 
 . *_Optional:_*  Move the legend to provide the chart with more space.
 +
-image:commonscript:radarChartExp5.png[]
+image:commonscript:radarChartExp5.png[alt="move legend to provide more space for radar chart"]
 
 . *_Optional:_*  For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 
@@ -66,7 +66,7 @@ image:commonscript:radarChartExp5.png[]
 . Press the {buttonEditMeasure} next to each measure, and select the desired ‘Aggregate’ and ‘Trend and Comparison’ method for the measure.
 
 +
-image:commonscript:radarChartExp9.png[]
+image:commonscript:radarChartExp9.png[alt="select Aggregate and Trend and Comparison for radar measure"]
 +
 NOTE: For radar charts, it is often desirable to set the ‘Trend and Comparison’ property to ‘Percent of Grant Total’.
 
@@ -74,17 +74,17 @@ NOTE: For radar charts, it is often desirable to set the ‘Trend and Comparison
 
 . To change the measure labels, right-click on a measure label and select ‘Axis Properties’ from the context menu.
 +
-image:commonscript:radarChartExp6.png[]
+image:commonscript:radarChartExp6.png[alt="right-click measure label and select Axis Properties"]
 +
 This opens the ‘Axis Properties’ panel.
 
 . Select the *Alias* tab, and modify the alias values as desired. Press btn:[OK] to apply the new labels.
 +
-image:commonscript:radarChartExp7.png[]
+image:commonscript:radarChartExp7.png[alt="modify alias values on Axis Properties Alias tab"]
 
 . {finishEditing}
 +
-image:commonscript:radarChartExp8.png[]
+image:commonscript:radarChartExp8.png[alt="completed radar chart with labeled axes"]
 
 include::partial$addTitlesLegend.adoc[]
 
@@ -92,7 +92,7 @@ include::partial$addTitlesLegend.adoc[]
 ****
 The sample xref:ROOT:attachment$Auto_Insurance_Overview.zip[Auto Insurance Overview] Dashboard provides an example of a radar chart.
 
-image:viewsheet:galleryBar2.png[]
+image:viewsheet:galleryBar2.png[alt="Auto Insurance Overview radar chart dashboard sample"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Auto_Insurance_Overview.zip[Auto Insurance Overview] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****

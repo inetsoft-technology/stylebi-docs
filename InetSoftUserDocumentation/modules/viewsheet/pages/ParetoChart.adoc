@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 A Pareto chart highlights the contributions of individual groups to an overall total. The chart consists of two parts: A bar chart that displays the dimension’s groups in order of decreasing value, and a line chart that provides a cumulative total of the groups’ values. The left axis of the chart represents the actual aggregate values, and the right axis represents the percent contribution to the overall total.
 
-image:commonscript:paretoChart4.png[]
+image:commonscript:paretoChart4.png[alt="Pareto chart with bars in decreasing order and cumulative line"]
 
 To create a Pareto chart, follow the basic steps below:
 
@@ -12,14 +12,14 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose the ‘Pareto’ style.   Press the {buttonApply}.
 +
-image:commonscript:paretoChart1.png[]
+image:commonscript:paretoChart1.png[alt="choose Pareto chart style and press Apply"]
 
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:paretoChart2.png[]
+image:commonscript:paretoChart2.png[alt="drag dimension to X or Y region in Chart Editor"]
 
 +
 TIP: {convertToDimension}
@@ -32,14 +32,14 @@ TIP: {convertToDimension}
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:paretoChart3.png[]
+image:commonscript:paretoChart3.png[alt="drag measure to X or Y region in Chart Editor"]
 
 +
 TIP: {convertToMeasure}
 
 . Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
 +
-image:Chart Edit Y Axis_1.png[]
+image:Chart Edit Y Axis_1.png[alt="select aggregation method for Pareto chart measure"]
 
 
 
@@ -53,7 +53,7 @@ include::partial$addTitlesLegend.adoc[]
 ****
 The sample xref:ROOT:attachment$Auto_Insurance_Overview.zip[Auto Insurance Overview] Dashboard provides an example of a Pareto chart.
 
-image:viewsheet:galleryBar2.png[]
+image:viewsheet:galleryBar2.png[alt="Auto Insurance Overview Pareto chart dashboard sample"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Auto_Insurance_Overview.zip[Auto Insurance Overview] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****

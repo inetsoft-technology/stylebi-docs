@@ -24,13 +24,13 @@ include::ROOT:partial$CreateNewDashboardNote.adoc[]
 
 . From the *Toolbox* panel, drag the Gauge component onto the Dashboard.
 +
-image:agileDash41.png[]
+image:agileDash41.png[alt="drag gauge component onto dashboard"]
 
 . From the data source at the top of the *Toolbox* panel, drag a *measure* onto the Gauge component. (A green highlight informs you when you can drop the field.)
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:agileDash42.png[]
+image:agileDash42.png[alt="drag measure onto gauge component"]
 +
 This binds the measure to the Gauge component so that the component displays the aggregated value of the measure.
 
@@ -38,7 +38,7 @@ This binds the measure to the Gauge component so that the component displays the
 
 . Select the *General* tab of the ‘Gauge Properties’ panel, and choose a desired gauge face.
 +
-image:outputProperties.png[]
+image:outputProperties.png[alt="select gauge face on general tab"]
 
 . Select the *Data* tab. From the 'Aggregate' menu, select the desired aggregation method.  *_Optional:_* To make the aggregate dynamic so that a user can change it, use the {buttonValueType}. (See xref:DynamicallySetProperties.adoc[] for more details.)
 
@@ -46,7 +46,7 @@ image:outputProperties.png[]
 
 . Enlarge the component as desired by dragging on any of the component borders.
 +
-image:agileDash43.png[]
+image:agileDash43.png[alt="enlarged gauge component on dashboard"]
 
 === Set Gauge Ranges (Optional)
 To set multiple ranges for a Gauge, follow the steps below:
@@ -63,7 +63,7 @@ To set multiple ranges for a Gauge, follow the steps below:
 
 . *_Optional:_*  Select ‘Gradient’ to smoothly blend the zone colors.   You can  choose a color for the final blend as well.
 +
-image:Range Colors for Slider.png[]
+image:Range Colors for Slider.png[alt="set gradient color ranges for gauge"]
 
 . Press btn:[OK] to apply the ranges.
 
@@ -79,7 +79,7 @@ include::ROOT:partial$CreateNewDashboardNote.adoc[]
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:textComponentAggregateExp.png[]
+image:textComponentAggregateExp.png[alt="drag measure onto text component"]
 +
 This binds the measure to the Text component so that the component displays the aggregated value of the measure.
 
@@ -87,13 +87,13 @@ This binds the measure to the Text component so that the component displays the 
 
 . *_Optional:_* Click the Text component to select it, and select the *Format* tab in the left panel.  Style the text as desired. (See xref:VisualFormat.adoc[] and xref:DataFormat.adoc[] for more details.)
 +
-image:textComponentAggregateExp2.png[]
+image:textComponentAggregateExp2.png[alt="style text using format tab"]
 
 . Right-click the Text element, and select 'Properties' form the context menu. This opens the 'Text Properties' panel.
 
 . Select the *Data* tab. From the 'Aggregate' menu, select the desired aggregation method.   To make the aggregate dynamic so that a user can change it, use the {buttonValueType}. See xref:DynamicallySetProperties.adoc[] for more details.
 +
-image:textComponentAggregateExp4.png[]
+image:textComponentAggregateExp4.png[alt="select aggregation method on data tab"]
 
 
 . Press btn:[OK].
@@ -107,7 +107,7 @@ See xref:AddConditions.adoc[] for more information about conditions.
 +
 TIP: It is generally preferable to use Filter components for filtering purposes.  See xref:FilterDashboard.adoc[].
 +
-image:textComponentAggregateExp5.png[]
+image:textComponentAggregateExp5.png[alt="add condition to filter aggregate data"]
 
 
 
@@ -125,7 +125,7 @@ Text or Gauge:: Enter an expression on the  *Script* tab of the ‘Gauge Propert
 [source,javascript]
 value = sum(Sales['Total'])
 +
-image:gaugeValueScript.png[]
+image:gaugeValueScript.png[alt="enter script expression to compute gauge value"]
 
 
 
@@ -138,7 +138,7 @@ include::ROOT:partial$excelFunctions.adoc[]
 ****
 The sample xref:ROOT:attachment$Enrollment.zip[Enrollment] Dashboard provides an example of using Text KPIs.
 
-image:viewsheet:galleryTextKPI2.png[]
+image:viewsheet:galleryTextKPI2.png[alt="text KPI gallery example dashboard"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Enrollment.zip[Enrollment] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****

@@ -27,7 +27,7 @@ video::359085988#chapter=16555681[vimeo,640,400]
 
 A chart visualizes a _dataset_, which is a table containing rows and columns. Columns (also called fields) in the dataset are classified as either *_dimensions_* or *_measures_* in the Chart Editor.
 
-image:addingChart1.png[]
+image:addingChart1.png[alt="chart dataset columns classified as dimensions or measures"]
 
 include::ROOT:partial$dimensionTip.adoc[]
 
@@ -55,7 +55,7 @@ video::359085988#chapter=16555884[vimeo,640,400]
 =====
 
 +
-image:viewsheetExp37.png[]
+image:viewsheetExp37.png[alt="press Select Chart Style and choose a style"]
 +
 NOTE: To set different styles for different datasets, see xref:MultipleStyleChart.adoc[].
 +
@@ -74,7 +74,7 @@ video::359085988#chapter=16555701[vimeo,640,400]
 
 
 +
-image:addingChart2a.png[]
+image:addingChart2a.png[alt="drag dimension from data source to X region"]
 +
 TIP: If you selected a ‘Pie’ style, you should place the dimension field in either the ‘Color’ or ‘Shape’ region rather than the ‘X’ region.
 +
@@ -95,7 +95,7 @@ include::ROOT:partial$videoVersion.adoc[]
 video::359085988#chapter=16555854[vimeo,640,400]
 =====
 +
-image:addingChart3.png[]
+image:addingChart3.png[alt="drag dimension to Color, Shape, Size, or Text region"]
 +
 Note that the effect of color, shape, and size coding varies by chart style. For example, in a bar-type chart the ‘Shape’ representation affects the style of the fill pattern, whereas in a point-type chart the ‘Shape’ representation affects the image of the point.
 +
@@ -111,12 +111,12 @@ include::ROOT:partial$videoVersion.adoc[]
 video::359085988#chapter=16556408[vimeo,640,400]
 =====
 +
-image:EditColor.png[]
+image:EditColor.png[alt="press Edit Color to change dimension color"]
 
 
 . *_Optional:_* To upload a custom image to use as a shape, press the {buttonAddShape}, and select the desired file.
 +
-image:addShapeButton.png[]
+image:addShapeButton.png[alt="press Add Shape and select desired file"]
 +
 NOTE: An administrator can make custom shapes available by placing the image files (png, gif, jpg, svg) in the _portal/shapes_ directory. (See xref:administration:Presentation.adoc#LookandFeel[Look and Feel] and xref:administration:Storage.adoc[] for  information on how to upload a file to this location.) The icons are sorted alphabetically by file name. Custom shape images can be any size, and are scaled according to the ‘Size’ setting in the Chart Editor.
 
@@ -143,14 +143,14 @@ include::ROOT:partial$videoVersion.adoc[]
 video::359085988#chapter=16556440[vimeo,640,400]
 =====
 +
-image:viewsheetExp34.png[]
+image:viewsheetExp34.png[alt="press Edit Dimension and set date grouping level"]
 +
 TIP: To group dates using a *fiscal calendar*, create Calculated Fields  for the desired date ranges (fiscal week, month, etc.) by using the corresponding fiscal functions, such as xref:commonscript:CALC_fiscalweek.adoc[CALC_fiscalweek] and xref:commonscript:CALC_fiscalmonth.adoc[CALC_fiscalmonth], and then use those Calculated Fields as the desired dimensions on the Chart.  See  xref:dataworksheet:CreateNewDataField.adoc#CreateCalcField[Create a Calculated Field in a Dashboard] for more details.
 
 
 . From the ‘Measures’ folder of the data source panel, drag measure the ‘Y’ region. This places the selected field onto the chart as a measure. You can add multiple measures to a chart. (See xref:MultipleMeasureChart.adoc[].)
 +
-image:addingChart4.png[]
+image:addingChart4.png[alt="drag measure from data source to Y region"]
 +
 TIP: {convertToMeasure}
 
@@ -166,7 +166,7 @@ video::359085988#chapter=16555934[vimeo,640,400]
 =====
 
 +
-image:addingChart5.png[]
+image:addingChart5.png[alt="drag measure to Color, Shape, Size, or Text region"]
 +
 Note that the effect of color, shape, and size coding varies by chart style. For example, in a bar-type chart the ‘Shape’ representation affects the density of the fill pattern, whereas in a point-type chart the ‘Shape’ representation affects the geometry of the point or the fraction filled.
 +
@@ -182,7 +182,7 @@ include::ROOT:partial$videoVersion.adoc[]
 video::359085988#chapter=16556423[vimeo,640,400]
 =====
 +
-image:EditColor2.png[]
+image:EditColor2.png[alt="press Edit Color to change measure color"]
 
 
 
@@ -207,7 +207,7 @@ video::359085988#chapter=16556376[vimeo,640,400]
 include::ROOT:partial$AggregationMethods.adoc[]
 ====
 +
-image:Chart Edit Y Axis_1.png[]
+image:Chart Edit Y Axis_1.png[alt="press Edit Measure and select aggregation method"]
 +
 Use the ‘Trend and Comparison’ menu to perform calculations based on chart aggregates, such as running total or percent change.  See xref:TrendCompareData.adoc[] for full details.
 
@@ -247,22 +247,22 @@ To make other adjustments to an axis, right-click the axis and select ‘Axis Pr
 To add a title above a chart, follow the steps below:
 . Right-click on the chart and select ‘Properties’. {rightClickOptions} This opens the ‘Chart Properties’ panel.
 +
-image:Chart Add Title2.png[]
+image:Chart Add Title2.png[alt="right-click chart and select Properties"]
 
 . Under the *General* tab, enter the desired text for the 'Title' property.
 . Select the ‘Visible’ option next to the 'Title' property.
 +
-image:Chart Add Title.png[]
+image:Chart Add Title.png[alt="enter title text and select Visible option"]
 
 . Press btn:[OK] to close the panel.
 
 . To format the title, click the title area to select it, and then select the *Format* tab in the left panel of Visual Composer. Use the formatting options to style the text as desired. (See xref:VisualFormat.adoc[] for more information.)
 +
-image:Chart Add Title3.png[]
+image:Chart Add Title3.png[alt="click title area and select Format tab"]
 
 . To increase the vertical space available for the title, drag down the handle under the title text.
 +
-image:Chart Add Title4.png[]
+image:Chart Add Title4.png[alt="drag handle to increase vertical space for title"]
 
 See xref:ChartProperties.adoc[]  for full information about the ‘Chart Properties’ dialog box.
 
@@ -275,7 +275,7 @@ NOTE: To hide a legend, right-click the legend and choose ‘Hide Legend’ from
 === General Tab
 The *General* tab offers the following options:
 
-image:Chart Legend Format Dialog.png[]
+image:Chart Legend Format Dialog.png[alt="right-click legend and select Legend Properties"]
 
 ****
 Title:: The text to display in the legend title bar.
@@ -293,7 +293,7 @@ video::359085988#chapter=16555914[vimeo,640,400]
 =====
 
 +
-image:Chart Legend Move.png[]
+image:Chart Legend Move.png[alt="drag legend to change legend position"]
 Ignore Null:: Ignore null values when generating the legend.
 ****
 
@@ -321,11 +321,11 @@ To modify the labels of a legend, follow the steps below:
 
 . Double-click the cells in the ‘Alias’ column that correspond to the legend labels that you wish to rename, and enter the desired replacement text.
 +
-image:legendFormatAlias.png[]
+image:legendFormatAlias.png[alt="double-click alias column cells to rename legend labels"]
 
 . Press btn:[OK] to close the panel. This updates the legend labels with the specified replacement text.
 +
-image:legendFormatAliasUpdated.png[]
+image:legendFormatAliasUpdated.png[alt="legend updated with new alias labels"]
 
 [#AdjustChartSpacing]
 == Adjust Chart Spacing
@@ -333,17 +333,17 @@ To change the vertical or horizontal spacing of elements on a chart, follow the 
 
 . Right-click on the Chart and select ‘Resize Plot’ from the context menu.  This will enable vertical or horizontal slider controls (as appropriate).
 +
-image:Change Chart Spacing.png[]
+image:Change Chart Spacing.png[alt="right-click chart and select Resize Plot"]
 . Drag the slider control to change the element spacing.  The chart will automatically enable scroll bars as required to accommodate the new spacing.
 +
-image:Change Chart Spacing2.png[]
+image:Change Chart Spacing2.png[alt="drag slider control to change element spacing"]
 . To reset the Chart to its original spacing, right-click on the Chart and select ‘Reset Size’ from the context menu.
 
 .Explore More...
 ****
 The sample xref:ROOT:attachment$Census.zip[Census] Dashboard (in the ‘Examples’ folder) provides an example of a chart that uses color and fill to represent dimensions and measures.
 
-image:viewsheet:galleryMultipleMeasure3.png[]
+image:viewsheet:galleryMultipleMeasure3.png[alt="census dashboard with color and fill chart"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Census.zip[Census] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 

@@ -23,7 +23,7 @@ video::359085988#chapter=16558857[vimeo,640,400]
 
 A _target line_ is a horizontal or vertical line drawn on the Chart that generally denotes either an ideal value (goal or threshold) or representative value (average, minimum, etc.). Regions above and below the target value can be assigned independent colors.
 
-image:commonscript:TargetLine5_3.png[]
+image:commonscript:TargetLine5_3.png[alt="target line drawn on chart"]
 
 
 To add a target line, follow the steps below:
@@ -40,7 +40,7 @@ include::ROOT:partial$measureTip.adoc[]
 
 . In the ‘Value’ field, type a numerical value at which to place the target line for the selected measure, or choose one of the following options to compute the target value from the data: ‘Average’, ‘Minimum’, ‘Maximum’, ‘Median’, ‘Sum’. (For example, select ‘Average’ to place the target line at the average value of the selected measure.)
 +
-image:TargetLine2_1.png[]
+image:TargetLine2_1.png[alt="set target line value"]
 
 . *_Optional:_*  If you select one of the available target line computations (‘Average’, ‘Minimum’, etc.), enable the ‘Entire Chart’ option to compute the target value based on measure data from the entire chart. Disable the ‘Entire Chart’ option to compute the target value for each sub-chart based only on measure data from the same sub-chart.
 +
@@ -49,11 +49,11 @@ image:TargetLine2_1.png[]
 ====
 The following illustration demonstrates the effect of the ‘Entire Chart’ setting (‘Value’ is set to ‘Maximum’ in both cases).
 
-image:commonscript:TargetLine3_1.png[]
+image:commonscript:TargetLine3_1.png[alt="entire chart option effect on target line"]
 ====
 . From the ‘Label’ menu, select one of the following label options:
 +
-image:commonscript:Add Target_2.png[]
+image:commonscript:Add Target_2.png[alt="select target line label option"]
 +
 [square]
 * Select ‘Enter a Value’ to type a custom label for the target line.
@@ -66,7 +66,7 @@ image:commonscript:Add Target_2.png[]
 . *_Optional:_*  To further customize the label, press the {buttonEdit} next to the ‘Label’ field. This opens a panel in which you can manually enter the label. Press the {buttonApply} when you have finished entering the label.
 
 +
-image:TargetLine1_2.png[]
+image:TargetLine1_2.png[alt="customize target line label"]
 
 +
 NOTE: The customized label supersedes any previous selection from the ‘Label’ menu.
@@ -89,7 +89,7 @@ If desired, you can add the target value, target formula, and field name into th
 
 . *_Optional:_*  Select a ‘Fill Above’ color and ‘Fill Below’ color to fill the regions of the chart above and below the target line respectively.
 +
-image:TargetLine4_1.png[]
+image:TargetLine4_1.png[alt="set fill above and fill below colors"]
 
 . Press btn:[OK] to close the panel.
 
@@ -101,7 +101,7 @@ include::ROOT:partial$targetLinesGraphForm.adoc[]
 
 A _target band_ is a horizontal or vertical band drawn on the chart that generally denotes either an ideal range (e.g., goal zone) or representative range (e.g., span of maximum to minimum). The region within the target band, as well as the regions above and below, can be assigned independent colors.
 
-image:commonscript:TargetStats8_1.png[]
+image:commonscript:TargetStats8_1.png[alt="target band drawn on chart"]
 
 To add a target band, follow the steps below:
 
@@ -115,11 +115,11 @@ To add a target band, follow the steps below:
 
 . In the ‘From Value’ field, enter a numerical value at which to place the lower band range for the selected measure, or choose one of the following options to compute the lower band range from the data: ‘Average’, ‘Minimum’, ‘Maximum’, ‘Median’, ‘Sum’. (For example, select ‘Average’ to place the lower band boundary at the average value of the selected measure.)
 +
-image:TargetBand1_1.png[]
+image:TargetBand1_1.png[alt="set target band from value"]
 
 . In the ‘From Label’ menu, select one of the following label options:
 +
-image:TargetBand2_1.png[]
+image:TargetBand2_1.png[alt="select target band from label option"]
 +
 [square]
 * Select ‘Enter a Value’ to type a custom label for the lower band boundary.
@@ -131,7 +131,7 @@ image:TargetBand2_1.png[]
 . *_Optional:_*  To further customize the label, press the {buttonEdit} next to the ‘From Label’ field. This opens a panel in which you can manually enter the label. Press the {buttonApply} when you have finished entering the label.
 
 +
-image:TargetBand3_1.png[]
+image:TargetBand3_1.png[alt="customize target band from label"]
 +
 NOTE: The customized label supersedes any previous selection from the ‘From Label’ menu.
 
@@ -158,7 +158,7 @@ If desired, you can add the target band value, target band formula, and field na
 ====
 The following illustration demonstrates the effect of the ‘Entire Chart’ setting. (In both cases, ‘From Value’ is set to ‘Minimum’ and ‘To Value’ is set to ‘Maximum’).
 
-image:commonscript:TargetBand4_1.png[]
+image:commonscript:TargetBand4_1.png[alt="entire chart option effect on target band"]
 ====
 . Repeat the previous steps to set the ‘To Value’ and ‘To Label’ properties, which specify the position and label of the upper band boundary.
 
@@ -166,7 +166,7 @@ image:commonscript:TargetBand4_1.png[]
 
 . *_Optional:_*  Press the ‘Fill Band’ button and select a background color to fill the band between the lower and upper boundaries. Select a ‘Fill Above’ color and ‘Fill Below’ color to fill the regions of the chart above and below the band boundaries, respectively.
 +
-image:TargetBand5_1.png[]
+image:TargetBand5_1.png[alt="set fill band and fill above below colors"]
 
 . Press btn:[OK] to close the panel.
 
@@ -178,7 +178,7 @@ include::ROOT:partial$targetLinesGraphForm.adoc[]
 ****
 The sample xref:ROOT:attachment$Generation_and_Distribution.zip[Generation and Distribution] Dashboard provides an example of using a target band on a chart.
 
-image:viewsheet:galleryTargetBand2.png[]
+image:viewsheet:galleryTargetBand2.png[alt="generation and distribution dashboard target band"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Generation_and_Distribution.zip[Generation and Distribution]  Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****
@@ -188,7 +188,7 @@ To explore this sample Dashboard, download and import the  xref:ROOT:attachment$
 
 A _statistical measure_ is represented by one or more lines drawn on the chart to indicate the values of statistical quantities derived from the data (confidence intervals, percentages, percentiles, quantiles, or standard deviation).
 
-image:commonscript:TargetStats1_1.png[]
+image:commonscript:TargetStats1_1.png[alt="statistical measure lines drawn on chart"]
 
 To add a statistical measure, follow the steps below:
 
@@ -205,50 +205,50 @@ To add a statistical measure, follow the steps below:
 . In the ‘Computation’ field, select one of the following options to compute statistics from the data: ‘Confidence Interval’, ‘Percentages’, ‘Percentile’, ‘Quantiles’, ‘Standard Deviation’. (See explanations below.)
 
 +
-image:TargetStats2_1.png[]
+image:TargetStats2_1.png[alt="select statistical measure computation"]
 
 . To modify the statistical measure, press the btn:[Edit] button. The following settings are available:
 +
 ****
 Confidence Interval:: For the ‘Confidence Interval’ option, enter a value as a percentage.
 +
-image:TargetStats4_1.png[]
+image:TargetStats4_1.png[alt="set confidence interval percentage"]
 +
 The resulting top and bottom confidence bounds indicate the interval of values in which the “true” value is _expected_ to be found. For example, the “true” temperature in the chart below would be expected to fall within the displayed confidence interval in 99 out of 100 such samples. (In other words, the true temperature is expected to be _outside_ the confidence bounds purely by chance in 1 out of 100 samples.)
 +
-image:commonscript:TargetStats3_1.png[]
+image:commonscript:TargetStats3_1.png[alt="confidence interval bounds on chart"]
 
 Percentages:: For the ‘Percentages’ option, enter a value or comma-separated list of values as percentages. In the ‘Of’ field, specify the basis on which the percentage should be computed. You can type a fixed value or select from the following presets: ‘Average’, ‘Minimum’, ‘Maximum’, ‘Median’, ‘Sum’.
 +
-image:TargetStats5_1.png[]
+image:TargetStats5_1.png[alt="set percentages computation options"]
 +
 For example, to display percentage lines at 70% and 90% of the Maximum, enter `70,90` in the ‘Percentages’ field and select the ‘Maximum’ option from the ‘Of’ field.
 +
-image:commonscript:TargetStats6_1.png[]
+image:commonscript:TargetStats6_1.png[alt="percentage lines on chart"]
 
 Percentiles:: For the ‘Percentiles’ option, enter a value or comma-separated list of values as percentages.
 +
-image:TargetStats7_1.png[]
+image:TargetStats7_1.png[alt="set percentiles computation options"]
 +
 The resulting percentile lines indicate the levels below which the specified percentages of values are found. For example, percentile lines at 70% and 90% (`70,90` in the ‘Percentages’ field) designate the levels, respectively, below which 70% and 90% of the data are found.
 +
-image:commonscript:TargetStats8_1.png[]
+image:commonscript:TargetStats8_1.png[alt="percentile lines on chart"]
 
 Quantiles:: For the ‘Quantiles’ option, enter the number of quantiles to display.
 +
-image:TargetStats9_1.png[]
+image:TargetStats9_1.png[alt="set quantiles computation options"]
 +
 The resulting quantile lines are evenly distributed between 0% and 100% and indicate the levels below which the specified percentage of values are found. For example, enter `4` as the ‘Number of Quantiles’ to generate lines designating the levels below which 25%, 50%, and 75% of the data are found. This creates four regions in the data: 0-25%, 25%-50%, 50%-75%, and 75%-100%.
 +
-image:commonscript:TargetStats10_1.png[]
+image:commonscript:TargetStats10_1.png[alt="quantile lines on chart"]
 
 Standard Deviation:: For the ‘Standard Deviation’ option, enter a comma-separated list of factors. Each successive pair of factors represents, respectively, the lower and upper multipliers for the standard deviation.
 +
-image:TargetStats11_1.png[]
+image:TargetStats11_1.png[alt="set standard deviation factors"]
 +
 For example, enter `-1,1,-2,2` in the ‘Factors’ field to draw lines, respectively, at 1 standard deviation below the mean, 1 standard deviation above the mean, 2 standard deviations below the mean, and 2 standard deviations above the mean.
 +
-image:commonscript:TargetStats12_1.png[]
+image:commonscript:TargetStats12_1.png[alt="standard deviation lines on chart"]
 +
 Select the ‘Sample’ option to compute the sample standard deviation or select the ‘Population’ option to compute the population standard deviation. (The distinction between sample and population standard deviation can be found in any Statistics reference.)
 ****
@@ -260,19 +260,19 @@ Select the ‘Sample’ option to compute the sample standard deviation or selec
 ====
 The following illustration demonstrates the effect of the ‘Entire Chart’ setting (‘Computation’ is set to ‘Standard Deviation’ in both cases).
 
-image:commonscript:TargetStats13_1.png[]
+image:commonscript:TargetStats13_1.png[alt="entire chart option effect on standard deviation"]
 ====
 
 . From the ‘Label’ menu, select one of the following label options:
 +
-image:Add Target_3.png[]
+image:Add Target_3.png[alt="select statistical measure label option"]
 +
 [square]
 * Select ‘Enter a Value’ to type custom labels for the statistical measures. Labels for individual lines should be separated by commas. For example, if you are generating the 4-quantile (which creates three lines), enter three labels separated by commas, for example:
 +
  Q1: 25% below, Q2: 50% below, Q3: 75% below
 +
-image:commonscript:TargetStats14_1.png[]
+image:commonscript:TargetStats14_1.png[alt="enter custom labels for quantile lines"]
 +
 If you enter only a single label, this label will be attached to all the lines. This can be useful when you include customization codes in the label, as described below.
 +
@@ -286,7 +286,7 @@ TIP: To enter a literal comma in the label, escape the comma with a backslash (e
 
 . *_Optional:_*  To further customize the labels, press the {buttonEdit} next to the ‘Label’ field. This opens a panel in which you can manually enter the labels. Press the {buttonApply} when you have finished entering the labels.
 +
-image:TargetLine1_3.png[]
+image:TargetLine1_3.png[alt="customize statistical measure labels"]
 +
 Labels for individual lines should be separated by commas. For example, if you are generating the 4-quantile (which creates three lines), enter three labels separated by commas, e.g., `Q1: 25% below, Q2: 50% below, Q3: 75% below`.
 +
@@ -312,12 +312,12 @@ NOTE: The customized label supersedes any previous selection from the ‘Label�
 
 . *_Optional:_*  Press the ‘Fill Band’ button to open a color picker and select a set of colors for the specified bands (i.e., the regions between the statistical lines). Select one color for each band. The colors are applied to the bands from left to right; the left-most color is applied to the lowest band, and so on. When you have selected the desired colors, press the {buttonApply}.
 +
-image:TargetStats15_1.png[]
+image:TargetStats15_1.png[alt="select fill band colors"]
 
 
 . *_Optional:_*  Select a ‘Fill Above’ color and ‘Fill Below’ color to fill the regions of the chart above and below the maximum and minimum statistical lines, respectively.
 +
-image:TargetStats16_1.png[]
+image:TargetStats16_1.png[alt="set fill above and fill below colors"]
 
 . Press btn:[OK] to close the dialog box.
 
@@ -342,7 +342,7 @@ To add a *trend line* (curve fit), follow the steps below:
 
 . Right-click on the chart and select ‘Properties’. {rightClickOptions} This opens the ‘Chart Properties’ dialog box.
 +
-image:Chart Plot Properties.png[]
+image:Chart Plot Properties.png[alt="open chart properties dialog box"]
 
 . Under the *Line* tab, use the 'Trend Line' menu to select the desired type of curve fit, such as Linear or Quadratic.
 
@@ -366,7 +366,7 @@ See xref:ChartProperties.adoc[]  for full information about available plot prope
 ****
 The sample xref:ROOT:attachment$Marketing_Lead_Trends.zip[ Marketing Lead Trends] Dashboard provides an example of trend lines.
 
-image:viewsheet:galleryMap2.png[]
+image:viewsheet:galleryMap2.png[alt="marketing lead trends dashboard trend lines"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Marketing_Lead_Trends.zip[ Marketing Lead Trends] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****

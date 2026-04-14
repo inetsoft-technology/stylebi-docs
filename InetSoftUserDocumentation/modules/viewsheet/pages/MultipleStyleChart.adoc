@@ -11,7 +11,7 @@ You can assign distinct styles (e.g., line, bar, point) to individual measures o
 
 include::ROOT:partial$measureTip.adoc[]
 
-image:commonscript:multipleChartStyle.png[]
+image:commonscript:multipleChartStyle.png[alt="multiple style chart example"]
 
 To create such a multiple-style chart, follow the steps below:
 
@@ -21,19 +21,19 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}.
 +
-image:commonscript:SelectChartStyleButton_1.png[]
+image:commonscript:SelectChartStyleButton_1.png[alt="press Select Chart Style button"]
 
 . In the chart styles panel, enable the ‘Multiple Styles’ option (below the chart style options), and press {buttonApply}.
 +
-image:commonscript:MultipleStyles_1.png[]
+image:commonscript:MultipleStyles_1.png[alt="enable Multiple Styles option in chart styles panel"]
 
 . Press the {buttonSelectChartStyle} next to the  measure you wish to change.
 +
-image:commonscript:ChartSelectChartType2_1.png[]
+image:commonscript:ChartSelectChartType2_1.png[alt="press Select Chart Style button next to a measure"]
 +
 This opens the chart styles panel for the specified measure.
 +
-image:commonscript:SelectChartStyleButton2_1.png[]
+image:commonscript:SelectChartStyleButton2_1.png[alt="chart styles panel open for individual measure"]
 
 . Click a chart type to select it, and then press the {buttonApply}. (You can also double-click the desired chart type.) This applies the style individually to the specified measure.
 +
@@ -43,7 +43,7 @@ NOTE: Only  compatible style combinations can be selected. (For example, ‘Pie�
 
 . To change the *visual appearance* (color, shape, size) of the measures independently, expand the menu in the *Visual* panel and select the measure you want to modify (or press the {buttonChevronPrevious} or {buttonChevronNext} to cycle through the measures). Select '`all`' to modify all measures. Then press the desired the '`Edit Color`', '`Edit Shape`', or '`Edit Size`' buttons.
 +
-image:viewsheet:MultipleStyles1.png[]
+image:viewsheet:MultipleStyles1.png[alt="expand Visual panel menu to select measure for styling"]
 
 include::partial$addTitlesLegend.adoc[]
 
@@ -51,7 +51,7 @@ include::partial$addTitlesLegend.adoc[]
 ****
 The sample xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard provides an example of a multiple style chart (Bar and Line together).
 
-image:viewsheet:galleryDataTip2.png[]
+image:viewsheet:galleryDataTip2.png[alt="Executive Sales Summary multiple style chart dashboard"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****

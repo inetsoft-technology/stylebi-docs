@@ -25,15 +25,15 @@ IMPORTANT: The Chart or Crosstab must contain a Date-type field. Date comparison
 
 . Press the {buttonMore} in the top corner of Chart or Crosstab, and select ‘Date Comparison’.
 +
-image:commonscript:dateComparison1.png[]
+image:commonscript:dateComparison1.png[alt="press More button and select Date Comparison"]
 +
 This opens the ‘Date Comparison’ dialog box.
 +
-image:commonscript:dateComparison2.png[]
+image:commonscript:dateComparison2.png[alt="date comparison dialog box"]
 
 . *_Optional:_* To apply an existing date comparison from another Chart or Crosstab in the Dashboard, enable the ‘Share Date Comparison With’ option, and choose the component from which to share the date comparison. Then press btn:[OK] to exit the dialog box.
 +
-image:commonscript:dateComparison3.png[]
+image:commonscript:dateComparison3.png[alt="enable share date comparison with option"]
 
 . Under *Date Range to Include in Comparison*, set the span of time to consider in the comparison. You can do this by specifying either a number of previous standard periods to compare (e.g., “compare previous 5 years”) or by specifying a set of custom periods to compare (e.g., “compare Jan. 5, 2019 through Feb. 10, 2020 with Nov. 5, 2019 through Dec 10, 2020”). Expand the sections below for more details on these two approaches.
 +
@@ -42,11 +42,11 @@ image:commonscript:dateComparison3.png[]
 ====
 .. Select the ‘Standard Periods’ tab if not already selected.
 +
-image:commonscript:dateComparison12.png[]
+image:commonscript:dateComparison12.png[alt="select Standard Periods tab"]
 
 .. Enter the number of past periods to compare and the type of period. For example, enter ‘4’ and select ‘Quarter’ to compare data from the past four quarters.
 +
-image:commonscript:dateComparison4.png[]
+image:commonscript:dateComparison4.png[alt="enter number of past periods and type to compare"]
 +
 TIP: You can also use Form components to set the number and period by pressing the {buttonValueType} and selecting the ‘Variable’ or Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
 
@@ -60,11 +60,11 @@ TIP: You can also use Form components to set the number and period by pressing t
 ====
 .. Select the *Custom Periods* tab if not already selected.
 +
-image:commonscript:dateComparison10.png[]
+image:commonscript:dateComparison10.png[alt="select Custom Periods tab"]
 
 .. Enter the desired period ranges by typing the dates in the indicated format or by pressing the {buttonSelectDate}.
 +
-image:commonscript:dateComparison5.png[]
+image:commonscript:dateComparison5.png[alt="enter desired period ranges by typing dates"]
 +
 You must specify at least two ranges. To add additional ranges, press the {buttonAddButton}. To remove a range, press the {buttonRemove} next to the range.
 +
@@ -80,7 +80,7 @@ TIP: You can also use Form components to set the dates by pressing the {buttonVa
 ====
 .. To compare *all periods* within the date range (e.g., all quarters, all months, etc.), select ‘All’ from the left menu. From the ‘Granularity’ menu, select the periods that you want to display on the Chart.
 +
-image:commonscript:dateComparison8.png[]
+image:commonscript:dateComparison8.png[alt="select All from left menu and set Granularity"]
 +
 TIP: You can also use Form components to set these options by pressing the {buttonValueType} and selecting the ‘Variable’ or Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
 +
@@ -89,11 +89,11 @@ TIP: You can also use Form components to set these options by pressing the {butt
 =====
 Configure the options as follows:
 
-image:commonscript:dateComparison21.png[]
+image:commonscript:dateComparison21.png[alt="configure month to date comparison options"]
 
 The resulting date comparison is shown below. {dateCompareDetails}
 
-image:commonscript:dateComparison22.png[]
+image:commonscript:dateComparison22.png[alt="chart and crosstab showing month-to-date comparison"]
 
 The Chart and Crosstab compare the past month and present month (to date), and provides the percent change as well as the respective values.
 =====
@@ -103,11 +103,11 @@ The Chart and Crosstab compare the past month and present month (to date), and p
 =====
 Configure options as follows:
 
-image:commonscript:dateComparison15.png[]
+image:commonscript:dateComparison15.png[alt="configure options for six quarters by month"]
 
 The resulting date comparison is shown below. {dateCompareDetails}
 
-image:commonscript:dateComparison16.png[]
+image:commonscript:dateComparison16.png[alt="chart and crosstab showing six quarters by month"]
 
 The data on the Chart and Crosstab includes the past six quarters, and provide a comparison of each quarter broken out by month of quarter (month 1, 2, or 3).
 =====
@@ -122,7 +122,7 @@ NOTE: The particular period being compared (e.g., the particular month) is deter
 
 From the ‘Granularity’ menu, select the periods that you want to display on the Chart.
 
-image:commonscript:dateComparison13.png[]
+image:commonscript:dateComparison13.png[alt="select Same Month from left menu and set Granularity"]
 
 TIP: You can also use Form components to set these options by pressing the {buttonValueType} and selecting the ‘Variable’ or ‘Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
 
@@ -131,11 +131,11 @@ TIP: You can also use Form components to set these options by pressing the {butt
 =====
 Configure the options as follows:
 
-image:commonscript:dateComparison23.png[]
+image:commonscript:dateComparison23.png[alt="configure same month year-over-year comparison options"]
 
 The resulting date comparison is shown below. {dateCompareDetails}
 
-image:commonscript:dateComparison24.png[]
+image:commonscript:dateComparison24.png[alt="chart and crosstab comparing current month across years"]
 
 The Chart and Crosstab compare the current month of the current and previous year.
 =====
@@ -144,11 +144,11 @@ The Chart and Crosstab compare the current month of the current and previous yea
 =====
 Configure the options as follows:
 
-image:commonscript:dateComparison17.png[]
+image:commonscript:dateComparison17.png[alt="configure second month of each quarter comparison options"]
 
 The resulting date comparison is shown below. {dateCompareDetails}
 
-image:commonscript:dateComparison18.png[]
+image:commonscript:dateComparison18.png[alt="chart and crosstab comparing second month of each quarter"]
 
 The data on the Chart and Crosstab includes the past six quarters, and provides a comparison of the second month of each quarter (e.g., Feb, May, Aug, Nov).
 =====
@@ -159,7 +159,7 @@ The data on the Chart and Crosstab includes the past six quarters, and provides 
 ====
 To compare the *same period “to date”* across the date range (e.g., same month of each year up to the 15th day of the month), select ‘Quarter To Date’, ‘Month To Date’, or ‘Week To Date’ from the left menu. Select ‘Use Range End Date’ to compare each month/week/day up until the ‘Range End Date’ date (specified above) within that period (e.g., the 24th day of the quarter), or deselect ‘Use Range End Date’ and enter an arbitrary date using the calendar widget. Check the ‘Inclusive’ option to include the specified “as of” date in the range. From the ‘Granularity’ menu, select the periods that you want to display on the Chart.
 
-image:commonscript:dateComparison14.png[]
+image:commonscript:dateComparison14.png[alt="select Quarter To Date and set period to date options"]
 
 TIP: You can also use Form components to set these options by pressing the {buttonValueType} and selecting the ‘Variable’ or Expression’ option. See xref:DynamicallySetProperties.adoc[] for more information.
 
@@ -168,11 +168,11 @@ TIP: You can also use Form components to set these options by pressing the {butt
 =====
 Configure the options as follows:
 
-image:commonscript:dateComparison19.png[]
+image:commonscript:dateComparison19.png[alt="configure month-to-date for each quarter options"]
 
 The resulting date comparison is shown below. {dateCompareDetails}
 
-image:commonscript:dateComparison20.png[]
+image:commonscript:dateComparison20.png[alt="chart and crosstab showing month-to-date by quarter"]
 
 The data on the Chart and Crosstab includes the past two years, and provides a comparison of the current month (in this case the third month) of each quarter up to today’s date (e.g., the 8th day of the month).
 =====

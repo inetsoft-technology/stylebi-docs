@@ -16,11 +16,11 @@ To use one of these representations, set the appropriate ‘Trend and Comparison
 
 . Press the {buttonEditMeasure} next to a measure.
 +
-image:Chart Edit Y Axis_1.png[]
+image:Chart Edit Y Axis_1.png[alt="press edit measure button next to measure"]
 
 . Select one of the calculation methods from the ‘Trend and Comparison’ menu in the pop-up panel.
 +
-image:CalculateMenu_1.png[]
+image:CalculateMenu_1.png[alt="select calculation method from trend and comparison menu"]
 +
 NOTE: Select ‘None’ (default) to use the raw aggregate. Select ‘Custom’ to create a new calculation method.
 
@@ -28,7 +28,7 @@ NOTE: Select ‘None’ (default) to use the raw aggregate. Select ‘Custom’ 
 
 . From the ‘Calculate’ menu, select a type of calculation: ‘Percent’, ‘Change’, ‘Running’, ‘Sliding’, ‘Value of’, or ‘Compound Growth’.
 +
-image:CalculationDialogBox_1.png[]
+image:CalculationDialogBox_1.png[alt="select calculation type from calculate menu"]
 
 . Select any additional options to fully specify the calculation method. The options vary for the different methods. See below for details:
 
@@ -43,7 +43,7 @@ image:CalculationDialogBox_1.png[]
 
 . Press btn:[OK] to close the dialog box. This adds the new method to the ‘Trend and Comparison’ menu.
 +
-image:CalculateMenuCustom_1.png[]
+image:CalculateMenuCustom_1.png[alt="new custom method added to trend and comparison menu"]
 
 . Press the {buttonApply}.
 
@@ -54,7 +54,7 @@ The aggregated measure will now be displayed on the Chart or Crosstab using the 
 == Percent Calculation
 The ‘Percent’ calculation allows you to express the measure based on ‘Grand Total’, ‘Subtotal’, or a particular dimensional group.
 
-image:CalculatePercent_1.png[]
+image:CalculatePercent_1.png[alt="percent calculation dialog box options"]
 
 Dimension:: Expresses the value of the aggregated measure for each group as a percentage of the measure aggregated across the selected *dimension*.
 +
@@ -82,7 +82,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 .. From the ‘Dimensions’ node in the data source, drag the ‘Region’ dimension to the ‘Y’ region, and drop it above the ‘Quantity Purchased’ measure. (This creates a facet chart containing multiple sub-graphs.)
 .. From the ‘Dimensions’ node in the data source, drag the ‘State’ dimension to the ‘Color’ region. This creates a subseries based on the ‘State’ field.
 +
-image:ChartCalculationPercentExample1.png[]
+image:ChartCalculationPercentExample1.png[alt="chart editor with dimensions and measure configured"]
 
 .. {finishEditing}
 
@@ -96,11 +96,11 @@ image:ChartCalculationPercentExample1.png[]
 
 . Under the *Advanced* tab, enable the ‘Show Values’ option, and press btn:[OK].
 +
-image:ChartCalculationPercentExample2.png[]
+image:ChartCalculationPercentExample2.png[alt="enable show values option in chart properties"]
 +
 This displays the aggregated measure value for each group on the chart.
 +
-image:ChartCalculationPercentExample3.png[]
+image:ChartCalculationPercentExample3.png[alt="chart displaying aggregate values for each group"]
 
 . Open the Chart Editor again.
 
@@ -108,7 +108,7 @@ image:ChartCalculationPercentExample3.png[]
 
 . In the ‘Trend and Comparison’ menu of the pop-up panel, select the ‘Custom’ option.
 +
-image:ChartCalculationPercentExample4.png[]
+image:ChartCalculationPercentExample4.png[alt="select custom option in trend and comparison menu"]
 
 . Press the btn:[Edit] button to open the ‘Calculation’ dialog box.
 
@@ -116,11 +116,11 @@ image:ChartCalculationPercentExample4.png[]
 
 . Select ‘Category’ from the ‘Of’ menu, and press btn:[OK] to close the dialog box.
 +
-image:ChartCalculationPercentExample5.png[]
+image:ChartCalculationPercentExample5.png[alt="select percent calculation with category dimension"]
 
 . {finishEditing}
 +
-image:ChartCalculationPercentExample6.png[]
+image:ChartCalculationPercentExample6.png[alt="chart showing percentages of category totals"]
 +
 The aggregated measure for each group is now represented as its percentage of the total aggregate for the corresponding category.
 
@@ -141,7 +141,7 @@ xref:PercentChangeChart.adoc[], for an example of change calculation on a Chart.
 ====
 The ‘Change’ calculation allows you to express the group aggregate in terms of its deviation (or percent deviation, if ‘As percent’ is selected) from the preceding, succeeding, first, or last group in the series. The ‘From’ menu specifies the baseline value.
 
-image:CalculateChange_1.png[]
+image:CalculateChange_1.png[alt="change calculation dialog box options"]
 
 First:: Expresses the value of the aggregated *measure* for each group as a difference from the corresponding first value for the parent group selected in the ‘Value of’ menu.
 +
@@ -159,7 +159,7 @@ xref:RunningTotalChart.adoc[], for an example of a running calculation.
 ====
 The ‘Running’ calculation allows you to express each group aggregate as an accumulation of previous aggregate values in the series. The method of accumulation is specified by the ‘Aggregate’ menu in the ‘Calculation’ dialog box.
 
-image:CalculateRunningTotal_1.png[]
+image:CalculateRunningTotal_1.png[alt="running calculation dialog box options"]
 
 The ‘Reset at’ option, available for date fields, allows you to specify the date interval (e.g., year, quarter, week, etc.) at which the accumulation should be cleared.
 
@@ -190,13 +190,13 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . From the ‘Level’ menu select ‘Month’, and press the {buttonApply}. This groups the date data (i.e., X-axis labels) by month.
 +
-image:RunningTotalExample1.png[]
+image:RunningTotalExample1.png[alt="set date dimension level to month"]
 
 . Press the {buttonEditMeasure} next to the ‘Quantity Purchased’ measure.
 
 . In the ‘Trend and Comparison’ menu of the pop-up panel, select the ‘Custom’ option.
 +
-image:RunningTotalExample3.png[]
+image:RunningTotalExample3.png[alt="select custom option in trend and comparison menu"]
 +
 NOTE: Leave the ‘Aggregate’ option in the pop-up panel set to the default ‘Sum’.
 
@@ -206,14 +206,14 @@ NOTE: Leave the ‘Aggregate’ option in the pop-up panel set to the default �
 .. From the ‘Aggregate’ menu, select ‘Sum’.
 .. From the ‘Reset at’ menu, select ‘Year’.
 +
-image:RunningTotalExample2.png[]
+image:RunningTotalExample2.png[alt="set running sum reset at year in calculation dialog"]
 .. Press btn:[OK] to close the dialog box.
 
 . Press the {buttonApply}.
 
 . {finishEditing}
 +
-image:RunningTotalExample4.png[]
+image:RunningTotalExample4.png[alt="time series chart showing running total by month"]
 +
 The time series now shows a running total for the summed quantity purchase, re-initialized at each new year.
 ****
@@ -227,7 +227,7 @@ xref:SlidingWindowChart.adoc[], for an example of a sliding calculation.
 ====
 The ‘Sliding’ calculation allows you to express each group’s value as an accumulation of neighboring aggregate values in the series, specified by a rectangular sliding window. This generally has the effect of smoothing (low-pass filtering) the displayed data.
 
-image:MovingCalculationDialog_1.png[]
+image:MovingCalculationDialog_1.png[alt="sliding calculation dialog box with window settings"]
 
 
 The method of accumulation is specified by the ‘Aggregate’ menu in the ‘Calculation’ dialog box.  The ‘Previous’ and ‘Next’ values specify the span of the sliding window as the number of preceding and succeeding groups, respectively, to include in the calculation. All included groups have equal weight in the calculation.
@@ -262,7 +262,7 @@ Assume the chart displays sales totals for March, April, May, June, July, August
 == Value Of Calculation
 The ‘Value of’ option is similar to the xref:#ChangeCalculation[] option, but does not perform any calculation, merely returning the referenced value (previous, first, next, or last). The ‘From’ menu specifies the reference value.
 
-image:CalculateValue_1.png[]
+image:CalculateValue_1.png[alt="value of calculation dialog box options"]
 
 First:: The corresponding first value for the parent group selected in the ‘Value of’ menu.
 Previous:: The corresponding previous value for the parent group selected in the ‘Value of’ menu.
@@ -273,7 +273,7 @@ Last:: The corresponding last value for the parent group selected in the ‘Valu
 == Compound Growth Calculation
 The ‘Compound Growth’ calculation is similar to the xref:#RunningCalculation[] and allows you to express each group aggregate as an accumulation of previous aggregate values in the series, but with added  *compounding*. It is therefore intended to be used only with *percentage values*. The method of aggregation should typically ‘Min’, ‘Max’, or ‘Average’ in the case of percentages.
 
-image:CalculateCompoundGrowth.png[]
+image:CalculateCompoundGrowth.png[alt="compound growth calculation dialog box options"]
 
 The ‘Reset at’ option, available for date fields, allows you to specify the date interval (e.g., year, quarter, week, etc.) at which the accumulation should be cleared.
 
@@ -282,7 +282,7 @@ The ‘Reset at’ option, available for date fields, allows you to specify the 
 ****
 The sample xref:ROOT:attachment$Sales_Revenue_Profit_Analysis.zip[Sales Revenue/Profit Analysis] Dashboard (in the ‘Examples’ folder) provides an  example of using a chart calculation (Change from First).
 
-image:viewsheet:galleryMultipleMeasure3.png[]
+image:viewsheet:galleryMultipleMeasure3.png[alt="sales revenue profit analysis dashboard example"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Sales_Revenue_Profit_Analysis.zip[Sales Revenue/Profit Analysis] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 

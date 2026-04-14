@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 A Scatter Contour chart displays contours that correspond to the density of the plotted points. The points themselves are *not* displayed.
 
 
-image:commonscript:ScatterContour1.png[]
+image:commonscript:ScatterContour1.png[alt="scatter contour chart example"]
 
 To create a scatter contour chart, follow the basic steps below:
 
@@ -13,7 +13,7 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose the ‘Scatter Contour’  style.    Press the {buttonApply}.
 +
-image:commonscript:scatterContourChartExp1.png[]
+image:commonscript:scatterContourChartExp1.png[alt="select scatter contour chart style"]
 
 
 . From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
@@ -21,7 +21,7 @@ image:commonscript:scatterContourChartExp1.png[]
 include::ROOT:partial$measureTip.adoc[]
 
 +
-image:commonscript:scatterContourChartExp2.png[]
+image:commonscript:scatterContourChartExp2.png[alt="drag measure to X or Y region"]
 +
 TIP: {convertToMeasure}
 
@@ -29,31 +29,31 @@ TIP: {convertToMeasure}
 +
 IMPORTANT: For a scatter contour  plot you may not want any aggregation at all. In this case, select ‘None’ as the aggregation method.
 +
-image:commonscript:scatterContourChartExp3.png[]
+image:commonscript:scatterContourChartExp3.png[alt="select aggregation method for measure"]
 
 . From the ‘Measures’ folder of the *Data Source* panel, drag a *second measure* to the ‘X’ or ‘Y’ region. (Use the region that does not already contain the first measure.)
 +
-image:commonscript:scatterContourChartExp4.png[]
+image:commonscript:scatterContourChartExp4.png[alt="drag second measure to remaining axis region"]
 
 . Press the {buttonEditMeasure} next to the second measure, and select the desired aggregation method for the measure. Press the {buttonApply}.
 +
-image:commonscript:scatterContourChartExp5.png[]
+image:commonscript:scatterContourChartExp5.png[alt="set aggregation for second measure"]
 +
 This creates the desired scatter contour chart.
 +
-image:commonscript:scatterContourChartExp6.png[]
+image:commonscript:scatterContourChartExp6.png[alt="completed scatter contour chart"]
 
 . *_Optional:_* Drag a *dimension* to the ‘Text’ area to display labels on the Chart.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:scatterContourChartExp7.png[]
+image:commonscript:scatterContourChartExp7.png[alt="drag dimension to text region for labels"]
 +
 NOTE: If ‘None’ is selected as the aggregation method, duplicate labels may be displayed.
 
 . *_Optional:_*  Press the {buttonEditColor} to select an alternate color scheme.
 +
-image:commonscript:scatterContourChartExp8.png[]
+image:commonscript:scatterContourChartExp8.png[alt="select alternate color scheme"]
 +
 NOTE: For a Scatter Contour chart you cannot bind a data field to the ‘Color’ region.
 
@@ -63,7 +63,7 @@ NOTE: For a Scatter Contour chart you cannot bind a data field to the ‘Color�
 +
 To change how the contours are focused on the data points (without weighting), press the ‘Edit Size’ button, and choose a fixed size value.
 +
-image:commonscript:contourMapExp7.png[]
+image:commonscript:contourMapExp7.png[alt="adjust contour size focus setting"]
 +
 NOTE: You can make additional adjustments to the appearance of the contours from the ‘Chart Properties’ dialog box. See below.
 

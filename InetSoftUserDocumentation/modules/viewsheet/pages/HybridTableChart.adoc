@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 A hybrid table chart is a chart that displays columns of data (like a table) in addition to the usual graphical chart elements.
 
-image:commonscript:tableLikeChart8_1.png[]
+image:commonscript:tableLikeChart8_1.png[alt="example hybrid table chart"]
 
 To create a hybrid table chart, follow the basic steps below:
 
@@ -15,7 +15,7 @@ include::partial$chartNewbieTip.adoc[]
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:tableLikeChart10_1.png[]
+image:commonscript:tableLikeChart10_1.png[alt="drag measure to X region"]
 +
 TIP: {convertToMeasure}
 
@@ -24,25 +24,25 @@ TIP: {convertToMeasure}
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:tableLikeChart1_1.png[]
+image:commonscript:tableLikeChart1_1.png[alt="drag dimension to Y region"]
 +
 TIP: {convertToDimension}
 
 . Drag the measure that you want to represent as text (e.g., ‘Quantity Purchased’) from the ‘Measures’ folder in the *Data Source* panel to the ‘Y’ region  (next to the dimension).
 +
-image:commonscript:tableLikeChart11_1.png[]
+image:commonscript:tableLikeChart11_1.png[alt="drag text measure to Y region"]
 
 . Press the {buttonEditMeasure} next to the measure. Set the ‘Aggregate’ property as desired and enable the ‘Discrete’ option.
 +
 IMPORTANT: The  ‘Discrete’ option allows the measure to behave as a dimension.
 +
-image:commonscript:tableLikeChart2_1.png[]
+image:commonscript:tableLikeChart2_1.png[alt="enable Discrete option for measure"]
 
 . Press the {buttonApply}.
 +
 Observe that the chart now displays a column of values giving the aggregated measure value as text for each dimension value.
 +
-image:commonscript:tableLikeChart3_1.png[]
+image:commonscript:tableLikeChart3_1.png[alt="chart displaying column of aggregated values"]
 
 . Drag another measure (e.g., ‘Discount’) from the ‘Measures’ folder in the *Data Source* panel to the ‘Y’ region  next to the previous measure.
 
@@ -50,27 +50,27 @@ image:commonscript:tableLikeChart3_1.png[]
 +
 IMPORTANT: The  ‘Discrete’ option allows the measure to behave as a dimension.
 +
-image:commonscript:tableLikeChart4_1.png[]
+image:commonscript:tableLikeChart4_1.png[alt="enable Discrete option for second measure"]
 +
 Observe that the chart now displays a column of values giving the aggregated measure value for each dimension group.
 +
-image:commonscript:tableLikeChart9_1.png[]
+image:commonscript:tableLikeChart9_1.png[alt="chart with two discrete measure columns"]
 
 . Right-click in the plot area and select ‘Properties’ from the context menu. This opens the ‘Chart Properties’ panel.
 +
-image:commonscript:VS Hybrid7.png[]
+image:commonscript:VS Hybrid7.png[alt="open Chart Properties from context menu"]
 
 . Select the *Line* tab and enable the ‘Show Table Grid’ option, and press btn:[OK]. This displays grid lines around the plot area, and around each text column.
 +
-image:commonscript:tableLikeChart6_1.png[]
+image:commonscript:tableLikeChart6_1.png[alt="enable Show Table Grid option on Line tab"]
 
 . *_Optional:_* Adjust the spacing between the columns by dragging on the boundaries between columns.
 +
-image:commonscript:Ad Hoc Hybrid10.png[]
+image:commonscript:Ad Hoc Hybrid10.png[alt="drag column boundaries to adjust spacing"]
 
 . Click on a column of text, set the desired formatting using the *Format* panel. (See xref:DataFormat.adoc[] for more information.)
 +
-image:commonscript:Ad Hoc Hybrid9.png[]
+image:commonscript:Ad Hoc Hybrid9.png[alt="set column formatting in Format panel"]
 +
 For example, set a number format for the ‘Quantity Purchased’ column and set a percent format for the ‘Discount’ column. Center-align both of these columns, and left-align the ‘Category’ column.
 
@@ -78,11 +78,11 @@ For example, set a number format for the ‘Quantity Purchased’ column and set
 
 . {finishEditing}
 +
-image:commonscript:VS Hybrid12.png[]
+image:commonscript:VS Hybrid12.png[alt="finished hybrid table chart"]
 
 . Resize the chart as desired. Add Text components above the chart to provide any desired column headers. (See xref:AddComponentsToDashboard.adoc[].)
 +
-image:commonscript:tableLikeChart8_1.png[]
+image:commonscript:tableLikeChart8_1.png[alt="resized hybrid table chart with column headers"]
 
 include::viewsheet:partial$addTitlesLegend.adoc[]
 

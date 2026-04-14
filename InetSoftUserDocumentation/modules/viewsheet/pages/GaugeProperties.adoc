@@ -31,7 +31,7 @@ Face:: The visual form of the element. Click on the desired skin to select it.
 Tooltip:: Value is displayed as tooltip when mouse hovers over the component. To display custom HTML in the tooltip, see xref:AddTipsToChart.adoc[].
 Shadow:: Adds a drop shadow to the component.
 
-image:Capture_024.png[]
+image:Capture_024.png[alt="gauge general tab properties panel"]
 
 == Data Tab
 {commonData}
@@ -44,7 +44,7 @@ TIP: {dynamicProperties}
 Range:: A set of colored zones to display on the Gauge. See xref:#SetColoredRangesforGauge[] below.
 Show Value:: Provides a digital display of the current value shown on a Gauge.
 
-image:Gauge properties advanced.png[]
+image:Gauge properties advanced.png[alt="gauge advanced tab with range and show value options"]
 
 [#SetColoredRangesforGauge]
 === Set Colored Ranges for a Gauge
@@ -62,7 +62,7 @@ To set multiple ranges for a Gauge, follow the steps below:
 
 . *_Optional:_*  If you have selected ‘Gradient’, choose a color for the final blend.
 +
-image:Range Colors for Slider.png[]
+image:Range Colors for Slider.png[alt="set gradient color ranges for gauge"]
 
 == Script Tab
 {commonScript}

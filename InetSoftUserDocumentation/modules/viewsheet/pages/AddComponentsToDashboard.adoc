@@ -15,7 +15,7 @@ include::ROOT:partial$CreateNewDashboardNote.adoc[]
 . Open the desired Dashboard for editing. (See xref:EditADashboard.adoc[].)
 . Drag components from the left *Toolbox* panel onto the Dashboard.
 +
-image:addingChart.png[]
+image:addingChart.png[alt="drag components from toolbox onto dashboard"]
 +
 See the following sections (xref:AddAChart.adoc[], xref:AddTable.adoc[], etc.) for more details on building the Dashboard.
 
@@ -24,7 +24,7 @@ See the following sections (xref:AddAChart.adoc[], xref:AddTable.adoc[], etc.) f
 . Press the {buttonSave} in the toolbar to save the Dashboard.
 . To refresh a Dashboard, right-click in an empty region of the Dashboard and select the ‘Refresh’ option from the context menu.
 +
-image:refreshMenu.png[]
+image:refreshMenu.png[alt="right-click and select Refresh from context menu"]
 +
 This refreshes the Dashboard to reflect changes to the underlying data source and embedded components.
 

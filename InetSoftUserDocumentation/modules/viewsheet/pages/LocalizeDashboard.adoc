@@ -22,13 +22,13 @@ To specify a Text ID for a component, follow the steps below:
 
 . Select the *Localization* tab.
 +
-image:administration:Localization1.png[]
+image:administration:Localization1.png[alt="select Localization tab in Dashboard Options"]
 
 . In the left ‘Component’ panel, select the property in the element tree that you wish to localize, and press btn:[Add]. This adds the property to the right ‘Localization Text ID’ panel.
 
 . In the ‘Localization Text ID’ panel, enter a label for the element in the ‘Text ID’ field.
 +
-image:administration:Localization2.png[]
+image:administration:Localization2.png[alt="enter Text ID for localization component"]
 +
 The Text ID that you enter here is the label used to represent the text of the corresponding component in the localization mapping file discussed in xref:#SreeBundleMappingFile[] below.
 

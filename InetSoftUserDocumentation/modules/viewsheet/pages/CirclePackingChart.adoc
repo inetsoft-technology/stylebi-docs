@@ -6,7 +6,7 @@ A  circle packing chart displays a *measure* by using circles in a hierarchical 
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 
-image:commonscript:circlePackingConfig1.png[]
+image:commonscript:circlePackingConfig1.png[alt="circle packing chart example"]
 
 To create a circle packing  chart, follow the basic steps below:
 
@@ -29,7 +29,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . In the Chart Editor, press the {buttonSelectChartStyle} and choose the ‘Circle Packing’ option. Press the {buttonApply}.
 +
-image:commonscript:circlePackingConfig2.png[]
+image:commonscript:circlePackingConfig2.png[alt="select Circle Packing chart style"]
 
 . Drag the ‘State’, ‘City’, and ‘Company’ fields from the *Data Source* panel to the ‘T’ region.
 
@@ -37,11 +37,11 @@ image:commonscript:circlePackingConfig2.png[]
 
 . Drag the ‘State’ dimension from the *Data Source* panel to the ‘Color’ region.
 +
-image:commonscript:circlePackingConfig3.png[]
+image:commonscript:circlePackingConfig3.png[alt="drag State dimension to Color"]
 
 . *_Optional:_* Press the ‘Edit Color’ button next to the ‘State’ dimension, and choose the desired colors to represent the state values. Press the {buttonApply}.
 +
-image:commonscript:EditColorButton.png[]
+image:commonscript:EditColorButton.png[alt="press Edit Color button"]
 
 . *_Optional:_* To fill any of the larger circles with static color (in this example, the ‘State’ and ‘City’ circles, or the outermost containing circle), click a circle to select it, and use the ‘Background’ property on the *Format* tab to apply a color. See xref:VisualFormat.adoc[] for more information about formatting.
 
@@ -52,7 +52,7 @@ image:commonscript:EditColorButton.png[]
 
 . Resize the chart as desired.
 +
-image:commonscript:circlePackingConfig1.png[]
+image:commonscript:circlePackingConfig1.png[alt="resize chart as desired"]
 
 . Hover the mouse over the chart to see a tooltip providing full information about each group.
 

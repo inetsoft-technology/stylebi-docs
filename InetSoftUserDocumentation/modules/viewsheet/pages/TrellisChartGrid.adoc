@@ -10,7 +10,7 @@ In some cases you may want to create a *grid of charts*, where different charts 
 
 include::ROOT:partial$dimensionTip.adoc[]
 
-image:commonscript:chart2_1.png[]
+image:commonscript:chart2_1.png[alt="grid of charts by region and category"]
 
 
 
@@ -19,7 +19,7 @@ To create a grid of charts, simply add dimensions into the ‘X’ and ‘Y’ r
 
 include::viewsheet:partial$chartNewbieTip.adoc[]
 
-image:commonscript:chart3_1.png[]
+image:commonscript:chart3_1.png[alt="place dimensions in X and Y regions for grid"]
 
 
 
@@ -27,7 +27,7 @@ image:commonscript:chart3_1.png[]
 ****
 The sample xref:ROOT:attachment$Mortality_Analysis.zip[Mortality Analysis] Dashboard provides an example of a grid of pie charts.
 
-image:viewsheet:galleryGridOfPie2.png[]
+image:viewsheet:galleryGridOfPie2.png[alt="grid of pie charts example"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Mortality_Analysis.zip[Mortality Analysis] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 
@@ -35,7 +35,7 @@ To explore this sample Dashboard, download and import the  xref:ROOT:attachment$
 
 The sample xref:ROOT:attachment$Marketing_Lead_Trends.zip[ Marketing Lead Trends] Dashboard provides an example of a grid of line charts.
 
-image:viewsheet:galleryMap2.png[]
+image:viewsheet:galleryMap2.png[alt="grid of line charts example"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Marketing_Lead_Trends.zip[ Marketing Lead Trends] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****

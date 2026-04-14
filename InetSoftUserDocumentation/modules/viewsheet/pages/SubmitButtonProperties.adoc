@@ -19,7 +19,7 @@ The *General* tab in the ‘Submit Properties’ panel provides the following un
 Label:: The text to be displayed on the button face.
 Refresh Dashboard after Submit:: When enabled, refreshes all Dashboard components when the user presses the ‘Submit’ button. When disabled, the only components refreshed when the user presses the ‘Submit’ button are those currently being filtered by Selection List, Selection Tree, Range Slider, or Calendar.
 
-image:SubmitPropertiesDialogBox.png[]
+image:SubmitPropertiesDialogBox.png[alt="submit button general tab properties"]
 
 == Script Tab
 {commonScript}

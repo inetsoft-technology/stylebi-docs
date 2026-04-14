@@ -22,11 +22,11 @@ When you hover the pointer over a data group on a Chart or Crosstab, the *toolti
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 
-image:dataTip1.png[]
+image:dataTip1.png[alt="tooltip displays data group details on hover"]
 
 You can also choose to replace the tooltip with a *data tip*. A data tip displays information about a data group using another Dashboard component, such as Chart, Text, or Gauge (or a collection of such components). The data tip is dynamically filtered to show only data corresponding to the particular chart group on which you hover.
 
-image:dataTip2.png[]
+image:dataTip2.png[alt="data tip component displays filtered dashboard data"]
 
 The data tip component and the component on which the data tip is displayed can be based on the same data block or on different data blocks. In the latter case, the data tip component is filtered based on any matching fields in the two data blocks.
 
@@ -70,13 +70,13 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 .. Press the {buttonEditDimension}, and use the ‘Ranking’ option to display only the top 10 companies. Press the {buttonApply}.
 +
-image:Chart Data Tip Top 10_1.png[]
+image:Chart Data Tip Top 10_1.png[alt="use ranking option to display top 10 companies"]
 
 .. {finishEditing}
 
 . Resize the chart as desired.
 +
-image:Chart w Data Tip_1.png[]
+image:Chart w Data Tip_1.png[alt="resized chart displaying quantity by company"]
 
 . Right-click the Chart, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Chart Properties’ panel.
 
@@ -84,7 +84,7 @@ image:Chart w Data Tip_1.png[]
 
 .. To adjust the transparency of the data tip component (Gauge), enter a value in the ‘Alpha’ menu (or choose one of the preset values). A value of 0% indicates complete transparency; a value of 100% indicates complete opacity.
 +
-image:dataTipChart2.png[]
+image:dataTipChart2.png[alt="select data tip view component on general tab"]
 
 .. Press btn:[OK] to close the ‘Chart Properties’ panel.
 
@@ -95,7 +95,7 @@ IMPORTANT: Data tips are not active in the design view. Preview the Dashboard to
 . Press the {buttonPreview} to preview the Dashboard, and hover the mouse over different companies in the Chart to view the corresponding Data Tip (i.e., number of orders).
 
 +
-image:Chart Data Tip Final.png[]
+image:Chart Data Tip Final.png[alt="hover over company shows data tip gauge"]
 
 The data tip Gauge   is  *_not displayed_* as part of the Dashboard layout. The Gauge appears *_only_* when you hover the mouse over one of the companies in the chart, and it displays only the data for that particular company.
 
@@ -107,7 +107,7 @@ TIP: You can use a single component in both a data tip view and a flyover view (
 ****
 The sample xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard provides an example of  using data tips.
 
-image:viewsheet:galleryDataTip2.png[]
+image:viewsheet:galleryDataTip2.png[alt="data tip gallery example dashboard"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****
@@ -141,7 +141,7 @@ To create a custom tooltip, follow the steps below:
 
 . Select the ‘Custom’ option, and enter the desired tooltip markup into the edit box. The names and indices for the data fields are listed at the bottom of the dialog box. You can insert a value into the tooltip by using either the index or the field name within curly braces, e.g., `pass:[{1}]` or `pass:[{Sum(Total)}]`. You can mix indices and names within a single tooltip. For Text, Gauge, and Image components, there is just a single value available, represented by `pass:[{0}]`.
 +
-image:CustomizeTooltipIndex.png[]
+image:CustomizeTooltipIndex.png[alt="select custom option and enter tooltip markup"]
 +
 For example, the following tooltip options are equivalent for the fields shown in the Chart dialog box above:
 +
@@ -195,7 +195,7 @@ The above tooltip will display the “Date” line for all measures. The ‘Quan
 ****
 In this example, you will create a Chart that displays quantity purchased by company. When the user hovers the mouse over a given company (e.g., “Rutgers Bank”), the Chart will display a tooltip similar to the following:
 
-image:CustomTooltipExp.png[]
+image:CustomTooltipExp.png[alt="custom tooltip showing company name and units purchased"]
 
 Follow the steps below:
 
@@ -217,13 +217,13 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 .. Press the {buttonEditDimension}, and use the ‘Ranking’ option to display only the top 10 companies. Press the {buttonApply}.
 +
-image:Chart Data Tip Top 10.png[]
+image:Chart Data Tip Top 10.png[alt="use ranking option to display top 10 companies"]
 
 .. {finishEditing}
 
 . Resize the chart as desired.
 +
-image:Chart w Data Tip.png[]
+image:Chart w Data Tip.png[alt="resized chart displaying quantity by company"]
 
 . Right-click the Chart, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Chart Properties’ panel.
 
@@ -237,6 +237,6 @@ image:Chart w Data Tip.png[]
 
 When you hover the mouse over the bars on the chart, you will now see the custom tooltip you specified.
 
-image:CustomizeTooltipExample_1.png[]
+image:CustomizeTooltipExample_1.png[alt="custom tooltip displayed when hovering over bar"]
 ****
 

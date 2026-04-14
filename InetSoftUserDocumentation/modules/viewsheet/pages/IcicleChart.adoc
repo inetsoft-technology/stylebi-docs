@@ -6,7 +6,7 @@ An icicle chart displays a measure by using the sizes of rectangles in a hierarc
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 
-image:commonscript:icicleConfig1.png[]
+image:commonscript:icicleConfig1.png[alt="icicle chart example"]
 
 To create an icicle  chart, follow the basic steps below:
 
@@ -29,7 +29,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . In the Chart Editor, press the {buttonSelectChartStyle} and choose the ‘Icicle’ option. Press the {buttonApply}.
 +
-image:commonscript:icicleConfig2.png[]
+image:commonscript:icicleConfig2.png[alt="press Select Chart Style button"]
 
 . Drag the ‘State’, ‘City’, and ‘Name’ fields from the *Data Source* panel to the ‘T’ region.
 
@@ -37,18 +37,18 @@ image:commonscript:icicleConfig2.png[]
 
 . Drag the ‘State’ dimension from the *Data Source* panel to the ‘Color’ region.
 +
-image:commonscript:icicleConfig3.png[]
+image:commonscript:icicleConfig3.png[alt="drag State dimension to Color region"]
 
 
 . *_Optional:_* Press the ‘Edit Color’ button next to the ‘State’ dimension, and choose the desired colors to represent the state values. Press the {buttonApply}.
 +
-image:commonscript:EditColorButton.png[]
+image:commonscript:EditColorButton.png[alt="press Edit Color button"]
 
 . {finishEditing}
 
 . Resize the chart as desired.
 +
-image:commonscript:icicleConfig1.png[]
+image:commonscript:icicleConfig1.png[alt="icicle chart example"]
 
 . Hover the mouse over the chart to see a tooltip providing full information about each group.
 

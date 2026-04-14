@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 A donut chart is a xref:PieChart.adoc[] with a hole in the center. The hole can be empty or  display a KPI.
 
-image:commonscript:ChartExpDonut20.png[]
+image:commonscript:ChartExpDonut20.png[alt="donut chart example"]
 
 == Simple Donut Chart
 The simple donut chart is the same as a xref:PieChart.adoc[], but with an empty hole in the center. The hole is the same color as the chart background. The example below displays Total Sales by Year.
@@ -19,28 +19,28 @@ include::ROOT:partial$measureTip.adoc[]
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:PieChartConfig.png[]
+image:commonscript:PieChartConfig.png[alt="drag measure to Y and dimension to Color"]
 
 . Press the {buttonSelectChartStyle}, and choose ‘Donut’. This converts the chart into a donut-chart representation.
 +
-image:commonscript:ChartExpDonut.png[]
+image:commonscript:ChartExpDonut.png[alt="select Donut chart style"]
 
 . Add the respective dimension values to the pie slices: Drag the dimension (‘Date’) field from the *Data Source* panel to the ‘Text’ region.
 +
-image:commonscript:PieChartTextLabels.png[]
+image:commonscript:PieChartTextLabels.png[alt="drag dimension to Text region for labels"]
 
 . *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 
 
 . In the bottom-left panel, press the ‘Edit Size’ button, and choose the size of the donut hole.
 +
-image:commonscript:ChartExpDonut21.png[]
+image:commonscript:ChartExpDonut21.png[alt="press Edit Size and choose donut hole size"]
 
 . *_Optional:_* {multipleDimensionNoColor}
 
 . {finishEditing}
 +
-image:commonscript:ChartExpDonut22.png[]
+image:commonscript:ChartExpDonut22.png[alt="completed simple donut chart"]
 
 The donut chart is now complete.
 
@@ -54,62 +54,62 @@ include::partial$chartNewbieTip.adoc[]
 
 . In the Chart Editor, drag the *measure*  field (e.g., ‘Total’) from the *Data Source* panel to the ‘Y’ region.
 +
-image:commonscript:ChartExpDonut23.png[]
+image:commonscript:ChartExpDonut23.png[alt="drag measure to Y region"]
 
 . For a Dashboard, right-click the data block containing the measure  field (‘Total’) in the *Data Source* panel, and select ‘New Calculated Field’.
 +
-image:commonscript:ChartExpDonut4.png[]
+image:commonscript:ChartExpDonut4.png[alt="right-click data block and select New Calculated Field"]
 +
 This opens the ‘Edit Calculated Field’ dialog box for a Dashboard. (See xref:dataworksheet:CreateNewDataField.adoc[] for more information about Calculated Fields.)
 
 
 . Enter a name (e.g., ‘Total2’) for the new field, and select the ‘Detail’ option. Click the measure  field (‘Total’) in the top-left panel to add it into the expression. This makes the new (calculated) field ‘Total2’ a duplicate of the existing ‘Total’ field. Select ‘Double’ from the ‘Return Data Type’ menu. Press btn:[OK] to close the Editor.
 +
-image:commonscript:ChartExpDonut6.png[]
+image:commonscript:ChartExpDonut6.png[alt="configure calculated field as duplicate measure"]
 
 . In the Chart Editor, press the {buttonSelectChartStyle}, and enable the ‘Multiple Styles’ option at the bottom of the panel. Then press the {buttonApply}.
 +
-image:commonscript:ChartExpDonut7.png[]
+image:commonscript:ChartExpDonut7.png[alt="enable Multiple Styles option and press Apply"]
 
 . Press the {buttonSwitchSingleGraph} button.
 +
-image:commonscript:ChartExpDonut8.png[]
+image:commonscript:ChartExpDonut8.png[alt="press Switch to Single Graph button"]
 
 . Drag the duplicate measure  field (‘Total2’) from the *Data Source* panel to the ‘Y’ region.
 +
-image:commonscript:ChartExpDonut9.png[]
+image:commonscript:ChartExpDonut9.png[alt="drag duplicate measure to Y region"]
 
 . In the bottom-left panel, select ‘Total’ as the measure for which to set visual properties.
 +
-image:commonscript:ChartExpDonut10.png[]
+image:commonscript:ChartExpDonut10.png[alt="select Total measure in bottom-left panel"]
 
 . Drag the dimension field (e.g., ‘Date’) from the *Data Source* panel to the ‘Color’ region (for the ‘Total’ measure).
 +
-image:commonscript:ChartExpDonut11.png[]
+image:commonscript:ChartExpDonut11.png[alt="drag dimension to Color region for Total measure"]
 
 . *_Optional:_* If you want the donut hole to display a numerical value, in the bottom-left panel, select ‘Total2’ as the measure for which to set visual properties.
 +
-image:commonscript:ChartExpDonut12.png[]
+image:commonscript:ChartExpDonut12.png[alt="select Total2 measure in bottom-left panel"]
 +
 Drag the ‘Total2’ measure field itself from the *Data Source* panel to the ‘Text’ region (for the ‘Total2’ measure).
 +
-image:commonscript:ChartExpDonut13.png[]
+image:commonscript:ChartExpDonut13.png[alt="drag Total2 measure to Text region"]
 
 . Press the {buttonSelectChartStyle} next to each measure, and choose ‘Pie’. This converts each measure into a pie-chart representation.
 +
-image:commonscript:ChartExpDonut14.png[]
+image:commonscript:ChartExpDonut14.png[alt="select Pie chart style for each measure"]
 
 . In the bottom-left panel, select ‘Total2’ as the measure for which to set visual properties. Press the ‘Edit Size’ button, and choose the size of the donut hole. Press the {buttonClose}.
 +
-image:commonscript:ChartExpDonut15.png[]
+image:commonscript:ChartExpDonut15.png[alt="press Edit Size to set donut hole size"]
 
 . Press the ‘Edit Color’ button, and choose the color of the donut hole.
 +
-image:commonscript:ChartExpDonut16.png[]
+image:commonscript:ChartExpDonut16.png[alt="press Edit Color to set donut hole color"]
 
 . Click the text in the donut hole to select it. Select the *Format* tab at the bottom of the left panel. Adjust the formatting of the text as desired. (See xref:DataFormat.adoc[] for more details.)
 +
-image:commonscript:ChartExpDonut17.png[]
+image:commonscript:ChartExpDonut17.png[alt="adjust text formatting in Format tab"]
 
 . *_Optional:_* Press the {buttonEditMeasure} next to each measure, choose the desired aggregation method, and press the {buttonApply}.
 +
@@ -117,13 +117,13 @@ IMPORTANT: You must set both measures to use the *same* aggregation method. The 
 
 . *_Optional:_* Add the respective year values to the pie slices: In the bottom-left panel, select ‘Total’ as the measure for which to set visual properties. Drag the dimension (‘Date’) field from the *Data Source* panel to the ‘Text’ region.
 +
-image:commonscript:ChartExpDonut19.png[]
+image:commonscript:ChartExpDonut19.png[alt="drag dimension to Text region for slice labels"]
 
 . {multipleDimensionNoColor}
 
 . {finishEditing} The donut chart is now complete.
 +
-image:commonscript:ChartExpDonut20.png[]
+image:commonscript:ChartExpDonut20.png[alt="completed advanced donut chart"]
 
 
 
@@ -133,7 +133,7 @@ include::partial$addTitlesLegend.adoc[]
 ****
 The sample xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard provides an example of a donut chart.
 
-image:viewsheet:galleryDataTip2.png[]
+image:viewsheet:galleryDataTip2.png[alt="executive sales summary dashboard donut chart example"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****

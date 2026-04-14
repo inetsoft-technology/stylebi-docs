@@ -38,19 +38,19 @@ include::ROOT:partial$CreateNewDashboardNote.adoc[]
 
 . Drag the dimension that you want to filter to an empty region in the Dashboard. For a string-type field, this creates a Selection List.
 +
-image:viewsheetExp17_1.png[]
+image:viewsheetExp17_1.png[alt="drag dimension to create selection list"]
 +
 TIP: To filter a *measure* with a Selection List,  drag  a  Selection List component from the *Toolbox* into the Dashboard, and then drag the measure into the blank Selection List. (This works for dimensions as well.)
 
 . Resize the Selection List as desired.
 +
-image:viewsheetExp19_1.png[]
+image:viewsheetExp19_1.png[alt="resize selection list"]
 
 . To display multiple columns in a Selection List, click any data cell to select it. Then drag the handle on the right side of the cell to change the cell size.
 +
 TIP: If there is a scroll bar, the handle will appear slightly to the right of the scroll bar.
 +
-image:viewsheetExp20_1a.png[]
+image:viewsheetExp20_1a.png[alt="drag handle to resize cell"]
 
 See xref:UseFilterComponents.adoc[] for information on how to use a Selection List to filter a Dashboard.
 
@@ -88,12 +88,12 @@ To create a hierarchy by dragging fields from the data source, follow the steps 
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:Selection Tree Exp 1.png[]
+image:Selection Tree Exp 1.png[alt="drag dimension to selection tree"]
 
 
 . Drag another dimension from the data block onto the Selection Tree. The values of this dimension provide the inner level of the hierarchy.
 +
-image:Selection Tree Exp 2.png[]
+image:Selection Tree Exp 2.png[alt="drag second dimension to selection tree"]
 
 
 
@@ -103,7 +103,7 @@ image:Selection Tree Exp 2.png[]
 ====
 The inner levels of the hierarchy show only the unique items compatible with corresponding outer level data. For example, the companies nested within the outer-level ‘CA’ node are only those companies whose corresponding state is CA.
 
-image:Selection Tree Expanded.png[]
+image:Selection Tree Expanded.png[alt="selection tree with expanded hierarchy"]
 ====
 
 . To change the hierarchy ordering, use the ‘Selection Tree Properties’ dialog box, as described in xref:#CreateHierarchyPropertiesDialogBox[] below.
@@ -120,17 +120,17 @@ To define a hierarchy by selecting columns on the *Hierarchy* tab of the ‘Sele
 
 . At the top of the dialog box, select the ‘Columns’ option.
 +
-image:Selection Tree Properties Data.png[]
+image:Selection Tree Properties Data.png[alt="select Columns option in properties"]
 
 . In the ‘Table’ menu, expand the desired data block to reveal its columns, or expand a cube dimension to reveal its levels.
 +
-image:Selection Tree Columns.png[]
+image:Selection Tree Columns.png[alt="expand data block to reveal columns"]
 
 . Select the column or level that you want to be the outer-most level of the Selection Tree hierarchy, and press btn:[Add]. This adds the column or level to the ‘Level’ list.
 
 . Repeat to add all desired levels of the hierarchy. To change the hierarchy ordering, use the btn:[Move Down] and btn:[Move Up] buttons. The order from top to bottom represents the nesting order of the Selection Tree, from outer to inner.
 +
-image:Selection Tree Dialog.png[]
+image:Selection Tree Dialog.png[alt="selection tree hierarchy levels dialog"]
 
 . Press btn:[OK] to close the dialog box.
 +
@@ -138,7 +138,7 @@ image:Selection Tree Dialog.png[]
 ====
 The inner levels of the hierarchy show only the unique items compatible with corresponding outer level data. For example, the companies nested within the outer-level ‘CA’ node are only those companies whose corresponding state is CA.
 
-image:Selection Tree Expanded.png[]
+image:Selection Tree Expanded.png[alt="selection tree with expanded hierarchy"]
 ====
 
 [#CreateRecursiveParentChildHierarchy]
@@ -172,7 +172,7 @@ The “Child ID” is the ID of the node itself, while the “Parent ID” is th
 
 The data above represent the following tree structure.
 
-image:SelectionTreeRecursive3.png[]
+image:SelectionTreeRecursive3.png[alt="recursive parent-child tree structure"]
 
 The “Parent ID” and “Child ID” columns indicate that nodes 5 and 6 share node 1 as parent, nodes 7 and 8 share node 2 as parent, nodes 9, 10, and 11 share node 3 as parent, and nodes 12 and 13 share node 4 as parent.
 ****
@@ -180,7 +180,7 @@ The “Parent ID” and “Child ID” columns indicate that nodes 5 and 6 share
 
 . At the top of the ‘Selection Tree Properties’ dialog box, select the ‘Parent/Child IDs’ option.
 +
-image:SelectionTreeRecursive1.png[]
+image:SelectionTreeRecursive1.png[alt="select Parent/Child IDs option"]
 
 . In the ‘Table’ menu, expand the desired data block to reveal its columns.
 
@@ -197,7 +197,7 @@ image:SelectionTreeRecursive1.png[]
 
 The Selection Tree is now populated based on the selected “Parent ID” and “Child ID” columns.
 
-image:SelectionTreeRecursive2.png[]
+image:SelectionTreeRecursive2.png[alt="selection tree populated with hierarchy"]
 
 [#FilterDateNumericalDataRangeSlider]
 == Filter Date/Numerical Data with Range Slider
@@ -214,7 +214,7 @@ video::359331010#chapter=16559038[vimeo,640,400]
 
 A Range Slider component allows you to select a date range or numerical range from a measure, as shown below.
 
-image:RangeSlider_1.png[]
+image:RangeSlider_1.png[alt="range slider with date range"]
 
 TIP: You can also filter a discrete measure using a Selection List.  See xref:#FilterWithSelectionList[].
 
@@ -226,7 +226,7 @@ To add a Range Slider follow the steps below:
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:RangeSliderExp1.png[]
+image:RangeSliderExp1.png[alt="drag measure onto range slider"]
 +
 TIP: You can also drag a measure from the *Toolbox* panel into an empty region of the Dashboard.  This will automatically create a Range Slider.
 
@@ -234,7 +234,7 @@ TIP: You can also drag a measure from the *Toolbox* panel into an empty region o
 
 . To enter precise values for the start-point or end-point, right-click on the Range Slider and select ‘Edit’ from the context menu. In the ‘Edit’ dialog box, enter the desired values and press btn:[OK].
 +
-image:Range Slider Edit1_2.png[]
+image:Range Slider Edit1_2.png[alt="enter range slider values and press OK"]
 
 . To quickly set the right side of the range to its maximum, double-click on the right end-handle. To quickly set the left side of the range to its minimum, double-click on the left end-handle. To quickly set the entire range to its full extent, double-click on the slider body.
 
@@ -258,11 +258,11 @@ To add a Calendar, follow the steps below.
 
 . Drag a ‘Calendar’ element from the *Toolbox* panel onto the Dashboard. This creates a new Calendar component.
 +
-image:Capture_051.png[]
+image:Capture_051.png[alt="drag calendar element to dashboard"]
 
 . Drag a date field from a data source in the *Toolbox* panel  onto the Calendar. This links the Calendar to the data represented by the selected date field.
 +
-image:AddCalendarExp1.png[]
+image:AddCalendarExp1.png[alt="drag date field onto calendar"]
 
 . To format the dates displayed in the Calendar, click on a date, and then select the *Format* tab in the left panel. {rightClickFormat} For example, when the Calendar is in ‘Year View’, you can format the months to display the month name (format `MMM` or `MMMM`) rather than the month number. See xref:DataFormat.adoc[] for more information  about date formats.
 
@@ -296,7 +296,7 @@ include::ROOT:partial$dimensionTip.adoc[]
 
 . Right-click the  component, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Properties’ dialog box.
 +
-image:Selection List properties_2.png[]
+image:Selection List properties_2.png[alt="open selection list properties dialog"]
 
 . From the ‘Measure’ menu, select the field that you wish to summarize.
 
@@ -321,15 +321,15 @@ include::ROOT:partial$AggregationMethods.adoc[]
 
 .. Adjust the column layout to provide the needed space by dragging the handle at the right side of column.
 +
-image:SelectionListAggResize1.png[]
+image:SelectionListAggResize1.png[alt="drag handle to adjust column layout"]
 
 .. Adjust the width of the aggregate text region by dragging the handle at the left side of the text.
 +
-image:SelectionListAggResize2.png[]
+image:SelectionListAggResize2.png[alt="drag handle to resize aggregate text"]
 
 .. Adjust the width of the aggregate bar region by dragging the handle at the left side of the bar.
 +
-image:SelectionListAggResize3.png[]
+image:SelectionListAggResize3.png[alt="drag handle to resize aggregate bar"]
 
 . *_Optional:_*  To format the aggregate text, click on the aggregate text to select it, and then select the *Format* tab in the left panel of Visual Composer.  (See xref:DataFormat.adoc[] for more information about the available options.)
 
@@ -351,13 +351,13 @@ To do this, follow the steps below:
 
 . Select the *Data* tab. Data blocks with compatible columns are listed in the ‘Compatible Tables’ panel.
 +
-image:multipleFilter1.png[]
+image:multipleFilter1.png[alt="compatible tables listed in data tab"]
 +
 Compatibility requires that the data block have a column with the *same name* as the column bound to the filter component. The data type of this column must be mergeable with the column bound to the Filter component (e.g., both String, both Integer, Integer and Double, etc.). If the column bound to the Filter component is drawn from a cube data source, the ‘compatible data block’ must also be drawn from a cube.
 
 . Press the {buttonAddArrow} to add the data block to the ‘Additional Tables’ panel.
 +
-image:multipleFilter2.png[]
+image:multipleFilter2.png[alt="press Add to add data block"]
 
 . Repeat the above steps to merge any additional data block columns.
 
@@ -369,17 +369,17 @@ Data values from the compatible columns in the added data blocks are merged into
 ****
 In the example below, a Dashboard is based on a Data Worksheet with three data blocks, containing data for companies in different regions: Eastern, Western, and Central.
 
-image:multipleFilter3.png[]
+image:multipleFilter3.png[alt="dashboard with three regional data blocks"]
 
 To use a single Selection List to filter all three data blocks, follow the steps below:
 
 . In the Dashboard, drag the ‘Company’ field from the ‘Eastern Customers’ data block into the Dashboard canvas.
 +
-image:multipleFilter4.png[]
+image:multipleFilter4.png[alt="drag Company field to dashboard canvas"]
 +
 This creates a Selection List that filters the ‘Eastern Customers’ data block based on ‘Company’.
 +
-image:multipleFilter5.png[]
+image:multipleFilter5.png[alt="selection list filtering eastern customers"]
 
 . Right-click the Selection List and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Selection List Properties’ dialog box.
 
@@ -387,7 +387,7 @@ image:multipleFilter5.png[]
 
 . Hold down the {buttonCtrl} key and click in the ‘Compatible Tables’ list to select both the ‘Western Customers’ and ‘Central Customers’ data blocks. Press the {buttonAddArrow} to add them to the ‘Additional Tables’ list.
 +
-image:multipleFilter6.png[]
+image:multipleFilter6.png[alt="add compatible tables to additional tables"]
 +
 These are “compatible” data blocks because they have a column of the same name (‘Company’) as the ‘Eastern Customers’ data block, and the corresponding columns have mergeable data types (identical data types, in this case).
 
@@ -395,11 +395,11 @@ These are “compatible” data blocks because they have a column of the same na
 
 The Selection List now displays the merged data from the ‘Company’ field of all three data blocks, and filtering selections that you make in the Selection List will filter all three data blocks simultaneously.
 
-image:multipleFilter7.png[]
+image:multipleFilter7.png[alt="selection list with merged company data"]
 
 To verify this, add a Table to the Dashboard for each of the three data blocks (see xref:AddTable.adoc[] or xref:AddCrosstab.adoc[]). Note how the Selection List filters the data in each table even though each table draws data from an independent data block.
 
-image:multipleFilter8.png[]
+image:multipleFilter8.png[alt="selection list filtering three data tables"]
 ****
 
 [#SubmitFiltersinBatch]

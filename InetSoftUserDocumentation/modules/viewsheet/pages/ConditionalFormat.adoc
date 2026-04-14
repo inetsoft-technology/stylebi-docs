@@ -10,7 +10,7 @@ To apply a highlight to a Table column, Image, Text, Chart, or Crosstab, follow 
 
 . Select ‘Highlight’ from the right-click context menu. This opens the ‘Highlight’ panel.
 +
-image:Highlight Dialog Box.png[]
+image:Highlight Dialog Box.png[alt="highlight panel with add button and attributes options"]
 
 . Press the btn:[Add] button. This opens the ‘Name’ dialog box.
 
@@ -36,7 +36,7 @@ NOTE: Cell-based highlights take precedence over row-based highlights.
 
 . Press the btn:[Edit] button below the ‘Conditions’ box. This opens the ‘Conditions’ dialog box.
 +
-image:dataworksheet:ConditionDialogBox.png[]
+image:dataworksheet:ConditionDialogBox.png[alt="conditions dialog box with operand and comparison menus"]
 
 
 . Select the operand and type of comparison from the menus at the top of the dialog box, e.g., `[Company][is not][one of]`.

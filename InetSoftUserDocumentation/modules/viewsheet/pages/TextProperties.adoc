@@ -18,11 +18,11 @@ In addition to the common properties, the *General* tab in the ‘Text Propertie
 
 TIP: {dynamicProperties}
 
-image:Text Properties_1.png[]
+image:Text Properties_1.png[alt="text properties general tab settings"]
 
 Text:: Display a label, or specify a single calculated value. To use an Excel-style aggregation function, press the  and select the ‘Expression’. See xref:viewsheetscript:AddScriptToDashboard.adoc#AddPropertyScript[Add Property Script] for more information on using the ‘Expression’ option.
 +
-image:textDynamic.png[]
+image:textDynamic.png[alt="text display label or calculated value"]
 +
 
 .Common Aggregation Methods

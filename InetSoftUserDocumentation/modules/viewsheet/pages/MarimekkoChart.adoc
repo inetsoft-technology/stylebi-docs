@@ -6,7 +6,7 @@ A Marimekko chart (also known as a Mekko or mosaic chart) displays a *measure* b
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 
-image:commonscript:MekkoConfig1.png[]
+image:commonscript:MekkoConfig1.png[alt="marimekko chart example"]
 
 To create a Marimekko  chart, follow the basic steps below:
 
@@ -29,7 +29,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . In the Chart Editor, press the {buttonSelectChartStyle} and choose the ‘Marimekko’ option. Press the {buttonApply}.
 +
-image:commonscript:MekkoConfig2.png[]
+image:commonscript:MekkoConfig2.png[alt="press Select Chart Style button"]
 
 . Drag the ‘State’ field from the *Data Source* panel to the ‘X’ region.
 
@@ -37,12 +37,12 @@ image:commonscript:MekkoConfig2.png[]
 
 . Drag the ‘Total’ measure   from the *Data Source* panel to the ‘Y’ region.
 +
-image:commonscript:MekkoConfig3.png[]
+image:commonscript:MekkoConfig3.png[alt="drag Total measure to Y region"]
 
 
 . *_Optional:_* Press the ‘Edit Color’ button next to the ‘City’ dimension, and choose the desired colors to represent the city values. Press the {buttonApply}.
 +
-image:commonscript:MekkoConfig4.png[]
+image:commonscript:MekkoConfig4.png[alt="press Edit Color button"]
 
 . *_Optional:_* Drag the ‘Category’ dimension  from the *Data Source* panel to the ‘Break By’ region to break out the data further by category.
 
@@ -50,7 +50,7 @@ image:commonscript:MekkoConfig4.png[]
 
 . Resize the chart as desired.
 +
-image:commonscript:MekkoConfig1.png[]
+image:commonscript:MekkoConfig1.png[alt="marimekko chart example"]
 
 . Hover the mouse over the chart to see a tooltip providing full information about each group.
 

@@ -18,7 +18,7 @@ NOTE: To hide axis line and labels, right-click the axis and choose ‘Hide Axis
 == Label Tab
 The *Label* tab offers the following options
 
-image:Chart Axis Properties Dialog.png[]
+image:Chart Axis Properties Dialog.png[alt="axis properties label tab options"]
 
 
 Show Axis Labels:: Display text labels on the axis.
@@ -27,7 +27,7 @@ Rotation:: The angle of the label text.
 == Line Tab
 The *Line* tab offers the following options
 
-image:Chart Axis Properties Dialog LineTab.png[]
+image:Chart Axis Properties Dialog LineTab.png[alt="axis properties line tab options"]
 
 Logarithmic Scale:: Set logarithmic scaling for the axis. (The logarithm base is selected automatically.)
 Reverse:: Orient the axis with maximum at bottom, minimum at top.
@@ -47,8 +47,8 @@ The *Alias* tab  is available for *dimension* (categorical) axes, and displays a
 
 include::ROOT:partial$dimensionTip.adoc[]
 
-image:axisFormatAlias.png[]
+image:axisFormatAlias.png[alt="alias tab with original and new axis labels"]
 
 To modify the labels of a categorical axis, double-click the cells in the ‘Alias’ column that correspond to the axis labels that you wish to rename, and enter the desired replacement text. Press btn:[OK] to close the panel. This updates the axis labels with the specified replacement text.
 
-image:axisFormatAliasUpdated.png[]
+image:axisFormatAliasUpdated.png[alt="axis labels updated with alias replacement text"]

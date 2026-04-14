@@ -28,14 +28,14 @@ You can place restrictions on which columns may be edited by users, and what typ
 
 . Right-click the column header, and select ‘Column Options’ from the context menu. This opens the ‘Column Option’ dialog box.
 +
-image:viewsheet:Column Option Menu.png[]
+image:viewsheet:Column Option Menu.png[alt="right-click column header to open column options"]
 
 . In the ‘Column Option’ dialog box, select ‘Enable Column Editing’ to make the column editable by users.
 
 
 . In the ‘Column Editor’ menu, select the type of editing control you wish to provide to users. The available options are ‘Text Editor’, ‘ComboBox Editor’, ‘Date Editor’, ‘Number Editor’, ‘Float Editor’, and ‘Boolean Editor’.
 +
-image:viewsheet:Column Editor Options.png[]
+image:viewsheet:Column Editor Options.png[alt="select column editor type in column option dialog"]
 
 . Press btn:[OK] to close the dialog box.
 
@@ -56,14 +56,14 @@ You can configure TextInput components and Editable Table columns  with differen
 === Boolean Data
 The ‘Boolean Editor’ provides the user with a simple checkbox input. This allows the user to enter `true` (checked) or `false` (unchecked) into an Editable Table cell or a TextInput component.
 
-image:viewsheet:Column Boolean Editor.png[]
+image:viewsheet:Column Boolean Editor.png[alt="boolean editor checkbox for true or false input"]
 
 
 
 === Categorical Data
 The ‘ComboBox Editor’ provides the user with standard menu input. This allows a user to simply select a value from a predefined list.
 
-image:viewsheet:Column ComboBox Editor.png[]
+image:viewsheet:Column ComboBox Editor.png[alt="combobox editor dropdown for selecting values"]
 
 To populate the menu from a *manually-created list*, follow these steps:
 
@@ -75,7 +75,7 @@ To populate the menu from a *manually-created list*, follow these steps:
 
 . Repeat the above steps to insert more elements.
 +
-image:viewsheetscript:Radio embedded.png[]
+image:viewsheetscript:Radio embedded.png[alt="add embedded list values with label and value fields"]
 
 . Press btn:[OK] to close the dialog box.
 
@@ -86,7 +86,7 @@ To populate the menu from the *Dashboard data source*, follow these steps:
 
 . Select a data block from the list on the left side. Select the appropriate fields from the ‘Label’ and ‘Value’ menus.
 +
-image:viewsheetscript:Radio query.png[]
+image:viewsheetscript:Radio query.png[alt="select query data block and label value fields"]
 
 . Press btn:[OK] to close the dialog box.
 
@@ -95,7 +95,7 @@ Enable both the ‘Embedded’ and ‘Query’ options to merge together the val
 === Date Data
 The ‘Date Editor’ provides the user with a pop-up calendar on which to select a date. This allows a user to enter date values into an Editable Table cell or a TextInput component.
 
-image:viewsheet:Column Date Editor.png[]
+image:viewsheet:Column Date Editor.png[alt="date editor with minimum maximum and error message"]
 
 The following options are available in the dialog box:
 
@@ -110,7 +110,7 @@ The ‘Float Editor’ provides the user with a standard floating point field in
 NOTE: Alphabetical characters are not permitted.
 
 
-image:viewsheet:Column Float Editor.png[]
+image:viewsheet:Column Float Editor.png[alt="float editor with minimum maximum and error message"]
 
 The following options are available in the dialog box:
 
@@ -126,7 +126,7 @@ The ‘Integer Editor’ provides the user with standard integer field input. Th
 
 NOTE: Alphabetical characters and decimal points are not permitted. To enter decimals, use the Float Editor.
 
-image:viewsheetscript:Column Number Editor.png[]
+image:viewsheetscript:Column Number Editor.png[alt="integer editor with minimum maximum and error message"]
 
 
 The following options are available in the dialog box:
@@ -143,11 +143,11 @@ The ‘Password Editor’ option is the same as the ‘Text Editor’  option, b
 === Text Data
 The ‘Text Editor’ provides the user with standard text field input. This allows a user to simply type values into an editable table cell or a TextInput component.
 
-image:viewsheetscript:Column Text Editor.png[]
+image:viewsheetscript:Column Text Editor.png[alt="text editor with pattern check and error message"]
 
 To mask the entered text, use the '`Password Editor`' option instead of the ‘Text Editor’ option.
 
-image:viewsheetscript:Column Password Editor.png[]
+image:viewsheetscript:Column Password Editor.png[alt="password editor masks entered text with asterisks"]
 
 The following options are available in the dialog box:
 
@@ -295,7 +295,7 @@ Product.Total
 
 . Resize the table as desired.
 +
-image:viewsheetscript:UpdateEditableTable1.png[]
+image:viewsheetscript:UpdateEditableTable1.png[alt="editable table with name price quantity and total columns"]
 
 . Right-click the table and select ‘Properties’. {rightClickOptions} This opens the ‘Table Properties’ panel.
 

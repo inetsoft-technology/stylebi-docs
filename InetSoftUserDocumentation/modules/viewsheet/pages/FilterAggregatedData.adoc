@@ -15,13 +15,13 @@ You can use a Range Slider to filter the post-aggregate data displayed by a Char
 
 . Drag a ‘Range Slider’ element from the *Toolbox*  into the Dashboard.
 +
-image:Range Slider_1.png[]
+image:Range Slider_1.png[alt="drag range slider element onto dashboard"]
 
 . Right-click on the Range Slider and select ‘Properties’ from the context menu. This opens the ‘Range Slider Properties’ panel.
 
 . Select the *Data* tab. In the ‘Table’ panel, expand the ‘Assemblies’ node, and select the component and aggregated field that you want to filter.
 +
-image:Range Slider Assemblies.png[]
+image:Range Slider Assemblies.png[alt="select assemblies node in range slider data tab"]
 
 . Press btn:[OK] to close the panel.
 
@@ -50,26 +50,26 @@ To filter aggregated  data in a Crosstab or Freehand Table, follow the steps bel
 +
 NOTE: The ‘Filter’ option is only available if the Dashboard contains a Selection Container component.
 +
-image:filtering1.png[]
+image:filtering1.png[alt="right-click column and select filter from context menu"]
 +
 This opens a  Filter control for the column: Selection List for a string-type column, Range Slider for a numerical-type or date-type column.
 +
-image:filtering2_1.png[]
+image:filtering2_1.png[alt="filter control displayed for selected column"]
 
 . Make the desired selection using the Filter control, and click away from the column to submit. (See  xref:UseFilterComponents.adoc[] for information on how to use these controls.) The selections that you make are shown in the Selection Container.
 +
 IMPORTANT: For a Crosstab or Freehand Table with aggregation, a Range Slider filters the *post-aggregate* data.
 
 +
-image:filtering3_1.png[]
+image:filtering3_1.png[alt="filter selections shown in selection container"]
 
 . To remove the filter from a particular column, follow the steps above, and press the {buttonUnselect} on the Filter control.
 +
-image:filtering5_1.png[]
+image:filtering5_1.png[alt="press unselect button to remove column filter"]
 
 . To remove all filters on the table, press the {buttonUnselectAll} in the Selection Container.
 +
-image:filtering4_1.png[]
+image:filtering4_1.png[alt="press unselect all in selection container"]
 
 
 
@@ -89,25 +89,25 @@ To filter aggregated Chart data, follow the steps below:
 NOTE: The ‘Filter’ option is only available if the Dashboard contains a Selection Container component.
 
 +
-image:Chart Filter1.png[]
+image:Chart Filter1.png[alt="right-click chart dimension and select filter"]
 +
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 +
 This opens the Filter control for the selected dimension or measure: Selection List for a string-type field, Range Slider for a numerical-type or date-type field.
 +
-image:Chart Filter2.png[]
+image:Chart Filter2.png[alt="filter control for selected chart dimension"]
 
 
 . Make the desired selection using the Filter control, and click away to submit. (See xref:UseFilterComponents.adoc[] for information on how to use these controls.) The selections that you make are shown in the Selection Container.
 +
 IMPORTANT: A Range Slider filters the post-aggregate data.
 +
-image:Chart Filter3.png[]
+image:Chart Filter3.png[alt="chart filter selection shown in selection container"]
 
 . To remove the filter from a particular field, follow the steps above, and press the {buttonUnselect} on the Filter control.
 +
-image:Chart Filter4.png[]
+image:Chart Filter4.png[alt="press unselect button to remove chart filter"]
 
 . To remove all filters on the chart, press the {buttonUnselectAll}.
 +
-image:Chart Filter5.png[]
+image:Chart Filter5.png[alt="press unselect all to remove all chart filters"]

@@ -7,7 +7,7 @@ A “word cloud” is a cluster of labels whose size and/or color indicates the 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 
 
-image:commonscript:WordCloudExample11.png[]
+image:commonscript:WordCloudExample11.png[alt="word cloud chart example"]
 
 To create a word cloud, follow the basic steps below:
 
@@ -40,19 +40,19 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . Drag the ‘Date’ dimension  to the ‘Y’ region. (This will break out the data by year.)
 +
-image:commonscript:WordCloudExample12.png[]
+image:commonscript:WordCloudExample12.png[alt="drag date dimension to Y region"]
 
 . Drag the ‘Name’ dimension  to the ‘Text’ region.
 +
-image:commonscript:WordCloudExample13.png[]
+image:commonscript:WordCloudExample13.png[alt="drag name dimension to text region"]
 
 . Drag the ‘Quantity Purchased’ measure (or any other measure)  to the ‘Color’ region.
 +
-image:commonscript:WordCloudExample2.png[]
+image:commonscript:WordCloudExample2.png[alt="drag measure to color region"]
 
 . Press the {buttonEditMeasure} next to the ‘Color’ field. Change the ‘Aggregate’ property to ‘Count’, and press the {buttonApply}.
 +
-image:commonscript:WordCloudExample3.png[]
+image:commonscript:WordCloudExample3.png[alt="set aggregate to count for color measure"]
 +
 This counts the occurrence of each product in each year group, and colors the corresponding labels proportionally.
 
@@ -60,18 +60,18 @@ This counts the occurrence of each product in each year group, and colors the co
 . Drag the ‘Quantity Purchased’ measure (again) to the ‘Size’ region.
 
 +
-image:commonscript:WordCloudExample4.png[]
+image:commonscript:WordCloudExample4.png[alt="drag measure to size region"]
 
 
 . Press the {buttonEditMeasure} next to the ‘Size’ field, and verify that the ‘Aggregate’ property is set to ‘Count’.
 +
-image:commonscript:WordCloudExample5.png[]
+image:commonscript:WordCloudExample5.png[alt="verify count aggregate for size measure"]
 +
 This counts the occurrence of each product in each year group, and sizes the corresponding labels proportionally.
 
 . Press the ‘Edit Color’ button in the ‘Color’ region. Choose a desired color spectrum, and press the {buttonClose}. (A word cloud often displays the smaller-sized labels in a lighter color.)
 +
-image:commonscript:WordCloudExample6.png[]
+image:commonscript:WordCloudExample6.png[alt="choose color spectrum for word cloud"]
 
 . Filter the chart to display just the top two years. (This will reduce the clutter on the chart.) You can do this by applying a ranking condition. Follow the steps below:
 +
@@ -82,7 +82,7 @@ image:commonscript:WordCloudExample6.png[]
 
 .. *Uncheck* the ‘As time series’ option. (This suppresses the labeling for any years that intervene between the top two years.)
 +
-image:commonscript:WordCloudExample7.png[]
+image:commonscript:WordCloudExample7.png[alt="set top 2 ranking for date dimension"]
 
 .. Press the {buttonApply}.
 ====
@@ -92,18 +92,18 @@ image:commonscript:WordCloudExample7.png[]
 ====
 .. Right-click on each legend and select ‘Hide Legend’.
 +
-image:commonscript:WordCloudExample8.png[]
+image:commonscript:WordCloudExample8.png[alt="right-click legend to hide it"]
 
 .. *_Optional:_*  Hide  axis titles by right-clicking a title and selecting ‘Hide Title’.
 
 .. Click on one of the labels in the plot area. Select the *Format* tab in the left panel and set the font face and size as desired.
 +
-image:commonscript:WordCloudExample9.png[]
+image:commonscript:WordCloudExample9.png[alt="set font face and size for word cloud labels"]
 ====
 
 . To adjust the label size further, press the ‘Edit Size’ button next to the ‘Size’ region. Adjust the maximum and minimum label sizes by dragging the slider. Press the {buttonApply} to apply the changes.
 +
-image:commonscript:WordCloudExample10.png[]
+image:commonscript:WordCloudExample10.png[alt="adjust label size range with slider"]
 +
 NOTE: To further increase the size range of displayed words, use the ‘Font Scale’ property under the *Advanced* tab of the ‘Chart Properties’ dialog box. (See xref:ChartProperties.adoc[] for more information.)
 
@@ -112,7 +112,7 @@ NOTE: To further increase the size range of displayed words, use the ‘Font Sca
 The completed chart compares the word clouds for the top two years.
 
 
-image:commonscript:WordCloudExample11.png[]
+image:commonscript:WordCloudExample11.png[alt="completed word cloud comparing top two years"]
 
 include::partial$addTitlesLegend.adoc[]
 

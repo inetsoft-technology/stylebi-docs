@@ -16,7 +16,7 @@ A Selection List filters the data displayed by data view components (Tables, Cha
 To filter data using a Selection List, select the desired item(s) in the list. If an {buttonApply} is visible in the title bar, press the {buttonApply} to submit your selections.
 
 
-image:SelectionList.png[]
+image:SelectionList.png[alt="selection list with selectable items"]
 
 TIP: If you want to make only a single selection (all selections being mutually exclusive), hold down the {buttonAlt} key on the keyboard and make your selection. This changes the Selection List to “single-selection” mode. {buttonAlt}-click again to return to multiple-selection mode.
 
@@ -56,20 +56,20 @@ A Selection Tree operates the same way as a Selection List but displays values i
 
 Press the {buttonExpand} next to an item on the tree to expand the tree and view items at the next level in the hierarchy. To select all items under a given parent item in the tree, right-click the parent item and choose ‘Select Subtree’ from the context menu. {rightClickOptions}
 
-image:selectSubtreeMenu.png[]
+image:selectSubtreeMenu.png[alt="right-click menu with select subtree option"]
 
 To clear all items under a given parent item in the tree, right-click the parent item and choose ‘Clear Subtree’ from the context menu.
 
 == Use a Range Slider
 A Range Slider component allows you to select a date range or numerical range, as shown below.
 
-image:RangeSlider_1.png[]
+image:RangeSlider_1.png[alt="range slider with adjustable end handles"]
 
 Adjust the selection range by dragging the slider end-handles. (You can also click on an end-handle and press kbd:[<] or kbd:[>]  on the keyboard.)
 
 To enter precise values for the start-point or end-point, right-click on the Range Slider and select ‘Edit’ from the context menu. In the ‘Edit’ dialog box, enter the desired values and press btn:[OK].
 
-image:Range Slider Edit1_2.png[]
+image:Range Slider Edit1_2.png[alt="range slider edit dialog for precise values"]
 
 To quickly set the right side of the range to its maximum, double-click on the right end-handle. To quickly set the left side of the range to its minimum, double-click on the left end-handle. To quickly set the entire range to its full extent, double-click on the slider body.
 
@@ -79,29 +79,29 @@ To quickly set the right side of the range to its maximum, double-click on the r
 You can use a Calendar to select dates at the year, month, week, or day level. Note that the Calendar *title bar* indicates the selected range. The range that you select is used to filter all Data View and Output components that are based on the same data block as the Calendar component.
 
 
-image:CalendarRangeTypes_1.png[]
+image:CalendarRangeTypes_1.png[alt="calendar component showing date range selection"]
 
 To filter a range of dates using the Calendar component, follow the steps below:
 
 . To switch the Calendar from single-page to double-page display, press the {buttonSwitchToRange}.
 +
-image:SwitchToRangeComparison.png[]
+image:SwitchToRangeComparison.png[alt="switch calendar to double-page range view"]
 +
 To switch the Calendar from double-page to single-page display, press the {buttonSwitchToSimpleView}.
 +
-image:SwitchToSimpleView.png[]
+image:SwitchToSimpleView.png[alt="switch calendar to single-page view"]
 
 . To switch the Calendar from displaying a single month to displaying the entire year, press the {buttonSwitchToYearView}.
 +
-image:SwitchToYearView.png[]
+image:SwitchToYearView.png[alt="switch calendar to year view"]
 +
 To switch the Calendar from displaying the entire year to displaying a single month, press the {buttonSwitchToMonthView}.
 +
-image:SwitchToMonthView.png[]
+image:SwitchToMonthView.png[alt="switch calendar to month view"]
 
 . Press the buttons below the title bar ({buttonLastMonth}, {buttonLastYear}, {buttonNextMonth}, {buttonNextYear}) to display the appropriate calendar pages.
 +
-image:LastNextMonth.png[]
+image:LastNextMonth.png[alt="calendar navigation buttons for previous and next month"]
 
 . Click a date on the Calendar to select the start date of the range. You can select a day, week, or month, depending on  how the Calendar has been configured.
 +
@@ -109,12 +109,12 @@ image:LastNextMonth.png[]
 ====
 To select a column of days (e.g., all Thursdays in a month), click the name of the desired day. (This is only available if “day selection” is enabled for the Calendar.  See xref:CalendarProperties.adoc[] for more details.)
 
-image:CalendarDaySelection.png[]
+image:CalendarDaySelection.png[alt="click day name to select column of days"]
 ====
 +
 In a ‘Month View’ calendar, click to select a day or week, or click the *name of the month* at the top of the calendar to select the entire month. In a ‘Year View’ calendar, click to select a month, or click the *name of the year* at the top of the calendar to select the entire year.
 +
-image:CalendarYearSelection.png[]
+image:CalendarYearSelection.png[alt="calendar in year view with month selection"]
 
 . Click another date on the Calendar to select the end date of the range, or hold the {buttonCtrl} key  and click to select discontiguous dates.
 
@@ -160,7 +160,7 @@ There are several ways to add filters to a Selection Container:
 === Add Filter by Dragging Column from  Table
 To add a new filter to a Selection Container, locate the column that you want to filter within an existing  Table or Crosstab. Drag the column into the Selection Container.
 
-image:SelectionContainer4.png[]
+image:SelectionContainer4.png[alt="drag column from table into selection container"]
 
 String-type fields are added to the Selection Container as Selection Lists, while numerical-type and date-type fields are added to the Selection Container as Range Sliders.
 
@@ -168,11 +168,11 @@ String-type fields are added to the Selection Container as Selection Lists, whil
 === Add Filter with ‘Add Filter’ Button
 Press the {buttonAddFilter} in the mini-toolbar of the Selection Container.
 
-image:SelectionContainer6.png[]
+image:SelectionContainer6.png[alt="press add filter button in selection container toolbar"]
 
 This opens the ‘Add Filter’ dialog box, where you can select the field to add as a filter to the Selection Container.
 
-image:SelectionContainer7.png[]
+image:SelectionContainer7.png[alt="add filter dialog box to select field"]
 
 String-type fields are added to the Selection Container as Selection Lists, while numerical-type and date-type fields are added to the Selection Container as Range Sliders.
 
@@ -180,24 +180,24 @@ String-type fields are added to the Selection Container as Selection Lists, whil
 === Add a Post-Aggregate Filter
 Add a post-aggregate filter into the Selection Container by right-clicking on a field in a Chart or Table and selecting the ‘Filter’ option. See xref:FilterAggregatedData.adoc#AdHocFilterPostAggregateCrosstabData[Ad Hoc Filter Post-Aggregate Crosstab Data] and xref:FilterAggregatedData.adoc#AdHocFilterPostAggregateChartData[Ad Hoc Filter Post-Aggregate Chart Data] for more information.
 
-image:Chart Filter1.png[]
+image:Chart Filter1.png[alt="right-click chart field to add post-aggregate filter"]
 
 String-type fields are added to the Selection Container as Selection Lists, while numerical-type and date-type fields are added to the Selection Container as Range Sliders.
 
 === Remove a Filter from Selection Container
 To remove a Filter component from the Selection Container, right-click the component and select ‘Remove’. {rightClickOptions}
 
-image:SelectionContainer5.png[]
+image:SelectionContainer5.png[alt="right-click filter to remove from selection container"]
 
 === Hide or Show a Filter in Selection Container
 To collapse a Filter component in a Selection Container, press the {buttonHide} in the selection component title bar. To expand a Filter component in a Selection Container, press the {buttonShow}.
 
-image:SelectionContainer1.png[]
+image:SelectionContainer1.png[alt="collapse or expand filter in selection container"]
 
 === Clear Filters in Selection Container
 To clear the filters on all Filter components in the Selection Container, press the {buttonUnselectAll} in the Selection Container title bar.
 
-image:SelectionContainer2.png[]
+image:SelectionContainer2.png[alt="clear all filters in selection container"]
 
 
 
@@ -212,19 +212,19 @@ NOTE: If you don't see the Dashboard in the Repository, download and import the 
 
 . Open the sample ‘Census’ Dashboard (in the ‘Examples’ folder).
 +
-image:censusExp1.png[]
+image:censusExp1.png[alt="open census dashboard with selection lists"]
 
 . Select a few states (e.g., ‘New Jersey’, ‘Pennsylvania’, ‘Florida’) in the ‘State’ Selection List.
 +
 Notice that the ‘Region’ selection list now shows two items with filled squares ({buttonSelectionListSelectedAuto}), ‘Northeast’ and ‘South’. This indicates that the result set includes only data from these two regions (because the states that you selected are in the Northeast and South regions.) The remaining regions are listed under ‘Others’.
 +
-image:Visualization9.png[]
+image:Visualization9.png[alt="state selections updating region selection list"]
 +
 NOTE: Some Selection Lists submit automatically when you make a selection. To make multiple selections, hold the {buttonCtrl} key  and click to make selections.
 
 . You can now filter the results further based on region. Select ‘Northeast’ in the ‘Region’ list. When you make this selection in the ‘Region’ selection list, the ‘State’ selection list automatically updates.
 +
-image:Visualization10.png[]
+image:Visualization10.png[alt="filter by region updating state selection list"]
 +
 Notice the following things about the updated ‘State’ selection list:
 +
@@ -243,5 +243,5 @@ Notice the following things about the updated ‘State’ selection list:
 +
 This clears the ‘Northeast’ selection from the ‘Region’ list. In general, when you select an option from the ‘Others’ list, this will clear any incompatible selections that you previously have made in other Selections Lists. The divisions listed are now those compatible with the five currently selected states.
 +
-image:Visualization11.png[]
+image:Visualization11.png[alt="selection list updated after selecting incompatible item"]
 ****

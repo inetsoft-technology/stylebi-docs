@@ -17,7 +17,7 @@ The Table component’s ‘Properties’ panel provides *General*, *Advanced*, a
 
 In addition to the common properties, the *General* tab in the ‘Table Properties’ panel provides the following properties.
 
-image:TableProperties.png[]
+image:TableProperties.png[alt="table properties general tab with table styles"]
 
 
 Table Styles:: A *table style* is a set of predefined formats (fonts, alignments, backgrounds etc.) that is directly applied to any table. The ‘Table Styles’ panel provides access to a Style Library containing a large number of predefined table styles. To select a table style, expand the desired category node (e.g. ‘Grid’, ‘Columns’, ‘Rows’, etc.) and click on one of the styles. A preview is of the style is displayed on the right side.  See xref:CreateTableStyle.adoc[] to create a custom style.
@@ -28,7 +28,7 @@ Table Styles:: A *table style* is a set of predefined formats (fonts, alignments
 == Advanced Tab
 The *Advanced* tab in the ‘Table Properties’ panel provides the following Table-specific properties:
 
-image:Table Dialog Advanced Tab.png[]
+image:Table Dialog Advanced Tab.png[alt="table advanced tab properties"]
 
 Shrink to Fit:: When enabled, this reduces the *height* of the table to match the number of records displayed, and allows final column *width* to be set manually. For example, if the original table height (as designed) was 10 rows, and the user then makes selections which restrict the result set to five rows, the table’s bottom border will retract or “shrink” to eliminate any empty rows at the bottom of the table.
 

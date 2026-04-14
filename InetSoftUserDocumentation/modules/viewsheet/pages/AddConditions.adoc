@@ -26,7 +26,7 @@ To apply a Condition to a Data View or Output component, follow these steps:
 
 . Right-click the element, and select ‘Conditions’ from the context menu. {rightClickOptions} This opens the ‘Conditions’ dialog box.
 +
-image:dataworksheet:ConditionDialogBox.png[]
+image:dataworksheet:ConditionDialogBox.png[alt="right-click element and select Conditions"]
 
 . Select the operand and type of comparison from the menus at the top of the dialog box, for example, `[Company][is not][one of]`.
 +
@@ -67,7 +67,7 @@ You can also enter an arbitrary variable name (one which does not correspond to 
 ====
 If *no value* is provided for a variable (parameter), it will have a *null* value.  This will cause the condition to be ignored, which generally results in *all* records  being returned.  If this is not the desired behavior, you can either test for null parameter values using xref:commonscript:isNull.adoc[] in  *onRefresh* script (see xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script]) and substitute a non-null value, or you can add an `[is not][equal to][null]` condition clause, as shown below:
 
-image:dataworksheet:nullVariable.png[]
+image:dataworksheet:nullVariable.png[alt="add is not equal to null condition clause"]
 
 Use the ‘Expression’ option as described below to enter a right-hand side  expression such as `null`.
 ====
@@ -97,7 +97,7 @@ To suppress prompting for ALL parameters, follow these steps:
 
 . *Disable* the ‘Prompt for Parameters’ option.
 +
-image:OptionsPromptForParameters.png[]
+image:OptionsPromptForParameters.png[alt="disable prompt for parameters option"]
 
 . Press btn:[OK] to close the dialog box.
 
@@ -107,13 +107,13 @@ To suppress prompting SOME parameters, follow these steps:
 . Press the {buttonOptions} in the toolbar to open the ‘Dashboard Options’ dialog box.
 . Press the btn:[Customize] button next to the ‘Prompt for Parameters’ option.
 +
-image:Viewsheet Options Customize.png[]
+image:Viewsheet Options Customize.png[alt="press Customize button next to prompt for parameters"]
 +
 This open the ‘Customize Parameters’ dialog box.
 
 . To disable one or more parameters, select the parameters you wish to disable in the ‘Enabled Parameters’ panel, and press the btn:[Add] button. This moves the selected parameters to the ‘Disabled Parameters’ panel.
 +
-image:CustomizeParametersDialog.png[]
+image:CustomizeParametersDialog.png[alt="select parameters to disable and press Add"]
 +
 To re-enable one or more disabled parameters, select the parameters you wish to enable in the ‘Disabled Parameters’ panel, and press the btn:[Remove] button. This moves the selected parameters to the ‘Enabled Parameters’ panel.
 

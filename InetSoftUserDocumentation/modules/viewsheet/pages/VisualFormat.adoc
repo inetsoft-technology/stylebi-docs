@@ -17,7 +17,7 @@ endif::ai[]
 
 The *Format* panel provides options for changing the visual appearance of elements and how they display  data. To format a component, click on a component to select it, and select the *Format* tab  in the left panel. {rightClickFormat}
 
-image:textComponentAggregateExp2.png[]
+image:textComponentAggregateExp2.png[alt="select component and open format tab"]
 
 
 
@@ -41,7 +41,7 @@ The ‘Font’ property of the *Format* panel allows you to specify the font fac
 
 TIP: Use the `@font-face` rule to embed fonts on the server and automatically download the fonts to the client machine.
 
-image:fontTab.png[]
+image:fontTab.png[alt="set font face style and size in format panel"]
 
 The text affected by the font setting varies by component, as shown below:
 
@@ -73,7 +73,7 @@ The text affected by the font setting varies by component, as shown below:
 == Set Color
 The ‘Color’ options allow you to set text color, background color, and transparency for components.
 
-image:Format Color Tab Basic.png[]
+image:Format Color Tab Basic.png[alt="color options in format panel"]
 
 
 
@@ -92,24 +92,24 @@ If you do not select a specific Table region, the property is applied to the who
 
 . Next to the ‘Color’ field, select ‘Value’ from the {buttonValueType}.
 +
-image:Format Color Tab.png[]
+image:Format Color Tab.png[alt="select value type for color field"]
 
 . Click on the color chip to select the desired foreground (text) color.
 +
-image:Pick Static Color.png[]
+image:Pick Static Color.png[alt="pick foreground color from color picker"]
 
 . Repeat the above steps in the ‘Background’ panel to set the background (fill) color.
 
 . Set the fill transparency by entering a value in the ‘Alpha’ field. A value of 0% indicates complete fill transparency (i.e., fill color not visible), and a value of 100% indicates complete fill opacity.
 +
-image:Pick Transparency.png[]
+image:Pick Transparency.png[alt="set fill transparency with alpha field"]
 
 You can also color dynamically by using a Form control (variable) or an expression. See xref:DynamicallySetProperties.adoc[]  for details.
 
 == Set Alignment
 The ‘Alignment’ settings determine the horizontal and vertical alignment of text in Dashboard components, including labels and titles on Charts.
 
-image:Format Alignment Tab_1.png[]
+image:Format Alignment Tab_1.png[alt="alignment settings in format panel"]
 
 See the instructions for xref:#SetColor[] above to select the component region to align. The text affected by the alignment setting varies for each component, as shown below:
 
@@ -152,7 +152,7 @@ video::359874333#chapter=16573880[vimeo,640,400]
 
 The ‘Border’ settings allow you to set border thickness and color for components.
 
-image:Format Border Tab.png[]
+image:Format Border Tab.png[alt="border settings in format panel"]
 
 For most components, the border setting determines the appearance of the component’s boundary.  To set borders for a component, follow these steps:
 
@@ -196,7 +196,7 @@ The ‘Wrap Text’ option wraps text to multiple lines instead of truncating th
 == Set a Graphical Format (Presenter)
 A *presenter* is a graphical representation of a numeric value. You can assign a presenter to a numerical cell of a Table or to a Text component that displays numerical data.
 
-image:PresenterMenu.png[]
+image:PresenterMenu.png[alt="select graphical presenter from presenter menu"]
 
 The following table lists some commonly used presenters.
 
@@ -226,7 +226,7 @@ The following table lists some commonly used presenters.
 == Format Data with CSS
 The ‘CSS’ setting allows you to specify a Cascading Style Sheets (CSS) Class or ID to style the visual properties of a component. This allows you to obtain a consistent appearance across all your Dashboards. You can override the CSS formatting as needed by setting manual formats on individual components.
 
-image:Format CSS Tab.png[]
+image:Format CSS Tab.png[alt="CSS class and ID settings in format panel"]
 
 IMPORTANT: Before you can apply CSS styles based on ID or Class, an administrator must upload a CSS file containing the ID and Class definitions. See  xref:administration:CreateCSSDefinitionFile.adoc[] and xref:administration:UploadCSSFile.adoc[] in xref:administration:ManageServer.adoc[] for more information.
 
@@ -245,11 +245,11 @@ To set a Dashboard component’s style by using CSS Class and ID, follow the ste
 
 . In Visual Composer, click to select the region of the component you want to style, and select the *Format* tab in the left panel. (See xref:administration:CSSDashboardRegions.adoc[] for information about which regions can be formatted with CSS.)
 +
-image:CSS Type text.png[]
+image:CSS Type text.png[alt="select component region and open format tab"]
 
 . Expand the ‘CSS’ menu. The label in the CSS panel indicates the CSS Type of the component. The component automatically inherits any styles defined in the CSS file for its Type.
 +
-image:CSS Type text2.png[]
+image:CSS Type text2.png[alt="expand CSS menu showing component type"]
 
 . Select the CSS ‘ID’ and/or select one or more classes from ‘Class’ to define the component’s style. Multiple components can share the same CSS Class, and a component can be assigned multiple classes.  ID is unique to a given component.
 +

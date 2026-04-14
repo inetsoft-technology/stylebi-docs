@@ -11,7 +11,7 @@ xref:JumpLineChart.adoc[], for an alternate discrete-level line chart.
 
 ====
 
-image:commonscript:stepChartExp1.png[]
+image:commonscript:stepChartExp1.png[alt="step line chart example"]
 
 To create a step line chart, follow the basic steps below:
 
@@ -19,21 +19,21 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose the ‘Step Line’ style.  Press the {buttonApply}.
 +
-image:commonscript:stepChartExp2.png[]
+image:commonscript:stepChartExp2.png[alt="select step line chart style"]
 
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:stepChartExpVS1.png[]
+image:commonscript:stepChartExpVS1.png[alt="drag dimension to X or Y region"]
 +
 TIP: {convertToDimension}
 
 
 . To break-out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to  the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
 +
-image:commonscript:stepChartExpVS2.png[]
+image:commonscript:stepChartExpVS2.png[alt="drag dimension to color or shape region"]
 
 . To break-out the data into groups without applying any visual formatting, drag a dimension to the ‘Break By/Tooltip’ region.
 
@@ -41,7 +41,7 @@ image:commonscript:stepChartExpVS2.png[]
 
 . *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
-image:viewsheetExp34.png[]
+image:viewsheetExp34.png[alt="set date dimension level grouping"]
 
 . *_Optional:_* {multipleDimensionNoColor}
 
@@ -49,13 +49,13 @@ image:viewsheetExp34.png[]
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:stepChartExpVS3.png[]
+image:commonscript:stepChartExpVS3.png[alt="drag measure to chart region"]
 +
 TIP: {convertToMeasure}
 
 . Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
 +
-image:Chart Edit Y Axis_1.png[]
+image:Chart Edit Y Axis_1.png[alt="select aggregation method for measure"]
 
 . To represent a measure by using tooltip information, drag the measure to the ‘Break By/Tooltip’ region.
 

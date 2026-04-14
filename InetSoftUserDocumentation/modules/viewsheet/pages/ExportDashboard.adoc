@@ -35,7 +35,7 @@ To export a static copy of the Dashboard into Excel, PowerPoint, PDF, HTML, or P
 
 . Choose the export type: ‘Excel’, ‘PowerPoint’, ‘PDF’, ‘HTML’, ‘PNG’, ‘CSV’, or ‘Snapshot’.
 +
-image:Viewsheet Export Content Tab_1.png[]
+image:Viewsheet Export Content Tab_1.png[alt="select export type in export dialog"]
 +
 
 NOTE: The ‘Snapshot’ option (if available) is mainly used for troubleshooting purposes. It produces a portable version of the Dashboard that incorporates an embedded (static) copy of the underlying data. This “snapshot” Dashboard can be loaded into another server installation via incremental deployment. (See xref:administration:ImportExportAssets.adoc[] for more details.)
@@ -64,26 +64,26 @@ To export the *aggregated data* displayed in a Crosstab, see xref:#ExportTableDa
 
 . Press the {buttonShowDetails} at the top-right of the Crosstab.
 +
-image:Crosstab Show Details.png[]
+image:Crosstab Show Details.png[alt="press show details button on crosstab"]
 +
 This opens a panel containing the detail data.
 +
-image:Crosstab Show Details2.png[]
+image:Crosstab Show Details2.png[alt="crosstab detail data panel opened"]
 
 . *Optional:*  To format values in the *Data* panel, press the {buttonFormat} in the header of the column you wish to format.
 +
-image:Crosstab Show Details Format.png[]
+image:Crosstab Show Details Format.png[alt="press format button in data panel column header"]
 +
 This opens the ‘Format’ dialog box, which allows you to set the format for the column. See xref:DataFormat.adoc[] for information about the available options.
 +
-image:Show Details Format Dialog.png[]
+image:Show Details Format Dialog.png[alt="format dialog box for column formatting"]
 +
 Formatting that you specify is saved with the Dashboard, and is automatically applied to the column whenever the ‘Show Details’ option is used, both in Visual Composer and the User Portal.
 
 
 . To apply a global table style, press the {buttonTableStyle}.
 +
-image:Show Details Format_2.png[]
+image:Show Details Format_2.png[alt="press table style button in data panel"]
 +
 This opens the ‘Table Style’ dialog box. Select a table style, and press btn:[OK].
 +
@@ -91,7 +91,7 @@ This opens the ‘Table Style’ dialog box. Select a table style, and press btn
 
 . Press the {buttonExport} in the *Data* panel. Press btn:[Close] to close the *Data* panel.
 +
-image:Crosstab Show Details Export.png[]
+image:Crosstab Show Details Export.png[alt="press export button in data panel"]
 
 [#ExportTableData]
 == Export Table Data
@@ -111,7 +111,7 @@ TIP: To export the *detail data* from a Crosstab, see xref:#ExportCrosstabData[]
 
 . Click the {buttonExport} in the Table title bar. This opens the ‘Export’ dialog box.
 +
-image:Table Export.png[]
+image:Table Export.png[alt="export dialog for table data"]
 
 . In the ‘Export’ dialog box, enter a name for the exported Excel file, and press btn:[OK].
 
@@ -136,25 +136,25 @@ To display a chart’s aggregate data in tabular form, follow the steps below:
 
 . Press the {buttonShowSummary} at the top-right of the chart.
 +
-image:Chart Show Chart Data.png[]
+image:Chart Show Chart Data.png[alt="press show summary button on chart"]
 +
 This opens the *Data* panel.
 +
-image:Chart Show Chart Details2.png[]
+image:Chart Show Chart Details2.png[alt="chart aggregate data panel opened"]
 
 . *_Optional:_* To format values in the *Data* panel, press the {buttonFormat} in the column header that you want to format.
 +
-image:show Summary Format1.png[]
+image:show Summary Format1.png[alt="press format button in chart data panel header"]
 +
 This opens the ‘Format Type’ panel. Select the desired format for the column and press the {buttonApply}. See xref:DataFormat.adoc[] for information about the available options.
 +
-image:Show Details Format Dialog_1.png[]
+image:Show Details Format Dialog_1.png[alt="format type panel for chart data column"]
 +
 Formatting that you specify is saved with the Dashboard, and is automatically applied to the column whenever the ‘Show Data’ option is used, both in Visual Composer and the User Portal.
 
 . To apply a global table style, press the {buttonTableStyle}.
 +
-image:Show Details Format_2.png[]
+image:Show Details Format_2.png[alt="press table style button in chart data panel"]
 +
 This opens the ‘Table Style’ dialog box. Select a table style, and press btn:[OK].
 
@@ -162,7 +162,7 @@ This opens the ‘Table Style’ dialog box. Select a table style, and press btn
 
 . Press the {buttonExport} in the *Data* panel.
 +
-image:Chart Show Chart Data Export.png[]
+image:Chart Show Chart Data Export.png[alt="press export button in chart data panel"]
 
 [#ExportChartImage]
 == Export a Chart as  Image
@@ -172,7 +172,7 @@ To save an individual Chart as an image, follow the steps below:
 
 . Right-click the Chart and select ‘Save As Image’ from the context menu.  When prompted, choose either SVG or PNG format.
 +
-image:saveChartAsImage.png[]
+image:saveChartAsImage.png[alt="right-click chart to select save as image"]
 
 TIP: To copy  a chart label to the clipboard, click on the label.
 
@@ -204,7 +204,7 @@ NOTE: Do not use the ‘Export’ button in the table title bar.
 
 . Select the ‘Expand Components’ option.
 +
-image:Export Viewsheet Excel.png[]
+image:Export Viewsheet Excel.png[alt="select expand components option in export dialog"]
 
 . Under the *Location* tab, select the ‘Desktop’ option.
 

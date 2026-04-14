@@ -9,7 +9,7 @@ xref:CompareDataByDate.adoc[], to perform a variety of comparisons on date-based
 
 A percent change chart displays the percent change from one group to the next.
 
-image:commonscript:pctChangeChartExp3.png[]
+image:commonscript:pctChangeChartExp3.png[alt="percent change chart showing group-to-group differences"]
 
 To create a percent change chart, follow the basic steps below:
 
@@ -17,21 +17,21 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose the desired style and press the {buttonApply}.
 +
-image:commonscript:barChartExp1.png[]
+image:commonscript:barChartExp1.png[alt="choose chart style and press Apply"]
 
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:barChartExp4.png[]
+image:commonscript:barChartExp4.png[alt="drag dimension to X or Y region in Chart Editor"]
 
 +
 TIP: {convertToDimension}
 
 . *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
-image:viewsheetExp34.png[]
+image:viewsheetExp34.png[alt="set date dimension level grouping in Chart Editor"]
 
 
 . *_Optional:_* {multipleDimensionNoColor} {addDimensionsUsingVisual}
@@ -41,25 +41,25 @@ image:viewsheetExp34.png[]
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:pctChangeChartExp1.png[]
+image:commonscript:pctChangeChartExp1.png[alt="drag measure to X or Y region in Chart Editor"]
 
 +
 TIP: {convertToMeasure}
 
 . Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
 +
-image:Chart Edit Y Axis_1.png[]
+image:Chart Edit Y Axis_1.png[alt="select aggregation method for chart measure"]
 
 . From the ‘Trend and Comparison’ menu, select the desired ‘Change’ or ‘% Change’ option.
 +
-image:commonscript:pctChangeChartExp2.png[]
+image:commonscript:pctChangeChartExp2.png[alt="select Change or Percent Change from Trend and Comparison menu"]
 
 . *_Optional:_* For more precise control, select the ‘Custom’ option, and press btn:[Edit]. Then choose ‘Change’ from in the ‘Calculation’ dialog box. Press btn:[OK] to close the ‘Calculation’ dialog box.
 +
 ****
 The ‘Change’ calculation allows you to express the group aggregate in terms of its deviation (or percent deviation, if ‘As percent’ is selected) from the preceding, succeeding, first, or last group in the series. The ‘From’ menu specifies the baseline value.
 
-image:CalculateChange_1.png[]
+image:CalculateChange_1.png[alt="Change calculation dialog with From and Value of options"]
 
 First:: Expresses the value of the aggregated measure for each group as a difference from the corresponding first value for the parent group selected in the ‘Value of’ menu.
 Previous:: Expresses the value of the aggregated measure for each group as a difference from the corresponding previous value for the parent group selected in the ‘Value of’ menu.
@@ -72,7 +72,7 @@ Last:: Expresses the value of the aggregated measure for each group as a differe
 
 . {finishEditing}
 +
-image:commonscript:pctChangeChartExp3.png[]
+image:commonscript:pctChangeChartExp3.png[alt="completed percent change chart"]
 
 
 include::partial$addTitlesLegend.adoc[]

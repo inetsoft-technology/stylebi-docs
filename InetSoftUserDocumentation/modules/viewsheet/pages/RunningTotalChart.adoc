@@ -9,7 +9,7 @@ xref:CompareDataByDate.adoc[], to perform a variety of comparisons on date-based
 
 A running total chart displays an aggregated measure that accumulates across groups, with optional reset points.
 
-image:commonscript:runningTotalChartExp2.png[]
+image:commonscript:runningTotalChartExp2.png[alt="running total chart accumulating values across groups"]
 
 To create a running total chart, follow the basic steps below:
 
@@ -17,13 +17,13 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose a desired style.   Press the {buttonApply}.
 +
-image:commonscript:barChartExp1.png[]
+image:commonscript:barChartExp1.png[alt="choose chart style and press Apply"]
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:barChartExp4.png[]
+image:commonscript:barChartExp4.png[alt="drag dimension to X or Y region in Chart Editor"]
 
 +
 TIP: {convertToDimension}
@@ -31,7 +31,7 @@ TIP: {convertToDimension}
 
 . To break-out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to  the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
 +
-image:commonscript:barChartExp2.png[]
+image:commonscript:barChartExp2.png[alt="drag dimension to Color Shape Size or Text region"]
 
 . To break-out the data into groups without applying any visual formatting, drag a dimension to the ‘Break By/Tooltip’ region.
 
@@ -39,31 +39,31 @@ image:commonscript:barChartExp2.png[]
 
 . *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
-image:viewsheetExp34.png[]
+image:viewsheetExp34.png[alt="set date dimension level grouping in Chart Editor"]
 
 . From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:pctChangeChartExp1.png[]
+image:commonscript:pctChangeChartExp1.png[alt="drag measure to X or Y region in Chart Editor"]
 
 +
 TIP: {convertToMeasure}
 
 . Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
 +
-image:Chart Edit Y Axis_1.png[]
+image:Chart Edit Y Axis_1.png[alt="select aggregation method for chart measure"]
 
 . From the ‘Trend and Comparison’ menu, select ‘Running Total’.
 +
-image:commonscript:runningTotalChartExp1.png[]
+image:commonscript:runningTotalChartExp1.png[alt="select Running Total from Trend and Comparison menu"]
 
 .  For more precise control, select the ‘Custom’ option, and press btn:[Edit]. Then choose ‘Running’ from  the ‘Calculation’ dialog box.
 +
 ****
 The ‘Running’ calculation allows you to express each group aggregate as an accumulation of previous aggregate values in the series. The method of accumulation is specified by the ‘Aggregate’ menu in the ‘Calculation’ dialog box.
 
-image:CalculateRunningTotal_1.png[]
+image:CalculateRunningTotal_1.png[alt="Running calculation dialog with Aggregate and Reset at options"]
 
 The ‘Reset at’ option, available for date fields, allows you to specify the date interval (e.g., year, quarter, week, etc.) at which the accumulation should be cleared.
 
@@ -79,7 +79,7 @@ include::ROOT:partial$AggregationMethods.adoc[]
 
 . {finishEditing}
 
-image:commonscript:runningTotalChartExp2.png[]
+image:commonscript:runningTotalChartExp2.png[alt="completed running total chart"]
 
 include::partial$addTitlesLegend.adoc[]
 
@@ -108,14 +108,14 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . From the ‘Level’ menu select ‘Month’, and press the {buttonApply}. This groups the date data (i.e., X-axis labels) by month.
 +
-image:RunningTotalExample1.png[]
+image:RunningTotalExample1.png[alt="Date dimension grouped by Month in Chart Editor"]
 
 
 . Press the {buttonEditMeasure} next to the ‘Quantity Purchased’ measure.
 
 . In the ‘Trend and Comparison’ menu of the pop-up panel, select the ‘Custom’ option.
 +
-image:RunningTotalExample3.png[]
+image:RunningTotalExample3.png[alt="select Custom option in Trend and Comparison menu"]
 
 . Press the btn:[Edit] button to open the ‘Calculation’ dialog box. Make the following settings:
 
@@ -123,14 +123,14 @@ image:RunningTotalExample3.png[]
 .. From the ‘Aggregate’ menu, select ‘Sum’.
 .. From the ‘Reset at’ menu, select ‘Year’.
 +
-image:RunningTotalExample2.png[]
+image:RunningTotalExample2.png[alt="Calculation dialog set to Running Sum with Year reset"]
 .. Press btn:[OK] to close the dialog box.
 
 . Press the {buttonApply}.
 
 . {finishEditing}
 +
-image:RunningTotalExample4.png[]
+image:RunningTotalExample4.png[alt="completed running average chart reset by year"]
 
 The time series now shows a running total for the summed quantity purchase, re-initialized at each new year.
 

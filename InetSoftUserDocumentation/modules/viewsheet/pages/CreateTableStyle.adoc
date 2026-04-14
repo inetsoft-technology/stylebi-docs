@@ -14,7 +14,7 @@ To create a custom table style, follow the steps below:
 
 . Right-click the Table Styles folder or press the  {buttonActions} and select '`New Table Style`'.
 +
-image:tableStyle1.png[]
+image:tableStyle1.png[alt="press Actions and select New Table Style"]
 +
 This opens the Table Style Editor, and opens a *Regions* tab next to the *Assets* tab. The table diagram in the top panel is an interactive interface that has  nine regions, each of which has its own set of attributes.
 
@@ -23,7 +23,7 @@ This opens the Table Style Editor, and opens a *Regions* tab next to the *Assets
 
 . Click on the region of the table diagram that you wish to style (or click the region name in the '`Default Regions`' list). The bottom panel displays the visual property settings for the region you selected.
 +
-image:tableStyle2.png[]
+image:tableStyle2.png[alt="click table region to select and style it"]
 +
 
 [cols="1,4"]
@@ -61,7 +61,7 @@ To define a new folder for your custom Table Styles, follow the steps below:
 
 . Right-click the Table Styles folder or press the  {buttonActions} and select '`New Folder`'.
 +
-image:tableStyle3.png[]
+image:tableStyle3.png[alt="press Actions and select New Folder"]
 
 . Enter the desired name into the '`Create New Folder`' dialog box, and press btn:[OK] to create the new folder.
 
@@ -76,7 +76,7 @@ To delete a table style, follow the steps below:
 
 . Right-click the  Style  or press the  {buttonActions} and select '`Remove`'.
 +
-image:tableStyle4.png[]
+image:tableStyle4.png[alt="press Actions and select Remove"]
 
 [#CreateCustomStylePattern]
 == Create a Custom Style Pattern
@@ -89,12 +89,12 @@ To create a pattern for use in a table style, follow the steps below:
 
 . In the *Regions* panel, right-click the ‘Custom Patterns’ folder or press the  {buttonActions}, and select the ‘New Pattern’ option.
 +
-image:tableStyle5.png[]
+image:tableStyle5.png[alt="press Actions and select New Pattern"]
 
 +
 This opens the ‘Row/Column Pattern’ dialog box.
 +
-image:tableStyle6.png[]
+image:tableStyle6.png[alt="row column pattern dialog box"]
 
 . On the *Row/Column* tab, select ‘Row’ to designate a row-based pattern rule, or select ‘Column’ to designate a column-based pattern rule.
 
@@ -109,7 +109,7 @@ image:tableStyle6.png[]
 . Press btn:[OK] to save the Style pattern. The new pattern is now listed under the ‘Custom Patterns’ folder in the *Regions* panel.
 
 +
-image:tableStyle7.png[]
+image:tableStyle7.png[alt="new pattern listed under custom patterns folder"]
 
 [#EditingCustomStylePattern]
 == Edit a Custom Style Pattern
@@ -123,7 +123,7 @@ To edit a pattern for a custom table style, follow these steps:
 . Right-click the pattern name under the ‘Custom Patterns’ folder or press the  {buttonActions}. Select ‘Edit’ from the  menu.
 
 +
-image:tableStyle8.png[]
+image:tableStyle8.png[alt="right-click pattern and select Edit"]
 +
 This opens the ‘Row/Column Pattern’ dialog box. See xref:#CreateCustomStylePattern[] for further details.
 

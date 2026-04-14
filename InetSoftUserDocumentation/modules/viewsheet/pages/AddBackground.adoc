@@ -22,7 +22,7 @@ To assign a uniform background to the entire Dashboard, follow the steps below:
 
 . Use the ‘Background’ property to specify the desired background color for the entire Dashboard.
 +
-image:formatTab1.png[]
+image:formatTab1.png[alt="set background color using format tab"]
 
 NOTE: When you apply a custom background, some components may display with white borders.  Use the *Format* tab (see xref:VisualFormat.adoc[]) or `border-color`  property (see xref:administration:CSSComponentProperties.adoc[]) to assign the desired border color.
 
@@ -39,13 +39,13 @@ To use an Image or a Shape as a background, follow the steps below:
 
 .. Under the *General* tab, expand the ‘Skin’ folder and select the desired skin, or press ‘Upload’ to upload your own image file to the server (JPEG, GIF, SVG, PNG, TIFF).
 +
-image:viewsheetExp47.png[]
+image:viewsheetExp47.png[alt="select skin or upload image file"]
 
 .. *_Optional:_* Select the *Advanced* tab.  Check the ‘Scale Image’ box, and select either ‘Maintain Aspect Ratio’ or ‘Scale (9-Cell Grid)’ option. The ‘Maintain Aspect Ratio’ option keeps the original image proportions as the image is scaled. The ‘Scale (9-Cell Grid)’ allows the interior of the image to scale without scaling the border around the image.
 +
 When using the default skins, select ‘Scale (9-Cell Grid)’ and enter “1” in each of the ‘Top’, ‘Right’, ‘Bottom’, and ‘Left’ fields.
 +
-image:viewsheetExp48.png[]
+image:viewsheetExp48.png[alt="select scale image and aspect ratio option"]
 
 .. Press btn:[OK] to exit the dialog box.
 
@@ -59,27 +59,27 @@ image:viewsheetExp48.png[]
 ****
 To create a *gradient fill*, select the ‘Gradient’ option next to the ‘Fill’ property. Press the gradient chip to open the Gradient Editor.
 
-image:gradientFill1.png[]
+image:gradientFill1.png[alt="select gradient option and press gradient chip"]
 
 
 Select the type of gradient (‘Linear’ or ‘Radial’), and for a linear gradient also set the ‘Angle’. Press the {buttonAddButton} to add a new color to the gradient.
 
-image:gradientFill2.png[]
+image:gradientFill2.png[alt="select gradient type and press Add button"]
 
 Click the color chip and select the color for that region of the gradient.
 
-image:gradientFill3.png[]
+image:gradientFill3.png[alt="click color chip to select gradient color"]
 
 Repeat the above steps to add additional colors. Drag the gradient color chips to adjust the distribution of color in the gradient.
 
-image:gradientFill4.png[]
+image:gradientFill4.png[alt="drag color chips to adjust gradient distribution"]
 
 To *delete* a color from the gradient, right-click the color chip and select ‘Delete’. Click away from the Gradient Editor to close the Editor and save the gradient.
 ****
 
 .. For a Rectangle component, set the ‘Round Corner’ property to soften the corners of the rectangle if desired. (Larger values indicate softer corners.)
 +
-image:viewsheetExp58.png[]
+image:viewsheetExp58.png[alt="set round corner property for rectangle"]
 
 .. Press btn:[OK] to exit the dialog box.
 
@@ -87,18 +87,18 @@ image:viewsheetExp58.png[]
 
 . Drag the Image or Shape into the desired position (usually behind another component or components).
 +
-image:Background Overlap Prompt.png[]
+image:Background Overlap Prompt.png[alt="drag image or shape into desired position"]
 
 . Resize the Image or Shape as desired.
 +
-image:Resize Background Image.png[]
+image:Resize Background Image.png[alt="resize image or shape as desired"]
 
 . *_Optional:_*  Right-click on the Image or Shape and select ‘Lock’ to prevent the component from being selected or moved. {rightClickOptions}
 +
-image:lockComponent.png[]
+image:lockComponent.png[alt="right-click image or shape and select Lock"]
 +
 TIP: Locking the component is useful when you are laying out other components on top of the Image or Shape. When the background Image or Shape is locked, you can easily move the top components without disturbing the position of the background. To unlock the component, right-click and select ‘Unlock’. {rightClickOptions}
 
 You can continue to place other components on top of this background image.
 
-image:Image Background.png[]
+image:Image Background.png[alt="components placed on top of background image"]

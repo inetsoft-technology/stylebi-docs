@@ -18,14 +18,14 @@ The properties in the *General* tab in the ‘Selection Tree Properties’ panel
 
 NOTE: For a Selection Tree, the ‘Single Selection’ property allows you to  select the hierarchy levels that should be constrained to single-selection. To place a level under single-selection restriction, select a field from the ‘Level’ menu, and press btn:[Add]. To remove a level from single-selection restriction, select the field in the list, and press btn:[Delete].
 
-image:Selection Tree Single Selection.png[]
+image:Selection Tree Single Selection.png[alt="single selection hierarchy levels configuration"]
 
 == Data Tab
 The *Data* tab in the ‘Selection Tree Properties’ panel provides the following Selection Tree-specific properties.
 
 TIP: {dynamicProperties}
 
-image:Selection Tree Deep Dialog.png[]
+image:Selection Tree Deep Dialog.png[alt="selection tree data tab properties"]
 
 
 Table:: The column or *dimension* that should be used to populate the Selection Tree.

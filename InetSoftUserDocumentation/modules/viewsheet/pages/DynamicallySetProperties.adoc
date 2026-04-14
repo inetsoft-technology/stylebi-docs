@@ -42,13 +42,13 @@ To parametrize a component property using a Form component, follow these steps:
 
 .. Locate the property that you wish to control, press the {buttonValueType}, and select ‘Variable’.
 +
-image:Variable Select Popup.png[]
+image:Variable Select Popup.png[alt="select variable option for property"]
 +
 NOTE: You can specify a Form control for any property that offers the ‘Variable’ option.
 
 .. From the pop-up menu, select the Form component that you want to control the property.
 +
-image:Variable Selection.png[]
+image:Variable Selection.png[alt="select form component to control property"]
 +
 [IMPORTANT]
 ====
@@ -56,7 +56,7 @@ When you link a Form component with a component property, you should ensure that
 
 * *Property Requires a Numerical Value*: If a property requires a numerical value, the Form component should provide an appropriate numerical value. For example, the ‘Ranking’ property in the Chart data binding (shown below) requires an integer value. An appropriate control for this property would therefore be a Spinner with ‘Increment’ property set to an integer value.
 +
-image:Ranking Variable.png[]
+image:Ranking Variable.png[alt="ranking property requires integer variable"]
 * *Property Requires a Boolean Value*: If a property has a ‘True’ or ‘False’ setting, the Form component should provide a Boolean value. For example, the ‘Enabled’ property expects a Boolean value `true` or `false`. An appropriate control for this property would therefore be a RadioButton with embedded list values {`true`,`false`}, and with ‘Data Type’ set to ‘Boolean’.
 * *Property Requires a String Value*: If a property requires one of a fixed set of strings, the Form component should provide a string from the set. For example, the ‘Visible’ property requires one of the strings ‘Show’, ‘Hide’, or ‘Hide on Print and Export’. The Form component must therefore return one of these strings. An appropriate control for this property would therefore be a RadioButton with embedded list values {‘Show’, ‘Hide’, ‘Hide on Print and Export’}, and with ‘Data Type’ set to ‘String’.
 ====
@@ -82,13 +82,13 @@ include::ROOT:partial$ProductSalesWorksheet.adoc[]
 
 . Press the {buttonValueType} next to ‘Quantity Purchased’, and choose the ‘Variable’ option. The menu displays the available variable names.
 +
-image:Crosstab Select Variable.png[]
+image:Crosstab Select Variable.png[alt="press value type choose variable option"]
 
 . From the list of variables, choose `$(RadioButton)`.
 
 . Now press the radio buttons in the RadioButton component. Note that the Chart displays the Y-axis field that you choose using the RadioButton control.
 +
-image:Capture_006.png[]
+image:Capture_006.png[alt="radiobutton controls chart y-axis field"]
 ****
 
 == Control  Conditions with Form Components
@@ -131,10 +131,10 @@ To control a Condition using a Form component, follow these steps:
 .. Create the left side of the condition as described under xref:ConditionalFormat.adoc[] and xref:AddConditions.adoc[], e.g., `[State][is][one of]`.
 .. Press the {buttonValueType} and select ‘Variable’.
 +
-image:Variable Select Popup Condition.png[]
+image:Variable Select Popup Condition.png[alt="select variable option for condition value"]
 From the adjacent pop-up menu, select the Form component that you want to control the value.
 +
-image:Variable Selection Condition.png[]
+image:Variable Selection Condition.png[alt="select form component to control condition"]
 .. Press btn:[Append] to add the condition, and press btn:[OK] to close the ‘Condition’ dialog box.
 
 The specified Form component will now provide the value for the right side of the condition.
@@ -153,38 +153,38 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 .. Change the ‘Name’ to “StateSelector”.
 .. In the ‘List Values’ panel, select the ‘Query’ option. Press btn:[Edit] to open the ‘List Values Selection’ dialog box.
 +
-image:ParameterHighlightListSelect.png[]
+image:ParameterHighlightListSelect.png[alt="select query option to set list values"]
 
 .. In the ‘List Values Selection’ dialog box, select the ‘Sales’ data block in the left panel, and then select ‘State’ in both the ‘Label’ and ‘Value’ menus.
 +
-image:ParameterHighlightListSelectDialog.png[]
+image:ParameterHighlightListSelectDialog.png[alt="select state field for label and value"]
 .. Press btn:[OK] to close both dialog boxes. This binds the CheckBox component to the ‘State’ field of the data block.
 . On the Dashboard, select the CheckBox component. Drag the handles to expand the component so that all state options are visible.
 +
-image:ParameterHighlightStretchInput.png[]
+image:ParameterHighlightStretchInput.png[alt="expand checkbox to show all state options"]
 
 . Drag a Table component from the *Toolbox* panel to the Dashboard.
 . Expand the ‘Sales’ data block at the top of the *Toolbox* panel, and drag the following fields into the Table: ‘Category’, ‘Company’, ‘City’, ‘State’, ‘Total’.
 . Enlarge the table so that at least 10 rows are visible.
 +
-image:ParameterHighlightTableAndList.png[]
+image:ParameterHighlightTableAndList.png[alt="enlarge table so ten rows are visible"]
 . Right-click a cell in the ‘City’ field of the Table, and select ‘Highlight’ from the context menu. This opens the ‘Highlight’ panel for the ‘City’ field.
 . In the ‘Highlight’ panel, press btn:[Add] and enter the name “CityHighlight”.
 . For the ‘Background’ property, select yellow.
 . In the ‘Conditions’ panel, press btn:[Edit] to open the ‘Conditions’ dialog box.
 +
-image:ParameterHighlightDefine.png[]
+image:ParameterHighlightDefine.png[alt="press edit to open conditions dialog box"]
 . In the ‘Conditions’ dialog box, create the left side of the condition by making the following menu selections: `[State][is][one of]`.
 . Press the {buttonValueType} and select ‘Variable’.
 . From the adjacent pop-up menu, select the “StateSelector” CheckBox.
 +
-image:ParameterHighlightDefineVariable.png[]
+image:ParameterHighlightDefineVariable.png[alt="select stateselector checkbox as variable"]
 . Press btn:[Append] to add the condition, and press btn:[OK] to close the ‘Conditions’ dialog box.
 . Press btn:[OK] to close the ‘Highlight’ panel.
 
 On the Dashboard, make selections in the CheckBox component, and observe how this highlights the cities in the Table that correspond to the selected states.
 
-image:ParameterHighlightFinal.png[]
+image:ParameterHighlightFinal.png[alt="checkbox selections highlight cities in table"]
 ****
 
 
@@ -206,21 +206,21 @@ xref:viewsheetscript:AdvancedDashboardScripting.adoc[], for more information abo
 You can enter a script in any property field that provides the {buttonValueType}  with an ‘Expression’ option.  This allows you to change the associated property in response to an event such as a user interaction.
 
 
-image:Expression Select Popup.png[]
+image:Expression Select Popup.png[alt="select expression option for property"]
 
 For example, to add a script to a component expression field, follow the steps below:
 
 . Right-click the component, and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Properties’ panel.
 +
-image:Right Click Properties.png[]
+image:Right Click Properties.png[alt="right-click component to open properties panel"]
 
 . In the ‘Properties’ panel, find the property you want to dynamically change. (In the example, we use the ‘Visible’ property under the *General* tab.)
 . Press the {buttonValueType} next to the property you want to modify, and select ‘Expression’ from the menu. This enables the {buttonEditFormula}.
 +
-image:Expression Option.png[]
+image:Expression Option.png[alt="press value type select expression from menu"]
 . Press the {buttonEditFormula} to open the Formula Editor.
 +
-image:Edit Expression Button.png[]
+image:Edit Expression Button.png[alt="press edit formula to open formula editor"]
 
 . In the Formula Editor, enter the desired script. For example, the following script hides the component if the user has selected ‘Hide’ from a RadioButton control, and the current month is March (i.e., the third month).
 [source,javascript]
@@ -236,7 +236,7 @@ IMPORTANT: The script must return one of the options in the property menu. For e
 +
 To automatically insert a function (such as `CALC.today()`), click the corresponding option in the ‘Functions’ list above the edit area. To automatically insert a reference to another component’s property, click the corresponding option in the ‘Component’ list above the edit area.
 +
-image:Formula Editor Function.png[]
+image:Formula Editor Function.png[alt="insert function from formula editor list"]
 +
 Many expressions are similar to formulas that you might use in Microsoft Excel^®^.   See xref:viewsheetscript:DashboardObjectReference.adoc[] and xref:commonscript:UserFunctions.adoc[] for a full description of available properties and functions.
 +

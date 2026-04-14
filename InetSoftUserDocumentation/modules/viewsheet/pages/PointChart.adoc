@@ -15,7 +15,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 A Point Chart displays a measure as a collection of points. This is the default chart style when numerical dimensions are used.
 
 
-image:commonscript:pointChartExp5.png[]
+image:commonscript:pointChartExp5.png[alt="point chart displaying measure as collection of points"]
 
 To create a point chart, follow the basic steps below.
 
@@ -23,7 +23,7 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose the ‘Point’  style.  (To create a stacked point chart, enable the ‘Stack’ option at the bottom of the panel.)  Press the {buttonApply}.
 +
-image:commonscript:pointChartExp1.png[]
+image:commonscript:pointChartExp1.png[alt="choose Point chart style and press Apply"]
 +
 include::ROOT:partial$stackNote.adoc[]
 
@@ -32,20 +32,20 @@ include::ROOT:partial$stackNote.adoc[]
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:pointChartExp2.png[]
+image:commonscript:pointChartExp2.png[alt="drag dimension to X or Y region in Chart Editor"]
 
 +
 TIP: {convertToDimension}
 
 . To break out the dataset into groups using color, shape, size, or text labeling, drag a dimension from the data source to  the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ region.
 +
-image:commonscript:pointChartExp3.png[]
+image:commonscript:pointChartExp3.png[alt="drag dimension to Color Shape Size or Text region"]
 
 . To break-out the data into groups without applying any visual formatting, drag a dimension to the ‘Break By/Tooltip’ region.
 
 . *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
-image:viewsheetExp34.png[]
+image:viewsheetExp34.png[alt="set date dimension level grouping in Chart Editor"]
 
 . *_Optional:_* {multipleDimensionNoColor}
 
@@ -53,13 +53,13 @@ image:viewsheetExp34.png[]
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:pointChartExp4.png[]
+image:commonscript:pointChartExp4.png[alt="drag measure to X or Y region in Chart Editor"]
 +
 TIP: {convertToMeasure}
 
 . Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
 +
-image:Chart Edit Y Axis_1.png[]
+image:Chart Edit Y Axis_1.png[alt="select aggregation method for point chart measure"]
 
 
 

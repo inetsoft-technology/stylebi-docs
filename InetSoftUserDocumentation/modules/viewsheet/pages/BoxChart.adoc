@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 A box chart (also known as “box-and-whisker” plot) displays a  in terms of its median, minimum, maximum, first quartile, and third quartile (excluding outliers).
 
-image:commonscript:boxChartExp4.png[]
+image:commonscript:boxChartExp4.png[alt="box chart example"]
 
 To create a box chart, follow the basic steps below:
 
@@ -14,13 +14,13 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose the ‘Box Plot’ style.  Press the {buttonApply}.
 +
-image:commonscript:boxChartExp1.png[]
+image:commonscript:boxChartExp1.png[alt="select Box Plot chart style"]
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:BoxChartExp5b.png[]
+image:commonscript:BoxChartExp5b.png[alt="drag dimension to X or Y"]
 +
 TIP: {convertToDimension}
 
@@ -28,13 +28,13 @@ TIP: {convertToDimension}
 
 . *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
-image:viewsheetExp34.png[]
+image:viewsheetExp34.png[alt="press Edit Dimension, set Level"]
 
 . From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:boxChartExp3.png[]
+image:commonscript:boxChartExp3.png[alt="drag measure to X or Y"]
 +
 The measure is represented in terms of the “box” (lower quartile, median, upper quartile), “whiskers” (minimum and maximum, excluding outliers), and individual outliers. An outlier is a value that is less than the lower quartile or greater than the upper quartile by more than 1.5 times the inter-quartile range.
 

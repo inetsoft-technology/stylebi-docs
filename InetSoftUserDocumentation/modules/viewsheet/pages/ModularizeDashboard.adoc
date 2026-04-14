@@ -27,7 +27,7 @@ The common Dashboard is now embedded within the host Dashboard, and all the comp
 
 To open an embedded Dashboard for editing, move the mouse over the embedded area in the host Dashboard, and then click the Dashboard icon in the upper left corner of the area.
 
-image:viewsheet:Embedded Viewsheet Button.png[]
+image:viewsheet:Embedded Viewsheet Button.png[alt="click dashboard icon to open embedded dashboard"]
 
 NOTE: This feature is also available to end-users who view the host Dashboard in the Portal if there is at least one hidden element in the embedded Dashboard. (See xref:GeneralTab.adoc[] for more information about hiding components.)
 
@@ -58,7 +58,7 @@ To synchronize Filter components and Form components, assign them the same ‘Sh
 . Open the Dashboard in Visual Composer.
 . Press the {buttonOptions} in the toolbar. This opens the ‘Dashboard Options’ dialog.
 +
-image:viewsheet:Options Button_1.png[]
+image:viewsheet:Options Button_1.png[alt="press Options button to open dashboard options"]
 . Select the Filters tab.
 . In the ‘Filters’ list, click on a selection or form component that you would like to synchronize, and drag it into the ‘Shared Filters’ list. (You can also double-click the item to add it to the list.)
 
@@ -68,7 +68,7 @@ IMPORTANT: Components that have the same ID (within the Dashboard or across Dash
 
 . Repeat the above steps to add additional components to the ‘Shared Filters’ list.
 +
-image:viewsheet:Deploy shared filters.png[]
+image:viewsheet:Deploy shared filters.png[alt="drag component into shared filters list"]
 . Press btn:[OK] to exit the dialog box.
 . Repeat the same process for other Dashboards (nested Dashboard or hyperlinked Dashboards).
 +

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 A dot plot represents a measure by its individual data points (_without aggregation_).
 
-image:commonscript:Ad Hoc Dot9.png[]
+image:commonscript:Ad Hoc Dot9.png[alt="dot plot chart example"]
 
 This type of chart can be useful when the dataset is very small, with fewer than approximately 20 data points for each dimension value.
 
@@ -17,7 +17,7 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose ‘Point’ and enable the ‘Stack’ option at the bottom. Press {buttonApply}.
 +
-image:commonscript:Ad Hoc Dot1.png[]
+image:commonscript:Ad Hoc Dot1.png[alt="select Point chart style and enable Stack"]
 +
 NOTE: ‘Point’ is the default chart style when numerical dimensions are used.
 
@@ -25,7 +25,7 @@ NOTE: ‘Point’ is the default chart style when numerical dimensions are used.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:Ad Hoc Dot2.png[]
+image:commonscript:Ad Hoc Dot2.png[alt="drag dimension to X region"]
 +
 TIP: {convertToDimension}
 
@@ -35,7 +35,7 @@ TIP: {convertToDimension}
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:Ad Hoc Dot3.png[]
+image:commonscript:Ad Hoc Dot3.png[alt="drag measure to Break By region"]
 +
 TIP: {convertToMeasure}
 +
@@ -44,22 +44,22 @@ Alternatively, you can drag the measure field to the ‘Color’, ‘Shape’, o
 . Press the {buttonEditMeasure} next to the measure. Set the ‘Aggregate’ property to ‘None’, and press the {buttonApply}.
 
 +
-image:commonscript:VS Dot4.png[]
+image:commonscript:VS Dot4.png[alt="set aggregate to None for measure"]
 
 . *_Optional:_* {multipleMeasure}
 
 
 . *_Optional:_* To display a dimension value in the chart tooltip, drag the dimension from the data source panel to the ‘Break By’ region next to the existing measure field.
 +
-image:commonscript:VS Dot5.png[]
+image:commonscript:VS Dot5.png[alt="drag dimension to Break By region"]
 +
 This will allow the chart tooltip to display both the measure and dimension values, as shown below (‘customer_id’ and ‘company_name’, in this example).
 +
-image:commonscript:VS Dot6.png[]
+image:commonscript:VS Dot6.png[alt="tooltip shows measure and dimension values"]
 
 . *_Optional:_*  To make the points larger, press the ‘Edit’ button next to the ‘Size’ field in the bottom panel, and select a larger size. Click away from the panel to make the change to the chart.
 +
-image:commonscript:Ad Hoc Dot8.png[]
+image:commonscript:Ad Hoc Dot8.png[alt="select larger size for data points"]
 
 . {finishEditing}
 

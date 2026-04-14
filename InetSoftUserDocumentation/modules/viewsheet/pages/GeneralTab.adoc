@@ -10,7 +10,7 @@ The *General* tab of the ‘Properties’ panel is common to many components. It
 NOTE: {dynamicProperties}
 
 
-image:General Tab.png[]
+image:General Tab.png[alt="general tab properties panel for dashboard component"]
 
 Name::	This name is used to refer to the component in binding and scripting. For purposes of scripting, the name should contain no spaces.
 Visible in External Dashboards::	If checked, the component will be visible when this Dashboard is embedded in another Dashboard (see xref:ModularizeDashboard.adoc[]).

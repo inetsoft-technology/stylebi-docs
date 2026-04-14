@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 A Gantt chart displays the timeline of a process, and usually consists of sequential or concurrent tasks arranged from top to bottom by start time.
 
-image:commonscript:gantt1.png[]
+image:commonscript:gantt1.png[alt="gantt chart example"]
 
 To create a Gantt chart, follow the basic steps below.
 
@@ -13,7 +13,7 @@ To create a Gantt chart, follow the basic steps below.
 ====
 The data for a Gantt chart should be the start and end times for tasks, as well as any milestones, as shown below. See xref:dataworksheet:PrepareYourData.adoc[] for information on how to manipulate your data, if it is not currently in this form.
 
-image:commonscript:gantt3.png[]
+image:commonscript:gantt3.png[alt="gantt chart data structure"]
 ====
 
 [TIP]
@@ -25,33 +25,33 @@ include::partial$createChartIntro.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose the ‘Gantt’  style.  Press the {buttonApply}.
 +
-image:commonscript:gantt2.png[]
+image:commonscript:gantt2.png[alt="press Select Chart Style button"]
 
 
 . If the date fields are listed under the ‘Dimensions’ folder in the *Data Source* panel, convert each date field to a *measure*. To do this, right-click each date dimension in the ‘Dimensions’ folder and select ‘Convert to Measure’.
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:ganttChartExpVS1.png[]
+image:commonscript:ganttChartExpVS1.png[alt="select Convert to Measure from menu"]
 
 
 . Drag the start date measure to the ‘Start’ region.
 +
-image:commonscript:ganttChartExpVS2.png[]
+image:commonscript:ganttChartExpVS2.png[alt="drag start date to Start region"]
 
 . Drag the end date measure to the ‘End’ region.
 +
-image:commonscript:ganttChartExpVS3.png[]
+image:commonscript:ganttChartExpVS3.png[alt="drag end date to End region"]
 
 . Drag the milestone date measure  to the ‘Milestone’ region.
 +
-image:commonscript:ganttChartExpVS4.png[]
+image:commonscript:ganttChartExpVS4.png[alt="drag milestone to Milestone region"]
 
 . From the *Data Source* panel, drag a desired *dimension* designating the different tasks to the ‘Y’ region.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:ganttChartExpVS5.png[]
+image:commonscript:ganttChartExpVS5.png[alt="drag dimension to Y region"]
 +
 TIP: {convertToDimension}
 +
@@ -59,17 +59,17 @@ Note that the order of the tasks may not be correct. To address this, proceed to
 
 . Press the {buttonEditDimension} next to the dimension.  Select the ‘Manual’ option in the ‘Sort’ menu, and press the {buttonEdit} to open the ‘Manual Ordering’ dialog box. To reorder an item in the ‘Manual Ordering’ dialog box, select the item and press  btn:[Up] or btn:[Down]. Press btn:[OK] to close the dialog box.
 +
-image:commonscript:gantt9.png[]
+image:commonscript:gantt9.png[alt="press Edit Dimension button"]
 +
 See xref:SortData.adoc[] for more information about setting dimension properties.
 
 . To display the milestones using a different color, select the milestone field from the menu above the ‘Color’ region, press the {buttonEditColor}, and choose the desired color.
 +
-image:commonscript:ganttChartExpVS6.png[]
+image:commonscript:ganttChartExpVS6.png[alt="press Edit Color button"]
 
 . *_Optional:_* To change the size of the milestones, select the milestone field from the menu above the ‘Color’ region, press the ‘Edit Size’ button, and choose the desired size.
 +
-image:commonscript:gantt10.png[]
+image:commonscript:gantt10.png[alt="press Edit Size button"]
 
 . *_Optional:_* To hide the legend, right-click the legend and select ‘Hide Legend’.
 

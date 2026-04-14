@@ -39,13 +39,13 @@ TIP: The Table Editor and Crosstab Editor are simpler than the Freehand Table Ed
 
 . Right-click on the Table or Crosstab and select '`Convert to Freehand Table`'. {rightClickOptions}
 +
-image:ConvertToFreehand1.png[]
+image:ConvertToFreehand1.png[alt="right-click and select convert to freehand table"]
 +
 The Table or Crosstab is now a Freehand Table, and can only be edited with the Freehand Table Editor.
 
 . Press the {buttonEdit} to open the Freehand Table Editor.
 +
-image:ConvertToFreehand2.png[]
+image:ConvertToFreehand2.png[alt="press Edit to open freehand table editor"]
 
 . Proceed to  edit the Freehand Table using the Editor as described in xref:#CreateNewFreehandTable[] below.
 
@@ -67,15 +67,15 @@ To create a new Freehand Table, follow the steps below:
 
 . Drag a Freehand Table from the *Toolbox* panel into the Dashboard.
 +
-image:Freehand Table Add.png[]
+image:Freehand Table Add.png[alt="drag freehand table from toolbox into dashboard"]
 
 . Press the {buttonEdit} in the top-right corner of the Freehand Table.
 +
-image:Freehand Table Edit Button.png[]
+image:Freehand Table Edit Button.png[alt="press Edit in top-right corner of freehand table"]
 +
 This opens the Freehand Table Editor.
 +
-image:Freehand Table Binding Dialog.png[]
+image:Freehand Table Binding Dialog.png[alt="freehand table editor binding dialog"]
 
 
 
@@ -83,7 +83,7 @@ image:Freehand Table Binding Dialog.png[]
 +
 IMPORTANT: A field name is not permitted to contain the “?” symbol when used in a Freehand Table. To display data from such a field, first create a copy of the field as a Calculated Field or as an Expression Column  with a legal name (see xref:dataworksheet:CreateNewDataField.adoc[] in xref:dataworksheet:PrepareYourData.adoc[]).
 +
-image:Freehand Table Binding New1.png[]
+image:Freehand Table Binding New1.png[alt="drag fields from data source into table diagram"]
 
 +
 include::viewsheet:partial$bindToComponent.adoc[]
@@ -92,7 +92,7 @@ include::viewsheet:partial$bindToComponent.adoc[]
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:Freehand Table Group1.png[]
+image:Freehand Table Group1.png[alt="click dimension and select Group option"]
 +
 . Specify the desired sorting and ranking for the group. Follow the steps below:
 +
@@ -108,7 +108,7 @@ include::ROOT:partial$measureTip.adoc[]
 +
 To specify an arbitrary sort order, select the ‘Manual’ option in the ‘Sort’ menu, and press the {buttonEdit} to open the ‘Manual Ordering’ dialog box. To reorder an item in the ‘Manual Ordering’ dialog box, select the item and press the btn:[Up] or btn:[Down] buttons. Press btn:[OK] to close the dialog box.
 +
-image:Manual Ordering Dialog.png[]
+image:Manual Ordering Dialog.png[alt="press Edit to open manual ordering dialog box"]
 
 .. For a Date-type field, select the desired level of date grouping (‘Year’, ‘Month’, etc.) from the ‘Level’ menu.  *_Optional:_* Select ‘As time series’ to force the display of date groups even when the group has no data. In this case the cell is filled either with a null value or with a zero (if the 'Fill Blank Cell With Zero' option is enabled on the *Advanced* tab of the ‘Table Properties’ dialog box.)
 
@@ -125,27 +125,27 @@ To apply a custom grouping only to *this particular table* (rather than applying
 ====
 ... Choose the ‘Custom’ option from the ‘Named Group’ menu. Then press the btn:[Edit] button.
 +
-image:Freehand Table Group2.png[]
+image:Freehand Table Group2.png[alt="choose Custom from Named Group menu and press Edit"]
 +
 This opens the ‘Named Group Definition’ dialog box.
 +
-image:Freehand Table Group3.png[]
+image:Freehand Table Group3.png[alt="named group definition dialog box"]
 
 ... Press the btn:[Add] button to create a new named group. Enter the name of the group and press btn:[OK].
 +
-image:Freehand Table Group4.png[]
+image:Freehand Table Group4.png[alt="press Add button to create new named group"]
 
 ... Press the btn:[Edit] button to open the condition editor.
 +
-image:Freehand Table Group5.png[]
+image:Freehand Table Group5.png[alt="press Edit button to open condition editor"]
 
 ... Specify the condition that defines the values that belong to the group. (See xref:AddConditions.adoc[] for more information about how to specify a condition.)
 +
-image:Freehand Table Group6.png[]
+image:Freehand Table Group6.png[alt="specify condition defining values belonging to group"]
 
 ... Press btn:[Finish Editing] to close the Editor.
 +
-image:Freehand Table Group7.png[]
+image:Freehand Table Group7.png[alt="press Finish Editing to close the editor"]
 
 ... Repeat the above steps to add additional groups. Select ‘Group all others together’ to combine unassigned values into a single group called ‘Others’. Select ‘Leave others in their own group’ to allow unassigned values to each remain in their own group. When you have added all groups, press btn:[OK] to return to the ‘Group’ panel.
 
@@ -184,15 +184,15 @@ include::ROOT:partial$videoVersion.adoc[]
 video::306617295#chapter=16540189[vimeo,640,400]
 =====
 +
-image:Freehand Table Binding New2.png[]
+image:Freehand Table Binding New2.png[alt="select expand cell and set expansion direction"]
 +
 If the cell expansion results in *duplicated entries*, enable the '`Merge Expanded Cell`' option in the bottom left panel. This is a useful way to simplify the table when expanded cells all contain the same text, or when borders between the cells are undesirable. If the cells are *not merged correctly* by default, you may need to explicitly select the '`Row Group`' or '`Column Group`' for the merge.  These settings determine which particular fields the merge should follow  in the row and columns directions.
 +
-image:Freehand Table Merge Expanded.png[]
+image:Freehand Table Merge Expanded.png[alt="enable merge expanded cell option"]
 +
 You may also need to set the appropriate '`Row Group`' or '`Column Group`' for the summarization, as shown below.  To do this, click an aggregate field in the table diagram, and assign the desired grouping dimension from the '`Row Group`' or '`Column Group`' menus.
 +
-image:FreehandTableColumnGroup.png[]
+image:FreehandTableColumnGroup.png[alt="assign grouping dimension from row group or column group menus"]
 
 
 . *_Optional:_*  To populate a cell using script, press the ‘Edit’ button at the bottom of the dialog box. This opens the Script Editor and allows you to create a calculation based on cell values, parameter values, component values, or values from any accessible  Data Worksheet.
@@ -206,7 +206,7 @@ include::ROOT:partial$videoVersion.adoc[]
 video::306617295#chapter=16541286[vimeo,640,400]
 =====
 +
-image:Freehand Table Formula1.png[]
+image:Freehand Table Formula1.png[alt="press Edit button to open script editor"]
 +
 .Reference a Cell
 ****
@@ -223,12 +223,12 @@ video::306617295#chapter=16541385[vimeo,640,400]
 
 Refer to the value in a cell of the table by using syntax `$cell_name`, where _cell_name_ is the name assigned in the ‘Cell Name’ field for the cell being referenced.
 
-image:Freehand Table Cell Reference.png[]
+image:Freehand Table Cell Reference.png[alt="refer to cell value using $cell_name syntax"]
 
 You can insert this reference easily by selecting the field name from the ‘Cell’ folder in the editor. See xref:viewsheetscript:AccessComponentData.adoc#TableCrosstabComponents[Table/Crosstab Components] in xref:viewsheetscript:AccessComponentData.adoc[] for more advanced cell reference syntax.
 
 
-image:Freehand Table Cell Reference2.png[]
+image:Freehand Table Cell Reference2.png[alt="insert reference from Cell folder in editor"]
 
 To access the underlying data block, use the keyword `data`. For example, `toList(data['Company'],'sort=desc')` returns a unique sorted list of values from the ‘Company’ field of the table’s underlying data block. Use query-style syntax to select data that matches a specified condition. For example, `toList(data['Product@Category:$CategoryCell'])` returns the value from field ‘Product’ where the value in field ‘Category’ matches the value in the cell named ‘CategoryCell’.
 
@@ -256,7 +256,7 @@ video::306617295#chapter=16540156[vimeo,640,400]
 
 
 +
-image:Freehand Table Binding New3.png[]
+image:Freehand Table Binding New3.png[alt="right-click cell to add or remove rows and columns"]
 +
 To *combine* multiple cells into a single cell, {buttonCtrl}-click to select the desired cells in the table diagram, then right-click and select '`Merge Cells`'.  This is useful when the addition of new rows or columns creates undesired blank cells. Merge these cells together so that a single label or value can be placed in the merged cell.  This is typically used  for static cells; see above for information on merging *expanding cells*.
 
@@ -284,13 +284,13 @@ Freehand Tables do not have the {buttonSort} that you find in the column headers
 
 . Right-click the Freehand Table and select '`Sorting`' from the menu. {rightClickOptions}
 +
-image:viewsheet:Freehand Table Sort3.png[]
+image:viewsheet:Freehand Table Sort3.png[alt="right-click freehand table and select Sorting"]
 +
 This opens the '`Sorting`' dialog box.
 
 . Press the {buttonSort} next to field you want to sort.
 +
-image:viewsheet:Freehand Table Sort5.png[]
+image:viewsheet:Freehand Table Sort5.png[alt="press Sort button next to field to sort"]
 +
 Press  once to sort the items in ascending numerical or alphabetical order. Press the button again to sort in descending numerical or reverse alphabetical order. Press the button a third time to reset the original order. When a column is sorted, its sort order is indicated by a {buttonAscSort} or {buttonDescSort} next to the field name.
 

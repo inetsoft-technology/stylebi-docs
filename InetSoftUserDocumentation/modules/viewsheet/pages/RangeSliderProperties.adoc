@@ -19,12 +19,12 @@ Only the standard properties are available. {commonGeneral}
 == Data Tab
 The *Data* tab in the ‘Range Slider Properties’ dialog box provides the following Range Slider-specific properties:
 
-image:Range Slider Dialog Data Tab.png[]
+image:Range Slider Dialog Data Tab.png[alt="range slider data tab properties"]
 
 Single Value:: Filter data based on one field from the data block (default). Only numeric and date type fields are supported.
 Composite Values:: Filter data based on the composition of two or more fields from the data block. All data types are supported. Simply select two or more columns to form the composite value for filtering.
 +
-image:Slider Composite Value.png[]
+image:Slider Composite Value.png[alt="filter data using composite values from two fields"]
 +
 ****
 Example: Range Slider Composite Value:: Consider a  data block with the following two columns:
@@ -49,7 +49,7 @@ Selecting the composite value `(2000,Jan)`, for example, filters the data set ba
 == Advanced Tab
 The *Advanced* tab in the ‘Range Slider Properties’ panel provides the following Range Slider-specific properties.
 
-image:Capture_046.png[]
+image:Capture_046.png[alt="range slider advanced tab properties"]
 
 Slider Size:: The range of data that is displayed at a given time. There are three cases:
 * *String*: For string-type fields, the ‘Slider Size’ specifies the number of “periods,” i.e., the number of consecutive (alphabetically ordered) values that should be simultaneously selected.

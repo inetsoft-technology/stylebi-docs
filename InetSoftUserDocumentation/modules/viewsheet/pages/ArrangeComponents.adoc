@@ -43,11 +43,11 @@ To create a group, follow these steps:
 
 . Select the components you want to group into a Container. (See xref:#SelectComponents[] for different ways to select.)
 +
-TIP: You can also select _existing groups_ to combine into a new Container. However, a Container component contains only *individual* components, not other Container components. Therefore, if you group together two existing groups, the existing Containers are deleted, and a single new Container is created to contain all of the individual components from the two preexisting groups.
+TIP: You can also select _existing groups_ to combine into a new Container. However, a Container component contains only *individual* components, not other Container components. Therefore, if you group together two existing groups, the existing Containers are deleted, and a single new Container is created to contain all the individual components from the two preexisting groups.
 
 . Right-click any selected component, and choose ‘Group’ from the context menu.
 +
-image:groupComponents.png[]
+image:groupComponents.png[alt="right-click selected components and choose Group"]
 +
 This creates a new Container component to group the selected components. The components within a Container remain fully functional, and you can adjust the component settings and properties in the usual manner.
 +
@@ -61,15 +61,15 @@ To *undo a grouping*, right-click the Container  and select ‘Ungroup’ from t
 
 You can align, distribute, and match sizes of multiple components on the Dashboard. To align multiple components, first *select* the desired components. (See xref:#SelectComponents[].) Then press the {buttonArrange} on the toolbar and choose the desired alignment.
 
-image:Align1.png[]
+image:Align1.png[alt="press Arrange button and choose alignment option"]
 
 To *distribute* (equally space) multiple components, select the desired components and press the {buttonArrange} on the toolbar. Then choose the {buttonDistributeHorizontally} or {buttonDistributeVertically}.
 
-image:Align2.png[]
+image:Align2.png[alt="press Arrange and choose distribute horizontal or vertical"]
 
 To *match the sizes* of multiple components, select the desired components and press the {buttonArrange} on the toolbar. Then choose the desired ‘Resize’ option.
 
-image:Align3.png[]
+image:Align3.png[alt="press Arrange and choose resize option"]
 
 [#CombineFiltersintoSelectionContainer]
 == Combine Multiple Filters into a Selection Container
@@ -90,11 +90,11 @@ To create a tabbed interface, follow the steps below.
 
 . Drag and drop one component (or group) onto another component (or group). This opens the ‘Layout Option’ dialog box.
 +
-image:Capture_012_1.png[]
+image:Capture_012_1.png[alt="drag component onto another opens layout option dialog"]
 
 . Choose the ‘Place component into tabbed interface’ option. This places the two components (or groups) into a tabbed interface.
 +
-image:Capture_014_1.png[]
+image:Capture_014_1.png[alt="components placed into tabbed interface"]
 
 Note that each component is placed in the top-left corner within its own tab. To display a component at a different location within its tab, first group the component together with a background (e.g., an Image or Shape component), and then use the group as the contents of the tab.  See xref:#GroupComponents[] for information on how to create a group.
 
@@ -127,13 +127,13 @@ To enable Dashboard scaling, follow the steps below:
 
 . Press the {buttonOptions} in the Dashboard toolbar. This opens the 'Dashboard Options' dialog box.
 +
-image:Viewsheet Options Button.png[]
+image:Viewsheet Options Button.png[alt="press Options button in dashboard toolbar"]
 
 . Select the *Layout* tab.
 
 . Enable the '`Scale to Screen`' option. This scales the Dashboard to the browser window so that all components are visible without scrolling.
 +
-image:Viewsheet Options ScaleToScreen.png[]
+image:Viewsheet Options ScaleToScreen.png[alt="enable scale to screen option in layout tab"]
 
 . *_Optional:_*  Select '`Fit to Width`'	to scale the Dashboard to the full width of the browser window. In this case, the Dashboard height is scaled proportionally to the width and may exceed the height of the window. (A vertical scroll bar is provided in this case.)
 

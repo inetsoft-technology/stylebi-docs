@@ -12,7 +12,7 @@ IMPORTANT: Do not place any measures on the ‘X’ and ‘Y’ axes, and do not
 
 
 
-image:commonscript:HeatMapConfig5.png[]
+image:commonscript:HeatMapConfig5.png[alt="heat map chart editor configuration"]
 
 
 
@@ -36,17 +36,17 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . Drag the ‘Date’ dimension from the *Data Source* panel to the ‘X’ region.
 +
-image:commonscript:HeatMapConfig.png[]
+image:commonscript:HeatMapConfig.png[alt="drag dimensions and measure to chart regions"]
 
 . Press the {buttonEditDimension} next to the ‘Date’ field and set the ‘Level’ property to ‘Month of Year’. Press the {buttonApply}.
 +
-image:commonscript:HeatMapConfig2.png[]
+image:commonscript:HeatMapConfig2.png[alt="set Date dimension level to Month of Year"]
 
 . *_Optional:_* {multipleDimensionNoColor}
 
 . Press the ‘Edit Color’ button next to the ‘Quantity Purchased’ measure, and choose the desired color spectrum to represent the aggregated values. (The built-in ‘Heat’ spectrum uses traditional shades of orange and brown, but you can use any other spectrum as well.)
 +
-image:commonscript:HeatMapConfig3.png[]
+image:commonscript:HeatMapConfig3.png[alt="choose color spectrum for heat map"]
 
 . Press the {buttonClose}.
 
@@ -54,7 +54,7 @@ image:commonscript:HeatMapConfig3.png[]
 
 . Resize the chart to show the desired number of products.
 +
-image:commonscript:HeatMapConfig4.png[]
+image:commonscript:HeatMapConfig4.png[alt="resized heat map showing products by month"]
 
 . To increase the density of the chart by using a finer grid, see xref:BasicChartingSteps.adoc#AdjustChartSpacing[Adjust Chart Spacing] in xref:BasicChartingSteps.adoc[].
 
@@ -66,7 +66,7 @@ include::viewsheet:partial$addTitlesLegend.adoc[]
 ****
 The sample xref:ROOT:attachment$Call_Center_Team_Performance.zip[Call Center Team Performance] Dashboard (in the ‘Examples’ folder) provides an example of a heat map.
 
-image:viewsheet:galleryHeatMap2.png[]
+image:viewsheet:galleryHeatMap2.png[alt="Call Center Team Performance heat map dashboard"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Call_Center_Team_Performance.zip[Call Center Team Performance] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 

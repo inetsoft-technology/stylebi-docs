@@ -6,7 +6,7 @@ A treemap displays a *measure* by using the sizes of rectangles in a hierarchica
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 
-image:commonscript:TreemapConfig1.png[]
+image:commonscript:TreemapConfig1.png[alt="treemap chart example"]
 
 To create a treemap  chart, follow the basic steps below:
 
@@ -29,7 +29,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . In the Chart Editor, press the {buttonSelectChartStyle} and choose the ‘Treemap’ option. Press the {buttonApply}.
 +
-image:commonscript:TreemapConfig2.png[]
+image:commonscript:TreemapConfig2.png[alt="press Select Chart Style, choose Treemap"]
 
 . Drag the ‘State’, ‘City’, and ‘Name’ fields from the *Data Source* panel to the ‘T’ region.
 
@@ -37,18 +37,18 @@ image:commonscript:TreemapConfig2.png[]
 
 . Drag the ‘State’ dimension from the *Data Source* panel to the ‘Color’ region.
 +
-image:commonscript:TreemapConfig3.png[]
+image:commonscript:TreemapConfig3.png[alt="drag State dimension to Color region"]
 
 
 . *_Optional:_* Press the ‘Edit Color’ button next to the ‘State’ dimension, and choose the desired colors to represent the state values. Press the {buttonApply}.
 +
-image:commonscript:EditColorButton.png[]
+image:commonscript:EditColorButton.png[alt="press Edit Color button for State dimension"]
 
 . {finishEditing}
 
 . Resize the chart as desired.
 +
-image:commonscript:TreemapConfig1.png[]
+image:commonscript:TreemapConfig1.png[alt="resize completed treemap chart"]
 
 . Hover the mouse over the chart to see a tooltip providing full information about each group.
 

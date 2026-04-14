@@ -31,15 +31,15 @@ To create the materialized view for a Dashboard, follow the steps below:
 
 . Right-click the Dashboard that you want to materialize, and select ‘Materialize’ from the menu.
 +
-image:Materialized View Portal1.png[]
+image:Materialized View Portal1.png[alt="right-click dashboard and select Materialize"]
 
 . Press the btn:[Analyze] button in the ‘Materialization’ dialog box.
 +
-image:Materialized View Portal2.png[]
+image:Materialized View Portal2.png[alt="press Analyze button in materialization dialog"]
 +
 This lists the assets that can be materialized.
 +
-image:Materialized View Portal3.png[]
+image:Materialized View Portal3.png[alt="assets listed for materialized view creation"]
 
 . Check the box next to the assets for which you want to create a materialized view.
 

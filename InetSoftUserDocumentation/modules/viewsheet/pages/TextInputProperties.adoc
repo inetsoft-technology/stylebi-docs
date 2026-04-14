@@ -16,7 +16,7 @@ The Text Input component’s ‘Properties’ panel provides *General*, *Option*
 == General Tab
 In addition to the common properties, the *General* tab in the ‘Text Input Properties’ panel provides the following properties.
 
-image:TextInput Properties Dialog.png[]
+image:TextInput Properties Dialog.png[alt="text input general tab properties"]
 
 Submit on Change::	When enabled (default), submits the entered value when user presses ‘Enter’ or clicks away. Otherwise, a separate ‘Submit’ button is required.
 Refresh Dashboard after Submit::	Force the dashboard to refresh when the user submits a value from the Form component.
