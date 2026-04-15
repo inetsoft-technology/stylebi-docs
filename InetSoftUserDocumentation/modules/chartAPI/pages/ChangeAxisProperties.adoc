@@ -14,7 +14,7 @@ graph.addElement(elem);
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
-image:commonscript:setScaleExample.png[]
+image:commonscript:setScaleExample.png[alt="basic bar chart before axis property changes"]
 
 
 This creates a basic bar chart displaying the dimensions ‘State’ and ‘Quantity’. Follow the steps below to experiment with modifying the chart’s axes:
@@ -68,7 +68,7 @@ xspec.setTextFrame(tframe);
 graph.setScale('Quantity',logscale);
 graph.setScale('State',cscale);
 +
-image:commonscript:setScaleExampleFinal.png[]
+image:commonscript:setScaleExampleFinal.png[alt="bar chart with log scale and styled axis labels"]
 
 
 .Complete Script

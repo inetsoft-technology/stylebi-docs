@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setTexture` to assign the desired pattern for '`NJ`' and '`NY`'.
 <4> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:CategoricalTextureFrame2setTexture.png[]
+image:commonscript:CategoricalTextureFrame2setTexture.png[alt="bar chart with custom textures assigned per category"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -87,7 +87,7 @@ Chart1.bindingInfo.textureFrame.setTexture('Annie',GTexture.PATTERN_5);
 
 --
 +
-image:commonscript:CategoricalTextureFrameSetTexture_1.png[]
+image:commonscript:CategoricalTextureFrameSetTexture_1.png[alt="bar chart with setTexture applied via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

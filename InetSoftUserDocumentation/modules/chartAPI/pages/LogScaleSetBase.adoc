@@ -36,7 +36,7 @@ graph.addElement(elem);
 <3> Use `setBase` to set the log base.
 <4> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
-image:commonscript:LogScaleSetBase.png[]
+image:commonscript:LogScaleSetBase.png[alt="bar chart with base-2 logarithmic scale"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

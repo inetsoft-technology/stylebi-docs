@@ -27,7 +27,7 @@ include::scriptexample:partial$AxisSpecSetLineVisible1.js[]
 <3> Use `setLineVisible` to show lines.
 <4> Use `setLineVisible` to hide lines.
 
-image:commonscript:AxisSpecsetLineVisible.png[]
+image:commonscript:AxisSpecsetLineVisible.png[alt="bar chart with one axis line hidden"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

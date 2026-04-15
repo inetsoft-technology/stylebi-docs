@@ -45,7 +45,7 @@ graph.addElement(elem); //<4>
 <4> Use xref:EGraphAddElement.adoc[] to add the `LineElement` to the Chart.
 
 
-image:commonscript:LineElementsetStackGroup.png[]
+image:commonscript:LineElementsetStackGroup.png[alt="line chart with independent lines per group"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

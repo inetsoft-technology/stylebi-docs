@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setSize` to assign the desired shape for '`NJ`', '`NY`', '`PA`'.
 <4> Use xref:GraphElementSetSizeFrame.adoc[] to add the `SizeFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:CategoricalSizeFrame2setSize.png[]
+image:commonscript:CategoricalSizeFrame2setSize.png[alt="bar chart with custom sizes assigned per category value"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -88,7 +88,7 @@ Chart1.bindingInfo.sizeFrame.setSize('Annie',5);
 
 --
 +
-image:commonscript:CategoricalSizeFrameSize.png[]
+image:commonscript:CategoricalSizeFrameSize.png[alt="bar chart with setSize applied via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

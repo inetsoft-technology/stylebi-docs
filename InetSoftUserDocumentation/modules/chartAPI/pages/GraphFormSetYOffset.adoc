@@ -34,7 +34,7 @@ graph.addElement(elem);
 <4> Use `setYOffset()` to set the vertical offset.
 <5> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:GraphFormSetXOffset.png[]
+image:commonscript:GraphFormSetXOffset.png[alt="chart with label form shifted by X and Y offsets"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

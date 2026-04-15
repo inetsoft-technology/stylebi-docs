@@ -25,7 +25,7 @@ include::scriptexample:partial$AxisSpecSetGridStyle1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setGridStyle` to assign the style.
 
-image:commonscript:TextSpecsetGridColor_1.png[]
+image:commonscript:TextSpecsetGridColor_1.png[alt="bar chart with dotted grid line style"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

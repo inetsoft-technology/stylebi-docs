@@ -36,6 +36,6 @@ graph.addElement(elem);
 <3> Use  xref:EGraphSetScale.adoc[] to add the `Scale` to the Chart.
 
 
-image:commonscript:LogScale.png[]
+image:commonscript:LogScale.png[alt="bar chart with logarithmic scale applied"]
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

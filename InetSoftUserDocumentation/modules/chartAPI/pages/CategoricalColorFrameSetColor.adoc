@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setColor` to assign the indicated colors to  '`NJ`'  and '`NY`'.
 <4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
 
-image:commonscript:CategoricalColorFrameSetColor2.png[]
+image:commonscript:CategoricalColorFrameSetColor2.png[alt="bar chart with custom colors assigned per category"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -87,7 +87,7 @@ Chart1.bindingInfo.colorFrame.setColor("Sue",java.awt.Color(0x222222));
 --
 
 +
-image:commonscript:CategoricalColorFrameSetColor.png[]
+image:commonscript:CategoricalColorFrameSetColor.png[alt="bar chart with setColor applied via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

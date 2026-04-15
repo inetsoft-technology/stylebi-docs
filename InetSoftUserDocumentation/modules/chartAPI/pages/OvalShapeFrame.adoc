@@ -42,7 +42,7 @@ graph.addElement(elem);
 <2> Create the `OvalShapeFrame` object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `OvalShapeFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:OvalShapeFramme2.png[]
+image:commonscript:OvalShapeFramme2.png[alt="bar chart with oval shapes of varying aspect ratio"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -68,7 +68,7 @@ Chart1.bindingInfo.shapeFrame = new OvalShapeFrame();
 --
 
 +
-image:commonscript:OvalShapeFrame.png[]
+image:commonscript:OvalShapeFrame.png[alt="bar chart with oval shape frame applied"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

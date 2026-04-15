@@ -35,7 +35,7 @@ graph.addElement(elem);
 <3> Use `setField` to specify the field for the `BipolarColorFrame`.
 <4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
 
-image:commonscript:BipolarColorFrame2.png[]
+image:commonscript:BipolarColorFrame2.png[alt="bar chart with bipolar color gradient frame"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -77,6 +77,6 @@ Chart1.bindingInfo.colorFrame = new BipolarColorFrame;
 --
 
 +
-image:commonscript:BipolarColorFrame.png[]
+image:commonscript:BipolarColorFrame.png[alt="bar chart with bipolar color frame via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]

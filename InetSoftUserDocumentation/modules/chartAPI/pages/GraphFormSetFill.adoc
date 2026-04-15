@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setFill()` to fill the `GraphForm`.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:GraphFormSetFill_1.png[]
+image:commonscript:GraphFormSetFill_1.png[alt="chart with filled line form shape"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

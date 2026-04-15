@@ -48,7 +48,7 @@ graph.addElement(elem);
 <4> Use `setTextSpec()` to assign the `TextSpec`.
 <5> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:LabelFormSetTextSpec.png[]
+image:commonscript:LabelFormSetTextSpec.png[alt="chart with label form text spec color set to red"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -38,7 +38,7 @@ graph.addElement(elem);
 <3> Use the inherited xref:VisualFrameSetField.adoc[] property to specify the field for the `RainbowColorFrame`.
 <4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
 
-image:commonscript:RainbowColorFrame2.png[]
+image:commonscript:RainbowColorFrame2.png[alt="bar chart with rainbow color frame"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -68,7 +68,7 @@ Chart1.bindingInfo.colorFrame = new RainbowColorFrame;
 --
 
 +
-image:commonscript:RainbowColorFrame.png[]
+image:commonscript:RainbowColorFrame.png[alt="bar chart with rainbow color frame onRefresh"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

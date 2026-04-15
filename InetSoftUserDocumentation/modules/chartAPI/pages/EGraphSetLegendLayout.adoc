@@ -33,7 +33,7 @@ graph.addElement(elem);
 --
 <1> Set the legend layout.
 
-image:commonscript:EGraphaddsetLegendLayout.png[]
+image:commonscript:EGraphaddsetLegendLayout.png[alt="EGraph with legend layout set to bottom"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

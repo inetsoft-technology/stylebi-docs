@@ -42,7 +42,7 @@ graph.addElement(elem);
 <3> Use `addValues()` to set `form` location.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:LineFormAddValues.png[]
+image:commonscript:LineFormAddValues.png[alt="bar chart with line form using categorical axis values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

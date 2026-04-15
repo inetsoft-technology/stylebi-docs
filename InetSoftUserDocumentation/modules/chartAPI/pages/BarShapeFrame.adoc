@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setFields` to specify the fields for the `BarShapeFrame`.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the Chart.
 
-image:commonscript:BarShapeFrame.png[]
+image:commonscript:BarShapeFrame.png[alt="point chart with mini bar shape elements"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

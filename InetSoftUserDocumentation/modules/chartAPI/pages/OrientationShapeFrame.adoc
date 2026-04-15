@@ -40,7 +40,7 @@ graph.addElement(elem);
 <2> Create the `OrientationShapeFrame` object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the element.
 
-image:commonscript:OrientationFrame2.png[]
+image:commonscript:OrientationFrame2.png[alt="point chart with orientation-mapped shape markers"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -66,7 +66,7 @@ Chart1.bindingInfo.shapeFrame = new OrientationShapeFrame;
 --
 
 +
-image:commonscript:OrientationShapeFrame.png[]
+image:commonscript:OrientationShapeFrame.png[alt="bar chart with orientation shape frame applied"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

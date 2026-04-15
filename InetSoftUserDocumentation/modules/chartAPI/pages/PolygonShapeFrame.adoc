@@ -45,7 +45,7 @@ graph.addElement(elem);
 <2> Create the `PolygonShapeFrame` object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:PolygonShapeFrame2.png[]
+image:commonscript:PolygonShapeFrame2.png[alt="point chart with polygon shapes of varying sides"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -72,7 +72,7 @@ Chart1.bindingInfo.shapeFrame = new PolygonShapeFrame;
 --
 
 +
-image:commonscript:PolygonShapeFrame.png[]
+image:commonscript:PolygonShapeFrame.png[alt="bar chart with polygon shape frame applied"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

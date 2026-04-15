@@ -50,7 +50,7 @@ graph.addElement(elem);
 <5> Use xref:StaticShapeFrameSetShape.adoc[] to assign the  `shape` to   the data.
 <6> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:IntervalElement.adoc[].
 +
-image:commonscript:GShapeImageShapeAlignment.png[]
+image:commonscript:GShapeImageShapeAlignment.png[alt="point chart with image shape aligned to top of data points"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -36,7 +36,7 @@ graph.addElement(elem);
 <3> Use `setScaleRange` to compute the scale range by stacking.
 <4> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
-image:commonscript:LinearScaleSetRange.png[]
+image:commonscript:LinearScaleSetRange.png[alt="bar chart with stacked scale range"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -48,7 +48,7 @@ graph.addElement(elem); //<4>
 <4> Use xref:EGraphAddElement.adoc[] to add the `LineElement` to the Chart.
 
 
-image:commonscript:LineElementsetStackNegative.png[]
+image:commonscript:LineElementsetStackNegative.png[alt="line chart with arithmetically stacked negative values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

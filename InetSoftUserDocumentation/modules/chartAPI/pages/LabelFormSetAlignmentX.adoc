@@ -47,7 +47,7 @@ graph.addElement(elem);
 <3> Use `setAlignmentX()` to set the horizontal alignment.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:LabelFormSetXAlignment.png[]
+image:commonscript:LabelFormSetXAlignment.png[alt="chart with label form horizontal alignment set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

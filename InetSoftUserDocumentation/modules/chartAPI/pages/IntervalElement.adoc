@@ -42,7 +42,7 @@ graph.addElement(elem); //<3>
 <3> Use xref:EGraphAddElement.adoc[] to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:IntervalElement.png[]
+image:commonscript:IntervalElement.png[alt="basic bar chart using IntervalElement"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

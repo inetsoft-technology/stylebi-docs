@@ -46,7 +46,7 @@ graph.addElement(elem);
 <4> Set the desired properties, inherited from xref:SizeFrame.adoc[].
 <5> Use xref:GraphElementSetSizeFrame.adoc[] to add the `LinearSizeFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:LinearSizeFrame2.png[]
+image:commonscript:LinearSizeFrame2.png[alt="bar chart with linearly mapped element sizes"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -76,7 +76,7 @@ Chart1.bindingInfo.sizeFrame = new LinearSizeFrame;
 --
 
 +
-image:commonscript:LinearSizeFrame.png[]
+image:commonscript:LinearSizeFrame.png[alt="bar chart with linear size frame applied"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

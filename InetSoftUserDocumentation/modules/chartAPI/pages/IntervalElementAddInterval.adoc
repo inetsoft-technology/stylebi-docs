@@ -37,7 +37,7 @@ graph.addElement(elem); //<4>
 <4> Use xref:EGraphAddElement.adoc[] to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:IntervalElementaddInterval.png[]
+image:commonscript:IntervalElementaddInterval.png[alt="floating interval bar chart with lower and upper values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -37,7 +37,7 @@ graph.addElement(elem);
 <4> Use  xref:EGraphSetScale.adoc[] to add the Scale to the Chart.
 
 
-image:commonscript:LinearRange.png[]
+image:commonscript:LinearRange.png[alt="bar chart with linear range computed from data min and max"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

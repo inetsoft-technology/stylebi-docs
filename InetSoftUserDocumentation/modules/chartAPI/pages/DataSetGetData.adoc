@@ -14,7 +14,7 @@ Returns the value in the `dataset` object specified by the column and row indice
 
 
 
-image:commonscript:datasetChart_1.png[]
+image:commonscript:datasetChart_1.png[alt="chart with two dataset measures"]
 
 Use `dataset.getData(j,i)` with row index `i` and column index `j` to access these plotted values. The `dataset.getRowCount()` and `dataset.getColCount()` functions provide the number of rows and columns of summarized data.
 

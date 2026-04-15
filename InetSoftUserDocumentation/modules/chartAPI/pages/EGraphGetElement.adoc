@@ -45,7 +45,7 @@ elem.setHint(GraphElement.HINT_SHINE,'false'); <2>
 
 
 +
-image:commonscript:EGraphgetElement.png[]
+image:commonscript:EGraphgetElement.png[alt="EGraph element retrieved and modified"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

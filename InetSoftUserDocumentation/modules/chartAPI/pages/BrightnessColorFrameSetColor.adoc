@@ -44,7 +44,7 @@ graph.addElement(elem);
 <4> Use `setColor` to specify the color for the `BrightnessColorFrame`.
 <5> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
 
-image:commonscript:BrightnessColorFrame2.png[]
+image:commonscript:BrightnessColorFrame2.png[alt="bar chart with custom brightness color applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -90,7 +90,7 @@ Chart1.bindingInfo.colorFrame.color = 0xFF00FF;
 --
 
 +
-image:commonscript:BrightnessColorFrame_1.png[]
+image:commonscript:BrightnessColorFrame_1.png[alt="bar chart with brightness color set via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

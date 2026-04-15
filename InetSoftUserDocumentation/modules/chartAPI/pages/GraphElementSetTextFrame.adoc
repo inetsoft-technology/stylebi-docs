@@ -38,7 +38,7 @@ graph.addElement(elem);  //<5>
 <5> Use `addElement` to add the `PointElement` to the Chart.
 
 
-image:commonscript:GraphElementsetTextFrame.png[]
+image:commonscript:GraphElementsetTextFrame.png[alt="point chart with text frame showing data values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

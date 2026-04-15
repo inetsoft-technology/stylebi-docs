@@ -22,7 +22,7 @@ include::scriptexample:partial$AxisSpecSetLabelVisible1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setLabelVisible` to hide labels.
 
-image:commonscript:TextSpecsetLabelVisible.png[]
+image:commonscript:TextSpecsetLabelVisible.png[alt="bar chart with axis labels hidden"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

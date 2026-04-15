@@ -29,7 +29,7 @@ include::scriptexample:partial$AxisSpecSetGridOnTop1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setGridOnTop` to adjust  the grid.
 
-image:commonscript:TextSpecsetGridOnTop.png[]
+image:commonscript:TextSpecsetGridOnTop.png[alt="bar chart with grid lines overlaying elements"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

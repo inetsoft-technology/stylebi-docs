@@ -46,7 +46,7 @@ graph.addElement(elem);
 <3> Use `setPartial()` to enable scrollbars.
 <4> Use the inherited  xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` object to the `ColorFrame`.
 
-image:commonscript:LegendSpecsetPartial.png[]
+image:commonscript:LegendSpecsetPartial.png[alt="chart with scrollable legend for many items"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

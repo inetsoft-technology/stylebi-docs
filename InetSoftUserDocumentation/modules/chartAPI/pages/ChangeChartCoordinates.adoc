@@ -36,7 +36,7 @@ graph.setScale("Direction",xscale);
 graph.setScale("Score",yscale);
 graph.addElement(elem);
 
-image:commonscript:RectCoordExample.png[]
+image:commonscript:RectCoordExample.png[alt="scatter chart with rectangular coordinates and dot grid"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -101,7 +101,7 @@ Polar coordinates represent data in terms of an angle and magnitude (radius). Th
 === Convert Rectangular to Polar Coordinates
 To create polar coordinates, you first need to create a set of rectangular coordinates with the xref:chartAPI:RectCoord.adoc[] constructor or access existing rectangular coordinates with xref:chartAPI:EGraphGetCoordinate.adoc[]. Consider the script from the previous section, xref:#AssignRectangularCoordinatesAutomatically[].
 
-image:commonscript:RectCoordExample_1.png[]
+image:commonscript:RectCoordExample_1.png[alt="scatter chart with explicit rectangular coordinates"]
 
 [source,javascript]
 --
@@ -142,7 +142,7 @@ var polar = new PolarCoord(rect);
 
 Assign this new coordinate set to the Chart to obtain the desired polar representation. The modified script is shown below:
 
-image:commonscript:PolarCoordsExample.png[]
+image:commonscript:PolarCoordsExample.png[alt="scatter chart converted to polar coordinates"]
 
 [source,javascript]
 --
@@ -223,7 +223,7 @@ graph.addElement(elem);
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
-image:commonscript:PolarCoordsExampleTHETA.png[]
+image:commonscript:PolarCoordsExampleTHETA.png[alt="polar chart with THETA angle-only mapping"]
 
 
 The result is that all points have the *same magnitude*, with variation only along the angle dimension. (All points therefore appear on the perimeter of the circle.)  To reverse a mapping, use the xref:chartAPI:CoordinateTranspose.adoc[] method.
@@ -245,7 +245,7 @@ graph.addElement(elem);
 
 include::partial$scriptThatModifiesGraph.adoc[]
 
-image:commonscript:PieChartExample1_1.png[]
+image:commonscript:PieChartExample1_1.png[alt="basic bar chart before pie chart conversion"]
 
 To create a pie chart from this data, just convert the Chart to a stacked bar, and then convert to polar coordinates. Follow the steps below:
 
@@ -267,7 +267,7 @@ graph.addElement(elem);
 <1> Creat the `ColorFrame` for '`State`'
 <2> Assign the `ColorFrame` to the `IntervalElement` (bars)
 +
-image:commonscript:PieChartExample2_1.png[]
+image:commonscript:PieChartExample2_1.png[alt="stacked bar with color coding by state"]
 
 +
 Note that a `null` value is assigned for the (unused) X-dimension when creating the xref:chartAPI:IntervalElement.adoc[] and xref:chartAPI:RectCoord.adoc[] objects.
@@ -279,7 +279,7 @@ elem.setCollisionModifier(GraphElement.STACK_SYMMETRIC);
 yscale.setScaleRange(new StackRange());
 
 +
-image:commonscript:PieChartExample3_1.png[]
+image:commonscript:PieChartExample3_1.png[alt="single stacked bar with symmetric stack modifier"]
 
 . Create polar coordinates from the existing rectangular coordinates. By default, this maps the non-null coordinate (Y-axis) to the polar coordinate’s magnitude dimension. Specify that it should be mapped to the angle dimension instead by using the `THETA` option.
 [source,javascript]
@@ -291,7 +291,7 @@ polar.setType(PolarCoord.THETA);
 [source,javascript]
 graph.setCoordinate(polar);
 +
-image:commonscript:PieChartExample4_1.png[]
+image:commonscript:PieChartExample4_1.png[alt="stacked bar converted to pie chart with polar coordinates"]
 
 . Remove the axis lines and labels. To do this, create an xref:chartAPI:AxisSpec.adoc[] object, and assign it to the xref:chartAPI:Scale.adoc[].
 +
@@ -303,7 +303,7 @@ yspec.setTickVisible(false);
 yscale.setAxisSpec(yspec);
 
 +
-image:commonscript:PieChartExample5_1.png[]
+image:commonscript:PieChartExample5_1.png[alt="pie chart with axis lines and labels hidden"]
 
 . Add the state names to the individual slices and hide the legend. To do this, create a new xref:chartAPI:TextFrame.adoc[] object based on the “State” field, and assign it to the xref:chartAPI:GraphElement.adoc[]. To hide the legend, create a new xref:chartAPI:LegendSpec.adoc[] object, and assign it to the xref:chartAPI:ColorFrame.adoc[].
 +
@@ -319,7 +319,7 @@ cframe.setLegendSpec(legend);
 [source,javascript]
 elem.setHint(GraphElement.HINT_EXPLODED,'true');
 +
-image:commonscript:PieChartExample6_1.png[]
+image:commonscript:PieChartExample6_1.png[alt="exploded pie chart with state name labels"]
 
 .Complete Script
 ****
@@ -417,7 +417,7 @@ elem.setColorFrame(frame);
 graph.addElement(elem);
 graph.setCoordinate(coord);
 +
-image:commonscript:ParallelCoordsTutorial.png[]
+image:commonscript:ParallelCoordsTutorial.png[alt="parallel coordinates chart with color-coded lines"]
 
 .Complete Script
 ****
@@ -504,7 +504,7 @@ var coord = new FacetCoord(outer,inner);
 graph.setCoordinate(coord);
 graph.addElement(elem);
 +
-image:commonscript:FacetCoordExample.png[]
+image:commonscript:FacetCoordExample.png[alt="facet chart with inner and outer coordinate grid"]
 +
 The resulting chart displays an outer grid based on the *outer coordinates* (‘State’ and ‘Product’). Within each cell of the outer grid, the chart displays the corresponding *inner coordinates* (‘Name’ and ‘Priority’).
 
@@ -548,7 +548,7 @@ graph.addElement(elem);
 
 include::partial$scriptThatModifiesGraph.adoc[]
 
-image:commonscript:PlotSpecSetBackground.png[]
+image:commonscript:PlotSpecSetBackground.png[alt="bar chart with blue plot background color"]
 
 === Set Background Image
 Use the xref:chartAPI:PlotSpecSetBackgroundImage.adoc[] function to display an image as the plot background. The following example uses a *static* Google map image as a background by aligning the map coordinates with the chart coordinates.
@@ -619,6 +619,6 @@ graph.setCoordinate(coord);
 graph.addElement(elem);
 --
 
-image:commonscript:PlotSpecSetBackgroundImageGoog.png[]
+image:commonscript:PlotSpecSetBackgroundImageGoog.png[alt="scatter chart with map image as plot background"]
 
 Note that the limits of the chart scales (`latscale.setMax`, `latscale.setMin`, `lonscale.setMax`, `lonscale.setMin`) have been set to match the geographical boundaries of the map image. This allows the image to align correctly with the chart axes.

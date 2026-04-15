@@ -32,7 +32,7 @@ graph.addElement(elem); //<4>
 <3> Use `addVar` to add the '`Total`' measure.
 <4> Use `addElement` to add the LineElement to the Chart.
 
-image:commonscript:GraphElementaddVar.png[]
+image:commonscript:GraphElementaddVar.png[alt="chart with measure added to LineElement"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

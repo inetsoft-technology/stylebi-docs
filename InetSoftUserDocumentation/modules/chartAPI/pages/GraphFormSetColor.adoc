@@ -40,7 +40,7 @@ graph.addElement(elem);
 <3> Use `setColor` to assign the color to the `GraphForm`.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:GraphFormSetColor.png[]
+image:commonscript:GraphFormSetColor.png[alt="chart with line form color set to red"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

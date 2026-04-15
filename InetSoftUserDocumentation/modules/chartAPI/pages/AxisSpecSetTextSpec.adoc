@@ -38,7 +38,7 @@ graph.addElement(elem);
 <3> Create the `TextSpec` object.
 <4> Use `setTextSpec` to assign the `TextSpec` to the axis.
 
-image:commonscript:AxisSpecsetTextSpec.png[]
+image:commonscript:AxisSpecsetTextSpec.png[alt="bar chart with custom axis label text color"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

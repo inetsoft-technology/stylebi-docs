@@ -37,7 +37,7 @@ graph.addElement(elem); //<4>
 <3> Use `addDim` to add the '`State`' dimension.
 <4> Use `addElement` to add the IntervalElement to the Chart.
 
-image:commonscript:GraphElementaddDim.png[]
+image:commonscript:GraphElementaddDim.png[alt="chart with dimension added to IntervalElement"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

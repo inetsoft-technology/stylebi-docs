@@ -32,7 +32,7 @@ graph.addElement(elem);
 <1> {dataset}
 <2> Use `setLegendPreferredSize()` to set the legend size.
 
-image:commonscript:EGraphaddsetLegendPreferredSize.png[]
+image:commonscript:EGraphaddsetLegendPreferredSize.png[alt="EGraph with legend preferred size set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -54,7 +54,7 @@ for (var i=0; i<dataset.getRowCount(); i++) { //<2>
 <2> Use `getRowCount()` to get the number of rows.
 
 
-image:commonscript:datasetGetRowCount.png[]
+image:commonscript:datasetGetRowCount.png[alt="dataset row count example"]
 
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

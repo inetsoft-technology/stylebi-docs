@@ -37,7 +37,7 @@ graph.addElement(elem); //<5>
 <5> Use `addElement` to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:GraphElementsetColorFrame.png[]
+image:commonscript:GraphElementsetColorFrame.png[alt="bar chart with ColorFrame applied to element"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

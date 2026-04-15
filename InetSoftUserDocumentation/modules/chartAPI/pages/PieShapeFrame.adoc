@@ -43,7 +43,7 @@ graph.addElement(elem);
 <3> Use the inherited xref:MultiShapeFrameSetFields.adoc[] property to assign the fields to the `PieShapeFrame`.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `PieShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:PieShapeFrame.png[]
+image:commonscript:PieShapeFrame.png[alt="point chart with mini-pie shape markers"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

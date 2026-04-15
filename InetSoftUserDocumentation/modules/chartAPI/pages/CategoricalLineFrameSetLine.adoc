@@ -44,7 +44,7 @@ graph.addElement(elem);
 <4> Use `setLine` to set the line style for a value.
 <5> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:CategoricalLineFrame2setLine.png[]
+image:commonscript:CategoricalLineFrame2setLine.png[alt="bar chart with custom line styles per category value"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -94,7 +94,7 @@ Chart1.bindingInfo.lineFrame.setLine('Annie', GLine.DOT_LINE);
 --
 
 +
-image:commonscript:CategoricalLineFrame_1.png[]
+image:commonscript:CategoricalLineFrame_1.png[alt="bar chart with setLine applied via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

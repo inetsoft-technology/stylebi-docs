@@ -42,7 +42,7 @@ graph.addElement(elem);
 <3> Use `setStartArrow()` to enable the start arrow.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:LineFormSetStartArrow.png[]
+image:commonscript:LineFormSetStartArrow.png[alt="bar chart with line form arrow at start point"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -46,7 +46,7 @@ graph.addElement(elem);
 <3> Use `setReversed` to set the  scale orientation.
 <4> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
-image:commonscript:LinearScaleSetReversed.png[]
+image:commonscript:LinearScaleSetReversed.png[alt="bar chart with reversed scale orientation"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

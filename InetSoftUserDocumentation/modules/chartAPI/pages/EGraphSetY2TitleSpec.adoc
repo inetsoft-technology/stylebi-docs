@@ -37,7 +37,7 @@ graph.addElement(elem);
 <3> Use `setY2TitleSpec` to add the `TitleSpec` to Chart.
 
 
-image:commonscript:EGraphaddsetY2TitleSpec.png[]
+image:commonscript:EGraphaddsetY2TitleSpec.png[alt="EGraph with Y2 title spec set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

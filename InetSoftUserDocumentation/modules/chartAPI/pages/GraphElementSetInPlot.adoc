@@ -51,7 +51,7 @@ graph.addElement(elem); //<5>
 <5> Use `addElement` to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:GraphElementsetInPlot.png[]
+image:commonscript:GraphElementsetInPlot.png[alt="bar chart with inPlot preventing plot resize"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

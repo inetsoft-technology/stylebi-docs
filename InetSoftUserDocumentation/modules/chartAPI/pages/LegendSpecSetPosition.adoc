@@ -48,7 +48,7 @@ graph.addElement(elem);
 <3> Use `setPosition` to assign position.
 <4> Use xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` object to the `ColorFrame`.
 
-image:commonscript:LegendSpecExamplesetPosition.png[]
+image:commonscript:LegendSpecExamplesetPosition.png[alt="chart with legend repositioned in-place at specified coordinates"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

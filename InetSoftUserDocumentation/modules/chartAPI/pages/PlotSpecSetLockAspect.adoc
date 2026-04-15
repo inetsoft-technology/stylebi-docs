@@ -43,7 +43,7 @@ graph.addElement(elem);
 <3> Use `setLockAspect` to enforce original image aspect ratio.
 <4> Use xref:CoordinateSetPlotSpec.adoc[] to assign the `PlotSpec` to the `Coordinate`.
 
-image:commonscript:PlotSpecSetLockAspect.png[]
+image:commonscript:PlotSpecSetLockAspect.png[alt="bar chart with locked aspect ratio background image"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

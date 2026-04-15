@@ -37,7 +37,7 @@ alert(graph.getLegendLayout()); //<3>
 <2> Set the legend layout.
 <3> Use `getLegendLayout` to get the layout constant.
 
-image:commonscript:EGraphaddsetLegendLayout.png[]
+image:commonscript:EGraphaddsetLegendLayout.png[alt="EGraph with legend layout retrieved"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

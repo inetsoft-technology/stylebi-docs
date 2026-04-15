@@ -40,7 +40,7 @@ graph.addElement(elem);
 <2> Create the xref:LegendSpec.adoc[] object.
 <3> Use `setBorderColor` to assign the legend color.
 
-image:commonscript:LegendSpecsetBorderColor.png[]
+image:commonscript:LegendSpecsetBorderColor.png[alt="legend with custom border color applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -53,7 +53,7 @@ graph.addElement(elem);
 <4> Use  xref:StaticLineFrameSetLine.adoc[] to apply a custom `Gline`.
 <5> Use xref:GraphElementSetLineFrame.adoc[] to add the `StaticLineFrame` to the xref:LineElement.adoc[].
 
-image:commonscript:LineFrame2.png[]
+image:commonscript:LineFrame2.png[alt="line chart with StaticLineFrame GLine applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -85,6 +85,6 @@ Chart1.bindingInfo.lineFrame.line = GLine(20,10);
 --
 
 +
-image:commonscript:GLineCustom.png[]
+image:commonscript:GLineCustom.png[alt="line chart with custom GLine pattern via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]

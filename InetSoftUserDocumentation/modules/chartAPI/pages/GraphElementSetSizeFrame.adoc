@@ -39,7 +39,7 @@ graph.addElement(elem);  //<5>
 <5> Use `addElement` to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:GraphElementsetSizeFrame.png[]
+image:commonscript:GraphElementsetSizeFrame.png[alt="bar chart with size frame applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

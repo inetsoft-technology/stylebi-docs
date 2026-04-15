@@ -50,7 +50,7 @@ graph.addElement(elem2);
 <3> Use `init` to initialize `ColorFrame` with value only.
 <4> Use xref:GraphElementGetColorFrame.adoc[] to add the `ColorFrame` to the elements.
 
-image:commonscript:CategoricalColorFrameInit1.png[]
+image:commonscript:CategoricalColorFrameInit1.png[alt="scatter chart with color frame initialized by field names"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -111,7 +111,7 @@ graph.addElement(elem2);
 <3> Use `init` to initialize `ColorFrame` with value and color.
 <4> Use xref:GraphElementGetColorFrame.adoc[] to add the `ColorFrame` to the elements.
 
-image:commonscript:CategoricalColorFrameInit2.png[]
+image:commonscript:CategoricalColorFrameInit2.png[alt="scatter chart with color frame initialized with custom colors"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

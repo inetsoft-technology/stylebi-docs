@@ -42,7 +42,7 @@ graph.addElement(elem);
 <4> Assign the scale to a xref:Coordinate.adoc[] object.
 
 
-image:commonscript:CategoricalScaleSetFill.png[]
+image:commonscript:CategoricalScaleSetFill.png[alt="area chart with scale filled to axis edges"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

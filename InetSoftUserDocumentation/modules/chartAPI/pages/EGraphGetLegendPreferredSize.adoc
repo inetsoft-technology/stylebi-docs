@@ -31,7 +31,7 @@ alert(graph.getLegendPreferredSize()); //<3>
 <2> Set the legend size.
 <3> Use `getLegendPreferredSize()` to get the legend size.
 
-image:commonscript:EGraphaddsetLegendPreferredSize.png[]
+image:commonscript:EGraphaddsetLegendPreferredSize.png[alt="EGraph with legend preferred size retrieved"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -14,7 +14,7 @@ graph.addElement(elem);
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
-image:commonscript:StaticColorFrameExample.png[]
+image:commonscript:StaticColorFrameExample.png[alt="scatter chart with small default point elements"]
 
 
 
@@ -42,7 +42,7 @@ elem.setSizeFrame(sframe);
 +
 The points are now large and red.
 +
-image:commonscript:StaticColorFrameExampleFinal.png[]
+image:commonscript:StaticColorFrameExampleFinal.png[alt="scatter chart with large red points applied"]
 
 Because these are *static* VisualFrames, the color and size are not keyed to the data. To represent data values using color, size, or other visual attributes, see xref:chartAPI:RepresentDatawithShapeColorSize.adoc[].
 

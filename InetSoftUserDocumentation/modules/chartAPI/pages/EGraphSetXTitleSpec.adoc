@@ -31,7 +31,7 @@ graph.addElement(elem);
 <3> Use `setXTitleSpec()` to add the `TitleSpec` to Chart.
 
 
-image:commonscript:EGraphaddsetXTitleSpec.png[]
+image:commonscript:EGraphaddsetXTitleSpec.png[alt="EGraph with X title spec set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

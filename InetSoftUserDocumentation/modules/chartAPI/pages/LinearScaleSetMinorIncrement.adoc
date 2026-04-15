@@ -44,7 +44,7 @@ graph.addElement(elem);
 <4> Use `setMinorIncrement` to set the  desired minor increment.
 <5> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
-image:commonscript:LinearScaleSetMinorIncrement.png[]
+image:commonscript:LinearScaleSetMinorIncrement.png[alt="bar chart with minor tick increment set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

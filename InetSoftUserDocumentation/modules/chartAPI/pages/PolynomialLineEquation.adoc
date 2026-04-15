@@ -29,7 +29,7 @@ graph.addForm(form); //<4>
 <3> Use    xref:GraphFormSetLineEquation.adoc[] to apply a the `PolynomialLineEquation`.
 <4> Use xref:EGraphAddForm.adoc[] to add the `LineForm` to the Chart.
 
-image:commonscript:PolynomialLineEquation.png[]
+image:commonscript:PolynomialLineEquation.png[alt="scatter chart with polynomial cubic trend line"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

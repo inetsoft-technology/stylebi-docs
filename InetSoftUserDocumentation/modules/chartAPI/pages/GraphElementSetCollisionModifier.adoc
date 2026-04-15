@@ -42,7 +42,7 @@ graph.addElement(elem); //<4>
 <3> Use `setCollisionModifier` to set stacking.
 <4> Use `addElement` to add the IntervalElement to the Chart.
 
-image:commonscript:GraphElementsetCollisionMod.png[]
+image:commonscript:GraphElementsetCollisionMod.png[alt="bar chart with symmetric stack collision modifier"]
 
 .Chart Component Script
 [source,javascript]
@@ -63,7 +63,7 @@ graph.addElement(elem); //<4>
 <3> Use `setCollisionModifier` to jitter the points.
 <4> Use `addElement` to add the PointElement to the Chart.
 
-image:commonscript:GraphElementsetCollisionMod2.png[]
+image:commonscript:GraphElementsetCollisionMod2.png[alt="point chart with jitter collision modifier applied"]
 
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

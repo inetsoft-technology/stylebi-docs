@@ -37,7 +37,7 @@ graph.addElement(elem);
 <2> Create the `AxisSpec` objects.
 <3> Use `setTickVisible` to hide ticks.
 
-image:commonscript:AxisSpecsetTickVisible.png[]
+image:commonscript:AxisSpecsetTickVisible.png[alt="bar chart with axis tick marks hidden"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

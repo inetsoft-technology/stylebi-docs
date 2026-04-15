@@ -42,7 +42,7 @@ graph.addElement(elem);
 <3> Use `setTuple()` to set the axis location for the label.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:LabelFormSetTuple.png[]
+image:commonscript:LabelFormSetTuple.png[alt="chart with label positioned using tuple axis coordinates"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

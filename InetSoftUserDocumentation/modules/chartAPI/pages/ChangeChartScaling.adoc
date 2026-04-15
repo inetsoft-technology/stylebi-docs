@@ -23,7 +23,7 @@ graph.addElement(elem);
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
-image:commonscript:ScalingChartAxes.png[]
+image:commonscript:ScalingChartAxes.png[alt="bar chart with default linear axis scale"]
 
 
 Note that in this Chart the xref:chartAPI:IntervalElement.adoc[] object implicitly defines a linear Y-axis scale. However, the data values on the Chart are widely different in magnitude, which suggests that a log scale might be more appropriate. To change the Y-axis to use a log scale, follow these steps:
@@ -38,7 +38,7 @@ var scale = new LogScale("Quantity");
 [source,javascript]
 graph.setScale("Quantity",scale);
 +
-image:commonscript:ScalingChartAxesFinal.png[]
+image:commonscript:ScalingChartAxesFinal.png[alt="bar chart with logarithmic Y-axis scale"]
 
 .Complete Script
 ****
@@ -72,11 +72,11 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . Press the {buttonEditDimension} next to the ‘State’ field in the ‘Data’ panel.
 +
-image:commonscript:Axis Range Example 1.png[]
+image:commonscript:Axis Range Example 1.png[alt="edit dimension button next to State field"]
 
 . From the ‘Ranking’ option in the ‘Edit Dimension’ panel, specify ‘Top 5 of Sum(Total)’. Press the {buttonApply}.
 +
-image:commonscript:Axis Range Example 2.png[]
+image:commonscript:Axis Range Example 2.png[alt="ranking option set to top 5 of sum total"]
 
 . Right-click the Chart component on the Dashboard, and select ‘Properties’ from the context menu. This opens the ‘Chart Properties’ panel.
 
@@ -103,11 +103,11 @@ yScale.setMin(.75*dMin);
 
 . Press btn:[OK] to close the ‘Chart Properties’ panel. Observe how the chart Y-axis updates so that the lower limit is 75% of the smallest chart value.
 +
-image:commonscript:Axis Range Example 3.png[]
+image:commonscript:Axis Range Example 3.png[alt="bar chart with Y-axis lower limit at 75 percent of minimum"]
 +
 . From the *Data Source* panel of the Chart Editor, drag the ‘Category’ field onto the Dashboard. This creates a ‘Category’ Selection List.
 +
-image:commonscript:Axis Range Example 4.png[]
+image:commonscript:Axis Range Example 4.png[alt="Category selection list added to dashboard"]
 
 . Select different combinations of categories from the ‘Category’ Selection List, and observe how the Chart axis updates.
 ====
@@ -129,7 +129,7 @@ graph.addElement(elem);
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
-image:commonscript:ScalingChartColorFrame.png[]
+image:commonscript:ScalingChartColorFrame.png[alt="bar chart with brightness color frame and default scale"]
 
 Note that in this Chart a linear scale is defined implicitly by the xref:chartAPI:BrightnessColorFrame.adoc[] object. The legend indicates that this default scale runs from 1400 to 2600. To change the scaling to run from 500 to 3000 instead, you must explicitly define a new `Scale` object. Follow these steps:
 
@@ -150,7 +150,7 @@ scale.setMin(500);
 [source,javascript]
 frame.setScale(scale);
 +
-image:commonscript:ScalingChartAxesFinal.png[]
+image:commonscript:ScalingChartAxesFinal.png[alt="bar chart with custom color frame scale range"]
 
 .Complete Script
 ****

@@ -37,7 +37,7 @@ graph.addElement(elem);
 <3> Use `setLine()` to set the line style.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:GraphFormSetLine.png[]
+image:commonscript:GraphFormSetLine.png[alt="chart with dash line style applied to form"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

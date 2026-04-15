@@ -34,7 +34,7 @@ graph = createTreemap("state", "price", ["state", "city", "product_name"]) //<2>
 <1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
 <2> Create the treemap chart.
 +
-image:commonscript:treeMap1.png[]
+image:commonscript:treeMap1.png[alt="treemap chart created from script"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -50,7 +50,7 @@ graph.addElement(elem); //<5>
 <5> Use `addElement` to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:GraphElementSetAutoTextColor.png[]
+image:commonscript:GraphElementSetAutoTextColor.png[alt="bar chart with auto text color on labels"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

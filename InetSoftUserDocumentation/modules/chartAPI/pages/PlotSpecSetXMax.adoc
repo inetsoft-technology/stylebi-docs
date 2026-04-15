@@ -41,7 +41,7 @@ graph.addElement(elem);
 <4> Use `setXMax()` to set the right edge X position for background image.
 <5> Use xref:CoordinateSetPlotSpec.adoc[]  to assign the `PlotSpec` to the `Coordinate`.
 
-image:commonscript:PlotSpecSetXMax.png[]
+image:commonscript:PlotSpecSetXMax.png[alt="scatter chart with background image right edge positioned"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

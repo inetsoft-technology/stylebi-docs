@@ -40,7 +40,7 @@ include::scriptexample:partial$AxisSpecSetInPlot1.js[]
 <3> Create the `AxisSpec` object.
 <4> Use `setInPlot` to add a buffer to the plot area.
 
-image:commonscript:AxisSpecsetInPlot.png[]
+image:commonscript:AxisSpecsetInPlot.png[alt="bar chart with max value buffered inside plot"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

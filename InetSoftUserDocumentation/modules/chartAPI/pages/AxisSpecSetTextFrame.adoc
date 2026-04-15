@@ -24,7 +24,7 @@ include::scriptexample:partial$AxisSpecSetTextFrame1.js[]
 <3> Create the `AxisSpec` object.
 <4> Use `setTextFrame` to assign the `TextFrame` to the axis.
 
-image:commonscript:AxisSpecsetTextFrame.png[]
+image:commonscript:AxisSpecsetTextFrame.png[alt="bar chart with custom axis text frame labels"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

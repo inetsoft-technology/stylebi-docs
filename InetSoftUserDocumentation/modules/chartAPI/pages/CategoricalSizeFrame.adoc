@@ -37,7 +37,7 @@ graph.addElement(elem);
 <2> Create the xref:CategoricalSizeFrame.adoc[] object.
 <3> Use xref:GraphElementSetSizeFrame.adoc[] to add the `CategoricalSizeFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:CategoricalSizeFrame2.png[]
+image:commonscript:CategoricalSizeFrame2.png[alt="bar chart with categorical size frame per state"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -81,7 +81,7 @@ Chart1.bindingInfo.sizeFrame = new CategoricalSizeFrame;
 --
 
 +
-image:commonscript:CategoricalSizeFrame.png[]
+image:commonscript:CategoricalSizeFrame.png[alt="bar chart with size frame applied via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

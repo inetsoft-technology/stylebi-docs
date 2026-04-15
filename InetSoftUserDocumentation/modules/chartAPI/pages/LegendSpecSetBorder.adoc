@@ -37,7 +37,7 @@ graph.addElement(elem);
 <3> Use `setBorder()` to assign a border style to the `LegendSpec`.
 <4> Use the inherited xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` to the `ColorFrame`.
 
-image:commonscript:LegendSpecsetBorder.png[]
+image:commonscript:LegendSpecsetBorder.png[alt="legend with dash border style applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

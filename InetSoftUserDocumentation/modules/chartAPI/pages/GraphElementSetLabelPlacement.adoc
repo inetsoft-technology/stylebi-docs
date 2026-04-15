@@ -38,7 +38,7 @@ graph.addElement(elem); //<4>
 <3> Use `setLabelPlacement` to position the `TextFrame` labels under the points.
 <4> Use `addElement` to add the `PointElement` to the Chart.
 
-image:commonscript:GraphElementsetLabelPlacement.png[]
+image:commonscript:GraphElementsetLabelPlacement.png[alt="point chart with labels placed below points"]
 
 
 

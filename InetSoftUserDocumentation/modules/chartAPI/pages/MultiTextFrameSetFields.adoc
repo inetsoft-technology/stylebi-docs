@@ -41,7 +41,7 @@ graph.addElement(elem);
 <3> Use `setFields` to specify the fields for the `MultiTextFrame`.
 <4> Use xref:GraphElementSetTextFrame.adoc[] to add the `MultiTextFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:MultiTextFrameSetField.png[]
+image:commonscript:MultiTextFrameSetField.png[alt="bar chart with multiple text field labels displayed"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -26,7 +26,7 @@ graph.addForm(form); //<4>
 <3> Use    xref:GraphFormSetLineEquation.adoc[] to apply a the `ExponentialLineEquation`.
 <4> Use xref:EGraphAddForm.adoc[] to add the `LineForm` to the Chart.
 
-image:commonscript:ExponentialLineEquation.png[]
+image:commonscript:ExponentialLineEquation.png[alt="line chart with exponential trend line"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

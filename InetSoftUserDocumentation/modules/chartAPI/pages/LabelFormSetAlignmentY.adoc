@@ -47,7 +47,7 @@ graph.addElement(elem);
 <3> Use `setAlignmentY()` to set the vertical alignment.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:LabelFormSetYAlignment.png[]
+image:commonscript:LabelFormSetYAlignment.png[alt="chart with label form vertical alignment set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

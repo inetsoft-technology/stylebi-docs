@@ -36,6 +36,6 @@ graph.addElement(elem);
 <1> Create the  `Coordinate` object.
 <2> Use `setCoordinate` to add the `Coordinate` object to the Chart.
 
-image:commonscript:EGraphsetCoordinate.png[]
+image:commonscript:EGraphsetCoordinate.png[alt="EGraph with transposed RectCoord applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

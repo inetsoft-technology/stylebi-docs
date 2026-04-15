@@ -39,7 +39,7 @@ graph.addElement(elem);
 <2> Create the xref:ShapeFrame.adoc[] object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the element.
 
-image:commonscript:FillShapeFrame2.png[]
+image:commonscript:FillShapeFrame2.png[alt="chart with FillShapeFrame applied to element"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -66,7 +66,7 @@ Chart1.bindingInfo.shapeFrame = new FillShapeFrame;
 --
 
 +
-image:commonscript:FillShapeFrame_1.png[]
+image:commonscript:FillShapeFrame_1.png[alt="chart with FillShapeFrame via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

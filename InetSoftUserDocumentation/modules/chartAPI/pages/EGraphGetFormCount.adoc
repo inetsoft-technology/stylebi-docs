@@ -42,7 +42,7 @@ graph.addElement(elem);
 <2> Add xref:GraphForm.adoc[] objects to Chart.
 <3> Use `getFormCount` to return the number of `GraphForms`.
 
-image:commonscript:EGraphgetFormCount.png[]
+image:commonscript:EGraphgetFormCount.png[alt="EGraph with form count retrieved"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

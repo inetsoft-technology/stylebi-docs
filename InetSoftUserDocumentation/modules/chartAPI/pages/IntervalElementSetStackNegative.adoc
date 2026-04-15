@@ -48,7 +48,7 @@ graph.addElement(elem); //<4>
 <4> Use xref:EGraphAddElement.adoc[] to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:IntervalElementsetStackNegative.png[]
+image:commonscript:IntervalElementsetStackNegative.png[alt="bar chart with arithmetic stacking of positive and negative values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

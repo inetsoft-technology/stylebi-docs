@@ -37,7 +37,7 @@ graph.addElement(elem);
 <2> Create the `OrientationTextureFrame` object.
 <3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:OrientationTextureFrame2.png[]
+image:commonscript:OrientationTextureFrame2.png[alt="bar chart with orientation-based texture pattern"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -63,7 +63,7 @@ Chart1.bindingInfo.textureFrame = new OrientationTextureFrame;
 --
 
 +
-image:commonscript:OrientationTextureFrame.png[]
+image:commonscript:OrientationTextureFrame.png[alt="bar chart with orientation texture frame applied"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

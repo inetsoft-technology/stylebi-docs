@@ -57,7 +57,7 @@ graph.addElement(elem);
 <3> Create the `PolarCoord` from the `RectCoord` object.
 <4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:PolarCoordsExample2.png[]
+image:commonscript:PolarCoordsExample2.png[alt="polar coordinate pie chart with stacked color segments"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

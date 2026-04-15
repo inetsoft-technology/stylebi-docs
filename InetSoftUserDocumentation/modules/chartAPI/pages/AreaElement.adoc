@@ -29,7 +29,7 @@ include::scriptexample:partial$AreaElement1.js[]
 <2> Create the `AreaElement` object.
 <3> Use `addElement` to assign the `AreaElement` to the Chart.
 
-image:commonscript:AreaElement.png[]
+image:commonscript:AreaElement.png[alt="area chart with stacked regions"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

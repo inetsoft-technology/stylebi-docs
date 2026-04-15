@@ -46,7 +46,7 @@ graph.addElement(elem);
 <4> Use `setField` to specify the field for the `GradientColorFrame`.
 <5> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
 
-image:commonscript:GradientColorFrame3.png[]
+image:commonscript:GradientColorFrame3.png[alt="chart with gradient color start color set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -93,7 +93,7 @@ Chart1.bindingInfo.colorFrame.toColor = 0xFF00FF;
 --
 
 +
-image:commonscript:GradientColorFrame_2.png[]
+image:commonscript:GradientColorFrame_2.png[alt="chart with gradient from color via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

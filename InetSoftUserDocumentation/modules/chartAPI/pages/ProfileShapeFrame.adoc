@@ -38,7 +38,7 @@ graph.addElement(elem);
 <3> Use the inherited xref:MultiShapeFrameSetFields.adoc[] property to assign the fields to the `ProfileShapeFrame`.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:ProfileShapeFrame.png[]
+image:commonscript:ProfileShapeFrame.png[alt="point chart with profile shape frame"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

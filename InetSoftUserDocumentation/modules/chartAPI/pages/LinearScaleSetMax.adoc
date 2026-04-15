@@ -44,7 +44,7 @@ graph.addElement(elem);
 <4> Use `setMax` to set the  desired maximum.
 <5> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
-image:commonscript:LinearScaleSetMinMax.png[]
+image:commonscript:LinearScaleSetMinMax.png[alt="bar chart with custom axis min and max values set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

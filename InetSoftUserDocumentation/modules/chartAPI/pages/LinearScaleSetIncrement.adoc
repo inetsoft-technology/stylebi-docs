@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setIncrement` to set the  desired increment.
 <4> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
-image:commonscript:LinearScaleSetIncrement.png[]
+image:commonscript:LinearScaleSetIncrement.png[alt="bar chart with custom axis increment applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

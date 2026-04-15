@@ -46,7 +46,7 @@ graph.setScale("Quantity", qscale); <2>
 <2> Use `setScale` to add the `Scale` object to Chart.
 
 +
-image:commonscript:EGraphsetScale.png[]
+image:commonscript:EGraphsetScale.png[alt="EGraph with custom scale min and max applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

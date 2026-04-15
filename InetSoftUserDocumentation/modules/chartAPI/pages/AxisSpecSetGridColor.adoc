@@ -22,7 +22,7 @@ include::scriptexample:partial$AxisSpecSetGridColor1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setGridColor` to assign the color.
 
-image:commonscript:TextSpecsetGridColor.png[]
+image:commonscript:TextSpecsetGridColor.png[alt="bar chart with custom grid line color"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

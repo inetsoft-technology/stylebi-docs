@@ -50,7 +50,7 @@ graph.addElement(elem);
 <4> Use `setOuterCoordinate` to assign the outer coordinates from the `RectCoord` to the `FacetCoord`.
 <5> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:FacetCoordsetInnerCoord_1.png[]
+image:commonscript:FacetCoordsetInnerCoord_1.png[alt="FacetCoord with outer coordinates set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

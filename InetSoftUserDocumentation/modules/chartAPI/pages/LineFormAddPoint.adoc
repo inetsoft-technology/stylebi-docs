@@ -52,7 +52,7 @@ graph.addElement(elem);
 <4> Use `addPoint()` to set `form2` points proportionally.
 <5> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:GraphFormSetPoint.png[]
+image:commonscript:GraphFormSetPoint.png[alt="bar chart with line forms at pixel and proportional points"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

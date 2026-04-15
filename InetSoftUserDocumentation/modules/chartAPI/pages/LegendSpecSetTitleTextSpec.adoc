@@ -40,7 +40,7 @@ graph.addElement(elem);
 <3> Create the xref:TextSpec.adoc[] object.
 <4> Use `setTitleTextSpec` to assign the `TextSpec` to the `LegendSpec`.
 
-image:commonscript:LegendSpecsetTitleTextSpec.png[]
+image:commonscript:LegendSpecsetTitleTextSpec.png[alt="legend with title text color set to red"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

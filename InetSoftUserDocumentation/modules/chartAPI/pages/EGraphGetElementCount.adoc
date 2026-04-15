@@ -35,7 +35,7 @@ for (var i=0; i<elemCount; i++) {
 <2> Add elements to Chart.
 <3> Use `getElementCount()` to return the number of elements.
 
-image:commonscript:EGraphgetElementCount.png[]
+image:commonscript:EGraphgetElementCount.png[alt="EGraph with element count retrieved"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

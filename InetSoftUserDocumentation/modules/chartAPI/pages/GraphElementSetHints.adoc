@@ -40,7 +40,7 @@ graph.addElement(elem); //<4>
 <3> Use `setHints` to apply shading.
 <4> Use `addElement` to add the `IntervalElement` to the Chart.
 
-image:commonscript:GraphElementsetHint.png[]
+image:commonscript:GraphElementsetHint.png[alt="bar chart with shine and alpha hints applied"]
 
 
 

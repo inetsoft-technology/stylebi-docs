@@ -42,7 +42,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 
 . Click the {buttonPreview} the toolbar to preview the  Dashboard.
 +
-image:commonscript:ScriptChartElementGraph.png[]
+image:commonscript:ScriptChartElementGraph.png[alt="point chart showing max and min totals per employee"]
 +
 The chart shows maximum and minimum totals for each employee, and the chart shape-coding (interior fill) displays the average totals.
 +
@@ -85,7 +85,7 @@ elem0.sizeFrame = sizframe;  // Max point element
 
 . Close the Script Editor, and press {buttonPreview} to preview the  Dashboard.
 +
-image:commonscript:ScriptChartElementGraphFinal.png[]
+image:commonscript:ScriptChartElementGraphFinal.png[alt="point chart with red arrow markers and resized max points"]
 
 .Complete Script
 ****

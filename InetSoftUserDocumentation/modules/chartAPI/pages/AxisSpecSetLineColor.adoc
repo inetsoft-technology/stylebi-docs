@@ -26,7 +26,7 @@ include::scriptexample:partial$AxisSpecSetLineColor1.js[]
 <2> Create two `AxisSpec` objects.
 <3> Use `setLineColor` to assign the color to both axes.
 
-image:commonscript:TextFrame2setLineColor.png[]
+image:commonscript:TextFrame2setLineColor.png[alt="bar chart with custom axis line colors"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

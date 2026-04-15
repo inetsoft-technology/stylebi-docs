@@ -36,7 +36,7 @@ graph.addElement(elem);
 <3> Use `setTitle` to assign the  title to the `LegendSpec`.
 <4> Use xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` to the `ColorFrame`.
 
-image:commonscript:LegendSpecsetTitle.png[]
+image:commonscript:LegendSpecsetTitle.png[alt="legend with custom title text applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -35,7 +35,7 @@ graph.addElement(elem);
 <2> Create the xref:CategoricalShapeFrame.adoc[] object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `CategoricalShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:CategoricalShapeFrame2.png[]
+image:commonscript:CategoricalShapeFrame2.png[alt="scatter chart with unique shape per category value"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -80,7 +80,7 @@ Chart1.bindingInfo.shapeFrame = new CategoricalShapeFrame;
 --
 
 +
-image:commonscript:CategoricalShapeFrame.png[]
+image:commonscript:CategoricalShapeFrame.png[alt="scatter chart with shape frame applied via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

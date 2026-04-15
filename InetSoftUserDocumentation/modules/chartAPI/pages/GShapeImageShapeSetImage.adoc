@@ -40,7 +40,7 @@ graph.addElement(elem);
 <4> Pass the `shape` to the xref:StaticShapeFrame.adoc[] constructor.
 <5> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:IntervalElement.adoc[].
 +
-image:commonscript:GShapeImageShape2setImage.png[]
+image:commonscript:GShapeImageShape2setImage.png[alt="bar chart with image assigned as shape fill"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -92,6 +92,6 @@ Chart1.bindingInfo.shapeFrame = frame;
 --
 
 +
-image:commonscript:GShapeImageShape_1.png[]
+image:commonscript:GShapeImageShape_1.png[alt="point chart with image shape via bindingInfo property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]

@@ -41,7 +41,7 @@ graph.addElement(elem); //<4>
 <4> Use xref:EGraphAddElement.adoc[] to add the `LineElement` to the Chart.
 
 
-image:commonscript:LineElementsetStartArrow.png[]
+image:commonscript:LineElementsetStartArrow.png[alt="line chart with arrow at start point"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

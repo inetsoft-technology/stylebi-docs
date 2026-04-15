@@ -41,6 +41,6 @@ graph.addElement(elem);
 <5> Use  xref:EGraphSetScale.adoc[] to add the `Scale` to the Chart for the  "`Quantity`" field.
 
 
-image:commonscript:PowerScale_1.png[]
+image:commonscript:PowerScale_1.png[alt="bar chart with exponent 0.5 power scale"]
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

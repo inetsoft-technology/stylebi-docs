@@ -39,7 +39,7 @@ include::scriptexample:partial$AxisSpecSetAxisStyle1.js[]
 <3> Use `setAxisStyle` to assign the style.
 <4> Assign the `AxisSpec` object to the `LinearScale` object.
 
-image:commonscript:TextSpecsetAxisStyle.png[]
+image:commonscript:TextSpecsetAxisStyle.png[alt="bar chart with axis style applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

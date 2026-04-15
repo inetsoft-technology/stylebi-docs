@@ -41,7 +41,7 @@ graph.addElement(elem);
 <2> Create the `DefaultTextFrame` object.
 <3> Use xref:GraphElementSetTextFrame.adoc[] to add the `TextFrame` to the element.
 
-image:commonscript:DefaultTextFrame2.png[]
+image:commonscript:DefaultTextFrame2.png[alt="chart with DefaultTextFrame labels applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -70,7 +70,7 @@ graph.addElement(elem);
 <3> Use `setText` to set the text mapping in the `TextFrame`.
 <4> Use xref:LegendSpecSetTextFrame.adoc[] to add the `TextFrame` to the legend.
 
-image:commonscript:TextFrame2setText_1.png[]
+image:commonscript:TextFrame2setText_1.png[alt="chart legend with custom text mapping applied"]
 
 
 [#Example3]
@@ -89,7 +89,7 @@ Chart1.bindingInfo.textFrame = new DefaultTextFrame;
 --
 
 
-image:commonscript:DefaultTextFrame.png[]
+image:commonscript:DefaultTextFrame.png[alt="chart with DefaultTextFrame via bindingInfo"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]
 

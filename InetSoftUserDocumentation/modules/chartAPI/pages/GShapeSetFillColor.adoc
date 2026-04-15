@@ -39,7 +39,7 @@ graph.addElement(elem);
 <4> Pass the `shape` to the xref:StaticShapeFrame.adoc[] constructor.
 <5> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:IntervalElement.adoc[].
 +
-image:commonscript:GShapeImageShape4.png[]
+image:commonscript:GShapeImageShape4.png[alt="point chart with circle shape fill color set to red"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

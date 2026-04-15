@@ -40,7 +40,7 @@ graph.addElement(elem);
 <3> Use `setValues()` to set the axis location for the label.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:LabelFormSetValues.png[]
+image:commonscript:LabelFormSetValues.png[alt="chart with label positioned using data axis values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

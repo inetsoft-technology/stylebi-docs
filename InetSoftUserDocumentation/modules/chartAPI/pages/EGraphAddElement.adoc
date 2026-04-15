@@ -31,7 +31,7 @@ graph.addElement(elem); //<2>
 <1> {dataset}
 <2> Use `addElement` to add the LineElement to Chart.
 
-image:commonscript:EGraphaddElem.png[]
+image:commonscript:EGraphaddElem.png[alt="EGraph with LineElement added"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

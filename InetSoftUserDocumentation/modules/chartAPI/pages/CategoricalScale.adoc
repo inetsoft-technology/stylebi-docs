@@ -42,7 +42,7 @@ graph.addElement(elem);
 <3> Assign the scale to a xref:Coordinate.adoc[] object.
 
 
-image:commonscript:CategoricalScale.png[]
+image:commonscript:CategoricalScale.png[alt="horizontal bar chart using categorical scale"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

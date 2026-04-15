@@ -43,7 +43,7 @@ graph.addElement(elem);
 <3> Use `addTuple()` to set `form` location.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:LineFormAddTuple.png[]
+image:commonscript:LineFormAddTuple.png[alt="bar chart with line form positioned by tuple coordinates"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

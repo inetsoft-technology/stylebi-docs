@@ -47,7 +47,7 @@ graph.addElement(elem);
 <4> Use `setInnerCoordinates` to assign the inner coordinates from the `RectCoord` to the `FacetCoord`.
 <5> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:FacetCoordsetInnerCoord.png[]
+image:commonscript:FacetCoordsetInnerCoord.png[alt="FacetCoord with inner coordinates set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

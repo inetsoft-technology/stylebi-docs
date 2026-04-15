@@ -36,7 +36,7 @@ graph.addElement(elem);
 <2> Create the xref:CategoricalTextureFrame.adoc[] object.
 <3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `CategoricalTextureFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:CategoricalTextureFrame2.png[]
+image:commonscript:CategoricalTextureFrame2.png[alt="bar chart with unique texture per category value"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -84,7 +84,7 @@ Chart1.bindingInfo.textureFrame.setTexture('Annie',GTexture.PATTERN_5);
 --
 
 +
-image:commonscript:CategoricalTextureFrameSetTexture.png[]
+image:commonscript:CategoricalTextureFrameSetTexture.png[alt="bar chart with texture frame applied via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

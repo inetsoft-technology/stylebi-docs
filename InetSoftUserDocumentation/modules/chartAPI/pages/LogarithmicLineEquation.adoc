@@ -24,7 +24,7 @@ graph.addForm(form); //<4>
 <3> Use    xref:GraphFormSetLineEquation.adoc[] to apply a the `LogarithmicLineEquation`.
 <4> Use xref:EGraphAddForm.adoc[] to add the `LineForm` to the Chart.
 
-image:commonscript:GraphFormSetEquation.png[]
+image:commonscript:GraphFormSetEquation.png[alt="scatter chart with logarithmic trend line"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

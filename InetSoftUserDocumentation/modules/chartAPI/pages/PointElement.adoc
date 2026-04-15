@@ -36,7 +36,7 @@ graph.addElement(elem); //<3>
 <3> Use xref:EGraphAddElement.adoc[] to add the `PointElement` to the Chart.
 
 
-image:commonscript:PointElement.png[]
+image:commonscript:PointElement.png[alt="basic point scatter chart with two data points"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

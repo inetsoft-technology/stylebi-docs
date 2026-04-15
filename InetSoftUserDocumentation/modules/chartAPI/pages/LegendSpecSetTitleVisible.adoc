@@ -38,7 +38,7 @@ graph.addElement(elem);
 <3> Use `setTitleVisible` to hide  the title of the `LegendSpec`.
 <4> Use xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` to the `ColorFrame`.
 
-image:commonscript:LegendSpecsetTitleVisible.png[]
+image:commonscript:LegendSpecsetTitleVisible.png[alt="legend with title hidden"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

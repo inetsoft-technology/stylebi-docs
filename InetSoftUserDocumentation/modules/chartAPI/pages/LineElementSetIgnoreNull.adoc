@@ -44,7 +44,7 @@ graph.addElement(elem);//<4>
 <4> Use xref:EGraphAddElement.adoc[] to add the `LineElement` to the Chart.
 
 
-image:commonscript:setIgnoreNull1.png[]
+image:commonscript:setIgnoreNull1.png[alt="line chart with gap at null value"]
 
 
 .Chart Component Script: Continue Line at Null
@@ -64,7 +64,7 @@ graph.addElement(elem); //<4>
 <4> Use xref:EGraphAddElement.adoc[] to add the `LineElement` to the Chart.
 
 
-image:commonscript:setIgnoreNull2.png[]
+image:commonscript:setIgnoreNull2.png[alt="line chart continuing through null value"]
 
 
 

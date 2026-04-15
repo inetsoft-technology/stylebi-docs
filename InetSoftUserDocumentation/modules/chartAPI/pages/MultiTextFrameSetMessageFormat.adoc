@@ -32,7 +32,7 @@ Use `MultiTextFrame` to place multiple measures/dimensions as labels on a Chart.
 +
 In the  example below, '`Order Date`' and '`Price`' are displayed on the axes, and '`Region`' is assigned as the '`Text`' binding.  Because we want a label for '`Total`' as well, this field has been placed in  the  '`Break By`' region.
 +
-image:commonscript:MultiTextFrameSetField1.png[]
+image:commonscript:MultiTextFrameSetField1.png[alt="chart editor with fields assigned to Break By region"]
 
 
 . Add the following script to the Chart component. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
@@ -54,7 +54,7 @@ graph.getElement(0).setTextFrame(tframe); //<4>
 
 . *_Optional:_* Use the *Format* tab to change the label color to make them more visible.  (See xref:viewsheet:VisualFormat.adoc[].)
 +
-image:commonscript:MultiTextFrameSetField2.png[]
+image:commonscript:MultiTextFrameSetField2.png[alt="chart with formatted multi-field labels using message format"]
 
 
 

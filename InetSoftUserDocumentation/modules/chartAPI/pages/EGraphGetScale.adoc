@@ -41,7 +41,7 @@ scale.setMax(1000000); <2>
 <2> Apply operations to `Scale` object.
 
 +
-image:commonscript:EGraphgetScale.png[]
+image:commonscript:EGraphgetScale.png[alt="EGraph with scale min and max set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

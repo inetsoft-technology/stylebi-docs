@@ -44,7 +44,7 @@ alert(Chart1.graph.getVisualFrames()[0].getColor()); <2>
 
 
 +
-image:commonscript:EGraphgetVisualFrames.png[]
+image:commonscript:EGraphgetVisualFrames.png[alt="EGraph visual frames retrieved for color info"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

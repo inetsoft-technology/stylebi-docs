@@ -38,7 +38,7 @@ graph.addForm(form); //<3>
 <2> Use `setLineEquation()` to set the curve fit.
 <3> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:GraphFormSetEquation.png[]
+image:commonscript:GraphFormSetEquation.png[alt="chart with logarithmic curve fit line applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

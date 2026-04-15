@@ -31,7 +31,7 @@ graph = createSunburstGraph("state", "price", ["state", "city", "product_name"])
 <1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
 <2> Create the sunburst chart.
 +
-image:viewsheet:sunburst1.png[]
+image:viewsheet:sunburst1.png[alt="sunburst chart created from script"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

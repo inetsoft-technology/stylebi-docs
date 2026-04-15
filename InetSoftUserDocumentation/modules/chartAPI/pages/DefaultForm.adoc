@@ -25,7 +25,7 @@ graph.addForm(form); //<3>
 <2> Set xref:GraphForm.adoc[] properties.
 <3> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` objects to the Chart.
 
-image:commonscript:DefaultForm1.png[]
+image:commonscript:DefaultForm1.png[alt="chart with DefaultForm rectangle added"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

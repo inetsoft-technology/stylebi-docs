@@ -44,7 +44,7 @@ graph.addElement(elem);
 <3> Use `setInPlot()` to resize the Chart to fit the `GraphForm`.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:GraphFormSetInPlot.png[]
+image:commonscript:GraphFormSetInPlot.png[alt="chart resized to fit line form in plot area"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

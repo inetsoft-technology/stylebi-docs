@@ -38,7 +38,7 @@ graph.addElement(elem);
 <3> Use `setFill` to fill the ovals.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:OvalShapeFrameSetFill.png[]
+image:commonscript:OvalShapeFrameSetFill.png[alt="bar chart with filled oval shape markers"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -68,7 +68,7 @@ Chart1.bindingInfo.shapeFrame.fill = true;
 
 --
 +
-image:commonscript:OvalShapeFrameFill.png[]
+image:commonscript:OvalShapeFrameFill.png[alt="bar chart with filled oval shape frame via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

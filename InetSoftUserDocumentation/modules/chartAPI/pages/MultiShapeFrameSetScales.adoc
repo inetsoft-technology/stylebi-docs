@@ -52,7 +52,7 @@ graph.addElement(elem);
 <4> Use `setScales` to specify the scales for the `MultiShapeFrame`.
 <5> Use xref:GraphElementSetShapeFrame.adoc[] to add the `MultiShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:MultiShapeFrameSetScales.png[]
+image:commonscript:MultiShapeFrameSetScales.png[alt="point chart with star shapes scaled per field"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

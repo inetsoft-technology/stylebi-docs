@@ -23,7 +23,7 @@ include::scriptexample:partial$AxisSpecSetLabelGap1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setLabelGap` to add space next to the axis labels.
 
-image:commonscript:TextSpecsetLabelGap.png[]
+image:commonscript:TextSpecsetLabelGap.png[alt="axis label gap setting example"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

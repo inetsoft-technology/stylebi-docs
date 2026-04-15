@@ -45,7 +45,7 @@ graph.addElement(elem);
 <2> Create the `LineFrame` object.
 <3> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:LineElement.adoc[].
 
-image:commonscript:LineFrame2.png[]
+image:commonscript:LineFrame2.png[alt="line chart with dashed line style applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -74,7 +74,7 @@ Chart1.bindingInfo.lineFrame = new LinearLineFrame;
 --
 
 +
-image:commonscript:LinearLineFrame.png[]
+image:commonscript:LinearLineFrame.png[alt="bar chart with linear line frame applied"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

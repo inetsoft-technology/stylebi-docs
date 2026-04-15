@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setField` to specify the field for the `CategoricalColorFrame`.
 <4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:CategoricalColorFrame2.png[]
+image:commonscript:CategoricalColorFrame2.png[alt="bar chart with categorical color frame applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -89,7 +89,7 @@ Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
 --
 
 +
-image:commonscript:CategoricalColorFrame.png[]
+image:commonscript:CategoricalColorFrame.png[alt="bar chart with categorical color frame via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

@@ -45,7 +45,7 @@ graph.addElement(elem);
 <3> Use `setPreferredSize` to assign the size.
 <4> Use xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` object to the `ColorFrame`.
 
-image:commonscript:LegendSpecExamplesetPreferredSize.png[]
+image:commonscript:LegendSpecExamplesetPreferredSize.png[alt="chart with legend sized to preferred dimensions"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

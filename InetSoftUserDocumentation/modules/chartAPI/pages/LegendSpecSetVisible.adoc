@@ -41,7 +41,7 @@ graph.addElement(elem);
 <3> Use `setVisible` to hide  the legend.
 <4> Use  xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` to the `ColorFrame`.
 
-image:commonscript:LegendSpecsetVisible.png[]
+image:commonscript:LegendSpecsetVisible.png[alt="chart with legend hidden"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

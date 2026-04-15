@@ -39,7 +39,7 @@ graph.addElement(elem); //<4>
 <3> Use `setBorderColor` to set the element color.
 <4> Use `addElement` to add the IntervalElement to the Chart.
 
-image:commonscript:GraphElementsetBorderColor.png[]
+image:commonscript:GraphElementsetBorderColor.png[alt="bar chart with border color set on element"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setFields` to specify the fields for the `MultiShapeFrame`.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `MultiShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:MultiShapeFrameSetFields.png[]
+image:commonscript:MultiShapeFrameSetFields.png[alt="point chart with star shapes mapped to multiple fields"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

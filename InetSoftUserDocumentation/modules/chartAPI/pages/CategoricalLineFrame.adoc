@@ -38,7 +38,7 @@ graph.addElement(elem);
 <3> Use `setField` to specify the field for the `CategoricalLineFrame`.
 <4> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:CategoricalLineFrame2.png[]
+image:commonscript:CategoricalLineFrame2.png[alt="bar chart with categorical line frame per state"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -87,7 +87,7 @@ Chart1.bindingInfo.lineFrame.setLine('Annie', GLine.DOT_LINE);
 --
 
 +
-image:commonscript:CategoricalLineFrame.png[]
+image:commonscript:CategoricalLineFrame.png[alt="bar chart with categorical line frame via bindingInfo"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

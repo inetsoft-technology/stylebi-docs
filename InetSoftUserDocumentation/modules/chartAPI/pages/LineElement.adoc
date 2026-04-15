@@ -41,7 +41,7 @@ graph.addElement(elem); //<3>
 <3> Use xref:EGraphAddElement.adoc[] to add the `LineElement` to the Chart.
 
 
-image:commonscript:LineElement.png[]
+image:commonscript:LineElement.png[alt="basic line chart connecting data points"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

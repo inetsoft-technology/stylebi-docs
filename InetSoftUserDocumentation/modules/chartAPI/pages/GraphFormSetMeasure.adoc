@@ -48,7 +48,7 @@ graph.addElement(elem2);
 <3> Use `setMeasure()` to display the `GraphForm` only for the '`Sales`' measure.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:GraphFormSetMeasure.png[]
+image:commonscript:GraphFormSetMeasure.png[alt="facet chart with label form on specific measure"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

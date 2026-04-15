@@ -41,7 +41,7 @@ graph.addElement(elem);
 <4> Use `setYMin()` to set the bottom edge Y position for background image.
 <5> Use xref:CoordinateSetPlotSpec.adoc[]  to assign the `PlotSpec` to the `Coordinate`.
 
-image:commonscript:PlotSpecSetXMax_2.png[]
+image:commonscript:PlotSpecSetXMax_2.png[alt="scatter chart with background image bottom edge positioned"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

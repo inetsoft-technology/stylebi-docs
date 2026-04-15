@@ -58,7 +58,7 @@ for(i=1; i<data.length; i++) {
 +
 include::partial$scriptThatModifiesGraph.adoc[]
 +
-image:commonscript:ChartChangeLabels.png[]
+image:commonscript:ChartChangeLabels.png[alt="bar chart with company name and percent labels"]
 
 The above script uses a customized `TextFrame` to display the company name together with the percentage of total represented by each company. The xref:chartAPI:TextFrameSetText.adoc[] function is the key to replacing one set of labels by a different set of labels.
 
