@@ -10,11 +10,11 @@ You can specify a single global CSS file that applies to all Dashboards, as well
 +
 If you have multi-tenancy enabled (see xref:EnableMultiTenant.adoc[]), you can choose to make the settings described  below either globally or for a particular organization. To make global settings, select the *Global Settings* tab, and then proceed as described in the sections  below.
 +
-image:PresentationGlobalSettings.png[]
+image:PresentationGlobalSettings.png[alt="select Global Settings tab on Presentation page"]
 +
 To make settings for a particular organization, select the *Organization Settings* tab, and use the *Select Organization* menu to choose the desired organization.
 +
-image:PresentationOrgSettings.png[]
+image:PresentationOrgSettings.png[alt="select Organization Settings tab and choose organization"]
 +
 Then proceed with steps   below:
 
@@ -22,13 +22,13 @@ Then proceed with steps   below:
 
 . Select the *Look and Feel* page in the right panel.
 +
-image:Global Look and Feel.png[]
+image:Global Look and Feel.png[alt="select Look and Feel page in right panel"]
 
 
 
 . Uncheck ‘Default Dashboard CSS’, and click in the ‘Custom Dashboard CSS File ’ field. This opens the standard file upload dialog box.
 +
-image:uploadCSSFile.png[]
+image:uploadCSSFile.png[alt="uncheck Default Dashboard CSS and click to upload custom file"]
 
 . Locate the desired CSS file, and press btn:[Open].
 

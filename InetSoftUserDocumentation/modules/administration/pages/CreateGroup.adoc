@@ -11,10 +11,10 @@ To create a new group, follow the steps below:
 . Press the {buttonSettings} at the top of Enterprise Manager.
 . Select the *Security* page in the left panel.
 +
-image:Figure 23_1.png[]
+image:Figure 23_1.png[alt="select Security page in left panel"]
 . Select the *Users* tab.
 +
-image:securityDefineUsers.png[]
+image:securityDefineUsers.png[alt="select Users tab in Security page"]
 
 . From the ‘Provider Name’ menu, select the security provider under which to define groups.
 
@@ -22,7 +22,7 @@ include::administration:partial$selectOrganization.adoc[]
 
 . Press the ‘New Group’ link below the tree. This creates a group with the default name ‘groupN’ (group0, group1, etc.).
 +
-image:server3.png[]
+image:server3.png[alt="new group created in security tree"]
 
 . Type in the ‘Name’ field to change the name of the group.
 
@@ -34,7 +34,7 @@ IMPORTANT: The multi-tenant feature in Enterprise Edition must be *disabled*.  S
 
 . *_Optional:_* To add the users or groups to a group, press the btn:[Add] button in the ‘Members’ area. Choose the desired group(s) in the ‘Add Group/User’ dialog box (kbd:[Ctrl]-click to select multiple groups or users), and press btn:[Add].
 +
-image:securityDefineGroup.png[]
+image:securityDefineGroup.png[alt="add members and roles to group dialog"]
 
 . *_Optional:_* To add a role for users in the group, press the btn:[Add] button in the ‘Roles’ area. Choose the desired role(s) in the ‘Add Role’ dialog box (kbd:[Ctrl]-click to select multiple roles), and press btn:[Add].
 
@@ -52,10 +52,10 @@ To edit a user, follow the steps below:
 . Press the {buttonSettings} at the top of Enterprise Manager.
 . Select the *Security* page in the left panel.
 +
-image:Figure 23_1.png[]
+image:Figure 23_1.png[alt="select Security page in left panel"]
 . Select the *Users* tab.
 +
-image:securityDefineUsers.png[]
+image:securityDefineUsers.png[alt="select Users tab in Security page"]
 
 . From the ‘Provider Name’ menu, select the security provider under which to define groups.
 

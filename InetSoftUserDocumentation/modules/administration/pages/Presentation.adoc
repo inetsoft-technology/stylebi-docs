@@ -12,11 +12,11 @@ If you have multi-tenancy enabled (see xref:EnableMultiTenant.adoc[]), you can c
 
 To make global settings, select the *Global Settings* tab, and then proceed as described in the sections  below.
 
-image:PresentationGlobalSettings.png[]
+image:PresentationGlobalSettings.png[alt="global settings tab for presentation options"]
 
 To make settings for a particular organization, select the *Organization Settings* tab, and use the *Select Organization* menu to choose the desired organization. Then proceed as described in the sections  below.
 
-image:PresentationOrgSettings.png[]
+image:PresentationOrgSettings.png[alt="organization settings tab with select organization menu"]
 
 [#GeneralFormat]
 == General Format
@@ -30,7 +30,7 @@ To format date/time representation and set default image format, follow the step
 
 . Select the *General Format* page in the right panel.
 +
-image:Figure 40.png[]
+image:Figure 40.png[alt="general format page with date and time format settings"]
 
 . Set the desired date and time formats.
 +
@@ -50,7 +50,7 @@ To set the export options available for  Dashboards, follow the steps below:
 
 . Select the *Export Menu* page in the right panel.
 +
-image:Figure 43.png[]
+image:Figure 43.png[alt="export menu page with dashboard export format options"]
 
 . Enable the desired export formats for  Dashboards.
 
@@ -68,7 +68,7 @@ To set the global look-and-feel for the User Portal follow the steps below:
 . *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
 . Select the *Look and Feel* page in the right panel.
 +
-image:Global Look and Feel.png[]
+image:Global Look and Feel.png[alt="look and feel page with portal appearance settings"]
 
 The following properties are available:
 
@@ -78,7 +78,7 @@ Default Dashboard CSS:: Allows you to specify a custom CSS file to use for Dashb
 
 Default Fonts:: Allows you to upload custom fonts. To add custom fonts, uncheck the ‘Default Font’ option and press the ‘Edit Fonts’ button. In the ‘User Fonts’ dialog box, press btn:[Add] to open the '`Add/Edit Font Face`' dialog box and load a new font by specifying the locations of the font’s TTF, EOT, SVG, and WOFF files, as well as the desired weight and style.
 +
-image:Global Look and Feel2.png[]
+image:Global Look and Feel2.png[alt="user fonts dialog for uploading custom fonts"]
 +
 You can add multiple font variations under the same name so that, for example, a bold or italic version of the font will be available when the user applies bold or italic formatting. Verify that each parent folder for the desired fonts is listed in the '`CID Font Path`' (see  xref:#PDFSettings[]). Note that fonts for   *asset exports* will not be available unless the font file is located in a '`CID Font Path`' directory.
 
@@ -96,7 +96,7 @@ Default Favicon:: This option is available only when the `portal.customLogo.enab
 
 Custom Shapes::  To upload custom images for use with a Chart (see xref:viewsheet:BasicChartingSteps.adoc[]), press the btn:[Custom Shapes] button to open the '`Custom Shapes`' dialog box.  To upload a Zip file containing images, first enable the '`Extract archive files`' option.  Press  btn:[Select], and choose an  image file (png, gif, jpg, svg) or archive. Press btn:[Upload] to upload the image or archive to the _portal/shapes_ directory. (See  xref:administration:Storage.adoc[] for   information about managing uploads.)
 +
-image:CustomShapes.png[]
+image:CustomShapes.png[alt="custom shapes dialog for uploading chart images"]
 +
 In the Chart Editor, the icons are sorted alphabetically by file name. Custom shape images can be any size, and are scaled according to the ‘Size’ setting in the Chart Editor.
 
@@ -118,7 +118,7 @@ A *theme* is a set of CSS properties that define the appearance (color and fonts
 
 . Select the *Themes* tab at the top.
 +
-image:theme0.png[]
+image:theme0.png[alt="themes tab listing available portal themes"]
 
 . See the  sections below to perform the desired functions:
 +
@@ -133,19 +133,19 @@ image:theme0.png[]
 === Create a New Theme
 . Press the {buttonNewCircle} to create a new theme.
 +
-image:theme1.png[]
+image:theme1.png[alt="press new circle button to create a theme"]
 
 
 
 . Enter the name for the new theme. (Do not click in the ‘Theme JAR File’ field.)  Press btn:[OK].
 +
-image:theme2.png[]
+image:theme2.png[alt="enter new theme name dialog"]
 
 . *_Optional:_* On the *Theme* tab, select the ‘Default’ option to use the theme as the default Portal appearance. Press btn:[Apply].
 
 . Select the *CSS* tab.
 +
-image:theme3.png[]
+image:theme3.png[alt="CSS tab for editing theme properties"]
 
 . Edit the desired CSS property. (To find a property, type some of the property’s name in the ‘Filter’ field above the property list.) For colors, you can click the color chip to enter a color using a color picker, or press the {buttonEdit} to enter a hex color code.
 
@@ -462,7 +462,7 @@ The ‘Enterprise Dark’ option  sets the ‘Dark’ theme for Enterprise Manag
 ****
 ====
 +
-image:theme4.png[]
+image:theme4.png[alt="apply CSS changes to theme"]
 
 . Press btn:[Apply] to make the changes to the theme.
 
@@ -475,21 +475,21 @@ To import a theme from a JAR file, follow the steps below:
 
 . Press the {buttonNewCircle} to create a new theme.
 +
-image:theme1.png[]
+image:theme1.png[alt="press new circle button to create a theme"]
 
 . Enter the name for the new theme. Click in the ‘Theme JAR File’ to upload the JAR file containing the theme, and press btn:[OK].
 +
-image:theme5.png[]
+image:theme5.png[alt="enter theme name and JAR file for import"]
 
 . On the *Theme* tab, select the ‘Default’ option to use the theme as the default Portal appearance. Press btn:[Apply].
 
 . If you wish to modify the imported theme, select the *CSS* tab.
 +
-image:theme3.png[]
+image:theme3.png[alt="CSS tab for editing theme properties"]
 
 . Edit the desired CSS property. For colors, you can click the color chip to enter a color using a color picker, or press the  to enter a hex color code. (xref:#AvailablePortalCSSProperties[] and xref:#AvailableEnterpriseManagerCSSProperties[] for information about where the different styles are applied.)
 +
-image:theme4.png[]
+image:theme4.png[alt="apply CSS changes to theme"]
 
 . Press btn:[Apply] to make the changes to the theme.
 
@@ -499,13 +499,13 @@ image:theme4.png[]
 === Export a Theme
 To export a theme to a JAR file, select the theme that you want to export, and press the {buttonDownload} to save the theme into a JAR file.
 
-image:theme6.png[]
+image:theme6.png[alt="download button to export theme as JAR file"]
 
 [#DeleteTheme]
 === Delete a Theme
 To delete a theme,  select the theme that you want to delete, and press the {buttonDelete}.
 
-image:theme7.png[]
+image:theme7.png[alt="delete button to remove selected theme"]
 
 [#AssignThemetoUserGroupRole]
 === Assign a Theme to a User, Group, or Role
@@ -529,7 +529,7 @@ To set a home page that appears when the user selects the Repository tab of the 
 
 . Select the *Welcome Page* page in the right panel.
 +
-image:welcomePage.png[]
+image:welcomePage.png[alt="welcome page settings with URI and resource options"]
 
 . You can specify a '`URI`' (same domain as InetSoft server) or a specific '`Resource`' file such as an HTML or JSP file, which must be placed in the _/usr/local/inetsoft/classes/_ directory. HTML content can be *localized* by using the following tag:
 
@@ -551,7 +551,7 @@ To create a message to be displayed to the user on the login screen, follow the 
 
 . Select the *Login Banner* page in the right panel.
 +
-image:loginBanner2.png[]
+image:loginBanner2.png[alt="login banner page with text and HTML options"]
 
 . Select ‘Text’ or ‘HTML’ from the ‘Type’ menu.
 
@@ -561,13 +561,13 @@ image:loginBanner2.png[]
 
 The text or HTML you specify is displayed below the password field of the Portal login page.
 
-image:loginBanner.png[]
+image:loginBanner.png[alt="login banner message displayed below password field"]
 
 [#ComposerMessages]
 == Composer Messages
 When a user opens Visual Composer, the right panel displays four help messages about how to create and edit Data Worksheets and Dashboards.
 
-image:ComposerMessages2.png[]
+image:ComposerMessages2.png[alt="visual composer right panel with default help messages"]
 
 To customize these four messages, follow the steps below:
 
@@ -579,7 +579,7 @@ To customize these four messages, follow the steps below:
 
 . Select the *Composer Messages* page in the right panel.
 +
-image:ComposerMessages.png[]
+image:ComposerMessages.png[alt="composer messages page with custom message fields"]
 
 . Enter the desired text for the ‘Dashboard Create Message’, ‘Dashboard Edit Message’, ‘Data Worksheet Create Message’, and ‘Data Worksheet Edit Message’.
 
@@ -600,7 +600,7 @@ To enable Dashboards for users, follow these steps:
 
 . Select the *Dashboard Settings* page in the right panel.
 +
-image:DashboardSettings.png[]
+image:DashboardSettings.png[alt="dashboard settings page with enable dashboards option"]
 
 . Select ‘Enable Dashboards’ to enable the {buttonDashboard} in the User Portal.
 
@@ -624,7 +624,7 @@ To set the options available on a Dashboard toolbar, follow the steps below:
 
 . Select the *Dashboard Toolbar* page in the right panel.
 +
-image:ViewsheetToolbarOptions.png[]
+image:ViewsheetToolbarOptions.png[alt="dashboard toolbar page with visible button options"]
 
 . To hide a toolbar button, deselect the corresponding box in the ‘Visible’ column.
 
@@ -647,13 +647,13 @@ To customize the tabs and links at the top of the User Portal, follow the steps 
 
 . Select the *Portal Integration* page in the right panel.
 +
-image:Figure 41.png[]
+image:Figure 41.png[alt="portal integration page with tab and link settings"]
 
 . To add a new tab, press the btn:[Add Tab] button and specify the tab name and the URI for the corresponding page. The specified URI must have the same host name and port as the InetSoft server.
 
 . Enable or disable the desired options: The ‘Help’, ‘Preferences’, ‘Logout’, ‘Home’, and ‘Search’ options determine which of these features are available in the User Portal. The ‘Logout’ option is only in effect when security is enabled.
 +
-image:UserPortalLinks.png[]
+image:UserPortalLinks.png[alt="user portal feature toggles for help logout and home"]
 
 . *_Optional_*: Enter  '`Custom Loading Text`' to specify text to display on the loading screen when the user logs into the User Portal.  The message is displayed under the "`Please wait, the application is loading`" message and logo.
 
@@ -663,7 +663,7 @@ image:UserPortalLinks.png[]
 == Time Settings
 Set time-related system properties.  In a multi-tenant environment, these can be set  both under the *Global Settings* and *Organization Settings* tabs.
 
-image:TimeSettings.png[]
+image:TimeSettings.png[alt="time settings page with week start day and schedule options"]
 
 Week Start Day:: The start day of the week for date components such as  Calendars. If not specified, the locale setting for the user determines the start day. (Equivalent property: `week.start`.)
 
@@ -684,7 +684,7 @@ To set properties of PDF generation, follow these steps:
 
 . Select the *PDF Settings* page in the right panel.
 +
-image:Figure 45.png[]
+image:Figure 45.png[alt="PDF settings page with compress and font options"]
 
 . Set the desired options (see below).
 
@@ -772,7 +772,7 @@ To *support CJK characters*, follow the steps below:
 
 .. Select the *Font Mapping* page in the right panel.
 +
-image:fontMapping.png[]
+image:fontMapping.png[alt="font mapping page for CJK TrueType to CID font mapping"]
 
 .. Press the btn:[Add] button.
 
@@ -836,15 +836,15 @@ To set specific data source types to visible or hidden   in the User Portal data
 
 . Select the *Data Source Visibility* page in the right panel.
 +
-image:DataSourceTypeVisibility.png[]
+image:DataSourceTypeVisibility.png[alt="data source visibility page with visible and hidden sections"]
 
 . To explicitly make a data source visible, press the  {buttonAddDataSource}  next to '`Visible Data Source Types`' and then select the data source to make accessible.
 +
-image:DataSourceTypeVisibility2.png[]
+image:DataSourceTypeVisibility2.png[alt="select data source to add to visible types list"]
 
 . To explicitly hide a data source, press the  {buttonAddDataSource}  next to '`Hidden Data Source Types`' and then select the data source to make inaccessible.
 +
-image:DataSourceTypeVisibility3.png[]
+image:DataSourceTypeVisibility3.png[alt="select data source to add to hidden types list"]
 
 
 NOTE: If the *same*  data source type is included in *both* the visible and hidden lists, it will be *hidden*. The equivalent proprties are  `visible.datasource.types` and `hidden.datasource.types`.
@@ -864,7 +864,7 @@ Map-type charts can display a background map provided by either Google Maps or M
 
 . Select the *Web Map* page in the right panel.
 +
-image:EM_WebMap.png[]
+image:EM_WebMap.png[alt="web map page with Mapbox and Google Maps options"]
 
 . To use the built-in (plain) map background, select ‘None’. Press the btn:[Apply] button.
 
@@ -905,7 +905,7 @@ To customize the Social Sharing feature available for  Dashboards, follow the st
 
 . Select the *Social Sharing* page in the right panel.
 +
-image:socialSharing1.png[]
+image:socialSharing1.png[alt="social sharing page with sharing option checkboxes"]
 
 . Check the boxes to select the sharing options (Email, Facebook, LinkedIn, etc.) that should be available globally to users.
 +
@@ -913,7 +913,7 @@ TIP: To control the available options for individual users, groups, or roles, se
 
 For *Google Hangouts Chat* and *Slack*, you will need to specify the *webhook URL*. Press the {buttonHelp} next to the webhook field for more information.
 
-image:socialSharing2.png[]
+image:socialSharing2.png[alt="webhook URL field for Google Hangouts or Slack sharing"]
 
 
 

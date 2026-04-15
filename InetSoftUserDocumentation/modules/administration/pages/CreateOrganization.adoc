@@ -15,15 +15,15 @@ To add a new organization, follow the steps below:
 . Press the {buttonSettings} at the top of Enterprise Manager.
 . Select the *Security* page in the left panel.
 +
-image:Figure 23_1.png[]
+image:Figure 23_1.png[alt="select Security page in left panel"]
 
 . Select ‘Enable Multi-Tenancy’. See xref:EnableMultiTenant.adoc[] for more information.
 +
-image:EM_Security_Multitenant1.png[]
+image:EM_Security_Multitenant1.png[alt="select Enable Multi-Tenancy option"]
 
 . Select the *Users* tab.
 +
-image:securityDefineUsers.png[]
+image:securityDefineUsers.png[alt="select Users tab in Security page"]
 
 . From the ‘Provider Name’ menu, select the security provider under which to define organizations.
 
@@ -32,7 +32,7 @@ image:securityDefineUsers.png[]
 
 . Press the btn:[New Organization] link below the navigation tree. (This option is available when multi-tenancy is enabled.  See xref:EnableMultiTenant.adoc[].)
 +
-image:organization3.png[]
+image:organization3.png[alt="press New Organization link below navigation tree"]
 
 +
 This opens the '`New Organization`' dialog box.
@@ -40,14 +40,14 @@ This opens the '`New Organization`' dialog box.
 
 . In the '`Clone From Existing Organization`' menu, choose an existing organization from which you want to copy settings such as identities, permissions, organization-scoped properties, and  assets (Dashboards, Data Worksheets, data sources).  The '`Host Organization`' is the default organization that is administered by the Site Administrator. Select '`None`' to create  the organization without preexisting settings.
 +
-image:organization2.png[]
+image:organization2.png[alt="Clone From Existing Organization menu selection"]
 
 +
 NOTE: To ensure security, you may  be prompted to confirm that you want to proceed with cloning.
 +
 This creates an organization with a default name ‘organizationN’ (organization0, organization1, etc.).
 +
-image:server18.png[]
+image:server18.png[alt="new organization with default name in security tree"]
 
 . *_Optional_*: Type in the ‘Name’ and '`ID`' fields to change the name and ID of the organization.
 
@@ -57,7 +57,7 @@ image:server18.png[]
 . *_Optional_*: To add roles to an organization, select the desired role in the  ‘Members’ panel.
 
 +
-image:server19.png[]
+image:server19.png[alt="add roles to organization Members panel"]
 
 . *_Optional:_* To inherit permission from another role, press the {buttonEMAdd} button in the ‘Inherit from’ area. Choose the desired role(s) in the ‘Add Role’ dialog box ({buttonCtrl}-click to select multiple roles), and press {buttonEMAdd}.  The new role will inherit all permissions from the roles selected in this list.
 
@@ -67,11 +67,11 @@ organization (ability for other users to administer this organization), press th
 
 . *_Optional_*: To impose user limits for the  organization,   press the btn:[Add] button in the '`Properties`' panel.
 +
-image:server20.png[]
+image:server20.png[alt="Properties panel with Add button for user limits"]
 +
 This opens the '`Property Editor`', where you can set the following properties for the organization:
 +
-image:server21.png[]
+image:server21.png[alt="Property Editor showing max row column and user count settings"]
 +
 [cols="1,4"]
 |===
@@ -96,12 +96,12 @@ To edit an organization, follow the steps below:
 . Press the {buttonSettings} at the top of Enterprise Manager.
 . Select the *Security* page in the left panel.
 +
-image:Figure 23_1.png[]
+image:Figure 23_1.png[alt="select Security page in left panel"]
 
 
 . Select the *Users* tab.
 +
-image:securityDefineUsers.png[]
+image:securityDefineUsers.png[alt="select Users tab in Security page"]
 
 . From the ‘Provider Name’ menu, select the security provider under which to define organizations.
 

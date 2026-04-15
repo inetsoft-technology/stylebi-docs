@@ -131,7 +131,7 @@ image:Materialized View Node_1.png[alt="materialized views global options page"]
 ****
 Create MV On-demand:: Set '`Create MV On-demand`' to specify that the ‘Dashboard Options’ dialog box in Visual Composer should offer the ‘Create MV On-demand’ option for individual Dashboards. When ‘Create MV On-demand’ is enabled for a Dashboard, a new materialized view is automatically created on-the-fly if the Dashboard does not have an existing materialized view (either because the materialized view was never populated with data or because the Dashboard underwent modifications that rendered an existing materialized view unusable). The materialized view will supply data to the Dashboard both at design time and at runtime. See xref:viewsheet:DashboardOptions.adoc[]  for information on setting this option.
 +
-image:viewsheet:Options Create MV on Demand_1.png[]
+image:viewsheet:Options Create MV on Demand_1.png[alt="create MV on-demand option in dashboard options"]
 
 MV On-demand by Default:: Set '`MV On-demand by Default`' to specify that the ‘Dashboard Options’ dialog box in Visual Composer should have the ‘Create MV On-demand’ option enabled by default for all new Dashboards. This relieves you  from creating a materialized view for each Dashboard individually.
 
@@ -170,7 +170,7 @@ See xref:#TransformationsandFaults[] for an approach to addressing other common 
 
 If you are using a VPM to filter data based on particular users (see xref:user:AddDataSecurity.adoc[] for more about VPMs), you should generally enable the ‘Create Materialized View for all users in group’ option when creating the materialized view. (See  xref:#CreateMaterializedView[] above for instructions on how to create a materialized view.)
 
-image:Materialized View All Users In Group.png[]
+image:Materialized View All Users In Group.png[alt="create materialized view for all users in group option"]
 
 This allows custom materialized views to be generated for each user (based on their individual VPM permissions). If this option is disabled, only the group name will be available to the VPM, and the filter will not be correctly applied for users.
 
@@ -263,11 +263,11 @@ In many of these instances, you may be able to facilitate materialization by man
 In the Data Worksheet below, the ‘NJ Orders’ data block is filtered by a Dashboard Range Slider, and the ‘NY Orders’ data block is filtered by a Dashboard Selection List. These two precursor data blocks are concatenated to create the resulting ‘Query1’ data block that is displayed on the Dashboard Chart.
 
 .Data Worksheet with Filters on Precursor Data Blocks
-image:MaterializedViewTransform1.png[]
+image:MaterializedViewTransform1.png[alt="data worksheet with filters on precursor data blocks"]
 
 Rather than applying the Dashboard filters to the *precursor* data blocks as above, it may be beneficial to move the filters forward to *resultant* ‘Query1’ data block, as shown below. Applying the filters to the ‘Query1’ data block (i.e., the data block that will be materialized) may *prevent faults* during the materialized view generation process.
 
 .Data Worksheet with Filters on Resultant Data Block
-image:MaterializedViewTransform2.png[]
+image:MaterializedViewTransform2.png[alt="data worksheet with filters moved to resultant data block"]
 ====
 

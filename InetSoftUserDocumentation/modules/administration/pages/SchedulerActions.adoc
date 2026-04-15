@@ -8,20 +8,20 @@ The scheduler action specifies the operations to be performed when the scheduled
 == Dashboard Action
 A Dashboard action executes one or more Dashboards, and delivers them as emails, transmits a notification, or saves a snapshot to the server. If the Dashboard requires *parameter values*, assign these parameters in the 'Creation Parameters' table at the bottom of the page.
 
-image:user:schedulerCreationParamaters.png[]
+image:user:schedulerCreationParamaters.png[alt="assign creation parameters for scheduled Dashboard action"]
 
 IMPORTANT: If the generated Dashboard does not reflect the most *recent data*, the Scheduler may be using a cached dataset. In this case, you can either increase the separation of your scheduled tasks or reduce the '`Data Cache Timeout`'.  See xref:TailorServerPerformance.adoc[] for details about this property.
 
 Use the *Bookmarks* section to add the bookmarks that you wish to include. (For Excel output, bookmarks are exported to separate Excel tabs.)
 
-image:schedulerChooseBookmarks.png[]
+image:schedulerChooseBookmarks.png[alt="add bookmarks to scheduled Dashboard action"]
 
 The following actions are available:
 
 === Notification of Task Status
 This option sends notifications to the email addresses that you specify in the '`Notify`' field.  The email notification informs the recipient of whether the Dashboard was generated or not. Enter a comma-separated list of emails, or press the {buttonSelectEmails} button next to the email field to open the ‘Select Emails’ dialog box and choose emails from a list.  Select ‘Notify only if failed’ to limit the notification only to the event of a task failure.
 
-image:schedulerAdminNotification1.png[]
+image:schedulerAdminNotification1.png[alt="configure notification email for scheduled task"]
 
 To send a test email to the addresses you entered, press the 'Test Mail' button. To send an *SMS*  message to a phone, enter the provisioned email address supplied by the recipient’s service provider. (For example, to send a text message to Verizon number 1234567890, enter the email address `1234567890@vtext.com`.)
 
@@ -31,7 +31,7 @@ Select ‘Include Link’ to include a URL link to the Dashboard in the email. T
 
 This option sends the Dashboard as an email attachment to the email addresses that you specify.  Enter a comma-separated list of emails in the ‘To’ field, or press the {buttonSelectEmails} next to the email fields to open the ‘Select Emails’ dialog box and choose emails from a list.
 
-image:schedulerAdminDeliverToEmails_dashboard.png[]
+image:schedulerAdminDeliverToEmails_dashboard.png[alt="configure deliver to emails action for Dashboard"]
 
 Use the '`Format`' menu to choose the format in which to generate the Dashboard: '`PDF`', '`PowerPoint`', or '`Excel`'. Enter the ‘Message’ body of the email using the rich text editor provided. For information on using an email template for the body, see xref:ConfigureServerEmail.adoc[].
 
@@ -51,7 +51,7 @@ Other Options::
 
 This option saves a copy of the Dashboard to the server file system or to an FTP server. Use the '`Format`' menu to choose the format in which to generate the Dashboard: 'PDF', 'PowerPoint', or 'Excel'.
 
-image:schedulerAdminSaveToServer.png[]
+image:schedulerAdminSaveToServer.png[alt="configure save to disk action for scheduled Dashboard"]
 
 To save to the server file system, press the {buttonAddFilePath}  button and specify a valid absolute path including filename.  (The filename extension, e.g., `.pdf`, is added automatically.) The filename can include parameters for automatic insertion of Dashboard name and time/date of  generation (see xref:#InsertParameters[] below).
 
@@ -134,7 +134,7 @@ include::ROOT:partial$settingCreationParams.adoc[]
 == Schedule Options
 The settings available under the *Options* tab options are described below.
 
-image:Schedule4.png[]
+image:Schedule4.png[alt="configure scheduler task options tab settings"]
 
 ****
 Enabled:: Temporarily enables or disables a task.
@@ -154,7 +154,7 @@ A backup action automatically backs up selected assets from the repository on th
 
 . Click or {buttonCtrl}-click to select assets in the left panel  and press the btn:[Add] button to add them to the right panel.
 +
-image:scheduleBackup1.png[]
+image:scheduleBackup1.png[alt="select assets to add to backup task"]
 
 . Press the btn:[Save] button.
 
@@ -164,7 +164,7 @@ A ‘Batch’ action allows you to run another task with a ‘Dashboard’ actio
 
 . In the ‘Select Schedule Task’ field, choose the existing task that you want to run with different sets of parameters.
 +
-image:scheduleBatch1.png[]
+image:scheduleBatch1.png[alt="select scheduled task for batch action"]
 
 . To manually enter parameter/value pairs, select the ‘Embedded’ option, and follow the steps below:
 
@@ -175,7 +175,7 @@ image:scheduleBatch1.png[]
 +
 To parametrize a property, specify a variable name (e.g., `messageVar`) in the relevant property field (e.g., the ‘Subject’ field) of the task action using the syntax `$(messageVar)`, and enter the variable name in the ‘Parameter Name’ field of the ‘Add Parameter’ dialog box.
 +
-image:scheduleBatch2.png[]
+image:scheduleBatch2.png[alt="add parameter in embedded batch parameters dialog"]
 
 .. Press btn:[OK] and repeat the above steps to add additional parameters.
 
@@ -185,19 +185,19 @@ image:scheduleBatch2.png[]
 
 .. From the ‘Query’ menu, choose the Data Worksheet that contains the parameter information.
 +
-image:scheduleBatch4.png[]
+image:scheduleBatch4.png[alt="choose Data Worksheet for batch query parameters"]
 +
 This Data Worksheet should contain a data block with relevant parameter value sets in each row, such as the one below (with four parameter value sets). See xref:dataworksheet:EnterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for information on how to create a table like this.
 +
-image:scheduleBatch3.png[]
+image:scheduleBatch3.png[alt="Data Worksheet with batch parameter value sets"]
 
 .. Use the menus next to the parameter names to specify the columns in the data block that contain the values for each parameter.
 +
-image:scheduleBatch5.png[]
+image:scheduleBatch5.png[alt="map columns to batch parameter names from data block"]
 +
 Parameters can also provide a value for one of the following properties of the task’s ‘Deliver To Emails’ action: ‘Email Addresses’, ‘CC’, ‘BCC’, ‘Subject’, ‘Attachment Name’, ‘Message’.  To parametrize a property, specify a variable name (e.g., `messageVar`) in the relevant property field of the task action (e.g., the ‘Subject’ field) using the syntax `$(messageVar)`. This variable will then appear in the ‘Query Parameters’ dialog box along with the  Dashboard parameters.
 +
-image:scheduleBatch6.png[]
+image:scheduleBatch6.png[alt="parametrize email properties in query parameters dialog"]
 
 .. Press btn:[OK] to exit the dialog box.
 

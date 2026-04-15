@@ -113,7 +113,7 @@ image:ActiveDirectorySampleSchema3.png[alt="enter Administrator ID distinguished
 
 The ‘Security Provider’ page for these setting appears as follows:
 
-image:ActiveDirectorySampleSchema4.png[]
+image:ActiveDirectorySampleSchema4.png[alt="completed Security Provider page for sample Active Directory"]
 ====
 
 To use an Active Directory server for authorization, you should enable writing to the schema. To do this, follow the steps below:
@@ -139,7 +139,7 @@ Note that the administrator account needs to be a member of the Schema Admins gr
 
 To use any  LDAP server other than xref:#ActiveDirectory[], select ‘Generic’ from the ‘LDAP Server’ menu under the ‘Security Provider’ page. (See xref:SpecifySecurityProvider.adoc[] for information about the ‘Security Provider’ page.)
 
-image:Figure 26.png[]
+image:Figure 26.png[alt="configure Generic LDAP server settings"]
 
 Note that a fully qualified name must be entered for the Administrator ID. The following properties are available:
 

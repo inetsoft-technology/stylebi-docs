@@ -11,7 +11,7 @@ include::partial$scriptThatModifiesGraph.adoc[]
 
 This generates a basic Bar Chart with quantities for four different states.
 
-image:commonscript:DecorativeElementExample.png[]
+image:commonscript:DecorativeElementExample.png[alt="basic bar chart with state quantities"]
 
 To add a small note indicating that the lowest value was due to an inventory problem, follow the steps below.
 
@@ -42,7 +42,7 @@ include::scriptexample:partial$AddChartDecoration2.js[lines=11..15]
 include::scriptexample:partial$AddChartDecoration2.js[lines=16..17]
 
 +
-image:commonscript:DecorativeElementExample2.png[]
+image:commonscript:DecorativeElementExample2.png[alt="bar chart with annotation arrow and label"]
 
 
 .Complete Script

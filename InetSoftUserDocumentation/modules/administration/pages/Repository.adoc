@@ -12,7 +12,7 @@ To manage  the repository, follow the steps below:
 
 . Select the *Content* page in the left panel, and select the *Repository* tab.
 +
-image:Figure 15.png[]
+image:Figure 15.png[alt="repository tab in content page showing asset tree"]
 
 . Perform the desired operations described in the following sections.
 
@@ -42,14 +42,14 @@ To create a new folder, follow the steps below:
 
 . Press the   {buttonNewCircle} above the Repository tree and select ‘New Folder’.
 +
-image:RepositoryNewFolder.png[]
+image:RepositoryNewFolder.png[alt="new folder option in repository new circle menu"]
 
 +
 This opens the folder definition page, which has two tabs: *Property* and *Security*.
 
 . Under the *Property* tab, specify the new ‘Folder Name’ and optional  ‘Description’.
 +
-image:Figure 18.png[]
+image:Figure 18.png[alt="folder property tab with name and description fields"]
 
 . *_Optional:_* Set the folder ‘Alias’. The alias is displayed to the user in the Portal in place of the folder’s actual name. If no alias is specified, the folder’s name is used.
 
@@ -65,7 +65,7 @@ include::ROOT:partial$ParentPermissions.adoc[]
 
 .. Press the btn:[Add] button to assign permissions to users, roles, or groups. See xref:SetRepositoryPermissions.adoc[].
 +
-image:reportSecurity2.png[]
+image:reportSecurity2.png[alt="add permissions to folder security tab"]
 
 . Press btn:[Apply].
 
@@ -102,7 +102,7 @@ NOTE: Deleted user-scope assets cannot be recovered.
 
 . Select the asset or folder that you want to restore and press btn:[Restore].
 +
-image:archiveRestore.png[]
+image:archiveRestore.png[alt="restore button to recover asset from recycle bin"]
 
 To export an asset from the Recycle Bin, see xref:ImportExportAssets.adoc[].
 
@@ -117,7 +117,7 @@ To add a Dashboard to the Repository, use Visual Composer to save the Dashboard 
 
 . To set the basic properties of the Dashboard, select the *Dashboard* tab. Set the desired options:
 +
-image:Viewsheet Definition Page.png[]
+image:Viewsheet Definition Page.png[alt="dashboard tab with name alias and description fields"]
 +
 Name:: The name under which the Dashboard should be listed in the Repository. Certain characters (e.g., “/”) are not permitted in names.
 Alias:: The Dashboard name displayed to the user in the Portal.
@@ -129,11 +129,11 @@ Description:: A brief description to be displayed as a tooltip when the user hov
 
 .. Press the btn:[Add] button to assign permissions to users, roles, or groups. See xref:SetRepositoryPermissions.adoc[] for more information.
 +
-image:reportSecurity4.png[]
+image:reportSecurity4.png[alt="add permissions to dashboard security tab"]
 
 . To create a materialized view (high-performace cache), select the *MV* tab. See xref:MaterializedView.adoc[] for more information.
 +
-image:Viewsheet MV Page.png[]
+image:Viewsheet MV Page.png[alt="MV tab for creating dashboard materialized view"]
 +
 IMPORTANT: For multi-tenant implementations utilizing the *additional connection* feature (see xref:user:AddAdditionalConnection.adoc[]), materialized views are created based on user/group connection assignments.  For this reason, if you set a Dashboard’s permissions by *role*, you must also add individual permissions for users or groups that have particular connections. This will enable the materialized views to be generated from the appropriate connections.
 
@@ -151,23 +151,23 @@ A Portal Dashboard or "`pinned Dashboard`" is a Dashboard that appear under the 
 
 . Select the *Content* page in the left panel, and select the *Repository* tab.
 +
-image:Figure 15.png[]
+image:Figure 15.png[alt="repository tab in content page showing asset tree"]
 
 . To add a Dashboard *for all users*, select the ‘Portal Dashboard Tab’ folder on the tree. To add a Dashboard for a *particular user only*, select the '`User Portal Dashboard Tab`' folder, and choose the desired user.
 
 . Press the {buttonNewCircle} above the tree, and select ‘New Dashboard’.
 +
-image:newDashboard.png[]
+image:newDashboard.png[alt="new dashboard option in repository new circle menu"]
 
 . Select the *Property* tab in the right panel. In the ‘Name’ field, enter a name for the new Dashboard. This name will be displayed on this Dashboard’s tab in the User Portal.
 
 . *_Optional:_*  Enter a description for the Dashboard in the ‘Description’ field. This description is visible when the Dashboard is being edited by administrator or user.
 +
-image:Dashboard Properties Dialog VS_1.png[]
+image:Dashboard Properties Dialog VS_1.png[alt="dashboard property tab with name and description fields"]
 
 . Choose a Dashboard from the ‘Select Dashboard’ list.
 +
-image:Edit Dashboard Admin VS.png[]
+image:Edit Dashboard Admin VS.png[alt="select dashboard from list to pin as portal dashboard"]
 
 . Select the *Security* tab in the right panel. See xref:SetRepositoryPermissions.adoc[] for information on how to assign permissions.
 
@@ -184,7 +184,7 @@ To set Data Worksheet properties such as name, description, materialized view, a
 
 . Expand the ‘Data Worksheets’ node on the content tree, and select the desired Data Worksheet.
 +
-image:Materialized View Worksheet1.png[]
+image:Materialized View Worksheet1.png[alt="expand data worksheets node and select worksheet"]
 
 . Select the *Data Worksheet* tab on the right to set the name, alias, and description.
 +

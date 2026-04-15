@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 To monitor and manage a variety of aspects of server activity, press the {buttonMonitoring} at the top of Enterprise Manager.
 
-image:Monitoring.png[]
+image:Monitoring.png[alt="monitoring button at top of enterprise manager"]
 
 On the pages listed in the left panel you can view Dashboards and queries that are currently executing on the server, and can terminate undesired activity. You can also view currently active users, and terminate any undesired sessions.
 
@@ -16,7 +16,7 @@ include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
 Use the *Summary* Monitoring page  to track server performance. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine. Click on a chart to view the detailed information provided by the corresponding ‘Monitoring’ page.
 
 
-image:Monitoring Summary.png[]
+image:Monitoring Summary.png[alt="summary monitoring page with server performance charts"]
 
 
 
@@ -41,7 +41,7 @@ The following information is available. The ‘Level’ column indicates the mon
 
 The bottom of the *Summary* page provides details about the JVM currently being used by the server, including the Java Home Directory and Classpath. If a reverse proxy is in use, this is indicated  above the JVM information.  If no reverse proxy information appears in that location, this means that no reverse proxy was detected.
 
-image:JVM.png[]
+image:JVM.png[alt="JVM details panel at bottom of summary page"]
 
 
 == Dashboards
@@ -51,7 +51,7 @@ Use the *Dashboards* Monitoring page to access key information about *executing*
 
 In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
 
-image:Monitoring Viewsheets.png[]
+image:Monitoring Viewsheets.png[alt="dashboards monitoring page with executing and open dashboards"]
 
 The page provides the following information:
 
@@ -71,7 +71,7 @@ To terminate a Dashboard, press the  {buttonSelect}  next to the Dashboard, and 
 == Queries
 Use the *Queries* Monitoring page  to access key information about queries currently executing on the server. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
 
-image:Monitoring Queries.png[]
+image:Monitoring Queries.png[alt="queries monitoring page with active query list"]
 
 The page provides the following information:
 
@@ -93,7 +93,7 @@ xref:TailorServerPerformance.adoc[], for information on configuring caching.
 
 Use the *Cache* Monitoring page  to access key information for  the data cache. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
 
-image:Monitoring Cache.png[]
+image:Monitoring Cache.png[alt="cache monitoring page with data cache statistics"]
 
 The page provides the following information:
 
@@ -111,7 +111,7 @@ IMPORTANT: Requires the `monitor.level` property  to be set to ‘High’. See x
 
 Use the *Users* Monitoring page  to access key information about user logins, and allows you to terminate a given user session. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
 
-image:Monitoring Users.png[]
+image:Monitoring Users.png[alt="users monitoring page with active session list"]
 
 The page provides the following information:
 [cols="1,3"]
@@ -130,7 +130,7 @@ include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
 
 Use the *Cluster* Monitoring page  to view cluster nodes.
 
-image:Monitoring Cluster.png[]
+image:Monitoring Cluster.png[alt="cluster monitoring page showing cluster nodes"]
 
 [#Logs]
 == Logs
@@ -141,7 +141,7 @@ xref:Logging.adoc[], for information on how to  configure logging behavior.
 
 Use the *Logs* Monitoring page  to view and download server and scheduler logs.
 
-image:Figure 36.png[]
+image:Figure 36.png[alt="logs monitoring page with log file viewer"]
 
 To do this follow the steps below:
 
@@ -151,13 +151,13 @@ NOTE: If the log size has exceeded the ‘Maximum Log File Size’ set on the *L
 
 . Select the ‘All’ option to display the entire contents of the log file (maximum 3000 lines by default), or enter the ‘Number of Lines’ from the end of the file to display.
 +
-image:LogNumberOfLines.png[]
+image:LogNumberOfLines.png[alt="select number of log lines to display"]
 
 . Select ‘Enable Auto-refresh’ to allow the display to update automatically as new lines are written to the log.
 
 . To download a zip archive containing all log files, press the btn:[Download] button at the top of the page.
 +
-image:LogDownload.png[]
+image:LogDownload.png[alt="download button to export zip of all log files"]
 
 . To refresh the display with current log records, press the btn:[Refresh] button (only available when ‘Enable Auto-refresh’ is disabled).
 

@@ -173,13 +173,13 @@ TIP: You may need to experiment with different point thresholds to determine whi
 
 .. To view the report for the point removal operation, press the ‘Output Window’ button in the OpenJUMP toolbar.
 +
-image:OpenJUMPExp16.png[]
+image:OpenJUMPExp16.png[alt="point removal operation report in Output Window"]
 
 . Export the map to InetSoft. Follow the steps below:
 
 .. Select the desired layer in the OpenJUMP project tree. Then select menu:InetSoft[Export layer]. This opens the ‘Export Layer’ dialog box.
 +
-image:OpenJUMPExp17.png[]
+image:OpenJUMPExp17.png[alt="Export Layer dialog box in OpenJUMP"]
 .. Specify the ‘Map file’ location. The map file must be named `mapdata.xml`.
 
 .. Specify the ‘Map type’. This is the top-level category for the map. For example, a map of type “New Jersey” might have layers (specified below) such as “New Jersey Counties” and “New Jersey Zip Codes”.
@@ -192,7 +192,7 @@ CAUTION: Do not specify a value for the ‘Layer name’ that is identical to on
 +
 The defined map type and any defined layers will appear in the menus of the Chart Editor’s geographical panel when you edit a geographical field in InetSoft.
 +
-image:OpenJUMPExp18.png[]
+image:OpenJUMPExp18.png[alt="Export Layer dialog showing map type and layer name fields"]
 +
 See xref:viewsheet:MapChart.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for more details on using the Chart Editor in a Dashboard.
 
@@ -222,7 +222,7 @@ TIP: Secondary coordinates are not currently used when rendering a chart.
 
 . Upload the _mapdata.xml_ file to the root level of server storage. See xref:Storage.adoc[] for information on how to upload a file.
 +
-image:OpenJUMPExp21.png[]
+image:OpenJUMPExp21.png[alt="upload mapdata.xml to root level of server storage"]
 
 . Restart the InetSoft server. Your custom map will now be available in the ‘Map’ menu of the Chart Editor, along with the predefined maps.
 
@@ -245,7 +245,7 @@ To add a layer from a new shapefile to an existing map (for example, to add a �
 
 .. For the ‘Layer name’, enter the name of the desired new layer (e.g., ‘CensusRegions’).
 +
-image:CustomMapNewLayer1.png[]
+image:CustomMapNewLayer1.png[alt="set layer name for new map layer in Export Layer dialog"]
 
 .. Complete the additional steps described in xref:#ExportCustomMap[], and press btn:[OK].
 +
@@ -263,20 +263,20 @@ To add a new layer by merging together regions within an existing shapefile (for
 
 . Press the '`View/Edit Attributes`' button in the OpenJUMP toolbar.
 +
-image:CustomMapNewLayer2.png[]
+image:CustomMapNewLayer2.png[alt="press View/Edit Attributes button in OpenJUMP toolbar"]
 +
 This displays the ‘Attributes’ table for the map.
 
 
 . Right-click on the table and select ‘Editable’ from the context menu.
 +
-image:CustomMapNewLayer3.png[]
+image:CustomMapNewLayer3.png[alt="right-click table and select Editable from context menu"]
 
 . Return to the map view. Hold the {buttonShift} key and click to select the regions that you want to merge. For example, hold the {buttonShift} key and click to select all states belonging to the “Pacific Division” (California, Oregon, Washington, Alaska, Hawaii).
 
 . Right-click on one of the selected states, and choose ‘Combine Selected Features’.
 +
-image:CustomMapNewLayer4.png[]
+image:CustomMapNewLayer4.png[alt="choose Combine Selected Features for selected map regions"]
 +
 The selected states are now considered a single unit.
 
@@ -288,23 +288,23 @@ The selected states are now considered a single unit.
 
 .. Right-click on the table, and select ‘View/Edit Schema’.
 +
-image:CustomMapNewLayer5.png[]
+image:CustomMapNewLayer5.png[alt="select View/Edit Schema from table context menu"]
 +
 This opens the ‘Edit Schema’ dialog box.
 
 .. Click in the table, and then press the ‘Insert’ (+) button to create a new column.
 +
-image:CustomMapNewLayer6.png[]
+image:CustomMapNewLayer6.png[alt="press Insert button to create new column in Edit Schema"]
 
 .. Enter the name and type of the new column (e.g., “CensusDivisions”).
 +
-image:CustomMapNewLayer7.png[]
+image:CustomMapNewLayer7.png[alt="enter name and type for new column in schema"]
 
 .. Press btn:[Apply changes] and return to the ‘Attributes’ table. Note that a new column has been added.
 
 .. Enter the appropriate labels into the blank cells.
 +
-image:CustomMapNewLayer8.png[]
+image:CustomMapNewLayer8.png[alt="enter labels in blank cells of Attributes table"]
 +
 Note that when you click on a blank cell, the corresponding map region is highlighted.
 
@@ -318,7 +318,7 @@ Note that when you click on a blank cell, the corresponding map region is highli
 
 .. For the ‘Feature ID’ and ‘Display name’, select the new column that you added to the ‘Attributes’ table.
 +
-image:CustomMapNewLayer9.png[]
+image:CustomMapNewLayer9.png[alt="select Feature ID and Display name from new column"]
 
 .. Complete the additional steps described in xref:#ExportCustomMap[], and press btn:[OK].
 +
@@ -349,13 +349,13 @@ To manually create shapes by merging existing shapes (e.g., to create larger reg
 
 .. For the ‘Feature ID’ and ‘Display name’, select the appropriate feature column.
 +
-image:CustomMapOverlay.png[]
+image:CustomMapOverlay.png[alt="Export Layer dialog with Feature ID and Display name selected"]
 
 .. Press btn:[OK]. This exports the layer to the location that you specified. The saved files include two CSV files and a _mapdata.xml_ file.
 +
 NOTE: You *do not* need this new _mapdata.xml_ file.
 +
-image:CustomMapOverlay2.png[]
+image:CustomMapOverlay2.png[alt="exported overlay files including CSV and mapdata.xml"]
 
 
 . Stop the InetSoft server if it is running.
@@ -401,7 +401,7 @@ image:CustomMapOverlay2.png[]
 
 . Create a Map Chart  based on the custom map. (See xref:viewsheet:MapChart.adoc[].) Observe that the specified regions and labels are overlaid on the map as desired.
 +
-image:CustomMapOverlay3.png[]
+image:CustomMapOverlay3.png[alt="map chart with Census Region shapes overlaid on states"]
 
 == Edit a Custom Map
 To edit map data from StyleBI in the OpenJUMP application, follow the steps below:
@@ -412,7 +412,7 @@ To edit map data from StyleBI in the OpenJUMP application, follow the steps belo
 
 . Select ‘InetSoft Map Layer’ in the left panel.
 +
-image:OpenJUMPExp19.png[]
+image:OpenJUMPExp19.png[alt="select InetSoft Map Layer in OpenJUMP open dialog"]
 
 . Locate the _mapdata.xml_ file that you want to edit. Press btn:[Next].
 
@@ -420,7 +420,7 @@ image:OpenJUMPExp19.png[]
 
 . Select the ‘Map type’ and ‘Layer name’ that you want to edit. (See xref:#ExportCustomMap[] for information about the map type and layer name.)
 +
-image:OpenJUMPExp20.png[]
+image:OpenJUMPExp20.png[alt="select map type and layer name to edit"]
 
 . Press btn:[Finish]. This loads the map data into the OpenJUMP application.
 

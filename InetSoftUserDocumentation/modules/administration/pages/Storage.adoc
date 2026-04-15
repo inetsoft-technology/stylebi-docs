@@ -150,7 +150,7 @@ To delete a plugin from the server, follow the steps below:
 
 . Check the box next to desired plugin, and press the btn:[Uninstall] button.
 +
-image:Drivers_Plugins5.png[]
+image:Drivers_Plugins5.png[alt="check plugin checkbox and press Uninstall button"]
 
 . Restart the server.
 
@@ -404,13 +404,13 @@ You can back-up stored assets as a Zip archive. Follow the steps below:
 
 . Select the *General* page in the left panel, and select the *Storage* page in the right panel.
 +
-image:Figure 11.png[]
+image:Figure 11.png[alt="select Storage page under General settings"]
 
 . To immediately back up assets, follow the steps below:
 
 .. Press the btn:[Back Up Now] button. This opens the ‘Storage Backup’ dialog box.
 +
-image:Figure 14.png[]
+image:Figure 14.png[alt="enter backup filename in Storage Backup dialog"]
 
 .. In the ‘Storage’ field, specify the backup file name, e.g., `data.zip`.
 
@@ -420,7 +420,7 @@ image:Figure 14.png[]
 
 .. Press the btn:[Schedule Backup] button.  This opens the *Tasks* tab for the built-in `pass:[__asset file backup__]` task.
 +
-image:scheduleBackup2.png[]
+image:scheduleBackup2.png[alt="open Tasks tab for asset file backup scheduled task"]
 
 .. Specify the desired interval under the *Conditions* tab and press the btn:[Save] button at the bottom of the page.  See xref:SchedulerConditions.adoc[] for more information about specifying a time interval.
 

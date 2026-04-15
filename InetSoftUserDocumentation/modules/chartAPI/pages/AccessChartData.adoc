@@ -9,11 +9,11 @@ You can access Chart data in scripts by referencing the Chart’s xref:viewsheet
 
 For example, consider a chart with two aggregated datasets (measures), as shown below:
 
-image:commonscript:datasetChart.png[]
+image:commonscript:datasetChart.png[alt="bar chart with two aggregated datasets"]
 
 The `data` object provides access to these aggregate values as the following array:
 
-image:commonscript:dataArrayShowData.png[]
+image:commonscript:dataArrayShowData.png[alt="data array with chart aggregate values"]
 
 [source,javascript]
 data[0][0] = 'DayOfWeek(Day)'
@@ -60,6 +60,6 @@ include::scriptexample:partial$AccessChartDataExp.js[]
 
 . Press the {buttonPreview} to preview the  Dashboard. Observe that values are shown for groups that have totals falling below the threshold of 5000.
 +
-image:commonscript:ChartTableArrayExample.png[]
+image:commonscript:ChartTableArrayExample.png[alt="bar chart with threshold-based value labels"]
 ====
 

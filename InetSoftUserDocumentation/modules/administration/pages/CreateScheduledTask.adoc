@@ -15,7 +15,7 @@ A *scheduled task* is an action or set of actions that occur automatically on a 
 . Press the {buttonSettings} at the top of Enterprise Manager.
 . Select the *Schedule* page in the left panel, and select the *Tasks* tab at the top.
 +
-image:schedulerTasksTab.png[]
+image:schedulerTasksTab.png[alt="select Tasks tab on Schedule page"]
 
 include::partial$selectOrganization.adoc[]
 
@@ -59,17 +59,17 @@ To create a new cycle, follow the steps below.
 
 . Select the *Schedule* page in the left panel, and select the *Data Cycles* tab at the top.
 +
-image:schedulerDataCyclesTab.png[]
+image:schedulerDataCyclesTab.png[alt="select Data Cycles tab on Schedule page"]
 
 include::partial$selectOrganization.adoc[]
 
 . Press the btn:[New Cycle] button to create a new cycle.
 +
-image:newCycleLink.png[]
+image:newCycleLink.png[alt="press New Cycle button to create a cycle"]
 
 . In the ‘Name’ field enter a name for the cycle, and set the cycle time condition. See xref:SchedulerConditions.adoc[] for details on the different time conditions available.
 +
-image:Figure 35.png[]
+image:Figure 35.png[alt="set cycle name and time condition"]
 
 
 . Select the *Options* tab, and set the desired options:
@@ -86,7 +86,7 @@ image:Figure 35.png[]
 . *_Optional:_* To create additional conditions on the cycle, press the btn:[Add] button.
 
 +
-image:multipleCycles.png[]
+image:multipleCycles.png[alt="multiple cycle conditions listed with Add button"]
 
 . Create the new condition as described above.
 
@@ -117,7 +117,7 @@ To configure an alert for a  Dashboard, follow the steps below:
 
 . On the *Actions* tab, specify the  Dashboard that contains the alert condition you want to test.
 +
-image:Alert2_1.png[]
+image:Alert2_1.png[alt="select Dashboard for alert on Actions tab"]
 
 . Select the actions that you want to perform if the alert is triggered. Generally, you will at least select the ‘Deliver To Emails’ option. (See xref:SchedulerActions.adoc[] for more about the available actions.) Enter a ‘Subject’ and ‘Message’ appropriate for the nature of the alert.
 
@@ -164,18 +164,18 @@ To manage scheduled tasks, first open the menu:Schedule[Tasks] page.  (See xref:
 === Create a Folder
 To create a new folder for scheduled tasks, press the {buttonMoreOptions} next to a desired folder and select ‘New Folder’.
 
-image:schedulerFolder1.png[]
+image:schedulerFolder1.png[alt="select New Folder from more options menu"]
 
 === Move a Task
 To move a task  into another folder, follow the steps below:
 
 . Select the task in the table, and press the btn:[Move Task] button below the table.
 +
-image:schedulerFolder2.png[]
+image:schedulerFolder2.png[alt="select task and press Move Task button"]
 
 . Choose the desired folder into which to place the task, and press ‘OK’.
 +
-image:schedulerFolder3.png[]
+image:schedulerFolder3.png[alt="choose destination folder for task"]
 
 === Rename a Folder
 To rename a folder, press the {buttonMoreOptions} next to the desired folder and select ‘Edit Folder’.
@@ -191,23 +191,23 @@ To delete a folder, press the {buttonMoreOptions} next to the desired folder and
 To monitor scheduled tasks, first open the menu:Schedule[Tasks] page.  (See xref:#CreateScheduledTask[] above.)  The table under the *Tasks* tab displays basic information (such as start time, end time, status of the last run, etc.) for all scheduled tasks.
 
 
-image:Figure 34.png[]
+image:Figure 34.png[alt="scheduled tasks table showing status and run times"]
 
 To temporarily disable or enable a task, use the checkbox under the ‘Enabled’ column.
 
 The '`Distribution`' chart provides a breakdown of daily tasks, including both enabled  and disabled tasks.
 
-image:ScheduleTaskDistribution.png[]
+image:ScheduleTaskDistribution.png[alt="Distribution chart showing daily task breakdown"]
 
 You can click a bar on the chart to zoom in.  Press the {buttonBack}  button at the top-right to return to the original view.
 
-image:ScheduleTaskDistribution2.png[]
+image:ScheduleTaskDistribution2.png[alt="zoomed distribution chart view after clicking a bar"]
 
 
 === Run a Task
 To run a task immediately, click the box next to the task name to select it. Then press the {buttonMoreOptions} and select ‘Run Now’.
 
-image:schedulerTaskRunNow.png[]
+image:schedulerTaskRunNow.png[alt="select Run Now from task more options menu"]
 
 === Kill a Task
 To stop a running task, click the box next to the task name to select it. Then press the {buttonMoreOptions} and select ‘Stop Now’.
