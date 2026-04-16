@@ -33,7 +33,7 @@ The *Advanced* tab in the ‘Chart Properties’ panel provides the following pr
 
 image:Advanced Chart Tab_1.png[alt="chart properties advanced tab"]
 
-
+=== Chart Options
 Glossy Effect:: Applies a 3D effect to the Chart as a whole. (Not available for all Chart styles.)
 Sparkline:: Hides all axes and legends. For a line chart, the ‘Sparkline’ also adds a point to the end of the line, and for a bar chart, displays negative values in red.
 Enable Ad Hoc Editing:: Allow end users to access the Chart Editor and edit the chart.
@@ -46,6 +46,8 @@ Top N For Each {...}:: When enabled, specifies that the top-N filter for a dimen
 *Example*: If the chart ‘X’ dimension is ‘Product Category’ and the ‘Color’ binding is ‘Product Name’, and you request “top 3” of ‘ProductName’, enable ‘Top N For Each Product Category’ to make the filter relative to the ‘Product Category’ grouping (yielding the top 3 products for each category). Leave the option disabled to filter ‘Product Name’ without respect to the ‘Product Category’ group.
 ****
 
+
+=== Plot
 Background:: The fill color of the plot area on the Chart.
 +
 TIP: To make the Chart background fully *transparent* (so that the Dashboard background is visible through the Chart), you should make the plot  '`Background`'  transparent here, and also make the component background transparent.  See xref:VisualFormat.adoc[] for more information.
@@ -54,11 +56,16 @@ Border Color:: For xref:CirclePackingChart.adoc[], sets the border color for the
 
 Pareto Line Color:: The color of the cumulative total line when a field is bound in the ‘Color’ region. If there is no ‘Color’ binding, the Pareto line is the same color as the bars.
 Alpha:: Sets transparency for the Chart elements. If disabled, the default transparency for the particular chart type is used.
+
+=== Banding
 Banding:: Adds alternating colored bands to a specified categorical or timescale axis. Select the desired band color from the color picker. The band ‘Size’ setting is an integer indicating the number of category groups (for a categorical axis) or the number of date groups (for a timescale axis) to be spanned by each band.
-Explode Pie:: Displays a pie chart with small gaps between the slices.
-Pie Ratio:: A value in the range [0.1,1] that determines the proportion of the plot area occupied by the pie. Similarly-sized Pie charts with the same ‘Pie Ratio’ setting will display pies having the same radius, which allows you to enforce consistency across multiple charts.
-+
-CAUTION: Large  ‘Pie Ratio’ settings may leave less space for the display of values on the Chart.
+
+=== Plot Options (General)
+The following plot options are typically available for all Chart types.
+
+==== General Options
+Options that apply to all or most Charts.
+
 Show Values:: Displays the aggregate measure values on the chart. If the chart also possesses a ‘Text’ binding, then the values displayed by ‘Show Values’ and those displayed by the ‘Text’ binding appear on different lines. Use a ‘Text’ format to individually format the values. For example, if the top value represents a date and the bottom value represents a number, you can apply the following text format, using `\n` to separate lines:
 +
  Date: {0,date,yyyy}\nAmount: {1,number,$#}
@@ -66,10 +73,19 @@ Show Values:: Displays the aggregate measure values on the chart. If the chart a
 For a *Map-type* chart, ‘Show Values’ displays the geographic labels for all regions if there is no ‘Text’ binding.
 +
 NOTE: By default, measure values are also displayed as a *tooltip* when the user *hovers* the mouse over the chart. Tooltips are visible when the Dashboard is previewed or viewed in the Portal. See xref:#GeneralTab[] to customize the tooltip.
-Apply Aesthetics to Source Nodes:: For *Network*, *Circular Network*, and *Tree* chart types, specifies that node ‘Color’ and ‘Size’ determined by ‘Target’ value should also be applied to source nodes that are not also target nodes.
 Show Reference Line:: Displays horizontal and vertical reference lines when the user moves the mouse over a data point.
 Stack Value:: Displays a single aggregate value for each primary (X-axis) grouping, rather than for each individual subseries grouping.
 Keep Element in Plot:: Automatically extend the chart boundaries to display chart elements (including target lines) that exceed the specified axis maximum.
+
+==== Pie Chart
+Explode Pie:: Displays a pie chart with small gaps between the slices.
+Pie Ratio:: A value in the range [0.1,1] that determines the proportion of the plot area occupied by the pie. Similarly-sized Pie charts with the same ‘Pie Ratio’ setting will display pies having the same radius, which allows you to enforce consistency across multiple charts.
++
+CAUTION: Large  ‘Pie Ratio’ settings may leave less space for the display of values on the Chart.
+
+==== Network and Tree Chart
+Apply Aesthetics to Source Nodes:: For *Network*, *Circular Network*, and *Tree* chart types, specifies that node ‘Color’ and ‘Size’ determined by ‘Target’ value should also be applied to source nodes that are not also target nodes.
+
 Include Parent Labels:: For xref:CirclePackingChart.adoc[] and xref:TreemapChart.adoc[], this includes the parent category names in the circle labels.
 Font Scale:: For *Word Cloud* Charts only, multiplies the specified ‘Size’ setting to increase the maximum font size of words in the cloud.
 Show Points:: For a *Line* and *Radar* chart, adds markers at the locations of the individual data points.
@@ -86,7 +102,9 @@ Edge Alpha:: Specifies the transparency of the contour edge for a  *Scatter Cont
 Cell Size:: Specifies the size of the cells that make up the grid on which contour weights are computed for a  *Scatter Contour* or *Contour Map* Chart. Higher values specify larger cells, and hence broader clusters. Lower values specify smaller cells, and hence smaller clusters.
 Bar Corner Radius:: For xref:BarChart.adoc[]  only, sets the radius for rounding the bar corners. The range is 0.0 (no rounding) to 0.5 (maximum rounding). The default is 0.3.
 Round All Corners:: For xref:BarChart.adoc[] type only, specifies (when enabled) that the '`Bar Corner Radius`' should be applied to all four corners of the bar.  When disabled (default), only the corners furthest from the axis are rounded.
-Target Lines:: Specify marker lines, bands, or statistical regions to be placed in the plot area. See xref:TrendCompareData.adoc[] for more information.
+
+=== Target Lines
+Specify marker lines, bands, or statistical regions to be placed in the plot area. See xref:TrendCompareData.adoc[] for more information.
 
 [#LineTab]
 == Line Tab
