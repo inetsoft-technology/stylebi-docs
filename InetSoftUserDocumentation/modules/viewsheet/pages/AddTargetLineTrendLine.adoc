@@ -38,6 +38,8 @@ To add a target line, follow the steps below:
 +
 include::ROOT:partial$measureTip.adoc[]
 
+=== Set the Value
+[start=5]
 . In the ‘Value’ field, type a numerical value at which to place the target line for the selected measure, or choose one of the following options to compute the target value from the data: ‘Average’, ‘Minimum’, ‘Maximum’, ‘Median’, ‘Sum’. (For example, select ‘Average’ to place the target line at the average value of the selected measure.)
 +
 image:TargetLine2_1.png[alt="set target line value"]
@@ -51,6 +53,9 @@ The following illustration demonstrates the effect of the ‘Entire Chart’ set
 
 image:commonscript:TargetLine3_1.png[alt="entire chart option effect on target line"]
 ====
+
+=== Set the Label
+[start=7]
 . From the ‘Label’ menu, select one of the following label options:
 +
 image:commonscript:Add Target_2.png[alt="select target line label option"]
@@ -85,6 +90,8 @@ If desired, you can add the target value, target formula, and field name into th
 |===
 ====
 
+=== Set the Style
+[start=9]
 . Select a ‘Line Style’ and ‘Line Color’ in which to display the target line.
 
 . *_Optional:_*  Select a ‘Fill Above’ color and ‘Fill Below’ color to fill the regions of the chart above and below the target line respectively.
@@ -113,10 +120,14 @@ To add a target band, follow the steps below:
 
 . In the ‘Field’ menu, select the chart measure to which you want to add the target band.
 
+=== Set the Value
+[start=5]
 . In the ‘From Value’ field, enter a numerical value at which to place the lower band range for the selected measure, or choose one of the following options to compute the lower band range from the data: ‘Average’, ‘Minimum’, ‘Maximum’, ‘Median’, ‘Sum’. (For example, select ‘Average’ to place the lower band boundary at the average value of the selected measure.)
 +
 image:TargetBand1_1.png[alt="set target band from value"]
 
+=== Set the Label
+[start=6]
 . In the ‘From Label’ menu, select one of the following label options:
 +
 image:TargetBand2_1.png[alt="select target band from label option"]
@@ -162,6 +173,8 @@ image:commonscript:TargetBand4_1.png[alt="entire chart option effect on target b
 ====
 . Repeat the previous steps to set the ‘To Value’ and ‘To Label’ properties, which specify the position and label of the upper band boundary.
 
+=== Set the Style
+[start=10]
 . Select a ‘Line Style’ and ‘Line Color’ in which to display the upper and lower target band boundaries.
 
 . *_Optional:_*  Press the ‘Fill Band’ button and select a background color to fill the band between the lower and upper boundaries. Select a ‘Fill Above’ color and ‘Fill Below’ color to fill the regions of the chart above and below the band boundaries, respectively.
@@ -202,6 +215,8 @@ To add a statistical measure, follow the steps below:
 
 . In the ‘Field’ menu, select the chart measure to which you want to add the statistical measure.
 
+===  Set the Value
+[start=6]
 . In the ‘Computation’ field, select one of the following options to compute statistics from the data: ‘Confidence Interval’, ‘Percentages’, ‘Percentile’, ‘Quantiles’, ‘Standard Deviation’. (See explanations below.)
 
 +
@@ -263,6 +278,8 @@ The following illustration demonstrates the effect of the ‘Entire Chart’ set
 image:commonscript:TargetStats13_1.png[alt="entire chart option effect on standard deviation"]
 ====
 
+=== Set the Label
+[start=9]
 . From the ‘Label’ menu, select one of the following label options:
 +
 image:Add Target_3.png[alt="select statistical measure label option"]
@@ -308,6 +325,8 @@ If desired, you can add the target value, target formula, and field name into a 
 +
 NOTE: The customized label supersedes any previous selection from the ‘Label’ menu.
 
+=== Set the Style
+[start=11]
 . Select a ‘Line Style’ and ‘Line Color’ in which to display the statistical lines.
 
 . *_Optional:_*  Press the ‘Fill Band’ button to open a color picker and select a set of colors for the specified bands (i.e., the regions between the statistical lines). Select one color for each band. The colors are applied to the bands from left to right; the left-most color is applied to the lowest band, and so on. When you have selected the desired colors, press the {buttonApply}.
