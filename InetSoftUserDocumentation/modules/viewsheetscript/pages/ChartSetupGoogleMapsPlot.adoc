@@ -35,7 +35,7 @@ var maxHeightPx = 300;
 var widthPx = 400;
 var heightPx = 400;
 graph = new EGraph();
-var urlPrefix = "https://maps.googleapis.com/maps/api/staticmap?&amp;key=AIzaSyAGEm6zLvFUwXHd9IVngVR61RY2M77wZZo";
+var urlPrefix = "https://maps.googleapis.com/maps/api/staticmap?&amp;key=XXXXXXXXXXXXXXXXXX";
 setupGoogleMapsPlot(graph, urlPrefix, dataset, latName, lngName, maxWidthPx, maxHeightPx, widthPx, heightPx);
 
 // Define chart elements and basic point appearance:
