@@ -45,7 +45,7 @@ percentageAggregate:'Average'}
 Chart1.addPercentageTarget('Sum(Product:Total)','null',125,options)
 --
 
-image:commonscript:PlotAddTargetPercentage1.png[]
+image:commonscript:PlotAddTargetPercentage1.png[alt="chart with single percentage target line at 125 percent of average"]
 
 .Multiple Percentage Lines
 [source,javascript]
@@ -59,7 +59,7 @@ Chart1.addPercentageTarget('Sum(Product:Total)',[0xDDAAAA,0xDDCCCC],[30,60,90],o
 --
 
 
-image:commonscript:PlotAddTargetPercentage2.png[]
+image:commonscript:PlotAddTargetPercentage2.png[alt="chart with multiple percentage target lines at 30 60 and 90 percent"]
 
 
 

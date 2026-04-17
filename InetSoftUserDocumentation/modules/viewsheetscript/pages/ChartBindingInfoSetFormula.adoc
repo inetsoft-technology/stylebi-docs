@@ -41,13 +41,13 @@ For a field "`Total`" bound to the Y-axis:
 Chart1.bindingInfo.setFormula("Total", Chart.MAX_FORMULA, Chart.BINDING_FIELD);
 
 --
-image:commonscript:bindingInfoSetFormula_3.png[]
+image:commonscript:bindingInfoSetFormula_3.png[alt="chart with Total field on Y-axis aggregated using Max formula"]
 
 For a field "`Total`" bound to the ColorFrame:
 [source,javascript]
 --
 Chart1.bindingInfo.setFormula("Total", Chart.MAX_FORMULA, Chart.AESTHETIC_COLOR);
 --
-image:commonscript:bindingInfoSetFormulaColor.png[]
+image:commonscript:bindingInfoSetFormulaColor.png[alt="chart with Total field color-coded using Max formula on ColorFrame"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]

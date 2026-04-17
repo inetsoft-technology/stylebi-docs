@@ -35,7 +35,7 @@ graph.addElement(elem);
 <2> Create the `StarShapeFrame` object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:StarShapeFrame.png[]
+image:commonscript:StarShapeFrame.png[alt="point chart with StarShapeFrame showing star shaped elements for three measures"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

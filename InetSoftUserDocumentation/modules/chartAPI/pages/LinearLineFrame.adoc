@@ -42,7 +42,7 @@ graph.addElement(elem);
 <3> Use `setField` to specify the field for the `LinearLineFrame`.
 <4> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:LinearLineFrame2.png[]
+image:commonscript:LinearLineFrame2.png[alt="point chart with LinearLineFrame varying line styles by Total field"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -71,7 +71,7 @@ Chart1.bindingInfo.lineFrame = new LinearLineFrame;
 --
 
 +
-image:commonscript:LinearLineFrame_1.png[]
+image:commonscript:LinearLineFrame_1.png[alt="bar chart with LinearLineFrame applied via bindingInfo lineFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

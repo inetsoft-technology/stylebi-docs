@@ -14,17 +14,17 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 
 . Press the {buttonObject}, and select {buttonFacebookAdInsightsQuery}.
 +
-image:FacebookInsightsQuery1.png[]
+image:FacebookInsightsQuery1.png[alt="select Facebook Ad Insights Query button from the toolbar"]
 +
 This opens the ‘Facebook Ad Insights  Query’ dialog box.
 +
-image:FacebookInsightsQuery2.png[]
+image:FacebookInsightsQuery2.png[alt="Facebook Ad Insights Query dialog box for configuring the data query"]
 
 . In the ‘Date Preset’ menu, select the range of dates for the data that you want to analyze.
 
 . Press the btn:[Add] button to add a ‘Metric’ field. Enter the metric that you want to retrieve. (See the Facebook developer website for a https://developers.facebook.com/docs/marketing-api/reference/adgroup/insights/[list of available metrics].)
 +
-image:FacebookInsightsQuery3.png[]
+image:FacebookInsightsQuery3.png[alt="Metric field added with press of Add button"]
 
 . Repeat the above step to add additional metrics. To remove a metric, check the box next to the metric and press btn:[Remove]. (Use the ‘Quick Add’ menu to add a listed metric.)
 

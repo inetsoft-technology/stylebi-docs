@@ -41,6 +41,6 @@ Chart1.bindingInfo.setTopN("Company",3);
 Chart1.bindingInfo.setTopNReverse("Company",true); // Bottom-N
 
 --
-image:commonscript:SetTopNReverse.png[]
+image:commonscript:SetTopNReverse.png[alt="chart showing bottom 3 Company groups by aggregate measure"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]

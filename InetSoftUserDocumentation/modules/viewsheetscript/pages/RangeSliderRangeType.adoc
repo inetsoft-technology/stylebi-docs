@@ -11,7 +11,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies the display mode for the Range Slider. This is equivalent to selecting a data type in the ‘Options’ panel of the *Advanced* tab in the ‘Properties’ dialog box.
 
-image:viewsheet:rangeSliderRangeType.png[]
+image:viewsheet:rangeSliderRangeType.png[alt="range slider Advanced tab showing range type data type selection"]
 
 == Type
 xref:commonscript:StyleConstant.adoc[] object:: `StyleConstant.NUMBER` +

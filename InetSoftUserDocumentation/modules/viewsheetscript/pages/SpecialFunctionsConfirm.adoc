@@ -29,6 +29,6 @@ else {
 
 The script executes a first time when a user presses the ‘Submit’ button. During this first execution, `confirmEvent.confirmed` is `false`, so the TextInput values are tested and the ‘Confirm’ dialog box is generated.
 
-image:viewsheet:ConfirmPrompt.png[]
+image:viewsheet:ConfirmPrompt.png[alt="confirm dialog box prompting user to continue or cancel submission"]
 
 If the user presses btn:[No], the dialog box is closed and no action is taken. If the user presses btn:[Yes], the script executes a *second time* with `confirmEvent.confirmed` now set to `true`, which commences the action in the `else` block. (In this case, the desired action is simply to assign the TextInput values to corresponding Dashboard parameters.)

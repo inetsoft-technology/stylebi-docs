@@ -17,7 +17,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.shapeLegends['Sum(Product:Quantity Purchased)'].color = 'red';
 Chart1.shapeLegends['Sum(Product:Total)'].color = 'green';
 
-image:commonscript:shapeLegendsColor.png[]
+image:commonscript:shapeLegendsColor.png[alt="chart shape legends with custom color applied to all legend text"]
 
 
 

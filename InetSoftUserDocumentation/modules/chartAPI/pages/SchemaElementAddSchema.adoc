@@ -45,7 +45,7 @@ graph.addElement(elem); //<4>
 <4> Use xref:EGraphAddElement.adoc[] to add the `SchemaElement` to the Chart.
 
 
-image:commonscript:SchemaElementsetPainter_1.png[]
+image:commonscript:SchemaElementsetPainter_1.png[alt="stock chart using SchemaElement with StockPainter for Hi Close Lo fields"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

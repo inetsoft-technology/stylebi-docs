@@ -44,7 +44,7 @@ labelColor:'black'}
 Chart1.addQuantileTarget('Sum(Product:Total)',[0xDDAAAA,0xDDCCCC],4,options)
 --
 
-image:commonscript:PlotAddTargetQuantile.png[]
+image:commonscript:PlotAddTargetQuantile.png[alt="chart with four quantile target lines dividing chart into quartiles"]
 
 
 

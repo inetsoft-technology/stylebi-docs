@@ -128,7 +128,7 @@ graph.addElement(elem);
 <3> Use `setFormat()` to assign the number format to the `TextSpec`.
 <4> Use xref:AxisSpecSetTextSpec.adoc[] to assign the `TextSpec` to the `AxisSpec`.
 
-image:commonscript:TextSpecsetFormat.png[]
+image:commonscript:TextSpecsetFormat.png[alt="bar chart with Y-axis numbers formatted with comma separators via TextSpec"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

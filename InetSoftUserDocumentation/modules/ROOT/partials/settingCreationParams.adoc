@@ -1,6 +1,6 @@
 . Press the btn:[Add] button below the ‘Creation Parameters’ table. This opens the ‘Add Parameter’ dialog box.
 +
-image:administration:Creation Parameters1.png[]
+image:administration:Creation Parameters1.png[alt="add parameter dialog opened after pressing the Add button"]
 
 . In the ‘Parameter Name’ field, select an existing parameter or manually enter the name of a parameter.
 
@@ -8,7 +8,7 @@ image:administration:Creation Parameters1.png[]
 
 . In the ‘Value’ field, press the {buttonValueType} and select ‘Value’ to enter a fixed value to be passed into the parameter. (Enter a comma-separated list for an array parameter.)
 +
-image:administration:Creation Parameters2.png[]
+image:administration:Creation Parameters2.png[alt="value type set to Value with fixed value entered in the Value field"]
 +
 To set the value using scripted logic, select ‘Expression’ or press the {buttonEditFormula} if available. This opens the Formula Editor. Create a script that returns the desired parameter value. You can use the predefined relative dates in the ‘Dynamic Dates’ folder.
 +
@@ -44,10 +44,10 @@ _NEXT_HOUR is 2023-08-16,14:50:29
 _NEXT_MINUTE is 2023-08-16,13:51:29
 ====
 +
-image:administration:scheduleActionDynamicDates.png[]
+image:administration:scheduleActionDynamicDates.png[alt="formula editor showing dynamic dates folder with predefined date values"]
 
 . Press btn:[OK] to close the dialog box. The parameter that you added is now listed in the table.
 +
-image:administration:Creation Parameters3.png[]
+image:administration:Creation Parameters3.png[alt="creation parameters table showing the newly added parameter entry"]
 
 . *_Optional:_*  To modify the parameter settings, press the {buttonEdit} next to the parameter. To remove the parameter, press the {buttonDelete} next to the parameter.

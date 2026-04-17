@@ -48,7 +48,7 @@ graph.addElement(elem);
 <3> Use `setTexture` to assign `GTexture.PATTERN_18`.
 <4> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:StaticTextureFrame2setTexture.png[]
+image:commonscript:StaticTextureFrame2setTexture.png[alt="bar chart with GTexture.PATTERN_18 applied via StaticTextureFrame setTexture"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -92,7 +92,7 @@ Chart1.bindingInfo.textureFrame.texture = GTexture.PATTERN_5;
 --
 
 +
-image:commonscript:StaticTextureFrame_2.png[]
+image:commonscript:StaticTextureFrame_2.png[alt="point chart with GTexture.PATTERN_5 set via bindingInfo textureFrame texture"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

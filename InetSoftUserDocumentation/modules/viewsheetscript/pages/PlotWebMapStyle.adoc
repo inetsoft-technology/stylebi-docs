@@ -32,13 +32,13 @@ String:: A Mapbox style available to current the Mapbox account:
 Chart1.webMapStyle = 'Satellite Streets';
 
 
-image:commonscript:webmapStyle1.png[]
+image:commonscript:webmapStyle1.png[alt="map chart with Satellite Streets Mapbox web map style applied"]
 
 [source,javascript]
 
 Chart1.webMapStyle = 'Monochrome';
 
-image:commonscript:webmapStyle2.png[]
+image:commonscript:webmapStyle2.png[alt="map chart with Monochrome Mapbox web map style applied"]
 
 
 

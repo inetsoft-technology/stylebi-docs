@@ -7,7 +7,7 @@ xref:ChangeImageWithScript.adoc[] for another approach to dynamically setting im
 
 Makes an image available in the ‘Uploaded’ folder of the ‘Image Properties’ dialog box.
 
-image:commonscript:addImage1.png[]
+image:commonscript:addImage1.png[alt="Image Properties dialog box showing Uploaded folder with available images"]
 
 After the image is added to the ‘Uploaded’ folder, you can display the image in any Image component by selecting its label the ‘Image Properties’ dialog box, or by assigning the label to the Image component’s xref:ImageImage.adoc[] property, as shown in the example below.
 

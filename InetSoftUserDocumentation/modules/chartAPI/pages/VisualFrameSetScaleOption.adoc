@@ -42,7 +42,7 @@ graph.addElement(elem);
 <3> Use `setScaleOption` to calculate scale with max and min tick values.
 <4> Use xref:GraphElementSetColorFrame.adoc[] to add the `VisualFrame` to the xref:IntervalElement.adoc[].
 +
-image:commonscript:VisualFrameSetScaleOption.png[]
+image:commonscript:VisualFrameSetScaleOption.png[alt="bar chart with GradientColorFrame scale using max and min tick values"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

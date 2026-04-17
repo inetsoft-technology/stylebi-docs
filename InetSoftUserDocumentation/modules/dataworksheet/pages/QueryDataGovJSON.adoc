@@ -15,11 +15,11 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonDataGovJSONQuery}. This opens the ‘Data gov JSON  Query’ dialog box.
 
 +
-image:dataSourceDataGov5.png[]
+image:dataSourceDataGov5.png[alt="Data gov JSON Query dialog box for configuring the data query"]
 
 . Enter the desired ‘URL Suffix’ for the web service.
 +
-image:dataSourceDataGov6.png[]
+image:dataSourceDataGov6.png[alt="URL Suffix field entered for the web service query"]
 
 . *_Optional:_* {datasourceSelectTabular}
 

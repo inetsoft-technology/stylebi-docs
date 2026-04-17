@@ -14,7 +14,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 
 . Press the {buttonObject}, and select {buttonSalesforceQuery}.
 +
-image:dataSourceSalesforce5.png[]
+image:dataSourceSalesforce5.png[alt="select Salesforce Query button from the toolbar"]
 +
 This opens the ‘Salesforce  Query’ dialog box.
 
@@ -24,7 +24,7 @@ This opens the ‘Salesforce  Query’ dialog box.
 
 . Enter the desired SOQL query in the text box.
 +
-image:dataSourceSalesforce6.png[]
+image:dataSourceSalesforce6.png[alt="SOQL query entered in the text box"]
 +
 For more information about SOQL queries, see the https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/[Force.com SOQL and SOSL Reference].
 

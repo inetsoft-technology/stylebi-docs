@@ -14,7 +14,7 @@ graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
 graph.addElement(elem);
 
-image:commonscript:VisualFrameExample1.png[]
+image:commonscript:VisualFrameExample1.png[alt="scatter chart showing State and Quantity without any VisualFrame applied"]
 
 include::partial$scriptThatModifiesGraph.adoc[]
 
@@ -50,7 +50,7 @@ elem.setSizeFrame(frame);
 +
 The point sizes now represent the data values contained in the ‘Total’ field.
 +
-image:commonscript:VisualFrameExample2.png[]
+image:commonscript:VisualFrameExample2.png[alt="scatter chart with point sizes representing Total field via LinearSizeFrame"]
 
 
 

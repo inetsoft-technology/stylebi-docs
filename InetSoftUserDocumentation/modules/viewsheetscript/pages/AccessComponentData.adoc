@@ -29,7 +29,7 @@ var firstLabel = CheckBox1.selectedLabels[0];
 
 You can manually type these references into your script, or enter them automatically by clicking the appropriate node on the ‘Component’ tree of the Script Editor.
 
-image:viewsheet:ComponentSelectedObject.png[]
+image:viewsheet:ComponentSelectedObject.png[alt="script editor component tree showing selectedObject node"]
 
 The less-commonly used xref:viewsheetscript:TextInput.adoc[]   provides a `value` property to return the current text.
 
@@ -67,11 +67,11 @@ include::ROOT:partial$ProductSalesWorksheet.adoc[]
 
 .. Press btn:[Add] again. For the second ‘Label’ enter the text “Select States.” For the corresponding ‘Value’, enter the text “State”.
 +
-image:viewsheet:Object Access RadioButton.png[]
+image:viewsheet:Object Access RadioButton.png[alt="radio button with two label and value entries added"]
 
 .. Press btn:[OK] in both dialog boxes. This creates a RadioButton with two choices from which the user can select the input method.
 +
-image:viewsheet:Object Access Viewsheet.png[]
+image:viewsheet:Object Access Viewsheet.png[alt="dashboard with radio button selection list and range slider"]
 
 
 . Add expression scripts to the Selection List and the Range Slider so that the appropriate control is enabled for the given user selection. Follow the steps below:
@@ -80,7 +80,7 @@ image:viewsheet:Object Access Viewsheet.png[]
 
 .. For the ‘Enabled’ option, press the {buttonValueType}, and select ‘Expression’. Then press the {buttonEditFormula} to open the Formula Editor.
 +
-image:viewsheet:Selection List Properties Expression.png[]
+image:viewsheet:Selection List Properties Expression.png[alt="selection list properties with enabled set to expression"]
 
 
 .. In the Formula Editor for the Selection List, enter the following script:
@@ -137,7 +137,7 @@ SelectionTree1.drillMember;
 
 You can manually type these references into your script, or enter them automatically by clicking the appropriate node on the ‘Component’ tree of the Script Editor.
 
-image:viewsheet:ComponentSelectedObject.png[]
+image:viewsheet:ComponentSelectedObject.png[alt="script editor component tree showing selectedObject node"]
 
 .Interactive Chart drilldown
 [example]
@@ -165,7 +165,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 .. Resize the Selection Tree so that it can display a reasonable number of rows.
 +
-image:commonscript:DrillMemberExample1.png[]
+image:commonscript:DrillMemberExample1.png[alt="selection tree with region state and city hierarchy fields"]
 
 . Press the {buttonEdit} on the Chart to open the Visualization Recommender. Press the {buttonFullEditor} at the top right of the Recommender to bypass the Recommender and open the Chart Editor.
 
@@ -177,21 +177,21 @@ image:commonscript:DrillMemberExample1.png[]
 
 .. Press the {buttonValueType} next to the ‘Region’ dimension in the top panel, and select the ‘Expression’ option.
 +
-image:commonscript:DrillMemberExample2.png[]
+image:commonscript:DrillMemberExample2.png[alt="chart editor with Region dimension set to expression type"]
 
 .. Press the {buttonEditFormula} to open the Script Editor.
 +
-image:commonscript:DrillMemberExample6.png[]
+image:commonscript:DrillMemberExample6.png[alt="edit formula button next to Region dimension expression"]
 
 .. In the top-left panel of the Script Editor, expand the ‘SelectionTree1’ node, and click ‘drillMember’. This adds the `SelectionTree1.drillMember` property in the editing area.
 +
-image:commonscript:DrillMemberExample3.png[]
+image:commonscript:DrillMemberExample3.png[alt="script editor showing SelectionTree1 drillMember property selected"]
 +
 [TIP]
 --
 Instead of using the '`Expression`' option from the {buttonValueType} button, you can select the '`Variable`' option.
 
-image:commonscript:DrillMemberExample7.png[]
+image:commonscript:DrillMemberExample7.png[alt="variable option selected from value type menu"]
 
 Then select  `SelectionTree1.drillMember` from the menu.  This produces the same result as the '`Expression`' described above.
 --
@@ -200,7 +200,7 @@ The xref:viewsheetscript:SelectionListTreeDrillMember.adoc[]  property returns t
 
 .. Press btn:[OK] to close the Formula Editor. The output of `SelectionTree1.drillMember` is now assigned to the Chart X-axis binding.
 +
-image:commonscript:DrillMemberExample4.png[]
+image:commonscript:DrillMemberExample4.png[alt="chart editor with drillMember expression assigned to X-axis binding"]
 
 . {finishEditing}
 
@@ -212,7 +212,7 @@ image:commonscript:DrillMemberExample4.png[]
 
 .. Select the ‘CT’ and ‘MA’ options in the Selection Tree. Observe that the Selection Tree now filters the Chart to display only data from the states of ‘CT’ and ‘MA’. In addition, the Selection Tree `drillMember` property changes the X-axis binding to represent the ‘City’ dimension, which is one level below ‘State’ in the Selection Tree hierarchy.
 +
-image:commonscript:DrillMemberExample5.png[]
+image:commonscript:DrillMemberExample5.png[alt="chart filtered by state selection showing city dimension on X-axis"]
 ====
 
 == Output Components
@@ -248,7 +248,7 @@ xref:TableValue.adoc[]:: Value of the current cell.
 
 You can type these keywords manually into your script, or you can click the appropriate node on the ‘Component’ tree in the Script Editor.
 
-image:viewsheet:RelativeReferenceEditor.png[]
+image:viewsheet:RelativeReferenceEditor.png[alt="script editor component tree showing table data and field nodes"]
 
 The sections below provide examples of different ways to access table values.
 
@@ -286,16 +286,16 @@ include::ROOT:partial$ProductSalesWorksheet.adoc[]
 
 . Drag and drop the ‘ProductInfo’ data block from the left panel into the Dashboard.
 +
-image:viewsheet:ProductInfoDataBlock.png[]
+image:viewsheet:ProductInfoDataBlock.png[alt="ProductInfo data block table added to the dashboard"]
 
 . Click to select any data cell in the ‘Price’ column. Then select the *Format* tab at the bottom of the left panel.
 +
-image:viewsheet:Capture_009.png[]
+image:viewsheet:Capture_009.png[alt="Price column cell selected with Format tab visible"]
 
 
 . Press the {buttonValueType} next to the ‘Color’ property, and select ‘Expression’ option.
 +
-image:Color Tab Formula Editor Button.png[]
+image:Color Tab Formula Editor Button.png[alt="Color property with expression option selected in Format tab"]
 
 . Press the {buttonEditFormula} next to the ‘Color’ property to open the Formula Editor.
 
@@ -309,14 +309,14 @@ else {
   0x0000FF;   // blue
 }
 +
-image:formulaEditor1.png[]
+image:formulaEditor1.png[alt="formula editor with color expression script using value greater than 1000"]
 
 +
 NOTE: A color can be specified as an ordered triple, or as a hexadecimal number.
 
 . Press btn:[OK] to exit the Formula Editor.
 +
-image:viewsheet:Capture_011.png[]
+image:viewsheet:Capture_011.png[alt="table with Price column cells colored red for values over 1000"]
 
 Notice that the cells in the ‘Price’ column are colored red if the value is greater than 1000 and blue otherwise. The script affects the entire ‘Price’ column, and can be edited from the *Format* panel for any cell in the column. This example continues in xref:#AccessDataInSameRow[].
 ====
@@ -347,7 +347,7 @@ else {
 
 . Press btn:[OK] to exit the Formula Editor.
 +
-image:viewsheetscript:Set Property Using Field.png[]
+image:viewsheetscript:Set Property Using Field.png[alt="Name column highlighted based on corresponding Price column values"]
 
 The values in the ‘Name’ column are now highlighted based on the corresponding values in the ‘Price’ column. This example continues in xref:#AccessDatainDifferentRowColumn[].
 ====
@@ -389,7 +389,7 @@ if (row > 1) {
 
 The cells in which the value is less than the previous row’s price are now highlighted in yellow.
 
-image:viewsheet:Expression Access Relative Cell.png[]
+image:viewsheet:Expression Access Relative Cell.png[alt="table with cells highlighted yellow where price is less than row above"]
 
 ====
 
@@ -417,7 +417,7 @@ for (i=1; i<table.length; i++) {
 
 . Press btn:[OK] to exit the Formula Editor.
 +
-image:viewsheet:Expression Access Absolute Cell.png[]
+image:viewsheet:Expression Access Absolute Cell.png[alt="Price column header cell shown red because a price exceeds 2000"]
 
 The header cell is red because a price exists that exceeds $2000. To test the header cell script, add a Range Slider to filter the values in the table. Follow these steps:
 
@@ -425,7 +425,7 @@ The header cell is red because a price exists that exceeds $2000. To test the he
 
 . From the ‘ProductInfo’ data block at the top of the *Toolbox* panel , drag the ‘Price’ field onto the Range Slider. This binds the Range Slider to the ‘Price’ field.
 +
-image:viewsheet:Expression Drag Price Slider.png[]
+image:viewsheet:Expression Drag Price Slider.png[alt="Range Slider bound to Price field added to the dashboard"]
 
 . Drag the right side of the Range Slider to vary the prices included in the dataset. Observe the color of the header cell as the dataset changes.
 ====

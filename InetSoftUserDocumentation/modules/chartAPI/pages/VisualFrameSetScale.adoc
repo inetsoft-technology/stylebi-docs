@@ -38,7 +38,7 @@ graph.addElement(elem);
 <2> Create the xref:LinearScale.adoc[] object.
 <3> Use `setScale` to add the `LinearScale` to the xref:BrightnessColorFrame.adoc[].
 +
-image:commonscript:VisualFrameSetScales.png[]
+image:commonscript:VisualFrameSetScales.png[alt="bar chart with BrightnessColorFrame scale range limited from 175 to 325"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

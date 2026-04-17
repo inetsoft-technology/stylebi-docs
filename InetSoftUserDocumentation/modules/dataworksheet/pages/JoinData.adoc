@@ -36,14 +36,14 @@ To use the {buttonJoinHandle}, follow the steps below:
 
 . Click on one of the data blocks that you want to join. This displays a {buttonJoinHandle} on each side of the data block.
 +
-image:joinHandles.png[]
+image:joinHandles.png[alt="join handles displayed on each side of the selected data block"]
 . Click on one of the join handles (left or right) and drag it onto a join handle on the data block that you want to join.
 +
-image:JoiningTablesAction.png[]
+image:JoiningTablesAction.png[alt="drag join handle from one data block onto join handle of the other"]
 
 This creates a new joined data block and opens the Join Editor. Proceed to xref:#UsetheJoinEditor[] to define the joins.
 
-image:JoiningTablesActionResult.png[]
+image:JoiningTablesActionResult.png[alt="new joined data block created after connecting join handles"]
 
 
 [#UsetheJoinButton]
@@ -60,11 +60,11 @@ TIP: In general, you should avoid joining more than two data blocks at the same 
 
 . Press the {buttonJoin} in the toolbar, and select  {buttonInnerOuterJoin}.
 +
-image:mashup2_1.png[]
+image:mashup2_1.png[alt="press Join button in toolbar and select Inner Outer Join"]
 
 This creates a new joined data block and opens the Join Editor. Proceed to xref:#UsetheJoinEditor[] to define the joins.
 
-image:JoiningTablesActionResult.png[]
+image:JoiningTablesActionResult.png[alt="new joined data block created after connecting join handles"]
 
 
 [#UsetheJoinEditor]
@@ -77,7 +77,7 @@ NOTE: Some joins may have been created by default. To delete a default join, cli
 
 . Specify an *inner join* condition by dragging a join field from one data block onto the corresponding join field in the other data block. Repeat to create join conditions on as many fields as needed.
 +
-image:mashup3_1.png[]
+image:mashup3_1.png[alt="drag join field from one data block onto corresponding field in the other"]
 +
 IMPORTANT: Join columns must have the same *data type* (e.g., both Integer, both String, etc.). Otherwise, you may see a "`join type is invalid`" error.
 +
@@ -86,13 +86,13 @@ By default, an “equality” join condition is used, producing the so-called in
 ****
 In the example below, the first join condition specifies that the values in the ‘Name’ column from the ‘Orders’ data block should be matched to the values in the ‘Name’ column from the ‘Returns’ data block. The second join condition specifies that the values in the ‘Order Num’ column from the ‘Orders’ data block should be matched to the values in the ‘Order Num’ column from the ‘Returns’ data block.
 
-image:mashup3_2.png[]
+image:mashup3_2.png[alt="two join conditions linking Name and Order Num columns between Orders and Returns"]
 ****
 +
 
 . *_Optional:_* To change an inner join to an outer join, right-click on the join link and choose the desired outer join.
 +
-image:mashup3_3.png[]
+image:mashup3_3.png[alt="right-click join link and choose outer join type from context menu"]
 +
 An *outer join* is a generalization of the inner join: In addition to the matching rows preserved by the equi-join, the left outer join returns all the rows in the left table, while the right outer join returns all the rows in the right table. The full outer join returns all the rows of both tables.
 +
@@ -102,15 +102,15 @@ NOTE: When you specify an outer join, the additional rows included from a data b
 
 . To add additional tables into the join, drag the tables from the left panel.
 +
-image:JoiningTablesAction4.png[]
+image:JoiningTablesAction4.png[alt="drag additional table from left panel into the Join Editor"]
 
 . Press btn:[Done].
 +
-image:mashup3_4.png[]
+image:mashup3_4.png[alt="press Done to close the Join Editor and create the joined data block"]
 +
 This creates the joined data block ('`Query1`').
 +
-image:mashup4_1.png[]
+image:mashup4_1.png[alt="Query1 joined data block created in the Data Worksheet canvas"]
 
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar or kbd:[Ctrl+S] on the keyboard.
 
@@ -130,28 +130,28 @@ include::ROOT:partial$CreateNewWorksheetNote.adoc[]
 +
 include::ROOT:partial$SalesExploreWorksheet.adoc[]
 +
-image:importWorksheet_2.png[]
+image:importWorksheet_2.png[alt="Sales Explore Data Worksheet dragged into the Data Worksheet panel"]
 
 . From the left panel, drag the ‘customers’ Data Worksheet  into the right panel. This creates the data block ‘customers1’.
 +
 include::ROOT:partial$customersQuery.adoc[]
 +
-image:InnerJoinExp1.png[]
+image:InnerJoinExp1.png[alt="Sales1 and customers1 data blocks added to the Data Worksheet"]
 . Click on the ‘customers1’ data block to select it and enable the join handles.
 . Drag a join handle from the ‘customers1’ data block onto a join handle of the ‘Sales1’ data block.
 +
-image:InnerJoinExp2.png[]
+image:InnerJoinExp2.png[alt="drag join handle from customers1 onto join handle of Sales1 data block"]
 +
 This opens the Join Editor.
 . In the Join Editor, drag the ‘Company’ column from the ‘Sales1’ data block onto the ‘company_name’ column of the ‘customers1’ data block.
 +
-image:CreatingJoin.png[]
+image:CreatingJoin.png[alt="drag Company column from Sales1 onto company name column of customers1"]
 . Press btn:[Done] to close the Join Editor and create the new joined data block, ‘Query1’.
 +
-image:JoinedTable.png[]
+image:JoinedTable.png[alt="Query1 joined data block created combining sales and customer data"]
 . To preview the ‘Query1’ data block, click the data block to select it. Then press the {buttonChangeView} in the bottom panel and select {buttonLiveDataView}.
 +
-image:JoinedPreview.png[]
+image:JoinedPreview.png[alt="preview of Query1 joined data block showing combined sales and customer columns"]
 ****
 
 
@@ -190,7 +190,7 @@ To cross-join two data blocks in a Data Worksheet, follow these steps:
 . Select the data blocks you want to join together. (You can hold the {buttonShift} or {buttonCtrl} key and click on the data blocks to select both, or drag with the mouse to “lasso” the data blocks.)
 . Press the {buttonJoin} in the toolbar and select  {buttonCrossJoin}.
 +
-image:CrossJoinOperation.png[]
+image:CrossJoinOperation.png[alt="press Join button in toolbar and select Cross Join option"]
 +
 The two data blocks are cross-joined to create a new data block. Filtering conditions from both base data blocks are applied to the cross-joined data block.
 
@@ -210,25 +210,25 @@ include::ROOT:partial$customersQuery.adoc[]
 . Create an Embedded Table containing the salesperson information. Follow the steps below:
 .. Create a new Embedded Table with two rows and two columns. (See xref:EnterData.adoc[] for more information.) The new Embedded Table is called ‘Query1’.
 +
-image:CrossJoinExp2.png[]
+image:CrossJoinExp2.png[alt="new embedded table Query1 created with two rows and two columns"]
 
 .. Click on the ‘Query1’ data block to select it.
 .. In the bottom panel, double-click on the ‘col0’ column header, and edit the column name to be ‘First Name’. Double-click on the ‘col1’ column header and edit the column name to be ‘Last Name’.
 +
-image:CrossJoinExp3.png[]
+image:CrossJoinExp3.png[alt="column headers renamed to First Name and Last Name in embedded table"]
 .. In the table cells below the columns headers, enter the following names:
 +
-image:CrossJoinExp4.png[]
+image:CrossJoinExp4.png[alt="salesperson names entered in First Name and Last Name table cells"]
 . Join the two data blocks using a cross-join: Hold the {buttonCtrl} key and click both data blocks to select them. Then press the {buttonJoin} in the toolbar and select {buttonCrossJoin}.
 +
-image:CrossJoining.png[]
+image:CrossJoining.png[alt="press Join button and select Cross Join to create cross-joined data block"]
 +
 This creates a new joined data block, ‘Query2’.
 +
-image:CrossJoined.png[]
+image:CrossJoined.png[alt="Query2 cross-joined data block created from customers and salesperson data blocks"]
 . To preview the ‘Query2’ data block, click the data block to select it. Then press the {buttonChangeView} in the bottom panel, and select {buttonLiveDataView}.
 +
-image:previewCrossJoin.png[]
+image:previewCrossJoin.png[alt="preview showing cross-product of customers and salesperson data blocks"]
 +
 Note that the ‘Query2’ data block returns the cross-product of the ‘customers1’ and ‘Query1’ data blocks. That is, the result represents every row of ‘Query1’ paired with every row of ‘customers1’.
 ****
@@ -261,11 +261,11 @@ To create a merge join, follow these steps:
 . Select the data blocks you want to join together. (You can hold the {buttonShift} or {buttonCtrl} key and click on the data blocks to select both, or drag with the mouse to “lasso” the data blocks.)
 . Press the {buttonJoin} in the toolbar and select  {buttonMergeJoin}.
 +
-image:MergeJoinToolbar.png[]
+image:MergeJoinToolbar.png[alt="press Join button in toolbar and select Merge Join option"]
 +
 This creates the new merge-joined data block.
 +
-image:MergeJoinToolbar2.png[]
+image:MergeJoinToolbar2.png[alt="new merge-joined data block created horizontally combining both data block columns"]
 +
 In the merge-joined data block, the columns of the shorter table are padded with empty rows to match the length of the longer table. The number of columns in the final merge-joined data block is the sum of the columns in the two base data blocks.
 
@@ -283,20 +283,20 @@ include::ROOT:partial$CreateNewWorksheetNote.adoc[]
 include::ROOT:partial$FastGoGameQuery.adoc[]
 . From the left *Asset* panel, drag the ‘Fast Go Game’ Data Worksheet  into the right panel. This creates a new data block named ‘Fast Go Game1’.
 +
-image:twoDWSQueries_2.png[]
+image:twoDWSQueries_2.png[alt="Wireless Mouse and Fast Go Game data blocks added to the worksheet"]
 
 . Hold down the {buttonCtrl} key and click the data blocks to select both. (Alternatively, drag across the data blocks to “lasso” them.)
 . Press the {buttonJoin} button on the toolbar and select {buttonMergeJoin}.
 +
-image:MergeJoinButton.png[]
+image:MergeJoinButton.png[alt="press Join button in toolbar and select Merge Join for the two data blocks"]
 +
 This creates a new data block, ‘Query1’.
 +
-image:MergeJoin.png[]
+image:MergeJoin.png[alt="Query1 merge-joined data block combining Wireless Mouse and Fast Go Game columns"]
 
 . To preview ‘Query1’, first click the data block to select it. Then press the {buttonChangeView} in the bottom panel and select {buttonLiveDataView}.
 +
-image:previewMergeJoin.png[]
+image:previewMergeJoin.png[alt="preview of merge-joined data block showing both data sets side by side"]
 +
 Notice that since the ‘Wireless Mouse1’ table has more rows than the ‘Fast Go Game1’ table, the number of rows of the ‘Query1’ table is equal to the number of rows of the ‘Wireless Mouse1’ table. The ‘Fast Go Game1’ data is padded with an empty row.
 ****
@@ -312,7 +312,7 @@ The sections below explain additional operations that you can perform on joined 
 === Open the Join Editor
 To reopen the Join Editor for a joined data block, right-click the joined data block (e.g., '`Query1`'), and select '`Edit Join`' from the menu. {rightClickOptions}
 
-image:ChangeJoinTypeAction.png[]
+image:ChangeJoinTypeAction.png[alt="right-click joined data block and select Edit Join from context menu"]
 
 Then proceed to xref:#UsetheJoinEditor[] as explained above, or see  xref:#ChangeJoinType[],  xref:#ChangetheJoinOrder[], and  xref:#AddTablestoJoin[].
 
@@ -333,7 +333,7 @@ NOTE: You can change the join type for all joined data blocks *_except_* for mer
 
 To change the join type for a joined data block, open the Join Editor for the data block.  (See xref:#OpentheJoinEditor[].)  In the Join Editor, right-click on a join link and select the desired type of join from the menu, and press btn:[Done].
 
-image:JoinTypeWorksheetExplorer.png[]
+image:JoinTypeWorksheetExplorer.png[alt="right-click join link and select desired join type from context menu"]
 
 The *Inner Join*  returns rows from the two data blocks that match based on the selected join column. The *Left Outer Join* additionally returns all rows in the left data block (including those without a match in the right data block), while the *Right Outer Join* additionally returns all the rows in the right data block  (including those without a match in the left data block). The *Full Outer Join* returns all the rows of both data blocks  (including those without  matches).
 
@@ -358,21 +358,21 @@ include::ROOT:partial$FastGoGameQuery.adoc[]
 +
 . Create an inner join between the two data blocks based on the ‘All Sales’ > ‘Company’ field and ‘Fast Go Game’ > ‘Customers’ field. (See xref:InnerOuterInequalityJoin[] above for instructions on how to create an inner join.)
 +
-image:JoinCustomerIDs.png[]
+image:JoinCustomerIDs.png[alt="inner join created between All Sales Company field and Fast Go Game Customers field"]
 
 . Select the joined data block and preview the data. To do this, press the {buttonChangeView} in the bottom panel and select {buttonLiveDataView}.
 +
-image:previewJoinedCustomerIDs.png[]
+image:previewJoinedCustomerIDs.png[alt="inner join preview showing only companies that purchased Fast Go Game"]
 +
 The result set contains only information about companies that bought Fast Go Game. This is because an inner join returns only records that have matches in both data blocks. Companies that do not appear in the ‘Fast Go Game’ data block are excluded.
 . Right-click the joined data block and select ‘Edit Join’ from the context menu. {rightClickOptions}
 . Click the join link and select ‘Right Outer Join’ from the context menu.
 +
-image:ChangeJoinCustomerIDType.png[]
+image:ChangeJoinCustomerIDType.png[alt="click join link and select Right Outer Join from context menu"]
 . Press btn:[Done] to close the Join Editor.
 . Preview the joined data block again.
 +
-image:previewLeftJoinedCustomerIDs.png[]
+image:previewLeftJoinedCustomerIDs.png[alt="right outer join preview showing all records from All Sales including unmatched rows"]
 +
 Note that the right outer join returns all of the records from the ‘All Sales1’ data block, even if they do not have a corresponding entry in the  ‘Fast Go Game1’ data block.
 ****
@@ -385,10 +385,10 @@ To change the order in which the tables are joined (for example, which table is 
 
 . Press the btn:[Reorder Tables] button at the bottom of the left panel. This opens the ‘Reorder Tables’ dialog box.
 +
-image:Join Reorder Tables.png[]
+image:Join Reorder Tables.png[alt="press Reorder Tables button to open the Reorder Tables dialog"]
 . In the ‘Reorder Tables’ dialog box, click a table in the list and set the desired position for the table by using the arrow buttons. Then press btn:[OK].
 +
-image:Join Reorder Tables2.png[]
+image:Join Reorder Tables2.png[alt="Reorder Tables dialog with arrow buttons to set table join order"]
 . Press btn:[Done] to close the Editor.
 
 [#AddTablestoJoin]
@@ -399,7 +399,7 @@ To add additional data blocks to an existing join follow these steps:
 
 . In the Join Editor, drag any additional tables from the left panel into the right panel.
 +
-image:ChangeJoinTypeAction2.png[]
+image:ChangeJoinTypeAction2.png[alt="drag additional table from left panel into the Join Editor"]
 
 . Create the joins between the new table and the existing tables as described in xref:InnerOuterInequalityJoin[] above.
 
@@ -410,14 +410,14 @@ image:ChangeJoinTypeAction2.png[]
 === View the Joined Dataset
 To view the data in the joined data block, click to select the joined data block (e.g., '`Query1`') and press the {buttonChangeView} in the bottom panel. Select {buttonLiveDataView}.
 
-image:mashup5.png[]
+image:mashup5.png[alt="select joined data block and press Change View to see live data"]
 
 [#RemoveDuplicateColumns]
 === Remove Duplicate Columns
 
 To remove duplicate columns (e.g., the join columns), press the {buttonShowHide} for the columns you wish to hide. (You can do this in either {buttonLiveDataView} or {buttonMetaDataView}.)
 
-image:mashup6_1.png[]
+image:mashup6_1.png[alt="press Show Hide button on duplicate columns to hide them from view"]
 
 
 === Rename Columns
@@ -428,7 +428,7 @@ include::ROOT:partial$duplicateNames.adoc[]
 === Rename the Data Block
 To rename the joined data block, double-click the title bar and type a new name, or right-click the title bar and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel. Enter the desired name in the ‘Name’ field, and press btn:[OK].
 
-image:mashup7.png[]
+image:mashup7.png[alt="Table Properties panel with Name field for renaming the joined data block"]
 
 === Set as Primary Data Block
 
@@ -436,7 +436,7 @@ It is good practice to mark the final result of your Data Worksheet as the *prim
 
 To do this, right-click the joined data block (e.g., ‘Orders and Returns’ below), and select ‘Set As Primary’ from the context menu. {rightClickOptions}
 
-image:mashup8_1.png[]
+image:mashup8_1.png[alt="right-click joined data block and select Set As Primary from context menu"]
 
 
 
@@ -446,6 +446,6 @@ In a Data Worksheet that includes many joins, you may sometimes need help to fin
 . Click to select the data block that contains the column that you want to trace. (Usually this data block is the result of one or more joins.)
 . Hold down the {buttonShift} and {buttonCtrl} keys and *hover* the mouse over the desired column in the bottom panel. This highlights the corresponding join with a dashed line to indicate the origin of the column.
 +
-image:worksheetNavigation.png[]
+image:worksheetNavigation.png[alt="hold Shift and Ctrl and hover over column to highlight its source data block"]
 
 . To highlight the source data block(s), continue to hold down the {buttonCtrl} and {buttonShift} keys, and click the mouse on the desired column in the bottom panel.

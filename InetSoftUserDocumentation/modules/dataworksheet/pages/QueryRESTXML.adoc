@@ -14,13 +14,13 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 
 . Press the {buttonObject}, and select {buttonRESTXMLQuery}. This opens the ‘REST XML  Query’ dialog box.
 +
-image:user:dataSourceRESTXML3.png[]
+image:user:dataSourceRESTXML3.png[alt="REST XML Query dialog box for configuring the data query"]
 
 . Enter the ‘URL Suffix’, and select the ‘XMLSchema’ (optional). If you select ‘XSD’ or ‘DTD’, supply the ‘XMLSchema URL’ for the XSD or DTD schema file.
 
 . Enter a desired ‘XPath expression’ to filter the data.  See https://www.w3schools.com/xml/xml_xpath.asp[XML and XPath] for information about the XPath syntax.
 +
-image:user:dataSourceRESTXML4.png[]
+image:user:dataSourceRESTXML4.png[alt="XPath expression field entered to filter the XML data"]
 
 
 

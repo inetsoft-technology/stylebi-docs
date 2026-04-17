@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Returns the date grouping level  specified by xref:CrosstabBindingInfoSetGroupOrder.adoc[] or set by the ‘Level’ option in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetGroupOrder_1.png[]
+image:commonscript:bindingInfoSetGroupOrder_1.png[alt="crosstab editor showing date grouping level set for a row header"]
 
 
 == Parameters

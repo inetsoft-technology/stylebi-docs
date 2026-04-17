@@ -16,7 +16,7 @@ To implement SSO using OpenID Connect, follow the steps below:
 
 . Open the *Security* page in Enterprise Manager, and select the SSO tab. From ‘Pick an SSO Provider’, select ‘OpenID Connect’.
 +
-image:administration:SSO2.png[]
+image:administration:SSO2.png[alt="security SSO tab with OpenID Connect selected as the SSO provider"]
 
 . Use the ‘Default Role(s)’ menu to select default role or roles for new users signing in.
 
@@ -50,7 +50,7 @@ To implement SSO using SAML, follow the steps below:
 
 . Open the *Security* page in Enterprise Manager, and select the *SSO* tab. From ‘Pick an SSO Provider’, select ‘SAML’.
 +
-image:administration:SSO1.png[]
+image:administration:SSO1.png[alt="security SSO tab with SAML selected as the SSO provider"]
 
 . Use the ‘Default Role(s)’ menu to select default role or roles for new users signing in.
 
@@ -103,7 +103,7 @@ TIP: {SampleYAML}
 
 . Open the *Security* page in Enterprise Manager, and select the *SSO* tab. From ‘Pick an SSO Provider’, select ‘Custom’.
 +
-image:administration:SSO4.png[]
+image:administration:SSO4.png[alt="security SSO tab with Custom selected as the SSO provider"]
 
 . Use the ‘Default Role(s)’ menu to select default role or roles for new users signing in.
 
@@ -115,12 +115,12 @@ image:administration:SSO4.png[]
 
 . Select ‘Java Class’ and enter the name of your filter class, e.g., `inetsoft.sree.SampleFilter`.
 +
-image:administration:SSO6.png[]
+image:administration:SSO6.png[alt="Java Class option selected with filter class name entered"]
 
 +
 Alternatively, select ‘Inline Groovy’ and enter the class using the skeleton provided in the edit box.
 +
-image:administration:SSO5.png[]
+image:administration:SSO5.png[alt="Inline Groovy option selected with skeleton class shown in edit box"]
 
 . Press btn:[Apply] and restart the InetSoft server.
 

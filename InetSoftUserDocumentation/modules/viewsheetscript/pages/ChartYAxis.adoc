@@ -16,7 +16,7 @@ Provides a *shortcut* to set axis properties for  all Y-axes. The available prop
 Chart1.yAxis.minorIncrement = 1000;
 Chart1.yAxis.labelColor = [255,0,0]
 
-image:commonscript:measureyAxis.png[]
+image:commonscript:measureyAxis.png[alt="chart with Y-axis minor increments set and labels colored red"]
 
 
 

@@ -17,13 +17,13 @@ Boolean
 [source,javascript]
 Chart1.includeParentLabels = true;
 
-image:commonscript:includeParentLabels1.png[]
+image:commonscript:includeParentLabels1.png[alt="treemap chart with parent group labels displayed on regions"]
 
 
 [source,javascript]
 Chart1.includeParentLabels = false;
 
-image:commonscript:includeParentLabels2.png[]
+image:commonscript:includeParentLabels2.png[alt="treemap chart with parent group labels hidden"]
 
 
 

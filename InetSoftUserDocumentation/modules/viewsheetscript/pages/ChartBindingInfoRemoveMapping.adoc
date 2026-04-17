@@ -32,7 +32,7 @@ for(i=0 ; i<mapArr.length ; i++) {
 }
 --
 
-image:commonscript:getMappingsAlert.png[]
+image:commonscript:getMappingsAlert.png[alt="alert dialog displaying mapped city value and its geographic code"]
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies whether the subtotal for a given parent group should be displayed. When `true`, this is equivalent to selecting ‘Show’ in the ‘Summarize’ menu of the Crosstab Editor.
 
-image:commonscript:bindingInfoSetGroupTotal.png[]
+image:commonscript:bindingInfoSetGroupTotal.png[alt="crosstab editor showing Summarize Show option for group subtotals"]
 
 
 
@@ -29,7 +29,7 @@ Crosstab1.bindingInfo.measureFields = ['Total'];
 Crosstab1.bindingInfo.setFormula('Total', StyleConstant.SUM_FORMULA);
 Crosstab1.bindingInfo.setGroupTotal('Region',StyleConstant.ROW_HEADER,true);
 
-image:commonscript:bindingInfoSetGroupTotalExp.png[]
+image:commonscript:bindingInfoSetGroupTotalExp.png[alt="crosstab with Region row subtotals displayed for each region group"]
 
 [TIP]
 ====

@@ -33,7 +33,7 @@ graph.addElement(elem);
 <3> Use `transpose` to transpose the axes.
 <4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:Coordinatetranspose.png[]
+image:commonscript:Coordinatetranspose.png[alt="bar chart with X and Y axes transposed"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

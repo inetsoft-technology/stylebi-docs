@@ -34,7 +34,7 @@ graph.addElement(elem);
 <3> Create the xref:TextSpec.adoc[] object.
 <4> Use `setTextSpec()` to assign the `TextSpec` to the title.
 
-image:commonscript:TitleSpecsetTextSpec.png[]
+image:commonscript:TitleSpecsetTextSpec.png[alt="bar chart with X-axis title styled via TitleSpec setTextSpec and red color"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

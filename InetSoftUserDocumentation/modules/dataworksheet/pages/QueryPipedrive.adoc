@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonPipedriveQuery}. This opens the ‘Pipedrive  Query’ dialog box.
 
 +
-image:pipedrive1.png[]
+image:pipedrive1.png[alt="Pipedrive Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

@@ -6,11 +6,11 @@ You can access data contained in the Dashboard data source from within any Dashb
 == Reference Datasource Data
 You can access data from the Dashboard’s data source from within any script. To do this, click the desired data field under the ‘Data’ folder in the Editor to insert the field into the script.
 
-image:insertData.png[]
+image:insertData.png[alt="script editor Data folder with available data fields listed"]
 
 Note that *Date*-type fields supply the following date parts: Year, QuarterOfYear, MonthOfYear, DayOfMonth, and DayOfWeek. *Time*-type fields supply the following date parts: HourOfDay, MinuteOfHour, SecondOfMinute. *TimeInstant*-type fields supply all of the previous date parts.
 
-image:insertDatePart.png[]
+image:insertDatePart.png[alt="script editor Data folder showing date field parts like Year and Month"]
 
 For example, to access a value in a Data Worksheet data block called ‘TopSales’, select the field from the ‘Data’ folder as described above, or manually type the desired reference. Some examples are shown below:
 

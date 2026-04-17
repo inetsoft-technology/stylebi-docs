@@ -14,11 +14,11 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 
 . Press the {buttonObject}, and select {buttonApacheHiveQuery}. This opens the ‘Apache Hive  Query’ dialog box.
 +
-image:apacheHiveQuery1.png[]
+image:apacheHiveQuery1.png[alt="Apache Hive Query dialog box for configuring the data query"]
 
 . In the ‘Enter SQL’ field, type or paste the Hive SQL string that you want to execute.
 +
-image:apacheHiveQuery2.png[]
+image:apacheHiveQuery2.png[alt="SQL field with Hive SQL string entered for execution"]
 
 include::partial$finalStepsQuery.adoc[]
 

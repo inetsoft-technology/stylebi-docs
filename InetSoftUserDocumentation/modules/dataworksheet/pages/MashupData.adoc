@@ -38,23 +38,23 @@ include::ROOT:partial$createVisualizationStep2Scratch.adoc[]
 
 . Press the {buttonCreate} at the top  of the User Portal, and select the {buttonWorksheet} option.
 +
-image:newWorksheet2.png[]
+image:newWorksheet2.png[alt="press Create button at top of User Portal and select Worksheet"]
 +
 This opens Visual Composer in a separate browser tab and displays the ‘New Data Worksheet’ dialog box.
 +
-image:newWorksheet3.png[]
+image:newWorksheet3.png[alt="New Data Worksheet dialog box showing Mashup Data and other options"]
 
 . Choose the {buttonMashupData} option. This creates a blank Data Worksheet named ‘Untitled-X’, where X is an auto-incremented integer.
 +
-image:visualComposer.png[]
+image:visualComposer.png[alt="blank Data Worksheet canvas opened in Visual Composer after choosing Mashup Data"]
 
 . Proceed to add  data blocks to the Data Worksheet. Drag the desired data (attributes, fields, or tables) from the left panel.
 +
-image:transform1.png[]
+image:transform1.png[alt="drag data attributes or tables from left panel into the worksheet canvas"]
 +
 You can also drag a data block (or individual columns of a data block) from another *Data Worksheet*. In this case, the inserted data block remains linked to the original Data Worksheet in which it is defined, and updates automatically in response to changes in the source Data Worksheet. To disable this auto-update behavior, press the {buttonAutoUpdate} in the toolbar of the bottom panel.
 +
-image:auto-update1.png[]
+image:auto-update1.png[alt="press Auto Update button in toolbar to disable automatic update from source worksheet"]
 +
 You can then force an update *on-demand* by right-clicking the data block (or by pressing the {buttonActions}) and selecting the ‘Update Mirror’ option. To restore the original auto-update behavior, press the {buttonAutoUpdate2}.
 

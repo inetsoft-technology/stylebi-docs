@@ -25,14 +25,14 @@ Constant (format) or Array ([format, mask])
 [source,javascript]
  Chart1.axis['Sum(Total)'].format = [Chart.DECIMAL_FORMAT,"#,###.00"];
 
-image:commonscript:dimensionFormatDecimal.png[]
+image:commonscript:dimensionFormatDecimal.png[alt="chart axis labels formatted with decimal number format"]
 
 == Example (Text)
 [source,javascript]
 Chart1.axis['Company'].format = [Chart.MESSAGE_FORMAT,"{0} Inc."]
 Chart1.axis['Company'].rotation = 30;
 
-image:commonscript:dimensionFormatText.png[]
+image:commonscript:dimensionFormatText.png[alt="chart axis labels formatted with message format appending Inc to values"]
 
 
 [TIP]

@@ -34,7 +34,7 @@ graph.addElement(elem);
 <3> Use `reflect` to reflect about horizontal axis.
 <4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:Coordinatereflect.png[]
+image:commonscript:Coordinatereflect.png[alt="bar chart with coordinate reflected about the horizontal axis"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

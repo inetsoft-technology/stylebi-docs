@@ -15,7 +15,7 @@ String
 Chart1.colorLegends['Sum(Product:Quantity Purchased)'].title = 'Salesperson Color';
 Chart1.colorLegends['Sum(Product:Total)'].title = 'Year Color';
 
-image:commonscript:colorLegendsTitle.png[]
+image:commonscript:colorLegendsTitle.png[alt="chart with all color legends having custom title text set"]
 
 [TIP]
 ====

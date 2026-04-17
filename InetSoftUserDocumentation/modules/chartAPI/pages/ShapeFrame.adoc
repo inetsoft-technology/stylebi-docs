@@ -51,7 +51,7 @@ elem.setShapeFrame(frame);  //<3>
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `StaticShapeFrame` to the xref:PointElement.adoc[].
 
 +
-image:commonscript:graphStaticColorFrame.png[]
+image:commonscript:graphStaticColorFrame.png[alt="point chart with StaticShapeFrame applying arrowbar shape to all elements"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -78,7 +78,7 @@ Chart1.bindingInfo.shapeFrame = new FillShapeFrame;
 --
 
 +
-image:commonscript:FillShapeFrame.png[]
+image:commonscript:FillShapeFrame.png[alt="point chart with FillShapeFrame applied via bindingInfo shapeFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

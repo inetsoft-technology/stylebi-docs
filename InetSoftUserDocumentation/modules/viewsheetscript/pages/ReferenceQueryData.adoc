@@ -9,11 +9,11 @@ Typically, when you access query data using the methods described below, you wil
 
 Note that you can assign a name to any cell within a Freehand Table. This allows you to use the cell’s name to reference the value of the cell from within another formula. Refer to the value in a cell by using syntax `$cell_name`, where `cell_name` is the name assigned in the ‘Cell Name’ field for the cell being referenced.
 
-image:viewsheet:Freehand Table Cell Reference_1.png[]
+image:viewsheet:Freehand Table Cell Reference_1.png[alt="freehand table cell with name assigned in Cell Name field"]
 
 You can insert this reference easily by selecting the field name from the ‘Cell’ folder in the editor.
 
-image:viewsheet:Freehand Table Cell Reference2_1.png[]
+image:viewsheet:Freehand Table Cell Reference2_1.png[alt="formula editor showing cell reference inserted from Cell folder"]
 
 
 == Extract a Query Column
@@ -43,7 +43,7 @@ var q = runQuery('ws:global:Examples/customers')
 
 
 +
-image:viewsheet:freehandExp1.png[]
+image:viewsheet:freehandExp1.png[alt="Dashboard Options Script tab with runQuery entered in onInit script"]
 +
 This executes the ‘customers’ query in the onInit script. (See xref:RunQueryFromScript.adoc[] for more details.)
 
@@ -55,7 +55,7 @@ This executes the ‘customers’ query in the onInit script. (See xref:RunQuery
 
 . Select the ‘Formula’ option and press the btn:[Edit] button.
 +
-image:viewsheet:freehandExp2.png[]
+image:viewsheet:freehandExp2.png[alt="freehand table editor with Formula option selected for cell"]
 
 
 . Enter the following formula in the Formula Editor:
@@ -68,15 +68,15 @@ This extracts the entire ‘state’ column from the ‘customers’ query to po
 
 . Select ‘Expand Cell’ and choose ‘Vertical’. (This causes the extracted data to fill down vertically.)
 +
-image:viewsheet:freehandExp3.png[]
+image:viewsheet:freehandExp3.png[alt="freehand table with Expand Cell set to Vertical and state column data populated"]
 +
 Observe that the table is populated with all the records from the ‘state’ column of the ‘customers’ query.
 +
-image:viewsheet:freehandExp4.png[]
+image:viewsheet:freehandExp4.png[alt="freehand table populated with all state values from customers query"]
 +
 To return just the unique values in the ‘state’ column, change the script from `q['state']` to `toList(q['state'])`.
 +
-image:viewsheet:freehandExp5.png[]
+image:viewsheet:freehandExp5.png[alt="freehand table showing unique state values using toList function"]
 ====
 
 [#DeriveDatafromQueryColumns]
@@ -101,7 +101,7 @@ include::ROOT:partial$customersQuery.adoc[]
 var q = runQuery('ws:global:Examples/customers')
 
 +
-image:viewsheet:freehandExp1.png[]
+image:viewsheet:freehandExp1.png[alt="Dashboard Options Script tab with runQuery entered in onInit script"]
 +
 This executes the ‘customers’ data block in the onInit script. (See xref:RunQueryFromScript.adoc[] for more details.)
 
@@ -113,7 +113,7 @@ This executes the ‘customers’ data block in the onInit script. (See xref:Run
 
 . Select the ‘Formula’ option and press the btn:[Edit] button.
 +
-image:viewsheet:freehandExp2_1.png[]
+image:viewsheet:freehandExp2_1.png[alt="freehand table editor with Formula selected for derived column expression"]
 
 . Enter the following formula in the Formula Editor:
 +
@@ -127,11 +127,11 @@ This concatenates the values in the ‘state’ column with the corresponding va
 
 . Select ‘Expand Cell’ and choose ‘Vertical’. (This causes the extracted data to fill down vertically.)
 +
-image:viewsheet:freehandExp6.png[]
+image:viewsheet:freehandExp6.png[alt="freehand table editor showing concatenation formula for state and zip fields"]
 +
 Observe that the table is populated with the concatenated values of ‘state’ and ‘zip’.
 +
-image:viewsheet:freehandExp7.png[]
+image:viewsheet:freehandExp7.png[alt="freehand table populated with concatenated state and zip values"]
 ====
 
 [#ExtractQueryDatawithFieldFiltering]
@@ -199,7 +199,7 @@ In this example, you will create a Freehand Table (based on the ‘customers’ 
 var q = runQuery('ws:global:Examples/customers')
 
 +
-image:viewsheet:freehandExp1.png[]
+image:viewsheet:freehandExp1.png[alt="Dashboard Options Script tab with runQuery entered in onInit script"]
 +
 This executes the ‘customers’ data block in the onInit script. (See xref:RunQueryFromScript.adoc[] for more details.)
 
@@ -211,7 +211,7 @@ This executes the ‘customers’ data block in the onInit script. (See xref:Run
 
 . Right-click on the bottom row and select ‘Insert Rows/Columns’ from the menu. Insert two rows at the bottom of the table.
 +
-image:viewsheet:freehandExp8.png[]
+image:viewsheet:freehandExp8.png[alt="freehand table structure with four rows and three columns inserted"]
 +
 The table should now have four rows and three columns.
 
@@ -219,7 +219,7 @@ The table should now have four rows and three columns.
 
 . Select the ‘Formula’ option and press the btn:[Edit] button.
 +
-image:viewsheet:freehandExp2_2.png[]
+image:viewsheet:freehandExp2_2.png[alt="freehand table editor with Formula selected for second example cell"]
 
 . Enter the following formula in the Formula Editor:
 +
@@ -232,11 +232,11 @@ This extracts the entire ‘state’ column from the ‘customers’ query to po
 
 . Select ‘Expand Cell’ and choose ‘Vertical’. (This causes the extracted data to fill down vertically.)
 +
-image:viewsheet:freehandExp3_1.png[]
+image:viewsheet:freehandExp3_1.png[alt="freehand table with Expand Cell Vertical set for state column"]
 
 . In the ‘Cell Name’ field, enter ‘`st`’ as the cell name.
 +
-image:viewsheet:freehandExp9.png[]
+image:viewsheet:freehandExp9.png[alt="freehand table cell name field showing st entered as cell name"]
 
 . Select cell[1,1] in the table (second row, second column).
 
@@ -247,17 +247,17 @@ q['city']
 +
 This extracts the entire ‘city’ column from the ‘customers’ query.
 +
-image:viewsheet:freehandExp10.png[]
+image:viewsheet:freehandExp10.png[alt="freehand table formula editor showing city column extraction formula"]
 
 . Select ‘Expand Cell’ and choose ‘Vertical’.
 
 . In the ‘Cell name’ field, enter ‘`ct`’ as the cell name.
 +
-image:viewsheet:freehandExp11.png[]
+image:viewsheet:freehandExp11.png[alt="freehand table cell name field showing ct entered as cell name"]
 
 . {finishEditing} Observe that the table is now populated with states and cities.
 +
-image:viewsheet:freehandExp12.png[]
+image:viewsheet:freehandExp12.png[alt="freehand table showing all states with all cities in adjacent column"]
 +
 However, the second column lists *all* the cities next to each state, not only the cities that reside within the specific state. To filter the cities based on the state values, include a field-filtering condition with a reference to the cell ‘`st`’, as described below.
 
@@ -265,13 +265,13 @@ However, the second column lists *all* the cities next to each state, not only t
 
 . Select cell[1,1] and change the formula from `q['city']` to `q['city@state:$st']`. This returns only values from the ‘city’ field where the corresponding ‘state’ value is equal to the value in the table cell named ‘`st`’.
 +
-image:viewsheet:freehandExp13.png[]
+image:viewsheet:freehandExp13.png[alt="freehand table formula with field filtering to show cities matching current state"]
 +
 NOTE: When making comparisons with 'null', use the syntax `$st['.']` to reference the cell value.
 
 . {finishEditing} View the resulting table.
 +
-image:viewsheet:freehandExp14.png[]
+image:viewsheet:freehandExp14.png[alt="freehand table showing only cities that correspond to each state row"]
 +
 Notice that the table now lists only those cities that correspond to the given state. To further restrict the table’s data to display only unique values of city and state (i.e., to remove duplicates), modify the two formulas to use the `toList()` function:
 +
@@ -305,11 +305,11 @@ This formula counts all the customers within the given city and state.
 
 . Select the ‘Expand Cell’ option and choose the ‘Vertical’ option.
 +
-image:viewsheet:freehandExp15.png[]
+image:viewsheet:freehandExp15.png[alt="freehand table editor with customer count formula and Expand Cell Vertical set"]
 
 . {finishEditing} The Table now displays a count of customer IDs within each city and state.
 +
-image:viewsheet:freehandExp16.png[]
+image:viewsheet:freehandExp16.png[alt="freehand table showing customer count per city within each state"]
 ====
 
 == Group Numbering
@@ -333,7 +333,7 @@ Do not set any cell expansion. Note that group indexing starts with 0. The form
 
 . {finishEditing} The table now displays the state group number in the first column. (You may need to resize the table to see all the columns.)
 +
-image:viewsheet:freehandExp17.png[]
+image:viewsheet:freehandExp17.png[alt="freehand table with state group numbers displayed in first column"]
 +
 Note that the groups numbers are repeated for each instance of the state. To merge these repeated instances together, continue with the steps below.
 
@@ -343,21 +343,21 @@ Note that the groups numbers are repeated for each instance of the state. To mer
 
 . Select the *Option* tab. Enable ‘Merge expanded cells’, and select ‘`st`’ from the ‘Row Group’ menu.
 +
-image:viewsheet:freehandExp18.png[]
+image:viewsheet:freehandExp18.png[alt="freehand table Option tab with Merge expanded cells enabled and st row group selected"]
 
 . Select cell[1,1] (second row, second column).
 
 . In the bottom left panel, enable ‘Merge expanded cells’ and select ‘`st`’ from the ‘Row Group’ menu.
 +
-image:viewsheet:freehandExp19.png[]
+image:viewsheet:freehandExp19.png[alt="freehand table Option tab with Merge expanded cells enabled for city column"]
 
 . {finishEditing} Note how repeated states and group numbers have been merged together.
 +
-image:viewsheet:freehandExp20.png[]
+image:viewsheet:freehandExp20.png[alt="freehand table with repeated state names and group numbers merged into single cells"]
 
 . To vertically align these values within their cells, click on a cell to select it, and select the *Format* tab in the left panel if Visual Composer. Choose ‘Middle’ from the ‘Vertical Alignment’ property.
 +
-image:viewsheet:freehandExp21.png[]
+image:viewsheet:freehandExp21.png[alt="Visual Composer Format tab showing Middle vertical alignment applied to cells"]
 ====
 
 
@@ -393,7 +393,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 var q = runQuery('ws:global:Examples/Sales Explore')
 
 +
-image:viewsheet:freehandExp22.png[]
+image:viewsheet:freehandExp22.png[alt="Dashboard Options Script tab with Sales Explore runQuery in onInit"]
 +
 This executes the ‘Sales Explore’ Data Worksheet in the onInit script. (See xref:RunQueryFromScript.adoc[] for more details.)
 
@@ -409,7 +409,7 @@ This executes the ‘Sales Explore’ Data Worksheet in the onInit script. (See 
 
 . Select the ‘Formula’ option and press the btn:[Edit] button.
 +
-image:viewsheet:freehandExp23.png[]
+image:viewsheet:freehandExp23.png[alt="freehand table editor with Formula selected for year group header cell"]
 
 . Enter the following formula in the Formula Editor:
 +
@@ -422,11 +422,11 @@ This extracts the entire ‘Date’ column from the ‘Sales Explore’ Data Wor
 
 . Select ‘Expand Cell’ and choose ‘Vertical’. (This causes the extracted data to fill down vertically.)
 +
-image:viewsheet:freehandExp24.png[]
+image:viewsheet:freehandExp24.png[alt="freehand table with year column set to Expand Cell Vertical"]
 
 . In the ‘Cell Name’ field, enter ‘`yr`’ as the cell name.
 +
-image:viewsheet:freehandExp25.png[]
+image:viewsheet:freehandExp25.png[alt="freehand table cell name field showing yr entered as cell name"]
 
 . Select cell[1,1] in the table (second row, second column). Select the ‘Formula’ option, and enter the following formula:
 +
@@ -437,7 +437,7 @@ This formula means “For each year in cell ‘yr’, find the values in the ‘
 
 . In the ‘Cell Name’ field, enter ‘`tot`’ as the cell name.
 +
-image:viewsheet:freehandExp26.png[]
+image:viewsheet:freehandExp26.png[alt="freehand table cell name field showing tot entered for annual totals cell"]
 
 . Select cell[1,2] (second row, third column). Select the ‘Formula’ option, and enter the following formula.
 +
@@ -446,11 +446,11 @@ $tot - $tot['yr:-1']
 +
 This formula uses relative cell referencing to calculate the difference between the total revenue (computed in the column named ‘`tot`’) of the current year and the previous year. The table should appear as shown below.
 +
-image:viewsheet:freehandExp27.png[]
+image:viewsheet:freehandExp27.png[alt="freehand table editor showing relative cell reference formula for year-over-year difference"]
 
 . {finishEditing} The resulting table displays totals by year, as well as the difference between successive years’ totals.
 +
-image:viewsheet:freehandExp28.png[]
+image:viewsheet:freehandExp28.png[alt="freehand table displaying annual totals and year-over-year differences"]
 ====
 
 == Reference a Cell with Absolute Parent Group
@@ -485,7 +485,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 var q = runQuery('ws:global:Examples/Sales Explore')
 
 +
-image:viewsheet:freehandExp22_1.png[]
+image:viewsheet:freehandExp22_1.png[alt="Dashboard Options Script tab with Sales Explore runQuery entered for absolute reference example"]
 +
 This executes the ‘Sales Explore’ query in the onInit script. (See xref:RunQueryFromScript.adoc[] for more details.)
 
@@ -501,7 +501,7 @@ This executes the ‘Sales Explore’ query in the onInit script. (See xref:RunQ
 
 . Select the ‘Formula’ option and press the btn:[Edit] button.
 +
-image:viewsheet:freehandExp23.png[]
+image:viewsheet:freehandExp23.png[alt="freehand table editor with Formula selected for year group header cell"]
 
 . Enter the following formula in the Formula Editor:
 +
@@ -514,12 +514,12 @@ This extracts the entire ‘Date’ column from the ‘Sales Explore’ Data Wor
 
 . Select ‘Expand Cell’ and choose ‘Vertical’. (This causes the extracted data to fill down vertically.)
 +
-image:viewsheet:freehandExp24.png[]
+image:viewsheet:freehandExp24.png[alt="freehand table with year column set to Expand Cell Vertical"]
 
 
 . In the ‘Cell Name’ field, enter ‘`yr`’ as the cell name.
 +
-image:viewsheet:freehandExp25.png[]
+image:viewsheet:freehandExp25.png[alt="freehand table cell name field showing yr entered as cell name"]
 
 . Select cell[1,1] in the table (second row, second column). Select the ‘Formula’ option, and enter the following formula:
 +
@@ -530,7 +530,7 @@ This formula means “For each year in cell ‘yr’, find the values in the ‘
 
 . In the ‘Cell Name’ field, enter ‘`tot`’ as the cell name.
 +
-image:viewsheet:freehandExp26.png[]
+image:viewsheet:freehandExp26.png[alt="freehand table cell name field showing tot entered for annual totals cell"]
 
 . Select cell[1,2] (second row, third column). Select the ‘Formula’ option, and enter the following formula.
 +
@@ -539,11 +539,11 @@ $tot - $tot['yr:"2017"']
 +
 This formula uses absolute cell referencing to calculate the difference between the total revenue (computed in the column named ‘tot’) of the current year and the year 2017. The table should appear as shown below:
 +
-image:viewsheet:freehandExp27.png[]
+image:viewsheet:freehandExp27.png[alt="freehand table editor showing relative cell reference formula for year-over-year difference"]
 
 . {finishEditing} The resulting table displays totals by year, as well as the difference between each year’s total and the total for 2017.
 +
-image:viewsheet:freehandExp28.png[]
+image:viewsheet:freehandExp28.png[alt="freehand table displaying annual totals and year-over-year differences"]
 ====
 
 == Reference a Cell with Absolute Parent Group
@@ -575,7 +575,7 @@ In this example, you will find the relative sales for each year compared to the 
 var q = runQuery('ws:global:Examples/Sales Explore')
 
 +
-image:viewsheet:freehandExp22_1.png[]
+image:viewsheet:freehandExp22_1.png[alt="Dashboard Options Script tab with Sales Explore runQuery entered for absolute reference example"]
 +
 This executes the ‘Sales Explore’ query in the onInit script. (See xref:RunQueryFromScript.adoc[] for more details.)
 
@@ -593,7 +593,7 @@ This executes the ‘Sales Explore’ query in the onInit script. (See xref:RunQ
 
 . Select the ‘Formula’ option and press the btn:[Edit] button.
 +
-image:viewsheet:freehandExp23_1.png[]
+image:viewsheet:freehandExp23_1.png[alt="freehand table editor with Formula selected for second absolute reference walkthrough"]
 
 . Enter the following formula in the Formula Editor:
 +
@@ -606,11 +606,11 @@ This extracts the entire ‘Date’ column from the ‘Sales Explore’ Data Wor
 
 . Select ‘Expand Cell’ and choose ‘Vertical’. (This causes the extracted data to fill down vertically.)
 +
-image:viewsheet:freehandExp24_1.png[]
+image:viewsheet:freehandExp24_1.png[alt="freehand table with year column Expand Cell Vertical set for second walkthrough"]
 
 . In the ‘Cell Name’ field, enter ‘`yr`’ as the cell name.
 +
-image:viewsheet:freehandExp25_1.png[]
+image:viewsheet:freehandExp25_1.png[alt="freehand table cell name field showing yr for second absolute reference walkthrough"]
 
 . Select cell[1,1] in the table (second row, second column). Select the ‘Formula’ option, and enter the following formula:
 +
@@ -621,7 +621,7 @@ This formula means “For each year in cell ‘yr’, find the values in the ‘
 
 . In the ‘Cell Name’ field, enter ‘`tot`’ as the cell name.
 +
-image:viewsheet:freehandExp26_1.png[]
+image:viewsheet:freehandExp26_1.png[alt="freehand table cell name field showing tot for second absolute reference walkthrough"]
 
 . Select cell[1,2] (second row, third column). Select the ‘Formula’ option, and enter the following formula.
 +
@@ -630,11 +630,11 @@ $tot - $tot['yr:"2017"']
 +
 This formula uses absolute cell referencing to calculate the difference between the total revenue (computed in the column named ‘tot’) of the current year and the year 2017. The table should appear as shown below:
 +
-image:viewsheet:freehandExp30.png[]
+image:viewsheet:freehandExp30.png[alt="freehand table editor showing absolute year reference formula for 2017 comparison"]
 
 . {finishEditing} The resulting table displays totals by year, as well as the difference between each year’s total and the total for 2017.
 +
-image:viewsheet:freehandExp29.png[]
+image:viewsheet:freehandExp29.png[alt="freehand table showing annual totals and difference from 2017 baseline"]
 ====
 
 == Reference a Cell with Parent Group as an Expression

@@ -47,7 +47,7 @@ graph.addElement(elem);
 <3> Use `setStartAngle` to set a 0° angle.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `VineShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:VineShapeFrameSetAngle_1.png[]
+image:commonscript:VineShapeFrameSetAngle_1.png[alt="point chart with VineShapeFrame start angle set to 0 degrees"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

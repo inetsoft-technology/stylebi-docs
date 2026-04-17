@@ -15,7 +15,7 @@ DashboardName.setInputSelectedObject(componentName,value)
 
 where `DashboardName` is the name *assigned* (as shown below) to the embedded Dashboard in the '`Dashboard Properties`' dialog box, and  `componentName` is the name assigned to  the Form component within the embedded Dashboard.
 
-image:viewsheet:DashboardPropertiesExp1.png[]
+image:viewsheet:DashboardPropertiesExp1.png[alt="Dashboard Properties dialog box showing name assigned to embedded dashboard"]
 
 TIP: To open the '`Dashboard Properties`' dialog box, right-click on the embedded Dashboard (within the host Dashboard), and select '`Properties`' from the menu. {rightClickOptions}
 

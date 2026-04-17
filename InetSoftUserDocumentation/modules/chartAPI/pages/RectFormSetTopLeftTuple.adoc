@@ -38,7 +38,7 @@ graph.addElement(new IntervalElement("State", "Quantity"));
 <3> Use `setTopLeftTuple()` to set the top-left corner.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:RectFormSetBottomRightTuple_1.png[]
+image:commonscript:RectFormSetBottomRightTuple_1.png[alt="bar chart with red rectangle positioned using top-left logical coordinates"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

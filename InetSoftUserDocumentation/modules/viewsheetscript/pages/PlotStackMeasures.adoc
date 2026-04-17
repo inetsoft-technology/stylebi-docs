@@ -17,12 +17,12 @@ Boolean
 [source,javascript]
 Chart1.stackMeasures = false;
 
-image:commonscript:stackMeasures2.png[]
+image:commonscript:stackMeasures2.png[alt="stacked chart showing multiple measures displayed side by side"]
 
 [source,javascript]
 Chart1.stackMeasures = true;
 
-image:commonscript:stackMeasures.png[]
+image:commonscript:stackMeasures.png[alt="stacked chart showing multiple measures stacked in single graph"]
 
 
 

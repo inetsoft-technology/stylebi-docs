@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Sets the number of row or column groups to preserve in the ranking. This is equivalent to setting the number '`N`' of ranking groups for  the '`Rank`' property of  the Crosstab Editor.
 
-image:commonscript:bindingInfoSetTopN.png[]
+image:commonscript:bindingInfoSetTopN.png[alt="crosstab editor showing Rank N option for filtering top groups"]
 
 
 This function should always be used in conjunction with  xref:CrosstabBindingInfoSetTopNSummaryCol.adoc[] and  xref:CrosstabBindingInfoSetTopNReverse.adoc[].
@@ -38,7 +38,7 @@ Crosstab1.bindingInfo.setTopN('Name',StyleConstant.ROW_HEADER,3);
 Crosstab1.bindingInfo.setTopNSummaryCol('Name',StyleConstant.ROW_HEADER,'Sum(Total)');
 Crosstab1.bindingInfo.setTopNReverse('Name',StyleConstant.ROW_HEADER,false);
 
-image:commonscript:bindingInfoSetTopNExp1.png[]
+image:commonscript:bindingInfoSetTopNExp1.png[alt="crosstab showing top 3 names by Sum of Total with column totals"]
 
 
 [TIP]

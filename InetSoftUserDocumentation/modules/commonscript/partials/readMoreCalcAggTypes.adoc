@@ -8,7 +8,7 @@
 ====
 To create an expression column in a Data Worksheet, press the {buttonCreateExpression}. (See xref:dataworksheet:CreateNewDataField.adoc[] for more details.)
 
-image:dataworksheet:agileTransform3.png[]
+image:dataworksheet:agileTransform3.png[alt="formula editor open after pressing create expression button"]
 
 Type the desired expression into the script area. To add a field into the expression, click on the field name in the ‘Fields’ listing. To reference a column of this or another data block, use the data block name.
 
@@ -35,10 +35,10 @@ include::partial$referenceCellsWorksheet.adoc[]
 To set a Dashboard property value using an expression, press the {buttonValueType} and select the ‘Expression’ option to open the Formula Editor. (See xref:viewsheet:DynamicallySetProperties.adoc[] for more details.)
 
 Example: Gauge Properties::
-image:viewsheet:Expression Option.png[]
+image:viewsheet:Expression Option.png[alt="expression option selected in gauge properties value type menu"]
 
 Example: Chart Editor::
-image:viewsheet:ChartPropertyExpression.png[]
+image:viewsheet:ChartPropertyExpression.png[alt="expression option selected in chart editor property field"]
 
 To insert a reference a component’s data, use the *value*, *selectedObjects*, *data*, or *table* property of the component. You can also reference data in the underlying Data Worksheet.
 
@@ -46,12 +46,12 @@ To insert a reference a component’s data, use the *value*, *selectedObjects*, 
 [source,javascript]
 ----
 // Average of ‘Total’ column in Data Worksheet ‘Sales’ data block:
-CALC.average(Sales['Total']);
+CALC.average(Sales[‘Total’]);
 
 // Average of ‘Total’ column in Dashboard ‘TableView1’ table:
-CALC.average(TableView1.table['Total'])
+CALC.average(TableView1.table[‘Total’])
 ----
-image:viewsheet:TableDataAccess.png[]
+image:viewsheet:TableDataAccess.png[alt="script accessing table data using component table property"]
 
 
 See xref:viewsheetscript:DashboardObjectReference.adoc[] for information about accessing dashboard properties  in script.  See xref:viewsheetscript:AccessComponentData.adoc[] and xref:viewsheetscript:AccessDataSourceData.adoc[] for more information about accessing Dashboard and Data Worksheet data.
@@ -64,11 +64,11 @@ See xref:viewsheetscript:DashboardObjectReference.adoc[] for information about a
 ====
 To *add script to a Dashboard component*, right-click the desired component, and select ‘Properties’ from the context menu to open the ‘Properties’ panel. {rightClickOptions} Select the *Script* tab to open the Script Editor, and select either *Script* or *onClick*. See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script] for more information about these options.
 
-image:viewsheetscript:ScriptEditorText.png[]
+image:viewsheetscript:ScriptEditorText.png[alt="script editor open on component properties script tab"]
 
 To *add global script to a Dashboard*, press {buttonOptions} in the toolbar to open the ‘Dashboard Options’ panel. Select the *Script* tab to open the Script Editor, and select either *onInit* or *onRefresh*. See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about these options.
 
-image:viewsheet:ViewsheetOptionsDialog.png[]
+image:viewsheet:ViewsheetOptionsDialog.png[alt="dashboard options dialog with script tab selected"]
 
 To insert a reference a component’s data, use the *value*, *selectedObjects*, *data*, or *table* property of the component. You can also reference data in the underlying Data Worksheet.
 
@@ -76,12 +76,12 @@ To insert a reference a component’s data, use the *value*, *selectedObjects*, 
 [source,javascript]
 ----
  // Average of ‘Total’ column in Data Worksheet ‘Sales’ data block:
-CALC.average(Sales['Total']);
+CALC.average(Sales[‘Total’]);
 
 // Average of ‘Total’ column in Dashboard ‘TableView1’ table:
-CALC.average(TableView1.table['Total'])
+CALC.average(TableView1.table[‘Total’])
 ----
-image:viewsheet:TableDataAccess.png[]
+image:viewsheet:TableDataAccess.png[alt="script accessing table data using component table property"]
 
 
 See xref:viewsheetscript:DashboardObjectReference.adoc[] for information about accessing dashboard properties  in script.  See xref:viewsheetscript:AccessComponentData.adoc[] and xref:viewsheetscript:AccessDataSourceData.adoc[] for more information about accessing Dashboard and Data Worksheet data.

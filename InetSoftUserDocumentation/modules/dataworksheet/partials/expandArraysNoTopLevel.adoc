@@ -21,10 +21,10 @@ Consider the following JSON:
 
 If ‘Expand Arrays’ is *enabled* (and ‘JSON Path’ is `$` or blank), all arrays will be fully expanded in parallel, as shown below:
 
-image:dataworksheet:expandArrays2.png[]
+image:dataworksheet:expandArrays2.png[alt="all arrays fully expanded in parallel with Expand Arrays enabled"]
 
 
 To selectively expand only certain portions of the result,  use the ‘Expanded Array Path’ field to specify the portion of the JSON path on which arrays should be expanded. For example, set ‘Expanded Array Path’ to `items.list1` to expand the `items` and `list1` arrays. (The top level array is always expanded.)
 
-image:dataworksheet:expandArrays3.png[]
+image:dataworksheet:expandArrays3.png[alt="Expanded Array Path field set to selectively expand specific arrays"]
 

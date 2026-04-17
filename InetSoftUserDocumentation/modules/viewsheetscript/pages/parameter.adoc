@@ -79,7 +79,7 @@ String:: Server hostname
 [source,javascript]
 alert('This server is named ' + parameter.__LINK_HOST__)
 
-image:viewsheetscript:parameterLINKHOST.png[]
+image:viewsheetscript:parameterLINKHOST.png[alt="alert dialog displaying server hostname from LINK_HOST parameter"]
 
 == pass:[parameter.__LINK_URI__]
 include::partial$readOnly.adoc[]
@@ -95,7 +95,7 @@ String:: Dashboard URI
 alert('This dashboard is served from ' + parameter.__LINK_URI__)
 
 
-image:viewsheetscript:parameterLINKURI.png[]
+image:viewsheetscript:parameterLINKURI.png[alt="alert dialog displaying dashboard root URL from LINK_URI parameter"]
 
 
 == pass:[parameter.__principle__]

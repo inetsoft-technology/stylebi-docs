@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Sets the percentage representation for one of the measures specified by xref:CrosstabBindingInfoMeasureFields.adoc[]. This is equivalent to setting a percentage representation for a measure in the '`Trend and Comparison`' property of the Crosstab Editor.
 
-image:commonscript:bindingInfoSetPercent.png[]
+image:commonscript:bindingInfoSetPercent.png[alt="crosstab editor Trend and Comparison with percentage of grand total set"]
 
 
 

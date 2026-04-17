@@ -17,7 +17,7 @@ Boolean
 [source,javascript]
 Chart1.axis['Sum(Total)'].reversed = true;
 
-image:commonscript:measureReversed.png[]
+image:commonscript:measureReversed.png[alt="chart with measure axis scale reversed so higher values appear at bottom"]
 
 
 

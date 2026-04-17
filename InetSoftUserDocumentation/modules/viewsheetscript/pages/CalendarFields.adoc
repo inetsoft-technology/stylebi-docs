@@ -9,7 +9,7 @@ xref:viewsheetscript:CalendarQuery.adoc[] to specify the data block from which t
 
 Specifies the field of the data block to be filtered by the Calendar component. This is equivalent to selecting the field under the *Data* tab of the component ‘Properties’ dialog box.
 
-image:viewsheet:calendarFields.png[]
+image:viewsheet:calendarFields.png[alt="calendar component Data tab showing fields property binding"]
 
 == Type
 array

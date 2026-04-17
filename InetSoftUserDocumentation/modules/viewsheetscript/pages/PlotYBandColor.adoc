@@ -18,7 +18,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.yBandColor = [220,220,255];
 Chart1.yBandColor = {r:220,g:220,b:255};
 
-image:commonscript:yBandColor.png[]
+image:commonscript:yBandColor.png[alt="chart with alternating y-axis band color applied to background"]
 
 
 

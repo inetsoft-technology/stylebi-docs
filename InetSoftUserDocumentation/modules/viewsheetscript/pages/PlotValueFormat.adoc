@@ -20,14 +20,14 @@ For the Date, Decimal, and Message formats, use the xref:CommonFormatSpec.adoc[]
 [source,javascript]
 Chart1.valueFormat = [Chart.DECIMAL_FORMAT,"#,###.00"];
 
-image:commonscript:valueFormatNumber.png[]
+image:commonscript:valueFormatNumber.png[alt="chart with numeric data labels formatted using specified number format"]
 
 
 .Text Format
 [source,javascript]
 Chart1.valueFormat = [Chart.MESSAGE_FORMAT,"{0} Dollars"];
 
-image:commonscript:valueFormatText.png[]
+image:commonscript:valueFormatText.png[alt="chart with text data labels formatted using specified text format"]
 
 
 [TIP]

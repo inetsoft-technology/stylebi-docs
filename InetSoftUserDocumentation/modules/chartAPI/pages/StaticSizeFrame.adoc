@@ -42,7 +42,7 @@ graph.addElement(elem);
 <2> Create the `StaticSizeFrame` object.
 <3> Use xref:GraphElementSetSizeFrame.adoc[] to add the `StaticSizeFrame` to the xref:IntervalElement.adoc[].
 +
-image:commonscript:StaticSizeFrame2.png[]
+image:commonscript:StaticSizeFrame2.png[alt="bar chart with StaticSizeFrame reading bar widths from Size data column"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -73,7 +73,7 @@ Chart1.bindingInfo.sizeFrame.setSize(30);
 --
 
 +
-image:commonscript:StaticSizeFrame.png[]
+image:commonscript:StaticSizeFrame.png[alt="point chart with StaticSizeFrame size 30 applied via bindingInfo sizeFrame"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

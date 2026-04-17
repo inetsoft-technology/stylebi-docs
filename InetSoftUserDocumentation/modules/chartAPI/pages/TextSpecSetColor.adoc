@@ -40,7 +40,7 @@ graph.addElement(elem);
 <3> Use `setColor()` to assign the color to the `TextSpec`.
 <4> Use xref:TitleSpecSetTextSpec.adoc[] to assign the `TextSpec` to the `TitleSpec`.
 
-image:commonscript:TitleSpecsetTextSpec_1.png[]
+image:commonscript:TitleSpecsetTextSpec_1.png[alt="bar chart with X-axis title text colored red via TextSpec setColor"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

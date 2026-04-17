@@ -17,7 +17,7 @@ include::partial$legendPosition.adoc[]
 [source,javascript]
 Chart1.legendPosition = Chart.LEFT;
 
-image:commonscript:legendPosition.png[]
+image:commonscript:legendPosition.png[alt="chart with legend position changed to top or right location"]
 
 
 

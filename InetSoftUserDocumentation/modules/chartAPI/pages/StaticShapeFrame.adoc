@@ -35,7 +35,7 @@ graph.addElement(elem);
 <2> Create the `StaticShapeFrame` object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `StaticShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:StaticShapeFrame2.png[]
+image:commonscript:StaticShapeFrame2.png[alt="point chart with StaticShapeFrame reading star and circle shapes from data column"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -58,7 +58,7 @@ graph.addElement(elem);
 <2> Create the `StaticShapeFrame` object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `StaticShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:StaticShapeFrameSVG.png[]
+image:commonscript:StaticShapeFrameSVG.png[alt="point chart with SVG happy face shape applied via StaticShapeFrame"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -88,7 +88,7 @@ Chart1.bindingInfo.shapeFrame.setShape(GShape.ARROWBAR);
 --
 
 +
-image:commonscript:StaticShapeFrame.png[]
+image:commonscript:StaticShapeFrame.png[alt="point chart with arrowbar shape applied via bindingInfo shapeFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

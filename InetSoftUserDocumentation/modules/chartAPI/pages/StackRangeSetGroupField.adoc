@@ -39,7 +39,7 @@ graph.addElement(elem);
 <5> Assign the `ScaleRange` to the `Scale`.
 <6> Use xref:EGraphSetScale.adoc[] to add the `Scale` to the Chart.
 
-image:commonscript:ScaleRangeSetGroup.png[]
+image:commonscript:ScaleRangeSetGroup.png[alt="point chart with scale range computed by stacking grouped State values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Sets the sorting order for row or column header. This is equivalent to setting the sorting for a header in the Crosstab Editor. The `measure` parameter is required only when a “by value” sort is requested.
 
-image:commonscript:bindingInfoSetColumnOrder.png[]
+image:commonscript:bindingInfoSetColumnOrder.png[alt="crosstab editor showing sort method options for a header field"]
 
 
 
@@ -66,7 +66,7 @@ Crosstab1.bindingInfo.setFormula('Total', StyleConstant.SUM_FORMULA);
 Crosstab1.bindingInfo.showColumnTotal = true;
 Crosstab1.bindingInfo.setColumnOrder('Name',StyleConstant.ROW_HEADER,StyleConstant.SORT_VALUE_DESC,'Sum(Total)');
 
-image:commonscript:bindingInfoSetColumnOrder2.png[]
+image:commonscript:bindingInfoSetColumnOrder2.png[alt="crosstab with Name rows sorted descending by Sum of Total value"]
 
 
 [TIP]

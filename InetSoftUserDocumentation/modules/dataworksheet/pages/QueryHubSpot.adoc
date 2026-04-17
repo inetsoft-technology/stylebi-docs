@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonHubSpotQuery}. This opens the ‘HubSpot  Query’ dialog box.
 
 +
-image:hubspot1.png[]
+image:hubspot1.png[alt="HubSpot Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

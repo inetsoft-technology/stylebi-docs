@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonFreshdeskQuery}. This opens the ‘Freshdesk  Query’ dialog box.
 
 +
-image:freshdesk1.png[]
+image:freshdesk1.png[alt="Freshdesk Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

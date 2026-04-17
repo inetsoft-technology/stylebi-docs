@@ -14,7 +14,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.sizeLegend.color = [255,0,0];
 Chart1.sizeLegend.color = {r:255,g:0,b:0};
 
-image:commonscript:sizeLegendColor.png[]
+image:commonscript:sizeLegendColor.png[alt="chart size legend with custom color applied to legend text"]
 
 
 

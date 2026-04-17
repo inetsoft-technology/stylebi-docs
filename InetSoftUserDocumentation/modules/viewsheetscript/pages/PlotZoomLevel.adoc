@@ -26,7 +26,7 @@ Non-negative integer. Zoom levels up to 18 may be supported, but the available l
 [source,javascript]
 Chart1.zoomLevel = 5;
 
-image:commonscript:zoomLevel.png[]
+image:commonscript:zoomLevel.png[alt="map chart with Google Maps zoom level set to 5"]
 
 
 

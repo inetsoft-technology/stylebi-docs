@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Returns the measure set for ranking  by xref:CrosstabBindingInfoSetTopNSummaryCol.adoc[] or by the '`Of`' property in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetTopNExp2_1.png[]
+image:commonscript:bindingInfoSetTopNExp2_1.png[alt="crosstab editor with Of measure property set for top-N ranking"]
 
 
 == Parameters

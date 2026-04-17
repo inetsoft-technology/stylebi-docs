@@ -32,7 +32,7 @@ graph.getElement(0).setInPlot(false); //<2>
 <2> Use xref:GraphElementSetInPlot.adoc[] to  display only the specified portion of the map. Otherwise, the Chart will force the entire map to display, regardless of the specified extent.
 
 
-image:commonscript:setExtent.png[]
+image:commonscript:setExtent.png[alt="US map zoomed to region between Washington and Boston"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

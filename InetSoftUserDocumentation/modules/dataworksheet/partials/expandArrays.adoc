@@ -21,13 +21,13 @@ Consider the following JSON:
 
 If ‘Expand Arrays’ and ‘Top Level Only’ are both *enabled* (and ‘JSON Path’ is `$` or blank), the top level of the array will be expanded into its individual items.
 
-image:dataworksheet:expandArrays1.png[]
+image:dataworksheet:expandArrays1.png[alt="top level array expanded with Expand Arrays and Top Level Only enabled"]
 
 If ‘Top Level Only’ is *disabled*, all arrays will be fully expanded in parallel, as shown below:
 
-image:dataworksheet:expandArrays2.png[]
+image:dataworksheet:expandArrays2.png[alt="all arrays fully expanded in parallel with Top Level Only disabled"]
 
 To selectively expand only certain portions of the result, deselect the ‘Top Level Only’ option, and use the ‘Expanded Array Path’ field to specify the portion of the JSON path on which arrays should be expanded. For example, set ‘Expanded Array Path’ to `items.list1` to expand the `items` and `list1` arrays. (The top level array is always expanded.)
 
-image:dataworksheet:expandArrays3.png[]
+image:dataworksheet:expandArrays3.png[alt="Expanded Array Path field set to selectively expand specific arrays"]
 

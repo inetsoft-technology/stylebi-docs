@@ -19,30 +19,30 @@ include::ROOT:partial$createVisualizationStep1Upload.adoc[]
 
 . Create a new Data Worksheet and select the {buttonUploadFile} option. (See xref:CreateNewWorksheet.adoc[].) This opens the ‘Import Data File’ dialog box.
 +
-image:dataworksheet:embeddedTable4.png[]
+image:dataworksheet:embeddedTable4.png[alt="Import Data File dialog with encoding delimiter and header options"]
 +
 If a Data Worksheet is already open in Visual Composer, press the {buttonCreateObject} on the toolbar, and select {buttonUploadFile} to open the ‘Import Data File’ dialog box.
 +
-image:textSource5_1.png[]
+image:textSource5_1.png[alt="press Create Object button and select Upload File to open Import Data File dialog"]
 
 . Press the btn:[Choose File] or btn:[Browse] button to open the ‘Open File’ dialog box.
 In this example, we will import an Excel file: Select an Excel file type (`.xls`, `*.xlsx`) from the menu next to the ‘File name’ field.
 +
-image:uploadFile2.png[]
+image:uploadFile2.png[alt="Open File dialog with Excel file type filter selected"]
 
 . Select the desired Excel file and press btn:[Open]. (Here we use the sample xref:ROOT:attachment$OrderDataText.xls[OrderDataText] Excel file.)
 +
-image:uploadFile1.png[]
+image:uploadFile1.png[alt="select the OrderDataText Excel file and press Open"]
 
 . Press btn:[OK] to import the data. (For the sample _OrderDataText.xls_ Excel file, you do not need to change the other settings.) This creates a new data block  named ‘OrderDataText’ with data from the file.
 +
-image:embeddedTable5.png[]
+image:embeddedTable5.png[alt="new OrderDataText data block created with imported file data"]
 
 . Right-click on the data block, and select ‘Properties’ from the context menu.  {rightClickOptions} This opens the ‘Table Properties’ panel.
 
 . In the ‘Name’ field, enter  a name for the data block, and press btn:[OK].
 +
-image:embeddedTable7.png[]
+image:embeddedTable7.png[alt="Table Properties panel with Name field for renaming the data block"]
 +
 include::ROOT:partial$duplicateNames.adoc[]
 

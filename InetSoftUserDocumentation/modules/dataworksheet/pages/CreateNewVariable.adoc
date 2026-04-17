@@ -10,11 +10,11 @@ To create a new Variable, follow these steps:
 
 . Press the {buttonCreateObject} in the toolbar and select {buttonVariable}.
 +
-image:variableButtonToolbar.png[]
+image:variableButtonToolbar.png[alt="press Create Object button and select Variable from toolbar"]
 +
 This opens the ‘Variable Properties’ dialog box.
 +
-image:parameterDialog.png[]
+image:parameterDialog.png[alt="Variable Properties dialog box with name label and type fields"]
 
 . Enter a ‘Name’ for the new Variable asset. This is the name that appears in the title bar of the Variable asset.
 +
@@ -25,7 +25,7 @@ include::ROOT:partial$duplicateNames.adoc[]
 ** Select ‘*None*’ to prompt the user with an empty text field (no choices).
 ** Select ‘*Embedded*’ to enter a fixed list of choices. Press the btn:[Edit] button to open the ‘Embedded List Values’ dialog box.
 +
-image:SelectionList_2.png[]
+image:SelectionList_2.png[alt="Embedded List Values dialog box to enter label and value pairs"]
 +
 .. Press btn:[Add] to create a new label/value pair. A label/value pair defines a particular choice that will be shown to the user in the input dialog box.
 .. In the ‘Label’ field, enter the text that should be displayed to the user for this particular choice.
@@ -35,7 +35,7 @@ image:SelectionList_2.png[]
 .. Press btn:[OK] to exit the ‘Embedded List Values’ dialog box.
 ** Select ‘*Query*’ to populate the list of choices with the data in an existing table column. Press the btn:[Select] button to open the ‘Table’ dialog box.
 +
-image:querySelectionList.png[]
+image:querySelectionList.png[alt="Table dialog showing value column and label column selection for variable"]
 +
 .. From the list box on the left side, select the table that contains the data you want to use.
 .. From the ‘Value Column’ menu, select the column that contains the data to be used in the filtering condition. Each row of the ‘Value Column’ represents a possible value of the Variable.
@@ -60,29 +60,29 @@ include::ROOT:partial$CreateNewWorksheetNote.adoc[]
 
 . Press the {buttonCreateObject} in the toolbar and select {buttonVariable}.
 +
-image:variableButtonToolbar.png[]
+image:variableButtonToolbar.png[alt=”press Create Object button and select Variable from toolbar”]
 +
 This opens the ‘Variable Properties’ dialog box.
 +
-image:parameterDialog.png[]
+image:parameterDialog.png[alt=”Variable Properties dialog box with name label and type fields”]
 . Specify “state” as the name of the Variable.
 . Specify “State” as the Label.
 . Select ‘String’ from the drop-down list for Type.
 . Uncheck the ‘None’ check box next to ‘Default Value’, and enter “CA” as the default value.
 . Ensure that ‘None’ is selected for the Selection List.
 +
-image:parameterCA.png[]
+image:parameterCA.png[alt="Variable Properties dialog with state variable configured and CA as default value"]
 . Press btn:[OK].
 . Right-click on the new Variable in the Data Worksheet and select ‘Set as Primary’. {rightClickOptions}
 +
-image:statePrimary.png[]
+image:statePrimary.png[alt="right-click variable and select Set as Primary from context menu"]
 . Press the {buttonSave} in the top toolbar. This opens the ‘Save as Data Worksheet’ dialog.
 . Specify “State” as the asset name.
 +
-image:saveStateWorksheet.png[]
+image:saveStateWorksheet.png[alt="Save as Data Worksheet dialog with State entered as the asset name"]
 . Press btn:[OK] to add the ‘State’ Variable to the left panel. Notice that the name of the asset in the left panel is shown with a {buttonVariableIcon} indicating that the asset is a Variable.
 +
-image:StateinTree.png[]
+image:StateinTree.png[alt="State variable shown in left panel with variable icon"]
 
 This example is continued in xref:UseVariable[] below, where the ‘state’ Variable is used in another Data Worksheet.
 
@@ -101,28 +101,28 @@ include::ROOT:partial$CreateNewWorksheetNote.adoc[]
 
 . From the left panel, drag the ‘Sales Explore’ Data Worksheet into the new Data Worksheet. This creates the data block ‘Sales1’.
 +
-image:importWorksheet_2.png[]
+image:importWorksheet_2.png[alt="Sales Explore Data Worksheet dragged into the Data Worksheet panel"]
 +
 include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . From the left panel, drag the ‘State’ Variable into the right panel. This imports the variable into the Data Worksheet as ‘state.`'
 +
-image:DragStateWorksheet.png[]
+image:DragStateWorksheet.png[alt="State variable dragged from left panel into the Data Worksheet"]
 +
 . Select the ‘Sales1’ data block, and press the {buttonDefineCondition} in the bottom panel to open the ‘Condition’ dialog box.
 . Press the btn:[More] button to add a new condition.
 . Create the condition `[State] [is] [equal to]`.
 . Press the {buttonChangeValueType} and select ‘Variable`'.
 +
-image:SwitchtoVariableCondition.png[]
+image:SwitchtoVariableCondition.png[alt="press Change Value Type button and select Variable in condition panel"]
 . From the ‘Variable Name’ menu, select ‘state’.
 +
-image:Stateequaltostate.png[]
+image:Stateequaltostate.png[alt="condition configured with State field equal to state variable"]
 . Press btn:[OK]. You will be prompted for the value of the ‘state’ Variable.
 . Enter “FL” and press btn:[OK].
 +
-image:specifyStateParameter.png[]
+image:specifyStateParameter.png[alt="parameter prompt dialog asking user to enter state value FL"]
 . Preview the data block (see xref:PreviewData.adoc[]), and note that only the sales for the state of Florida are now shown.
 +
-image:Variable in Condition End.png[]
+image:Variable in Condition End.png[alt="data block preview showing only sales records for Florida"]
 ****

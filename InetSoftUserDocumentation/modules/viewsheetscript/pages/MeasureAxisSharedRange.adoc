@@ -23,7 +23,7 @@ Boolean
 [source,javascript]
 Chart1.yAxis.sharedRange = false;
 
-image:commonscript:measureSharedRange.png[]
+image:commonscript:measureSharedRange.png[alt="facet chart with independent Y-axis scales per sub-graph"]
 
 
 

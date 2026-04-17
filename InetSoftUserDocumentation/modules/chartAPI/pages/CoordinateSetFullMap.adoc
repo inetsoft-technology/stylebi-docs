@@ -34,7 +34,7 @@ graph.getElement(0).setInPlot(!zoomed); //<3>
 <3> Use xref:GraphElementSetInPlot.adoc[] to  display only the specified portion of the map. Otherwise, the Chart will force the entire map to display, regardless of the `setFullMap` setting.
 
 
-image:commonscript:setFullMap.png[]
+image:commonscript:setFullMap.png[alt="map chart zoomed to display only selected regions"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

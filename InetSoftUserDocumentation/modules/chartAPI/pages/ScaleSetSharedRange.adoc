@@ -44,7 +44,7 @@ graph.addElement(elem);
 <5> Create the xref:FacetCoord.adoc[] object.
 <6> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:ScaleSetSharedRange.png[]
+image:commonscript:ScaleSetSharedRange.png[alt="facet chart with Quantity scale shared by row and column only"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

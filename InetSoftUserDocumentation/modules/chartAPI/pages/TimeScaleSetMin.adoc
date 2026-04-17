@@ -46,7 +46,7 @@ graph.addElement(elem);
 <4> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
 
-image:commonscript:TimeScaleSetMin.png[]
+image:commonscript:TimeScaleSetMin.png[alt="bar chart with TimeScale minimum date set to year 2005"]
 
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

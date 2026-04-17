@@ -14,7 +14,7 @@ include::partial$axisShortcut.adoc[]
 Chart1.axis['Company'].font = new java.awt.Font('Serif', java.awt.Font.BOLD, 12);
 Chart1.axis['Company'].font ='Lucida Sans Unicode-BOLD-14';
 
-image:commonscript:dimensionFont.png[]
+image:commonscript:dimensionFont.png[alt="chart with axis labels displayed in bold serif font"]
 
 [TIP]
 ====

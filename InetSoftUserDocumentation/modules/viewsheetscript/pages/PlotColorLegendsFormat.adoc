@@ -18,7 +18,7 @@ For the Date, Decimal, and Message formats, use the xref:CommonFormatSpec.adoc[]
 Chart1.colorLegends['Sum(Product:Quantity Purchased)'].format = [Chart.MESSAGE_FORMAT,"{0} Inc."];
 Chart1.colorLegends['Sum(Product:Total)'].format = [Chart.DECIMAL_FORMAT,"$#,##0M"];
 
-image:commonscript:colorLegendsFormat.png[]
+image:commonscript:colorLegendsFormat.png[alt="chart with all color legends having number format applied"]
 
 
 [TIP]

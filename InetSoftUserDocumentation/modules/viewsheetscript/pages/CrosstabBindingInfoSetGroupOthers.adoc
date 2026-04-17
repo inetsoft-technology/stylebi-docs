@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies whether groups excluded from the ranking should be grouped as ‘Others’. When `true`, this is equivalent to checking ‘Group all others together’ in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetGroupOthers.png[]
+image:commonscript:bindingInfoSetGroupOthers.png[alt="crosstab editor showing Group all others together checkbox option"]
 
 
 == Parameters
@@ -38,7 +38,7 @@ Crosstab1.bindingInfo.setTopNSummaryCol('Name',StyleConstant.ROW_HEADER,'Sum(Tot
 Crosstab1.bindingInfo.setTopNReverse('Name',StyleConstant.ROW_HEADER,true);
 Crosstab1.bindingInfo.setGroupOthers('Name',StyleConstant.ROW_HEADER,true);
 
-image:commonscript:bindingInfoSetGroupOthers2.png[]
+image:commonscript:bindingInfoSetGroupOthers2.png[alt="crosstab showing bottom 3 names with remaining groups combined as Others"]
 
 
 [TIP]

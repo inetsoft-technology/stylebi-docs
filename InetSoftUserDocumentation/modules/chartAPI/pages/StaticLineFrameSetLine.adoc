@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setLine` to assign the dotted line style to the `StaticLineFrame`.
 <4> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:StaticLineFrame2setLine.png[]
+image:commonscript:StaticLineFrame2setLine.png[alt="point chart with dotted line style applied via StaticLineFrame setLine"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -81,7 +81,7 @@ Chart1.bindingInfo.lineFrame.line = GLine.LARGE_DASH;
 --
 
 +
-image:commonscript:StaticLineFrameOnLoad_1.png[]
+image:commonscript:StaticLineFrameOnLoad_1.png[alt="line chart with large dash line style applied via bindingInfo lineFrame line property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

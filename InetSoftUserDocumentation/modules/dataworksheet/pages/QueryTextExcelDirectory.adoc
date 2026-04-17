@@ -14,11 +14,11 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 
 . Press the {buttonObject}, and select {buttonTextExcelDirectoryQuery}.
 +
-image:dataSourceTextExcel5.png[]
+image:dataSourceTextExcel5.png[alt="select Text Excel Directory Query button from the toolbar"]
 +
 This opens the ‘Text/Excel Directory  Query’ dialog box.
 +
-image:dataSourceTextExcel6.png[]
+image:dataSourceTextExcel6.png[alt="Text Excel Directory Query dialog box for configuring the data query"]
 +
 
 . From the ‘File/Folder’ menu, select an Excel/CSV/Text file, or select a folder.  If you select a folder, all files in the folder will be concatenated.  If you select a file, specify the file properties using the additional controls.  The options (‘Sheet’, ‘Encoding’, ‘Text Delimiter’, etc.) are the same as for uploading a file (see xref:dataworksheet:UploadData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[]):

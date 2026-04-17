@@ -26,10 +26,10 @@ A mirrored table looks just like a regular copy, but remains linked to the origi
 
 To create a *mirror copy*, right-click the title row of the table to mirror, and select ‘Mirror’ from the right-click menu. {rightClickOptions}
 
-image:MirroredTables.png[]
+image:MirroredTables.png[alt="right-click table title row and select Mirror from context menu"]
 
 The new mirrored table is created, and a graphical link to the original table is drawn to indicate the dependency.
 
-image:MirroredTables1.png[]
+image:MirroredTables1.png[alt="mirrored table linked to original table by graphical dependency line"]
 
 IMPORTANT: This link is one-way only: Changes you make to the original table are propagated to the mirrored table, but changes you make to the mirrored table are *not* propagated to the original table.

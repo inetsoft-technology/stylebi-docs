@@ -17,7 +17,7 @@ dataConditions.value[]::					Array of filtered dimension values
 == Example
 Consider a Chart that uses a flyover view to filter a Table named “Query1”. If the ‘On Click Only’ option is set for the Chart flyover (and therefore multiple Chart groups can be selected in the flyover), the Table’s `dataConditions.attr[]` and `dataConditions.value[]` arrays will each contain one item for every group the user selects on the Chart. You can iterate through these arrays to obtain the currently selected dimensions and values.
 
-image:dataConditions2.png[]
+image:dataConditions2.png[alt="dashboard with chart using flyover view to filter a table component"]
 
 
 
@@ -43,7 +43,7 @@ NOTE: This script could also be written as an expression for the ‘Title’ pro
 
 When the user selects groups on the Chart, the Table’s title bar indicates the current flyover filter applied to the Table.
 
-image:dataConditions.png[]
+image:dataConditions.png[alt="table with title bar showing current flyover filter from chart selection"]
 
 
 

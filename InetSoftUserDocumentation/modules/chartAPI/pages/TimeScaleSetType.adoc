@@ -47,7 +47,7 @@ graph.addElement(elem);
 <4> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
 
-image:commonscript:TimeScalesetType.png[]
+image:commonscript:TimeScalesetType.png[alt="bar chart with TimeScale tick marks set to yearly increments"]
 
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

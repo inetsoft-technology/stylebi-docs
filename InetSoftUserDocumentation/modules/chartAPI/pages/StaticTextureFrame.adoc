@@ -45,7 +45,7 @@ graph.addElement(elem);
 <2> Create the `StaticTextureFrame` object.
 <3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:StaticTextureFrame2.png[]
+image:commonscript:StaticTextureFrame2.png[alt="bar chart with StaticTextureFrame reading texture patterns from data column"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -88,7 +88,7 @@ Chart1.bindingInfo.textureFrame = new StaticTextureFrame;
 --
 
 +
-image:commonscript:StaticTextureFrame_1.png[]
+image:commonscript:StaticTextureFrame_1.png[alt="bar chart with StaticTextureFrame applied via bindingInfo textureFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

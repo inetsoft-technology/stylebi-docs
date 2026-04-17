@@ -37,7 +37,7 @@ graph.addElement(elem);
 <3> Use `setField` to specify the field for the `CircularColorFrame`.
 <4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
 
-image:commonscript:CircularColorFrame2.png[]
+image:commonscript:CircularColorFrame2.png[alt="bar chart with CircularColorFrame applied to Quantity field"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -82,7 +82,7 @@ Chart1.bindingInfo.colorFrame = new CircularColorFrame;
 --
 
 +
-image:commonscript:BrightnessColorFrame1.png[]
+image:commonscript:BrightnessColorFrame1.png[alt="bar chart with CircularColorFrame applied via bindingInfo colorFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

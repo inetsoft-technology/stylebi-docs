@@ -46,7 +46,7 @@ graph.addElement(elem);
 <3> Use `setSize()` to set the {javaawtDimension} object.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:ShapeformSetSize.png[]
+image:commonscript:ShapeformSetSize.png[alt="bar chart with a 50x50 pixel red triangle ShapeForm at NJ 100"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

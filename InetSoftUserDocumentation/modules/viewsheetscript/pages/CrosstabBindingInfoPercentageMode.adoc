@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies the direction (row or column) for percentage computation. This is equivalent to selecting the ‘By’ option of the ‘Calculation’ dialog box in the Crosstab Editor (accessible from btn:[Edit] button under the {buttonEditMeasure}).
 
-image:commonscript:bindingInfoPercentMode.png[]
+image:commonscript:bindingInfoPercentMode.png[alt="crosstab editor Calculation dialog showing By row or column direction option"]
 
 == Type
 xref:commonscript:StyleConstant.adoc[] object:: `StyleConstant.PERCENTAGE_BY_COL` or `StyleConstant.PERCENTAGE_BY_ROW`

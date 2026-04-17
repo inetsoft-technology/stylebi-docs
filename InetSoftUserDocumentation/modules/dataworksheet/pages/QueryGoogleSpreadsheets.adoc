@@ -15,11 +15,11 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonGoogleSpreadsheetsQuery}. This opens the ‘Google Spreadsheets  Query’ dialog box.
 
 +
-image:dataSourceGoogleSheets5.png[]
+image:dataSourceGoogleSheets5.png[alt="Google Spreadsheets Query dialog box for configuring the data query"]
 
 . From the ‘Spreadsheet’ menu choose the desired Google Spreadsheet. From the ‘Worksheet’ menu, choose the desired worksheet in the spreadsheet.
 +
-image:dataSourceGoogleSheets6.png[]
+image:dataSourceGoogleSheets6.png[alt="Spreadsheet and Worksheet menus with desired options chosen"]
 
 +
 include::dataworksheet:partial$finalStepsQuery.adoc[]

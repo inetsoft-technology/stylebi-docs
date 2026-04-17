@@ -31,7 +31,7 @@ Chart1.bindingInfo.lines['Sum(Total)'] = new StaticLineFrame(GLine.LARGE_DASH);
 --
 
 
-image:commonscript:bindingInfoLines.png[]
+image:commonscript:bindingInfoLines.png[alt="line chart with Sum Total line displayed in large dash style"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]
 

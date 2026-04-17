@@ -45,7 +45,7 @@ graph.addElement(elem);
 <3> Use `setTuple()` to set the axis location for the form.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:ShapeformSetTuple.png[]
+image:commonscript:ShapeformSetTuple.png[alt="bar chart with a red triangle ShapeForm placed using axis tuple coordinates"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

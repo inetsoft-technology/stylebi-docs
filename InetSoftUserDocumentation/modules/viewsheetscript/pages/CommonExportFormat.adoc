@@ -7,7 +7,7 @@ include::partial$readOnly.adoc[]
 
 Returns the format in which a Dashboard is currently being exported: `pdf`, `pptx`, `xlsx`, `html`, `png`. This property can be used to control the *visibility* of a component during export by placing it within an Expression  that sets the ‘Visible’ property of a component.
 
-image:exportFormat.png[]
+image:exportFormat.png[alt="Visible property expression using exportFormat to control visibility during export"]
 
 
 The `exportFormat` property obtains a value only when the Dashboard is actively being exported. At all other times, the value is `null`.

@@ -11,7 +11,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies the field (for single value) or fields (for composite value) of the data block to be displayed by the Range Slider component. This is equivalent to selecting fields under the *Data* tab of the component ‘Properties’ dialog box.
 
-image:viewsheet:RangeSliderFields.png[]
+image:viewsheet:RangeSliderFields.png[alt="range slider properties Data tab showing field binding selection"]
 
 == Type
 Array

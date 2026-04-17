@@ -37,14 +37,14 @@ type:: One of the following:  `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
 --
 Chart1.bindingInfo.setTextField("Employee",Chart.STRING);
 --
-image:commonscript:bindingInfoSetTextDimension.png[]
+image:commonscript:bindingInfoSetTextDimension.png[alt="chart with Employee dimension text labels displayed on chart elements"]
 
 .Measure (numerical) field
 [source,javascript]
 --
 Chart1.bindingInfo.setTextField("Total",Chart.NUMBER);
 --
-image:commonscript:bindingInfoSetTextMeasure.png[]
+image:commonscript:bindingInfoSetTextMeasure.png[alt="chart with Total measure numeric values displayed as text labels"]
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

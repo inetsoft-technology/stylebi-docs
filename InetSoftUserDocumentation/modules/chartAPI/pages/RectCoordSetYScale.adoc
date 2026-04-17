@@ -41,7 +41,7 @@ graph.addElement(elem);
 <3> Use `setYScale` to set the   xref:Scale.adoc[] for the Y-axis.
 <4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:RectCoordSetYScale.png[]
+image:commonscript:RectCoordSetYScale.png[alt="bar chart with RectCoord Y-axis set using LinearScale"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

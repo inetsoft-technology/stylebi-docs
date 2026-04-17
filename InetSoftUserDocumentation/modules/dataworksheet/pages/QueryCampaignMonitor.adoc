@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonCampaignMonitorQuery}. This opens the ‘Campaign Monitor  Query’ dialog box.
 
 +
-image:campaignmonitor1.png[]
+image:campaignmonitor1.png[alt="Campaign Monitor Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

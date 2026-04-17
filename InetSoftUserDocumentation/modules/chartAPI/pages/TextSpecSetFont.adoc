@@ -47,7 +47,7 @@ graph.addElement(elem);
 <3> Use `setFont()` to assign the font to the `TextSpec`.
 <4> Use xref:TitleSpecSetTextSpec.adoc[] to  assign the `TextSpec` to the `TitleSpec`.
 
-image:commonscript:TextSpecsetFont.png[]
+image:commonscript:TextSpecsetFont.png[alt="bar chart with X-axis title in bold Verdana 14pt font via TextSpec"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

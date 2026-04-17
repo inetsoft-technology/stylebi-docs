@@ -40,7 +40,7 @@ lineColor:'red',lineStyle:Chart.THICK_LINE,labelFont:'Lucida Sans Unicode-BOLD-1
 Chart1.addConfidenceIntervalTarget('Sum(Product:Total)',0xDDAAAA,99,options);
 --
 
-image:commonscript:PlotAddTargetCI.png[]
+image:commonscript:PlotAddTargetCI.png[alt="chart with confidence interval target band displayed in red"]
 
 
 

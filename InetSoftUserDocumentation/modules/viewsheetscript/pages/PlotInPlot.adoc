@@ -17,7 +17,7 @@ In the Chart below, the measure value of $8,000,000 is cropped because the axis 
 Chart1.axis['Sum(Product:Total)'].maximum = 6000000;
 Chart1.inPlot = false;
 
-image:commonscript:inPlot.png[]
+image:commonscript:inPlot.png[alt="chart with value labels displayed inside the plot area"]
 
 
 

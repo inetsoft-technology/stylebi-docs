@@ -595,7 +595,7 @@ NOTE: The `alert()` function *does not* pause script execution.
 var arr = ['Sue','Robert','Eric'];
 alert(arr.join(","))
 
-image:administration:alertFunction.png[]
+image:administration:alertFunction.png[alt="alert dialog box showing comma-separated array values from script"]
 
 The `alert()` dialog box is also useful for displaying critical information to a user (for example, if the user’s selections have resulted in an empty dataset).  You can also use the  xref:viewsheetscript:SpecialFunctionsConfirm.adoc[] function to display information to a user, which also prompts the user to either continue or abort the operation.
 

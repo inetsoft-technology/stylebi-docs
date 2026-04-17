@@ -19,19 +19,19 @@ include::user:partial$createVisualizationStep3.adoc[]
 
 . In the User Portal, press the {buttonCreate} and select the {buttonCreateDashboard} or {buttonWorksheet} option.
 +
-image:viewsheet:portalDesignTab.png[]
+image:viewsheet:portalDesignTab.png[alt="User Portal showing Create button and Dashboard or Worksheet option"]
 
 . Select the *Assets* tab in the left panel (if not already selected).
 
 . Expand the '`Library`' folder, and right-click the '`Script`' folder. {rightClickOptions} Select '`New Script Function`'.
 +
-image:customFunction1.png[]
+image:customFunction1.png[alt="Assets panel with Script folder and New Script Function option selected"]
 
 
 
 . Enter the desired function script, beginning with `function` keyword.  You can use the built-in functions provided in the '`JavaScript Functions`' and '`Excel Functions`' folders on the left side.
 +
-image:customFunction2.png[]
+image:customFunction2.png[alt="script library editor showing custom function with parameter and body"]
 +
 Any parameters (e.g., col) should be placed in a comma-separated list inside the parentheses that follow the function name. These parameters can then be used inside the function body. Since JavaScript does not support type declaration, parameters are not qualified with types.
 +
@@ -59,12 +59,12 @@ include::user:partial$createVisualizationStep3.adoc[]
 
 . In the User Portal, press the {buttonCreate} and select the {buttonCreateDashboard} or {buttonWorksheet} option.
 +
-image:viewsheet:portalDesignTab.png[]
+image:viewsheet:portalDesignTab.png[alt="User Portal showing Create button and Dashboard or Worksheet option"]
 
 
 . Expand the '`Library`' folder and  the '`Script`' folder. Double-click the function that you want to edit. {rightClickOptions}
 +
-image:customFunction3.png[]
+image:customFunction3.png[alt="Script library folder expanded with existing function available to edit"]
 
 . Edit and save the function as described in xref:#AddFunctiontoScriptLibrary[].
 

@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonLighthouseQuery}. This opens the ‘Lighthouse  Query’ dialog box.
 
 +
-image:lighthouse1.png[]
+image:lighthouse1.png[alt="Lighthouse Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

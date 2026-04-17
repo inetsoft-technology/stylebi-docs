@@ -13,7 +13,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.colorLegends['Sum(Product:Quantity Purchased)'].color = 'red';
 Chart1.colorLegends['Sum(Product:Total)'].color = 'green';
 
-image:commonscript:colorLegendsColor.png[]
+image:commonscript:colorLegendsColor.png[alt="chart with all color legends having color changed"]
 
 
 

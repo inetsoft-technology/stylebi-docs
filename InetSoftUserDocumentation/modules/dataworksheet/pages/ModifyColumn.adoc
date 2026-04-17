@@ -9,7 +9,7 @@ The following sections describe ways that you can modify the columns of a data b
 
 To *search for a column*, press the {buttonSearchColumns}  in the bottom panel toolbar, and type the column name or any part of the column name. This will scroll the table to a matching column. If there are multiple matches, press the arrows to cycle through the matches. Press the {buttonClearSearch}  to clear the search term.
 
-image:searchColumn.png[]
+image:searchColumn.png[alt="press Search Columns button and type column name to find a column"]
 
 == Change a Column Name
 To *change a column name*, select the data block and double-click the column header in the bottom panel. To display long column names, press the {buttonWrapColumnHeaders}. Press again to hide long names.
@@ -26,7 +26,7 @@ By default, all manually created columns in an Embedded Table are of type ‘Str
 . Click the Embedded Table data block to select it.
 In the bottom panel, right-click the column header and select ‘Column Type’ from the context menu or press the {buttonColumnType} in the column header. {rightClickOptions}
 +
-image:embeddedTableColumnType2.png[]
+image:embeddedTableColumnType2.png[alt="right-click column header and select Column Type from context menu"]
 +
 This opens the ‘Column Type’ panel.
 
@@ -52,10 +52,10 @@ include::ROOT:partial$CreateNewWorksheetNote.adoc[]
 
 . Right-click a header cell in the bottom panel and select ‘Column Type’ from the context menu. {rightClickOptions} This opens the ‘Column Type’ panel.
 +
-image:embeddedTableColumnType.png[]
+image:embeddedTableColumnType.png[alt="right-click header cell and select Column Type to open the Column Type panel"]
 . Select ‘Integer’ from the ‘Type’ menu and press btn:[OK].
 +
-image:selectIntegerColumnType.png[]
+image:selectIntegerColumnType.png[alt="select Integer from the Type menu in the Column Type panel"]
 ****
 
 [#ChangeColumnDescription]
@@ -65,11 +65,11 @@ To add or edit a column description, follow the steps below:
 
 . Click the data block to select it. Right-click the desired column header in the bottom panel (or press the {buttonActions}), and select ‘Column Description’ in the context menu.
 +
-image::AddColumnDescription.png[]
+image::AddColumnDescription.png[alt="right-click column header and select Column Description from context menu"]
 +
 . Add or edit the desired description in the ‘Column Description’ dialog box and press ‘OK’.
 +
-image::AddColumnDescription2.png[]
+image::AddColumnDescription2.png[alt="Column Description dialog box to add or edit the column description text"]
 
 [#RepositionColumn]
 == Reposition a Column
@@ -77,7 +77,7 @@ To *reposition a column*, simply drag the column within the bottom panel and dro
 
 To *reposition multiple columns*, press the {buttonReorderTableColumns}  in the bottom panel toolbar. This opens the ‘Reorder Columns’ dialog box. Select one or more fields and press the btn:[Up], btn:[Down], btn:[Move to Top] and btn:[Move to Bottom] buttons to adjust the order as desired. Press btn:[OK] at the bottom of the panel.
 
-image::reorderColumns.png[]
+image::reorderColumns.png[alt="Reorder Columns dialog with Up Down Move to Top and Bottom buttons"]
 
 == Hide a Column
 
@@ -87,5 +87,5 @@ NOTE: You may need to first press the {buttonChangeView}  and select {buttonMeta
 
 To *hide multiple columns*, press the {buttonShowHideColumns}  in the bottom panel toolbar. This opens the ‘Show/Hide Columns’ dialog box, where you can choose columns that you want to hide. Type in the ‘Search’ box and press the {buttonSearch}  to list columns that fully or partially match the search string. Press btn:[OK] at the bottom of the panel after making your selection.
 
-image::showHideColumns.png[]
+image::showHideColumns.png[alt="Show Hide Columns dialog to select which columns to hide"]
 

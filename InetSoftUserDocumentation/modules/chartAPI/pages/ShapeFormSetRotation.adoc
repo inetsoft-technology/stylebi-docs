@@ -35,7 +35,7 @@ include::scriptexample:partial$ShapeFormSetRotation1.js[]
 <3> Use `setRotation()` to set the rotation.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:ShapeformSetRotation.png[]
+image:commonscript:ShapeformSetRotation.png[alt="bar chart with a rotated ShapeForm triangle overlaid on chart area"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

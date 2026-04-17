@@ -32,7 +32,7 @@ Chart1.bindingInfo.shapes['DistinctCount(customer_id)'] = new StaticShapeFrame(G
 --
 <1> Sets 'state' as the geographic field.
 
-image:commonscript:bindingInfoGeoFields.png[]
+image:commonscript:bindingInfoGeoFields.png[alt="map chart with state bound as geographic field color-coded by customer count"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]
 

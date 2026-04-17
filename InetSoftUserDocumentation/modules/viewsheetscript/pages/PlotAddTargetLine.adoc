@@ -43,7 +43,7 @@ var options = {fillAbove:[200,200,255],fillBelow:[225,225,225],label:'Value: {0}
 Chart1.addTargetLine('Sum(Product:Total)',null,2500000,options);
 --
 
-image:commonscript:PlotAddTarget.png[]
+image:commonscript:PlotAddTarget.png[alt="chart with single target line at 2500000 with fill above and below"]
 
 .Multiple Target Lines
 [source,javascript]
@@ -54,7 +54,7 @@ lineColor:'blue',lineStyle:Chart.DASH_LINE,labelFont:'Lucida Sans Unicode-BOLD-1
 Chart1.addTargetLine('Sum(Product:Total)',0xDD99DD,['avg','max'],options);
 --
 
-image:commonscript:PlotAddTarget2.png[]
+image:commonscript:PlotAddTarget2.png[alt="chart with multiple target lines at average and maximum with fill bands"]
 
 
 

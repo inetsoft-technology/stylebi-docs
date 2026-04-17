@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonmondaycomQuery}. This opens the ‘monday.com  Query’ dialog box.
 
 +
-image:mondayCom1.png[]
+image:mondayCom1.png[alt="monday.com Query dialog box for configuring the data query"]
 +
 
 . Enter the desired GraphQL query in the ‘Query’ field. See the https://graphql.org/[GraphQL site] for more information about syntax and usage. An example of a simple query (without variables or pagination) is shown below:

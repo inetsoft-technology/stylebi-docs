@@ -18,7 +18,7 @@ Boolean:: `true`: gaps are preserved for date data +
 Chart1.bindingInfo.setTimeSeries("Order Date", true);
 
 
-image:commonscript:setTimeSeries_1.png[]
+image:commonscript:setTimeSeries_1.png[alt="chart with date gaps preserved as empty intervals in time series"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]
 

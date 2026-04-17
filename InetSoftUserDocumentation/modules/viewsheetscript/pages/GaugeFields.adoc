@@ -9,7 +9,7 @@ xref:viewsheetscript:GaugeQuery.adoc[] to specify the data block from which to d
 
 Specifies the field of the data block to be displayed by the Gauge component. This is equivalent to selecting a field from the '`Columns`' menu under the *Data* tab of the component ‘Properties’ dialog box.
 
-image:viewsheetscript:GaugeFields.png[]
+image:viewsheetscript:GaugeFields.png[alt="gauge component Data tab showing Columns field binding selection"]
 
 
 When you use a bivariate aggregation method (e.g., correlation), the fields array should contain two field names. Otherwise, the array should contain just a single field name.

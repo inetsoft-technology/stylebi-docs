@@ -15,7 +15,7 @@ Boolean
 Chart1.colorLegends['Sum(Product:Quantity Purchased)'].titleVisible = true;
 Chart1.colorLegends['Sum(Product:Total)'].titleVisible = false;
 
-image:commonscript:colorLegendsTitleVisible.png[]
+image:commonscript:colorLegendsTitleVisible.png[alt="chart with titles hidden on all color legends"]
 
 [TIP]
 ====

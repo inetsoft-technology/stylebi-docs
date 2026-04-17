@@ -14,7 +14,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 
 . Press the {buttonObject}, and select {buttonSAPQuery} appropriate for the data connection you previously created, either ‘SAP ABAP Query’, ‘SAP BAPI Query’, or ‘SAP Table Query’. This opens the ‘SAP  Query’ dialog box.
 +
-image:dataSourceSAP5.png[]
+image:dataSourceSAP5.png[alt="SAP Query dialog box for configuring the data query"]
 
 
 
@@ -26,7 +26,7 @@ image:dataSourceSAP5.png[]
 .. Press the btn:[Load Parameters] button. To supply a value for a parameter, check the corresponding box and enter a parameter value.
 .. *_Optional:_*  To add additional parameters, press the btn:[Add] button. To remove a parameter, check the corresponding box and press the btn:[Remove] button.
 +
-image:dataSourceSAP7.png[]
+image:dataSourceSAP7.png[alt="SAP ABAP query parameters loaded with values entered"]
 
 
 . For an *SAP BAPI* connection, follow the steps below:
@@ -40,7 +40,7 @@ image:dataSourceSAP7.png[]
 .. Press the btn:[Load Parameters] button. To supply a value for a parameter, check the corresponding box and enter a parameter value.
 .. *_Optional:_*  To add additional parameters, press the btn:[Add] button. To remove a parameter, check the corresponding box and press the btn:[Remove] button.
 +
-image:dataSourceSAP8.png[]
+image:dataSourceSAP8.png[alt="SAP BAPI query configured with object type function and table"]
 
 . For an *SAP Tables* connection, follow the steps below:
 
@@ -51,7 +51,7 @@ image:dataSourceSAP8.png[]
 NOTE: This may take a few minutes.
 .. Select the desired table in the ‘Table Name’ menu.
 +
-image:dataSourceSAP9.png[]
+image:dataSourceSAP9.png[alt="SAP Tables query with desired table selected in Table Name menu"]
 
 include::partial$finalStepsQuery.adoc[]
 

@@ -11,7 +11,7 @@ xref:viewsheetscript:TextQuery.adoc[] to specify the data block from which to dr
 
 Specifies the field of the data block to be displayed by the Text component. This is equivalent to selecting fields under the *Data* tab of the component ‘Properties’ dialog box.
 
-image:commonscript:bindingInfoTextFields.png[]
+image:commonscript:bindingInfoTextFields.png[alt="text component Data tab showing field binding selection"]
 
 
 When you use a bivariate aggregation method (e.g., correlation), the `fields` array should contain two field names. Otherwise, the array should contain just a single field name.

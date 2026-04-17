@@ -12,7 +12,7 @@ You can dynamically set the image file (GIF, JPG, etc.) of an image component us
 
 . Press the {buttonValueType} and select ‘Expression’ or ‘Variable’, depending on the mechanism you wish to use to set the image property.
 +
-image:viewsheet:Advanced dynamic image.png[]
+image:viewsheet:Advanced dynamic image.png[alt="Image Properties Advanced tab with Dynamic Image Selection and Expression chosen"]
 +
 [square]
 * If you chose ‘Expression’, press the {buttonEdit} and use the Formula Editor to add a script. A typical script might take the following form.  See xref:viewsheet:DynamicallySetProperties.adoc#ControlPropertieswithExpression[Control Properties with Expression] for more details.

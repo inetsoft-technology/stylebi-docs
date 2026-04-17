@@ -38,7 +38,7 @@ graph.addElement(elem);
 <3> Use `rotate` to rotate the polar coordinates 45°.
 <4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:Coordinaterotate.png[]
+image:commonscript:Coordinaterotate.png[alt="polar coordinate chart with axes rotated 45 degrees"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

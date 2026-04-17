@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonGithubQuery}. This opens the ‘Github  Query’ dialog box.
 
 +
-image:github1.png[]
+image:github1.png[alt="Github Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

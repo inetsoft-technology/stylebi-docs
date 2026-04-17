@@ -10,7 +10,7 @@ xref:viewsheetscript:CrosstabQuery.adoc[] to specify the data block from which t
 
 Specifies the data block fields to be used as measures. This is equivalent to adding fields into the ‘Aggregates’ region of the Crosstab Editor.
 
-image:commonscript:bindingInfoMeasures.png[]
+image:commonscript:bindingInfoMeasures.png[alt="crosstab editor Aggregates region with measure fields assigned"]
 
 
 
@@ -26,7 +26,7 @@ Crosstab1.bindingInfo.rowFields = ['Category','Name'];
 Crosstab1.bindingInfo.colFields = ['Region','State'];
 Crosstab1.bindingInfo.measureFields = ['Total','Quantity Purchased'];
 
-image:commonscript:bindingInfoCrosstabExp1_3.png[]
+image:commonscript:bindingInfoCrosstabExp1_3.png[alt="crosstab showing Total and Quantity Purchased measures with row and column fields"]
 
 [TIP]
 ====

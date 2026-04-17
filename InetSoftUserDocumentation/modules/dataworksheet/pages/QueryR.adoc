@@ -15,11 +15,11 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonRQuery}.
 
 +
-image:dataSourceR5.png[]
+image:dataSourceR5.png[alt="select R Query button from the toolbar"]
 +
 This opens the ‘R  Query’ dialog box.
 +
-image:dataSourceR6.png[]
+image:dataSourceR6.png[alt="R Query dialog box for configuring the data query"]
 
 
 . Enter the desired R script. This can be simply the name of the data set (e.g., “iris”) or a more elaborate analysis script.

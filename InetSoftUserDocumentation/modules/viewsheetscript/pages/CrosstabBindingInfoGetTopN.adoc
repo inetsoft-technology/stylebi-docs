@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Returns the number of row or column groups in the ranking specified by  xref:CrosstabBindingInfoSetTopN.adoc[] or set by the ‘Rank’ option in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetTopN_1.png[]
+image:commonscript:bindingInfoSetTopN_1.png[alt="crosstab editor with Rank top-N option set for a row header"]
 
 
 == Parameters

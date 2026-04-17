@@ -38,7 +38,7 @@ graph.addElement(elem);
 <3> Use `setField` to specify the field for the `HeatColorFrame`.
 <4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
 
-image:commonscript:HeatColorFrame2.png[]
+image:commonscript:HeatColorFrame2.png[alt="bar chart with HeatColorFrame varying shades of brown by Quantity"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -82,7 +82,7 @@ Chart1.bindingInfo.colorFrame = new HeatColorFrame();
 --
 
 +
-image:commonscript:HeatColorFrame_1.png[]
+image:commonscript:HeatColorFrame_1.png[alt="bar chart with HeatColorFrame applied via bindingInfo colorFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

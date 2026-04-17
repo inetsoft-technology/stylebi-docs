@@ -28,11 +28,11 @@ include::ROOT:partial$CreateNewWorksheetNote.adoc[]
 
 . Press the {buttonCreateObject}, and select {buttonEmbeddedTable}.
 +
-image:newEmbeddedTableToobar.png[]
+image:newEmbeddedTableToobar.png[alt="press Create Object button and select Embedded Table from toolbar"]
 
 . In the ‘Embedded Table’ dialog box provide a ‘Name’ for the Embedded Table and enter a number for ‘Rows’ and ‘Columns’. Then press btn:[OK].
 +
-image:EmbeddedTableCreate.png[]
+image:EmbeddedTableCreate.png[alt="Embedded Table dialog to specify table name rows and columns"]
 
 . To edit a column header, double-click on the header in the bottom panel and enter the desired text.
 
@@ -40,7 +40,7 @@ image:EmbeddedTableCreate.png[]
 
 . To edit a data cell, click in the cell in the bottom panel and enter text directly. You can enter both numeric and non-numeric values.
 +
-image:embeddedTableEnterData.png[]
+image:embeddedTableEnterData.png[alt="click a data cell in bottom panel to enter text directly"]
 . Press the {buttonSave} in the toolbar to save the Data Worksheet with the embedded data.
 
 .Example: Create Embedded Table
@@ -52,19 +52,19 @@ include::ROOT:partial$CreateNewWorksheetNote.adoc[]
 
 . Press the {buttonCreateObject}, and select {buttonEmbeddedTable}. Use the ‘Embedded Table’ dialog box to create an Embedded Table with three rows and three columns.
 +
-image:EmbeddedTableCreate2.png[]
+image:EmbeddedTableCreate2.png[alt="Embedded Table dialog creating table with three rows and three columns"]
 
 . Press btn:[OK] to close the dialog box and create the Embedded Table.
 
 . In the bottom panel, double-click on the ‘col0’ header cell. The cell switches to editing mode, and you can now type in the cell to change the text.
 +
-image:EditableEmbeddedTable.png[]
+image:EditableEmbeddedTable.png[alt="double-click column header to switch cell to editing mode"]
 
 . Change the column names for ‘col0’, ‘col1’ and ‘col2’ to ‘A’, ‘B’ and ‘C’, respectively.
 
 . Enter any values in the nine data cells. Note that both numeric and non-numeric values can be entered in the table.
 +
-image:filledEmbeddedTable.png[]
+image:filledEmbeddedTable.png[alt="embedded table with columns A B C and data values entered in cells"]
 ****
 
 == Add Rows to an Embedded Table
@@ -76,7 +76,7 @@ To *add a new row* to an Embedded Table, follow these steps:
 
 . Right-click a table row in the bottom panel, and choose ‘Insert Row’ or ‘Append Row’ from the context menu. This inserts a blank row above the row you clicked or appends a blank row below the row you clicked, respectively.
 +
-image:insertRowEmbedded.png[]
+image:insertRowEmbedded.png[alt="right-click table row and select Insert Row or Append Row"]
 +
 All cells in the new row can be edited.
 
@@ -114,21 +114,21 @@ include::ROOT:partial$CreateNewWorksheetNote.adoc[]
 
 . From the left panel, drag the ‘Sales Explore’ Data Worksheet into the right panel. This creates the data block ‘Sales1’.
 +
-image:importWorksheet_2.png[]
+image:importWorksheet_2.png[alt="Sales Explore Data Worksheet dragged into the Data Worksheet panel"]
 . Press the {buttonChangeView} in the bottom panel, and select {buttonLiveDataView}.
 +
-image:SalesbyCategoryLiveData.png[]
+image:SalesbyCategoryLiveData.png[alt="Sales data block in live data view showing sales by category"]
 
 . Right-click the data block and select ‘Convert to Embedded Table’. {rightClickOptions}
 +
 A new data block is created with name ‘Query1’.
 . Select the ‘Query1’ data block. Press the {buttonChangeView} in the bottom panel and select {buttonEditAction}.
 +
-image:converttoEmbedded2.png[]
+image:converttoEmbedded2.png[alt="select Query1 data block and press Change View to select Edit action"]
 
 . Click on any of the cells in the bottom panel. Notice that all of the cells are now editable.
 +
-image:EmbeddedTableEditable.png[]
+image:EmbeddedTableEditable.png[alt="embedded table with all cells now editable after conversion"]
 ****
 
 == Import Data into an Embedded Table
@@ -143,11 +143,11 @@ NOTE: Any existing data and column names in the Embedded Table will be overwritt
 . Select an existing Embedded Table.
 . In the bottom panel, Press the {buttonImportDataFile}.
 +
-image:importCSVButton.png[]
+image:importCSVButton.png[alt="press Import Data File button in the bottom panel"]
 +
 This opens the ‘Import Data File’ dialog box.
 +
-image:embeddedTable4.png[]
+image:embeddedTable4.png[alt="Import Data File dialog with file encoding delimiter and header options"]
 
 . Press ‘Choose File’, and choose the desired text file. (By default, only files with the extension `.csv` are shown. To view all file types, enter `\*.*` in the ‘File Name’ field, and press kbd:[Enter].)
 
@@ -197,7 +197,7 @@ NOTE: Multiple controls can be linked to the same Embedded Table.
 * To access a Variable, expand the ‘Variable’ node, and select the desired Variable asset in the Data Worksheet. Skip to the final step below.
 . For an Embedded Table, press the {buttonChooseCell} next to the ‘Target’ field. This displays a representation of the Embedded Table.
 +
-image:viewsheet:Input Browse Embedded Table.png[]
+image:viewsheet:Input Browse Embedded Table.png[alt="embedded table representation displayed for selecting target cell"]
 
 . In the displayed Embedded Table, click to select the table cell into which form values should be passed. This automatically populates the ‘Column’ and ‘Row’ menus with the corresponding cell indices. Alternatively, specify the target cell directly from the provided menus:
 * From the ‘Column’ menu, select the appropriate field of the Embedded Table data block.

@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonJiraQuery}. This opens the ‘Jira  Query’ dialog box.
 
 +
-image:jira1.png[]
+image:jira1.png[alt="Jira Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

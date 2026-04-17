@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonHarvestQuery}. This opens the ‘Harvest  Query’ dialog box.
 
 +
-image:harvest1.png[]
+image:harvest1.png[alt="Harvest Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

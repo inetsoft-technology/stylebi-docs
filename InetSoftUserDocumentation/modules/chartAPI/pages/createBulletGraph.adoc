@@ -31,7 +31,7 @@ opts::			String containing additional options:
 
 Consider the Data Worksheet data block ‘Query1’ shown below. (This data block is a mirror of the ‘All Sales’ data block, with expression columns for ‘Target’, ‘range1’, ‘range2’, and ‘range3’, grouping on the ‘Employee’ and ‘Company’ fields, ‘Sum’ aggregation on the ‘Total’ field, and ‘Max’ aggregation on the expression columns.)
 
-image:commonscript:BulletChartWS.png[]
+image:commonscript:BulletChartWS.png[alt="data worksheet with Target range1 range2 range3 expression columns"]
 
 include::ROOT:partial$AllSalesQuery.adoc[]
 
@@ -53,7 +53,7 @@ graph = createBulletGraph('Total', ['range1','range2','range3'],'Target',0x0000F
 <1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
 <2> Create the bullet chart.
 +
-image:commonscript:BulletChart.png[]
+image:commonscript:BulletChart.png[alt="horizontal bullet graph with target and range bands by company and employee"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

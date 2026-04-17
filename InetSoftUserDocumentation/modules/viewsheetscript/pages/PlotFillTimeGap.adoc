@@ -19,7 +19,7 @@ Place the ‘Date’ field on the X-axis (with ‘Level’ = ‘Month’) and pl
 .Example 1: Ignore missing data
 Chart1.fillTimeGap = false
 
-image:commonscript:fillTimeGapFalse.png[]
+image:commonscript:fillTimeGapFalse.png[alt="line chart ignoring missing date data with no gap shown"]
 
 [source,javascript]
 .Example 2: Leave gap for missing data
@@ -32,7 +32,7 @@ Chart1.fillGapWithDash=false; //<3>
 <2> Do not fill gap with 0.
 <3> Set to `true` to display *dashed line* in gap.  See xref:PlotFillGapWithDash.adoc[].
 
-image:commonscript:fillTimeGapNull.png[]
+image:commonscript:fillTimeGapNull.png[alt="line chart with visible gap left for missing monthly data"]
 
 
 [source,javascript]
@@ -40,7 +40,7 @@ image:commonscript:fillTimeGapNull.png[]
 Chart1.fillTimeGap = true;
 Chart1.fillZero = true;
 
-image:commonscript:fillTimeGapZero.png[]
+image:commonscript:fillTimeGapZero.png[alt="line chart with zero inserted for missing monthly data point"]
 
 
 [TIP]

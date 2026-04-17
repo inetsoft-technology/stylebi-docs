@@ -47,6 +47,6 @@ The same distinction obtains for `Chart.DAY_INTERVAL`, `Chart.DAY_OF_MONTH_PART`
 Chart1.bindingInfo.setGroupOrder("Order Date",Chart.QUARTER_INTERVAL)
 
 --
-image:commonscript:setGroupOrder.png[]
+image:commonscript:setGroupOrder.png[alt="chart with Order Date dimension grouped by quarter interval"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]

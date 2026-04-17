@@ -42,7 +42,7 @@ graph.addElement(elem);
 <3> Use the inherited xref:MultiShapeFrameSetFields.adoc[] property to assign the fields to the `SunShapeFrame`.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `SunShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:SunShapeFrame.png[]
+image:commonscript:SunShapeFrame.png[alt="point chart with SunShapeFrame showing radial line elements for three measures"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

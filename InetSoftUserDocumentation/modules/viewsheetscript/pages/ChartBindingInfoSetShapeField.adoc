@@ -39,14 +39,14 @@ type:: One of the following:  `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
 --
 Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
 --
-image:commonscript:bindingInfoSetShapeDimension.png[]
+image:commonscript:bindingInfoSetShapeDimension.png[alt="point chart with Employee dimension shape-coded by category"]
 
 .Measure (numerical) field
 [source,javascript]
 --
 Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
 --
-image:commonscript:bindingInfoSetShapeMeasure.png[]
+image:commonscript:bindingInfoSetShapeMeasure.png[alt="point chart with Total measure shape-coded by numeric value"]
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

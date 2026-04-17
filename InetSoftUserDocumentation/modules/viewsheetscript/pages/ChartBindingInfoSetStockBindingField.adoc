@@ -79,13 +79,13 @@ include::commonscript:partial$bindingInfoNote.adoc[]
 
 . Press the {buttonPreview} to preview the chart.
 +
-image:commonscript:setStockBinding2.png[]
+image:commonscript:setStockBinding2.png[alt="stock chart displaying average high low open close prices by quarter"]
 +
 TIP: You can also use the {buttonZoomIn} to limit the date range.
 
 . To observe the structure of the Chart more closely, set a condition on the chart to limit the date range (e.g., limit to the year of 2004).
 +
-image:commonscript:setStockBinding3.png[]
+image:commonscript:setStockBinding3.png[alt="stock chart filtered to year 2004 showing quarterly OHLC structure"]
 
 Note that for each quarter, the values of each of the measures (`High`, `Low`, `Close/Last`, `Open`) have been independently aggregated as specified by the corresponding formula parameter (in this case, `Chart.AVERAGE_FORMULA`  for each). The “high” and “low” measures are represented by the extremes of the vertical line, and the “open” and “close” measures are represented, respectively, by the left and right horizontal lines.
 

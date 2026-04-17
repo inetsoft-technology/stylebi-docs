@@ -14,7 +14,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.shapeLegend.color = [255,0,0];
 Chart1.shapeLegend.color = {r:255,g:0,b:0};
 
-image:commonscript:shapeLegendColor.png[]
+image:commonscript:shapeLegendColor.png[alt="chart shape legend with custom color applied to legend text"]
 
 
 

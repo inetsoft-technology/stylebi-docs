@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonInfluxDBQuery}. This opens the ‘InfluxDB  Query’ dialog box.
 
 +
-image:influxDB1.png[]
+image:influxDB1.png[alt="InfluxDB Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

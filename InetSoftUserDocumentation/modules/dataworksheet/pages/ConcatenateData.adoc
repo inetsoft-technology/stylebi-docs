@@ -23,7 +23,7 @@ NOTE: If you plan to create a difference (*minus*), the order in which you selec
 
 . Press the {buttonConcatenate} in the toolbar and select the desired concatenation.
 +
-image:ConcatenateTableButton2.png[]
+image:ConcatenateTableButton2.png[alt="press Concatenate button in toolbar to select concatenation type"]
 
 * {buttonIntersect}: See xref:Intersection[] for an example.
 * {buttonUnion}: See xref:Union[] for an example.
@@ -50,12 +50,12 @@ include::ROOT:partial$FastGoGameQuery.adoc[]
 . From the left *Asset* panel, drag the ‘Fast Go Game’ Data Worksheet  into the right panel. This creates a new data block named ‘Fast Go Game1’.
 . Drag across both data blocks to select them. Press the {buttonConcatenate} in the toolbar and select {buttonIntersect}.
 +
-image:IntersectConcat2.png[]
+image:IntersectConcat2.png[alt="intersect concatenation applied to two selected data blocks"]
 +
 This creates a new data block, ‘Query1’.
 . Click the ‘Query1’ data block to select it. In the bottom panel, press the {buttonChangeView} and choose {buttonLiveDataView}.
 +
-image:IntersectPreview.png[]
+image:IntersectPreview.png[alt="preview of intersection result showing common customers"]
 +
 Only those customers who purchased more than 100 pieces of both ‘Wireless Mouse’ and ‘Fast Go Game’ are included in the result set.
 ****
@@ -90,13 +90,13 @@ include::ROOT:partial$FastGoGameQuery.adoc[]
 . From the left *Asset* panel, drag the ‘Fast Go Game’ Data Worksheet  into the right panel. This creates a new data block named ‘Fast Go Game1’.
 . Drag across both data blocks to select them. Press the {buttonConcatenate} in the toolbar and select {buttonUnion}.
 +
-image:DragQueryforUnion_1.png[]
+image:DragQueryforUnion_1.png[alt="union concatenation applied to Wireless Mouse and Fast Go Game data blocks"]
 +
 This creates a new data block, ‘Query1’.
 
 . Click the ‘Query1’ data block to select it. In the bottom panel, press the {buttonChangeView} and choose {buttonLiveDataView}.
 +
-image:UnionConcatPreview.png[]
+image:UnionConcatPreview.png[alt="preview of union result combining customers from both data blocks"]
 +
 The data block returns all customers who purchased more than 100 pieces of either ‘Wireless Mouse’ or ‘Fast Go Game’.
 ****
@@ -129,10 +129,10 @@ IMPORTANT: It is important to select the ‘Wireless Mouse1’ data block *_afte
 
 . Press the {buttonConcatenate} in the toolbar and select {buttonMinus}. This creates a new data block, ‘Query1’.
 +
-image:MinusConcat2.png[]
+image:MinusConcat2.png[alt="minus concatenation applied to Fast Go Game and Wireless Mouse data blocks"]
 . Click the ‘Query1’ data block to select it. In the bottom panel, press the {buttonChangeView} and choose {buttonLiveDataView}.
 +
-image:MinusPreview.png[]
+image:MinusPreview.png[alt="preview of minus result showing unique customers from first table"]
 +
 The data block returns all customers who purchased more than 100 pieces of ‘Fast Go Game’ but did not purchase more than 100 pieces of ‘Wireless Mouse’. (In this example, there is only one such customer).
 
@@ -154,15 +154,15 @@ video::298263200[vimeo,640,400]
 
 . Right-click on the Concatenated Table and select ‘Edit Concatenation’ from the context menu. {rightClickOptions}
 +
-image:editConcatenation.png[]
+image:editConcatenation.png[alt="right-click concatenated table and select Edit Concatenation"]
 +
 This opens the Concatenation Editor.
 . Press the ‘Edit Concatenation’ button on the left side of the diagram corresponding to the concatenation you want to change. This opens the ‘Concatenation Type’ panel.
 +
-image:ConnectorLine.png[]
+image:ConnectorLine.png[alt="Concatenation Editor showing connector line between data blocks"]
 . Select a new concatenation type.
 +
-image:ConnectorLine2.png[]
+image:ConnectorLine2.png[alt="select new concatenation type in Concatenation Type panel"]
 . If you set the concatenation type to ‘Union’, you can choose ‘Keep Duplicate Rows’ to prevent the removal of duplicate rows from the result.
 . *_Optional:_*  If the concatenated data block contains multiple concatenations, select ‘Apply to all concatenations’ to simultaneously update all of the links to the specified concatenation type. Leave this option disabled to modify only the selected link.
 . Press btn:[Done] to close the Editor.
@@ -177,10 +177,10 @@ To change the order in which the tables are concatenated (which would affect the
 
 . Press the btn:[Reorder Tables] button at the bottom of the left panel. This opens the ‘Reorder Tables’ dialog box.
 +
-image:Concatenate Reorder 1.png[]
+image:Concatenate Reorder 1.png[alt="press Reorder Tables button to open the Reorder Tables dialog"]
 . In the ‘Reorder Tables’ dialog box, click a table in the list and set the desired position for the table by using the arrow buttons. Then press btn:[OK].
 +
-image:Concatenate Reorder 2.png[]
+image:Concatenate Reorder 2.png[alt="reorder tables dialog with arrow buttons to change table order"]
 . Press btn:[Done] to close the Editor.
 
 include::ROOT:partial$CreateDashboard.adoc[]
@@ -190,10 +190,10 @@ To add additional tables into a existing concatenation, follow these steps:
 
 . Right-click on the Concatenated Table and select ‘Edit Concatenation’ from the context menu. {rightClickOptions}
 +
-image:editConcatenation.png[]
+image:editConcatenation.png[alt="right-click concatenated table and select Edit Concatenation"]
 . In the Concatenation Editor, drag any additional tables from the left panel onto the border of the table where the concatenation should be made. (A green highlight indicates the concatenation position.)
 +
-image:editConcatenation2.png[]
+image:editConcatenation2.png[alt="drag additional table to concatenation border in the editor"]
 . Press btn:[Done] to close the Editor.
 
 include::ROOT:partial$CreateDashboard.adoc[]

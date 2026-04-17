@@ -46,7 +46,7 @@ graph.addElement(elem);
 <4> Use `setScaleOption` to use zero in scale range.
 <5> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:ScaleSetOption.png[]
+image:commonscript:ScaleSetOption.png[alt="bar chart with Y-axis scaled from zero using Scale.ZERO option"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

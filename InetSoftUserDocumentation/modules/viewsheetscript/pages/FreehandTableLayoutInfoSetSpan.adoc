@@ -23,7 +23,7 @@ height::			Number of vertical cells to span
 
 .No spanning
 [example]
-image:commonscript:setSpan1.png[]
+image:commonscript:setSpan1.png[alt="freehand table with cells showing no column or row spanning applied"]
 
 .Span two columns
 [example]
@@ -31,7 +31,7 @@ image:commonscript:setSpan1.png[]
 [source,javascript]
 FreehandTable1.layoutInfo.setSpan(0,0,2,1);
 
-image:commonscript:setSpan2.png[]
+image:commonscript:setSpan2.png[alt="freehand table with top-left cell spanning two columns horizontally"]
 ====
 
 .Span two rows
@@ -40,7 +40,7 @@ image:commonscript:setSpan2.png[]
 [source,javascript]
 FreehandTable1.layoutInfo.setSpan(0,0,1,2);
 
-image:commonscript:setSpan3.png[]
+image:commonscript:setSpan3.png[alt="freehand table with top-left cell spanning two rows vertically"]
 ====
 
 

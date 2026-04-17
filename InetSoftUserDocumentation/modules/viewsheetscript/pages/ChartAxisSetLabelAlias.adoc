@@ -19,7 +19,7 @@ alias::			Replacement string
 Chart1.axis['Customer:City'].setLabelAlias('New Brunswick','New Bruns');
 Chart1.axis['Customer:City'].setLabelAlias('San Francisco','San Fran');
 
-image:commonscript:setLabelAlias.png[]
+image:commonscript:setLabelAlias.png[alt="chart axis labels with city names replaced by shorter aliases"]
 
 
 

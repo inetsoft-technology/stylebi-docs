@@ -15,13 +15,13 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonOneDriveQuery}. This opens the ‘One Drive  Query’ dialog box.
 
 +
-image:OneDrive1.png[]
+image:OneDrive1.png[alt="One Drive Query dialog box for configuring the data query"]
 +
 . Enter a path in the ‘Path’ field.  For example, if the REST endpoint is https://graph.microsoft.com/v1.0/me/drive/root:/MyFolder/MyFile.csv, ‘Path’ should specify everything following `/root:/` in the request, in this case `MyFolder/MyFile.csv`. Permitted file extensions are `txt`, `csv`, `xls`, `xlsx`.
 
 . *_Optional:_* Press   the btn:[Load File] button if you want to preview the data.
 +
-image:OneDrive2.png[]
+image:OneDrive2.png[alt="press Load File button to preview data from OneDrive"]
 +
 The options (‘Sheet’, ‘Encoding’, ‘Text Delimiter’, etc.) are the same as for uploading a file (see xref:dataworksheet:UploadData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[]):
 

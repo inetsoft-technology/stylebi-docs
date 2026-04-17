@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonChargebeeQuery}. This opens the ‘Chargebee  Query’ dialog box.
 
 +
-image:chargebee1.png[]
+image:chargebee1.png[alt="Chargebee Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

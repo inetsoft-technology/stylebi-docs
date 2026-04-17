@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonAirtableQuery}. This opens the ‘Airtable  Query’ dialog box.
 
 +
-image:airtable1.png[]
+image:airtable1.png[alt="Airtable Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

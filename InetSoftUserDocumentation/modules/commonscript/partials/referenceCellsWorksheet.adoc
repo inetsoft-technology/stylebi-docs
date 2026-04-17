@@ -96,7 +96,7 @@ PRODUCT_ID
 PRODUCT_NAME
 CATEGORY_ID
 +
-image:dataworksheet:ReferenceCellExampleMakeTable6.png[]
+image:dataworksheet:ReferenceCellExampleMakeTable6.png[alt="PRODUCTS data block with PRODUCT_ID, PRODUCT_NAME, CATEGORY_ID fields"]
 
 
 +
@@ -123,12 +123,12 @@ This formula says: “Look in the ‘CATEGORIES1’ data block, and return the v
 
 . Select the ‘Script’ button at the top-right of the Formula Editor.
 +
-image:dataworksheet:ReferenceCellExampleMakeTableNoSQL.png[]
+image:dataworksheet:ReferenceCellExampleMakeTableNoSQL.png[alt="formula editor with script button selected and cell reference formula entered"]
 
 
 . Press btn:[OK] to close the Formula Editor. The two data blocks are now connected by a graphical link to indicate that the ‘PRODUCTS1’ data block references the ‘CATEGORIES1’ data block.
 +
-image:dataworksheet:ReferenceCellExampleMakeTable7.png[]
+image:dataworksheet:ReferenceCellExampleMakeTable7.png[alt="PRODUCTS1 and CATEGORIES1 data blocks linked by graphical reference line"]
 
 
 . Preview the ‘PRODUCTS1’ data block. (Click the data block to select it. Then press the {buttonChangeView} in the bottom panel and select {buttonLiveDataView}.)
@@ -136,6 +136,6 @@ image:dataworksheet:ReferenceCellExampleMakeTable7.png[]
 +
 The expression column in the ‘PRODUCTS1’ data bock now displays the category name corresponding to each entry in the ‘CAT_ID’ column.
 +
-image:dataworksheet:ReferenceCellExampleMakeTable5.png[]
+image:dataworksheet:ReferenceCellExampleMakeTable5.png[alt="PRODUCTS1 data block preview showing category name expression column"]
 
 ======

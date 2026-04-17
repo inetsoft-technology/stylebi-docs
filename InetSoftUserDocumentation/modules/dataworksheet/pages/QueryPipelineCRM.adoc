@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonPipelineCRMQuery}. This opens the ‘Pipeline CRM  Query’ dialog box.
 
 +
-image:pipelinedeals1.png[]
+image:pipelinedeals1.png[alt="Pipeline CRM Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonMixpanelQuery}. This opens the ‘Mixpanel  Query’ dialog box.
 
 +
-image:mixpanel1.png[]
+image:mixpanel1.png[alt="Mixpanel Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

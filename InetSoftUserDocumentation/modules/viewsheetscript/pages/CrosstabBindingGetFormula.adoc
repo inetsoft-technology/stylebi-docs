@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Returns the aggregation formula for one of the measures specified by  xref:viewsheetscript:CrosstabBindingInfoMeasureFields.adoc[] or set as the aggregation method for a measure in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetFormula_1.png[]
+image:commonscript:bindingInfoSetFormula_1.png[alt="crosstab editor showing aggregation formula assigned to a measure"]
 
 
 == Parameters

@@ -37,7 +37,7 @@ graph = createCirclePackingGraph("_", "price", "state", ["state", "city", "produ
 <1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
 <2> Create the circle packing chart.
 +
-image:viewsheet:ciclePacking1.png[]
+image:viewsheet:ciclePacking1.png[alt="circle packing chart with state city and product hierarchy by price"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -42,7 +42,7 @@ lineColor:'red',lineStyle:Chart.THICK_LINE,labelFont:'Lucida Sans Unicode-BOLD-1
 Chart1.addStandardDeviationTarget('Sum(Product:Total)',[0xDDCCCC,0xDDAAAA,0xDDCCCC],[-1,1,-2,2],options)
 --
 
-image:commonscript:PlotAddTargetStDev1.png[]
+image:commonscript:PlotAddTargetStDev1.png[alt="chart with standard deviation target lines at plus and minus 1 and 2"]
 
 
 

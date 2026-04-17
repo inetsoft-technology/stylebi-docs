@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Sets the measure to use in ranking groups. This is equivalent to setting the ‘Of’ measure in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetTopNExp2.png[]
+image:commonscript:bindingInfoSetTopNExp2.png[alt="crosstab editor showing Of measure field for ranking groups"]
 
 
 This function should always be used in conjunction with xref:CrosstabBindingInfoSetTopN.adoc[] and  xref:CrosstabBindingInfoSetTopNReverse.adoc[].
@@ -50,7 +50,7 @@ Crosstab1.bindingInfo.setTopN('Name',StyleConstant.ROW_HEADER,3);
 Crosstab1.bindingInfo.setTopNSummaryCol('Name',StyleConstant.ROW_HEADER,'Sum(Total)');
 Crosstab1.bindingInfo.setTopNReverse('Name',StyleConstant.ROW_HEADER,false);
 
-image:commonscript:bindingInfoSetTopNExp1_1.png[]
+image:commonscript:bindingInfoSetTopNExp1_1.png[alt="crosstab showing top 3 names ranked by Sum of Total measure"]
 
 
 [TIP]

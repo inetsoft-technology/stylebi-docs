@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonGoogleCalendarQuery}. This opens the ‘Google Calendar  Query’ dialog box.
 
 +
-image:googleCalendar1.png[]
+image:googleCalendar1.png[alt="Google Calendar Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

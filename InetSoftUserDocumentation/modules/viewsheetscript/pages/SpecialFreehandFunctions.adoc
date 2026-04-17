@@ -79,7 +79,7 @@ var q = runQuery('ws:global:Examples/Sales Explore')
 
 
 +
-image:viewsheet:freehandExp22.png[]
+image:viewsheet:freehandExp22.png[alt="Dashboard Options Script tab with Sales Explore runQuery entered in onInit"]
 +
 This executes the ‘Sales Explore’ Data Worksheet in the onInit script. (See xref:RunQueryFromScript.adoc[] for more details.)
 
@@ -91,7 +91,7 @@ This executes the ‘Sales Explore’ Data Worksheet in the onInit script. (See 
 
 . Select the ‘Formula’ option and press the btn:[Edit] button.
 +
-image:viewsheet:freehandExp34.png[]
+image:viewsheet:freehandExp34.png[alt="freehand table editor with Formula selected for rowList expression cell"]
 
 . Enter the following formula in the Formula Editor:
 +
@@ -104,7 +104,7 @@ This extracts values from the ‘Date’ column of the ‘Sales Explore’ Data 
 
 . Select ‘Expand Cell’ and choose ‘Vertical’. (This causes the extracted data to fill down vertically.)
 +
-image:viewsheet:freehandExp31.png[]
+image:viewsheet:freehandExp31.png[alt="freehand table with Expand Cell Vertical set for rowList date column"]
 
 . Select cell[1,1] in the table (second row, second column). Select the ‘Formula’ option, and enter the following formula:
 +
@@ -113,11 +113,11 @@ field['Category']
 +
 This returns the value in the ‘Category’ column corresponding to the date in the first column.
 +
-image:viewsheet:freehandExp32.png[]
+image:viewsheet:freehandExp32.png[alt="freehand table editor with field category formula for second column"]
 
 . {finishEditing} The resulting table displays the date for all orders greater than $10,000, and the corresponding category.
 +
-image:viewsheet:freehandExp33.png[]
+image:viewsheet:freehandExp33.png[alt="freehand table showing dates and categories for orders greater than ten thousand"]
 ====
 
 [#mapList]

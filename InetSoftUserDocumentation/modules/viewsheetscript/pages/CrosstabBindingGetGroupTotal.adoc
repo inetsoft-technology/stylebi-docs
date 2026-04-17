@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Returns `true` if the subtotal for the specified group is being displayed, `false` otherwise. This property can be set by  xref:CrosstabBindingInfoSetGroupTotal.adoc[] or by the '`Summarize`' property in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetGroupTotal_1.png[]
+image:commonscript:bindingInfoSetGroupTotal_1.png[alt="crosstab editor showing Summarize subtotal option for a grouped field"]
 
 
 

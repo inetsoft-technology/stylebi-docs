@@ -11,12 +11,12 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies whether the upper limit of the selection is included in the result set. For example, if the upper limit of the Range Slider selection is 15, a setting of `upperInclusive=true` (default) includes the value 15 in the result set.
 
-image:viewsheet:Range Slider Inclusive.png[]
+image:viewsheet:Range Slider Inclusive.png[alt="range slider showing upper limit value 15 included in selection range"]
 
 
 A setting of `upperInclusive=false` in this case excludes the value 15 from the result set.
 
-image:viewsheet:Range Slider Exclusive.png[]
+image:viewsheet:Range Slider Exclusive.png[alt="range slider showing upper limit value 15 excluded from selection range"]
 
 The range display on the slider reflects the status of the `upperInclusive` property (e.g., `10..15` vs. `10\->15`).
 

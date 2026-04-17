@@ -20,7 +20,7 @@ Boolean
 [source,javascript]
 Chart1.axis['Company'].lineVisible = false;
 
-image:commonscript:dimensionLineVisible.png[]
+image:commonscript:dimensionLineVisible.png[alt="chart with axis line hidden by setting lineVisible to false"]
 
 
 

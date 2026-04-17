@@ -41,7 +41,7 @@ elem.setTextFrame(frame);  //<3>
 <2> Create the `StackTextFrame` object.
 <3> Use xref:GraphElementSetTextFrame.adoc[] to add the `TextFrame` to the element.
 
-image:commonscript:StackTextFrame1.png[]
+image:commonscript:StackTextFrame1.png[alt="stacked bar chart with total labels added via StackTextFrame"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

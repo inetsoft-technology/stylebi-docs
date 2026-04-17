@@ -22,7 +22,7 @@ Place the ‘Date’ field on the X-axis (with ‘Level’ = ‘Month’) and pl
 Chart1.fillTimeGap = true;
 Chart1.fillGapWithDash = true;
 
-image:commonscript:fillGapWithDash.png[]
+image:commonscript:fillGapWithDash.png[alt="line chart with missing data shown as dashed line segment"]
 
 
 

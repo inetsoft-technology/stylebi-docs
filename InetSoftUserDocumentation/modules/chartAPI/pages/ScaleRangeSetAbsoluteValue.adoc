@@ -40,7 +40,7 @@ graph.addElement(elem);
 <4> Use xref:LinearScaleSetScaleRange.adoc[] to assign the `LinearRange` to the scale.
 <5> Use xref:EGraphSetScale.adoc[] to add the scale to the Chart for the '`Quantity`' axis.
 
-image:commonscript:ScaleRangeSetAbsoluteValue.png[]
+image:commonscript:ScaleRangeSetAbsoluteValue.png[alt="bar chart showing negative value NY plotted on positive axis"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

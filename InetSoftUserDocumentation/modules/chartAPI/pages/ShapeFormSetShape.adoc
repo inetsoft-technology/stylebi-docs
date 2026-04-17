@@ -43,7 +43,7 @@ graph.addElement(elem);
 <3> Use `setShape()` to assign a xref:GShape.adoc[].
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:ShapeformSetShape1.png[]
+image:commonscript:ShapeformSetShape1.png[alt="bar chart with a red filled triangle GShape overlaid at NJ 100"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -74,7 +74,7 @@ graph.addElement(elem);
 <3> Use `setShape()` to assign an `ImageShape`.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:ShapeformSetShape2.png[]
+image:commonscript:ShapeformSetShape2.png[alt="bar chart with an ImageShape logo overlaid using ShapeForm at NJ 100"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

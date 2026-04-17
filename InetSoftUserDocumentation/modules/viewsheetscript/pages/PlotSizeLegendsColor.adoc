@@ -15,7 +15,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.sizeLegends['Sum(Product:Quantity Purchased)'].color = 'red';
 Chart1.sizeLegends['Sum(Product:Total)'].color = 'green';
 
-image:commonscript:sizeLegendsColor.png[]
+image:commonscript:sizeLegendsColor.png[alt="chart size legends with custom color applied to all legend text"]
 
 
 

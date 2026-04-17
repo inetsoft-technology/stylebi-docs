@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies whether a trailing row containing totals should be displayed. This is equivalent to setting ‘Row Total’ in the Crosstab Editor.
 
-image:commonscript:bindingInfoshowRowTotal.png[]
+image:commonscript:bindingInfoshowRowTotal.png[alt="crosstab editor with Row Total option enabled"]
 
 
 
@@ -30,7 +30,7 @@ Crosstab1.bindingInfo.setFormula('Total',StyleConstant.SUM_FORMULA);
 Crosstab1.bindingInfo.setFormula('Quantity Purchased',StyleConstant.SUM_FORMULA);
 Crosstab1.bindingInfo.showRowTotal = true;
 
-image:commonscript:bindingInfoshowRowTotal2.png[]
+image:commonscript:bindingInfoshowRowTotal2.png[alt="crosstab with trailing row displaying grand totals for all measures"]
 
 
 [TIP]

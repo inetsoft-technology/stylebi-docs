@@ -14,11 +14,11 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 
 . Press the {buttonObject}, and select {buttonGoogleAnalyticsGA4Query}. This opens the ‘Google Analytics GA4 Query’ dialog box.
 +
-image:dataSourceGoogleAnalyticsGA45.png[]
+image:dataSourceGoogleAnalyticsGA45.png[alt="Google Analytics GA4 Query dialog box for configuring the data query"]
 
 . Enter the desired query parameters into the provided fields. For more information about query parameters, see the https://developers.google.com/analytics/devguides/reporting/core/dimsmets[Dimensions and Metrics Explorer] for the version 4.0 API.
 +
-image:dataSourceGoogleAnalyticsGA47.png[]
+image:dataSourceGoogleAnalyticsGA47.png[alt="query parameters entered into the provided fields"]
 +
 include::dataworksheet:partial$finalStepsQuery.adoc[]
 

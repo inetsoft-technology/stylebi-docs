@@ -40,7 +40,7 @@ graph.addElement(elem);
 <2> Create the `RightTiltTextureFrame` object.
 <3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:RightTiltTextureFrame2.png[]
+image:commonscript:RightTiltTextureFrame2.png[alt="bar chart with RightTiltTextureFrame applied positively sloping lines by Total"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -69,7 +69,7 @@ Chart1.bindingInfo.textureFrame = new RightTiltTextureFrame;
 --
 
 +
-image:commonscript:RightTiltTextureFrame.png[]
+image:commonscript:RightTiltTextureFrame.png[alt="bar chart with RightTiltTextureFrame applied via bindingInfo textureFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

@@ -39,7 +39,7 @@ graph.addElement(new IntervalElement("State", "Quantity"));
 <3> Use `setBottomRightTuple()` to set the bottom-right corner.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:RectFormSetBottomRightTuple.png[]
+image:commonscript:RectFormSetBottomRightTuple.png[alt="bar chart with red rectangle positioned using logical axis coordinates"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Sets the grouping level for a date-type field. This is equivalent to setting the ‘Level’ for a date-type field in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetGroupOrder.png[]
+image:commonscript:bindingInfoSetGroupOrder.png[alt="crosstab editor showing Level date grouping option for a row header"]
 
 
 
@@ -34,7 +34,7 @@ Crosstab1.bindingInfo.measureFields = ['Total'];
 Crosstab1.bindingInfo.setFormula('Total', StyleConstant.SUM_FORMULA);
 Crosstab1.bindingInfo.setGroupOrder('Date',StyleConstant.ROW_HEADER,StyleConstant.QUARTER_OF_YEAR_DATE_GROUP);
 
-image:commonscript:bindingInfoSetGroupOrderExp.png[]
+image:commonscript:bindingInfoSetGroupOrderExp.png[alt="crosstab with Date grouped by quarter of year in row headers"]
 
 [TIP]
 ====

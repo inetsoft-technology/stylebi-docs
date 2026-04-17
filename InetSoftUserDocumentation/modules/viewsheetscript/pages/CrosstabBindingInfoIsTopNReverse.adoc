@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Returns the value  set by xref:CrosstabBindingInfoSetTopNReverse.adoc[] or by the '`Rank`' property in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetTopNExp3_1.png[]
+image:commonscript:bindingInfoSetTopNExp3_1.png[alt="crosstab editor showing Rank property controlling top or bottom group display"]
 
 
 

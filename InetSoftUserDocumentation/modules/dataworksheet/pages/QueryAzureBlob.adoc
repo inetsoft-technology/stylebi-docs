@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonAzureBlobQuery}. This opens the ‘Azure Blob  Query’ dialog box.
 
 +
-image:azureblob1.png[]
+image:azureblob1.png[alt="Azure Blob Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

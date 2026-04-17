@@ -14,11 +14,11 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 
 . Press the {buttonObject}, and select {buttonElasticsearchRESTQuery}.
 +
-image:elasticsearchRESTQuery1.png[]
+image:elasticsearchRESTQuery1.png[alt="select Elasticsearch REST Query button from the toolbar"]
 +
 This opens the ‘Elasticsearch REST  Query’ dialog box.
 +
-image:dataSourceElasticQuery1.png[]
+image:dataSourceElasticQuery1.png[alt="Elasticsearch REST Query dialog box for configuring the data query"]
 
 . Enter the ‘URL Suffix’ and a desired ‘JSON Path’.  See https://goessner.net/articles/JsonPath/[JSONPath - XPath for JSON] for information about the JSON Path syntax.
 +

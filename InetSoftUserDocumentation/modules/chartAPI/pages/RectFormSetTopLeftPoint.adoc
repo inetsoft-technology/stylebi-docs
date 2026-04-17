@@ -50,7 +50,7 @@ graph.addElement(elem);
 <4> Use `setTopLeftPoint()` to set `rect2` points proportionally.
 <5> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:RectFormSetBottomRightPoint_1.png[]
+image:commonscript:RectFormSetBottomRightPoint_1.png[alt="bar chart with two rectangles set using pixel and proportional top-left points"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

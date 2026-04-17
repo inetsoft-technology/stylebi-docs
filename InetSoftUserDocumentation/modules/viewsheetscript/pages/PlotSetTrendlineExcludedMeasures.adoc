@@ -22,7 +22,7 @@ array::			An array of measure names for which to hide the trend line
 Chart1.setTrendLineExcludedMeasures(['Sum(Product:Total)','Count(Order:Num)'])
 
 
-image:commonscript:setTrendLineExcludedMeasures.png[]
+image:commonscript:setTrendLineExcludedMeasures.png[alt="chart with trendlines excluded from specified measures"]
 
 [TIP]
 ====

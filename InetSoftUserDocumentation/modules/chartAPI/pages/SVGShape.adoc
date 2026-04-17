@@ -59,7 +59,7 @@ graph.addElement(elem);
 <2> Pass the `SVGShape` to   the xref:StaticShapeFrame.adoc[] constructor.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:StaticShapeFrameSVG_1.png[]
+image:commonscript:StaticShapeFrameSVG_1.png[alt="point chart using SVGShape.FACE_HAPPY constant as element shape"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -105,7 +105,7 @@ graph.addElement(elem);
 <3> Pass the `svg` shape to the xref:StaticShapeFrame.adoc[] contructor.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:StaticShapeFrameSVG_3.png[]
+image:commonscript:StaticShapeFrameSVG_3.png[alt="point chart using SVGShape loaded from remote URL as element shape"]
 
 
 

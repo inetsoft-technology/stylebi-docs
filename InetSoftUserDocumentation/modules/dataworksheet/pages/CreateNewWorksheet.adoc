@@ -13,15 +13,15 @@ include::ROOT:partial$createVisualizationStep2Worksheet.adoc[]
 Press the {buttonCreate}  at the top of the User Portal, and select {buttonWorksheet}.
 
 
-image::newWorksheet2.png[]
+image::newWorksheet2.png[alt="press Create button at top of User Portal and select Worksheet"]
 
 Alternatively, press the top {buttonDataTab}  in the Portal.
 
-image::user:uploadDriver1.png[]
+image::user:uploadDriver1.png[alt="press the Data tab at the top of the Portal"]
 
 Then select ‘Data Worksheet’ in the left panel and press the {buttonNewWorksheet} in the toolbar.
 
-image::user:PortalCreateWorksheet2.png[]
+image::user:PortalCreateWorksheet2.png[alt="select Data Worksheet in left panel and press New Worksheet button"]
 
 This displays the ‘New Data Worksheet’ dialog box.  See xref:#NewDataWorksheetDialogBox[] below.
 
@@ -29,7 +29,7 @@ This displays the ‘New Data Worksheet’ dialog box.  See xref:#NewDataWorkshe
 == Create a Data Worksheet from Visual Composer
 If you are already in Visual Composer, you can create a new Dashboard by pressing the {buttonCreate} and selecting {buttonNewWorksheet}.  Then follow the directions for the '`Mashup`' option in xref:#NewDataWorksheetDialogBox[].
 
-image:user:CreateNewAsset.png[]
+image:user:CreateNewAsset.png[alt="press Create button in Visual Composer and select New Worksheet"]
 
 == Create a New Folder
 To create a new asset folder in Visual Composer, see xref:viewsheet:CreateNewDashboard.adoc#CreateNewAssetFolder[Create a New Folder].

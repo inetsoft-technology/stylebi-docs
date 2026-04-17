@@ -8,7 +8,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Returns the sorting order for a row or column header (as a xref:commonscript:StyleConstant.adoc[] integer) specified by  xref:CrosstabBindingInfoSetColumnOrder.adoc[] or set by the ‘Sort’ option in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetColumnOrder_1.png[]
+image:commonscript:bindingInfoSetColumnOrder_1.png[alt="crosstab editor showing column sort order setting for a row header"]
 
 
 

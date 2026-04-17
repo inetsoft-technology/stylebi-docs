@@ -51,7 +51,7 @@ elem.setSizeFrame(frame); //<3>
 <2> Create the `StaticSizeFrame` object.
 <3> Use xref:GraphElementSetSizeFrame.adoc[] to add the `StaticSizeFrame` to the xref:PointElement.adoc[].
 +
-image:commonscript:StaticSizeFrameElement.png[]
+image:commonscript:StaticSizeFrameElement.png[alt="point chart with StaticSizeFrame setting all points to 30 pixels"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -84,7 +84,7 @@ Chart1.bindingInfo.sizeFrame.max = 100;
 --
 
 +
-image:commonscript:StaticSizeFrame_1.png[]
+image:commonscript:StaticSizeFrame_1.png[alt="bar chart with LinearSizeFrame applied via bindingInfo sizeFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

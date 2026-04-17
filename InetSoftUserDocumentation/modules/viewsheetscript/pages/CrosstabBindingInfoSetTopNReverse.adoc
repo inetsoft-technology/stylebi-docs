@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies whether groups are selected from the top or bottom of the ranking according to the given measure. When `true`, this is equivalent to selecting ‘Bottom’ in the ‘Ranking’ menu in the Crosstab Editor. When `false`, this is equivalent to selecting ‘Top’ in the ‘Ranking’ menu in the Crosstab Editor.
 
-image:commonscript:bindingInfoSetTopNExp3.png[]
+image:commonscript:bindingInfoSetTopNExp3.png[alt="crosstab editor showing Top or Bottom Ranking menu option"]
 
 
 This function should always be used in conjunction with  xref:CrosstabBindingInfoSetTopN.adoc[] and xref:CrosstabBindingInfoSetTopNSummaryCol.adoc[].
@@ -35,7 +35,7 @@ Crosstab1.bindingInfo.setTopN('Name',StyleConstant.ROW_HEADER,3);
 Crosstab1.bindingInfo.setTopNSummaryCol('Name',StyleConstant.ROW_HEADER,'Sum(Total)');
 Crosstab1.bindingInfo.setTopNReverse('Name',StyleConstant.ROW_HEADER,false);
 
-image:commonscript:bindingInfoSetTopNExp1_2.png[]
+image:commonscript:bindingInfoSetTopNExp1_2.png[alt="crosstab showing top 3 names filtered by Sum of Total with column totals"]
 
 
 [TIP]

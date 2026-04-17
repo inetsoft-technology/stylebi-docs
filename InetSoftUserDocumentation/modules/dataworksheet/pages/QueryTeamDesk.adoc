@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonTeamDeskQuery}. This opens the ‘TeamDesk  Query’ dialog box.
 
 +
-image:teamdesk1.png[]
+image:teamdesk1.png[alt="TeamDesk Query dialog box for configuring the data query"]
 +
 IMPORTANT:  The ‘Row ID’ parameter is usually required except when using a public attachment column.
 

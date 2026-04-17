@@ -123,7 +123,7 @@ Before beginning the example, compile the `DataChangeClient` class as described 
 
 . Create a new Data Worksheet, and add the following Embedded Table. (See xref:dataworksheet:EnterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for instructions on how to create an Embedded Table.)
 +
-image:administration:ServerUpdateEmbeddedTable.png[]
+image:administration:ServerUpdateEmbeddedTable.png[alt="embedded table added to the EmbeddedData data worksheet"]
 
 . Right-click the ‘col1’ header, and select ‘Column Type’ from the context menu. This opens the ‘Column Type’ dialog box.
 
@@ -135,13 +135,13 @@ image:administration:ServerUpdateEmbeddedTable.png[]
 
 . Add a Chart to the Dashboard to display the data from the Data Worksheet as follows. (See xref:viewsheet:BasicChartingSteps.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].)
 +
-image:administration:ServerUpdateCreateChart.png[]
+image:administration:ServerUpdateCreateChart.png[alt="chart added to dashboard displaying data from the EmbeddedData worksheet"]
 
 . Press the {buttonOptions} in the Dashboard toolbar. This opens the ‘Dashboard Options’ dialog box.
 
 . In the ‘Deployment’ panel at the bottom, enable the ‘Server-Side Update’ option, and set the ‘Refresh Interval’ to 10 seconds.
 +
-image:administration:ServerUpdateOptions.png[]
+image:administration:ServerUpdateOptions.png[alt="dashboard options with server-side update enabled and refresh interval set"]
 
 . Press btn:[OK] to close the dialog box.
 
@@ -149,13 +149,13 @@ image:administration:ServerUpdateOptions.png[]
 
 . Launch the User Portal, and open ‘UserDashboard’ in the Portal.
 +
-image:administration:ServerUpdatePortal.png[]
+image:administration:ServerUpdatePortal.png[alt="UserDashboard open in the user portal showing chart data"]
 
 . Return to the ‘EmbeddedData’ Data Worksheet in Visual Composer.
 
 . Make some changes to the data in the Embedded Table, and press the {buttonSave}.
 +
-image:administration:ServerUpdateEmbeddedTable2.png[]
+image:administration:ServerUpdateEmbeddedTable2.png[alt="embedded table with modified data values before saving"]
 
 . Return to the User Portal. (Do not reload the Dashboard.) Note that the Dashboard remains the same, even though the underlying data has changed.
 
@@ -165,5 +165,5 @@ image:administration:ServerUpdateEmbeddedTable2.png[]
 
 . Return to the User Portal. (Do not reload the Dashboard.) Observe that the Dashboard updates automatically after the specified delay.
 +
-image:administration:ServerUpdatePortal2.png[]
+image:administration:ServerUpdatePortal2.png[alt="dashboard automatically updated in portal after DataChangeClient triggered"]
 

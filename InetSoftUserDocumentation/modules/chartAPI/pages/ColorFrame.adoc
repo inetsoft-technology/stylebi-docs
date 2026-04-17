@@ -50,7 +50,7 @@ elem.setColorFrame(frame); //<3>
 <2> Create the xref:ColorFrame.adoc[] object.
 <3> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
 
-image:commonscript:graphStaticColorFrame.png[]
+image:commonscript:graphStaticColorFrame.png[alt="bar chart with StaticColorFrame applying a fixed magenta color"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -74,7 +74,7 @@ Chart1.bindingInfo.colorFrame.color = 0xFF00FF;
 --
 
 
-image:commonscript:BrightnessColorFrame.png[]
+image:commonscript:BrightnessColorFrame.png[alt="bar chart with BrightnessColorFrame applied via bindingInfo colorFrame property"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]
 

@@ -19,7 +19,7 @@ Boolean
 Chart1.fillTimeGap = true;
 Chart1.fillZero = false;
 
-image:commonscript:fillTimeGapNull_1.png[]
+image:commonscript:fillTimeGapNull_1.png[alt="line chart with null gap shown for missing time series data"]
 
 
 [source,javascript]
@@ -27,7 +27,7 @@ image:commonscript:fillTimeGapNull_1.png[]
 Chart1.fillTimeGap = true;
 Chart1.fillZero = true;
 
-image:commonscript:fillTimeGapZero_1.png[]
+image:commonscript:fillTimeGapZero_1.png[alt="line chart with zero value substituted for missing time series data"]
 
 
 [TIP]

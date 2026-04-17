@@ -30,7 +30,7 @@ graph.addElement(elem);
 <4> Use the `Scale` to create a new xref:Coordinate.adoc[].
 <5> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:ScaleFields.png[]
+image:commonscript:ScaleFields.png[alt="bar chart with LogScale applied to Quantity field via setFields"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

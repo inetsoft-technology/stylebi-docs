@@ -28,7 +28,7 @@ Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
 --
 
 
-image:commonscript:CategoricalColorFrame.png[]
+image:commonscript:CategoricalColorFrame.png[alt="chart with Employee dimension color-coded using CategoricalColorFrame"]
 
 .Measure (numerical) field
 [source,javascript]
@@ -39,7 +39,7 @@ Chart1.bindingInfo.colorFrame = new BrightnessColorFrame;
 --
 
 
-image:commonscript:BrightnessColorFrame1.png[]
+image:commonscript:BrightnessColorFrame1.png[alt="chart with Total measure color-coded using BrightnessColorFrame"]
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

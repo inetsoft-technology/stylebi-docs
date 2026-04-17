@@ -43,7 +43,7 @@ graph.addElement(elem);
 <4> Use `setMax` to fix the maximum at 100 pixels.
 <5> Use xref:GraphElementSetSizeFrame.adoc[] to add the `LinearSizeFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:SizeFrameSetLargest_1.png[]
+image:commonscript:SizeFrameSetLargest_1.png[alt="bar chart with LinearSizeFrame max set to 100 pixels for bar width scaling"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -91,7 +91,7 @@ Chart1.bindingInfo.sizeFrame.max = 100;
 --
 
 +
-image:commonscript:SizeFrameMax.png[]
+image:commonscript:SizeFrameMax.png[alt="point chart with LinearSizeFrame max setting applied via bindingInfo sizeFrame"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

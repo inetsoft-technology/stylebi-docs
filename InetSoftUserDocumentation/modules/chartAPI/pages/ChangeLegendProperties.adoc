@@ -23,7 +23,7 @@ graph.addElement(elem);
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
-image:commonscript:LegendSpecExample.png[]
+image:commonscript:LegendSpecExample.png[alt="bar chart with CategoricalColorFrame distinguishing states by color"]
 
 This creates a basic bar chart displaying the dimensions ‘State’ and ‘Quantity’. In this script, a xref:chartAPI:CategoricalColorFrame.adoc[] distinguishes the different states by color. Follow the steps below to experiment with modifying the chart’s legend:
 
@@ -56,7 +56,7 @@ legend.setTextFrame(tframe);
 [source,javascript]
 graph.setLegendLayout(Chart.TOP);
 +
-image:commonscript:LegendSpecExampleFinal.png[]
+image:commonscript:LegendSpecExampleFinal.png[alt="bar chart with modified legend title font border and layout above chart"]
 
 .Complete Script
 ****

@@ -10,7 +10,7 @@ xref:viewsheetscript:CrosstabQuery.adoc[] to specify the data block from which t
 
 Specifies the data block fields to be used as crosstab column headers. This is equivalent to adding fields into the ‘Columns’ region of the Crosstab Editor.
 
-image:commonscript:bindingInfoColHeaders.png[]
+image:commonscript:bindingInfoColHeaders.png[alt="crosstab editor Columns region with column header fields assigned"]
 
 == Type
 Array
@@ -23,7 +23,7 @@ Crosstab1.bindingInfo.rowFields = ['Category','Name'];
 Crosstab1.bindingInfo.colFields = ['Region','State'];
 Crosstab1.bindingInfo.measureFields = ['Total','Quantity Purchased'];
 
-image:commonscript:bindingInfoCrosstabExp1_2.png[]
+image:commonscript:bindingInfoCrosstabExp1_2.png[alt="crosstab with category and name as rows region and state as columns"]
 
 [TIP]
 ====

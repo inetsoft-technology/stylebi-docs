@@ -56,7 +56,7 @@ graph.setCoordinate(coord); //<7>
 <6> Add third measure (‘Returns’),  represented on the left axis. #Note#: The third measure must be added using  xref:GraphElementAddVar.adoc[] rather than xref:GraphElementAddDim.adoc[].
 <7> Use xref:EGraphSetCoordinate.adoc[] to add the `RectCoord` to the Chart.
 
-image:commonscript:Tricoord.png[]
+image:commonscript:Tricoord.png[alt="triangular coordinate chart with three measures Quantity Total and Returns"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

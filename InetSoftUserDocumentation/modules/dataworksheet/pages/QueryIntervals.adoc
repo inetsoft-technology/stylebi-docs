@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonIntervalsQuery}. This opens the ‘Intervals  Query’ dialog box.
 
 +
-image:intervals1.png[]
+image:intervals1.png[alt="Intervals Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

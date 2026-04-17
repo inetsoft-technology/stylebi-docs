@@ -15,7 +15,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.quadrantColor = [255,0,0];
 Chart1.quadrantStyle = Chart.DOT_LINE;
 
-image:commonscript:quadrantColor.png[]
+image:commonscript:quadrantColor.png[alt="scatter chart with quadrant dividing lines in custom color"]
 
 
 

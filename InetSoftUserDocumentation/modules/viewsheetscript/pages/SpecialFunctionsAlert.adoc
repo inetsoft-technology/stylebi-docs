@@ -32,7 +32,7 @@ NOTE: The term “toast”  refers to the standard auto-expiring notification us
 var arr = ['Sue','Robert','Eric'];
 alert(arr.join(","),'TRACE')
 
-image:administration:alertFunction_1.png[]
+image:administration:alertFunction_1.png[alt="dashboard showing dark-color toast notification with alert message displayed"]
 
 
 

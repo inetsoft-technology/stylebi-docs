@@ -44,7 +44,7 @@ graph.addElement(elem);
 <3> Use `setNegativeColor` to specify the negative  color for the `StaticColorFrame`.
 <4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
 
-image:commonscript:StaticColorFrameNegative2.png[]
+image:commonscript:StaticColorFrameNegative2.png[alt="bar chart with positive bars green and negative bar NY red"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -97,7 +97,7 @@ Chart1.bindingInfo.colorFrame.negativeColor = 0xFF0000;
 --
 
 +
-image:commonscript:StaticColorFrameNegative3.png[]
+image:commonscript:StaticColorFrameNegative3.png[alt="bar chart with negative change values red and positive change values green"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

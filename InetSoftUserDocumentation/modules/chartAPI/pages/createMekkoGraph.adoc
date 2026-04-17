@@ -34,7 +34,7 @@ graph = createMekkoGraph("state", "city", "price", "state"); //<2>
 <1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
 <2> Create the Mekko chart.
 +
-image:viewsheet:mekko1.png[]
+image:viewsheet:mekko1.png[alt="marimekko chart with state on X-axis city breakout colored by state"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

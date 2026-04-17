@@ -15,11 +15,11 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonCassandraQuery}. This opens the ‘Cassandra  Query’ dialog box.
 
 +
-image:cassandraQuery1.png[]
+image:cassandraQuery1.png[alt="Cassandra Query dialog box for configuring the data query"]
 
 . In the ‘SQL’ field, type or paste the Cassandra SQL string that you want to execute.
 +
-image:cassandraQuery2.png[]
+image:cassandraQuery2.png[alt="SQL field with Cassandra SQL string entered for execution"]
 
 . *_Optional:_* {datasourceSelectTabular}
 

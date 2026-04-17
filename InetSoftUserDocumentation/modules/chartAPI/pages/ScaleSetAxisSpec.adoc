@@ -33,7 +33,7 @@ graph.addElement(elem);
 <4> Use `setAxisSpec` to assign the  `AxisSpec` to the `Scale`.
 <5> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
-image:commonscript:ScaleSetAxisSpec.png[]
+image:commonscript:ScaleSetAxisSpec.png[alt="bar chart with Quantity axis line colored red via AxisSpec"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

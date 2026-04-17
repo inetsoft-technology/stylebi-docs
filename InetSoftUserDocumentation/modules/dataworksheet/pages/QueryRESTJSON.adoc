@@ -14,11 +14,11 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 
 . Press the {buttonObject}, and select {buttonRESTJSONQuery}. This opens the ‘REST JSON  Query’ dialog box.
 +
-image:dataSourceREST5.png[]
+image:dataSourceREST5.png[alt="REST JSON Query dialog box for configuring the data query"]
 
 . Enter the ‘URL Suffix’ and  desired ‘JSON Path’.  See https://goessner.net/articles/JsonPath/[JSONPath - XPath for JSON] for information about the JSON Path syntax.
 +
-image:dataSourceREST6.png[]
+image:dataSourceREST6.png[alt="URL Suffix and JSON Path fields entered for the REST query"]
 +
 ****
 Example: JSON Path:: Consider the data at https://jsonplaceholder.typicode.com/users.  The JSONPath string
@@ -67,7 +67,7 @@ include::partial$paginationREST.adoc[]
 ====
 The Lookup Query below queries the URL provided by the `properties.forecast` field of the base query.
 
-image:JSON_LookupQuery.png[]
+image:JSON_LookupQuery.png[alt="Lookup Query configured to query URL from the base query field"]
 ====
 
 . *_Optional:_* {datasourceSelectTabular}

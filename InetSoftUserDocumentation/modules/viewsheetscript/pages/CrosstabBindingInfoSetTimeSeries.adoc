@@ -20,7 +20,7 @@ Boolean:: `true`: gaps are preserved for date data +
 [source,javascript]
 Crosstab1.bindingInfo.setTimeSeries("Order:Date", true);
 
-image:commonscript:setTimeSeries_2.png[]
+image:commonscript:setTimeSeries_2.png[alt="crosstab with date gaps preserved as empty months in time series"]
 
 
 [TIP]

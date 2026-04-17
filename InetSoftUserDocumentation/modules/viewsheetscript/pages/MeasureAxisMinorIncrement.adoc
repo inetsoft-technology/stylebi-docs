@@ -17,7 +17,7 @@ number
 Chart1.axis['Sum(Total)'].increment = 500000;
 Chart1.axis['Sum(Total)'].minorIncrement = 100000;
 
-image:commonscript:measureMinorIncrement.png[]
+image:commonscript:measureMinorIncrement.png[alt="chart axis with minor tick marks at 100000 intervals"]
 
 
 

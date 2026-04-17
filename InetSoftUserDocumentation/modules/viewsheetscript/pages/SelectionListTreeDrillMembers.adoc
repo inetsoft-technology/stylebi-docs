@@ -24,7 +24,7 @@ NOTE:  drillMembers  does not apply to Selection Lists.
 
 For example, consider a three-level Selection Tree hierarchy: menu:Region[State>City].
 
-image:viewsheet:Selection Tree 3 Level_1.png[]
+image:viewsheet:Selection Tree 3 Level_1.png[alt="three-level selection tree showing Region State City hierarchy for drillMembers example"]
 
 If the user makes a selection at the level of region, `drillMembers` returns the array `['Region','State']`. If the user makes a selection at the level of state or city, `drillMembers` returns the array `['Region','State','City']`. This array is useful for displaying multiple geographical levels on a map, as shown in the example below.
 
@@ -59,7 +59,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 .. Resize the Selection Tree so that it can display a reasonable number of options.
 +
-image:commonscript:DrillMembersExample1.png[]
+image:commonscript:DrillMembersExample1.png[alt="selection tree with State and City fields added as two-level hierarchy"]
 
 . Press the {buttonEdit} on the Chart to open the Visualization Recommender.  Press the {buttonFullEditor} at the top right of the Recommender to bypass the Recommender and open the Chart Editor.
 
@@ -70,7 +70,7 @@ image:commonscript:DrillMembersExample1.png[]
 . In the *Data Source* panel, right click on the ‘City’ field, and select ‘Set Geographic’.
 
 +
-image:commonscript:DrillMembersExample3.png[]
+image:commonscript:DrillMembersExample3.png[alt="chart data source panel with State and City fields set as geographic"]
 +
 NOTE: A red question mark indicates that not all cities in the ‘City’ field of this example have mappings.
 
@@ -81,32 +81,32 @@ NOTE: A red question mark indicates that not all cities in the ‘City’ field 
 . Configure the Chart to adapt the geographical level based on the user’s selection in the Selection Tree. To do this, follow the steps below:
 .. Press the {buttonValueType} button next to the ‘State’ dimension in the *Data* panel. In the pop-up menu, select the ‘Expression’ option.
 +
-image:commonscript:DrillMembersExample5.png[]
+image:commonscript:DrillMembersExample5.png[alt="chart data panel with value type button showing Expression option selected"]
 
 .. Press the {buttonEditFormula} to open the Script Editor.
 +
-image:commonscript:DrillMembersExample6.png[]
+image:commonscript:DrillMembersExample6.png[alt="script editor opened for editing the geographic dimension formula"]
 
 .. In the top-left panel of the Script Editor, expand the `SelectionTree1` node, and click `drillMembers` (*not* `drillMember`). This adds the `SelectionTree1.drillMembers` property in the editing area.
 +
-image:commonscript:DrillMembersExample7.png[]
+image:commonscript:DrillMembersExample7.png[alt="script editor with SelectionTree1.drillMembers inserted as geographic binding expression"]
 +
 If the user makes no selection in the Selection Tree, the `drillMembers` property returns the array `['State']`, which displays the ‘Total’ measure on a state-basis. If the user selects one or more states or cities in the Selection Tree, `drillMembers` returns the array `['State','City']`, which displays the ‘Total’ measure on a city-basis.
 
 
 .. Press btn:[OK] to close the Script Editor. The output of `SelectionTree1.drillMembers` is now assigned to the Chart Geographical binding.
 +
-image:commonscript:DrillMembersExample8.png[]
+image:commonscript:DrillMembersExample8.png[alt="chart data panel showing drillMembers expression assigned to geographic binding"]
 
 . Verify that the map adapts to the user’s selections:
 
 .. Press the {buttonClearSelection} in the Selection Tree to remove any existing selections. Observe that the map represents the measure on a state level, the top level of the Selection Tree hierarchy.
 +
-image:commonscript:DrillMembersExample10.png[]
+image:commonscript:DrillMembersExample10.png[alt="map chart showing total measure at state level with no selection tree selection"]
 
 .. Select the ‘CA’ option in the Selection Tree. Observe that the Selection Tree filters the map to display only data from California. In addition, the  `drillMembers` property changes the geographical binding to represent the ‘City’ dimension, and the measure is now displayed at the city-level.
 +
-image:commonscript:DrillMembersExample9.png[]
+image:commonscript:DrillMembersExample9.png[alt="map chart filtered to California showing total measure at city level"]
 
 To automatically zoom a map to display only the regions that the user selects, see the example for Coordinate.setFullMap(boolean).
 // XXXXXXXXXXXXXX

@@ -28,7 +28,7 @@ graph.setScale("Quantity", qscale); //<4>
 <3> Use `setDataFields` to initialize the  `Scale` with the '`Total`' field.
 <4> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
-image:commonscript:ScaleSetDataFields.png[]
+image:commonscript:ScaleSetDataFields.png[alt="bar chart with LogScale range initialized from Total field data"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

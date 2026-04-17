@@ -34,7 +34,7 @@ graph.addElement(elem);
 <3> Use `setLabel()` to assign the  label to the `TitleSpec`.
 <4> Use xref:EGraphSetXTitleSpec.adoc[] to assign the `TitleSpec` to the Chart.
 
-image:commonscript:EGraphaddsetXTitleSpec_1.png[]
+image:commonscript:EGraphaddsetXTitleSpec_1.png[alt="bar chart with X Title label added via TitleSpec setLabel"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

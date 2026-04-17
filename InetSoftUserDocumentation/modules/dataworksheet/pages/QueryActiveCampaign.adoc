@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonActiveCampaignQuery}. This opens the ‘ActiveCampaign Query’ dialog box.
 
 +
-image:activecampaign1.png[]
+image:activecampaign1.png[alt="ActiveCampaign Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

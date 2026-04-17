@@ -13,7 +13,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.diagonalColor = [255,0,0];
 Chart1.diagonalStyle = Chart.DOT_LINE;
 
-image:commonscript:diagonalColor.png[]
+image:commonscript:diagonalColor.png[alt="scatter chart with diagonal reference line displayed in custom color"]
 
 
 

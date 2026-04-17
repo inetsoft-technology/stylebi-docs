@@ -34,7 +34,7 @@ graph.addElement(elem);
 <3> Create the xref:StackRange.adoc[] object and assign to the `Scale`.
 <4> Use xref:EGraphSetScale.adoc[] to add the `Scale` to the Chart.
 
-image:commonscript:LinearScaleSetRange_1.png[]
+image:commonscript:LinearScaleSetRange_1.png[alt="bar chart with Y-axis range set by stacking NJ and NY values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

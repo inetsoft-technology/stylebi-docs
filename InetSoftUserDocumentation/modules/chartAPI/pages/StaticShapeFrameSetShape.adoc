@@ -34,7 +34,7 @@ graph.addElement(elem);
 <3> Use `setShape` to assign a cross-shape to the xref:PointElement.adoc[].
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `StaticShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:StaticShapeFrame2setShape.png[]
+image:commonscript:StaticShapeFrame2setShape.png[alt="point chart with cross shape applied to all elements via setShape"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -79,7 +79,7 @@ Chart1.bindingInfo.shapeFrame.setShape(GShape.ARROWBAR);
 --
 
 +
-image:commonscript:StaticShapeFrame_1.png[]
+image:commonscript:StaticShapeFrame_1.png[alt="point chart with arrowbar shape set via bindingInfo shapeFrame setShape"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

@@ -18,14 +18,14 @@ For the Date, Decimal, and Message formats, use the xref:CommonFormatSpec.adoc[]
 [source,javascript]
 Chart1.sizeLegend.format = [Chart.DECIMAL_FORMAT,"$#,##0.00"];
 
-image:commonscript:sizeLegendFormatNumber.png[]
+image:commonscript:sizeLegendFormatNumber.png[alt="chart size legend with numeric format applied to legend values"]
 
 
 .Text Format
 [source,javascript]
 Chart1.sizeLegend.format = [Chart.MESSAGE_FORMAT,"{0} Inc."];
 
-image:commonscript:sizeLegendFormatText.png[]
+image:commonscript:sizeLegendFormatText.png[alt="chart size legend with text format applied to legend labels"]
 
 
 [TIP]

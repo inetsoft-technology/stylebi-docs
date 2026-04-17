@@ -8,7 +8,7 @@ To view the SQL statements that a data block will attempt to execute (the query 
 . Click on the data block to select it.
 . Right-click the data block, and select ‘Show Plan’ from the context menu.  {rightClickOptions}
 +
-image:showPlanMenu.png[]
+image:showPlanMenu.png[alt="right-click data block and select Show Plan from context menu"]
 +
 This opens the ‘Query Plan’ panel. The ‘Query Plan’ dialog box displays the queries that will be sent to the database at runtime. Additionally, it shows the data operations that the Data Worksheet will perform in post-processing, after the data is retrieved from the database. The plan also shows the source information for parameterized conditions.
 
@@ -26,13 +26,13 @@ include::ROOT:partial$importAllExamples.adoc[]
 . Drag the *CATEGORIES* table to an empty location in the right panel.
 . Join the two data blocks using an inner join on the  `CATEGORY_ID` field in each data block. See xref:dataworksheet:JoinData.adoc[] more details.
 +
-image:dataworksheet:queryPlanJoin.png[]
+image:dataworksheet:queryPlanJoin.png[alt="inner join created between PRODUCTS and CATEGORIES tables on CATEGORY ID field"]
 +
 This creates a new table called ‘Query1’.
 +
 . Right-click the ‘Query1’ data block, and select ‘Show Plan’. {rightClickOptions}  This displays the ‘Query Plan’ dialog box.
 +
-image:dataworksheet:queryPlanSingleSQL.png[]
+image:dataworksheet:queryPlanSingleSQL.png[alt="Query Plan dialog showing single SQL statement that joins both tables"]
 
 The ‘Query Plan’ dialog box displays the query that the table will send to the database. The statement below the query indicates that this query (including the instructions to join the two tables) will be sent to the database as a single SQL statement, which is also indicated by the single icon in the top panel.
 
@@ -41,11 +41,11 @@ To override the default single-query behavior, follow the steps below:
 . Right-click the ‘Query1’ table again, and select ‘Properties’ from the context menu. This opens the ‘Table Properties’ panel.
 . Deselect ‘Merge SQL’ and press btn:[OK] to exit the panel.
 +
-image:dataworksheet:showPlanOption.png[]
+image:dataworksheet:showPlanOption.png[alt="deselect Merge SQL option in Table Properties panel and press OK"]
 +
 Right-click the data block, and select ‘Show Plan’ again.
 +
-image:dataworksheet:queryPlanPostProcess.png[]
+image:dataworksheet:queryPlanPostProcess.png[alt="query plan showing separate queries for PRODUCTS and CATEGORIES with join in post-processing"]
 +
 The query plan is again displayed, but the top panel now shows an expandable hierarchy of queries. The *PRODUCTS* and *CATEGORIES* queries are each individually executed as single queries, but the inner join that generates the final ‘Query’ table is performed in post-processing.
 ****

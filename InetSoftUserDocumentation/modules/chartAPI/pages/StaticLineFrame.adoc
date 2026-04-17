@@ -44,7 +44,7 @@ graph.addElement(elem);
 <2> Create the `LineFrame` object.
 <3> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:StaticLineFrame2.png[]
+image:commonscript:StaticLineFrame2.png[alt="point chart with StaticLineFrame reading line styles from data column"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -73,7 +73,7 @@ Chart1.bindingInfo.lineFrame.line = GLine.LARGE_DASH;
 --
 
 +
-image:commonscript:StaticLineFrameOnLoad.png[]
+image:commonscript:StaticLineFrameOnLoad.png[alt="line chart with large dash line style applied via bindingInfo lineFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

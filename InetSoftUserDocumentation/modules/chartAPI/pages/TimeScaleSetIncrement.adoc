@@ -30,7 +30,7 @@ graph.getScale("Order Date").setIncrement(12) <1>
 <1> Set increment to 12 weeks.
 
 
-image:commonscript:TimeScaleSetIncrement.png[]
+image:commonscript:TimeScaleSetIncrement.png[alt="line chart with Order Date axis tick marks set every 12 weeks"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

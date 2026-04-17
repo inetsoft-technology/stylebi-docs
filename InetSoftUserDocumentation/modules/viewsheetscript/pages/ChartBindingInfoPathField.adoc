@@ -42,6 +42,6 @@ Chart1.mapType = Chart['MAP_TYPE_U.S.'];
 <1> Sets '`Long`' as the path field. Path will be drawn through ascending longitude values.
 <2> Use xref:ChartBindingInfoSetTextField.adoc[] to place names on the points.
 
-image:commonscript:bindingInfoPathField.png[]
+image:commonscript:bindingInfoPathField.png[alt="map chart with path drawn through points in ascending longitude order"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]

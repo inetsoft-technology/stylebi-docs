@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonMailchimpQuery}. This opens the ‘Mailchimp  Query’ dialog box.
 
 +
-image:mailChimp1.png[]
+image:mailChimp1.png[alt="Mailchimp Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

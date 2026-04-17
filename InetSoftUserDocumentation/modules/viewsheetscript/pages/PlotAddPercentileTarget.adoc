@@ -48,7 +48,7 @@ labelFont:'Lucida Sans Unicode-BOLD-11',labelColor:'black'}
 Chart1.addPercentileTarget('Sum(Product:Total)','null',95,options)
 --
 
-image:commonscript:PlotAddTargetPercentile1.png[]
+image:commonscript:PlotAddTargetPercentile1.png[alt="chart with 95th percentile target line displayed in red"]
 
 .Multiple Percentile Lines
 [source,javascript]
@@ -61,7 +61,7 @@ Chart1.addPercentileTarget('Sum(Product:Total)',[0xDDAAAA,0xDDCCCC],[50,75,90],o
 --
 
 
-image:commonscript:PlotAddTargetPercentile2.png[]
+image:commonscript:PlotAddTargetPercentile2.png[alt="chart with multiple percentile target lines at 50 75 and 90"]
 
 
 

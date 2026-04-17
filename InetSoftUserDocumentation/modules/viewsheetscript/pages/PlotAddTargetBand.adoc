@@ -49,7 +49,7 @@ labelFont:'Lucida Sans Unicode-BOLD-11', labelColor:'black'};
 Chart1.addTargetBand('Sum(Product:Total)',0xDDAAAA,['min','avg'],options)
 --
 
-image:commonscript:PlotAddTargetBand1.png[]
+image:commonscript:PlotAddTargetBand1.png[alt="chart with target band spanning min to average range"]
 
 .Multiple Target Bands
 [source,javascript]
@@ -63,7 +63,7 @@ Chart1.addTargetBand('Sum(Product:Total)',[0xDDAAAA,0xAAAADD],['min','avg','max'
 --
 
 
-image:commonscript:PlotAddTargetBand2.png[]
+image:commonscript:PlotAddTargetBand2.png[alt="chart with multiple target bands spanning min average and max ranges"]
 
 
 

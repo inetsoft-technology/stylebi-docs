@@ -31,7 +31,7 @@ include::scriptexample:partial$ShapeFormSetPoint1.js[]
 <4> Use `setPoint()` to set `shape2` points proportionally.
 <5> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:LabelFormSetPoint.png[]
+image:commonscript:LabelFormSetPoint.png[alt="bar chart with shapes placed using pixel and proportional point coordinates"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

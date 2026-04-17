@@ -47,7 +47,7 @@ graph.addElement(elem); //<3>
 <3> Use xref:EGraphAddElement.adoc[] to add the `PointElement` to the Chart.
 
 
-image:commonscript:SchemaElement.png[]
+image:commonscript:SchemaElement.png[alt="box and whiskers chart using SchemaElement with BoxPainter by state"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

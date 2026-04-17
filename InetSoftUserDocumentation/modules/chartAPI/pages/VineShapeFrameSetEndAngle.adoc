@@ -46,7 +46,7 @@ graph.addElement(elem);
 <3> Use `setEndAngle` to set a 90° angle.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `VineShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:VineShapeFrameSetAngle.png[]
+image:commonscript:VineShapeFrameSetAngle.png[alt="point chart with VineShapeFrame end angle set to 90 degrees"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -36,7 +36,7 @@ graph.addElement(elem);
 <2> Create the `LeftTiltTextureFrame` object.
 <3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:LeftTiltTextureFrame2.png[]
+image:commonscript:LeftTiltTextureFrame2.png[alt="bar chart with LeftTiltTextureFrame applied negatively sloping lines by Total"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -79,7 +79,7 @@ Chart1.bindingInfo.textureFrame = new LeftTiltTextureFrame;
 --
 
 +
-image:commonscript:LeftTiltTextureFrame_1.png[]
+image:commonscript:LeftTiltTextureFrame_1.png[alt="bar chart with LeftTiltTextureFrame applied via bindingInfo textureFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

@@ -47,7 +47,7 @@ graph.addElement(elem);
 <4> Use `setColor` to specify the  color for the `SaturationColorFrame`.
 <5> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:SaturationColorFrame2.png[]
+image:commonscript:SaturationColorFrame2.png[alt="bar chart with SaturationColorFrame mapping Quantity to red saturation levels"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -78,7 +78,7 @@ Chart1.bindingInfo.colorFrame.color = 0xFF0000;
 --
 
 +
-image:commonscript:SaturationColorFrame.png[]
+image:commonscript:SaturationColorFrame.png[alt="bar chart with SaturationColorFrame applied via bindingInfo colorFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

@@ -36,7 +36,7 @@ graph.addElement(elem);
 <3> Use `setField` to specify the field for the `VisualFrame`.
 <4> Use xref:GraphElementSetColorFrame.adoc[] to add the `VisualFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:VisualFrameSetField.png[]
+image:commonscript:VisualFrameSetField.png[alt="bar chart with BrightnessColorFrame field set to Quantity via setField"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
