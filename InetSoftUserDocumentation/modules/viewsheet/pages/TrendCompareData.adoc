@@ -62,8 +62,8 @@ include::ROOT:partial$dimensionTip.adoc[]
 Grand Total:: Expresses the value of the aggregated measure for each group as a percentage of the measure aggregated across all groups.
 Subtotal:: For a facet-type chart (i.e., a chart with both a measure and dimension on the same axis or with multiple dimensions on the same axis), this expresses the value of the aggregated measure for each group as a percentage of the measure aggregated across all groups on the same sub-chart.
 
-.Example: Percent Calculation
-****
+=== Example: Percent Calculation
+
 In this example, you will create a chart that displays the quantity of products sold for different categories, regions, and states. You will display the aggregated measure for each subgroup as a percentage of the total aggregate for the category. Follow the steps below:
 
 . Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
@@ -75,6 +75,8 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . Press the {buttonEdit} at the top-right of the Chart to open the Visualization Recommender. Bypass the Recommender by pressing the {buttonFullEditor} at the top right. This opens the Chart Editor.
 
+==== Add Data to Chart
+[start=4]
 . In the Chart Editor, make the following selections:
 
 .. From the ‘Dimensions’ node in the data source, drag the ‘Category’ dimension to the ‘X’ region.
@@ -88,10 +90,14 @@ image:ChartCalculationPercentExample1.png[alt="chart editor with dimensions and 
 
 . Drag the Chart handles to enlarge the Chart as desired.
 
+==== Add Filter
+[start=6]
 . From the data source, drag the ‘State’ dimension onto the Dashboard. This creates a ‘State’ Selection List.
 
 . Select the following states in the ‘State’ selection list: ‘AZ’, ‘CA’, ‘NJ’, ‘NY’.
 
+==== Show Values on Chart
+[start=8]
 . Right-click the plot area of the chart, and select ‘Properties’ from the context menu. This opens the ‘Chart Properties’ panel.
 
 . Under the *Advanced* tab, enable the ‘Show Values’ option, and press btn:[OK].
@@ -104,6 +110,8 @@ image:ChartCalculationPercentExample3.png[alt="chart displaying aggregate values
 
 . Open the Chart Editor again.
 
+==== Add Percent Trend and Comparison
+[start=10]
 . Press the {buttonEditMeasure} next to the ‘Quantity Purchased’ measure.
 
 . In the ‘Trend and Comparison’ menu of the pop-up panel, select the ‘Custom’ option.
@@ -130,7 +138,7 @@ Grand Total:: The aggregated measure for each group is represented as its percen
 Subtotal:: The aggregated measure for each group is represented as its percentage with respect to the entirety of data on the same sub-graph (i.e., the region, ‘USA East’ or ‘USA West’).
 Region:: The aggregated measure for each group is represented as its percentage with respect to its entire region (same as ‘Subtotal’ for this example).
 State:: The aggregated measure for each group is represented as its percentage with respect to its entire state.
-****
+
 
 [#ChangeCalculation]
 == Change Calculation
@@ -169,8 +177,8 @@ The ‘Reset at’ option, available for date fields, allows you to specify the 
 include::ROOT:partial$AggregationMethods.adoc[]
 ====
 
-.Example: Running Average
-****
+=== Example: Running Average
+
 In this example, you will create a chart that computes total quantities sold by month, and displays these values as a running average. The running average will be reset on a yearly basis. Follow the steps below:
 
 . Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
@@ -216,7 +224,7 @@ image:RunningTotalExample2.png[alt="set running sum reset at year in calculation
 image:RunningTotalExample4.png[alt="time series chart showing running total by month"]
 +
 The time series now shows a running total for the summed quantity purchase, re-initialized at each new year.
-****
+
 
 [#SlidingCalculation]
 == Sliding Calculation
