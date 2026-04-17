@@ -63,9 +63,6 @@ Banding:: Adds alternating colored bands to a specified categorical or timescale
 === Plot Options (General)
 The following plot options are typically available for all Chart types.
 
-==== General Options
-Options that apply to all or most Charts.
-
 Show Values:: Displays the aggregate measure values on the chart. If the chart also possesses a ‘Text’ binding, then the values displayed by ‘Show Values’ and those displayed by the ‘Text’ binding appear on different lines. Use a ‘Text’ format to individually format the values. For example, if the top value represents a date and the bottom value represents a number, you can apply the following text format, using `\n` to separate lines:
 +
  Date: {0,date,yyyy}\nAmount: {1,number,$#}
@@ -73,35 +70,88 @@ Show Values:: Displays the aggregate measure values on the chart. If the chart a
 For a *Map-type* chart, ‘Show Values’ displays the geographic labels for all regions if there is no ‘Text’ binding.
 +
 NOTE: By default, measure values are also displayed as a *tooltip* when the user *hovers* the mouse over the chart. Tooltips are visible when the Dashboard is previewed or viewed in the Portal. See xref:#GeneralTab[] to customize the tooltip.
+
 Show Reference Line:: Displays horizontal and vertical reference lines when the user moves the mouse over a data point.
+
 Stack Value:: Displays a single aggregate value for each primary (X-axis) grouping, rather than for each individual subseries grouping.
+
 Keep Element in Plot:: Automatically extend the chart boundaries to display chart elements (including target lines) that exceed the specified axis maximum.
 
-==== Pie Chart
+Fill Time-Series Gaps:: When the ‘As time series’ option is set for a dimension, the ‘Fill Time-Series Gaps’ option specifies how missing data should be represented on the chart. (See xref:BasicChartingSteps.adoc[] for information on how to edit a dimension.) When the option is disabled, plotted lines simply ignore the missing data and connect adjacent points. When the option is enabled, you can choose to represent gaps with either ‘Null’, which leaves an empty space at the location, or with ‘Zero’, which inserts a numerical value of 0 at the location.
+
+Stack Measures:: Stacks multiple chart measures together. This may be desirable when the individual measures are fractions of some total. (Example: Component fees on a shipment, such as documentation, packaging, handling, etc.) This option is available only when there are multiple measures on the chart, the ‘Stack’ option is enabled from the {buttonSelectChartStyle}, and single-graph mode has been activated from the {buttonSwitchSingleGraph}.
+
+=== Plot Options (Pie Chart)
+The following plot options are  available for xref:viewsheet:PieChart.adoc[] types.
+
 Explode Pie:: Displays a pie chart with small gaps between the slices.
+
 Pie Ratio:: A value in the range [0.1,1] that determines the proportion of the plot area occupied by the pie. Similarly-sized Pie charts with the same ‘Pie Ratio’ setting will display pies having the same radius, which allows you to enforce consistency across multiple charts.
 +
 CAUTION: Large  ‘Pie Ratio’ settings may leave less space for the display of values on the Chart.
 
-==== Network and Tree Chart
-Apply Aesthetics to Source Nodes:: For *Network*, *Circular Network*, and *Tree* chart types, specifies that node ‘Color’ and ‘Size’ determined by ‘Target’ value should also be applied to source nodes that are not also target nodes.
+=== Plot Options (Network/Tree Chart)
+The following plot option is  available for xref:viewsheet:NetworkChart.adoc[], xref:CircularNetworkChart.adoc[] and xref:TreeChart.adoc[] types.
 
-Include Parent Labels:: For xref:CirclePackingChart.adoc[] and xref:TreemapChart.adoc[], this includes the parent category names in the circle labels.
-Font Scale:: For *Word Cloud* Charts only, multiplies the specified ‘Size’ setting to increase the maximum font size of words in the cloud.
-Show Points:: For a *Line* and *Radar* chart, adds markers at the locations of the individual data points.
-Show Lines:: For *Point*-type charts, displays line segments connecting the points on the chart. To display a fitted line, use the ‘Trend Line’ option instead. (See xref:#LineTab[].)
-As One Line:: For Point-type charts with a dimension set in the *Color*, *Shape*, *Size*, or *Text* regions, connects the points with a *single line* rather than using separate lines for the different dimension values. Requires ‘Show Lines’ to be enabled.
-Fill Missing Data with Dashed Line:: For *Line* and *Radar* charts, and for *Point* charts with ‘Show Lines’ enabled, linearly interpolates missing data using a dashed line.
-Fill Time-Series Gaps:: When the ‘As time series’ option is set for a dimension, the ‘Fill Time-Series Gaps’ option specifies how missing data should be represented on the chart. (See xref:BasicChartingSteps.adoc[] for information on how to edit a dimension.) When the option is disabled, plotted lines simply ignore the missing data and connect adjacent points. When the option is enabled, you can choose to represent gaps with either ‘Null’, which leaves an empty space at the location, or with ‘Zero’, which inserts a numerical value of 0 at the location.
-Stack Measures:: Stacks multiple chart measures together. This may be desirable when the individual measures are fractions of some total. (Example: Component fees on a shipment, such as documentation, packaging, handling, etc.) This option is available only when there are multiple measures on the chart, the ‘Stack’ option is enabled from the {buttonSelectChartStyle}, and single-graph mode has been activated from the {buttonSwitchSingleGraph}.
-Map Default Color:: For a *Map* Chart, sets the color for map regions that are not assigned a color based on data.
-Always Show Color in Map:: For a *Map* Chart, when a column is bound to the ‘Color’ field of the *Visual* panel in the Chart Editor, this setting ensures that the color is always used to fill the map regions. Otherwise, if another column is simultaneously bound to the ‘Shape’, ‘Size’, or ‘Text’ fields of the *Visual* panel, the color generated for the ‘Color’ binding will be applied to the plotted points rather than to the map regions.
-Levels:: Specifies the number of contours used to represent each region in a Scatter Contour or Contour Map Chart. A larger number produces a smoother transition of colors.
-Bandwidth:: Specifies the area over which to calculate density for a  *Scatter Contour* or *Contour Map* Chart. A larger number produces contours that span larger areas.
-Edge Alpha:: Specifies the transparency of the contour edge for a  *Scatter Contour* or *Contour Map* Chart. The transparency of the contour center is determined by the  Chart ‘Alpha’ property. A higher value makes the edges more visible.
-Cell Size:: Specifies the size of the cells that make up the grid on which contour weights are computed for a  *Scatter Contour* or *Contour Map* Chart. Higher values specify larger cells, and hence broader clusters. Lower values specify smaller cells, and hence smaller clusters.
-Bar Corner Radius:: For xref:BarChart.adoc[]  only, sets the radius for rounding the bar corners. The range is 0.0 (no rounding) to 0.5 (maximum rounding). The default is 0.3.
-Round All Corners:: For xref:BarChart.adoc[] type only, specifies (when enabled) that the '`Bar Corner Radius`' should be applied to all four corners of the bar.  When disabled (default), only the corners furthest from the axis are rounded.
+Apply Aesthetics to Source Nodes:: Specifies that node ‘Color’ and ‘Size’ determined by ‘Target’ value should also be applied to source nodes that are not also target nodes.
+
+
+=== Plot Options (Circle Packing/ Treemap)
+The following plot option is  available for xref:viewsheet:CirclePackingChart.adoc[] and xref:TreeChart.adoc[] types.
+
+
+Include Parent Labels:: This includes the parent category names in the circle labels.
+
+=== Plot Options (Word Cloud Chart)
+The following plot option is available for xref:viewsheet:WordcloudChart.adoc[] types.
+
+
+Font Scale:: Multiplies the specified ‘Size’ setting to increase the maximum font size of words in the cloud.
+
+=== Plot Options (Line Chart)
+The following plot options are  available for xref:viewsheet:LineChart.adoc[] and xref:RadarChart.adoc[] types.
+
+Show Points:: Adds markers at the locations of the individual data points.
+
+Fill Missing Data with Dashed Line:: Linearly interpolates missing data using a dashed line.
+
+
+
+=== Plot Options (Point Chart)
+The following plot options are  available for xref:viewsheet:PointChart.adoc[] types.
+
+
+Show Lines:: Displays line segments connecting the points on the chart. To display a fitted line, use the ‘Trend Line’ option instead. (See xref:#LineTab[].)
+
+As One Line:: When a dimension is set in the *Color*, *Shape*, *Size*, or *Text* regions, connects the points with a *single line* rather than using separate lines for the different dimension values. Requires ‘Show Lines’ to be enabled.
+
+Fill Missing Data with Dashed Line:: When ‘Show Lines’ is enabled, linearly interpolates missing data using a dashed line.
+
+
+=== Plot Options (Map Chart)
+The following plot options are  available for xref:viewsheet:MapChart.adoc[]  types.
+
+
+Map Default Color:: Sets the color for map regions that are not assigned a color based on data.
+
+Always Show Color in Map:: When a column is bound to the ‘Color’ field of the *Visual* panel in the Chart Editor, this setting ensures that the color is always used to fill the map regions. Otherwise, if another column is simultaneously bound to the ‘Shape’, ‘Size’, or ‘Text’ fields of the *Visual* panel, the color generated for the ‘Color’ binding will be applied to the plotted points rather than to the map regions.
+
+=== Plot Options (Contour Map/Scatter Contour)
+The following plot options are  available for xref:viewsheet:ContourMapChart.adoc[] and xref:ScatterContourChart.adoc[] types.
+
+Levels:: Specifies the number of contours used to represent each region. A larger number produces a smoother transition of colors.
+
+Bandwidth:: Specifies the area over which to calculate density. A larger number produces contours that span larger areas.
+
+Edge Alpha:: Specifies the transparency of the contour edge. The transparency of the contour center is determined by the  Chart ‘Alpha’ property. A higher value makes the edges more visible.
+
+Cell Size:: Specifies the size of the cells that make up the grid on which contour weights are computed. Higher values specify larger cells, and hence broader clusters. Lower values specify smaller cells, and hence smaller clusters.
+
+=== Plot Options (Bar Chart)
+The following plot options are  available for xref:viewsheet:BarChart.adoc[]  types.
+
+Bar Corner Radius:: Sets the radius for rounding the bar corners. The range is 0.0 (no rounding) to 0.5 (maximum rounding). The default is 0.3.
+Round All Corners:: Specifies (when enabled) that the '`Bar Corner Radius`' should be applied to all four corners of the bar.  When disabled (default), only the corners furthest from the axis are rounded.
 
 === Target Lines
 Specify marker lines, bands, or statistical regions to be placed in the plot area. See xref:TrendCompareData.adoc[] for more information.
