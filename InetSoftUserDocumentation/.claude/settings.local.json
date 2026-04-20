@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -)",
+      "Bash(python3 -c ':*)",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('/tmp/button_lookup.json'\\)\\); print\\(len\\(d\\)\\)\")",
+      "Bash(echo \"Button lookup entries: $\\(python3 -c \"import json; d=json.load\\(open\\('/tmp/button_lookup.json'\\)\\); print\\(len\\(d\\)\\)\"\\)\")",
+      "Bash(python3 -c \" import re from pathlib import Path root = Path\\('modules/chartAPI'\\) files = [] for f in sorted\\(root.rglob\\('*.adoc'\\)\\): text = f.read_text\\(encoding='utf-8'\\) count = sum\\(1 for line in text.splitlines\\(\\) if re.match\\(r'^\\\\s*image:', line\\) and 'alt=' not in line\\) if count: files.append\\(str\\(f\\)\\) n = len\\(files\\) batch = n // 6 for i in range\\(6\\): start = i * batch end = \\(i+1\\)*batch if i < 5 else n print\\(repr\\(files[start:end]\\)\\) \")"
+    ]
+  }
+}
