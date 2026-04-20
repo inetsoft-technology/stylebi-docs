@@ -1,4 +1,4 @@
-= labelVisible
+= tickLabelVisible
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -25,14 +25,14 @@ Boolean::	`true`: display scale labels +
 
 == Example
 [source,javascript]
-Slider1.labelVisible = false;
+Slider1.tickLabelVisible = false;
 
 [TIP]
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-labelVisible             // unqualified
-Slider1.labelVisible     // qualified
+tickLabelVisible             // unqualified
+Slider1.tickLabelVisible     // qualified
 
 {secondForm}
 ====
