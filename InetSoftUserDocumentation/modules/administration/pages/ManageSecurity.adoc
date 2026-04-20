@@ -131,7 +131,7 @@ orgID:: Organization ID (optional).  If omitted user is created on current organ
 === Example
 [source,groovy]
 import inetsoft.shell.dsl.Security
-def newUser = Security.securityUser {
+newUser = Security.securityUser {
   name 'annie'
   orgID 'org1'
 }
@@ -149,7 +149,7 @@ orgID:: Organization ID (optional).  If omitted user is created on current organ
 === Example
 [source,groovy]
 import inetsoft.shell.dsl.Security
-def newGroup = Security.securityGroup {
+newGroup = Security.securityGroup {
   name 'hourlyEmployee'
   orgID 'org1'
 }
@@ -167,7 +167,7 @@ orgID:: Organization ID (optional).  If omitted user is created on current organ
 === Example
 [source,groovy]
 import inetsoft.shell.dsl.Security
-def newRole = Security.securityRole {
+newRole = Security.securityRole {
   name 'Designer'
   orgID 'org1'
 }
@@ -182,7 +182,7 @@ id:: Organization ID from which to clone new organization settings.
 === Example
 [source,groovy]
 import inetsoft.shell.dsl.Security
-def newOrganization = Security.securityOrganization {
+newOrganization = Security.securityOrganization {
   name 'organization0'
   id 'organization0'
 }
@@ -243,7 +243,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 === Example
 [source,groovy]
 import inetsoft.shell.dsl.Security
-def newUser = Security.securityUser {
+newUser = Security.securityUser {
   name 'bob'
 }
 :security update-user annie newUser --organizationid organization0
@@ -261,7 +261,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 === Example
 [source,groovy]
 import inetsoft.shell.dsl.Security
-def newGroup = Security.securityGroup {
+newGroup = Security.securityGroup {
   name 'partTimeEmployee'
 }
 :security update-group hourlyEmployee newGroup --organizationid organization0
@@ -280,7 +280,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 === Example
 [source,groovy]
 import inetsoft.shell.dsl.Security
-def newRole = Security.securityRole {
+newRole = Security.securityRole {
   name 'Developer'
 }
 :security update-role Designer newRole --organizationid organization0
@@ -296,7 +296,7 @@ name:: Name of variable containing organization definition.
 === Example
 [source,groovy]
 import inetsoft.shell.dsl.Security
-def newOrganization= Security.securityOrganization {
+newOrganization= Security.securityOrganization {
   name 'Company1'
   id 'organization0'
 }
@@ -336,15 +336,15 @@ permission:: A `resourcePermission` object describing the asset and the permissi
 [source,groovy]
 import inetsoft.shell.dsl.Security
 import inetsoft.sree.security.IdentityID
-def actionList = ['READ','WRITE','DELETE','SHARE','ADMIN']
-def id = new IdentityID('Everyone', 'host-org')
-def grant = Security.permissionGrant {
+actionList = ['READ','WRITE','DELETE','SHARE','ADMIN']
+id = new IdentityID('Everyone', 'host-org')
+grant = Security.permissionGrant {
   identityID id
   type 'ROLE'
   actions actionList
 }
-def grantList = [grant]
-def sec = Security.resourcePermission {
+grantList = [grant]
+sec = Security.resourcePermission {
   resource 'Examples/Census'
   resourceType 'REPORT'
   grants grantList
@@ -381,8 +381,8 @@ grant:: A `permissionGrant` object.
 [source,groovy]
 import inetsoft.shell.dsl.Security
 import inetsoft.sree.security.IdentityID
-def actionList = ['READ','WRITE','DELETE','SHARE','ADMIN']
-def grant = Security.permissionGrant {
+actionList = ['READ','WRITE','DELETE','SHARE','ADMIN']
+grant = Security.permissionGrant {
   identityID id
   type 'ROLE'
   actions actionList
@@ -423,9 +423,9 @@ grant:: A `permissionGrant` object.
 [source,groovy]
 import inetsoft.shell.dsl.Security
 import inetsoft.sree.security.IdentityID
-def id = new IdentityID('Everyone', 'host-org')
-def actionList = ['READ','WRITE','DELETE']
-def grant = Security.permissionGrant {
+id = new IdentityID('Everyone', 'host-org')
+actionList = ['READ','WRITE','DELETE']
+grant = Security.permissionGrant {
   identityID id
   type 'ROLE'
   actions actionList

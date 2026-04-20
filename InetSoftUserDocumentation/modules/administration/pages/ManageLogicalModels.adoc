@@ -126,7 +126,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 [source,groovy]
 --
 import inetsoft.shell.dsl.LogicalModelBuilder
-def model= new LogicalModelBuilder().with {
+model= new LogicalModelBuilder().with {
     name("(Default Connection)")
     physicalModel("Order View")
     parent("lm")
@@ -196,7 +196,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 --
 // Update logical model name from 'lm' to 'lm1'
 import inetsoft.shell.dsl.LogicalModelBuilder
-def model = new LogicalModelBuilder().with {
+model = new LogicalModelBuilder().with {
     name("lm1")
     physicalModel("Order View")
     parent(null)

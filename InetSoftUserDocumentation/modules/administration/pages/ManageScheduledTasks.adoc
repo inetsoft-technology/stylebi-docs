@@ -104,8 +104,8 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 [source,groovy]
 import inetsoft.shell.dsl.Schedule
 import inetsoft.sree.security.IdentityID
-def ownerID = new IdentityID("admin", "host-org")
-def task1 = Schedule.task {
+ownerID = new IdentityID("admin", "host-org")
+task1 = Schedule.task {
   name 'New Name'
   owner ownerID
   description 'test update'
@@ -177,7 +177,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 [source,groovy]
 import inetsoft.shell.dsl.Schedule
 import java.time.OffsetDateTime
-def condition = Schedule.timeCondition {
+condition = Schedule.timeCondition {
   type 'AT'
   date OffsetDateTime.parse('2019-01-01T00:00:00Z')
 }
@@ -213,7 +213,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 [source,groovy]
 import inetsoft.shell.dsl.Schedule
 import java.time.OffsetDateTime
-def condition = Schedule.timeCondition {
+condition = Schedule.timeCondition {
   type 'AT'
   date OffsetDateTime.parse('2019-01-01T00:00:00Z')
 }
@@ -259,8 +259,8 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 import inetsoft.sree.security.IdentityID
 import inetsoft.shell.dsl.Schedule
 adminUser = new IdentityID("admin", "host-org")
-def ems = ['sarapeng@inetsoft.com']
-def action2 = Schedule.viewsheetAction {
+ems = ['sarapeng@inetsoft.com']
+action2 = Schedule.viewsheetAction {
 viewsheet '1^128^__NULL__^Examples/Census^host-org'
 bookmarkName '(Home)'
 bookmarkNames(['(Home)'])
@@ -305,8 +305,8 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 import inetsoft.sree.security.IdentityID
 import inetsoft.shell.dsl.Schedule
 adminUser = new IdentityID("admin", "host-org")
-def ems = ['user1@inetsoft.com']
-def action2 = Schedule.viewsheetAction {
+ems = ['user1@inetsoft.com']
+action2 = Schedule.viewsheetAction {
   viewsheet '1^128^__NULL__^Examples/Census^host-org'
   bookmarkName '(Home)'
   bookmarkNames(['(Home)'])

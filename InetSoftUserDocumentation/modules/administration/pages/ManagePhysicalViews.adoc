@@ -246,7 +246,7 @@ join:: The join definition
 --
 
 import inetsoft.shell.dsl.PhysicalTableDelegate
-def join1 = PhysicalTableDelegate.join {
+join1 = PhysicalTableDelegate.join {
   type 'EQUAL'
   orderPriority 1
   merge 'AND'
@@ -329,7 +329,7 @@ aliases:: Auto-alias information
 [source,groovy]
 --
 import inetsoft.shell.dsl.PhysicalTableDelegate
-def aliases = [PhysicalTableDelegate.autoAlias {
+aliases = [PhysicalTableDelegate.autoAlias {
   alias 'a'
   foreignTable 'SA.ORDERS'
   keepOutgoing true

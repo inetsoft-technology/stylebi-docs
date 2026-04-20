@@ -39,7 +39,7 @@ Move an existing data source named “Examples/Test” to “Test Data Source”
 [source,groovy]
 ----
 import inetsoft.shell.dsl.DataSource
-def ds = DataSource.jdbc {
+ds = DataSource.jdbc {
   name 'Test Data Source'
   url 'jdbc:h2:mem:test'
   driver 'org.h2.Driver'

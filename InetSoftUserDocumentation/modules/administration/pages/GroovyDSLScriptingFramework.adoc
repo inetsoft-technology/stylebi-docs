@@ -38,9 +38,9 @@ Access the command line arguments (arg1, arg2) with the `commandLine` property a
 
 [source,groovy]
 inetsoft {
-    def scriptFile = commandLine[0]
-    def firstArg = commandLine[1]
-    def secondArg = commandLine[2]
+    scriptFile = commandLine[0]
+    firstArg = commandLine[1]
+    secondArg = commandLine[2]
     println "Running script: $scriptFile"
     println "First argument: $firstArg"
     println "Second argument: $secondArg"
@@ -160,7 +160,7 @@ inetsoft {
   username 'admin'
   password 'admin'
   connect {
-    def t = task {
+    t = task {
       name 'My Task'
       enabled false
     }

@@ -139,7 +139,7 @@ bookmarks:: Array of bookmarks to include in exported Dashboard. (optional)
 [source,groovy]
 --
 // Export Dashboard 2
-def bks = ['bk1','bk2']
+bks = ['bk1','bk2']
 :vs open '1^128^__NULL__^Examples/Census^host-org'
 :vs export 2 'PDF' 'E:/vs1.pdf' --bookmarks bks
 --
@@ -158,7 +158,7 @@ bookmarks:: Array of bookmarks to include in exported Dashboard. (optional)
 [source,groovy]
 --
 // Export Dashboard 2
-def bks = ['bk1','bk2']
+bks = ['bk1','bk2']
 :vs open '1^128^__NULL__^Examples/Census^host-org'
 :vs async-export 2 'PDF' --bookmarks bks
 --

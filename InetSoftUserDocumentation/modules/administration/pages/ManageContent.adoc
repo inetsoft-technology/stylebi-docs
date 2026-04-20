@@ -50,7 +50,7 @@ Import all assets except the _Examples/Census_ and _Examples/Hurricane_ Data Wor
 Import all assets except the _Examples/Census_ and _Examples/Hurricane_ Data Worksheets, keeping any assets that already exist in the repository. This is the same as Example 2, but uses a Groovy List for the excluded asset list.
 
 [source,groovy]
-def excluded = [
+excluded = [
     '1^2^__NULL__^Examples/Census'
     '1^2^__NULL__^Examples/Hurricane'
 ]
@@ -85,11 +85,11 @@ Export all shared Dashboards in the _Examples_ folder and all Data Worksheets, i
 Export all shared Dashboards in the _Examples_ folder and all Data Worksheets, including those in subfolders. (The inclusion is the same as Example 1, but uses a Groovy List below.) Also, exclude the global _Examples/Hurricane_ Data Worksheet.
 
 [source,groovy]
-def included = [
+included = [
   '/global/viewsheet/Examples/*',
   '/global/worksheet/**'
 ]
-def excluded = [
+excluded = [
   '/global/worksheet/Examples/Hurricane'
 ]
 

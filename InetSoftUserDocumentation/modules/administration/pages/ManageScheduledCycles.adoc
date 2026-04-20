@@ -34,7 +34,7 @@ conditions:: The name of a variable containing a Groovy List of https://www.inet
 [source,groovy]
 import inetsoft.shell.dsl.Schedule
 import java.time.OffsetDateTime
-def condition1 = [
+condition1 = [
   Schedule.timeCondition {
     type 'EVERY_DAY'
     hour 11
@@ -44,7 +44,7 @@ def condition1 = [
     timeZone 'Asia/Shanghai'
   }
 ]
-def cycle1 = Schedule.cycle {
+cycle1 = Schedule.cycle {
   name 'test1'
   startNotify true
   startEmail 'joe@inetsoft.com'
@@ -89,7 +89,7 @@ task:: The name of a variable that contains an https://www.inetsoft.com/docs/sty
 [source,groovy]
 import inetsoft.shell.dsl.Schedule
 import java.time.OffsetDateTime
-def cycle1 = Schedule.cycle {
+cycle1 = Schedule.cycle {
   name 'test123'
   startNotify true
   startEmail 'joe@inetsoft.com'
@@ -150,7 +150,7 @@ condition:: The name of a variable that contains an https://www.inetsoft.com/doc
 [source,groovy]
 import inetsoft.shell.dsl.Schedule
 import java.time.OffsetDateTime
-def condition1 = Schedule.timeCondition {
+condition1 = Schedule.timeCondition {
   type 'EVERY_DAY'
   hour 11
   minute 25
@@ -192,7 +192,7 @@ condition:: The name of a variable that contains an https://www.inetsoft.com/doc
 [source,groovy]
 import inetsoft.shell.dsl.Schedule
 import java.time.OffsetDateTime
-def condition1 = Schedule.timeCondition {
+condition1 = Schedule.timeCondition {
   type 'EVERY_DAY'
   hour 11
   minute 25
