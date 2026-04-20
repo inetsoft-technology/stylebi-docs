@@ -1,7 +1,7 @@
 name: Publish to GitHub Pages with Lunr Search Extension
 on:
   push:
-    branches: [main]
+    branches: [main, v1.0]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 concurrency:
@@ -23,7 +23,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v5
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Configure Pages
       uses: actions/configure-pages@v5
     - name: Install Node.js
@@ -37,7 +39,7 @@ jobs:
       working-directory: ui
       run: npx gulp bundle
     - name: Install Antora with the Antora Lunr Extension
-      run: npm i antora @antora/lunr-extension
+      run: npm i antora @antora/lunr-extension antora-router-extension
     - name: Generate Site
       run: npx antora --ui-bundle-url ../ui/build/ui-bundle.zip antora-playbook.yml
     - name: Upload Artifacts
