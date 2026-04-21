@@ -13,7 +13,7 @@ include::ROOT:partial$chartStyle.adoc[]
 
 == Example
 [source,javascript]
-Chart1.separatedStyle = Chart.CHART_3D_BAR;
+Chart1.separatedStyle = Chart.CHART_BAR;
 
 
 

@@ -373,7 +373,7 @@ include::ROOT:partial$measureAndDimensionTip.adoc[]
 
 . *_Optional:_*  To enable simple forecasting based on historical patterns, you can extrapolate the trend line to the right. To do this, use the ‘Project Forward’ field to enter the number of axis units that the trend line should extend beyond the final data point.
 +
-NOTE: Projection requires that axis values be a linear and complete series of either numbers or dates. Projection is not available for the following chart types: Waterfall, Pie, 3D Pie, Radar, Filled Radar, Map. It is also not available for the following data types: String, Boolean.
+NOTE: Projection requires that axis values be a linear and complete series of either numbers or dates. Projection is not available for the following chart types: Waterfall, Pie, Radar, Filled Radar, Map. It is also not available for the following data types: String, Boolean.
 
 . If there are multiple measures on the Chart, use the ‘For Measures’ menu to select the individual measures that should display the specified trend line.
 

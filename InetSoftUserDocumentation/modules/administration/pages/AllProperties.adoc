@@ -25,8 +25,6 @@ image:allProperties.png[alt="select All Properties page in left panel"]
 == Chart Properties
 The following table lists a variety of charting properties.
 
-graph.3dbar.maxcount:: The maximum number of dimension values that can be displayed in a 3D Bar Chart (default is 5000).
-graph.3dpie.maxcount:: The maximum number of dimension values that can be displayed in a 3D Pie Chart (default is 2,000).
 graph.area.maxcount:: The maximum number of dimension values that can be displayed in an Area Chart (default is 5000).
 graph.axis.inplot:: Specifies whether the maximum measure value is included within the plot region. (Default is `false`.) See also xref:viewsheetscript:PlotInPlot.adoc[].
 graph.axislabel.maxcount:: The maximum number of labels to display on a Chart axis (default is 2000).
