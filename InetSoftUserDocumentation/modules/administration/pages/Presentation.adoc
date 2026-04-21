@@ -657,7 +657,8 @@ image:UserPortalLinks.png[alt="user portal feature toggles for help logout and h
 
 . *_Optional_*: Enter  '`Custom Loading Text`' to specify text to display on the loading screen when the user logs into the User Portal.  The message is displayed under the "`Please wait, the application is loading`" message and logo.
 
-. *_Optional_*: Enter a '`Home Link`' to set the URL of the {buttonHome}  in the User Portal. (The default is the `index.html` landing page). This can be an absolute URL such as https://www.google.com, or a path relative to `/app/` such as  `composer`.
+. *_Optional_*: Enter a '`Home Link`' and '`EM Home Link`' to set the URL of the {buttonHome}  in the User Portal and Enterprise Manager, respectively. (The default is the `index.html` landing page). This can be an absolute URL such as https://www.google.com, or a path relative to `/app/` such as  `composer`.
+
 
 [#TimeSettings]
 == Time Settings
@@ -923,5 +924,21 @@ NOTE: The ‘Open Graph Image URL’ can be relative to the application root (e.
 
 The ‘Open Graph Title’ and ‘Open Graph Description’ are used as the default `og:title` and `og:description` for a  Dashboard that is accessed via direct URL and does not include a title/alias or description. If a directly accessed  Dashboard *does* include a title/alias or description, then the title/alias or description is used to set `og:title` and `og:description`.
 
+[#AIIntegration]
+== AI Integration
+To customize the integration of the AI Assistant feature, use the properties below:
 
+image:AIIntegration1.png[alt="configure AI Integration in Enterprise Manager"]
+
+Show AI Assistant Chat Link in Navigation Bars:: When enabled (default) displays the {buttonAssistant} in the navigation bar of the User Portal.  The equivalent property is `ai.assistant.visible`.
+
+AI Assistant Internal URL:: When specified, this enables the reverse-proxy mode for the AI assistant so that the browser never communicates  to the AI Assistant directly.  Communications are directed through the proxy URL which lets you deploy the AI Assistant at  an internal network address that browsers cannot reach. The internal URL is never exposed to the client.  Leave this setting blank when using the direct mode (below).  The equivalent property is `chat.app.internal.url`.
+
+AI Assistant Server URL:: When a proxy URL is NOT provided for '`AI Assistant Internal URL`', the '`AI Assistant Server URL`' provides the public-facing URL of the AI Assistant service. StyleBI returns this URL directly to the browser, which then connects to the AI Assistant server directly ("`direct mode`").  If the '`AI Assistant Internal URL`' above is specified, this URL is ignored. The equivalent property is `chat.app.server.url`.
+
+AI Assistant Title:: Custom  name to display for the AI Assistant in the history sidebar. The equivalent property is `chat.app.title`.
+
+AI Assistant Vendor Name:: Custom  name to display for the AI Assistant in the AI Assistant header. The equivalent property is `chat.app.vendor.name`.
+
+AI Assistant Logo URL:: URL for a custom logo image to display in the AI Assistant header. This can   also specify a server storage path to an  internally saved image (e.g., `portal/shapes/logo.png`). The equivalent property is `chat.app.logo.url`.
 

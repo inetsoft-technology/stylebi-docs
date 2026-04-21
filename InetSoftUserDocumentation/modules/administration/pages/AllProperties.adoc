@@ -368,3 +368,18 @@ The following table lists a variety of time and date properties.
 crosstab.dateTime.expandAll.level:: Sets the maximum expansion of date fields in a Crosstab. Options are `Year`, `QuarterOfYear`, `MonthOfYear` (default), `DayOfMonth`, `HourOfDay`, `MinuteOfHour`, `SecondOfMinute`.
 mysql.server.timezone:: Set to a valid Java time zone ID to indicate the StyleBI server time zone (e.g., `US/Eastern`). If not defined, the default time zone is used.
 week.start::   The start day of the week for date components such as  Calendars (e.g., `week.start=tuesday`). If not specified, the locale setting for the user determines the start day.
+
+[#AIAssistantProperties]
+== AI Assistant Properties
+
+ai.assistant.visible:: When enabled (default) displays the {buttonAssistant} in the navigation bar of the User Portal.
+
+chat.app.internal.url:: When specified, this enables the reverse-proxy mode for the AI assistant so that the browser never communicates to the AI Assistant directly. Communications are directed through the proxy URL which lets you deploy the AI Assistant at an internal network address that browsers cannot reach. The internal URL is never exposed to the client. Leave this setting blank when using the direct mode (see `chat.app.server.url`).
+
+chat.app.server.url:: When a proxy URL is NOT provided for `chat.app.internal.url`, this provides the public-facing URL of the AI Assistant service. StyleBI returns this URL directly to the browser, which then connects to the AI Assistant server directly ("direct mode"). If `chat.app.internal.url` is specified, this URL is ignored.
+
+chat.app.title:: Custom name to display for the AI Assistant in the history sidebar.
+
+chat.app.vendor.name:: Custom name to display for the AI Assistant in the AI Assistant header.
+
+chat.app.logo.url:: URL for a custom logo image to display in the AI Assistant header. This can also specify a server storage path to an internally saved image (e.g., `portal/shapes/logo.png`).
