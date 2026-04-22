@@ -35,7 +35,41 @@ Select First Item:: For Check Box, selects the first item when the Dashboard loa
 image:Capture_062.png[alt="radio button check box combo box general tab"]
 
 == Data Tab
-The  *Data* tab in the ‘Properties’ panel for Radio Button, Check Box, or Combo Box is the same as for Sliders and Spinners.  See xref:SliderSpinnerProperties.adoc[].
+The *Data* tab in the ‘Properties’ panel provides the following unique property for  Combo Box only. Other properties are the same as for Sliders and Spinners.  See xref:SliderSpinnerProperties.adoc[].
+
+Format Date Values Sent to Query::  A Date format code that should be used to format any date selected in the ComboBox before it is used in database query.  Date format codes are explained in xref:DataFormat#DateFormat[Date Format], but the following unique  restrictions apply here:
+
+[square]
+* Only the following format tokens are permitted: `y`, `M`, `d`
+* Only the following separators are permitted: `-`, `/`, `.`, space
+* A year token is *required*:  `yy` or `yyyy`
+* A month token is *required*: `M` or `MM`
+* A day token is *required*: `d` or `dd`
++
+.Examples
+****
+|===
+|Format|Valid|Reason
+
+|yyyy-MM-dd |yes|valid
+|MM/dd/yyyy |yes|valid
+|dd.MM.yyyy |yes|valid
+|yyyy/MM/dd |yes|valid
+|d-M-yyyy |yes|valid
+|yyyy, MM d |yes|valid
+|yyyy MM dd|yes|valid
+
+|yyyy-MM  |NO| missing `d`
+|MM-dd |NO| missing `y`
+|yyyy-MM-dd HH:mm |NO| `H` not allowed
+|EEE, MMM d yyyy |NO| `E` not allowed
+|yyyy_MM_dd |NO| `_` not allowed
+
+|===
+
+****
+
+image::ComboBoxDataTab.png[alt="Data tab in Combo Box Properties dialog"]
 
 == Label Tab
 The *Label* tab in the ‘Properties’ panel provides the following unique properties for Combo Box.
