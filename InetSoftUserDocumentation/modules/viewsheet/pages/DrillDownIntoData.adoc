@@ -387,7 +387,7 @@ image:Hyperlink Parameter Dialog.png[alt="select Company field for parameter val
 
 . *_Optional:_* Repeat the above steps to add additional parameters.
 
-. *_Optional:_*  Enable ‘Send Dashboard parameters’ to pass all existing Dashboard parameters to the target  Dashboard, including Form component values. The Dashboard parameter names must exactly match those defined in the target  Dashboard. See xref:viewsheetscript:parameter.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] for more information about Dashboard parameters.
+. *_Optional:_*  Enable ‘Send Dashboard parameters’ to pass all existing Dashboard parameters to the target  Dashboard, including Form component values. The Dashboard parameter names must exactly match parameter names  defined in the target  Dashboard. See xref:viewsheetscript:parameter.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] for more information about Dashboard parameters.
 +
 [.videotitle]
 .Watch Video: Add Drill Down Hyperlinks (Pass Form Values)
@@ -397,6 +397,8 @@ include::ROOT:partial$videoVersion.adoc[]
 
 video::306732112#chapter=16555175[vimeo,640,400]
 =====
++
+If the parameter name matches the name of a *Form component* in the target Dashboard, the Form component will be set to that parameter value when the hyperlink is  used.
 
 . *_Optional:_*  Select ‘Disable parameter prompt’ to suppress the parameter dialog box that might ordinarily be produced by a parameterized  Dashboard upon launch. (Prompting is automatically suppressed for parameters passed in the hyperlink itself.)
 
