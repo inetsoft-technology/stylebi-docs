@@ -297,6 +297,7 @@ image:CrosstabDetails2.png[alt="press Export button to export data"]
 . Press btn:[Close] to exit the *Data* panel.
 
 
+
 [#DrillwithTableHyperlinks]
 == Drill with Table/Crosstab Hyperlinks
 
@@ -320,15 +321,24 @@ video::306732112#chapter=16550996[vimeo,640,400]
 
 IMPORTANT: If you have identical filters in the origin  dashboard and target (hyperlinked) dashboard, and you want these filters to be *synchronized*, you should configure shared filters in *both dashboards*. See xref:ModularizeDashboard.adoc#SynchronizingDashboardFilters[Synchronizing Dashboard Filters] in xref:ModularizeDashboard.adoc[] more details.
 
-. Right-click on a Chart element to add hyperlinks to the chart elements (e.g., bars), or right-click on a chart dimension label to add hyperlinks to the labels. {rightClickOptions}
+. Right-click on a desired Chart region, as described below. {rightClickOptions}
++
+[square]
+* Right-click a *Chart element* and select the '`Hyperlink`' option to add hyperlinks to the Chart elements (e.g., bars or points).
+* Right-click on a *Chart dimension label* and select the '`Hyperlink`' option to add hyperlinks to the labels.
+* Right-click the *Chart title* and select the '`Hyperlink Title`' option to add a hyperlink to the title.
+* Right-click an *empty plot region* and select '`Hyperlink Empty Plot Area`' to add a hyperlink to the entire plot region.
 
 
-. Select ‘Hyperlink’ from the context menu. This opens the ‘Hyperlink’ dialog box.
 +
 image:Hyperlink Chart.png[alt="hyperlink dialog box for chart"]
 
++
+This opens the ‘Hyperlink’ dialog box.
+
 . In the ‘Hyperlink’ dialog box, define the desired hyperlink. See the  sections below for examples of how to configure  hyperlinks for the desired target:
 +
+[square]
 * xref:#HyperlinkDashboard[]
 * xref:#HyperlinkWebPage[]
 
