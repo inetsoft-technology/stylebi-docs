@@ -298,6 +298,8 @@ visible.datasource.types:: Comma-separated list of datasource names to be displa
 
 wallboarding.enabled:: When set to `true`, prevents Dashboards with ‘Server-Side Update’ enabled from timing out due to inactivity. This is useful for Dashboards that are publicly displayed (as  “wallboards”) for long periods of time without any user interaction. See xref:viewsheet:DashboardOptions.adoc[] for information about the ‘Server-Side Update’ Dashboard option.
 
+script.cursor.top:: When set to `true`, places the cursor at the top of the script when the Script Editor is opened.  When `false` (default) the cursor appears at the bottom of the script when the Script Editor is opened.
+
 == Scheduler Properties
 The following table lists a variety of scheduling properties. See xref:ConfigureScheduler.adoc[] for related properties.
 
