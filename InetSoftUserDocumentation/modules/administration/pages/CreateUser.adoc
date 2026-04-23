@@ -101,5 +101,32 @@ include::administration:partial$selectOrganization.adoc[]
 
 NOTE: For efficiency, the number of users listed in the navigation tree under LDAP security is limited by the `em.user.max` property (default 1000). See xref:AllProperties.adoc[] for more information about setting properties. Unlisted users can be found by using the {buttonFilterField}.
 
+[#CopyandPasteIdentities]
+== Copy and Paste Identities
+
+IMPORTANT: You cannot copy and paste identities across different organizations or different security providers.
+
+To copy the '`Member Of`', '`Roles`', or '`Administrator Permissions`' identities from one user to another, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Security* page in the left panel.
++
+image:Figure 23_1.png[alt="select Security page in left panel"]
+. Select the *Users* tab.
++
+image:securityDefineUsers.png[alt="select Users tab in Security page"]
+
+. From the ‘Provider Name’ menu, select the security provider under which to define users.
+
+include::administration:partial$selectOrganization.adoc[]
+
+. Press the btn:[Copy Identities] button below the '`Member Of`', '`Roles`', or '`Administrator Permissions`' tables to copy the current identities. You can then navigate to another user and paste those identities.
+
+. Press the btn:[Paste Identities] button below the corresponding table to paste the identities you have copied.
++
+TIP: The btn:[Paste Identities] button will display numbers in parentheses, such as btn:[Paste Identities (x of n)]. The *second value* (*n*) indicates the number of identities that were copied to the clipboard. The *first value* (*x*) indicates the number of identities that are compatible with the current user, and can actually be pasted.
+
+. Press btn:[Apply] to save your changes.
+
 == Rules for Users, Groups, Roles
 include::partial$userRoleGroupNote.adoc[]

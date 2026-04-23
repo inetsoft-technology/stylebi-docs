@@ -13,6 +13,7 @@ To set permissions for Dashboards,  data sources, multi-tenant connections, repo
 
 NOTE: Repository folders are logical groupings, and do not represent file system directories.
 
+== Set New Permissions
 . Press the {buttonSettings} at the top of Enterprise Manager.
 . Select the *Content* page in the left panel.
 
@@ -65,3 +66,35 @@ image:Report Permissions.png[alt="select users groups or roles to add permission
 * If explicit permissions are set on an individual  Dashboard or  folder (i.e.,  ‘Derive permissions from parent folder’ is disabled), the explicit permissions govern the asset and the parent permissions are ignored.
 * If a user experiences a `Read Access Denied` error, this generally indicates that permissions on the *asset* or *parent folder* are not set correctly for the user.
 ====
+
+[#CopyandPastePermissions]
+== Copy and Paste Permissions
+
+IMPORTANT: You cannot copy and paste permissions across different organizations or  different security providers.
+
+To copy permissions from one asset to another, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Content* page in the left panel.
+
+include::partial$selectOrganization.adoc[]
+
+. Select the *Repository* tab.
++
+image:Figure 15.png[alt="select Repository tab in Content page"]
+
+
+. Click to select the desired repository asset (Dashboard, folder, etc.) in the tree.
+. Select the *Security* tab.
++
+image:dashboardSecurityTab.png[alt="select Security tab for repository asset"]
+
+
+. Press the btn:[Copy Permissions] button below the permissions table to copy the asset's current permissions.  You can then navigate to another asset and paste the permissions to that asset.
+
+. Press the btn:[Paste Permissions] button below the permissions table to paste permissions you have already copied from another asset.
++
+TIP: The btn:[Paste Permissions] button will display numbers in parentheses, such as btn:[Paste Permissions (x of n)].  The *second  value* (*n*) indicates the number of permissions that were copied to the clipboard.  The *first  value* (*x*) indicates the  number of permissions that  are compatible  with the   current asset, and can actually be pasted.
+
+
+. Press btn:[Apply].

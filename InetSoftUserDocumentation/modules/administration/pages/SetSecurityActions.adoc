@@ -8,6 +8,10 @@ Summary:
 Security Actions (Action Permissions) in StyleBI governs access to various UI features and functionalities, such as portal tabs, worksheets, dashboards, and specialized actions like chart types, bookmarks, and SQL editing. Administrators can use these actions to restrict access and visibility based on user roles, ensuring proper security without detailing every individual action.
 endif::ai[]
 
+This section explains how to restrict the actions that a user can perform in the User Portal based on user, group, or role.
+
+== Set New Permissions
+
 The procedure for setting object permissions (Actions) is the same for all components.  For example, to set permissions for the ‘Bookmark’ feature, follow the steps below:
 
 . Press the {buttonSettings} at the top of Enterprise Manager.
@@ -107,5 +111,37 @@ IMPORTANT: This is an organization-wide setting, and will be applied to all asse
 
 * Permission for the ‘My Dashboards’ folder is granted by default for all users. However, if explicit permission for ‘My Dashboards’ is assigned to at least one user, then explicit permission must be assigned for any other users who require this feature.
 
-* The ‘Use Parent Permissions’ setting is significant only for the asset components listed under the ‘Data Worksheet’ node. If you set permissions for the ‘Global’ node, they can be inherited by all of the assets under this node.
+* The ‘Use Parent Permissions’ setting is significant only for the asset components listed under the ‘Data Worksheet’ node. If you set permissions for the ‘Global’ node, they can be inherited by all the assets under this node.
 ====
+
+
+[#CopyandPastePermissions]
+== Copy and Paste Permissions
+
+IMPORTANT: You cannot copy and paste permissions across different organizations or  different security providers.
+
+
+
+The procedure for copying and pasting object permissions (Actions) is the same for all components.  For example, to copy  or paste permissions for the ‘Bookmark’ feature, follow the steps below:
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Security* page in the left panel.
+
+. Select the *Actions* tab.
++
+image:securityActions.png[alt="select Actions tab on Security page"]
+
+include::partial$selectOrganization.adoc[]
+
+. Click to select the desired action or object in the tree. For example, select the ‘Open and Create Bookmarks’ item in the tree.
+
+
+. Press the btn:[Copy Permissions] button below the permissions table to copy the action`'s current permissions.  You can then navigate to another action and paste the permissions to that action.
+
+. Press the btn:[Paste Permissions] button below the permissions table to paste permissions you have already copied from another action.
++
+TIP: The btn:[Paste Permissions] button will display numbers in parentheses, such as btn:[Paste Permissions (x of n)].  The *second  value* (*n*) indicates the number of permissions that were copied to the clipboard.  The *first  value* (*x*) indicates the  number of permissions that  are compatible  with the   current action, and can actually be pasted.
+
+
+. Press btn:[Apply].

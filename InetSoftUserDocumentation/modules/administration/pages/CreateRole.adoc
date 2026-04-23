@@ -70,5 +70,37 @@ include::partial$selectOrganization.adoc[]
 . Expand the ‘Roles’ node on the tree, and select the desired role.
 . Make any desired edits and press {buttonEMApply}.
 
+[#CopyandPasteIdentities]
+== Copy and Paste Identities
+
+IMPORTANT: You cannot copy and paste identities across different organizations or different security providers.
+
+To copy the '`Assigned to`' or '`Inherit from`' identities from one role to another, follow the steps below:
+
+
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+. Select the *Security* page in the left panel.
++
+image:Figure 23_1.png[alt="select Security page in left panel"]
+. Select the *Users* tab.
++
+image:securityDefineUsers.png[alt="select Users tab in Security page"]
+
+. From the ‘Provider Name’ menu, select the security provider under which to define roles.
+
+include::partial$selectOrganization.adoc[]
+
+
+. Expand the ‘Roles’ node on the tree, and select the desired role.
+
+. Press the btn:[Copy Identities] button below the '`Assigned to`' or '`Inherit from`' table to copy the current identities. You can then navigate to another role and paste those identities.
+
+. Press the btn:[Paste Identities] button below the corresponding table to paste the identities you have copied.
++
+TIP: The btn:[Paste Identities] button will display numbers in parentheses, such as btn:[Paste Identities (x of n)]. The *second value* (*n*) indicates the number of identities that were copied to the clipboard. The *first value* (*x*) indicates the number of identities that are compatible with the current role, and can actually be pasted.
+
+. Press {buttonEMApply} to save your changes.
+
 == Rules for Users, Groups, Roles
 include::partial$userRoleGroupNote.adoc[]
