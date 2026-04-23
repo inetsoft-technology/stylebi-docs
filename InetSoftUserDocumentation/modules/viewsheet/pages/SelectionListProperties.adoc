@@ -30,6 +30,7 @@ Action::
 * *Single Selection*: Allows only one item to be selected at a given time (mutually-exclusive choices). See xref:SelectionTreeProperties.adoc[] for information on how to select hierarchy levels.
 * *Suppress Blank*: Removes empty values (caused by nulls in the data set) from the Selection List.
 * *Select First Item*: Selects the first item when the Dashboard loads (if no items are preselected).
+* *Allow toggle between single and multi-selection*: This allows the user to switch between single-selection and multi-selection by using the {buttonSelectionSingle} or {buttonSelectionMulti}, respectively.
 
 == Data Tab
 

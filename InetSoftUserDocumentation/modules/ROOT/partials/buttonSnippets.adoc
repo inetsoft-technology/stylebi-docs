@@ -166,6 +166,8 @@
 :buttonSelectionListNotIncluded: Not included image:ROOT:buttons/selected-gray.svg[alt="not included",role=button]
 :buttonSelectionListEmpty: Unselected image:ROOT:buttons/select-empty.svg[alt="unselected",role=button]
 :buttonSelectionListExcluded: Excluded image:ROOT:buttons/close.svg[alt="excluded",role=button]
+:buttonSelectionSingle: ‘Switch to single selection mode’ button image:ROOT:buttons/select-single.svg[alt="Switch to single selection mode",role=button]
+:buttonSelectionMulti: ‘Switch to multi-selection mode’ button image:ROOT:buttons/select-multi.svg[alt="Switch to multi selection mode",role=button]
 :buttonChartShowEnlarged: ‘Show Enlarged’  button image:ROOT:buttons/expand.svg[alt="Show Enlarged",role=button]
 :buttonChartShowActualSize: ‘Show Actual Size’ button image:ROOT:buttons/contract.svg[alt="Show Actual Size",role=button]
 :buttonReverse: ‘Reverse’ button image:ROOT:buttons/selection-swap.svg[alt="Reverse",role=button]

@@ -18,7 +18,12 @@ To filter data using a Selection List, select the desired item(s) in the list. I
 
 image:SelectionList.png[alt="selection list with selectable items"]
 
-TIP: If you want to make only a single selection (all selections being mutually exclusive), hold down the {buttonAlt} key on the keyboard and make your selection. This changes the Selection List to “single-selection” mode. {buttonAlt}-click again to return to multiple-selection mode.
+[TIP]
+====
+If you want to make only a single selection (all selections being mutually exclusive), hold down the {buttonAlt} key on the keyboard and make your selection. This changes the Selection List to “single-selection” mode. {buttonAlt}-click again to return to multiple-selection mode.
+
+Another way to switch between single- and multiple-selection mode is to press the {buttonSelectionSingle} or {buttonSelectionMulti} next to the selection that you want to make.
+====
 
 If there is no {buttonApply} in the title bar, each selection you make is submitted immediately. To make multiple selections before submitting, hold the {buttonCtrl} key while making your selections.
 
