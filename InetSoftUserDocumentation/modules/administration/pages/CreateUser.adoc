@@ -102,6 +102,7 @@ include::administration:partial$selectOrganization.adoc[]
 
 NOTE: For efficiency, the number of users listed in the navigation tree under LDAP security is limited by the `em.user.max` property (default 1000). See xref:AllProperties.adoc[] for more information about setting properties. Unlisted users can be found by using the {buttonFilterField}.
 
+
 [#CopyandPasteIdentities]
 == Copy and Paste Identities
 
