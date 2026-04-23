@@ -20,11 +20,19 @@ image:schedulerTasksTab.png[alt="select Tasks tab on Schedule page"]
 include::partial$selectOrganization.adoc[]
 
 . Press the btn:[New Task] button under the table. This creates a new task, with the default name ‘Task n’ (e.g., Task1, Task2, Task3, etc.).
-. Select the *Conditions* tab and specify a condition to determine when the task will execute. See xref:SchedulerConditions.adoc[] for details.
+. Select the *Conditions* tab and press the btn:[Add] button to specify a condition to determine when the task will execute. See xref:SchedulerConditions.adoc[] for details.  To copy an existing condition, select the condition in the list and press the btn:[Copy] button.
++
+image:scheduleTaskCopy.png[]
 +
 TIP: To run a task *on demand*, see xref:#MonitorScheduledTasks[] below.
 
-. Select the *Actions* tab and specify the type of action to take when the scheduled task executes. See xref:SchedulerActions.adoc[] for details.
+. Select the *Actions* tab and press the btn:[Add] button to specify the type of action to take when the scheduled task executes. See xref:SchedulerActions.adoc[] for details. To copy an existing action, select the action in the list and press the btn:[Copy] button.
++
+image:scheduleActionCopy.png[]
+
+
+
+
 . *_Optional:_* Select the *Options* tab to set advanced properties.
 +
 [#SchedulerOptions]
@@ -37,6 +45,9 @@ Execute As:: A task can be executed as a user, in which case user permissions wi
 Locale:: A different locale can be specified for each individual task by using this option.
 ****
 . Press the btn:[Save] button at the bottom to save the task.
+
+
+
 
 [#CreateScheduledCycle]
 == Create a Scheduled Cycle

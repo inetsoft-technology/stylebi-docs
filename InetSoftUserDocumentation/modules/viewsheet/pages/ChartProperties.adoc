@@ -147,11 +147,11 @@ Edge Alpha:: Specifies the transparency of the contour edge. The transparency of
 
 Cell Size:: Specifies the size of the cells that make up the grid on which contour weights are computed. Higher values specify larger cells, and hence broader clusters. Lower values specify smaller cells, and hence smaller clusters.
 
-=== Plot Options (Bar Chart)
-The following plot options are  available for xref:viewsheet:BarChart.adoc[]  types.
+=== Plot Options (Bar Chart/Interval Chart)
+The following plot options are  available for xref:viewsheet:BarChart.adoc[] and xref:IntervalChart.adoc[] types.
 
 Bar Corner Radius:: Sets the radius for rounding the bar corners. The range is 0.0 (no rounding) to 0.5 (maximum rounding). The default is 0.3.
-Round All Corners:: Specifies (when enabled) that the '`Bar Corner Radius`' should be applied to all four corners of the bar.  When disabled (default), only the corners furthest from the axis are rounded.
+Round All Corners:: For xref:BarChart.adoc[], specifies (when enabled) that the '`Bar Corner Radius`' should be applied to all four corners of the bar.  When disabled (default), only the corners furthest from the axis are rounded.  This option is always *enabled* for xref:IntervalChart.adoc[].
 
 === Target Lines
 Specify marker lines, bands, or statistical regions to be placed in the plot area. See xref:TrendCompareData.adoc[] for more information.
