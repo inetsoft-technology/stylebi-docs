@@ -1,0 +1,33 @@
+= quickSwitchAllowed
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:viewsheet:SelectionListProperties.adoc[] and xref:viewsheet:SelectionTreeProperties.adoc[] for more information on these components.
+
+
+Specifies whether the user can toggle between single-selection and multi-selection mode using the {buttonSelectionSingle} and {buttonSelectionMulti} buttons.
+
+
+== Type
+Boolean::	`true`: allows the user to toggle between single and multi-selection mode +
+`false`: disables toggling (default)
+
+
+== Example
+[source,javascript]
+SelectionList1.quickSwitchAllowed = true
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+quickSwitchAllowed                   // unqualified
+SelectionList1.quickSwitchAllowed    // qualified
+
+{secondForm}
+====
+
+
