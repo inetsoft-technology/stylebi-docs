@@ -1,8 +1,14 @@
-= Preview Query
+= Profile Data Block Performance
 include::ROOT:partial$buttonSnippets.adoc[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
+There are two ways you can examine Data Block performance:
+[square]
+* xref:#PreviewDataBlockQuery[]: Examine the data block query to see if it can be processed as a single query (most optimal) or requires post-processing by the server.
+* xref:#ViewDataBlockExecutionTime[]: Display the actual amount of time a data block query execution required.
 
+[#PreviewDataBlockQuery]
+== Preview Data Block Query
 To view the SQL statements that a data block will attempt to execute (the query plan), follow the steps below:
 
 . Click on the data block to select it.
@@ -49,3 +55,22 @@ image:dataworksheet:queryPlanPostProcess.png[alt="query plan showing separate qu
 +
 The query plan is again displayed, but the top panel now shows an expandable hierarchy of queries. The *PRODUCTS* and *CATEGORIES* queries are each individually executed as single queries, but the inner join that generates the final ‘Query’ table is performed in post-processing.
 ****
+
+[#ViewDataBlockExecutionTime]
+== View Data Block Execution Time
+In some cases, you may want to determine which data blocks are most costly in terms of processing.  To view  execution time for a particular data block, follow the steps below:
+
+. Click on the data block to select it.
+
+. In the bottom panel, press the {buttonChangeView}, and select {buttonLiveDataView}. This displays a *limited preview* of the data in the  data block.
++
+image::QueryExecutionTime1.png[alt="display limited preview of data block"]
+
+. Press the {buttonChangeDataMode} and *deselect* '`Enable display row limit`'.  This will *fully execute* the data block query, so that you can see the actual execution time.
++
+image::QueryExecutionTime2.png[alt="disable preview display limit to see full dataset"]
+
+. Check the  status bar for the query execution time for the selected data block.
++
+image::QueryExecutionTime3.png[alt="status bar displays execution time for data block"]
+

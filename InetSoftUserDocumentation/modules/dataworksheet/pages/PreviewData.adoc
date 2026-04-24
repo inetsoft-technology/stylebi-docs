@@ -6,7 +6,8 @@ To preview the data that will be returned by a data block, follow the steps belo
 
 
 . Click on the data block to select it.
-. In the bottom panel, press the {buttonChangeView}, and select {buttonLiveDataView}. This displays a limited preview of the data in the  data block.
+
+. In the bottom panel, press the {buttonChangeView}, and select {buttonLiveDataView}. This displays a limited preview of the data in the  data block.  The status bar also displays the *query execution time*.
 +
 image::agileTransform8.png[alt="press Change View and select Live Data View to preview data block"]
 +
