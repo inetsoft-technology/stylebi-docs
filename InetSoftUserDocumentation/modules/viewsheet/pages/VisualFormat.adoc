@@ -187,7 +187,12 @@ To set all borders to the current line style, click the ‘Select All’ button.
 
 Use the ‘Round Corner’ property to set the radius (in pixels) of the border corners. Larger values create softer corners, while smaller values create sharper corners.
 
-TIP: For the *Tabbed Interface* component, use the ‘Round Top Corners Only’ option to restrict the ‘Round Corner’ setting to the *top of the tab*, leaving the bottom corners with no rounding.  To apply a unique style to the active (currently selected) tab, click on a tab to make it active, and then apply the desired styling from the *Format* panel. (See xref:TabbedInterfaceProperties.adoc[] for additional information.)
+[TIP]
+====
+For the *Tabbed Interface* component, use the ‘Round Top Corners Only’ option to restrict the ‘Round Corner’ setting to the *top of the tab*, leaving the bottom corners with no rounding (useful for top tabs).  Use the ‘Round Bottom Corners Only’ option to restrict the ‘Round Corner’ setting to the *bottom of the tab*, leaving the top corners with no rounding (useful for bottom tabs). See xref:TabbedInterfaceProperties.adoc[] for  information about tab location.
+
+To apply a unique style to the active (currently selected) tab, click on a tab to make it active, and then apply the desired styling from the *Format* panel.
+====
 
 == Wrap Text
 The ‘Wrap Text’ option wraps text to multiple lines instead of truncating the text. For a *Selection Tree*, this setting adjusts the row height automatically to ensure the wrapped text is visible.

@@ -22,5 +22,7 @@ image:Tab Properties General Tab.png[alt="tab properties assign labels and order
 
 To change a tab label, select the desired tab in the ‘Tab’ list, enter the new label text in the ‘Label’ field, and press btn:[OK]. To change the position of the selected tab, press btn:[Move Up] or btn:[Move Down].
 
+To display the tabs *below* the tabbed components rather than *above*, select the '`Bottom Tabs`' option.
+
 == Script Tab
 {commonScript}
