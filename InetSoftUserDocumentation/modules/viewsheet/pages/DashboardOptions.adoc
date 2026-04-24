@@ -29,6 +29,8 @@ While metadata view can be useful for layout  purposes, Filter components such a
 +
 TIP: If you press the btn:[Cancel] button in the Dashboard loading dialog box, the Dashboard is automatically displayed in meta-data mode.
 
+Hide INFO Notifications in Composer:: When enabled, this suppresses the popup toast alerts for messages that have *Info* level and below. These alerts are instead sent directly to the Console.  (See xref:VisualComposerConsole.adoc[] for more information.) *Warning* and *Error* alerts continue to generate toast messages as normal.
+
 Prompt for parameters:: Enables user prompting for any parameters defined in the linked data source. Disable ‘Prompt for parameters’ to completely suppress prompting. This may be necessary when  parameter values are being supplied from another source (script, hyperlink, session data, etc.) and the user should therefore not be prompted to enter values.
 +
 Press the btn:[Customize] button to selectively disable prompting for certain parameters or to set the display order for parameters. (If disabled parameters are used within filter conditions, the corresponding filter conditions are dropped.) See xref:AddConditions.adoc[] for more information.
