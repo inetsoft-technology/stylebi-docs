@@ -1,0 +1,66 @@
+= dateFormatPattern
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for  properties shared with other components.
+* xref:viewsheet:RadioCheckBoxComboProperties.adoc[]for more information about Form components.
+====
+
+Specifies the date format code used to format any date selected in the ComboBox before it is sent to a database query. (See xref:viewsheet:RadioCheckBoxComboProperties.adoc[] for information on the 'Format Date Values Sent to Query' option.) This property should be set in the *onInit* handler. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about handlers.)
+
+IMPORTANT: The xref:CheckRadioComboQueryDateFormat.adoc[] property must be set to `true` to apply the format pattern.
+
+
+
+
+== Type
+String::	A date format code. (See xref:viewsheet:DataFormat.adoc#DateFormat[Date Format] for format codes.) The following *restrictions* apply:
+
+[square]
+* Only the following format tokens are permitted: `y`, `M`, `d`
+* Only the following separators are permitted: `-`, `/`, `.`, comma, space
+* A year token is *required*:  `yy` or `yyyy`
+* A month token is *required*: `M` or `MM`
+* A day token is *required*: `d` or `dd`
++
+.Examples
+****
+|===
+|Format|Valid|Reason
+
+|yyyy-MM-dd |yes|valid
+|MM/dd/yyyy |yes|valid
+|dd.MM.yyyy |yes|valid
+|yyyy/MM/dd |yes|valid
+|d-M-yyyy |yes|valid
+|yyyy, MM d |yes|valid
+|yyyy MM dd|yes|valid
+
+|yyyy-MM  |NO| missing `d`
+|MM-dd |NO| missing `y`
+|yyyy-MM-dd HH:mm |NO| `H` not allowed
+|EEE, MMM d yyyy |NO| `E` not allowed
+|yyyy_MM_dd |NO| `_` not allowed
+
+|===
+****
+
+== Example
+[source,javascript]
+ComboBox1.dateFormatPattern = 'yyyy-MM-dd';
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+dateFormatPattern            // unqualified
+ComboBox1.dateFormatPattern  // qualified
+
+{secondForm}
+====

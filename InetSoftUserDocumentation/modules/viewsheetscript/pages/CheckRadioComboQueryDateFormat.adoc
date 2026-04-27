@@ -1,0 +1,41 @@
+= queryDateFormat
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for  properties shared with other components.
+* xref:viewsheet:RadioCheckBoxComboProperties.adoc[]for more information about Form components.
+====
+
+
+For Combo Box *only*, enables formatting of dates sent to the database in the Combo Box query.  To set the format, use xref:CheckRadioComboDateFormatPattern.adoc[].
+
+
+
+
+== Type
+Boolean:: `true`: formatting on  +
+`false`: formatting off
+
+
+
+
+== Example
+[source,javascript]
+ComboBox1.queryDateFormat = true;
+ComboBox1.dateFormatPattern = 'yyyy-MM-dd';
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+queryDateFormat            // unqualified
+ComboBox1.queryDateFormat  // qualified
+
+{secondForm}
+====

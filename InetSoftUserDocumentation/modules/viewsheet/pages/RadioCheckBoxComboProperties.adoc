@@ -41,7 +41,7 @@ Format Date Values Sent to Query::  A Date format code that should be used to fo
 
 [square]
 * Only the following format tokens are permitted: `y`, `M`, `d`
-* Only the following separators are permitted: `-`, `/`, `.`, space
+* Only the following separators are permitted: `-`, `/`, `.`, comma, space
 * A year token is *required*:  `yy` or `yyyy`
 * A month token is *required*: `M` or `MM`
 * A day token is *required*: `d` or `dd`
