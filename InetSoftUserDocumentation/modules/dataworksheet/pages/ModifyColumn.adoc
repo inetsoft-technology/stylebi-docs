@@ -30,7 +30,11 @@ image:embeddedTableColumnType2.png[alt="right-click column header and select Col
 +
 This opens the ‘Column Type’ panel.
 
-. Select the desired data type from the ‘Type’ menu. If you select a numeric or date type, a secondary ‘Parse Format’ menu appears below.
+. Select the desired data type from the ‘Type’ menu. The available data types are shown below:
++
+include::ROOT:partial$DataTypeTable.adoc[]
++
+If you select a numeric or date type, a secondary ‘Parse Format’ menu appears below.
 . *_Optional:_*  In the ‘Parse Format’ menu, select the format in which you have entered your data. This allows the Embedded Table to convert the data to a standard representation. For example, if you have entered dates in the form “1/13/1995,” select or type `MM/d/yyyy` as the parse format.
 +
 NOTE: The ‘Parse Format’ menu is available only for _manually-created_ Embedded Table columns. It is not available for data converted from a regular data block.

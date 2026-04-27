@@ -43,6 +43,11 @@ include::ROOT:partial$duplicateNames.adoc[]
 . From the ‘Return Data Type’ menu, select the appropriate data type for the values that the expression will return.
 +
 CAUTION: Setting an incorrect ‘Return Data Type’ may cause the expression to return unexpected results.
++
+The following data types are available:
++
+include::ROOT:partial$DataTypeTable.adoc[]
+
 
 . Type the desired expression into the script area. To add a field into the expression, click on the field name in the ‘Fields’ listing. To reference the data contained in other cells of the data block, see xref:dataworksheet:AccessDataInExpression.adoc[].
 +

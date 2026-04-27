@@ -1,0 +1,17 @@
+[cols="1,5"]
+|===
+|Type|Description
+
+|String|Text string
+|Integer|32-bit signed integer  in range -2,147,483,648 to 2,147,483,647
+|Double|64-bit number
+|Date|Date with no time component (e.g., `2024-03-15`)
+|Time|Time with no date component (e.g., `14:30:00`)
+|TimeInstant|Time and date (e.g., `2024-03-15 14:30:00`)
+|Boolean|`true` or `false`
+|Float|32-bit number
+|Character|A single unicode character
+|Byte|One byte number (8-bit integer) in range  -128 to 127
+|Short|16-bit integer in range -32,768 to 32,767
+|Long|64-bit signed integer
+|===

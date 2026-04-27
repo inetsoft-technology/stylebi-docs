@@ -59,7 +59,10 @@ An attribute name can contain any characters except a *period* (“.”). Howeve
  ! [ ] ? { & } : ^ ` \ ' " = / < > $()
 ====
 
-Data Type:: Assign a data type (‘Integer’, String’, etc.) from the ‘Data Type’ menu.
+Data Type:: Assign a data type (‘Integer’, String’, etc.) from the ‘Data Type’ menu.  The following types are available:
++
+include::ROOT:partial$DataTypeTable.adoc[]
+
 
 Physical Column:: To change the physical view field that is represented by the logical model attribute, select the desired field from the ‘Physical Column’ menu.
 

@@ -20,7 +20,10 @@ image:parameterDialog.png[alt="Variable Properties dialog box with name label an
 +
 include::ROOT:partial$duplicateNames.adoc[]
 . Enter a ‘Label’ for the Variable. This is the label that appears in the parameter dialog box that prompts the user.
-. Select the data type of the Variable from the ‘Type’ menu. This is the data type of the values that the Variable will provide to the filtering condition.
+. Select the data type of the Variable from the ‘Type’ menu. This is the data type of the values that the Variable will provide to the filtering condition.  The following types are available:
++
+include::ROOT:partial$DataTypeTable.adoc[]
++
 . In the ‘Selection List’ panel, specify the source of the Variable data:
 ** Select ‘*None*’ to prompt the user with an empty text field (no choices).
 ** Select ‘*Embedded*’ to enter a fixed list of choices. Press the btn:[Edit] button to open the ‘Embedded List Values’ dialog box.

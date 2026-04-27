@@ -8,20 +8,21 @@ The following data type constants are available.
 == Type
 xref:commonscript:StyleConstant.adoc[] object:: One of the (integer) constants below:
 +
+[cols="1,5"]
 |===
 |Type|Description
 
-|BOOLEAN|true or false
-|BYTE|single byte number
+|BOOLEAN|`true` or `false`
+|BYTE|one byte number (8-bit integer) in range  -128 to 127
 |CHAR|character
 |DATE|date with no time component
-|DOUBLE|double number
+|DOUBLE|64-bit number
 |ENUM|user-defined string constants
-|FLOAT|float number
-|INTEGER|integer number
-|LONG|long integer number
-|SHORT|short integer number
-|STRING|text stringTIMEtime
+|FLOAT|32-bit number
+|INTEGER|32-bit signed integer  in range -2,147,483,648 to 2,147,483,647
+|LONG|64-bit signed integer
+|SHORT|16-bit integer in range -32,768 to 32,767
+|STRING|text string
 |TIME_INSTANT|time and date
 |===
 
