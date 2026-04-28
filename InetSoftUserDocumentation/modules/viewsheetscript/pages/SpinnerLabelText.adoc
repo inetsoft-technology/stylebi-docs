@@ -1,0 +1,31 @@
+= labelText
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Spinner settings.
+====
+
+Specifies the text of the label displayed for the Spinner component. See xref:viewsheet:SliderSpinnerProperties.adoc[] for information on the '`Label Text`' option.
+
+== Type
+String::	Label text
+
+
+== Example
+[source,javascript]
+Spinner1.labelVisible = true;
+Spinner1.labelText = 'Select a value';
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+labelText             // unqualified
+Spinner1.labelText    // qualified
+
+{secondForm}
+====

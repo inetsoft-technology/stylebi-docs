@@ -1,0 +1,31 @@
+= labelVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:TextInputProperties.adoc[] for more information on TextInput settings.
+====
+
+Specifies whether a label is displayed for the TextInput component. See xref:viewsheet:TextInputProperties.adoc[] for information on the '`Show Label`' option.
+
+== Type
+Boolean:: `true`: label is displayed +
+`false`: label is not displayed
+
+
+== Example
+[source,javascript]
+TextInput1.labelVisible = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+labelVisible               // unqualified
+TextInput1.labelVisible    // qualified
+
+{secondForm}
+====

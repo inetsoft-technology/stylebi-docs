@@ -1,0 +1,35 @@
+= labelPosition
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+Specifies the position of the label relative to the Slider component. See xref:viewsheet:SliderSpinnerProperties.adoc[] for information on the '`Label Position`' option.
+
+== Type
+String::
+* `'top'`: label appears above the component
+* `'bottom'`: label appears below the component
+* `'left'`: label appears to the left of the component (default)
+* `'right'`: label appears to the right of the component
+
+
+== Example
+[source,javascript]
+Slider1.labelVisible = true;
+Slider1.labelPosition = 'top';
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+labelPosition            // unqualified
+Slider1.labelPosition    // qualified
+
+{secondForm}
+====

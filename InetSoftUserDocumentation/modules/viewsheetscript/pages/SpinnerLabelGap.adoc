@@ -1,0 +1,31 @@
+= labelGap
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:SliderSpinnerProperties.adoc[] for more information on Spinner settings.
+====
+
+Specifies the gap in pixels between the Spinner component and its label. See xref:viewsheet:SliderSpinnerProperties.adoc[] for information on the '`Gap (px)`' option.
+
+== Type
+Integer::	Gap in pixels between the component and the label (default: 5)
+
+
+== Example
+[source,javascript]
+Spinner1.labelVisible = true;
+Spinner1.labelGap = 10;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+labelGap             // unqualified
+Spinner1.labelGap    // qualified
+
+{secondForm}
+====

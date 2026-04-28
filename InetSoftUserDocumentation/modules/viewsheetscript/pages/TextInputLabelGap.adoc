@@ -1,0 +1,31 @@
+= labelGap
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:TextInputProperties.adoc[] for more information on TextInput settings.
+====
+
+Specifies the gap in pixels between the TextInput component and its label. See xref:viewsheet:TextInputProperties.adoc[] for information on the '`Gap (px)`' option.
+
+== Type
+Integer::	Gap in pixels between the component and the label (default: 5)
+
+
+== Example
+[source,javascript]
+TextInput1.labelVisible = true;
+TextInput1.labelGap = 10;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+labelGap               // unqualified
+TextInput1.labelGap    // qualified
+
+{secondForm}
+====
