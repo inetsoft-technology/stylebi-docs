@@ -17,6 +17,7 @@ ui:
 antora:
   extensions:
   - require: '@antora/lunr-extension'
+    index_latest_only: true
   - antora-router-extension
     
 asciidoc:
