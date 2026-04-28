@@ -1,0 +1,35 @@
+= AxisSpec.setTruncate(Boolean)
+:navtitle: setTruncate()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies whether axis labels may be truncated with `..` when there is insufficient space to display the full text. {noGetter}
+
+== Parameter
+Boolean:: `true`: truncate labels that do not fit +
+`false`: do not truncate labels
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var spec = new AxisSpec();
+spec.setTruncate(true); // <1>
+--
+<1> Allow labels to be truncated when space is limited.
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = Chart1.getCoordinate();
+var scale = coord.getXScale();
+var spec = scale.getAxisSpec();
+spec.setTruncate(true);
+--
+=====

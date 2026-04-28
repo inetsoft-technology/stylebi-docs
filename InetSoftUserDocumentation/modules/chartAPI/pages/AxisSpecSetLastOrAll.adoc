@@ -1,0 +1,36 @@
+= AxisSpec.setLastOrAll(Boolean)
+:navtitle: setLastOrAll()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies the truncation behavior for multi-line axis labels when there is insufficient space to display all lines. When `true`, only the last line is kept; when `false`, as many lines as can fit are kept. {noGetter}
+
+== Parameter
+Boolean:: `true`: keep only the last line of a truncated multi-line label +
+`false`: keep as many lines as can fit
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var spec = new AxisSpec();
+spec.setTruncate(true);
+spec.setLastOrAll(true); // <1>
+--
+<1> When truncating multi-line labels, keep only the last line.
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = Chart1.getCoordinate();
+var scale = coord.getXScale();
+var spec = scale.getAxisSpec();
+spec.setLastOrAll(true);
+--
+=====

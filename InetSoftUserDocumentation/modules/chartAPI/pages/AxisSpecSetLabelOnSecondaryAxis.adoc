@@ -1,0 +1,35 @@
+= AxisSpec.setLabelOnSecondaryAxis(Boolean)
+:navtitle: setLabelOnSecondaryAxis()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies whether axis labels are displayed on the opposite side of the chart. For a Y-axis, labels move from left to right; for an X-axis, labels move from bottom to top. {noGetter}
+
+== Parameter
+Boolean:: `true`: display labels on the opposite side +
+`false`: display labels on the default side (default)
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var spec = new AxisSpec();
+spec.setLabelOnSecondaryAxis(true); // <1>
+--
+<1> Move axis labels to the opposite side of the chart.
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = Chart1.getCoordinate();
+var scale = coord.getYScale();
+var spec = scale.getAxisSpec();
+spec.setLabelOnSecondaryAxis(true);
+--
+=====

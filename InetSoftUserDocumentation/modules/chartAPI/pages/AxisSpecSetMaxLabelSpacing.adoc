@@ -1,0 +1,34 @@
+= AxisSpec.setMaxLabelSpacing(Number)
+:navtitle: setMaxLabelSpacing()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies the maximum space in pixels reserved between axis labels. This value acts as an upper bound when the label spacing is calculated automatically based on available space and label distribution. The corresponding getter function is `getMaxLabelSpacing()`.
+
+== Parameter
+Number:: Maximum spacing in pixels between axis labels
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var spec = new AxisSpec();
+spec.setMaxLabelSpacing(20); // <1>
+--
+<1> Limit the maximum space between labels to 20 pixels.
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = Chart1.getCoordinate();
+var scale = coord.getXScale();
+var spec = scale.getAxisSpec();
+spec.setMaxLabelSpacing(20);
+--
+=====

@@ -1,0 +1,34 @@
+= AxisSpec.setLine2Color(value)
+:navtitle: setLine2Color()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies the color of the secondary axis line. The corresponding getter function is `getLine2Color()`.
+
+== Parameter
+A {javaawtcolor} object
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+var spec = new AxisSpec();
+spec.setLine2Color(java.awt.Color.GRAY); // <1>
+--
+<1> Set the secondary axis line color to gray.
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = Chart1.getCoordinate();
+var scale = coord.getYScale();
+var spec = scale.getAxisSpec();
+spec.setLine2Color(java.awt.Color.GRAY);
+--
+=====
