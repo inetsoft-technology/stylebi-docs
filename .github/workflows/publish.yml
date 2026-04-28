@@ -17,10 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: playbook  # All run: steps execute here    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+        working-directory: playbook  # All run: steps execute here
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -34,7 +31,7 @@ jobs:
         node-version: '18'
     - name: Install UI components
       working-directory: ui
-      run: npm install      
+      run: npm install
     - name: Create UI Bundle
       working-directory: ui
       run: npx gulp bundle
@@ -46,6 +43,13 @@ jobs:
       uses: actions/upload-pages-artifact@v4
       with:
         path: playbook/build/site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
