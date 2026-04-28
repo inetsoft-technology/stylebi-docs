@@ -2,3 +2,6 @@ name: InetSoftUserDocumentation
 nav:
   - modules/ROOT/nav.adoc 
 version: 1.0.0
+asciidoc:
+  attributes:
+    noindex: '@'
