@@ -36,7 +36,7 @@ jobs:
       working-directory: ui
       run: npx gulp bundle
     - name: Install Antora with the Antora Lunr Extension
-      run: npm i antora @antora/lunr-extension antora-router-extension
+      run: npm i antora @antora/lunr-extension@1.0.0-alpha.13 antora-router-extension
     - name: Generate Site
       run: npx antora --ui-bundle-url ../ui/build/ui-bundle.zip antora-playbook.yml
     - name: Upload Artifacts
