@@ -1,0 +1,32 @@
+= tipOnClick
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+xref:viewsheet:TableProperties.adoc[] to set this property in the '`Table Properties`' dialog box.
+====
+
+Specifies that the data tip view for a Table, Crosstab, or Freehand Table is displayed only when the user clicks on the component, rather than on hover. If the clicked cell has a hyperlink, you must {buttonCtrl}-click to show the data tip.  See xref:viewsheet:AddTipsToChart.adoc[] for more information about data tips.
+
+== Type
+Boolean:: `true`: show data tip on mouse click +
+`false`: show data tip on mouse hover (default)
+
+
+== Example
+[source,javascript]
+----
+TableView1.tipOnClick = true;
+----
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+tipOnClick                 // unqualified
+TableView1.tipOnClick      // qualified
+
+{secondForm}
+====

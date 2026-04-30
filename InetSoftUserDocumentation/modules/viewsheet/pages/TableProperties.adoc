@@ -39,7 +39,7 @@ Delete Rows:: Allows a user to delete rows from the table. To do this, the user 
 Edit Rows:: Allows a user to edit data in the table. Edited data is not retained across sessions unless saved  to the Data Worksheet by setting the '`Write Back to Storage`' option. See xref:WriteBackToStorage.adoc#ValidateUserInput[Validate User Input] for information about validation.
 
 Write Back to Storage:: Allows user-modified data in an Embedded Table to persist across sessions by saving the modified data together with the underlying Data Worksheet.
-Data Tip View:: A Dashboard component is displayed when mouse hovers over table area. The component is filtered based on the hover region. See xref:AddTipsToChart.adoc[] for more details.
+Data Tip View:: A Dashboard component is displayed when mouse hovers over table area. The component is filtered based on the hover region. Select ‘On Click Only’ if you want the data tip to appear only when the user clicks (rather than hovers). If the clicked cell has a hyperlink, you must use {buttonCtrl}-click  to show the data tip. See xref:AddTipsToChart.adoc[] for more details.
 Flyover Views:: Allows you to select a set of Dashboard components which will be adaptively filtered as the user hovers the mouse or clicks on the table area. (Select ‘On Click Only’ if you want the filtered components to update when the user clicks.) If the table contains aggregated data, filtering is based on the grouping field dimension(s) in the row on which the user hovers or clicks. If the table contains detail data, filtering is based on the non-numeric columns in the row on which the user hovers or clicks. See xref:DrillDownIntoData.adoc[] for more details.
 
 

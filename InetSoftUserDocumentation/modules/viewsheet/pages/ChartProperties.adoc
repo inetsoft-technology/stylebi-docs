@@ -23,7 +23,7 @@ NOTE: {dynamicProperties}
 
 Tip::
 * *Tooltip*: Value is displayed as a tooltip when the mouse hovers over the corresponding chart area. To display custom HTML in the tooltip, see xref:AddTipsToChart.adoc[].
-* *Data Tip View*: A Dashboard component is displayed when the mouse hovers over the chart area. The component is filtered based on the hover region. See xref:AddTipsToChart.adoc[] for more details.
+* *Data Tip View*: A Dashboard component is displayed when the mouse hovers over the chart area. The component is filtered based on the hover region. Select ‘On Click Only’ if you want the data tip to appear only when the user clicks (rather than hovers). If the clicked element has a hyperlink, you must {buttonCtrl}-click to show the data tip. See xref:AddTipsToChart.adoc[] for more details.
 * *Flyover Views*: Allows you to select a set of Dashboard components which will be adaptively filtered as the user hovers the mouse or clicks on the chart area. (Select ‘On Click Only’ if you want the filtered components to update when the user clicks.)  See  xref:DrillDownIntoData.adoc[] for more details.
 
 image:Chart Properties General Tab.png[alt="chart properties general tab"]

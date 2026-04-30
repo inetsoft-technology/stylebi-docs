@@ -24,7 +24,7 @@ include::ROOT:partial$measureAndDimensionTip.adoc[]
 
 image:dataTip1.png[alt="tooltip displays data group details on hover"]
 
-You can also choose to replace the tooltip with a *data tip*. A data tip displays information about a data group using another Dashboard component, such as Chart, Text, or Gauge (or a collection of such components). The data tip is dynamically filtered to show only data corresponding to the particular chart group on which you hover.
+You can also choose to replace the tooltip with a *data tip*. A data tip displays information about a data group using another Dashboard component, such as Chart, Text, or Gauge (or a collection of such components). The data tip is dynamically filtered to show only data corresponding to the particular chart group on which you hover. To show the data tip only on click (rather than hover), enable the ‘On Click Only’ option in the component's Properties dialog. If the element has a hyperlink, you must {buttonCtrl}-click to show the data tip.
 
 image:dataTip2.png[alt="data tip component displays filtered dashboard data"]
 
