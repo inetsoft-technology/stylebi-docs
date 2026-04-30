@@ -12,7 +12,16 @@
       "Bash(gh search *)",
       "WebFetch(domain:api.github.com)",
       "Bash(gh api *)",
-      "Bash(gh auth *)"
+      "Bash(gh auth *)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:gitlab.com)",
+      "WebFetch(domain:docs.antora.org)",
+      "Bash(git -C /tmp/stylebi-v1.0 add InetSoftUserDocumentation/antora.yml)",
+      "Bash(git -C /tmp/stylebi-v1.0 commit -m ' *)",
+      "Bash(git -C \"C:/src/stylebi-docs\" status)",
+      "Bash(git -C \"C:/src/stylebi-docs\" log origin/main..HEAD --oneline)",
+      "Bash(git show *)",
+      "Bash(gh pr *)"
     ]
   }
 }
