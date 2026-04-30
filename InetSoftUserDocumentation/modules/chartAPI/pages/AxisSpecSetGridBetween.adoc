@@ -14,12 +14,16 @@ Boolean:: `true`: draw grid lines between ticks +
 .Chart Component Script
 [source,javascript]
 --
-var spec = new AxisSpec();
-spec.setGridBetween(true); // <1>
+include::scriptexample:partial$AxisSpecSetGridBetween1.js[]
 --
-<1> Draw grid lines between tick marks.
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Use `setGridBetween` to draw grid lines between tick marks rather than at tick marks.
 
+
+image:commonscript:AxisSpecSetGridBetween.png[]
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
 
 [TIP]
 =====
@@ -27,9 +31,6 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 [source,javascript]
 --
-var coord = Chart1.getCoordinate();
-var scale = coord.getYScale();
-var spec = scale.getAxisSpec();
-spec.setGridBetween(true);
+include::scriptexample:partial$AxisSpecSetGridBetween2.js[]
 --
 =====

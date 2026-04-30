@@ -1,4 +1,4 @@
-= AxisSpec.setAxisSize(Number)
+= AxisSpec.setAxisSize(value)
 :navtitle: setAxisSize()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -6,19 +6,24 @@ include::ROOT:partial$buttonSnippets.adoc[]
 Specifies a fixed size for the axis area in pixels. For a vertical axis, this sets the width; for a horizontal axis, this sets the height. The corresponding getter function is `getAxisSize()`.
 
 == Parameter
-Number:: Fixed size of the axis area in pixels
+value:: Fixed size of the axis area in pixels
 
 == Example
 
 .Chart Component Script
 [source,javascript]
 --
-var spec = new AxisSpec();
-spec.setAxisSize(80); // <1>
+include::scriptexample:partial$AxisSpecSetAxisSize1.js[]
 --
-<1> Set the axis area to a fixed width/height of 80 pixels.
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Use `setAxisSize` to fix the axis area to 80 pixels wide.
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+image:commonscript:AxisSpecSetAxisSize.png[alt="set axis area using setAxisSize in script"]
+
+
 
 [TIP]
 =====
@@ -26,9 +31,6 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 [source,javascript]
 --
-var coord = Chart1.getCoordinate();
-var scale = coord.getYScale();
-var spec = scale.getAxisSpec();
-spec.setAxisSize(80);
+include::scriptexample:partial$AxisSpecSetAxisSize2.js[]
 --
 =====

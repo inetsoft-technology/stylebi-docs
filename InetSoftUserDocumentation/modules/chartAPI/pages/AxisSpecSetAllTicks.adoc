@@ -3,7 +3,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-Specifies whether tick marks are displayed for labels that have been suppressed by the `setAbbreviate()` option. When abbreviation is enabled, some labels are dropped to conserve space; this property controls whether tick marks remain visible at those positions. {noGetter}
+Specifies whether *tick marks* are displayed for labels that have been suppressed by  xref:AxisSpecSetAbbreviate.adoc[] or because of duplicate-label suppression.  {noGetter}
 
 == Parameter
 Boolean:: `true`: show ticks for abbreviated (suppressed) labels +
@@ -14,11 +14,11 @@ Boolean:: `true`: show ticks for abbreviated (suppressed) labels +
 .Chart Component Script
 [source,javascript]
 --
-var spec = new AxisSpec();
-spec.setAbbreviate(true);
-spec.setAllTicks(true); // <1>
+include::scriptexample:partial$AxisSpecSetAllTicks1.js[]
 --
-<1> Show ticks even for labels dropped by abbreviation.
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Use `setAllTicks` to show tick marks at all label positions, including those suppressed by abbreviation.
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -28,9 +28,6 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 [source,javascript]
 --
-var coord = Chart1.getCoordinate();
-var scale = coord.getXScale();
-var spec = scale.getAxisSpec();
-spec.setAllTicks(true);
+include::scriptexample:partial$AxisSpecSetAllTicks2.js[]
 --
 =====

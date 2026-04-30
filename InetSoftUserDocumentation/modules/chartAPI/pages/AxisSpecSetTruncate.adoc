@@ -3,21 +3,24 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-Specifies whether axis labels may be truncated with `..` when there is insufficient space to display the full text. {noGetter}
+Specifies whether axis labels are truncated with [`..`] when there is insufficient space to display the full text. When `false`, crowded labels may instead be hidden, overlapped, or rotated. {noGetter}
 
 == Parameter
-Boolean:: `true`: truncate labels that do not fit +
-`false`: do not truncate labels
+Boolean:: `true`: truncate labels that do not fit (default) +
+`false`: do not truncate labels (crowded labels may be hidden or rotated)
 
 == Example
 
 .Chart Component Script
 [source,javascript]
 --
-var spec = new AxisSpec();
-spec.setTruncate(true); // <1>
+include::scriptexample:partial$AxisSpecSetTruncate1.js[]
 --
-<1> Allow labels to be truncated when space is limited.
+<1> {dataset} Five long product names are used to ensure labels exceed the available width per category.
+<2> Create the `AxisSpec` object.
+<3> Use `setTruncate(true)` to truncate labels that do not fit.
+
+image:commonscript:AxisSpecSetTruncate.png[]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -27,9 +30,6 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 [source,javascript]
 --
-var coord = Chart1.getCoordinate();
-var scale = coord.getXScale();
-var spec = scale.getAxisSpec();
-spec.setTruncate(true);
+include::scriptexample:partial$AxisSpecSetTruncate2.js[]
 --
 =====

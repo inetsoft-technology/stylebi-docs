@@ -14,12 +14,16 @@ Boolean:: `true`: display labels on the opposite side +
 .Chart Component Script
 [source,javascript]
 --
-var spec = new AxisSpec();
-spec.setLabelOnSecondaryAxis(true); // <1>
+include::scriptexample:partial$AxisSpecSetLabelOnSecondaryAxis1.js[]
 --
-<1> Move axis labels to the opposite side of the chart.
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Use `setLabelOnSecondaryAxis` to move axis labels to the opposite side of the chart.
+
+image:commonscript:AxisSpecSetLabelOnSecondaryAxis.png[]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
 
 [TIP]
 =====
@@ -27,9 +31,6 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 [source,javascript]
 --
-var coord = Chart1.getCoordinate();
-var scale = coord.getYScale();
-var spec = scale.getAxisSpec();
-spec.setLabelOnSecondaryAxis(true);
+include::scriptexample:partial$AxisSpecSetLabelOnSecondaryAxis2.js[]
 --
 =====

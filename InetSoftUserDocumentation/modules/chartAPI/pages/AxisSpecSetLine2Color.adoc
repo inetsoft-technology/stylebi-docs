@@ -6,6 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 Specifies the color of the secondary axis line. The corresponding getter function is `getLine2Color()`.
 
 == Parameter
+value::
 A {javaawtcolor} object
 
 == Example
@@ -13,10 +14,13 @@ A {javaawtcolor} object
 .Chart Component Script
 [source,javascript]
 --
-var spec = new AxisSpec();
-spec.setLine2Color(java.awt.Color.GRAY); // <1>
+include::scriptexample:partial$AxisSpecSetLine2Color1.js[]
 --
-<1> Set the secondary axis line color to gray.
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Use `setLine2Color` to set the secondary axis line color.
+
+image:commonscript:AxisSpecSetLine2Color.png[]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -26,9 +30,6 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 [source,javascript]
 --
-var coord = Chart1.getCoordinate();
-var scale = coord.getYScale();
-var spec = scale.getAxisSpec();
-spec.setLine2Color(java.awt.Color.GRAY);
+include::scriptexample:partial$AxisSpecSetLine2Color2.js[]
 --
 =====

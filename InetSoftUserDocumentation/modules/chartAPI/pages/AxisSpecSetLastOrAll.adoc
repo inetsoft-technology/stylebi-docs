@@ -3,7 +3,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-Specifies the truncation behavior for multi-line axis labels when there is insufficient space to display all lines. When `true`, only the last line is kept; when `false`, as many lines as can fit are kept. {noGetter}
+Specifies the truncation behavior for multi-line axis labels when there is insufficient space to display all lines. When `true`, only the *last line* of the label is displayed; when `false`, as many lines as possible are displayed . {noGetter}
 
 == Parameter
 Boolean:: `true`: keep only the last line of a truncated multi-line label +
@@ -14,12 +14,14 @@ Boolean:: `true`: keep only the last line of a truncated multi-line label +
 .Chart Component Script
 [source,javascript]
 --
-var spec = new AxisSpec();
-spec.setTruncate(true);
-spec.setLastOrAll(true); // <1>
+include::scriptexample:partial$AxisSpecSetLastOrAll1.js[]
 --
-<1> When truncating multi-line labels, keep only the last line.
+<1> {dataset} Each `Product` value contains three lines separated by `\n`.
+<2> Create the `AxisSpec` object.
+<3> Use `setLastOrAll(true)` to show only the last line of each truncated label.
 
+
+image:commonscript:AxisSpecSetLastOrAll.png[]
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]
@@ -28,9 +30,6 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 [source,javascript]
 --
-var coord = Chart1.getCoordinate();
-var scale = coord.getXScale();
-var spec = scale.getAxisSpec();
-spec.setLastOrAll(true);
+include::scriptexample:partial$AxisSpecSetLastOrAll2.js[]
 --
 =====
