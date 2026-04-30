@@ -139,7 +139,7 @@ selectionList.maxrow:: The maximum number of items to be displayed in a Selectio
 
 script.execution.timeout:: A safety-net for script execution time, especially for infinite loops. Times-out the script if execution time exceeds specified value (in seconds).
 table.output.maxrow:: Sets the global maximum row limit for all Tables, Crosstabs, and Freehand Tables during Dashboard runtime execution. This property controls the size of the final displayed table, following any grouping and aggregation.
-table.output.maxcol:: Sets the global maximum column limit for all Tables, Crosstabs, and Freehand Tables during Dashboard runtime execution.
+table.output.maxcol:: Sets the global maximum column limit for all Tables, Crosstabs, and Freehand Tables during Dashboard runtime execution. Valid range is 1–500. Values outside this range are clamped to the nearest bound. Default is 500.
 
 
 == Log Properties
