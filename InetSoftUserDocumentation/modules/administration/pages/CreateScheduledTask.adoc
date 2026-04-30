@@ -91,6 +91,10 @@ image:Figure 35.png[alt="set cycle name and time condition"]
 * ‘Notification of Cycle Threshold Exceeded’ emails the specified addresses if the cycle runs for longer than the specified number of seconds.
 
 . Select the *Security* tab, and assign the desired permissions for the cycle. See xref:SetSecurityActions.adoc[] for instructions on how to assign permissions.
++
+To *copy* the cycle`'s current permissions, press the btn:[Copy Permissions] button below the permissions table.  You can then navigate to another cycle and paste the permissions to that cycle. To paste permissions you have already copied from another cycle, press the btn:[Paste Permissions] button.
++
+TIP: The btn:[Paste Permissions] button will display numbers in parentheses, such as btn:[Paste Permissions (x of n)].  The *second  value* (*n*) indicates the number of permissions that were copied to the clipboard.  The *first  value* (*x*) indicates the  number of permissions that  are compatible  with the   current cycle, and can actually be pasted.
 
 . Press the btn:[Save] button at the bottom of the panel.
 

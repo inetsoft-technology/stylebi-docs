@@ -111,7 +111,12 @@ image:schedulerTimeRangeDef.png[alt="press Add button in Time Ranges panel"]
 image:schedulerTimeRangeDef2.png[alt="configure Time Range dialog with start and end times"]
 
 . *_Optional:_* Select ‘Default’ to make this the default time range.
+
 . *_Optional:_* Select the *Security* tab in the dialog box, and assign permissions for this particular time range to different users, groups, or roles.
++
+To *copy* the time range`'s current permissions, press the btn:[Copy Permissions] button below the permissions table.  You can then navigate to another time range and paste the permissions to that range. To paste permissions you have already copied from another time range, press the btn:[Paste Permissions] button.
++
+The btn:[Paste Permissions] button will display numbers in parentheses, such as btn:[Paste Permissions (x of n)].  The *second  value* (*n*) indicates the number of permissions that were copied to the clipboard.  The *first  value* (*x*) indicates the  number of permissions that  are compatible  with the   current time range, and can actually be pasted.
 +
 TIP: To specify in general which users, groups, and roles have access to the time range feature for scheduling, use the  ‘Time Range’ option on the *Actions* tab of the *Security* page. See xref:SetSecurityActions.adoc[] for instruction on how to assign action permissions.
 
