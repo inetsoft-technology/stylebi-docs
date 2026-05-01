@@ -21,7 +21,8 @@
       "Bash(git -C \"C:/src/stylebi-docs\" status)",
       "Bash(git -C \"C:/src/stylebi-docs\" log origin/main..HEAD --oneline)",
       "Bash(git show *)",
-      "Bash(gh pr *)"
+      "Bash(gh pr *)",
+      "Bash(xargs grep *)"
     ]
   }
 }

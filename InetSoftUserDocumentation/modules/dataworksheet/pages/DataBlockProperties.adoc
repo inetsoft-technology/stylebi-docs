@@ -14,7 +14,7 @@ image:dataworksheet:TableProps.png[alt="Table Properties panel with description 
 
 The  properties are described below.
 
-Description:: The description text is displayed as a tooltip when the mouse hovers over the Table icon in the table’s title row.
+Description:: The description text is displayed as a tooltip when the user hovers the mouse  over the data block in the Worksheet canvas or over the  {buttonTableIcon} in the table’s title row.
 Max Rows:: The maximum number of rows to retrieve from the database at runtime.
 Visible in Dashboard:: When selected, allows the fields of the data block to be accessed for Dashboard design. Otherwise, the data block is not accessible to the Dashboard.
 +
