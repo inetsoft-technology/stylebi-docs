@@ -262,6 +262,8 @@ portal.history.bar:: Set to `true` (default) to display the Portal history bar, 
 
 portal.home.link:: Sets the URL of the ‘Home’ button in the User Portal. (The default is the `index.html` landing page). This can be an absolute URL such as https://www.google.com, or a path relative to `/app/` such as  `composer`.
 
+em.home.link:: Sets the URL of the ‘Home’ button in Enterprise Manager. (The default is the `index.html` landing page). This can be an absolute URL such as https://www.google.com, or a path relative to `/app/` such as  `composer`. See  xref:Presentation.adoc#PortalIntegration[Portal Integration] for more information.
+
 portal.customLoadingText:: Specifies text to display on the loading screen when the user logs into the User Portal.  The message is displayed under the "Please wait, the application is loading" message and logo.
 
 portal.customLogo.enabled:: When set to `true`, this reveals the '`Default Favicon`' property  xref:Presentation.adoc#LookandFeel[Look and Feel] page.  Default is `false`.  Uncheck the '`Default Favicon`' property to upload a custom favicon.
