@@ -39,7 +39,7 @@ jobs:
       run: npm i antora @antora/lunr-extension antora-router-extension
     - name: Generate Site
       env:
-        SITE_URL: https://inetsoft-technology.github.io/stylebi-docs
+        URL: https://inetsoft-technology.github.io/stylebi-docs
       run: npx antora --ui-bundle-url ../ui/build/ui-bundle.zip antora-playbook.yml
     - name: Upload Artifacts
       uses: actions/upload-pages-artifact@v4
