@@ -38,7 +38,7 @@ jobs:
     - name: Install Antora with the Antora Lunr Extension
       run: npm i antora @antora/lunr-extension antora-router-extension
     - name: Generate Site
-      run: npx antora --ui-bundle-url ../ui/build/ui-bundle.zip antora-playbook.yml
+      run: npx antora --ui-bundle-url ../ui/build/ui-bundle.zip --site-url https://inetsoft-technology.github.io/stylebi-docs antora-playbook.yml
     - name: Upload Artifacts
       uses: actions/upload-pages-artifact@v4
       with:
