@@ -10,6 +10,46 @@ endif::ai[]
 
 This section explains how to restrict the actions that a user can perform in the User Portal based on user, group, or role.
 
+== Built-In Role Permissions
+
+StyleBI includes the following built-in roles with predefined permissions. You can create additional roles and customize permissions as needed. See xref:CreateRole.adoc[] and the sections below for more information.
+
+[cols="1,3"]
+|===
+|Role |Permissions
+
+|*Everyone*
+a|
+[square]
+* Repository tree (browse and view Dashboards)
+* Ad-hoc editing of Dashboards
+* Bookmarks
+* Print, email, and export Dashboards
+
+|*Designer*
+a|
+[square]
+* *Everyone* role permissions (above)
+* Dashboard tab (Pinned Dashboards)
+* Visual Composer (create and edit Dashboards and Data Worksheets)
+
+|*Advanced*
+a|
+
+[square]
+* *Everyone* role permissions (above)
+* Schedule Time Range
+* Schedule Dashboards
+
+|*Administrator*
+a|
+
+[square]
+* No restrictions.
+* Full access to the User Portal and Enterprise Manager.
+
+|===
+
 == Set New Permissions
 
 The procedure for setting object permissions (Actions) is the same for all components.  For example, to set permissions for the ‘Bookmark’ feature, follow the steps below:
