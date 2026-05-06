@@ -73,8 +73,12 @@ image:fixedColorMapping1.png[alt="press assign fixed mapping button to open colo
 .. In the ‘Color Mapping’ dialog box, press the ‘Add Row’ btn:[+] button to add a new value, and use the color swatch to set a fixed color for that value. Press the ‘Delete Row’ btn:[-] button to remove a mapping.
 +
 image:fixedColorMapping2.png[alt="add rows and assign fixed colors in color mapping dialog"]
++
+To assign a color to a dimension value that does not appear in the current data, enable the ‘Switch To Manual Input’ option, and type the value directly.
++
+image:fixedColorMapping4.png[alt="manually enter a dimension value not included in the data"]
 
-. Press ‘OK’.
+. Press btn:[OK].
 
 . Press the {buttonApply} to apply the color setting.
 
