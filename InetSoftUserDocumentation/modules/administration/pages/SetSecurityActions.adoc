@@ -73,6 +73,7 @@ include::partial$selectOrganization.adoc[]
 ====
 The following actions are available:
 
+AI Assistant:: Access to the {buttonAssistant}  in the Portal and Visual Composer.
 Bookmark:: Access to the {buttonBookmarks} features in the  Dashboard toolbar. ‘Open Bookmark’ permission allows the user to view existing bookmarks, while ‘Open and Create Bookmark’ additionally allows the user to create new bookmarks. ‘Share Bookmark’ permission allows a user to share bookmarks to members of their own group(s), while ‘Share to All’ allows sharing to all users without exception.   (See xref:user:BookmarkDashboard.adoc[] for more information.)
 Chart Types:: Access to different chart types in the Chart Editor.
 Dashboard Toolbar:: Access to various buttons on the Dashboard toolbar. (See xref:user:UseDashboard.adoc[] for more information.)
