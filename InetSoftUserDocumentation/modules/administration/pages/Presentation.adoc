@@ -926,10 +926,21 @@ The ‘Open Graph Title’ and ‘Open Graph Description’ are used as the defa
 
 [#AIIntegration]
 == AI Integration
-To customize the integration of the AI Assistant feature, use the properties below:
+To customize the integration of the AI Assistant feature, follow the steps below:
 
+
+. Press the {buttonSettings} at the top of Enterprise Manager.
+
+. Select the *Presentation* page in the left panel.
+
+. *_Optional_*: If you have multi-tenancy enabled, see xref:#PresentationMultiTenancy[] above.
+
+. Select the *AI Integration* page in the right panel.
++
 image:AIIntegration1.png[alt="configure AI Integration in Enterprise Manager"]
 
+. Adjust the settings listed below:
++
 Show AI Assistant Chat Link in Navigation Bars:: When enabled (default) displays the {buttonAssistant} in the navigation bar of the User Portal.  The equivalent property is `ai.assistant.visible`.
 
 AI Assistant Internal URL:: When specified, this enables the reverse-proxy mode for the AI assistant so that the browser never communicates  to the AI Assistant directly.  Communications are directed through the proxy URL which lets you deploy the AI Assistant at  an internal network address that browsers cannot reach. The internal URL is never exposed to the client.  Leave this setting blank when using the direct mode (below).  The equivalent property is `chat.app.internal.url`.
@@ -942,3 +953,4 @@ AI Assistant Vendor Name:: Custom  name to display for the AI Assistant in the A
 
 AI Assistant Logo URL:: URL for a custom logo image to display in the AI Assistant header. This can   also specify a server storage path to an  internally saved image (e.g., `portal/shapes/logo.png`). The equivalent property is `chat.app.logo.url`.
 
+. Press btn:[Apply].

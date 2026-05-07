@@ -1,0 +1,36 @@
+= Use the AI Assistant
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+The AI Assistant allows you to ask questions about any aspect of  StyleBI. The Assistant will cull relevant information from the Documentation and the Knowledge Base to answer your specific question.  Here are some sample questions you can ask the Assistant:
+
+[square]
+* "`How do I create a bar chart?`"
+* "`I need to extract the year part of a date.  How can I do that?`"
+* "`My Worksheet data is being limited.  What is causing that?`"
+
+== Open the Assistant
+To use the AI Assistant, follow the steps below:
+
+. Press the {buttonAssistant} in the Portal toolbar or in the Visual Composer toolbar.  This opens the AI Assistant.
++
+image::Assistant1.png[]
+
++
+NOTE: If you do not see the {buttonAssistant}, consult your administrator.
+
+. Type your question or request in the input field.
++
+image::Assistant2.png[]
+
+. Select '`Think`' or '`DeepThink`' from the menu to set the reasoning effort.
+
+. Press kbd:[Enter] or press  the {buttonSend} to send your question
+The AI Assistant will respond with an answer, a suggested visualization, or guidance based information it discovers in the Documentation or Knowledge Base.
+
+. To begin a new chat, press the btn:[New Chat] button.
+
+. To clear the history, press the btn:[Clear All] button.
+
+. To close the AI Assistant panel, press the {buttonAssistant} again or click outside the panel.
