@@ -40,7 +40,7 @@ Enable Ad Hoc Editing:: Allow end users to access the Chart Editor and edit the 
 Enable Date Comparison:: Enables the Date Comparison feature for the Chart. See xref:CompareDataByDate.adoc[] for more details.
 Enable Drilling:: Allows the user to drill up and down in date or dimension fields. See xref:DrillDownIntoData.adoc[] for more information.
 Sort Others Last:: Available when ‘Group all others together’ is enabled for Top/Bottom ranking in the ‘Edit Dimension’ panel of the Chart Editor. (See xref:FilterTopBottomGroups.adoc[]  for information about dimension ranking). When enabled, this property places the ‘Others’ group _after_ all of the ranked groups, regardless of the specified dimension sorting.
-Top N For Each {...}:: When enabled, specifies that the top-N filter for a dimension (see xref:FilterTopBottomGroups.adoc[]) should be relative to the parent dimension in a dimension hierarchy. (See xref:#HierachyTab[] for explicit hierarchy.)
+Top N For Each {...}:: When enabled, specifies that the top-N filter for a dimension (see xref:FilterTopBottomGroups.adoc[]) should be relative to the parent dimension in a dimension hierarchy. (See xref:#HierarchyTab[] for explicit hierarchy.)
 +
 ****
 *Example*: If the chart ‘X’ dimension is ‘Product Category’ and the ‘Color’ binding is ‘Product Name’, and you request “top 3” of ‘ProductName’, enable ‘Top N For Each Product Category’ to make the filter relative to the ‘Product Category’ grouping (yielding the top 3 products for each category). Leave the option disabled to filter ‘Product Name’ without respect to the ‘Product Category’ group.
