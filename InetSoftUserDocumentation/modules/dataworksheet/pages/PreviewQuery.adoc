@@ -66,7 +66,7 @@ In some cases, you may want to determine which data blocks are most costly in te
 +
 image::QueryExecutionTime1.png[alt="display limited preview of data block"]
 
-. Press the {buttonChangeDataMode} and *deselect* '`Enable display row limit`'.  This will *fully execute* the data block query, so that you can see the actual execution time.
+. Press the {buttonChangeDataMode} and *deselect* '`Enable Display Row Limit`'.  This will *fully execute* the data block query, so that you can see the actual execution time.
 +
 image::QueryExecutionTime2.png[alt="disable preview display limit to see full dataset"]
 
