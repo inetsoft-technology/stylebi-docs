@@ -1,4 +1,4 @@
-= Prometheus  Query
+﻿= Prometheus  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonPrometheusQuery}. This opens the ‘Prometheus  Query’ dialog box.
 
 +
-image:prometheus1.png[alt="Prometheus Query dialog box for configuring the data query"]
+image::prometheus1.png[alt="Prometheus Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

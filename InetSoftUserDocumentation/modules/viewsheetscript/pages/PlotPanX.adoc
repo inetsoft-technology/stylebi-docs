@@ -1,4 +1,4 @@
-= panX
+﻿= panX
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -16,7 +16,7 @@ Integer
 [source,javascript]
 Chart1.panX = -25;
 
-image:commonscript:panX.png[alt="chart with X-axis panned to show a different horizontal range"]
+image::commonscript:panX.png[alt="chart with X-axis panned to show a different horizontal range"]
 
 
 

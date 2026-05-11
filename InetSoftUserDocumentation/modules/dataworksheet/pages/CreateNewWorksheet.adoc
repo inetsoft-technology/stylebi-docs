@@ -1,4 +1,4 @@
-= Create a Data Worksheet
+﻿= Create a Data Worksheet
 include::ROOT:partial$buttonSnippets.adoc[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
@@ -29,7 +29,7 @@ This displays the ‘New Data Worksheet’ dialog box.  See xref:#NewDataWorkshe
 == Create a Data Worksheet from Visual Composer
 If you are already in Visual Composer, you can create a new Dashboard by pressing the {buttonCreate} and selecting {buttonNewWorksheet}.  Then follow the directions for the '`Mashup`' option in xref:#NewDataWorksheetDialogBox[].
 
-image:user:CreateNewAsset.png[alt="press Create button in Visual Composer and select New Worksheet"]
+image::user:CreateNewAsset.png[alt="press Create button in Visual Composer and select New Worksheet"]
 
 == Create a New Folder
 To create a new asset folder in Visual Composer, see xref:viewsheet:CreateNewDashboard.adoc#CreateNewAssetFolder[Create a New Folder].

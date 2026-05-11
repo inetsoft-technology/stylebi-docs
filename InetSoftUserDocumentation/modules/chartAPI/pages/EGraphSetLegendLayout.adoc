@@ -1,4 +1,4 @@
-= EGraph.setLegendLayout(value)
+﻿= EGraph.setLegendLayout(value)
 :navtitle: setLegendLayout()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -33,7 +33,7 @@ graph.addElement(elem);
 --
 <1> Set the legend layout.
 
-image:commonscript:EGraphaddsetLegendLayout.png[alt="EGraph with legend layout set to bottom"]
+image::commonscript:EGraphaddsetLegendLayout.png[alt="EGraph with legend layout set to bottom"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

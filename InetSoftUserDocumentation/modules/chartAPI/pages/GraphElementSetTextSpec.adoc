@@ -1,4 +1,4 @@
-= GraphElement.setTextSpec(spec)
+﻿= GraphElement.setTextSpec(spec)
 :navtitle: setTextSpec()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -38,7 +38,7 @@ graph.addElement(elem); //<5>
 <5> Use `addElement` to add the `PointElement` to the Chart.
 
 
-image:commonscript:GraphElementsetTextSpec.png[alt="point chart with text spec color set to red"]
+image::commonscript:GraphElementsetTextSpec.png[alt="point chart with text spec color set to red"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

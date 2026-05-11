@@ -1,4 +1,4 @@
-= projectTrendLineForward
+﻿= projectTrendLineForward
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ Positive integer
 [source,javascript]
 Chart1.projectTrendLineForward = 3;
 
-image:commonscript:projectTrendlineForward.png[alt="chart with trendline projected forward beyond last data point"]
+image::commonscript:projectTrendlineForward.png[alt="chart with trendline projected forward beyond last data point"]
 
 
 

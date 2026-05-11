@@ -1,4 +1,4 @@
-= TextSpec.setBackground(value)
+﻿= TextSpec.setBackground(value)
 :navtitle: setBackground()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -40,7 +40,7 @@ graph.addElement(elem);
 <3> Use `setBackground()` to assign the color to the `TextSpec`.
 <4> Use xref:LabelFormSetTextSpec.adoc[] Assign the `TextSpec` to the `LabelForm`.
 
-image:commonscript:TextSpecsetBackground.png[alt="bar chart with a label form showing gray background via TextSpec setBackground"]
+image::commonscript:TextSpecsetBackground.png[alt="bar chart with a label form showing gray background via TextSpec setBackground"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

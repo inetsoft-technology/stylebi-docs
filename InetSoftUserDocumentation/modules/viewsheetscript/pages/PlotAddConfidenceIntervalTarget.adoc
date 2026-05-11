@@ -1,4 +1,4 @@
-= addConfidenceIntervalTarget(measure, colors, values, options)
+﻿= addConfidenceIntervalTarget(measure, colors, values, options)
 :navtitle: addConfidenceIntervalTarget()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -40,7 +40,7 @@ lineColor:'red',lineStyle:Chart.THICK_LINE,labelFont:'Lucida Sans Unicode-BOLD-1
 Chart1.addConfidenceIntervalTarget('Sum(Product:Total)',0xDDAAAA,99,options);
 --
 
-image:commonscript:PlotAddTargetCI.png[alt="chart with confidence interval target band displayed in red"]
+image::commonscript:PlotAddTargetCI.png[alt="chart with confidence interval target band displayed in red"]
 
 
 

@@ -1,4 +1,4 @@
-= AxisSpec.setLabelGap(value)
+﻿= AxisSpec.setLabelGap(value)
 :navtitle: setLabelGap()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -23,7 +23,7 @@ include::scriptexample:partial$AxisSpecSetLabelGap1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setLabelGap` to add space next to the axis labels.
 
-image:commonscript:TextSpecsetLabelGap.png[alt="axis label gap setting example"]
+image::commonscript:TextSpecsetLabelGap.png[alt="axis label gap setting example"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

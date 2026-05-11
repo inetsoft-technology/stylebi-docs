@@ -1,4 +1,4 @@
-= Smartsheet  Query
+﻿= Smartsheet  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -14,7 +14,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 
 . Press the {buttonObject}, and select {buttonSmartsheetQuery}. This opens the ‘Smartsheet  Query’ dialog box.
 +
-image:smartsheet.png[alt="Smartsheet Query dialog box for configuring the data query"]
+image::smartsheet.png[alt="Smartsheet Query dialog box for configuring the data query"]
 
 
 

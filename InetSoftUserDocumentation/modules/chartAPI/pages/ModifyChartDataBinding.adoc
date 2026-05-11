@@ -1,4 +1,4 @@
-= Modify Chart Data Binding
+﻿= Modify Chart Data Binding
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -58,7 +58,7 @@ Chart1.bindingInfo.setColorField("Employee",Chart.STRING);
 
 . Close the Editor and press the {buttonPreview} to preview the  Dashboard.
 +
-image:commonscript:ModifyingChartBinding.png[alt="bar chart with scripted data binding and color subseries"]
+image::commonscript:ModifyingChartBinding.png[alt="bar chart with scripted data binding and color subseries"]
 
 .Complete Script
 ****

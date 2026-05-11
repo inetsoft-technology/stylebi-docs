@@ -1,4 +1,4 @@
-= RectCoord.setYScale2(scale)
+﻿= RectCoord.setYScale2(scale)
 :navtitle: setYScale2()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -51,7 +51,7 @@ graph.addElement(elem2);
 <3> Use `setYScale2` to set the   xref:Scale.adoc[] for the secondary Y-axis.
 <4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:RectCoordsetYScale2.png[alt="point chart with primary and secondary Y-axes for Quantity and Total"]
+image::commonscript:RectCoordsetYScale2.png[alt="point chart with primary and secondary Y-axes for Quantity and Total"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

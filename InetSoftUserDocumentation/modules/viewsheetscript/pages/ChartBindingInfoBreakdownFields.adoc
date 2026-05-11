@@ -1,4 +1,4 @@
-= bindingInfo.breakdownFields
+﻿= bindingInfo.breakdownFields
 :navtitle: breakdownFields
 %experimental%
 %navtitle%: setTimeSeries()
@@ -35,7 +35,7 @@ Chart1.bindingInfo.breakdownFields = [["Order Date",Chart.DATE]];
 
 include::ROOT:partial$AllSalesQuery.adoc[]
 
-image:commonscript:bindingInfoBeakoutFields.png[alt="chart with Order Date as breakdown field grouping bar data"]
+image::commonscript:bindingInfoBeakoutFields.png[alt="chart with Order Date as breakdown field grouping bar data"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]
 

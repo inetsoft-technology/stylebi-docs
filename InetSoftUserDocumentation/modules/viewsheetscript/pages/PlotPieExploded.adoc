@@ -1,4 +1,4 @@
-= pieExploded
+﻿= pieExploded
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -16,7 +16,7 @@ Boolean:: `true`: explode pie +
 Chart1.pieExploded = true
 
 
-image:commonscript:pieExploded.png[alt="pie chart with one or more slices exploded outward"]
+image::commonscript:pieExploded.png[alt="pie chart with one or more slices exploded outward"]
 
 
 

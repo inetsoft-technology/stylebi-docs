@@ -1,4 +1,4 @@
-= Twilio  Query
+﻿= Twilio  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonTwilioQuery}. This opens the ‘Twilio  Query’ dialog box.
 
 +
-image:twilio1.png[alt="Twilio Query dialog box for configuring the data query"]
+image::twilio1.png[alt="Twilio Query dialog box for configuring the data query"]
 
 
 

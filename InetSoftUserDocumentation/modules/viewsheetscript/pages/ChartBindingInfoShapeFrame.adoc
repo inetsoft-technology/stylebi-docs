@@ -1,4 +1,4 @@
-= bindingInfo.shapeFrame
+﻿= bindingInfo.shapeFrame
 :navtitle: shapeFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -35,7 +35,7 @@ Chart1.bindingInfo.shapeFrame = new TriangleShapeFrame;
 --
 
 
-image:commonscript:bindingInfoShapeFrame.png[alt="point chart with Total size-coded using TriangleShapeFrame"]
+image::commonscript:bindingInfoShapeFrame.png[alt="point chart with Total size-coded using TriangleShapeFrame"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]
 

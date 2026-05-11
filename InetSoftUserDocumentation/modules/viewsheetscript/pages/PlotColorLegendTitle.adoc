@@ -1,4 +1,4 @@
-= colorLegend.title
+﻿= colorLegend.title
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -14,7 +14,7 @@ String
 [source,javascript]
 Chart1.colorLegend.title = 'Salesperson';
 
-image:commonscript:colorLegendTitle.png[alt="chart color legend with custom title text set"]
+image::commonscript:colorLegendTitle.png[alt="chart color legend with custom title text set"]
 
 [TIP]
 ====

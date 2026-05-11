@@ -1,8 +1,8 @@
-= Server Environment
+﻿= Server Environment
 
 These topics describe options for configuring the server environment, including server type, localization, and performance tuning, most of which are available under the *General* page.
 
-image:EM_GeneralPage.png[alt="General page in Enterprise Manager settings"]
+image::EM_GeneralPage.png[alt="General page in Enterprise Manager settings"]
 
 IMPORTANT: In a multi-tenant environment, only the Site Administrator can access the *General* settings.  See xref:EnableMultiTenant.adoc[] for more information about multi-tenancy.
 

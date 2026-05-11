@@ -1,4 +1,4 @@
-= EGraph.getXTitleSpec()
+﻿= EGraph.getXTitleSpec()
 :navtitle: getXTitleSpec()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -28,7 +28,7 @@ alert(spec.getLabel());
 
 
 
-image:commonscript:EGraphaddsetXTitleSpec.png[alt="EGraph with X title spec retrieved"]
+image::commonscript:EGraphaddsetXTitleSpec.png[alt="EGraph with X title spec retrieved"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

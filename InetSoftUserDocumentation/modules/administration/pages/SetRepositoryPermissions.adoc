@@ -1,4 +1,4 @@
-= Set Repository Permissions
+﻿= Set Repository Permissions
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -21,13 +21,13 @@ include::partial$selectOrganization.adoc[]
 
 . Select the *Repository* tab.
 +
-image:Figure 15.png[alt="select Repository tab in Content page"]
+image::Figure 15.png[alt="select Repository tab in Content page"]
 
 
 . Click to select the desired repository asset (Dashboard, folder, etc.) in the tree.
 . Select the *Security* tab.
 +
-image:dashboardSecurityTab.png[alt="select Security tab for repository asset"]
+image::dashboardSecurityTab.png[alt="select Security tab for repository asset"]
 . Uncheck ‘Derive permissions from Parent’.
 +
 .Expand to view a list of parent permissions
@@ -45,10 +45,10 @@ IMPORTANT: This is an organization-wide setting, and will be applied to all asse
 
 . Press the {buttonEMAdd} button. This opens the ‘Add Permission’ dialog box.
 +
-image:dashboardSecurityTab2.png[alt="press Add button to open Add Permission dialog"]
+image::dashboardSecurityTab2.png[alt="press Add button to open Add Permission dialog"]
 . {buttonCtrl}-click to select the desired users, groups, or roles, and press {buttonEMAdd}.
 +
-image:Report Permissions.png[alt="select users groups or roles to add permission"]
+image::Report Permissions.png[alt="select users groups or roles to add permission"]
 . Select the desired permission (READ, WRITE, DELETE, SHARE, ADMIN) by checking the boxes next to the users, roles, or groups. Note that ADMIN permission provides privileges for administering the corresponding asset within Enterprise Manager, and therefore implies the  other permissions. The SHARE setting controls access to social sharing options in the Portal.
 . Press {buttonEMApply} to save your changes.
 
@@ -81,13 +81,13 @@ include::partial$selectOrganization.adoc[]
 
 . Select the *Repository* tab.
 +
-image:Figure 15.png[alt="select Repository tab in Content page"]
+image::Figure 15.png[alt="select Repository tab in Content page"]
 
 
 . Click to select the desired repository asset (Dashboard, folder, etc.) in the tree.
 . Select the *Security* tab.
 +
-image:dashboardSecurityTab.png[alt="select Security tab for repository asset"]
+image::dashboardSecurityTab.png[alt="select Security tab for repository asset"]
 
 
 . Press the btn:[Copy Permissions] button below the permissions table to copy the asset's current permissions.  You can then navigate to another asset and paste the permissions to that asset.

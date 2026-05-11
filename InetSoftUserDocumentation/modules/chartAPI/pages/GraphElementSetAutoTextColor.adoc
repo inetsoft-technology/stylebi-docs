@@ -1,4 +1,4 @@
-= GraphElement.setAutoTextColor(Boolean)
+﻿= GraphElement.setAutoTextColor(Boolean)
 :navtitle: setAutoTextColor()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -50,7 +50,7 @@ graph.addElement(elem); //<5>
 <5> Use `addElement` to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:GraphElementSetAutoTextColor.png[alt="bar chart with auto text color on labels"]
+image::commonscript:GraphElementSetAutoTextColor.png[alt="bar chart with auto text color on labels"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

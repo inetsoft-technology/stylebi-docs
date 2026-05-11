@@ -1,4 +1,4 @@
-= IntervalElement.addInterval(lower,upper)
+﻿= IntervalElement.addInterval(lower,upper)
 :navtitle: addInterval()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -37,7 +37,7 @@ graph.addElement(elem); //<4>
 <4> Use xref:EGraphAddElement.adoc[] to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:IntervalElementaddInterval.png[alt="floating interval bar chart with lower and upper values"]
+image::commonscript:IntervalElementaddInterval.png[alt="floating interval bar chart with lower and upper values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

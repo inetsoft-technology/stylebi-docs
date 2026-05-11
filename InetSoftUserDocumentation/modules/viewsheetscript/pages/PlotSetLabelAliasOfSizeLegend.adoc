@@ -1,4 +1,4 @@
-= setLabelAliasOfSizeLegend(value, alias)
+﻿= setLabelAliasOfSizeLegend(value, alias)
 :navtitle: setLabelAliasOfSizeLegend()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -22,7 +22,7 @@ Chart1.setLabelAliasOfSizeLegend('NJ','New Jersey');
 Chart1.setLabelAliasOfSizeLegend('NY','New York');
 
 
-image:commonscript:setLabelAliasOfSizeLegend.png[alt="chart size legend with label values replaced by custom aliases"]
+image::commonscript:setLabelAliasOfSizeLegend.png[alt="chart size legend with label values replaced by custom aliases"]
 
 [TIP]
 ====

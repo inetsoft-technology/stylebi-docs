@@ -1,4 +1,4 @@
-= Zendesk Sell Query
+﻿= Zendesk Sell Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonZendeskSellQuery}. This opens the ‘Zendesk Sell Query’ dialog box.
 
 +
-image:zendesksell1.png[alt="Zendesk Sell Query dialog box for configuring the data query"]
+image::zendesksell1.png[alt="Zendesk Sell Query dialog box for configuring the data query"]
 
 
 

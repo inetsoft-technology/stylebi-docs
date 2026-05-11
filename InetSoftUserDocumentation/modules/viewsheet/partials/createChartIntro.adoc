@@ -1,4 +1,4 @@
-include::ROOT:partial$buttonSnippets.adoc[]
+﻿include::ROOT:partial$buttonSnippets.adoc[]
 
 .Open a Chart for Editing...
 [%collapsible]
@@ -21,20 +21,20 @@ include::ROOT:partial$CreateNewDashboardNote.adoc[]
 
 . From the *Toolbox* panel, drag a Chart component into the Dashboard.
 +
-image:addingChart.png[alt="drag Chart component into Dashboard"]
+image::addingChart.png[alt="drag Chart component into Dashboard"]
 
 . Resize the Chart as desired by dragging the handles.
 +
-image:resizeChartHandle_1.png[alt="drag handles to resize Chart"]
+image::resizeChartHandle_1.png[alt="drag handles to resize Chart"]
 
 . Press the ’Edit’ button in the center of the Chart or press the {buttonEdit} in the top-right corner.
 +
-image:ChartEditButton.png[alt="press Edit button on Chart"]
+image::ChartEditButton.png[alt="press Edit button on Chart"]
 +
 This opens  the same Visualization Recommender available for creating a new Dashboard.
 include::ROOT:partial$CreateNewDashboardNote.adoc[]
 
 . To bypass the Recommender, press the {buttonFullEditor} at the top right to open the Chart Editor.
 +
-image:ChartEditorIntro.png[alt="press Full Editor to open Chart Editor"]
+image::ChartEditorIntro.png[alt="press Full Editor to open Chart Editor"]
 ====

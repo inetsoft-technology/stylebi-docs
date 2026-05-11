@@ -1,4 +1,4 @@
-= setLabelAliasOfColorLegend(value, alias)
+﻿= setLabelAliasOfColorLegend(value, alias)
 :navtitle: setLabelAliasOfColorLegend()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -20,7 +20,7 @@ Chart1.setLabelAliasOfColorLegend('NJ','New Jersey');
 Chart1.setLabelAliasOfColorLegend('NY','New York');
 
 
-image:commonscript:setLabelAliasOfColorLegend.png[alt="chart color legend with state abbreviations replaced by full state names"]
+image::commonscript:setLabelAliasOfColorLegend.png[alt="chart color legend with state abbreviations replaced by full state names"]
 
 [TIP]
 ====

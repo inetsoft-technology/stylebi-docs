@@ -1,4 +1,4 @@
-= SEOmonitor  Query
+﻿= SEOmonitor  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonSEOmonitorQuery}. This opens the ‘SEOmonitor  Query’ dialog box.
 
 +
-image:seomonitor1.png[alt="SEOmonitor Query dialog box for configuring the data query"]
+image::seomonitor1.png[alt="SEOmonitor Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

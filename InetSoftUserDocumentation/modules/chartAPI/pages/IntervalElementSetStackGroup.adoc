@@ -1,4 +1,4 @@
-= IntervalElement.setStackGroup(Boolean)
+﻿= IntervalElement.setStackGroup(Boolean)
 :navtitle: setStackGroup()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -44,7 +44,7 @@ graph.addElement(elem); //<4>
 <4> Use xref:EGraphAddElement.adoc[] to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:IntervalElementsetStackGroup.png[alt="bar chart with independent stack group ordering"]
+image::commonscript:IntervalElementsetStackGroup.png[alt="bar chart with independent stack group ordering"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

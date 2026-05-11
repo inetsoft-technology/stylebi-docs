@@ -1,4 +1,4 @@
-= Create a Custom Map
+﻿= Create a Custom Map
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -44,14 +44,14 @@ To prepare and export a shape file for use with InetSoft, follow the steps below
 
 . Select the shapefile that you wish to export, and press btn:[Finish]. (In this example, *world.shp* is a shapefile containing the political boundaries of all countries in the world.)
 +
-image:OpenJUMPExp1.png[alt="open shapefile in OpenJUMP application"]
+image::OpenJUMPExp1.png[alt="open shapefile in OpenJUMP application"]
 
 
 . Consolidate the logical map features. *Consolidation* merges all shapes for a atomic entity (e.g., a single country) into a single feature. To do this, follow the steps below:
 
 .. Select  menu:InetSoft[Consolidate Features]. This opens the ‘Consolidate Features’ dialog box.
 +
-image:OpenJUMPExp2.png[alt="Consolidate Features dialog box in OpenJUMP"]
+image::OpenJUMPExp2.png[alt="Consolidate Features dialog box in OpenJUMP"]
 
 .. In the ‘Layer’ menu, select the desired geographical layer.
 
@@ -59,7 +59,7 @@ image:OpenJUMPExp2.png[alt="Consolidate Features dialog box in OpenJUMP"]
 
 .. Press btn:[OK]. This creates the consolidated map, which is listed under the ‘Result’ node in the OpenJUMP project tree.
 +
-image:OpenJUMPExp3.png[alt="consolidated map listed in OpenJUMP project tree"]
+image::OpenJUMPExp3.png[alt="consolidated map listed in OpenJUMP project tree"]
 
 .. *_Optional:_* To conserve memory, delete the original ‘world’ layer from the ‘Working’ node of the OpenJUMP project tree. To do this, right click on the ‘world’ entry, and choose ‘Remove Selected Layers’.
 
@@ -71,7 +71,7 @@ image:OpenJUMPExp3.png[alt="consolidated map listed in OpenJUMP project tree"]
 
 .. Select the desired ‘Layer’, and set the ‘Minimum’, ‘Maximum’, and ‘Interval’ properties of the histogram.
 +
-image:OpenJUMPExp4.png[alt="Area Histogram dialog with min max and interval settings"]
+image::OpenJUMPExp4.png[alt="Area Histogram dialog with min max and interval settings"]
 +
 For example, a minimum of 10%, maximum of 100%, and interval of 10% generates histogram values for the following percentages: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100.
 
@@ -79,17 +79,17 @@ For example, a minimum of 10%, maximum of 100%, and interval of 10% generates hi
 
 .. To view the histogram, press the ‘Output Window’ button in the OpenJUMP toolbar.
 +
-image:OpenJUMPExp5.png[alt="press Output Window button in OpenJUMP toolbar"]
+image::OpenJUMPExp5.png[alt="press Output Window button in OpenJUMP toolbar"]
 +
 The histogram indicates the percentage of the polygons in the map which would be removed for a given area threshold. Use the histogram to identify the proper area threshold for removing polygons. For example, the histogram below indicates that by removing all polygons smaller than an area threshold of 0.046081, you could effectively remove 90% of polygons in the map.
 +
-image:OpenJUMPExp6.png[alt="area histogram showing polygon removal percentages"]
+image::OpenJUMPExp6.png[alt="area histogram showing polygon removal percentages"]
 +
 In this example, areas in the range of 0.04 units are probably not visually significant compared to other areas, the largest of which is approximately 6000 units. Therefore, by using a polygon removal threshold of 0.04 you can eliminate the majority of polygons without detectably altering the displayed map.
 
 .. Select menu:InetSoft[Remove small polygons]. This opens the ‘Remove Small Polygons’ dialog box.
 +
-image:OpenJUMPExp7.png[alt="Remove Small Polygons dialog box"]
+image::OpenJUMPExp7.png[alt="Remove Small Polygons dialog box"]
 +
 NOTE: The most significant (largest) polygon of a map feature (e.g., country) is always retained regardless of the threshold.
 
@@ -97,7 +97,7 @@ NOTE: The most significant (largest) polygon of a map feature (e.g., country) is
 
 .. Press btn:[OK] to initiate the polygon removal. This creates a new map layer (“world consolidated areas removed” in the example).
 +
-image:OpenJUMPExp8.png[alt="new map layer after polygon removal in project tree"]
+image::OpenJUMPExp8.png[alt="new map layer after polygon removal in project tree"]
 
 .. *_Optional:_* To remove the original layer (“world consolidated”), right-click the “world consolidated” node, and choose ‘Remove Selected Layers’ from the context menu.
 +
@@ -105,19 +105,19 @@ TIP: You may need to experiment with different area thresholds to determine whic
 
 .. To view the report for the polygon removal operation, press the ‘Output Window’ button in the OpenJUMP toolbar.
 +
-image:OpenJUMPExp9.png[alt="polygon removal operation report in Output Window"]
+image::OpenJUMPExp9.png[alt="polygon removal operation report in Output Window"]
 
 . To help reduce the memory required for the map, determine the maximum precision to be used. Follow the steps below:
 
 .. Select menu:InetSoft[Find Precision]. This opens the ‘Find Precision’ dialog box.
 +
-image:OpenJUMPExp10.png[alt="Find Precision dialog box in OpenJUMP"]
+image::OpenJUMPExp10.png[alt="Find Precision dialog box in OpenJUMP"]
 
 .. Select the desired layer, and press btn:[OK].
 
 .. Press the ‘Output Window’ button in the OpenJUMP toolbar to view current precision. (The precision is expressed as the number of decimal places used to represent the map coordinates.)
 +
-image:OpenJUMPExp11.png[alt="current map coordinate precision in Output Window"]
+image::OpenJUMPExp11.png[alt="current map coordinate precision in Output Window"]
 +
 If the precision is unnecessarily high, you can reduce it in the next step. (A precision of six decimal places is more than adequate for most cases.)
 
@@ -127,7 +127,7 @@ If the precision is unnecessarily high, you can reduce it in the next step. (A p
 
 .. Select the desired layer, and enter a value for ‘Precision’. (A precision of six decimal places is more than adequate for most cases.)
 +
-image:OpenJUMPExp12.png[alt="Noding dialog with layer and precision settings"]
+image::OpenJUMPExp12.png[alt="Noding dialog with layer and precision settings"]
 
 .. Press btn:[OK]. This snaps all coordinates to the specified precision and corrects some common topological errors.
 
@@ -139,7 +139,7 @@ image:OpenJUMPExp12.png[alt="Noding dialog with layer and precision settings"]
 
 .. Select the desired ‘Layer’, and set the ‘Minimum’, ‘Maximum’, and ‘Interval’ properties of the threshold histogram.
 +
-image:OpenJUMPExp13.png[alt="Point Threshold Histogram dialog with layer and interval settings"]
+image::OpenJUMPExp13.png[alt="Point Threshold Histogram dialog with layer and interval settings"]
 +
 For example, a minimum of 99%, maximum of 100%, and interval of 0.1% generates histogram values for the following percentages: 99.0, 99.1, 99.2, 99.3, 99.4, 99.5, 99.6, 99.7, 99.8, 99.9, 100.
 
@@ -150,7 +150,7 @@ For example, a minimum of 99%, maximum of 100%, and interval of 0.1% generates h
 
 .. To view the histogram, press the ‘Output Window’ button in the OpenJUMP toolbar.
 +
-image:OpenJUMPExp14.png[alt="boundary point significance histogram in Output Window"]
+image::OpenJUMPExp14.png[alt="boundary point significance histogram in Output Window"]
 +
 The histogram indicates the percentage of boundary points which would be removed for a given point “significance” threshold. Use the histogram to identify the proper point significance threshold for border simplification. For example, the histogram above indicates that by removing all points with significance smaller than 1.094881, you would effectively remove 99.4% of the boundary points.
 +
@@ -160,7 +160,7 @@ In this example, points with significance in the range of 1.0 are probably not v
 
 .. Select menu:InetSoft[Simplify lines and polygons]. This opens the ‘Simplify’ dialog box.
 +
-image:OpenJUMPExp15.png[alt="Simplify dialog with layer algorithm and threshold settings"]
+image::OpenJUMPExp15.png[alt="Simplify dialog with layer algorithm and threshold settings"]
 .. Select the desired ‘Layer’, and choose the same ‘Algorithm’ that you used in the previous step.
 
 .. Enter a ‘Threshold’ value. Boundary points with significance smaller than the threshold will be removed from the map. (In this case, a value of 1.0 will result in the removal of approximately 99% of the map’s points.)
@@ -173,13 +173,13 @@ TIP: You may need to experiment with different point thresholds to determine whi
 
 .. To view the report for the point removal operation, press the ‘Output Window’ button in the OpenJUMP toolbar.
 +
-image:OpenJUMPExp16.png[alt="point removal operation report in Output Window"]
+image::OpenJUMPExp16.png[alt="point removal operation report in Output Window"]
 
 . Export the map to InetSoft. Follow the steps below:
 
 .. Select the desired layer in the OpenJUMP project tree. Then select menu:InetSoft[Export layer]. This opens the ‘Export Layer’ dialog box.
 +
-image:OpenJUMPExp17.png[alt="Export Layer dialog box in OpenJUMP"]
+image::OpenJUMPExp17.png[alt="Export Layer dialog box in OpenJUMP"]
 .. Specify the ‘Map file’ location. The map file must be named `mapdata.xml`.
 
 .. Specify the ‘Map type’. This is the top-level category for the map. For example, a map of type “New Jersey” might have layers (specified below) such as “New Jersey Counties” and “New Jersey Zip Codes”.
@@ -192,7 +192,7 @@ CAUTION: Do not specify a value for the ‘Layer name’ that is identical to on
 +
 The defined map type and any defined layers will appear in the menus of the Chart Editor’s geographical panel when you edit a geographical field in InetSoft.
 +
-image:OpenJUMPExp18.png[alt="Export Layer dialog showing map type and layer name fields"]
+image::OpenJUMPExp18.png[alt="Export Layer dialog showing map type and layer name fields"]
 +
 See xref:viewsheet:MapChart.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for more details on using the Chart Editor in a Dashboard.
 
@@ -222,7 +222,7 @@ TIP: Secondary coordinates are not currently used when rendering a chart.
 
 . Upload the _mapdata.xml_ file to the root level of server storage. See xref:Storage.adoc[] for information on how to upload a file.
 +
-image:OpenJUMPExp21.png[alt="upload mapdata.xml to root level of server storage"]
+image::OpenJUMPExp21.png[alt="upload mapdata.xml to root level of server storage"]
 
 . Restart the InetSoft server. Your custom map will now be available in the ‘Map’ menu of the Chart Editor, along with the predefined maps.
 
@@ -245,7 +245,7 @@ To add a layer from a new shapefile to an existing map (for example, to add a �
 
 .. For the ‘Layer name’, enter the name of the desired new layer (e.g., ‘CensusRegions’).
 +
-image:CustomMapNewLayer1.png[alt="set layer name for new map layer in Export Layer dialog"]
+image::CustomMapNewLayer1.png[alt="set layer name for new map layer in Export Layer dialog"]
 
 .. Complete the additional steps described in xref:#ExportCustomMap[], and press btn:[OK].
 +
@@ -263,20 +263,20 @@ To add a new layer by merging together regions within an existing shapefile (for
 
 . Press the '`View/Edit Attributes`' button in the OpenJUMP toolbar.
 +
-image:CustomMapNewLayer2.png[alt="press View/Edit Attributes button in OpenJUMP toolbar"]
+image::CustomMapNewLayer2.png[alt="press View/Edit Attributes button in OpenJUMP toolbar"]
 +
 This displays the ‘Attributes’ table for the map.
 
 
 . Right-click on the table and select ‘Editable’ from the context menu.
 +
-image:CustomMapNewLayer3.png[alt="right-click table and select Editable from context menu"]
+image::CustomMapNewLayer3.png[alt="right-click table and select Editable from context menu"]
 
 . Return to the map view. Hold the {buttonShift} key and click to select the regions that you want to merge. For example, hold the {buttonShift} key and click to select all states belonging to the “Pacific Division” (California, Oregon, Washington, Alaska, Hawaii).
 
 . Right-click on one of the selected states, and choose ‘Combine Selected Features’.
 +
-image:CustomMapNewLayer4.png[alt="choose Combine Selected Features for selected map regions"]
+image::CustomMapNewLayer4.png[alt="choose Combine Selected Features for selected map regions"]
 +
 The selected states are now considered a single unit.
 
@@ -288,23 +288,23 @@ The selected states are now considered a single unit.
 
 .. Right-click on the table, and select ‘View/Edit Schema’.
 +
-image:CustomMapNewLayer5.png[alt="select View/Edit Schema from table context menu"]
+image::CustomMapNewLayer5.png[alt="select View/Edit Schema from table context menu"]
 +
 This opens the ‘Edit Schema’ dialog box.
 
 .. Click in the table, and then press the ‘Insert’ (+) button to create a new column.
 +
-image:CustomMapNewLayer6.png[alt="press Insert button to create new column in Edit Schema"]
+image::CustomMapNewLayer6.png[alt="press Insert button to create new column in Edit Schema"]
 
 .. Enter the name and type of the new column (e.g., “CensusDivisions”).
 +
-image:CustomMapNewLayer7.png[alt="enter name and type for new column in schema"]
+image::CustomMapNewLayer7.png[alt="enter name and type for new column in schema"]
 
 .. Press btn:[Apply changes] and return to the ‘Attributes’ table. Note that a new column has been added.
 
 .. Enter the appropriate labels into the blank cells.
 +
-image:CustomMapNewLayer8.png[alt="enter labels in blank cells of Attributes table"]
+image::CustomMapNewLayer8.png[alt="enter labels in blank cells of Attributes table"]
 +
 Note that when you click on a blank cell, the corresponding map region is highlighted.
 
@@ -318,7 +318,7 @@ Note that when you click on a blank cell, the corresponding map region is highli
 
 .. For the ‘Feature ID’ and ‘Display name’, select the new column that you added to the ‘Attributes’ table.
 +
-image:CustomMapNewLayer9.png[alt="select Feature ID and Display name from new column"]
+image::CustomMapNewLayer9.png[alt="select Feature ID and Display name from new column"]
 
 .. Complete the additional steps described in xref:#ExportCustomMap[], and press btn:[OK].
 +
@@ -349,13 +349,13 @@ To manually create shapes by merging existing shapes (e.g., to create larger reg
 
 .. For the ‘Feature ID’ and ‘Display name’, select the appropriate feature column.
 +
-image:CustomMapOverlay.png[alt="Export Layer dialog with Feature ID and Display name selected"]
+image::CustomMapOverlay.png[alt="Export Layer dialog with Feature ID and Display name selected"]
 
 .. Press btn:[OK]. This exports the layer to the location that you specified. The saved files include two CSV files and a _mapdata.xml_ file.
 +
 NOTE: You *do not* need this new _mapdata.xml_ file.
 +
-image:CustomMapOverlay2.png[alt="exported overlay files including CSV and mapdata.xml"]
+image::CustomMapOverlay2.png[alt="exported overlay files including CSV and mapdata.xml"]
 
 
 . Stop the InetSoft server if it is running.
@@ -401,7 +401,7 @@ image:CustomMapOverlay2.png[alt="exported overlay files including CSV and mapdat
 
 . Create a Map Chart  based on the custom map. (See xref:viewsheet:MapChart.adoc[].) Observe that the specified regions and labels are overlaid on the map as desired.
 +
-image:CustomMapOverlay3.png[alt="map chart with Census Region shapes overlaid on states"]
+image::CustomMapOverlay3.png[alt="map chart with Census Region shapes overlaid on states"]
 
 == Edit a Custom Map
 To edit map data from StyleBI in the OpenJUMP application, follow the steps below:
@@ -412,7 +412,7 @@ To edit map data from StyleBI in the OpenJUMP application, follow the steps belo
 
 . Select ‘InetSoft Map Layer’ in the left panel.
 +
-image:OpenJUMPExp19.png[alt="select InetSoft Map Layer in OpenJUMP open dialog"]
+image::OpenJUMPExp19.png[alt="select InetSoft Map Layer in OpenJUMP open dialog"]
 
 . Locate the _mapdata.xml_ file that you want to edit. Press btn:[Next].
 
@@ -420,7 +420,7 @@ image:OpenJUMPExp19.png[alt="select InetSoft Map Layer in OpenJUMP open dialog"]
 
 . Select the ‘Map type’ and ‘Layer name’ that you want to edit. (See xref:#ExportCustomMap[] for information about the map type and layer name.)
 +
-image:OpenJUMPExp20.png[alt="select map type and layer name to edit"]
+image::OpenJUMPExp20.png[alt="select map type and layer name to edit"]
 
 . Press btn:[Finish]. This loads the map data into the OpenJUMP application.
 

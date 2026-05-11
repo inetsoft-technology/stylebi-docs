@@ -1,4 +1,4 @@
-= glossyEffect
+﻿= glossyEffect
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -13,7 +13,7 @@ Boolean
 Chart1.glossyEffect = true;
 
 
-image:commonscript:glossyEffect.png[alt="chart plot area with glossy 3D effect applied to elements"]
+image::commonscript:glossyEffect.png[alt="chart plot area with glossy 3D effect applied to elements"]
 
 
 [TIP]

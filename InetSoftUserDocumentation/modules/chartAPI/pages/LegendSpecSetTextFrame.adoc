@@ -1,4 +1,4 @@
-= LegendSpec.setTextFrame(frame)
+﻿= LegendSpec.setTextFrame(frame)
 :navtitle: setTextFrame()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -41,7 +41,7 @@ graph.addElement(elem);
 <3> Create the xref:LegendSpec.adoc[] object.
 <4> Use `setTextFrame` to assign the `TextFrame` to the legend.
 
-image:commonscript:LegendSpecsetTextFrame.png[alt="legend with text frame mapping values to custom labels"]
+image::commonscript:LegendSpecsetTextFrame.png[alt="legend with text frame mapping values to custom labels"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

@@ -1,4 +1,4 @@
-= All Properties
+﻿= All Properties
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 :availableDataSources: JDBC, Microsoft Access, Oracle, SQL Server, MySQL, DB2, jTDS, Ingres, Sybase, Derby, Derby Embedded, Informix, SQL Anywhere, PostgreSQL, Dremio, Impala, Vertica, Teradata, SAP HANA, Snowflake, Actian, Amazon Aurora/RDS MySQL, Amazon Aurora/RDS PostgreSQL, AWS EMR, AWS Redshift, Aster Data nCluster, Cisco Info Server, Exasol, Google Cloud SQL, IBM AS400, MapR, MariaDB, MemSQL, MonetDB, Pivotal Greenplum, Progress OpenEdge, FileMaker, LucidDB, Netezza, SQLite, SQL Server Express, Google BigQuery, Siebel CRM (Oracle), Siebel CRM (SQL Server), HPCC, OrientDB, Aerospike, Apache Drill, Presto, PHOENIX, Text/Excel Directory, Google Spreadsheets, SAP ABAP, SAP BAPI, SAP Tables, R, Facebook Ad Insights, Google Analytics, Sharepoint Online, Apache Hive, Data.gov JSON, OData, MongoDB, Cassandra, Couchbase, Redis, Cosmosdb, Salesforce, REST JSON, REST XML, Rest.ActiveCampaign, Rest.Airtable, Rest.Appfigures, Rest.Asana, Rest.AzureBlob, Rest.AzureSearch, Rest.CampaignMonitor, Rest.Chargebee, Rest.Chargify, Rest.ChartMogul, Rest.ConstantContact, Rest.Copper, Rest.DataDotWorld, Rest.Firebase, Rest.FortyTwoMatters, Rest.Freshdesk, Rest.Freshsales, Rest.Freshservice, Rest.GitHub, Rest.GitLab, GoSquared, Rest.GoogleCalendar, GraphQL, Rest.Harvest, Rest.HelpScoutDocs, Rest.HubSpot, Rest.InfluxDB, Rest.Insightly, Rest.Intervals, Rest.Jira, Rest.Jive, Rest.Lighthouse, Rest.Linkedin, Rest.LiveAgent, Rest.Mailchimp, Rest.Mixpanel, monday.com, Rest.Nicereply, Rest.Pipedrive, Rest.PipelineDeals, Rest.Prometheus, Rest.SEOmonitor, Rest.SalesforceReports, Rest.SendGrid, Rest.ServiceNow, Shopify, Rest.Smartsheet, Rest.Square, Rest.Stripe, Rest.SurveyMonkey, Rest.TeamDesk, Rest.Toggl, Rest.Twilio, Rest.Twitter, Rest.WordPress, Rest.Xero, Rest.YouTubeAnalytics, Rest.Zendesk, Rest.ZendeskSell, Rest.ZohoCRM
@@ -12,7 +12,7 @@ WARNING: Entering illegitimate property values can prevent the software from ope
 
 . Select the *All Properties* page in the left panel.
 +
-image:allProperties.png[alt="select All Properties page in left panel"]
+image::allProperties.png[alt="select All Properties page in left panel"]
 
 . To locate an existing property in the list, type some or all of the property name in the  {buttonFilterField} above the table.
 

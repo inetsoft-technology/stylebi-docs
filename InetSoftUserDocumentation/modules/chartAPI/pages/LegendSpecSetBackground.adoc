@@ -1,4 +1,4 @@
-= LegendSpec.setBackground(value)
+﻿= LegendSpec.setBackground(value)
 :navtitle: setBackground()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setBackground()` to assign the color to the `LegendSpec`.
 <4> Use the inherited xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` to the `ColorFrame`.
 
-image:commonscript:LegendSpecsetBackground.png[alt="legend with custom background color applied"]
+image::commonscript:LegendSpecsetBackground.png[alt="legend with custom background color applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

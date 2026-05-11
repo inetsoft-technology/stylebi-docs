@@ -1,4 +1,4 @@
-= bindingInfo.setTimeSeries(col, Boolean)
+﻿= bindingInfo.setTimeSeries(col, Boolean)
 :navtitle: setTimeSeries()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -20,7 +20,7 @@ Boolean:: `true`: gaps are preserved for date data +
 [source,javascript]
 Crosstab1.bindingInfo.setTimeSeries("Order:Date", true);
 
-image:commonscript:setTimeSeries_2.png[alt="crosstab with date gaps preserved as empty months in time series"]
+image::commonscript:setTimeSeries_2.png[alt="crosstab with date gaps preserved as empty months in time series"]
 
 
 [TIP]

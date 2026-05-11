@@ -1,4 +1,4 @@
-= bindingInfo.textureFrame
+﻿= bindingInfo.textureFrame
 :navtitle: textureFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -38,7 +38,7 @@ Chart1.bindingInfo.textureFrame = new GridTextureFrame;
 --
 
 
-image:commonscript:bindingInfoTextureFrame.png[alt="bar chart with Total bars filled using GridTextureFrame pattern"]
+image::commonscript:bindingInfoTextureFrame.png[alt="bar chart with Total bars filled using GridTextureFrame pattern"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]
 

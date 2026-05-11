@@ -1,4 +1,4 @@
-= Asana Query
+﻿= Asana Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonAsanaQuery}. This opens the ‘Asana  Query’ dialog box.
 
 +
-image:asana1.png[alt="Asana Query dialog box for configuring the data query"]
+image::asana1.png[alt="Asana Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

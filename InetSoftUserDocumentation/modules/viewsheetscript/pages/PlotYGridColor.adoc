@@ -1,4 +1,4 @@
-= yGridColor
+﻿= yGridColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -20,7 +20,7 @@ Chart1.yGridColor = [255,0,0];
 Chart1.yGridColor = {r:255,g:0,b:0};
 
 
-image:commonscript:yGridColor.png[alt="chart with y-axis grid lines displayed in custom color"]
+image::commonscript:yGridColor.png[alt="chart with y-axis grid lines displayed in custom color"]
 
 
 [TIP]

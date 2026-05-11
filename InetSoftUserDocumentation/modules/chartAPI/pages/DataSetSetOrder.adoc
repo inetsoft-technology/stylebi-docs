@@ -1,4 +1,4 @@
-= DataSet.setOrder(dim, arr)
+﻿= DataSet.setOrder(dim, arr)
 :navtitle: setOrder()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -42,7 +42,7 @@ graph.addElement(elem);
 --
 <1> Sort the 'State' field in the specified order.
 
-image:commonscript:datasetsetOrder.png[alt="bar chart with dataset sorted by custom order"]
+image::commonscript:datasetsetOrder.png[alt="bar chart with dataset sorted by custom order"]
 
 
 

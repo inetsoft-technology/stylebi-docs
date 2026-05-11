@@ -1,4 +1,4 @@
-= axis.minimum
+﻿= axis.minimum
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -18,7 +18,7 @@ number
 [source,javascript]
 Chart1.axis['Sum(Product:Total)'].minimum = 50000;
 
-image:commonscript:axisMinimum.png[alt="chart with measure axis minimum set to 50000"]
+image::commonscript:axisMinimum.png[alt="chart with measure axis minimum set to 50000"]
 
 
 

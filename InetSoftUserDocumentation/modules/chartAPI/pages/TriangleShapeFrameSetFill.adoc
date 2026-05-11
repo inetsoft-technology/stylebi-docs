@@ -1,4 +1,4 @@
-= TriangleShapeFrame.setFill(Boolean)
+﻿= TriangleShapeFrame.setFill(Boolean)
 :navtitle: setFill()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -42,7 +42,7 @@ graph.addElement(elem);
 <3> Use `setFill` to draw filled  shapes.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `TriangleShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:TriangleShapeFrame2setFill.png[alt="point chart with filled triangle shapes showing proportional Total values"]
+image::commonscript:TriangleShapeFrame2setFill.png[alt="point chart with filled triangle shapes showing proportional Total values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -73,7 +73,7 @@ Chart1.bindingInfo.shapeFrame.fill = true;
 --
 
 +
-image:commonscript:TriangleShapeFrameFill.png[alt="point chart with TriangleShapeFrame fill true via bindingInfo shapeFrame"]
+image::commonscript:TriangleShapeFrameFill.png[alt="point chart with TriangleShapeFrame fill true via bindingInfo shapeFrame"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

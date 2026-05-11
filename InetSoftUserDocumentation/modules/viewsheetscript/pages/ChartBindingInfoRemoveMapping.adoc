@@ -1,4 +1,4 @@
-= bindingInfo.getMappings(col)
+﻿= bindingInfo.getMappings(col)
 :navtitle: getMappings()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -32,7 +32,7 @@ for(i=0 ; i<mapArr.length ; i++) {
 }
 --
 
-image:commonscript:getMappingsAlert.png[alt="alert dialog displaying mapped city value and its geographic code"]
+image::commonscript:getMappingsAlert.png[alt="alert dialog displaying mapped city value and its geographic code"]
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

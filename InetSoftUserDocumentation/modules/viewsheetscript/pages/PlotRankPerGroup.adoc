@@ -1,4 +1,4 @@
-= rankPerGroup
+﻿= rankPerGroup
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -22,7 +22,7 @@ Chart2.rankPerGroup = false;
 
 
 
-image:commonscript:rankPerGroup.png[alt="chart with data ranked separately within each group"]
+image::commonscript:rankPerGroup.png[alt="chart with data ranked separately within each group"]
 
 
 

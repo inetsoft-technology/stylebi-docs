@@ -1,4 +1,4 @@
-= AxisSpec.setLineVisible(Boolean)
+﻿= AxisSpec.setLineVisible(Boolean)
 :navtitle: setLineVisible()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -27,7 +27,7 @@ include::scriptexample:partial$AxisSpecSetLineVisible1.js[]
 <3> Use `setLineVisible` to show lines.
 <4> Use `setLineVisible` to hide lines.
 
-image:commonscript:AxisSpecsetLineVisible.png[alt="bar chart with one axis line hidden"]
+image::commonscript:AxisSpecsetLineVisible.png[alt="bar chart with one axis line hidden"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

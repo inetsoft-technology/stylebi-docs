@@ -1,4 +1,4 @@
-= AxisSpec.setGridColor(value)
+﻿= AxisSpec.setGridColor(value)
 :navtitle: setGridColor()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -22,7 +22,7 @@ include::scriptexample:partial$AxisSpecSetGridColor1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setGridColor` to assign the color.
 
-image:commonscript:TextSpecsetGridColor.png[alt="bar chart with custom grid line color"]
+image::commonscript:TextSpecsetGridColor.png[alt="bar chart with custom grid line color"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

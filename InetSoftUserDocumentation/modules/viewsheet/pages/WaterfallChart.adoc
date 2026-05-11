@@ -1,10 +1,10 @@
-= Waterfall Chart
+﻿= Waterfall Chart
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 A waterfall chart displays the cumulative contributions of different groups to a total.
 
-image:commonscript:waterfallChartExp9.png[alt="waterfall chart example"]
+image::commonscript:waterfallChartExp9.png[alt="waterfall chart example"]
 
 To create a waterfall  chart, follow the basic steps below:
 
@@ -12,13 +12,13 @@ include::partial$chartNewbieTip.adoc[]
 
 . Press the {buttonSelectChartStyle}. Choose the ‘Waterfall’ style.   Press the {buttonApply}.
 +
-image:commonscript:waterfallChartExp1.png[alt="select waterfall chart style"]
+image::commonscript:waterfallChartExp1.png[alt="select waterfall chart style"]
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired *dimension* to the ‘X’ or ‘Y’ region.
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image:commonscript:waterfallChartExp2.png[alt="drag dimension to X or Y region"]
+image::commonscript:waterfallChartExp2.png[alt="drag dimension to X or Y region"]
 
 +
 TIP: {convertToDimension}
@@ -26,7 +26,7 @@ TIP: {convertToDimension}
 
 . *_Optional:_* For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
-image:viewsheetExp34.png[alt="set date dimension level grouping"]
+image::viewsheetExp34.png[alt="set date dimension level grouping"]
 
 
 . *_Optional:_* {multipleDimensionNoColor} {addDimensionsUsingVisual}
@@ -35,17 +35,17 @@ image:viewsheetExp34.png[alt="set date dimension level grouping"]
 +
 include::ROOT:partial$measureTip.adoc[]
 +
-image:commonscript:waterfallChartExp3.png[alt="drag measure to X or Y region"]
+image::commonscript:waterfallChartExp3.png[alt="drag measure to X or Y region"]
 +
 TIP: {convertToMeasure}
 
 . Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method for the measure.
 +
-image:commonscript:waterfallChartExp8.png[alt="select aggregation method for measure"]
+image::commonscript:waterfallChartExp8.png[alt="select aggregation method for measure"]
 
 . *_Optional:_*  In some cases, you may want to represent the aggregate value for each group as a change from the previous aggregate, in which case the total represents the overall change. To do this, select ‘Change from Previous’ in the ‘Trend and Comparison’ menu, and press the {buttonApply}.
 +
-image:commonscript:waterfallChartExp4.png[alt="select change from previous in trend and comparison menu"]
+image::commonscript:waterfallChartExp4.png[alt="select change from previous in trend and comparison menu"]
 
 . *_Optional:_* {multipleMeasure} {addMeasuresUsingVisual}
 
@@ -53,15 +53,15 @@ image:commonscript:waterfallChartExp4.png[alt="select change from previous in tr
 
 . Add a highlight to distinguish the negative “bricks” on the chart from the positive bricks. To do this, right-click the chart, and select the ‘Highlight’ option. {rightClickOptions}
 +
-image:commonscript:waterfallChartExp5.png[alt="right-click chart to add highlight for negative values"]
+image::commonscript:waterfallChartExp5.png[alt="right-click chart to add highlight for negative values"]
 
 . Create a highlight to format negative values. See xref:ConditionalFormat.adoc[] for more information.
 +
-image:commonscript:waterfallChartExp6.png[alt="create highlight condition for negative values"]
+image::commonscript:waterfallChartExp6.png[alt="create highlight condition for negative values"]
 
 . Press btn:[OK].
 +
-image:commonscript:waterfallChartExp7.png[alt="waterfall chart with highlighted negative bricks"]
+image::commonscript:waterfallChartExp7.png[alt="waterfall chart with highlighted negative bricks"]
 
 include::partial$addTitlesLegend.adoc[]
 
@@ -69,7 +69,7 @@ include::partial$addTitlesLegend.adoc[]
 ****
 The sample xref:ROOT:attachment$Financial_Client_Demographics.zip[Financial Client Demographics] Dashboard provides an example of a waterfall chart.
 
-image:viewsheet:galleryWaterfall2.png[alt="financial client demographics waterfall chart example"]
+image::viewsheet:galleryWaterfall2.png[alt="financial client demographics waterfall chart example"]
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Financial_Client_Demographics.zip[Financial Client Demographics] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 ****

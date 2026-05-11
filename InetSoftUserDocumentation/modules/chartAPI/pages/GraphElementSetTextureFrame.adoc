@@ -1,4 +1,4 @@
-= GraphElement.setTextureFrame(frame)
+﻿= GraphElement.setTextureFrame(frame)
 :navtitle: setTextureFrame()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -38,7 +38,7 @@ graph.addElement(elem); //<5>
 <5> Use `addElement` to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:GraphElementsetTextureFrame.png[alt="bar chart with texture frame pattern applied"]
+image::commonscript:GraphElementsetTextureFrame.png[alt="bar chart with texture frame pattern applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

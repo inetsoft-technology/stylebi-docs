@@ -1,4 +1,4 @@
-= colorLegends.title
+﻿= colorLegends.title
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ String
 Chart1.colorLegends['Sum(Product:Quantity Purchased)'].title = 'Salesperson Color';
 Chart1.colorLegends['Sum(Product:Total)'].title = 'Year Color';
 
-image:commonscript:colorLegendsTitle.png[alt="chart with all color legends having custom title text set"]
+image::commonscript:colorLegendsTitle.png[alt="chart with all color legends having custom title text set"]
 
 [TIP]
 ====

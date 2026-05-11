@@ -1,20 +1,20 @@
-= Configure the Portal
+﻿= Configure the Portal
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 To manage user preferences in the Portal, press the {buttonAccount} at the top of the Portal and select {buttonPreferences}.
 
-image:Preferences Link.png[alt="press Setting and select Preferences"]
+image::Preferences Link.png[alt="press Setting and select Preferences"]
 
 This opens the ‘Preferences’ dialog box.
 
-image:Preferences Dialog.png[alt="Preferences dialog box"]
+image::Preferences Dialog.png[alt="Preferences dialog box"]
 
 The following preferences are available:
 
 Change Password:: Press the ‘Change Password’ link to open the ‘Change Password’ dialog box. Enter your current password and a new password and press btn:[OK].
 +
-image:ChangePassword.png[alt="change password dialog"]
+image::ChangePassword.png[alt="change password dialog"]
 
 Email:: Enter the email address to which notifications should be sent.
 

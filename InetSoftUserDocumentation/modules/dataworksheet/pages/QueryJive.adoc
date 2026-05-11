@@ -1,4 +1,4 @@
-= Jive  Query
+﻿= Jive  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonJiveQuery}. This opens the ‘Jive  Query’ dialog box.
 
 +
-image:jive1.png[alt="Jive Query dialog box for configuring the data query"]
+image::jive1.png[alt="Jive Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

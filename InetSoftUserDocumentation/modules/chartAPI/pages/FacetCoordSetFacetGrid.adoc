@@ -1,4 +1,4 @@
-= FacetCoord.setFacetGrid(Boolean)
+﻿= FacetCoord.setFacetGrid(Boolean)
 :navtitle: setFacetGrid()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -26,7 +26,7 @@ include::scriptexample:partial$FacetCoordSetFacetGrid1.js[]
 <2> Create the xref:chartAPI:FacetCoord.adoc[] from inner and outer xref:chartAPI:RectCoord.adoc[] objects.
 <3> Use `setFacetGrid` to draw a border around the outer perimeter of the facet chart.
 
-image:commonscript:AxisSpecSetFacetGrid.png[]
+image::commonscript:AxisSpecSetFacetGrid.png[]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

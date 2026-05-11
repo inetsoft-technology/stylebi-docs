@@ -1,4 +1,4 @@
-= LinearScale.setIncrement(value)
+﻿= LinearScale.setIncrement(value)
 :navtitle: setIncrement()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -39,7 +39,7 @@ graph.addElement(elem);
 <3> Use `setIncrement` to set the  desired increment.
 <4> Use xref:EGraphSetScale.adoc[] to assign the `Scale` to the Chart.
 
-image:commonscript:LinearScaleSetIncrement.png[alt="bar chart with custom axis increment applied"]
+image::commonscript:LinearScaleSetIncrement.png[alt="bar chart with custom axis increment applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

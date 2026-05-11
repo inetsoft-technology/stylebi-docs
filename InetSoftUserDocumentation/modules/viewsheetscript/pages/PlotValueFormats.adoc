@@ -1,4 +1,4 @@
-= valueFormats
+﻿= valueFormats
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -31,7 +31,7 @@ Chart1.valueFormats['Sum(Total)'].color = [0,0,255];
 Chart1.valueFormats['Sum(Total)'].format = [Chart.DECIMAL_FORMAT,"$#,###.00"]
 Chart1.valueFormats['Sum(Total)'].font = 'Lucida Sans Unicode-BOLD-8';
 
-image:commonscript:valueFormats.png[alt="chart with per-measure data labels each formatted individually"]
+image::commonscript:valueFormats.png[alt="chart with per-measure data labels each formatted individually"]
 
 
 

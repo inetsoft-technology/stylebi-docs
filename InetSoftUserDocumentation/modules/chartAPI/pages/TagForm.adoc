@@ -1,4 +1,4 @@
-= TagForm
+﻿= TagForm
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -43,7 +43,7 @@ graph.addElement(elem);
 <4> Use  inherited  xref:LabelFormSetValues.adoc[] function to set label position.
 <5> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:TagForm.png[alt="point chart with auto-positioned tag labels at NY 300 and NY 305"]
+image::commonscript:TagForm.png[alt="point chart with auto-positioned tag labels at NY 300 and NY 305"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

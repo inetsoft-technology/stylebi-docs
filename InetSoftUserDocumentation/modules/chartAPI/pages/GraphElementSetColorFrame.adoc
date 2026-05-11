@@ -1,4 +1,4 @@
-= GraphElement.setColorFrame(frame)
+﻿= GraphElement.setColorFrame(frame)
 :navtitle: setColorFrame()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -37,7 +37,7 @@ graph.addElement(elem); //<5>
 <5> Use `addElement` to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:GraphElementsetColorFrame.png[alt="bar chart with ColorFrame applied to element"]
+image::commonscript:GraphElementsetColorFrame.png[alt="bar chart with ColorFrame applied to element"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

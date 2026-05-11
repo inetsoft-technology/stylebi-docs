@@ -1,4 +1,4 @@
-= GraphForm
+﻿= GraphForm
 
 
 [CAUTION,caption=created by]
@@ -15,7 +15,7 @@
 
 The `GraphForm` object contains information for form (i.e., shape) elements manually drawn on the chart.
 
-image:commonscript:GraphForm.png[alt="chart with manually drawn GraphForm elements"]
+image::commonscript:GraphForm.png[alt="chart with manually drawn GraphForm elements"]
 
 The following methods are provided:
 [square]

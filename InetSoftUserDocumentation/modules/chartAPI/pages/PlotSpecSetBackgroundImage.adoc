@@ -1,4 +1,4 @@
-= PlotSpec.setBackgroundImage(value)
+﻿= PlotSpec.setBackgroundImage(value)
 :navtitle: setBackgroundImage()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -42,7 +42,7 @@ graph.addElement(elem);
 <2> Use `setBackgroundImage` to set the plot image.
 <3> Use `setPlotSpec` to assign the `PlotSpec` to the `Coordinate`.
 
-image:commonscript:PlotSpecSetBackgroundImage.png[alt="bar chart with background image in plot area"]
+image::commonscript:PlotSpecSetBackgroundImage.png[alt="bar chart with background image in plot area"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

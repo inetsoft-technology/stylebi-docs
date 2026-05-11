@@ -1,4 +1,4 @@
-= sizeLegends.title
+﻿= sizeLegends.title
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -20,7 +20,7 @@ Chart1.sizeLegends['Sum(Product:Quantity Purchased)'].title = 'Salesperson Size'
 Chart1.sizeLegends['Sum(Product:Total)'].title = 'Year Size';
 
 
-image:commonscript:sizeLegendsTitle.png[alt="chart size legends with custom title text for each legend"]
+image::commonscript:sizeLegendsTitle.png[alt="chart size legends with custom title text for each legend"]
 
 [TIP]
 ====

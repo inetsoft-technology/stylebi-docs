@@ -1,4 +1,4 @@
-= Freshsales  Query
+﻿= Freshsales  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonFreshsalesQuery}. This opens the ‘Freshsales  Query’ dialog box.
 
 +
-image:freshsales1.png[alt="Freshsales Query dialog box for configuring the data query"]
+image::freshsales1.png[alt="Freshsales Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

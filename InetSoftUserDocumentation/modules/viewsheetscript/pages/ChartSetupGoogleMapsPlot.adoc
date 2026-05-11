@@ -1,4 +1,4 @@
-= setupGoogleMapsPlot(graph, urlPrefix, data, latitudeColumnName, longitudeColumnName, maxWidthPx, maxHeightPx, widthPx, heightPx)
+﻿= setupGoogleMapsPlot(graph, urlPrefix, data, latitudeColumnName, longitudeColumnName, maxWidthPx, maxHeightPx, widthPx, heightPx)
 :navtitle: setupGoogleMapsPlot()
 
 
@@ -61,5 +61,5 @@ elem.setHint(GraphElement.HINT_ALPHA,1);
 graph.addElement(elem);
 --
 
-image:commonscript:GoogleMap.png[alt="chart showing Google Map background with labeled location points"]
+image::commonscript:GoogleMap.png[alt="chart showing Google Map background with labeled location points"]
 

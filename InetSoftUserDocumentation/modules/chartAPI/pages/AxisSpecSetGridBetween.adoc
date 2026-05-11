@@ -1,4 +1,4 @@
-= AxisSpec.setGridBetween(Boolean)
+﻿= AxisSpec.setGridBetween(Boolean)
 :navtitle: setGridBetween()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -21,7 +21,7 @@ include::scriptexample:partial$AxisSpecSetGridBetween1.js[]
 <3> Use `setGridBetween` to draw grid lines between tick marks rather than at tick marks.
 
 
-image:commonscript:AxisSpecSetGridBetween.png[]
+image::commonscript:AxisSpecSetGridBetween.png[]
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 

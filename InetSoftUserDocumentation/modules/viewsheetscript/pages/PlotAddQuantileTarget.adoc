@@ -1,4 +1,4 @@
-= addQuantileTarget(measure, colors, values, options)
+﻿= addQuantileTarget(measure, colors, values, options)
 :navtitle: addQuantileTarget()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -44,7 +44,7 @@ labelColor:'black'}
 Chart1.addQuantileTarget('Sum(Product:Total)',[0xDDAAAA,0xDDCCCC],4,options)
 --
 
-image:commonscript:PlotAddTargetQuantile.png[alt="chart with four quantile target lines dividing chart into quartiles"]
+image::commonscript:PlotAddTargetQuantile.png[alt="chart with four quantile target lines dividing chart into quartiles"]
 
 
 

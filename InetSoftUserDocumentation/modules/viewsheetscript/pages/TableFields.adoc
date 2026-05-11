@@ -1,4 +1,4 @@
-= fields
+﻿= fields
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -40,7 +40,7 @@ TableView1.fields     // qualified
 {secondForm}
 ====
 
-image:tableFields.png[alt="table showing State Company and Total columns bound from SalesByDate data block"]
+image::tableFields.png[alt="table showing State Company and Total columns bound from SalesByDate data block"]
 
 
 

@@ -1,4 +1,4 @@
-= mapDefaultColor
+﻿= mapDefaultColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -16,7 +16,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.mapDefaultColor = java.awt.Color.YELLOW;
 
 
-image:commonscript:mapDefaultBackground.png[alt="map chart with default background color set for unmapped regions"]
+image::commonscript:mapDefaultBackground.png[alt="map chart with default background color set for unmapped regions"]
 
 
 

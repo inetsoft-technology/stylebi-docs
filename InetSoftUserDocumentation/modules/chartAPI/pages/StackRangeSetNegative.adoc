@@ -1,4 +1,4 @@
-= StackRange.setStackNegative(Boolean)
+﻿= StackRange.setStackNegative(Boolean)
 :navtitle: setStackNegative()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -42,7 +42,7 @@ graph.addElement(elem);
 <5> Assign the `ScaleRange` to the `Scale`.
 <6> Use xref:EGraphSetScale.adoc[] to add the `Scale` to the Chart.
 
-image:commonscript:ScaleRangeSetStackNegative.png[alt="bar chart with negative NY values not stacked for scale range calculation"]
+image::commonscript:ScaleRangeSetStackNegative.png[alt="bar chart with negative NY values not stacked for scale range calculation"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

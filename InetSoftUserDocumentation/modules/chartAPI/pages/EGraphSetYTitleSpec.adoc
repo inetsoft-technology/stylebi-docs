@@ -1,4 +1,4 @@
-= EGraph.setYTitleSpec(spec)
+﻿= EGraph.setYTitleSpec(spec)
 :navtitle: setYTitleSpec()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -36,7 +36,7 @@ graph.addElement(elem);
 <3> Use `setYTitleSpec()` to add the `TitleSpec` to Chart.
 
 
-image:commonscript:EGraphaddsetYTitleSpec.png[alt="EGraph with Y title spec set"]
+image::commonscript:EGraphaddsetYTitleSpec.png[alt="EGraph with Y title spec set"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

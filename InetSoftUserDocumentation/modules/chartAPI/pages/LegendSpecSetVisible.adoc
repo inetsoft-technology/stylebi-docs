@@ -1,4 +1,4 @@
-= LegendSpec.setVisible(Boolean)
+﻿= LegendSpec.setVisible(Boolean)
 :navtitle: setVisible()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -41,7 +41,7 @@ graph.addElement(elem);
 <3> Use `setVisible` to hide  the legend.
 <4> Use  xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` to the `ColorFrame`.
 
-image:commonscript:LegendSpecsetVisible.png[alt="chart with legend hidden"]
+image::commonscript:LegendSpecsetVisible.png[alt="chart with legend hidden"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

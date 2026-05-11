@@ -1,4 +1,4 @@
-= colorLegend.titleVisible
+﻿= colorLegend.titleVisible
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -14,7 +14,7 @@ Boolean
 [source,javascript]
 Chart1.colorLegend.titleVisible = false;
 
-image:commonscript:colorLegendTitleVisible.png[alt="chart color legend with title hidden by setting titleVisible to false"]
+image::commonscript:colorLegendTitleVisible.png[alt="chart color legend with title hidden by setting titleVisible to false"]
 
 [TIP]
 ====

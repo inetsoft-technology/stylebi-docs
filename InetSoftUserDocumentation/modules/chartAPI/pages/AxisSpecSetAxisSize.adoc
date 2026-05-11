@@ -1,4 +1,4 @@
-= AxisSpec.setAxisSize(value)
+﻿= AxisSpec.setAxisSize(value)
 :navtitle: setAxisSize()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -21,7 +21,7 @@ include::scriptexample:partial$AxisSpecSetAxisSize1.js[]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
-image:commonscript:AxisSpecSetAxisSize.png[alt="set axis area using setAxisSize in script"]
+image::commonscript:AxisSpecSetAxisSize.png[alt="set axis area using setAxisSize in script"]
 
 
 

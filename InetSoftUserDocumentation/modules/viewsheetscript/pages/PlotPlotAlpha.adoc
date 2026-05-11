@@ -1,4 +1,4 @@
-= plotAlpha
+﻿= plotAlpha
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -13,7 +13,7 @@ Number			between 0 and 1
 [source,javascript]
 Chart1.plotAlpha = .5;
 
-image:commonscript:plotAlpha.png[alt="chart with element transparency adjusted via plotAlpha setting"]
+image::commonscript:plotAlpha.png[alt="chart with element transparency adjusted via plotAlpha setting"]
 
 
 

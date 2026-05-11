@@ -1,4 +1,4 @@
-= trendLine
+﻿= trendLine
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -26,7 +26,7 @@ Chart.QUADRATIC
 trendLine = Chart.QUADRATIC;
 trendLineStyle = Chart.DASH_LINE;
 
-image:commonscript:trendlineColor.png[alt="chart with quadratic trendline displayed as dashed line"]
+image::commonscript:trendlineColor.png[alt="chart with quadratic trendline displayed as dashed line"]
 
 
 

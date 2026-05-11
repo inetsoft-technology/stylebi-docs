@@ -1,4 +1,4 @@
-= facetGridColor
+﻿= facetGridColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -13,7 +13,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.facetGrid = true;
 Chart1.facetGridColor = 'red';
 
-image:commonscript:facetGrid.png[alt="chart with facet grid line color set"]
+image::commonscript:facetGrid.png[alt="chart with facet grid line color set"]
 
 
 

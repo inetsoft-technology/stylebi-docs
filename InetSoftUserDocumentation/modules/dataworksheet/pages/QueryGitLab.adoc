@@ -1,4 +1,4 @@
-= GitLab  Query
+﻿= GitLab  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonGitLabQuery}. This opens the ‘GitLab  Query’ dialog box.
 
 +
-image:gitlab1.png[alt="GitLab Query dialog box for configuring the data query"]
+image::gitlab1.png[alt="GitLab Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

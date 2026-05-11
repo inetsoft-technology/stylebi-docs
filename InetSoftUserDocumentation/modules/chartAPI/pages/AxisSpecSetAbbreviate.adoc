@@ -1,4 +1,4 @@
-= AxisSpec.setAbbreviate(Boolean)
+﻿= AxisSpec.setAbbreviate(Boolean)
 :navtitle: setAbbreviate()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -24,7 +24,7 @@ include::scriptexample:partial$AxisSpecSetAbbreviate1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setAbbreviate` to drop common prefixes.
 
-image:commonscript:TextSpecsetAbbreviate.png[alt="axis labels with common date prefix dropped"]
+image::commonscript:TextSpecsetAbbreviate.png[alt="axis labels with common date prefix dropped"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

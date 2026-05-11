@@ -1,4 +1,4 @@
-= axis.increment
+﻿= axis.increment
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -19,7 +19,7 @@ number
 [source,javascript]
 Chart1.axis['Sum(Total)'].increment = 300000
 
-image:commonscript:measureINcrement.png[alt="chart with measure axis increment set to 300000"]
+image::commonscript:measureINcrement.png[alt="chart with measure axis increment set to 300000"]
 
 
 

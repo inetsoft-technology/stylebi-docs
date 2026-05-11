@@ -1,4 +1,4 @@
-= ShapeForm.addValues(value)
+﻿= ShapeForm.addValues(value)
 :navtitle: addValues()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -43,7 +43,7 @@ graph.addElement(elem);
 <3> Use `setValues()` to set `form` location.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:ShapeformSetValues.png[alt="bar chart with a red triangle ShapeForm placed at NJ 100 using categorical values"]
+image::commonscript:ShapeformSetValues.png[alt="bar chart with a red triangle ShapeForm placed at NJ 100 using categorical values"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

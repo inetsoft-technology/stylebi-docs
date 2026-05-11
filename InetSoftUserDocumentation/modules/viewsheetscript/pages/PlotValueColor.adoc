@@ -1,4 +1,4 @@
-= valueColor
+﻿= valueColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::partial$colorSyntax.adoc[]
 Chart1.valueColor = [255,0,255];
 Chart1.valueColor = {r:255,g:0,b:255};
 
-image:commonscript:valueColor.png[alt="chart with data point labels displayed in custom color"]
+image::commonscript:valueColor.png[alt="chart with data point labels displayed in custom color"]
 
 
 

@@ -1,4 +1,4 @@
-= GraphForm.setLine(value)
+﻿= GraphForm.setLine(value)
 :navtitle: setLine()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -37,7 +37,7 @@ graph.addElement(elem);
 <3> Use `setLine()` to set the line style.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.
 
-image:commonscript:GraphFormSetLine.png[alt="chart with dash line style applied to form"]
+image::commonscript:GraphFormSetLine.png[alt="chart with dash line style applied to form"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

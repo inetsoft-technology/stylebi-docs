@@ -1,4 +1,4 @@
-= ParallelCoord.setScales(scales)
+﻿= ParallelCoord.setScales(scales)
 :navtitle: setScales()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -42,7 +42,7 @@ graph.setCoordinate(coord); //<4>
 <3> Create the `ParallelCoord` from the `LinearScale` objects.
 <4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:ParallelCoordssetCoords.png[alt="parallel coordinates chart with scales set via array"]
+image::commonscript:ParallelCoordssetCoords.png[alt="parallel coordinates chart with scales set via array"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

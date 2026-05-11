@@ -1,4 +1,4 @@
-= VisualFrame.setLegendSpec(spec)
+﻿= VisualFrame.setLegendSpec(spec)
 :navtitle: setLegendSpec()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -37,7 +37,7 @@ graph.addElement(elem);
 <2> Create the `LegendSpec` object.
 <3> Use `setLegendSpec` to add the `LegendSpec` to the xref:LinearSizeFrame.adoc[].
 +
-image:commonscript:VisualFrameSetLegendSpec.png[alt="point chart with legend border colored red via LegendSpec setBorderColor"]
+image::commonscript:VisualFrameSetLegendSpec.png[alt="point chart with legend border colored red via LegendSpec setBorderColor"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

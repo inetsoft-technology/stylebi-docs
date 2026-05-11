@@ -1,4 +1,4 @@
-= AxisSpec.setTruncate(Boolean)
+﻿= AxisSpec.setTruncate(Boolean)
 :navtitle: setTruncate()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -20,7 +20,7 @@ include::scriptexample:partial$AxisSpecSetTruncate1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setTruncate(true)` to truncate labels that do not fit.
 
-image:commonscript:AxisSpecSetTruncate.png[]
+image::commonscript:AxisSpecSetTruncate.png[]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

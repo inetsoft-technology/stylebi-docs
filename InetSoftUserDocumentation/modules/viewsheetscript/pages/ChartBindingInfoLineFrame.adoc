@@ -1,4 +1,4 @@
-= bindingInfo.lineFrame
+﻿= bindingInfo.lineFrame
 :navtitle: lineFrame
 %experimental%
 %navtitle%: setTimeSeries()
@@ -33,7 +33,7 @@ Chart1.bindingInfo.lineFrame = new LinearLineFrame;
 --
 
 
-image:commonscript:bindingInfoLineFrame.png[alt="line chart with line style varying by Total using LinearLineFrame"]
+image::commonscript:bindingInfoLineFrame.png[alt="line chart with line style varying by Total using LinearLineFrame"]
 
 include::commonscript:partial$bindingInfoNote.adoc[]
 

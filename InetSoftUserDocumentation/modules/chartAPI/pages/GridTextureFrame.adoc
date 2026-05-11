@@ -1,4 +1,4 @@
-= GridTextureFrame
+﻿= GridTextureFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -36,7 +36,7 @@ graph.addElement(elem);
 <2> Create the `GridTextureFrame` object.
 <3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
 
-image:commonscript:GridTextureFrame2.png[alt="bar chart with grid texture frame applied"]
+image::commonscript:GridTextureFrame2.png[alt="bar chart with grid texture frame applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
@@ -68,7 +68,7 @@ Chart1.bindingInfo.textureFrame = new GridTextureFrame();
 --
 
 +
-image:commonscript:GridTextureFrame.png[alt="bar chart with GridTextureFrame applied via bindingInfo textureFrame property"]
+image::commonscript:GridTextureFrame.png[alt="bar chart with GridTextureFrame applied via bindingInfo textureFrame property"]
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 

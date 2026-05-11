@@ -1,4 +1,4 @@
-= CategoricalShapeFrame.setShape(val,shape)
+﻿= CategoricalShapeFrame.setShape(val,shape)
 :navtitle: setShape()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -40,7 +40,7 @@ graph.addElement(elem);
 <3> Use `setShape` to assign the desired shape for '`NJ`' and '`NY`'.
 <4> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
 
-image:commonscript:CategoricalShapeFrame2setShape.png[alt="scatter chart with custom shapes assigned per category"]
+image::commonscript:CategoricalShapeFrame2setShape.png[alt="scatter chart with custom shapes assigned per category"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

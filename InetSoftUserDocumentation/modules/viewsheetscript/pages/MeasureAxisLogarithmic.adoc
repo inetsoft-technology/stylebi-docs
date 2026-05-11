@@ -1,4 +1,4 @@
-= axis.logarithmic
+﻿= axis.logarithmic
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -17,7 +17,7 @@ Boolean
 [source,javascript]
 Chart1.axis['Sum(Total)'].logarithmic = true
 
-image:commonscript:measureLogarithmic.png[alt="chart with measure axis displayed on logarithmic scale"]
+image::commonscript:measureLogarithmic.png[alt="chart with measure axis displayed on logarithmic scale"]
 
 
 

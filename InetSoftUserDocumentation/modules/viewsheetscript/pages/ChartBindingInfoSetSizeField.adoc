@@ -1,4 +1,4 @@
-= bindingInfo.setSizeField(col, type)
+﻿= bindingInfo.setSizeField(col, type)
 :navtitle: setSizeField()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -29,14 +29,14 @@ type:: One of the following: `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
 --
 Chart1.bindingInfo.setSizeField("Employee",Chart.STRING);
 --
-image:commonscript:bindingInfoSetSizeDimension.png[alt="chart with Employee dimension size-coded categorically"]
+image::commonscript:bindingInfoSetSizeDimension.png[alt="chart with Employee dimension size-coded categorically"]
 
 .Measure (numerical) field
 [source,javascript]
 --
 Chart1.bindingInfo.setSizeField("Total",Chart.NUMBER);
 --
-image:commonscript:bindingInfoSetSizeMeasure.png[alt="chart with Total measure size-coded by numeric value"]
+image::commonscript:bindingInfoSetSizeMeasure.png[alt="chart with Total measure size-coded by numeric value"]
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

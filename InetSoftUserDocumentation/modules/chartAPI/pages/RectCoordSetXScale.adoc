@@ -1,4 +1,4 @@
-= RectCoord.setXScale(scale)
+﻿= RectCoord.setXScale(scale)
 :navtitle: setXScale()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -41,7 +41,7 @@ graph.addElement(elem);
 <3> Use `setXScale` to set the   xref:Scale.adoc[] for the X-axis.
 <4> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
 
-image:commonscript:RectCoordSetXScale.png[alt="bar chart with RectCoord X-axis set using CategoricalScale"]
+image::commonscript:RectCoordSetXScale.png[alt="bar chart with RectCoord X-axis set using CategoricalScale"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

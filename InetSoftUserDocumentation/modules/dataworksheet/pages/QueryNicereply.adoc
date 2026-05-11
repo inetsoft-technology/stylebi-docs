@@ -1,4 +1,4 @@
-= Nicereply  Query
+﻿= Nicereply  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonNicereplyQuery}. This opens the ‘Nicereply  Query’ dialog box.
 
 +
-image:nicereply1.png[alt="Nicereply Query dialog box for configuring the data query"]
+image::nicereply1.png[alt="Nicereply Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

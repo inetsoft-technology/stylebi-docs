@@ -1,4 +1,4 @@
-= sizeLegends.format
+﻿= sizeLegends.format
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -18,7 +18,7 @@ For the Date, Decimal, and Message formats, use the xref:CommonFormatSpec.adoc[]
 Chart1.sizeLegends['Sum(Product:Quantity Purchased)'].format = [Chart.MESSAGE_FORMAT,"{0} orders"];
 Chart1.sizeLegends['Sum(Product:Total)'].format = [Chart.DECIMAL_FORMAT,"$#,##0M"];
 
-image:commonscript:sizeLegendsFormat.png[alt="chart size legends with custom format applied to all legend labels"]
+image::commonscript:sizeLegendsFormat.png[alt="chart size legends with custom format applied to all legend labels"]
 
 
 [TIP]

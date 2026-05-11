@@ -1,4 +1,4 @@
-= GraphElement.setInPlot(Boolean)
+﻿= GraphElement.setInPlot(Boolean)
 :navtitle: setInPlot()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -51,7 +51,7 @@ graph.addElement(elem); //<5>
 <5> Use `addElement` to add the `IntervalElement` to the Chart.
 
 
-image:commonscript:GraphElementsetInPlot.png[alt="bar chart with inPlot preventing plot resize"]
+image::commonscript:GraphElementsetInPlot.png[alt="bar chart with inPlot preventing plot resize"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

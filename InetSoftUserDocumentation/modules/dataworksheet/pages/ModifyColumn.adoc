@@ -1,4 +1,4 @@
-= Modify a Column
+﻿= Modify a Column
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 include::ROOT:partial$rightClickOptions.adoc[]
@@ -9,7 +9,7 @@ The following sections describe ways that you can modify the columns of a data b
 
 To *search for a column*, press the {buttonSearchColumns}  in the bottom panel toolbar, and type the column name or any part of the column name. This will scroll the table to a matching column. If there are multiple matches, press the arrows to cycle through the matches. Press the {buttonClearSearch}  to clear the search term.
 
-image:searchColumn.png[alt="press Search Columns button and type column name to find a column"]
+image::searchColumn.png[alt="press Search Columns button and type column name to find a column"]
 
 == Change a Column Name
 To *change a column name*, select the data block and double-click the column header in the bottom panel. To display long column names, press the {buttonWrapColumnHeaders}. Press again to hide long names.
@@ -26,7 +26,7 @@ By default, all manually created columns in an Embedded Table are of type ‘Str
 . Click the Embedded Table data block to select it.
 In the bottom panel, right-click the column header and select ‘Column Type’ from the context menu or press the {buttonColumnType} in the column header. {rightClickOptions}
 +
-image:embeddedTableColumnType2.png[alt="right-click column header and select Column Type from context menu"]
+image::embeddedTableColumnType2.png[alt="right-click column header and select Column Type from context menu"]
 +
 This opens the ‘Column Type’ panel.
 
@@ -56,10 +56,10 @@ include::ROOT:partial$CreateNewWorksheetNote.adoc[]
 
 . Right-click a header cell in the bottom panel and select ‘Column Type’ from the context menu. {rightClickOptions} This opens the ‘Column Type’ panel.
 +
-image:embeddedTableColumnType.png[alt="right-click header cell and select Column Type to open the Column Type panel"]
+image::embeddedTableColumnType.png[alt="right-click header cell and select Column Type to open the Column Type panel"]
 . Select ‘Integer’ from the ‘Type’ menu and press btn:[OK].
 +
-image:selectIntegerColumnType.png[alt="select Integer from the Type menu in the Column Type panel"]
+image::selectIntegerColumnType.png[alt="select Integer from the Type menu in the Column Type panel"]
 ****
 
 [#ChangeColumnDescription]

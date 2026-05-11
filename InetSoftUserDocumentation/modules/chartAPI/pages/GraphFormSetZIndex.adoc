@@ -1,4 +1,4 @@
-= GraphForm.setZIndex(value)
+﻿= GraphForm.setZIndex(value)
 :navtitle: setZIndex()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -46,7 +46,7 @@ graph.addElement(elem);
 <3> Use `setZIndex()` to move `form1` in front of `form2` by providing a higher `ZIndex`.
 <4> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` objects to the Chart.
 
-image:commonscript:GraphFormSetZIndex.png[alt="chart with overlapping forms ordered by Z-index"]
+image::commonscript:GraphFormSetZIndex.png[alt="chart with overlapping forms ordered by Z-index"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

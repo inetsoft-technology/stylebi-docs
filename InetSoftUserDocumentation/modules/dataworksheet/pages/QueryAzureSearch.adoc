@@ -1,4 +1,4 @@
-= Azure Search Query
+﻿= Azure Search Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonAzureSearchQuery}. This opens the ‘Azure Search  Query’ dialog box.
 
 +
-image:azureSearch1.png[alt="Azure Search Query dialog box for configuring the data query"]
+image::azureSearch1.png[alt="Azure Search Query dialog box for configuring the data query"]
 +
 include::dataworksheet:partial$RESTwEndpoint.adoc[]
 

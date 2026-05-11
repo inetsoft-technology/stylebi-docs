@@ -1,4 +1,4 @@
-= AxisSpec.setLabelOnSecondaryAxis(Boolean)
+﻿= AxisSpec.setLabelOnSecondaryAxis(Boolean)
 :navtitle: setLabelOnSecondaryAxis()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -20,7 +20,7 @@ include::scriptexample:partial$AxisSpecSetLabelOnSecondaryAxis1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setLabelOnSecondaryAxis` to move axis labels to the opposite side of the chart.
 
-image:commonscript:AxisSpecSetLabelOnSecondaryAxis.png[]
+image::commonscript:AxisSpecSetLabelOnSecondaryAxis.png[]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

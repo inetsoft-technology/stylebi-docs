@@ -1,4 +1,4 @@
-= Radio Button/Check Box/Combo Box Properties
+﻿= Radio Button/Check Box/Combo Box Properties
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -32,7 +32,7 @@ Sort:: Specifies the sort order of the items, ‘Ascending’ or ‘Descending�
 Editable:: Allows the user to enter an arbitrary string into the Combo Box (in addition to selecting from the list options).
 Select First Item:: For Check Box, selects the first item when the Dashboard loads (if no items are preselected).
 
-image:Capture_062.png[alt="radio button check box combo box general tab"]
+image::Capture_062.png[alt="radio button check box combo box general tab"]
 
 == Data Tab
 The *Data* tab in the ‘Properties’ panel provides the following unique property for  Combo Box only. Other properties are the same as for Sliders and Spinners.  See xref:SliderSpinnerProperties.adoc[].

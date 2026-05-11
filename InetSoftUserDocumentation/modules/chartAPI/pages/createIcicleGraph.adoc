@@ -1,4 +1,4 @@
-= createIcicleGraph(colorDim, sizeCol, treeDims, [xdims, ydims])
+﻿= createIcicleGraph(colorDim, sizeCol, treeDims, [xdims, ydims])
 :navtitle: createIcicleGraph()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -36,7 +36,7 @@ graph = createIcicleGraph('state', "price", ["state", "city", "product_name"]) /
 <1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
 <2> Create the icicle chart.
 +
-image:viewsheet:icicle1.png[alt="icicle chart with state city and product hierarchy sized by price"]
+image::viewsheet:icicle1.png[alt="icicle chart with state city and product hierarchy sized by price"]
 +
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

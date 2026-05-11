@@ -1,4 +1,4 @@
-= DataSet.getColCount()
+﻿= DataSet.getColCount()
 :navtitle: getColCount()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -51,7 +51,7 @@ for (var i=0; i<dataset.getRowCount(); i++) { //<2>
 <2> Use xref:DataSetGetRowCount.adoc[] to get the number of rows.
 <3> Use `getColCount()` to get the number of columns.
 
-image:commonscript:datasetGetColCount.png[alt="dataset column count example"]
+image::commonscript:datasetGetColCount.png[alt="dataset column count example"]
 
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

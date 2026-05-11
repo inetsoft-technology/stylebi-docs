@@ -1,4 +1,4 @@
-= GraphElement.setShapeFrame(frame)
+﻿= GraphElement.setShapeFrame(frame)
 :navtitle: setShapeFrame()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -37,7 +37,7 @@ graph.addElement(elem); //<5>
 <5> Use `addElement` to add the `PointElement` to the Chart.
 
 
-image:commonscript:GraphElementsetShapeFrame.png[alt="point chart with StarShapeFrame applied"]
+image::commonscript:GraphElementsetShapeFrame.png[alt="point chart with StarShapeFrame applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

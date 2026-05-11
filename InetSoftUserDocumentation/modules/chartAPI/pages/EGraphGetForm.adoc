@@ -1,4 +1,4 @@
-= EGraph.getForm(index)
+﻿= EGraph.getForm(index)
 :navtitle: getForm()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -48,7 +48,7 @@ graph.addElement(elem);
 
 
 +
-image:commonscript:EGraphgetForm.png[alt="EGraph with form retrieved and recolored"]
+image::commonscript:EGraphgetForm.png[alt="EGraph with form retrieved and recolored"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

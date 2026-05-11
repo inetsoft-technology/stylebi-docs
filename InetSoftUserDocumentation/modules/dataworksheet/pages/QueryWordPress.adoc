@@ -1,4 +1,4 @@
-= WordPress  Query
+﻿= WordPress  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -15,7 +15,7 @@ include::ROOT:partial$createVisualizationStep2QueryCreate.adoc[]
 . Press the {buttonObject}, and select {buttonWordPressQuery}. This opens the ‘WordPress  Query’ dialog box.
 
 +
-image:wordpress1.png[alt="WordPress Query dialog box for configuring the data query"]
+image::wordpress1.png[alt="WordPress Query dialog box for configuring the data query"]
 
 
 
