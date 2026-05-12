@@ -12,7 +12,13 @@ image::dataSourceNewTwitter2.png[alt="Twitter (X) data source definition screen"
 
 . In the ‘Name’ field, enter a label for this connection.
 
-. Press the btn:[Authorize] button to populate the ‘OAuth Token’ field.   If you need to generate a token manually, see https://docs.x.com/tutorials/postman-getting-started#using-oauth-2-0-to-generate-a-user-access-token[Using OAuth 2.0 to generate a user access token] in the https://docs.x.com/home[X Developer Platform docs].
+. Enter the ‘Client ID’ and ‘Client Secret’.
+
+. Press the btn:[Authorize] button.  Follow the screens to populate the ‘Access Token’, ‘Refresh Token’, and '`Token Expiration`'  fields.
+
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if a schema change has been made to a database, for example), press the btn:[Refresh Metadata] button.
+
+
 +
 . *_Optional:_* {multiTenantUser}
 
