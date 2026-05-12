@@ -86,7 +86,28 @@ If you are not using  SAML, OpenID, or Auth0, you can provide a custom filter th
 ====
 [source,java]
 ----
-include::ROOT:attachment$SampleFilter.java[]
+public class SampleFilter implements Filter {
+   public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+      throws IOException, ServletException {
+      HttpServletRequest httpRequest = (HttpServletRequest) request;
+      HttpSession session = httpRequest.getSession(true);
+      // Replace with your own business logic to determine the user
+      String userId = httpRequest.getParameter("USERID");
+
+      if(userId == null) {
+         chain.doFilter(httpRequest, response);
+         return;
+      }
+      SRPrincipal principal = new SRPrincipal(userId);
+      session.setAttribute(RepletRepository.PRINCIPAL_COOKIE, principal);
+      HttpServletRequestWrapper wrapper = new HttpServletRequestWrapper(httpRequest) {
+         public Principal getUserPrincipal() {
+            return principal;
+         }
+      };
+      chain.doFilter(wrapper, response);
+   }
+}
 ----
 ====
 
