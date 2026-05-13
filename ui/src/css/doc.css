@@ -486,8 +486,7 @@
 
 .doc .imageblock .content {
   width: 100%;
-  max-width: 500px;
-  margin: 10px auto;
+  margin: 10px 0;
 }
 
 .doc img {
