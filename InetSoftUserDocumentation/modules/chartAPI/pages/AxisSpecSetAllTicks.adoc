@@ -16,9 +16,9 @@ Boolean:: `true`: show ticks for abbreviated (suppressed) labels +
 --
 include::scriptexample:partial$AxisSpecSetAllTicks1.js[]
 --
-<1> {dataset}
-<2> Create the `AxisSpec` object.
-<3> Use `setAllTicks` to show tick marks at all label positions, including those suppressed by abbreviation.
+<1> {dataset} Twelve monthly data points ensure enough labels to trigger abbreviation.
+<2> Create the `AxisSpec` object. `setAbbreviate(true)` suppresses crowded labels; `setAllTicks(true)` keeps tick marks at all positions including suppressed ones.
+<3> Use `setAllTicks(true)` to show tick marks at every month, even where the label has been suppressed.
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
