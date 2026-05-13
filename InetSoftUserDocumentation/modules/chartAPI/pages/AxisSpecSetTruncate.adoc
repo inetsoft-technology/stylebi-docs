@@ -20,7 +20,7 @@ include::scriptexample:partial$AxisSpecSetTruncate1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setTruncate(true)` to truncate labels that do not fit.
 
-image::commonscript:AxisSpecSetTruncate.png[]
+image::commonscript:AxisSpecSetTruncate.png[alt="bar chart with truncated axis labels"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

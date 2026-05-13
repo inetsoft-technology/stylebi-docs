@@ -21,7 +21,7 @@ include::scriptexample:partial$AxisSpecSetLastOrAll1.js[]
 <3> Use `setLastOrAll(true)` to show only the last line of each truncated label.
 
 
-image::commonscript:AxisSpecSetLastOrAll.png[]
+image::commonscript:AxisSpecSetLastOrAll.png[alt="bar chart showing last-line-only truncation of multi-line axis labels"]
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]

@@ -20,7 +20,7 @@ include::scriptexample:partial$AxisSpecSetLine2Color1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setLine2Color` to set the secondary axis line color.
 
-image::commonscript:AxisSpecSetLine2Color.png[]
+image::commonscript:AxisSpecSetLine2Color.png[alt="bar chart with secondary axis line color applied"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

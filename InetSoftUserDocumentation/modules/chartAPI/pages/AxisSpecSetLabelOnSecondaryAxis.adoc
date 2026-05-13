@@ -20,7 +20,7 @@ include::scriptexample:partial$AxisSpecSetLabelOnSecondaryAxis1.js[]
 <2> Create the `AxisSpec` object.
 <3> Use `setLabelOnSecondaryAxis` to move axis labels to the opposite side of the chart.
 
-image::commonscript:AxisSpecSetLabelOnSecondaryAxis.png[]
+image::commonscript:AxisSpecSetLabelOnSecondaryAxis.png[alt="bar chart with axis labels displayed on the opposite side"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

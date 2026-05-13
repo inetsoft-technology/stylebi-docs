@@ -21,7 +21,7 @@ include::scriptexample:partial$AxisSpecSetGridBetween1.js[]
 <3> Use `setGridBetween` to draw grid lines between tick marks rather than at tick marks.
 
 
-image::commonscript:AxisSpecSetGridBetween.png[]
+image::commonscript:AxisSpecSetGridBetween.png[alt="bar chart with grid lines drawn between tick marks"]
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 

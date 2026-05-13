@@ -23,7 +23,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 
 . Press the {buttonOptions} in the toolbar to open the ‘Dashboard Options’ dialog box, then select the *Script* tab to open the *onRefresh* Handler.
 +
-NOTE: Changest to the `bindingInfo` property must in general be made *prior to query execution*. Therefore, attach `bindingInfo` scripts to the *onRefresh* handler.
+NOTE: Changes to the `bindingInfo` property must in general be made *prior to query execution*. Therefore, attach `bindingInfo` scripts to the *onRefresh* handler.
 
 
 . In *onRefresh* Handler in the Script Editor, enter the commands below:
