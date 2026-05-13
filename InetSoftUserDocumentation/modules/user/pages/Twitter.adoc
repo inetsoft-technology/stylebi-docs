@@ -16,7 +16,7 @@ image::dataSourceNewTwitter2.png[alt="Twitter (X) data source definition screen"
 
 . Press the btn:[Authorize] button.  Follow the screens to populate the ‘Access Token’, ‘Refresh Token’, and '`Token Expiration`'  fields.
 
-. *_Optional:_* To refresh meta-data for the data source (which may be necessary if a schema change has been made to a database, for example), press the btn:[Refresh Metadata] button.
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
 
 
 +
