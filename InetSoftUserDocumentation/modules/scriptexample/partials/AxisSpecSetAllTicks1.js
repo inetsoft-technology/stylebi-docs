@@ -12,6 +12,7 @@ var aspec = new AxisSpec(); //<2>
 var tspec = new TextSpec();
 tspec.setFormat(java.text.SimpleDateFormat('yyyy-MMM'));
 aspec.setTextSpec(tspec);
+aspec.setLineColor(java.awt.Color(0xff0000));
 aspec.setAbbreviate(true);
 aspec.setAllTicks(true); //<3>
 tscale.setAxisSpec(aspec);
