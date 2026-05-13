@@ -16,9 +16,9 @@ Boolean:: `true`: show tick marks at all positions, including those with suppres
 --
 include::scriptexample:partial$AxisSpecSetAllTicks1.js[]
 --
-<1> {dataset} Twenty-four monthly data points spanning two years. Formatting as `'yyyy'` means all 12 months of each year share the same label — 11 out of 12 per year are suppressed as duplicates.
-<2> Create the `AxisSpec` object. Formatting as `'yyyy'` causes duplicate labels; the red line color makes tick marks easy to spot.
-<3> Use `setAllTicks(true)` to keep a tick mark at every month position even where the duplicate label is hidden. Change to `false` to see only one tick per year.
+<1> {dataset} 90 daily data points (Jan–Mar 2023). `setType(DAY)` and `setIncrement(1)` force one tick per day; `setMaxTicks(100)` allows all 90 ticks to be generated.
+<2> Create the `AxisSpec` object. Formatting as `'MMM'` means every day in the same month shares the same label — 89 out of 90 are duplicates.
+<3> Use `setAllTicks(true)` to show all 90 daily tick marks even where duplicate labels are hidden. Change to `false` to see only 3 tick marks (one per month).
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
