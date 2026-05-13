@@ -1,0 +1,54 @@
+= AxisSpec.setColorFrame(frame)
+:navtitle: setColorFrame()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies a mapping between axis label values and colors. The corresponding "getter" function is `getColorFrame()`.
+
+== Parameter
+frame:: A xref:ColorFrame.adoc[] object
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var sscale = new CategoricalScale("State");
+var aspec = new AxisSpec(); //<2>
+var frame = new CategoricalColorFrame(); //<3>
+frame.setField("State");
+frame.setColor("NJ", java.awt.Color(0xff0000));
+frame.setColor("NY", java.awt.Color(0x0000ff));
+aspec.setColorFrame(frame); //<4>
+sscale.setAxisSpec(aspec);
+graph.setScale("State", sscale);
+graph.addElement(elem);
+--
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Create the `ColorFrame` object and map values to colors.
+<4> Use `setColorFrame` to assign the `ColorFrame` to the axis.
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+--
+var coord = graph.getCoordinate(); //<1>
+var scale = coord.getXScale(); //<2>
+var spec = scale.getAxisSpec(); //<3>
+
+var frame = new CategoricalColorFrame();
+frame.setField("State");
+frame.setColor("NJ", java.awt.Color(0xff0000));
+frame.setColor("NY", java.awt.Color(0x0000ff));
+spec.setColorFrame(frame);
+--
+=====
