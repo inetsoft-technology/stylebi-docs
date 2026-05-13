@@ -14,7 +14,8 @@ dataset = [["Date","Quantity"],
 graph = new EGraph();
 var elem = new LineElement("Date", "Quantity");
 var tscale = new TimeScale("Date");
-tscale.setInterval(1, TimeScale.MONTH);
+tscale.setType(TimeScale.MONTH);
+tscale.setIncrement(1);
 var aspec = new AxisSpec(); //<2>
 var tspec = new TextSpec();
 tspec.setFormat(java.text.SimpleDateFormat('yyyy'));
