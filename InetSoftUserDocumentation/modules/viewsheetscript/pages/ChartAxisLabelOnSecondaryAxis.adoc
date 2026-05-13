@@ -1,0 +1,25 @@
+= axis.labelOnSecondaryAxis
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+When `true`, displays axis labels on the opposite side of the chart. For a Y-axis, labels move from left to right; for an X-axis, labels move from bottom to top. When `false` (default), labels are displayed on the default side.
+include::partial$axisShortcut.adoc[]
+
+== Type
+Boolean
+
+== Example
+[source,javascript]
+Chart1.yAxis.labelOnSecondaryAxis = true;
+
+image::commonscript:ChartAxisLabelOnSecondaryAxis.png[alt="chart with Y-axis labels displayed on the right side"]
+
+[TIP]
+====
+Either syntax below can be used in xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+xAxis.labelOnSecondaryAxis             // unqualified
+Chart1.xAxis.labelOnSecondaryAxis      // qualified
+
+{secondForm}
+====
