@@ -26,6 +26,8 @@ image::dataSourceSAP2.png[alt="SAP data source definition screen"]
 
 . Enter the connection information for your SAP installation. See the https://help.sap.com/[SAP documentation] for further information about the connection parameters.
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

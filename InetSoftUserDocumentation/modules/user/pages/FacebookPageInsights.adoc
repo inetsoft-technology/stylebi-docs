@@ -16,6 +16,8 @@ image::dataSourceNewFacebookPageInsights1.png[alt="Facebook Page Insights data s
 
 . Enter the ‘Page ID’.
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

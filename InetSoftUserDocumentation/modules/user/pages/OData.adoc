@@ -22,6 +22,8 @@ Password Credentials Grant:: To use password credentials grant, enter the ‘Use
 OpenID Connect OAuth Authentication:: To use OpenID Connect OAuth authentication, enter the ‘Client ID’, ‘Client Secret’, ‘Scope’, ‘Authorization URI’, and  ‘Token URI’.  Leave the ‘User’ ID and ‘Password’ fields *empty*. Press the btn:[Authorize] button. The ‘Access Token’ and ‘Refresh Token’ fields will be automatically populated.
 ****
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

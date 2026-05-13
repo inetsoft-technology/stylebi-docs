@@ -14,6 +14,8 @@ image::dataSourceNewSharePointOnline2.png[alt="SharePoint Online data source def
 
 . Enter the ‘Client ID’, ‘Tenant ID’, and ‘Client Secret’. See the https://docs.microsoft.com/en-us/sharepoint/sharepoint-online[SharePoint Online documentation] for information about these settings.
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

@@ -17,6 +17,8 @@ image::dataSourceNewYouTubeAnalytics2.png[alt="YouTube Analytics data source def
 
 . Press the btn:[Authorize] button to populate the token fields.
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

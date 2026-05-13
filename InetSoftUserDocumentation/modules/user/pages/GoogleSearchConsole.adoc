@@ -17,6 +17,8 @@ image::dataSourceGoogleSearch1.png[alt="Google Search Console data source defini
 
 . Log into the desired account. Close the browser window and return to the data source definition screen when instructed to do so. The token fields should now be populated.
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

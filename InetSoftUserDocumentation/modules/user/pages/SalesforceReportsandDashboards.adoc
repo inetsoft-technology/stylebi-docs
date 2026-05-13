@@ -12,6 +12,8 @@ image::dataSourceNewSalesforceReportsandDashboards2.png[alt="Salesforce Reports 
 
 . Select the ‘Account Type’ and provide the required credentials.
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

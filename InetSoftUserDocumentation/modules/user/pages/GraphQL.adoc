@@ -49,6 +49,8 @@ Oauth 2.0:: If you select ‘Oauth 2.0’, follow the steps below:
 . *_Optional:_* Under the ‘Query HTTP Parameters’ field, press the btn:[Add] button to add the retrieved token into a parameter for the second-step query, as illustrated below (for generic REST data source). You can use the predefined `pass:[{{token}}]` variable to represent the retrieved token value in the query.
 
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

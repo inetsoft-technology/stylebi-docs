@@ -13,6 +13,8 @@ image::dataSourceNewSmartsheet2.png[alt="Smartsheet data source definition scree
 
 . Enter the ‘Access Token’.
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

@@ -12,6 +12,8 @@ image::dataSourceNewPrometheus2.png[alt="Prometheus data source definition scree
 
 . Enter the  ‘Host’ and ‘Port’.
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

@@ -14,6 +14,8 @@ image::dataSourceSalesforce2.png[alt="Salesforce data source definition screen"]
 . Enter the ‘User’ and ‘Password’.  The password is a password string and token concatenated together.  For example, if the password is ‘abc123’ and the token is ‘XYZ987654321’, the ‘Password’ field should specify “abc123XYZ987654321”.
 
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

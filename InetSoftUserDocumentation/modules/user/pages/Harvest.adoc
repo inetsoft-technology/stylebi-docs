@@ -12,6 +12,8 @@ image::dataSourceNewHarvest2.png[alt="Harvest data source definition screen"]
 
 . Enter the ‘Account ID’ and ‘Personal Access Token’.
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].

@@ -20,6 +20,8 @@ NOTE: Selecting scopes that are not compatible with your Shopify account may cau
 
 . Enter the ‘Client ID’ and ‘Client Secret’ and press ‘Authorize’. This will populate the token fields.
 +
+. *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].
