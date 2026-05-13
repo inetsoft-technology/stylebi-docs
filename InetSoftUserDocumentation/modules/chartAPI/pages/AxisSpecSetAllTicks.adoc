@@ -3,11 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-Specifies whether *tick marks* are displayed for labels that have been suppressed by  xref:AxisSpecSetAbbreviate.adoc[] or because of duplicate-label suppression.  {noGetter}
+Specifies whether *tick marks* are displayed at positions where duplicate labels have been suppressed on a xref:TimeScale.adoc[]. When a date format produces the same text for multiple consecutive ticks (for example, formatting monthly data as `'yyyy'` causes every month in the same year to display the same label), the duplicate labels are hidden. This property controls whether tick marks are still drawn at those hidden-label positions.  {noGetter}
 
 == Parameter
-Boolean:: `true`: show ticks for abbreviated (suppressed) labels +
-`false`: hide ticks for abbreviated (suppressed) labels
+Boolean:: `true`: show tick marks at all positions, including those with suppressed duplicate labels +
+`false`: hide tick marks where duplicate labels have been suppressed
 
 == Example
 
@@ -16,9 +16,9 @@ Boolean:: `true`: show ticks for abbreviated (suppressed) labels +
 --
 include::scriptexample:partial$AxisSpecSetAllTicks1.js[]
 --
-<1> {dataset} Twelve monthly data points ensure enough labels to trigger abbreviation.
-<2> Create the `AxisSpec` object. `setAbbreviate(true)` suppresses crowded labels; `setAllTicks(true)` keeps tick marks at all positions including suppressed ones.
-<3> Use `setAllTicks(true)` to show tick marks at every month, even where the label has been suppressed.
+<1> {dataset} Twenty-four monthly data points spanning two years. Formatting as `'yyyy'` means all 12 months of each year share the same label — 11 out of 12 per year are suppressed as duplicates.
+<2> Create the `AxisSpec` object. Formatting as `'yyyy'` causes duplicate labels; the red line color makes tick marks easy to spot.
+<3> Use `setAllTicks(true)` to keep a tick mark at every month position even where the duplicate label is hidden. Change to `false` to see only one tick per year.
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
