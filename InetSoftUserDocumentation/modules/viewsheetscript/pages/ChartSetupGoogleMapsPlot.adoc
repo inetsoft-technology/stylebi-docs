@@ -28,7 +28,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 --
 dataset = [["Latitude","Longitude","PlaceName"],[40.8516051126306,-73.95223617553711,'GW Bridge'],[40.76292614285948,-74.00982856750488,'Lincoln Tunnel'],[40.72755146730012,-74.02107238769531,'Holland Tunnel']];
 
-ar latName = "Latitude";
+var latName = "Latitude";
 var lngName = "Longitude";
 var maxWidthPx = 300;
 var maxHeightPx = 300;

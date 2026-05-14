@@ -1,16 +1,16 @@
 
-[cols="1,5"]
+[cols="1,4,4"]
 |===
-|Symbol|Description
+|Symbol|Description|Example
 
-|0|Displays the digit at this location. Displays “0” if there is no value at this location.
-|#|Displays the digit at this location (rounded, if placed in least significant position to the right of the decimal point). Suppresses display if there is no value at this location.
-|.|Decimal point
-|-|Minus sign
-|,|Grouping separator
-|E|Separates mantissa and exponent in scientific notation
-|;|Separates positive and negative sub-patterns
-|%|Multiplies by 100 and displays as percentage
-|$, ¥, €, etc.|Inserts the specified currency symbol
-|¤|Inserts the default currency symbol
+|0|Displays the digit at this location. Displays "0" if there is no value at this location.|`+"00.00"+` with `+4.5+` → `+"04.50"+`
+|#|Displays the digit at this location (rounded, if placed in least significant position to the right of the decimal point). Suppresses display if there is no value at this location.|`+"#.#"+` with `+4.567+` → `+"4.6"+`
+|.|Decimal point|`+"#.00"+` with `+4.5+` → `+"4.50"+`
+|-|Minus sign|`+"-#"+` with `+-42+` → `+"-42"+`
+|,|Grouping separator|`+"#,##0"+` with `+12345+` → `+"12,345"+`
+|E|Separates mantissa and exponent in scientific notation|`+"0.###E0"+` with `+1234+` → `+"1.234E3"+`
+|;|Separates positive and negative sub-patterns|`+"#.00;(#.00)"+` with `+-5.2+` → `+"(5.20)"+`
+|%|Multiplies by 100 and displays as percentage|`+"#%"+` with `+0.25+` → `+"25%"+`
+|$, ¥, €, etc.|Inserts the specified currency symbol|`+"$#.00"+` with `+12.5+` → `+"$12.50"+`
+|¤|Inserts the default currency symbol|`+"¤#,##0.00"+` in US locale → `+"$1,234.56"+`; in German locale → `+"€1.234,56"+`
 |===
