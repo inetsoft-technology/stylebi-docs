@@ -90,7 +90,7 @@ If a Dashboard  includes a title/alias or description, then the title/alias or d
 To embed a Dashboard within an IFrame, use the URLs provided above, for example, for a server running on http://www.example.com:
 
 [source,html]
-<iframe src="https://www.example.com/app/viewer/view/global/DashboardPath/DashboardName allowfullscreen>
+<iframe src="https://www.example.com/app/viewer/view/global/DashboardPath/DashboardName" allowfullscreen>
 </iframe>
 
 include::partial$securityAllowIFrame.adoc[]

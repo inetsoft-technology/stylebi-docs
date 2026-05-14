@@ -13,7 +13,7 @@ All commands to the InetSoft engine are sent via a servlet (repository servlet) 
 
 
 == SharePoint Portal Framework
-SharePoint is a popular portal framework developed by Microsoft (usually deployed on an IIS server). The ‘Contents’ of a Share Point portal consists of one or more components referred to as ‘Web Parts’. A Web Part may retrieve its content from any third party source by simply specifying the appropriate URL. Therefore, by adding a new ‘Web Part’ and specifying the appropriate content URL you can display an InetSoft Dashboard  as a ‘Web Part’. (See xref:LoadAssetsViaURL.adoc[]. For example:
+SharePoint is a popular portal framework developed by Microsoft (usually deployed on an IIS server). The ‘Contents’ of a SharePoint portal consists of one or more components referred to as ‘Web Parts’. A Web Part may retrieve its content from any third party source by simply specifying the appropriate URL. Therefore, by adding a new ‘Web Part’ and specifying the appropriate content URL you can display an InetSoft Dashboard  as a ‘Web Part’. (See xref:LoadAssetsViaURL.adoc[]. For example:
 
 {SREEContext}/app/viewer/view/global/DashboardPath/DashboardName
 

@@ -21,7 +21,7 @@ Custom DB-based or API-Based Security Provider::
 +
 include::ROOT:partial$enterpriseOnly.adoc[]
 +
-Implement a custom security provider if your setup requires the security provider to perform authentication of user credentials or user role/group mappings against an _external source_. For example, if your security data store is a database or another security framework and you have partial session-based SSO, use a custom security provider. The best approach is the _compoiste security provider_, which splits the responsibility for authentication and authorization tasks. To do this, implement your own authentication provider and use the built-in file-based authorization provider. See xref:administration:SpecifySecurityProvider.adoc[] in xref:administration:ManageServer.adoc[] for more infomation.
+Implement a custom security provider if your setup requires the security provider to perform authentication of user credentials or user role/group mappings against an _external source_. For example, if your security data store is a database or another security framework and you have partial session-based SSO, use a custom security provider. The best approach is the _composite security provider_, which splits the responsibility for authentication and authorization tasks. To do this, implement your own authentication provider and use the built-in file-based authorization provider. See xref:administration:SpecifySecurityProvider.adoc[] in xref:administration:ManageServer.adoc[] for more information.
 
 
 
