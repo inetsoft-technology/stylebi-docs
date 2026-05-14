@@ -3,7 +3,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=See Also]
-xref:viewsheet:ChartProperties.adoc[] to set this property in the '`Chart Properties`' dialog box.
+xref:viewsheet:ChartProperties.adoc[] to set this property using the '`On Click Only`' option.
 
 Specifies, when `true`,  that the data tip view for a Chart is displayed only when the user clicks on the Chart, rather than on hover. If the clicked element has a hyperlink, you must {buttonCtrl}-click to show the data tip.  See xref:viewsheet:AddTipsToChart.adoc[] for more information about data tips.
 

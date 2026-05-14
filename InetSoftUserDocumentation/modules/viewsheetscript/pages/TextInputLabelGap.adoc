@@ -11,6 +11,9 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies the gap in pixels between the TextInput component and its label. See xref:viewsheet:TextInputProperties.adoc[] for information on the '`Gap (px)`' option.
 
+[NOTE]
+This property only applies when the label is visible (`labelVisible = true` and `labelText` is set).
+
 == Type
 Integer::	Gap in pixels between the component and the label (default: 5)
 

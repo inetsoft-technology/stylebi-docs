@@ -16,7 +16,7 @@ Boolean::	`true`: allows the user to toggle between single and multi-selection m
 
 == Example
 [source,javascript]
-SelectionList1.quickSwitchAllowed = true
+SelectionList1.quickSwitchAllowed = true;
 
 
 
