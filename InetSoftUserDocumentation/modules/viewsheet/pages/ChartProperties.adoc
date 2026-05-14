@@ -90,6 +90,13 @@ Pie Ratio:: A value in the range [0.1,1] that determines the proportion of the p
 +
 CAUTION: Large  ‘Pie Ratio’ settings may leave less space for the display of values on the Chart.
 
+=== Plot Options (Bar Chart)
+The following plot options are available for xref:viewsheet:BarChart.adoc[] types (non-stacked, non-3D only).
+
+Corner Radius:: A value between 0 and 0.5 that controls the rounding of bar corners. A value of `0` produces square corners; `0.5` produces the maximum rounding. Only the open (value) end of each bar is rounded unless 'Round All Corners' is also enabled. New charts default to a radius of 0.3.
+
+Round All Corners:: When enabled, rounds all four corners of each bar equally using the 'Corner Radius' value. When disabled (default), only the open (value) end of each bar is rounded.
+
 === Plot Options (Network/Tree Chart)
 The following plot option is  available for xref:viewsheet:NetworkChart.adoc[], xref:CircularNetworkChart.adoc[] and xref:TreeChart.adoc[] types.
 

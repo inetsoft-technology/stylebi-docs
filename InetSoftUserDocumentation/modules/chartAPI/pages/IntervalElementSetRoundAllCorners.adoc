@@ -1,0 +1,44 @@
+= IntervalElement.setRoundAllCorners(Boolean)
+:navtitle: setRoundAllCorners()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Specifies whether all four corners of each bar are rounded equally, or only the open (value) end. Requires a non-zero corner radius set via `setCornerRadius()`. Not available for stacked or 3D bar charts. {noGetter}
+
+== Parameter
+Boolean:: `true`: round all four corners +
+`false`: round only the open (value) end (default)
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity"); //<2>
+elem.setCornerRadius(0.5);
+elem.setRoundAllCorners(true); //<3>
+graph.addElement(elem); //<4>
+--
+
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use `setRoundAllCorners(true)` to round all four corners of each bar.
+<4> Use xref:EGraphAddElement.adoc[] to add the `IntervalElement` to the Chart.
+
+image::commonscript:IntervalElementSetRoundAllCorners.png[alt="bar chart with all four corners of each bar rounded equally"]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:EGraphGetElement.adoc[] to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0);
+elem.setCornerRadius(0.5);
+elem.setRoundAllCorners(true);
+--
+=====

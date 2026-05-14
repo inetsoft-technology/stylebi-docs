@@ -1,0 +1,41 @@
+= IntervalElement.setCornerRadius(Number)
+:navtitle: setCornerRadius()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Sets the corner radius for bars. A value of `0` produces square corners; `0.5` produces the maximum rounding. Only the open (value) end of each bar is rounded unless `setRoundAllCorners(true)` is also set. Not available for stacked or 3D bar charts. {noGetter}
+
+== Parameter
+Number:: A value between `0` (square) and `0.5` (maximum rounding)
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+--
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity"); //<2>
+elem.setCornerRadius(0.5); //<3>
+graph.addElement(elem); //<4>
+--
+
+<1> {dataset}
+<2> Create the `IntervalElement` object.
+<3> Use `setCornerRadius` to set the bar corner radius.
+<4> Use xref:EGraphAddElement.adoc[] to add the `IntervalElement` to the Chart.
+
+image::commonscript:IntervalElementSetCornerRadius.png[alt="bar chart with rounded corners on the value end of each bar"]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:EGraphGetElement.adoc[] to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+--
+var elem = graph.getElement(0);
+elem.setCornerRadius(0.5);
+--
+=====

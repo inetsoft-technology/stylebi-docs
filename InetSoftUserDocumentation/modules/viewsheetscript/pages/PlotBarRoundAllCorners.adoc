@@ -1,0 +1,28 @@
+= barRoundAllCorners
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+When `true`, rounds all four corners of each bar equally using the radius set by `barCornerRadius`. When `false` (default), only the open (value) end of each bar is rounded. Not available for stacked or 3D bar charts.
+
+== Type
+Boolean:: `true`: round all four corners +
+`false`: round only the open (value) end
+
+== Example
+[source,javascript]
+Chart1.barRoundAllCorners = true;
+
+
+image::commonscript:barRoundAllCorners.png[alt="bar chart with all four corners of each bar rounded equally"]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+barRoundAllCorners          // unqualified
+Chart1.barRoundAllCorners   // qualified
+
+{secondForm}
+====
