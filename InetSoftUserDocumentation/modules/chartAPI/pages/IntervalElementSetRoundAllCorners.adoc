@@ -3,7 +3,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-Specifies whether all four corners of each bar are rounded equally, or only the open (value) end. Requires a non-zero corner radius set via `setCornerRadius()`. Not available for stacked bar charts. {noGetter}
+Specifies whether all four corners of each bar are rounded equally, or only the open (value) end. Requires a non-zero corner radius set via xref:IntervalElementSetCornerRadius.adoc[]. Not available for stacked bar charts. {noGetter}
 
 == Parameter
 Boolean:: `true`: round all four corners +

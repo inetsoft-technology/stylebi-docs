@@ -3,7 +3,9 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-Sets the corner radius for bars. A value of `0` produces square corners; `0.5` produces the maximum rounding. Only the open (value) end of each bar is rounded unless `setRoundAllCorners(true)` is also set. Not available for stacked bar charts. {noGetter}
+Sets the corner radius for bars. A value of `0` produces square corners; `0.5` produces the maximum rounding. Only the open (value) end of each bar is rounded unless xref:IntervalElementSetRoundAllCorners.adoc[] is  set to `true`. Not available for stacked bar charts. {noGetter}
+
+
 
 == Parameter
 value:: A value between `0` (square) and `0.5` (maximum rounding)

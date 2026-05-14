@@ -2,9 +2,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-Sets the corner radius for bars on a xref:viewsheet:BarChart.adoc[]. A value of `0` produces square corners; `0.5` produces the maximum rounding. Only the open (value) end of each bar is rounded unless `barRoundAllCorners` is also enabled. Not available for stacked or 3D bar charts.
-
-New charts default to a radius of `0.3`.
+Sets the corner radius for bars on a xref:viewsheet:BarChart.adoc[]. A value of `0` produces square corners; `0.5` produces the maximum rounding. Only the open (value) end of each bar is rounded unless xref:PlotBarRoundAllCorners.adoc[] is also enabled. Not available for stacked  bar charts. Default is `0.3`.
 
 == Type
 Number:: A value between `0` (square) and `0.5` (maximum rounding)

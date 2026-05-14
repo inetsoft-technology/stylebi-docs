@@ -2,7 +2,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-When `true`, rounds all four corners of each bar equally using the radius set by `barCornerRadius`. When `false` (default), only the open (value) end of each bar is rounded. Not available for stacked or 3D bar charts.
+When `true`, rounds all four corners of each bar equally using the radius set by xref:PlotBarCornerRadius.adoc[]. When `false` (default), only the open (value) end of each bar is rounded. Not available for stacked bar charts.
 
 == Type
 Boolean:: `true`: round all four corners +
@@ -10,8 +10,8 @@ Boolean:: `true`: round all four corners +
 
 == Example
 [source,javascript]
+Chart1.barCornerRadius = 0.5;
 Chart1.barRoundAllCorners = true;
-
 
 image::commonscript:barRoundAllCorners.png[alt="bar chart with all four corners of each bar rounded equally"]
 
