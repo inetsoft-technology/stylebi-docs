@@ -3,7 +3,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-Specifies whether all four corners of each bar are rounded equally, or only the open (value) end. Requires a non-zero corner radius set via `setCornerRadius()`. Not available for stacked or 3D bar charts. {noGetter}
+Specifies whether all four corners of each bar are rounded equally, or only the open (value) end. Requires a non-zero corner radius set via `setCornerRadius()`. Not available for stacked bar charts. {noGetter}
 
 == Parameter
 Boolean:: `true`: round all four corners +
@@ -14,12 +14,7 @@ Boolean:: `true`: round all four corners +
 .Chart Component Script
 [source,javascript]
 --
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity"); //<2>
-elem.setCornerRadius(0.5);
-elem.setRoundAllCorners(true); //<3>
-graph.addElement(elem); //<4>
+include::scriptexample:partial$IntervalElementSetRoundAllCorners1.js[]
 --
 
 <1> {dataset}
