@@ -1,0 +1,29 @@
+= smoothLines
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+When `true`, renders chart lines as smooth curves instead of straight segments. For xref:viewsheet:LineChart.adoc[] and xref:viewsheet:AreaChart.adoc[] types (including Stacked variants), uses Catmull-Rom interpolation. For xref:viewsheet:CircularNetworkChart.adoc[], draws edges as Bezier curves.
+
+== Type
+Boolean:: `true`: smooth curves +
+`false`: straight line segments
+
+== Example
+[source,javascript]
+Chart1.smoothLines = true;
+
+
+image::commonscript:smoothLines.png[alt="line chart with smooth curved lines instead of straight segments"]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+smoothLines          // unqualified
+Chart1.smoothLines   // qualified
+
+{secondForm}
+====

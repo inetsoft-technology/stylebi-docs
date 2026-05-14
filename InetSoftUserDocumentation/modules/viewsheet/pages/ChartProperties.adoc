@@ -95,6 +95,8 @@ The following plot option is  available for xref:viewsheet:NetworkChart.adoc[], 
 
 Apply Aesthetics to Source Nodes:: Specifies that node ‘Color’ and ‘Size’ determined by ‘Target’ value should also be applied to source nodes that are not also target nodes.
 
+Smooth Lines:: _(xref:CircularNetworkChart.adoc[] only)_ When enabled, draws chart edges as smooth Bezier curves instead of straight lines. New Circular Network charts have this option enabled by default.
+
 
 === Plot Options (Circle Packing/ Treemap)
 The following plot option is  available for xref:viewsheet:CirclePackingChart.adoc[] and xref:TreeChart.adoc[] types.
@@ -112,6 +114,8 @@ Font Scale:: Multiplies the specified ‘Size’ setting to increase the maximum
 The following plot options are  available for xref:viewsheet:LineChart.adoc[] and xref:RadarChart.adoc[] types.
 
 Show Points:: Adds markers at the locations of the individual data points.
+
+Smooth Lines:: _(xref:LineChart.adoc[], xref:AreaChart.adoc[], Stacked Line, and Stacked Area charts only)_ When enabled, renders chart lines as smooth curves (Catmull-Rom interpolation) instead of straight segments. Enabled by default for Area charts; disabled by default for Line charts.
 
 Fill Missing Data with Dashed Line:: Linearly interpolates missing data using a dashed line.
 
