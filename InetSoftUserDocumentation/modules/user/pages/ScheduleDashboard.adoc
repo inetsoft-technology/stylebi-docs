@@ -116,6 +116,7 @@ You can view and monitor all of your scheduled tasks under the {buttonSchedule} 
 
 image::schedule5.png[alt="scheduled tasks list in Portal"]
 
+=== Task Operations
 The table provides the following operations:
 
 * Press the {buttonEdit} to modify the task specifications. This opens the Editor as described in xref:#CreateAdvancedSchedule[] above. Proceed to make any desired changes to xref:#ScheduleConditions[], xref:#ScheduleActions[], or xref:ScheduleOptions[].
@@ -123,6 +124,8 @@ The table provides the following operations:
 * Press the {buttonStopNow} to stop the task immediately.
 * Press the {buttonDelete} to delete the task. To *temporarily disable* a task, deselect the ‘Enabled’ checkbox on the *Options* tab. See xref:#ScheduleOptions[] for more information.
 
+[#MoveTask]
+=== Move a Task
 To *move* the task into a different folder, follow these steps:
 
 NOTE: New folders can only be created by an administrator.
