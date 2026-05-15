@@ -10,9 +10,19 @@ Boolean
 
 == Example
 [source,javascript]
-Chart1.yAxis.labelOnSecondaryAxis = true;
+----
+Chart1.yAxis.labelOnSecondaryAxis = true;   // move Y-axis labels to right side
+----
 
 image::commonscript:ChartAxisLabelOnSecondaryAxis.png[alt="chart with Y-axis labels displayed on the right side"]
+
+== Additional Examples
+[source,javascript]
+----
+Chart1.xAxis.labelOnSecondaryAxis = true;   // move X-axis labels to top
+Chart1.y2Axis.labelOnSecondaryAxis = true;  // move secondary Y-axis labels to left side
+Chart1.axis['SalesField'].labelOnSecondaryAxis = true;  // move axis labels for specific field
+----
 
 [TIP]
 ====
