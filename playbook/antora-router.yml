@@ -1420,6 +1420,10 @@ routes:
   ZendeskSell: InetSoftUserDocumentation:user:ZendeskSell.adoc
   ZohoCRM: InetSoftUserDocumentation:user:ZohoCRM.adoc
   createBulletGraph: InetSoftUserDocumentation:chartAPI:createBulletGraph.adoc
+  createCirclePackingGraph: InetSoftUserDocumentation:chartAPI:createCirclePacking.adoc
+  createMekkoGraph: InetSoftUserDocumentation:chartAPI:createMekkoGraph.adoc
+  createSunburstGraph: InetSoftUserDocumentation:chartAPI:createSunburstGraph.adoc
+  createTreemap: InetSoftUserDocumentation:chartAPI:createTreeMap.adoc
   ChartDataSet: InetSoftUserDocumentation:chartAPI:Dataset.adoc
   EGraphAddElement: InetSoftUserDocumentation:chartAPI:EGraphAddElement.adoc
   EGraphAddForm: InetSoftUserDocumentation:chartAPI:EGraphAddForm.adoc
