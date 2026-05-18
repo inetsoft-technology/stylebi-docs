@@ -1,0 +1,35 @@
+= bottomTabs
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:viewsheet:TabbedInterfaceProperties.adoc[] for more information on Tabbed Interface.
+====
+
+
+When `true`, displays the tabs at the bottom of the Tabbed Interface component. When `false` (default), tabs are displayed at the top.
+
+== Type
+Boolean:: `true`: tabs appear at the bottom +
+`false`: tabs appear at the top (default)
+
+
+== Example
+[source,javascript]
+Tab1.bottomTabs = true;
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+bottomTabs           // unqualified
+Tab1.bottomTabs      // qualified
+
+{secondForm}
+====

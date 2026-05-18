@@ -756,6 +756,7 @@ routes:
   ChartSortOthersLast: InetSoftUserDocumentation:viewsheetscript:ChartSortOthersLast.adoc 
   ChartTipAlpha: InetSoftUserDocumentation:viewsheetscript:ChartTipAlpha.adoc
   ChartTipView: InetSoftUserDocumentation:viewsheetscript:ChartTipView.adoc
+  ChartTipOnClick: InetSoftUserDocumentation:viewsheetscript:ChartTipOnClick.adoc
   ChartTitle: InetSoftUserDocumentation:viewsheetscript:ChartTitle.adoc
   ChartTooltip: InetSoftUserDocumentation:viewsheetscript:ChartTooltip.adoc
   ChartToolTip: InetSoftUserDocumentation:viewsheetscript:ChartTooltip.adoc
@@ -780,6 +781,7 @@ routes:
   ChartAxisMinorIncrement: InetSoftUserDocumentation:viewsheetscript:ChartAxisMinorIncrement.adoc
   ChartAxisReversed: InetSoftUserDocumentation:viewsheetscript:ChartAxisReversed.adoc
   ChartAxisSharedRange: InetSoftUserDocumentation:viewsheetscript:ChartAxisSharedRange.adoc
+  ChartAxisLabelOnSecondaryAxis: InetSoftUserDocumentation:viewsheetscript:ChartAxisLabelOnSecondaryAxis.adoc
   MeasureAxisIncrement: InetSoftUserDocumentation:viewsheetscript:MeasureAxisIncrement.adoc
   MeasureAxisLogarithmic: InetSoftUserDocumentation:viewsheetscript:MeasureAxisLogarithmic.adoc
   MeasureAxisMaximum: InetSoftUserDocumentation:viewsheetscript:MeasureAxisMaximum.adoc
@@ -824,6 +826,10 @@ routes:
   PlotAddTargetBand: InetSoftUserDocumentation:viewsheetscript:PlotAddTargetBand.adoc
   PlotAddTargetLine: InetSoftUserDocumentation:viewsheetscript:PlotAddTargetLine.adoc
   PlotApplyEffect: InetSoftUserDocumentation:viewsheetscript:PlotApplyEffect.adoc
+  ChartBarCornerRadius: InetSoftUserDocumentation:viewsheetscript:PlotBarCornerRadius.adoc
+  ChartBarRoundAllCorners: InetSoftUserDocumentation:viewsheetscript:PlotBarRoundAllCorners.adoc
+  PlotBarCornerRadius: InetSoftUserDocumentation:viewsheetscript:PlotBarCornerRadius.adoc
+  PlotBarRoundAllCorners: InetSoftUserDocumentation:viewsheetscript:PlotBarRoundAllCorners.adoc
   PlotChartStyle: InetSoftUserDocumentation:viewsheetscript:PlotChartStyle.adoc
   PlotClearTargets: InetSoftUserDocumentation:viewsheetscript:PlotClearTargets.adoc
   PlotColorField: InetSoftUserDocumentation:viewsheetscript:PlotColorField.adoc
@@ -1002,6 +1008,19 @@ routes:
   CheckRadioComboValue: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboValue.adoc  
   CheckRadioComboRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
   CheckRadioComboSelectFirstItemOnLoad: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboSelectFirstItemOnLoad.adoc
+  CheckRadioComboDateFormatPattern: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboDateFormatPattern.adoc
+  CheckRadioComboLabelGap: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboLabelGap.adoc
+  CheckRadioComboLabelPosition: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboLabelPosition.adoc
+  CheckRadioComboLabelText: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboLabelText.adoc
+  CheckRadioComboLabelVisible: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboLabelVisible.adoc
+  CheckRadioComboQueryDateFormat: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboQueryDateFormat.adoc
+  ComboBox: InetSoftUserDocumentation:viewsheetscript:CheckRadioCombo.adoc
+  ComboBoxDateFormatPattern: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboDateFormatPattern.adoc
+  ComboBoxLabelGap: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboLabelGap.adoc
+  ComboBoxLabelPosition: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboLabelPosition.adoc
+  ComboBoxLabelText: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboLabelText.adoc
+  ComboBoxLabelVisible: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboLabelVisible.adoc
+  ComboBoxQueryDateFormat: InetSoftUserDocumentation:viewsheetscript:CheckRadioComboQueryDateFormat.adoc
   CrosstabBindingInfoColFields: InetSoftUserDocumentation:viewsheetscript:CrosstabBindingInfoColFields.adoc
   CrosstabBindingGetColumnOrder: InetSoftUserDocumentation:viewsheetscript:CrosstabBindingGetColumnOrder.adoc
   CrosstabBindingGetFormula: InetSoftUserDocumentation:viewsheetscript:CrosstabBindingGetFormula.adoc
@@ -1144,7 +1163,7 @@ routes:
   SelectionListTreeSelectFirstItemOnLoad: InetSoftUserDocumentation:viewsheetscript:SelectionListTreeSelectFirstItemOnLoad.adoc
   SliderCurrentVisible: InetSoftUserDocumentation:viewsheetscript:SliderCurrentVisible.adoc
   SliderIncrement: InetSoftUserDocumentation:viewsheetscript:SliderIncrement.adoc
-  SliderLabelVisible: InetSoftUserDocumentation:viewsheetscript:SliderTickLabelVisible.adoc
+  SliderLabelVisible: InetSoftUserDocumentation:viewsheetscript:SliderLabelVisible.adoc
   SliderMax: InetSoftUserDocumentation:viewsheetscript:SliderMax.adoc
   SliderMaxVisible: InetSoftUserDocumentation:viewsheetscript:SliderMaxVisible.adoc
   SliderMin: InetSoftUserDocumentation:viewsheetscript:SliderMin.adoc
@@ -1153,14 +1172,22 @@ routes:
   SliderSubmitOnChange: InetSoftUserDocumentation:viewsheetscript:SliderSubmitOnChange.adoc
   SliderRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
   SliderTickVisible: InetSoftUserDocumentation:viewsheetscript:SliderTickVisible.adoc
+  SliderLabelGap: InetSoftUserDocumentation:viewsheetscript:SliderLabelGap.adoc
+  SliderLabelPosition: InetSoftUserDocumentation:viewsheetscript:SliderLabelPosition.adoc
+  SliderLabelText: InetSoftUserDocumentation:viewsheetscript:SliderLabelText.adoc
   SpinnerIncrement: InetSoftUserDocumentation:viewsheetscript:SpinnerIncrement.adoc
   SpinnerMax: InetSoftUserDocumentation:viewsheetscript:SpinnerMax.adoc
   SpinnerMin: InetSoftUserDocumentation:viewsheetscript:SpinnerMin.adoc
   SpinnerSubmitOnChange: InetSoftUserDocumentation:viewsheetscript:SpinnerSubmitOnChange.adoc
   SpinnerRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
+  SpinnerLabelGap: InetSoftUserDocumentation:viewsheetscript:SpinnerLabelGap.adoc
+  SpinnerLabelPosition: InetSoftUserDocumentation:viewsheetscript:SpinnerLabelPosition.adoc
+  SpinnerLabelText: InetSoftUserDocumentation:viewsheetscript:SpinnerLabelText.adoc
+  SpinnerLabelVisible: InetSoftUserDocumentation:viewsheetscript:SpinnerLabelVisible.adoc
   SubmitButtonRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
   TabbedInterfaceLabels: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceLabels.adoc
   TabbedInterfaceSelectedIndex: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceSelectedIndex.adoc
+  TabbedInterfaceBottomTabs: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceBottomTabs.adoc
   TabLabels: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceLabels.adoc
   TabSelectedIndex: InetSoftUserDocumentation:viewsheetscript:TabbedInterfaceSelectedIndex.adoc
   TableAppendRow: InetSoftUserDocumentation:viewsheetscript:TableAppendRow.adoc
@@ -1210,6 +1237,7 @@ routes:
   TableTableStyle: InetSoftUserDocumentation:viewsheetscript:TableStyle.adoc
   TableTipAlpha: InetSoftUserDocumentation:viewsheetscript:TableTipAlpha.adoc
   TableTipView: InetSoftUserDocumentation:viewsheetscript:TableTipView.adoc
+  TableTipOnClick: InetSoftUserDocumentation:viewsheetscript:TableTipOnClick.adoc
   TableValue: InetSoftUserDocumentation:viewsheetscript:TableValue.adoc
   TextAutoSize: InetSoftUserDocumentation:viewsheetscript:TextAutoSize.adoc
   TextEmbedAsURL: InetSoftUserDocumentation:viewsheetscript:TextEmbedAsURL.adoc
@@ -1234,6 +1262,10 @@ routes:
   TextInputSubmitOnChange: InetSoftUserDocumentation:viewsheetscript:TextInputSubmitOnChange.adoc
   TextInputRefreshAfterSubmit: InetSoftUserDocumentation:viewsheetscript:CommonRefreshAfterSubmit.adoc
   TextInputValue: InetSoftUserDocumentation:viewsheetscript:TextInputValue.adoc
+  TextInputLabelGap: InetSoftUserDocumentation:viewsheetscript:TextInputLabelGap.adoc
+  TextInputLabelPosition: InetSoftUserDocumentation:viewsheetscript:TextInputLabelPosition.adoc
+  TextInputLabelText: InetSoftUserDocumentation:viewsheetscript:TextInputLabelText.adoc
+  TextInputLabelVisible: InetSoftUserDocumentation:viewsheetscript:TextInputLabelVisible.adoc
   Parameter: InetSoftUserDocumentation:viewsheetscript:parameter.adoc
   ThisParameter: InetSoftUserDocumentation:viewsheetscript:thisParameter.adoc
   ThisViewsheetIsActionVisible: InetSoftUserDocumentation:viewsheetscript:thisViewsheetIsActionVisible.adoc
@@ -1250,6 +1282,8 @@ routes:
   thisViewsheetViewsheetAlias: InetSoftUserDocumentation:viewsheetscript:thisViewsheetViewsheetAlias.adoc
   thisViewsheetViewsheetName: InetSoftUserDocumentation:viewsheetscript:thisViewsheetViewsheetName.adoc
   thisViewsheetViewsheetPath: InetSoftUserDocumentation:viewsheetscript:thisViewsheetViewsheetPath.adoc
+  ThisViewsheetSetInputSelectedObject: InetSoftUserDocumentation:viewsheetscript:setInputSelectedObject.adoc
+  setInputSelectedObject: InetSoftUserDocumentation:viewsheetscript:setInputSelectedObject.adoc
   CreateScriptFunction: InetSoftUserDocumentation:viewsheetscript:CreateScriptFunction.adoc
   Dataset: InetSoftUserDocumentation:chartAPI:Dataset.adoc
   VSPropertiesBorderColors: InetSoftUserDocumentation:viewsheetscript:CommonBorderColors.adoc
@@ -1414,3 +1448,4 @@ routes:
   EGraphSetXTitleSpec: InetSoftUserDocumentation:chartAPI:EGraphSetXTitleSpec.adoc  
   EGraphSetY2TitleSpec: InetSoftUserDocumentation:chartAPI:EGraphSetY2TitleSpec.adoc  
   EGraphSetYTitleSpec: InetSoftUserDocumentation:chartAPI:EGraphSetYTitleSpec.adoc
+  EGraph: InetSoftUserDocumentation:chartAPI:EGraph.adoc
