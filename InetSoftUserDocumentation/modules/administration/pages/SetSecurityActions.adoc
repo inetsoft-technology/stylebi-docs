@@ -73,20 +73,9 @@ include::partial$selectOrganization.adoc[]
 ====
 The following actions are available:
 
+Bookmark:: Access to the {buttonBookmarks} features in the  Dashboard toolbar. ‘Open Bookmark’ permission allows the user to view existing bookmarks, while ‘Open and Create Bookmark’ additionally allows the user to create new bookmarks. ‘Share Bookmark’ permission allows a user to share bookmarks to members of their own group(s), while ‘Share to All’ allows sharing to all users without exception.   (See xref:user:BookmarkDashboard.adoc[] for more information.)
+Chart Types:: Access to different chart types in the Chart Editor.
 Dashboard Toolbar:: Access to various buttons on the Dashboard toolbar. (See xref:user:UseDashboard.adoc[] for more information.)
-Edit Mobile Devices:: Permission to edit mobile device screen layouts. (See xref:viewsheet:CreateDeviceLayout.adoc[] for more information about device layouts.)
-Visual Composer:: Access to Visual Composer, for example via the {buttonWorksheet} or {buttonCreateDashboard} options under the Portal {buttonCreate}. Visual Composer permission is required to edit Dashboards and Data Worksheets.
-Physical Table:: Access to database tables via the ‘TABLE’ folder of the ‘Data Source’ tree in a Data Worksheet. This also controls access to the ‘_Database_ Query’ option for Data Worksheet. (See xref:dataworksheet:QueryData.adoc[] for more information.)
-+
-TIP: If you want a user to see only specific tables, set your database permissions to allow that user access to only the desired  tables.
-
-Free Form SQL:: Permission to create a data set by entering a SQL string in the ‘Database Query’ dialog box of a Data Worksheet. (See xref:dataworksheet:QueryData.adoc[] for more information.)
-My Dashboards:: Access to the ‘My Dashboards’ folder in the Portal Repository tree for storage of private assets.
-Portal Repository Tree - Drag and Drop:: Permission to drag-and-drop assets in the Portal Repository tree. (See xref:user:ManageRepository.adoc[] for more information.)
-Materialize Assets:: Access to the ‘Materialize’ menu option for Dashboards in the Portal Repository tree, as well as for Enterprise Manager. (See xref:viewsheet:ImprovePerformance.adoc[] and xref:administration:MaterializedView.adoc[]  for more information.)
-Portal Tabs:: Access to various Portal tabs. (See xref:user:UsePortal.adoc[] for more information about the Portal.)
-Schedule Options:: Access to various Scheduler options when scheduling  Dashboards in the Portal.  See xref:user:ScheduleDashboard.adoc[] or xref:administration:Schedule.adoc[] for more details.
-Internal Scheduled Tasks:: Access to various predefined scheduled tasks.
 Enterprise Manager:: Access to various pages in Enterprise Manager.
 +
 [IMPORTANT]
@@ -96,16 +85,27 @@ Enterprise Manager:: Access to various pages in Enterprise Manager.
 * The following options are not available when multi-tenancy is enabled (see xref:administration:EnableMultiTenant.adoc[]): menu:Monitoring[Cache], menu:Monitoring[Clustering], menu:Monitoring[Summary], menu:Monitoring[Logs], menu:Settings[All Properties], menu:Settings[General], menu:Settings[Logging], menu:EM[Notification].
 =====
 
-Chart Types:: Access to different chart types in the Chart Editor.
-Bookmark:: Access to the {buttonBookmarks} features in the  Dashboard toolbar. ‘Open Bookmark’ permission allows the user to view existing bookmarks, while ‘Open and Create Bookmark’ additionally allows the user to create new bookmarks. ‘Share Bookmark’ permission allows a user to share bookmarks to members of their own group(s), while ‘Share to All’ allows sharing to all users without exception.   (See xref:user:BookmarkDashboard.adoc[] for more information.)
+Internal Scheduled Tasks:: Access to various predefined scheduled tasks.
+Portal Tabs:: Access to various Portal tabs. (See xref:user:UsePortal.adoc[] for more information about the Portal.)
+Schedule Options:: Access to various Scheduler options when scheduling  Dashboards in the Portal.  See xref:user:ScheduleDashboard.adoc[] or xref:administration:Schedule.adoc[] for more details.
 Social Sharing:: Access to the various options under the {buttonSocialSharing} in the Portal. (See xref:viewsheet:ShareToSocialNetwork.adoc[] for more information.)
-Upload Drivers:: Permission to upload database drivers when creating a new data source using the {buttonDataSource} option under the Portal {buttonCreate} and on the *Drivers and Plugins* page in Enterprise Manager. (See xref:user:ConnectToData.adoc[] and xref:administration:Storage.adoc#ManageDriversandPlugins[Manage Drivers and Plugins] for more information.)
-Profile:: Permission to profile the performance of a Dashboard  via the Portal {buttonProfile} action. (See xref:user:ProfileDashboard.adoc[] for more information.)
+Visual Composer:: Access to Visual Composer, for example via the {buttonWorksheet} or {buttonCreateDashboard} options under the Portal {buttonCreate}. Visual Composer permission is required to edit Dashboards and Data Worksheets.
 AI Assistant:: Access to the {buttonAssistant}  in the Portal and Visual Composer.
-Cross Join:: Permission to create cross joins via the {buttonCrossJoin} option in a Data Worksheet and to create cross-joins in a physical view. Restricting access to cross joins may help prevent the accidental creation of large queries that impact performance.
 Create New Data Source:: Permission to select {buttonDataSource} from the {buttonCreate} in the Portal. Requires also permission for the Portal Data tab (see ‘Portal Tabs’ above). (See xref:user:ConnectToData.adoc[] for more information.)
+Cross Join:: Permission to create cross joins via the {buttonCrossJoin} option in a Data Worksheet and to create cross-joins in a physical view. Restricting access to cross joins may help prevent the accidental creation of large queries that impact performance.
 Edit Dashboard Calculated Fields::  Permission to create Calculated Fields in a Dashboard.  This is enabled by default for users who have Dashboard edit permission.
+Edit Mobile Devices:: Permission to edit mobile device screen layouts. (See xref:viewsheet:CreateDeviceLayout.adoc[] for more information about device layouts.)
 Edit Worksheet Expression Columns:: Permission to create Expression Columns in a Data Worksheet. This is enabled by default for users who have Data Worksheet edit permission.
+Free Form SQL:: Permission to create a data set by entering a SQL string in the ‘Database Query’ dialog box of a Data Worksheet. (See xref:dataworksheet:QueryData.adoc[] for more information.)
+Materialize Assets:: Access to the ‘Materialize’ menu option for Dashboards in the Portal Repository tree, as well as for Enterprise Manager. (See xref:viewsheet:ImprovePerformance.adoc[] and xref:administration:MaterializedView.adoc[]  for more information.)
+My Dashboards:: Access to the ‘My Dashboards’ folder in the Portal Repository tree for storage of private assets.
+Physical Table:: Access to database tables via the ‘TABLE’ folder of the ‘Data Source’ tree in a Data Worksheet. This also controls access to the ‘_Database_ Query’ option for Data Worksheet. (See xref:dataworksheet:QueryData.adoc[] for more information.)
++
+TIP: If you want a user to see only specific tables, set your database permissions to allow that user access to only the desired  tables.
+
+Portal Repository Tree - Drag and Drop:: Permission to drag-and-drop assets in the Portal Repository tree. (See xref:user:ManageRepository.adoc[] for more information.)
+Profile:: Permission to profile the performance of a Dashboard  via the Portal {buttonProfile} action. (See xref:user:ProfileDashboard.adoc[] for more information.)
+Upload Drivers:: Permission to upload database drivers when creating a new data source using the {buttonDataSource} option under the Portal {buttonCreate} and on the *Drivers and Plugins* page in Enterprise Manager. (See xref:user:ConnectToData.adoc[] and xref:administration:Storage.adoc#ManageDriversandPlugins[Manage Drivers and Plugins] for more information.)
 ====
 +
 image::server7.png[alt="select action in security actions tree"]

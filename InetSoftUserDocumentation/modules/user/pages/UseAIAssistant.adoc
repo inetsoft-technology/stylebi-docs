@@ -39,8 +39,8 @@ The AI Assistant will respond with an answer, a suggested visualization, or guid
 == Panel Controls
 The AI Assistant panel header provides the following controls:
 
-Move to bottom / Move to side:: Toggles the panel between side mode (docked to the right of the screen) and bottom mode (docked to the bottom of the screen).
+{buttonMoveToBottom} / {buttonMoveToSide}:: Toggles the panel between side mode (docked to the right of the screen) and bottom mode (docked to the bottom of the screen).
 
-Collapse / Expand:: Hides or shows the panel body while keeping the header visible. Press again to restore.
+{buttonCollapse} / {buttonExpand}:: Hides or shows the panel body while keeping the header visible. Press again to restore.
 
-Close (×):: Closes the AI Assistant panel entirely.
+{buttonCloseX}:: Closes the AI Assistant panel entirely.
