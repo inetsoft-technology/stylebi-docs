@@ -135,6 +135,7 @@ newUser = Security.securityUser {
   name 'annie'
   orgID 'org1'
 }
+newUser.setPassword('Admin1234!')
 :security create-user newUser
 
 
@@ -186,6 +187,7 @@ newOrganization = Security.securityOrganization {
   name 'organization0'
   id 'organization0'
 }
+newOrganization.setDefaultPassword('Admin1234!')
 :security create-organization newOrganization --copyFromOrgId host-org
 
 
