@@ -49,6 +49,7 @@ Bar:: Specifies that the aggregate *measure* is displayed graphically as a propo
 +
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 
+Compatible Tables:: Lists data blocks with columns compatible for multi-block filtering. To configure this component to filter multiple data blocks simultaneously, see xref:AddFilterComponents.adoc#FilterMultipleDataBlocks[Filter Multiple Data Blocks].
 
 == Script Tab
 {commonScript}

@@ -21,6 +21,8 @@ The *Data* tab in the ‘Calendar Properties’ dialog box allows you to choose 
 
 image::Calendar Properties Data Tab.png[alt="calendar properties data tab with date field selection"]
 
+Compatible Tables:: Lists data blocks with columns compatible for multi-block filtering. To configure this component to filter multiple data blocks simultaneously, see xref:AddFilterComponents.adoc#FilterMultipleDataBlocks[Filter Multiple Data Blocks].
+
 == Advanced Tab
 
 The *Advanced* tab in the ‘Calendar Properties’ dialog box provides the following Calendar-specific properties.
