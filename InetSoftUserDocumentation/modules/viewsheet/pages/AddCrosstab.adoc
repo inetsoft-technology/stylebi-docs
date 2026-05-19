@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to add and configure a Crosstab (pivot table) in a Dashboard. Crosstabs aggregate data across row and column dimensions, displaying subtotals and grand totals. Use a Crosstab when you need to summarize measures broken down by two or more dimensions in a tabular format.
+endif::ai[]
+
 The following sections explain how to add a  Crosstab, which allows you to display aggregated data in tabular  form. To create a crosstab, follow the steps below:
 
 [.videotitle]

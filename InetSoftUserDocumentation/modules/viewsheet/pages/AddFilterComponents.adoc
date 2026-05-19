@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to add interactive filter components (Selection List, Range Slider, Calendar, CheckBox, RadioButton, ComboBox) to a Dashboard. These components let end users filter dashboard data at runtime by selecting values, ranges, or dates, affecting all components bound to the same data block. For fixed (non-user-adjustable) filters on a specific component, see AddConditions instead.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 * xref:dataworksheet:FilterData.adoc[], in xref:dataworksheet:PrepareYourData.adoc[], to explicitly filter data at the Data Worksheet level.

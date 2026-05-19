@@ -4,6 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 include::viewsheet:partial$availableToEndUsers.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to add, reposition, format, and delete text annotations in a Dashboard. Annotations can be attached to the Dashboard body, to a specific component, or to an individual data point in a Chart. Annotations are saved per bookmark and are available to end users (not just designers) at view time.  They allow a user to "mark up" a Dashboard.
+endif::ai[]
+
 You can add annotations to a Dashboard, to an individual Dashboard component, and even to an individual data point. The following sections explain how to do this.
 
 == Annotate the Dashboard

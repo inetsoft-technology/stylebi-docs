@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Global settings for a Dashboard, accessed via the Options button in Visual Composer. Covers data source selection, metadata (design-time placeholder) mode, maximum row limits, on-load scripts, and layout behavior. Use this page when you need to change a Dashboard's data source, suppress live data during design, or configure Dashboard-wide behavior.
+endif::ai[]
+
 You can set global options for a Dashboard from the ‘Dashboard Options’  dialog box in Visual Composer. To open the ‘Dashboard Options’  dialog box, press the {buttonOptions}  in the toolbar.
 
 image::dataworksheet:VSOptions Button Toolbar.png[alt="press Options button to open Dashboard Options dialog"]
