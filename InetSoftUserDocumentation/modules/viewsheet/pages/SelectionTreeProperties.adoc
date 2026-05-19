@@ -42,6 +42,7 @@ Measure:: The field to aggregate and display next to the Selection Tree values.
 Aggregate:: The method of aggregation to be used for the ‘Measure’ field.
 Text:: Specifies that the aggregated measure is displayed as plain text.
 Bar:: Specifies that the aggregate measure is displayed graphically as a proportional bar.
+Compatible Tables:: Lists data blocks with columns compatible for multi-block filtering. To configure this component to filter multiple data blocks simultaneously, see xref:AddFilterComponents.adoc#FilterMultipleDataBlocks[Filter Multiple Data Blocks].
 
 [.videotitle]
 .Watch Video: Filtering a Dashboard (Specify measure in Tree)

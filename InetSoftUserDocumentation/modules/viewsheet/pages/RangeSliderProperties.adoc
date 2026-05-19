@@ -46,6 +46,8 @@ Using the composite value of these two fields, the Range Slider values are the f
 Selecting the composite value `(2000,Jan)`, for example, filters the data set based on the constraint (Year=2000, Month=Jan).
 ****
 
+Compatible Tables:: Lists data blocks with columns compatible for multi-block filtering. To configure this component to filter multiple data blocks simultaneously, see xref:AddFilterComponents.adoc#FilterMultipleDataBlocks[Filter Multiple Data Blocks].
+
 == Advanced Tab
 The *Advanced* tab in the ‘Range Slider Properties’ panel provides the following Range Slider-specific properties.
 
