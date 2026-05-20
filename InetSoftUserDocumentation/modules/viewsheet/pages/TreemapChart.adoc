@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Treemap chart, which displays a measure using proportionally sized rectangles arranged in a hierarchical layout. Place hierarchical dimensions in the T region and the measure in the Size region. Compare to SunburstChart (radial wedges) and CirclePackingChart (circles).
+endif::ai[]
+
 A treemap displays a *measure* by using the sizes of rectangles in a hierarchical display.
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]

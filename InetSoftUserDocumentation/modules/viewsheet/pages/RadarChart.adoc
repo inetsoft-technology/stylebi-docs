@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Radar (spider/web) chart, which visualizes a single measure across multiple dimensions or multiple measures along a single dimension. See ChartProperties for the Show Points option to display data point markers on radar chart lines.
+endif::ai[]
+
 A Radar Chart (also called a spider chart or web chart) typically allows you to visualize a single *measure* along several *dimensions*, or multiple measures along a single dimension.
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]

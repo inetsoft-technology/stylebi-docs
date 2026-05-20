@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Step Line chart, which is a LineChart variant that connects data points using only horizontal and vertical (staircase) directions. See JumpLineChart for a variant using only horizontal segments, and StepAreaChart for the filled staircase variant.
+endif::ai[]
+
 A step line chart is a type of xref:LineChart.adoc[] that connects the measure  data points by using only the horizontal and vertical directions.
 
 .See Also...

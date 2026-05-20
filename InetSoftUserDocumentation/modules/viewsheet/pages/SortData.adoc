@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how end-users can sort Table and Crosstab columns and chart dimension groups at runtime by clicking sort buttons. Covers ascending, descending, and original-order cycling. For design-time sorting in the Data Worksheet, see dataworksheet:SortData.
+endif::ai[]
+
 include::viewsheet:partial$availableToEndUsers.adoc[]
 
 The following sections explain how to sort data in a Table and a Chart. (To sort at the Data Worksheet level, see xref:dataworksheet:SortData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[].)

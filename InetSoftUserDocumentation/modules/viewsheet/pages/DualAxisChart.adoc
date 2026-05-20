@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Dual Axis (secondary Y-axis) chart, which displays two measures on separate left and right axes. Enable 'Secondary Axis' in the Edit Measure panel after switching to single-graph mode. See MultipleMeasureChart for general multi-measure techniques.
+endif::ai[]
+
 [.videotitle]
 .Watch Video: Creating a Chart (Use Secondary Axis)
 [%collapsible]

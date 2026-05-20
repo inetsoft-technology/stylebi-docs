@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Stock (OHLC) chart, which displays four measures (low, high, open, close) against a date dimension for financial trading data. Functionally the same as CandleChart but with a different visual style (tick marks vs. filled body).
+endif::ai[]
+
 A stock chart, also known as an open-hi-low-close (OHLC) chart, displays four different *measures*, “low,” “high,” “opening,” and “closing,” and is most often used to plot trading information. A stock chart is functionally the same as a  xref:CandleChart.adoc[].
 
 include::ROOT:partial$measureTip.adoc[]

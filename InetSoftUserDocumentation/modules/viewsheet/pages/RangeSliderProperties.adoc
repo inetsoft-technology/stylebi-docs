@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Range Slider filter component properties. Covers single-value vs. composite-value filtering, min/max range labels, snap-to-increment, and the Compatible Tables setting for filtering multiple data blocks simultaneously. See AddFilterComponents for how to create a Range Slider.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

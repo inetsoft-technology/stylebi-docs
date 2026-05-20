@@ -2,7 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a Scatter (point) Chart in a Dashboard. Best suited for showing the relationship or correlation between two measures. Covers binding X and Y measure axes, adding a color or size encoding for a third dimension, and creating a bubble chart variant. See BasicChartingSteps for general chart creation fundamentals.
+endif::ai[]
 
 [.videotitle]
 .Watch Video: Creating a Chart (Group Without Format)

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Sunburst chart, which displays a measure using hierarchically arranged wedges in a radial layout (like a multi-level pie chart). Place hierarchical dimensions in the T region and the measure in the Size region. Compare to TreemapChart (rectangles) and CirclePackingChart (circles).
+endif::ai[]
+
 A  Sunburst (mosaic) chart displays a *measure* by using wedges in a hierarchical display.
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]

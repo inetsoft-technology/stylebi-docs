@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to export a Dashboard as a static file (Excel, PowerPoint, PDF, HTML, PNG, CSV, Snapshot) and how to export data from individual components (Table, Crosstab, Chart). Also covers offline editing by exporting to Excel and re-importing modified data.
+endif::ai[]
+
 include::viewsheet:partial$availableToEndUsers.adoc[]
 
 [.videotitle]

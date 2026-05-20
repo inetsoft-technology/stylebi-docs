@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Image component properties, which displays a static or dynamic image in a Dashboard. Covers image selection, transparency (Alpha), scaling options (including 9-cell grid), tiling, and the Pop Component feature for click-triggered pop-up overlays.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

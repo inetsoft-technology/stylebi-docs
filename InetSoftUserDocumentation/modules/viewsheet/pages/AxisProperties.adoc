@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Chart Axis properties, accessed via right-click on an axis or axis label. Covers the Label tab (format, rotation, font, visibility), Line tab (axis line style, tick marks, grid lines), and Alias tab (rename axis labels). See AxisTitleProperties for axis title settings.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

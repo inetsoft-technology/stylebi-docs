@@ -1,5 +1,10 @@
 ﻿= Nested Dashboard Properties
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for the Nested Dashboard Properties panel, which appears when right-clicking an embedded Dashboard within a host Dashboard. Provides only General and Script tabs. See ModularizeDashboard for how to create nested/embedded Dashboards.
+endif::ai[]
+
 The nested ‘Dashboard Properties’ panel provides only a *General* and *Script* tabs. See xref:GeneralTab.adoc[] and xref:ScriptTab.adoc[] for information on these common properties.
 
 image::Nested Viewsheet Properties Dialog.png[alt="nested dashboard properties panel"]

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Dot Plot chart, which displays individual (un-aggregated) data points as stacked dots. Best for small datasets with fewer than ~20 points per dimension. Uses Point style with Stack enabled and Aggregate set to None.
+endif::ai[]
+
 A dot plot represents a measure by its individual data points (_without aggregation_).
 
 image::commonscript:Ad Hoc Dot9.png[alt="dot plot chart example"]

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for the General tab that is common to most Dashboard components. Covers the Name (used for scripting), Visible, Enabled, and Title properties. See also DataTab and AdvancedTab for other common property tabs.
+endif::ai[]
+
 [WARNING,caption=seel also]
 {SeeAlsoCommonProperties}
 

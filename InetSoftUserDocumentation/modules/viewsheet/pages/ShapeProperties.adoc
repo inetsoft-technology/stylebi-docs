@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Shape component properties (Line, Oval, Rectangle). Covers border style and color, fill color and transparency, rounded corner radius (rectangles), and gradient fills. See AddBackground for how to add shapes to a Dashboard.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

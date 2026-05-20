@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how end-users interact with charts at runtime, including using the chart toolbar, zooming, drilling down into data, and saving chart changes via bookmarks, image export, or Dashboard save. Available to end-users viewing Dashboards in the Portal.
+endif::ai[]
+
 include::viewsheet:partial$availableToEndUsers.adoc[]
 
 Charts provide many features for customization and exploration. These features are described in the sections below.  After you modify a Chart, you can save your changes (if desired) in one of the following ways:

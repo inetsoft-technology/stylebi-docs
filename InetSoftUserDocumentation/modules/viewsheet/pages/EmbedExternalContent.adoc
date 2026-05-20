@@ -2,11 +2,15 @@
 %experimetal%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to embed external content (a URL) inside a Dashboard using an automatically generated IFrame via the Text component's 'Embed as URL' option. URL parameters can be passed for filtering child Dashboards. See AddTextOrHTML for manually inserting IFrame HTML.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 xref:AddTextOrHTML.adoc[], to insert HTML markup containing an IFrame tag.
 ====
-
 
 To embed external content within an *automatically generated*  IFrame, follow the steps below:
 

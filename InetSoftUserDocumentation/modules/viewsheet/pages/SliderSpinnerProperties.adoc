@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Slider and Spinner Form component properties. Sliders and Spinners are input controls used to dynamically set numeric properties of other Dashboard components at runtime. See DynamicallySetProperties for how to use Form components to control Dashboard behavior.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

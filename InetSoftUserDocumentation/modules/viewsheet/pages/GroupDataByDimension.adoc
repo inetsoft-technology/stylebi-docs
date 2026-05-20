@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to group chart data by color, shape, size, or text labels, how to group dates by level (week/month/year/quarter), how to create named groups by merging axis labels, and how to apply top-N/bottom-N ranking filters to chart dimensions.
+endif::ai[]
+
 [.videotitle]
 .Watch Video: Grouping Data in a Dashboard (Group Using Color, Shape, Size)
 [%collapsible]

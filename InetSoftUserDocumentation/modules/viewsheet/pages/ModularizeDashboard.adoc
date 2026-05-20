@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to build composite Dashboards by nesting smaller Dashboard modules within a parent Dashboard, and how to synchronize filter and form components across nested Dashboards using shared filter IDs. Covers reusability, maintainability, and team development benefits.
+endif::ai[]
+
 Some Dashboards require a large number of elements, and would be complex to design using just a single Dashboard. In such cases, it is often easier to use a _modular_ design, and build the final Dashboard from a set of simpler Dashboards. Each of the simple Dashboards might contain just a few controls, and provide specific functionality to the composite Dashboard.
 
 Modular designs offer several benefits:

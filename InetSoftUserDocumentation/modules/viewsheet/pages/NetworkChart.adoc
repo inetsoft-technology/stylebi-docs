@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Network chart, which displays pairwise peer relationships with nodes positioned freely. Requires Source and Target dimension fields and optionally a weight measure. An alternative to CircularNetworkChart which arranges nodes along a circle.
+endif::ai[]
+
 A network chart displays a network structure defined by pairwise peer relationships.   It is an alternative representation of a xref:CircularNetworkChart.adoc[].
 
 image::commonscript:networkChart1.png[alt="network chart showing peer relationship connections"]

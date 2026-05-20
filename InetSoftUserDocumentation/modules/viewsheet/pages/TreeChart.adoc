@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Tree chart, which visualizes organizational hierarchies or parent-child relationships as a tree-shaped diagram with nodes and branches. Requires Source and Target dimension fields defining parent-child pairs.
+endif::ai[]
+
 A tree chart displays an organizational hierarchy defined by parent-child relationships.
 
 image::commonscript:treeChart1.png[alt="tree chart hierarchy example"]

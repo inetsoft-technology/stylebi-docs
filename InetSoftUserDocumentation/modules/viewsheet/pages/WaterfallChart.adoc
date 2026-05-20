@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a Waterfall Chart in a Dashboard. A waterfall chart displays how sequential positive and negative values contribute to a cumulative total — useful for financial analysis such as profit/loss breakdowns. See BasicChartingSteps for general chart creation fundamentals.
+endif::ai[]
+
 A waterfall chart displays the cumulative contributions of different groups to a total.
 
 image::commonscript:waterfallChartExp9.png[alt="waterfall chart example"]

@@ -3,6 +3,11 @@
 :page-stem:
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a geographic Map Chart in a Dashboard, including built-in maps (world, US states, etc.) and custom maps. Covers binding geographic name or coordinate fields, adding color and size encodings for measures, and configuring map layers. Use when you need to visualize data by geographic region or location.
+endif::ai[]
+
 [.videotitle]
 .Watch Video: Create a Custom Map (Create a Built-In Map)
 [%collapsible]

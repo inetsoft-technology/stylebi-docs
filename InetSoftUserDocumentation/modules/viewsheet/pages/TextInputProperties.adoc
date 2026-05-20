@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Text Input form component properties. Covers submit behavior, placeholder text, default text, multi-line mode, inset border style, and the Option tab for input editor/validation. See WriteBackToStorage for persisting user input to the database.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

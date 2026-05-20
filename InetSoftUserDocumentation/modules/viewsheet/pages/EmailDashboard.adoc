@@ -2,8 +2,12 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-include::viewsheet:partial$availableToEndUsers.adoc[]
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to immediately email a Dashboard to users, including specifying recipients, export format (Excel, PDF, PowerPoint, HTML, PNG, CSV), and bookmarks to include. For scheduling recurring emails, see user:ScheduleDashboard.
+endif::ai[]
 
+include::viewsheet:partial$availableToEndUsers.adoc[]
 
 To *immediately* email a Dashboard  to other users, follow the steps below.  To schedule a Dashboard to be periodically emailed, see xref:user:ScheduleDashboard.adoc[].
 

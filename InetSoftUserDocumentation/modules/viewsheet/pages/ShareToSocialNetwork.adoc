@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How end users can share a Dashboard to social networks (LinkedIn, Twitter, Facebook, etc.) or via email using the Social Sharing button in the Dashboard toolbar. Access to sharing options is controlled by administrator permissions. See SetSecurityActions to configure which sharing options are available.
+endif::ai[]
+
 include::viewsheet:partial$availableToEndUsers.adoc[]
 
 

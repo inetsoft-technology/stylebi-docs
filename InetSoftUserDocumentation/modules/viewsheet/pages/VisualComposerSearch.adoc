@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to use the Search feature in Visual Composer to locate Dashboard components by name. Type in the Search box at the bottom of Visual Composer to find components with matching Name properties (not Title properties). Use Previous/Next buttons to cycle through matches.
+endif::ai[]
+
 The Search feature helps you locate components on a complex dashboard. Type in the ‘Search’ box at the bottom of the Visual Composer window to find dashboard components with a full or partial name match. (The ‘Name’ of a component is set on the *General* tab of the ‘Properties’ panel. See xref:GeneralTab.adoc[].)
 
 In the example below, both the ‘Name’ and ‘First Name’ Selection Lists are located by typing “name” in the ‘Search’ field.

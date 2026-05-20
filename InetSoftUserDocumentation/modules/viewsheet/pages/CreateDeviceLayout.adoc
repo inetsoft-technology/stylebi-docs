@@ -2,6 +2,11 @@
 %experimetal%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to create device-specific layouts for a Dashboard to control how it appears on mobile devices, tablets, and printed pages. Covers adding device layouts, repositioning and resizing components per layout, and setting print layout options. Permission to edit device layouts is controlled by administrator settings.
+endif::ai[]
+
 [.videotitle]
 .Watch Video: Creating a Dashboard (Layout for Mobile)
 [%collapsible]

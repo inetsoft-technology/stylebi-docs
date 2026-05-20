@@ -2,6 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to open an existing Dashboard for editing in Visual Composer, either from the Portal toolbar or by double-clicking/dragging in the Assets panel. Recommends using a development or test environment for edits rather than production.
+endif::ai[]
 
 To open an existing Dashboard for editing, you can open the Dashboard for viewing in the Portal (see xref:user:UseDashboard.adoc[]) and press the {buttonEdit} in the Dashboard toolbar.
 

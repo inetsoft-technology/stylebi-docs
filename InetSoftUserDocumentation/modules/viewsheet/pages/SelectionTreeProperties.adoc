@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Selection Tree filter component properties. Covers hierarchy level configuration (columns or parent/child IDs), single-selection per level, auto-select children, and Compatible Tables for multi-block filtering. Similar to SelectionListProperties but supports hierarchical dimension nesting.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

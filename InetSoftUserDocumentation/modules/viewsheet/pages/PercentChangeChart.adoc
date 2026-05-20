@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Percent Change chart, which shows the percent change between consecutive dimension groups. A specialized comparison chart. See CompareDataByDate for additional date-based comparison methods including running totals and moving averages.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 xref:CompareDataByDate.adoc[], to perform a variety of comparisons on date-based charts.

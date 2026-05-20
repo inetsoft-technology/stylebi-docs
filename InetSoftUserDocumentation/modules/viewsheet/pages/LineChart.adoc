@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a Line Chart in a Dashboard, including stacked and step-line variants. Best suited for showing trends over time or continuous data. Covers binding dimensions and measures and configuring line style options. See BasicChartingSteps for general chart creation fundamentals.
+endif::ai[]
+
 A line chart displays a measure as a continuous line.
 
 image::commonscript:lineChartExp5.png[alt="line chart example"]

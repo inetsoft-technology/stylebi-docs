@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Jump Line chart, which is a StepLineChart variant that uses only horizontal line segments to connect data points, with no vertical connections between levels. Compare to StepLineChart (includes vertical connections) and LineChart (diagonal connections).
+endif::ai[]
+
 A Jump Line chart is a xref:StepLineChart.adoc[] that connects the  measure data points by using only horizontal lines, without any vertical connections.
 
 

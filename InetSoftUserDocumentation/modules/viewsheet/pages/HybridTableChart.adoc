@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Hybrid Table chart, which combines a graphical chart (e.g., bar chart) with tabular text columns in the same component. Uses the Discrete option on measures to render them as text columns rather than chart elements.
+endif::ai[]
+
 A hybrid table chart is a chart that displays columns of data (like a table) in addition to the usual graphical chart elements.
 
 image::commonscript:tableLikeChart8_1.png[alt="example hybrid table chart"]

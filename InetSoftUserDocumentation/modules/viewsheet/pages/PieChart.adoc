@@ -2,7 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a Pie Chart (and donut chart variant) in a Dashboard. Best suited for showing part-to-whole relationships across a small number of categories. Covers binding a dimension and measure, enabling the donut style, and using explode-pie for emphasis. See BasicChartingSteps for general chart creation fundamentals.
+endif::ai[]
 
 [.videotitle]
 .Watch Video: Creating a Chart (Pie Chart)

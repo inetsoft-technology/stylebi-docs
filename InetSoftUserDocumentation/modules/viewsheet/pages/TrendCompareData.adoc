@@ -2,6 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to apply trend and comparison methods to Chart or Crosstab measures, such as percent of total, change from previous group, moving averages, and running totals. These methods are set via the Trend and Comparison option in the Edit Measure panel.
+endif::ai[]
 
 There are many different ways to represent an aggregated *measure* in a Chart or Crosstab. For example, you can represent the aggregated measure  in terms of its _percentage_ of a total, or by its _difference_ from a preceding group, or by a _moving average_ based on adjacent groups, etc.
 

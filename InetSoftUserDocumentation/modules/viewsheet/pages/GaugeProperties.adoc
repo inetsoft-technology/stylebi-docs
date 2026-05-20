@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Gauge component properties (General, Advanced, Data, Script tabs). Covers gauge style, face/needle appearance, value range, target value, and data binding. See AddAKPI for how to use a Gauge to display a KPI.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

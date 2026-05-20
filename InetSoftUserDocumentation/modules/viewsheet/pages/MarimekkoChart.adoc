@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Marimekko (Mekko/mosaic) chart, which displays a measure using variable-width and variable-height rectangles arranged in columns. Place a dimension in the X region for columns and another dimension in the Color or Break By region for the grouping within columns.
+endif::ai[]
+
 A Marimekko chart (also known as a Mekko or mosaic chart) displays a *measure* by using the sizes of rectangles in a hierarchical display.
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]

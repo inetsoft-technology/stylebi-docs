@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to assign distinct chart styles (e.g., line, bar, point) to individual measures on a chart using the Multiple Styles option. Requires first creating a multi-measure chart. See MultipleMeasureChart for adding multiple measures.
+endif::ai[]
+
 [CAUTION,caption=see also]
 xref:ChartProperties.adoc[] for the *Show Points* option for  xref:LineChart.adoc[] and  xref:RadarChart.adoc[].
 

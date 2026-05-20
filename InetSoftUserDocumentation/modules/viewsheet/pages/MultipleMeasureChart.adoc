@@ -2,6 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to display multiple measures on a chart using color, shape, size, or text visual encodings, or by using multiple axes (single-axis vs. separate-axis mode). See MultipleStyleChart for assigning different chart styles (bar, line, point) to different measures.
+endif::ai[]
 
 .See Also...
 [TIP]

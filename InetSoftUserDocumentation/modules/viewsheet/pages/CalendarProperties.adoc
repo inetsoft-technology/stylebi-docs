@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Calendar filter component properties. Covers date field selection, display style (calendar wall vs. dropdown), view mode (simple or double), and the Compatible Tables setting for filtering multiple data blocks simultaneously. See AddFilterComponents for how to create a Calendar.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

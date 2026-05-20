@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for the Data tab that is common to many Dashboard components. Covers the Table, Column, Aggregate, With, Target, and Value properties used to bind a component to a data source. Filter components (Selection List, etc.) have a different Data tab layout.
+endif::ai[]
+
 [WARNING,caption=seel also]
 {SeeAlsoCommonProperties}
 

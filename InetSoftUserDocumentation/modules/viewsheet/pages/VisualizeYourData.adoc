@@ -1,6 +1,9 @@
 = Visualize Your Data
 
-
+// metadata for AI
+ifdef::ai[]
+Summary: Top-level overview and navigation page for the Dashboard (Visualize Your Data) module. Introduces Dashboards as data presentation tools created in Visual Composer, and provides links to all major sections including creating Dashboards, using charts, adding components, and filtering data.
+endif::ai[]
 
 A *Dashboard* is a data presentation tool that you  create in *Visual Composer*  to dynamically filter a data set and visualize the output on tables, charts, and gauges. By visualizing your data with a Dashboard, you can rapidly discover meaningful trends and associations that yield actionable business intelligence.
 

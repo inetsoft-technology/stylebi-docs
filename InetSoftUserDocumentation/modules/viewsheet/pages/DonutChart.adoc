@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating a Donut chart, which is a PieChart with a hole in the center. The hole can be empty (simple donut) or display a KPI value such as a grand total (advanced donut). See PieChart for basic pie chart creation.
+endif::ai[]
+
 A donut chart is a xref:PieChart.adoc[] with a hole in the center. The hole can be empty or  display a KPI.
 
 image::commonscript:ChartExpDonut20.png[alt="donut chart example"]

@@ -2,7 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for creating an Area chart, which displays a measure as a filled region. It is functionally identical to a Line chart, with the additional option of creating stacked area variants. See BasicChartingSteps for general charting steps.
+endif::ai[]
 
 An area chart displays a measure as a filled region. It is functionally the same as a xref:LineChart.adoc[].
 
