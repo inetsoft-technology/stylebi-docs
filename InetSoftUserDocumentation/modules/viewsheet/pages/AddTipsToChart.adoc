@@ -2,6 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to add tooltips and data tips to a Chart. Data tips display a Dashboard component filtered to the hovered chart region; custom tooltips display user-defined HTML when hovering over a data point. Both features are available to end users at view time. See also AddAnnotation for persistent chart annotations.
+endif::ai[]
 
 include::viewsheet:partial$availableToEndUsers.adoc[]
 

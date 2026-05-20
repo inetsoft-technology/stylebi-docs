@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to create custom reusable Table Styles that can be applied to Tables and Crosstabs across multiple Dashboards. Covers defining cell formatting for each region of the table (header, body, total rows, etc.) in the Table Style Editor. Use when the built-in predefined styles are insufficient.
+endif::ai[]
+
 In addition to using  predefined Table Styles (see xref:TableProperties.adoc[]), you also can create your own custom table styles. A custom Table Style  is a reusable component that can be applied to multiple tables in  Dashboards. The following sections explain how to create and use a custom Table Style.
 
 [#CreateNewTableStyle]

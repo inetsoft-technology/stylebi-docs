@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to add a Key Performance Indicator (KPI) to a Dashboard. Covers two approaches: a Gauge component for graphical display of a single aggregated value, and a Text component for a digital/numeric display. Use this page when you want to prominently highlight a single metric such as total revenue or order count.
+endif::ai[]
+
 [.videotitle]
 .Watch Video: Creating a Dashboard (Add a KPI)
 [%collapsible]

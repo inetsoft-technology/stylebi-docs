@@ -2,6 +2,11 @@
 %experimetal%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to add a background to a Dashboard, either as a solid color fill or as an image. Also covers setting background color or image on individual components. Use this page to improve Dashboard visual design by adding branding, logos, or a consistent color scheme.
+endif::ai[]
+
 [.videotitle]
 .Watch Video: Creating a Dashboard (Add Background)
 [%collapsible]
