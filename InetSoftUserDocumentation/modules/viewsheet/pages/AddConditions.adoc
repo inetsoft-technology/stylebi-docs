@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to apply a fixed (non-user-adjustable) condition filter to a specific Dashboard component (Chart, Table, Crosstab, Gauge, or Text). Unlike Filter components such as Selection Lists, a Condition affects only the single component it is applied to and cannot be changed by end users at runtime.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 xref:AddFilterComponents.adoc[], for the recommended approach to filtering your data in most cases.

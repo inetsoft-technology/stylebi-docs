@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a Freehand Table, an advanced component that enables non-hierarchical groupings and formula cells — layouts not possible in a regular Table or Crosstab. The recommended workflow is to first create a Crosstab that approximates the desired result, then convert it to a Freehand Table and make final adjustments.
+endif::ai[]
+
 [WARNING, caption=see also]
 xref:viewsheetscript:AccessComponentData.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] for information on how to reference cells in a Freehand Table.
 

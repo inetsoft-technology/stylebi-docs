@@ -2,6 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Step-by-step instructions for adding a Chart to a Dashboard, including understanding dimensions vs. measures, binding data to chart axes, selecting a chart type, and using the Chart Editor. This is the foundational chart creation page — read this before consulting chart-type-specific pages such as BarChart or LineChart.
+endif::ai[]
 
 The following sections explain how to add a Chart to your Dashboard.
 

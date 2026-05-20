@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Table component properties, accessible via right-click > Properties. Covers the General tab (table style, header/data cell formatting, pagination, row/column sizing, tooltip) and Advanced tab (max rows, drill-down, column visibility). See AddTable for how to create and bind a Table.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

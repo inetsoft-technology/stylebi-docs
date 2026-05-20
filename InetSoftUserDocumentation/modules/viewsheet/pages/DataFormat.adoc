@@ -2,6 +2,10 @@
 %experimetal%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to apply display format patterns (date, number, currency, text, percent) to values in Dashboard components. Formatting controls how data is presented without changing the underlying values. Accessed via the Format panel in Visual Composer.
+endif::ai[]
 
 [.videotitle]
 .Watch Video: Creating a Dashboard (Format Data)
