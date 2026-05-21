@@ -1,0 +1,133 @@
+= Create a Table
+:page-aliases: viewsheet:AddTable.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: This document explains how to add and configure a Table, including styling, resizing, aligning, and formatting columns. Most of these operations—especially applying Table Styles—also apply to Crosstab and Freehand table, ensuring consistent formatting across all table types.
+endif::ai[]
+
+[.videotitle]
+.Watch Video: Creating a Dashboard (Add a Table)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359874333#chapter=16573231[vimeo,640,400]
+=====
+
+
+The following sections explain how to add and configure a regular Table, which allows you to display tabular data in raw (unaggregated) form.
+
+
+== Add a Table Component
+. If necessary, create a new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+
+. Drag a Table component from *Toolbox* panel into the Dashboard to create a blank table.
++
+image:dashboard1.png[alt="drag table component from toolbox into dashboard"]
+
++
+[TIP]
+====
+You can also drag an entire data block into the Dashboard. This adds the data block as a new Table. Then proceed with the steps below.
+
+image:viewsheetExp2.png[alt="drag entire data block into dashboard"]
+====
++
+
+
+
+
+. Press the {buttonEdit} on the Table to open the Table Editor.
+
+. In the Table Editor, drag individual columns from a data block into the ‘Details’ region, or onto the Table itself. The green highlight shows you where each column will be placed.
++
+IMPORTANT: If you want to add data from multiple data blocks into the Table, you must first join them together.  See xref:dataworksheet:JoinData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[]. _Data models_ are already fully joined, and all attributes can be used in a Table.
++
+image:dashboard2.png[alt="drag columns into details region of table editor"]
++
+include::dashboard:partial$bindToComponent.adoc[]
+
+. *_Optional:_* To hide a column, press the {buttonShowHide}.  To remove the column entirely, drag the column back to the left *Data Source* panel.
++
+image:dashboard3.png[alt="press Show/Hide button to hide a column"]
+
+. *_Optional:_* To sort a column, press the {buttonSort}. Press once to sort in ascending order, press again to sort in descending order, press a third time to return to the original order. (You can sort on both visible and hidden columns.)
++
+image:dashboard4.png[alt="press Sort button to sort a column"]
+
+. {finishEditing}
+
+
+
+
+
+. Format the table as desired. To do this, select the *Format* tab at the bottom of the left panel. {rightClickFormat} See xref:#ConfigureTableAppearance[] below for more information.
++
+image:formatTab.png[alt="select Format tab at bottom of left panel"]
+
+
+
+[#ConfigureTableAppearance]
+== Configure Table Appearance
+The following sections explain how  format a Table.
+
+=== Style a Table
+
+To apply a global Table Style, right-click the table and select ‘Properties’ from the context menu. {rightClickOptions} This opens the ‘Table Properties’ panel. In the ‘Table Styles’ region of the *General* tab, select a table style. Press btn:[OK].
+
+image:viewsheetExp4.png[alt="select a table style in table properties panel"]
+
+This applies a global style to the table, including fonts, background colors, foreground colors, and borders.
+
+=== Resize a Table
+
+To resize a Table, click the table to select it. Drag the bottom border of the table to display more rows. Drag the right border to display more columns.
+
+image:viewsheetExp3.png[alt="drag bottom or right border to resize table"]
+
+[#ResizeColumn]
+=== Resize a Column
+
+To resize a column, drag the column borders as desired.
+
+image:viewsheetExp5.png[alt="drag column borders to resize a column"]
+
+You can also right-click a cell and select ‘Set Cell Size’. This opens the ‘Resize Cell’ dialog box, where you can specify the cell dimensions in pixels.
+
+image:viewsheetExp67.png[alt="right-click cell and select Set Cell Size"]
+
+To hide a table column entirely, use the Table Editor as described above. To display all  columns, right-click the Table and select ‘Show Columns’ from the context menu.
+
+=== Align  Header and Data Cells
+To align a column header, click the column header to select it (hold the {buttonCtrl} or {buttonShift} key and click to select multiple columns). Then press the desired alignment button in the *Format* panel to align the header text.
+
+image:viewsheetExp8.png[alt="press alignment button to align column header"]
+
+To align the data values in a column, select any cell in the column, and  choose select the desired alignment option in the *Format* panel.
+
+=== Format a Column as Currency
+To format a column’s data as currency, select any cell in the column and choose the ‘Currency’ option from the ‘Format’ menu in the *Format* panel. Press the {buttonApply}.  See xref:DataFormat.adoc[] for more details about formatting.
+
+image:viewsheetExp9.png[alt="choose Currency option from Format menu"]
+
+=== Format a Column as Date
+To format a column’s data as a date, select any cell in the column and choose the ‘Date’ option from the ‘Format’ menu in the *Format* panel.
+
+image:viewsheetExp11.png[alt="choose Date option from Format menu"]
+
+Select a date code from the menu or select ‘Custom’ and enter your own. (For example, the code `MM/dd/yyyy` indicates that dates should be displayed with a two-digit month, two-digit day, and four-digit year.) Press the {buttonApply}. See xref:DataFormat.adoc[] for more details about formatting.
+
+=== Format a column as Number
+To format a column’s data as a number, select any cell in the column and choose the ‘Number’ option from the ‘Format’ menu in the *Format* panel.
+
+
+Select a number code from the menu or select ‘Custom’ and enter your own. (For example, the code `\#,##0.00` indicates that numbers in the column should have a comma every three places to the left of the decimal, and two digits to the right of the decimal.) Press the {buttonApply}. See xref:DataFormat.adoc[] for more details about formatting.
+
+=== Change the Order of Columns
+To change the order of the columns, click and drag on a column header and drop the column into the desired position. A green highlight indicates the drop position.
+
+image:viewsheetExp14.png[alt="drag column header to change column order"]

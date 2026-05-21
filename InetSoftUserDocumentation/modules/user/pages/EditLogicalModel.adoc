@@ -71,7 +71,7 @@ Format:: To add formatting to the data returned in an attribute,  click the ‘F
 .See a list  of available date format symbols...
 [%collapsible]
 ====
-For examples of how  to construct dates using these symbols, see xref:viewsheet:DataFormat.adoc#DateFormat[Date Format] in xref:viewsheet:VisualizeYourData.adoc[].
+For examples of how  to construct dates using these symbols, see xref:dashboard:DataFormat.adoc#DateFormat[Date Format] in xref:dashboard:VisualizeYourData.adoc[].
 
 
 include::commonscript:partial$dateFormatTable.adoc[]
@@ -198,14 +198,14 @@ If the URL for ‘Web Link’ is https://www.inetsoft.com/$(param1), the value o
 
 . Enable the ‘Send Dashboard Parameters’ option to pass dashboard-level parameters in the hyperlink (in addition to the auto-drill parameter specified above).
 +
-TIP: Dashboard parameters are parameters defined within the dashboard containing the hyperlinks.  See xref:viewsheet:DynamicallySetProperties.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] and xref:viewsheetscript:parameter.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[] for more information about parameters.
+TIP: Dashboard parameters are parameters defined within the dashboard containing the hyperlinks.  See xref:dashboard:DynamicallySetProperties.adoc[] in xref:dashboard:VisualizeYourData.adoc[] and xref:dashboardscript:parameter.adoc[] in xref:dashboardscript:AdvancedDashboardScripting.adoc[] for more information about parameters.
 +
 The drill-down dashboard or web-page should be designed to accept these parameter values, or they will be ignored. In the case of a drill-down dashboard (‘Asset Link’ option), the parameters are passed into *parameters of the same name*, if they exist, in the drill-down dashboard. In the case of a drill-down web page (‘Web Link’ option), the parameters are passed in the URL as key-value pairs.
 +
 .Send Dashboard Parameters
 [example]
 ====
-Consider a dashboard that has the following dashboard parameters defined in the *onInit* script. (See xref:viewsheetscript:AddScriptToDashboard.adoc[] for  information about how to add script.)
+Consider a dashboard that has the following dashboard parameters defined in the *onInit* script. (See xref:dashboardscript:AddScriptToDashboard.adoc[] for  information about how to add script.)
 
 [source,javascript]
 parameter.param1 = hello

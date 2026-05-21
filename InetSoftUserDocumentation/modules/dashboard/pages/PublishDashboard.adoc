@@ -1,0 +1,11 @@
+= Publish a Dashboard
+:page-aliases: viewsheet:PublishDashboard.adoc
+%experimetal%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following sections explain how to arrange components on a Dashboard for publication across a variety of devices and languages.
+
+[square]
+** xref:dashboard:CreateDeviceLayout.adoc[]: Define or select a device class based on screen size, and specify how a Dashboard should be displayed for that device class.
+** xref:dashboard:ModularizeDashboard.adoc[]: Build a complex Dashboard from several smaller Dashboards.  This allows you to compartmentalize functions and integrate data from multiple sources into a single presentation.  Modularization also facilitates team development and maintainability.
+** xref:dashboard:LocalizeDashboard.adoc[]: Translate a Dashboard into one or more alternate languages.  The Dashboard is then displayed to the user in the appropriate language based on the user's locale setting.

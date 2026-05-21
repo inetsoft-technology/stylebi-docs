@@ -44,7 +44,7 @@ If you are using the Portal for the first time, you can also press the Portal Da
 image:UserPortalFirstTimePortalDashboards.png[alt="press Portal Dashboards link"]
 ====
 {buttonRepository}:: View all available Dashboards in the repository.  See xref:ManageRepository.adoc[] for information on how to organize the Repository.
-{buttonCreate}:: Create data sources, Data Worksheets, and Dashboards. See xref:ConnectToData.adoc[], xref:dataworksheet:CreateNewWorksheet.adoc[], and xref:viewsheet:CreateNewDashboard.adoc[] for more information.
+{buttonCreate}:: Create data sources, Data Worksheets, and Dashboards. See xref:ConnectToData.adoc[], xref:dataworksheet:CreateNewWorksheet.adoc[], and xref:dashboard:CreateNewDashboard.adoc[] for more information.
 {buttonSchedule}:: Schedule Dashboards to generate automatically, and monitor queued and completed scheduled tasks. See xref:user:ScheduleDashboard.adoc[]  for more details.
 {buttonData}:: Create and manage data sources. See xref:ConnectToData.adoc[] for more information.
 {buttonHelp}:: Open this documentation.

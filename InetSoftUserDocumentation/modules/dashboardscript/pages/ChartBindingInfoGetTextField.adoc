@@ -1,0 +1,31 @@
+= bindingInfo.getTextField()
+:page-aliases: viewsheetscript:ChartBindingInfoGetTextField.adoc
+:navtitle: getTextField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:dashboardscript:ChartBindingInfoSetTextField.adoc[]  to set the binding information.
+
+Returns the field bound to the xref:chartAPI:TextFrame.adoc[] (text coding).
+
+
+
+
+
+
+== Returns
+String::			Field name used for text-coding
+
+
+
+== Example
+[source,javascript]
+--
+var tfield = Chart1.bindingInfo.getTextField();
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

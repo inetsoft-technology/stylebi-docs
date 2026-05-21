@@ -194,7 +194,7 @@ The defined map type and any defined layers will appear in the menus of the Char
 +
 image:OpenJUMPExp18.png[alt="Export Layer dialog showing map type and layer name fields"]
 +
-See xref:viewsheet:MapChart.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for more details on using the Chart Editor in a Dashboard.
+See xref:dashboard:MapChart.adoc[] in xref:dashboard:VisualizeYourData.adoc[] for more details on using the Chart Editor in a Dashboard.
 
 .. Select the ‘Feature ID’. This is the attribute that uniquely identifies the map features. (In some cases this may be the FIPS or ISO code for a feature.)
 
@@ -399,7 +399,7 @@ image:CustomMapOverlay2.png[alt="exported overlay files including CSV and mapdat
 
 . Restart the InetSoft Server.
 
-. Create a Map Chart  based on the custom map. (See xref:viewsheet:MapChart.adoc[].) Observe that the specified regions and labels are overlaid on the map as desired.
+. Create a Map Chart  based on the custom map. (See xref:dashboard:MapChart.adoc[].) Observe that the specified regions and labels are overlaid on the map as desired.
 +
 image:CustomMapOverlay3.png[alt="map chart with Census Region shapes overlaid on states"]
 

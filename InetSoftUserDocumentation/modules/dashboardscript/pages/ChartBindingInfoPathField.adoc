@@ -1,0 +1,48 @@
+= bindingInfo.pathField
+:page-aliases: viewsheetscript:ChartBindingInfoPathField.adoc
+:navtitle: pathField
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+
+
+Specifies the  field to be  used in the '`Path`' binding.  See xref:dashboard:MapChart.adoc[] for more information about '`Path`'.
+
+
+
+
+
+
+== Type
+Array: `[Field,Type]`
+
+[square]
+* `Field` is a  field name (String)
+* `Type`	is  one of  `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
+
+
+
+== Example
+For a Dashboard with '`Map Points`' Data Worksheet as data source.
+
+include::ROOT:partial$MapPointsWS.adoc[]
+
+[source,javascript]
+--
+Chart1.query = "Data";
+Chart1.chartStyle = Chart.CHART_MAP;
+Chart1.bindingInfo.yFields = [['Lat',Chart.NUMBER]];
+Chart1.bindingInfo.xFields = [['Long',Chart.NUMBER]];
+Chart1.bindingInfo.pathField = ['Long',Chart.NUMBER]; //<1>
+Chart1.bindingInfo.setTextField('Name',Chart.STRING); //<2>
+Chart1.mapType = Chart['MAP_TYPE_U.S.'];
+--
+<1> Sets '`Long`' as the path field. Path will be drawn through ascending longitude values.
+<2> Use xref:ChartBindingInfoSetTextField.adoc[] to place names on the points.
+
+image:commonscript:bindingInfoPathField.png[alt="map chart with path drawn through points in ascending longitude order"]
+
+include::commonscript:partial$bindingInfoNote.adoc[]

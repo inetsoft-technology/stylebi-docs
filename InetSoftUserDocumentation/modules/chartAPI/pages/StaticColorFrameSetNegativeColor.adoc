@@ -20,7 +20,7 @@ value:: a {JavaAwtColor} object
 
 == Value (Property Syntax)
 
-include::viewsheetscript:partial$colorSyntax.adoc[]
+include::dashboardscript:partial$colorSyntax.adoc[]
 
 
 
@@ -70,9 +70,9 @@ frame.setNegativeColor(java.awt.Color(0xff0000));
 == Example 2
 
 
-This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
 
-. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet.
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet.
 +
 include::ROOT:partial$AllSalesQuery.adoc[]
 
@@ -83,7 +83,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 
 . Place ‘Total’ also in the ‘Color’ region. Press the {buttonEditMeasure} next to the ‘Color’ region, and select ‘Change from Previous’ from the ‘Trend and Comparison’ menu. Press the {buttonApply}.
 
-. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
 
 +
 .onRefresh Script

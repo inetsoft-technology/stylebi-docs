@@ -558,7 +558,7 @@ Use the xref:chartAPI:PlotSpecSetBackgroundImage.adoc[] function to display an i
 This example is provided to illustrate how to configure an image background. The image in this example is a map. However, note that there are simpler ways to synchronize a map background with a chart:
 [square]
 * To configure a web map background *without* scripting, see xref:administration:Presentation.adoc#WebMap[Web Map].
-* To assign a map background in script, use   xref:viewsheetscript:ChartSetupGoogleMapsPlot.adoc[].
+* To assign a map background in script, use   xref:dashboardscript:ChartSetupGoogleMapsPlot.adoc[].
 ====
 
 [source,javascript]

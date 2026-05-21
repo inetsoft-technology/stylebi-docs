@@ -1,0 +1,32 @@
+= panY
+:page-aliases: viewsheetscript:PlotPanY.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+The number of pixels by which to pan a xref:dashboard:MapChart.adoc[] in the vertical direction. Positive values shift the map down, while negative values shift the map up.
+
+IMPORTANT: Setting the `panY` value  causes the map’s default UI pan controls to be *hidden*.
+
+== Type
+Integer
+
+
+
+== Example
+[source,javascript]
+Chart1.panY = -15;
+
+image:commonscript:panY.png[alt="chart with Y-axis panned to show a different vertical range"]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+panY          // unqualified
+Chart1.panY   // qualified
+
+{secondForm}
+====

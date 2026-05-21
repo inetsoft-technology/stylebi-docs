@@ -1,0 +1,34 @@
+= fillBlankWithZero
+:page-aliases: viewsheetscript:CrosstabFillBlankWithZero.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+Populate empty cells of the crosstab table with zeros. (Empty data cells occur when no results exist corresponding to the row and column headings.)
+
+
+
+== Type
+Boolean:: `true`: use zeros in empty cells +
+`false`: leave empty cells blank
+
+
+
+== Example
+[source,javascript]
+Crosstab1.fillBlankWithZero = true
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+fillBlankWithZero             // unqualified
+Crosstab1.fillBlankWithZero   // qualified
+
+{secondForm}
+====
+
+

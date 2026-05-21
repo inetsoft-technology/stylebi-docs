@@ -1,0 +1,45 @@
+= deleteRow(row)
+:page-aliases: viewsheetscript:TableDeleteRow.adoc
+:navtitle: deleteRow()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+xref:dashboard:WriteBackToStorage.adoc#AccessMostRecentUserModification[Access Most Recent User Modification] to detect recent changes.
+====
+
+
+For an *Editable Table*, deletes the row specified by integer parameter `row`, and adds this deleted row to the array returned by `getFormRows(DELETED)`. See xref:dashboard:TableProperties.adoc[] for information on making a Table editable.
+
+
+
+
+
+
+== Parameters
+row::			integer row index
+
+== Example
+[source,javascript]
+----
+// Delete row 4:
+TableView1.deleteRow(4);
+
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+deleteRow                 // unqualified
+TableView1.deleteRow      // qualified
+
+{secondForm}
+====
+
+

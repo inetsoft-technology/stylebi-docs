@@ -129,15 +129,15 @@ image:Materialized View Node_1.png[alt="materialized views global options page"]
 . Set any desired global options:
 +
 ****
-Create MV On-demand:: Set '`Create MV On-demand`' to specify that the ‘Dashboard Options’ dialog box in Visual Composer should offer the ‘Create MV On-demand’ option for individual Dashboards. When ‘Create MV On-demand’ is enabled for a Dashboard, a new materialized view is automatically created on-the-fly if the Dashboard does not have an existing materialized view (either because the materialized view was never populated with data or because the Dashboard underwent modifications that rendered an existing materialized view unusable). The materialized view will supply data to the Dashboard both at design time and at runtime. See xref:viewsheet:DashboardOptions.adoc[]  for information on setting this option.
+Create MV On-demand:: Set '`Create MV On-demand`' to specify that the ‘Dashboard Options’ dialog box in Visual Composer should offer the ‘Create MV On-demand’ option for individual Dashboards. When ‘Create MV On-demand’ is enabled for a Dashboard, a new materialized view is automatically created on-the-fly if the Dashboard does not have an existing materialized view (either because the materialized view was never populated with data or because the Dashboard underwent modifications that rendered an existing materialized view unusable). The materialized view will supply data to the Dashboard both at design time and at runtime. See xref:dashboard:DashboardOptions.adoc[]  for information on setting this option.
 +
-image:viewsheet:Options Create MV on Demand_1.png[alt="create MV on-demand option in dashboard options"]
+image:dashboard:Options Create MV on Demand_1.png[alt="create MV on-demand option in dashboard options"]
 
 MV On-demand by Default:: Set '`MV On-demand by Default`' to specify that the ‘Dashboard Options’ dialog box in Visual Composer should have the ‘Create MV On-demand’ option enabled by default for all new Dashboards. This relieves you  from creating a materialized view for each Dashboard individually.
 
 Default Cycle for New MV:: Set '`Default Cycle for New MV`' to specify that the default cycle to be used for on-demand materialized view generation. See xref:Schedule.adoc[] for information on how to create a cycle.
 
-Use meta-data for editing if MV is not available:: Set '`Use meta-data for editing if MV is not available`' to specify that when a materialized view is not available to supply data for a Dashboard (for any reason), the design mode of Visual Composer should display meta-data rather than querying the database for data. This will improve design-time performance. See xref:viewsheet:DashboardOptions.adoc[] for more information about meta-data mode.
+Use meta-data for editing if MV is not available:: Set '`Use meta-data for editing if MV is not available`' to specify that when a materialized view is not available to supply data for a Dashboard (for any reason), the design mode of Visual Composer should display meta-data rather than querying the database for data. This will improve design-time performance. See xref:dashboard:DashboardOptions.adoc[] for more information about meta-data mode.
 
 Fail if MV is not available at runtime:: Set '`Fail if MV is not available at runtime`' to specify that when a user loads a Dashboard in the User Portal  an error message should be generated if the requested Dashboard does not possess a corresponding materialized view or the materialized view fails to generate (due to user-cancellation or for any other reason). If you prefer the Dashboard to query the database for data rather than generate an error in this case, disable ‘Fail if MV is not available at runtime’.
 ****

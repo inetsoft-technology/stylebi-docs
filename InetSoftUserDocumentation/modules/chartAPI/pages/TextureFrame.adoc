@@ -36,12 +36,12 @@ The `TextureFrame` object contains the texture for visual chart objects. You can
 
 == Example 1
 
-. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+. Bind a xref:dashboard:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
 +
 include::ROOT:partial$AllSalesQuery.adoc[]
 
 
-. Add the following script to the Chart component. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
+. Add the following script to the Chart component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
 +
 .Chart Component Script
 [source,javascript]
@@ -67,14 +67,14 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 == Example 2
 
 
-This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:TextureFrame.adoc[].
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:TextureFrame.adoc[].
 
-. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
 +
 include::ROOT:partial$AllSalesQuery.adoc[]
 
 
-. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
 
 +
 .onRefresh Script

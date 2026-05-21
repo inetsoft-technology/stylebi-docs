@@ -1,0 +1,34 @@
+= axis.reversed
+:page-aliases: viewsheetscript:ChartAxisReversed.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Reverses the direction of the axis scale so that higher numbers appear at the bottom or left.
+
+include::partial$axisShortcut.adoc[]
+
+== Type
+Boolean
+
+
+== Example
+[source,javascript]
+Chart1.axis['Sum(Total)'].reversed = true;
+
+image:commonscript:measureReversed.png[alt="chart with measure axis scale reversed so higher values appear at bottom"]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].reversed             // unqualified
+Chart1.axis['...'].reversed      // qualified
+
+{secondForm}
+====
+

@@ -1,0 +1,34 @@
+= legendTitleColor
+:page-aliases: viewsheetscript:PlotLegendTitleColor.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the color of the legend title text.
+
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.legendTitleColor = [255,0,0];
+Chart1.legendTitleColor = {r:255,g:0,b:0}
+
+
+image:commonscript:legendColor.png[alt="chart legend with title text displayed in custom color"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+legendTitleColor          // unqualified
+Chart1.legendTitleColor   // qualified
+
+{secondForm}
+====

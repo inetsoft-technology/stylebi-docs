@@ -1,0 +1,39 @@
+= col
+:page-aliases: viewsheetscript:TableCol.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+include::partial$readOnly.adoc[]
+
+
+
+[WARNING,caption=See Also]
+====
+* xref:dashboardscript:TableTable.adoc[] for more information about the `table` array.
+* xref:dashboard:TableProperties.adoc[] for general information about the Table component.
+====
+
+
+
+
+Returns the column index of the cell currently referenced by a *Format* expression script. For example, if you specify a ‘Color’ expression in the *Format* panel for a *detail cell* in a Table, you can use the `col` property within the script to obtain the index of the column. This, together with xref:dashboardscript:TableTable.adoc[] array and the xref:dashboardscript:TableRow.adoc[] property allow you to construct relative references to other cells in the Table.
+
+See xref:dashboard:DynamicallySetProperties.adoc#ControlPropertieswithExpression[Control Properties with Expression] for information about how to use expressions to set properties.
+
+== Example
+The script below can be used in a ‘Color’ or ‘Background’ expression to set color formatting on a Table detail cell. It assigns a red color if the value in the cell is less than the value of the same cell in the row above, and assigns a green color otherwise.
+
+[source,javascript]
+----
+ if (row > 1) {
+  if (value < table[row-1][col]) {
+    [255,0,0]
+  }
+  else {
+    [0,255,0]
+  }
+}
+----
+
+
+

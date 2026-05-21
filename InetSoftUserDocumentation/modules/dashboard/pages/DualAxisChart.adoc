@@ -1,0 +1,69 @@
+= Dual Axis Chart
+:page-aliases: viewsheet:DualAxisChart.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[.videotitle]
+.Watch Video: Creating a Chart (Use Secondary Axis)
+[%collapsible]
+=====
+include::ROOT:partial$videoVersion.adoc[]
+
+video::359085988#chapter=16555828[vimeo,640,400]
+=====
+
+
+By default, when you add two or more *measure* fields on the Y-axis, the selected datasets are plotted on adjacent sets of axes, as shown below in the Chart Editor:
+
+include::ROOT:partial$measureTip.adoc[]
+
+image:commonscript:Chart Secondary Axis1_1.png[alt="two measures plotted on adjacent axes"]
+
+In some cases, you may want to use *dual Y-axes* to represent these measures, as shown below:
+
+image:commonscript:Chart Secondary Axis2.png[alt="dual Y-axes chart with two measures"]
+
+
+To display a dataset on the right-side (secondary) Y-axis, follow the steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Add multiple measures to the chart. (See xref:MultipleMeasureChart.adoc[] for additional details.)
+
+. Press the {buttonSwitchSingleGraph} in the Chart Editor.
++
+image:commonscript:Chart Switch to Single.png[alt="press Switch to Single Graph button"]
++
+This places all measuress on the same Y-axis rather than on adjacent axes.
++
+[TIP]
+====
+To return to the multiple axis style, open the Chart Editor and press the {buttonSwitchSeparateGraph}.
+
+image:commonscript:Chart Switch to Separate.png[alt="press Switch to Separate Graph button"]
+====
+
+. Press the {buttonEditMeasure} next to the measure that you wish to display against the secondary Y-axis.
+
+. Enable the ‘Secondary Axis’ option at the bottom of the panel.
++
+image:commonscript:SecondaryYAxis.png[alt="enable Secondary Axis option"]
+
+. Press the {buttonApply} to update the chart axes.
++
+image:commonscript:SecondaryYAxis2.png[alt="chart updated with secondary Y-axis"]
+
+. {finishEditing}
+
+include::dashboard:partial$addTitlesLegend.adoc[]
+
+
+
+.Explore More...
+****
+The sample xref:ROOT:attachment$Accounts_Receivable_Management.zip[Accounts Receivable Management] Dashboard provides an example of a dual axis chart.
+
+image:dashboard:galleryDualAxis2.png[alt="accounts receivable dual axis chart example"]
+
+To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Accounts_Receivable_Management.zip[Accounts Receivable Management] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+****

@@ -8,7 +8,7 @@ Converts a numerical value to a string based on the specified format. {CALCExcel
 == Parameters
 value::			Numerical value to convert to text
 format::			A  number format pattern constructed
-from the following symbols. See  xref:viewsheet:DataFormat.adoc#NumberFormat[Number Format] for more examples.
+from the following symbols. See  xref:dashboard:DataFormat.adoc#NumberFormat[Number Format] for more examples.
 +
 include::partial$numberFormatTable.adoc[]
 

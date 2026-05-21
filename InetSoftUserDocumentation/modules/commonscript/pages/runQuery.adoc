@@ -4,7 +4,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=See Also]
-xref:viewsheetscript:RunQueryFromScript.adoc[] for examples of executing Data Worksheet queries in a Dashboard.
+xref:dashboardscript:RunQueryFromScript.adoc[] for examples of executing Data Worksheet queries in a Dashboard.
 
 Returns a query result set as a two-dimensional array.
 

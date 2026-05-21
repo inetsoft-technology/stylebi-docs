@@ -71,9 +71,9 @@ CheckBox {
 
 The Type definition applies styles universally to all elements of a particular type (e.g., all CheckBoxes). To define custom properties (variables) for a particular component type, see xref:#CSSVariables[].
 
-For Dashboard components, the ‘Type’ is displayed in the *CSS* pop-up in the *Format* panel. See xref:viewsheet:VisualFormat.adoc[] for a list of all available CSS component types.
+For Dashboard components, the ‘Type’ is displayed in the *CSS* pop-up in the *Format* panel. See xref:dashboard:VisualFormat.adoc[] for a list of all available CSS component types.
 
-image:viewsheet:CSS Table Detail.png[alt="view CSS type in Format panel"]
+image:dashboard:CSS Table Detail.png[alt="view CSS type in Format panel"]
 
 [#CSSTableStyle]
 == CSS Table Style
@@ -160,7 +160,7 @@ For example:
    font-family: arial;
 }
 ----
-See xref:viewsheet:VisualFormat.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for information on how to assign a CSS Class or ID to a Dashboard component.
+See xref:dashboard:VisualFormat.adoc[] in xref:dashboard:VisualizeYourData.adoc[] for information on how to assign a CSS Class or ID to a Dashboard component.
 
 [#CSSID]
 == CSS ID
@@ -185,7 +185,7 @@ For example:
    font-family: arial;
 }
 ----
-See xref:viewsheet:VisualFormat.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for information on how to assign a CSS Class or ID to a Dashboard component.
+See xref:dashboard:VisualFormat.adoc[] in xref:dashboard:VisualizeYourData.adoc[] for information on how to assign a CSS Class or ID to a Dashboard component.
 
 [#CSSCombinations]
 == CSS Combinations
@@ -242,7 +242,7 @@ Table#Highlight {
 
 In this case, when the Dashboard designer selects the ‘Highlight’ ID for a Chart component, the CSS applies a pink background. When the Dashboard designer selects the ‘Highlight’ ID for a Table component, the CSS applies a magenta background. When the Dashboard designer selects the ‘Highlight’ ID for any other component type, the CSS applies a red background.
 
-See xref:viewsheet:VisualFormat.adoc[] in xref:viewsheet:VisualizeYourData.adoc[]  for information on how to assign a CSS Class or ID to a Dashboard component.
+See xref:dashboard:VisualFormat.adoc[] in xref:dashboard:VisualizeYourData.adoc[]  for information on how to assign a CSS Class or ID to a Dashboard component.
 
 [#CSSVariables]
 == CSS Variables

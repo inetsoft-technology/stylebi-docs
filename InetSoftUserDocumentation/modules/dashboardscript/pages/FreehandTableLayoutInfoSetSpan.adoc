@@ -1,0 +1,58 @@
+= layoutInfo.setSpan(row, col, width, height)
+:page-aliases: viewsheetscript:FreehandTableLayoutInfoSetSpan.adoc
+:navtitle: setSpan()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+Sets the number of cells (vertically and horizontally) that the specified cell in a Freehand Table should span.
+
+
+
+
+
+
+== Parameter
+row:: row index
+col:: column index
+width::			Number of horizontal cells to span
+height::			Number of vertical cells to span
+
+
+
+
+== Examples
+
+.No spanning
+[example]
+image:commonscript:setSpan1.png[alt="freehand table with cells showing no column or row spanning applied"]
+
+.Span two columns
+[example]
+====
+[source,javascript]
+FreehandTable1.layoutInfo.setSpan(0,0,2,1);
+
+image:commonscript:setSpan2.png[alt="freehand table with top-left cell spanning two columns horizontally"]
+====
+
+.Span two rows
+[example]
+====
+[source,javascript]
+FreehandTable1.layoutInfo.setSpan(0,0,1,2);
+
+image:commonscript:setSpan3.png[alt="freehand table with top-left cell spanning two rows vertically"]
+====
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+layoutInfo.setSpan                 // unqualified
+FreehandTable1.layoutInfo.setSpan  // qualified
+
+{secondForm}
+====

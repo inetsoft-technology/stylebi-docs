@@ -1,0 +1,29 @@
+= shapeLegend.titleVisible
+:page-aliases: viewsheetscript:PlotShapeLegendTitleVisible.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the visibility of the legend title bar for a shape-key legend.
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.shapeLegend.titleVisible = false;
+
+image:commonscript:shapeLegendTitleVisible.png[alt="chart shape legend with title visibility toggled"]
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shapeLegend.titleVisible           // unqualified
+Chart1.shapeLegend.titleVisible    // qualified
+
+{secondForm}
+====

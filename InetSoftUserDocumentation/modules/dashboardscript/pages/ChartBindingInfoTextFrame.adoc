@@ -1,0 +1,33 @@
+= bindingInfo.textFrame
+:page-aliases: viewsheetscript:ChartBindingInfoTextFrame.adoc
+:navtitle: textFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:TextFrame.adoc[] outside of the data binding.
+====
+
+
+Specifies a mapping between axis values and replacement text.
+
+
+== Type
+xref:chartAPI:TextFrame.adoc[]
+
+
+== Example
+.onRefresh Script
+[source,javascript]
+--
+Chart1.bindingInfo.setTextField("Company",Chart.STRING);
+Chart1.bindingInfo.textFrame = new DefaultTextFrame;
+
+--
+
+
+image:commonscript:DefaultTextFrame.png[alt="chart with Company name text labels applied using DefaultTextFrame"]
+
+include::commonscript:partial$bindingInfoNote.adoc[]

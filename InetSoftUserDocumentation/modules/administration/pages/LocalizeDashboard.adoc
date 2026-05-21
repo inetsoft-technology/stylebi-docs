@@ -3,7 +3,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-You can use a simple text mapping to localize most text in a  Dashboard. The first step in setting up localization for a particular  Dashboard is to assign *Text IDs* to each text element to be mapped. You can do this in the  ‘Options’ dialog box of Visual Composer.  See xref:viewsheet:LocalizeDashboard.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for more information on how to assign Text IDs.
+You can use a simple text mapping to localize most text in a  Dashboard. The first step in setting up localization for a particular  Dashboard is to assign *Text IDs* to each text element to be mapped. You can do this in the  ‘Options’ dialog box of Visual Composer.  See xref:dashboard:LocalizeDashboard.adoc[] in xref:dashboard:VisualizeYourData.adoc[] for more information on how to assign Text IDs.
 
 
 == Create SreeBundle Mapping File

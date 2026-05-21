@@ -4,7 +4,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
-xref:viewsheetscript:ChangeImageWithScript.adoc[] for another approach to dynamically change images in a Dashboard.
+xref:dashboardscript:ChangeImageWithScript.adoc[] for another approach to dynamically change images in a Dashboard.
 
 
 Loads an image from a Java resource, URL, or database BLOB (binary large object).  The `getImage()` function checks whether the argument specifies a valid resource. If it does not specify a resource, then `getImage()` treats the parameter as an encoded image. Both ASCII Hex and ASCII85 are supported (useful for XML data).

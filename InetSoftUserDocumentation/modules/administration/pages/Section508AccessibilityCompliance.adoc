@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-The User Portal is compliant with Section 508 of the federal Rehabilitation Act of 1973. This means that most features of the User Portal are accessible via keyboard commands and corresponding voice commands. See xref:viewsheet:KeyboardNavigation.adoc[] for information on Dashboard accessibility.
+The User Portal is compliant with Section 508 of the federal Rehabilitation Act of 1973. This means that most features of the User Portal are accessible via keyboard commands and corresponding voice commands. See xref:dashboard:KeyboardNavigation.adoc[] for information on Dashboard accessibility.
 
 To enable full Section 508 compliance in the User Portal, set `accessibility.enabled=true`. ({EMPropertyConfig})
 

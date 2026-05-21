@@ -1,0 +1,35 @@
+= Add Components
+:page-aliases: viewsheet:AddComponentsToDashboard.adoc
+experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+The following sections explain how to work with components in a Dashboard.  See xref:EnhanceVisualization.adoc[] for  ideas on improving Dashboard appearance.
+
+== Add New Components
+To add components to an existing Dashboard, follow the steps below:
+[NOTE]
+====
+If you do not have an existing Dashboard, create a new Dashboard.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
+====
+
+. Open the desired Dashboard for editing. (See xref:EditADashboard.adoc[].)
+. Drag components from the left *Toolbox* panel onto the Dashboard.
++
+image:addingChart.png[alt="drag components from toolbox onto dashboard"]
++
+See the following sections (xref:AddAChart.adoc[], xref:AddTable.adoc[], etc.) for more details on building the Dashboard.
+
+. *_Optional:_* Group components together into larger units. See xref:ArrangeComponents.adoc#GroupComponents[Group Components] for more information.
+
+. Press the {buttonSave} in the toolbar to save the Dashboard.
+. To refresh a Dashboard, right-click in an empty region of the Dashboard and select the ‘Refresh’ option from the context menu.
++
+image:refreshMenu.png[alt="right-click and select Refresh from context menu"]
++
+This refreshes the Dashboard to reflect changes to the underlying data source and embedded components.
+
+== Arrange Components
+To arrange and group components, see xref:ArrangeComponents.adoc[].
+
+

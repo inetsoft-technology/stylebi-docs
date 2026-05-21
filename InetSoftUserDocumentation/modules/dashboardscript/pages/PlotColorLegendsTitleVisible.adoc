@@ -1,0 +1,29 @@
+= colorLegends.titleVisible
+:page-aliases: viewsheetscript:PlotColorLegendsTitleVisible.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the visibility of the legend title bar within a color-key legend (on charts that have *multiple* color legends).
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.colorLegends['Sum(Product:Quantity Purchased)'].titleVisible = true;
+Chart1.colorLegends['Sum(Product:Total)'].titleVisible = false;
+
+image:commonscript:colorLegendsTitleVisible.png[alt="chart with titles hidden on all color legends"]
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+colorLegends['...'].titleVisible           // unqualified
+Chart1.colorLegends['...'].titleVisible    // qualified
+
+{secondForm}
+====

@@ -1,0 +1,42 @@
+= includeParentLabels
+:page-aliases: viewsheetscript:PlotIncludeParentLabels.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+For a xref:dashboard:TreemapChart.adoc[] and xref:dashboard:CirclePackingChart.adoc[] only, specifies that the labels of parents in the hierarchy should be displayed (along with the child labels).
+
+== Type
+Boolean
+
+== Examples
+
+
+
+
+
+[source,javascript]
+Chart1.includeParentLabels = true;
+
+image:commonscript:includeParentLabels1.png[alt="treemap chart with parent group labels displayed on regions"]
+
+
+[source,javascript]
+Chart1.includeParentLabels = false;
+
+image:commonscript:includeParentLabels2.png[alt="treemap chart with parent group labels hidden"]
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+includeParentLabels          // unqualified
+Chart1.includeParentLabels   // qualified
+
+{secondForm}
+====

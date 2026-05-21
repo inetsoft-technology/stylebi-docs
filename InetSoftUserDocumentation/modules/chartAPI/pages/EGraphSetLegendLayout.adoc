@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 [WARNING,caption=see also]
-xref:viewsheetscript:ChartSetActionVisible.adoc[] to control the ability of a user to position the legend and to access  other Chart features.
+xref:dashboardscript:ChartSetActionVisible.adoc[] to control the ability of a user to position the legend and to access  other Chart features.
 
 Specifies the Chart legend’s position.  The corresponding “getter” function is xref:chartAPI:EGraphGetLegendLayout.adoc[].
 
@@ -16,7 +16,7 @@ Specifies the Chart legend’s position.  The corresponding “getter” functio
 == Paramater
 value:: One of the following constants:
 +
-include::viewsheetscript:partial$legendPosition.adoc[]
+include::dashboardscript:partial$legendPosition.adoc[]
 
 == Example
 .Chart Component Script

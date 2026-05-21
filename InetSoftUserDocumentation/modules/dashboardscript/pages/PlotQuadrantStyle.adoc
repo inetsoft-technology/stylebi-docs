@@ -1,0 +1,31 @@
+= quadrantStyle
+:page-aliases: viewsheetscript:PlotQuadrantStyle.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the style of the quadrant lines.
+
+
+== Type
+A  xref:commonscript:StyleConstantLineStyle.adoc[] constant
+
+== Example
+[source,javascript]
+Chart1.quadrantColor=[255,0,0];
+Chart1.quadrantStyle=Chart.DOT_LINE;
+
+image:commonscript:quadrantColor_1.png[alt="scatter chart with quadrant lines in custom line style"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+quadrantStyle          // unqualified
+Chart1.quadrantStyle   // qualified
+
+{secondForm}
+====

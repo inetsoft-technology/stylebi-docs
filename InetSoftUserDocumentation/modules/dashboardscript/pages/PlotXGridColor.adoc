@@ -1,0 +1,35 @@
+= xGridColor
+:page-aliases: viewsheetscript:PlotXGridColor.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the X-axis grid color.
+
+
+
+
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.xGridColor = [255,0,0];
+Chart1.xGridColor = {r:255,g:0,b:0};
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+xGridColor          // unqualified
+Chart1.xGridColor   // qualified
+
+{secondForm}
+====

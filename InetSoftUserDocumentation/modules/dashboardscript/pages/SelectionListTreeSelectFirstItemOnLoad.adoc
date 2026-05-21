@@ -1,0 +1,34 @@
+= selectFirstItemOnLoad
+:page-aliases: viewsheetscript:SelectionListTreeSelectFirstItemOnLoad.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+xref:dashboard:SelectionListProperties.adoc[] and xref:dashboard:SelectionTreeProperties.adoc[] more information on these components.
+
+
+
+Selects the first item when the Dashboard loads (if no items are preselected).
+
+== Type
+Boolean::  `true`: selects first item  +
+`false`: no selection
+
+
+
+
+== Example
+[source,javascript]
+SelectionList1.selectFirstItemOnLoad = true;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+selectFirstItemOnLoad            // unqualified
+SelectionList1.selectFirstItemOnLoad  // qualified
+
+{secondForm}
+====

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 When applying a number format, users can add a suffix “K”, “M”, or “B” to the pattern string to automatically divide the numerical value by 10^3^, 10^6^, or 10^9^, respectively.
 
-image:viewsheet:Format Number KMB.png[alt="number format with K M B suffix options"]
+image:dashboard:Format Number KMB.png[alt="number format with K M B suffix options"]
 
 You can define custom symbols and multipliers by adding the desired entries into the _userformat.xml_ file. For example, the following _userformat.xml_ file defines three new multipliers, “halfK”, “halfM”, and “halfB”, that divide the numerical values by 5x10^2^, 5x10^5^, and 5x10^8^, respectively.
 

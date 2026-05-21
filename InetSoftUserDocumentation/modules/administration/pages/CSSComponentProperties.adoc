@@ -2,7 +2,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-The table below lists the available properties and values for styling Dashboard non-tabular components. (To apply CSS styles to Tables, Crosstabs, and Freehand Tables, see xref:CSSTableStyleProperties.adoc[].) For a list of Dashboard component regions that can be styled using these properties, see xref:viewsheet:VisualFormat.adoc[] and  xref:CSSDashboardRegions.adoc[].
+The table below lists the available properties and values for styling Dashboard non-tabular components. (To apply CSS styles to Tables, Crosstabs, and Freehand Tables, see xref:CSSTableStyleProperties.adoc[].) For a list of Dashboard component regions that can be styled using these properties, see xref:dashboard:VisualFormat.adoc[] and  xref:CSSDashboardRegions.adoc[].
 
 CSS properties in the table below can be applied using either Component xref:CreateCSSDefinitionFile.adoc#CSSType[CSS Type] (e.g., “GaugeTickLabel”), xref:CreateCSSDefinitionFile.adoc#CSSClass[CSS Class], xref:CreateCSSDefinitionFile.adoc#CSSID[CSS ID], or by using xref:CreateCSSDefinitionFile.adoc#CSSGlobalDefault[CSS Global Default]. Notes in the *Restrictions* column below apply to both Component and Global Types unless otherwise indicated.
 

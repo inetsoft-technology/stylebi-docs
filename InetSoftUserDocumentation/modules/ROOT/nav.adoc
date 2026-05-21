@@ -21,7 +21,7 @@ include::partial$MINITOC_QuerySpecificDataSource.adoc[]
 
 
 // DASHBOARD DESIGN ------------------------------------
-* xref:viewsheet:VisualizeYourData.adoc[]
+* xref:dashboard:VisualizeYourData.adoc[]
 include::partial$MINITOC_VisualizeYourData1.adoc[]
 include::partial$MINITOC_ChartTypes.adoc[]
 include::partial$MINITOC_VisualizeYourData2.adoc[]
@@ -33,104 +33,104 @@ include::partial$MINITOC_VisualizeYourData2.adoc[]
 
 
 // PUBLISH DASHBOARD ---------------------------------
-* xref:viewsheet:PublishDashboard.adoc[]
+* xref:dashboard:PublishDashboard.adoc[]
 include::partial$MINITOC_PublishDashboard.adoc[]
 
 
 
 // DASHBOARD REFERENCE --------------------------------
-* xref:viewsheet:DashboardReference.adoc[]
+* xref:dashboard:DashboardReference.adoc[]
 include::partial$MINITOC_DashboardReference.adoc[]
 
 
 // DASHBOARD SCRIPTING ------------------------------
-* xref:viewsheetscript:AdvancedDashboardScripting.adoc[]
+* xref:dashboardscript:AdvancedDashboardScripting.adoc[]
 include::partial$MINITOC_AdvancedDashboardScripting1.adoc[]
 
 
-** xref:viewsheetscript:DashboardObjectReference.adoc[]
-*** xref:viewsheetscript:Dashboard.adoc[]
+** xref:dashboardscript:DashboardObjectReference.adoc[]
+*** xref:dashboardscript:Dashboard.adoc[]
 include::partial$MINITOC_Dashboard.adoc[]
 
-*** xref:viewsheetscript:GlobalFunctions.adoc[]
+*** xref:dashboardscript:GlobalFunctions.adoc[]
 include::partial$MINITOC_SpecialPurposeFunctions.adoc[]
 
-*** xref:viewsheetscript:CommonProperties.adoc[]
+*** xref:dashboardscript:CommonProperties.adoc[]
 include::partial$MINITOC_CommonProperties.adoc[]
 
-*** xref:viewsheetscript:Calendar.adoc[]
+*** xref:dashboardscript:Calendar.adoc[]
 include::partial$MINITOC_Calendar.adoc[]
 
-*** xref:viewsheetscript:Chart.adoc[]
-**** xref:viewsheetscript:General.adoc[]
+*** xref:dashboardscript:Chart.adoc[]
+**** xref:dashboardscript:General.adoc[]
 include::partial$MINITOC_ChartGeneral.adoc[]
 
-**** xref:viewsheetscript:ChartAxisProperties.adoc[]
+**** xref:dashboardscript:ChartAxisProperties.adoc[]
 include::partial$MINITOC_ChartAxisProperties.adoc[]
 
-**** xref:viewsheetscript:MeasureAxisProperties.adoc[]
+**** xref:dashboardscript:MeasureAxisProperties.adoc[]
 include::partial$MINITOC_MeasureAxisProperties.adoc[]
 
-**** xref:viewsheetscript:AxisTitleProperties.adoc[]
+**** xref:dashboardscript:AxisTitleProperties.adoc[]
 include::partial$MINITOC_AxisTitleProperties.adoc[]
 
-**** xref:viewsheetscript:PlotProperties.adoc[]
+**** xref:dashboardscript:PlotProperties.adoc[]
 include::partial$MINITOC_PlotProperties.adoc[]
 
-**** xref:viewsheetscript:ChartBindingInfo.adoc[]
+**** xref:dashboardscript:ChartBindingInfo.adoc[]
 include::partial$MINITOC_ChartBindingInfo.adoc[]
 
-*** xref:viewsheetscript:CheckRadioCombo.adoc[]
+*** xref:dashboardscript:CheckRadioCombo.adoc[]
 include::partial$MINITOC_CheckRadioCombo.adoc[]
 
-*** xref:viewsheetscript:Crosstab.adoc[]
+*** xref:dashboardscript:Crosstab.adoc[]
 include::partial$MINITOC_Crosstab.adoc[]
 
-*** xref:viewsheetscript:FreehandTable.adoc[]
+*** xref:dashboardscript:FreehandTable.adoc[]
 include::partial$MINITOC_FreehandTable.adoc[]
 
-*** xref:viewsheetscript:Gauge.adoc[]
+*** xref:dashboardscript:Gauge.adoc[]
 include::partial$MINITOC_Gauge.adoc[]
 
-*** xref:viewsheetscript:Image.adoc[]
+*** xref:dashboardscript:Image.adoc[]
 include::partial$MINITOC_Image.adoc[]
 
-*** xref:viewsheetscript:Line.adoc[]
+*** xref:dashboardscript:Line.adoc[]
 include::partial$MINITOC_Line.adoc[]
 
-*** xref:viewsheetscript:Oval.adoc[]
+*** xref:dashboardscript:Oval.adoc[]
 include::partial$MINITOC_Oval.adoc[]
 
-*** xref:viewsheetscript:RangeSlider.adoc[]
+*** xref:dashboardscript:RangeSlider.adoc[]
 include::partial$MINITOC_RangeSlider.adoc[]
 
-*** xref:viewsheetscript:Rectangle.adoc[]
+*** xref:dashboardscript:Rectangle.adoc[]
 include::partial$MINITOC_Rectangle.adoc[]
 
-*** xref:viewsheetscript:SelectionContainer.adoc[]
+*** xref:dashboardscript:SelectionContainer.adoc[]
 include::partial$MINITOC_SelectionContainer.adoc[]
 
-*** xref:viewsheetscript:SelectionListTree.adoc[]
+*** xref:dashboardscript:SelectionListTree.adoc[]
 include::partial$MINITOC_SelectionListTree.adoc[]
 
-*** xref:viewsheetscript:Slider.adoc[]
+*** xref:dashboardscript:Slider.adoc[]
 include::partial$MINITOC_Slider.adoc[]
 
-*** xref:viewsheetscript:Spinner.adoc[]
+*** xref:dashboardscript:Spinner.adoc[]
 include::partial$MINITOC_Spinner.adoc[]
 
-*** xref:viewsheetscript:SubmitButton.adoc[]
+*** xref:dashboardscript:SubmitButton.adoc[]
 
-*** xref:viewsheetscript:TabbedInterface.adoc[]
+*** xref:dashboardscript:TabbedInterface.adoc[]
 include::partial$MINITOC_TabbedInterface.adoc[]
 
-*** xref:viewsheetscript:Table.adoc[]
+*** xref:dashboardscript:Table.adoc[]
 include::partial$MINITOC_Table.adoc[]
 
-*** xref:viewsheetscript:Text.adoc[]
+*** xref:dashboardscript:Text.adoc[]
 include::partial$MINITOC_Text.adoc[]
 
-*** xref:viewsheetscript:TextInput.adoc[]
+*** xref:dashboardscript:TextInput.adoc[]
 include::partial$MINITOC_TextInput.adoc[]
 
 

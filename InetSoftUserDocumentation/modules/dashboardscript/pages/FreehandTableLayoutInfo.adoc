@@ -1,0 +1,14 @@
+= layoutInfo
+:page-aliases: viewsheetscript:FreehandTableLayoutInfo.adoc
+
+The `layoutInfo` property provides access to a family of sub-properties that allow you to configure the behavior of cells within a Freehand Table.
+
+xref:dashboardscript:FreehandTableLayoutInfoSetCellBinding.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetCellName.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetColGroup.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetExpansion.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetMergeCells.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetMergeColGroup.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetMergeRowGroup.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetRowGroup.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetSpan.adoc[] +

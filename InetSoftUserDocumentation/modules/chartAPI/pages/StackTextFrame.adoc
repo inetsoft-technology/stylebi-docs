@@ -12,7 +12,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 ====
 
 
-The `StackTextFrame` object contains data for a  xref:viewsheet:MultipleMeasureChart.adoc#Stack[Stacked Chart]. To create a `StackTextFrame` object, call the `StackTextFrame` constructor.
+The `StackTextFrame` object contains data for a  xref:dashboard:MultipleMeasureChart.adoc#Stack[Stacked Chart]. To create a `StackTextFrame` object, call the `StackTextFrame` constructor.
 
 [source, javascript]
 var frame = new StackTextFrame (elem);

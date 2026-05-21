@@ -3,7 +3,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [WARNING,caption=see also]
-xref:viewsheetscript:CommonAlignment.adoc[] for information about using alignment constants.
+xref:dashboardscript:CommonAlignment.adoc[] for information about using alignment constants.
 
 
 Alignment constants are defined for horizontal or vertical directions. You can combine the alignment options by using a bitwise OR of the values (see example below).

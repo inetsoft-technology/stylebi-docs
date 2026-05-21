@@ -3,7 +3,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-include::viewsheetscript:partial$readOnly.adoc[]
+include::dashboardscript:partial$readOnly.adoc[]
 
 Return the character at the specified position in the string, indexed from 0. Use xref:StringObjectCharCodeAt.adoc[] to return the *code* rather than the character.
 

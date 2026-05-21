@@ -184,7 +184,7 @@ To configure a Dashboard *Form component* to control  a Data Worksheet Embedded 
 
 
 
-. Open the Dashboard for editing. (See xref:viewsheet:EditADashboard.adoc[].)
+. Open the Dashboard for editing. (See xref:dashboard:EditADashboard.adoc[].)
 
 . Right-click on the Form control in the Dashboard, and select ‘Properties’.
 
@@ -197,7 +197,7 @@ NOTE: Multiple controls can be linked to the same Embedded Table.
 * To access a Variable, expand the ‘Variable’ node, and select the desired Variable asset in the Data Worksheet. Skip to the final step below.
 . For an Embedded Table, press the {buttonChooseCell} next to the ‘Target’ field. This displays a representation of the Embedded Table.
 +
-image:viewsheet:Input Browse Embedded Table.png[alt="embedded table representation displayed for selecting target cell"]
+image:dashboard:Input Browse Embedded Table.png[alt="embedded table representation displayed for selecting target cell"]
 
 . In the displayed Embedded Table, click to select the table cell into which form values should be passed. This automatically populates the ‘Column’ and ‘Row’ menus with the corresponding cell indices. Alternatively, specify the target cell directly from the provided menus:
 * From the ‘Column’ menu, select the appropriate field of the Embedded Table data block.
@@ -209,14 +209,14 @@ NOTE: The ‘Row’ menu displays the format “row: row value.” For example, 
 
 . Press btn:[OK] to exit the ‘Properties’ panel.
 
-The control is now linked to the Data Worksheet’s Embedded Table or Variable, and changes you make using the control will alter the values in the specified Embedded Table cells or Variable. To set the options displayed by the Form control, see xref:viewsheet:RadioCheckBoxComboProperties.adoc[] in  xref:viewsheet:DashboardReference.adoc[].
+The control is now linked to the Data Worksheet’s Embedded Table or Variable, and changes you make using the control will alter the values in the specified Embedded Table cells or Variable. To set the options displayed by the Form control, see xref:dashboard:RadioCheckBoxComboProperties.adoc[] in  xref:dashboard:DashboardReference.adoc[].
 
 === Update from Dashboard Embedded Table
 To configure a Dashboard *Table* to control of a Data Worksheet Embedded Table (or Variable), follow these steps:
 
 
 
-. Open the Dashboard for editing. (See xref:viewsheet:EditADashboard.adoc[].)
+. Open the Dashboard for editing. (See xref:dashboard:EditADashboard.adoc[].)
 
 . Create a Table based on a Data Worksheet Embedded Table. (To do this, assign fields from an Embedded Table in the Data Worksheet to a Dashboard Table component.)
 . Right-click on the Table in the Dashboard, and select ‘Properties’.

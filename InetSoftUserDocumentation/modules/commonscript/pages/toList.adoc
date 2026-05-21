@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-Remove duplicate entries from input array to yield a list of unique elements with optional sorting and grouping. See xref:viewsheetscript:SpecialFreehandFunctions.adoc#toList[toList] in xref:viewsheetscript:SpecialFreehandFunctions.adoc[] for application to Freehand Table.
+Remove duplicate entries from input array to yield a list of unique elements with optional sorting and grouping. See xref:dashboardscript:SpecialFreehandFunctions.adoc#toList[toList] in xref:dashboardscript:SpecialFreehandFunctions.adoc[] for application to Freehand Table.
 
 == Parameters
 list::			array to filter

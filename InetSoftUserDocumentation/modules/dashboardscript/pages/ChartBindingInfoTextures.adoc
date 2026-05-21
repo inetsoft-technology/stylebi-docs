@@ -1,0 +1,46 @@
+= bindingInfo.textures
+:page-aliases: viewsheetscript:ChartBindingInfoTextures.adoc
+:navtitle: textures
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:TextureFrame.adoc[] outside of the data binding.
+* xref:dashboardscript:ChartBindingInfoTextureFrame.adoc[] for information on assigning value-keyed frames.
+====
+
+
+
+
+
+
+
+Specifies a xref:chartAPI:StaticTextureFrame.adoc[] (fixed pattern) for a particular measure on a xref:dashboard:BarChart.adoc[].
+
+
+
+
+
+
+
+
+
+== Type
+xref:chartAPI:StaticTextureFrame.adoc[]
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.textures['Sum(Total)'] = new StaticTextureFrame(GTexture.PATTERN_5);
+
+--
+
+
+image:commonscript:bindingInfoTextures.png[alt="bar chart with Sum Total bars using static pattern 5 texture fill"]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

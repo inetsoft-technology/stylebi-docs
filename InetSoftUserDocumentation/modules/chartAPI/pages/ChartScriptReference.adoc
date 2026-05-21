@@ -18,7 +18,7 @@ Charts are unique among all  components in that you can access many Chart proper
 
 [square]
 * For information on low-level Chart API methods, see the sections above. The API provides full control over all aspects of Chart data and presentation, but may yield more complex and verbose scripts.
-* For information on using simple scriptable Chart properties, see xref:viewsheetscript:Chart.adoc[].  This approach produces scripts that are easier to read and maintain.
+* For information on using simple scriptable Chart properties, see xref:dashboardscript:Chart.adoc[].  This approach produces scripts that are easier to read and maintain.
 
 Note that scripted Charts are not good candidates for user-modification, so you should *deselect* ‘Enable Ad Hoc Editing’ in the Chart Properties dialog box.
 ====

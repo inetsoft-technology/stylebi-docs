@@ -3,7 +3,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-The chart style constants specify how a Chart presents its data.  See xref:viewsheet:ChartTypes.adoc[] for a description of the different styles.
+The chart style constants specify how a Chart presents its data.  See xref:dashboard:ChartTypes.adoc[] for a description of the different styles.
 
 == Type
 xref:commonscript:StyleConstant.adoc[] object:: One of the (integer) constants below:

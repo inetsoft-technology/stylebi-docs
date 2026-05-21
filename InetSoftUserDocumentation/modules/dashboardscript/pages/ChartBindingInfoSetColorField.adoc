@@ -1,0 +1,49 @@
+= bindingInfo.setColorField(col, type)
+:page-aliases: viewsheetscript:ChartBindingInfoSetColorField.adoc
+:navtitle: setColorField()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:dashboardscript:ChartBindingInfoGetColorField.adoc[]  to obtain the binding information.
+* xref:dashboardscript:ChartBindingInfoColorframe.adoc[]  for information on the different types of xref:chartAPI:ColorFrame.adoc[] available.
+====
+
+Bind the specified field to a xref:chartAPI:ColorFrame.adoc[] (color coding).
+
+== Parameter
+col::			Field to be used for color-coding
+type:: One of the following: `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
+
+
+== Examples
+.Dimension (categorical) field
+[source,javascript]
+--
+Chart1.bindingInfo.setColorField("Employee",Chart.STRING);
+Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
+
+--
+
+
+image:commonscript:CategoricalColorFrame.png[alt="chart with Employee dimension color-coded using CategoricalColorFrame"]
+
+.Measure (numerical) field
+[source,javascript]
+--
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new BrightnessColorFrame;
+
+--
+
+
+image:commonscript:BrightnessColorFrame1.png[alt="chart with Total measure color-coded using BrightnessColorFrame"]
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+
+

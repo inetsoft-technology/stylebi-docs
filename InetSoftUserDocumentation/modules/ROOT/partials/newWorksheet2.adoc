@@ -36,4 +36,4 @@ You can then force an update *on-demand* by right-clicking the data block (or by
 
 *_Optional_*: To modify the properties of a column in a data block, such as its name, visibility, position, sort order, see xref:dataworksheet:ModifyColumn.adoc[]. To view the query represented by the data block, see xref:dataworksheet:PreviewQuery.adoc[].  To preview the data returned by the data block, see xref:dataworksheet:PreviewData.adoc[].
 
-You can now do data pipeline operations on this data, as described in the following sections (xref:dataworksheet:FilterData.adoc[], xref:dataworksheet:JoinData.adoc[], etc.), or you can proceed to create Dashboards based on this Data Worksheet. See xref:viewsheet:VisualizeYourData.adoc[] for information about constructing a Dashboard.
+You can now do data pipeline operations on this data, as described in the following sections (xref:dataworksheet:FilterData.adoc[], xref:dataworksheet:JoinData.adoc[], etc.), or you can proceed to create Dashboards based on this Data Worksheet. See xref:dashboard:VisualizeYourData.adoc[] for information about constructing a Dashboard.

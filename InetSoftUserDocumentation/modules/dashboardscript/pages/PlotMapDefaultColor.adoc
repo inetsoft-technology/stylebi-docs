@@ -1,0 +1,33 @@
+= mapDefaultColor
+:page-aliases: viewsheetscript:PlotMapDefaultColor.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+Sets the color for map regions that are not assigned a color based on data.
+
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.mapDefaultColor = java.awt.Color.YELLOW;
+
+
+image:commonscript:mapDefaultBackground.png[alt="map chart with default background color set for unmapped regions"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+mapDefaultColor          // unqualified
+Chart1.mapDefaultColor   // qualified
+
+{secondForm}
+====

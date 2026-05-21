@@ -87,7 +87,7 @@ NOTE: There can be only a single CSS file *per organization* at any time.
 
 . Press btn:[Apply]. This uploads the specified CSS file to the server.
 
-For an example of applying these CSS definitions to a Dashboard see xref:viewsheet:VisualFormat.adoc[]  in xref:viewsheet:VisualizeYourData.adoc[].
+For an example of applying these CSS definitions to a Dashboard see xref:dashboard:VisualFormat.adoc[]  in xref:dashboard:VisualizeYourData.adoc[].
 
 [#GlobalFormat]
 == Global Format
@@ -209,4 +209,4 @@ image:CSSExp_TableStyleClass.png[alt="YellowRows class styling odd rows yellow"]
 
 See xref:CreateCSSDefinitionFile.adoc#CSSTableStyle[CSS TableStyle] for information about TableStyles.
 
-For information on setting a Dashboard component’s CSS Class and ID, see xref:viewsheet:VisualFormat.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].
+For information on setting a Dashboard component’s CSS Class and ID, see xref:dashboard:VisualFormat.adoc[] in xref:dashboard:VisualizeYourData.adoc[].

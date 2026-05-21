@@ -1,0 +1,40 @@
+= hyperlink
+:page-aliases: viewsheetscript:GaugeHyperlink.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:dashboard:GaugeProperties.adoc[] for general information about Output components.
+* xref:dashboard:DrillDownIntoData.adoc[] for basic information on hyperlinks.
+====
+
+Specifies a hyperlink to a  Dashboard or URL.
+
+== Type
+String or {InetSoftReportHyperlink}
+
+
+
+== Example
+[source,javascript]
+Gauge1.hyperlink = "Tutorial/Interactive";
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+hyperlink           // unqualified
+Gauge1.hyperlink    // qualified
+
+{secondForm}
+====
+
+

@@ -1,0 +1,45 @@
+= bindingInfo.sizes
+:page-aliases: viewsheetscript:ChartBindingInfoSizes.adoc
+:navtitle: sizes
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:SizeFrame.adoc[] outside of the data binding.
+* xref:dashboardscript:ChartBindingInfoSizeFrame.adoc[] for information on assigning value-keyed frames.
+====
+
+
+
+
+
+
+Specifies a xref:chartAPI:StaticSizeFrame.adoc[] (fixed size) for the specified measure.
+
+
+
+
+
+
+
+
+
+== Type
+xref:chartAPI:StaticSizeFrame.adoc[]
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.sizes['Sum(Total)'] = new StaticSizeFrame(30);
+
+--
+
+
+image:commonscript:bindingInfoSize.png[alt="chart with Sum Total elements displayed at static size of 30"]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

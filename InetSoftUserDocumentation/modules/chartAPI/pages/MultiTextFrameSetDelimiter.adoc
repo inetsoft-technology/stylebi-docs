@@ -36,7 +36,7 @@ In the  example below, '`Order Date`' and '`Price`' are displayed on the axes, a
 image:commonscript:MultiTextFrameSetField1.png[alt="chart editor with fields assigned to Break By region"]
 
 
-. Add the following script to the Chart component. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
+. Add the following script to the Chart component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
 +
 .Chart Component Script
 [source,javascript]
@@ -53,7 +53,7 @@ graph.getElement(0).setTextFrame(tframe); //<4>
 
 . Press btn:[OK].  The labels are displayed on the Chart.
 
-. *_Optional:_* Use the *Format* tab to change the label color to make them more visible.  (See xref:viewsheet:VisualFormat.adoc[].)
+. *_Optional:_* Use the *Format* tab to change the label color to make them more visible.  (See xref:dashboard:VisualFormat.adoc[].)
 +
 image:commonscript:MultiTextFrameSetDelimiter.png[alt="chart with multi-field labels separated by newline delimiter"]
 

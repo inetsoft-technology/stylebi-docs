@@ -1,0 +1,37 @@
+= suppressBlank
+:page-aliases: viewsheetscript:SelectionListTreeSuppressBlank.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:dashboard:SelectionListProperties.adoc[] and xref:dashboard:SelectionTreeProperties.adoc[] more information on these components.
+
+
+When `true`, removes empty values (caused by nulls in the data set) from the Selection List.
+
+
+
+
+
+== Type
+Boolean::	`true`: remove empty entries +
+`false`: allow empty entries (default)
+
+
+== Example
+[source,javascript]
+SelectionList1.suppressBlank = true
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+suppressBlank                   // unqualified
+SelectionList1.suppressBlank    // qualified
+
+{secondForm}
+====
+
+

@@ -34,7 +34,7 @@ dataset = [["State", "Quantity"],["NJ", 200],["NY", 300],["PA", 370],["CT", 75]]
 [source,javascript]
 dataset = runQuery("ws:global:Examples/AllSales");
 +
-See xref:viewsheetscript:RunQueryFromScript.adoc[]  and xref:chartAPI:CreateChartwithChartAPI.adoc[] for details about using xref:commonscript:runQuery.adoc[runQuery].
+See xref:dashboardscript:RunQueryFromScript.adoc[]  and xref:chartAPI:CreateChartwithChartAPI.adoc[] for details about using xref:commonscript:runQuery.adoc[runQuery].
 
 
 The `dataset` object is also accessible for reading. See the xref:chartAPI:DataSetGetData.adoc[] method for more information. However, in many cases, the xref:chartAPI:Data.adoc[] property provides more convenient access to Chart data.

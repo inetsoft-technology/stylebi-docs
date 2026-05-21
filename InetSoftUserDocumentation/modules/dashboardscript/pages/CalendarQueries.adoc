@@ -1,0 +1,35 @@
+= queries
+:page-aliases: viewsheetscript:CalendarQueries.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+[WARNING,caption=See Also]
+xref:CalendarFields.adoc[] to specify the fields to display in the Calendar.
+
+
+Specifies the data blocks to be *merged* in the Calendar component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.) See xref:dashboard:AddFilterComponents.adoc#FilterMultipleDataBlocks[Filter Multiple Data Blocks] for more information about merging data blocks.  The selected data blocks must be *compatible* in the sense described there.
+
+
+image:dataworksheet:dataBlocks_2.png[alt="Data Worksheet toolbox showing available data blocks for merging"]
+
+== Type
+Array
+
+
+== Example
+[source,javascript]
+Calendar1.queries = ['LimitedProducts', 'ProductInfo'];
+Calendar1.fields = ['State'];
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+queries              // unqualified
+Calendar1.queries    // qualified
+
+{secondForm}
+====
+
+

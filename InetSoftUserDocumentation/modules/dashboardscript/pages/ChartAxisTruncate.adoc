@@ -1,0 +1,36 @@
+= axis.truncate
+:page-aliases: viewsheetscript:ChartAxisTruncate.adoc
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+When `true` (default), abbreviates or ellipsizes long labels to prevent overlap with other labels (using ellipses “...” to indicate omitted text). When `false`, hides long labels to prevent overlap with other labels.
+include::partial$axisShortcut.adoc[]
+
+
+
+== Type
+Boolean
+
+
+
+== Example
+[source,javascript]
+Chart1.axis['Name'].truncate = false;
+
+
+image:commonscript:lableTruncate.png[alt="chart with long axis labels hidden instead of truncated with ellipses"]
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+axis['...'].truncate             // unqualified
+Chart1.axis['...'].truncate      // qualified
+
+{secondForm}
+====
+
