@@ -1,4 +1,9 @@
-﻿= Server Environment
+= Server Environment
+
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for server environment configuration options in the Enterprise Manager General settings page, covering server type, localization, and performance tuning.
+endif::ai[]
 
 These topics describe options for configuring the server environment, including server type, localization, and performance tuning, most of which are available under the *General* page.
 

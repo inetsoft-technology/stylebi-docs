@@ -1,6 +1,11 @@
-﻿= contourEdgeAlpha
+= contourEdgeAlpha
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the transparency of the contour *edge* for a xref:viewsheet:ScatterContourChart.adoc[] or xref:viewsheet:ContourMapChart.adoc[]. (The transparency of the contour *center* is determined by the xref:PlotPlotAlpha.adoc[] property.) A value of `0` indicates complete transparency (edge not visible), and a value of `1` indicates complete opacity.
+endif::ai[]
 
 
 

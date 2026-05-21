@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns `true` if `string1` is identical to `string2`, and returns `false` otherwise. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns `true` if `string1` is identical to `string2`, and returns `false` otherwise. {CALCExcelFunctionPage}
 
 [TIP]

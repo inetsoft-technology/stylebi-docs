@@ -22,7 +22,11 @@
       "Bash(git -C \"C:/src/stylebi-docs\" log origin/main..HEAD --oneline)",
       "Bash(git show *)",
       "Bash(gh pr *)",
-      "Bash(xargs grep *)"
+      "Bash(xargs grep *)",
+      "Bash(xxd)",
+      "Bash(xxd \"modules/administration/pages/CreateScheduledTask.adoc\")",
+      "Bash(grep -v \"^[0-9a-f]*: [0-9a-f ]*  [[:print:]]*$\")",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

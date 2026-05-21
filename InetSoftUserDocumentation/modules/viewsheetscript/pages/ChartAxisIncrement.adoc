@@ -1,6 +1,11 @@
-﻿= axis.increment
+= axis.increment
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the numerical increment for measure axis labels.
+endif::ai[]
 
 
 

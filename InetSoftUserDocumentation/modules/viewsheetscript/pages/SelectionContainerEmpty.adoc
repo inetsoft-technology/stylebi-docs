@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns `true` if the Selection Container contains no filters. Returns `false` if the Selection Container contains at least one filter, whether added in Visual Composer or by any user method. (See xref:viewsheet:UseFilterComponents.adoc#BundleFiltersinSelectionContainer[Bundle Filters in a Selection Container] for more information about the user methods.)
+endif::ai[]
+
 include::partial$readOnly.adoc[]
 
 [WARNING,caption=See Also]

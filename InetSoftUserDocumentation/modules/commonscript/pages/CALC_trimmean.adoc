@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the mean of the interior of a data set by excluding a percentage of data points from the top and bottom tails. This provides a measure of the mean that is not influenced by outliers. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the mean of the interior of a data set by excluding a percentage of data points from the top and bottom tails. This provides a measure of the mean that is not influenced by outliers. {CALCExcelFunctionPage}
 
 == Parameters

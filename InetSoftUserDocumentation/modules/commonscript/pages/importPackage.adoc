@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Enable the use of *unqualified* names for all the classes of the specified package by searching for unqualified names as classes qualified by the given package. The package can be a `java` package, an `inetsoft` package, or any other package beginning with `com` or `org`.
+endif::ai[]
+
 
 
 Enable the use of *unqualified* names for all the classes of the specified package by searching for unqualified names as classes qualified by the given package. The package can be a `java` package, an `inetsoft` package, or any other package beginning with `com` or `org`.

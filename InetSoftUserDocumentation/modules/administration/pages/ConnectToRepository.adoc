@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to connect to a repository from the Administration Console before running administrative commands. Enterprise only.
+endif::ai[]
+
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 

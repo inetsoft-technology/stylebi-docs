@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure a custom Java authentication class as the security provider in Enterprise Manager for cases where built-in providers are insufficient. Enterprise only.
+endif::ai[]
+
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 To use a custom Java class for authentication (i.e., verifying user credentials), select the ‘Custom’ option from the ‘Provider Type’ menu on the ‘Security Provider’ page. (See xref:SpecifySecurityProvider.adoc[].)

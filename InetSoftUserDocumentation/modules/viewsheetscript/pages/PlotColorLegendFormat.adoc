@@ -1,6 +1,11 @@
-﻿= colorLegend.format
+= colorLegend.format
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the format for data values displayed in the color legend.
+endif::ai[]
 
 
 Sets the format for data values displayed in the color legend.

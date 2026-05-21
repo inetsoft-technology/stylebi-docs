@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the power series sum stem:[a_0x^n + a_1x^(n+m) + a_2x^(n+2m) + ... + a_ix^(n+im)]. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 
 Returns the  power series sum stem:[a_0x^n + a_1x^(n+m)  + a_2x^(n+2m) + ... + a_ix^(n+im)]. {CALCExcelFunctionPage}

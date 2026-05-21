@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Removes the mapping that exists between the specified `value` of field `col` and a defined geographical code.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====

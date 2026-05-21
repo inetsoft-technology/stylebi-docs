@@ -1,8 +1,13 @@
-﻿= bindingInfo.breakdownFields
+= bindingInfo.breakdownFields
 :navtitle: breakdownFields
 %experimental%
 %navtitle%: setTimeSeries()
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: %navtitle%: setTimeSeries()
+endif::ai[]
 
 
 

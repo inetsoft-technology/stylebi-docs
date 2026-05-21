@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the product of two conformable matrices, `array1*array2`, each represented as a two-dimensional array. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the product of two conformable matrices, `array1*array2`, each represented as a two-dimensional array. {CALCExcelFunctionPage}
 
 == Parameters

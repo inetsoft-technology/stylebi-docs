@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the factorial of a number. (The factorial of 0 is 1 by definition.) {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the factorial of a number. (The factorial of 0 is 1 by definition.) {CALCExcelFunctionPage}
 

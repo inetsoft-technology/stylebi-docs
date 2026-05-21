@@ -1,5 +1,10 @@
-﻿= Access Data in Expression
+= Access Data in Expression
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to access data block column values within Data Worksheet expressions, including current-row field access, row indexing, and referencing other data blocks. See CreateNewDataField for how to add expression columns.
+endif::ai[]
 :experimental:
 
 There are a variety of ways to access the data of a data block from within an expression.  See xref:dataworksheet:CreateNewDataField.adoc[] for information on how to add an expression to a data block.

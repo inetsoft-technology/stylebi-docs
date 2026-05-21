@@ -1,6 +1,11 @@
-﻿= quadrantStyle
+= quadrantStyle
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the style of the quadrant lines.
+endif::ai[]
 
 
 Sets the style of the quadrant lines.

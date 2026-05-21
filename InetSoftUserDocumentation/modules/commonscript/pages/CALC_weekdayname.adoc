@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the full name for the day of the week corresponding to the given `date` (e.g., “Monday”). {CALCExcelFunctionPage}
+endif::ai[]
+
 
 
 Returns the full name for the day of the week corresponding to the given `date` (e.g., “Monday”). {CALCExcelFunctionPage}

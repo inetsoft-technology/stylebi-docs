@@ -1,6 +1,11 @@
-﻿= axis.ticksVisible
+= axis.ticksVisible
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the visibility of the axis tick marks for a dimension or measure.
+endif::ai[]
 
 
 Sets the visibility of the axis tick marks for a dimension or measure.

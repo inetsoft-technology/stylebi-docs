@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value of the *Weibull distribution* for specified value of random variable `x`, scale parameter `alpha`, and shape parameter `beta`. Value `x` typically represents a time interval between events. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the value of the *Weibull distribution* for specified value of random variable `x`, scale parameter `alpha`, and shape parameter `beta`. Value `x` typically represents a time interval between events.  {CALCExcelFunctionPage}
 

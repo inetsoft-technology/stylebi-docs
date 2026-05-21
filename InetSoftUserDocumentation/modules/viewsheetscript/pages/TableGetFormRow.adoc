@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For an *Editable Table*, retrieves the edited row specified by the index. Often the index is provided by the xref:SpecialFunctionsEvent.adoc[] object for the Editable Table. See xref:viewsheet:TableProperties.adoc[] or xref:TableForm.adoc[] for information on making a Table editable.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

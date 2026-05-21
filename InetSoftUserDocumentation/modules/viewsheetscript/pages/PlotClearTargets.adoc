@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Removes all target lines and bands from the chart.
+endif::ai[]
+
 
 Removes all target lines and bands from the chart.
 

@@ -1,6 +1,11 @@
-﻿= fillGapWithDash
+= fillGapWithDash
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: When you designate a dimension as a “time series” (see xref:ChartBindingInfoSetTimeSeries.adoc[]) and set xref:PlotFillTimeGap.adoc[] to `true`, `fillGapWithDash` will linearly interpolate missing data using a *dashed line*.
+endif::ai[]
 
 
 When you designate a dimension as a “time series” (see xref:ChartBindingInfoSetTimeSeries.adoc[]) and set xref:PlotFillTimeGap.adoc[]  to `true`,  `fillGapWithDash` will  linearly interpolate missing data using a *dashed line*.

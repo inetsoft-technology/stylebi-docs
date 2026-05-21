@@ -1,7 +1,12 @@
-﻿= bindingInfo.getFormula(measure)
+= bindingInfo.getFormula(measure)
 :navtitle: getFormula()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the aggregation formula for one of the measures specified by xref:viewsheetscript:CrosstabBindingInfoMeasureFields.adoc[] or set as the aggregation method for a measure in the Crosstab Editor.
+endif::ai[]
 
 
 

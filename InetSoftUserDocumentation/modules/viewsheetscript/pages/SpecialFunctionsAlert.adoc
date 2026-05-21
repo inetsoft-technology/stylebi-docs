@@ -1,7 +1,12 @@
-﻿= alert(message,level)
+= alert(message,level)
 :navtitle: alert()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:SpecialFunctionsConfirm.adoc[] to prompt the user with a choice dialog box.
+endif::ai[]
 
 [WARNING,caption=See Also]
 xref:SpecialFunctionsConfirm.adoc[] to prompt the user with a choice dialog box.

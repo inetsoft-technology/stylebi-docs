@@ -1,5 +1,10 @@
 = Date Object Functions
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for JavaScript Date object functions, covering how to create and manipulate Date objects for date/time operations and conversions in the scripting environment.
+endif::ai[]
+
 
 The JavaScript Date object stores the time and date and can be used to manipulate dates and perform date conversions. There are several ways to create a Date object. Invoked without arguments, the new *Date* object contains the time and date of its creation:
 

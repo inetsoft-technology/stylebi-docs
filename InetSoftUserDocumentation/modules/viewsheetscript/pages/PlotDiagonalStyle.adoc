@@ -1,6 +1,11 @@
-﻿= diagonalStyle
+= diagonalStyle
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the style of the diagonal line.
+endif::ai[]
 
 
 Sets the style of the diagonal line.

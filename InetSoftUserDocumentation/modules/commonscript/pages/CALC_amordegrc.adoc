@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the depreciation of an asset for accounting year `period` on a prorated basis according to the *degressive* method of the French accounting system. {CALCExcelFunctionPage} This function is similar to xref:CALC_amorlinc.adoc[] except that the depreciation coefficient is calculated based on the life of the asset:
+endif::ai[]
+
 
 Returns the depreciation of an asset for accounting year `period` on a prorated basis according to the *degressive* method of the French accounting system. {CALCExcelFunctionPage} This function is similar to xref:CALC_amorlinc.adoc[] except that the depreciation coefficient is calculated based on the life of the asset:
 

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether the Dashboard should be executed as part of a scheduled task. This allows you adapt scheduled task execution based on conditions at runtime. Set to `true` to allow the Dashboard to run as scheduled. Set to `false` to override the scheduled task setting and suppress Dashboard execution. See xref:user:ScheduleDashboard.adoc[] in xref:user:UsePortal.adoc[] and xref:administration:Schedule.adoc[] in xref:administration:ManageServer.adoc[] for more information about scheduling.
+endif::ai[]
+
 
 Specifies whether the Dashboard should be executed as part of a scheduled task. This allows you adapt scheduled task execution based on conditions at runtime.  Set to `true` to allow the Dashboard to run as scheduled. Set to `false` to override the scheduled task setting and suppress Dashboard execution. See xref:user:ScheduleDashboard.adoc[] in xref:user:UsePortal.adoc[] and xref:administration:Schedule.adoc[] in xref:administration:ManageServer.adoc[] for more information about scheduling.
 

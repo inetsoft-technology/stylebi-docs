@@ -1,6 +1,11 @@
 = Manage Scheduled Tasks
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to monitor and manage scheduled tasks using the Groovy DSL Administration Console :schedule command, including adding, editing, running, removing, and checking task status. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 Monitor and manage scheduled tasks using the `:schedule` or equivalent `:sch` command.  This command has actions to add, edit, run, and remove schedule tasks, as well as actions to get the current status of schedule tasks.

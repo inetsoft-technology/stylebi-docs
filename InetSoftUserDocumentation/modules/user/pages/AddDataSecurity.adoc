@@ -1,5 +1,10 @@
 = Add Data Security (VPM)
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for Virtual Private Model (VPM) security, which provides row- and column-level data filtering for relational data sources. Covers conditions, hidden columns, lookups, and their triggers. Enterprise only. See CreateNewVPM to begin.
+endif::ai[]
+
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 A Virtual Private Model (VPM) is an optional component that provides a highly flexible and comprehensive security layer for relational data sources. The VPM controls security for individual database tables and physical views, filtering all queries that reference these tables or models. The VPM is invisible to users, transparently providing access only to data for which a given user is authorized.

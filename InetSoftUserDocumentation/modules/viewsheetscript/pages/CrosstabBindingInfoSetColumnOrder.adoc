@@ -1,7 +1,12 @@
-﻿= bindingInfo.setColumnOrder(sort_field, header, method, [measure])
+= bindingInfo.setColumnOrder(sort_field, header, method, [measure])
 :navtitle: setColumnOrder()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the sorting order for row or column header. This is equivalent to setting the sorting for a header in the Crosstab Editor. The `measure` parameter is required only when a “by value” sort is requested.
+endif::ai[]
 
 
 Sets the sorting order for row or column header. This is equivalent to setting the sorting for a header in the Crosstab Editor. The `measure` parameter is required only when a “by value” sort is requested.

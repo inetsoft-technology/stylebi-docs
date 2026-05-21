@@ -1,7 +1,12 @@
-﻿= setLabelAliasOfColorLegend(value, alias)
+= setLabelAliasOfColorLegend(value, alias)
 :navtitle: setLabelAliasOfColorLegend()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Replace the specified label in the color legend with an alias. {noGetter}
+endif::ai[]
 
 
 Replace the specified label in the color legend with an alias. {noGetter}

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value of the cell in the specified field (column) and same row as the cell currently referenced by a ‘Format’ expression script. For example, if you specify a ‘Text Color’ expression in the ‘Format’ dialog box for a detail cell in a table column, you can use the `field` property within the script to obtain the value of the detail cell in the corresponding row of another column.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====

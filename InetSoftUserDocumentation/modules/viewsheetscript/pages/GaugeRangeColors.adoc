@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies an array of one to three colors to be used for the Gauge ranges (color zones). The positions of the colors on the Gauge are determined by the xref:GaugeRanges.adoc[] array. Colors can be specified by any of the methods shown for the xref:CommonBackground.adoc[] property.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.

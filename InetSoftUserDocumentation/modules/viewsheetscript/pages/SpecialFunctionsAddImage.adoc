@@ -1,4 +1,9 @@
-﻿= addImage(label, image)
+= addImage(label, image)
+
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the addImage(label, image) global function, which makes an image available in the Image Properties dialog Uploaded folder for use in Dashboard Image components.
+endif::ai[]
 :navtitle: addImage()
 
 

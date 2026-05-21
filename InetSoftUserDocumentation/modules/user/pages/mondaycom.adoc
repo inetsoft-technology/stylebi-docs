@@ -1,7 +1,12 @@
-﻿= monday.com
+= monday.com
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+
+// metadata for AI
+ifdef::ai[]
+Summary: Instructions for connecting to monday.com as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘monday.com’ data source, and press btn:[Create]. This opens the data source definition screen.

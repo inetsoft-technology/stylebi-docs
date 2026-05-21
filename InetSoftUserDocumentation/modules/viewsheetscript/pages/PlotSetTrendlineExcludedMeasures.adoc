@@ -1,7 +1,12 @@
-﻿= setTrendLineExcludedMeasures(array)
+= setTrendLineExcludedMeasures(array)
 :navtitle: setTrendLineExcludedMeasures()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Remove the trend line from the measures specified in the array argument. (See xref:viewsheet:AddTargetLineTrendLine.adoc[] for information on how to set trend lines.)
+endif::ai[]
 
 
 

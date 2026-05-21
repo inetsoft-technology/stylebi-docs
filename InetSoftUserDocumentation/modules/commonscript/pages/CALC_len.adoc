@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the number of characters in a text string, which is generally the same as the String xref:StringObjectLength.adoc[] property. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the number of characters in a text string, which is generally the same as the String   xref:StringObjectLength.adoc[] property. {CALCExcelFunctionPage}
 
 == Parameters

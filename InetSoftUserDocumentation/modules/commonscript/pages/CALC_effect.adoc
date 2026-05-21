@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *effective* annual interest rate, given the nominal annual interest rate and the number of compounding periods per year. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *effective* annual interest rate, given the nominal annual interest rate and the number of compounding periods per year. {CALCExcelFunctionPage}
 

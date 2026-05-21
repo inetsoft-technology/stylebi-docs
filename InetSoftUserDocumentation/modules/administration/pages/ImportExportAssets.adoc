@@ -1,6 +1,11 @@
-﻿= Import and Export Assets
+= Import and Export Assets
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to import and export assets (Dashboards, Table Styles, Data Worksheets, etc.) between server environments using incremental deployment features in Enterprise Manager.
+endif::ai[]
 
 NOTE:   To automate deployment of assets, see xref:ManageContent.adoc[]. To manage the storage database, see xref:Storage.adoc[].
 

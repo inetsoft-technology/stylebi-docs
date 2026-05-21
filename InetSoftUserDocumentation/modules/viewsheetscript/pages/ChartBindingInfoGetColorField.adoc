@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheetscript:PlotColorField.adoc[] to return the runtime ‘Color’ binding.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 xref:viewsheetscript:PlotColorField.adoc[]  to return the runtime ‘Color’ binding.

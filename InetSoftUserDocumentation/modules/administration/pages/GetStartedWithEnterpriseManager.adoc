@@ -1,5 +1,10 @@
 = Get Started with Enterprise Manager
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for server configuration using Enterprise Manager, covering launch, navigation, security, scheduling, repository, monitoring, and performance settings.
+endif::ai[]
+
 The following sections explains how to configure the server environment using the Enterprise Manager.
 
 NOTE: Enterprise Manager does not permit path names and file names to contain Chinese or other Unicode characters.

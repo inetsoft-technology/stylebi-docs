@@ -1,5 +1,10 @@
-﻿= Create a New Data Field
+= Create a New Data Field
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to add a new calculated field to a Data Worksheet data block using an expression column or a named grouping column. Covers formula syntax and referencing existing columns.
+endif::ai[]
 :experimental:
 
 You can create a new data field with one of the following two approaches.

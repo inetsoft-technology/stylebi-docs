@@ -1,5 +1,10 @@
 = Style Constant
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for the StyleConstant static object, which provides constants used in the StyleBI host environment (e.g., line styles, colors) accessible without instantiation.
+endif::ai[]
+
 The `StyleConstant` object is a static object that contains all definitions for constants used in the StyleBI host environment. These constants can be accessed without explicitly creating an instance of a StyleConstant object, as shown below:
 
 [source,javascript]

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that the value currently selected on the Range Slider is numerically displayed at all times. Otherwise, the current value is only numerically displayed while the user is actively dragging the slider.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

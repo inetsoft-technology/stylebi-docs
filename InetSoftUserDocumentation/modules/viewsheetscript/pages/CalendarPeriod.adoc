@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether the two panels of a Calendar in xref:CalendarDoubleCalendar.adoc[] mode represent a period comparison or a simple date range.
+endif::ai[]
+
 
 
 

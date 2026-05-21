@@ -1,6 +1,11 @@
-﻿= Add an Additional Connection
+= Add an Additional Connection
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Instructions for adding multiple connections to a single data source, enabling multi-tenant environments where different connections are assigned to different users or tenants.
+endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 

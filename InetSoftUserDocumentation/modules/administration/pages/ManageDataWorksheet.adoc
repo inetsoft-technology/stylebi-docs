@@ -1,6 +1,11 @@
 = Manage Data Worksheets
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to manage Data Worksheets programmatically using the Groovy DSL Administration Console :worksheet command. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 Manage Data Worksheets in script by using the `:worksheet` or equivalent `:ws` command. See xref:dataworksheet:PrepareYourData.adoc[] for  information about Data Worksheets in the User Portal.

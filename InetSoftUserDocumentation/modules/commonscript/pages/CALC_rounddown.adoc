@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Rounds a number toward zero to a specified number of digits. Positive number are rounded down, negative numbers are rounded up. {CALCExcelFunctionPage}
+endif::ai[]
+
 Rounds a number toward zero to a specified number of digits. Positive number are rounded down, negative numbers are rounded up. {CALCExcelFunctionPage}
 
 == Parameters

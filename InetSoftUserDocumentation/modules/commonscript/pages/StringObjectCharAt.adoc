@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the character at the specified position in the string, indexed from 0. Use xref:StringObjectCharCodeAt.adoc[] to return the *code* rather than the character.
+endif::ai[]
+
 include::viewsheetscript:partial$readOnly.adoc[]
 
 Return the character at the specified position in the string, indexed from 0. Use xref:StringObjectCharCodeAt.adoc[] to return the *code* rather than the character.

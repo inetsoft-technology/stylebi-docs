@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the initial lower end (left side) of the selected range. This property should be set in the *onInit* handler (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about handlers.)
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

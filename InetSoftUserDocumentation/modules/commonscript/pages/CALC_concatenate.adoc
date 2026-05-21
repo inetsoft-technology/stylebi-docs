@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the strings in `array` joined into a single string. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the strings in `array` joined into a single string. {CALCExcelFunctionPage}
 
 [TIP]

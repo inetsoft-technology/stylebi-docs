@@ -1,6 +1,11 @@
-﻿= axis.labelVisible
+= axis.labelVisible
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the visibility of the dimension or measure axis labels.
+endif::ai[]
 
 
 Sets the visibility of the dimension or measure axis labels.

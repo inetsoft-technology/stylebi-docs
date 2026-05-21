@@ -1,6 +1,11 @@
-﻿= legendTitleColor
+= legendTitleColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color of the legend title text.
+endif::ai[]
 
 
 Sets the color of the legend title text.

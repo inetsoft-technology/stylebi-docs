@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the index of the last occurrence of the specified sub-string within the larger string, or return `-1` if not found.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

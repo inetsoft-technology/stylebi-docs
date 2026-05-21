@@ -1,6 +1,11 @@
-﻿= pieExploded
+= pieExploded
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Separates the slices of a xref:viewsheet:PieChart.adoc[] by a small gap.
+endif::ai[]
 
 
 Separates the slices of a xref:viewsheet:PieChart.adoc[] by a small gap.

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Extracts the specified date interval.
+endif::ai[]
+
 Extracts the specified date interval.
 
 

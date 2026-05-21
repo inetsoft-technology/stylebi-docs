@@ -1,6 +1,11 @@
-﻿= queries
+= queries
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the data blocks to be merged in the Selection Tree or Selection List component. (The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.) See xref:viewsheet:AddFilterComponents.adoc[] for more information about merging compatible data blocks in a Selection Tree or Selection List.
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

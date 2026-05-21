@@ -1,7 +1,12 @@
-﻿= bindingInfo.textureFrame
+= bindingInfo.textureFrame
 :navtitle: textureFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the aesthetic treatment (fill pattern) for the shape-coded data on a xref:viewsheet:BarChart.adoc[]. A xref:chartAPI:TextureFrame.adoc[] can texture-code chart elements by value, or simply specify a static texture style.
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

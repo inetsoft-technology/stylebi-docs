@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Creates a new Java object.
+endif::ai[]
+
 
 
 Creates a new Java object.

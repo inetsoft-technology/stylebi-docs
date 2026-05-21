@@ -1,5 +1,10 @@
 = Global Object Functions
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for Global object functions and properties available throughout the scripting environment without any qualifier.
+endif::ai[]
+
 The Global object contains the properties and functions available for the entire scripting environment. The values and functions can be accessed anywhere as top-level properties and functions without any qualifier.
 
 == Example

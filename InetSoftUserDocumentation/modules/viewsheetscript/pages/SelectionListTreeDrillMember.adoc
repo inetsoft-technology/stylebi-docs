@@ -1,6 +1,11 @@
-﻿= drillMember
+= drillMember
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the name of the field *one level below* the deepest level in the hierarchy at which the user has made a selection in a *Selection Tree*. This is useful for creating interactive chart drilldowns, as shown in the example in xref:viewsheetscript:AccessComponentData.adoc#FilterComponents[Filter Components].
+endif::ai[]
 
 include::partial$readOnly.adoc[]
 

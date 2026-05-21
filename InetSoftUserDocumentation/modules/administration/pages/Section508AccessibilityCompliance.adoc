@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview of Section 508 (federal Rehabilitation Act) accessibility compliance in the User Portal, including keyboard navigation support for Dashboard components.
+endif::ai[]
+
 
 
 The User Portal is compliant with Section 508 of the federal Rehabilitation Act of 1973. This means that most features of the User Portal are accessible via keyboard commands and corresponding voice commands. See xref:viewsheet:KeyboardNavigation.adoc[] for information on Dashboard accessibility.

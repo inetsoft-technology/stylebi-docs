@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies a predefined style to be applied to the Table.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

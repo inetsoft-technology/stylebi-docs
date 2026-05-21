@@ -1,5 +1,10 @@
 = Schedule
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for the Scheduler, a stand-alone application that automatically generates Dashboards on a defined schedule. Links to setup, task creation, conditions, and actions.
+endif::ai[]
+
 
 The Scheduler is an application that automatically generates  Dashboards on an assigned schedule. The Scheduler is available to both administrators and  users (with appropriate permissions).
 

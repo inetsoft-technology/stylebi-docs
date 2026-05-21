@@ -1,4 +1,9 @@
 = eval(string)
+
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the eval(string) global function, which evaluates a dynamically-created string of JavaScript code. Use sparingly as eval-dependent scripts are difficult to debug.
+endif::ai[]
 :navtitle: eval()
 
 

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the absolute value of a specified number. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs[Math.abs()] method, and can be used with or without the `Math` qualifier, `abs()` or `Math.abs()`.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

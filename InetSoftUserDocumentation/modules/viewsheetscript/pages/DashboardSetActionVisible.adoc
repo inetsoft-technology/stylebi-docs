@@ -1,4 +1,9 @@
-﻿= setActionVisible(name,Boolean)
+= setActionVisible(name,Boolean)
+
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the setActionVisible(name, Boolean) function on embedded Dashboards, which controls visibility of actions like the Open button.
+endif::ai[]
 
 
 Sets the value of the specified property for an embedded Dashboard. See xref:viewsheet:ModularizeDashboard.adoc[] for more information about embedding.

@@ -1,6 +1,11 @@
-﻿= shapeLegend.color
+= shapeLegend.color
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color for labels within a shape-key legend.
+endif::ai[]
 
 
 Sets the color for labels within a shape-key legend.

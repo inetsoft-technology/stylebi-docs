@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Converts an Arabic numeral to Roman numeral, as text. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Converts an Arabic numeral to Roman numeral, as text. {CALCExcelFunctionPage}
 

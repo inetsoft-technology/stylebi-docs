@@ -1,6 +1,11 @@
-﻿= zoom
+= zoom
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the zoom level for a xref:viewsheet:MapChart.adoc[] that uses a default or Mapbox background. If the value is an integer, this is equivalent to the number of times the {buttonZoomIn} is pressed on the map.
+endif::ai[]
 
 
 Sets the zoom level for a xref:viewsheet:MapChart.adoc[] that uses a default or Mapbox background. If the value is an integer, this is equivalent to the number of times the {buttonZoomIn} is pressed on the map.

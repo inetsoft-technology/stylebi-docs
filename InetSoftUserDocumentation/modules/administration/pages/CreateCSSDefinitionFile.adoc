@@ -1,6 +1,11 @@
-﻿= Create a CSS File
+= Create a CSS File
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a CSS definition file (UTF-8 text) that applies Class, ID, Type, or global styles to Dashboard components. See ExampleCSSDefinitionFile for samples and UploadCSSFile to deploy.
+endif::ai[]
 
 [WARNING,caption=see also]
 xref:ExampleCSSDefinitionFile.adoc[] for samples of different CSS definitions by Class, ID, etc.

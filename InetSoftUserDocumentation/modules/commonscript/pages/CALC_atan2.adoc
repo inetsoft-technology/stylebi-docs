@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the inverse tangent of the point represented by the specified x and y co-ordinates, in radians. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the inverse tangent of the point represented by the specified x and y co-ordinates, in radians. {CALCExcelFunctionPage}
 

@@ -1,5 +1,10 @@
 = refreshData()
 
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the refreshData() global function, which clears all cached Dashboard data and forces a data reload.
+endif::ai[]
+
 Clears all cached Dashboard data.
 
 == Example

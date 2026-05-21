@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the date format code used to format any date selected in the ComboBox before it is sent to a database query. (See xref:viewsheet:RadioCheckBoxComboProperties.adoc[] for information on the 'Format Date Values Sent to Query' option.) This property should be set in the *onInit* handler. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about handlers.)
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

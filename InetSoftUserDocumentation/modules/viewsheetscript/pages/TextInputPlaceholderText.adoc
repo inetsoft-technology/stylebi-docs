@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the text to appear within the TextInput field whenever *no text* has been entered. (This is often a hint to the user about what data they should enter, for example, "`Enter the employee name`".) The placeholder text is automatically removed when the user begins entering data, and is *never submitted* as the value of the TextInput component.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

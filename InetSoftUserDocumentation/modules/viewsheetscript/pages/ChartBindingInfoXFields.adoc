@@ -1,7 +1,12 @@
-﻿= bindingInfo.xFields
+= bindingInfo.xFields
 :navtitle: xFields
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:PlotXFields.adoc[] to return the fields currently bound to X-axis at runtime.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

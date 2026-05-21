@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the default text to appear within the TextInput field. If '`Default Text`' is specified, the xref:TextInputPlaceholderText.adoc[] is not shown. If the '`Default Text`' is not subsequently modified by the user, it will be *submitted* as the value of the TextInput component.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

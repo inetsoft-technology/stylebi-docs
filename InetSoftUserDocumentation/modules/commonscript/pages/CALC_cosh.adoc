@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the hyperbolic cosine of any real number. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Return the hyperbolic cosine of any real number. {CALCExcelFunctionPage}
 

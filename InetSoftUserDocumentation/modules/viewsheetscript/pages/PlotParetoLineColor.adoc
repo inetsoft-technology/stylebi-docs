@@ -1,6 +1,11 @@
-﻿= paretoLineColor
+= paretoLineColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color of the *cumulative total* line in a xref:viewsheet:ParetoChart.adoc[] when a field is bound in the *Color* region. If there is no *Color* binding, the Pareto line is the same color as the bars.
+endif::ai[]
 
 
 Sets the color of the *cumulative total* line in a xref:viewsheet:ParetoChart.adoc[]  when a field is bound in the *Color* region. If there is no *Color* binding, the Pareto line is the same color as the bars.

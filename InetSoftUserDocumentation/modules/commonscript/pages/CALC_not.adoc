@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reverses the value of the Boolean argument. {CALCExcelFunctionPage} This is similar to the JavaScript `!` operator, which can also be used for this purpose.
+endif::ai[]
+
 
 Reverses the value of the Boolean argument. {CALCExcelFunctionPage} This is similar to the JavaScript `!` operator, which can also be used for this purpose.
 

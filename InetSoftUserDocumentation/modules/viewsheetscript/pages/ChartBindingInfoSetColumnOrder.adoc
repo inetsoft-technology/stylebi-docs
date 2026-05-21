@@ -1,7 +1,12 @@
-﻿= bindingInfo.setColumnOrder(col, order, [sortCol])
+= bindingInfo.setColumnOrder(col, order, [sortCol])
 :navtitle: setColumnOrder()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheetscript:ChartBindingInfoGetColumnOrder.adoc[] to obtain existing binding information.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

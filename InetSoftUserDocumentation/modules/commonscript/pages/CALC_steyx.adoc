@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *standard error* of the estimate for a regression model based on independent values in `array_x` and dependent (function) values in `array_y`. The standard error represents the average distance of values in `array_y` from the regression line. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the *standard error* of the estimate for a regression model based on independent values in `array_x` and dependent (function) values in `array_y`. The standard error represents the average distance of values in `array_y` from the regression line. {CALCExcelFunctionPage}
 
 == Parameters

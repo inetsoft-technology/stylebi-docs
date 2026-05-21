@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the xref:chartAPI:EGraph.adoc[] object of the Chart, to be used with Chart API scripts. See xref:chartAPI:ChartScriptTutorial.adoc[] for more information about Chart API script.
+endif::ai[]
+
 
 Specifies the xref:chartAPI:EGraph.adoc[] object of the Chart, to be used with Chart API scripts.  See xref:chartAPI:ChartScriptTutorial.adoc[] for more information about  Chart API script.
 

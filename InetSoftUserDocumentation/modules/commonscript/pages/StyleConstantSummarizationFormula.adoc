@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: The summarization formulas below are available for Crosstab and Chart scripting.
+endif::ai[]
+
 
 The summarization formulas below are available for Crosstab and Chart scripting.
 

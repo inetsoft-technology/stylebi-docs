@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies an image file either by an uploaded image name (e.g., `'image1.gif'`), a resource path on the server (e.g., `'/library/image1.gif'`), a URL (e.g., `“https://www.google.com/images/logos/ps_logo2.png”`), or a BLOB stored in a data block. See xref:viewsheet:ImageProperties.adoc[] for information on uploading images.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

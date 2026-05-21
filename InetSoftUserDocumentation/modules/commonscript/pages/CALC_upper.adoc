@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Converts all lowercase characters in `string` to uppercase characters. {CALCExcelFunctionPage} This is generally the same as xref:StringObjectToUpperCase.adoc[].
+endif::ai[]
+
 
 Converts all lowercase characters in `string` to uppercase characters. {CALCExcelFunctionPage}  This is generally the same as xref:StringObjectToUpperCase.adoc[].
 

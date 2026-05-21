@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that the image should be scaled to the Image component dimensions. Scaling can be set to either preserve the image proportions (xref:ImageMaintainAspectRatio.adoc[], default) or to resize just a selected portion of the image (xref:ImageScale9.adoc[]).
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 xref:viewsheet:ImageProperties.adoc[] for general information about Image components.

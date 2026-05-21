@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: JavaScript function to compare sort order of this string and another string given by `compare_string`. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare[String.prototype.localeCompare()] in the {JavaScriptRef} for details on usage.
+endif::ai[]
+
 
 JavaScript function to compare sort order of this string and another string given by `compare_string`.   See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare[String.prototype.localeCompare()] in the {JavaScriptRef} for details on usage.
 

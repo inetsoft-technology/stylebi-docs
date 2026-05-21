@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value of the *hypergeometric distribution*, the probability of `sample_s` successes in a sample of size `number_sample` (drawn without replacement), where the population of size `number_population` has `population_s` successes. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the value of the *hypergeometric distribution*, the probability of `sample_s` successes in a sample of size `number_sample` (drawn without replacement), where the population of size `number_population` has `population_s` successes. {CALCExcelFunctionPage}
 

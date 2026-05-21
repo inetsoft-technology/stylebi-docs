@@ -1,6 +1,11 @@
-﻿= yBandColor
+= yBandColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Displays bands of the specified color on a categorical or timescale Y-axis.
+endif::ai[]
 
 
 Displays bands of the specified color on a categorical or timescale Y-axis.

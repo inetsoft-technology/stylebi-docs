@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the selected *value* of the component (not the label). Applies to single-value input elements (Slider, Spinner, Radio Button, Combo Box) and the tabs of co-located components (Tabbed Interface).
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that the data tip view for a Table, Crosstab, or Freehand Table is displayed only when the user clicks on the component, rather than on hover. If the clicked cell has a hyperlink, you must {buttonCtrl}-click to show the data tip. See xref:viewsheet:AddTipsToChart.adoc[] for more information about data tips.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 xref:viewsheet:TableProperties.adoc[] to set this property in the '`Table Properties`' dialog box.

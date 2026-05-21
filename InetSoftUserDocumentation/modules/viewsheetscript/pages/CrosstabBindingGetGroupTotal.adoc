@@ -1,7 +1,12 @@
-﻿= bindingInfo.getGroupTotal(field, header)
+= bindingInfo.getGroupTotal(field, header)
 :navtitle: getGroupTotal()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns `true` if the subtotal for the specified group is being displayed, `false` otherwise. This property can be set by xref:CrosstabBindingInfoSetGroupTotal.adoc[] or by the '`Summarize`' property in the Crosstab Editor.
+endif::ai[]
 
 
 

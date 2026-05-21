@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Rounds a number away from 0 to the nearest *odd* integer. Positive values are rounded up, negative values are rounded down. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Rounds a number away from 0 to the nearest *odd* integer. Positive values are rounded up, negative values are rounded down. {CALCExcelFunctionPage}
 

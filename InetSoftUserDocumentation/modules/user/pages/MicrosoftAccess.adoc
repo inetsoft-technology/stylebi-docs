@@ -1,4 +1,4 @@
-﻿= Microsoft Access
+= Microsoft Access
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -16,6 +16,11 @@ Connections to a Microsoft Access database are supported via http://ucanaccess.s
 * Logical model entities cannot contain a space in the entity name.
 ====
 
+
+// metadata for AI
+ifdef::ai[]
+Summary: Instructions for connecting to Microsoft Access as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
 

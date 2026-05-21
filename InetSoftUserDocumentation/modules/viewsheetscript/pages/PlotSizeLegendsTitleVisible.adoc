@@ -1,6 +1,11 @@
-﻿= sizeLegends.titleVisible
+= sizeLegends.titleVisible
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the visibility of the legend title bar within a size-key legend on Charts that have *multiple* size legends.
+endif::ai[]
 
 
 Sets the visibility of the legend title bar within a size-key legend on Charts that have *multiple* size legends.

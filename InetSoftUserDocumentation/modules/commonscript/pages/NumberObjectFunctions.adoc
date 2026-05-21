@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: All numeric values are number objects. The values are normally used for computation using operators such as multiplication, addition, subtraction and division. See xref:commonscript:MathObjectFunctions.adoc[] and xref:commonscript:CalcObjectFunctions.adoc[] for functions that operate on numeric values.
+endif::ai[]
+
 
 All numeric values are number objects. The values are normally used for computation using  operators such as multiplication, addition, subtraction and division. See xref:commonscript:MathObjectFunctions.adoc[] and xref:commonscript:CalcObjectFunctions.adoc[] for functions that operate on numeric values.
 

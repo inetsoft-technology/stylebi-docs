@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For an *Editable Table*, retrieves the rows that have been modified by the user. The optional `type` parameter specifies the set of rows to return, and can be provided in string form (e.g., `'added'`) or constant form (e.g., `ADDED`). Omit the parameter to return all rows in table.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

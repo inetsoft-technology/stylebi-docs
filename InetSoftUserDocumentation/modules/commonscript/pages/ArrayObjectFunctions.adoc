@@ -1,5 +1,10 @@
 = Array Object Functions
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for JavaScript Array object functions, covering the built-in methods for creating and manipulating non-fixed-length arrays in the scripting environment.
+endif::ai[]
+
 
 JavaScript arrays are a non-fixed length arrays. A constant array can be created using an array literal:
 

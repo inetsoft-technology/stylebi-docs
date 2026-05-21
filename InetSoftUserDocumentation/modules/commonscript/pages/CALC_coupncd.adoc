@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the first *coupon* date following the settlement date. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the first *coupon* date following the settlement date. {CALCExcelFunctionPage}
 

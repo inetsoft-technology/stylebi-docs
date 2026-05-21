@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the integer index of the value within the specified array, with indexing starting at 0 for the first array element. If the value does not exist in the array, the function returns -1.
+endif::ai[]
+
 
 
 Returns the integer index of the value within the specified array, with indexing starting at 0 for the first array element. If the value does not exist in the array, the function returns -1.

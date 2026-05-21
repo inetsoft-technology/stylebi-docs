@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Rounds a number to a specified number of digits. {CALCExcelFunctionPage}
+endif::ai[]
+
 Rounds a number to a specified number of digits. {CALCExcelFunctionPage}
 
 == Parameters

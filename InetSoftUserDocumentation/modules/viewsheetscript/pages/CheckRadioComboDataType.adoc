@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the data type for items displayed in a Check Box, Radio Button, or ComboBox component via the “Embedded” option.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====

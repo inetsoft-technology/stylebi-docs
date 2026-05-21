@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the visibility/accessibility of the specified end-user Selection List or Selection Tree feature.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

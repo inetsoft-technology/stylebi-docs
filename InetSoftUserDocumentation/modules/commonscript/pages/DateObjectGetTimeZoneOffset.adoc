@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: JavaScript function to return the difference in minutes between a date evaluated in universal timezone and local timezone. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset[Date.getTimezoneOffset()] in the {JavaScriptRef} for details on usage.
+endif::ai[]
+
 
 
 JavaScript function to return the difference in minutes between a date evaluated in universal timezone and local timezone.    See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset[Date.getTimezoneOffset()] in the {JavaScriptRef} for details on usage.

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to use the AI Assistant to ask natural-language questions about StyleBI features and documentation, getting answers sourced from the documentation and knowledge base.
+endif::ai[]
+
 
 The AI Assistant allows you to ask questions about any aspect of  StyleBI. The Assistant will cull relevant information from the Documentation and the Knowledge Base to answer your specific question.  Here are some sample questions you can ask the Assistant:
 

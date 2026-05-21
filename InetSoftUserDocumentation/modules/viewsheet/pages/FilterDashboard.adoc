@@ -2,6 +2,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+
 // metadata for AI
 ifdef::ai[]
 Summary: Overview and hub page for all Dashboard filtering techniques in StyleBI. Links to user-adjustable Filter components (Selection List, Range Slider, Calendar, etc.), fixed component-level Conditions, data-level filtering in the Data Worksheet, and other approaches. Start here to understand the full range of filtering options and choose the right technique.

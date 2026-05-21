@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the double factorial stem:[n!!] of a number stem:[n], as shown below:
+endif::ai[]
+
 
 Returns the double factorial stem:[n!!] of a number stem:[n], as shown below:
 

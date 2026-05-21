@@ -1,7 +1,12 @@
-﻿= bindingInfo.shapes
+= bindingInfo.shapes
 :navtitle: shapes
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies a xref:chartAPI:StaticShapeFrame.adoc[]
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

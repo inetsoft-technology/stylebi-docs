@@ -1,7 +1,12 @@
-﻿= bindingInfo.setTimeSeries(col, Boolean)
+= bindingInfo.setTimeSeries(col, Boolean)
 :navtitle: setTimeSeries()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that gaps in *Date* data should be retained. For example, if the data in the Crosstab is grouped by month, and there is no data for the month of June, the `setTimeSeries` property ensures that the month of June is still retained in the Crosstab.
+endif::ai[]
 
 
 

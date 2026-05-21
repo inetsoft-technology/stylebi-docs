@@ -1,5 +1,10 @@
 = Common Properties
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for script properties shared by most Dashboard components, such as visible, enabled, alpha, and position. Exceptions noted per component.
+endif::ai[]
+
 The following topics describe basic properties that are shared by most of the Dashboard components. Exceptions are noted where appropriate.
 
 [square]

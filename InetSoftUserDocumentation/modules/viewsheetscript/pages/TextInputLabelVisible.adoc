@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether a label is displayed for the TextInput component. See xref:viewsheet:TextInputProperties.adoc[] for information on the '`Show Label`' option.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

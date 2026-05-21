@@ -1,7 +1,12 @@
-﻿= bindingInfo.setCandleBindingField(arr)
+= bindingInfo.setCandleBindingField(arr)
 :navtitle: setCandleBindingField()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:ChartBindingInfoGetCandleBindingField.adoc[] to obtain existing binding information.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the width and height of a component in terms of pixels. Fractional values for width and height are rounded down to the next lowest integer. This property does not take effect in the design view of Visual Composer and does not apply to components within a Selection Container.
+endif::ai[]
+
 
 
 

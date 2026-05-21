@@ -1,6 +1,11 @@
-﻿= upperInclusive
+= upperInclusive
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether the upper limit of the selection is included in the result set. For example, if the upper limit of the Range Slider selection is 15, a setting of `upperInclusive=true` (default) includes the value 15 in the result set.
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

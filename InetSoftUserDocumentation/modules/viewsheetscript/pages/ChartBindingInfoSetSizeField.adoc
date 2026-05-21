@@ -1,7 +1,12 @@
-﻿= bindingInfo.setSizeField(col, type)
+= bindingInfo.setSizeField(col, type)
 :navtitle: setSizeField()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Bind the specified field to a xref:chartAPI:SizeFrame.adoc[] (size coding).
+endif::ai[]
 
 
 [WARNING,caption=See Also]

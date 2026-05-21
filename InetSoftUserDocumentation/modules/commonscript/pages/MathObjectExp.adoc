@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value of the natural exponential function, stem:[e^x], where stem:[e] is the base of the natural logarithm and stem:[x] is the specified `number`. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/exp[Math.exp()] method, and can be used with or without the `Math` qualifier, `exp()` or `Math.exp()`.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

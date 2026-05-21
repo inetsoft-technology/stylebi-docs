@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the name of the month for the given `date` object (e.g. “March”). {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the name of the month for the given `date` object (e.g. “March”). {CALCExcelFunctionPage}
 
 

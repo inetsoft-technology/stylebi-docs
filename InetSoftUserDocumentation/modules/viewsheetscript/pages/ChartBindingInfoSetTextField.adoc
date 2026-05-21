@@ -1,7 +1,12 @@
-﻿= bindingInfo.setTextField(col, type)
+= bindingInfo.setTextField(col, type)
 :navtitle: setTextField()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Bind the specified field to a xref:chartAPI:TextFrame.adoc[] (text coding).
+endif::ai[]
 
 
 [WARNING,caption=See Also]

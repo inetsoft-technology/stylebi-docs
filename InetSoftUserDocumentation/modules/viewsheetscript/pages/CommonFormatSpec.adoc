@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheet:VisualFormat.adoc[] for more information about format specifications.
+endif::ai[]
+
 
 [WARNING,caption=see also]
 xref:viewsheet:VisualFormat.adoc[] for more information about format specifications.

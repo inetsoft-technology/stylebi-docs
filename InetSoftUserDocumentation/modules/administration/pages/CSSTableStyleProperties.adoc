@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference table of table region CSS selectors (e.g., Header, Body, EvenRow) available for formatting Table, Crosstab, and Freehand Table components via CSS TableStyle syntax.
+endif::ai[]
+
 The table below lists table regions that can be formatted with a CSS TableStyle. See xref:CreateCSSDefinitionFile.adoc#CSSTableStyle[CSS TableStyle] for more information about the TableStyle syntax.
 
 If the CSS file does not include specific formatting for a table region, the `TableStyle` selector with the most similar attributes is used. For example, if `EvenCol` formatting is omitted, `Body` formatting is used instead. If no substitute is found, the default TableStyle formatting is used.

@@ -1,6 +1,11 @@
-﻿= formula
+= formula
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the aggregation method for the measure displayed in the Gauge component. This is equivalent to selecting a method from the ‘Aggregate’ menu under the *Data* tab of the component ‘Properties’ dialog box.
+endif::ai[]
 
 
 

@@ -1,5 +1,10 @@
 = viewsheetUser
 
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the viewsheetUser read-only property, which returns the owner ID for privately-scoped Dashboards, or null for non-privately-scoped Dashboards.
+endif::ai[]
+
 include::partial$readOnly.adoc[]
 
 [WARNING,caption=See Also]

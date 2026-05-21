@@ -1,6 +1,11 @@
-﻿= Add a Hidden Column Trigger
+= Add a Hidden Column Trigger
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to add a scripted trigger to a VPM hidden column, allowing the column restriction to be applied selectively based on user role, group, or identity. Requires an existing VPM. See CreateNewVPM and AddDataSecurity.
+endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 

@@ -1,5 +1,10 @@
 = Measure Axis Properties
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for measure-axis-specific script properties, accessed via axis['Measure Name']. See ChartAxisProperties for general axis properties.
+endif::ai[]
+
 
 The topics in this section describe *measure*  axis  properties. (See xref:ChartAxisProperties.adoc[]  for  properties of all axes.) Measure properties should be prefixed by `axis['Measure Name']`.
 

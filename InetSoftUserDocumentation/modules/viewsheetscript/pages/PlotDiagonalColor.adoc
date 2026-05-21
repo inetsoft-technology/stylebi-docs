@@ -1,6 +1,11 @@
-﻿= diagonalColor
+= diagonalColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color of the diagonal line.
+endif::ai[]
 
 
 Sets the color of the diagonal line.

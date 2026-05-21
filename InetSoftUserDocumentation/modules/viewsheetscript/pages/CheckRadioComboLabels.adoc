@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the labels (as an array) displayed in a Check Box, Radio Button, or ComboBox component. This property can be used only within component-level script (see xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script]), and the xref:CheckRadioComboValues.adoc[] property must specify an array of the same length.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

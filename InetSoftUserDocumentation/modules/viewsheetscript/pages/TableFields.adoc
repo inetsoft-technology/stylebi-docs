@@ -1,6 +1,11 @@
-﻿= fields
+= fields
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the fields of the data block to be displayed in the Table.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

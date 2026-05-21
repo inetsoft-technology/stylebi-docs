@@ -1,6 +1,11 @@
-﻿= Zendesk Sell Query
+= Zendesk Sell Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a Data Worksheet query from an existing Zendesk Sell Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+endif::ai[]
 
 
 To create a new data set from an existing Zendesk Sell connection, follow the steps below:

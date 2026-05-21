@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Rounds number down to the nearest integer. {CALCExcelFunctionPage}
+endif::ai[]
+
 Rounds number down to the nearest integer.  {CALCExcelFunctionPage}
 
 NOTE: `CALC.integer()` is an alias for `CALC.int()`.

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For a chart with ‘Multiple Styles’ selected from {buttonSelectChartStyle}, sets the style for the specified dataset. For a chart with a single style, sets the global style.
+endif::ai[]
+
 
 
 For a chart with ‘Multiple Styles’ selected from {buttonSelectChartStyle}, sets the style for the specified dataset. For a chart with a single style, sets the global style.

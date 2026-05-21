@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:CALC_left.adoc[], xref:CALC_right.adoc[], and xref:CALC_mid.adoc[] for an equivalent functions.
+endif::ai[]
+
 [WARNING,caption=see also]
 xref:CALC_left.adoc[], xref:CALC_right.adoc[], and xref:CALC_mid.adoc[] for an equivalent functions.
 

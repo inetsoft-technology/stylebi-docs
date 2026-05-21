@@ -1,6 +1,11 @@
-﻿= quadrantColor
+= quadrantColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color of the quadrant lines.
+endif::ai[]
 
 
 Sets the color of the quadrant lines.

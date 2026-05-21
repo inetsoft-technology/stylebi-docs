@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: JavaScript function to set the *day of the month* for a date in local time. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setDate[Date.setDate()] in the {JavaScriptRef} for details on usage.
+endif::ai[]
+
 
 
 JavaScript function to set the *day of the month* for a date in local time.   See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setDate[Date.setDate()] in the {JavaScriptRef} for details on usage.

@@ -1,6 +1,11 @@
-﻿= Repository
+= Repository
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to manage the server repository in Enterprise Manager, including organizing Dashboards into folders and setting read/write permissions by user or role.
+endif::ai[]
 
 The *Repository* is the collection of   Dashboards deployed on the server.   Dashboards can be organized into folders, and folders can be hierarchically nested. If  security is enabled, users and roles can be given read and write permission for  folders or individual  Dashboards.
 

@@ -1,7 +1,12 @@
-﻿= addConfidenceIntervalTarget(measure, colors, values, options)
+= addConfidenceIntervalTarget(measure, colors, values, options)
 :navtitle: addConfidenceIntervalTarget()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Draws a set of horizontal or vertical confidence intervals on the chart. See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.
+endif::ai[]
 
 
 Draws a set of horizontal or vertical confidence intervals on the chart. See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.

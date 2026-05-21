@@ -1,6 +1,11 @@
-﻿= composite
+= composite
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether the Range Slider displays a single value or composite value. This is equivalent to selecting ‘Single Value’ or ‘Composite Value’ in the *Data* tab of the component ‘Properties’ dialog box.
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

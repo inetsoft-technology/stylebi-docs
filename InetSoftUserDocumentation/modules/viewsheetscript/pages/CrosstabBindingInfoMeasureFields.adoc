@@ -1,7 +1,12 @@
-﻿= bindingInfo.measureFields
+= bindingInfo.measureFields
 :navtitle: measureFields
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheetscript:CrosstabQuery.adoc[] to specify the data block from which the Crosstab displays data.
+endif::ai[]
 
 
 

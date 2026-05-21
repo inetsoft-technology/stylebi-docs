@@ -1,4 +1,9 @@
-﻿= Access Datasource Data
+= Access Datasource Data
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to access data from the Dashboard data source within Dashboard scripts, including syntax for referencing data fields by name or index.
+endif::ai[]
 
 You can access data contained in the Dashboard data source from within any Dashboard script. The following sections explain the syntax for accessing data from the data source data. See xref:AccessComponentData.adoc[] for information on how to access the specific data represented in a component.
 

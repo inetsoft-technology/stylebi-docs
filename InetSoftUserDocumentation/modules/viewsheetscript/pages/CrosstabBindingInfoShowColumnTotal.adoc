@@ -1,7 +1,12 @@
-﻿= bindingInfo.showColumnTotal
+= bindingInfo.showColumnTotal
 :navtitle: showColumnTotal
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether a trailing column containing totals should be displayed. This is equivalent to setting ‘Column Total’ in the Crosstab Editor.
+endif::ai[]
 
 
 Specifies whether a trailing column containing totals should be displayed. This is equivalent to setting ‘Column Total’ in the Crosstab Editor.

@@ -1,7 +1,12 @@
-﻿= bindingInfo.sizes
+= bindingInfo.sizes
 :navtitle: sizes
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies a xref:chartAPI:StaticSizeFrame.adoc[] (fixed size) for the specified measure.
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the smallest value in array, where Booleans are valued as 1 if `true` and 0 if false, and string values are valued as 0. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the smallest value in array, where Booleans are valued as 1 if `true` and 0 if false, and string values are valued as 0. {CALCExcelFunctionPage}
 
 == Parameters

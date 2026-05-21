@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether server or client time should be used when the ComboBox is configured to use a *calendar interface* for TimeInstant type data. (See xref:viewsheet:RadioCheckBoxComboProperties.adoc[] for information on setting the ‘Calendar’ option.) This property should be set in the *onInit* handler (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about handlers.)
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the number of days between the `start_date` and the `end_date`, using 12 months of 30 days. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 
 

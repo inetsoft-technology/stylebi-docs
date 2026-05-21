@@ -1,11 +1,11 @@
-﻿= Set Security Actions
+= Set Security Actions
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+
 // metadata for AI
 ifdef::ai[]
-Summary:
-Security Actions (Action Permissions) in StyleBI governs access to various UI features and functionalities, such as portal tabs, worksheets, dashboards, and specialized actions like chart types, bookmarks, and SQL editing. Administrators can use these actions to restrict access and visibility based on user roles, ensuring proper security without detailing every individual action.
+Summary: Security Actions (Action Permissions) in StyleBI governs access to various UI features and functionalities, such as portal tabs, worksheets, dashboards, and specialized actions like chart types, bookmarks, and SQL editing. Administrators can use these actions to restrict access and visibility based on user roles, ensuring proper security without detailing every individual action.
 endif::ai[]
 
 This section explains how to restrict the actions that a user can perform in the User Portal based on user, group, or role.

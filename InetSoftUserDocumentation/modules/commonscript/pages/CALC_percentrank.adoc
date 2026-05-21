@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the rank of a value `x` within the data provided in `array`. The rank is given as a percentage indicating the percentage of values in `array` that fall below value `x`. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the rank of a value `x` within the data provided in `array`. The rank is given as a percentage indicating the percentage of values in `array` that fall below value `x`. {CALCExcelFunctionPage}
 
 == Parameters

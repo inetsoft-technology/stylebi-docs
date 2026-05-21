@@ -1,7 +1,12 @@
-﻿= bindingInfo.getMappings(col)
+= bindingInfo.getMappings(col)
 :navtitle: getMappings()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the mappings that exist between the values in field `col` and defined geographical codes (as a two-dimensional string array).
+endif::ai[]
 
 
 [WARNING,caption=See Also]

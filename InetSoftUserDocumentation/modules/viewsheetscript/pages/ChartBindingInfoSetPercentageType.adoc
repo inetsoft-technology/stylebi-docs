@@ -1,7 +1,12 @@
-﻿= bindingInfo.setPercentageType(col,type)
+= bindingInfo.setPercentageType(col,type)
 :navtitle: setPercentageType()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheetscript:ChartBindingInfoGetPercentageType.adoc[] to obtain the binding information.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

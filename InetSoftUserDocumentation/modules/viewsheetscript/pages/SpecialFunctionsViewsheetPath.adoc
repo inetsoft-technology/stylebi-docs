@@ -1,5 +1,10 @@
 = viewsheetPath
 
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the viewsheetPath read-only property, which returns the repository path of the current Dashboard (e.g., "Tutorial/Sales Explore").
+endif::ai[]
+
 include::partial$readOnly.adoc[]
 
 [WARNING,caption=See Also]

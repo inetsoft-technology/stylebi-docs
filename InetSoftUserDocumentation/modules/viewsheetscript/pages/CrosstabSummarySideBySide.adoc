@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Display multiple measures side-by-side rather than stacked vertically (the default).
+endif::ai[]
+
 
 
 

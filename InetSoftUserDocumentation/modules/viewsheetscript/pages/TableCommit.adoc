@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: When a user adds or changes a row in an *Editable Table*, the new or modified row is highlighted in color. To clear the highlight on these rows and remove them from the corresponding array returned by xref:TableGetFormRows.adoc[], use the table’s `commit` function.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====

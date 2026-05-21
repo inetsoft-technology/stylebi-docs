@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the depreciation of an asset over an arbitrary period using the *variable-declining balance* method. The rate of depreciation for a given year is `factor/life`.
+endif::ai[]
+
 
 Returns the depreciation of an asset over an arbitrary period using the *variable-declining balance* method. The rate of depreciation for a given year is `factor/life`.
  {CALCExcelFunctionPage}

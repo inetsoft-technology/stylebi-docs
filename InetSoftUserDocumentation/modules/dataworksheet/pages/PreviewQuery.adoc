@@ -1,5 +1,10 @@
-﻿= Profile Data Block Performance
+= Profile Data Block Performance
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to profile Data Worksheet data block performance, including examining the generated query and viewing actual query execution time.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 There are two ways you can examine Data Block performance:

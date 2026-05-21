@@ -1,7 +1,12 @@
-﻿= bindingInfo.isTopNReverse(field, header)
+= bindingInfo.isTopNReverse(field, header)
 :navtitle: isTopNReverse()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value set by xref:CrosstabBindingInfoSetTopNReverse.adoc[] or by the '`Rank`' property in the Crosstab Editor.
+endif::ai[]
 
 
 

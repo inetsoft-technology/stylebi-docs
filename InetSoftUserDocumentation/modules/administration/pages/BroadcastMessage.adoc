@@ -1,6 +1,11 @@
-﻿= Broadcast a Message
+= Broadcast a Message
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to send an alert message to all currently logged-in users using the broadcast notification feature in Enterprise Manager.
+endif::ai[]
 
 IMPORTANT: The broadcast feature requires that a security provider be specified.  See xref:ConfigureSecurity.adoc[].  In a multi-tenant environment, only the Site Administrator can access the Broadcast feature.  (See xref:EnableMultiTenant.adoc[] for more information about multi-tenancy.)
 

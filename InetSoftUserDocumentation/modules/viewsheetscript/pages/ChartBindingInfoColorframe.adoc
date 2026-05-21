@@ -1,7 +1,12 @@
-﻿= bindingInfo.colorFrame
+= bindingInfo.colorFrame
 :navtitle: colorFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the aesthetic color treatment for the chart elements. A xref:chartAPI:ColorFrame.adoc[] can color-code chart elements by value, or simply specify a static color scheme. The default for dimensions is xref:chartAPI:CategoricalColorFrame.adoc[], and the default for measures is xref:chartAPI:GradientColorFrame.adoc[].
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

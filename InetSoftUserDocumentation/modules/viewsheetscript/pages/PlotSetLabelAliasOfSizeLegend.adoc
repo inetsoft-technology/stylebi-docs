@@ -1,7 +1,12 @@
-﻿= setLabelAliasOfSizeLegend(value, alias)
+= setLabelAliasOfSizeLegend(value, alias)
 :navtitle: setLabelAliasOfSizeLegend()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Replace the specified label in the size legend with an alias. {noGetter}
+endif::ai[]
 
 
 Replace the specified label in the size legend with an alias. {noGetter}

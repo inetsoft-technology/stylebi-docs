@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: You can access data from an arbitrary query or Data Worksheet in script by using the xref:commonscript:runQuery.adoc[] command.
+endif::ai[]
+
 
 You can access data from an arbitrary query or Data Worksheet in script by using the xref:commonscript:runQuery.adoc[] command.
 

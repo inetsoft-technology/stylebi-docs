@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the sum of the elements in `array2` corresponding to elements in `array1` that satisfy the condition given by `conditionString`. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the sum of the elements in `array2` corresponding to elements in `array1` that satisfy the condition given by `conditionString`.  {CALCExcelFunctionPage}
 

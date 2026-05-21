@@ -1,6 +1,11 @@
-﻿= Create a New Variable
+= Create a New Variable
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to define a Variable in a Data Worksheet and use it in filter conditions to create parameterized queries where the user supplies the value at runtime.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 The following sections explain how to define  a Variable and use it within a Condition.  See xref:FilterData.adoc[] for information on how to specify a filter condition.

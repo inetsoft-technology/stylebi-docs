@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:thisViewsheetSetActionVisible.adoc[] to show or hide Dashboard toolbar buttons.
+endif::ai[]
+
 [WARNING,caption=See Also]
 xref:thisViewsheetSetActionVisible.adoc[] to show or hide Dashboard toolbar buttons.
 

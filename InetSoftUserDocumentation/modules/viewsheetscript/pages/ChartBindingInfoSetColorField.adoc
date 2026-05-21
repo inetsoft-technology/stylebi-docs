@@ -1,7 +1,12 @@
-﻿= bindingInfo.setColorField(col, type)
+= bindingInfo.setColorField(col, type)
 :navtitle: setColorField()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Bind the specified field to a xref:chartAPI:ColorFrame.adoc[] (color coding).
+endif::ai[]
 
 
 [WARNING,caption=See Also]

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the visibility setting for the specified toolbar button and associated feature.
+endif::ai[]
+
 
 Returns the visibility setting for the specified toolbar button and associated feature.
 

@@ -1,6 +1,11 @@
-﻿= plotBackground
+= plotBackground
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the plot background color.
+endif::ai[]
 
 
 Sets the plot background color.

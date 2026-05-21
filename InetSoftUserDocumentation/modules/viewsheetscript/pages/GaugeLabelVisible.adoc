@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether the Gauge displays a digital representation of the current reading. (This applies only to Gauge faces that support a digital display.)
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====

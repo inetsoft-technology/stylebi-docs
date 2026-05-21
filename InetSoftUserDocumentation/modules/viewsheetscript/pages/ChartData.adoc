@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:chartAPI:Data.adoc[] in xref:chartAPI:ChartScriptReference.adoc[] for information about working with chart data.
+endif::ai[]
+
 
 [WARNING,   caption=See Also]
 xref:chartAPI:Data.adoc[] in xref:chartAPI:ChartScriptReference.adoc[] for information about working with chart data.

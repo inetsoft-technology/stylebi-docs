@@ -1,5 +1,10 @@
 = event
 
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the event object available in the Dashboard onRefresh handler, providing component name, type, row, and column details about the most recent user action in Form, editable Table, or Filter components.
+endif::ai[]
+
 [WARNING,caption=See Also]
 xref:viewsheet:WriteBackToStorage.adoc#AccessUserModifiedData[Access User-Modified Data], for additional discussion of the `event` object.
 

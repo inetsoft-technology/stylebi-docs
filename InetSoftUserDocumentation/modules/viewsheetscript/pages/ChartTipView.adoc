@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the data tip for the Chart. A *data tip* is a graphical form of tooltip that displays a specified Dashboard component when the user hovers the mouse over a group on the Chart. See xref:viewsheet:AddTipsToChart.adoc[] for more details.
+endif::ai[]
+
 
 
 Sets the data tip for the Chart. A *data tip* is a graphical form of tooltip that  displays a specified Dashboard component  when the user hovers the mouse over a group on the Chart. See xref:viewsheet:AddTipsToChart.adoc[] for more details.

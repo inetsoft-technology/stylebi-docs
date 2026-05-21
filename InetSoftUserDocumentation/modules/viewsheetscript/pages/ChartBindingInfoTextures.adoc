@@ -1,7 +1,12 @@
-﻿= bindingInfo.textures
+= bindingInfo.textures
 :navtitle: textures
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies a xref:chartAPI:StaticTextureFrame.adoc[] (fixed pattern) for a particular measure on a xref:viewsheet:BarChart.adoc[].
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

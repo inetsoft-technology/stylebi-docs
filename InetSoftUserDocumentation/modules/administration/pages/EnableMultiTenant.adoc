@@ -1,6 +1,11 @@
-﻿= Enable Multi-Tenancy
+= Enable Multi-Tenancy
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to enable multi-tenancy in Enterprise Manager to support multiple organizations with isolated data, connections, and assets. Enterprise only.
+endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 

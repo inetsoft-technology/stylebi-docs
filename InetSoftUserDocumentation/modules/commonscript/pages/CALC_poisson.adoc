@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value of the Poisson distribution for specified value of random variable `x` and rate parameter `lambda`. Value `x` typically represents the number of events that occur over a period of time in an independently distributed random process, where `lambda` represents the expected (average) number of events over such a period. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the value of the Poisson distribution for specified value of random variable `x` and rate parameter `lambda`. Value `x` typically represents the number of events that occur over a period of time in an independently distributed random process, where `lambda` represents the expected (average) number of events over such a period. {CALCExcelFunctionPage}
 

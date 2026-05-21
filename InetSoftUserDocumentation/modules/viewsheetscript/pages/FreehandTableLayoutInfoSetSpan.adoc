@@ -1,7 +1,12 @@
-﻿= layoutInfo.setSpan(row, col, width, height)
+= layoutInfo.setSpan(row, col, width, height)
 :navtitle: setSpan()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the number of cells (vertically and horizontally) that the specified cell in a Freehand Table should span.
+endif::ai[]
 
 Sets the number of cells (vertically and horizontally) that the specified cell in a Freehand Table should span.
 

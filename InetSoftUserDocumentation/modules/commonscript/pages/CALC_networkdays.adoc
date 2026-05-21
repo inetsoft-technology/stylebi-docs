@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the total number of working days between `start_date` and `end_date`. If either `start_date` or `end_date` is itself a working day, that day is also included in the total. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the total number of working days between `start_date` and `end_date`. If either `start_date` or `end_date` is itself a working day, that day is also included in the total. {CALCExcelFunctionPage}
 
 

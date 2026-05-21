@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *interest rate* for a fully invested security without compounding. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *interest rate* for a fully invested security without compounding. {CALCExcelFunctionPage}
 

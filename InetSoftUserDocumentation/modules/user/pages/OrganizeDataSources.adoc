@@ -1,6 +1,11 @@
-﻿= Organize Data Sources
+= Organize Data Sources
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to organize data sources, logical models, physical views, and VPMs into folders in the Portal data panel.
+endif::ai[]
 
 The following sections explain how to manage your data sources.
 

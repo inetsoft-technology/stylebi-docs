@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value below which _p_ percent of the values in the array fall. A value of _p_=50 returns the median value, equivalent to xref:CALC_median.adoc[]. This CALC function returns the same result as Excel’s PERCENTILE.EXC function.
+endif::ai[]
+
 Returns the  value below which _p_ percent of the values in the array fall. A value of _p_=50 returns the median value, equivalent to xref:CALC_median.adoc[].  This CALC function returns the same result as Excel’s PERCENTILE.EXC function.
 
 == Parameters

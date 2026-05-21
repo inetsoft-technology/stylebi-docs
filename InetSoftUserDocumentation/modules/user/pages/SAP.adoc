@@ -1,4 +1,4 @@
-﻿= SAP
+= SAP
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 include::ROOT:partial$enterpriseOnly.adoc[]
@@ -16,6 +16,11 @@ To connect to an SAP database, an administrator must first upload the correct dr
 * Upload the SAP driver to the server.
 ====
 
+
+// metadata for AI
+ifdef::ai[]
+Summary: Instructions for connecting to SAP as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘SAP ABAP’, ‘SAP BAPI’, or ‘SAP Tables’ data source. This opens the SAP definition screen.

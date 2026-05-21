@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the logarithm of a positive number to the specified base. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the logarithm of a positive number to the specified base. {CALCExcelFunctionPage}
 
 == Parameters

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the gap in pixels between the Spinner component and its label. See xref:viewsheet:SliderSpinnerProperties.adoc[] for information on the '`Gap (px)`' option.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

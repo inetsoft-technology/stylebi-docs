@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the visibility of the secondary (top) X-axis. The default is `true` (visible) if a value has been provided for xref:AxisX2TitleText.adoc[], otherwise `false`.
+endif::ai[]
+
 
 
 Sets the visibility of the secondary (top) X-axis. The default is `true` (visible) if a value has been provided for xref:AxisX2TitleText.adoc[], otherwise `false`.

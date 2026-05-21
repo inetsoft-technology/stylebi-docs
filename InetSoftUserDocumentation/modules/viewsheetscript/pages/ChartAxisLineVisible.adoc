@@ -1,6 +1,11 @@
-﻿= axis.lineVisible
+= axis.lineVisible
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the visibility of the dimension or measure axis line.
+endif::ai[]
 
 
 

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the clean *price* per $100 face value of a security that pays periodic interest. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the clean *price* per $100 face value of a security that pays periodic interest. {CALCExcelFunctionPage}
 

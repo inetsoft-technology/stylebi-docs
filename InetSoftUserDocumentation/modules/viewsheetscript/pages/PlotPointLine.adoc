@@ -1,6 +1,11 @@
-﻿= pointLine
+= pointLine
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Draws line segments connecting the points on a xref:viewsheet:PointChart.adoc[].
+endif::ai[]
 
 
 Draws line segments connecting the points on a xref:viewsheet:PointChart.adoc[].

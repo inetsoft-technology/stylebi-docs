@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the average of the values in `array1` weighted by the values in the `array2`.
+endif::ai[]
+
 Returns the average of the values in `array1` weighted by the values in the `array2`.
 
 == Parameters

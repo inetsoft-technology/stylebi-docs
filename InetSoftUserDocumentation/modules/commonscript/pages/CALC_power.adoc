@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the result of a number raised to a power, stem:[b^n]. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the result of a number raised to a power, stem:[b^n]. {CALCExcelFunctionPage}
 
 == Parameters

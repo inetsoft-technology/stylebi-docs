@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the _k_-th percentile of values in array. The _k_-th percentile is the value below which fraction _k_ of the data are found. For example, _k_=0.5 represents the value below which half (50%) of the data are found, also known as the median. This CALC function returns the same result as Excel’s PERCENTILE and PERCENTILE.INC functions.
+endif::ai[]
+
 Returns the _k_-th percentile of values in array. The _k_-th percentile is the value below which fraction _k_ of the data are found. For example, _k_=0.5 represents the value below which half (50%) of the data are found, also known as the median.  This CALC function returns the same result as Excel’s PERCENTILE and PERCENTILE.INC functions.
 
 == Parameters

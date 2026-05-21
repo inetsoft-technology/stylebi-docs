@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns `true` if one or more of the arguments evaluate to `true`, otherwise returns `false`. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns `true` if one or more of the arguments evaluate to `true`, otherwise returns `false`. {CALCExcelFunctionPage}
 

@@ -1,6 +1,11 @@
-﻿= valueFillColor
+= valueFillColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the value fill color for donut-style and bullet-style Gauges.
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Remove whitespace characters from both sides of a string.
+endif::ai[]
+
 
 
 Remove whitespace characters from both sides of a string.

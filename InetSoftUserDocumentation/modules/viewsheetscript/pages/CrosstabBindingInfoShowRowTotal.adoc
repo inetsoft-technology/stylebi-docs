@@ -1,7 +1,12 @@
-﻿= bindingInfo.showRowTotal
+= bindingInfo.showRowTotal
 :navtitle: showRowTotal
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether a trailing row containing totals should be displayed. This is equivalent to setting ‘Row Total’ in the Crosstab Editor.
+endif::ai[]
 
 
 Specifies whether a trailing row containing totals should be displayed. This is equivalent to setting ‘Row Total’ in the Crosstab Editor.

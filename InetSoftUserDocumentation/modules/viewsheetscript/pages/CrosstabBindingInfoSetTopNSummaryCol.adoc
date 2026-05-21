@@ -1,7 +1,12 @@
-﻿= bindingInfo.setTopNSummaryCol(field, header, measure)
+= bindingInfo.setTopNSummaryCol(field, header, measure)
 :navtitle: setTopNSummaryCol()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the measure to use in ranking groups. This is equivalent to setting the ‘Of’ measure in the Crosstab Editor.
+endif::ai[]
 
 
 Sets the measure to use in ranking groups. This is equivalent to setting the ‘Of’ measure in the Crosstab Editor.

@@ -1,7 +1,12 @@
-﻿= bindingInfo.setGroupOrder(group_field, header, level)
+= bindingInfo.setGroupOrder(group_field, header, level)
 :navtitle: setGroupOrder()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the grouping level for a date-type field. This is equivalent to setting the ‘Level’ for a date-type field in the Crosstab Editor.
+endif::ai[]
 
 
 

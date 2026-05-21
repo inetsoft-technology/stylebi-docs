@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *modified* Macaulay duration (in years) for a security with an assumed par value of $100. This is the Macaulay duration divided by `(1 + yld/frequency)`, where Macaulay duration is given by xref:CALC_duration.adoc[]. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *modified* Macaulay duration (in years) for a security with an assumed par value of $100. This is the Macaulay duration divided by `(1 + yld/frequency)`, where Macaulay duration is given by xref:CALC_duration.adoc[]. {CALCExcelFunctionPage}
 

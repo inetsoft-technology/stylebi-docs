@@ -1,6 +1,11 @@
-﻿= dataConditions
+= dataConditions
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheet:DrillDownIntoData.adoc[] for more information about flyover views.
+endif::ai[]
 
 include::partial$readOnly.adoc[]
 

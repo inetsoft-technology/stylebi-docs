@@ -1,6 +1,11 @@
-﻿= Create an Organization
+= Create an Organization
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a tenant organization in Enterprise Manager for multi-tenant deployments, including assigning users and configuring org-specific access. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 An *organization* is assigned to a user when multi-tenancy is enabled (see xref:EnableMultiTenant.adoc[]), and the URL used  to access the StyleBI server provides the organization ID.  When an organization is identified in the URL, the users, groups, and roles  specified for that organization will be in effect for the session.

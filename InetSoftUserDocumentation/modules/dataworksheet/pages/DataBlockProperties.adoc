@@ -1,5 +1,10 @@
-﻿= Data Block Properties
+= Data Block Properties
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Data Worksheet data block properties, including description, maximum rows retrieved, and handling of duplicate rows.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 You can change various properties of a data block, such the description, maximum number of rows retrieved and displayed, and the handling of duplicate rows.

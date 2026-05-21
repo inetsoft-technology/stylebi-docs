@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:thisViewsheetIsActionVisible.adoc[] to return Dashboard toolbar button visibility.
+endif::ai[]
+
 [WARNING,caption=See Also]
 xref:thisViewsheetIsActionVisible.adoc[] to return Dashboard toolbar button visibility.
 

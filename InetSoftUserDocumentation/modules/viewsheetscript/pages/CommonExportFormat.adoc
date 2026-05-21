@@ -1,6 +1,11 @@
-﻿= exportFormat
+= exportFormat
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the format in which a Dashboard is currently being exported: `pdf`, `pptx`, `xlsx`, `html`, `png`. This property can be used to control the *visibility* of a component during export by placing it within an Expression that sets the ‘Visible’ property of a component.
+endif::ai[]
 
 include::partial$readOnly.adoc[]
 

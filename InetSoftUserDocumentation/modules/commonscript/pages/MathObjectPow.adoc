@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the specified base raised to the given exponent power. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow[Math.pow()] method, and *must* be used with the `Math` qualifier, `Math.pow()`.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

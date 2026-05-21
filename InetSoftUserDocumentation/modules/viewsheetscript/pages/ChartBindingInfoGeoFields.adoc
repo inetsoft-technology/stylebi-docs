@@ -1,7 +1,12 @@
-﻿= bindingInfo.geoFields
+= bindingInfo.geoFields
 :navtitle: geoFields
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:PlotGeoFields.adoc[] to return the currently bound ‘Geographic’ field at runtime.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

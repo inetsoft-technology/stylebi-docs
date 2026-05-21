@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For an *Editable Table*, inserts a new blank row prior to the row specified by integer parameter `row`, and adds this new row to the array returned by `getFormRows(ADDED)`. See xref:viewsheet:TableProperties.adoc[] for information on making a Table editable.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====

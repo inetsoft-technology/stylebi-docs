@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Convert a number to a string. You can also convert a number to a string by simply concatenating (`+`) the number with any string.
+endif::ai[]
+
 
 
 Convert a number to a string.  You can also convert a number to a string by simply concatenating (`+`) the number with any string.

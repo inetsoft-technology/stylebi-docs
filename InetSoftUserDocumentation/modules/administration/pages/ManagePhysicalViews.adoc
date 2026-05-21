@@ -1,6 +1,11 @@
 = Manage Physical Views
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to manage physical views programmatically using the Groovy DSL Administration Console :physicalmodel command. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 Manage physical views in script by using the `:physicalmodel` or equivalent `:pm` command. See xref:user:CreatePhysicalView.adoc[] for  information about physical views in the User Portal.

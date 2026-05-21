@@ -1,6 +1,11 @@
-﻿= Create a Logical Model
+= Create a Logical Model
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Step-by-step instructions for creating a logical model on top of a physical view, organizing database columns into business-oriented entities and attributes for relational database data sources.
+endif::ai[]
 
 
 IMPORTANT: Logical models can only be created for *relation database* data sources. (See xref:JDBC.adoc[] or xref:ConnectToDataSource.adoc[] for information on how to configure a relational database data source.)

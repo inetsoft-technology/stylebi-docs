@@ -1,7 +1,12 @@
-﻿= bindingInfo.setFormula(col, formula, binding)
+= bindingInfo.setFormula(col, formula, binding)
 :navtitle: setFormula()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheetscript:ChartBindingInfoGetFormula.adoc[] to obtain existing binding information.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

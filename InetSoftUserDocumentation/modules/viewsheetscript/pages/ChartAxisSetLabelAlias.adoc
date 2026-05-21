@@ -1,7 +1,12 @@
-﻿= axis.setLabelAlias(value,alias)
+= axis.setLabelAlias(value,alias)
 :navtitle: axis.setLabelAlias()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Replace the specified label on the axis with an alias.
+endif::ai[]
 
 
 

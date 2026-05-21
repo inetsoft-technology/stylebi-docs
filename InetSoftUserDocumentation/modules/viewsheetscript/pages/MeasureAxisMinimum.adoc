@@ -1,6 +1,11 @@
-﻿= axis.minimum
+= axis.minimum
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the minimum value for a measure axis.
+endif::ai[]
 
 
 

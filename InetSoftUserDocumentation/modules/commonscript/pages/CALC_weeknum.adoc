@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the week number within the year for the given date. (The first week of the year has index 1.) {CALCExcelFunctionPage}
+endif::ai[]
+
 
 
 Returns the week number within the year for the given date. (The first week of the year has index 1.) {CALCExcelFunctionPage}

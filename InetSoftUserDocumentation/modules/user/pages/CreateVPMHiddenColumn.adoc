@@ -1,6 +1,11 @@
-﻿= Create a Hidden Column
+= Create a Hidden Column
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to specify hidden columns in a VPM to restrict user access to specific database table columns. Enterprise only. See AddDataSecurity for VPM overview.
+endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 

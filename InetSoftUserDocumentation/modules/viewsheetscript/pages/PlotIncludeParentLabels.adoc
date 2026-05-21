@@ -1,6 +1,11 @@
-﻿= includeParentLabels
+= includeParentLabels
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: For a xref:viewsheet:TreemapChart.adoc[] and xref:viewsheet:CirclePackingChart.adoc[] only, specifies that the labels of parents in the hierarchy should be displayed (along with the child labels).
+endif::ai[]
 
 
 For a xref:viewsheet:TreemapChart.adoc[] and xref:viewsheet:CirclePackingChart.adoc[] only, specifies that the labels of parents in the hierarchy should be displayed (along with the child labels).

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Writes a value into the specified row and column of the *Embedded Table*. See xref:viewsheet:TableProperties.adoc[] for information on how to make a Table editable.
+endif::ai[]
+
 Writes a value into the specified row and column of the *Embedded Table*.  See xref:viewsheet:TableProperties.adoc[]  for information on how to make a Table editable.
 
 == Parameter

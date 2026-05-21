@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the least common multiple of an array of non-negative numbers. Non-integer values are truncated. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the least common multiple of an array of non-negative numbers. Non-integer values are truncated. {CALCExcelFunctionPage}
 
 == Parameters

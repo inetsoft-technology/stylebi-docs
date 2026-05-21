@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that the table should be “editable” by the user. See xref:viewsheet:WriteBackToStorage.adoc#AccessUserModifiedData[Access User-Modified Data] for more details.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

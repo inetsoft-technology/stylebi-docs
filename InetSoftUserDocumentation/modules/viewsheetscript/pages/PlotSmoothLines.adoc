@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For xref:viewsheet:LineChart.adoc[], xref:viewsheet:AreaChart.adoc[], and xref:viewsheet:CircularNetworkChart.adoc[], set to `true` to render chart lines as smooth curves instead of straight segments.
+endif::ai[]
+
 
 For xref:viewsheet:LineChart.adoc[], xref:viewsheet:AreaChart.adoc[], and xref:viewsheet:CircularNetworkChart.adoc[],  set to `true` to render chart lines as smooth curves instead of straight segments.
 

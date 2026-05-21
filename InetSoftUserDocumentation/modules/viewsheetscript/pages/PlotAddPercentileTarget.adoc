@@ -1,7 +1,12 @@
-﻿= addPercentileTarget(measure, colors, values, options)
+= addPercentileTarget(measure, colors, values, options)
 :navtitle: addPercentileTarget()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Draws a set of horizontal or vertical lines on the chart to mark the specified percentiles. See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.
+endif::ai[]
 
 
 

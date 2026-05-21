@@ -1,4 +1,9 @@
-﻿= parameter
+= parameter
+
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the parameter property, which reads and writes Dashboard and session parameters including Data Worksheet variables, Form component values, hyperlink parameters, and session context like user and roles.
+endif::ai[]
 
 
 The `parameter` property allows you to read and write parameters that exist in the context of the Dashboard and user session.  Parameters can be created in several ways, including the following:

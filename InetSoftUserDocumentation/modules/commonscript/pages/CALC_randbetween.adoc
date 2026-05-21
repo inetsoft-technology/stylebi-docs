@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return a pseudo-random integer value between a specified `bottom` integer and `top` integer (inclusive). {CALCExcelFunctionPage}
+endif::ai[]
+
 Return a pseudo-random integer value between a specified `bottom` integer and `top` integer (inclusive). {CALCExcelFunctionPage}
 
 == Parameters

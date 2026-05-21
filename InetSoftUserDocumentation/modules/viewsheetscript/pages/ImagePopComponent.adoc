@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the name of an individual component or Container to display as a pop-up interface. When the user clicks the Image, the selected component is displayed at the location of the Image. Otherwise, the specified component is not visible in the Dashboard.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 xref:viewsheet:ImageProperties.adoc[] for general information about Image components.

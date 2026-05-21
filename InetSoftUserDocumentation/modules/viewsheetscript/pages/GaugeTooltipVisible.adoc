@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether the Gauge displays a tooltip or not.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Converts a numerical value to a string based on the specified format. {CALCExcelFunctionPage}
+endif::ai[]
+
 Converts a numerical value to a string based on the specified format. {CALCExcelFunctionPage}
 
 == Parameters

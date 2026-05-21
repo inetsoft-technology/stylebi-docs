@@ -1,4 +1,9 @@
-﻿= setupGoogleMapsPlot(graph, urlPrefix, data, latitudeColumnName, longitudeColumnName, maxWidthPx, maxHeightPx, widthPx, heightPx)
+= setupGoogleMapsPlot(graph, urlPrefix, data, latitudeColumnName, longitudeColumnName, maxWidthPx, maxHeightPx, widthPx, heightPx)
+
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the setupGoogleMapsPlot() function, which creates a Google Maps background for a Chart component. Requires a Google Maps API key.
+endif::ai[]
 :navtitle: setupGoogleMapsPlot()
 
 

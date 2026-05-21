@@ -1,6 +1,11 @@
-﻿= Monitor Server Activity
+= Monitor Server Activity
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to monitor server activity in Enterprise Manager, including viewing active user sessions, running queries, memory usage, and server metrics.
+endif::ai[]
 
 To monitor and manage a variety of aspects of server activity, press the {buttonMonitoring} at the top of Enterprise Manager.
 

@@ -1,6 +1,11 @@
 = Manage Security
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to manage server security configuration programmatically using the Groovy DSL Administration Console :security command. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 Use the `:security` or equivalent `:sec` command to manage the server security configuration.   Security must first be enabled in Enterprise Manager. See xref:SpecifySecurityProvider.adoc[] for more information.

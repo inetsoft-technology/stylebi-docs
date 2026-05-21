@@ -1,5 +1,10 @@
 = Dashboard
 
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference index for embedded Dashboard properties, which are set in the host (parent) Dashboard. See ModularizeDashboard for embedding information.
+endif::ai[]
+
 The  properties in this section are available for an embedded Dashboard. These properties should be set in the host (parent) Dashboard. See xref:viewsheet:ModularizeDashboard.adoc[] for more information.
 
 [square]

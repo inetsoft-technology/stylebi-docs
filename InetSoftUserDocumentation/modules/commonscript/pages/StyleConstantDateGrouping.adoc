@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Date grouping levels are used for Chart and Crosstab binding.
+endif::ai[]
+
 Date grouping levels are used for Chart and Crosstab binding.
 
 == Type

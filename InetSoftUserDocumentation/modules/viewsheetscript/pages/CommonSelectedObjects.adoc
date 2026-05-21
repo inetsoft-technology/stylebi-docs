@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the selected *values* (not the labels) of the component as an array. Applies to multi-value input elements (Check Boxes) and selection elements (Selection Lists, Selection Trees, Range Slider, Calendars).
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====

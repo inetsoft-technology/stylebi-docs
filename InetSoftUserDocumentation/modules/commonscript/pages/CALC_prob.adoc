@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the probability that a value falls between `lower_limit` and `upper_limit` (inclusive) based on the discrete probabilities in `arrayProb`. The probability is computed by adding together the probabilities in `arrayProb` corresponding to the values in `array_x` that fall in the specified range. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the probability that a value falls between `lower_limit` and `upper_limit` (inclusive) based on the discrete probabilities in `arrayProb`. The probability is computed by adding together the probabilities in `arrayProb` corresponding to the values in `array_x` that fall in the specified range. {CALCExcelFunctionPage}
 
 == Parameters

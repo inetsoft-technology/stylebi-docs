@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns `num_chars` consecutive characters from `string`, starting with the location given by `start_num`. {CALCExcelFunctionPage} To extract a substring with arbitrary starting and ending indexes, use xref:StringObjectsubString.adoc[].
+endif::ai[]
+
 Returns `num_chars` consecutive characters from `string`, starting with the location given by `start_num`.  {CALCExcelFunctionPage} To extract a substring with arbitrary starting and ending indexes, use xref:StringObjectsubString.adoc[].
 
 == Parameters

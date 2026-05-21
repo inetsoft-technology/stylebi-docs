@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheet:SelectionListProperties.adoc[] and xref:viewsheet:SelectionTreeProperties.adoc[] more information on these components.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 xref:viewsheet:SelectionListProperties.adoc[] and xref:viewsheet:SelectionTreeProperties.adoc[] more information on these components.

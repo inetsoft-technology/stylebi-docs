@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: JavaScript function to return a date in string format. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString[Date.toString()] in the {JavaScriptRef} for details on usage.
+endif::ai[]
+
 
 JavaScript function to return a date in string format.   See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString[Date.toString()] in the {JavaScriptRef} for details on usage.
 

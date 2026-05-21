@@ -1,6 +1,11 @@
-﻿= Enable Self-Signup
+= Enable Self-Signup
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to enable the self-signup feature that lets users create their own accounts from the login page, adding them to a dedicated Self Organization. Enterprise only.
+endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 

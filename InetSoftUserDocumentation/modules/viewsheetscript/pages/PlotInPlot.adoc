@@ -1,6 +1,11 @@
-﻿= inPlot
+= inPlot
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether the maximum measure value is included within the plot region. When `true` (default), this adds a slight buffer to the edge of the plot area in order to ensure that the specified maximum value falls within the displayed plot area (even if the axis limit is set lower). When `false`, the plot area is permitted to crop off measure values that fall outside the plot range.
+endif::ai[]
 
 
 Specifies whether the maximum measure value is included within the plot region. When `true` (default), this adds a slight buffer to the edge of the plot area in order to ensure that the specified maximum value falls within the displayed plot area (even if the axis limit is set lower). When `false`, the plot area is permitted to crop off measure values that fall outside the plot range.

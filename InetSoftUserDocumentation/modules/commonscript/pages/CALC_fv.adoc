@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *future value* of an investment based on periodic, constant payments and a constant interest rate. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *future value* of an investment based on periodic, constant payments and a constant interest rate. {CALCExcelFunctionPage}
 

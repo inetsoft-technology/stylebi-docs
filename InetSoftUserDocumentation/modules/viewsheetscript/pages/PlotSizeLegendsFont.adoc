@@ -1,6 +1,11 @@
-﻿= sizeLegends.font
+= sizeLegends.font
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the font for labels within a size-key legend on Charts that have *multiple* size legends.
+endif::ai[]
 
 
 Sets the font for labels within a size-key legend on Charts that have *multiple* size legends.

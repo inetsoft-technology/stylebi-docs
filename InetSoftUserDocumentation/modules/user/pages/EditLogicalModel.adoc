@@ -1,6 +1,11 @@
-﻿= Edit a Logical Model
+= Edit a Logical Model
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to open and modify an existing logical model in the Portal data model editor.
+endif::ai[]
 
 include::ROOT:partial$createVisualizationClose.adoc[]
 

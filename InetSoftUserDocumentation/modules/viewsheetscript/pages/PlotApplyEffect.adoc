@@ -1,6 +1,11 @@
-﻿= applyEffect
+= applyEffect
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Enables a 3D visual effect for chart elements.
+endif::ai[]
 
 
 Enables a 3D visual effect for chart elements.

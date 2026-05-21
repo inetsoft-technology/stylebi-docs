@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *population variance* for the values in `array`. Variance is the square of the standard deviation and provides a measure of how widely the data are spread about the mean. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the *population variance* for the values in `array`. Variance is the square of the standard deviation and provides a measure of how widely the data are spread about the mean. {CALCExcelFunctionPage}
 
 == Parameters

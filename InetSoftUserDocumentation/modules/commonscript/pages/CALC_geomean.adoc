@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *geometric mean* of values in array. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the *geometric mean* of values in array. {CALCExcelFunctionPage}
 
 == Parameters

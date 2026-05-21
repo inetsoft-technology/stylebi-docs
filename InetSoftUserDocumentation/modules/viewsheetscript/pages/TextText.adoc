@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the text contents of the Text component.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

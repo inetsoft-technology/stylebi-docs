@@ -1,6 +1,11 @@
 = geoFields
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:ChartBindingInfoGeoFields.adoc[] to associate fields with the ‘Geographic’ binding.
+endif::ai[]
 include::viewsheetscript:partial$readOnly.adoc[]
 
 

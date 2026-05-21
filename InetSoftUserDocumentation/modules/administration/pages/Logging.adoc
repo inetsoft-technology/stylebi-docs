@@ -1,6 +1,11 @@
-﻿= Logging
+= Logging
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure server logging levels, log file locations, and log rotation settings in Enterprise Manager.
+endif::ai[]
 
 [NOTE,caption=Site admin only]
 ====

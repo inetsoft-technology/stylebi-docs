@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the depreciation of an asset for accounting year `period` using the *double-declining balance* method or some other factor. {CALCExcelFunctionPage} The rate of depreciation for a given year is `factor/life`. If `factor` is omitted, it is assumed to be 2 (the double-declining balance method).
+endif::ai[]
+
 
 Returns the depreciation of an asset for accounting year `period` using the *double-declining balance* method or some other factor. {CALCExcelFunctionPage} The rate of depreciation for a given year is `factor/life`. If `factor` is omitted, it is assumed to be 2 (the double-declining balance method).
 

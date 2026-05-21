@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: When `true` (default), refreshes the Dashboard after submission. This is useful when you want Dashboard components to be immediately updated with the submitted data (for example, when new values are submitted from an Editable Table or Form component to the Data Worksheet).
+endif::ai[]
+
 
 
 

@@ -1,6 +1,11 @@
 = xFields
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the names of the query fields (as an array) that are currently assigned to the X-axis binding at runtime. This property is read-only. Use xref:ChartBindingInfoXFields.adoc[] to assign fields to the X-axis.
+endif::ai[]
 include::viewsheetscript:partial$readOnly.adoc[]
 
 

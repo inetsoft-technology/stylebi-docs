@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the most frequently occurring value in `array`. If there are several elements that occur with the maximum frequency, the *smallest* of these is returned. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the most frequently occurring value in `array`. If there are several elements that occur with the maximum frequency, the *smallest* of these is returned. {CALCExcelFunctionPage}
 
 == Parameters

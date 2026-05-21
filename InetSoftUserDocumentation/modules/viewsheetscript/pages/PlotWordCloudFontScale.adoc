@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For a xref:viewsheet:WordcloudChart.adoc[], multiplies the specified ‘Size’ setting in the Editor to increase the maximum font size of words in the cloud.
+endif::ai[]
+
 
 For a xref:viewsheet:WordcloudChart.adoc[], multiplies the specified ‘Size’ setting in the Editor to increase the maximum font size of words in the cloud.
 

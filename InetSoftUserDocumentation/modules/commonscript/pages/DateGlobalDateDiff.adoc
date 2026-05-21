@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the difference between `date1` and `date2` as measured by the specified interval.
+endif::ai[]
+
 Returns the difference between   `date1`  and `date2` as measured by the specified interval.
 
 

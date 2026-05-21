@@ -1,7 +1,12 @@
-﻿= bindingInfo.setTopN(col, N)
+= bindingInfo.setTopN(col, N)
 :navtitle: setTopN()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheetscript:ChartBindingInfoGetTopN.adoc[] to obtain the binding information.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

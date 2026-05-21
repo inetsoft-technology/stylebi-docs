@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: In a Freehand Table expression, returns `true` when the values in the list match any group cells in the context. See xref:viewsheetscript:FreehandTable.adoc[] for more information.
+endif::ai[]
+
 
 
 In a Freehand Table expression, returns `true` when the values in the list match any group cells in the context.  See xref:viewsheetscript:FreehandTable.adoc[] for more information.

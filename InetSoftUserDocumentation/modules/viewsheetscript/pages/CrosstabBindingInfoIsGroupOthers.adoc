@@ -1,7 +1,12 @@
-﻿= bindingInfo.isGroupOthers(field, header)
+= bindingInfo.isGroupOthers(field, header)
 :navtitle: isGroupOthers()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value set by xref:CrosstabBindingInfoSetGroupOthers.adoc[] or by the '`Group all others together`' property in the Crosstab Editor.
+endif::ai[]
 
 
 Returns the value  set  by xref:CrosstabBindingInfoSetGroupOthers.adoc[] or by the '`Group all others together`' property in the Crosstab Editor.

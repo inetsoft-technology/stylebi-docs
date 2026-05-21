@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Enables the Text component to display the URL that you entered into the ‘Text’ field (or set with the xref:TextText.adoc[] property) within an embedded IFrame.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the negative binomial distribution, the probability that there will be `number_f` failures before the `number_s`-th success in a series of independent Bernoulli trials, when the constant probability of a success is `probability_s`. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the negative binomial distribution, the probability that there will be `number_f` failures before the `number_s`-th success in a series of independent Bernoulli trials, when the constant probability of a success is `probability_s`. {CALCExcelFunctionPage}
 

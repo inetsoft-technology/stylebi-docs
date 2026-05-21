@@ -1,5 +1,10 @@
-﻿= Navigate Enterprise Manager
+= Navigate Enterprise Manager
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to navigate the Enterprise Manager interface after logging in, including accessing Settings, Monitoring, and other administrative panels.
+endif::ai[]
 
 
 After you have logged in to Enterprise Manager, press the {buttonSettings} at the top of the page to access the various administrative operations.

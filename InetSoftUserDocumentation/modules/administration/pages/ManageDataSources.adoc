@@ -1,6 +1,11 @@
 = Manage Data Sources
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to manage data sources programmatically using the Groovy DSL Administration Console :datasource command. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 Manage data sources in script by using the `:datasource` or equivalent `:ds` command.

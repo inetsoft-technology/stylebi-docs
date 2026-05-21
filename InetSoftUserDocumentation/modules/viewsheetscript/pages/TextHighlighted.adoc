@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Identifies whether a highlight with the specified name has been applied to the Text component (i.e., whether the highlight condition has been satisfied.) You can use this to alert the user that a highlight has been triggered.
+endif::ai[]
+
 include::partial$readOnly.adoc[]
 
 [WARNING,caption=See Also]

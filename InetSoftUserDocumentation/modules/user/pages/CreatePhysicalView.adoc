@@ -1,6 +1,11 @@
-﻿= Create a Physical View
+= Create a Physical View
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Step-by-step instructions for creating a physical view that defines the database table join structure underlying a data model, for relational database data sources.
+endif::ai[]
 
 IMPORTANT: Physical views can only be created for relational databases. (See xref:JDBC.adoc[]  or  xref:ConnectToDataSource.adoc[] for information on how to configure a relational database data source.)
 

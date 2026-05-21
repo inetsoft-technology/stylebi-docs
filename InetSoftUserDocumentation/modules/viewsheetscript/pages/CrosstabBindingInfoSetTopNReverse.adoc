@@ -1,7 +1,12 @@
-﻿= bindingInfo.setTopNReverse(field, header, Boolean)
+= bindingInfo.setTopNReverse(field, header, Boolean)
 :navtitle: setTopNReverse()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether groups are selected from the top or bottom of the ranking according to the given measure. When `true`, this is equivalent to selecting ‘Bottom’ in the ‘Ranking’ menu in the Crosstab Editor. When `false`, this is equivalent to selecting ‘Top’ in the ‘Ranking’ menu in the Crosstab Editor.
+endif::ai[]
 
 
 

@@ -1,7 +1,12 @@
-﻿= bindingInfo.setGroupOrder(col, grouping)
+= bindingInfo.setGroupOrder(col, grouping)
 :navtitle: setGroupOrder()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheetscript:ChartBindingInfoGetGroupOrder.adoc[] to set the binding information.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

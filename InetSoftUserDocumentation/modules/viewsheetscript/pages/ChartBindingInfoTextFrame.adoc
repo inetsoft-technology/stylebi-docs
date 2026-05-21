@@ -1,7 +1,12 @@
-﻿= bindingInfo.textFrame
+= bindingInfo.textFrame
 :navtitle: textFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies a mapping between axis values and replacement text.
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

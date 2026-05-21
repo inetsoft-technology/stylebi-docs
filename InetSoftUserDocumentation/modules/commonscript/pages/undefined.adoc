@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: The value undefined is returned if a non-existent object or property is referenced. It is also the value of a variable before it is initialized.
+endif::ai[]
+
 
 
 The value undefined is returned if a non-existent object or property is referenced. It is also the value of a variable before it is initialized.

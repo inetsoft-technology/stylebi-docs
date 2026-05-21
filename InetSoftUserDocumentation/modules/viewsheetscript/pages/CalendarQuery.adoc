@@ -1,6 +1,11 @@
-﻿= query
+= query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:CalendarFields.adoc[] to specify the fields to display in the Calendar.
+endif::ai[]
 
 [WARNING,caption=See Also]
 xref:CalendarFields.adoc[] to specify the fields to display in the Calendar.

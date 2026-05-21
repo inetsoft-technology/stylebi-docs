@@ -1,6 +1,11 @@
-﻿= oneLine
+= oneLine
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: For a xref:viewsheet:PointChart.adoc[] with a dimension set in the *Color*, *Shape*, *Size*, or *Text* regions, connects the points with a single line rather than using separate lines for the different dimension values.
+endif::ai[]
 
 
 For a xref:viewsheet:PointChart.adoc[] with a dimension set in the *Color*, *Shape*, *Size*, or *Text* regions, connects the points with a single line rather than using separate lines for the different dimension values.

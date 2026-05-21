@@ -1,6 +1,11 @@
-﻿= Audit
+= Audit
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to enable and configure the audit feature in Enterprise Manager to track Dashboard and data access, user activity, and asset dependencies in an audit database. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 

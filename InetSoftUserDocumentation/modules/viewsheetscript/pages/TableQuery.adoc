@@ -1,6 +1,11 @@
-﻿= query
+= query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the data block to be used by the Table component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

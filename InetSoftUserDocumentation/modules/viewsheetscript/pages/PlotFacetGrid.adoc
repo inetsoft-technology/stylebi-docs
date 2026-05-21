@@ -1,6 +1,11 @@
-﻿= facetGrid
+= facetGrid
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: When `true`, displays the global border of a facet-type chart (a chart with multiple dimensions on the axes). Set to `false` (default) to disable the border.
+endif::ai[]
 
 
 When `true`, displays the global border of a facet-type chart (a chart with multiple dimensions on the axes). Set to `false` (default) to disable the border.

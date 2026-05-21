@@ -1,6 +1,11 @@
-﻿= panX
+= panX
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: The number of pixels by which to pan a xref:viewsheet:MapChart.adoc[] in the horizontal direction. Positive values shift the map left, while negative values shift the map right.
+endif::ai[]
 
 
 The number of pixels by which to pan a xref:viewsheet:MapChart.adoc[] in the horizontal direction. Positive values shift the map left, while negative values shift the map right.

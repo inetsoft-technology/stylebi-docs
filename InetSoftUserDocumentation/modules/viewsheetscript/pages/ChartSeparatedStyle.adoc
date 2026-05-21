@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the Chart style for a chart with a *single measure*. For a chart with ‘Multiple Styles’ selected from {buttonSelectChartStyle}, use xref:ChartSingleStyle.adoc[].
+endif::ai[]
+
 
 Specifies the Chart style for a chart with a *single measure*. For a chart with ‘Multiple Styles’ selected from {buttonSelectChartStyle}, use xref:ChartSingleStyle.adoc[].
 

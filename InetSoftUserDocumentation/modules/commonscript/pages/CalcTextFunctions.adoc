@@ -2,5 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: The following topics present String functions provided by the CALC object. {CALCExcelHeadingPage}
+endif::ai[]
+
 The following topics present String functions provided by the CALC object. {CALCExcelHeadingPage}
 

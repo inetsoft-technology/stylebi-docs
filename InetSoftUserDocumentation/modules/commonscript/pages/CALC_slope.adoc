@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Calculates the slope of the best-fit regression line through the values in `array_x` and `array_y`. {CALCExcelFunctionPage}
+endif::ai[]
+
 Calculates the slope of the best-fit regression line through the values in `array_x` and `array_y`. {CALCExcelFunctionPage}
 
 == Parameters

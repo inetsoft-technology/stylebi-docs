@@ -1,5 +1,10 @@
 = Java Objects (LiveConnect)
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview of LiveConnect support in the InetSoft scripting engine, which allows JavaScript scripts to access Java classes and objects using the new operator.
+endif::ai[]
+
 The JavaScript engine used in InetSoft supports the *LiveConnect* feature, which allows a JavaScript script to access Java classes and objects. This is particularly useful in InetSoft because the host environment is running inside a Java virtual machine and many properties of the Dashboard elements require Java objects.
 
 A Java object can be created using the *new* operator:

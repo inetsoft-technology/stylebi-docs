@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For Combo Box *only*, enables formatting of dates sent to the database in the Combo Box query. To set the format, use xref:CheckRadioComboDateFormatPattern.adoc[].
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

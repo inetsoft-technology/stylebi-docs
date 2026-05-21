@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to localize data source names, data model entity and attribute names, and query column names using SreeBundle mapping files.
+endif::ai[]
+
 You can use a simple text mapping to localize  data source names, data model names (entity/attribute), and query (column) names.
 
 

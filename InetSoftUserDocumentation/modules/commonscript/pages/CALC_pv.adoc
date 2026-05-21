@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *present value* of an investment, the lump-sum amount that a series of future payments is worth right now. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *present value* of an investment, the lump-sum amount that a series of future payments is worth right now. {CALCExcelFunctionPage}
 

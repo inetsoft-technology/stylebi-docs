@@ -1,6 +1,11 @@
-﻿= Example CSS File
+= Example CSS File
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Annotated example CSS definition file demonstrating global, type, class, and ID selectors for styling Dashboard components. See CreateCSSDefinitionFile for creation steps.
+endif::ai[]
 
 In this example, you will create a new CSS file. The CSS instructions will format components in the Dashboard by using the *global* format (`pass:[*]`), component and sub-component *type* format, component *class* format, and component *ID* format.
 

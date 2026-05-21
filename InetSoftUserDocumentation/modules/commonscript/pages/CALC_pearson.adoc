@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *Pearson product moment correlation* coefficient of the values in `array1` and `array2`. The correlation coefficient indicates the degree of linear relationship between two variables. It ranges from -1 (perfect negative linear relationship) to +1 (perfect positive linear relationship). A value of 0 indicates no linear relationship. {CALCExcelFunctionPage} The result should be comparable to that obtained with xref:CALC_correl.adoc[].
+endif::ai[]
+
 Returns the *Pearson product moment correlation* coefficient of the values in `array1` and `array2`. The correlation coefficient indicates the degree of linear relationship between two variables. It ranges from -1 (perfect negative linear relationship) to +1 (perfect positive linear relationship). A value of 0 indicates no linear relationship.  {CALCExcelFunctionPage}  The result should be comparable to that obtained with xref:CALC_correl.adoc[].
 
 == Parameters

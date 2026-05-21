@@ -1,6 +1,11 @@
-﻿= Configure LDAP Security
+= Configure LDAP Security
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure LDAP (including Active Directory) as the authentication and authorization provider in Enterprise Manager, mapping LDAP users, groups, and roles to InetSoft security.
+endif::ai[]
 
 
 The LDAP security provider is useful when your users, groups, and roles are already defined in an LDAP environment such as Active Directory or any generic LDAP implementation.

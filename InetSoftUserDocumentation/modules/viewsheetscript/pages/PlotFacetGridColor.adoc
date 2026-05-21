@@ -1,6 +1,11 @@
-﻿= facetGridColor
+= facetGridColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color for the global border of a facet-type chart (a chart with multiple dimensions on the axes).
+endif::ai[]
 
 
 Sets the color for the global border of a facet-type chart (a chart with multiple dimensions on the axes).

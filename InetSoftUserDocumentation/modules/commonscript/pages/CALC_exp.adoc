@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value of the natural exponential function, stem:[e^x], where stem:[e] is the base of the natural logarithm and stem:[x] is the specified `number`. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the value of the natural exponential function, stem:[e^x], where stem:[e] is the base of the natural logarithm and stem:[x] is the specified `number`. {CALCExcelFunctionPage}
 

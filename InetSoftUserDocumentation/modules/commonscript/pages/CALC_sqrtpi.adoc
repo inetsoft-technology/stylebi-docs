@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the square root of a positive number multiplied by stem:[pi]: `sqrt(pi()*number)`. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the square root of a positive number multiplied by stem:[pi]: `sqrt(pi()*number)`. {CALCExcelFunctionPage}
 
 

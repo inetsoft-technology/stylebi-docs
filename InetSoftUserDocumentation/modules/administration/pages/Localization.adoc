@@ -1,5 +1,10 @@
 = Localization
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for localization features, linking to instructions for localizing the User Portal interface, Dashboards, and data source names.
+endif::ai[]
+
 Localization is a feature that allows StyleBI to adapt to different language environments, and is implemented for three contexts:
 
 [square]

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the value of the Image component in cases when the component is bound to a data field (i.e., representing an aggregate). If the Image component is not bound to a data field, the value property is undefined.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 xref:viewsheet:ImageProperties.adoc[] for general information about Image components.

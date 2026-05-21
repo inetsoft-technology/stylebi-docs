@@ -1,6 +1,11 @@
-﻿= Create a Custom Function
+= Create a Custom Function
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: In addition to using predefined JavaScript functions (see xref:commonscript:UserFunctions.adoc[]), you also can create your own functions. A custom function is a reusable component that can be applied in multiple Dashboards. By saving common script tasks to the script library, you can keep your main scrips short, simple, and easy to maintain. The following sections explain how to create and use a custom script function.
+endif::ai[]
 
 In addition to using  predefined JavaScript functions (see xref:commonscript:UserFunctions.adoc[]), you also can create your own functions. A custom function  is a reusable component that can be applied in  multiple   Dashboards. By saving common script tasks to the script library, you can keep your main scrips short, simple, and easy to maintain. The following sections explain how to create and use a custom script function.
 

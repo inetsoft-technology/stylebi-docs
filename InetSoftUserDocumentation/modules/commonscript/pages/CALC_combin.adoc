@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the number of unique combinations in which a set of elements can be combined into groups of a given size. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the number of unique combinations in which a set of elements can be combined into groups of a given size. {CALCExcelFunctionPage}
 

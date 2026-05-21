@@ -1,6 +1,11 @@
-﻿= valueColor
+= valueColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:PlotValueFormats.adoc[] to set the color of a value on a multi-style chart.
+endif::ai[]
 
 [WARNING,caption=see also]
 xref:PlotValueFormats.adoc[] to set the color of a value on a multi-style chart.

@@ -1,7 +1,12 @@
-﻿= bindingInfo.setGroupOthers(field, header, Boolean)
+= bindingInfo.setGroupOthers(field, header, Boolean)
 :navtitle: setGroupOthers()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether groups excluded from the ranking should be grouped as ‘Others’. When `true`, this is equivalent to checking ‘Group all others together’ in the Crosstab Editor.
+endif::ai[]
 
 
 Specifies whether groups excluded from the ranking should be grouped as ‘Others’. When `true`, this is equivalent to checking ‘Group all others together’ in the Crosstab Editor.

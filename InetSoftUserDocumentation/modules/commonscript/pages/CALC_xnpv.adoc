@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *net present value* for a schedule of cash flows that is not necessarily periodic, based on a 365-day year. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *net present value* for a schedule of cash flows that is not necessarily periodic, based on a 365-day year. {CALCExcelFunctionPage}
 

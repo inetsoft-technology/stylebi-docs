@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies an array of component names, representing the components to be filtered by Table flyover. See xref:viewsheet:DrillDownIntoData.adoc#DrillwithFlyover[Drill with a Flyover] for more information about flyovers.
+endif::ai[]
+
 
 
 

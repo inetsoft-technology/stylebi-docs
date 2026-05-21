@@ -1,6 +1,11 @@
-﻿= valueFormats
+= valueFormats
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Provides access to value formatting for Charts that have ‘Multiple Styles’ enabled. (See xref:viewsheet:MultipleStyleChart.adoc[] for information about the ‘Multiple Styles’ property in Dashboards.) To format a measure in a multiple-style chart, set the `valueFormats` property for the desired measure.
+endif::ai[]
 
 [WARNING,caption=see also]
 ====

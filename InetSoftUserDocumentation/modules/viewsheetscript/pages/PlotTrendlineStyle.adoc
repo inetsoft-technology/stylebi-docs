@@ -1,6 +1,11 @@
-﻿= trendLineStyle
+= trendLineStyle
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the style of the trend line. Set `trendLineStyle=GraphConstants.AUTO` to match the trend line style to the corresponding measure line. Otherwise, use one of the xref:commonscript:StyleConstantLineStyle.adoc[] constants.
+endif::ai[]
 
 
 Sets the style of the trend line. Set  `trendLineStyle=GraphConstants.AUTO` to match the trend line style to the corresponding measure line. Otherwise, use one of the xref:commonscript:StyleConstantLineStyle.adoc[] constants.

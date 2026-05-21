@@ -1,6 +1,11 @@
-﻿= Configure Server Email
+= Configure Server Email
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure the server email (SMTP) settings in Enterprise Manager for sending scheduled Dashboard deliveries and error notifications.
+endif::ai[]
 
 To specify how the  server mails Dashboards and notifications to users (and how end users can contact an administrator in case an error is generated during Dashboard generation), follow the steps below:
 

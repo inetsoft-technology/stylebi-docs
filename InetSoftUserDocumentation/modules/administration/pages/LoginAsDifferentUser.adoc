@@ -1,6 +1,11 @@
-﻿= Login as Different User
+= Login as Different User
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to use the Login as Different User feature in Enterprise Manager to impersonate another user for testing and debugging purposes.
+endif::ai[]
 
 
 

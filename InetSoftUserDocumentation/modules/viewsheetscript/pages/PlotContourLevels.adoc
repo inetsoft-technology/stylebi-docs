@@ -1,6 +1,11 @@
-﻿= contourLevels
+= contourLevels
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: The number of individual colored contours to draw on a xref:viewsheet:ScatterContourChart.adoc[] or xref:viewsheet:ContourMapChart.adoc[].
+endif::ai[]
 
 
 

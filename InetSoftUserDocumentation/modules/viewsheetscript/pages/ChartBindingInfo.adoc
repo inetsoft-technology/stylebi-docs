@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: The topics in this section present functions related to the `bindingInfo` property of the Chart. The `bindingInfo` property provides access to the binding, grouping, and aggregation settings available within the Chart Editor.
+endif::ai[]
+
 
 
 The topics in this section present functions related to the `bindingInfo` property of the Chart. The `bindingInfo` property provides access to the binding, grouping, and aggregation settings available within the Chart Editor.

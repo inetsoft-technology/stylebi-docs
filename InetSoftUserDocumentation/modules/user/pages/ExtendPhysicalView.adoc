@@ -1,6 +1,11 @@
-﻿= Extend a Physical View
+= Extend a Physical View
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a tenant-specific physical view extension in a multi-tenant environment, adding tenant-specific database tables alongside shared tables. Enterprise only.
+endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 

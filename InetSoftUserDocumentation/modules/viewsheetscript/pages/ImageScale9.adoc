@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: When xref:ImageScaleImage.adoc[] is enabled and xref:ImageMaintainAspectRatio.adoc[] is disabled, `scale9` specifies the number of pixels on each image boundary that should be left unscaled, in the order `[top left bottom right]`. This permits you to scale only the interior of an image, leaving edge treatments unmodified.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

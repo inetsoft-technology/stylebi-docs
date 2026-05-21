@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Counts the number of distinct elements in array.
+endif::ai[]
+
 Counts the number of distinct elements in array.
 
 == Parameters

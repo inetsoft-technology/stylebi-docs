@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the visibility for data values displayed in the chart plot area.
+endif::ai[]
+
 
 Sets the visibility for data values displayed in the chart plot area.
 

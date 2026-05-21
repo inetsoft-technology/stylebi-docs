@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the standard score (z-score) for value `x` based on the distribution characterized by population `mean` and `standard_dev`. The standardized value is `(x-mean)/standard_dev`, and indicates the deviation of `x` from the `mean` value in terms of the standard deviation. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the standard score (z-score) for value `x` based on the distribution characterized by population `mean` and `standard_dev`. The standardized value is `(x-mean)/standard_dev`, and indicates the deviation of `x` from the `mean` value in terms of the standard deviation. {CALCExcelFunctionPage}
 

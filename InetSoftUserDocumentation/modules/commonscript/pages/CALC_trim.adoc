@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Removes all white space characters from `string` except for single spaces after words or punctuation. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Removes all white space characters from `string` except for single spaces after words or punctuation. {CALCExcelFunctionPage}
 

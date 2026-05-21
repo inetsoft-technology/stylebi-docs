@@ -1,6 +1,11 @@
-﻿= Create a User
+= Create a User
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create and manage users in Enterprise Manager when using the default authentication provider, including setting passwords and assigning roles and groups.
+endif::ai[]
 
 If you are using the *default security provider* for authentication, you can define users in Enterprise Manager as described below. If you are using an LDAP server for authentication, you should define users in your LDAP software. See xref:SpecifySecurityProvider.adoc[] for more information about security providers.
 

@@ -1,4 +1,4 @@
-﻿= MySQL
+= MySQL
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -6,6 +6,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 IMPORTANT: {pluginDriverRequired}
 
+
+// metadata for AI
+ifdef::ai[]
+Summary: Instructions for connecting to MySQL as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
 

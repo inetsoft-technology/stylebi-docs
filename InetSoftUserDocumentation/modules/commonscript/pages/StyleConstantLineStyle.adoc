@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: The line style constants can be used in all properties requiring line style constants, such as separator style, tab fill style, and table borders.
+endif::ai[]
+
 The line style constants can be used in all properties requiring line style constants, such as separator style, tab fill style, and table borders.
 
 == Type

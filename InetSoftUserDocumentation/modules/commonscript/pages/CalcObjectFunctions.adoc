@@ -1,5 +1,10 @@
 = CALC Object Functions
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for the CALC object function library, which provides static implementations of Microsoft Excel spreadsheet functions for use in scripting without creating a CALC instance.
+endif::ai[]
+
 The CALC library contains implementations of Microsoft Excel^®^ spreadsheet functions.  All these functions are static and can be used without creating an instance of the CALC object.
 
 == Examples: Array Operations

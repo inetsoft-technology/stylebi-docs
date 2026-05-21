@@ -1,7 +1,12 @@
-﻿= bindingInfo.setTimeSeries(col, Boolean)
+= bindingInfo.setTimeSeries(col, Boolean)
 :navtitle: setTimeSeries()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:ChartBindingInfoIsTimeSeries.adoc[] to obtain the time-series status.
+endif::ai[]
 
 [WARNING,caption=See Also]
 xref:ChartBindingInfoIsTimeSeries.adoc[]  to obtain the time-series status.

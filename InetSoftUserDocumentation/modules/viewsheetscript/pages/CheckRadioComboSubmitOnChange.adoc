@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that user selections should be submitted immediately to the server and the Dashboard refreshed with updated data (default). When this feature is disabled, user selections are not submitted until the user explicitly preforms a submit operation. (See xref:viewsheet:DynamicallySetProperties.adoc[] and xref:viewsheet:SubmitButtonProperties.adoc[] for more information.)
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

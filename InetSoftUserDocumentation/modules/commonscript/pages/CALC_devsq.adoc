@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the sum of squares of deviations of values in array from their sample mean. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the sum of squares of deviations of values in array from their sample mean. {CALCExcelFunctionPage}
 
 == Parameters

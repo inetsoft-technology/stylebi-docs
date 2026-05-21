@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies a tooltip to be displayed on Chart elements. You can use placeholders `pass:[{0}]`, `pass:[{1}]`, `pass:[{2}]`, etc., to insert data values from the corresponding fields into the tooltip text, and format the inserted data using number or date formats. (See xref:viewsheet:DataFormat.adoc[] for more details on format strings.) You can additionally use HTML markup such as `<i>`, `<b>`, `<h1>`, `<u>`, `<small>`, and `<br>` to format the tooltip contents.
+endif::ai[]
+
 
 
 

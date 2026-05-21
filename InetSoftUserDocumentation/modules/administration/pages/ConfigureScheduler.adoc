@@ -1,6 +1,11 @@
-﻿= Configure the Scheduler
+= Configure the Scheduler
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure the Scheduler application in Enterprise Manager, including scheduler server settings and connection parameters.
+endif::ai[]
 
 
 To configure the Scheduler, follow the steps below:

@@ -1,6 +1,11 @@
-﻿= Modify a Column
+= Modify a Column
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to modify columns in a Data Worksheet data block, including renaming, reordering, hiding, changing data types, and setting column aliases.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 The following sections describe ways that you can modify the columns of a data block.

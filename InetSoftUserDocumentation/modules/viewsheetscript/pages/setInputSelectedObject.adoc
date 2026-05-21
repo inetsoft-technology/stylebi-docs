@@ -1,7 +1,12 @@
-﻿= setInputSelectedObject(componentName,value)
+= setInputSelectedObject(componentName,value)
 %experimental%
 :navtitle: setInputSelectedObject()
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:parameter.adoc[] for a list of methods to create Dashboard parameters.
+endif::ai[]
 
 [CAUTION,caption=see also]
 xref:parameter.adoc[] for a list of methods to create Dashboard parameters.

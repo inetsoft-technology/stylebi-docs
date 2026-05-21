@@ -1,6 +1,11 @@
-﻿= Administer License Keys
+= Administer License Keys
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to add, update, and remove license keys in Enterprise Manager. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 == Add License Key

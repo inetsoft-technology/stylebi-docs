@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For a xref:viewsheet:LineChart.adoc[] or xref:viewsheet:AreaChart.adoc[], when set to `true`, displays a single tooltip with details from all lines. (The amount of data displayed will be limited by available space in the tooltip.) When `false` (default), the tooltip displays details only for the line to which the user points.
+endif::ai[]
+
 
 For a xref:viewsheet:LineChart.adoc[] or xref:viewsheet:AreaChart.adoc[], when set to `true`, displays a single tooltip with details from all lines. (The amount of data displayed will be limited by available space in the tooltip.) When `false` (default), the tooltip displays details only for the line to which the user points.
 

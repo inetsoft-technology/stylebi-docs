@@ -1,6 +1,11 @@
-﻿= Cache
+= Cache
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure the internal cache that stores Dashboard objects and datasets, including cache size, expiration, and related options in Enterprise Manager.
+endif::ai[]
 
 include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
 

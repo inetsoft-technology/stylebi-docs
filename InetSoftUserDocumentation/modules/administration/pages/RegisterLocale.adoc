@@ -1,6 +1,11 @@
-﻿= Register a Locale
+= Register a Locale
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to register locales in Enterprise Manager so they appear in the language selection menus of the User Portal and Enterprise Manager login screens.
+endif::ai[]
 
 To implement localization at the User Portal level or Dashboard level, first register the desired locales. The locale entries that you add here will be displayed in the ‘Locale’ menu of the User Portal and Enterprise Manager login screens.
 

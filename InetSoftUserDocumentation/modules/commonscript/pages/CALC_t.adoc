@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the string or date supplied by `value`. If `value` is numerical or Boolean, the function returns an empty string. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the string or date supplied by `value`. If `value` is numerical or Boolean, the function returns an empty string. {CALCExcelFunctionPage}
 
 == Parameters

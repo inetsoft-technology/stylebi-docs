@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For an *Embedded Table* in a Dashboard, writes the user-modified data into the corresponding Embedded Table in the Data Worksheet. See xref:viewsheet:TableProperties.adoc[] for information on making a Table editable.
+endif::ai[]
+
 
 For an *Embedded Table* in a Dashboard, writes the user-modified data into the corresponding Embedded Table in the Data Worksheet. See xref:viewsheet:TableProperties.adoc[] for information on making a Table editable.
 

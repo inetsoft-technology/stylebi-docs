@@ -1,6 +1,11 @@
-﻿= Change Images with Script
+= Change Images with Script
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: You can dynamically set the image file (GIF, JPG, etc.) of an image component using a variable or an expression. Follow the steps below:
+endif::ai[]
 
 include::viewsheetscript:partial$scriptAccessDashboardData.adoc[]
 

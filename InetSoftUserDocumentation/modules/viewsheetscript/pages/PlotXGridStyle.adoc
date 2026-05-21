@@ -1,6 +1,11 @@
-﻿= xGridStyle
+= xGridStyle
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the X-axis grid style. A grid line is drawn at each axis tick.
+endif::ai[]
 
 
 Sets the X-axis grid style. A grid line is drawn at each axis tick.

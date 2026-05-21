@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the visibility of the X-axis title.
+endif::ai[]
+
 
 
 Sets the visibility of the X-axis title.

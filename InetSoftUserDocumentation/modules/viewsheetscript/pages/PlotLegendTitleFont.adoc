@@ -1,6 +1,11 @@
-﻿= legendTitleFont
+= legendTitleFont
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the font for the legend title.
+endif::ai[]
 
 
 Sets the font for the legend title.

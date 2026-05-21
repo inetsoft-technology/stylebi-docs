@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the Fisher z-transformation at numeric value `x`. This transformation produces a function that is normally distributed rather than skewed, and can be used to perform hypothesis testing on the sample correlation coefficient. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the Fisher z-transformation at numeric value `x`. This transformation produces a function that is normally distributed rather than skewed, and can be used to perform hypothesis testing on the sample correlation coefficient. {CALCExcelFunctionPage}
 

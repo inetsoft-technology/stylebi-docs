@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns `true` if the user has pressed the btn:[Cancel] button during Dashboard loading, otherwise returns `false`.
+endif::ai[]
+
 Returns `true` if the user has pressed the btn:[Cancel] button during Dashboard loading, otherwise returns `false`.
 
 This function allows a long-running script to be terminated by a user btn:[Cancel] action. If a script does not check the `isCancelled` status and self-terminate, the Dashboard cannot be canceled by user action until the script has run to completion.

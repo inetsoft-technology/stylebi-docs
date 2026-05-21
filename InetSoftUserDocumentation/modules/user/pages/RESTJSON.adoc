@@ -1,4 +1,4 @@
-﻿= REST JSON
+= REST JSON
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -6,6 +6,11 @@ include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
 TIP: You can set up the https://www.inetsoft.com/docs/stylebi/web-api/[InetSoft Web API] as REST JSON Data Source using the steps below.  This will allow you to use the Web API endpoints to access information such as materialized view status.
 
+
+// metadata for AI
+ifdef::ai[]
+Summary: Instructions for connecting to REST JSON as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
 

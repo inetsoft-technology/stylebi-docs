@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Parse a string into integer. If the radix is omitted or undefined, it is assumed to be 10, unless the string begins with `0x` or `0X`, in which case 16 is assumed.
+endif::ai[]
+
 
 Parse a string into integer. If the radix is omitted or undefined, it is assumed to be 10, unless the string begins with `0x` or `0X`, in which case 16 is assumed.
 

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the transparency (alpha) of the image displayed by the Image component.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 xref:viewsheet:ImageProperties.adoc[] for general information about Image components.

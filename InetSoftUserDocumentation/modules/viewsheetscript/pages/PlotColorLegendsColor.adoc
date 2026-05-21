@@ -1,6 +1,11 @@
-﻿= colorLegends.color
+= colorLegends.color
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the label color within a color-key legend (on charts that have *multiple* color legends).
+endif::ai[]
 
 
 Sets the label color within a color-key legend (on charts that have *multiple* color legends).

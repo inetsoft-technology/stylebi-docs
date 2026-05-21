@@ -1,5 +1,10 @@
-﻿= Preview Data
+= Preview Data
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to preview the data returned by a Data Worksheet data block in Live Data View, showing a limited sample along with query execution time.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 To preview the data that will be returned by a data block, follow the steps below:

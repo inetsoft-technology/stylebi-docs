@@ -1,6 +1,11 @@
-﻿= contourBandwidth
+= contourBandwidth
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: The area over which to calculate density for a xref:viewsheet:ScatterContourChart.adoc[] or xref:viewsheet:ContourMapChart.adoc[]. A larger number produces contours that span larger areas.
+endif::ai[]
 
 
 

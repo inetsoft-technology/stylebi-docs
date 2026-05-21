@@ -1,7 +1,12 @@
-﻿= bindingInfo.setShapeField()
+= bindingInfo.setShapeField()
 :navtitle: setShapeField()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Bind the specified field to a xref:chartAPI:ShapeFrame.adoc[] (shape coding). The aesthetic treatment applied to the chart elements depends on the type of the chart:
+endif::ai[]
 
 
 [WARNING,caption=See Also]

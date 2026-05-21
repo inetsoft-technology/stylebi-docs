@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *straight-line* depreciation of an asset for one period (year). {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *straight-line* depreciation of an asset for one period (year). {CALCExcelFunctionPage}
 

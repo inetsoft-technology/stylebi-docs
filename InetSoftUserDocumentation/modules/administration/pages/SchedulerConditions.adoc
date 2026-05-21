@@ -1,6 +1,11 @@
-﻿= Scheduler Conditions
+= Scheduler Conditions
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for scheduler task conditions that determine when a scheduled task executes, including time-based, completion-based, and chained conditions. See CreateScheduledTask.
+endif::ai[]
 
 Set a condition for a scheduled task under the *Condition* tab. (See xref:CreateScheduledTask.adoc[].) A condition determines when the scheduled task executes.
 

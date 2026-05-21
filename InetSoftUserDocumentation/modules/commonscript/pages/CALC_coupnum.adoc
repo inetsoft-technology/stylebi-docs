@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *number of coupons* payable between the settlement date and maturity date, rounded up to the nearest whole coupon. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *number of coupons* payable between the settlement date and maturity date, rounded up to the nearest whole coupon. {CALCExcelFunctionPage}
 

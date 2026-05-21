@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that the sorting specified by xref:CheckRadioComboSortType.adoc[] should be based on the values in the list rather than the labels. Default is `false` (i.e., sort by label, not by value).
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

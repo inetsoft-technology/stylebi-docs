@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the inverse of the Fisher transformation given by xref:CALC_fisher.adoc[]. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the inverse of the Fisher transformation given by xref:CALC_fisher.adoc[]. {CALCExcelFunctionPage}
 

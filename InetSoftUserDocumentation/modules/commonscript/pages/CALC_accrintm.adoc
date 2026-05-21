@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *accrued interest* for a security that pays interest at *maturity*. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *accrued interest* for a security that pays interest at *maturity*. {CALCExcelFunctionPage}
 

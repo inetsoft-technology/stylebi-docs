@@ -1,6 +1,11 @@
-﻿= sizeLegends.title
+= sizeLegends.title
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the legend title within a size-key legend on charts that have *multiple* size legends.
+endif::ai[]
 
 
 Sets the legend title within a size-key legend on charts that have *multiple* size legends.

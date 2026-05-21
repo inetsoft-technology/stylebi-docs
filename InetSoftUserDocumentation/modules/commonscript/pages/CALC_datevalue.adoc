@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the number of days between the epoch (12/31/1899) and parameter `date`. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 
 

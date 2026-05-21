@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For a CheckBox component, selects the first item when the Dashboard loads (if no items are preselected).
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

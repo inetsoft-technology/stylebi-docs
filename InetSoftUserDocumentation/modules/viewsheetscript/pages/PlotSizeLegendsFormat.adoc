@@ -1,6 +1,11 @@
-﻿= sizeLegends.format
+= sizeLegends.format
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the format for data values displayed within a size-key legend on Charts that have *multiple* size legends.
+endif::ai[]
 
 
 Sets the format for data values displayed within a size-key legend on Charts that have *multiple* size legends.

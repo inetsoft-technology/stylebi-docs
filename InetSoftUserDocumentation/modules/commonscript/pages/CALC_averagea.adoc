@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the average (arithmetic mean) of the arguments. {CALCExcelFunctionPage} Text and Boolean values are evaluated as follows:
+endif::ai[]
+
 Returns the average (arithmetic mean) of the arguments.  {CALCExcelFunctionPage} Text and Boolean values are evaluated as follows:
 [square]
 * Text evaluates to `0`

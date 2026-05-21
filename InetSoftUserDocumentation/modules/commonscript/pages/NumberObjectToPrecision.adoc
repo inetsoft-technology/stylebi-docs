@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:commonscript:CALC_floor.adoc[] for the related function in the CALC library.
+endif::ai[]
+
 [WARNING,caption=See Also]
 xref:commonscript:CALC_floor.adoc[] for the related function in the CALC library.
 

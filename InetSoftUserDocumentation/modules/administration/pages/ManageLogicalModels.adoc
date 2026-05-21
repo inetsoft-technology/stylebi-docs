@@ -1,6 +1,11 @@
 = Manage Logical Models
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to manage logical models programmatically using the Groovy DSL Administration Console :logicalmodel command. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 Manage logical models in script by using the `:logicalmodel` or equivalent `:lm` command. See xref:user:CreateLogicalModel.adoc[] for  information about logical models in the User Portal.

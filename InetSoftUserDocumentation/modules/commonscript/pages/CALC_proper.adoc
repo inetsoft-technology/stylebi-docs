@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Capitalizes the first letter of each word in string. {CALCExcelFunctionPage}
+endif::ai[]
+
 Capitalizes the first letter of each word in string. {CALCExcelFunctionPage}
 
 == Parameters

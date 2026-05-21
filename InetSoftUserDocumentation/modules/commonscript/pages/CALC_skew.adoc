@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the skewness of the data set in `array`, which indicates the asymmetry of the distribution around its mean. Positive skewness indicates that the right-side tail of the distribution is longer than the left, while negative skewness indicates that the left-side tail of the distribution is longer than the right. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the skewness of the data set in `array`, which indicates the asymmetry of the distribution around its mean. Positive skewness indicates that the right-side tail of the distribution is longer than the left, while negative skewness indicates that the left-side tail of the distribution is longer than the right. {CALCExcelFunctionPage}
 
 == Parameters

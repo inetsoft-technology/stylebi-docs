@@ -1,6 +1,11 @@
-﻿= Create a Role
+= Create a Role
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create and manage roles in Enterprise Manager when using the default authentication provider, for assigning permissions to sets of users with similar functions.
+endif::ai[]
 
 A role (e.g., Manager, Developer, Analyst, etc.) can be used to assign permissions to a set of users who perform a similar set of functions. You can create and edit roles in Enterprise Manager only when using the ‘Default’ authentication provider.
 

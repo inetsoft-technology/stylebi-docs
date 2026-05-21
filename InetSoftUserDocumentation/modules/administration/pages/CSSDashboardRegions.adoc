@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Reference table of Dashboard component regions and their corresponding CSS type selectors that can be independently formatted in a CSS definition file.
+endif::ai[]
+
 The table below lists the Dashboard component regions that can be independently formatted, and the corresponding CSS “type” selectors.   To format parts of a table (other than title bar) using CSS, see xref:CSSTableStyleProperties.adoc[].
 
 [NOTE]

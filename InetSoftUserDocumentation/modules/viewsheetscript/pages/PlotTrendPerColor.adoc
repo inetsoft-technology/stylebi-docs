@@ -1,6 +1,11 @@
-﻿= trendPerColor
+= trendPerColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that an individual trend line should be displayed for each colored group (dimension value) on the Chart.
+endif::ai[]
 
 
 Specifies that an individual trend line should be displayed for each colored group (dimension value) on the Chart.

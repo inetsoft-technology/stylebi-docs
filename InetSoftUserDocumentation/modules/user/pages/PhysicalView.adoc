@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for physical views, which define the database table join structure underlying a data model. Physical views are not directly exposed to users; they are accessed via logical models. See CreatePhysicalView for creation steps.
+endif::ai[]
+
 The basis of a data model is the *physical view*, which specifies a set of database tables and the joins that relate them. The physical view does not represent a *particular* query that retrieves specific fields, but rather outlines the full join structure that will enable arbitrary queries to be generated *automatically* when a dashboard accesses a set of attributes from the data model.
 
 TIP: If you make a change to the structure of the database schema, press the btn:[Refresh Metadata] button on the datasource definition page. (For example, see xref:JDBC.adoc[].)

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For a chart with ‘Multiple Styles’ selected from {buttonSelectChartStyle}, sets the style for the specified dataset. Use xref:ChartSeparatedStyle.adoc[] to set a single global style.
+endif::ai[]
+
 
 
 

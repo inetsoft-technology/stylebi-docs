@@ -1,6 +1,11 @@
-﻿= Extend a Logical Model
+= Extend a Logical Model
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a tenant-specific logical model extension in a multi-tenant environment, mapping the model to a tenant-specific physical view and connection. Enterprise only.
+endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 

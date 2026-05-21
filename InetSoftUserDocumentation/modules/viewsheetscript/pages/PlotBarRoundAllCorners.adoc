@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: When `true`, rounds all four corners of each bar equally using the radius set by xref:PlotBarCornerRadius.adoc[]. When `false` (default), only the open (value) end of each bar is rounded. Not available for stacked bar charts.
+endif::ai[]
+
 When `true`, rounds all four corners of each bar equally using the radius set by xref:PlotBarCornerRadius.adoc[]. When `false` (default), only the open (value) end of each bar is rounded. Not available for stacked bar charts.
 
 == Type

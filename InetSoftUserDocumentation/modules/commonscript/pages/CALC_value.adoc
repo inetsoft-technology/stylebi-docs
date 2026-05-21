@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Converts a formatted number `string` to the equivalent numerical value. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Converts a formatted number `string` to the equivalent numerical value. {CALCExcelFunctionPage}
 

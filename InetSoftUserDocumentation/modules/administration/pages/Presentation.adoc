@@ -1,6 +1,11 @@
-﻿= Presentation
+= Presentation
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure the visual appearance and branding of the User Portal in Enterprise Manager, including logos, color themes, and multi-tenant presentation options.
+endif::ai[]
 
 This section discusses the various features that are available for tailoring the appearance of the User Portal.
 

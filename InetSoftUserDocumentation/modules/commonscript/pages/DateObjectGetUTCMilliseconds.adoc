@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: JavaScript function to return the milliseconds part of a date in universal time. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds[Date.getUTCMilliseconds()] in the {JavaScriptRef} for details on usage.
+endif::ai[]
+
 
 JavaScript function to return the milliseconds part of a date in universal time.    See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds[Date.getUTCMilliseconds()] in the {JavaScriptRef} for details on usage.
 

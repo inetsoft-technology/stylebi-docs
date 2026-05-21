@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the contents displayed by the Text component in cases when the component is bound to a data field (i.e., displaying an aggregate). If the Text component is not bound to a data field, the `value` property is *undefined* unless explicitly set in script.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

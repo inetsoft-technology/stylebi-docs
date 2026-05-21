@@ -2,6 +2,7 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+
 // metadata for AI
 ifdef::ai[]
 Summary: Reference table for keyboard navigation in Dashboards, covering Tab/Shift+Tab for component focus, arrow keys for within-component navigation and adjustments, and Space for making selections. Also covers toolbar navigation from within a component.

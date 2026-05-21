@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Calculates the point at which the best-fit regression line for the values in `array_x` and `array_y` intersects the y-axis. {CALCExcelFunctionPage}
+endif::ai[]
+
 Calculates the point at which the best-fit regression line for the values in `array_x` and `array_y` intersects the y-axis. {CALCExcelFunctionPage}
 
 == Parameters

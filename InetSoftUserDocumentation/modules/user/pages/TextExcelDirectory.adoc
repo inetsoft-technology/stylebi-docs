@@ -1,9 +1,14 @@
-﻿= Text/Excel Directory
+= Text/Excel Directory
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 This page explains how to create a persistent connection to a specified file (text or Excel) or file location. If you instead want to create a data set from a one-time data import, see xref:dataworksheet:UploadData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[].
 
+
+// metadata for AI
+ifdef::ai[]
+Summary: Instructions for connecting to Text/Excel Directory as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Text/Excel Directory’ data source, and press btn:[Create]. This opens the root folder definition screen.

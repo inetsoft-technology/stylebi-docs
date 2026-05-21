@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns `num_char` number of characters from the right side of `string`. {CALCExcelFunctionPage} To extract a substring with arbitrary starting and ending indexes, use xref:StringObjectsubString.adoc[] or xref:CALC_mid.adoc[].
+endif::ai[]
+
 Returns `num_char` number of characters from the right side of `string`. {CALCExcelFunctionPage}  To extract a substring with arbitrary starting and ending indexes, use xref:StringObjectsubString.adoc[] or xref:CALC_mid.adoc[].
 
 

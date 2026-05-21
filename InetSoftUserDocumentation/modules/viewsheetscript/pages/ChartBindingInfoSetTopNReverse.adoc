@@ -1,7 +1,12 @@
-﻿= bindingInfo.setTopNReverse(col, Boolean)
+= bindingInfo.setTopNReverse(col, Boolean)
 :navtitle: setTopNReverse()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheetscript:ChartBindingInfoIsTopNReverse.adoc[] to obtain the binding information.
+endif::ai[]
 
 [WARNING,caption=See Also]
 xref:viewsheetscript:ChartBindingInfoIsTopNReverse.adoc[]  to obtain the binding information.

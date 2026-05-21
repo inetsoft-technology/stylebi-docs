@@ -1,6 +1,11 @@
-﻿= drillMembers
+= drillMembers
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns an array of the levels at which the user has made a selection. The array includes all levels from the top level to one level below the current selection. (The top level is included even when no selection is made.)
+endif::ai[]
 
 include::partial$readOnly.adoc[]
 

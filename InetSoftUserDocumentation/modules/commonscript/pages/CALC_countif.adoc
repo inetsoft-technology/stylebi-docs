@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Counts the number of elements in the `array` that meet a certain condition, such as `>100` or `==21` or `=='desk'`. {CALCExcelFunctionPage}
+endif::ai[]
+
 Counts the number of elements in the `array` that meet a certain condition, such as `>100` or `==21` or `=='desk'`. {CALCExcelFunctionPage}
 
 == Parameters

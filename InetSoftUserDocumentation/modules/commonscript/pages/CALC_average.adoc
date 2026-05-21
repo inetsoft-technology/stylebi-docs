@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:CALC_averagea.adoc[] to process text and Boolean values in addition to numerical values.
+endif::ai[]
+
 [WARNING,caption=see also]
 xref:CALC_averagea.adoc[] to process text and Boolean values in addition to numerical values.
 

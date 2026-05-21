@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Prints a log message to the server log.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the __k__th largest value in the array. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the __k__th largest value in the array.  {CALCExcelFunctionPage}
 
 NOTE: Duplicate values are included in the ranking. For example, ranking set {4,5,8,7,8,4,5,3,7} from greatest to least yields {8,8,7,7,5,5,4,4,3}.

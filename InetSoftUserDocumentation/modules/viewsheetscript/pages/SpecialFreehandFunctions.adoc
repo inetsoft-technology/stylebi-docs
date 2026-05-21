@@ -1,6 +1,11 @@
-﻿= Special Freehand Table Functions
+= Special Freehand Table Functions
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: The functions in this section are commonly used to populate cells in a Freehand Table.
+endif::ai[]
 
 include::partial$scriptAccessDashboardData.adoc[]
 

@@ -1,5 +1,10 @@
 = Query a Specific Data Source
 
+// metadata for AI
+ifdef::ai[]
+Summary: Navigation page listing all available data source query types in Data Worksheets. Find your data source type here to get specific query configuration instructions.
+endif::ai[]
+
 
 In StyleBI, a query is represented as a Data Worksheet.  The following sections explain how to create a new Data Worksheet  by querying a specific data source.
 [square]

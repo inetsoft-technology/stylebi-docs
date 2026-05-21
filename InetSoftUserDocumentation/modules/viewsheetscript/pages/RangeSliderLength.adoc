@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the initial slider range. For a numerical field, this gives the range as a multiple of the minimum length xref:RangeSliderRangeSize.adoc[]. For example, if `length` is 3 and `rangeSize` is 100, the initial slider range is 300. For a date field, the units are specified by the xref:RangeSliderRangeType.adoc[] setting (year, month, or day). In either case, the user can subsequently readjust the range as desired.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

@@ -1,6 +1,11 @@
 = sizeField
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the name of the query field that is currently assigned to the ‘Size’ binding (xref:chartAPI:SizeFrame.adoc[]) at runtime. This property is read-only. Use xref:ChartBindingInfoSetSizeField.adoc[] to set the '`Size`' binding in script.
+endif::ai[]
 include::viewsheetscript:partial$readOnly.adoc[]
 
 

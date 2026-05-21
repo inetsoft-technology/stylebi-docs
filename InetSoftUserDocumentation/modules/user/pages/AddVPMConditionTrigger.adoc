@@ -1,6 +1,11 @@
-﻿= Add a Condition Trigger
+= Add a Condition Trigger
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to add a scripted trigger to a VPM row condition, allowing the condition to be applied selectively based on user role, group, or identity. Requires an existing VPM. See CreateNewVPM and AddDataSecurity.
+endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 

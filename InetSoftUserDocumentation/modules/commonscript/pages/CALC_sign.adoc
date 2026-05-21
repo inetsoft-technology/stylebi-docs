@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the sign of a number, `-1` for negative, or `+1` for positive. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 
 Returns the sign of a number, `-1` for negative, or `+1` for positive. {CALCExcelFunctionPage}

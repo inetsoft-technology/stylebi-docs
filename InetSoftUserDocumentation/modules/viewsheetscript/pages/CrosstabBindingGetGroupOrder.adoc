@@ -1,7 +1,12 @@
-﻿= bindingInfo.getGroupOrder(group_field, header)
+= bindingInfo.getGroupOrder(group_field, header)
 :navtitle: getGroupOrder()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the date grouping level specified by xref:CrosstabBindingInfoSetGroupOrder.adoc[] or set by the ‘Level’ option in the Crosstab Editor.
+endif::ai[]
 
 
 

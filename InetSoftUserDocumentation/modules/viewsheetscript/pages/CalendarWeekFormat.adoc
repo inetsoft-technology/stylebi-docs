@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the format for the days of the week displayed at the top of the Calendar.
+endif::ai[]
+
 
 
 Sets the format for the days of the week displayed at the top of the Calendar.

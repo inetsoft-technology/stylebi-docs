@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: The following data type constants are available.
+endif::ai[]
+
 
 The following data type constants are available.
 

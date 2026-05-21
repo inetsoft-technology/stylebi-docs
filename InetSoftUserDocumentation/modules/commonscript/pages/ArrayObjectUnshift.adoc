@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Adds specified items to the beginning of the array, and returns the new array length.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheet:DrillDownIntoData.adoc[] for basic information on hyperlinks.
+endif::ai[]
+
 
 [WARNING,caption=see also]
 xref:viewsheet:DrillDownIntoData.adoc[] for basic information on hyperlinks.

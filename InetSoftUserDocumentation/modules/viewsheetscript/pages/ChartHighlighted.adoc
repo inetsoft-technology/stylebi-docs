@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheet:ConditionalFormat.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for basic information on highlights.
+endif::ai[]
+
 [WARNING,caption=See Also]
 xref:viewsheet:ConditionalFormat.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for basic information on highlights.
 

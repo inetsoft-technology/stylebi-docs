@@ -1,7 +1,12 @@
-﻿= addStandardDeviationTarget(measure, colors, values, options)
+= addStandardDeviationTarget(measure, colors, values, options)
 :navtitle: addStandardDeviationTarget()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Draws a set of horizontal or vertical lines on the chart to mark the specified number of standard deviations from the mean. See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.
+endif::ai[]
 
 
 

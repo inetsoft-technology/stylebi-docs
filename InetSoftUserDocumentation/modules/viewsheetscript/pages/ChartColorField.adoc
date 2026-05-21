@@ -1,6 +1,11 @@
 = colorField
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the name of the query field that is currently assigned to the 'Color' binding (xref:chartAPI:ColorFrame.adoc[]) at runtime. This property is read-only. Use xref:ChartBindingInfoSetColorField.adoc[] to set the '`Color`' binding in script.
+endif::ai[]
 include::viewsheetscript:partial$readOnly.adoc[]
 
 

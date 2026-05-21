@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:StringObjectReplace.adoc[] to replace a string using a regular expression.
+endif::ai[]
+
 [WARNING,caption=See Also]
 xref:StringObjectReplace.adoc[] to replace a string using a regular expression.
 

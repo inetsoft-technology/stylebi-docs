@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the _k_-th smallest value in `array`. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the _k_-th smallest value in `array`. {CALCExcelFunctionPage}
 
 == Parameters

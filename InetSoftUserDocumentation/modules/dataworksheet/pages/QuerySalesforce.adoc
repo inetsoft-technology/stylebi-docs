@@ -1,6 +1,11 @@
-﻿= Salesforce  Query
+= Salesforce  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a Data Worksheet query from an existing Salesforce Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 To create a new data set from an existing Salesforce  connection, follow the steps below:

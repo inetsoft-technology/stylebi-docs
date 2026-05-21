@@ -1,6 +1,11 @@
-﻿= mapDefaultColor
+= mapDefaultColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color for map regions that are not assigned a color based on data.
+endif::ai[]
 
 
 Sets the color for map regions that are not assigned a color based on data.

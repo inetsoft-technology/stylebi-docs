@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that users can insert new rows in an *Editable Table*. See xref:viewsheet:WriteBackToStorage.adoc#AccessUserModifiedData[Access User-Modified Data] for more details. (Use xref:TableForm.adoc[] to make a Table editable.)
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

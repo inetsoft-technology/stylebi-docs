@@ -1,6 +1,11 @@
-﻿= Create a Task, Cycle, or Alert
+= Create a Task, Cycle, or Alert
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create scheduled tasks, cycles, and alerts in Enterprise Manager, including defining conditions, actions, and delivery options for automated Dashboard generation.
+endif::ai[]
 
 The following sections explain how to create  tasks, cycles, and alerts.
 

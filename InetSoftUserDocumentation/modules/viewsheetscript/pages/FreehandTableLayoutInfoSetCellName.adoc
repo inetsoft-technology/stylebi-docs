@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the name of the specified cell in a Freehand Table.
+endif::ai[]
+
 
 Sets the name of the specified cell in a Freehand Table.
 

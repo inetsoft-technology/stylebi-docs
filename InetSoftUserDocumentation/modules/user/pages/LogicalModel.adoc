@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for logical models, which present a business-oriented entity-attribute view of a relational database for Dashboard designers and end users. See CreateLogicalModel for creation steps.
+endif::ai[]
+
 A *logical model* presents a business-oriented, easy-to-understand view of a single underlying physical view. The logical model organizes data from the physical view into logical entities that correspond to business world objects, rather than to the underlying physical tables. Each entity contains one or more attributes that map to database table columns from the physical view.
 
 NOTE:  A physical view can  be exposed to end users *only* through a logical model.

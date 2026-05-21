@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns a date corresponding to the last day of the month that is a specified number of months before or after the given date. A negative value for `months` represents a date prior to the specified date. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns a date corresponding to the last day of the month that is a specified number of months before or after the given date.  A negative value for `months` represents a date prior to the specified date. {CALCExcelFunctionPage}
 

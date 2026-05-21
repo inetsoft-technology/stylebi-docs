@@ -1,6 +1,11 @@
 = shapeField
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the name of the query field that is currently assigned to the ‘Shape’ binding (xref:chartAPI:ShapeFrame.adoc[]) at runtime. This property is read-only. Use xref:ChartBindingInfoSetShapeField.adoc[] to set the '`Shape`' binding in script.
+endif::ai[]
 include::viewsheetscript:partial$readOnly.adoc[]
 
 

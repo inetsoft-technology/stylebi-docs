@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the sine of an angle in radians. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin[Math.sin()] method, and can be used with or without the `Math` qualifier, `sin()` or `Math.sin()`.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

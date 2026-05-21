@@ -1,5 +1,10 @@
 = Advanced Topics
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for advanced administration topics in Enterprise Manager, including storage configuration, localization, custom maps, D3 charts, accessibility, and other server-level settings.
+endif::ai[]
+
 NOTE: Only users who have administrator privileges can change server settings.
 
 The following sections describe some more advanced topics.

@@ -1,6 +1,11 @@
-﻿= yGridColor
+= yGridColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the Y-axis grid color.
+endif::ai[]
 
 
 Sets the Y-axis grid color.

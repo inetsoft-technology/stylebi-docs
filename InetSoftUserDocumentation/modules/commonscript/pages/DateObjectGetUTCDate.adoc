@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: JavaScript function to return the day of the month for a date in universal time. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCDate[Date.getUTCDate()] in the {JavaScriptRef} for details on usage.
+endif::ai[]
+
 
 
 JavaScript function to return the day of the month for a date in universal time.  See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCDate[Date.getUTCDate()] in the {JavaScriptRef} for details on usage.

@@ -1,6 +1,11 @@
-﻿= axis.logarithmic
+= axis.logarithmic
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets logarithmic scaling for a numeric axis.
+endif::ai[]
 
 
 

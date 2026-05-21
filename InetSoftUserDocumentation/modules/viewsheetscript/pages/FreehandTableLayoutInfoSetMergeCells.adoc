@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the specified cell in a Freehand Table to be merged. See xref:viewsheet:AddFreehandTable.adoc[] for more information about ‘Merge Expanded Cells’.
+endif::ai[]
+
 Sets the specified cell in a Freehand Table to be merged. See xref:viewsheet:AddFreehandTable.adoc[] for more information about ‘Merge Expanded Cells’.
 
 

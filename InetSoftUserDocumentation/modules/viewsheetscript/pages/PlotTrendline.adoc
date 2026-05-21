@@ -1,6 +1,11 @@
-﻿= trendLine
+= trendLine
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the mathematical formula for the trend line (e.g., linear, quadratic, etc).
+endif::ai[]
 
 
 Sets the mathematical formula for the trend line (e.g., linear, quadratic, etc).

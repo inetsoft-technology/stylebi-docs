@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Adds a drop shadow to the component.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

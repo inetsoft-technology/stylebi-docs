@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns a decimal value between 0 and 1 representing the number of days between `start_date` and `end_date` as a fraction of the year. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns a decimal value between 0 and 1 representing the number of days between `start_date` and `end_date` as a fraction of the year. {CALCExcelFunctionPage}
 

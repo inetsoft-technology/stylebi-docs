@@ -1,6 +1,11 @@
-﻿= referenceLineVisible
+= referenceLineVisible
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Displays horizontal and vertical reference lines when the user moves the mouse over a point on the chart.
+endif::ai[]
 
 
 Displays horizontal and vertical reference lines when the user moves the mouse over a point on the chart.

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that the animation in an *animated GIF* image should be played. Otherwise, a static image is displayed.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 xref:viewsheet:ImageProperties.adoc[] for general information about Image components.

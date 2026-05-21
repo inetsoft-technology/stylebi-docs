@@ -1,7 +1,12 @@
-﻿= bindingInfo.setGroupTotal(field, header, Boolean)
+= bindingInfo.setGroupTotal(field, header, Boolean)
 :navtitle: setGroupTotal()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether the subtotal for a given parent group should be displayed. When `true`, this is equivalent to selecting ‘Show’ in the ‘Summarize’ menu of the Crosstab Editor.
+endif::ai[]
 
 
 

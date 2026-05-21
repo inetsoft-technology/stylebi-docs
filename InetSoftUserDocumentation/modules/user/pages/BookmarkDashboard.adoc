@@ -1,6 +1,11 @@
-﻿= Bookmark a Dashboard
+= Bookmark a Dashboard
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to save, manage, and share Dashboard bookmarks that preserve filter selections and other settings for later reuse. Covers creating, updating, deleting, and sharing bookmarks in the User Portal.
+endif::ai[]
 
 include::viewsheet:partial$availableToEndUsers.adoc[]
 

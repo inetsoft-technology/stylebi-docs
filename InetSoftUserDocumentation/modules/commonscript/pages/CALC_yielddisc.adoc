@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the annual *yield* for a *discounted* security that does not pay interest. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 
 Returns the annual *yield* for a *discounted* security that does not pay interest. {CALCExcelFunctionPage}

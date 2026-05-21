@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Multiplies corresponding row components of a two-dimensional array (matrix) and returns the sum of those products. For example, for a 3x3 matrix
+endif::ai[]
+
 
 Multiplies corresponding row components of a two-dimensional array (matrix) and returns the sum of those products. For example, for a 3x3 matrix
 

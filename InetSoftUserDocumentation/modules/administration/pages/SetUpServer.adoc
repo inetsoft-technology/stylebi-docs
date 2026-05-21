@@ -1,6 +1,11 @@
 = Set Up Server
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure server properties and storage using the Groovy DSL Administration Console :setup command when the server is not running. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 If the server is running, it is best to manage server properties and storage using Enterprise Manager as described in xref:AllProperties.adoc[] and xref:Storage.adoc[]. However, if the server is not running, you can set up the server in script by using the `:setup`  or equivalent `:su` command.

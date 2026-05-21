@@ -1,6 +1,11 @@
-﻿= pieRatio
+= pieRatio
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: A value in the range [0.1,1] that determines the proportion of the plot area occupied by the *pie element* of the xref:viewsheet:PieChart.adoc[]. Similarly-sized Pie charts with the same ratio setting will display pies having the same radius, which can be used to enforce consistency across multiple charts.
+endif::ai[]
 
 
 A value in the range [0.1,1] that determines the proportion of the plot area occupied by the *pie element* of the xref:viewsheet:PieChart.adoc[]. Similarly-sized Pie charts with the same ratio setting will display pies having the same radius, which can be used to enforce consistency across multiple charts.

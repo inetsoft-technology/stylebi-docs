@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the annual *yield* of a security that pays interest only at *maturity*. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the annual *yield* of a security that pays interest only at *maturity*. {CALCExcelFunctionPage}
 

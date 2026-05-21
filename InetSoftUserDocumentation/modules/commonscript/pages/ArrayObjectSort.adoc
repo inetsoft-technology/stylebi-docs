@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sort the array items according to a *compare function*. If the function is not provided, all items are sorted as strings.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

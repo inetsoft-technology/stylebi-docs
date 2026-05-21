@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the sorting for items displayed in a Check Box, Radio Button, or ComboBox component.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

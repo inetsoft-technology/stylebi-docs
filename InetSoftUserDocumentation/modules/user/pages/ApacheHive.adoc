@@ -1,4 +1,4 @@
-﻿= Apache Hive
+= Apache Hive
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -6,6 +6,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
+
+// metadata for AI
+ifdef::ai[]
+Summary: Instructions for connecting to Apache Hive as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘Apache Hive’ data source, and press btn:[Create]. This opens the data source definition screen.

@@ -1,7 +1,12 @@
-﻿= bindingInfo.sizeFrame
+= bindingInfo.sizeFrame
 :navtitle: sizeFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the size of graphical elements. A xref:chartAPI:SizeFrame.adoc[] can size-code chart elements by value, or simply specify a static size. The default for dimensions is xref:chartAPI:CategoricalSizeFrame.adoc[]. The default for measures is xref:chartAPI:LinearSizeFrame.adoc[].
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

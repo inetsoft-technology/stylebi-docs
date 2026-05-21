@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheet:GeneralTab.adoc[] for more information about setting the title.
+endif::ai[]
+
 [WARNING,  caption=See Also]
 xref:viewsheet:GeneralTab.adoc[] for more information about setting the title.
 

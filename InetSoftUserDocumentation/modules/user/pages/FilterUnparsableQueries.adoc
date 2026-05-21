@@ -1,6 +1,11 @@
 = Filter Unparsable Queries
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to use special VPM tags (vpm.tables, vpm.columns, vpm.condition) in complex SQL queries that the server cannot parse automatically, enabling VPM security filtering for those queries. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 In some cases, the server may not be able to parse highly complex SQL queries, or those that contain custom database syntax. If a query is unparsable, the server cannot automatically identify the columns being returned by the query, and therefore cannot automatically apply the VPM security model.

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to use the Groovy DSL scripting framework to write administrative scripts for managing repositories, data sources, security, and other server resources. Enterprise only.
+endif::ai[]
+
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 

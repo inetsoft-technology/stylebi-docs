@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the size of the cells that make up the grid on which contour weights are computed for a xref:viewsheet:ScatterContourChart.adoc[] or xref:viewsheet:ContourMapChart.adoc[]. Higher values specify larger cells, and hence broader clusters. Lower values specify smaller cells, and hence smaller clusters.
+endif::ai[]
+
 
 Specifies the size of the cells that make up the grid on which contour weights are computed for a  xref:viewsheet:ScatterContourChart.adoc[] or xref:viewsheet:ContourMapChart.adoc[]. Higher values specify larger cells, and hence broader clusters. Lower values specify smaller cells, and hence smaller clusters.
 

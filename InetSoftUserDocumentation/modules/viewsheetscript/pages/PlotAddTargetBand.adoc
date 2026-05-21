@@ -1,7 +1,12 @@
-﻿= addTargetBand(measure, colors, values, options)
+= addTargetBand(measure, colors, values, options)
 :navtitle: addTargetBand()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Draws a set of horizontal or vertical target bands in the plot area using the specified colors and options. See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.
+endif::ai[]
 
 
 

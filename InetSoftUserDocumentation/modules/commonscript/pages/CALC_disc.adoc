@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *discount* rate for a security. {CALCExcelFunctionPage} The rate is calculated as follows:
+endif::ai[]
+
 
 Returns the *discount* rate for a security. {CALCExcelFunctionPage} The rate is calculated as follows:
 

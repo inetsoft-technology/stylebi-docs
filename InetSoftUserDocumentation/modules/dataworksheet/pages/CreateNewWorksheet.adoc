@@ -1,5 +1,10 @@
-﻿= Create a Data Worksheet
+= Create a Data Worksheet
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a new Data Worksheet in Visual Composer by querying a data source, including selecting data blocks, configuring fields, and saving the worksheet.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 Visual Composer allows you to create a Data Worksheet by performing data pipeline operations such as grouping, post-aggregate filtering, joins, and so on. Follow the steps below to create a Data Worksheet.

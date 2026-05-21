@@ -1,6 +1,11 @@
-﻿= Launch Enterprise Manager
+= Launch Enterprise Manager
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to open Enterprise Manager in a web browser and log in to access the server administration interface.
+endif::ai[]
 
 Enterprise Manager is a web-based tool that allows you to administer the InetSoft  server. To open  Enterprise Manager, follow these steps:
 

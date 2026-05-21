@@ -1,5 +1,10 @@
 = Connect to Your Data
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for connecting InetSoft to data. Covers creating persistent datasource connections, importing files into Data Worksheets, editing connections, and deciding whether to create a data model.
+endif::ai[]
+
 A *datasource* provides a persistent connection to your data, so changes that you make to your data by updating, modifying, or deleting records are automatically reflected in all Dashboards that use the data source.
 
 == Overview

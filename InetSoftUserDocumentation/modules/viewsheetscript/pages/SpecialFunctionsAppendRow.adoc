@@ -1,4 +1,9 @@
 = appendRow(table,row)
+
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the appendRow(table, row) global function, which appends a data row to a specified editable Table in a Dashboard.
+endif::ai[]
 :navtitle: appendRow()
 
 [WARNING,caption=See Also]

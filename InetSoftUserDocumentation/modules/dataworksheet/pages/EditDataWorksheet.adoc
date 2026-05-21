@@ -1,5 +1,10 @@
-﻿= Edit a Data Worksheet
+= Edit a Data Worksheet
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to open and edit an existing Data Worksheet in the User Portal.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 To edit a Data Worksheet in the User Portal, follow the steps below.

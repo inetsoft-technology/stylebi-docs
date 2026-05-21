@@ -1,7 +1,12 @@
-﻿= bindingInfo.setPercentageType(measure, pct)
+= bindingInfo.setPercentageType(measure, pct)
 :navtitle: setPercentageType()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the percentage representation for one of the measures specified by xref:CrosstabBindingInfoMeasureFields.adoc[]. This is equivalent to setting a percentage representation for a measure in the '`Trend and Comparison`' property of the Crosstab Editor.
+endif::ai[]
 
 
 

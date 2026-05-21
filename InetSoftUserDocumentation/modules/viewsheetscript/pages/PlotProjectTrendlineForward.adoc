@@ -1,6 +1,11 @@
-﻿= projectTrendLineForward
+= projectTrendLineForward
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the number of axis increments to project the trend line forward (into the future).
+endif::ai[]
 
 
 

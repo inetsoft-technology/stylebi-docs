@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the inverse tangent (in radians) of a number. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan[Math.atan()] method, and can be used with or without the `Math` qualifier, `atan()` or `Math.atan()`.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Parse a string into a date.
+endif::ai[]
+
 Parse a string into a date.
 
 

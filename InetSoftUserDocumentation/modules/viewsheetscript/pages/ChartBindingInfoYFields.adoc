@@ -1,7 +1,12 @@
-﻿= bindingInfo.yFields
+= bindingInfo.yFields
 :navtitle: yFields
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:PlotYFields.adoc[] to return the fields currently bound to Y-axis at runtime.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

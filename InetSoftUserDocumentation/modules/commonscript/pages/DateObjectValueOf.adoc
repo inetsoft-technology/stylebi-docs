@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: JavaScript function to return the milliseconds from January 1, 1970 (Unix epoch) to the specified date. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf[Date.valueOf()] in the {JavaScriptRef} for details on usage.
+endif::ai[]
+
 JavaScript function to return the milliseconds from January 1, 1970 (Unix epoch) to the specified date.            See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf[Date.valueOf()] in the {JavaScriptRef} for details on usage.
 
 

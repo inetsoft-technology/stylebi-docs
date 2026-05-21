@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the subtotal of an array based on the specified aggregation function. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the subtotal of an array based on the specified aggregation function. {CALCExcelFunctionPage}
 
 == Parameters

@@ -1,6 +1,11 @@
-﻿= webMapStyle
+= webMapStyle
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: For a xref:viewsheet:MapChart.adoc[] that uses a *Mapbox* web map background (see xref:PlotWebMap.adoc[]), sets the Mapbox map style.
+endif::ai[]
 
 
 

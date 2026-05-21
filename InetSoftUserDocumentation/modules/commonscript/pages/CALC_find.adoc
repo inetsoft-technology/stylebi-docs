@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:StringObjectLastIndexOf.adoc[] to find the last occurrence of a string.
+endif::ai[]
+
 [WARNING,caption=See Also]
 xref:StringObjectLastIndexOf.adoc[] to find the last occurrence of a string.
 

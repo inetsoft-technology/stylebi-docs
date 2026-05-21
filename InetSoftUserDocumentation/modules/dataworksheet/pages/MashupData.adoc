@@ -1,5 +1,10 @@
-﻿= Mashup Data
+= Mashup Data
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a new data block by dragging and dropping tables and fields in the Data Worksheet, suitable for simple column selection from data models or database tables.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 This section describes how to create a new data block by simple drag-and-drop operations.

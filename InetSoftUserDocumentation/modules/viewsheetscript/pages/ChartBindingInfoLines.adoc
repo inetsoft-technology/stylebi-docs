@@ -1,8 +1,13 @@
-﻿= bindingInfo.lines
+= bindingInfo.lines
 :navtitle: lines
 %experimental%
 %navtitle%: setTimeSeries()
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: %navtitle%: setTimeSeries()
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

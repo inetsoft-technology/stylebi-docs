@@ -1,6 +1,11 @@
-﻿= trendLineColor
+= trendLineColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color of the trend lines. This option only applies when the ‘One Per Color’ option is disabled (xref:PlotTrendPerColor.adoc[] set to `false`).
+endif::ai[]
 
 
 Sets the color of the trend lines.  This option only applies when the ‘One Per Color’ option is disabled (xref:PlotTrendPerColor.adoc[] set to `false`).

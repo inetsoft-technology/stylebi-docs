@@ -1,7 +1,12 @@
-﻿= bindingInfo.percentageMode
+= bindingInfo.percentageMode
 :navtitle: percentageMode
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the direction (row or column) for percentage computation. This is equivalent to selecting the ‘By’ option of the ‘Calculation’ dialog box in the Crosstab Editor (accessible from btn:[Edit] button under the {buttonEditMeasure}).
+endif::ai[]
 
 
 

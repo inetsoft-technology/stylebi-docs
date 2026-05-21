@@ -1,6 +1,11 @@
-﻿= Help Scout Docs  Query
+= Help Scout Docs  Query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a Data Worksheet query from an existing Help Scout Docs Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+endif::ai[]
 
 
 To create a new data set from an existing Help Scout Docs  connection, follow the steps below:

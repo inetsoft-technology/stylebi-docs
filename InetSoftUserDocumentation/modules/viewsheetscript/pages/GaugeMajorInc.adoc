@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the interval between display of labels on the Gauge. For example, a value of 15 indicates that the gauge labels should be placed at positions of 0, 15, 30, 45, etc. The `majorInc` value should be larger than the xref:GaugeMinorInc.adoc[] value.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====

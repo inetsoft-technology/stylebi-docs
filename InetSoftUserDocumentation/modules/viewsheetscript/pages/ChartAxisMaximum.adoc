@@ -1,6 +1,11 @@
-﻿= axis.maximum
+= axis.maximum
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the maximum value for a numeric axis.
+endif::ai[]
 
 
 

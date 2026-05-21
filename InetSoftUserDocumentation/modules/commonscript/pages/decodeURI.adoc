@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Produce a new URI with escape sequences or UTF-8 encoding replaced by the characters they represent.
+endif::ai[]
+
 
 Produce a new URI with escape sequences or UTF-8 encoding replaced by the characters they represent.
 

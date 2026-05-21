@@ -1,6 +1,11 @@
 = Manage Content
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to manage repository contents using the Groovy DSL Administration Console :files command for importing, exporting, and backing up repository assets. Enterprise only.
+endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
 Manage repository contents in script by using the `:files` or equivalent `:file` command. This allows import, export, and backup of repository assets. To upload and download non-repository files, see xref:SetUpServer.adoc[].

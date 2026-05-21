@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: If the Gauge component is bound to a data field (i.e., displaying an aggregate), `value` returns the value displayed by the component. If the Gauge component is not bound to a data field, `value` specifies the value to display.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 xref:viewsheet:GaugeProperties.adoc[] for general information about Output components.

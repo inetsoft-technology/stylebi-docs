@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the largest value in `array`. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the largest value in `array`. {CALCExcelFunctionPage}
 
 == Parameters

@@ -1,6 +1,11 @@
 = textField
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the name of the query field that is currently assigned to the ‘Text’ binding (xref:chartAPI:TextFrame.adoc[]) at runtime. This property is read-only. Use xref:ChartBindingInfoSetTextField.adoc[] to set the '`Text`' binding in script.
+endif::ai[]
 include::viewsheetscript:partial$readOnly.adoc[]
 
 

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the quarter (1, 2, 3, or 4) corresponding to the given `date`.
+endif::ai[]
+
 
 
 

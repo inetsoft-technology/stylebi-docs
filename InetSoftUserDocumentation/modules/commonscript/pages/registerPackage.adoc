@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Register the specified package to enable the use of all the classes in the package. Packages can also be registered by setting the `javascript.java.packages` property. {EMPropertyConfig}
+endif::ai[]
+
 
 
 Register the specified package to enable the use of all the classes in the package. Packages can also be registered by setting the `javascript.java.packages` property.  {EMPropertyConfig}

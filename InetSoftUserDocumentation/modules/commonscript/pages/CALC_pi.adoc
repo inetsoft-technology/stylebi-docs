@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the number stem:[pi], accurate to 15 digits. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the number stem:[pi], accurate to 15 digits. {CALCExcelFunctionPage}
 

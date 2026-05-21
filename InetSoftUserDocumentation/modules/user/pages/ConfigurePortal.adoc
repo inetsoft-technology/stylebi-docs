@@ -1,6 +1,11 @@
-﻿= Configure the Portal
+= Configure the Portal
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to manage user preferences in the Portal, including changing your password and email address.
+endif::ai[]
 
 To manage user preferences in the Portal, press the {buttonAccount} at the top of the Portal and select {buttonPreferences}.
 

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the periodic *payment* for a loan based on constant payments and a constant interest rate. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the periodic *payment* for a loan based on constant payments and a constant interest rate. {CALCExcelFunctionPage}
 

@@ -1,5 +1,10 @@
-﻿= Upload Data
+= Upload Data
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to import data from a text file, CSV, or Excel file directly into a Data Worksheet as an Embedded Table, without creating a persistent data source connection.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 [.videotitle]

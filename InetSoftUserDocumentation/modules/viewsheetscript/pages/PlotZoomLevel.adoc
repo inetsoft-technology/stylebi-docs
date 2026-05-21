@@ -1,6 +1,11 @@
-﻿= zoomLevel
+= zoomLevel
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the zoom level for a xref:viewsheet:MapChart.adoc[] with a Google Map background. (The integer value is equivalent to the number of times the {BUTTONZOOMIN} is pressed on the map.)
+endif::ai[]
 
 
 Sets the zoom level for a xref:viewsheet:MapChart.adoc[] with a Google Map background. (The integer value is equivalent to the number of times the {BUTTONZOOMIN} is pressed on the map.)

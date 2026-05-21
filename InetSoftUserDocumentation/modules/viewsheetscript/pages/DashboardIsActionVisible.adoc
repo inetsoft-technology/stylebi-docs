@@ -1,5 +1,10 @@
 = isActionVisible(name)
 
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the isActionVisible(name) function on embedded Dashboards, which reads whether a specified action (e.g., Open button) is visible.
+endif::ai[]
+
 Returns the value of the specified property for an embedded Dashboard. See xref:viewsheet:ModularizeDashboard.adoc[] for more information about embedding.
 
 == Paramaters

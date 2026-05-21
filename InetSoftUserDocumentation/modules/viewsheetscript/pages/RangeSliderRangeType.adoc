@@ -1,6 +1,11 @@
-﻿= rangeType
+= rangeType
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the display mode for the Range Slider. This is equivalent to selecting a data type in the ‘Options’ panel of the *Advanced* tab in the ‘Properties’ dialog box.
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

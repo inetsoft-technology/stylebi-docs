@@ -1,6 +1,11 @@
-﻿= Data Worksheet  Properties
+= Data Worksheet  Properties
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Data Worksheet-level properties accessible from the Options button, including name, description, and global settings.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 

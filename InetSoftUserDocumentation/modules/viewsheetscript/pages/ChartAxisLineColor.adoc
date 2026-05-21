@@ -1,6 +1,11 @@
-﻿= axis.lineColor
+= axis.lineColor
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color of the dimension or measure axis line.
+endif::ai[]
 
 
 Sets the color of the dimension or measure axis line.

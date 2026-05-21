@@ -1,7 +1,12 @@
-﻿= bindingInfo.setStockBindingField(arr)
+= bindingInfo.setStockBindingField(arr)
 :navtitle: setStockBindingField()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:ChartBindingInfoGetStockBindingField.adoc[] to obtain the binding information.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

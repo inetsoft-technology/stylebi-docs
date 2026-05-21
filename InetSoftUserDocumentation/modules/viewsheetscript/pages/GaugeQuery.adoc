@@ -1,6 +1,11 @@
-﻿= query
+= query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheetscript:GaugeFields.adoc[] to specify the data block from which to draw the fields.
+endif::ai[]
 
 [WARNING,caption=See Also]
 xref:viewsheetscript:GaugeFields.adoc[] to specify the data block from which to draw the fields.

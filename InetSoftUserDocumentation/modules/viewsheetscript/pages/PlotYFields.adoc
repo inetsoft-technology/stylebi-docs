@@ -1,6 +1,11 @@
 = yFields
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the names of the query fields (as an array) that are currently assigned to the Y-axis binding at runtime. This property is read-only. Use xref:ChartBindingInfoYFields.adoc[] to assign fields to the Y-axis.
+endif::ai[]
 include::viewsheetscript:partial$readOnly.adoc[]
 
 

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns an integer representing the day of the week corresponding to the specified `date`. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 
 Returns an integer representing the day of the week corresponding to the specified `date`.  {CALCExcelFunctionPage}

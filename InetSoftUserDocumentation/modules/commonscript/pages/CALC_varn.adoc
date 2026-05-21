@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *sample variance* for the values in array. Variance is the square of the standard deviation and provides a measure of how widely the data are spread about the mean.
+endif::ai[]
+
 Returns the *sample variance* for the values in array. Variance is the square of the standard deviation and provides a measure of how widely the data are spread about the mean.
 
 == Parameters

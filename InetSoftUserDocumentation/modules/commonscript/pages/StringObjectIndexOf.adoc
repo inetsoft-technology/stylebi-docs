@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the index of the first occurrence of specified sub-string within the larger string, or return `-1` if the sub-string is not found.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]

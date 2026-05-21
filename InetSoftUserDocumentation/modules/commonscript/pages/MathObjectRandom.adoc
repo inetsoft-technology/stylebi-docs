@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return a pseudo-random number between 0 and 1. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random[Math.random()] method, and *must* be used with the `Math` qualifier, `Math.random()`.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

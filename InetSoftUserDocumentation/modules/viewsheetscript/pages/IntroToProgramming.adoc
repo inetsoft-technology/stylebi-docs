@@ -1,6 +1,11 @@
-﻿= Introduction to Programming
+= Introduction to Programming
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: You can add advanced interactivity to your Dashboards by attaching scripts to components or events (e.g., Dashboard loading). Dashboard scripts use JavaScript syntax (https://www.ecma-international.org/publications/standards/Ecma-262.htm[ECMA-262]) and support most standard JavaScript functions. The JavaScript function libraries are enhanced with additional functions that provide programmatic access to Dashboard properties and behaviors.
+endif::ai[]
 
 You can add advanced interactivity to your Dashboards by attaching scripts to components or events (e.g., Dashboard loading). Dashboard scripts use JavaScript syntax  (https://www.ecma-international.org/publications/standards/Ecma-262.htm[ECMA-262]) and support most standard JavaScript functions. The JavaScript function libraries are enhanced with additional functions that provide programmatic access to Dashboard properties and behaviors.
 

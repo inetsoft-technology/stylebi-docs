@@ -1,5 +1,10 @@
 = bindingInfo
 
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference index for the Crosstab bindingInfo property, which provides sub-properties for configuring the data binding of a Crosstab component.
+endif::ai[]
+
 The `bindingInfo` property provides access to a family of sub-properties that allow you to configure the data displayed in the Crosstab.
 
 

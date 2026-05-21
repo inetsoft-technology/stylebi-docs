@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the string representation of a regular expression object. This function is an implementation of the standard JavaScript RegExp https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString[toString()] method.
+endif::ai[]
+
 
 
 Returns the string representation of a regular expression object. This function is an implementation of the standard JavaScript RegExp https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString[toString()] method.

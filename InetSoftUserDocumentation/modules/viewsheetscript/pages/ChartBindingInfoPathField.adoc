@@ -1,7 +1,12 @@
-﻿= bindingInfo.pathField
+= bindingInfo.pathField
 :navtitle: pathField
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the field to be used in the '`Path`' binding. See xref:viewsheet:MapChart.adoc[] for more information about '`Path`'.
+endif::ai[]
 
 
 

@@ -1,6 +1,11 @@
-﻿= stackValue
+= stackValue
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: For a *stacked* Chart (press {buttonSelectChartStyle} and select the ‘Stack’ option), displays just the *total value* rather than individual groups values when the ‘Show Values’ property is enabled.
+endif::ai[]
 
 
 

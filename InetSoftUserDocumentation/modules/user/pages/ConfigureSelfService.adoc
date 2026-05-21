@@ -1,5 +1,10 @@
 = Configure Self-Service
 
+// metadata for AI
+ifdef::ai[]
+Summary: Admin guide for configuring self-service Dashboard creation features, including setting up repository permissions, action permissions, and data source access for end users.
+endif::ai[]
+
 The following sections explain how you can configure self-service features to enable users to most effectively create their own  dashboards.
 
 

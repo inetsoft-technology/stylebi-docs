@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: When `true` (default), merge automatically expanded cells into a single cell. This is a useful way to simplify the table when expanded cells all contain the same text, or when borders between the cells are undesirable.
+endif::ai[]
+
 
 
 

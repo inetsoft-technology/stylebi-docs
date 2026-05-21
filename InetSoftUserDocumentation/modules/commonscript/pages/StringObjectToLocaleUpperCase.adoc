@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Convert all characters to uppercase according to specified locale convention, specified as https://www.oracle.com/technetwork/java/javase/java8locales-2095355.html[Java-supported two-letter codes] for locale language and country.
+endif::ai[]
+
 
 
 Convert all characters to uppercase according to specified locale convention, specified as https://www.oracle.com/technetwork/java/javase/java8locales-2095355.html[Java-supported two-letter codes] for locale language and country.

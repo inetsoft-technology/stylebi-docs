@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the sample *standard deviation* for the values in `array`. Standard deviation is the square root of the variance and provides a measure of how widely the data are spread about the mean. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the sample *standard deviation* for the values in `array`. Standard deviation is the square root of the variance and provides a measure of how widely the data are spread about the mean. {CALCExcelFunctionPage}
 
 == Parameters

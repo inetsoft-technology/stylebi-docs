@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *covariance* between the values in `array1` and `array2`. Covariance is the average of the products of deviations for each data point pair. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the *covariance* between the values in `array1` and `array2`. Covariance is the average of the products of deviations for each data point pair. {CALCExcelFunctionPage}
 
 == Parameters

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the __n__th largest value in the specified `array`. Use n=1 to return the maximum, equivalent to xref:CALC_max.adoc[]. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the __n__th largest value in the specified `array`. Use n=1  to return the maximum, equivalent to xref:CALC_max.adoc[]. {CALCExcelFunctionPage}
 
 == Parameters

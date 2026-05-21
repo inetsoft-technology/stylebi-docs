@@ -1,6 +1,11 @@
-﻿= Pivot Data
+= Pivot Data
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to pivot or unpivot data in a Data Worksheet, converting multiple measures into a single measure with a new dimension, or expanding dimension values into separate measure columns.
+endif::ai[]
 
 To create a desired chart or table in a Dashboard, you may sometimes need to “pivot” or “unpivot” the data in one of the following ways:
 

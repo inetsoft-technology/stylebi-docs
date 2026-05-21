@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For cases when the ‘Scale to Screen’ option (see xref:viewsheet:DashboardOptions.adoc[]) is enabled, returns the final rendered position of the top-left corner of a component in terms of pixels. The top-left corner of the Dashboard represents pixel location (0,0). This property returns `null` within the design view of Visual Composer and whenever ‘Scale to Screen’ is not enabled.
+endif::ai[]
+
 include::partial$readOnly.adoc[]
 
 

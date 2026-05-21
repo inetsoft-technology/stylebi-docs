@@ -1,6 +1,11 @@
-﻿= webMap
+= webMap
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets a xref:viewsheet:MapChart.adoc[] to use a web map background. (If the setting does not affect the chart, ask your administrator to enable the Web Map feature in Enterprise Manager.)
+endif::ai[]
 
 
 

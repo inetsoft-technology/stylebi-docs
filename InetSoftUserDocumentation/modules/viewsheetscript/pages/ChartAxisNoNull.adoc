@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For Date/Time and Categorical axes, set to `true` to suppress the display of null dimension values. When `false` (default), null values are represented without labels.
+endif::ai[]
+
 
 
 For Date/Time and Categorical axes, set to `true` to suppress the display of null dimension values. When `false` (default), null values are represented without labels.

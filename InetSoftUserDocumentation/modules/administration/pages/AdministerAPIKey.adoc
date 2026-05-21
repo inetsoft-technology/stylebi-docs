@@ -1,6 +1,11 @@
-﻿= Administer API Key
+= Administer API Key
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create and manage OAuth API keys in Enterprise Manager for data sources that require OAuth authentication. Community edition only. See the list of OAuth-dependent data sources.
+endif::ai[]
 include::ROOT:partial$communityOnly.adoc[]
 
 To connect to a data source that uses *OAuth*, you must first create an API Key. See xref:#OAuthDataSources[] below for the data sources that require the API key.

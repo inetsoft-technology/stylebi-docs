@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value in the cell currently referenced by a *Format* expression script. For example, if you specify a ‘Color’ expression in the *Format* panel for a Table *header cell*, you can use the `value` property within the script to obtain the value in the targeted header cell. Likewise, if you specify a ‘Color’ expression in the *Format* panel for a *detail cell* in a Table column (which means that the expression will be evaluated in turn for each detail cell in the column), you can use the `value` property within the script to obtain the value of the currently referenced detail cell.
+endif::ai[]
+
 include::partial$readOnly.adoc[]
 
 

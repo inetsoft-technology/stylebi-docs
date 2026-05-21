@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the minimum slider value. If ‘Single Value’ is selected under the *Data* tab of the ‘Range Slider Properties’ dialog box, the `min` value is a single number or date (as appropriate for the data represented on the Slider). If ‘Composite Value’ is selected under the *Data* tab, the `min` value is an array.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

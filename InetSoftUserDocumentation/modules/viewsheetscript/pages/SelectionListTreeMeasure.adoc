@@ -1,6 +1,11 @@
-﻿= measure
+= measure
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the measure field to be displayed by the Selection component. This is equivalent to selecting a field from the ‘Measure’ menu under the *Data* tab of the component ‘Properties’ dialog box.
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

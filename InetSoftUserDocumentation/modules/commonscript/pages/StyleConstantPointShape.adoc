@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: The point shape constants can be used to specify the shape used in a Point Chart. You are recommended to use xref:chartAPI:GShape.adoc[] instead.
+endif::ai[]
+
 The point shape constants can be used to specify the shape used in a Point Chart.  You are  recommended to use xref:chartAPI:GShape.adoc[] instead.
 
 == Type

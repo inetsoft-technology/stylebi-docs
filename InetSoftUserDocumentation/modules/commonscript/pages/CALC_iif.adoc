@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns `value_if_true` if condition evaluates to `true`, and returns `value_if_false` if condition evaluates to `false`. {CALCExcelFunctionPage} This is similar to the https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator[JavaScript ternary operator], which can also be used for this purpose.
+endif::ai[]
+
 
 Returns `value_if_true` if condition evaluates to `true`, and returns `value_if_false` if condition evaluates to `false`.  {CALCExcelFunctionPage} This is similar to the https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator[JavaScript ternary operator], which can also be used for this purpose.
 

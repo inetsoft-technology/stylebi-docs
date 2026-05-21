@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:ArrayObjectJoin.adoc[] to combine elements of an array into a string.
+endif::ai[]
+
 
 [WARNING,caption=see also]
 xref:ArrayObjectJoin.adoc[] to combine elements of an array into a string.

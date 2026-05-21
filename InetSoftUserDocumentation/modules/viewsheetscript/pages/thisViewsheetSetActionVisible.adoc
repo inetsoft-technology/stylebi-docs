@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the visibility of Dashboard toolbar buttons and export options. To hide a button or export option, set the value to false. This function should generally be placed in the onInit Handler. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+endif::ai[]
+
 
 Sets the visibility of Dashboard toolbar buttons and export options. To hide a button or export option, set the value to false. This function should generally be placed in the onInit Handler. (See xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
 

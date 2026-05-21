@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the natural logarithm of a positive number (base stem:[e]). {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the natural logarithm of a positive number (base stem:[e]). {CALCExcelFunctionPage}
 
 == Parameters

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: JavaScript function to return the minutes part of a date in local time. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes[Date.getMinutes()] in the {JavaScriptRef} for details on usage.
+endif::ai[]
+
 JavaScript function to return the minutes part of a date in local time. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes[Date.getMinutes()] in the {JavaScriptRef} for details on usage.
 
 include::ROOT:partial$dateObjects.adoc[]

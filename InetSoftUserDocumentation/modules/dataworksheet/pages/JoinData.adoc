@@ -1,6 +1,11 @@
-﻿= Join Data
+= Join Data
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to join two or more data blocks horizontally in a Data Worksheet, defining equality or inequality join conditions to combine data from different tables, queries, or data models.
+endif::ai[]
 
 [WARNING,caption=see also]
 xref:ConcatenateData.adoc[] to create a *vertical composition* of two or more data blocks.

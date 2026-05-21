@@ -3,6 +3,12 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to localize Dashboard text by assigning Text IDs to elements in Visual Composer and mapping them to translated strings in a locale properties file.
+endif::ai[]
+
+
 You can use a simple text mapping to localize most text in a  Dashboard. The first step in setting up localization for a particular  Dashboard is to assign *Text IDs* to each text element to be mapped. You can do this in the  ‘Options’ dialog box of Visual Composer.  See xref:viewsheet:LocalizeDashboard.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for more information on how to assign Text IDs.
 
 

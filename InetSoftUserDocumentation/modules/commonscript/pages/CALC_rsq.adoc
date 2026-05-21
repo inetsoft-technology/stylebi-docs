@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the square of the Pearson product moment correlation coefficient (*R^2^*) for the values in `array1` and `array2`. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns the square of the Pearson product moment correlation coefficient (*R^2^*) for the values in `array1` and `array2`. {CALCExcelFunctionPage}
 
 The R^2^ coefficient indicates the degree to which variance in `array2` can be accounted for by variance in `array1` (or vice versa). An R^2^ value near 0 indicates that the values in `array1` and `array2` have little linear relationship. An R^2^ value near 1 indicates that the values in `array1` and `array2` have a strong linear relationship, such that the variance in `array2` can be largely explained by variance in `array1` using a linear model.

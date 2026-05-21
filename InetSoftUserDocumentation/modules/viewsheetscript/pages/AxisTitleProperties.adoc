@@ -1,5 +1,10 @@
 = Axis Title Properties
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for axis title script properties (xTitle, yTitle, x2Title, y2Title). Lists available title properties for chart axes.
+endif::ai[]
+
 
 The topics in this section describe properties are available for axis  titles.  Title properties should be prefixed by `xTitle`, `yTitle`, `x2Title`, or `y2Title`.
 

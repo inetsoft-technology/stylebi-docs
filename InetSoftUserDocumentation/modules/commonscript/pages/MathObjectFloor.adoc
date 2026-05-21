@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the largest integer less than or equal to the specified number. This is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor[Math.floor()] method, and *must* be used with the `Math` qualifier, `Math.floor()`.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Remove leading whitespace characters from a string.
+endif::ai[]
+
 
 
 Remove leading whitespace characters from a string.

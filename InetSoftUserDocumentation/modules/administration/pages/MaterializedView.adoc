@@ -1,6 +1,11 @@
-﻿= Materialized View
+= Materialized View
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure and manage materialized views in Enterprise Manager, which pre-aggregate Dashboard data in a cache to dramatically improve query performance for end users.
+endif::ai[]
 
 A materialized view is a caching strategy that pre-aggregates and stores the data required by a Dashboard or Data Worksheet. When a Dashboard has a materialized view,  the Dashboard  will attempt to query the cached materialized view rather than the database. This can significantly reduce the run time for certain queries, and greatly improve performance for the end-user.
 

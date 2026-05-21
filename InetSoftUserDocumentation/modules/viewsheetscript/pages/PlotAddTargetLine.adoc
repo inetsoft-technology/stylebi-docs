@@ -1,7 +1,12 @@
-﻿= addTargetLine(measure, colors, values, options)
+= addTargetLine(measure, colors, values, options)
 :navtitle: addTargetLine()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Draws a set of horizontal or vertical target lines in the plot area using the specified colors and options. See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.
+endif::ai[]
 
 
 

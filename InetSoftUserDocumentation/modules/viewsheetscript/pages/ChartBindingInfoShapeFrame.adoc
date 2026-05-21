@@ -1,7 +1,12 @@
-﻿= bindingInfo.shapeFrame
+= bindingInfo.shapeFrame
 :navtitle: shapeFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the aesthetic treatment for shape-coded data on a xref:viewsheet:PointChart.adoc[]. A xref:chartAPI:ShapeFrame.adoc[] can shape-code chart elements by value, or simply specify a static shape style.
+endif::ai[]
 
 [WARNING,caption=See Also]
 ====

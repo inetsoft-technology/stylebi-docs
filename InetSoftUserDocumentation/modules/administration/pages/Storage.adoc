@@ -1,6 +1,11 @@
-﻿= Storage
+= Storage
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure asset storage backend in Enterprise Manager via docker-compose.yaml, covering supported storage types and migration between environments.
+endif::ai[]
 :deployAssets: To move assets such as Dashboards, queries, or data sources from one environment to another, see xref:ImportExportAssets.adoc[].
 
 IMPORTANT: {deployAssets}

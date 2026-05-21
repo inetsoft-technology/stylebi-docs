@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the Table cell data format as a two dimensional array. The attribute can be referenced using the row number as the first index and the column header or number as the second index, `[row][col]`. Column and row indices start at 0.
+endif::ai[]
+
 
 
 

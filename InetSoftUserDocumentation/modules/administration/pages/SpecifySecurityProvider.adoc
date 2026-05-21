@@ -1,6 +1,11 @@
-﻿= Specify Security Provider
+= Specify Security Provider
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure authentication and authorization providers in Enterprise Manager, including Default, LDAP, Database, and Custom provider types.
+endif::ai[]
 
 
 A security provider is a module that handles security operations for the InetSoft server. You can specify independent security providers to provide the following functions:

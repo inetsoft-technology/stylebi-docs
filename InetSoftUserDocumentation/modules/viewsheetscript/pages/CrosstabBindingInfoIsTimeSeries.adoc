@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the state of the specified Date column, designated as time-series or not. Fields can be designated as time-series by xref:CrosstabBindingInfoSetTimeSeries.adoc[] or in the Crosstab Editor.
+endif::ai[]
+
 
 
 

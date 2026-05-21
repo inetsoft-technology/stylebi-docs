@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns a new date that is created by adding the specified amount of time to the specified interval of the given date.
+endif::ai[]
+
 Returns a new date that is created by adding the specified amount of time to the specified interval of the given date.
 
 == Parameters

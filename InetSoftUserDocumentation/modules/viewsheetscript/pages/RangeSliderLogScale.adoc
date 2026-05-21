@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that the slider for a numerical field should use a logarithmic scale. The base of the log is determined automatically.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

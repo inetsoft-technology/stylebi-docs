@@ -1,6 +1,11 @@
-﻿= axis.sharedRange
+= axis.sharedRange
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:chartAPI:FacetCoord.adoc[] for an example of creating a facet chart.
+endif::ai[]
 
 
 

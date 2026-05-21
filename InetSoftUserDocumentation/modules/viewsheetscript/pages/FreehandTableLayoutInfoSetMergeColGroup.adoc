@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the column group for the specified merged cells in a Freehand Table. See xref:viewsheet:AddFreehandTable.adoc[] for more information about ‘Column Group’ for merged cells.
+endif::ai[]
+
 Sets the column group for the specified merged cells in a Freehand Table. See xref:viewsheet:AddFreehandTable.adoc[] for more information about ‘Column Group’ for merged cells.
 
 

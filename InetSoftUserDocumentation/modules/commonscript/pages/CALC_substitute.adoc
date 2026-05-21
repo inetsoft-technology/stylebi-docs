@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Replaces an instance of `rep_string` within `old_string` using replacement text provided by `new_string`. {CALCExcelFunctionPage}
+endif::ai[]
+
 Replaces an instance of `rep_string` within `old_string` using replacement text provided by `new_string`. {CALCExcelFunctionPage}
 
 This function replaces specific *text* within `old_string`. Use xref:CALC_replace.adoc[] to replace text that occurs at a specific *location* in `old_string`.

@@ -1,6 +1,11 @@
-﻿= Group and Aggregate Data
+= Group and Aggregate Data
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to group and aggregate (summarize) data in a Data Worksheet, including choosing group-by columns, aggregate functions, and deciding between Data Worksheet vs. Dashboard-level aggregation.
+endif::ai[]
 
 Grouping and aggregation,  also known as summarization, is an essential part of presenting information to business audiences.  By use of effective grouping and aggregation, you can reduce massive datasets to a handful of key trends and indicators, facilitating business  insight and action.  The sections below explain how to effectively aggregate your data.
 

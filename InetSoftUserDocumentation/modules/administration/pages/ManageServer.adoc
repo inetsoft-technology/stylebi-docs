@@ -1,5 +1,10 @@
 = Manage the Server
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview of Enterprise Manager capabilities for server administration, including monitoring, logging, configuration, file management, and security. Introduces the Enterprise Manager web application.
+endif::ai[]
+
 
 
 Enterprise Manager is a webapp that allows administrators to manage the InetSoft server, and includes features such as monitoring, logging, configuration, file management, and security.  Administrator credentials are required to access Enterprise  Manager.

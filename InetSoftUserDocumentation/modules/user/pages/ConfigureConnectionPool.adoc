@@ -1,6 +1,11 @@
-﻿= Configure Connection Pool
+= Configure Connection Pool
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure HikariCP connection pool settings for a data source, including pool size, timeout, and other HikariCP knobs. Enterprise only.
+endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 

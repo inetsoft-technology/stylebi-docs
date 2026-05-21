@@ -1,5 +1,10 @@
-﻿= Enter Data
+= Enter Data
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to create an Embedded Table by manually entering data into a Data Worksheet, creating a persistent data block that can be saved across sessions.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 

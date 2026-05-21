@@ -1,6 +1,11 @@
-﻿= colorLegends.font
+= colorLegends.font
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the font for labels within a color-key legend (on charts that have *multiple* color legends).
+endif::ai[]
 
 
 Sets the font for labels within a color-key legend (on charts that have *multiple* color legends).

@@ -1,6 +1,11 @@
-﻿= glossyEffect
+= glossyEffect
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Applies a 3D effect to the Chart as a whole. (Not available for all Chart styles.)
+endif::ai[]
 
 
 Applies a 3D effect to the Chart as a whole. (Not available for all Chart styles.)

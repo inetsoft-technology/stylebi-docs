@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the __n__th most frequently occurring value in the specified array. Use n=1 (first most frequent value) to return the mode, equivalent to xref:CALC_mode.adoc[].
+endif::ai[]
+
 Returns the __n__th most frequently occurring value in the specified array. Use  n=1 (first most frequent value) to return the mode, equivalent to xref:CALC_mode.adoc[].
 
 == Parameters

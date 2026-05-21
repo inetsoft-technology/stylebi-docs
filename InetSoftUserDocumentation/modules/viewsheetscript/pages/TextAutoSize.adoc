@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Enables the Text component to automatically adjust its height to display all the contents.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

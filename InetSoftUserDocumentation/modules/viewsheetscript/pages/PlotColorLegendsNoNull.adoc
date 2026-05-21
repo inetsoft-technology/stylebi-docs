@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: For Charts with *multiple* Date/Time or Categorical color legends, set to `true` to suppress the display of `null` dimension values in the legend. When `false` (default), `null` values are represented without a label in the legend.
+endif::ai[]
+
 
 For Charts with *multiple* Date/Time or Categorical color legends, set to `true` to suppress the display of `null` dimension values in the legend. When `false` (default), `null` values are represented without a label in the legend.
 

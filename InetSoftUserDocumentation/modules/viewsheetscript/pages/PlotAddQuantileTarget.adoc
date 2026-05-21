@@ -1,7 +1,12 @@
-﻿= addQuantileTarget(measure, colors, values, options)
+= addQuantileTarget(measure, colors, values, options)
 :navtitle: addQuantileTarget()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Draws a set of horizontal or vertical lines on the chart to mark the specified quantiles. See xref:viewsheet:AddTargetLineTrendLine.adoc[] for more information about target lines.
+endif::ai[]
 
 
 

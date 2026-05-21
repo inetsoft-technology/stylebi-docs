@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the interval between the values when a user increments or decrements the Spinner. For example, a value of 15 indicates the Spinner should traverse values of 0, 15, 30, 45, etc. (assuming that `min=0`).
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

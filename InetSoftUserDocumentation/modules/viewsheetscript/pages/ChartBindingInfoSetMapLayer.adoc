@@ -1,7 +1,12 @@
-﻿= bindingInfo.setMapLayer(col, layer)
+= bindingInfo.setMapLayer(col, layer)
 :navtitle: setMapLayer()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the map layer corresponding to a geographic field.
+endif::ai[]
 
 
 [WARNING,caption=See Also]

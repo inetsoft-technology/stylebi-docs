@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the column index of the cell currently referenced by a *Format* expression script. For example, if you specify a ‘Color’ expression in the *Format* panel for a *detail cell* in a Table, you can use the `col` property within the script to obtain the index of the column. This, together with xref:viewsheetscript:TableTable.adoc[] array and the xref:viewsheetscript:TableRow.adoc[] property allow you to construct relative references to other cells in the Table.
+endif::ai[]
+
 include::partial$readOnly.adoc[]
 
 

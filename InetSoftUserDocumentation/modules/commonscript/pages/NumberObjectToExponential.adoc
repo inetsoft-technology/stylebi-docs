@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Converts a number to scientific notation.
+endif::ai[]
+
 
 
 Converts a number to scientific notation.

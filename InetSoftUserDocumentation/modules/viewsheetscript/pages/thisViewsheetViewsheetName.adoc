@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the name of the Dashboard. See xref:administration:Repository.adoc[] in xref:administration:ManageServer.adoc[] for information on how to set the name of a Dashboard.
+endif::ai[]
+
 
 include::partial$readOnly.adoc[]
 

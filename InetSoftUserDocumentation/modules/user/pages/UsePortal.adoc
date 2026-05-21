@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for the User Portal, which provides access to Dashboards, Data Worksheets, and data source management. Links to all major Portal tasks including opening the Portal, configuring preferences, scheduling, and bookmarking.
+endif::ai[]
+
 The User Portal provides features for accessing and managing existing assets, such as Data Worksheets and Dashboards, and allows you to create new assets as well. The User Portal is a web-based interface, so you do not need to install any special software on your computer. Your system administrator will tell you the correct address to use in your web browser.
 
 

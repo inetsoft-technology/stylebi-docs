@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Enables the Date Comparison feature for the Chart. See xref:viewsheet:CompareDataByDate.adoc[] for more details.
+endif::ai[]
+
 
 Enables the Date Comparison feature for the Chart. See xref:viewsheet:CompareDataByDate.adoc[] for more details.
 

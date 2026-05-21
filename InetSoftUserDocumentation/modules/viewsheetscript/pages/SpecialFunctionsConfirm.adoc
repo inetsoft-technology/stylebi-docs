@@ -1,4 +1,9 @@
-﻿= confirm(message)
+= confirm(message)
+
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the confirm(message) global function, which opens a confirmation dialog asking the user to confirm or cancel an operation before proceeding.
+endif::ai[]
 :navtitle: confirm()
 
 [WARNING,caption=See Also]

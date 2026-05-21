@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Return the maximum of the specified values. This function is an implementation of the standard JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max[Math.max()] method, and *must* be used with the `Math` qualifier, `Math.max()`.
+endif::ai[]
+
 
 
 [WARNING,caption=See Also]

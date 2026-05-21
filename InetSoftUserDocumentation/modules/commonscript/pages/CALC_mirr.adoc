@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *modified internal rate* of return for a series of periodic cash flows. This function considers both the cost of the investment and the interest received on reinvestment of cash. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *modified internal rate* of return for a series of periodic cash flows. This function considers both the cost of the investment and the interest received on reinvestment of cash. {CALCExcelFunctionPage}
 

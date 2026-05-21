@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the number of columns in a table, prior to grouping and aggregation.
+endif::ai[]
+
 
 include::partial$readOnly.adoc[]
 

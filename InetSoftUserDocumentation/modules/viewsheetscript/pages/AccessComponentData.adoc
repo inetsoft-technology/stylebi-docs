@@ -1,6 +1,11 @@
-﻿= Access Component Data
+= Access Component Data
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: You can access component data and filter selections using script. The following sections explain how to do this. For information on how to detect the most recent user interaction, see xref:viewsheet:WriteBackToStorage.adoc#AccessUserModifiedData[Access User-Modified Data] in xref:viewsheet:WriteBackToStorage.adoc[].
+endif::ai[]
 
 include::viewsheetscript:partial$seeAlsoComponentData.adoc[]
 

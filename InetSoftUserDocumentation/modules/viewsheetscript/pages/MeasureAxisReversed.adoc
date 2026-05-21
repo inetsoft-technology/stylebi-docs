@@ -1,6 +1,11 @@
-﻿= axis.reversed
+= axis.reversed
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Reverses the direction of the axis scale so that higher numbers appear at the bottom or left.
+endif::ai[]
 
 
 

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Determines whether Dashboard users can add new selection fields to the Selection Container.
+endif::ai[]
+
 [WARNING,caption=See Also]
 ====
 [square]

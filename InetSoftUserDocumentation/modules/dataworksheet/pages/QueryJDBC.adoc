@@ -1,5 +1,10 @@
 = JDBC Query
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a Data Worksheet data set from a relational database (JDBC) data source, including prerequisite connection setup. See user:JDBC for connection configuration.
+endif::ai[]
+
 To create a new data set from a relational database  data source, first set up the data source connection. See xref:user:JDBC.adoc[] for more details.
 
 After you have configured the connection, proceed to xref:CreateNewWorksheet.adoc[].

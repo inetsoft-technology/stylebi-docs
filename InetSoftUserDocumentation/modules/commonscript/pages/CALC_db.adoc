@@ -4,6 +4,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the depreciation of an asset for accounting year `period` using the *fixed-declining balance* method. {CALCExcelFunctionPage} The rate of depreciation is for a given year is
+endif::ai[]
+
 
 Returns the depreciation of an asset for accounting year `period` using the *fixed-declining balance* method. {CALCExcelFunctionPage} The rate of depreciation is for a given year is
 

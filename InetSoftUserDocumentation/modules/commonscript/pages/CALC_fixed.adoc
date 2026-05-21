@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns a number rounded to the specified number of `decimals` and formatted as text using a period and commas. {CALCExcelFunctionPage}
+endif::ai[]
+
 Returns a number rounded to the specified number of `decimals` and formatted as text using a period and commas. {CALCExcelFunctionPage}
 
 == Parameters

@@ -1,6 +1,11 @@
-﻿= Add Script to a Dashboard
+= Add Script to a Dashboard
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: If you need to modify a Dashboard at runtime, or implement more complex business logic, you can add script to your Dashboard. There are three levels at which you can attach script in a Dashboard:
+endif::ai[]
 
 If you need to modify a Dashboard at runtime, or implement  more complex business logic, you can add script to your Dashboard. There are three levels at which you can attach script in a Dashboard:
 

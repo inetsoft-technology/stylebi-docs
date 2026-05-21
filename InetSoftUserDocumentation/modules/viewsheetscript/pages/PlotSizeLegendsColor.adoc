@@ -1,6 +1,11 @@
-﻿= sizeLegends.color
+= sizeLegends.color
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the label color within a size-key legend on charts that have *multiple* size legends.
+endif::ai[]
 
 
 Sets the label color within a size-key legend on charts that have *multiple* size legends.

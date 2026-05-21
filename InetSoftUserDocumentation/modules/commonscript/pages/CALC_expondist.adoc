@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the value of the *exponential* distribution for specified value of random variable `x` and rate parameter `lambda`. Value `x` typically represents the time interval between events in a Poisson process. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the value of the *exponential* distribution for specified value of random variable `x` and rate parameter `lambda`. Value `x` typically represents the time interval between events in a Poisson process. {CALCExcelFunctionPage}
 

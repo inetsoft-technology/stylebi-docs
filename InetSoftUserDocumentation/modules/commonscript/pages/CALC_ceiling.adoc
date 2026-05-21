@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns `number` rounded away from zero to the nearest multiple of significance. Positive numbers are rounded up, negative numbers are rounded down. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns `number` rounded away from zero to the nearest multiple of significance. Positive numbers are rounded up, negative numbers are rounded down. {CALCExcelFunctionPage}
 

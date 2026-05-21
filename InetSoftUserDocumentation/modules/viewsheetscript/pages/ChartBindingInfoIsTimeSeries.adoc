@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:ChartBindingInfoSetTimeSeries.adoc[] to designate a field as time-series.
+endif::ai[]
+
 [WARNING,caption=See Also]
 xref:ChartBindingInfoSetTimeSeries.adoc[]  to designate a field as time-series.
 

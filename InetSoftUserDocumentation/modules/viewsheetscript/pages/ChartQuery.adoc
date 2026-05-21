@@ -1,6 +1,11 @@
-﻿= query
+= query
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:ChartBindingInfoXFields.adoc[] and xref:ChartBindingInfoYFields.adoc[] to specify the fields to display in the Chart.
+endif::ai[]
 
 [WARNING,caption=See Also]
 xref:ChartBindingInfoXFields.adoc[] and xref:ChartBindingInfoYFields.adoc[] to specify the fields to display in the Chart.

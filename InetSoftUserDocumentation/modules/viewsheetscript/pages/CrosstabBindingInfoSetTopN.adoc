@@ -1,7 +1,12 @@
-﻿= bindingInfo.setTopN(field, header, number)
+= bindingInfo.setTopN(field, header, number)
 :navtitle: setTopN()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the number of row or column groups to preserve in the ranking. This is equivalent to setting the number '`N`' of ranking groups for the '`Rank`' property of the Crosstab Editor.
+endif::ai[]
 
 
 

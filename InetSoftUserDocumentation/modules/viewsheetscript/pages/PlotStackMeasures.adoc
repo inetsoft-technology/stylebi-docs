@@ -1,6 +1,11 @@
-﻿= stackMeasures
+= stackMeasures
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: For a *stacked* chart (press {buttonSelectChartStyle} and select the ‘Stack’ option) in *single-graph* display (press the {buttonSwitchSingleGraph}), this displays multiple measures in “stacked” format rather than side-by-side.
+endif::ai[]
 
 
 

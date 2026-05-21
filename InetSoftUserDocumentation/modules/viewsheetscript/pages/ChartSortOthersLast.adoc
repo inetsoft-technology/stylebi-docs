@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: If set to `true` (default), when ‘Group all others together’ is enabled for Top/Bottom ranking in the ‘Edit Dimension’ panel of the Chart Editor, this places the ‘Others’ group _after_ all the ranked groups, regardless of the specified dimension sorting. (See xref:viewsheet:AddAChart.adoc[] for information about dimension ranking.)
+endif::ai[]
+
 
 
 

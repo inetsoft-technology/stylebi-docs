@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *net present value* of an investment by using a discount rate and a series of future payments (negative values) and income (positive values). {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *net present value* of an investment by using a discount rate and a series of future payments (negative values) and income (positive values). {CALCExcelFunctionPage}
 

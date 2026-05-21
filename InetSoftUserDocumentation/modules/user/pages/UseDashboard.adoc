@@ -1,6 +1,11 @@
-﻿= Use a Dashboard
+= Use a Dashboard
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to open and interact with a Dashboard in the User Portal, including opening pinned Dashboards, searching the repository, and using filter components.
+endif::ai[]
 
 The following sections explain how to open and use a Dashboard in the Portal. See xref:viewsheet:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.
 

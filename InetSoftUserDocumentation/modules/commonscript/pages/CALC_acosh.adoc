@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the inverse hyperbolic cosine of a number. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the inverse hyperbolic cosine of a number. {CALCExcelFunctionPage}
 

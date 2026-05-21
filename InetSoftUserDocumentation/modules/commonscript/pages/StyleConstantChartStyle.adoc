@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: The chart style constants specify how a Chart presents its data. See xref:viewsheet:ChartTypes.adoc[] for a description of the different styles.
+endif::ai[]
+
 
 The chart style constants specify how a Chart presents its data.  See xref:viewsheet:ChartTypes.adoc[] for a description of the different styles.
 

@@ -1,6 +1,11 @@
-﻿= Profile a Dashboard
+= Profile a Dashboard
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to enable Dashboard profiling in the Portal to measure execution time for each component, identifying performance bottlenecks.
+endif::ai[]
 
 You can profile the execution of your Dashboards to determine which aspects of execution consume the most time. To do this, follow the steps below:
 

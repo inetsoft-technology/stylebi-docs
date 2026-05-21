@@ -1,6 +1,11 @@
-﻿= Open User Portal
+= Open User Portal
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to open the User Portal in a web browser from the main landing page.
+endif::ai[]
 
 
 

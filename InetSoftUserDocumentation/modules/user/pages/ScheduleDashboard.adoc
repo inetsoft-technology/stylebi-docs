@@ -1,6 +1,11 @@
-﻿= Schedule a Dashboard
+= Schedule a Dashboard
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to schedule automatic Dashboard generation and delivery on a predefined cycle, including quick-scheduling and advanced schedule options for email delivery and format selection.
+endif::ai[]
 
 
 The following sections explain how to schedule a Dashboard for automatic generation on a predefined cycle.
@@ -23,7 +28,7 @@ image::scheduleDashboard1.png[alt="select Create New Bookmark or Use Current Boo
 CSV:: {exportcsv}
 Excel:: {exportexcel}
 
-. In the ‘Emails’ field, enter a comma-separated list of email addresses to which the Dashboard should be delivered, or press the btn:[⋯] button to select from a list of user emails. (Only users from your own groups are listed.)
+. In the ‘Emails’ field, enter a comma-separated list of email addresses to which the Dashboard should be delivered, or press the btn:[?] button to select from a list of user emails. (Only users from your own groups are listed.)
 
 . Select a ‘Daily’, ‘Weekly’, or ‘Monthly’, option and specify the additional details (e.g., time) when the Dashboard should be generated. {timeRangeCondition}
 +

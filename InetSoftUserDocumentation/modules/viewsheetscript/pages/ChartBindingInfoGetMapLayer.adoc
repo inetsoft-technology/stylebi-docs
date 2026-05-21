@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: xref:viewsheetscript:ChartBindingInfoSetMapLayer.adoc[] to set the binding information.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 xref:viewsheetscript:ChartBindingInfoSetMapLayer.adoc[]  to set the binding information.

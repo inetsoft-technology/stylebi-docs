@@ -1,6 +1,11 @@
-﻿= shapeLegend.format
+= shapeLegend.format
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the format for data values displayed in the shape legend.
+endif::ai[]
 
 
 Sets the format for data values displayed in the shape legend.

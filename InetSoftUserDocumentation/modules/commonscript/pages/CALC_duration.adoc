@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the *Macaulay duration* in years for a security with an assumed par value of $100. Duration is the weighted average of the present value of the cash flows and is used as a measure of a bond price’s response to changes in yield. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Returns the *Macaulay duration* in years for a security with an assumed par value of $100. Duration is the weighted average of the present value of the cash flows and is used as a measure of a bond price’s response to changes in yield. {CALCExcelFunctionPage}
 

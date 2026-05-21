@@ -1,5 +1,10 @@
 = Configure Security
 
+// metadata for AI
+ifdef::ai[]
+Summary: Step-by-step overview for setting up security on the InetSoft server, including specifying authentication/authorization providers, creating users, groups, and roles, and setting repository and action permissions.
+endif::ai[]
+
 
 Follow the  steps below to set up security for the server.
 

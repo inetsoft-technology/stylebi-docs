@@ -1,7 +1,12 @@
-﻿= bindingInfo.getTopN(field, header)
+= bindingInfo.getTopN(field, header)
 :navtitle: getTopN()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the number of row or column groups in the ranking specified by xref:CrosstabBindingInfoSetTopN.adoc[] or set by the ‘Rank’ option in the Crosstab Editor.
+endif::ai[]
 
 
 

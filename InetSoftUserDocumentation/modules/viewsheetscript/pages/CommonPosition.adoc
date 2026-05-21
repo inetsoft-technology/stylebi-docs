@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the position of the top-left corner of a component in terms of pixels, where the top-left corner of the Dashboard is (0,0). Fractional values for vertical and horizontal position are rounded down to the next lowest integer. This property does not take effect in the design view of Visual Composer and does not apply to components within a Selection Container.
+endif::ai[]
+
 
 
 Specifies the position of the top-left corner of a component in terms of pixels, where the top-left corner of the Dashboard is (0,0). Fractional values for vertical and horizontal position are rounded down to the next lowest integer. This property does not take effect in the design view of Visual Composer and does not apply to components within a Selection Container.

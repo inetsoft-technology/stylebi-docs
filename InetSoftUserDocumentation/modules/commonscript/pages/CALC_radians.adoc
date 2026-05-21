@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Converts a number representing an angle in degrees to radians. {CALCExcelFunctionPage}
+endif::ai[]
+
 
 Converts a number representing an angle in degrees to radians. {CALCExcelFunctionPage}
 

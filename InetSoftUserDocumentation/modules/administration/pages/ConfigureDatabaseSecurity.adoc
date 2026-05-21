@@ -1,6 +1,11 @@
-﻿= Configure Database Security
+= Configure Database Security
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure a database as the authentication provider in Enterprise Manager, including connection settings and user/role query configuration. Enterprise only.
+endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
 

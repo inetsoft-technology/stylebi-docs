@@ -1,5 +1,10 @@
 = saveWorksheet()
 
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference for the saveWorksheet() global function, which persists user-entered data from Dashboard Embedded Tables and Form components back to the Data Worksheet.
+endif::ai[]
+
 [WARNING,caption=See Also]
 xref:viewsheet:TableProperties.adoc[] for information on making a table editable.
 

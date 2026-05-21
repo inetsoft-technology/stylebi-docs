@@ -1,6 +1,11 @@
-﻿= yBandSize
+= yBandSize
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the width of the bands on a categorical or timescale Y-axis.
+endif::ai[]
 
 
 Specifies the width of the bands on a categorical or timescale Y-axis.
