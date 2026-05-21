@@ -15,7 +15,7 @@ Boolean:: `true`: fit entire map in chart borders (default) +
 
 
 == Example
-Create the map below. See the example for  xref:viewsheetscript:SelectionListTreeDrillMembers.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[]. To zoom the map to display only the selected regions, add the following script to the Chart component:
+Create the map below. See the example for  xref:dashboardscript:SelectionListTreeDrillMembers.adoc[] in xref:dashboardscript:AdvancedDashboardScripting.adoc[]. To zoom the map to display only the selected regions, add the following script to the Chart component:
 
 
 

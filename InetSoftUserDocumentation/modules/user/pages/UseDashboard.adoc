@@ -7,7 +7,7 @@ ifdef::ai[]
 Summary: How to open and interact with a Dashboard in the User Portal, including opening pinned Dashboards, searching the repository, and using filter components.
 endif::ai[]
 
-The following sections explain how to open and use a Dashboard in the Portal. See xref:viewsheet:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.
+The following sections explain how to open and use a Dashboard in the Portal. See xref:dashboard:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.
 
 NOTE: Mobile devices should be running iOS 7 or later, or Android 4.1 "Jelly Bean" or later, to view Dashboards.
 
@@ -24,7 +24,7 @@ To open a Dashboard using the Portal's {buttonDashboard}, follow the steps below
 +
 image::Opening Sample Viewsheet2.png[alt="select Dashboard tab to view"]
 
-See xref:viewsheet:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.  See xref:DeployDashboard.adoc[]  for information on how to add and manage Dashboards under the {buttonDashboard}.
+See xref:dashboard:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.  See xref:DeployDashboard.adoc[]  for information on how to add and manage Dashboards under the {buttonDashboard}.
 
 == Open a Repository Dashboard
 To open a Dashboard using the Portal's {buttonRepository}, follow the steps below.
@@ -40,32 +40,32 @@ To open a Dashboard using the Portal's {buttonRepository}, follow the steps belo
 +
 image::user:Opening Sample Viewsheet.png[alt="click to select Dashboard"]
 
-See xref:viewsheet:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.   See xref:ManageRepository.adoc[]  for information on how to organize Dashboards under the {buttonRepository}.
+See xref:dashboard:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.   See xref:ManageRepository.adoc[]  for information on how to organize Dashboards under the {buttonRepository}.
 
 == Use the Dashboard Tools
 The Dashboard toolbar has the following buttons:
 
-image::viewsheet:Viewsheet Toolbar.png[alt="Dashboard toolbar"]
+image::dashboard:Viewsheet Toolbar.png[alt="Dashboard toolbar"]
 
 NOTE: Not all buttons may be available at all times.
 
 {buttonPrevious}:: Undoes the most recent action.
 {buttonNext}:: Restores the most recent action that was undone.
-{buttonEdit}:: Opens the current Dashboard in Visual Composer. For more information about creating and modifying Dashboards using Visual Composer, see xref:viewsheet:VisualizeYourData.adoc[].
+{buttonEdit}:: Opens the current Dashboard in Visual Composer. For more information about creating and modifying Dashboards using Visual Composer, see xref:dashboard:VisualizeYourData.adoc[].
 {buttonRefresh}:: Updates the Dashboard with the most current data, bookmarks, and script results.
-{buttonEmail}:: Sends an export of the Dashboard to another person. See xref:viewsheet:EmailDashboard.adoc[] for more information.
-{buttonSocialSharing}:: Shares the Dashboard to a social network. See xref:viewsheet:ShareToSocialNetwork.adoc[] for more information.
+{buttonEmail}:: Sends an export of the Dashboard to another person. See xref:dashboard:EmailDashboard.adoc[] for more information.
+{buttonSocialSharing}:: Shares the Dashboard to a social network. See xref:dashboard:ShareToSocialNetwork.adoc[] for more information.
 {buttonSchedule}:: Configures a Dashboard for automatic generation and delivery. See xref:ScheduleDashboard.adoc[] for more information.
 {buttonPrint}:: Prints the Dashboard on any available printer.
-{buttonExport}:: Exports a copy of the Dashboard to Excel, PowerPoint, or PDF format. See xref:viewsheet:ExportDashboard.adoc[]  for detailed instructions.
+{buttonExport}:: Exports a copy of the Dashboard to Excel, PowerPoint, or PDF format. See xref:dashboard:ExportDashboard.adoc[]  for detailed instructions.
 {buttonZoomDash}:: Increase or decrease the Dashboard magnification. You should use this {buttonZoomDash}  rather than the *browser`'s* built-in zoom.  (The browser zoom may not preserve dashboard appearance accurately).
 +
-TIP: To zoom into data on a  Chart, see xref:viewsheet:DrillDownIntoData.adoc#ZoomChart[Zoom a Chart].
+TIP: To zoom into data on a  Chart, see xref:dashboard:DrillDownIntoData.adoc#ZoomChart[Zoom a Chart].
 {buttonBookmarks}:: Opens the ‘Bookmark’ menu, which allows you to save a bookmark or load a previously-saved bookmark. See xref:BookmarkDashboard.adoc[] for more details.
 
 
 {buttonFullScreen}:: Expands the Dashboard to use the full screen.
-{buttonShowAnnotation}:: Toggles annotations on and off. See xref:viewsheet:AddAnnotation.adoc[] for more details.
+{buttonShowAnnotation}:: Toggles annotations on and off. See xref:dashboard:AddAnnotation.adoc[] for more details.
 {buttonClose}:: Closes the Dashboard.
 
 

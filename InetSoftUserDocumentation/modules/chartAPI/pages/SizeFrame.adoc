@@ -20,7 +20,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 The `SizeFrame` object contains the size scale for visual chart objects. You can use a `SizeFrame` object to represent data dimensions with size (size coding), or to apply a fixed (static) size. To create a `SizeFrame`, use a constructor such as  xref:LinearSizeFrame.adoc[]   or xref:StaticSizeFrame.adoc[].
 
-You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `SizeFrame` using the xref:viewsheetscript:ChartBindingInfoSizeFrame.adoc[]  property in *onRefresh* script. See xref:#Example2[] below.
+You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `SizeFrame` using the xref:dashboardscript:ChartBindingInfoSizeFrame.adoc[]  property in *onRefresh* script. See xref:#Example2[] below.
 
 `SizeFrame` provides the following special methods:
 [square]
@@ -31,12 +31,12 @@ include::ROOT:partial$MINITOC_SizeFrame.adoc[]
 
 
 == Example 1
-. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+. Bind a xref:dashboard:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
 +
 include::ROOT:partial$AllSalesQuery.adoc[]
 
 
-. Add the following script to the Chart component. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
+. Add the following script to the Chart component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
 +
 .Chart Component Script
 [source,javascript]
@@ -63,14 +63,14 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 == Example 2
 
 
-This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:SizeFrame.adoc[].
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:SizeFrame.adoc[].
 
-. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
 +
 include::ROOT:partial$AllSalesQuery.adoc[]
 
 
-. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
 
 +
 .onRefresh Script

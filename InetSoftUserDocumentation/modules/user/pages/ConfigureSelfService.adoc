@@ -22,6 +22,6 @@ Action Permission:: Provide access to the relevant self-service *actions*, such 
 
 There are some settings that you may want to adjust to facilitate end-user self-service for individual dashboards.
 
-Ad Hoc Editing:: For Chart and Crosstab components in a Dashboard, turn on ‘Enable Ad Hoc Editing’. This will allow end users to modify these components without opening the Dashboard in Visual Composer. See xref:viewsheet:ChartProperties.adoc[] and xref:viewsheet:CrosstabProperties.adoc[] for more information.
+Ad Hoc Editing:: For Chart and Crosstab components in a Dashboard, turn on ‘Enable Ad Hoc Editing’. This will allow end users to modify these components without opening the Dashboard in Visual Composer. See xref:dashboard:ChartProperties.adoc[] and xref:dashboard:CrosstabProperties.adoc[] for more information.
 
-Ad Hoc Filtering:: To enable a user to add filters into a Dashboard without opening the Dashboard in Visual Composer, add a Selection Container into the dashboard, and enable the ‘Allow User to Add/Remove Selections’ property. See xref:viewsheet:SelectionContainerProperties.adoc[] for more details.
+Ad Hoc Filtering:: To enable a user to add filters into a Dashboard without opening the Dashboard in Visual Composer, add a Selection Container into the dashboard, and enable the ‘Allow User to Add/Remove Selections’ property. See xref:dashboard:SelectionContainerProperties.adoc[] for more details.

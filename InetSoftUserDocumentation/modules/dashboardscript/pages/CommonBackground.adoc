@@ -1,0 +1,42 @@
+= background
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:dashboard:VisualFormat.adoc[] for more information about setting color.
+endif::ai[]
+
+[WARNING,  caption=See Also]
+xref:dashboard:VisualFormat.adoc[] for more information about setting color.
+
+
+Specifies the background color that fills the area of the element.
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+
+== Example
+[source,javascript]
+background = java.awt.Color.lightGray;
+
+
+
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+background               // unqualified
+Component1.background    // qualified
+
+{secondForm}
+====
+
+

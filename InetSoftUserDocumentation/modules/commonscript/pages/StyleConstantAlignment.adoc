@@ -4,11 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: xref:viewsheetscript:CommonAlignment.adoc[] for information about using alignment constants.
+Summary: xref:dashboardscript:CommonAlignment.adoc[] for information about using alignment constants.
 endif::ai[]
 
 [WARNING,caption=see also]
-xref:viewsheetscript:CommonAlignment.adoc[] for information about using alignment constants.
+xref:dashboardscript:CommonAlignment.adoc[] for information about using alignment constants.
 
 
 Alignment constants are defined for horizontal or vertical directions. You can combine the alignment options by using a bitwise OR of the values (see example below).

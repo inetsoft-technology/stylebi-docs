@@ -1,0 +1,32 @@
+= barCornerRadius
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the corner radius for bars on a xref:dashboard:BarChart.adoc[]. A value of `0` produces square corners; `0.5` produces the maximum rounding. Only the open (value) end of each bar is rounded unless xref:PlotBarRoundAllCorners.adoc[] is also enabled. Not available for stacked bar charts. Default is `0.3`.
+endif::ai[]
+
+Sets the corner radius for bars on a xref:dashboard:BarChart.adoc[]. A value of `0` produces square corners; `0.5` produces the maximum rounding. Only the open (value) end of each bar is rounded unless xref:PlotBarRoundAllCorners.adoc[] is also enabled. Not available for stacked  bar charts. Default is `0.3`.
+
+== Type
+Number:: A value between `0` (square) and `0.5` (maximum rounding)
+
+== Example
+[source,javascript]
+Chart1.barCornerRadius = 0.5;
+
+
+image::commonscript:barCornerRadius.png[alt="bar chart with rounded corners on the value end of each bar"]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+barCornerRadius          // unqualified
+Chart1.barCornerRadius   // qualified
+
+{secondForm}
+====

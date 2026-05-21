@@ -1,0 +1,59 @@
+= query
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the data block to be used by the Table component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.
+endif::ai[]
+
+
+[WARNING,caption=See Also]
+====
+* xref:dashboardscript:TableFields.adoc[] to specify the fields to display in the table.
+* xref:dashboard:TableProperties.adoc[]  for general information about the Table component.
+====
+
+
+
+
+
+Specifies the data block to be used by the Table component. The available data blocks appear at the top of the *Toolbox* panel in Visual Composer.
+
+image::dataworksheet:dataBlocks.png[alt="Toolbox panel showing available data blocks for table query binding"]
+
+== Type
+String
+
+
+
+== Example
+[source,javascript]
+----
+TableView1.query = 'SalesByDate';
+TableView1.fields = ['State','Company','Total'];
+
+----
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+query                 // unqualified
+TableView1.query      // qualified
+
+{secondForm}
+====
+
+
+
+
+
+
+
+
+
+

@@ -5,12 +5,12 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Remove duplicate entries from input array to yield a list of unique elements with optional sorting and grouping. See xref:viewsheetscript:SpecialFreehandFunctions.adoc#toList[toList] in xref:viewsheetscript:SpecialFreehandFunctions.adoc[] for application to Freehand Table.
+Summary: Remove duplicate entries from input array to yield a list of unique elements with optional sorting and grouping. See xref:dashboardscript:SpecialFreehandFunctions.adoc#toList[toList] in xref:dashboardscript:SpecialFreehandFunctions.adoc[] for application to Freehand Table.
 endif::ai[]
 
 
 
-Remove duplicate entries from input array to yield a list of unique elements with optional sorting and grouping. See xref:viewsheetscript:SpecialFreehandFunctions.adoc#toList[toList] in xref:viewsheetscript:SpecialFreehandFunctions.adoc[] for application to Freehand Table.
+Remove duplicate entries from input array to yield a list of unique elements with optional sorting and grouping. See xref:dashboardscript:SpecialFreehandFunctions.adoc#toList[toList] in xref:dashboardscript:SpecialFreehandFunctions.adoc[] for application to Freehand Table.
 
 == Parameters
 list::			array to filter

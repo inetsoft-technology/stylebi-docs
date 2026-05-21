@@ -48,7 +48,7 @@ This creates a new scheduled task that will automatically generate and email the
 == Set an Alert
 
 [WARNING,caption=see also]
-xref:viewsheetscript:ChartHighlighted.adoc[Chart.highlighted], xref:viewsheetscript:TableHighlighted.adoc[Table.highlighted], xref:viewsheetscript:ImageHighlighted.adoc[Image.highlighted], xref:viewsheetscript:TextHighlighted.adoc[Text.highlighted] to determine in Dashboard script whether an highlight has been applied or not.
+xref:dashboardscript:ChartHighlighted.adoc[Chart.highlighted], xref:dashboardscript:TableHighlighted.adoc[Table.highlighted], xref:dashboardscript:ImageHighlighted.adoc[Image.highlighted], xref:dashboardscript:TextHighlighted.adoc[Text.highlighted] to determine in Dashboard script whether an highlight has been applied or not.
 
 An *alert* is a notification that a specified *data event* has occurred, for example, that total sales have fallen below some critical level. You can set an alert based on highlight conditions in a Dashboard, or based on Dashboard Gauge ranges.
 
@@ -192,7 +192,7 @@ Other Options::
 * The ‘Include Link’ option  includes a URL link to the Dashboard in the email. The email recipient can click the link to open the Dashboard in a new browser tab if they possess the appropriate permissions for that Dashboard.
 
 
-Insert Parameters:: The '`Subject`' line and '`Attachment Name`' can include parameters for automatic insertion of Dashboard name and time and date of generation. These parameters use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:viewsheet:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
+Insert Parameters:: The '`Subject`' line and '`Attachment Name`' can include parameters for automatic insertion of Dashboard name and time and date of generation. These parameters use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:dashboard:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
 +
 |===
 |Subject or Filename |Generated As...
@@ -249,7 +249,7 @@ Excel:: {exportexcel}
 * The ‘Expand Components’ option expands scrolling tables and charts in the generated Dashboard so that all data is displayed.
 * The ‘Only Data Elements’ option limits the export to only the data-bearing components.
 
-. *_Optional_*: To  include parameters into the file name for automatic insertion of Dashboard name and time and date of generation,  use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:viewsheet:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
+. *_Optional_*: To  include parameters into the file name for automatic insertion of Dashboard name and time and date of generation,  use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:dashboard:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
 +
 |===
 |Filename |Generated As...

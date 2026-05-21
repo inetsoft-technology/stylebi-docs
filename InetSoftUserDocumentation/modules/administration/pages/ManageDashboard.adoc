@@ -8,7 +8,7 @@ Summary: How to manage Dashboards programmatically using the Groovy DSL Administ
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 
-Manage Dashboards in script by using the `:viewsheet` or equivalent `:vs` command. See xref:viewsheet:CreateNewDashboard.adoc[] for  information about Dashboards in the User Portal.
+Manage Dashboards in script by using the `:viewsheet` or equivalent `:vs` command. See xref:dashboard:CreateNewDashboard.adoc[] for  information about Dashboards in the User Portal.
 
 
 include::partial$adminConsoleOptionalParams.adoc[]

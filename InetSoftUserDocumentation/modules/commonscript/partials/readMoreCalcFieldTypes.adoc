@@ -29,7 +29,7 @@ include::partial$referenceCellsWorksheet.adoc[]
 ====
 To create a *calculated field in a dashboard*, right-click on the data block, data model, or query to which you want to add the calculated field, and select ‘New Calculated Field’. (See xref:dataworksheet:CreateNewDataField.adoc[] for more details.)
 
-image::viewsheet:NewCalculatedField1.png[alt="new calculated field dialog after right-clicking a data block"]
+image::dashboard:NewCalculatedField1.png[alt="new calculated field dialog after right-clicking a data block"]
 
 Insert fields (and parameters and component properties) into the script by clicking the items in the tree.
 
@@ -37,20 +37,20 @@ Insert fields (and parameters and component properties) into the script by click
 [source,javascript]
 CALC.quarter(field['Order Date'])
 
-image::viewsheet:CalcField1.png[alt="calculated field formula entered in the formula editor"]
+image::dashboard:CalcField1.png[alt="calculated field formula entered in the formula editor"]
 ====
 
 .How to access data in Dashboard Property Expressions...
 [%collapsible]
 ====
 
-To set a Dashboard property value using an expression, press the {buttonValueType} and select the ‘Expression’ option to open the Formula Editor. (See xref:viewsheet:DynamicallySetProperties.adoc[] for more details.)
+To set a Dashboard property value using an expression, press the {buttonValueType} and select the ‘Expression’ option to open the Formula Editor. (See xref:dashboard:DynamicallySetProperties.adoc[] for more details.)
 
 Example: Gauge Properties::
-image::viewsheet:Expression Option.png[alt="expression option selected in gauge properties value type menu"]
+image::dashboard:Expression Option.png[alt="expression option selected in gauge properties value type menu"]
 
 Example: Chart Editor::
-image::viewsheet:ChartPropertyExpression.png[alt="expression option selected in chart editor property field"]
+image::dashboard:ChartPropertyExpression.png[alt="expression option selected in chart editor property field"]
 
 To insert a reference a component’s data, use the *value*, *selectedObjects*, *data*, or *table* property of the component.
 
@@ -59,9 +59,9 @@ To insert a reference a component’s data, use the *value*, *selectedObjects*, 
 CALC.quarter(Calendar1.selectedObjects[0])
 CALC.quarter(TableView1.table['Order Date'][1])
 
-See xref:viewsheetscript:DashboardObjectReference.adoc[] for information about accessing dashboard settings and data in script.
+See xref:dashboardscript:DashboardObjectReference.adoc[] for information about accessing dashboard settings and data in script.
 
-image::viewsheet:expressionData.png[alt="expression referencing component data using selectedObjects property"]
+image::dashboard:expressionData.png[alt="expression referencing component data using selectedObjects property"]
 
 ====
 
@@ -69,13 +69,13 @@ image::viewsheet:expressionData.png[alt="expression referencing component data u
 .How to access data in Dashboard Scripts...
 [%collapsible]
 ====
-To *add script to a Dashboard component*, right-click the desired component, and select ‘Properties’ from the context menu to open the ‘Properties’ panel. {rightClickOptions} Select the *Script* tab to open the Script Editor, and select either *Script* or *onClick*. See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script] for more information about these options.
+To *add script to a Dashboard component*, right-click the desired component, and select ‘Properties’ from the context menu to open the ‘Properties’ panel. {rightClickOptions} Select the *Script* tab to open the Script Editor, and select either *Script* or *onClick*. See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script] for more information about these options.
 
-image::viewsheetscript:ScriptEditorText.png[alt="script editor open on component properties script tab"]
+image::dashboardscript:ScriptEditorText.png[alt="script editor open on component properties script tab"]
 
-To *add global script to a Dashboard*, press {buttonOptions} in the toolbar to open the ‘Dashboard Options’ panel. Select the *Script* tab to open the Script Editor, and select either *onInit* or *onRefresh*. See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about these options.
+To *add global script to a Dashboard*, press {buttonOptions} in the toolbar to open the ‘Dashboard Options’ panel. Select the *Script* tab to open the Script Editor, and select either *onInit* or *onRefresh*. See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script] for more information about these options.
 
-image::viewsheet:ViewsheetOptionsDialog.png[alt="dashboard options dialog with script tab selected"]
+image::dashboard:ViewsheetOptionsDialog.png[alt="dashboard options dialog with script tab selected"]
 
 To insert a reference a component’s data, use the *value*, *selectedObjects*, *data*, or *table* property of the component.
 
@@ -84,9 +84,9 @@ To insert a reference a component’s data, use the *value*, *selectedObjects*, 
 CALC.quarter(Calendar1.selectedObjects[0])
 CALC.quarter(TableView1.table['Order Date'][1])
 
-image::viewsheet:ScriptComponentData.png[alt="script accessing component data using table property syntax"]
+image::dashboard:ScriptComponentData.png[alt="script accessing component data using table property syntax"]
 
 
-See xref:viewsheetscript:DashboardObjectReference.adoc[] for information about accessing dashboard settings and data in script.
+See xref:dashboardscript:DashboardObjectReference.adoc[] for information about accessing dashboard settings and data in script.
 ====
 =====

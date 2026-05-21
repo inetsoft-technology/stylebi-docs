@@ -1,0 +1,34 @@
+= diagonalColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color of the diagonal line.
+endif::ai[]
+
+
+Sets the color of the diagonal line.
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.diagonalColor = [255,0,0];
+Chart1.diagonalStyle = Chart.DOT_LINE;
+
+image::commonscript:diagonalColor.png[alt="scatter chart with diagonal reference line displayed in custom color"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+diagonalColor          // unqualified
+Chart1.diagonalColor   // qualified
+
+{secondForm}
+====

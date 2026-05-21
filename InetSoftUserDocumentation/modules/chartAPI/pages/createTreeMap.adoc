@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-The `createTreeMap()` function generates a xref:viewsheet:TreemapChart.adoc[].
+The `createTreeMap()` function generates a xref:dashboard:TreemapChart.adoc[].
 
 == Parameters
 colorDim::			Name of dimension column whose values should be represented by color.

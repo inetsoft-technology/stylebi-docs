@@ -1,0 +1,40 @@
+= stackValue
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: For a *stacked* Chart (press {buttonSelectChartStyle} and select the ‘Stack’ option), displays just the *total value* rather than individual groups values when the ‘Show Values’ property is enabled.
+endif::ai[]
+
+
+
+For a *stacked* Chart (press {buttonSelectChartStyle} and select the ‘Stack’ option), displays just the *total value* rather than individual groups values when the ‘Show Values’ property is enabled.
+
+
+
+
+
+== Type
+Boolean
+
+
+== Example
+
+[source,javascript]
+Chart1.stackValue = true;
+
+image::commonscript:stackValue.png[alt="stacked bar chart with cumulative totals shown at each stack segment"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+stackValue          // unqualified
+Chart1.stackValue   // qualified
+
+{secondForm}
+====

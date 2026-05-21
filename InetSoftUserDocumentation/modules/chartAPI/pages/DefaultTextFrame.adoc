@@ -16,7 +16,7 @@ The `DefaultTextFrame` object contains data to display in text form, as well as 
 [source,javascript]
 var frame = new DefaultTextFrame('Quantity');
 
-You can pass a field name (e.g., ‘Quantity’) to the constructor in element script , or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. To stylize or reposition text created using a `DefaultTextFrame`, use the xref:GraphElementSetTextSpec.adoc[] and xref:GraphElementSetLabelPlacement.adoc[] options. You can also set this using the xref:viewsheetscript:ChartBindingInfoTextFrame.adoc[]  property syntax in *onRefresh* script . See xref:#Example3[] below.
+You can pass a field name (e.g., ‘Quantity’) to the constructor in element script , or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. To stylize or reposition text created using a `DefaultTextFrame`, use the xref:GraphElementSetTextSpec.adoc[] and xref:GraphElementSetLabelPlacement.adoc[] options. You can also set this using the xref:dashboardscript:ChartBindingInfoTextFrame.adoc[]  property syntax in *onRefresh* script . See xref:#Example3[] below.
 
 
 
@@ -78,7 +78,7 @@ image::commonscript:TextFrame2setText_1.png[alt="chart legend with custom text m
 
 
 
-This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:TextFrame.adoc[].
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:TextFrame.adoc[].
 
 .onRefresh Script
 [source,javascript]

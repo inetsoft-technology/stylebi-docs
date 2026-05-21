@@ -7,7 +7,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
-The Chart  xref:viewsheetscript:ChartBindingInfo.adoc[]  property provides access to the data binding options in the Chart’s ‘Data Binding’ dialog box. This includes the binding of fields to the X-axis, Y-axis, and VisualFrames (Color, Shape, etc.), as well as grouping and summarization settings.
+The Chart  xref:dashboardscript:ChartBindingInfo.adoc[]  property provides access to the data binding options in the Chart’s ‘Data Binding’ dialog box. This includes the binding of fields to the X-axis, Y-axis, and VisualFrames (Color, Shape, etc.), as well as grouping and summarization settings.
 
 == Walkthrough
 In the following example, you will bind a chart to the ‘All Sales’ Data Worksheet, set the axis bindings, define a subseries, and set grouping and summarization. Follow the steps below:

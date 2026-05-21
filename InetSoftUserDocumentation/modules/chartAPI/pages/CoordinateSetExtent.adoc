@@ -14,7 +14,7 @@ maxX::			the maximum longitude
 maxY::			the maximum latitude
 
 == Example
-Create a map of the United States. (See xref:viewsheet:MapChart.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for more information about adding a map to a Dashboard.) To restrict the range of the map to the region between Washington and Boston, first obtain the latitude and longitude of these cities:
+Create a map of the United States. (See xref:dashboard:MapChart.adoc[] in xref:dashboard:VisualizeYourData.adoc[] for more information about adding a map to a Dashboard.) To restrict the range of the map to the region between Washington and Boston, first obtain the latitude and longitude of these cities:
 
 Washington:: 38.895111 latitude, -77.036667 longitude
 Boston:: 42.358056 latitude, -71.063611 longitude

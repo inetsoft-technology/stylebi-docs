@@ -1,0 +1,47 @@
+= form
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that the table should be “editable” by the user. See xref:dashboard:WriteBackToStorage.adoc#AccessUserModifiedData[Access User-Modified Data] for more details.
+endif::ai[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:dashboard:TableProperties.adoc[] to set the property without using script.
+====
+
+
+Specifies that the table should be “editable” by the user.   See xref:dashboard:WriteBackToStorage.adoc#AccessUserModifiedData[Access User-Modified Data] for more details.
+
+
+
+
+
+
+
+
+== Type
+Boolean:: `true`: allow editing +
+`false`: do not allow editing (default)
+
+
+
+== Example
+[source,javascript]
+TableView1.form = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+form                 // unqualified
+TableView1.form      // qualified
+
+{secondForm}
+====
+
+

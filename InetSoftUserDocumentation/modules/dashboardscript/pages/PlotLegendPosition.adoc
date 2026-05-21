@@ -1,0 +1,38 @@
+= legendPosition
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the legend position relative to the chart. Set the property to `Chart.NONE` to hide the legend.
+endif::ai[]
+
+
+Sets the legend position relative to the chart. Set the property to `Chart.NONE` to hide the legend.
+
+
+
+
+== Type
+A Legend Position constant:
+
+include::partial$legendPosition.adoc[]
+
+== Example
+[source,javascript]
+Chart1.legendPosition = Chart.LEFT;
+
+image::commonscript:legendPosition.png[alt="chart with legend position changed to top or right location"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+legendPosition          // unqualified
+Chart1.legendPosition   // qualified
+
+{secondForm}
+====

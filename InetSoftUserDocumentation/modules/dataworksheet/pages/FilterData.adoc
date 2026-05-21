@@ -6,7 +6,7 @@ include::ROOT:partial$rightClickOptions.adoc[]
 You can filter data at the  data pipeline level (Data Worksheet) or presentation level (Dashboard).
 
 [square]
-* To filter at the Dashboard level, see xref:viewsheet:FilterDashboard.adoc[]. This provides the user with the greatest flexibility to adjust the filtering,
+* To filter at the Dashboard level, see xref:dashboard:FilterDashboard.adoc[]. This provides the user with the greatest flexibility to adjust the filtering,
 * To filter at the Data Worksheet level, see the sections below.
 
 When you perform filtering in a  Data Worksheet, *only* the filtered data will be available for further manipulation and presentation (although the filter itself can be parameterized and controlled from a Dashboard; see xref:FilterUsingDynamicConditions[] below). Filtering at the  Data Worksheet level  may be most efficient when you want to use the filtered data set across many Dashboards.
@@ -25,7 +25,7 @@ include::ROOT:partial$videoVersion.adoc[]
 video::299240869[vimeo,640,400]
 =====
 
-To filter the detail (pre-aggregate) data in a data block, follow the steps below. Note: If you want Dashboard users to dynamically filter the data in a Dashboard, see xref:viewsheet:FilterDashboard.adoc[] instead.
+To filter the detail (pre-aggregate) data in a data block, follow the steps below. Note: If you want Dashboard users to dynamically filter the data in a Dashboard, see xref:dashboard:FilterDashboard.adoc[] instead.
 
 include::ROOT:partial$dataRowLimit.adoc[]
 
@@ -75,7 +75,7 @@ Clauses are evaluated in order of indentation, the most indented clauses being e
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar, or press kbd:[Ctrl+S] on the keyboard.
 
 
-You can now use this Data Worksheet as the data source for a Dashboard. See xref:viewsheet:VisualizeYourData.adoc[] to create a Dashboard.
+You can now use this Data Worksheet as the data source for a Dashboard. See xref:dashboard:VisualizeYourData.adoc[] to create a Dashboard.
 
 If your condition requires only the “AND” operator and does not require the “OR” operator, or if it requires no logical operators at all, you can use the simple condition interface (without selecting the ‘Advanced Conditions’ check box).  See the example below.
 
@@ -127,7 +127,7 @@ video::299114159[vimeo,640,400]
 
 To filter data that has been grouped and aggregated in a data block, follow the steps below.
 
-NOTE: If you want Dashboard users to dynamically filter data in a Dashboard, see xref:viewsheet:FilterDashboard.adoc[]  in instead.
+NOTE: If you want Dashboard users to dynamically filter data in a Dashboard, see xref:dashboard:FilterDashboard.adoc[]  in instead.
 
 
 
@@ -176,7 +176,7 @@ Clauses are evaluated in order of indentation, the most indented clauses being e
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar, or press kbd:[Ctrl+S] on the keyboard.
 
 
-You can now use this Data Worksheet as the data source for a Dashboard. See xref:viewsheet:VisualizeYourData.adoc[] to create a Dashboard.
+You can now use this Data Worksheet as the data source for a Dashboard. See xref:dashboard:VisualizeYourData.adoc[] to create a Dashboard.
 
 [#FilterTopBottomData]
 == Filter Top and Bottom Data
@@ -193,7 +193,7 @@ video::299259014[vimeo,640,400]
 
 A condition that filters the top-N or bottom-N records or groups based on a specified measure is called a _ranking condition_.
 
-NOTE: If you want to configure ranking in a specific Chart or Crosstab, see xref:viewsheet:FilterDashboard.adoc[] instead.
+NOTE: If you want to configure ranking in a specific Chart or Crosstab, see xref:dashboard:FilterDashboard.adoc[] instead.
 
 To create a ranking condition on a data block, follow the steps below:
 
@@ -231,13 +231,13 @@ To delete a clause in the condition, select the clause and press the btn:[Fewer]
 . Save the Data Worksheet by pressing the {buttonSave} in the toolbar, or press kbd:[Ctrl+S] on the keyboard.
 
 
-You can now use this Data Worksheet as the data source for a Dashboard. See xref:viewsheet:VisualizeYourData.adoc[] to create a Dashboard.
+You can now use this Data Worksheet as the data source for a Dashboard. See xref:dashboard:VisualizeYourData.adoc[] to create a Dashboard.
 
 [#FilterUsingDynamicConditions]
 == Filter Using Dynamic Conditions
 There are several different ways to make a data block filtering condition more dynamic by incorporating user input, session data, and so on. The following sections explain these approaches.
 
-NOTE: If you want to apply dynamic conditions at the Dashboard level (rather than at the data level), see xref:viewsheet:FilterDashboard.adoc[].
+NOTE: If you want to apply dynamic conditions at the Dashboard level (rather than at the data level), see xref:dashboard:FilterDashboard.adoc[].
 
 [#UseVariableinCondition]
 === Use a Variable (Parameter) in a Condition
@@ -279,17 +279,17 @@ NOTE: You do not need to use a Variable object in order to parametrize a conditi
 ====
 A user can modify the  value of a Variable in the Data Worksheet by using a Dashboard Form component. To configure Dashboard control of a Variable, follow these steps:
 
-. Open the Dashboard for editing. (See xref:viewsheet:EditADashboard.adoc[].)
+. Open the Dashboard for editing. (See xref:dashboard:EditADashboard.adoc[].)
 
-. Add the desired Form component to the Dashboard. (See xref:viewsheet:DynamicallySetProperties.adoc[] for more information about Form components.)
+. Add the desired Form component to the Dashboard. (See xref:dashboard:DynamicallySetProperties.adoc[] for more information about Form components.)
 . Right-click on the Form component in the Dashboard, and select ‘Properties’.
 . Select the *Data* tab in the ‘Properties’ panel.
 . Open the ‘Target’ menu. Expand the ‘Variable’ node, and select the desired Variable asset in the Data Worksheet.
 +
-image::viewsheet:formControlVariable.png[alt="open Target menu and select Variable node to link form control to variable"]
+image::dashboard:formControlVariable.png[alt="open Target menu and select Variable node to link form control to variable"]
 . Press btn:[OK] to exit the ‘Properties’ panel.
 
-The Form control is now linked to the Data Worksheet Variable, and changes the user makes using the control will alter the values in the  Variable. To set the options displayed by the Form control, see xref:viewsheet:RadioCheckBoxComboProperties.adoc[].
+The Form control is now linked to the Data Worksheet Variable, and changes the user makes using the control will alter the values in the  Variable. To set the options displayed by the Form control, see xref:dashboard:RadioCheckBoxComboProperties.adoc[].
 ====
 
 . Click to select the data block that you want to filter.
@@ -311,16 +311,16 @@ In the Combo Box, do one of the following:
 [square]
 ** Select an existing Variable from the menu. (See xref:CreateNewVariable.adoc[] for how to create a new variable.)
 ** Type the name of a new parameter.
-** Type the name of a Dashboard Form component. (See xref:viewsheet:DynamicallySetProperties.adoc[] for information about using these components.)
+** Type the name of a Dashboard Form component. (See xref:dashboard:DynamicallySetProperties.adoc[] for information about using these components.)
 +
 image::Variable in ConditionTyped.png[alt="variable name typed into the combo box on the right side of condition"]
 . Press ‘OK’ to close the  ‘Condition’ panel.
 
-The Data Worksheet will now prompt for the value of the variable/parameter, and will continue to do so each time the Data Worksheet is freshly  accessed.  The user will also be prompted for the parameter value by any Dashboard that utilizes the Data Worksheet, _unless_ the Dashboard contains a Form component that sets the value of the parameter. If you need to *suppress* the parameter prompt in a Dashboard (for example, if you are setting the parameter using script), use the ‘Prompt for Parameters’ property in the xref:viewsheet:DashboardOptions.adoc[] dialog box.
+The Data Worksheet will now prompt for the value of the variable/parameter, and will continue to do so each time the Data Worksheet is freshly  accessed.  The user will also be prompted for the parameter value by any Dashboard that utilizes the Data Worksheet, _unless_ the Dashboard contains a Form component that sets the value of the parameter. If you need to *suppress* the parameter prompt in a Dashboard (for example, if you are setting the parameter using script), use the ‘Prompt for Parameters’ property in the xref:dashboard:DashboardOptions.adoc[] dialog box.
 
 [IMPORTANT]
 ====
-If *no value* is provided for a variable (parameter), it will have a *null* value.  This will cause the condition to be ignored, which generally results in *all* records  being returned.  If this is not the desired behavior, you can either test for null parameter values using xref:commonscript:isNull.adoc[] in  *onRefresh* script (see xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script]) and substitute a non-null value, or you can add an `[is not][equal to][null]` condition clause, as shown below:
+If *no value* is provided for a variable (parameter), it will have a *null* value.  This will cause the condition to be ignored, which generally results in *all* records  being returned.  If this is not the desired behavior, you can either test for null parameter values using xref:commonscript:isNull.adoc[] in  *onRefresh* script (see xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script]) and substitute a non-null value, or you can add an `[is not][equal to][null]` condition clause, as shown below:
 
 image::nullVariable.png[alt="condition with is not equal to null clause added to handle null variable"]
 

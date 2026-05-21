@@ -1,0 +1,34 @@
+= sizeLegend.title
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the legend title for a size-key legend.
+endif::ai[]
+
+
+Sets the legend title for a size-key legend.
+
+
+
+== Type
+String
+
+
+== Example
+
+[source,javascript]
+Chart1.sizeLegend.title = 'Salesperson';
+
+image::commonscript:sizeLegendTitle.png[alt="chart size legend with custom title text displayed"]
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sizeLegend.title           // unqualified
+Chart1.sizeLegend.title    // qualified
+
+{secondForm}
+====

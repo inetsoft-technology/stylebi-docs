@@ -12,15 +12,15 @@ This user documentation explains how to use the User Portal to create data sourc
 
 * xref:dataworksheet:PrepareYourData.adoc[]: Create  a *Data Worksheet*  using *Visual Composer* to manipulate your dataset (e.g.,  filter, group, sort, transform) or  mashup data from multiple data sources.
 
-* xref:viewsheet:VisualizeYourData.adoc[]: Create a *Dashboard* using  *Visual Composer*  to dynamically filter a data set and visualize the output on tables, charts, and gauges.
+* xref:dashboard:VisualizeYourData.adoc[]: Create a *Dashboard* using  *Visual Composer*  to dynamically filter a data set and visualize the output on tables, charts, and gauges.
 
 * xref:user:ConfigureSelfService.adoc[]: Configure self-service features to enable users to most effectively create their own  dashboards.
 
-* xref:viewsheet:PublishDashboard.adoc[]: Arrange components on a Dashboard for publication across a variety of devices and languages.
+* xref:dashboard:PublishDashboard.adoc[]: Arrange components on a Dashboard for publication across a variety of devices and languages.
 
-* xref:viewsheet:DashboardReference.adoc[]: Descriptions of all properties available in Dashboard component dialog boxes.
+* xref:dashboard:DashboardReference.adoc[]: Descriptions of all properties available in Dashboard component dialog boxes.
 
-* xref:viewsheetscript:AdvancedDashboardScripting.adoc[]: Add    flexibility to Dashboard applications with programmatic logic.
+* xref:dashboardscript:AdvancedDashboardScripting.adoc[]: Add    flexibility to Dashboard applications with programmatic logic.
 
 * xref:administration:ManageServer.adoc[]: Use Enterprise Manager  to manage the InetSoft server with features such as monitoring, logging, configuration, file management, and security.
 

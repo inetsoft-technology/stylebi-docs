@@ -1,0 +1,20 @@
+= Crosstab
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:dashboard:AddCrosstab.adoc[] for general information about crosstab or pivot tables.
+endif::ai[]
+
+
+
+[WARNING,caption=See Also]
+xref:dashboard:AddCrosstab.adoc[] for general information about crosstab or pivot tables.
+
+
+
+This section presents functions specifically for xref:dashboard:AddCrosstab.adoc[Crosstab]  operations. The Crosstab  component also supports all the properties of the xref:dashboardscript:Table.adoc[] component.
+
+[square]
+include::ROOT:partial$MINITOC_Crosstab.adoc[]

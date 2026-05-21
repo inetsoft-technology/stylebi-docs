@@ -1,0 +1,18 @@
+= layoutInfo
+
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference index for the Freehand Table layoutInfo property, which provides sub-properties for configuring cell bindings, names, groups, expansion, and merging.
+endif::ai[]
+
+The `layoutInfo` property provides access to a family of sub-properties that allow you to configure the behavior of cells within a Freehand Table.
+
+xref:dashboardscript:FreehandTableLayoutInfoSetCellBinding.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetCellName.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetColGroup.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetExpansion.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetMergeCells.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetMergeColGroup.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetMergeRowGroup.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetRowGroup.adoc[] +
+xref:dashboardscript:FreehandTableLayoutInfoSetSpan.adoc[] +

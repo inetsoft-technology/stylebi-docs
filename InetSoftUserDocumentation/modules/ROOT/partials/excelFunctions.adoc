@@ -22,4 +22,4 @@ xref:commonscript:CALC_counta.adoc[]:: Return the number of non-null values in a
 [source,javascript]
 CALC.counta(SalesByDate['City'])
 
-See xref:viewsheetscript:AccessDataSourceData.adoc#ReferenceDatasourceData[Reference Datasource Data] for more information on the syntax for accessing data columns. See xref:commonscript:CalcObjectFunctions.adoc[] for additional script functions.
+See xref:dashboardscript:AccessDataSourceData.adoc#ReferenceDatasourceData[Reference Datasource Data] for more information on the syntax for accessing data columns. See xref:commonscript:CalcObjectFunctions.adoc[] for additional script functions.

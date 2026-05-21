@@ -40,7 +40,7 @@ Save File Suffix::	Suffix to be automatically appended to the name of all files 
 .See a list  of available date format symbols...
 [%collapsible]
 ====
-For examples of how  to construct dates using these symbols, see xref:viewsheet:DataFormat.adoc#DateFormat[Date Format] in xref:viewsheet:VisualizeYourData.adoc[].
+For examples of how  to construct dates using these symbols, see xref:dashboard:DataFormat.adoc#DateFormat[Date Format] in xref:dashboard:VisualizeYourData.adoc[].
 
 
 include::commonscript:partial$dateFormatTable.adoc[]

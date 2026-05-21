@@ -99,7 +99,7 @@ Default Favicon:: This option is available only when the `portal.customLogo.enab
 
 
 
-Custom Shapes::  To upload custom images for use with a Chart (see xref:viewsheet:BasicChartingSteps.adoc[]), press the btn:[Custom Shapes] button to open the '`Custom Shapes`' dialog box.  To upload a Zip file containing images, first enable the '`Extract archive files`' option.  Press  btn:[Select], and choose an  image file (png, gif, jpg, svg) or archive. Press btn:[Upload] to upload the image or archive to the _portal/shapes_ directory. (See  xref:administration:Storage.adoc[] for   information about managing uploads.)
+Custom Shapes::  To upload custom images for use with a Chart (see xref:dashboard:BasicChartingSteps.adoc[]), press the btn:[Custom Shapes] button to open the '`Custom Shapes`' dialog box.  To upload a Zip file containing images, first enable the '`Extract archive files`' option.  Press  btn:[Select], and choose an  image file (png, gif, jpg, svg) or archive. Press btn:[Upload] to upload the image or archive to the _portal/shapes_ directory. (See  xref:administration:Storage.adoc[] for   information about managing uploads.)
 +
 image::CustomShapes.png[alt="custom shapes dialog for uploading chart images"]
 +
@@ -611,7 +611,7 @@ image::DashboardSettings.png[alt="dashboard settings page with enable dashboards
 
 . *_Optional:_* Uncheck ‘Dashboard Tabs Top’ to display the tabs for multiple Dashboards at the bottom of the screen rather than at the top (default).
 
-. *_Optional:_* Select '`Drill Tabs Top`' to display tabs of drill-down Dashboards at the top of the screen.  (See xref:viewsheet:DrillDownIntoData.adoc#DrillwithChartHyperlinks[Drill with Chart Hyperlinks] for more details on drill-down features.)
+. *_Optional:_* Select '`Drill Tabs Top`' to display tabs of drill-down Dashboards at the top of the screen.  (See xref:dashboard:DrillDownIntoData.adoc#DrillwithChartHyperlinks[Drill with Chart Hyperlinks] for more details on drill-down features.)
 
 
 

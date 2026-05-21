@@ -1,0 +1,34 @@
+= sizeLegend.noNull
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: For Date/Time and Categorical size legends, set to `true` to suppress the display of `null` dimension values in the legend. When `false` (default), `null` values are represented without a label in the legend.
+endif::ai[]
+
+
+For Date/Time and Categorical size legends, set to `true` to suppress the display of `null` dimension values in the legend. When `false` (default), `null` values are represented without a label in the legend.
+
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.sizeLegend.noNull = true;
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+sizeLegend.noNull          // unqualified
+Chart1.sizeLegend.noNull   // qualified
+
+{secondForm}
+====

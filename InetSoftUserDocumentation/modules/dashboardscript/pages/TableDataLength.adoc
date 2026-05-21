@@ -1,0 +1,59 @@
+= data.length
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Returns the number of rows in a table, prior to aggregation and summarization.
+endif::ai[]
+
+
+include::partial$readOnly.adoc[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:TableTableLength.adoc[] for the length of post-aggregate (as-displayed) results table.
+* xref:dashboardscript:AccessComponentData.adoc#TableCrosstabComponents[Table/Crosstab Components] for  information about working with table data.
+====
+
+
+
+Returns the number of rows in a table, prior to aggregation and summarization.
+
+== Type
+Integer
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+----
+// Testing for empty result set:
+if (TableView1.data.length == 1) {
+  Text1.text = 'No data returned';
+}
+
+----
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+data.length                 // unqualified
+TableView1.data.length      // qualified
+
+{secondForm}
+====
+
+

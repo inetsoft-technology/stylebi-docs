@@ -1,0 +1,46 @@
+= bindingInfo.shapeFrame
+:navtitle: shapeFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the aesthetic treatment for shape-coded data on a xref:dashboard:PointChart.adoc[]. A xref:chartAPI:ShapeFrame.adoc[] can shape-code chart elements by value, or simply specify a static shape style.
+endif::ai[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:chartAPI:ModifyChartElement.adoc[]  to apply a xref:chartAPI:ShapeFrame.adoc[] outside of the data binding.
+* xref:dashboardscript:ChartBindingInfoShapes.adoc[] to set a static shape for a particular measure.
+* xref:dashboardscript:ChartBindingInfoSetShapeField.adoc[] for information on binding a shape field.
+====
+
+
+
+
+Specifies the aesthetic treatment for shape-coded data on a xref:dashboard:PointChart.adoc[]. A xref:chartAPI:ShapeFrame.adoc[] can shape-code chart elements by value, or simply specify a static shape style.
+
+
+
+
+
+
+== Type
+xref:chartAPI:ShapeFrame.adoc[]
+
+
+
+== Example
+
+[source,javascript]
+--
+Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
+Chart1.bindingInfo.shapeFrame = new TriangleShapeFrame;
+--
+
+
+image::commonscript:bindingInfoShapeFrame.png[alt="point chart with Total size-coded using TriangleShapeFrame"]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+

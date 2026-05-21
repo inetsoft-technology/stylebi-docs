@@ -26,7 +26,7 @@ include::ROOT:partial$CreateNewDashboardNote.adoc[]
 +
 include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
-. Add a xref:viewsheet:BarChart.adoc[]  with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+. Add a xref:dashboard:BarChart.adoc[]  with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
 
 . Add the following script:
 +

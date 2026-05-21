@@ -1,0 +1,58 @@
+= Calendar Properties
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for Calendar filter component properties. Covers date field selection, display style (calendar wall vs. dropdown), view mode (simple or double), and the Compatible Tables setting for filtering multiple data blocks simultaneously. See AddFilterComponents for how to create a Calendar.
+endif::ai[]
+
+[WARNING,caption=see also]
+====
+[square]
+* xref:AddFilterComponents.adoc[] and xref:UseFilterComponents.adoc[] for more information about how to use a Calendar.
+* {commonProperties}
+* xref:dashboardscript:Calendar.adoc[]  in xref:dashboardscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
+====
+
+The ‘Calendar Properties’ dialog box provides *General*, *Data*,  *Advanced*, and *Script* tabs. The next sections discuss the component-specific properties available under these tabs.
+
+== General Tab
+The *General* tab in the ‘Calendar Properties’ dialog box provides only the common general properties.  See xref:CommonProperties.adoc[].
+
+
+== Data Tab
+The *Data* tab in the ‘Calendar Properties’ dialog box allows you to choose the date field on which Calendar selections operate. Only columns with date formatting are displayed.
+
+image::Calendar Properties Data Tab.png[alt="calendar properties data tab with date field selection"]
+
+Compatible Tables:: Lists data blocks with columns compatible for multi-block filtering. To configure this component to filter multiple data blocks simultaneously, see xref:AddFilterComponents.adoc#FilterMultipleDataBlocks[Filter Multiple Data Blocks].
+
+== Advanced Tab
+
+The *Advanced* tab in the ‘Calendar Properties’ dialog box provides the following Calendar-specific properties.
+
+image::Capture_054.png[alt="calendar advanced tab with show as and view mode options"]
+
+NOTE: {dynamicProperties}
+
+
+Show as::
+
+* *Calendar*: Displays the calendar as a traditional wall calendar.
+* *Dropdown*: Displays the calendar as a drop-down list.
+View Mode::
+* *Simple View*: Displays a single calendar unit.
+* *Range*: Displays two calendars side by side, facilitating range selection.
+Calendar Type::
+* *Yearly*: Displays all twelve months in a single calendar.
+* *Monthly*: Displays a single month.
+* *Day Selection*: Enables selection of individual days on the calendar.
+* *Single Selection*: Prevents the user from selecting multiple date units on the Calendar.
+Min:: Specifies the earliest date that can be selected on the Calendar.
+Max:: Specifies the latest date that can be selected on the Calendar.
+Submit on Change:: When enabled (default), submits the selected value immediately upon selection. Otherwise, a separate ‘Submit’ button is required.
+
+== Script Tab
+{commonScript}

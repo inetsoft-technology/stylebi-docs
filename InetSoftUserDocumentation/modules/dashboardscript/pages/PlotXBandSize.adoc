@@ -1,0 +1,42 @@
+= xBandSize
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the width of the bands on a categorical or timescale X-axis.
+endif::ai[]
+
+
+Specifies the width of the bands on a categorical or timescale X-axis.
+
+== Type
+integer::				Number of category groups (for a categorical axis) or the number of date groups (for a timescale axis) to be spanned by each band
+
+
+
+
+
+
+
+
+
+== Example
+[source,javascript]
+Chart1.xBandSize = 2;
+
+
+image::commonscript:xBandColor_1.png[alt="chart with x-axis band size set to control band width"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+xBandSize          // unqualified
+Chart1.xBandSize   // qualified
+
+{secondForm}
+====

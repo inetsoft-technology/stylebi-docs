@@ -1,0 +1,58 @@
+= webMapStyle
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: For a xref:dashboard:MapChart.adoc[] that uses a *Mapbox* web map background (see xref:PlotWebMap.adoc[]), sets the Mapbox map style.
+endif::ai[]
+
+
+
+For a xref:dashboard:MapChart.adoc[] that uses a *Mapbox* web map background (see xref:PlotWebMap.adoc[]), sets the Mapbox map style.
+
+
+
+== Type
+String:: A Mapbox style available to current the Mapbox account:
++
+[source]
+'Blank'
+'Outdoors'
+'Monochrome'
+'Streets'
+'Satellite Streets'
+'Basic'
+
+
+
+
+
+
+
+
+== Examples
+
+[source,javascript]
+Chart1.webMapStyle = 'Satellite Streets';
+
+
+image::commonscript:webmapStyle1.png[alt="map chart with Satellite Streets Mapbox web map style applied"]
+
+[source,javascript]
+
+Chart1.webMapStyle = 'Monochrome';
+
+image::commonscript:webmapStyle2.png[alt="map chart with Monochrome Mapbox web map style applied"]
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+webMapStyle          // unqualified
+Chart1.webMapStyle   // qualified
+
+{secondForm}
+====

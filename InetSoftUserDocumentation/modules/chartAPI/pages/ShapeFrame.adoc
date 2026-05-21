@@ -23,19 +23,19 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 A `ShapeFrame` object contains the shape style for visual chart objects. You can use a `ShapeFrame` object to represent data dimensions with shape (shape coding), or to apply a fixed (static) shape style. To create a `ShapeFrame`, use a constructor such as xref:PolygonShapeFrame.adoc[] or xref:StaticShapeFrame.adoc[].
 
-You can pass the name of a field (e.g., ‘Total’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also set this using the xref:viewsheetscript:ChartBindingInfoShapeFrame.adoc[]  syntax in *onRefresh* script . See xref:#Example2[] below.
+You can pass the name of a field (e.g., ‘Total’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also set this using the xref:dashboardscript:ChartBindingInfoShapeFrame.adoc[]  syntax in *onRefresh* script . See xref:#Example2[] below.
 
 
 
 
 
 == Example 1
-. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+. Bind a xref:dashboard:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
 +
 include::ROOT:partial$AllSalesQuery.adoc[]
 
 
-. Add the following script to the Chart component. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
+. Add the following script to the Chart component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
 +
 .Chart Component Script
 [source,javascript]
@@ -59,14 +59,14 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 [#Example2]
 == Example 2
 
-This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:ShapeFrame.adoc[].
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ShapeFrame.adoc[].
 
-. Bind a xref:viewsheet:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+. Bind a xref:dashboard:PointChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
 +
 include::ROOT:partial$AllSalesQuery.adoc[]
 
 
-. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
 +
 .onRefresh Script
 [source,javascript]

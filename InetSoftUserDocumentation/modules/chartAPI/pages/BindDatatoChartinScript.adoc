@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 There are several ways to bind data to a Chart using script. The following sections present the various approaches.
 
-TIP: It is not necessary to use script to do this.  In fact, the easiest way to bind data to a Chart is to use the Chart Editor (see xref:viewsheet:AddAChart.adoc[]). After you have bound data to the Chart using the Chart Editor, you can proceed to modify the chart using script operations as described in xref:chartAPI:ModifyChartElement.adoc[].
+TIP: It is not necessary to use script to do this.  In fact, the easiest way to bind data to a Chart is to use the Chart Editor (see xref:dashboard:AddAChart.adoc[]). After you have bound data to the Chart using the Chart Editor, you can proceed to modify the chart using script operations as described in xref:chartAPI:ModifyChartElement.adoc[].
 
 == Bind Data in Component-Level Script
 
@@ -29,7 +29,7 @@ graph = new EGraph();
 var elem = new IntervalElement("State", "Sales");
 graph.addElement(elem);
 
-If the data block name contains spaces, use the syntax `viewsheet['data block name']`. See xref:viewsheetscript:AccessDataSourceData.adoc[] for more information about accessing Data Worksheet data in Dashboard script.
+If the data block name contains spaces, use the syntax `viewsheet['data block name']`. See xref:dashboardscript:AccessDataSourceData.adoc[] for more information about accessing Data Worksheet data in Dashboard script.
 
 
 == Bind Data from Array
@@ -45,7 +45,7 @@ You can see an example of this approach in xref:chartAPI:ChangeChartScaling.adoc
 
 == Bind Data in Dashboard-Level Script
 
-You can  bind the Chart to one of the data blocks available to the Dashboard by using the Chart’s xref:viewsheetscript:ChartQuery.adoc[] property (for example, in *onRefresh* script).
+You can  bind the Chart to one of the data blocks available to the Dashboard by using the Chart’s xref:dashboardscript:ChartQuery.adoc[] property (for example, in *onRefresh* script).
 
 For example, assume that ‘Orders And Returns’ is the name of a data block. The following  *onRefresh* script binds this data block to the Chart.
 [source,javascript]

@@ -18,7 +18,7 @@ var frame = new StaticTextureFrame(GTexture.PATTERN_5); //<2>
 <1> Call constructor without specifying a texture.
 <2> Call constructor and pass the specified texture.
 
-You can pass a `GTexture` object directly to the constructor or specify it later using the xref:StaticTextureFrameSetTexture.adoc[] function. You can also assign a `TextureFrame` using the xref:viewsheetscript:ChartBindingInfoTextureFrame.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
+You can pass a `GTexture` object directly to the constructor or specify it later using the xref:StaticTextureFrameSetTexture.adoc[] function. You can also assign a `TextureFrame` using the xref:dashboardscript:ChartBindingInfoTextureFrame.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
 
 
 
@@ -69,14 +69,14 @@ frame.setField("Texture");
 == Example 2
 
 
-This example illustrates how to use xref:viewsheetscript:ChartBindingInfo.adoc[] properties to control the xref:TextureFrame.adoc[].
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:TextureFrame.adoc[].
 
-. Bind a xref:viewsheet:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
 +
 include::ROOT:partial$AllSalesQuery.adoc[]
 
 
-. Add the following script in the *onRefresh* handler. (See xref:viewsheetscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
 
 +
 .onRefresh Script

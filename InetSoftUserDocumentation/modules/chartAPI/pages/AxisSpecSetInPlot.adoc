@@ -9,7 +9,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:chartAPI:GraphElementSetInPlot.adoc[]    to adjust plot boundaries to include graph elements.
 * xref:chartAPI:GraphFormSetInPlot.adoc[] to adjust plot boundaries to include graph forms.
 * xref:chartAPI:LinearScaleSetMax.adoc[] for information on how to manually set a maximum value using the API method.
-* xref:viewsheetscript:MeasureAxisMaximum.adoc[] for information on how to manually set a maximum value using the axis property.
+* xref:dashboardscript:MeasureAxisMaximum.adoc[] for information on how to manually set a maximum value using the axis property.
 ====
 
 Specifies whether the specified maximum measure value is included within the plot region. When `true`, this adds a slight buffer to the edge of the plot area in order to ensure that the specified maximum value falls within the displayed plot area. {noGetter}

@@ -1,0 +1,38 @@
+= titleVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:dashboard:GeneralTab.adoc[] for more information about visibility.
+endif::ai[]
+
+[WARNING,  caption=See Also]
+xref:dashboard:GeneralTab.adoc[] for more information about visibility.
+
+
+Specifies the visibility of the component title bar. This property is only available for components that possess a title bar.
+
+== Type
+Boolean:: `true`: display the title bar +
+`false`: hide the title bar
+
+
+
+== Example
+[source,javascript]
+SelectionList1.titleVisible = false;
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+titleVisible               // unqualified
+Component1.titleVisible    // qualified
+
+{secondForm}
+====
+
+

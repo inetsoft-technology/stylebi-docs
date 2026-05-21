@@ -1,0 +1,21 @@
+= TextInput
+
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference index for the TextInput Form component, listing its unique scriptable properties. See CommonProperties for shared properties.
+endif::ai[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:dashboard:TextInputProperties.adoc[] for more information about the TextInput component.
+====
+
+
+
+
+The following topics present  properties that are unique to the TextInput component.
+
+[square]
+include::ROOT:partial$MINITOC_TextInput.adoc[]

@@ -31,7 +31,7 @@ image::allProperties.png[alt="select All Properties page in left panel"]
 The following table lists a variety of charting properties.
 
 graph.area.maxcount:: The maximum number of dimension values that can be displayed in an Area Chart (default is 5000).
-graph.axis.inplot:: Specifies whether the maximum measure value is included within the plot region. (Default is `false`.) See also xref:viewsheetscript:PlotInPlot.adoc[].
+graph.axis.inplot:: Specifies whether the maximum measure value is included within the plot region. (Default is `false`.) See also xref:dashboardscript:PlotInPlot.adoc[].
 graph.axislabel.maxcount:: The maximum number of labels to display on a Chart axis (default is 2000).
 graph.bar.maxcount:: The maximum number of dimension values that can be displayed in a Bar Chart (default is 10,000).
 graph.candle.maxcount:: The maximum number of dimension values that can be displayed in a Candle Chart (default is 2,000).
@@ -83,10 +83,10 @@ The following table lists a variety of properties related to format and appearan
 
 barcode.bar.width:: The width (in pixels) of the thinnest bar in a barcode. Other bars will change their size relative to this.
 barcode.resolution:: The output resolution of the barcode when either the barcode is being output to a device other than the screen, or the barcode is being generated on a headless machine and the screen resolution could not be determined. The default resolution is 72 dpi.
-format.date:: Format used for all date data. See xref:viewsheet:DataFormat.adoc[] for more information.
+format.date:: Format used for all date data. See xref:dashboard:DataFormat.adoc[] for more information.
 format.number.round:: If formatting has not been specified for a number displayed in a Dashboard, this property controls the rounding of the value. Available settings are shown below in xref:#RoundingSettings[].  The default is `ROUND_HALF_EVEN`.
 format.percent.round:: For a percent format, this property controls the rounding of the value. Available settings are shown below in xref:#RoundingSettings[]. The default is `ROUND_HALF_EVEN`.
-format.time:: Format used for all time data (Date). See xref:viewsheet:DataFormat.adoc[] for more information.
+format.time:: Format used for all time data (Date). See xref:dashboard:DataFormat.adoc[] for more information.
 
 
 [#RoundingSettings]
@@ -303,7 +303,7 @@ visible.datasource.types:: Comma-separated list of datasource names to be displa
 {availableDataSources}
 ====
 
-wallboarding.enabled:: When set to `true`, prevents Dashboards with ‘Server-Side Update’ enabled from timing out due to inactivity. This is useful for Dashboards that are publicly displayed (as  “wallboards”) for long periods of time without any user interaction. See xref:viewsheet:DashboardOptions.adoc[] for information about the ‘Server-Side Update’ Dashboard option.
+wallboarding.enabled:: When set to `true`, prevents Dashboards with ‘Server-Side Update’ enabled from timing out due to inactivity. This is useful for Dashboards that are publicly displayed (as  “wallboards”) for long periods of time without any user interaction. See xref:dashboard:DashboardOptions.adoc[] for information about the ‘Server-Side Update’ Dashboard option.
 
 script.cursor.top:: When set to `true`, places the cursor at the top of the script when the Script Editor is opened.  When `false` (default) the cursor appears at the bottom of the script when the Script Editor is opened.
 
@@ -358,7 +358,7 @@ asset.backup.count:: Number of copies of the storage backup to retain. (Default=
 assetData.thread.count:: The maximum number of Dashboards that can simultaneously execute queries  (for ‘cpu’ and ‘session’ keys only). Increase this value if a set of Dashboards with long-running queries is blocking the execution of other Dashboards. (Default is 12 times the CPU count.)
 cpu.affinity.mask:: Controls which CPU cores the server process uses for execution. For example, `cpu.affinity.mask=0,2,4` restricts the server to use only CPU 0, CPU 2, and CPU 4.
 html.session.timeout:: Inactivity timeout period for each  viewing session (in milliseconds). Default is 1200000 (20 minutes). When an open asset is inactive for the specified timeout period, the asset will be closed and the following message displayed: “Session timeout. Please re-open.”
-html.image.directory:: Location to which images should be uploaded for  the  xref:viewsheet:ImageProperties.adoc#GeneralTab[Static Image] property of Image components. The  path should be specified relative to the root storage location.  For example,  specify the value `serverImage/myImages` to force images to upload into the _serverImage/myImages_ folder in server storage.  The specified location must already exist on the server.  See xref:Storage.adoc#ManageStoredAssets[Manage Stored Assets] for information on how to create a folder in server storage.
+html.image.directory:: Location to which images should be uploaded for  the  xref:dashboard:ImageProperties.adoc#GeneralTab[Static Image] property of Image components. The  path should be specified relative to the root storage location.  For example,  specify the value `serverImage/myImages` to force images to upload into the _serverImage/myImages_ folder in server storage.  The specified location must already exist on the server.  See xref:Storage.adoc#ManageStoredAssets[Manage Stored Assets] for information on how to create a folder in server storage.
 
 javascript.java.packages:: List of JavaScript packages accessible to the scripting environment.
 repository.asset.backup.enable:: Enables automatic backup of Data Worksheets and Dashboards. See xref:Storage.adoc[] to set this property in Enterprise Manager.

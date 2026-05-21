@@ -7,12 +7,12 @@ ifdef::ai[]
 Summary: How to save, manage, and share Dashboard bookmarks that preserve filter selections and other settings for later reuse. Covers creating, updating, deleting, and sharing bookmarks in the User Portal.
 endif::ai[]
 
-include::viewsheet:partial$availableToEndUsers.adoc[]
+include::dashboard:partial$availableToEndUsers.adoc[]
 
 
 A bookmark allows you save your current Dashboard settings (filter selections, menu choices, annotations, etc.) so that you can return to these settings at a later time. The following sections explain how to work with bookmarks.
 
-NOTE: Bookmarks store only settings, *not* data. See xref:viewsheet:AddAnnotation.adoc[] to save annotations with a bookmark.
+NOTE: Bookmarks store only settings, *not* data. See xref:dashboard:AddAnnotation.adoc[] to save annotations with a bookmark.
 
 [#SaveNewBookmark]
 == Save a New Bookmark
@@ -24,13 +24,13 @@ To save a Dashboard configuration as a new bookmark in the User Portal, follow t
 
 . Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
 +
-image::viewsheet:AddBookmark.png[alt="press Bookmarks button"]
+image::dashboard:AddBookmark.png[alt="press Bookmarks button"]
 
 . Select the ‘Save as New Bookmark’ option. This opens the ‘Bookmark Properties’ dialog box.
 
 . Enter a name for the new bookmark in the ‘Name’ field. (The default bookmark name is current time.)
 +
-image::viewsheet:AddBookmark2.png[alt="enter name for new bookmark"]
+image::dashboard:AddBookmark2.png[alt="enter name for new bookmark"]
 
 . Select ‘Private’ if you want the bookmark to be visible only to you. Select ‘Shared’ if you want other users of the Dashboard to be able to use the bookmark that you have created.
 +
@@ -47,19 +47,19 @@ To restore a Dashboard to the settings saved in a bookmark, follow the steps bel
 
 . Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
 +
-image::viewsheet:AddBookmark.png[alt="press Bookmarks button"]
+image::dashboard:AddBookmark.png[alt="press Bookmarks button"]
 
 . Press the {buttonFilter} to restrict the displayed bookmarks to either ‘Shared By Others’ or ‘Owned By Me’. The default is ‘All’.
 +
-image::viewsheet:Bookmark Filter.png[alt="press Filter to restrict bookmarks"]
+image::dashboard:Bookmark Filter.png[alt="press Filter to restrict bookmarks"]
 
 . To filter the list of available bookmarks, type all or part of a Bookmark label in the ‘Search’ field.
 +
-image::viewsheet:Bookmark Search.png[alt="type in Search field to filter bookmarks"]
+image::dashboard:Bookmark Search.png[alt="type in Search field to filter bookmarks"]
 
 . Select the bookmark you want to restore.
 +
-image::viewsheet:Browse Bookmark Dialog.png[alt="select bookmark to restore"]
+image::dashboard:Browse Bookmark Dialog.png[alt="select bookmark to restore"]
 
 The Dashboard is updated with the settings previously saved in the bookmark.
 
@@ -70,12 +70,12 @@ To update a bookmark with new settings, follow the steps below:
 
 . Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
 +
-image::viewsheet:AddBookmark.png[alt="press Bookmarks button"]
+image::dashboard:AddBookmark.png[alt="press Bookmarks button"]
 
 . Select the bookmark you want to update. This bookmark is now the active bookmark.
 
 +
-image::viewsheet:Browse Bookmark Dialog.png[alt="select bookmark to update"]
+image::dashboard:Browse Bookmark Dialog.png[alt="select bookmark to update"]
 
 . Make any desired changes to the Dashboard settings (selections, input components, etc.).
 
@@ -90,7 +90,7 @@ To delete a bookmark, follow the steps below:
 
 . Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
 +
-image::viewsheet:AddBookmark.png[alt="press Bookmarks button"]
+image::dashboard:AddBookmark.png[alt="press Bookmarks button"]
 
 . Press the {buttonRemove} next to the bookmark that you want to delete.
 
@@ -103,16 +103,16 @@ To delete all bookmarks based on their age since creation or last access, follow
 
 . Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
 +
-image::viewsheet:AddBookmark.png[alt="press Bookmarks button"]
+image::dashboard:AddBookmark.png[alt="press Bookmarks button"]
 
 . Press the {buttonRemoveBookmarks}.
 +
-image::viewsheet:BookmarkDelete1.png[alt="press Remove Bookmarks button"]
+image::dashboard:BookmarkDelete1.png[alt="press Remove Bookmarks button"]
 
 
 . To remove bookmarks that were created prior to a certain date, select ‘Older than’ and choose the desired date. To remove bookmarks that have not been accessed since a certain date, select ‘Not accessed since’ and choose the desired date.
 +
-image::viewsheet:BookmarkDelete2.png[alt="select Older than or Not accessed since"]
+image::dashboard:BookmarkDelete2.png[alt="select Older than or Not accessed since"]
 
 . Press btn:[OK].
 
@@ -125,11 +125,11 @@ To change the name or sharing settings for a bookmark, follow the steps below:
 
 . Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
 +
-image::viewsheet:AddBookmark.png[alt="press Bookmarks button"]
+image::dashboard:AddBookmark.png[alt="press Bookmarks button"]
 
 . Press the {buttonEdit} next to the bookmark that you want to change. This opens the ‘Edit Bookmark’ dialog box.
 +
-image::viewsheet:BookmarkProps.png[alt="press Edit to open Bookmark Properties"]
+image::dashboard:BookmarkProps.png[alt="press Edit to open Bookmark Properties"]
 
 . Make the desired changes to the bookmark name and sharing. See xref:#SaveNewBookmark[] above for more information about these settings.
 
@@ -150,13 +150,13 @@ TIP: If you have not yet bookmarked the desired Dashboard state, see xref:#SaveN
 
 . Press the {buttonBookmarks} on the right side of the toolbar. This opens the ‘Bookmark’ menu.
 +
-image::viewsheet:AddBookmark.png[alt="press Bookmarks button"]
+image::dashboard:AddBookmark.png[alt="press Bookmarks button"]
 
 
 
 . Press the {buttonSetAsDefault} next to the bookmark that you want to set as the Dashboard’s starting state.
 +
-image::viewsheet:Bookmark Default.png[alt="press Set as Default button"]
+image::dashboard:Bookmark Default.png[alt="press Set as Default button"]
 +
 NOTE: The default bookmark is subsequently shown in _italics_.
 

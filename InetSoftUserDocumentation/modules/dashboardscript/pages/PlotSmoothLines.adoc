@@ -1,0 +1,34 @@
+= smoothLines
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: For xref:dashboard:LineChart.adoc[], xref:dashboard:AreaChart.adoc[], and xref:dashboard:CircularNetworkChart.adoc[], set to `true` to render chart lines as smooth curves instead of straight segments.
+endif::ai[]
+
+
+For xref:dashboard:LineChart.adoc[], xref:dashboard:AreaChart.adoc[], and xref:dashboard:CircularNetworkChart.adoc[],  set to `true` to render chart lines as smooth curves instead of straight segments.
+
+== Type
+Boolean:: `true`: smooth curves (default for  xref:dashboard:AreaChart.adoc[] and xref:dashboard:CircularNetworkChart.adoc[]) +
+`false`: straight line segments (default for xref:dashboard:LineChart.adoc[])
+
+== Example
+[source,javascript]
+Chart1.smoothLines = true;
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+smoothLines          // unqualified
+Chart1.smoothLines   // qualified
+
+{secondForm}
+====

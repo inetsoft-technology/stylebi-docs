@@ -3,7 +3,7 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-To force a Dashboard to refresh its data at a specified interval, simply select the ‘Server-Side Update’ option in the ‘Dashboard Options’ dialog box. (See xref:viewsheet:DashboardOptions.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for more details.)
+To force a Dashboard to refresh its data at a specified interval, simply select the ‘Server-Side Update’ option in the ‘Dashboard Options’ dialog box. (See xref:dashboard:DashboardOptions.adoc[] in xref:dashboard:VisualizeYourData.adoc[] for more details.)
 
 You can further customize the update behavior by configuring the Dashboard to refresh in response to a particular external event. For example, your database can issue a refresh command to a Dashboard in response to a database event such as a data update.
 
@@ -28,7 +28,7 @@ This indicates that the DataChange server (responsible for server-side updates) 
 
 . If you do not see the above output in the log, this may indicate a port conflict. In this case, set the `dataChange.rmi.port` property  to a different port number.
 
-. Open the desired Dashboard in Visual Composer. Open the ‘Dashboard Options’ dialog box, and select the ‘Server-Side Update’ option. (See xref:viewsheet:DashboardOptions.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].) In the ‘Refresh Interval’ field, enter the period (in seconds) at which the server should check for the external trigger event.
+. Open the desired Dashboard in Visual Composer. Open the ‘Dashboard Options’ dialog box, and select the ‘Server-Side Update’ option. (See xref:dashboard:DashboardOptions.adoc[] in xref:dashboard:VisualizeYourData.adoc[].) In the ‘Refresh Interval’ field, enter the period (in seconds) at which the server should check for the external trigger event.
 
 . Create a  `DataChangeClient` class that can be executed by an external program (for example, by the database) to trigger a particular Dashboard to update.
 +
@@ -133,7 +133,7 @@ image::administration:ServerUpdateEmbeddedTable.png[alt="embedded table added to
 
 . Create a new Dashboard based on the ‘EmbeddedData’ Data Worksheet.
 
-. Add a Chart to the Dashboard to display the data from the Data Worksheet as follows. (See xref:viewsheet:BasicChartingSteps.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].)
+. Add a Chart to the Dashboard to display the data from the Data Worksheet as follows. (See xref:dashboard:BasicChartingSteps.adoc[] in xref:dashboard:VisualizeYourData.adoc[].)
 +
 image::administration:ServerUpdateCreateChart.png[alt="chart added to dashboard displaying data from the EmbeddedData worksheet"]
 

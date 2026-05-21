@@ -1,0 +1,34 @@
+= contourLevels
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: The number of individual colored contours to draw on a xref:dashboard:ScatterContourChart.adoc[] or xref:dashboard:ContourMapChart.adoc[].
+endif::ai[]
+
+
+
+The number of individual colored contours to draw on a xref:dashboard:ScatterContourChart.adoc[] or xref:dashboard:ContourMapChart.adoc[].
+
+== Type
+Integer
+
+== Example
+[source,javascript]
+Chart1.contourLevels = 3;
+
+image::commonscript:contourLevels.png[alt="contour chart showing specified number of contour level bands"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+contourLevels         // unqualified
+Chart1.contourLevels  // qualified
+
+{secondForm}
+====

@@ -1,0 +1,34 @@
+= shapeLegend.title
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the legend title for a shape-key legend.
+endif::ai[]
+
+
+Sets the legend title for a shape-key legend.
+
+
+
+== Type
+String
+
+
+== Example
+
+[source,javascript]
+Chart1.shapeLegend.title = 'Salesperson';
+
+image::commonscript:shapeLegendTitle.png[alt="chart shape legend with custom title text displayed"]
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shapeLegend.title           // unqualified
+Chart1.shapeLegend.title    // qualified
+
+{secondForm}
+====

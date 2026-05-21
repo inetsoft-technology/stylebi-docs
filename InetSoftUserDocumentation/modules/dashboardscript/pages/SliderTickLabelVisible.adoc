@@ -1,0 +1,45 @@
+= tickLabelVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies whether the labels on the Slider scale are displayed.
+endif::ai[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:dashboard:SliderSpinnerProperties.adoc[] for more information on Slider settings.
+====
+
+Specifies whether the labels on the Slider scale are displayed.
+
+
+
+
+== Type
+Boolean::	`true`: display scale labels +
+`false`: hide scale labels
+
+
+
+
+
+
+== Example
+[source,javascript]
+Slider1.tickLabelVisible = false;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+tickLabelVisible             // unqualified
+Slider1.tickLabelVisible     // qualified
+
+{secondForm}
+====
+
+

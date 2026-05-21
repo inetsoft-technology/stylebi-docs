@@ -1,0 +1,20 @@
+= Tabbed Interface
+
+// metadata for AI
+ifdef::ai[]
+Summary: Script reference index for the Tabbed Interface layout component, listing its unique scriptable properties. See CommonProperties for shared properties.
+endif::ai[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:dashboard:ArrangeComponents.adoc[] for more information about Tabbed Interface.
+====
+
+
+
+The following topics present properties that are unique to the Tabbed Interface.
+
+[square]
+include::ROOT:partial$MINITOC_TabbedInterface.adoc[]

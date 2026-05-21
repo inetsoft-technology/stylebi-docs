@@ -1,0 +1,34 @@
+= referenceLineVisible
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Displays horizontal and vertical reference lines when the user moves the mouse over a point on the chart.
+endif::ai[]
+
+
+Displays horizontal and vertical reference lines when the user moves the mouse over a point on the chart.
+
+
+== Type
+Boolean
+
+
+== Examples
+
+[source,javascript]
+Chart1.referenceLineVisible = true;
+
+
+image::commonscript:referenceLineVisible.png[alt="chart with reference lines hidden by setting referenceLineVisible to false"]
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+referenceLineVisible           // unqualified
+Chart1.referenceLineVisible    // qualified
+
+{secondForm}
+====

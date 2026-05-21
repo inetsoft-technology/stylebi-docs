@@ -1,0 +1,43 @@
+= tableStyle
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies a predefined style to be applied to the Table.
+endif::ai[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:dashboard:TableProperties.adoc[] for more information about Table styles.
+====
+
+
+Specifies a predefined style to be applied to the Table.
+
+
+== Type
+String
+
+
+
+
+
+
+== Example
+[source,javascript]
+TableView1.tableStyle = 'Shaded'
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+tableStyle                 // unqualified
+TableView1.tableStyle      // qualified
+
+{secondForm}
+====
+
+

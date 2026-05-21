@@ -1,0 +1,34 @@
+= plotAlpha
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the transparency of chart elements (bars, lines, points, etc.). A value of 0 indicates complete transparency (i.e., chart elements not visible), and a value of 1 indicates complete opacity.
+endif::ai[]
+
+
+
+Sets the transparency of chart elements (bars, lines, points, etc.). A value of 0 indicates complete transparency (i.e., chart elements not visible), and a value of 1 indicates complete opacity.
+
+== Type
+Number			between 0 and 1
+
+== Example
+[source,javascript]
+Chart1.plotAlpha = .5;
+
+image::commonscript:plotAlpha.png[alt="chart with element transparency adjusted via plotAlpha setting"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+plotAlpha          // unqualified
+Chart1.plotAlpha   // qualified
+
+{secondForm}
+====

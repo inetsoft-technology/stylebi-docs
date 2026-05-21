@@ -1,0 +1,40 @@
+= bindingInfo.getTopN(col)
+:navtitle: getTopN()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:dashboardscript:ChartBindingInfoSetTopN.adoc[] to set the binding information.
+endif::ai[]
+
+
+[WARNING,caption=See Also]
+xref:dashboardscript:ChartBindingInfoSetTopN.adoc[]  to set the binding information.
+
+Returns the number (N) of top or bottom groups being filtered for the specified field.
+
+
+
+== Parameter
+col::			Name of filtered field
+
+
+
+
+
+
+
+
+
+
+== Example
+
+[source,javascript]
+--
+var N = Chart1.bindingInfo.getTopN("Company");
+
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

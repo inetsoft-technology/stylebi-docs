@@ -76,7 +76,7 @@ Other Options::
 * The ‘Expand Components’ option expands scrolling tables and charts in the generated Dashboard so that all data is displayed.
 * The ‘Only Data Elements’ option limits the export to only the data-bearing components.
 
-Insert Parameters:: The filename can include parameters for automatic insertion of Dashboard name and time and date of generation. These parameters use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:viewsheet:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
+Insert Parameters:: The filename can include parameters for automatic insertion of Dashboard name and time and date of generation. These parameters use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:dashboard:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
 +
 |===
 |Filename |Generated As...
@@ -105,7 +105,7 @@ To include Dashboard  *creation parameter* values in the filename, simply place 
 
 [#InsertParameters]
 === Insert Parameters
-The '`Subject`' line and '`Attachment Name`' can include parameters for automatic insertion of Dashboard name and time and date of generation. These parameters use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:viewsheet:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
+The '`Subject`' line and '`Attachment Name`' can include parameters for automatic insertion of Dashboard name and time and date of generation. These parameters use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:dashboard:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
 
 |===
 |Subject or Filename |Generated As...

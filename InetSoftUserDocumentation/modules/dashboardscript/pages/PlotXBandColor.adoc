@@ -1,0 +1,39 @@
+= xBandColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Displays bands of the specified color on a categorical or timescale X-axis.
+endif::ai[]
+
+
+Displays bands of the specified color on a categorical or timescale X-axis.
+
+
+
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.xBandColor = [150,150,200];
+Chart1.xBandColor = {r:150,g:150,b:200};
+
+image::commonscript:xBandColor.png[alt="chart with alternating x-axis band color applied to background"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+xBandColor          // unqualified
+Chart1.xBandColor   // qualified
+
+{secondForm}
+====

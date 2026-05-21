@@ -1,0 +1,53 @@
+= flyOnClick
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies that components filtered by a Table flyover will be updated only when the user clicks on the table.
+endif::ai[]
+
+
+
+
+[WARNING,caption=See Also]
+====
+xref:dashboard:TableProperties.adoc[] to set the property without using script.
+====
+
+
+
+Specifies that components filtered by a Table flyover will be updated only when the user clicks on the table.
+
+== Type
+Boolean:: `true`: update on mouse click +
+`false`: update on mouse hover (default)
+
+
+
+
+== Example
+
+
+[source,javascript]
+----
+TableView1.flyOnClick = true;
+
+
+----
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+flyOnClick                 // unqualified
+TableView1.flyOnClick      // qualified
+
+{secondForm}
+====
+
+

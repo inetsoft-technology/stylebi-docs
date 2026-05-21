@@ -1,0 +1,46 @@
+= embedAsURL
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Enables the Text component to display the URL that you entered into the ‘Text’ field (or set with the xref:TextText.adoc[] property) within an embedded IFrame.
+endif::ai[]
+
+
+
+[WARNING,caption=See Also]
+====
+xref:dashboard:TextProperties.adoc[] for general information about the Text component.
+====
+
+
+Enables the Text component to display the URL that you entered into the ‘Text’ field (or set with the xref:TextText.adoc[] property) within an embedded IFrame.
+
+
+
+
+
+
+
+== Type
+Boolean:: `true`: display URL embedded in IFrame +
+`false`: display text normally
+
+
+
+== Example
+[source,javascript]
+Text1.embedAsURL = true;
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+embedAsURL            // unqualified
+Text1.embedAsURL      // qualified
+
+{secondForm}
+====
+
+

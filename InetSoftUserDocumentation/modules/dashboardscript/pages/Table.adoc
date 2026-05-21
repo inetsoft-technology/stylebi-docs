@@ -1,0 +1,25 @@
+= Table
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: The following topics describe functions that are provided for Table operations.
+endif::ai[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:dashboardscript:Crosstab.adoc[] for properties specific to Crosstabs.
+* xref:dashboardscript:FreehandTable.adoc[] for properties specific to  Freehand Tables.
+* xref:dashboard:AddTable.adoc[] for general information about the Table component.
+====
+
+
+
+The following topics describe functions that are provided for Table operations.
+
+[square]
+include::ROOT:partial$MINITOC_Table.adoc[]

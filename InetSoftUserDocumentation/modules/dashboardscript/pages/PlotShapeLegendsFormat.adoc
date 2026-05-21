@@ -1,0 +1,37 @@
+= shapeLegends.format
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the format for data values displayed within a shape-key legend (on charts that have *multiple* shape legends).
+endif::ai[]
+
+
+Sets the format for data values displayed within a shape-key legend (on charts that have *multiple* shape legends).
+
+
+== Type
+include::commonscript:partial$dataFormats.adoc[]
+
+For the Date, Decimal, and Message formats, use the xref:CommonFormatSpec.adoc[]  property to assign a format specification using the appropriate masks: `[formatType, formatSpec]`.  See the examples below.
+
+
+== Examples
+
+[source,javascript]
+Chart1.shapeLegends['Sum(Product:Quantity Purchased)'].format = [Chart.MESSAGE_FORMAT,"{0} Inc."];
+Chart1.shapeLegends['Sum(Product:Total)'].format = [Chart.DECIMAL_FORMAT,"$#,##0M"];
+
+image::commonscript:shapeLegendsFormat.png[alt="chart shape legends with custom format applied to all legend labels"]
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shapeLegends['...'].format          // unqualified
+Chart1.shapeLegends['...'].format   // qualified
+
+{secondForm}
+====

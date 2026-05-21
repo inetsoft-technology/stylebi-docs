@@ -124,7 +124,7 @@ To delete a cycle, select the cycle you want to delete in the table, and press t
 ====
 [square]
 * xref:#CreateAutomatedAlert[], below,  to run or suppress the delivery options based on your own custom Dashboard logic.
-* xref:viewsheetscript:ChartHighlighted.adoc[Chart.highlighted], xref:viewsheetscript:TableHighlighted.adoc[Table.highlighted], xref:viewsheetscript:ImageHighlighted.adoc[Image.highlighted], xref:viewsheetscript:TextHighlighted.adoc[Text.highlighted] to determine in Dashboard script whether a highlight has been applied or not.
+* xref:dashboardscript:ChartHighlighted.adoc[Chart.highlighted], xref:dashboardscript:TableHighlighted.adoc[Table.highlighted], xref:dashboardscript:ImageHighlighted.adoc[Image.highlighted], xref:dashboardscript:TextHighlighted.adoc[Text.highlighted] to determine in Dashboard script whether a highlight has been applied or not.
 ====
 
 An *alert* is a notification that a specified event has occurred, for example, that total sales have fallen below some critical level. You can set an alert based on highlight conditions in a Dashboard, or based on Dashboard Output component ranges.
@@ -169,7 +169,7 @@ To create an automated alert, follow the steps below:
 
 . Within the specified  Dashboard, implement the logic which determines whether an alert should be dispatched. In general, you should place the script containing this logic on the individual component containing the data to be evaluated.
 +
-TIP: See xref:viewsheetscript:AddScriptToDashboard.adoc[] for more information on where to add script.
+TIP: See xref:dashboardscript:AddScriptToDashboard.adoc[] for more information on where to add script.
 +
 Within this  script, place a call to    `scheduleAction()` to specify whether the scheduled task should execute or not (based on the logic you implemented above).   If a  script sets `thisViewsheet.scheduleAction(false)`, the scheduled task will not execute.
 

@@ -27,11 +27,11 @@ When you perform grouping and aggregation in a Data Worksheet, *_only_* the aggr
 
 
 Dashboard Level::
-To group and aggregate data at the Dashboard level, see the following sections in xref:viewsheet:VisualizeYourData.adoc[]. This provides the user with the greatest flexibility to adjust the grouping and aggregation to suit their needs.
+To group and aggregate data at the Dashboard level, see the following sections in xref:dashboard:VisualizeYourData.adoc[]. This provides the user with the greatest flexibility to adjust the grouping and aggregation to suit their needs.
 [square]
-* To group and aggregate data in  Chart, see xref:viewsheet:GroupDataByDimension.adoc[].
-* To group and aggregate data in a  crosstab, see xref:viewsheet:AddCrosstab.adoc[].
-* To group and aggregate data as a  KPI, see xref:viewsheet:AddAKPI.adoc[].
+* To group and aggregate data in  Chart, see xref:dashboard:GroupDataByDimension.adoc[].
+* To group and aggregate data in a  crosstab, see xref:dashboard:AddCrosstab.adoc[].
+* To group and aggregate data as a  KPI, see xref:dashboard:AddAKPI.adoc[].
 
 
 
@@ -103,7 +103,7 @@ video::299960242[vimeo,640,400]
 
 A crosstab (pivot table) in a Data Worksheet can have one column header, one or more row headers, and one measure. The values at the row-column intersections of the crosstab table represent (aggregates) of the measure.
 
-NOTE: You can also create a crosstab (with more than one column header) in a Dashboard. See xref:viewsheet:AddTable.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].
+NOTE: You can also create a crosstab (with more than one column header) in a Dashboard. See xref:dashboard:AddTable.adoc[] in xref:dashboard:VisualizeYourData.adoc[].
 
 To create a crosstab from an existing data block, follow these steps.
 
@@ -338,7 +338,7 @@ include::ROOT:partial$duplicateNames.adoc[]
 == Create a Named Grouping
 The default grouping procedure simply partitions a column based on its distinct values. For example, if a column contains state abbreviations CA, NY, and WA, then the default grouping produces one group for CA, one group for NY, and one group for WA. To create a different partition, use a named grouping. A _named grouping_ is a  user-defined grouping that   partitions the data into the desired groups according to a reusable set of custom conditions (i.e., rules).
 
-NOTE: You can also create a custom grouping in a Chart or Crosstab at the Dashboard level. See xref:viewsheet:GroupDataByDimension.adoc[] and xref:viewsheet:AddTable.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].
+NOTE: You can also create a custom grouping in a Chart or Crosstab at the Dashboard level. See xref:dashboard:GroupDataByDimension.adoc[] and xref:dashboard:AddTable.adoc[] in xref:dashboard:VisualizeYourData.adoc[].
 
 To create a named grouping, follow these steps:
 

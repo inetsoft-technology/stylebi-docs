@@ -1,0 +1,31 @@
+= facetGrid
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: When `true`, displays the global border of a facet-type chart (a chart with multiple dimensions on the axes). Set to `false` (default) to disable the border.
+endif::ai[]
+
+
+When `true`, displays the global border of a facet-type chart (a chart with multiple dimensions on the axes). Set to `false` (default) to disable the border.
+
+== Type
+Boolean
+
+== Example
+[source,javascript]
+Chart1.facetGrid = true;
+Chart1.facetGridColor = 'red';
+
+image::commonscript:facetGrid.png[alt="chart with facet grid lines visible between sub-graphs"]
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+facetGrid          // unqualified
+Chart1.facetGrid   // qualified
+
+{secondForm}
+====

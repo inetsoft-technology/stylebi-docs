@@ -18,7 +18,7 @@ format::				A number format pattern
 .See a list  of available number format symbols...
 [%collapsible]
 ====
-For examples of how  to construct formats using these symbols, see xref:viewsheet:DataFormat.adoc#NumberFormat[Number Format] in xref:viewsheet:VisualizeYourData.adoc[].
+For examples of how  to construct formats using these symbols, see xref:dashboard:DataFormat.adoc#NumberFormat[Number Format] in xref:dashboard:VisualizeYourData.adoc[].
 
 
 include::commonscript:partial$numberFormatTable.adoc[]

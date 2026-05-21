@@ -92,13 +92,13 @@ To create a new calculated field, follow the steps below:
 
 
 
-. Edit the Dashboard to which you want to add an expression field. See xref:viewsheet:EditADashboard.adoc[].
+. Edit the Dashboard to which you want to add an expression field. See xref:dashboard:EditADashboard.adoc[].
 
 
 . In the *Toolbox* panel, right-click on the data block or data model  to which you want to add the calculated field. Select ‘New Calculated Field’ from the context menu.
 +
 
-image::viewsheet:NewCalculatedField1.png[alt="right-click data block in Toolbox and select New Calculated Field"]
+image::dashboard:NewCalculatedField1.png[alt="right-click data block in Toolbox and select New Calculated Field"]
 
 +
 This opens the ‘Calculated Field’ panel.
@@ -113,7 +113,7 @@ The following special characters are *permitted* in the name of a calculated fie
 +
 NOTE: Your choice of ‘Detail’ or ‘Aggregate’ *cannot* be changed later.
 +
-image::viewsheet:NewCalculatedField2.png[alt="select Detail or Aggregate option in Calculated Field panel"]
+image::dashboard:NewCalculatedField2.png[alt="select Detail or Aggregate option in Calculated Field panel"]
 
 
 . In the ‘Return Data Type’ menu, select the data type that the calculated field will return.
@@ -130,10 +130,10 @@ In general, SQL expressions perform better than JavaScript expressions because S
 . Press btn:[OK] to close the Formula Editor. This adds the new calculated field to the data source at the top of the *Toobox* panel.
 +
 
-image::viewsheet:NewCalculatedField4.png[alt="new calculated field added to data source in Toolbox panel"]
+image::dashboard:NewCalculatedField4.png[alt="new calculated field added to data source in Toolbox panel"]
 
 
-You can display this calculated field in Output Components (see xref:viewsheet:AddAKPI.adoc[]) or Data View Components (see xref:viewsheet:AddAChart.adoc[] and xref:viewsheet:AddTable.adoc[]) in the same way that would display any other data field.
+You can display this calculated field in Output Components (see xref:dashboard:AddAKPI.adoc[]) or Data View Components (see xref:dashboard:AddAChart.adoc[] and xref:dashboard:AddTable.adoc[]) in the same way that would display any other data field.
 
 NOTE: You cannot bind an aggregate-based calculated field to Filter components.
 
@@ -141,7 +141,7 @@ NOTE: You cannot bind an aggregate-based calculated field to Filter components.
 == Detail-Level Calculation
 See xref:CreateCalcField[] to open the ‘Edit Calculated Field’ dialog box, and select the ‘Detail’ option. The available detail fields are listed in the top-left panel. Click on an available field in the panel to add it to the expression.
 
-image::viewsheet:NewCalculatedField3.png[alt="Edit Calculated Field dialog showing detail fields available for expression"]
+image::dashboard:NewCalculatedField3.png[alt="Edit Calculated Field dialog showing detail fields available for expression"]
 
 NOTE:  *Date*-type fields supply the following date parts: Year, QuarterOfYear, MonthOfYear,             DayOfMonth, and DayOfWeek. *Time*-type fields supply the following date parts: HourOfDay, MinuteOfHour,            SecondOfMinute. *TimeInstant*-type fields supply all of the previous date parts.
 
@@ -167,13 +167,13 @@ To add a new aggregate to the list, follow the steps below:
 
 . Press the ‘New Aggregate’ link in the top-left panel.
 +
-image::viewsheet:CalcFieldExample8.png[alt="press New Aggregate link to add a new aggregate to the list"]
+image::dashboard:CalcFieldExample8.png[alt="press New Aggregate link to add a new aggregate to the list"]
 +
 This opens the ‘Aggregate’ dialog box.
 +
 . In the ‘Field’ menu of the ‘Aggregate’ dialog box, select the field that you wish to aggregate for purposes of the calculation.
 +
-image::viewsheet:CalcFieldExample9.png[alt="select field to aggregate in the Aggregate dialog box"]
+image::dashboard:CalcFieldExample9.png[alt="select field to aggregate in the Aggregate dialog box"]
 +
 . In the ‘Aggregate’ menu, select the desired aggregation method.
 +
@@ -185,7 +185,7 @@ include::ROOT:partial$AggregationMethods.adoc[]
 . For a bivariate aggregation method, select the second field from the ‘With’ menu.
 . Press btn:[OK] to close the ‘Aggregate’ dialog box. The Formula Editor now displays the newly defined aggregate quantity in the top-left panel.
 +
-image::viewsheet:CalcFieldExample10.png[alt="newly defined aggregate appears in the top-left panel of Formula Editor"]
+image::dashboard:CalcFieldExample10.png[alt="newly defined aggregate appears in the top-left panel of Formula Editor"]
 +
 . *_Optional:_*  Press the ‘New Aggregate’ button again, and repeat the above steps to add as many additional aggregates as desired. To *delete* an aggregate from the list, press the {buttonActions} to the right of the aggregate, and select '`Delete Column(s)`'.
 
@@ -193,7 +193,7 @@ image::viewsheet:CalcFieldExample10.png[alt="newly defined aggregate appears in 
 +
 NOTE: Click an aggregate field in the top-left panel to add it to the expression.
 +
-image::viewsheet:CalcFieldExample11.png[alt="enter calculation using aggregate fields in the formula area"]
+image::dashboard:CalcFieldExample11.png[alt="enter calculation using aggregate fields in the formula area"]
 
 
 
@@ -203,7 +203,7 @@ The sample xref:ROOT:attachment$Global_Visual_Analysis.zip[Global Visual Analysi
 
 To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Global_Visual_Analysis.zip[Global Visual Analysis] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
 
-image::viewsheet:galleryBubble2.png[alt="Global Visual Analysis dashboard sample using calculated fields for map colors"]
+image::dashboard:galleryBubble2.png[alt="Global Visual Analysis dashboard sample using calculated fields for map colors"]
 ****
 
 

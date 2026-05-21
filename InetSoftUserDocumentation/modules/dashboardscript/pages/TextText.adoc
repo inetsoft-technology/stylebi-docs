@@ -1,0 +1,45 @@
+= text
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the text contents of the Text component.
+endif::ai[]
+
+
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:dashboard:TextProperties.adoc[] for general information about the Text component.
+* xref:dashboard:AddTextOrHTML.adoc[] for information about displaying HTML.
+====
+
+
+Specifies the text contents of the Text component.
+
+
+== Type
+String
+
+
+
+
+
+
+== Example
+[source,javascript]
+Text1.text = "Hello World";
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+text            // unqualified
+Text1.text      // qualified
+
+{secondForm}
+====
+
+

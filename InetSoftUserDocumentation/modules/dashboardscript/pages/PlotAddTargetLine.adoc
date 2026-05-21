@@ -1,0 +1,81 @@
+= addTargetLine(measure, colors, values, options)
+:navtitle: addTargetLine()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Draws a set of horizontal or vertical target lines in the plot area using the specified colors and options. See xref:dashboard:AddTargetLineTrendLine.adoc[] for more information about target lines.
+endif::ai[]
+
+
+
+Draws a set of horizontal or vertical target lines in the plot area using the specified colors and options.  See xref:dashboard:AddTargetLineTrendLine.adoc[] for more information about target lines.
+
+include::ROOT:partial$targetLinesGraphForm.adoc[]
+
+
+== Parameter
+measure::			Name of measure on which to draw target line
+colors::			Color (see xref:PlotValueColor.adoc[]) or array of colors to fill area between target lines
+values::			Array of values and/or valid aggregation methods (`'max'`,`'min'`,`'avg'`,`'med'`) at which to draw the lines
+options::			Name-value pairs of options (see xref:#Options[] below, e.g., `{fillAbove:0xff0000, fillBelow:0x00ff00}`)
+
+[#Options]
+== Options
+fillAbove::				Color (see xref:PlotValueColor.adoc[]) to fill the region above the target line
+fillBelow::				Color (see xref:PlotValueColor.adoc[]) to fill the region below the target line
+label::				String to label the target line(s). The following codes can be inserted:
++
+include::partial$targetLabelCodes.adoc[]
+
+
+lineColor::				Color (see xref:PlotValueColor.adoc[]) to apply to all target lines
+lineStyle::				The line style (a  xref:commonscript:StyleConstantLineStyle.adoc[] constant) to apply to all target lines
+labelFont::				The font description (e.g., `'Lucida Sans Unicode-BOLD-14'`) to apply to all target labels
+labelColor::				The color (see xref:PlotValueColor.adoc[]) to apply to all target labels
+
+
+
+
+
+==  Examples
+.Single Target Line
+[source,javascript]
+--
+// The 'options' object is broken into several lines for clarity:
+var options = {fillAbove:[200,200,255],fillBelow:[225,225,225],label:'Value: {0}',lineColor:'blue'};
+Chart1.addTargetLine('Sum(Product:Total)',null,2500000,options);
+--
+
+image::commonscript:PlotAddTarget.png[alt="chart with single target line at 2500000 with fill above and below"]
+
+.Multiple Target Lines
+[source,javascript]
+--
+// The 'options' object is broken into several lines for clarity:
+var options = {fillAbove:[200,200,200],fillBelow:[200,200,200],label:['{1}: {0,number,$#,##0}','{1}: {0,number,$#,##0}'], \
+lineColor:'blue',lineStyle:Chart.DASH_LINE,labelFont:'Lucida Sans Unicode-BOLD-11',labelColor:'black'};
+Chart1.addTargetLine('Sum(Product:Total)',0xDD99DD,['avg','max'],options);
+--
+
+image::commonscript:PlotAddTarget2.png[alt="chart with multiple target lines at average and maximum with fill bands"]
+
+
+
+
+
+
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+addTargetLine         // unqualified
+Chart1.addTargetLine  // qualified
+
+{secondForm}
+====

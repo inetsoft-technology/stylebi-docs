@@ -1,0 +1,29 @@
+= bindingInfo.getMapLayer(col)
+:navtitle: getMapLayer()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: xref:dashboardscript:ChartBindingInfoSetMapLayer.adoc[] to set the binding information.
+endif::ai[]
+
+
+[WARNING,caption=See Also]
+xref:dashboardscript:ChartBindingInfoSetMapLayer.adoc[]  to set the binding information.
+
+Returns the map layer assigned to a geographic field.
+
+== Parameters
+col::				Field for which layer is desired
+
+
+== Example
+
+[source,javascript]
+--
+var layer = Chart1.bindingInfo.getMapLayer('state')
+--
+
+
+include::commonscript:partial$bindingInfoNote.adoc[]

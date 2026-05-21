@@ -6,10 +6,10 @@ The following sections explain how to use the Chart Script API to modify and cre
 [WARNING,caption=See Also]
 ====
 [square]
-* xref:viewsheetscript:AdvancedDashboardScripting.adoc[]  for information on scripting  Dashboards.
+* xref:dashboardscript:AdvancedDashboardScripting.adoc[]  for information on scripting  Dashboards.
 * xref:chartAPI:ChartScriptReference.adoc[] for complete information on all API functions.
 ====
-In most cases, you should create Charts using the Chart Editor, as described in xref:viewsheet:AddAChart.adoc[]. The Chart Editor is very easy to use, and yet provides a rich feature set to design a wide variety of Charts.
+In most cases, you should create Charts using the Chart Editor, as described in xref:dashboard:AddAChart.adoc[]. The Chart Editor is very easy to use, and yet provides a rich feature set to design a wide variety of Charts.
 
 In cases where  you *cannot* create the desired Chart using the Chart Editor, you can use Chart Script to gain deeper control over Chart object model.  This is typically useful for special-purpose or industry-specific Charts that have non-standard axis layouts or unusual mixtures of text and graphics.
 

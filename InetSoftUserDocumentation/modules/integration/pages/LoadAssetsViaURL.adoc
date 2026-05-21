@@ -119,11 +119,11 @@ function receiveMessage(event) {
     }
 }
 
-TIP: For more information about hyperlinks, see xref:viewsheet:DrillDownIntoData.adoc[] in xref:viewsheet:VisualizeYourData.adoc[], and  xref:viewsheetscript:TextHyperlink.adoc[] and xref:viewsheetscript:TableSetHyperlink.adoc[] in xref:viewsheetscript:AdvancedDashboardScripting.adoc[].
+TIP: For more information about hyperlinks, see xref:dashboard:DrillDownIntoData.adoc[] in xref:dashboard:VisualizeYourData.adoc[], and  xref:dashboardscript:TextHyperlink.adoc[] and xref:dashboardscript:TableSetHyperlink.adoc[] in xref:dashboardscript:AdvancedDashboardScripting.adoc[].
 
 
 === Adapt Size of IFrame to Browser Size
-A JSON message will be automatically triggered when the Dashboard has the ‘Scale to Screen’ option enabled (see xref:viewsheet:DashboardOptions.adoc[]) and the `scrollHeight` of the dashboard changes, for example, `{ scrollHeight: 123 }`.  This message can be used to dynamically resize the IFrame to prevent the introduction of scroll bars.  For example (place script inside `<script></script>` tags):
+A JSON message will be automatically triggered when the Dashboard has the ‘Scale to Screen’ option enabled (see xref:dashboard:DashboardOptions.adoc[]) and the `scrollHeight` of the dashboard changes, for example, `{ scrollHeight: 123 }`.  This message can be used to dynamically resize the IFrame to prevent the introduction of scroll bars.  For example (place script inside `<script></script>` tags):
 
 .Example: Adapt IFrame size
 [source,javascript]
@@ -151,7 +151,7 @@ ViewerToolbarButtonStatus::
 * *visible* status of toolbar button
 * *disabled* status of toolbar button
 
-To pass a message into the Dashboard, use `postMessage` as shown below, where `<buttonName>` is the name of a button, such as ‘Email’. (See xref:viewsheetscript:thisViewsheet.adoc[] for a list of button names.)
+To pass a message into the Dashboard, use `postMessage` as shown below, where `<buttonName>` is the name of a button, such as ‘Email’. (See xref:dashboardscript:thisViewsheet.adoc[] for a list of button names.)
 
 .Example: Pass a message
 [source,javascript]
@@ -216,7 +216,7 @@ For CSV export, if you omit parameter `tableAssemblies`, all Dashboard tables ar
 [example]
 http://localhost:8080/sree/export/viewsheet/global/DashboardName?outtype=csv&tableAssemblies=table1,table2,table3
 
-You can set additional CSV options as well: ‘Delimiter’, ‘Quote’, ‘Tab Delimited’, and ‘Keep Header’. (See xref:viewsheet:ExportDashboard.adoc[] for more information about these options.)
+You can set additional CSV options as well: ‘Delimiter’, ‘Quote’, ‘Tab Delimited’, and ‘Keep Header’. (See xref:dashboard:ExportDashboard.adoc[] for more information about these options.)
 
 .Set CSV properties
 [example]
@@ -261,7 +261,7 @@ If a Dashboard  includes a title/alias or description, then the title/alias or d
 [WARNING,caption=see also]
 ====
 [square]
-* xref:viewsheet:AddConditions.adoc[] in xref:viewsheet:VisualizeYourData.adoc[] for information about parameters in  Dashboard conditions.
+* xref:dashboard:AddConditions.adoc[] in xref:dashboard:VisualizeYourData.adoc[] for information about parameters in  Dashboard conditions.
 * xref:dataworksheet:FilterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[] for information about parameters in Data Worksheets.
 ====
 
@@ -275,7 +275,7 @@ include::partial$percent20.adoc[]
 [example]
  {SREEContext}/app/viewer/view/global/SalesDashboard?emp=Annie&comp=Nova%20Tera
 
-The transmitted parameter(s) will be available in the Dashboard through the xref:viewsheetscript:parameter.adoc[] script object and in parameterized filtering conditions. See xref:#DisplayDashboard[] for additional information about opening a Dashboard.
+The transmitted parameter(s) will be available in the Dashboard through the xref:dashboardscript:parameter.adoc[] script object and in parameterized filtering conditions. See xref:#DisplayDashboard[] for additional information about opening a Dashboard.
 
 [#DisplayInteractiveChart]
 == Display an Interactive Chart

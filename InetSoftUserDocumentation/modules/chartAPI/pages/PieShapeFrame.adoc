@@ -9,7 +9,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:VisualFrame.adoc[]
 ====
 
-The `PieShapeFrame` object contains the shape styles for multi-dimensional “mini-pie” elements to be used together with a xref:viewsheet:PointChart.adoc[] (xref:PointElement.adoc[]) chart. To create a `PieShapeFrame` object, call the `PieShapeFrame` constructor.
+The `PieShapeFrame` object contains the shape styles for multi-dimensional “mini-pie” elements to be used together with a xref:dashboard:PointChart.adoc[] (xref:PointElement.adoc[]) chart. To create a `PieShapeFrame` object, call the `PieShapeFrame` constructor.
 
 [source,javascript]
 var frame = new PieShapeFrame("m1","m2","m3");

@@ -62,7 +62,7 @@ For example:
 [#AccessSRPrincipalinScript]
 == Access SRPrincipal in Script
 
-You can access the `SRPrincipal` object within VPM trigger scripts and Dashboard scripts (in the  *onRefresh* handler or in component-level script).  See xref:user:CreateNewVPM.adoc[] and xref:viewsheetscript:AddScriptToDashboard.adoc[] for more information about using script.
+You can access the `SRPrincipal` object within VPM trigger scripts and Dashboard scripts (in the  *onRefresh* handler or in component-level script).  See xref:user:CreateNewVPM.adoc[] and xref:dashboardscript:AddScriptToDashboard.adoc[] for more information about using script.
 
 .Example: Access SRPrincipal in Script
 [source,javascript]
@@ -162,11 +162,11 @@ principal.setParameter("State", new String[] {"NJ", "NY", "CT"})
 
 A parameter value specified with `setParameter()` can be accessed in the following contexts:
 
-* In Dashboards via the xref:viewsheetscript:parameter.adoc[] script keyword.
+* In Dashboards via the xref:dashboardscript:parameter.adoc[] script keyword.
 
 * In a parameterized condition on a Data Worksheet data block. (See xref:dataworksheet:FilterData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[].)
 
-* In a parameterized condition on a Dashboard component. (See xref:viewsheet:AddConditions.adoc[] in xref:viewsheet:VisualizeYourData.adoc[].)
+* In a parameterized condition on a Dashboard component. (See xref:dashboard:AddConditions.adoc[] in xref:dashboard:VisualizeYourData.adoc[].)
 
 When accessing the parameter in a condition (Dashboard or Data Worksheet), the name of the condition variable should exactly match the parameter name specified by `setParameter()`.
 

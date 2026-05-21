@@ -1,0 +1,39 @@
+= yBandColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Displays bands of the specified color on a categorical or timescale Y-axis.
+endif::ai[]
+
+
+Displays bands of the specified color on a categorical or timescale Y-axis.
+
+
+
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.yBandColor = [220,220,255];
+Chart1.yBandColor = {r:220,g:220,b:255};
+
+image::commonscript:yBandColor.png[alt="chart with alternating y-axis band color applied to background"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+yBandColor          // unqualified
+Chart1.yBandColor   // qualified
+
+{secondForm}
+====

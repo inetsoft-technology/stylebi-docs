@@ -1,0 +1,37 @@
+= paretoLineColor
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the color of the *cumulative total* line in a xref:dashboard:ParetoChart.adoc[] when a field is bound in the *Color* region. If there is no *Color* binding, the Pareto line is the same color as the bars.
+endif::ai[]
+
+
+Sets the color of the *cumulative total* line in a xref:dashboard:ParetoChart.adoc[]  when a field is bound in the *Color* region. If there is no *Color* binding, the Pareto line is the same color as the bars.
+
+
+
+== Type
+include::partial$colorSyntax.adoc[]
+
+== Example
+[source,javascript]
+Chart1.paretoLineColor = [255,0,0];
+Chart1.paretoLineColor = {r:255,g:0,b:0};
+
+
+image::commonscript:paretoLineColor.png[alt="pareto chart with cumulative line displayed in custom color"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+paretoLineColor         // unqualified
+Chart1.paretoLineColor  // qualified
+
+{secondForm}
+====
