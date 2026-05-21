@@ -26,7 +26,20 @@
       "Bash(xxd)",
       "Bash(xxd \"modules/administration/pages/CreateScheduledTask.adoc\")",
       "Bash(grep -v \"^[0-9a-f]*: [0-9a-f ]*  [[:print:]]*$\")",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\src\\\\stylebi-docs\\\\InetSoftUserDocumentation\")",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(grep -v \":0$\")",
+      "Bash(sort -t: -k2 -rn)",
+      "Bash(cd \"C:\\\\src\\\\stylebi-docs\" && grep -r \"viewsheet:\" --include=\"*.yml\" --include=\"*.yaml\" --include=\"*.js\" --exclude-dir=\".claude\" -l)",
+      "Bash(git mv *)",
+      "Bash(Move-Item modules\\\\viewsheet modules\\\\dashboard)",
+      "PowerShell(cmd /c \"cd C:\\\\src\\\\stylebi-docs\\\\InetSoftUserDocumentation && ren modules\\\\viewsheet dashboard && ren modules\\\\viewsheetscript dashboardscript\")",
+      "PowerShell(Get-Process | Where-Object {$_.MainWindowTitle -ne \"\" -or $_.ProcessName -match \"idea|rider|git|search|index|defender\"} | Select-Object ProcessName, Id, MainWindowTitle)",
+      "Bash(python3 check_links.py)",
+      "Bash(git commit -m ' *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\src\\\\stylebi-docs\\\\InetSoftUserDocumentation\\\\modules\" -Directory)",
+      "Bash(Select-Object Name)"
     ]
   }
 }

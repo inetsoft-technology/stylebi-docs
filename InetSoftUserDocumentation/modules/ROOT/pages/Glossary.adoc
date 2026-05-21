@@ -1,0 +1,187 @@
+= StyleBI Glossary
+
+ifdef::ai[]
+Summary: Definitions of StyleBI-specific terms used throughout this documentation. Key concepts include: Dashboard, Data Worksheet, Visual Composer, Enterprise Manager, VPM (Virtual Private Model), Data Block, Dimension, Measure, Materialized View, Cycle, Scheduled Task, Logical Model, Physical View, Highlight, Bookmark, Flyover, Brush, Named Group, Mirror Copy, Ad Hoc editing, Device Layout, and Nested Dashboard. Consult this page when encountering unfamiliar StyleBI terminology.
+endif::ai[]
+
+This page defines StyleBI-specific terms used throughout the documentation.
+
+== A
+
+Ad Hoc Editing::
+A runtime capability that lets end-users modify a Dashboard`'s Charts and filters without access to Visual Composer.  Changes can be saved as a bookmark.
+
+Aggregation::
+A function that summarizes a measure for a dataset or a group — for example, sum, average, count, min, or max. Aggregations can be performed in Data Worksheets, in Dashboard Charts, Tables, Gauges, and Text KPIs, and in script.
+
+Alert::
+A notification triggered automatically when a scheduled task detects that a specified condition has been met — for example, when a KPI falls below a threshold. Alerts are configured as xref:administration:CreateScheduledTask.adoc[Scheduled Tasks].
+
+Alias::
+Can refer to any of the following:
++
+[square]
+* An alternative display name assigned to a dimension value or measure in various contexts (such as Chart legend or axis) without changing the underlying data.
+* A folder or Dashboard display name, as distinct from the actual folder or Dashboard name.
+* A duplicate table in a physical view that is used to break a join cycle.  See xref:user:PhysicalView.adoc[].
+
+Annotation::
+A note or comment attached to a Dashboard component or to a specific data point. Annotations are visible to all users who view the Dashboard. See xref:dashboard:AddAnnotation.adoc[].
+
+Asset::
+Any item stored in the StyleBI repository — including Dashboards, Data Worksheets, table styles, and scripts.
+
+== B
+
+Bookmark::
+A saved snapshot of a Dashboard's current state — including filter selections, annotations, and layout settings — that a user can reload later. See xref:user:BookmarkDashboard.adoc[].
+
+Brush / Brushing::
+An interaction that highlights related data points across multiple charts simultaneously when a user selects data in one chart, making cross-chart patterns visible. See xref:dashboard:DrillDownIntoData.adoc[].
+
+== C
+
+Calendar::
+A filter component that lets users select dates or date ranges to filter Dashboard data. See xref:dashboard:CalendarProperties.adoc[].
+
+Chart::
+A visual component that plots data using one of many chart types (bar, line, pie, scatter, map, etc.) Charts are bound to a Data Worksheet data block or data model and usually display both dimensions and measures. See xref:dashboard:AddAChart.adoc[].
+
+Condition::
+Filter criteria applied to a data block or Dashboard component that includes or excludes rows based on field values, expressions, or user input. Can be static or dynamic (based on user input, parameters, session data, etc.)
+
+Container::
+The component created when you group other components together. See xref:dashboard:ContainerProperties.adoc[].
+
+Crosstab::
+A tabular component that arranges dimensions as rows and columns and displays aggregated measure values at their intersections — also known as  a pivot table. See xref:dashboard:AddCrosstab.adoc[].
+
+Cycle::
+A time-based schedule used for Materialized View generation. See xref:administration:CreateScheduledTask.adoc[].
+
+== D
+
+Dashboard::
+A data presentation created in Visual Composer that combines charts, tables, gauges, and filter components into an interactive analytical view. Dashboards are built on top of Data Worksheets or data models and can be published to the User Portal. See xref:dashboard:VisualizeYourData.adoc[].
+
+Data Block::
+A named result set (table) within a Data Worksheet — the basic unit of data from which Dashboard components draw. A Data Worksheet can contain multiple data blocks joined or transformed (mashed-up) from different sources.  The '`Primary`' data block is generally the final or most important result in the Data Worksheet.
+
+Data Model::
+A business-oriented representation of database structure, consisting of a Physical View and one or more Logical Models, that simplifies data access for Dashboard designers.
+
+Data Worksheet::
+A data preparation layer created in Visual Composer that connects to data sources, assembles data blocks, and applies transformations before the data is used in a Dashboard. See xref:dataworksheet:PrepareYourData.adoc[].
+
+Device Layout::
+A responsive design configuration that defines how a Dashboard is displayed on different screen sizes — desktop, tablet, and phone. See xref:dashboard:CreateDeviceLayout.adoc[].
+
+Dimension::
+A categorical data field (such as Region, Product, or Date) used for grouping and filtering. Dimensions are generally placed on chart axes and in table row/column headers, and are filtered by Selection Lists and Trees.
+
+Drill-Down::
+Navigation from summary data to more detailed data — for example, clicking a chart bar to see the underlying records. Implemented by a variety of techniques such as hyperlinks, zoom, Show Details, and hierarchy. See xref:dashboard:DrillDownIntoData.adoc[].
+
+== E
+
+Enterprise Manager::
+The web-based administration console for StyleBI. Used to configure security, data connections, scheduling, server settings, and performance tuning. See xref:administration:GetStartedWithEnterpriseManager.adoc[].
+
+== F
+
+Filter Component::
+A Dashboard component — such as a Selection List, Range Slider, or Calendar — that lets users interactively filter data across all components sharing the same data block.
+
+Flyover View::
+An association between two components such that when a user hovers over data on the first component, the second component displays related details, filtered based on user hover. Available for Charts, Tables, and Freehand Tables. See xref:dashboard:DrillDownIntoData.adoc[].
+
+Form Component::
+A Dashboard input component — such as a CheckBox, RadioButton, ComboBox, TextInput, Slider, or Spinner — that passes user-supplied values to dynamic properties, scripts, or Data Worksheet variables.
+
+Freehand Table::
+An advanced table component in which individual cells can be bound to different data sources and contain script expressions. See xref:dashboard:AddFreehandTable.adoc[].
+
+== G
+
+Gauge::
+A Dashboard output component that displays a single summary value (KPI) against a configurable scale with color-coded ranges. See xref:dashboard:GaugeProperties.adoc[].
+
+== H
+
+Highlight::
+A conditional formatting rule applied to a Dashboard component that changes the visual appearance of data — such as color or font — when a condition is met. Available for tables, charts, text, and images. See xref:dashboard:ConditionalFormat.adoc[].
+
+== L
+
+Logical Model::
+The business-facing layer of a Data Model that presents database entities and attributes using business-friendly names and structure. Logical Models are built on top of Physical Views. See xref:user:CreateLogicalModel.adoc[].
+
+== M
+
+Mashup::
+A Data Worksheet technique that combines data from multiple data blocks or data sources — including joining and concatenating them — using drag-and-drop. See xref:dataworksheet:MashUpData.adoc[].
+
+Materialized View::
+A server-side cache of pre-aggregated Dashboard query results that dramatically improves load performance for complex or large-data Dashboards. See xref:administration:MaterializedView.adoc[].
+
+Measure::
+A numeric data field (such as Revenue, Quantity, or Duration) that is typically aggregated for display in Charts, Crosstabs, and KPIs.
+
+Mirror Copy::
+A copy of a Data Worksheet data block that remains linked to the source data block and automatically reflects any changes made to the source. Useful for creating multiple processing paths from a single source dataset. See xref:dataworksheet:CopyData.adoc[].
+
+== N
+
+Named Group::
+A reusable custom grouping that maps individual dimension values to user-defined categories — for example, grouping US states into regions. See xref:dashboard:GroupDataByDimension.adoc[].
+
+Nested Dashboard::
+A Dashboard embedded inside another Dashboard, typically used in modular design and for drill-downs.
+
+== P
+
+Physical View::
+The join-layer of a Data Model that specifies tables, columns, and the joins that relate them. Physical Views are the foundation on which Logical Models are built. See xref:user:CreatePhysicalView.adoc[].
+
+== R
+
+Range Slider::
+A filter component that lets users select a numerical or date range by adjusting a slider control. See xref:dashboard:RangeSliderProperties.adoc[].
+
+Repository::
+The central server-side storage for all StyleBI assets — Dashboards, Data Worksheets, data source definitions, table styles, and scripts.
+
+== S
+
+Scheduled Task::
+An automated action — such as generating a Dashboard, exporting to PDF, or sending an email — that runs on a defined schedule or condition. See xref:administration:CreateScheduledTask.adoc[].
+
+Selection Container::
+A layout component that groups multiple filter components (Selection Lists, Range Sliders, etc.) into a single collapsible panel to save screen space. See xref:dashboard:SelectionContainerProperties.adoc[].
+
+Selection List::
+A filter component that displays dimension values as a list, allowing users to include or exclude values interactively. See xref:dashboard:SelectionListProperties.adoc[].
+
+Selection Tree::
+A filter component that displays hierarchical dimension values (such as Country → Region → City) in a collapsible tree. See xref:dashboard:SelectionTreeProperties.adoc[].
+
+Show Details::
+An interaction that displays the underlying detail records behind an aggregated chart or table value in a separate panel. See xref:dashboard:FilterAggregatedData.adoc[].
+
+== U
+
+User Portal::
+The web interface where end-users access published Dashboards, manage bookmarks, and interact with shared data. See xref:user:UsePortal.adoc[].
+
+== V
+
+Virtual Private Model (VPM)::
+A server-side security layer that transparently enforces row-level and column-level data access restrictions on relational data sources based on the logged-in user's roles and groups. See xref:user:AddDataSecurity.adoc[].
+
+Visual Composer::
+The browser-based design environment used to create and edit both Data Worksheets and Dashboards. Accessed from the User Portal.
+
+== Z
+
+Zoom::
+A chart interaction that filters the chart to show only the selected dimension values, effectively zooming in on a subset of the data. See xref:dashboard:UseCharts.adoc[].
