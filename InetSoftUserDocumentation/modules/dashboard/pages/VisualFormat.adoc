@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Visual Format defines presentation-level formatting rules for controlling the visual appearance of displayed values and elements in dashboad. It supports consistent styling, number formats, and conditional visual rules across different visual levels, including detailed and aggregated results, without affecting data access or permissions.
+Summary: Add Visual Format explains how to use the Format panel in Visual Composer to control the visual appearance of Dashboard components without scripting. Topics covered include setting font (face, style, size), foreground and background color, alignment, borders, wrap text, graphical presenters, and CSS classes/IDs. For Charts, color and font can be applied chart-wide (affecting all text including axis labels, axis titles, legends, and plot labels) or to individual regions independently by clicking a specific region before formatting.
 endif::ai[]
 
 [WARNING,caption=see also]
@@ -75,6 +75,36 @@ The ‘Color’ options allow you to set text color, background color, and trans
 image::Format Color Tab Basic.png[alt="color options in format panel"]
 
 
+
+The text and regions affected by the color setting vary by component, as shown below:
+
+[cols="1,2"]
+|===
+|Component |Color Target
+
+|Chart
+a|Color can be applied globally to entire Chart or to individual regions independently.
+[square]
+* *Global*: With no Chart region selected, foreground color applies to all Chart text: Axis labels, axis titles, legend content, legend titles, and plot labels.
+
+* *Independent Region*: To target a specific region (e.g., axis label, axis title, legend), click  first to select it, and then set the color.
+|Crosstab|Same as Table.
+|Table|Color can be set independently for title bar, column headers, and data cells. Click the desired region, then set the color.
+|Freehand Table|Same as Table.
+|Embedded Table|Same as Table.
+|Selection List|Color can be set independently for title text and choice text. Click the title bar or a choice cell, then set the color.
+|Selection Tree|Same as Selection List. Color can be set independently for each level of the hierarchy.
+|Selection Container|Same as Selection List and Range Slider.
+|Range Slider|Color setting affects all text displayed on the slider.
+|Calendar|Color setting affects the title text.
+|Text|Color setting affects the text.
+|Gauge|Color setting affects labels and value (if present).
+|Slider|Color setting affects the labels.
+|Spinner|Color setting affects the spinner text.
+|Checkbox|Color can be set independently for title text and choice labels. Click the title bar or a choice cell, then set the color.
+|Radio Button|Same as Checkbox.
+|Combo Box|Color setting affects the choice text.
+|===
 
 To set a static foreground color, background color, and transparency (alpha) for a component, follow the steps below:
 
