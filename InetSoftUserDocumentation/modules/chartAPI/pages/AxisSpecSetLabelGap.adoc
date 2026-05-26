@@ -16,9 +16,9 @@ value:: 			integer number of pixels to use for gap
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetLabelGap1.js[]
---
+----
 <1> {dataset}
 <2> Create the `AxisSpec` object.
 <3> Use `setLabelGap` to add space next to the axis labels.
@@ -33,8 +33,8 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetLabelGap2.js[]
 
---
+----
 =====

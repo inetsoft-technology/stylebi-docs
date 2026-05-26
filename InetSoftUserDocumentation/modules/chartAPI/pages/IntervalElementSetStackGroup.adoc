@@ -25,7 +25,7 @@ Boolean:: `true`: independent stack order for each group +
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"],["NJ",200], ["NJ",300],["NY",300],["NY",100]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity"); //<2>
@@ -36,7 +36,7 @@ elem.setColorFrame(frame);
 elem.setStackGroup(true); //<3>
 elem.setCollisionModifier(GraphElement.STACK_SYMMETRIC);
 graph.addElement(elem); //<4>
---
+----
 
 <1> {dataset}
 <2> Create the `IntervalElement` object.
@@ -55,12 +55,12 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 elem.setStackGroup(false);
 // To adjust the Y-axis to include all elements:
 graph.getCoordinate().getYScale().setScaleRange(new StackRange());
---
+----
 =====
 
 

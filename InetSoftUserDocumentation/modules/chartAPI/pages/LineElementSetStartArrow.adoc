@@ -27,13 +27,13 @@ Boolean:: `true`: draw arrow +
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"],["NJ",100],["NY",300],["PA",200]]; //<1>
 graph = new EGraph();
 elem = new LineElement("State", "Quantity"); //<2>
 elem.setStartArrow(true); //<3>
 graph.addElement(elem); //<4>
---
+----
 
 <1> {dataset}
 <2> Create the `LineElement` object.
@@ -52,11 +52,11 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 elem.setStartArrow(true);
 
---
+----
 =====
 
 

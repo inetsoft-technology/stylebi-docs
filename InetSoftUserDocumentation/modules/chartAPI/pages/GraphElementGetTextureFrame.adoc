@@ -20,11 +20,11 @@ A xref:TextureFrame.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = elem.getTextureFrame(); //<2>
 frame.setField("Customer:Company"); //<3>
---
+----
 
 <1> Obtain a handle to the  `GraphElement` object.
 <2> Use `getTextureFrame` to obtain a handle to the `TextureFrame` object.

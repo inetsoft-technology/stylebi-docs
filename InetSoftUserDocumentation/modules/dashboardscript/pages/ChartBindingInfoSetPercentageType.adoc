@@ -35,10 +35,10 @@ Chart.PERCENTAGE_NONE
 == Example
 
 [source,javascript]
---
+----
 Chart1.bindingInfo.setPercentageType("Total", Chart.PERCENTAGE_OF_GROUP)
 
---
+----
 
 image::commonscript:setPercentageTypeGroup.png[alt="chart with Total displayed as percentage of group total"]
 

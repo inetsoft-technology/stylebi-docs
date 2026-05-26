@@ -21,7 +21,7 @@ value::			a number specifying the logarithm base
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",12], ["NY",450]]; //<1>
 graph = new EGraph();
 var qscale = new LogScale("Quantity"); //<2>
@@ -29,7 +29,7 @@ var elem = new IntervalElement("State", "Quantity");
 qscale.setBase(2); //<3>
 graph.setScale("Quantity", qscale); //<4>
 graph.addElement(elem);
---
+----
 
 <1> {dataset}
 <2> Create the xref:LogScale.adoc[] object.
@@ -47,13 +47,13 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ① and  xref:chartAPI:RectCoordGetYScale.adoc[]  to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object and xref:chartAPI:Scale.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var coord = graph.getCoordinate(); //<1>
 var scale = coord.getYScale(); //<2>
 // Compact syntax: var scale = graph.getCoordinate().getYScale();
 
 scale.setBase(2);
---
+----
 =====
 
 

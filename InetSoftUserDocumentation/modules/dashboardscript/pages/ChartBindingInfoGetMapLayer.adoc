@@ -21,9 +21,9 @@ col::				Field for which layer is desired
 == Example
 
 [source,javascript]
---
+----
 var layer = Chart1.bindingInfo.getMapLayer('state')
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

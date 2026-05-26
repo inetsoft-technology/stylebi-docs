@@ -12,9 +12,9 @@ value:: Fixed size of the axis area in pixels
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetAxisSize1.js[]
---
+----
 <1> {dataset}
 <2> Create the `AxisSpec` object.
 <3> Use `setAxisSize` to fix the axis area to 80 pixels wide.
@@ -30,7 +30,7 @@ image::commonscript:AxisSpecSetAxisSize.png[alt="set axis area using setAxisSize
 To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetAxisSize2.js[]
---
+----
 =====

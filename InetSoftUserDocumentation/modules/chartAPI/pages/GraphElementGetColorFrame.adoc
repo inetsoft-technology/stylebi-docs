@@ -16,11 +16,11 @@ A xref:ColorFrame.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = elem.getColorFrame(); //<2>
 frame.setField("Customer:Company"); //<3>
---
+----
 
 <1> Obtain a handle to the  `GraphElement` object.
 <2> Use `getColorFrame` to obtain a handle to the `ColorFrame` object.

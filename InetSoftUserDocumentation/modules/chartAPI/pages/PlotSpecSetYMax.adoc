@@ -16,7 +16,7 @@ value::			A number
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["Q1","Q2"], [300,200], [500,300]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("Q1", "Q2");
@@ -34,7 +34,7 @@ spec.setXMin(100);
 coord.setPlotSpec(spec); //<5>
 graph.setCoordinate(coord);
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:PlotSpec.adoc[] object.
 <3> Use xref:PlotSpecSetBackgroundImage.adoc[] to assign a background image to plot area.
@@ -53,7 +53,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetCoordinate.adoc[] {circle1} and xref:chartAPI:CoordinateGetPlotSpec.adoc[] {circle2} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:PlotSpec.adoc[]. For example:
 
 [source,javascript]
---
+----
 var coord = graph.getCoordinate(); // <1>
 var spec = coord.getPlotSpec(); //<2>
 // Compact syntax: var spec = graph.getCoordinate().getPlotSpec();
@@ -65,5 +65,5 @@ spec.setYMin(10000);
 spec.setXMax(20);
 spec.setXMin(15);
 
---
+----
 =====

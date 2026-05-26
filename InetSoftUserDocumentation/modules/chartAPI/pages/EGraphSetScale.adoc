@@ -32,7 +32,7 @@ scale::			scale to apply to axis (xref:chartAPI:Scale.adoc[])
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]];
 graph = new EGraph();
 var elem = new LineElement("State", "Quantity");
@@ -41,7 +41,7 @@ qscale.setMin(100);
 qscale.setMax(500);
 graph.addElement(elem);
 graph.setScale("Quantity", qscale); <2>
---
+----
 <1> Create the `Scale` object.
 <2> Use `setScale` to add the `Scale` object to Chart.
 

@@ -28,7 +28,7 @@ value::			a subclass of {javaawtgeomPoint2D} +
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]];  //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -43,7 +43,7 @@ rect2.setColor(java.awt.Color(0xff00ff));
 graph.addForm(rect1); //<5>
 graph.addForm(rect2); //<5>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the  xref:RectForm.adoc[] object.
 <3> Use `setTopLeftPoint()` to set `rect1` points in pixels.
@@ -60,7 +60,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was previously created with the Chart Editor, you do not need to add a Chart element. For example:
 
 [source,javascript]
---
+----
 var rect1 = new RectForm();var rect2 = new RectForm();
 rect1.setTopLeftPoint(new java.awt.Point(100, 100));
 rect1.setBottomRightPoint(new java.awt.Point(150, 50));
@@ -70,6 +70,6 @@ rect2.setBottomRightPoint(new java.awt.geom.Point2D.Double(.8,.5));
 rect2.setColor(java.awt.Color(0xff00ff));
 graph.addForm(rect1);
 graph.addForm(rect2);
---
+----
 =====
 

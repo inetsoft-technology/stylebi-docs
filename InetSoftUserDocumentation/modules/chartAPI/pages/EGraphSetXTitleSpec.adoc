@@ -17,7 +17,7 @@ spec::			A xref:chartAPI:TitleSpec.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -25,7 +25,7 @@ var spec = new TitleSpec(); //<2>
 spec.setLabel("X Title")
 graph.setXTitleSpec(spec); //<3>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:TitleSpec.adoc[] object.
 <3> Use `setXTitleSpec()` to add the `TitleSpec` to Chart.
@@ -44,11 +44,11 @@ To change the property on a Chart that was previously created with the Chart Edi
 
 
 [source,javascript]
---
+----
 var spec = graph.getXTitleSpec(); <1>
 spec.setLabel("X Title");
 
---
+----
 =====
 
 

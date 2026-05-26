@@ -36,10 +36,10 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 +
 .Chart Component Script
 [source,javascript]
---
+----
 var elem = graph.getElement(0); <1>
 elem.setHint(GraphElement.HINT_SHINE,'false'); <2>
---
+----
 <1> Obtain handle to `GraphElement` object.
 <2> Apply operations to `GraphElement` object.
 

@@ -26,7 +26,7 @@ arr::			Array of xref:Scale.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity", "m1", "m2", "m3"], ["NJ", 200, 50,50,5], ["NY", 300,20,30,50]]; //<1>
 graph = new EGraph();
 var frame = new StarShapeFrame(); //<2>
@@ -44,7 +44,7 @@ frame.setScales([scale1, scale2, scale3]); //<4>
 elem.setShapeFrame(frame); //<5>
 graph.setScale("Quantity",yscale);
 graph.addElement(elem);
---
+----
 
 <1> {dataset}
 <2> Create   the `MultiShapeFrame` object.

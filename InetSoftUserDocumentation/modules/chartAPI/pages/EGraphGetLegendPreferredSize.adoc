@@ -16,7 +16,7 @@ Integer (pixels)
 == Example
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -26,7 +26,7 @@ elem.setColorFrame(frame);
 graph.setLegendPreferredSize(150); //<2>
 graph.addElement(elem);
 alert(graph.getLegendPreferredSize()); //<3>
---
+----
 <1> {dataset}
 <2> Set the legend size.
 <3> Use `getLegendPreferredSize()` to get the legend size.
@@ -44,9 +44,9 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To use the property on a Chart that was previously created with the Chart Editor, simply call the function. For example:
 
 [source,javascript]
---
+----
 graph.getLegendPreferredSize();
---
+----
 =====
 
 

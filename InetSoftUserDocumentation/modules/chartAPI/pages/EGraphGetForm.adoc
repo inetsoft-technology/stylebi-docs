@@ -31,7 +31,7 @@ index::			Integer index of form object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -41,7 +41,7 @@ form.addPoint(java.awt.Point(100,100));
 form.addPoint(java.awt.Point(200,200));
 form.setColor(java.awt.Color(0xff0000));
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create a xref:LineForm.adoc[] object.
 <3> Use `getForm()` to obtain a handle to the `LineForm` object.

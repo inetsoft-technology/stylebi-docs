@@ -27,9 +27,9 @@ value::			Number
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$ShapeFormSetRotation1.js[]
---
+----
 <1> {dataset}
 <2> Create the  xref:ShapeForm.adoc[] object.
 <3> Use `setRotation()` to set the rotation.
@@ -45,8 +45,8 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was previously created with the Chart Editor, you do not need to add a Chart element. For example:
 
 [source,javascript]
---
+----
 include::scriptexample:partial$ShapeFormSetRotation2.js[]
---
+----
 =====
 

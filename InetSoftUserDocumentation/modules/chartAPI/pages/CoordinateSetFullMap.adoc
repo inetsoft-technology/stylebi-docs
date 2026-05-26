@@ -23,12 +23,12 @@ Create the map below. See the example for  xref:dashboardscript:SelectionListTre
 
 .Chart Component Script
 [source,javascript]
---
+----
 var zoomed = SelectionTree1.selectedObjects.length > 0; //<1>
 graph.getCoordinate().setFullMap(!zoomed); //<2>
 graph.getElement(0).setInPlot(!zoomed); //<3>
 
---
+----
 <1> If there are selected items, set `zoomed` to `true`.
 <2> If `zoomed=true`, use `setFullMap(false)` to display only selected data.
 <3> Use xref:GraphElementSetInPlot.adoc[] to  display only the specified portion of the map. Otherwise, the Chart will force the entire map to display, regardless of the `setFullMap` setting.

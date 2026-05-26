@@ -18,7 +18,7 @@ spec:: A xref:TextSpec.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["CA", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity"); //<2>
@@ -29,7 +29,7 @@ spec.setColor(java.awt.Color(0xff0000));
 elem.setTextFrame(frame);
 elem.setTextSpec(spec); //<4>
 graph.addElement(elem); //<5>
---
+----
 
 <1> {dataset}
 <2> Create the `PointElement` object.
@@ -49,11 +49,11 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var spec = elem.getTextSpec("Sum(Product:Total)");
 spec.setColor(java.awt.Color(0xff0000));
---
+----
 =====
 
 

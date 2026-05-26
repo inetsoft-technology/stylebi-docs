@@ -22,7 +22,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 . Right-click the Chart and select '`Properties`'.  Enter the script  below into the *Script* tab.
 +
 [source,javascript]
---
+----
 // Create new TextFrame based on 'Company' field:
 var tframe = new DefaultTextFrame('Company');
 
@@ -54,11 +54,13 @@ for(i=1; i<data.length; i++) {
   // Assign the new label in place of the old label:
   tframe.setText(oldLabel,newLabel);
 }
---
-+
-include::partial$scriptThatModifiesGraph.adoc[]
+----
 +
 image::commonscript:ChartChangeLabels.png[alt="bar chart with company name and percent labels"]
++
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
 
 The above script uses a customized `TextFrame` to display the company name together with the percentage of total represented by each company. The xref:chartAPI:TextFrameSetText.adoc[] function is the key to replacing one set of labels by a different set of labels.
 
@@ -73,7 +75,7 @@ Because this `TextFrame` is already associated with the X-axis labels, there is 
 
 .Revised script to access existing TextFrame
 [source,javascript]
---
+----
 // Get a handle to the existing X-axis TextFrame:
 var tframe = graph.getCoordinate().getXScale().getAxisSpec().getTextFrame();
 
@@ -101,7 +103,7 @@ for(i=1; i<data.length; i++) {
   // Assign the new label in place of the old label:
    tframe.setText(oldLabel,newLabel);
 }
---
+----
 
 
 

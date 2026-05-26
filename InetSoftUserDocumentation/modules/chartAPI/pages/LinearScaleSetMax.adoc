@@ -26,7 +26,7 @@ value::			Number specifying the maximum scale value
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var qscale = new LinearScale("Quantity"); //<2>
@@ -36,7 +36,7 @@ qscale.setMax(450); //<4>
 graph.setScale("Quantity", qscale); //<5>
 graph.addElement(elem);
 
---
+----
 
 <1> {dataset}
 <2> Create the xref:LinearScale.adoc[] object.
@@ -58,14 +58,14 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetYScale.adoc[] ② to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:Scale.adoc[]. For example:
 
 [source,javascript]
---
+----
 var coord = graph.getCoordinate(); //<1>
 var scale = coord.getYScale(); //<2>
 // Compact Syntax: var scale = graph.getCoordinate().getYScale();
 
 scale.setMin(2000000);
 scale.setMax(15000000);
---
+----
 =====
 
 

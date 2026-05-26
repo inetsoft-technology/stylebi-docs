@@ -23,7 +23,7 @@ Integer::			Number of form objects
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -37,7 +37,7 @@ for (var i=0; i<formCount; i++) {
   graph.getForm(i).setColor(java.awt.Color(0xff0000));
 }
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Add xref:GraphForm.adoc[] objects to Chart.
 <3> Use `getFormCount` to return the number of `GraphForms`.

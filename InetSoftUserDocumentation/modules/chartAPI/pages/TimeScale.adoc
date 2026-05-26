@@ -24,7 +24,7 @@ include::ROOT:partial$MINITOC_TimeScale.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 var date1 = new Date();
 var date2 = new Date();
 var maxDate = new Date();
@@ -40,7 +40,7 @@ tscale.setMax(maxDate);
 graph.setScale("Date", tscale); //<3>
 graph.addElement(elem);
 
---
+----
 
 <1> {dataset}
 <2> Create the `TimeScale` object.

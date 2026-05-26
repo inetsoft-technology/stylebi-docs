@@ -50,7 +50,7 @@ Because these are *static* VisualFrames, the color and size are not keyed to the
 .Complete Script
 ****
 [source,javascript]
---
+----
 dataset = [["State","Quantity","Total"],["NJ",200,2500],["NY",300,1500]];
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -61,7 +61,7 @@ sframe.setSize(10);
 elem.setColorFrame(cframe);
 elem.setSizeFrame(sframe);
 graph.addElement(elem);
---
+----
 [TIP]
 =====
 To change the property on a Chart that was *previously created* with the Chart Editor, use the xref:chartAPI:EGraphGetElement.adoc[] method ① to obtain a handle to the desired Chart element. For example:

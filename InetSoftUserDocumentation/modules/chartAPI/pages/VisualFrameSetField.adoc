@@ -20,7 +20,7 @@ field::			name of the column (String)
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -29,7 +29,7 @@ frame.setField("Quantity"); //<3>
 frame.setColor(java.awt.Color(0xff0000));
 elem.setColorFrame(frame); //<4>
 graph.addElement(elem);
---
+----
 
 <1> {dataset}
 <2> Create   the `VisualFrame` object.
@@ -51,14 +51,14 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = elem.getColorFrame(); //<2>
 // Compact syntax: var frame = graph.getElement(0).getColorFrame();
 
 frame.setField("Customer:Company");
 
---
+----
 =====
 
 

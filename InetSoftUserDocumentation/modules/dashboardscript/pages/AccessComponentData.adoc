@@ -193,13 +193,13 @@ image::commonscript:DrillMemberExample6.png[alt="edit formula button next to Reg
 image::commonscript:DrillMemberExample3.png[alt="script editor showing SelectionTree1 drillMember property selected"]
 +
 [TIP]
---
+----
 Instead of using the '`Expression`' option from the {buttonValueType} button, you can select the '`Variable`' option.
 
 image::commonscript:DrillMemberExample7.png[alt="variable option selected from value type menu"]
 
 Then select  `SelectionTree1.drillMember` from the menu.  This produces the same result as the '`Expression`' described above.
---
+----
 +
 The xref:dashboardscript:SelectionListTreeDrillMember.adoc[]  property returns the name of the field that resides one level (in the Selection Tree hierarchy) below the *lowest* level that the user has selected. Thus, if the user has selected one or more _states_ in the Selection Tree, `SelectionTree1.drillMember` returns the string ‘City’.
 

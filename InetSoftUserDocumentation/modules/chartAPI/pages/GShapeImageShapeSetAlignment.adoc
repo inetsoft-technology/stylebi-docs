@@ -26,7 +26,7 @@ GShape.ImageShape.Alignment.RIGHT
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -42,7 +42,7 @@ elem.setShapeFrame(frame); //<6>
 var sizeframe = new StaticSizeFrame(100);
 elem.setSizeFrame(sizeframe);
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `GShape.ImageShape` shape.
 <3> Use xref:GShapeImageShapeSetImage.adoc[] to assign the desired image to the `shape`.
@@ -62,7 +62,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} and xref:GraphElementGetShapeFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] object and xref:ShapeFrame.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = elem.getShapeFrame(); //<2>
 var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
@@ -73,7 +73,7 @@ for(var i=0; i<dataset.getRowCount();i++) {
   frame.setShape(dataset.getData(0,i),shape);
 }
 
---
+----
 =====
 
 

@@ -45,7 +45,7 @@ You can also create a custom `SVGShape` from an SVG image stored in the local fi
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State","Quantity");
@@ -54,7 +54,7 @@ var sizeFrame = new StaticSizeFrame(10);
 elem.setSizeFrame(sizeFrame);
 elem.setShapeFrame(shapeFrame); //<3>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Pass the `SVGShape` to   the xref:StaticShapeFrame.adoc[] constructor.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the xref:PointElement.adoc[].
@@ -68,7 +68,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State","Quantity");
@@ -78,7 +78,7 @@ var sizeFrame = new StaticSizeFrame(10);
 elem.setSizeFrame(sizeFrame);
 elem.setShapeFrame(shapeFrame); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Pass the image to the `SVGShape()` constructor to create the `svg` shape.
 <3> Pass the `svg` shape to the xref:StaticShapeFrame.adoc[] contructor.
@@ -89,7 +89,7 @@ graph.addElement(elem);
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State","Quantity");
@@ -99,7 +99,7 @@ var sizeFrame = new StaticSizeFrame(10);
 elem.setSizeFrame(sizeFrame);
 elem.setShapeFrame(shapeFrame); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Pass the image URL to the `SVGShape()` constructor to create the `svg` shape.
 <3> Pass the `svg` shape to the xref:StaticShapeFrame.adoc[] contructor.

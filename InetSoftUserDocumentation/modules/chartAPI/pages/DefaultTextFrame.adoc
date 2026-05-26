@@ -24,7 +24,7 @@ You can pass a field name (e.g., ‘Quantity’) to the constructor in element s
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",203], ["NY",327]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -35,7 +35,7 @@ frame.setField("Quantity");
 elem.setTextFrame(frame); //<3>
 elem.setTextSpec(spec);
 graph.addElement(elem);
---
+----
 
 <1> {dataset}
 <2> Create the `DefaultTextFrame` object.
@@ -50,7 +50,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -63,7 +63,7 @@ tframe.setText('NY','New York'); //<3>
 spec.setTextFrame(tframe); //<4>
 elem.setColorFrame(cframe);
 graph.addElement(elem);
---
+----
 
 <1> {dataset}
 <2> Create the `DefaultTextFrame` object.
@@ -82,11 +82,11 @@ This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[]
 
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setTextField("Company",Chart.STRING);
 Chart1.bindingInfo.textFrame = new DefaultTextFrame;
 
---
+----
 
 
 image::commonscript:DefaultTextFrame.png[alt="chart with DefaultTextFrame via bindingInfo"]

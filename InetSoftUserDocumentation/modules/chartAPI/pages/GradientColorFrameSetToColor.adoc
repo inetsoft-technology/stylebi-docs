@@ -30,7 +30,7 @@ include::dashboardscript:partial$colorSyntax.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"],["NJ",200],["NY",300],["PA",50],["CT",100]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -40,7 +40,7 @@ frame.setToColor(java.awt.Color(0xff0000)); //<3>
 frame.setField("Quantity"); //<4>
 elem.setColorFrame(frame); //<5>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:GradientColorFrame.adoc[] object.
 <3> Use `setToColor` to specify the end color for the `GradientColorFrame`.
@@ -58,14 +58,14 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = new GradientColorFrame();
 frame.setFromColor(java.awt.Color(0x000000));
 frame.setToColor(java.awt.Color(0xff0000));
 frame.setField("Quantity");
 elem.setColorFrame(frame);
---
+----
 =====
 
 
@@ -85,13 +85,13 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
 Chart1.bindingInfo.colorFrame = new GradientColorFrame;
 Chart1.bindingInfo.colorFrame.fromColor = 0x0000FF;
 Chart1.bindingInfo.colorFrame.toColor = 0xFF00FF;
 
---
+----
 
 +
 image::commonscript:GradientColorFrame_3.png[alt="chart with gradient to color via bindingInfo"]

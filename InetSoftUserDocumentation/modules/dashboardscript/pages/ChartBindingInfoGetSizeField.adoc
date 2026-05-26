@@ -26,10 +26,10 @@ String::			Field name used for size-coding
 
 == Example
 [source,javascript]
---
+----
 var sfield = Chart1.bindingInfo.getSizeField();
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

@@ -23,7 +23,7 @@ text::			the replacement string
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -32,7 +32,7 @@ tframe.setText('NJ','New Jersey'); //<3>
 tframe.setText('NY','New York'); //<3>
 elem.setTextFrame(tframe); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `DefaultTextFrame` object.
 <3> Use `setText` to assign the desired labels to  '`NJ`' and '`NY`'.
@@ -51,14 +51,14 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} and xref:GraphElementGetTextFrame.adoc[] {circle2}  to obtain a handle to the desired xref:GraphElement.adoc[] and xref:TextFrame.adoc[]. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = elem.getTextFrame(); //<2>
 // Compact syntax: var frame = graph.getElement(0).getTextFrame();
 
 frame.setText('NJ','New Jersey');
 frame.setText('NY','New York');
---
+----
 =====
 
 

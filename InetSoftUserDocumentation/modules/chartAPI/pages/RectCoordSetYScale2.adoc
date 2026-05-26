@@ -25,7 +25,7 @@ scale::			a xref:Scale.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity","Total"], ["NJ",200,10000], ["NY",300,8000]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -45,7 +45,7 @@ graph.setCoordinate(coord); //<4>
 graph.addElement(elem);
 graph.addElement(elem2);
 
---
+----
 <1> {dataset}
 <2> Create xref:RectCoord.adoc[] object.
 <3> Use `setYScale2` to set the   xref:Scale.adoc[] for the secondary Y-axis.

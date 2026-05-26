@@ -26,10 +26,10 @@ String::			Field name used for text-coding
 
 == Example
 [source,javascript]
---
+----
 var tfield = Chart1.bindingInfo.getTextField();
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

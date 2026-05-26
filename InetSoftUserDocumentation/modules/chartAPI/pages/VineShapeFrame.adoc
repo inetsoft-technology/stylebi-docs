@@ -30,7 +30,7 @@ Radius:: The radius of the circle
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity", "m1", "m2", "m3"],["NJ", 200,90,25,50],["NY", 300,30,15,15]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -47,7 +47,7 @@ frame.setStartAngle(0);
 frame.setEndAngle(90); //<3>
 elem.setShapeFrame(frame); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `VineShapeFrame` object.
 <3> Use `setEndAngle` to set a 90° angle.

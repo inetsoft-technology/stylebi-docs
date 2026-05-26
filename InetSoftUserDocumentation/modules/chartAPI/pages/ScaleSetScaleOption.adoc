@@ -28,7 +28,7 @@ value:: `Scale.RAW` (no modification) +
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -38,7 +38,7 @@ var coord = new RectCoord(sscale,qscale); //<3>
 qscale.setScaleOption(Scale.ZERO); //<4>
 graph.setCoordinate(coord); //<5>
 graph.addElement(elem);
---
+----
 
 <1> {dataset}
 <2> Create   the xref:Scale.adoc[] objects.

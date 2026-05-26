@@ -36,10 +36,10 @@ The formula name (String)
 For a field '`Total`' bound to the Y-axis:
 
 [source,javascript]
---
+----
 var formula = Chart1.bindingInfo.getFormula("Total",Chart.BINDING_FIELD);
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

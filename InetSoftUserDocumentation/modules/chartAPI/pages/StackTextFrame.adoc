@@ -31,11 +31,11 @@ elem::			a xref:GraphElement.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = new StackTextFrame(elem); //<2>
 elem.setTextFrame(frame);  //<3>
---
+----
 
 <1> Use xref:EGraphGetElement.adoc[] to get a handle to the xref:GraphElement.adoc[].
 <2> Create the `StackTextFrame` object.

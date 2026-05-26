@@ -24,7 +24,7 @@ arr::			Array of Strings
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity", "m1", "m2", "m3"], ["NJ", 200, 6,3,4], ["NY", 300,8,2,5]]; //<1>
 graph = new EGraph();
 var frame = new StarShapeFrame(); //<2>
@@ -32,7 +32,7 @@ var elem = new PointElement("State", "Quantity");
 frame.setFields(["m1", "m2", "m3"]); //<3>
 elem.setShapeFrame(frame); //<4>
 graph.addElement(elem);
---
+----
 
 <1> {dataset}
 <2> Create   the `MultiShapeFrame` object.

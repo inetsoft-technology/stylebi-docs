@@ -28,7 +28,7 @@ You can pass a `GLine` object or a field name (e.g., ‘Line’) to the construc
 
 .Chart Component Script
 [source,javascript]
---
+----
 
 dataset = [["State","Quantity","Line"], ["NJ",200,Chart.THICK_LINE], ["NY",300,Chart.MEDIUM_DASH]]; //<1>
 graph = new EGraph();
@@ -39,7 +39,7 @@ lineframe.setField("Line");
 elem.setLineFrame(lineframe); //<3>
 elem.setSizeFrame(sizeframe);
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `LineFrame` object.
 <3> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:PointElement.adoc[].
@@ -66,11 +66,11 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.lineFrame = new StaticLineFrame;
 Chart1.bindingInfo.lineFrame.line = GLine.LARGE_DASH;
 
---
+----
 
 +
 image::commonscript:StaticLineFrameOnLoad.png[alt="line chart with large dash line style applied via bindingInfo lineFrame property"]

@@ -27,7 +27,7 @@ Chart.RIGHT_ALIGNMENT
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -46,7 +46,7 @@ shape2.setAlignmentX(Chart.CENTER_ALIGNMENT); //<3>
 graph.addForm(shape1); //<4>
 graph.addForm(shape2); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the  xref:ShapeForm.adoc[] object.
 <3> Use `setAlignmentX()` to set the horizontal alignment.
@@ -62,7 +62,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was previously created with the Chart Editor, you do not need to add a Chart element. For example:
 
 [source,javascript]
---
+----
 var shape1 = new ShapeForm();
 var shape2 = new ShapeForm();
 shape1.setPoint(new java.awt.geom.Point2D.Double(.5,.75));
@@ -78,7 +78,7 @@ shape2.setAlignmentX(Chart.CENTER_ALIGNMENT);
 graph.addForm(shape1);
 graph.addForm(shape2);
 
---
+----
 =====
 
 

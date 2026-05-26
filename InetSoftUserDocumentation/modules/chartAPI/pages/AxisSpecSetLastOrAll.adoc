@@ -13,9 +13,9 @@ Boolean:: `true`: keep only the last line of a truncated multi-line label +
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetLastOrAll1.js[]
---
+----
 <1> {dataset} Each `Product` value contains three lines separated by `\n`.
 <2> Create the `AxisSpec` object.
 <3> Use `setLastOrAll(true)` to show only the last line of each truncated label.
@@ -29,7 +29,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetLastOrAll2.js[]
---
+----
 =====

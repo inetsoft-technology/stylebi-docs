@@ -31,9 +31,9 @@ value::			Value whose mapping should be removed
 == Example
 Remove mapping for value 'Queens' in column 'city':
 [source,javascript]
---
+----
 Chart1.bindingInfo.removeMapping('city','Queens');
---
+----
 
 
 

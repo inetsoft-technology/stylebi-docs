@@ -44,12 +44,12 @@ The `dataset` object is also accessible for reading. See the xref:chartAPI:DataS
 
 .Set the dataset
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["CA",200], ["NY",3000]];
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
 graph.addElement(elem);
---
+----
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

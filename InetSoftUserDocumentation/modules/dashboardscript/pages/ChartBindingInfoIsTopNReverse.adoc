@@ -43,10 +43,10 @@ Boolean:: `true`: filter is bottom N +
 == Example
 
 [source,javascript]
---
+----
 var rev = Chart1.bindingInfo.isTopNReverse("Company");
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

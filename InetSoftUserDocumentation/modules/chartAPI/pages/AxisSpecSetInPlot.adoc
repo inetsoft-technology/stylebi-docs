@@ -32,9 +32,9 @@ Boolean:: `true`: display max value within plot region +
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetInPlot1.js[]
---
+----
 <1> {dataset}
 <2> Set a fixed maximum for the '`Quantity`' scale.
 <3> Create the `AxisSpec` object.
@@ -50,7 +50,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetInPlot2.js[]
---
+----
 =====

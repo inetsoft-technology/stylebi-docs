@@ -36,11 +36,11 @@ xref:chartAPI:TextureFrame.adoc[]
 == Example
 
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
 Chart1.bindingInfo.textureFrame = new GridTextureFrame;
 
---
+----
 
 
 image::commonscript:bindingInfoTextureFrame.png[alt="bar chart with Total bars filled using GridTextureFrame pattern"]

@@ -37,10 +37,10 @@ xref:chartAPI:StaticSizeFrame.adoc[]
 == Example
 
 [source,javascript]
---
+----
 Chart1.bindingInfo.sizes['Sum(Total)'] = new StaticSizeFrame(30);
 
---
+----
 
 
 image::commonscript:bindingInfoSize.png[alt="chart with Sum Total elements displayed at static size of 30"]

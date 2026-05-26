@@ -29,7 +29,7 @@ include::dashboardscript:partial$colorSyntax.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",-300]];graph = new EGraph(); //<1>
 var elem = new IntervalElement("State", "Quantity");
 var frame = new StaticColorFrame(); //<2>
@@ -38,7 +38,7 @@ frame.setColor(java.awt.Color(0x00ff00));
 frame.setNegativeColor(java.awt.Color(0xff0000)); //<3>
 elem.setColorFrame(frame); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:StaticColorFrame.adoc[] object.
 <3> Use `setNegativeColor` to specify the negative  color for the `StaticColorFrame`.
@@ -55,14 +55,14 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} and xref:GraphElementGetColorFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:ColorFrame.adoc[]  objects. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0);  //<1>
 var frame = elem.getColorFrame(); //<2>
 // Compact syntax: var frame = graph.getElement(0).getColorFrame();
 
 frame.setColor(java.awt.Color(0x00ff00));
 frame.setNegativeColor(java.awt.Color(0xff0000));
---
+----
 =====
 
 
@@ -88,13 +88,13 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.colorFrame = new StaticColorFrame;
 Chart1.bindingInfo.colorFrame.color = 0x00FF00;
 Chart1.bindingInfo.colorFrame.negativeColor = 0xFF0000;
 
 
---
+----
 
 +
 image::commonscript:StaticColorFrameNegative3.png[alt="bar chart with negative change values red and positive change values green"]

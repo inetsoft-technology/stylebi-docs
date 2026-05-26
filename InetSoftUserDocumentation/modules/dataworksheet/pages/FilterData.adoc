@@ -466,16 +466,16 @@ For example, to retrieve orders placed before today, you can use one of the foll
 +
 .SQL
 [source]
---
+----
 [Order Date][is][less than][Expression:SQL[CURRENT_TIMESTAMP]]
---
+----
 +
 
 .JavaScript
 [source]
---
+----
 [Order Date][is][less than][Javascript:[CALC.today()]]
---
+----
 
 . Press btn:[OK] to close the Editor.
 

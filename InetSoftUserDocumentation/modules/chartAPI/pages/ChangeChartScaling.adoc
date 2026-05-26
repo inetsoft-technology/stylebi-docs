@@ -83,7 +83,7 @@ image::commonscript:Axis Range Example 2.png[alt="ranking option set to top 5 of
 . Select the *Script* tab, and enter the following script:
 +
 [source,javascript]
---
+----
 var dMin = 10000000; // Default minimum
 
 // Get a handle to the chart's Y-axis Scale:
@@ -99,7 +99,7 @@ for (var i=0; i < dataset.getRowCount(); i++) {
 
 // Set Y-axis lower limit to .75 of minimum value:
 yScale.setMin(.75*dMin);
---
+----
 
 . Press btn:[OK] to close the ‘Chart Properties’ panel. Observe how the chart Y-axis updates so that the lower limit is 75% of the smallest chart value.
 +
@@ -174,7 +174,7 @@ graph.addElement(elem);
 =====
 To change the property on a Chart that was *previously created* with the Chart Editor, use the xref:chartAPI:EGraphGetElement.adoc[] method ① to obtain a handle to the desired Chart element. For example:
 [source,javascript]
---
+----
 var elem = graph.getElement(0); <1>
 var frame = new BrightnessColorFrame();
 frame.setField("Total");
@@ -185,6 +185,6 @@ scale.setMax(3000);
 scale.setMin(500);
 frame.setScale(scale);
 elem.setColorFrame(frame);
---
+----
 =====
 ****

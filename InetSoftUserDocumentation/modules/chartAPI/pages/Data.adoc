@@ -22,7 +22,7 @@ data = runQuery("ws:global:Examples/AllSales");
 The `data` object also supports formula table syntax such as the following:
 
 [source,javascript]
---
+----
 // Data in aggregated measure/column 'Sum(Sales)'
 data["Sum(Sales)"]
 
@@ -31,4 +31,4 @@ data["Sum(Sales)@State:NJ"]
 
 // Data in 'Sum(Sales)' where the value exceeds 1000000
 data["State?Sum(Sales) > 1000000"]
---
+----

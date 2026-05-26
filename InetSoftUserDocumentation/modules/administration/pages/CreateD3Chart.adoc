@@ -17,7 +17,7 @@ Create an HTML page with the D3.js chart and place it into the  *web-assets* fol
 
 
 [source,html]
---
+----
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -38,7 +38,7 @@ Create an HTML page with the D3.js chart and place it into the  *web-assets* fol
   </script>
 </body>
 </html>
---
+----
 <1> The `d3-inetsoft.js` plugin should be included as an external script.
 <2> Your D3.js code should be inserted in the `loadData()` function.
 <3> The first parameter of `d3.inetsoft()` function is the ‘Name’ of the *data table* in the Dashboard. See Step 2 below for more information about the data table.

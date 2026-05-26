@@ -24,13 +24,13 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // List all Dashboards in environment
 :vs list
 
 // List all Dashboards in organization0
 :vs list --organizationid organization0
---
+----
 
 [#ListOpenDashboards]
 == List Open Dashboards
@@ -39,10 +39,10 @@ The `list-open` action lists the currently open Dashboards. {connectRepositoryNo
 
 === Examples
 [source,groovy]
---
+----
 // List all open Dashboards in environment
 :vs list-open
---
+----
 
 
 == Get Dashboard Bookmarks
@@ -54,10 +54,10 @@ id:: Dashboard ID
 
 === Examples
 [source,groovy]
---
+----
 // List bookmarks for Census Dashboard
 :vs bookmarks "1^128^__NULL__^Examples/Census^host-org"
---
+----
 
 [#OpenDashboard]
 ==  Open a Dashboard
@@ -71,13 +71,13 @@ parameters:: Parameter  values to pass to Dashboard (optional)
 
 === Examples
 [source,groovy]
---
+----
 // Open Census Dashboard
 :vs open "1^128^__NULL__^Examples/Census^host-org"
 
 // Open Census Dashboard with specified parameter
 :vs open "1^128^__NULL__^Examples/Census^host-org" numberOfDays 10
---
+----
 
 == Get Dashboard
 The `get` action obtains a handle to an open Dashboard. {connectRepositoryNote}
@@ -88,10 +88,10 @@ id:: Runtime Dashboard ID.  Obtain this from the `list-open` action.  (See xref:
 
 === Examples
 [source,groovy]
---
+----
 // Get handle to Dashboard 2
 :vs get 2
---
+----
 
 
 == Close Dashboard
@@ -104,10 +104,10 @@ id:: Runtime Dashboard ID. Obtain this from the `list-open` action.  (See xref:#
 
 === Examples
 [source,groovy]
---
+----
 // Close Dashboard 2
 :vs close 2
---
+----
 
 ==  Mail a Dashboard
 The `mail` action sends a Dashboard to a recipient in the specified format. {connectRepositoryNote}
@@ -125,10 +125,10 @@ message:: The body of the email.
 
 === Examples
 [source,groovy]
---
+----
 // Mail Dashboard 2
 :vs mail 2 'PDF' 'joe@org1.com' 'me@org2.com' 'very important info' 'This is the Dashboard you requested.'
---
+----
 
 ==  Export a Dashboard
 The `export` action downloads the Dashboard  in the specified format. {connectRepositoryNote}  The Dashboard should be *open* before exporting.  (See xref:#OpenDashboard[].)
@@ -142,12 +142,12 @@ bookmarks:: Array of bookmarks to include in exported Dashboard. (optional)
 
 === Examples
 [source,groovy]
---
+----
 // Export Dashboard 2
 bks = ['bk1','bk2']
 :vs open '1^128^__NULL__^Examples/Census^host-org'
 :vs export 2 'PDF' 'E:/vs1.pdf' --bookmarks bks
---
+----
 
 ==  Asynchronously Export a Dashboard
 The `async-export` action downloads the Dashboard  in the specified format. The export is non-blocking and the status must be polled to determine when it is complete. (See xref:#GetAsynchronousExportStatus[].) {connectRepositoryNote} The Dashboard should be *open* before exporting.  (See xref:#OpenDashboard[].)
@@ -161,12 +161,12 @@ bookmarks:: Array of bookmarks to include in exported Dashboard. (optional)
 
 === Examples
 [source,groovy]
---
+----
 // Export Dashboard 2
 bks = ['bk1','bk2']
 :vs open '1^128^__NULL__^Examples/Census^host-org'
 :vs async-export 2 'PDF' --bookmarks bks
---
+----
 
 ==  Remove an Asynchronous Export Action
 The `remove-export` action removes an existing asynchronous export action, cancelling it if necessary. {connectRepositoryNote}
@@ -176,10 +176,10 @@ id:: Export ID
 
 === Examples
 [source,groovy]
---
+----
 // Remove export "vs-export-1"
 :vs remove-export "vs-export-1"
---
+----
 
 [#GetAsynchronousExportStatus]
 ==  Get Asynchronous Export Status
@@ -190,10 +190,10 @@ id:: Export ID
 
 === Examples
 [source,groovy]
---
+----
 // Get status for export "vs-export-1"
 :vs get-export-status "vs-export-1"
---
+----
 
 [#GetAsynchronousExportContent]
 ==  Get Asynchronous Export Content
@@ -206,10 +206,10 @@ file:: Path to the local file that will be written
 
 === Examples
 [source,groovy]
---
+----
 // Get content for export 2
 :vs get-export-content 2 'E:/vs1.pdf'
---
+----
 
 
 ==  Rename a Dashboard
@@ -225,10 +225,10 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // Rename Examples/Census to Admin/CensusData
 :vs rename "1^128^__NULL__^Examples/Census^host-org" "Admin/CensusData" false --owner user0 --organizationid organization0
---
+----
 
 == Delete a Dashboard
 The `delete` action deletes a Dashboard from the repository. {connectRepositoryNote}
@@ -240,10 +240,10 @@ id:: Runtime Dashboard ID. Obtain this from the `list-open` action.  (See xref:#
 
 === Examples
 [source,groovy]
---
+----
 // Delete Examples/Census Dashboard
 :vs delete "1^128^__NULL__^Examples/Census^host-org"
---
+----
 
 
 == Add a Pinned Dashboard
@@ -256,10 +256,10 @@ id:: Runtime Dashboard ID. Obtain this from the `list-open` action.  (See xref:#
 
 === Examples
 [source,groovy]
---
+----
 // Pin the Census Dashboard
 :vs add-favorite "1^128^__NULL__^Examples/Census^host-org"
---
+----
 
 == Remove a Pinned Dashboard
 The `remove-favorite` action removes the specified pinned dashboard from  the Portal for the current user. {connectRepositoryNote}
@@ -271,7 +271,7 @@ id:: Runtime Dashboard ID. Obtain this from the `list-open` action.  (See xref:#
 
 === Examples
 [source,groovy]
---
+----
 // Pin the Census Dashboard
 :vs remove-favorite "1^128^__NULL__^Examples/Census^host-org"
---
+----

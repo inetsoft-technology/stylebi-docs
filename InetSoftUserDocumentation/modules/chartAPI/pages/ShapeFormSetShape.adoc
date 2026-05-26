@@ -25,7 +25,7 @@ xref:GShapeImageShape.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -37,7 +37,7 @@ form.setSize(new java.awt.Dimension(50,50));
 graph.addForm(form); //<4>
 graph.addElement(elem);
 
---
+----
 <1> {dataset}
 <2> Create the  xref:ShapeForm.adoc[] object.
 <3> Use `setShape()` to assign a xref:GShape.adoc[].
@@ -53,7 +53,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 
 
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
@@ -68,7 +68,7 @@ form.setShape(shape); //<3>
 form.setSize(new java.awt.Dimension(150,40));
 graph.addForm(form); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the  xref:ShapeForm.adoc[] object.
 <3> Use `setShape()` to assign an `ImageShape`.

@@ -25,7 +25,7 @@ You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or s
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity","Total"], ["NJ",300,1000], ["NY",200,1500]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -36,7 +36,7 @@ sframe.setSize(10);
 elem.setLineFrame(lframe); //<4>
 elem.setSizeFrame(sframe);
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `LinearLineFrame` object.
 <3> Use `setField` to specify the field for the `LinearLineFrame`.
@@ -64,11 +64,11 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
 Chart1.bindingInfo.lineFrame = new LinearLineFrame;
 
---
+----
 
 +
 image::commonscript:LinearLineFrame_1.png[alt="bar chart with LinearLineFrame applied via bindingInfo lineFrame property"]

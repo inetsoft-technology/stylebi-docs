@@ -23,7 +23,7 @@ Boolean:: `true`: fill axis to edges +
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300], ["CT", 50], ["PA", 175]]; //<1>
 graph = new EGraph();
 var elem = new AreaElement("State", "Quantity");
@@ -35,7 +35,7 @@ graph.setCoordinate(coord);
 graph.addElement(elem);
 
 
---
+----
 <1> {dataset}
 <2> Create the `CategoricalScale` object.
 <3> Use `setFill` to fill to edges of axis.

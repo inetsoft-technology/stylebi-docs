@@ -27,10 +27,10 @@ textCols::	 Array of dimension column names from which to render labels.
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = viewsheet['Query1']; //<1>
 graph = createMekkoGraph("state", "city", "price", "state"); //<2>
---
+----
 <1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
 <2> Create the Mekko chart.
 +

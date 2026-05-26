@@ -20,7 +20,7 @@ shape:: xref:GShape.adoc[], `GShape.ImageShape`, or xref:SVGShape.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var frame = new StaticShapeFrame(); //<2>
@@ -28,7 +28,7 @@ var elem = new PointElement("State", "Quantity");
 frame.setShape(GShape.CROSS); //<3>
 elem.setShapeFrame(frame); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `StaticShapeFrame` object.
 <3> Use `setShape` to assign a cross-shape to the xref:PointElement.adoc[].
@@ -45,11 +45,11 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} and xref:GraphElementGetShapeFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:ShapeFrame.adoc[]  objects. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = elem.getShapeFrame();
 frame.setShape(GShape.CROSS);
---
+----
 =====
 
 
@@ -71,12 +71,12 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Company",Chart.STRING);
 Chart1.bindingInfo.shapeFrame = new StaticShapeFrame;
 Chart1.bindingInfo.shapeFrame.setShape(GShape.ARROWBAR);
 
---
+----
 
 +
 image::commonscript:StaticShapeFrame_1.png[alt="point chart with arrowbar shape set via bindingInfo shapeFrame setShape"]

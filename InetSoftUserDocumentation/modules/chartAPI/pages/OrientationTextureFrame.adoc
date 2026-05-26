@@ -25,14 +25,14 @@ You can pass the name of a field (e.g., ‘Total’) to the constructor, or spec
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity","Total"], ["NJ",300,10],["NY",200,20],["PA",250,35]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
 var frame = new OrientationTextureFrame("Total"); //<2>
 elem.setTextureFrame(frame); //<3>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `OrientationTextureFrame` object.
 <3> Use xref:GraphElementSetTextureFrame.adoc[] to add the `TextureFrame` to the xref:IntervalElement.adoc[].
@@ -56,11 +56,11 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
 Chart1.bindingInfo.textureFrame = new OrientationTextureFrame;
 
---
+----
 
 +
 image::commonscript:OrientationTextureFrame.png[alt="bar chart with orientation texture frame applied"]

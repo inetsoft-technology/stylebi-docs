@@ -25,7 +25,7 @@ GraphElement.STACK_SYMMETRIC  (offset vert, center)
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"],["NJ", 200],["NJ", 300],["NY", 300],["NY", 100]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity"); //<2>
@@ -36,7 +36,7 @@ elem.setColorFrame(frame);
 elem.setStackGroup(true);
 elem.setCollisionModifier(GraphElement.STACK_SYMMETRIC); //<3>
 graph.addElement(elem); //<4>
---
+----
 <1> {dataset}
 <2> Create the `IntervalElement` object.
 <3> Use `setCollisionModifier` to set stacking.
@@ -46,7 +46,7 @@ image::commonscript:GraphElementsetCollisionMod.png[alt="bar chart with symmetri
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"],["NJ",200],["NJ",200],["NJ",200],["NJ",200],["NJ",200],["NJ",300],
 ["NY",300],["NY",300],["NY",300],["NY",300],["NY",300],["NY",450]]; //<1>
 graph = new EGraph();
@@ -57,7 +57,7 @@ elem.setColorFrame(frame);
 elem.setStackGroup(true);
 elem.setCollisionModifier(GraphElement.MOVE_JITTER); //<3>
 graph.addElement(elem); //<4>
---
+----
 <1> {dataset}
 <2> Create the `PointElement` object.
 <3> Use `setCollisionModifier` to jitter the points.
@@ -74,8 +74,8 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 elem.setCollisionModifier(GraphElement.MOVE_JITTER);
---
+----
 =====

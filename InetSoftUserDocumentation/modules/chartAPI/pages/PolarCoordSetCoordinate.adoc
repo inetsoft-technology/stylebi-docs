@@ -25,7 +25,7 @@ coord::			a xref:RectCoord.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["Direction", "Score"], [(Math.PI/2),20], [(Math.PI/4),30], [(Math.PI),35]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("Direction", "Score");
@@ -41,7 +41,7 @@ var polar = new PolarCoord(); //<3>
 polar.setCoordinate(rect); //<4>
 graph.setCoordinate(polar); //<5>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:RectCoord.adoc[] object.
 <3> Create the `PolarCoord`  object.

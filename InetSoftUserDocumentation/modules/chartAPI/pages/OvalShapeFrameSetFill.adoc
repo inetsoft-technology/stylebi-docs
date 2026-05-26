@@ -24,7 +24,7 @@ Boolean:: `true`: fill oval  +
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity","Total"], ["NJ",200,30], ["NY",300,15],["PA",150,5]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -32,7 +32,7 @@ var frame = new OvalShapeFrame("Total"); //<2>
 frame.setFill(true); //<3>
 elem.setShapeFrame(frame); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `OvalShapeFrame` object.
 <3> Use `setFill` to fill the ovals.
@@ -61,12 +61,12 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
 Chart1.bindingInfo.shapeFrame = new OvalShapeFrame;
 Chart1.bindingInfo.shapeFrame.fill = true;
 
---
+----
 +
 image::commonscript:OvalShapeFrameFill.png[alt="bar chart with filled oval shape frame via bindingInfo"]
 +

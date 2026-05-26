@@ -22,13 +22,13 @@ Creates a `dataset` from an array. Note that you can also create a `dataset` wit
 
 .Set the dataset
 [source,javascript]
---
+----
 var arr = [["State","Quantity"], ["NJ",200], ["NY",300]];
 dataset = new DefaultDataSet(arr);
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
 graph.addElement(elem);
---
+----
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 

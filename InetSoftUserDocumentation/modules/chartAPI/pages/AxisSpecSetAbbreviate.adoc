@@ -17,9 +17,9 @@ Boolean:: `true`: drop common prefixes +
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetAbbreviate1.js[]
---
+----
 <1> {dataset}
 <2> Create the `AxisSpec` object.
 <3> Use `setAbbreviate` to drop common prefixes.
@@ -34,7 +34,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②,  and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetAbbreviate2.js[]
---
+----
 =====

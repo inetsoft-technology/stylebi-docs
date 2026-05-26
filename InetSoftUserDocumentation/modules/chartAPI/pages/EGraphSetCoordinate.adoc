@@ -22,7 +22,7 @@ coord:: A xref:chartAPI:Coordinate.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]];
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -32,7 +32,7 @@ var coord = new RectCoord(sscale,qscale); <1>
 coord.transpose();
 graph.setCoordinate(coord); <2>
 graph.addElement(elem);
---
+----
 <1> Create the  `Coordinate` object.
 <2> Use `setCoordinate` to add the `Coordinate` object to the Chart.
 

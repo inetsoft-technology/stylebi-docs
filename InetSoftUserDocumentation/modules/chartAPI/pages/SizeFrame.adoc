@@ -40,13 +40,13 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .Chart Component Script
 [source,javascript]
---
+----
 var elem = Chart1.graph.getElement(0); //<1>
 var frame = new StaticSizeFrame();  //<2>
 frame.setSize(30);
 elem.setSizeFrame(frame); //<3>
 
---
+----
 <1> Use xref:EGraphGetElement.adoc[] to get a handle to the xref:PointElement.adoc[].
 <2> Create the `StaticSizeFrame` object.
 <3> Use xref:GraphElementSetSizeFrame.adoc[] to add the `StaticSizeFrame` to the xref:PointElement.adoc[].
@@ -75,13 +75,13 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setSizeField("Total",Chart.NUMBER);
 Chart1.bindingInfo.sizeFrame = new LinearSizeFrame;
 Chart1.bindingInfo.sizeFrame.smallest = 10;
 Chart1.bindingInfo.sizeFrame.largest = 50;
 Chart1.bindingInfo.sizeFrame.max = 100;
---
+----
 
 +
 image::commonscript:StaticSizeFrame_1.png[alt="bar chart with LinearSizeFrame applied via bindingInfo sizeFrame property"]

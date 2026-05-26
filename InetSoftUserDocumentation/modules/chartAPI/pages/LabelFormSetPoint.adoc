@@ -26,7 +26,7 @@ value::			a subclass of {javaawtgeomPoint2D} +
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -39,7 +39,7 @@ form2.setPoint(new java.awt.geom.Point2D.Double(.5,.7)); //<4>
 graph.addForm(form1); //<5>
 graph.addForm(form2); //<5>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the  xref:LabelForm.adoc[] object.
 <3> Use `setPoint()` to set `form1` points in pixels.

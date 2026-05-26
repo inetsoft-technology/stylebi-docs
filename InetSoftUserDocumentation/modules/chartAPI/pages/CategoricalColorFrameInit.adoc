@@ -25,7 +25,7 @@ color::			array of colors corresponding to value array
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity","Total"], ["NJ",200,10000], ["NY",300,8000]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -44,7 +44,7 @@ coord.setYScale2(qscale2);
 graph.setCoordinate(coord);
 graph.addElement(elem);
 graph.addElement(elem2);
---
+----
 <1> {dataset}
 <2> Create the xref:ColorFrame.adoc[] object.
 <3> Use `init` to initialize `ColorFrame` with value only.
@@ -62,7 +62,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var elem2 = graph.getElement(1); //<1>
 var cframe = new CategoricalColorFrame();
@@ -77,7 +77,7 @@ coord.setXScale(sscale);
 coord.setYScale(qscale);
 coord.setYScale2(qscale2);
 graph.setCoordinate(coord);
---
+----
 =====
 
 
@@ -86,7 +86,7 @@ graph.setCoordinate(coord);
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity","Total"], ["NJ",200,10000], ["NY",300,8000]]; //<2>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -105,7 +105,7 @@ coord.setYScale2(qscale2);
 graph.setCoordinate(coord);
 graph.addElement(elem);
 graph.addElement(elem2);
---
+----
 <1> {dataset}
 <2> Create the xref:ColorFrame.adoc[] object.
 <3> Use `init` to initialize `ColorFrame` with value and color.

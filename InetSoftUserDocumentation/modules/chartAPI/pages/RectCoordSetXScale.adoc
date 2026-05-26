@@ -23,7 +23,7 @@ scale::			a xref:Scale.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -35,7 +35,7 @@ coord.setYScale(qscale);
 graph.setCoordinate(coord); //<4>
 graph.addElement(elem);
 
---
+----
 <1> {dataset}
 <2> Create xref:RectCoord.adoc[] object.
 <3> Use `setXScale` to set the   xref:Scale.adoc[] for the X-axis.

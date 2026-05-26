@@ -15,9 +15,9 @@ xref:chartAPI:TextSpec.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecGetTextSpec.js[]
---
+----
 <1> Use xref:EGraphGetCoordinate.adoc[] to obtain a handle to the xref:Coordinate.adoc[].
 <2> Use xref:RectCoordGetYScale.adoc[] to obtain a handle to ttyhe xref:Scale.adoc[].
 <3> Use xref:ScaleGetAxisSpec.adoc[] to get a handle to the xref:AxisSpec.adoc[].

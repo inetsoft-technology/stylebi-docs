@@ -36,7 +36,7 @@ var line = new GLine(dashsize, width);
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300], ["PA",100]]; //<1>
 graph = new EGraph();
 var elem = new LineElement("State", "Quantity");
@@ -46,7 +46,7 @@ frame.setLine(GLine.DASH_LINE); //<3>
 elem.setLineFrame(frame); //<5>
 graph.addElement(elem);
 
---
+----
 <1> {dataset}
 <2> Create a  xref:StaticLineFrame.adoc[] object.
 <3> Use    xref:StaticLineFrameSetLine.adoc[] to apply a `Gline` constant.
@@ -78,11 +78,11 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.lineFrame = new StaticLineFrame;
 Chart1.bindingInfo.lineFrame.line = GLine(20,10);
 
---
+----
 
 +
 image::commonscript:GLineCustom.png[alt="line chart with custom GLine pattern via bindingInfo"]

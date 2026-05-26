@@ -23,9 +23,9 @@ include::partial$dateFormatTable.adoc[]
 == Examples
 .Sample usage
 [source,javascript]
---
+----
 var dateToday = formatDate(new Date(), "hh 'o''clock' a, zzzz");
---
+----
 
 Some format string pattern examples are shown below:
 

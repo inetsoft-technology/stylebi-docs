@@ -32,7 +32,7 @@ value::			Number of pixels, or relative size
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -41,7 +41,7 @@ frame.setMax(100);
 frame.setSize(50); //<3>
 elem.setSizeFrame(frame);  //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `StaticSizeFrame` object.
 <3> Use `setSize` to set the size for the `StaticSizeFrame`.
@@ -59,11 +59,11 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} and xref:GraphElementGetSizeFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:SizeFrame.adoc[]  objects. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = elem.getSizeFrame(); //<2>
 frame.setSize(50);
---
+----
 =====
 
 
@@ -83,11 +83,11 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setSizeField("Company",Chart.STRING);
 Chart1.bindingInfo.sizeFrame = new StaticSizeFrame;
 Chart1.bindingInfo.sizeFrame.size = 30;
---
+----
 
 +
 image::commonscript:StaticSizeFrame_1.png[alt="point chart with StaticSizeFrame size 30 set via bindingInfo sizeFrame size"]

@@ -37,11 +37,11 @@ Chart.CLOSE: // measure defining the closing values
 
 == Example
 [source,javascript]
---
+----
 Chart1.bindingInfo.getCandleBindingField(Chart.LOW);
 // returns (for example): lowPrice[lowPrice, null, Average, 0]
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

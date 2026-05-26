@@ -27,7 +27,7 @@ include::partial$gLineConstants.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -37,7 +37,7 @@ frame.setLine('NJ',GLine.THIN_LINE); //<4>
 frame.setLine('NY',GLine.LARGE_DASH); //<4>
 elem.setLineFrame(frame); //<5>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:LineFrame.adoc[] object.
 <3> Use `setField` to specify the field for the `CategoricalLineFrame`.
@@ -57,14 +57,14 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 frame = new CategoricalLineFrame();
 frame.setField("State");
 frame.setLine('NJ',GLine.THIN_LINE);
 frame.setLine('NY',GLine.LARGE_DASH);
 elem.setLineFrame(frame);
---
+----
 =====
 
 
@@ -83,7 +83,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
 Chart1.bindingInfo.lineFrame = new CategoricalLineFrame;
 Chart1.bindingInfo.lineFrame.setLine('Robert', GLine.LARGE_DASH);
@@ -91,7 +91,7 @@ Chart1.bindingInfo.lineFrame.setLine('Eric', GLine.LARGE_DASH);
 Chart1.bindingInfo.lineFrame.setLine('Sue', GLine.DOT_LINE);
 Chart1.bindingInfo.lineFrame.setLine('Annie', GLine.DOT_LINE);
 
---
+----
 
 +
 image::commonscript:CategoricalLineFrame_1.png[alt="bar chart with setLine applied via bindingInfo"]

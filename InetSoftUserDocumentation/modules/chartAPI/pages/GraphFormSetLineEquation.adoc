@@ -27,13 +27,13 @@ line::		A model to fit:
 
 .Chart Component Script
 [source,javascript]
---
+----
 var form = new LineForm(); //<1>
 var equation = new LogarithmicLineEquation();
 form.setLineEquation(equation); //<2>
 form.setColor(java.awt.Color(0xff0000));
 graph.addForm(form); //<3>
---
+----
 <1> Create the  xref:GraphForm.adoc[] object.
 <2> Use `setLineEquation()` to set the curve fit.
 <3> Use xref:EGraphAddForm.adoc[] to add the `GraphForm` to the Chart.

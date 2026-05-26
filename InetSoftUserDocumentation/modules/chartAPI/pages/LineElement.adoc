@@ -29,12 +29,12 @@ include::ROOT:partial$MINITOC_LineElement.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 100], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new LineElement("State", "Quantity"); //<2>
 graph.addElement(elem); //<3>
---
+----
 
 <1> {dataset}
 <2> Create the `LineElement` object.

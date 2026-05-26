@@ -13,9 +13,9 @@ Boolean:: `true`: truncate labels that do not fit (default) +
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetTruncate1.js[]
---
+----
 <1> {dataset} Five long product names are used to ensure labels exceed the available width per category.
 <2> Create the `AxisSpec` object.
 <3> Use `setTruncate(true)` to truncate labels that do not fit.
@@ -29,7 +29,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetTruncate2.js[]
---
+----
 =====

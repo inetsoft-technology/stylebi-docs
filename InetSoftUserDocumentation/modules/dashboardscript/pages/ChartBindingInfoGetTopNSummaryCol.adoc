@@ -23,10 +23,10 @@ col::			Name of filtered field
 == Example
 
 [source,javascript]
---
+----
 var agg = Chart1.bindingInfo.getTopNSummaryCol("Company")
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

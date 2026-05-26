@@ -20,7 +20,7 @@ Boolean:: `true`: show negative values on positive axis +
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",-300]]; //<1>
 graph = new EGraph();
 var qscale = new LinearScale("Quantity");
@@ -33,7 +33,7 @@ range.setAbsoluteValue(true); //<3>
 qscale.setScaleRange(range); //<4>
 graph.setScale("Quantity", qscale); //<5>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `LinearRange` object.
 <3> Use `setAbsoluteValue` to show negative values on positive axis.
@@ -52,12 +52,12 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetCoordinate.adoc[] {circle1},  xref:chartAPI:RectCoordGetYScale.adoc[] {circle2}, and xref:LinearScaleGetScaleRange.adoc[] {circle3} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[],  xref:chartAPI:Scale.adoc[], and xref:ScaleRange.adoc[]. For example:
 
 [source,javascript]
---
+----
 var coord = graph.getCoordinate(); //<1>
 var scale = coord.getYScale(); //<2>
 var range = scale.getScaleRange(); //<3>
 // Compact syntax: var range = graph.getCoordinate().getYScale().getScaleRange();
 
 range.setAbsoluteValue(true);
---
+----
 =====

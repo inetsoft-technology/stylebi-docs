@@ -40,12 +40,12 @@ image::commonscript:MultiTextFrameSetField1.png[alt="chart editor with fields as
 +
 .Chart Component Script
 [source,javascript]
---
+----
 var tframe = new MultiTextFrame(); //<1>
 tframe.setFields("Customer:Region", "Sum(Product:Price)", "Sum(Product:Total)"); //<2>
 tframe.setDelimiter("\n"); //<3>
 graph.getElement(0).setTextFrame(tframe); //<4>
---
+----
 <1> Create the xref:MultiTextFrame.adoc[] object.
 <2> Use xref:MultiTextFrameSetFields.adoc[] to assign the fields you want to use as labels.
 <3> Use `setDelimiter()` to separate the label text with newline.

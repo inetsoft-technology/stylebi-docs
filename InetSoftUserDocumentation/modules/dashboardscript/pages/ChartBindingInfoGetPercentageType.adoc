@@ -33,10 +33,10 @@ Number::
 == Example
 
 [source,javascript]
---
+----
 var type = Chart1.bindingInfo.getPercentageType("Total", Chart.BINDING_FIELD)
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

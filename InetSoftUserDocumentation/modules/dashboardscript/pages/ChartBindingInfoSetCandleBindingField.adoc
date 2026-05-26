@@ -72,7 +72,7 @@ include::ROOT:partial$stockPricesQuery.adoc[]
 . Enter the following script in the  *onRefresh* handler of the  Dashboard.
 +
 [source,javascript]
---
+----
 Chart1.query='Stock Prices';
 Chart1.chartStyle = Chart.CHART_CANDLE;
 var data_high = ["Stock Prices.High",Chart.HIGH,Chart.AVERAGE_FORMULA];
@@ -86,7 +86,7 @@ Chart1.bindingInfo.setCandleBindingField(data_high);
 Chart1.bindingInfo.setCandleBindingField(data_low);
 Chart1.bindingInfo.setCandleBindingField(data_close);
 Chart1.bindingInfo.setCandleBindingField(data_open);
---
+----
 include::commonscript:partial$bindingInfoNote.adoc[]
 
 . Press the {buttonPreview} to preview the chart.

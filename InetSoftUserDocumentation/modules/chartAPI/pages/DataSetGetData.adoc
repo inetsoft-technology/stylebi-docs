@@ -33,7 +33,7 @@ row::			Row index of value to return
 
 .Chart Component Script
 [source,javascript]
---
+----
 var str = "";
 // Loop through rows
 for (var i = 0; i < dataset.getRowCount(); i++) {
@@ -46,7 +46,7 @@ for (var i = 0; i < dataset.getRowCount(); i++) {
   alert(str);
 }
 
---
+----
 
 The following output is displayed:
 [source]

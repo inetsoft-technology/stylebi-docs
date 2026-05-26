@@ -25,7 +25,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // List all physical views in environment
 :pm list-models
 
@@ -37,7 +37,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 // List physical views for data source ModelTest
 :pm list-models --datasource=Examples/ModelTest
---
+----
 
 
 
@@ -58,14 +58,14 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // Rename pv_org1 to pv_org11
 :pm  rename-model "f1/org1"  "pv_org1" "pv_org11"
 
 // Rename pv_org1 to pv_org11 in folder f1 for organization1
 :pm rename-model "f1/org1"  "pv_org1" "pv_org11" --description desc --organizationid organization1 --folder=f1
 
---
+----
 
 
 
@@ -90,10 +90,10 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // Create new physical view pv_org111 for organization1
 :pm create-model "f1/org1" 'pv_org111' --organizationid organization1
---
+----
 
 == Remove Physical View
 The `remove-model` action deletes a  physical view. {connectRepositoryNote}
@@ -113,13 +113,13 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // Remove base physical view cphy1
 :pm remove-model "Examples/ModelTest" cphy1
 
 // Remove extended physical view associated with Default Connection having parent Order View
 :pm  remove-model 'Examples/Orders' '(Default Connection)' 'Order View'
---
+----
 
 
 
@@ -138,13 +138,13 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // Open base physical view OrderView
 :pm open-model "Examples/Orders" "OrderView"
 
 // Open extended physical view associated with Default Connection having parent Order View for organization1
 :pm open-model 'Examples/Orders' '(Default Connection)' --parentModel 'Order View' --organizationid organization1
---
+----
 
 == Get Physical View
 The `get-model` action returns a handle to the  physical view. {connectRepositoryNote}
@@ -156,9 +156,9 @@ id:: Physical view ID
 
 === Examples
 [source,groovy]
---
+----
 :pm get-model 1
---
+----
 
 == Save Physical View
 The `save-model` action save a  physical view. {connectRepositoryNote}
@@ -170,9 +170,9 @@ id:: Physical view ID
 
 === Examples
 [source,groovy]
---
+----
 :pm save-model 1
---
+----
 
 == Close Physical View
 The `close-model` action closes a  physical view. {connectRepositoryNote}
@@ -184,9 +184,9 @@ id:: Physical view ID
 
 === Examples
 [source,groovy]
---
+----
 :pm close-model 1
---
+----
 
 == Add Table to Physical View
 The `add-table` action adds a new table to the   physical view. {connectRepositoryNote}
@@ -199,9 +199,9 @@ baseTable:: Table to add
 
 === Examples
 [source,groovy]
---
+----
 :pm add-table 1 "CUSTOMERS"
---
+----
 
 == Remove Table from Physical View
 The `remove-table` action removes a  table from the   physical view. {connectRepositoryNote}
@@ -215,9 +215,9 @@ name:: The name of the table to remove
 
 === Examples
 [source,groovy]
---
+----
 :pm remove-table 0 'SA.CUSTOMERS' 'CUSTOMERS'
---
+----
 
 
 == Create Inline View
@@ -232,9 +232,9 @@ sql:: SQL instruction to generate inline view
 
 === Examples
 [source,groovy]
---
+----
 :pm create-view id cview1 'select * from SA.ORDERS'
---
+----
 
 == Create Join
 The `create-join` action creates a join between tables in the physical view. {connectRepositoryNote}
@@ -248,7 +248,7 @@ join:: The join definition
 
 === Examples
 [source,groovy]
---
+----
 
 import inetsoft.shell.dsl.PhysicalTableDelegate
 join1 = PhysicalTableDelegate.join {
@@ -265,7 +265,7 @@ join1 = PhysicalTableDelegate.join {
 }
 
 :pm create-join id cview1 join1
---
+----
 
 == Remove Join
 The `remove-join` action deletes a join. {connectRepositoryNote}
@@ -279,10 +279,10 @@ index:: Index of join to remove
 
 === Examples
 [source,groovy]
---
+----
 // Remove the join on tableName
 :pm remove-join id tableName join_index
---
+----
 
 
 == Create an Alias Table
@@ -297,10 +297,10 @@ alias:: Name of alias table
 
 === Examples
 [source,groovy]
---
+----
 // Create an alias table for table cview1 with name cview1_alias
 :pm create-alias id cview1 cview1_alias
---
+----
 
 
 == Rename an Alias Table
@@ -315,10 +315,10 @@ newName:: New name of alias table
 
 === Examples
 [source,groovy]
---
+----
 // Rename alias table cview1_alias1 to cview1_alias1_rename
 :pm rename-alias 2 cview1_alias1 cview1_alias1_rename
---
+----
 
 == Update Auto-Alias Properties
 The `update-auto-aliasing` action changes properties of auto-alias tables.  See xref:user:EditPhysicalView.adoc#AliasSingleTable[Alias a Single Table] for information about the role of aliases in a physical view. {connectRepositoryNote}
@@ -332,7 +332,7 @@ aliases:: Auto-alias information
 
 === Examples
 [source,groovy]
---
+----
 import inetsoft.shell.dsl.PhysicalTableDelegate
 aliases = [PhysicalTableDelegate.autoAlias {
   alias 'a'
@@ -341,7 +341,7 @@ aliases = [PhysicalTableDelegate.autoAlias {
   prefix 'b' }]
 
 :pm update-auto-aliasing 0 'SA.CUSTOMERS' aliases
---
+----
 
 == List Tables
 The `list-tables` action lists tables of an extended physical view.  See xref:user:ExtendPhysicalView.adoc[] for more information about extended physical views. {connectRepositoryNote}
@@ -358,7 +358,7 @@ organizationid:: Organization ID (optional)
 
 === Examples
 [source,groovy]
---
+----
 // List tables for Orders datasource for organization0
 :pm list-tables  --datasource=Examples/Orders --organizationid organization0
 
@@ -367,7 +367,7 @@ organizationid:: Organization ID (optional)
 
 // List extended physical view tables
 :pm list-tables "mv1" "mv2"
---
+----
 
 
 == List Table Column
@@ -382,12 +382,12 @@ organizationid:: Organization ID (optional)
 
 === Examples
 [source,groovy]
---
+----
 // List columns  for ORDERS table for organization0
 :pm list-columns 'Examples/Orders/TABLE/SA/ORDERS' --organizationid organization0
 
 // List extended physical view tables
 :pm list-columns 'Examples/Orders/TABLE/SA/ORDERS' --organizationid organization0
---
+----
 
 

@@ -20,9 +20,9 @@ Boolean:: `true`: grid lines represented as shape (default) +
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$AxisSpecSetGridAsShape1.js[]
---
+----
 <1> {dataset}
 <2> Create the xref:Coordinate.adoc[] object.
 <3> Use `rotate` to rotate the polar coordinates 45°.

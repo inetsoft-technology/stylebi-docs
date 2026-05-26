@@ -24,10 +24,10 @@ ydims:: Array of dimensions (from among `colorDim` and `treeDims`) to be used to
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = viewsheet['Query1']; //<1>
 graph = createSunburstGraph("state", "price", ["state", "city", "product_name"]) //<2>
---
+----
 <1> See xref:Dataset.adoc[] for more information about setting the `dataset`.
 <2> Create the sunburst chart.
 +

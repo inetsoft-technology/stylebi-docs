@@ -24,7 +24,7 @@ You can pass the name of a field (e.g., ‘Total’) to the constructor, or spec
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity","Total"], ["NJ",200,30], ["NY",300,15], ["PA",150,5]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -34,7 +34,7 @@ sizeframe.setSize(10);
 elem.setSizeFrame(sizeframe);
 elem.setShapeFrame(shapeframe); //<3>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:ShapeFrame.adoc[] object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `ShapeFrame` to the element.
@@ -58,12 +58,12 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
 Chart1.bindingInfo.shapeFrame = new FillShapeFrame;
 
 
---
+----
 
 +
 image::commonscript:FillShapeFrame_1.png[alt="chart with FillShapeFrame via bindingInfo"]

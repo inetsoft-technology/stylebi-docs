@@ -34,7 +34,7 @@ include::commonscript:partial$gTexture.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",300], ["NY",200]];  //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -42,7 +42,7 @@ frame = new StaticTextureFrame(); //<2>
 frame.setTexture(GTexture.PATTERN_18);  //<3>
 elem.setTextureFrame(frame); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `StaticTextureFrame` object.
 <3> Use `setTexture` to assign `GTexture.PATTERN_18`.
@@ -59,11 +59,11 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} and xref:GraphElementGetTextureFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:TextureFrame.adoc[]  objects. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = elem.getTextureFrame(); //<2>
 frame.setTexture(GTexture.PATTERN_18);
---
+----
 =====
 
 
@@ -84,12 +84,12 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Company",Chart.STRING);
 Chart1.bindingInfo.textureFrame = new StaticTextureFrame();
 Chart1.bindingInfo.textureFrame.texture = GTexture.PATTERN_5;
 
---
+----
 
 +
 image::commonscript:StaticTextureFrame_2.png[alt="point chart with GTexture.PATTERN_5 set via bindingInfo textureFrame texture"]

@@ -22,7 +22,7 @@ include::dashboardscript:partial$legendPosition.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -32,7 +32,7 @@ elem.setColorFrame(frame);
 graph.setLegendLayout(Chart.BOTTOM); //<2>
 graph.addElement(elem);
 alert(graph.getLegendLayout()); //<3>
---
+----
 <1> {dataset}
 <2> Set the legend layout.
 <3> Use `getLegendLayout` to get the layout constant.
@@ -50,9 +50,9 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To use the property on a Chart that was previously created with the Chart Editor, simply call the function. For example:
 
 [source,javascript]
---
+----
 graph.setLegendLayout(Chart.BOTTOM);
---
+----
 =====
 
 

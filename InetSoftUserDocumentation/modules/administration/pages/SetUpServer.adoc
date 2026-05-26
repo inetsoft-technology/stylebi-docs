@@ -27,11 +27,11 @@ value:: Value of the property
 
 === Examples
 [source,groovy]
---
+----
 :setup set-property '/var/lib/inetsoft' 'license.key' 'S000-000-ERX-00000-00000' //<1>
 :setup set-property '/var/lib/inetsoft' 'security.enabled' 'false' //<2>
 
---
+----
 <1> Set license key.
 <2> Turn off security. This may be useful if you cannot log into Enterprise Manager for any reason.
 

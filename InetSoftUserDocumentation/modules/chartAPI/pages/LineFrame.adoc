@@ -30,7 +30,7 @@ The `LineFrame` object contains the line design for visual chart objects. `LineF
 
 .Chart Component Script
 [source,javascript]
---
+----
 
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300], ["PA",100]]; //<1>
 graph = new EGraph();
@@ -40,7 +40,7 @@ frame.setLine(GLine.DASH_LINE);
 // or frame.setLine(new GLine(10,5));
 elem.setLineFrame(frame); //<3>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `LineFrame` object.
 <3> Use xref:GraphElementSetLineFrame.adoc[] to add the `LineFrame` to the xref:LineElement.adoc[].
@@ -67,11 +67,11 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
 Chart1.bindingInfo.lineFrame = new LinearLineFrame;
 
---
+----
 
 +
 image::commonscript:LinearLineFrame.png[alt="bar chart with linear line frame applied"]

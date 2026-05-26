@@ -25,7 +25,7 @@ value::			Number of pixels, or relative size
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity", "width"], ["NJ", 200, 5],["NY", 300,10], ["PA",75,15]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -36,7 +36,7 @@ frame.setLargest(50);
 frame.setMax(100); //<4>
 elem.setSizeFrame(frame); //<5>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `LinearSizeFrame` object.
 <3> Use the inherited  xref:VisualFrameSetField.adoc[] property to assign the desired measure to the `LinearSizeFrame`.
@@ -56,13 +56,13 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} and xref:GraphElementGetSizeFrame.adoc[] {circle2}  to obtain a handle to the desired xref:GraphElement.adoc[] and xref:SizeFrame.adoc[]. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = elem.getSizeFrame(); //<2>
 frame.setSmallest(10);
 frame.setLargest(50);
 frame.setMax(100);
---
+----
 =====
 
 
@@ -82,13 +82,13 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setSizeField("Total",Chart.NUMBER);
 Chart1.bindingInfo.sizeFrame = new LinearSizeFrame;
 Chart1.bindingInfo.sizeFrame.smallest = 10;
 Chart1.bindingInfo.sizeFrame.largest = 50;
 Chart1.bindingInfo.sizeFrame.max = 100;
---
+----
 
 +
 image::commonscript:SizeFrameMax.png[alt="point chart with LinearSizeFrame max setting applied via bindingInfo sizeFrame"]

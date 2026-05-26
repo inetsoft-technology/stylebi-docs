@@ -32,13 +32,13 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // List attributes of logical model clm1
 :lm list-columns 'Examples/ModelTest' "Order View" clm1
 
 // List attributes of default connection logical model for organization0
 :lm list-columns "Oracle" 'pv' '(Default Connection)' --parentmodel lm1 --organizationid organization0
---
+----
 
 
 == List Available Logical Models
@@ -56,7 +56,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // List all logical models in environment
 :lm list-models
 
@@ -77,7 +77,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 // List logical models for default connection of Order View physical view on Orders data source
 :lm list-models 'Examples/Orders' 'Order View' '(Default Connection)'
---
+----
 
 
 == Get Logical Model
@@ -97,14 +97,14 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // Get a handle to Order Model, defined on physical view Order View for Orders data source
 :lm get-model 'Examples/Orders' 'Order View' 'Order Model'
 
 // Get extended model for base model lm for organization0
 :lm get-model 'Oracle' 'pv' '(Default Connection)' --parentmodel lm --organizationid organization0
 
---
+----
 
 
 
@@ -129,7 +129,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 import inetsoft.shell.dsl.LogicalModelBuilder
 model= new LogicalModelBuilder().with {
     name("(Default Connection)")
@@ -144,7 +144,7 @@ model= new LogicalModelBuilder().with {
 // Create new logical model named Default Connection extending base model lm
 :lm create-model "Examples/Orders" "Order View" model --parentmodel "lm"
 
---
+----
 
 
 
@@ -168,7 +168,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 
 // Rename lm2 to lm3
 :lm rename-model "Oracle" "lm2" "lm3"
@@ -176,7 +176,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 // Rename lm2 to lm3 in folder f1 for organization0
 :lm rename-model "Oracle" "lm2" "lm3" --folder=f1 --description this is desc --organizationid organization0
 
---
+----
 
 == Update Logical Model
 The `update-model` action changes properties the logical model. {connectRepositoryNote}
@@ -198,7 +198,7 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // Update logical model name from 'lm' to 'lm1'
 import inetsoft.shell.dsl.LogicalModelBuilder
 model = new LogicalModelBuilder().with {
@@ -211,7 +211,7 @@ model = new LogicalModelBuilder().with {
 }
 
 :lm update-model "Examples/Orders" "lm" model
---
+----
 
 
 
@@ -234,11 +234,11 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // Remove base logical model lm
 :lm remove-model 'Examples/Orders' 'lm'
 
 // Remove logical model Default Connection  having parent lm3 for organization0
 :lm remove-model "Oracle" "(Default Connection)"  --folder f1 --parentmodel lm3 --organizationid organization0
---
+----
 

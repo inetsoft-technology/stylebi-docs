@@ -37,10 +37,10 @@ Boolean:: `true`: Field is set as time-series +
 == Example
 
 [source,javascript]
---
+----
 var ts = Chart1.bindingInfo.isTimeSeries("Order Date");
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

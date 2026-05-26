@@ -25,7 +25,7 @@ include::ROOT:partial$MINITOC_CategoricalColorFrame.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",20], ["NY",40]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -33,7 +33,7 @@ var frame = new CategoricalColorFrame(); //<2>
 frame.setField("State"); //<3>
 elem.setColorFrame(frame); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:ColorFrame.adoc[] object.
 <3> Use `setField` to specify the field for the `CategoricalColorFrame`.
@@ -53,13 +53,13 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = new CategoricalColorFrame();
 frame.setField("State");
 elem.setColorFrame(frame);
 
---
+----
 =====
 
 
@@ -82,11 +82,11 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setColorField("Employee",Chart.STRING);
 Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
 
---
+----
 
 +
 image::commonscript:CategoricalColorFrame.png[alt="bar chart with categorical color frame via bindingInfo"]

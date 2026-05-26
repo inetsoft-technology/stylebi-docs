@@ -24,7 +24,7 @@ You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or s
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"],["NJ",200],["NY",300],["PA",50],["CT",100]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -32,7 +32,7 @@ var frame = new RGBCubeColorFrame([[0,0,0],[.5,1,1]]); //<2>
 frame.setField("Quantity");  //<3>
 elem.setColorFrame(frame); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `RGBCubeColorFrame` object.
 <3> Use the inherited xref:VisualFrameSetField.adoc[] property to specify the field for the `RGBCubeColorFrame`.
@@ -61,11 +61,11 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
 Chart1.bindingInfo.colorFrame = new RGBCubeColorFrame([[0,0,0],[.5,1,1]]);
 
---
+----
 
 +
 image::commonscript:RGBCubeColorFrame.png[alt="bar chart with RGBCubeColorFrame applied via bindingInfo colorFrame property"]

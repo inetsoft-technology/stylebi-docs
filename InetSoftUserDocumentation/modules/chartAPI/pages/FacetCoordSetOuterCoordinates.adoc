@@ -25,7 +25,7 @@ coord::			A xref:RectCoord.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "City", "Product", "Quantity"],["NJ", "Piscataway", "P1", 200],
 ["NJ", "Edison", "P2", 100],["NY", "NYC", "P1", 300]]; //<1>
 graph = new EGraph();
@@ -43,7 +43,7 @@ graph.setCoordinate(coord); //<5>
 graph.addElement(elem);
 
 
---
+----
 <1> {dataset}
 <2> Create the xref:RectCoord.adoc[] objects.
 <3> Create a `FacetCoord` object.

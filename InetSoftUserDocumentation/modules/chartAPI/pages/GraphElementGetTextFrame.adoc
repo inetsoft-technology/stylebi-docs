@@ -20,14 +20,14 @@ A xref:TextFrame.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = elem.getTextFrame(); //<2>
 // Compact syntax: var frame = graph.getElement(0).getTextFrame();
 
 frame.setText('NJ','New Jersey'); // <3>
 frame.setText('NY','New York'); //<3>
---
+----
 
 <1> Obtain a handle to the  `GraphElement` object.
 <2> Use `getTextFrame` to obtain a handle to the `TextFrame` object.

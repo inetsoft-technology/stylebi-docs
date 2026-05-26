@@ -45,10 +45,10 @@ Number::
 == Example
 
 [source,javascript]
---
+----
 Chart1.bindingInfo.getGroupOrder("Order Date", Chart.BINDING_FIELD)
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

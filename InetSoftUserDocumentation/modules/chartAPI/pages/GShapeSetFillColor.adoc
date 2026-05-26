@@ -21,7 +21,7 @@ color:: {javaawtcolor}		 to fill the shape
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State","Quantity");
@@ -32,7 +32,7 @@ var sizeFrame = new StaticSizeFrame(10);
 elem.setSizeFrame(sizeFrame);
 elem.setShapeFrame(shapeFrame); //<5>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Use `create()` to create the shape.
 <3> Use `setFillColor()` to assign the color.

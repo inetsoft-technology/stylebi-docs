@@ -268,11 +268,11 @@ To execute  scripted actions only upon user demand, you can add your code to the
 For example, the following *onClick* script for a Submit Button will clear the selections from the specified Selection List filters  when the user clicks the button:
 
 [source,javascript]
---
+----
 SelectionList1.selectedObjects = []; //<1>
 SelectionList2.selectedObjects = [];
 SelectionList3.selectedObjects = [];
---
+----
 <1> See xref:CommonSelectedObjects.adoc[] for more information about this property.
 
 [#AddDashboardScript]

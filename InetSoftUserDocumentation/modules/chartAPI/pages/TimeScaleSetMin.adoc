@@ -25,7 +25,7 @@ value::			a {JavaScriptDate} object
 
 .Chart Component Script
 [source,javascript]
---
+----
 var date1 = new Date();
 var date2 = new Date();
 var minDate = new Date();
@@ -39,7 +39,7 @@ var tscale = new TimeScale("Date"); //<2>
 tscale.setMin(minDate); //<3>
 graph.setScale("Date", tscale); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:TimeScale.adoc[] object.
 <3> Use `setMin` to set the  desired minimum.
@@ -62,13 +62,13 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetXScale.adoc[] ② to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object and xref:chartAPI:Scale.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var coord = graph.getCoordinate(); //<1>
 var scale = coord.getXScale(); //<2>
 // Compact syntax: var scale = graph.getCoordinate().getXScale();
 
 scale.setMin(dateAdd('yyyy',-10,CALC.today()));
---
+----
 =====
 
 

@@ -50,10 +50,10 @@ Therefore, the mask `MMM-dd-yyyy` yields the string “Nov-08-2006”.
 For number formatting, use the following numeric masks:
 
 [source]
---
+----
 # = Number
 0 = Number with zero padding
---
+----
 
 include::ROOT:partial$extendedDecimalFormat.adoc[]
 
@@ -110,7 +110,7 @@ The Text Format `pass:[--{0}--]` yields:
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"],["NJ",20000],["NY",30000]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -122,7 +122,7 @@ aspec.setTextSpec(tspec); //<4>
 qscale.setAxisSpec(aspec);
 graph.setScale("Quantity", qscale);
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the  xref:TextSpec.adoc[] object.
 <3> Use `setFormat()` to assign the number format to the `TextSpec`.
@@ -142,7 +142,7 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 
 [source,javascript]
---
+----
 var coord = graph.getCoordinate(); // <1>
 var scale = coord.getYScale(); //<2>
 var spec = scale.getAxisSpec(); //<3>
@@ -151,5 +151,5 @@ var textspec = spec.getTextSpec(); //<4>
 
 textspec.setFormat(java.text.DecimalFormat("##,###.00"));
 
---
+----
 =====

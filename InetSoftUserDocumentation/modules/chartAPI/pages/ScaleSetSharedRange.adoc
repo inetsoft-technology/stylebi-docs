@@ -20,7 +20,7 @@ value:: `true`: share scaling across all sub-graphs +
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "City", "Product", "Quantity"],["NJ", "Piscataway", "P1", 200],
 ["NJ", "Edison", "P2", 100],["NY", "NYC", "P1", 300]]; //<1>
 graph = new EGraph();
@@ -35,7 +35,7 @@ var outer = new RectCoord(state, product); //<4>
 var coord = new FacetCoord(outer,inner); //<5>
 graph.setCoordinate(coord); //<6>
 graph.addElement(elem);
---
+----
 
 <1> {dataset}
 <2> Create   the xref:LinearScale.adoc[] object.

@@ -32,9 +32,9 @@ include::commonscript:partial$fieldBindingConstant.adoc[]
 == Example
 For primary field `"Price"` bound to the xref:chartAPI:ColorFrame.adoc[].
 [source,javascript]
---
+----
 var formula = Chart1.bindingInfo.setSecondaryField("Price", "Discount", Chart.AESTHETIC_COLOR);
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

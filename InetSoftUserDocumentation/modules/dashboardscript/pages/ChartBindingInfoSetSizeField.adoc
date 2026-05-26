@@ -31,16 +31,16 @@ type:: One of the following: `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
 == Examples
 .Dimension (categorical) field
 [source,javascript]
---
+----
 Chart1.bindingInfo.setSizeField("Employee",Chart.STRING);
---
+----
 image::commonscript:bindingInfoSetSizeDimension.png[alt="chart with Employee dimension size-coded categorically"]
 
 .Measure (numerical) field
 [source,javascript]
---
+----
 Chart1.bindingInfo.setSizeField("Total",Chart.NUMBER);
---
+----
 image::commonscript:bindingInfoSetSizeMeasure.png[alt="chart with Total measure size-coded by numeric value"]
 
 

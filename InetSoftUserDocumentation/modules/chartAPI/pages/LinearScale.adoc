@@ -23,7 +23,7 @@ include::ROOT:partial$MINITOC_LinearScale.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var qscale = new LinearScale(); //<2>
@@ -32,7 +32,7 @@ var elem = new IntervalElement("State", "Quantity");
 graph.setScale("Quantity", qscale); //<3>
 graph.addElement(elem);
 
---
+----
 
 <1> {dataset}
 <2> Create the `LinearScale` object.

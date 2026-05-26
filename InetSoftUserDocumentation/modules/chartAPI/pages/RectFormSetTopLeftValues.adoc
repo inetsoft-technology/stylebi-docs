@@ -24,7 +24,7 @@ value::			an [X,Y] pair
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var rect = new RectForm(); //<2>
@@ -33,7 +33,7 @@ rect.setBottomRightValues(['NY',50]);
 rect.setColor(java.awt.Color(0xff0000));
 graph.addForm(rect); //<4>
 graph.addElement(new IntervalElement("State", "Quantity"));
---
+----
 <1> {dataset}
 <2> Create the  xref:RectForm.adoc[] object.
 <3> Use `setTopLeftValues()` to set the top-left corner.
@@ -49,13 +49,13 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was previously created with the Chart Editor, you do not need to add a Chart element. For example:
 
 [source,javascript]
---
+----
 var rect = new RectForm();
 rect.setTopLeftValues(['NJ',200]);
 rect.setBottomRightValues(['NY',50]);
 rect.setColor(java.awt.Color(0xff0000));
 graph.addForm(rect);
 
---
+----
 =====
 

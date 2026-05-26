@@ -38,7 +38,7 @@ The *Path* option requires a proxy server in front of the StyleBI server to set 
 +
 .Sample HAProxy configuration
 [source,lua]
---
+----
 frontend ft_web
     bind :8080 name http
     maxconn 10000
@@ -67,7 +67,7 @@ backend bk_web_<OrgID> //<1>
     http-request replace-path ^/<OrgID>/(.*) /\1 //<1>
     option forwardfor
     balance roundrobin
---
+----
 <1> Replace `<OrgID>`  with the configured Organization ID.
 
 . Proceed to create organizations.  See xref:CreateOrganization.adoc[] for more information.

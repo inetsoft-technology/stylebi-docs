@@ -20,13 +20,13 @@ field::			String containing name of variable
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity", "Total"],["NY",550,2500],["NJ",370,3000]]; //<1>
 graph = new EGraph();
 var elem = new LineElement("State","Quantity"); //<2>
 elem.addVar("Total"); //<3>
 graph.addElement(elem); //<4>
---
+----
 <1> {dataset}
 <2> Create the `LineElement` object.
 <3> Use `addVar` to add the '`Total`' measure.
@@ -47,10 +47,10 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 elem.addVar("Total");
---
+----
 =====
 
 

@@ -30,7 +30,7 @@ The example below uses Chart API scripting.  See xref:chartAPI:ChartScriptTutori
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [source,javascript]
---
+----
 dataset = [["Latitude","Longitude","PlaceName"],[40.8516051126306,-73.95223617553711,'GW Bridge'],[40.76292614285948,-74.00982856750488,'Lincoln Tunnel'],[40.72755146730012,-74.02107238769531,'Holland Tunnel']];
 
 var latName = "Latitude";
@@ -64,7 +64,7 @@ elem.setShapeFrame(sframe);
 elem.setColorFrame(cframe);
 elem.setHint(GraphElement.HINT_ALPHA,1);
 graph.addElement(elem);
---
+----
 
 image::commonscript:GoogleMap.png[alt="chart showing Google Map background with labeled location points"]
 

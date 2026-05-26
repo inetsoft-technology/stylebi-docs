@@ -17,11 +17,11 @@ A xref:chartAPI:PlotSpec.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 var coord = graph.getCoordinate(); //<1>
 var spec = coord.getPlotSpec(); //<2>
 spec.setBackground(java.awt.Color(0xEEEEFF)); //<3>
---
+----
 
 <1> Obtain a handle to the xref:Coordinate.adoc[] object.
 <2> Use `getPlotSpec` to obtain the xref:PlotSpec.adoc[] object.

@@ -22,7 +22,7 @@ value::			a number specifying the scaling exponent
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var qscale = new PowerScale(); //<2>
@@ -32,7 +32,7 @@ qscale.setExponent(0.5); //<4>
 graph.setScale("Quantity", qscale); //<5>
 graph.addElement(elem);
 
---
+----
 
 <1> {dataset}
 <2> Create the `PowerScale` object.

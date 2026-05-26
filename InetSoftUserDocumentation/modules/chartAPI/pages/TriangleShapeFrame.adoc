@@ -23,7 +23,7 @@ You can pass the name of a field (e.g., ‘Total’) to the constructor, or spec
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity","Total"], ["NJ",200,30],["NY",300,15], ["PA",150,5]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -33,7 +33,7 @@ var frame = new TriangleShapeFrame("Total"); //<2>
 elem.setShapeFrame(frame); //<3>
 elem.setSizeFrame(sizeframe);
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `TriangleShapeFrame` object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `TriangleShapeFrame` to the xref:PointElement.adoc[].
@@ -61,11 +61,11 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
 Chart1.bindingInfo.shapeFrame = new TriangleShapeFrame;
 
---
+----
 
 +
 image::commonscript:TriangleShapeFrame.png[alt="point chart with TriangleShapeFrame applied via bindingInfo shapeFrame property"]

@@ -28,7 +28,7 @@ You can pass a `Scale` object (e.g., ‘qscale’) to the constructor, or specif
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["Quantity","Total","Returns"],[50,50,100],[75,100,25],[100,100,0]]; //<1>
 graph = new EGraph();
 var elem = new PointElement();
@@ -47,7 +47,7 @@ graph.setScale("Quantity", qscale);
 graph.setScale("Total", qscale);
 graph.setScale("Returns", qscale);
 graph.setCoordinate(coord); //<7>
---
+----
 <1> {dataset}
 <2> Create the xref:Scale.adoc[] object.
 <3> Create the xref:TriCoord.adoc[] object from the `Scale` object.

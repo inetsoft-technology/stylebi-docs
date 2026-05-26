@@ -26,7 +26,7 @@ Integer number of columns
 
 .Chart Component Script
 [source,javascript]
---
+----
  // Create a chart with two datasets:
 dataset = [["State", "Total", "Profit"],["NJ", 200, 25],["NY", 300, 150]]; //<1>
 graph = new EGraph();
@@ -49,7 +49,7 @@ for (var i=0; i<dataset.getRowCount(); i++) { //<2>
   graph.addForm(form)
 }
 
---
+----
 <1> {dataset}
 <2> Use `getRowCount()` to get the number of rows.
 

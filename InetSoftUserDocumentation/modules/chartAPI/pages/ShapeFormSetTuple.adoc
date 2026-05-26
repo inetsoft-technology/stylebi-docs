@@ -28,7 +28,7 @@ value::			An [X,Y] pair
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -39,7 +39,7 @@ form.setColor(java.awt.Color(0xff0000));
 form.setSize(new java.awt.Dimension(50,50));
 graph.addForm(form); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the  xref:ShapeForm.adoc[] object.
 <3> Use `setTuple()` to set the axis location for the form.

@@ -37,12 +37,12 @@ Array::				array of selected option values
 == Examples
 .Example 1: Read a Selection List
 [source,javascript]
---
+----
 var num = SelectionList1.selectedObjects.length;
 var msg = 'You selected ' + num + ' objects: ';
 msg += SelectionList1.selectedObjects.join(', '); // <1>
 alert(msg) //<2>
---
+----
 <1> Append the comma-separated list of selected items to the `msg` string.
 <2> Display the  `msg` string.
 
@@ -52,14 +52,14 @@ SelectionList1.selectedObjects=['CA','MA','TX'];
 
 .Example 3: Set two Calendars
 [source,javascript]
---
+----
 Calendar1.selectedObjects = [Calendar1.min, dateAdd('m',3,Calendar1.min)]; //<1>
 
 if(Calendar2.selectedObjects[1] == null){
   Calendar2.selectedObjects = [CALC.today()]; //<2>
 }
 
---
+----
 <1> Select a three-month range starting from the earliest date on the Calendar.
 <2> For a Calendar in *day-selection* mode, select today`'s date  *ONLY IF* not already set
 

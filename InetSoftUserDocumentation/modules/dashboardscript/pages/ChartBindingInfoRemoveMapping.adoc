@@ -30,12 +30,12 @@ col::			Field whose mappings should be returned
 == Example
 Display mappings in column 'city':
 [source,javascript]
---
+----
 var mapArr = Chart1.bindingInfo.getMappings('city');
 for(i=0 ; i<mapArr.length ; i++) {
   alert('Value "' + mapArr[i][0] + '" is mapped to ' + mapArr[i][1] + '.');
 }
---
+----
 
 image::commonscript:getMappingsAlert.png[alt="alert dialog displaying mapped city value and its geographic code"]
 

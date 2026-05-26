@@ -23,7 +23,7 @@ Image object, see xref:commonscript:getImage.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]];
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -37,7 +37,7 @@ spec.setBackgroundImage(logo); //<2>
 coord.setPlotSpec(spec); //<3>
 graph.setCoordinate(coord);
 graph.addElement(elem);
---
+----
 <1> Create the `PlotSpec` object.
 <2> Use `setBackgroundImage` to set the plot image.
 <3> Use `setPlotSpec` to assign the `PlotSpec` to the `Coordinate`.
@@ -54,7 +54,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetCoordinate.adoc[] {circle1} and xref:chartAPI:CoordinateGetPlotSpec.adoc[] {circle2} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] and xref:chartAPI:PlotSpec.adoc[]. For example:
 
 [source,javascript]
---
+----
 var coord = graph.getCoordinate(); //<1>
 var spec = coord.getPlotSpec(); //<2>
 // Compact syntax: var spec = graph.getCoordinate().getPlotSpec();
@@ -62,5 +62,5 @@ var spec = coord.getPlotSpec(); //<2>
 var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
 spec.setBackgroundImage(logo);
 
---
+----
 =====

@@ -59,7 +59,7 @@ var coord = graph.getCoordinate();
 You can explicitly define the `RectCoord` object, if needed. The script below is the same as the script in xref:#AssignRectangularCoordinatesAutomatically[], but uses two scales to explicitly define a set of rectangular coordinates. These coordinates are then explicitly assigned to the chart using xref:chartAPI:EGraphSetCoordinate.adoc[].
 
 [source,javascript]
---
+----
 dataset = [["Direction", "Score"],[(Math.PI/2),20],[(Math.PI/4),30],[(Math.PI),35]];
 graph = new EGraph();
 var elem = new PointElement("Direction", "Score");
@@ -84,7 +84,7 @@ graph.setScale("Score",yscale);
 var rect = new RectCoord(xscale,yscale); <1>
 graph.setCoordinate(rect); <2>
 graph.addElement(elem);
---
+----
 <1> Explicitly create rectangular coordinates
 <2> Assign coordinates to graph
 
@@ -104,7 +104,7 @@ To create polar coordinates, you first need to create a set of rectangular coord
 image::commonscript:RectCoordExample_1.png[alt="scatter chart with explicit rectangular coordinates"]
 
 [source,javascript]
---
+----
 dataset = [["Direction", "Score"],[(Math.PI/2),20],[(Math.PI/4),30],[(Math.PI),35]];
 graph = new EGraph();
 var elem = new PointElement("Direction", "Score");
@@ -129,7 +129,7 @@ graph.setScale("Score",yscale);
 var rect = new RectCoord(xscale,yscale); <1>
 graph.setCoordinate(rect); <2>
 graph.addElement(elem);
---
+----
 <1> Explicitly create  rectangular coordinates
 <2> Assign coordinates to graph
 +
@@ -145,7 +145,7 @@ Assign this new coordinate set to the Chart to obtain the desired polar represen
 image::commonscript:PolarCoordsExample.png[alt="scatter chart converted to polar coordinates"]
 
 [source,javascript]
---
+----
 dataset = [["Direction", "Score"],[(Math.PI/2),20],[(Math.PI/4),30],[(Math.PI),35]];
 graph = new EGraph();
 var elem = new PointElement("Direction", "Score");
@@ -172,7 +172,7 @@ var polar = new PolarCoord(rect); <2>
 graph.setCoordinate(polar); <3>
 graph.addElement(elem);
 
---
+----
 <1> Create rectangular coordinates
 <2> Convert rectangular coordinates to polar coordinates
 <3> Assign polar coordinates to graph
@@ -188,7 +188,7 @@ TIP: Mapping just a single dimension is useful for pie charts. See xref:#PolarCo
 The example below is the same as that in xref:#ConvertRectangulartoPolarCoordinates[], except that here only the angle dimension is mapped:
 
 [source,javascript]
---
+----
 dataset = [["Direction", "Score"],[(Math.PI/2),20],[(Math.PI/4),30],[(Math.PI),35]];
 graph = new EGraph();
 var elem = new PointElement("Direction", "Score");
@@ -215,7 +215,7 @@ var polar = new PolarCoord(rect); <1>
 polar.setType(PolarCoord.THETA); <2>
 graph.setCoordinate(polar);
 graph.addElement(elem);
---
+----
 <1> Create the polar coordinates
 <2> Set `THETA` to map only the angle dimension
 
@@ -252,7 +252,7 @@ To create a pie chart from this data, just convert the Chart to a stacked bar, a
 . Instead of using different X-axis positions to distinguish the ‘State’ data, distinguish the states using a xref:chartAPI:ColorFrame.adoc[]  object.
 +
 [source,javascript]
---
+----
 dataset = [["State", "Revenue"], ["CA", 200],["NY",300],["PA",150]];
 graph = new EGraph();
 var elem = new IntervalElement(null,"Revenue");
@@ -263,7 +263,7 @@ var cframe = new CategoricalColorFrame("State"); <1>
 elem.setColorFrame(cframe); <2>
 graph.setCoordinate(rect);
 graph.addElement(elem);
---
+----
 <1> Creat the `ColorFrame` for '`State`'
 <2> Assign the `ColorFrame` to the `IntervalElement` (bars)
 +
@@ -324,7 +324,7 @@ image::commonscript:PieChartExample6_1.png[alt="exploded pie chart with state na
 .Complete Script
 ****
 [source,javascript]
---
+----
 dataset = [["State", "Revenue"], ["CA", 200],["NY",300],["PA",150]];
 graph = new EGraph();
 var elem = new IntervalElement(null,"Revenue");
@@ -350,7 +350,7 @@ cframe.setLegendSpec(legend);
 elem.setHint(GraphElement.HINT_EXPLODED,'true');
 graph.setCoordinate(polar);
 graph.addElement(elem);
---
+----
 ****
 
 [#ParallelCoordinates]
@@ -422,7 +422,7 @@ image::commonscript:ParallelCoordsTutorial.png[alt="parallel coordinates chart w
 .Complete Script
 ****
 [source,javascript]
---
+----
 dataset = [["Test1","Test2","Test3","Name"],[100,80,20,'Joe'],[75,50,40,'Jane'],[50,30,80,'Fred']];
 graph = new EGraph();
 var elem = new LineElement();
@@ -443,7 +443,7 @@ var frame = new CategoricalColorFrame("Name");
 elem.setColorFrame(frame);
 graph.addElement(elem);
 graph.setCoordinate(coord);
---
+----
 ****
 
 [#FacetCoordinates]
@@ -511,7 +511,7 @@ The resulting chart displays an outer grid based on the *outer coordinates* (‘
 .Complete Script
 ****
 [source,javascript]
---
+----
 dataset = [["State", "Product", "Name", "Priority"],["NJ", "P1", "Joe", 2],["NJ", "P2", "Sam", 3],["NY", "P1", "Jane", 4],["NJ", "P1", "Sam", 1],["NJ", "P2", "Joe", 10],["NY", "P1", "Sam", 10]];
 graph = new EGraph();
 var elem = new IntervalElement("Name", "Priority");
@@ -524,7 +524,7 @@ var outer = new RectCoord(state, product);
 var coord = new FacetCoord(outer,inner);
 graph.setCoordinate(coord);
 graph.addElement(elem);
---
+----
 ****
 
 == Set Coordinate Background
@@ -562,7 +562,7 @@ This example is provided to illustrate how to configure an image background. The
 ====
 
 [source,javascript]
---
+----
 // Define latitude and longitude values for landmarks:
 dataset = [["Latitude","Longitude","PlaceName"],[40.8516051126306,-73.95223617553711,' GW Bridge '],[40.76292614285948,-74.00982856750488,' Lincoln Tunnel '],[40.72755146730012,-74.02107238769531,' Holland Tunnel ']];
 graph = new EGraph();
@@ -617,7 +617,7 @@ elem.setHint(GraphElement.HINT_ALPHA,1);
 // Assign coordinates:
 graph.setCoordinate(coord);
 graph.addElement(elem);
---
+----
 
 image::commonscript:PlotSpecSetBackgroundImageGoog.png[alt="scatter chart with map image as plot background"]
 

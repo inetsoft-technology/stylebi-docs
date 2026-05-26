@@ -51,9 +51,9 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 +
 [source,javascript]
---
+----
 include::scriptexample:partial$AccessChartDataExp.js[]
---
+----
 
 
 . Press btn:[OK] to close the Script Editor.

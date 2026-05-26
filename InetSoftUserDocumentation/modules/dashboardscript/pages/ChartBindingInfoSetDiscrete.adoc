@@ -30,14 +30,14 @@ Chart.AESTHETIC_TEXT
 
 == Examples
 [source,javascript]
---
+----
 Chart1.bindingInfo.setDiscrete("Total", true, Chart.BINDING_FIELD);
 Chart1.bindingInfo.setDiscrete("Paid", true, Chart.AESTHETIC_COLOR);
 Chart1.bindingInfo.setDiscrete("Paid", true, Chart.AESTHETIC_SHAPE);
 Chart1.bindingInfo.setDiscrete("Paid", true, Chart.AESTHETIC_SIZE);
 Chart1.bindingInfo.setDiscrete("Paid", true, Chart.AESTHETIC_TEXT);
 
---
+----
 
 
 

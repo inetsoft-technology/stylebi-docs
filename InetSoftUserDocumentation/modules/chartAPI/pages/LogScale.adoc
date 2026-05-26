@@ -21,7 +21,7 @@ You can pass the names of the fields (e.g., ‘Last Year’, ‘This Year’) fo
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",2000]]; //<1>
 graph = new EGraph();
 var qscale = new LogScale(); //<2>
@@ -29,7 +29,7 @@ qscale.setFields(["Quantity"]);
 var elem = new IntervalElement("State", "Quantity");
 graph.setScale("Quantity", qscale); // <3>
 graph.addElement(elem);
---
+----
 
 <1> {dataset}
 <2> Create the `LogScale` object.

@@ -22,7 +22,7 @@ frame:: A xref:TextFrame.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["CA", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity"); //<2>
@@ -30,7 +30,7 @@ var frame = new DefaultTextFrame(); //<3>
 frame.setField("Quantity");
 elem.setTextFrame(frame); //<4>
 graph.addElement(elem);  //<5>
---
+----
 <1> {dataset}
 <2> Create the `PointElement` object.
 <3> Create a `TextFrame` object.
@@ -49,10 +49,10 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = new DefaultTextFrame();
 frame.setField("Quantity");
 elem.setTextFrame(frame);
---
+----
 =====

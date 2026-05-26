@@ -23,7 +23,7 @@ A {javaawtcolor} object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -35,7 +35,7 @@ frame.setLegendSpec(spec);
 elem.setColorFrame(frame);
 graph.addElement(elem);
 
---
+----
 <1> {dataset}
 <2> Create the xref:LegendSpec.adoc[] object.
 <3> Use `setBorderColor` to assign the legend color.
@@ -53,7 +53,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetElement.adoc[] ① and xref:chartAPI:GraphElementGetColorFrame.adoc[] ② to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[] and xref:chartAPI:ColorFrame.adoc[]. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); <1>
 var frame = elem.getColorFrame(); <2>
 // Compact syntax: var frame = graph.getElement(0).getColorFrame();
@@ -62,5 +62,5 @@ var spec = new LegendSpec();
 spec.setBorderColor(java.awt.Color(0xff00ff));
 frame.setLegendSpec(spec);
 
---
+----
 =====

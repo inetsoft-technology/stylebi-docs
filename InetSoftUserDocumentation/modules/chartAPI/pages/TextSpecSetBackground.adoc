@@ -22,7 +22,7 @@ A {javaawtcolor} object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -34,7 +34,7 @@ spec.setBackground(java.awt.Color(0xcccccc)); //<3>
 form.setTextSpec(spec); //<4>
 graph.addForm(form);
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the  xref:TextSpec.adoc[] object.
 <3> Use `setBackground()` to assign the color to the `TextSpec`.
@@ -55,12 +55,12 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 
 [source,javascript]
---
+----
 var titlespec = graph.getXTitleSpec(); //<1>
 var textspec = titlespec.getTextSpec(); //<2>
 // Compact syntax: var textspec = graph.getXTitleSpec().getTextSpec();
 
 textspec.setBackground(java.awt.Color(0xff0000));
 
---
+----
 =====

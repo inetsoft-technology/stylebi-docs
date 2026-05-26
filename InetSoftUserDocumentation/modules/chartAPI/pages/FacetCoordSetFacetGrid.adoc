@@ -19,9 +19,9 @@ Boolean:: `true`: display outer border +
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$FacetCoordSetFacetGrid1.js[]
---
+----
 <1> {dataset}
 <2> Create the xref:chartAPI:FacetCoord.adoc[] from inner and outer xref:chartAPI:RectCoord.adoc[] objects.
 <3> Use `setFacetGrid` to draw a border around the outer perimeter of the facet chart.
@@ -35,7 +35,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ① to obtain a handle to the xref:chartAPI:FacetCoord.adoc[] object. For example:
 
 [source,javascript]
---
+----
 include::scriptexample:partial$FacetCoordSetFacetGrid2.js[]
---
+----
 =====

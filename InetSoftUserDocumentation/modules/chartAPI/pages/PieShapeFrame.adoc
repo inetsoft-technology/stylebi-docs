@@ -26,7 +26,7 @@ You can pass the name of a field (e.g., e.g., ‘m1’, ‘m2’, ‘m3’) to t
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity","m1","m2","m3"], ["NJ", 200,5,2,3], ["NY", 300,2,4,4]]; //<1>
 graph = new EGraph();
 var frame = new PieShapeFrame(); //<2>
@@ -37,7 +37,7 @@ elem.setShapeFrame(frame); //<4>
 elem.setSizeFrame(sframe);
 graph.addElement(elem);
 
---
+----
 <1> {dataset}
 <2> Create the `PieShapeFrame` object.
 <3> Use the inherited xref:MultiShapeFrameSetFields.adoc[] property to assign the fields to the `PieShapeFrame`.

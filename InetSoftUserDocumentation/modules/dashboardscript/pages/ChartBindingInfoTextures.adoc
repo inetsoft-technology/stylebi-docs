@@ -38,10 +38,10 @@ xref:chartAPI:StaticTextureFrame.adoc[]
 == Example
 
 [source,javascript]
---
+----
 Chart1.bindingInfo.textures['Sum(Total)'] = new StaticTextureFrame(GTexture.PATTERN_5);
 
---
+----
 
 
 image::commonscript:bindingInfoTextures.png[alt="bar chart with Sum Total bars using static pattern 5 texture fill"]

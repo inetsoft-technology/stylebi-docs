@@ -35,9 +35,9 @@ geocode::			A geographical location in the geo data file
 Map the value `'Queens'` (in column `city`) to `'New York City'`. Note that the latitude and longitude for code `USA0113` are defined in _inetsoft/graph/geo/data/us-cities.csv_.
 [source,javascript]
 
---
+----
 Chart1.bindingInfo.addMapping('city','Queens','USA0113');
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

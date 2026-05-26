@@ -21,7 +21,7 @@ frame:: A xref:ShapeFrame.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
  dataset = [["State","Quantity","m1","m2", "m3"],["NJ",200,6,3,4],["NY",300,8,2,5]]; //<1>
 graph = new EGraph();
 var frame = new StarShapeFrame(); //<2>
@@ -29,7 +29,7 @@ var elem = new PointElement("State", "Quantity"); //<3>
 frame.setFields(["m1", "m2", "m3"]);
 elem.setShapeFrame(frame); //<4>
 graph.addElement(elem); //<5>
---
+----
 <1> {dataset}
 <2> Create a `StarShapeFrame` object.
 <3> Create the `PointElement` object.
@@ -48,10 +48,10 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = new StarShapeFrame();
 frame.setFields(["m1", "m2", "m3"]);
 elem.setShapeFrame(frame);
---
+----
 =====

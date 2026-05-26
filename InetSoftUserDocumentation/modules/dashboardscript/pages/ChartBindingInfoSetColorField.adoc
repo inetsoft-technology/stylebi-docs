@@ -26,22 +26,22 @@ type:: One of the following: `Chart.STRING`, `Chart.DATE`, or `Chart.NUMBER`
 == Examples
 .Dimension (categorical) field
 [source,javascript]
---
+----
 Chart1.bindingInfo.setColorField("Employee",Chart.STRING);
 Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
 
---
+----
 
 
 image::commonscript:CategoricalColorFrame.png[alt="chart with Employee dimension color-coded using CategoricalColorFrame"]
 
 .Measure (numerical) field
 [source,javascript]
---
+----
 Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
 Chart1.bindingInfo.colorFrame = new BrightnessColorFrame;
 
---
+----
 
 
 image::commonscript:BrightnessColorFrame1.png[alt="chart with Total measure color-coded using BrightnessColorFrame"]

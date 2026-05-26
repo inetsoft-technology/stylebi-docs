@@ -27,7 +27,7 @@ You can pass a set of Scale objects (e.g., ‘scale1’, ‘scale2’, etc.) to 
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["Quantity","Total","Returns"],[200,800,10],[175,1000,15],[50,300,20]]; //<1>
 graph = new EGraph();
 var elem = new LineElement();
@@ -41,7 +41,7 @@ elem.addDim("Returns");
 graph.addElement(elem);
 graph.setCoordinate(coord); //<4>
 
---
+----
 <1> {dataset}
 <2> Create the xref:LinearScale.adoc[] objects.
 <3> Create the `ParallelCoord` from the `LinearScale` objects.

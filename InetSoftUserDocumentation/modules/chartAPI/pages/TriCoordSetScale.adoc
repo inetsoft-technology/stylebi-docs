@@ -20,7 +20,7 @@ scale::			a xref:Scale.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["Quantity","Total","Returns"],[50,50,100],[75,100,25],[100,100,0]]; //<1>
 graph = new EGraph();
 var elem = new PointElement();
@@ -42,7 +42,7 @@ graph.setScale("Total", qscale);
 graph.setScale("Returns", qscale);
 graph.setCoordinate(coord); //<8>
 
---
+----
 <1> {dataset}
 <2> Create the xref:Scale.adoc[] object.
 <3> Create the xref:TriCoord.adoc[] object from the `Scale` object.

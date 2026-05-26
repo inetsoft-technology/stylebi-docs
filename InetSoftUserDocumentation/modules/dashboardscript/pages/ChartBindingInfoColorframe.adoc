@@ -29,11 +29,11 @@ xref:chartAPI:ColorFrame.adoc[]
 == Example
 
 [source,javascript]
---
+----
 Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
 Chart1.bindingInfo.colorFrame = new HeatColorFrame;
 
---
+----
 
 
 image::commonscript:HeatColorFrame.png[alt="chart with elements color-coded using HeatColorFrame by Total value"]

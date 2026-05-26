@@ -31,10 +31,10 @@ col::			Name of filtered field
 == Example
 
 [source,javascript]
---
+----
 var N = Chart1.bindingInfo.getTopN("Company");
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

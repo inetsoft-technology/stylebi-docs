@@ -55,7 +55,7 @@ TIP: Chart API script which operates on the Chart’s `EGraph` property should b
 . Use script commands to create the required xref:StaticShapeFrame.adoc[], xref:StaticColorFrame.adoc[], and xref:StaticSizeFrame.adoc[] objects:
 +
 [source,javascript]
---
+----
 // Create arrow-shaped markers:
 var shpframe = new StaticShapeFrame(GShape.ARROWBAR);
 
@@ -64,24 +64,24 @@ var colframe = new StaticColorFrame(java.awt.Color(0xFF0000));
 
 // Create static size of 10 pixels:
 var sizframe = new StaticSizeFrame(10);
---
+----
 
 . Obtain a handle to each of the two datasets (element sets) by using the xref:EGraphGetElement.adoc[] method.
 +
 [source,javascript]
---
+----
 var elem0 = graph.getElement(0); // Max point element
 var elem1 = graph.getElement(1); // Min point element
---
+----
 
 . Assign the visual frames to the appropriate data elements using the element’s xref:GraphElementSetShapeFrame.adoc[], xref:GraphElementSetColorFrame.adoc[], and xref:GraphElementSetSizeFrame.adoc[] properties.
 +
 [source,javascript]
---
+----
 elem1.shapeFrame = shpframe; // Min point element
 elem1.colorFrame = colframe; // Min point element
 elem0.sizeFrame = sizframe;  // Max point element
---
+----
 
 . Close the Script Editor, and press {buttonPreview} to preview the  Dashboard.
 +

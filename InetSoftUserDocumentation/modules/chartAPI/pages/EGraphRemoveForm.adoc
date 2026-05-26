@@ -16,7 +16,7 @@ idx::			a xref:chartAPI:GraphForm.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -28,7 +28,7 @@ form.setFill(true);
 graph.addForm(form); //<2>
 graph.addElement(elem);
 graph.removeForm(0); //<3>
---
+----
 <1> {dataset}
 <2> Add the xref:LineForm.adoc[] to Chart.
 <3> Use `removeForm()` to remove the `LineForm`.

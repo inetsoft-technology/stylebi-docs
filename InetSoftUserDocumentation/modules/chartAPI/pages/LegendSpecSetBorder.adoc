@@ -20,7 +20,7 @@ include::partial$gLineConstants.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]];  //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -31,7 +31,7 @@ spec.setBorder(Chart.DASH_LINE); //<3>
 frame.setLegendSpec(spec); //<4>
 elem.setColorFrame(frame);
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the  xref:LegendSpec.adoc[] object.
 <3> Use `setBorder()` to assign a border style to the `LegendSpec`.
@@ -55,7 +55,7 @@ To change the property on a Chart that was *previously created* with the Chart E
 
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); <1>
 var frame = elem.getColorFrame(); <2>
 // Compact syntax: var frame = graph.getElement(0).getColorFrame();
@@ -63,5 +63,5 @@ var spec = new LegendSpec();
 spec.setBorder(Chart.DASH_LINE);
 frame.setLegendSpec(spec);
 
---
+----
 =====

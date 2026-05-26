@@ -20,7 +20,7 @@ You can pass a xref:GShape.adoc[] or xref:SVGShape.adoc[] object (e.g., `GShape.
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity","Shape"], ["NJ",200,"STAR"], ["NY",300,"CIRCLE"]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -30,7 +30,7 @@ shapeframe.setField("Shape");
 elem.setShapeFrame(shapeframe); //<3>
 elem.setSizeFrame(sizeframe);
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `StaticShapeFrame` object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `StaticShapeFrame` to the xref:PointElement.adoc[].
@@ -44,7 +44,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State","Quantity");
@@ -53,7 +53,7 @@ var sizeFrame = new StaticSizeFrame(10);
 elem.setSizeFrame(sizeFrame);
 elem.setShapeFrame(shapeFrame); //<3>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the `StaticShapeFrame` object.
 <3> Use xref:GraphElementSetShapeFrame.adoc[] to add the `StaticShapeFrame` to the xref:PointElement.adoc[].
@@ -80,12 +80,12 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Company",Chart.STRING);
 Chart1.bindingInfo.shapeFrame = new StaticShapeFrame;
 Chart1.bindingInfo.shapeFrame.setShape(GShape.ARROWBAR);
 
---
+----
 
 +
 image::commonscript:StaticShapeFrame.png[alt="point chart with arrowbar shape applied via bindingInfo shapeFrame property"]

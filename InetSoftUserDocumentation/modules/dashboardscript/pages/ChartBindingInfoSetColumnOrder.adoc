@@ -54,18 +54,18 @@ sortCol::			String: Formula for sorting:
 
 == Examples
 [source,javascript]
---
+----
 Chart1.bindingInfo.setColumnOrder('Company',Chart.SORT_DESC)
 
---
+----
 
 image::commonscript:SetColumnOrder.png[alt="chart with Company dimension sorted in descending alphabetical order"]
 
 [source,javascript]
---
+----
 Chart1.bindingInfo.setColumnOrder('Company',Chart.SORT_VALUE_DESC,'Sum(Total)');
 
---
+----
 
 image::commonscript:SetColumnOrder1.png[alt="chart with Company dimension sorted descending by Sum of Total value"]
 

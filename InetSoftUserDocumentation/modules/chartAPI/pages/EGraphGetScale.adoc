@@ -32,11 +32,11 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 +
 .Chart Component Script
 [source,javascript]
---
+----
 var scale = graph.getScale("Sum(Total)"); <1>
 scale.setMin(600000);
 scale.setMax(1000000); <2>
---
+----
 <1> Obtain handle to `Scale` object.
 <2> Apply operations to `Scale` object.
 

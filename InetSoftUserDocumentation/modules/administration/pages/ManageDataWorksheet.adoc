@@ -24,13 +24,13 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // List all Data Worksheets in environment
 :ws list
 
 // List all Data Worksheets in organization0
 :ws list --organizationid organization0
---
+----
 
 
 
@@ -44,10 +44,10 @@ id:: Data Worksheet ID
 
 === Examples
 [source,groovy]
---
+----
 // Get a parameters for Call Center Monitoring Data Worksheet
 :ws parameters '1^2^__NULL__^Examples/Call Center Monitoring'
---
+----
 
 
 == Get Data Worksheet Metadata
@@ -60,10 +60,10 @@ id:: Data Worksheet ID
 
 === Examples
 [source,groovy]
---
+----
 // Get a metadata for Hurricane Data Worksheet
 :ws metadata 1^2^__NULL__^Examples/Hurricane
---
+----
 
 == List open Data Worksheets
 The `list-open` action returns a list of currently open  Data Worksheets. {connectRepositoryNote}
@@ -75,11 +75,11 @@ organizationid:: Organization ID for multi-tenant environment.  (See xref:Enable
 
 === Examples
 [source,groovy]
---
+----
 // List all open Data Worksheets
 :ws list-open
 
---
+----
 
 
 
@@ -95,10 +95,10 @@ parameters:: Parameter  values to pass to Data Worksheet (optional)
 
 === Examples
 [source,groovy]
---
+----
 // Open Call Center Monitoring for editing, and pass 2035 as parameter
 :ws open '1^2^__NULL__^Examples/Call Center Monitoring^host-org' 2035
---
+----
 
 
 == Get Data Worksheet
@@ -112,10 +112,10 @@ id:: Runtime Data Worksheet ID
 
 === Examples
 [source,groovy]
---
+----
 // Get handle to Data Worksheet 2
 :ws get 2
---
+----
 
 
 == Close Data Worksheet
@@ -128,10 +128,10 @@ id:: Runtime Data Worksheet ID
 
 === Examples
 [source,groovy]
---
+----
 // Close Data Worksheet 2
 :ws close 2
---
+----
 
 == Return Data Worksheet Data
 The `data` action obtains data from the primary data block of a     Data Worksheet. See xref:dataworksheet:DataBlockProperties.adoc[] for more information about the primary data block. {connectRepositoryNote}
@@ -145,7 +145,7 @@ rows:: Number of rows to retrieve
 
 === Examples
 [source,groovy]
---
+----
 // get data from Data Worksheet 2, starting with row 3 and continuing for four rows
 :ws data 2 3 4
---
+----

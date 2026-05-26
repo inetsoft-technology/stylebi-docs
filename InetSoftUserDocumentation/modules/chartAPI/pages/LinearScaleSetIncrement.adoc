@@ -23,7 +23,7 @@ value::			Number specifying interval between values
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var qscale = new LinearScale("Quantity"); //<2>
@@ -32,7 +32,7 @@ qscale.setIncrement(15); //<3>
 graph.setScale("Quantity", qscale); //<4>
 graph.addElement(elem);
 
---
+----
 
 <1> {dataset}
 <2> Create the xref:LinearScale.adoc[] object.

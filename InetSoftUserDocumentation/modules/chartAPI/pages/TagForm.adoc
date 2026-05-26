@@ -22,7 +22,7 @@ var tag = new TagForm();
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"],["NJ",200],["NY",300],["NY",305]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -36,7 +36,7 @@ graph.addForm(form1); //<5>
 graph.addForm(form2); //<5>
 graph.addElement(elem);
 
---
+----
 <1> {dataset}
 <2> Create the  `TagForm` object.
 <3> Use  inherited  xref:LabelFormSetLabel.adoc[] function to set label text.

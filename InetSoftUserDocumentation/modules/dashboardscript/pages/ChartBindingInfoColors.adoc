@@ -34,10 +34,10 @@ xref:chartAPI:StaticColorFrame.adoc[]
 == Example
 
 [source,javascript]
---
+----
 Chart1.bindingInfo.colors['Sum(Total)'] = new StaticColorFrame(java.awt.Color(0xFF00FF));
 
---
+----
 
 
 image::commonscript:bindingInfoColors.png[alt="chart with Sum Total bars displayed in static magenta color"]

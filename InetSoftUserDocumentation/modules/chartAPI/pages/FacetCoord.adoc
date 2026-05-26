@@ -29,7 +29,7 @@ include::ROOT:partial$MINITOC_FacetCoord.adoc[]
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "City", "Product", "Quantity"],["NJ", "Piscataway", "P1", 200],
 ["NJ", "Edison", "P2", 100],["NY", "NYC", "P1", 300]]; //<1>
 graph = new EGraph();
@@ -44,7 +44,7 @@ var coord = new FacetCoord(outer,inner);  //<3>
 graph.setCoordinate(coord); //<4>
 graph.addElement(elem);
 
---
+----
 <1> {dataset}
 <2> Create the xref:RectCoord.adoc[] objects.
 <3> Create the `FacetCoord` from the `RectCoord` objects.

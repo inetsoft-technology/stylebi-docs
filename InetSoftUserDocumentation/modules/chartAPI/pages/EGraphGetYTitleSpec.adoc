@@ -16,10 +16,10 @@ A xref:chartAPI:TitleSpec.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 var spec = Chart1.graph.getYTitleSpec();
 alert(spec.getLabel());
---
+----
 
 
 

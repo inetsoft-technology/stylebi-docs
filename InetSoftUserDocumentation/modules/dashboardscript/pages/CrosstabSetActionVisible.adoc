@@ -22,12 +22,12 @@ NOTE: The 'Sort Column' setting overrides the `sort.crosstab.aggregate` and `sor
 name::			Name of Crosstab function (String):
 +
 [source]
---
+----
 'Menu Actions' <1>
 'Export' <2>
 'Show Details' <3>
 'Sort Column' <4>
---
+----
 <1> The {buttonMore}.
 <2> The {buttonExport}. Applies also when the Crosstab is used as a xref:dashboard:AddTipsToChart.adoc#DataTip[Data Tip].
 <3> For xref:dashboard:AddFreehandTable.adoc[Freehand Table.]

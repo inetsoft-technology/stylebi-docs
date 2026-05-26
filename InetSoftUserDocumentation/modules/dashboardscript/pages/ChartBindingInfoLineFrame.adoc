@@ -32,10 +32,10 @@ xref:chartAPI:LineFrame.adoc[]
 == Example
 
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
 Chart1.bindingInfo.lineFrame = new LinearLineFrame;
---
+----
 
 
 image::commonscript:bindingInfoLineFrame.png[alt="line chart with line style varying by Total using LinearLineFrame"]

@@ -23,7 +23,7 @@ You can pass a field name to the constructor (e.g., “Quantity”), or specify 
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"],["NJ",200],["NY",300],["PA",50]]; //<1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -32,7 +32,7 @@ frame.setField("Quantity"); //<3>
 elem.setColorFrame(frame); //<4>
 graph.addElement(elem);
 
---
+----
 <1> {dataset}
 <2> Create the xref:ColorFrame.adoc[] object.
 <3> Use `setField` to specify the field for the `BrightnessColorFrame`.
@@ -50,12 +50,12 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 var frame = new BrightnessColorFrame();
 frame.setField("Quantity");
 elem.setColorFrame(frame);
---
+----
 =====
 
 
@@ -78,11 +78,11 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
 Chart1.bindingInfo.colorFrame = new BrightnessColorFrame;
 
---
+----
 
 +
 image::commonscript:BrightnessColorFrame1.png[alt="bar chart with brightness color frame via bindingInfo"]

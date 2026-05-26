@@ -13,9 +13,9 @@ Boolean:: `true`: round all four corners +
 
 .Chart Component Script
 [source,javascript]
---
+----
 include::scriptexample:partial$IntervalElementSetRoundAllCorners1.js[]
---
+----
 
 <1> {dataset}
 <2> Create the `IntervalElement` object.
@@ -31,9 +31,9 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use xref:EGraphGetElement.adoc[] to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0);
 elem.setCornerRadius(0.5);
 elem.setRoundAllCorners(true);
---
+----
 =====

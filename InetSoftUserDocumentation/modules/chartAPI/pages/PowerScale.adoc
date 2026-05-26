@@ -20,7 +20,7 @@ You can pass the names of the fields (e.g., ‘Last Year’, ‘This Year’) fo
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var qscale = new PowerScale(); //<2>
@@ -30,7 +30,7 @@ qscale.setExponent(0.5);
 graph.setScale("Quantity", qscale); //<4>
 graph.addElement(elem);
 
---
+----
 
 <1> {dataset}
 <2> Create the `PowerScale` object.

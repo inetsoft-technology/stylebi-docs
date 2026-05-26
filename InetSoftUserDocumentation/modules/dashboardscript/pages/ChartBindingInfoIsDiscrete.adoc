@@ -36,10 +36,10 @@ Boolean:: `true`: Field is set as discrete +
 == Example
 
 [source,javascript]
---
+----
 var dis = Chart1.bindingInfo.isDiscrete("Order Num");
 
---
+----
 
 
 include::commonscript:partial$bindingInfoNote.adoc[]

@@ -74,7 +74,7 @@ image::commonscript:setScaleExampleFinal.png[alt="bar chart with log scale and s
 .Complete Script
 ****
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",3000]];
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
@@ -100,12 +100,12 @@ xspec.setTextFrame(tframe);
 graph.setScale('Quantity',logscale);
 graph.setScale('State',cscale);
 graph.addElement(elem);
---
+----
 [NOTE]
 =====
 To change properties on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetYScale2.adoc[] ②  to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 [source,javascript]
---
+----
 var coord = graph.getCoordinate(); <1>
 var yscale = coord.getYScale(); <2>
 // Compact syntax: var yscale = graph.getCoordinate().getYScale();
@@ -123,6 +123,6 @@ var tspec = new TextSpec();
 tspec.setFont(java.awt.Font('Dialog',java.awt.Font.BOLD, 14)); xspec.setTextSpec(tspec);
 xspec.setAxisStyle(AxisSpec.AXIS_SINGLE2);
 xscale.setAxisSpec(xspec);
---
+----
 =====
 ****

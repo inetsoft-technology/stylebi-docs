@@ -17,9 +17,9 @@ dim::		Name of the dimension to sort
 arr::  Array of strings with desired label order:
 +
 [source,javascript]
---
+----
 ['label1','label2','label3',...]
---
+----
 
 
 
@@ -33,13 +33,13 @@ arr::  Array of strings with desired label order:
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State", "Quantity"],["NJ", 200],["NY", 300],["PA", 25]];
 dataset.setOrder('State',['PA','NY','NJ']); <1>
 graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
 graph.addElement(elem);
---
+----
 <1> Sort the 'State' field in the specified order.
 
 image::commonscript:datasetsetOrder.png[alt="bar chart with dataset sorted by custom order"]

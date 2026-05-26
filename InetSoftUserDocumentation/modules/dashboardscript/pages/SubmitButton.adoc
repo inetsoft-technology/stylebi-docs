@@ -21,11 +21,11 @@ The Submit Button can also be  used to batch-execute script operations *on deman
 For example, the following *onClick* script will clear the selections from the specified Selection List filters  when the user clicks the button:
 
 [source,javascript]
---
+----
 SelectionList1.selectedObjects = []; //<1>
 SelectionList2.selectedObjects = [];
 SelectionList3.selectedObjects = [];
---
+----
 <1> See xref:CommonSelectedObjects.adoc[] for more information about this property.
 
 When you use a Submit Button this way, you should change the button '`Label`' to display something more representative of the button`'s action, such as "`Clear All Filters`" in the above example.  (See xref:dashboard:SubmitButtonProperties.adoc[] for more information about the '`Label`' property.)

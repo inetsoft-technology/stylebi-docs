@@ -17,13 +17,13 @@ PolynomialLineEquation.Quadratic()
 
 .Chart Component Script
 [source,javascript]
---
+----
 var form = new LineForm(); //<1>
 var equation = new PolynomialLineEquation.Cubic(); //<2>
 form.setLineEquation(equation); //<3>
 form.setColor(java.awt.Color(0xff0000));
 graph.addForm(form); //<4>
---
+----
 <1> Create a  xref:LineForm.adoc[] object.
 <2> Create the `PolynomialLineEquation`.
 <3> Use    xref:GraphFormSetLineEquation.adoc[] to apply a the `PolynomialLineEquation`.

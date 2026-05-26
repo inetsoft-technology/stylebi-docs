@@ -25,7 +25,7 @@ Two-dimensional array: `[[Field_1,Type_1],[Field_2,Type_2],...]`
 
 == Example
 [source,javascript]
---
+----
 Chart1.query = "customers";
 Chart1.chartStyle = Chart.CHART_MAP;
 Chart1.bindingInfo.setColorField("customer_id",Chart.NUMBER);
@@ -34,7 +34,7 @@ Chart1.bindingInfo.geoFields = [['state',Chart.STRING]]; <1>
 Chart1.mapType = Chart['MAP_TYPE_U.S.'];
 Chart1.bindingInfo.setMapLayer("state",Chart.STATE);
 Chart1.bindingInfo.shapes['DistinctCount(customer_id)'] = new StaticShapeFrame(GShape.NIL);
---
+----
 <1> Sets 'state' as the geographic field.
 
 image::commonscript:bindingInfoGeoFields.png[alt="map chart with state bound as geographic field color-coded by customer count"]

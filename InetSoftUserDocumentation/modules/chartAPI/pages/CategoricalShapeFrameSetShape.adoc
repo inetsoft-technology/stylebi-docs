@@ -22,7 +22,7 @@ shape:: xref:GShape.adoc[] or xref:GShapeImageShape.adoc[] object
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
 graph = new EGraph();
 var elem = new PointElement("State", "Quantity");
@@ -34,7 +34,7 @@ shapeframe.setShape('NY',GShape.FILLED_DIAMOND); //<3>
 elem.setShapeFrame(shapeframe); // <4>
 elem.setSizeFrame(sizeframe);
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:CategoricalShapeFrame.adoc[] object.
 <3> Use `setShape` to assign the desired shape for '`NJ`' and '`NY`'.
@@ -52,7 +52,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var elem = graph.getElement(0); //<1>
 sizeframe = new StaticSizeFrame("State");
 sizeframe.setSize(10);
@@ -62,7 +62,7 @@ shapeframe.setShape('NY',GShape.FILLED_DIAMOND);
 elem.setShapeFrame(shapeframe);
 elem.setSizeFrame(sizeframe);
 
---
+----
 =====
 
 
@@ -82,13 +82,13 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 +
 .onRefresh Script
 [source,javascript]
---
+----
 Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
 Chart1.bindingInfo.shapeFrame = new CategoricalShapeFrame;
 Chart1.bindingInfo.shapeFrame.setShape('Robert', GShape.FILLED_CIRCLE);
 Chart1.bindingInfo.shapeFrame.setShape('Sue', GShape.FILLED_DIAMOND);
 
---
+----
 
 +
 include::commonscript:partial$bindingInfoNote.adoc[]

@@ -163,7 +163,7 @@ The custom formats use a set of placeholders (`H`,`m`,`s`, etc.) to represent th
 You can represent the millisecond duration of 2684722000 in a variety of ways:
 
 [source,javascript]
---
+----
 // ‘Pad with Zeros’ enabled or disabled
 HH:mm = 745:45 // 745 hours, 45 minutes
 
@@ -172,7 +172,7 @@ ddd HH:mm:ss = 31 1:45:22 // 31 days, 1 hour, 45 minutes, 22 seconds
 
 // ‘Pad with Zeros’ enabled:
 ddd HH:mm:ss = 031 01:45:22 // 31 days, 1 hour, 45 minutes, 22 seconds
---
+----
 ====
 
 

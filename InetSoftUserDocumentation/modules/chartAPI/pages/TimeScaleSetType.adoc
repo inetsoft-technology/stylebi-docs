@@ -31,7 +31,7 @@ TimeScale.YEAR
 
 .Chart Component Script
 [source,javascript]
---
+----
 dataset = [["Date", "Quantity"], [new Date(2008,8,1),200], [new Date(2008,10,1),400],
 [new Date(2009,0,1),300], [new Date(2009,1,1),900]]; //<1>
 graph = new EGraph();
@@ -40,7 +40,7 @@ var tscale = new TimeScale("Date"); //<2>
 tscale.setType(TimeScale.YEAR); //<3>
 graph.setScale("Date", tscale); //<4>
 graph.addElement(elem);
---
+----
 <1> {dataset}
 <2> Create the xref:TimeScale.adoc[] object.
 <3> Use `setType` to set a year increment.
@@ -61,13 +61,13 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetXScale.adoc[] ② to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object and xref:chartAPI:Scale.adoc[] object. For example:
 
 [source,javascript]
---
+----
 var coord = graph.getCoordinate(); //<1>
 var scale = coord.getXScale(); //<2>
 // Compact syntax: var scale = graph.getCoordinate().getXScale();
 
 scale.setType(TimeScale.YEAR);
---
+----
 =====
 
 
