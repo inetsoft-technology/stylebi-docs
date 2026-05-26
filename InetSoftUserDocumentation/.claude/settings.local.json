@@ -39,7 +39,9 @@
       "Bash(python3 check_links.py)",
       "Bash(git commit -m ' *)",
       "Bash(Get-ChildItem -Path \"C:\\\\src\\\\stylebi-docs\\\\InetSoftUserDocumentation\\\\modules\" -Directory)",
-      "Bash(Select-Object Name)"
+      "Bash(Select-Object Name)",
+      "Bash(grep -c \"\\\\-\\\\-$\" modules/chartAPI/pages/ChangeChartLabels.adoc)",
+      "Bash(git add *)"
     ]
   }
 }

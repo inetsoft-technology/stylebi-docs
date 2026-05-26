@@ -33,6 +33,7 @@ If you select a data model or table as the data source, your Dashboard will have
 NOTE: If you do not want to use the Dashboard Wizard (see below), you do not need to specify a data source at this time. (See xref:DashboardOptions.adoc[] to choose a data source at a later time.)
 . Choose how you want to start building your Dashboard, by using the Dashboard Wizard or the Visual Composer.
 +
+[square]
 * xref:UseDashboardWizard[]
 * xref:UseVisualComposer[]
 
@@ -51,7 +52,7 @@ include::ROOT:partial$videoVersion.adoc[]
 video::359874333#chapter=16572783[vimeo,640,400]
 =====
 
-Follow these steps:
+To create a new Dashboard using the Dashboard Wizard, follow these steps:
 
 . Follow the initial steps in xref:CreateNewDashboard.adoc[] above to open the ‘New Dashboard’ dialog box.
 
@@ -251,7 +252,7 @@ video::359874333#chapter=16572924[vimeo,640,400]
 =====
 
 
-Follow these steps:
+To create a new Dashboard using the Visual Composer, follow these steps:
 
 . Follow the initial steps in xref:CreateNewDashboard.adoc[] above to open the ‘New Dashboard’ dialog box.
 
