@@ -41,7 +41,9 @@
       "Bash(Get-ChildItem -Path \"C:\\\\src\\\\stylebi-docs\\\\InetSoftUserDocumentation\\\\modules\" -Directory)",
       "Bash(Select-Object Name)",
       "Bash(grep -c \"\\\\-\\\\-$\" modules/chartAPI/pages/ChangeChartLabels.adoc)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git pull *)",
+      "Bash(git push *)"
     ]
   }
 }

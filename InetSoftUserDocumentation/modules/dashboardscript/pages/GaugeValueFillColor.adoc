@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Specifies the value fill color for donut-style and bullet-style Gauges.
+Summary: Specifies the value fill color for donut-style and bullet-style Gauges. Gauge must be bound to data.
 endif::ai[]
 
 [WARNING,caption=See Also]
@@ -12,7 +12,7 @@ endif::ai[]
 xref:dashboard:GaugeProperties.adoc[] for general information about Output components.
 ====
 
-Specifies the value fill color for donut-style and bullet-style Gauges.
+Specifies the value fill color for donut-style and bullet-style Gauges. Note: The color is not visible unless the Gauge is displaying data.
 
 
 
