@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Freehand Table, an advanced component that enables non-hierarchical groupings and formula cells — layouts not possible in a regular Table or Crosstab. The recommended workflow is to first create a Crosstab that approximates the desired result, then convert it to a Freehand Table and make final adjustments.
+Summary: How to create a Freehand Table (also called a free-form table, ad-hoc table, or custom layout table), an advanced component that enables non-hierarchical groupings and formula cells — layouts not possible in a regular Table or Crosstab (pivot table). The recommended workflow is to first create a Crosstab that approximates the desired result, then convert it to a Freehand Table and make final adjustments.
 endif::ai[]
 
 [WARNING, caption=see also]

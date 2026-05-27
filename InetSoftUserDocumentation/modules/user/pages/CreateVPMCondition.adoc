@@ -7,7 +7,7 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add a row-filter condition to a VPM (Virtual Private Model) to restrict which database rows are visible to users. Covers triggering by table or physical view, building condition clauses using field values, expressions, variables, session data (user/role/group), and subqueries.
+Summary: How to add a row-filter condition (row filter, data restriction, security filter, WHERE clause) to a VPM (Virtual Private Model) to restrict which database rows are visible to users. Covers triggering by table or physical view, building condition clauses using field values, expressions, variables, session data (user/role/group), and subqueries.
 endif::ai[]
 
 You can add a condition to a VPM to filter the rows retrieved from the database tables. Follow the steps below:

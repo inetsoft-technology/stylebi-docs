@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to open and edit an existing logical model, including adding entities and attributes, renaming entities, modifying attribute properties (data type, format, reference type, browse data), and adding auto-drill hyperlinks that link to dashboards or web pages with optional parameter passing.
+Summary: How to open and edit an existing logical model (data model, semantic layer, data dictionary), including adding entities and attributes, renaming entities, modifying attribute properties (data type, format, reference type, browse data), and adding auto-drill hyperlinks that link to dashboards or web pages with optional parameter passing.
 endif::ai[]
 
 include::ROOT:partial$createVisualizationClose.adoc[]

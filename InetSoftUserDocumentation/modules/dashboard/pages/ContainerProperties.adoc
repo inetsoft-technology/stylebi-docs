@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Container component properties, which groups multiple Dashboard components into a single resizable unit. Covers background, border, padding, and layout behavior. See ArrangeComponents for how to create a Container by grouping components.
+Summary: Reference for Container (also called a component group or grouped components) component properties, which groups multiple Dashboard components into a single resizable unit. Covers background, border, padding, and layout behavior. See ArrangeComponents for how to create a Container by grouping components.
 endif::ai[]
 
 [WARNING,caption=see also]

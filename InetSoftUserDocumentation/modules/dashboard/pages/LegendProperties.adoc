@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Chart Legend properties, accessed via right-click on the legend. Covers the General tab (position, borders, title, border), Scale tab (min/max for size legend), and Alias tab (rename legend labels). Also explains how to hide and show legends.
+Summary: Reference for Chart Legend properties (also called chart legend color, legend position, or legend settings), accessed via right-click on the legend. Covers the General tab (position, borders, title, border), Scale tab (min/max for size legend), and Alias tab (rename legend labels). Also explains how to hide and show legends.
 endif::ai[]
 
 [WARNING,caption=see also]

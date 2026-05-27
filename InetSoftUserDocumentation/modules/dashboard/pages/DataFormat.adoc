@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to apply display format patterns (date, number, currency, text, percent) to values in Dashboard components. Formatting controls how data is presented without changing the underlying values. Accessed via the Format panel in Visual Composer.
+Summary: How to apply display format patterns (date, number, currency, text, percent) to values in Dashboard components. Formatting controls how data is presented without changing the underlying values. Accessed via the Format panel in Visual Composer. Not to be confused with: VisualFormat.adoc (static visual appearance — colors, fonts, borders) or ConditionalFormat.adoc (conditional highlighting based on data values).
 endif::ai[]
 
 [.videotitle]

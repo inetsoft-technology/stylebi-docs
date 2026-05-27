@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create scheduled tasks, cycles, and alerts in Enterprise Manager, including defining conditions, actions, and delivery options for automated Dashboard generation.
+Summary: How to create scheduled tasks, cycles, and alerts in Enterprise Manager, including defining conditions, actions, and delivery options for automated Dashboard generation. For portal users scheduling their own Dashboard delivery without admin access, see ScheduleDashboard.adoc in the user module.
 endif::ai[]
 
 The following sections explain how to create  tasks, cycles, and alerts.

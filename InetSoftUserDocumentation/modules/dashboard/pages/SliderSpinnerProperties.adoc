@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Slider and Spinner Form component properties. Covers number range (min/max/increment), data target binding to an Embedded Table or Variable in the Data Worksheet, snap-to-increment, label display options, and Write Back to Storage. See DynamicallySetProperties for how to use Form components to control Dashboard behavior.
+Summary: Reference for Slider and Spinner Form component properties (also called numeric input or value selector controls). Covers number range (min/max/increment), data target binding to an Embedded Table or Variable in the Data Worksheet, snap-to-increment, label display options, and Write Back to Storage. See DynamicallySetProperties for how to use Form components to control Dashboard behavior.
 endif::ai[]
 
 [WARNING,caption=see also]

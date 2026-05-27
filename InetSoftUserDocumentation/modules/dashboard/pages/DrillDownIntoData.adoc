@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview of all drill-down techniques available in a Dashboard, including chart brushing, hyperlinks, flyover views, and dimension-level drilling. Most techniques are available to end users at view time. Use this page to choose the right approach for interactive data exploration and navigation between detail levels.
+Summary: Overview of all drill-down techniques available in a Dashboard, including chart brushing (cross-chart filter or linked selection), hyperlinks, flyover views (hover tooltips), and dimension-level drilling. Most techniques are available to end users at view time. Use this page to choose the right approach for interactive data exploration and navigation between detail levels.
 endif::ai[]
 
 include::dashboard:partial$availableToEndUsers.adoc[]

@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create new data fields in a Data Worksheet or Dashboard, including expression columns (JavaScript or SQL) in a data block, and Dashboard calculated fields for detail-level or aggregate-level calculations. Covers formula syntax, data types, and referencing existing columns.
+Summary: How to create new calculated data fields in a Data Worksheet or Dashboard, including expression columns (JavaScript or SQL) in a data block, and Dashboard calculated fields for detail-level or aggregate-level calculations. Covers formula syntax, data types, and referencing existing columns.
 endif::ai[]
 :experimental:
 

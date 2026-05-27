@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for the Submit Button form component properties. Covers the button label and whether submitting refreshes all Dashboard components or only those filtered by Selection/Form components. See DynamicallySetProperties for how Form components work together.
+Summary: Reference for the Submit Button (also called an apply filters button or batch submit button) form component properties. Covers the button label and whether submitting refreshes all Dashboard components or only those filtered by Selection/Form components. See DynamicallySetProperties for how Form components work together.
 endif::ai[]
 
 [WARNING,caption=see also]

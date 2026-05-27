@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and navigation page for Virtual Private Model (VPM) security, which provides row- and column-level data filtering for relational data sources. Covers conditions, hidden columns, lookups, and their triggers. Enterprise only. See CreateNewVPM to begin.
+Summary: Overview and navigation page for Virtual Private Model (VPM) security (also called row-level security, RLS, column-level security, data masking, or data access restriction), which provides row- and column-level data filtering for relational data sources. Covers conditions, hidden columns, lookups, and their triggers. Enterprise only. See CreateNewVPM to begin. Not to be confused with: ConfigureSecurity.adoc, which controls login authentication, user/role definitions, and who can access which Dashboard assets.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

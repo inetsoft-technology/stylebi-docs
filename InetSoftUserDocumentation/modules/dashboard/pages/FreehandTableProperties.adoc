@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Freehand Table component properties, which differ from regular Table properties. Covers header/trailer rows and columns, Shrink to Fit, Fill Blank Cell With Zero, Data Tip, and Flyover Views. See TableProperties for regular Table settings.
+Summary: Reference for Freehand Table (also called a free-form table or custom layout table) component properties, which differ from regular Table properties. Covers header/trailer rows and columns, Shrink to Fit, Fill Blank Cell With Zero, Data Tip, and Flyover Views (hover tooltips). See TableProperties for regular Table settings.
 endif::ai[]
 
 [WARNING,caption=see also]

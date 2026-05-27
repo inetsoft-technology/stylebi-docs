@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Selection List filter component properties. Covers display style (list vs. dropdown), sort order, submit behavior, single-selection mode, and data binding including an optional measure bar display. Also covers Compatible Tables for filtering multiple data blocks simultaneously.
+Summary: Reference for Selection List filter component properties (also called a checkbox filter, multi-select filter, or filter list). Covers display style (list vs. dropdown), sort order, submit behavior, single-selection mode, and data binding including an optional measure bar display. Also covers Compatible Tables for filtering multiple data blocks simultaneously.
 endif::ai[]
 
 [WARNING,caption=see also]

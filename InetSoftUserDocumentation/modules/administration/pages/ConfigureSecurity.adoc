@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Step-by-step overview for setting up security on the InetSoft server, including specifying authentication/authorization providers, creating users, groups, and roles, and setting repository and action permissions.
+Summary: Step-by-step overview for setting up security on the InetSoft server, including specifying authentication/authorization providers, creating users, groups, and roles, and setting repository and action permissions. Not to be confused with: AddDataSecurity.adoc (Virtual Private Model/VPM), which restricts which database rows and columns specific users can see — a data-level restriction independent of login or asset permissions.
 endif::ai[]
 
 

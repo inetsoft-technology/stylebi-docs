@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and navigation page for the Data Worksheet module. Explains where to perform data preparation tasks such as filtering, grouping, sorting, and joining, with links to relevant sections.
+Summary: Top-level routing index for the Data Worksheet module (also called query builder, data prep, ETL layer, or data pipeline). Use this to find the right page for any data preparation task. Creating a new Data Worksheet: CreateNewWorksheet.adoc. Writing SQL queries or using the query wizard: QueryData.adoc. Importing a CSV, Excel, or text file: UploadData.adoc. Filtering data (conditions, WHERE clause, row restrictions): FilterData.adoc. Grouping and aggregation (SUM, COUNT, AVG by dimension): GroupAggregateData.adoc. Joining data blocks (inner, outer, inequality joins): JoinData.adoc. Combining multiple data sources (mashup): MashupData.adoc. Union, intersection, or difference between data blocks: ConcatenateData.adoc. Calculated fields and derived expressions: CreateNewDataField.adoc. Variables and parameters (user input to queries): CreateNewVariable.adoc. Pivoting, transposing, or reshaping data: PivotData.adoc. Sorting: SortData.adoc. Copying or creating mirror copies of data blocks: CopyData.adoc. Row-level and column-level data security (VPM): SecureData.adoc. Data Worksheet properties: DataWorksheetProperties.adoc.
 endif::ai[]
 
 [WARNING,caption=see also]

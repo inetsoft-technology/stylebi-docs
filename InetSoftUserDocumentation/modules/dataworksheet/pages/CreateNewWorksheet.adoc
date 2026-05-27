@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a new Data Worksheet from the User Portal or from within Visual Composer, including the New Data Worksheet dialog options (Mashup, Query, Upload) and how to save a worksheet with the correct scope (public or private).
+Summary: How to create a new Data Worksheet (query builder, data pipeline, data prep) from the User Portal or from within Visual Composer (the dashboard designer), including the New Data Worksheet dialog options (Mashup, Query, Upload) and how to save a worksheet with the correct scope (public or private).
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 

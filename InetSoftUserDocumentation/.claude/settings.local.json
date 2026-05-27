@@ -45,7 +45,8 @@
       "Bash(git pull *)",
       "Bash(git push *)",
       "Bash(grep -v \"test\\\\|Test\\\\|spec\\\\|scss\\\\|html$\")",
-      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(item['path']\\) for item in data]\")"
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(item['path']\\) for item in data]\")",
+      "Bash(grep -rA 2 \"ifdef::ai\\\\[\\\\]\" modules/administration/pages/SpecifySecurityProvider.adoc)"
     ]
   }
 }

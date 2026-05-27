@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Tabbed Interface component properties, which groups multiple Dashboard components into tabs to conserve screen space. Covers tab labels, tab position (top or bottom), and appearance settings. See ArrangeComponents for how to create a Tabbed Interface by grouping components.
+Summary: Reference for Tabbed Interface (also called a tab panel, tabbed container, or tabs) component properties, which groups multiple Dashboard components into tabs to conserve screen space. Covers tab labels, tab position (top or bottom), and appearance settings. See ArrangeComponents for how to create a Tabbed Interface by grouping components.
 endif::ai[]
 
 [WARNING,caption=see also]

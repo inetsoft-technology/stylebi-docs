@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Text component properties. Covers the Text field (static label or dynamic expression), data binding for displaying aggregate values, and formatting. The Text component can also embed external content via URL. See AddTextOrHTML for how to add a Text component.
+Summary: Reference for Text component properties. The Text component is commonly used as a KPI card or metric card to display a single aggregated value (scorecard tile). Covers the Text field (static label or dynamic expression), data binding for displaying aggregate values, and formatting. The Text component can also embed external content via URL. See AddTextOrHTML for how to add a Text component.
 endif::ai[]
 
 [WARNING,caption=see also]

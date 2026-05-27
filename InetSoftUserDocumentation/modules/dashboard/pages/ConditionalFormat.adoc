@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to apply conditional formatting (highlights) to Table columns, Crosstabs, Charts, Images, and Text components. Highlights change visual appearance (foreground color, background color, font) based on data conditions, making it easy to draw attention to exceptions or thresholds. Multiple highlights on the same element combine additively.
+Summary: How to apply conditional formatting (highlights, also called color rules) to Table columns, Crosstabs, Charts, Images, and Text components. Highlights change visual appearance (foreground color, background color, font) based on data conditions, making it easy to draw attention to exceptions or thresholds. Multiple highlights on the same element combine additively. Not to be confused with: VisualFormat.adoc (static visual appearance — colors, fonts, borders) or DataFormat.adoc (number/date/percent display patterns).
 endif::ai[]
 
 You can apply conditional formatting (*highlighting*) to Table columns, Images, Text, Crosstabs, and Chart elements. Conditional formatting  allows component appearance to change based on the data bound to the element. These conditional formats are called _highlights_. They are very useful in calling attention to events where   data meets (or fails to meet) some specified condition.

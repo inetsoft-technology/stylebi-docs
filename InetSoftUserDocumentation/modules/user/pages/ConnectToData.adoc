@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and navigation page for connecting InetSoft to data. Covers creating persistent datasource connections, importing files into Data Worksheets, editing connections, and deciding whether to create a data model.
+Summary: Top-level routing index for data source connections in StyleBI. Use this to find the right page for connecting to data. Creating a new database, API, or cloud service connection: ConnectToDataSource.adoc (lists all supported connector types — databases, REST, Salesforce, Google Analytics, etc.). Importing a CSV, Excel, or text file without a persistent data source: UploadData.adoc in the dataworksheet module. Editing or updating an existing connection: EditConnection.adoc. Deciding whether to use a data model (logical/physical model) versus direct queries: NeedDataModel.adoc. Row-level and column-level data security (Virtual Private Model, VPM): AddDataSecurity.adoc. For setup instructions for a specific connector (JDBC, Salesforce, REST API, Google Analytics, etc.), see the individual connector pages listed under ConnectToDataSource.adoc.
 endif::ai[]
 
 A *datasource* provides a persistent connection to your data, so changes that you make to your data by updating, modifying, or deleting records are automatically reflected in all Dashboards that use the data source.

@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview of Enterprise Manager capabilities for server administration, including monitoring, logging, configuration, file management, and security. Introduces the Enterprise Manager web application.
+Summary: Top-level routing index for Enterprise Manager server administration. Use this to find the right page for any admin task. Getting started with Enterprise Manager: GetStartedWithEnterpriseManager.adoc. Security setup — authentication providers (LDAP, database, custom), SSO, users, groups, roles, permissions, and multi-tenancy/organizations: ConfigureSecurity.adoc. Scheduled tasks — automated Dashboard runs, email delivery, PDF/Excel exports, and alerts: Schedule.adoc, CreateScheduledTask.adoc. Materialized views and query caching for Dashboard performance: AdvancedTopics.adoc, MaterializedView.adoc. CSS styling applied server-wide to all Dashboards: CreateCSSDefinitionFile.adoc, UploadCSSFile.adoc. Server localization and language settings: AdvancedTopics.adoc. Logging and server monitoring: AdvancedTopics.adoc. Custom geographic maps: AdvancedTopics.adoc. Command-line/batch administration: AutomateAdminTasks.adoc.
 endif::ai[]
 
 

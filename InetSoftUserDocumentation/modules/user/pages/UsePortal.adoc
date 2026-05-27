@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and navigation page for the User Portal, which provides access to Dashboards, Data Worksheets, and data source management. Links to all major Portal tasks including opening the Portal, configuring preferences, scheduling, and bookmarking.
+Summary: Top-level routing index for end-user Portal tasks. Use this to find the right page for anything an end-user does in the User Portal. Logging in and accessing the Portal: OpenUserPortal.adoc. Changing password or email: ConfigurePortal.adoc. Organizing Dashboards into folders: ManageRepository.adoc. Understanding Dashboard toolbar and controls: UseDashboard.adoc. Using filter components (selection lists, sliders, calendars) to explore data: UseFilterComponents.adoc. Using chart interactions — zoom, drill-down, brushing, show details, ad hoc editing: UseCharts.adoc. Saving Dashboard state (filters, annotations) as a bookmark to reload later: BookmarkDashboard.adoc. Adding notes or comments to Dashboard components or data points (annotations): AddAnnotation.adoc. Scheduling a Dashboard for automatic email delivery or export: ScheduleDashboard.adoc. Sharing a Dashboard via email or social network: ShareDashboard.adoc. Investigating Dashboard load performance: ProfileDashboard.adoc. Pinning a Dashboard to the Portal home: DeployDashboard.adoc.
 endif::ai[]
 
 The User Portal provides features for accessing and managing existing assets, such as Data Worksheets and Dashboards, and allows you to create new assets as well. The User Portal is a web-based interface, so you do not need to install any special software on your computer. Your system administrator will tell you the correct address to use in your web browser.

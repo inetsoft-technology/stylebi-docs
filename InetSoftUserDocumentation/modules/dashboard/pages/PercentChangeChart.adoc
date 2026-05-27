@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Percent Change chart in a Dashboard, which shows the percent change (or absolute change) between consecutive dimension groups. Covers selecting the Change or % Change option from the Trend and Comparison menu, and using the Custom calculation to control the baseline (First, Previous, Next, or Last). See CompareDataByDate for additional date-based comparison methods.
+Summary: How to create a Percent Change chart in a Dashboard (also called a percentage change or growth rate chart), which shows the percent change (or absolute change) between consecutive dimension groups. Covers selecting the Change or % Change option from the Trend and Comparison menu, and using the Custom calculation to control the baseline (First, Previous, Next, or Last). See CompareDataByDate for additional date-based comparison methods.
 endif::ai[]
 
 [WARNING,caption=see also]

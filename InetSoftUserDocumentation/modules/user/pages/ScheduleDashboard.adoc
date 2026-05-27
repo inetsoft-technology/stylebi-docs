@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to schedule automatic Dashboard generation and delivery on a predefined cycle, including quick-scheduling and advanced schedule options for email delivery and format selection.
+Summary: How to schedule automatic Dashboard generation and delivery on a predefined cycle, including quick-scheduling and advanced schedule options for email delivery and format selection. For admin-level scheduling with full delivery control, email templates, and alerts, see CreateScheduledTask.adoc in the administration module.
 endif::ai[]
 
 

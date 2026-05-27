@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to create a Trellis (small multiples) chart grid, which is a grid of charts where each cell represents a different dimension value. Place dimensions in the X and/or Y regions of the Chart Editor to create the grid. Note that web map backgrounds are not supported in trellis charts.
+Summary: Explains how to create a Trellis chart grid (also called small multiples or a faceted chart), which is a grid of charts where each cell represents a different dimension value. Place dimensions in the X and/or Y regions of the Chart Editor to create the grid. Note that web map backgrounds are not supported in trellis charts.
 endif::ai[]
 
 NOTE: Web map backgrounds (e.g., Google Maps) cannot be used in Trellis-type charts.

@@ -7,7 +7,7 @@ include::dashboard:partial$availableToEndUsers.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Charts and Crosstabs can compare data across multiple date ranges, supporting standard periods (years, quarters, months, weeks) or custom date ranges, with three comparison modes (all periods, same period, period-to-date). Results can be shown as values, changes, or percentage changes. A Date-type field is required; color or axis will be used to distinguish date groups depending on existing chart settings.
+Summary: Charts and Crosstabs can compare data across multiple date ranges — sometimes called year-over-year (YoY), period comparison, or date comparison — supporting standard periods (years, quarters, months, weeks) or custom date ranges, with three comparison modes (all periods, same period, period-to-date). Results can be shown as values, changes, or percentage changes. A Date-type field is required; color or axis will be used to distinguish date groups depending on existing chart settings.
 endif::ai[]
 
 Charts and Crosstabs provide an easy way to *compare* data across different date ranges. For example:

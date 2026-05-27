@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Selection Container component properties, which groups multiple filter components (Selection Lists, Trees, etc.) into a collapsible panel to save Dashboard space. Covers appearance, title, and layout settings. See AddFilterComponents for how to create filter components.
+Summary: Reference for Selection Container component properties (also called a filter panel or filter group), which groups multiple filter components (Selection Lists, Trees, etc.) into a collapsible panel to save Dashboard space. Covers appearance, title, and layout settings. See AddFilterComponents for how to create filter components.
 endif::ai[]
 
 [WARNING,caption=see also]

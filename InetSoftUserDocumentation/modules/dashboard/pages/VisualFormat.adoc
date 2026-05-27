@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Add Visual Format explains how to use the Format panel in Visual Composer to control the visual appearance of Dashboard components without scripting. Topics covered include setting font (face, style, size), foreground and background color, alignment, borders, wrap text, graphical presenters, and CSS classes/IDs. For Charts, color and font can be applied chart-wide (affecting all text including axis labels, axis titles, legends, and plot labels) or to individual regions independently by clicking a specific region before formatting.
+Summary: Add Visual Format explains how to use the Format panel in Visual Composer to control the visual appearance of Dashboard components without scripting. Topics covered include setting font (face, style, size), foreground and background color, alignment, borders, wrap text, graphical presenters (also called cell renderers, in-cell bars, or data bars), and CSS classes/IDs. For Charts, color and font can be applied chart-wide (affecting all text including axis labels, axis titles, legends, and plot labels) or to individual regions independently by clicking a specific region before formatting. Not to be confused with: DataFormat.adoc (number/date/percent display patterns such as currency symbols and date strings) or ConditionalFormat.adoc (rule-based highlighting that changes appearance based on data values).
 endif::ai[]
 
 [WARNING,caption=see also]

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Radio Button, Check Box, and Combo Box form component properties. Covers list value sources (embedded or query-populated), submit behavior, and default value selection. These Form components pass selected values to a Data Worksheet target. See DynamicallySetProperties for usage.
+Summary: Reference for Radio Button, Check Box, and Combo Box form component properties (also called form controls, input controls, or filter controls). Covers list value sources (embedded or query-populated), submit behavior, and default value selection. These Form components pass selected values to a Data Worksheet target. See DynamicallySetProperties for usage.
 endif::ai[]
 
 [WARNING,caption=see also]
