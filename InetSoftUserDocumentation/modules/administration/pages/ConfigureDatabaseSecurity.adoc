@@ -15,7 +15,7 @@ image::server22.png[alt="configure database authentication settings"]
 
 IMPORTANT: If multi-tenancy is enabled (see xref:EnableMultiTenant.adoc[]) but the database does not contain organization information, leave the "`Organization`" queries blank.  All members are then processed as belonging to the default Host Organization.
 
-
+== Database Connection Settings
 
 Driver:: The driver class name (e.g., `com.mysql.jdbc.Driver`). Corresponding property:  `security.dbap.driver`.
 
@@ -42,6 +42,8 @@ DSTU7564-512
 
 
 Append Salt:: Enable to append salt; disable to prepend salt. Corresponding property: `security.dbap.salt.append`.
+
+== User, Group, and Role Query Settings
 
 Users Query:: A query that takes a username as a parameter and returns username, password, optional salt. Corresponding property: `security.dbap.user.query`.
 +
@@ -93,8 +95,8 @@ select distinct emails from usertable where organization = ? and username = ?
 ****
 
 Group Users Query:: A query that takes a group name as a parameter returns a list of users for a given group. Corresponding property: `security.dbap.group.users.query`.
-****
 +
+****
 .Example 1: Multi-tenancy disabled
 [source,sql]
 select distinct username from usertable where "group" = ?
@@ -128,6 +130,8 @@ select distinct "role" from usertable
 select distinct "role",organization from usertable
 ****
 
+== Organization Query Settings (Multi-Tenant)
+
 Organization List Query:: *_Optional_*: For a *multi-tenant* environment, a query that returns a list of organizations. Corresponding property:    `security.dbap.organization.list.query`. Press the btn:[Show Organization List] button to display the query  results.
 +
 .Example
@@ -155,6 +159,8 @@ NOTE: If multitenancy is *enabled* but the database does not contain organizatio
 
 
 
+
+== Administrator Role Settings
 
 System Administrator Roles:: Roles for the system administrator.
 

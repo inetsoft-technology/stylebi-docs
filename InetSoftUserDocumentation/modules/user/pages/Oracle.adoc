@@ -9,7 +9,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Oracle as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to an Oracle database as a data source in InetSoft. The Oracle driver is bundled. Supports Custom URL or host name/port/SID entry with login credentials; use the Custom option to connect by service name instead of SID. Also covers a known limitation with CLOB columns and how to work around it using CAST to VARCHAR2.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

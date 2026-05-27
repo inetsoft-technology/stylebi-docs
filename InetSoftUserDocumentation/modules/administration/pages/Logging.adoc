@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to configure server logging levels, log file locations, and log rotation settings in Enterprise Manager.
+Summary: How to configure server logging settings in Enterprise Manager, including log file location, maximum log file size, log rotation, default log detail level (Debug/Info/Warning/Error), and custom per-asset log levels.
 endif::ai[]
 
 [NOTE,caption=Site admin only]

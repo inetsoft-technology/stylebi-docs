@@ -7,7 +7,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Google Cloud SQL as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Google Cloud SQL as a data source in InetSoft Style Intelligence using a JDBC driver (plugin driver required). You can connect via a Custom URL (jdbc:mysql:///{DatabaseName}?cloudSqlInstance=...) or by entering the Host Name, Port, Database Name, and login credentials manually. After connecting, proceed to create a data set.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

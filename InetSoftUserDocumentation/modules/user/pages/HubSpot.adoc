@@ -7,7 +7,7 @@ include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to HubSpot as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to HubSpot as a data source in InetSoft Style Intelligence. Authentication uses an OAuth flow via the Authorize button to populate the token fields. An API key is required for open-source deployments. After connecting, proceed to define a data set using QueryHubSpot.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

@@ -7,7 +7,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Vertica as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Vertica as a data source in InetSoft using a JDBC driver (plugin required). Requires setting Database Type to Custom, supplying the Driver Class name and a JDBC URL in the form jdbc:vertica://{host}:{port}/{databaseName}, plus login credentials.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

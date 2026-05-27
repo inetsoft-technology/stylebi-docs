@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Running Total chart, which displays an aggregated measure that accumulates across dimension groups, with optional reset points. See CompareDataByDate for related date-based comparisons and TrendCompareData for setting trend/comparison methods.
+Summary: How to create a Running Total chart in a Dashboard, which displays an aggregated measure that accumulates across dimension groups. Covers selecting Running Total from the Trend and Comparison menu, using the Custom Running calculation with aggregate method and optional Reset at date interval, and includes a step-by-step running average example. See CompareDataByDate for related date-based comparisons.
 endif::ai[]
 
 [WARNING,caption=see also]

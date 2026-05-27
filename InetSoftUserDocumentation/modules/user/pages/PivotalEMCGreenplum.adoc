@@ -9,7 +9,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Pivotal (EMC) Greenplum as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Pivotal (EMC) Greenplum as a data source in InetSoft using a JDBC driver. Covers selecting the Custom database type, entering the Driver Class, and using the JDBC URL format `jdbc:pivotal:greenplum://{hostname}:{port};DatabaseName={databaseName}`.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

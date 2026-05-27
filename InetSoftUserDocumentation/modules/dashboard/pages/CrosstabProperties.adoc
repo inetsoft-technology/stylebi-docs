@@ -2,6 +2,12 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+
+// metadata for AI
+ifdef::ai[]
+Summary: Reference for all Crosstab component properties in StyleBI, including the General tab (same as Table), the Advanced tab (summary fields, grid lines, totals, multiple aggregations, row/column settings), the Hierarchy tab (custom drill-down hierarchy), and the Script tab. Use this page to configure Crosstab appearance, aggregation behavior, and drill-down navigation.
+endif::ai[]
+
 [WARNING,caption=see also]
 ====
 [square]
@@ -18,12 +24,6 @@ The *General* tab in the ‘Crosstab Properties’ panel is the same as for regu
 
 [#AdvancedTab]
 == Advanced Tab
-
-
-// metadata for AI
-ifdef::ai[]
-Summary: Defines all properties of a Crosstab element, including data layout, summary fields, grid lines, visual/global options, and explains how to display and arrange multiple aggregations, adjust row/column settings, totals, and other Crosstab behaviors in StyleBI.
-endif::ai[]
 
 The *Advanced* tab in the ‘Crosstab Properties’ panel provides the following properties.  Some properties apply to Freehand Table as well.
 

@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview page for integrating StyleBI into a third-party web application, linking to the primary tasks: configuring SSO, choosing a security provider, loading assets via URL, customizing the login page, and customizing server-side updates. Notes that HTTPS requires a reverse proxy with SSL termination.
+endif::ai[]
+
 The following  primary tasks are required to integrate StyleBI into a 3rd party-web application:
 
 * xref:ConfigureSingleSignOn.adoc[]

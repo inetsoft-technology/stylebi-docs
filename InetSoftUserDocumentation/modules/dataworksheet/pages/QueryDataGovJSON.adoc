@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an existing Data.Gov JSON Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+Summary: How to create a Data Worksheet query from a Data.Gov JSON connection by entering a URL Suffix for the web service endpoint, with an optional tabular data format selection. Covers opening the Data.Gov JSON Query dialog and completing the query setup in a Data Worksheet.
 endif::ai[]
 
 

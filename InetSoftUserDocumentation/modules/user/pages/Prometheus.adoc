@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Prometheus as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Prometheus as a data source in InetSoft. Requires entering the Host and Port for the Prometheus server. After connecting, proceed to define a data set using the Prometheus query page.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

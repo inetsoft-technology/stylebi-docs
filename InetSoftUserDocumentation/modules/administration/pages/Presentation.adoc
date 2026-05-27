@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to configure the visual appearance and branding of the User Portal in Enterprise Manager, including logos, color themes, and multi-tenant presentation options.
+Summary: How to configure Presentation settings in Enterprise Manager, covering general date/time formats, export menu options, look and feel (fonts, favicon, custom shapes), themes (CSS variables for Portal and Enterprise Manager), welcome page, login banner, composer messages, Dashboard settings and toolbar, portal integration tabs, time settings, PDF settings and font mapping, data source visibility, web map backgrounds (Mapbox/Google Maps), social sharing, and AI Assistant integration.
 endif::ai[]
 
 This section discusses the various features that are available for tailoring the appearance of the User Portal.

@@ -9,7 +9,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Apache Hive as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Apache Hive as a data source in InetSoft. Requires Host, Port, Database, HiveServer Type, and security credentials. After connecting, query data via the Data Worksheet.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

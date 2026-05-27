@@ -3,6 +3,10 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 :SREEContext: http://hostname:8080
 
+// metadata for AI
+ifdef::ai[]
+Summary: URL syntax reference for accessing StyleBI components from external web applications, including displaying the User Portal, individual portal tabs, Dashboards (public and private), exporting Dashboards, embedding interactive charts via IFrame or web component, passing parameters to Dashboards, and pinging the server. Covers IFrame embedding and cross-page communication.
+endif::ai[]
 
 The following sections show you how to display User Portal components via URL. (HTTP requests can be submitted with both the GET and POST methods.) To embed User Portal components into your web application, use the supplied URLs with an *IFrame*.
 

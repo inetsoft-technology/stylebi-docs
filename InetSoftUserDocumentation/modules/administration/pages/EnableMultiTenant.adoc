@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to enable multi-tenancy in Enterprise Manager to support multiple organizations with isolated data, connections, and assets. Enterprise only.
+Summary: How to enable multi-tenancy in Enterprise Manager to support multiple organizations (tenants) with isolated data connections and assets. Covers the Domain and Path URL routing options for identifying the tenant organization, including sample HAProxy configuration. Enterprise only.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

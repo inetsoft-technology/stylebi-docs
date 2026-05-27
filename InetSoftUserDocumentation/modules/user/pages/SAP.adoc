@@ -19,7 +19,7 @@ To connect to an SAP database, an administrator must first upload the correct dr
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to SAP as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to SAP (ABAP, BAPI, or Tables) as a data source in InetSoft. Requires .NET 1.1 runtime, SAP client tools and DLLs (librfc32.dll, sapjcorfc.dll), and the SAP driver JAR (sapjco.jar) to be installed on the server. Enterprise edition only.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

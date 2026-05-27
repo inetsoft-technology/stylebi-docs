@@ -5,10 +5,10 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Box (box-and-whisker) chart, which displays a measure's distribution in terms of median, minimum, maximum, first quartile, and third quartile, with individual outliers shown as separate points.
+Summary: Reference for creating a Box (box-and-whisker) chart, which displays a measure's distribution in terms of median, minimum, maximum, first and third quartiles, with individual outliers shown as separate points. Covers binding a dimension and measure to the chart and choosing the Box Plot style.
 endif::ai[]
 
-A box chart (also known as “box-and-whisker” plot) displays a  in terms of its median, minimum, maximum, first quartile, and third quartile (excluding outliers).
+A box chart (also known as “box-and-whisker” plot) displays a measure in terms of its median, minimum, maximum, first quartile, and third quartile (excluding outliers).
 
 image::commonscript:boxChartExp4.png[alt="box chart example"]
 

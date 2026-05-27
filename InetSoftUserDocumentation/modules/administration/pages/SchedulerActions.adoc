@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for the three types of scheduler task actions (Dashboard, Backup, Batch) that define operations performed when a scheduled task runs. See CreateScheduledTask.
+Summary: Reference for scheduled task actions and options in StyleBI, covering the three action types (Dashboard, Backup, Batch), delivery options (email notification, deliver to emails, save to disk), creation parameters, schedule options, and how to insert dynamic parameters into email subjects and filenames.
 endif::ai[]
 
 The scheduler action specifies the operations to be performed when the scheduled task runs. (See xref:CreateScheduledTask.adoc[].) There are three types of actions:  ‘Dashboard’, ‘Backup’, and '`Batch`'.

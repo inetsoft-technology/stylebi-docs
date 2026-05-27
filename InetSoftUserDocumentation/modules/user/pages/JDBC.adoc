@@ -10,7 +10,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to JDBC as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to create a custom JDBC data source connection in InetSoft for databases not covered by built-in connectors. Requires uploading a JDBC driver plugin, specifying the Driver Class and JDBC URL, and providing login credentials. Covers connection testing and common database URL formats for Oracle, DB2, MySQL, SQL Server, and others.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

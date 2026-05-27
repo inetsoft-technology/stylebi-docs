@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an existing One Drive Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+Summary: How to create a Data Worksheet query from a OneDrive connection by specifying a file path (txt, csv, xls, xlsx), previewing data with the Load File button, and configuring options such as sheet selection, encoding, delimiter, Unpivot Data for crosstab conversion, First Row as Header, and Remove Quotation Marks.
 endif::ai[]
 
 

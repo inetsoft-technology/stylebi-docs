@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to monitor server activity in Enterprise Manager, including viewing active user sessions, running queries, memory usage, and server metrics.
+Summary: How to use the Monitoring section of Enterprise Manager to track server activity, including executing Dashboards, running queries, cache usage, active user sessions, cluster nodes, and server logs. Covers how to terminate Dashboards, queries, or user sessions from the monitoring pages.
 endif::ai[]
 
 To monitor and manage a variety of aspects of server activity, press the {buttonMonitoring} at the top of Enterprise Manager.

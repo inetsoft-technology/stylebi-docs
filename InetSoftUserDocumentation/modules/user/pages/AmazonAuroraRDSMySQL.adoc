@@ -8,7 +8,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Amazon Aurora RDS MySQL as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Amazon Aurora RDS MySQL as a data source in InetSoft. Requires a plugin driver; supports both a custom connection URL and manual entry of Host Name, Port, Database Name, and credentials. Uses MySQL database type.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

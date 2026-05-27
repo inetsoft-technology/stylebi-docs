@@ -7,7 +7,7 @@ include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Shopify as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Shopify as a data source in InetSoft. Requires your Shopify store name (Shop field), OAuth Client ID and Client Secret, and desired API access scopes. After authorization the token fields are populated automatically.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

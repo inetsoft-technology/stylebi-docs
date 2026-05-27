@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an existing monday.com Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+Summary: How to create a Data Worksheet query from a monday.com data source using GraphQL, including writing the query with optional variables, configuring pagination (Pagination Variable and Pagination JSON Path), choosing a Request Type (GET or POST), specifying a JSON Path to extract fields from the response, and optionally enabling the Expand Arrays option.
 endif::ai[]
 
 

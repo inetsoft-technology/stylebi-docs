@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to InfluxDB as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to InfluxDB as a data source in InetSoft Style Intelligence. You supply the server URL and choose an Authentication Scheme, then enter either user credentials or an API token depending on the scheme. After connecting, proceed to define a data set using QueryInfluxDB.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

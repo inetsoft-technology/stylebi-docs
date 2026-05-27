@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Twilio SendGrid as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Twilio SendGrid as a data source in InetSoft. Requires a Twilio SendGrid API Key for authentication. After entering the API Key and pressing OK, verify the connection status icon to confirm success.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

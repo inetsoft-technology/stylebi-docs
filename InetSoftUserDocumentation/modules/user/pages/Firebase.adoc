@@ -7,7 +7,7 @@ include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Firebase as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Firebase as a data source in InetSoft Style Intelligence. You supply a Project ID and then use the Authorize button to complete OAuth authentication and populate the token fields. An API key is required for open-source deployments. After connecting, proceed to define a data set using QueryFirebase.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

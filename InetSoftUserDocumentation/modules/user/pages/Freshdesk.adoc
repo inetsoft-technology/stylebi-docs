@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Freshdesk as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Freshdesk as a data source in InetSoft Style Intelligence. Required credentials are a Domain and an API Key. After connecting, proceed to define a data set using QueryFreshdesk.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

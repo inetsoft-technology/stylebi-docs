@@ -2,6 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure custom server-side Dashboard updates triggered by external events (such as a database event) using the DataChangeClient class and the assetMonitor.enabled property. Includes a full walkthrough of setting up an automatically-refreshing Dashboard.
+endif::ai[]
 
 To force a Dashboard to refresh its data at a specified interval, simply select the ‘Server-Side Update’ option in the ‘Dashboard Options’ dialog box. (See xref:dashboard:DashboardOptions.adoc[] in xref:dashboard:VisualizeYourData.adoc[] for more details.)
 

@@ -7,7 +7,7 @@ include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to SurveyMonkey as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to SurveyMonkey as a data source in InetSoft. Uses OAuth authorization — press the Authorize button to populate the token field automatically. No manual token entry is required.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

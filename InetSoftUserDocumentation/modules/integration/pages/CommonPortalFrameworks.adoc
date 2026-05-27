@@ -3,6 +3,11 @@
 :SREEContext: http://hostname:8080
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Integration guidance for common portal frameworks, specifically Microsoft IIS Web Server and SharePoint Portal Framework. Explains that StyleBI must run on a J2EE-compliant server and can be embedded in SharePoint Web Parts or IIS-hosted pages via URL.
+endif::ai[]
+
 The following sections discuss issues related to some common server and portal frameworks.
 
 == Microsoft IIS Web Server

@@ -1,6 +1,11 @@
 = Filter Data
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to filter data in a Data Worksheet data block, including pre-aggregate and post-aggregate conditions, ranking (top-N/bottom-N) filters, dynamic conditions using variables, session data, field comparisons, expressions, and subqueries, plus materialized view update conditions.
+endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
 You can filter data at the  data pipeline level (Data Worksheet) or presentation level (Dashboard).
@@ -242,12 +247,6 @@ NOTE: If you want to apply dynamic conditions at the Dashboard level (rather tha
 [#UseVariableinCondition]
 === Use a Variable (Parameter) in a Condition
 
-
-// metadata for AI
-ifdef::ai[]
-Summary: Filter data in a worksheet using dynamic conditions that apply user-selected values, variables, or expressions at runtime, allowing rows to be included or excluded based on changing criteria without requiring script.
-endif::ai[]
-
 [.videotitle]
 .Watch Video: Filter Data Using Parameters
 
@@ -415,12 +414,6 @@ The condition compares corresponding values in the selected columns (left-most m
 
 [#UseExpressioninCondition]
 === Use an Expression in a Condition
-
-
-// metadata for AI
-ifdef::ai[]
-Summary: Filter data in a worksheet using dynamic conditions that apply user-selected values, variables, or expressions at runtime, allowing rows to be included or excluded based on changing criteria without requiring script.
-endif::ai[]
 
 [.videotitle]
 .Watch Video: Filter Data Using an Expression

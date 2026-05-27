@@ -7,7 +7,7 @@ include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to GraphQL as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to a GraphQL endpoint as a data source in InetSoft Style Intelligence. You supply the service URL and choose an authentication method: Basic (username/password), Two-step Token (with Authentication URI, HTTP parameters, and token regex), or OAuth 2.0 (Client ID/Secret, Authorization URI, Token URI, and Scope). An API key is required for open-source deployments. After connecting, proceed to define a data set using QueryGraphQL.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

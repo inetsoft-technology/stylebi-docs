@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Square as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Square as a data source in InetSoft. Requires a Square Personal Access Token. Optionally check the Sandbox option to connect to sandbox data rather than production data.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

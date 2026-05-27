@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an existing Hive Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+Summary: How to create a Data Worksheet query from an Apache Hive connection by entering a Hive SQL string in the 'Enter SQL' field. Covers opening the Apache Hive Query dialog and completing the query setup in a Data Worksheet.
 endif::ai[]
 
 

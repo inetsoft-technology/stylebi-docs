@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to pin Dashboards to the Portal Dashboard button and manage which Dashboards appear there, including adding and arranging pinned Dashboards.
+Summary: How to deploy, edit, delete, and reposition Pinned Dashboards in the User Portal, including selecting which Dashboard to display under each tab and adjusting the tab order.
 endif::ai[]
 
 You can arrange the Pinned Dashboards displayed by the {buttonDashboard} of the User Portal, and add your own Pinned Dashboards under this button.

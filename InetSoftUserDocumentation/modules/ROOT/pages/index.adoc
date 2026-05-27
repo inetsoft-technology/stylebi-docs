@@ -1,6 +1,11 @@
 // this is a comment
 = InetSoft Documentation
 
+// metadata for AI
+ifdef::ai[]
+Summary: Top-level documentation home for InetSoft StyleBI. Links to all major documentation modules: connecting to data sources, preparing Data Worksheets, building Dashboards in Visual Composer, publishing Dashboards, server administration via Enterprise Manager, scripting, the Chart API, and end-user Portal guidance. Also links to the Java API and Web API references.
+endif::ai[]
+
 InetSoft StyleBI  allows you to explore, analyze, monitor, report, and collaborate on business and operational data, all in real time.  StyleBI is engineered to scale with your enterprise needs, and to seamlessly integrate with a wide variety of data sources and delivery platforms.
 
 == About This Documentation

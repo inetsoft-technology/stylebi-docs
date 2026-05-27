@@ -7,7 +7,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to FileMaker as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to FileMaker as a data source in InetSoft Style Intelligence using a JDBC driver (plugin driver required). You must supply a Driver Class name and a JDBC URL of the form jdbc:filemaker://{host}/{databaseName}, plus login credentials. After connecting, proceed to create a data set.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

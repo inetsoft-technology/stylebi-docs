@@ -6,7 +6,7 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Google Analytics GA4 as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Google Analytics GA4 as a data source in InetSoft Style Intelligence (enterprise only). Authentication uses the Sign in with Google OAuth flow to populate the token fields. Optional Connect Timeout and Read Timeout settings are available. After connecting, proceed to define a data set using QueryGoogleAnalyticsGA4.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

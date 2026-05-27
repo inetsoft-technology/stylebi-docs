@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Scatter Contour chart, which shows density contours for scatter plot points without displaying the individual points. Useful for visualizing data concentration patterns. See ContourMapChart to overlay contours on a geographic map.
+Summary: How to create a Scatter Contour chart in a Dashboard, which shows density contours for scatter plot data without displaying individual points. Covers binding two measures to X and Y axes, optional weighting via a Size measure, color scheme selection, and adjusting contour characteristics (bandwidth, resolution, levels) in Chart Properties. See ContourMapChart to overlay contours on a geographic map.
 endif::ai[]
 
 A Scatter Contour chart displays contours that correspond to the density of the plotted points. The points themselves are *not* displayed.

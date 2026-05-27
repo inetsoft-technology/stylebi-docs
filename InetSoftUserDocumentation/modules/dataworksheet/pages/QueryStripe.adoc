@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an existing Stripe Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+Summary: How to create a Data Worksheet query from a Stripe data source by opening a Data Worksheet, pressing the Object button, selecting the Stripe Query option, and configuring the endpoint and query fields in the Stripe Query dialog box.
 endif::ai[]
 
 

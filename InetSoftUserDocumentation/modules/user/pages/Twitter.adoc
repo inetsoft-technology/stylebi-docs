@@ -7,7 +7,7 @@ include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Twitter (X) as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Twitter (X) as a data source in InetSoft. Requires a Client ID and Client Secret; pressing Authorize populates the Access Token, Refresh Token, and Token Expiration fields automatically via OAuth.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

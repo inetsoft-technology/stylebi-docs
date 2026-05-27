@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an existing Facebook Ad Insights Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+Summary: How to create a Data Worksheet query from a Facebook Ad Insights connection (Enterprise only) by selecting a Date Preset, adding Metrics, specifying Breakdowns, and configuring Additional Parameters in the Facebook Ad Insights Query dialog. Covers selecting ad campaign metrics and breakdowns using the Facebook Marketing API.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

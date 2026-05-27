@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to manage server security configuration programmatically using the Groovy DSL Administration Console :security command. Enterprise only.
+Summary: How to manage server security programmatically using the Groovy DSL Administration Console :security command. Covers creating, updating, listing, and deleting users, groups, roles, and organizations; changing master and user passwords; and managing repository asset permissions and permission grants (list, get, set, delete, create-grant, update-grant, delete-grant). Enterprise only.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

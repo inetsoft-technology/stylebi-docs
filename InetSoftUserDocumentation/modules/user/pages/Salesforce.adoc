@@ -6,7 +6,7 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Salesforce as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Salesforce as a data source in InetSoft (enterprise edition). Requires a Salesforce username and a combined password+security token string (e.g., if password is "abc123" and token is "XYZ987654321", enter "abc123XYZ987654321" in the Password field).
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

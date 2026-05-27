@@ -9,7 +9,7 @@ TIP: You can set up the https://www.inetsoft.com/docs/stylebi/web-api/[InetSoft 
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to REST JSON as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to a REST JSON web service as a data source in InetSoft, including how to configure Basic authentication (username/password and HTTP parameters) and Two-step Token authentication (authentication URI, token regex pattern, and query parameters). Also explains how to set up the InetSoft Web API as a REST JSON data source.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

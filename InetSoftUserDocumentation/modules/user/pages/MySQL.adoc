@@ -9,7 +9,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to MySQL as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to MySQL as a data source in InetSoft. Requires uploading the MySQL JDBC driver plugin. Supports Custom URL or host name/port/database name entry with login credentials. Supports HikariCP connection pool configuration.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

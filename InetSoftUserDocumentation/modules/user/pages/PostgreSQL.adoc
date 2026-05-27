@@ -9,7 +9,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to PostgreSQL as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to a PostgreSQL database as a data source in InetSoft. The PostgreSQL driver is bundled with InetSoft. Covers entering connection details (Host Name, Port, Database Name, credentials) or using a custom JDBC URL in the form `jdbc:postgresql://{host}:{port}/{databaseName}`.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

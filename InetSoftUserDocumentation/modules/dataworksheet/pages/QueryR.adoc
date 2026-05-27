@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an existing R Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+Summary: How to create a Data Worksheet query from an R connection by entering an R script (data set name or analysis script), with optional Pre-execution JavaScript to pass Worksheet data blocks and variables into the R session, and optional Post-execution JavaScript to write R session data frames or variables back into Worksheet Embedded Tables.
 endif::ai[]
 
 

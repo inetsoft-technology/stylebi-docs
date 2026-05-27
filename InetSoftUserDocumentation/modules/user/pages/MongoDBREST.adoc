@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to MongoDB REST as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to MongoDB via REST as a data source in InetSoft. Requires Host, Port, ReplicaSet, Database name, and security credentials. After a successful connection, you can query MongoDB REST data in a Data Worksheet.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

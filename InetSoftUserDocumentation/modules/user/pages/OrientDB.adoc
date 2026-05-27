@@ -9,7 +9,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to OrientDB as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to an OrientDB database as a data source in InetSoft using a JDBC driver. Covers selecting the Custom database type, specifying the Driver Class, entering the JDBC URL in the form `jdbc:orient:remote:{host}/{databaseName}`, and providing login credentials.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

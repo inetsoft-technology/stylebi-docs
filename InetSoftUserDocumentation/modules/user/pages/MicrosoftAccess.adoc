@@ -19,7 +19,7 @@ Connections to a Microsoft Access database are supported via http://ucanaccess.s
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Microsoft Access as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to a Microsoft Access database as a data source in InetSoft using the bundled UCanAccess driver. Supports Access 2000–2016 formats. Connection uses either a Custom JDBC URL (jdbc:ucanaccess:{DatabaseFilePath}) or a file path, plus optional login credentials. Includes known limitations such as unsupported date formats and data types.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

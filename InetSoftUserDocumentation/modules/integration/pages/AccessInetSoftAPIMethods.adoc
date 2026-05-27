@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Links to the InetSoft Java API and Web API documentation for developers who need to call InetSoft methods from external applications.
+endif::ai[]
+
 The documentation for InetSoft API methods that can be called from external applications can be found in the following locations:
 
 Java API::

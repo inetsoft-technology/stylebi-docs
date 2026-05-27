@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an existing Pipeline CRM Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+Summary: How to create a Data Worksheet query from a Pipeline CRM connection by selecting an endpoint, specifying a JSON Path expression to extract data, optionally expanding arrays, and setting a query timeout.
 endif::ai[]
 
 

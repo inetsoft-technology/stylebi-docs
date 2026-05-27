@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to TeamDesk as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to TeamDesk as a data source in InetSoft. Requires the TeamDesk Domain, Application ID, and Authorization Token for authentication.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

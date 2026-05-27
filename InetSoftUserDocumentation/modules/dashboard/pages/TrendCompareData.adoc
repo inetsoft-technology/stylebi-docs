@@ -80,8 +80,6 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . Press the {buttonEdit} at the top-right of the Chart to open the Visualization Recommender. Bypass the Recommender by pressing the {buttonFullEditor} at the top right. This opens the Chart Editor.
 
-==== Add Data to Chart
-[start=4]
 . In the Chart Editor, make the following selections:
 
 .. From the ‘Dimensions’ node in the data source, drag the ‘Category’ dimension to the ‘X’ region.
@@ -95,14 +93,10 @@ image::ChartCalculationPercentExample1.png[alt="chart editor with dimensions and
 
 . Drag the Chart handles to enlarge the Chart as desired.
 
-==== Add Filter
-[start=6]
 . From the data source, drag the ‘State’ dimension onto the Dashboard. This creates a ‘State’ Selection List.
 
 . Select the following states in the ‘State’ selection list: ‘AZ’, ‘CA’, ‘NJ’, ‘NY’.
 
-==== Show Values on Chart
-[start=8]
 . Right-click the plot area of the chart, and select ‘Properties’ from the context menu. This opens the ‘Chart Properties’ panel.
 
 . Under the *Advanced* tab, enable the ‘Show Values’ option, and press btn:[OK].
@@ -115,8 +109,6 @@ image::ChartCalculationPercentExample3.png[alt="chart displaying aggregate value
 
 . Open the Chart Editor again.
 
-==== Add Percent Trend and Comparison
-[start=10]
 . Press the {buttonEditMeasure} next to the ‘Quantity Purchased’ measure.
 
 . In the ‘Trend and Comparison’ menu of the pop-up panel, select the ‘Custom’ option.

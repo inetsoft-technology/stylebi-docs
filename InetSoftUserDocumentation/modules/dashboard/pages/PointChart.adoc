@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Point chart, which displays a measure as a collection of points and is the default chart style for numerical dimensions. See BubbleChart to encode a second measure as point size, ScatterChart to place measures on both axes, or DotPlotChart to show individual un-aggregated values.
+Summary: How to create a Point chart in a Dashboard, which displays a measure as a collection of points and is the default chart style for numerical dimensions. Covers selecting the Point style, binding a dimension to Color/Shape/Size/Text regions, and adding measure fields. See BubbleChart to encode a second measure as point size, ScatterChart to place measures on both axes, or DotPlotChart to show individual un-aggregated values.
 endif::ai[]
 
 [WARNING,caption= see also]

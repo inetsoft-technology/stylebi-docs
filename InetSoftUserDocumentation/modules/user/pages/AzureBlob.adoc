@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Azure Blob as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Azure Blob Storage as a data source in InetSoft. Requires an Account Name and Storage Account Key to generate a Shared Access Signature (SAS); fields can also be filled in manually. After connecting, query data via the Data Worksheet.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

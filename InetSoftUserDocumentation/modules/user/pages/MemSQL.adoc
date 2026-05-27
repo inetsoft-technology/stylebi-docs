@@ -9,7 +9,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to MemSQL as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to MemSQL (SingleStore) as a data source in InetSoft using the MySQL database type. Supports Custom URL or host/port/database name entry, and login credentials. Requires uploading a JDBC driver plugin and supports HikariCP connection pool configuration.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

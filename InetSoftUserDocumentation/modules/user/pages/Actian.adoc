@@ -7,7 +7,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Actian as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Actian (Actian Vector) as a data source in InetSoft using a custom JDBC driver. Requires a plugin driver, the driver class name, and a JDBC URL of the form jdbc:ingres://{hostname}:{port}/{databaseName}, plus login credentials.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

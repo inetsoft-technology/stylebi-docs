@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an existing Google Analytics GA4 Query connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+Summary: How to create a Data Worksheet query from a Google Analytics GA4 connection (Enterprise only) by entering dimensions and metrics query parameters in the Google Analytics GA4 Query dialog. Covers configuring GA4 API query parameters using the Dimensions and Metrics Explorer for version 4.0.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

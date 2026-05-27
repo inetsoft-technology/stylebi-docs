@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to ZohoCRM as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Zoho CRM as a data source in InetSoft. Requires a Client ID, Client Secret, Account Domain, and Authorization Code; pressing Authorize populates the OAuth token fields automatically.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

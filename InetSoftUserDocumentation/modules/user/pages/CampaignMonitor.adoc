@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Campaign Monitor as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Campaign Monitor (email marketing) as a data source in InetSoft. Requires the Campaign Monitor URL and API Key. After connecting, query data via the Data Worksheet.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

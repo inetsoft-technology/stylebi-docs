@@ -7,7 +7,7 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: VPM provides a transparent security layer for relational data, enforcing fine-grained row- and column-level access by automatically filtering queries based on user, role, and group.
+Summary: Step-by-step instructions for creating a new Virtual Private Model (VPM) for a relational database data source, providing access to the Conditions, Hidden Columns, and Test tabs used to configure row-level and column-level data security. Enterprise only.
 endif::ai[]
 
 IMPORTANT: VPMs can only be created for relation database data sources.  (See xref:JDBC.adoc[] or  xref:ConnectToDataSource.adoc[] for information on how to configure a relational database data source.)

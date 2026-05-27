@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to configure server properties and storage using the Groovy DSL Administration Console :setup command when the server is not running. Enterprise only.
+Summary: How to use the Administration Console :setup command (Groovy DSL) to manage the InetSoft server when it is not running, including setting and getting server properties, uploading and downloading files to storage, backing up and restoring assets, listing drivers, and packaging database drivers as plugins.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

@@ -8,7 +8,7 @@ To connect to Siebel CRM, create a direct connection to the back-end database.
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Siebel CRM as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Siebel CRM as a data source in InetSoft. Because Siebel CRM does not have a native connector, you connect via a direct JDBC connection to its back-end Oracle or SQL Server database. See the Oracle or SQL Server connector pages for connection details.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

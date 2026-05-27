@@ -8,7 +8,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to SQL Server as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Microsoft SQL Server (including SQL Server on Azure) as a data source in InetSoft. The SQL Server driver is bundled with InetSoft. Covers entering Host Name, Port, Instance Name, Database Name, and credentials, or using a custom JDBC URL. Notes that Azure connections require a Database Name.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

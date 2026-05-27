@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to access and modify the SRPrincipal user session object in StyleBI, including accessing it from JSP/Servlet, Login Listeners, and Dashboard scripts. Covers the setProperty(), setLocale(), and setParameter() methods, plus a use case for simulating user sessions with VPM filtering.
+endif::ai[]
+
 It is often desirable to set certain custom properties for a user session. While these properties are external to InetSoft, they can still be accessed from within the InetSoft environment through the *SRPrincipal* object that is associated with the user session. The following sections explain how to access and modify the `SRPrincipal` object.
 
 == Access SRPrincipal in JSP/Servlet

@@ -9,7 +9,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Presto as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Presto as a data source in InetSoft using a JDBC driver. Covers selecting the Custom database type, specifying the Driver Class, and entering the JDBC URL in the form `jdbc:presto://host:port[/catalog]`.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

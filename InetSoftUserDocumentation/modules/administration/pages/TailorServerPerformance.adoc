@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to configure server performance options in Enterprise Manager, including thread pools, query timeouts, and other performance tuning parameters.
+Summary: How to configure server performance options in Enterprise Manager on the General > Performance page, including query timeouts, maximum row counts, dataset caching settings, and related safeguard properties. Also covers the list of properties available to limit query size and execution time.
 endif::ai[]
 
 To configure server performance options, follow the steps below:

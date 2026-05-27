@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Percent Change chart, which shows the percent change between consecutive dimension groups. A specialized comparison chart. See CompareDataByDate for additional date-based comparison methods including running totals and moving averages.
+Summary: How to create a Percent Change chart in a Dashboard, which shows the percent change (or absolute change) between consecutive dimension groups. Covers selecting the Change or % Change option from the Trend and Comparison menu, and using the Custom calculation to control the baseline (First, Previous, Next, or Last). See CompareDataByDate for additional date-based comparison methods.
 endif::ai[]
 
 [WARNING,caption=see also]

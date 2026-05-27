@@ -3,12 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query using the Database Query dialog box, writing SQL directly against a relational database for cases where visual data block assembly is insufficient.
-endif::ai[]
-
-// metadata for AI
-ifdef::ai[]
-Summary: How to create a Data Worksheet query from an existing Query Data connection, including browsing available fields and configuring query parameters. See QuerySpecificDataSource for the full list of available data source query types.
+Summary: How to create a Data Worksheet query using the Database Query dialog box, supporting both basic and advanced SQL query modes, including column selection, joins, filter conditions, grouping, sorting, SQL string editing, and adding query variables or materialized view update conditions.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 

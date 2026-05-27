@@ -1,5 +1,10 @@
 = Advanced Server Integration
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview and navigation page for integrating InetSoft StyleBI into a third-party environment, linking to topics on web app port changes, single sign-on, multi-tenancy, the API, user session management, and portal framework integration.
+endif::ai[]
+
 IMPORTANT: Only users who have administrator privileges can change server settings.
 
 The topics in these sections explain how to integrate InetSoft into your own environment.  These sections are intended for administrators.

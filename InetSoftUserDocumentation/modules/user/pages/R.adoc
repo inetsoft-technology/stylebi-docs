@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to R as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to an R server as a data source in InetSoft. Requires entering the URL for the R server and any required credentials. After connecting, proceed to define a data set using the R query page.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

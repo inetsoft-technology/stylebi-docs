@@ -9,7 +9,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to MonetDB as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to MonetDB as a data source in InetSoft. Requires uploading the MonetDB JDBC driver plugin and providing the Driver Class, JDBC URL (format: jdbc:monetdb://<hostname>[:<port>]/<databasename>), and login credentials. Supports HikariCP connection pool configuration.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

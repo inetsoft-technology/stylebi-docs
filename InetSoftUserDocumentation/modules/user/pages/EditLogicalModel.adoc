@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to open and modify an existing logical model in the Portal data model editor.
+Summary: How to open and edit an existing logical model, including adding entities and attributes, renaming entities, modifying attribute properties (data type, format, reference type, browse data), and adding auto-drill hyperlinks that link to dashboards or web pages with optional parameter passing.
 endif::ai[]
 
 include::ROOT:partial$createVisualizationClose.adoc[]
@@ -110,8 +110,6 @@ Browse Data:: To allow designers and users to browse the attribute values using 
 == Add Auto Drill
 
 The *auto-drill* feature allows you to add hyperlinks to  an attribute in a logical model. The hyperlinks will then be present in any Dashboard that uses the attribute. For example, if you place an auto-drill on the ‘State’ attribute of a data model, then all tables and charts that display the ‘State’ attribute will have hyperlinks on the states. These hyperlinks can link to a web page or to another Dashboard.
-
-=== Auto Drill Walkthrough
 
 To add auto-drills to a data model, follow the steps below:
 

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to configure asset storage backend in Enterprise Manager via docker-compose.yaml, covering supported storage types and migration between environments.
+Summary: How to manage StyleBI storage in Enterprise Manager, including managing stored assets and files in the Content > Storage tab, uploading and managing database drivers and plugins, changing the backend storage method (MapDB, AWS DynamoDB/S3, Azure CosmosDB/Blob, Google Firestore/GCS, JDBC, MongoDB) via docker-compose.yaml, and backing up stored assets.
 endif::ai[]
 :deployAssets: To move assets such as Dashboards, queries, or data sources from one environment to another, see xref:ImportExportAssets.adoc[].
 

@@ -7,7 +7,7 @@ include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Google Spreadsheets as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Google Spreadsheets (Google Sheets) as a data source in InetSoft Style Intelligence. Authentication uses the Sign in with Google OAuth flow. Optional Connect Timeout and Read Timeout settings are available. An API key is required for open-source deployments. After connecting, proceed to define a data set using QueryGoogleSpreadsheets.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

@@ -2,6 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to change the StyleBI web application port by modifying the ports setting in docker-compose.yaml. The default port is 8080.
+endif::ai[]
 
 IMPORTANT: Stop your server before making these changes. The container needs to be recreated for the port change to take effect.
 

@@ -9,7 +9,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to MapR as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to MapR (Hadoop-based data platform) as a data source in InetSoft. Requires uploading the MapR JDBC driver plugin and providing the Driver Class, JDBC URL (format: jdbc:hive2://{host}:{port}/), and login credentials. After a successful connection, you can proceed to define a data set.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

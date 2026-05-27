@@ -7,7 +7,7 @@ include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to OData as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to an OData service as a data source in InetSoft. Requires a web service root URL and supports three authentication methods: Basic Authentication (username/password), Password Credentials Grant (OAuth with Token URI), and OpenID Connect OAuth (Client ID, Client Secret, Scope, Authorization URI, Token URI).
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Mixpanel as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to Mixpanel as a data source in InetSoft. Requires a Mixpanel API Secret. After a successful connection, you can query Mixpanel event and user data in a Data Worksheet.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

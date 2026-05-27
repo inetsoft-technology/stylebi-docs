@@ -7,7 +7,7 @@ include::ROOT:partial$APIKeyForOpenSource.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Quickbooks Reports as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: How to connect to QuickBooks Reports as a data source in InetSoft using OAuth authorization. Covers pressing the Authorize button to log in and populate the token and Company ID fields, and selecting Production Mode to target live rather than sandbox data.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

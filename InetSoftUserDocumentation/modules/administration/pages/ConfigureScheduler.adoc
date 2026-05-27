@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to configure the Scheduler application in Enterprise Manager, including scheduler server settings and connection parameters.
+Summary: How to configure the Scheduler in Enterprise Manager, covering scheduler properties (threads, classpath, save-file suffix), task failure notifications, defining time ranges for scheduled tasks, restricting server save paths, and attaching custom task listener code.
 endif::ai[]
 
 
