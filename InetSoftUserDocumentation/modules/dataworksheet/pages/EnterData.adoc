@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create an Embedded Table (manual data entry, static data table) by manually typing data into a Data Worksheet, creating a persistent data block that can be saved across sessions.
+Summary: How to create an Embedded Table (manual data entry, static data table) in Visual Composer by manually typing data into a Data Worksheet, creating a persistent data block that can be saved across sessions.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Freshsales connection using the Freshsales Query dialog box. The query uses a REST endpoint configuration to retrieve CRM and sales data from Freshsales.
+Summary: How to create a Data Worksheet query from a Freshsales connection in Visual Composer using the Freshsales Query dialog box. The query uses a REST endpoint configuration to retrieve CRM and sales data from Freshsales.
 endif::ai[]
 
 

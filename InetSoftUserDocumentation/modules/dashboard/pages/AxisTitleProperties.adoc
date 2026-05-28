@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for editing and formatting chart axis titles, including custom title text, placeholders for dynamic field names, and font/color formatting. See AxisProperties for axis label properties.
+Summary: Reference for editing and formatting chart axis titles in Visual Composer, including custom title text, placeholders for dynamic field names, and font/color formatting. See AxisProperties for axis label properties.
 endif::ai[]
 
 [WARNING,caption=see also]

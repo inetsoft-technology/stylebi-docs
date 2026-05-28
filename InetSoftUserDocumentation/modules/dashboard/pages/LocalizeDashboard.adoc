@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to configure Dashboard components for multi-locale display by assigning Text IDs to component text properties, and how to create SreeBundle mapping files that translate those Text IDs into locale-specific strings. See administration:Localization for server-level localization.
+Summary: Explains how to configure Dashboard components in Visual Composer for multi-locale display by assigning Text IDs to component text properties, and how to create SreeBundle mapping files that translate those Text IDs into locale-specific strings. See administration:Localization for server-level localization.
 endif::ai[]
 
 If the Dashboards you create are viewed in multiple locales, it may be desirable to configure Dashboard components to display text in a language specific to the user locale. The following Dashboard components can be localized in this way:

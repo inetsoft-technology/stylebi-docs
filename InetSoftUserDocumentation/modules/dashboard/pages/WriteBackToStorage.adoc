@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to configure Dashboard tables and Form components so that user-entered data is written back and persisted in the Data Worksheet across sessions — also called WriteBack, write back to database, or editable table data entry. Covers making tables editable (add/edit/delete rows), input validation, and the Write Back to Storage setting on Form components.
+Summary: Explains how to configure Dashboard tables and Form components in Visual Composer so that user-entered data is written back and persisted in the Data Worksheet across sessions — also called WriteBack, write back to database, or editable table data entry. Covers making tables editable (add/edit/delete rows), input validation, and the Write Back to Storage setting on Form components.
 endif::ai[]
 
 You can configure an Embedded Table to be *editable* by users and  save user modifications back to the Data Worksheet. The following sections explain how to do this.  See xref:TableProperties.adoc[] to designate a Table as an Embedded Table.

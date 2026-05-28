@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add, remove, and manage components in an existing Dashboard. Covers dragging components from the Toolbox, deleting components, and links to component-specific creation pages (Charts, Tables, Filters, etc.). Use this as an orientation page for Dashboard component management.
+Summary: How to add, remove, and manage components in an existing Dashboard in Visual Composer. Covers dragging components from the Toolbox, deleting components, and links to component-specific creation pages (Charts, Tables, Filters, etc.). Use this as an orientation page for Dashboard component management.
 endif::ai[]
 
 The following sections explain how to work with components in a Dashboard.  See xref:EnhanceVisualization.adoc[] for  ideas on improving Dashboard appearance.

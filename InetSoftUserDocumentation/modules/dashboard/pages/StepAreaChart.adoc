@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Step Area chart, which is an AreaChart variant that connects data points using only horizontal and vertical (staircase) directions instead of diagonal lines. See AreaChart for standard area charts and StepLineChart for the non-filled staircase variant.
+Summary: Reference for creating a Step Area chart in Visual Composer, which is an AreaChart variant that connects data points using only horizontal and vertical (staircase) directions instead of diagonal lines. See AreaChart for standard area charts and StepLineChart for the non-filled staircase variant.
 endif::ai[]
 
 A step area chart is a type of xref:AreaChart.adoc[] that connects the  *measure* data points by using only the horizontal and vertical directions.

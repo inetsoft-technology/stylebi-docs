@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to filter data in a Data Worksheet data block (also called a query filter, row filter, or WHERE clause), including pre-aggregate and post-aggregate conditions, ranking (top-N/bottom-N) filters, dynamic conditions using variables, session data, field comparisons, expressions, and subqueries, plus materialized view update conditions. Not to be confused with: FilterDashboard.adoc, which covers user-controlled filter UI components (Selection Lists, Range Sliders, Calendars) that appear on a Dashboard.
+Summary: How to filter data in a Data Worksheet data block in Visual Composer (also called a query filter, row filter, or WHERE clause), including pre-aggregate and post-aggregate conditions, ranking (top-N/bottom-N) filters, dynamic conditions using variables, session data, field comparisons, expressions, and subqueries, plus materialized view update conditions. Not to be confused with: FilterDashboard.adoc, which covers user-controlled filter UI components (Selection Lists, Range Sliders, Calendars) that appear on a Dashboard.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 

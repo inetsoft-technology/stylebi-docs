@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an SAP data source, covering three SAP connection types: SAP ABAP (selecting Infoset, User Group, and Query Name then loading parameters), SAP BAPI (selecting Object Type, Function Name, and Table then loading parameters), and SAP Tables (filtering by type and table name). This is an Enterprise-only feature.
+Summary: How to create a Data Worksheet query in Visual Composer from an SAP data source, covering three SAP connection types: SAP ABAP (selecting Infoset, User Group, and Query Name then loading parameters), SAP BAPI (selecting Object Type, Function Name, and Table then loading parameters), and SAP Tables (filtering by type and table name). This is an Enterprise-only feature.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

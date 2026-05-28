@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to filter data after it has been grouped and aggregated in a Chart, Crosstab, or Freehand Table. Unlike Selection Lists and Conditions which filter pre-aggregate detail data, this page covers post-aggregate filtering using a Range Slider or ad hoc filter. Use when you want to filter by a summarized value such as "show only categories with total sales above $10,000."
+Summary: How to filter data after it has been grouped and aggregated in Visual Composer, applied to a Chart, Crosstab, or Freehand Table. Unlike Selection Lists and Conditions which filter pre-aggregate detail data, this page covers post-aggregate filtering using a Range Slider or ad hoc filter. Use when you want to filter by a summarized value such as "show only categories with total sales above $10,000."
 endif::ai[]
 
 [WARNING,caption=See Also]

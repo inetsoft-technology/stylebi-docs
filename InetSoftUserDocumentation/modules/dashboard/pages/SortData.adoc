@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how end-users can sort Table and Crosstab columns and chart dimension groups at runtime by clicking sort buttons. Covers ascending, descending, and original-order cycling. For design-time sorting in the Data Worksheet, see dataworksheet:SortData.
+Summary: Explains how end-users can sort Table and Crosstab columns and chart dimension groups at runtime in the User Portal by clicking sort buttons. Covers ascending, descending, and original-order cycling. For design-time sorting in the Data Worksheet, see dataworksheet:SortData.
 endif::ai[]
 
 include::dashboard:partial$availableToEndUsers.adoc[]

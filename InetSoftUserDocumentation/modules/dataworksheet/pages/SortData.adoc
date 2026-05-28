@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to sort data (ORDER BY, sort rows) in a Data Worksheet on one or more columns. Covers sort direction and the difference between Data Worksheet-level sorting vs. Dashboard-level sorting.
+Summary: How to sort data (ORDER BY, sort rows) in a Data Worksheet in Visual Composer on one or more columns. Covers sort direction and the difference between Data Worksheet-level sorting vs. Dashboard-level sorting.
 endif::ai[]
 
 To sort data in a Data Worksheet, see the sections below. You can sort data on a single column or multiple columns. Sorting in a Data Worksheet may be most efficient when you want to use the sorted data across many Dashboards. Otherwise, you can simply allow the user to  sort at the presentation level (Dashboard).

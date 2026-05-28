@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Scatter Matrix chart in a Dashboard, which is a grid of scatter plots where multiple measures are plotted against one another in all pairwise combinations. Requires adding each measure to both the X and Y regions and placing a dimension in Color/Shape/Size/Text. Useful for identifying correlations between several measures simultaneously.
+Summary: How to create a Scatter Matrix chart in Visual Composer, which is a grid of scatter plots where multiple measures are plotted against one another in all pairwise combinations. Requires adding each measure to both the X and Y regions and placing a dimension in Color/Shape/Size/Text. Useful for identifying correlations between several measures simultaneously.
 endif::ai[]
 
 include::partial$chartNewbieTip.adoc[]

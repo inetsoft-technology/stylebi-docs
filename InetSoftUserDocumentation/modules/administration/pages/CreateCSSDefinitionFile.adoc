@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a CSS definition file (UTF-8 text) that applies Class, ID, Type, or global styles to Dashboard components. See ExampleCSSDefinitionFile for samples and UploadCSSFile to deploy.
+Summary: How to create a CSS definition file (UTF-8 text) that applies Class, ID, Type, or global styles to Dashboard components, and upload it in Enterprise Manager. See ExampleCSSDefinitionFile for samples and UploadCSSFile to deploy.
 endif::ai[]
 
 [WARNING,caption=see also]

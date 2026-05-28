@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Dual Axis chart (also called a secondary axis chart, double axis chart, or two-Y-axis chart), which displays two measures on separate left and right axes. Enable 'Secondary Axis' in the Edit Measure panel after switching to single-graph mode. See MultipleMeasureChart for general multi-measure techniques.
+Summary: How to create a Dual Axis chart in Visual Composer (also called a secondary axis chart, double axis chart, or two-Y-axis chart), which displays two measures on separate left and right axes. Enable 'Secondary Axis' in the Edit Measure panel after switching to single-graph mode. See MultipleMeasureChart for general multi-measure techniques.
 endif::ai[]
 
 [.videotitle]

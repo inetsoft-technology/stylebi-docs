@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Salesforce data source, including optionally enabling the Bulk API for large data sets, selecting an SObject table, and entering a SOQL query. This is an Enterprise-only feature.
+Summary: How to create a Data Worksheet query in Visual Composer from a Salesforce data source, including optionally enabling the Bulk API for large data sets, selecting an SObject table, and entering a SOQL query. This is an Enterprise-only feature.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

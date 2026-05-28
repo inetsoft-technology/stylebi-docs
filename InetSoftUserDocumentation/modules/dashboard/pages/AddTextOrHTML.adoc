@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add text labels, titles, descriptions, and HTML content to a Dashboard. Text components support UTF-8 characters and HTML markup, and can be populated statically or dynamically via script or expressions. Also covers adding hyperlinks within text.
+Summary: How to add text labels, titles, descriptions, and HTML content to a Dashboard in Visual Composer. Text components support UTF-8 characters and HTML markup, and can be populated statically or dynamically via script or expressions. Also covers adding hyperlinks within text.
 endif::ai[]
 
 [.videotitle]

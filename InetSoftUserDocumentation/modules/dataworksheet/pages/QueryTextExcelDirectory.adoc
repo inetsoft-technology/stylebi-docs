@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Text/Excel Directory data source, including selecting a file or folder, choosing a sheet (for Excel), setting encoding and delimiter options, and configuring import settings such as Unpivot Data (for crosstab tables), First Row as Header, and Remove Quotation Marks.
+Summary: How to create a Data Worksheet query in Visual Composer from a Text/Excel Directory data source, including selecting a file or folder, choosing a sheet (for Excel), setting encoding and delimiter options, and configuring import settings such as Unpivot Data (for crosstab tables), First Row as Header, and Remove Quotation Marks.
 endif::ai[]
 
 

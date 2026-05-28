@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add tooltips and data tips (also called chart tooltips, data tooltips, or hover labels) to a Chart. Data tips display a Dashboard component filtered to the hovered chart region; custom tooltips display user-defined HTML when hovering over a data point. Both features are available to end users at view time. See also AddAnnotation for persistent chart annotations.
+Summary: How to add tooltips and data tips (also called chart tooltips, data tooltips, or hover labels) to a Chart in Visual Composer. Data tips display a Dashboard component filtered to the hovered chart region; custom tooltips display user-defined HTML when hovering over a data point. Both features are available to end users at view time. See also AddAnnotation for persistent chart annotations.
 endif::ai[]
 
 include::dashboard:partial$availableToEndUsers.adoc[]

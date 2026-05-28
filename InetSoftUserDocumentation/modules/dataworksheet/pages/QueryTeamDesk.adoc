@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a TeamDesk data source by opening a Data Worksheet, pressing the Object button, selecting the TeamDesk Query option, and configuring the endpoint and query fields in the TeamDesk Query dialog box. Note that the Row ID parameter is usually required unless using a public attachment column.
+Summary: How to create a Data Worksheet query in Visual Composer from a TeamDesk data source by opening a Data Worksheet, pressing the Object button, selecting the TeamDesk Query option, and configuring the endpoint and query fields in the TeamDesk Query dialog box. Note that the Row ID parameter is usually required unless using a public attachment column.
 endif::ai[]
 
 

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating an Interval chart, which is a bar chart variant where each bar spans between two measure values — a lower bound (Y region) and a height/span (Size region). Useful for displaying confidence intervals, ranges, or two-measure comparisons.
+Summary: Reference for creating an Interval chart in Visual Composer, which is a bar chart variant where each bar spans between two measure values — a lower bound (Y region) and a height/span (Size region). Useful for displaying confidence intervals, ranges, or two-measure comparisons.
 endif::ai[]
 
 An Interval chart is similar to a  xref:BarChart.adoc[] but represents *two measures* with each bar: A smaller value that defines the bottom of the bar, and a larger value that defines the size of the bar. (Note that the second measure specifies the vertical span of the bar, and *_not_* the upper value of the bar.)

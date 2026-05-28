@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Gantt chart, which displays task timelines with start dates, end dates, and optional milestones. Requires date fields converted to measures and bound to Start, End, and Milestone regions, with a task dimension on the Y axis.
+Summary: How to create a Gantt chart in Visual Composer, which displays task timelines with start dates, end dates, and optional milestones. Requires date fields converted to measures and bound to Start, End, and Milestone regions, with a task dimension on the Y axis.
 endif::ai[]
 
 A Gantt chart displays the timeline of a process, and usually consists of sequential or concurrent tasks arranged from top to bottom by start time.

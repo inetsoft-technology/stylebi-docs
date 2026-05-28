@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query using the Database Query dialog box, supporting both basic and advanced SQL query modes, including column selection, joins, filter conditions, grouping, sorting, SQL string editing, and adding query variables or materialized view update conditions.
+Summary: How to create a Data Worksheet query in Visual Composer using the Database Query dialog box, supporting both basic and advanced SQL query modes, including column selection, joins, filter conditions, grouping, sorting, SQL string editing, and adding query variables or materialized view update conditions.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 

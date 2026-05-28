@@ -7,7 +7,7 @@ include::dashboard:partial$availableToEndUsers.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How end users interact with filter components (Selection List, Selection Tree, Range Slider, Calendar, CheckBox, RadioButton, ComboBox) at Dashboard view time — making selections, applying filters, and clearing selections. This is the end-user companion to AddFilterComponents, which covers how designers configure these components.
+Summary: How end users interact with filter components in the User Portal (Selection List, Selection Tree, Range Slider, Calendar, CheckBox, RadioButton, ComboBox) at Dashboard view time — making selections, applying filters, and clearing selections. This is the end-user companion to AddFilterComponents, which covers how designers configure these components.
 endif::ai[]
 
 The following sections explain how to *use* filter components to dynamically explore your data.  See xref:AddFilterComponents.adoc[] for information on how to design a Dashboard using these components.

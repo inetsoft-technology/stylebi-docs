@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Candle (candlestick) chart, which plots four measures (low, high, open, close) against a date dimension for financial or trading data. Functionally similar to StockChart but with a filled-body visual style.
+Summary: How to create a Candle (candlestick) chart in Visual Composer, which plots four measures (low, high, open, close) against a date dimension for financial or trading data. Functionally similar to StockChart but with a filled-body visual style.
 endif::ai[]
 
 A candle chart displays four different measures (low, high, open, close) against a date dimension, and is most often used to plot trading information. A candle chart is functionally similar to a xref:StockChart.adoc[].

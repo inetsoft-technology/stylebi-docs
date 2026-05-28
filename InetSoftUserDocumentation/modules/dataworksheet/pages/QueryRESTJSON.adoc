@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a REST JSON connection, including entering a URL suffix and JSON Path expression, optionally expanding arrays, selecting a pagination type, and configuring Lookup Queries to resolve values from URLs embedded in JSON fields. Also covers the optional Tabular selection and query timeout settings.
+Summary: How to create a Data Worksheet query in Visual Composer from a REST JSON connection, including entering a URL suffix and JSON Path expression, optionally expanding arrays, selecting a pagination type, and configuring Lookup Queries to resolve values from URLs embedded in JSON fields. Also covers the optional Tabular selection and query timeout settings.
 endif::ai[]
 
 

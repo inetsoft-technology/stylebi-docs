@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Google Calendar connection using the Google Calendar Query dialog box. The query uses a REST endpoint configuration to retrieve calendar events and scheduling data from Google Calendar.
+Summary: How to create a Data Worksheet query from a Google Calendar connection in Visual Composer using the Google Calendar Query dialog box. The query uses a REST endpoint configuration to retrieve calendar events and scheduling data from Google Calendar.
 endif::ai[]
 
 

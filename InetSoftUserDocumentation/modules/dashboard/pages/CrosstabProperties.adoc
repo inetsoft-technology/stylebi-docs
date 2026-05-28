@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for all Crosstab (pivot table or cross-tab) component properties in StyleBI, including the General tab (same as Table), the Advanced tab (summary fields, grid lines, totals, multiple aggregations, row/column settings), the Hierarchy tab (custom drill-down hierarchy), and the Script tab. Use this page to configure Crosstab appearance, aggregation behavior, and drill-down navigation.
+Summary: Reference for all Crosstab (pivot table or cross-tab) component properties in Visual Composer, including the General tab (same as Table), the Advanced tab (summary fields, grid lines, totals, multiple aggregations, row/column settings), the Hierarchy tab (custom drill-down hierarchy), and the Script tab. Use this page to configure Crosstab appearance, aggregation behavior, and drill-down navigation.
 endif::ai[]
 
 [WARNING,caption=see also]

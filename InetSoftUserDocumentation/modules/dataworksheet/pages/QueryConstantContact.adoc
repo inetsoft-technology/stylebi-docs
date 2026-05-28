@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Constant Contact connection using the Constant Contact Query dialog box. The query uses a REST endpoint configuration to retrieve email marketing and contact list data from Constant Contact.
+Summary: How to create a Data Worksheet query from a Constant Contact connection in Visual Composer using the Constant Contact Query dialog box. The query uses a REST endpoint configuration to retrieve email marketing and contact list data from Constant Contact.
 endif::ai[]
 
 

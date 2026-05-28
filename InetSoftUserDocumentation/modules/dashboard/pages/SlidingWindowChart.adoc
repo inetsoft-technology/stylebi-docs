@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Sliding Window chart, which computes aggregates over overlapping data windows (most commonly moving averages, also called rolling averages). See CompareDataByDate for related date-based comparison charts and TrendCompareData for setting trend/comparison methods.
+Summary: Reference for creating a Sliding Window chart in Visual Composer, which computes aggregates over overlapping data windows (most commonly moving averages, also called rolling averages). See CompareDataByDate for related date-based comparison charts and TrendCompareData for setting trend/comparison methods.
 endif::ai[]
 
 [WARNING,caption=see also]

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an Elasticsearch REST connection by configuring a URL Suffix, JSON Path expression, optional Expand Arrays setting, and a Filter field. Covers JSONPath syntax for selecting fields and filtering Elasticsearch data within the Elasticsearch REST Query dialog.
+Summary: How to create a Data Worksheet query from an Elasticsearch REST connection in Visual Composer by configuring a URL Suffix, JSON Path expression, optional Expand Arrays setting, and a Filter field. Covers JSONPath syntax for selecting fields and filtering Elasticsearch data within the Elasticsearch REST Query dialog.
 endif::ai[]
 
 

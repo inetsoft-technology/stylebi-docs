@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Running Total chart in a Dashboard (also called a cumulative total or running sum chart), which displays an aggregated measure that accumulates across dimension groups. Covers selecting Running Total from the Trend and Comparison menu, using the Custom Running calculation with aggregate method and optional Reset at date interval, and includes a step-by-step running average example. See CompareDataByDate for related date-based comparisons.
+Summary: How to create a Running Total chart in Visual Composer (also called a cumulative total or running sum chart), which displays an aggregated measure that accumulates across dimension groups. Covers selecting Running Total from the Trend and Comparison menu, using the Custom Running calculation with aggregate method and optional Reset at date interval, and includes a step-by-step running average example. See CompareDataByDate for related date-based comparisons.
 endif::ai[]
 
 [WARNING,caption=see also]

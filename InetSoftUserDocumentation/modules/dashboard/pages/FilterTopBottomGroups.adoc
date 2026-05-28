@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to apply a ranking filter (top-N or bottom-N) to Charts and Crosstabs to show only the highest or lowest dimension groups by a selected measure — for example, "top 5 products by revenue." Covers ranking in both the Chart Editor and Crosstab Editor, and the option to group excluded items into an "Others" category.
+Summary: How to apply a ranking filter (top-N or bottom-N) in Visual Composer to Charts and Crosstabs to show only the highest or lowest dimension groups by a selected measure — for example, "top 5 products by revenue." Covers ranking in both the Chart Editor and Crosstab Editor, and the option to group excluded items into an "Others" category.
 endif::ai[]
 
 [WARNING,caption=See Also]

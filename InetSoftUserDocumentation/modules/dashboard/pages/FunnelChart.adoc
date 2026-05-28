@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Funnel chart, which displays sequential process stages as horizontally proportional bars arranged in descending order. Dimensions represent stages (Y region) and measures represent stage sizes (X region).
+Summary: How to create a Funnel chart in Visual Composer, which displays sequential process stages as horizontally proportional bars arranged in descending order. Dimensions represent stages (Y region) and measures represent stage sizes (X region).
 endif::ai[]
 
 A Funnel Chart typically displays the sequential stages of a process, where the aggregate for each stage represents a subset of the aggregate from the previous stage.

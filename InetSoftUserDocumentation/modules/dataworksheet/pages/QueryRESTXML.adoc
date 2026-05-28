@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a REST XML data source, including entering a URL Suffix, selecting an XMLSchema (XSD or DTD), specifying an XPath expression to filter data, choosing a Request Type (GET or POST), and optionally configuring Page Count pagination and the Expand Arrays option.
+Summary: How to create a Data Worksheet query in Visual Composer from a REST XML data source, including entering a URL Suffix, selecting an XMLSchema (XSD or DTD), specifying an XPath expression to filter data, choosing a Request Type (GET or POST), and optionally configuring Page Count pagination and the Expand Arrays option.
 endif::ai[]
 
 

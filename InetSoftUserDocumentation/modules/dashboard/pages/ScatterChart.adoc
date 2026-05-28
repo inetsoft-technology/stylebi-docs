@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Scatter Chart in a Dashboard, which places measures on both X and Y axes to show correlations. Covers selecting the Point style, binding dimensions to Color/Shape/Size, dragging two measures to the X and Y regions, and setting aggregation. For a bubble chart variant (adding a size measure) see BubbleChart.
+Summary: How to create a Scatter Chart in Visual Composer, which places measures on both X and Y axes to show correlations. Covers selecting the Point style, binding dimensions to Color/Shape/Size, dragging two measures to the X and Y regions, and setting aggregation. For a bubble chart variant (adding a size measure) see BubbleChart.
 endif::ai[]
 
 [.videotitle]

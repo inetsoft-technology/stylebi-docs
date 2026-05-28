@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to embed external content (a URL) inside a Dashboard using an automatically generated IFrame via the Text component's 'Embed as URL' option. URL parameters can be passed for filtering child Dashboards. See AddTextOrHTML for manually inserting IFrame HTML.
+Summary: How to embed external content (a URL) inside a Dashboard in Visual Composer using an automatically generated IFrame via the Text component's 'Embed as URL' option. URL parameters can be passed for filtering child Dashboards. See AddTextOrHTML for manually inserting IFrame HTML.
 endif::ai[]
 
 [WARNING,caption=see also]

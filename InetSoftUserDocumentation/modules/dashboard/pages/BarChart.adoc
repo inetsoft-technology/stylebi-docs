@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Bar Chart in a Dashboard, including grouped, stacked, and 100% stacked variants. Covers binding dimensions and measures, selecting bar style options, and configuring color and size encodings. See BasicChartingSteps for general chart creation fundamentals.
+Summary: How to create a Bar Chart in Visual Composer, including grouped, stacked, and 100% stacked variants. Covers binding dimensions and measures, selecting bar style options, and configuring color and size encodings. See BasicChartingSteps for general chart creation fundamentals.
 endif::ai[]
 
 A bar chart displays a measure as filled bars.

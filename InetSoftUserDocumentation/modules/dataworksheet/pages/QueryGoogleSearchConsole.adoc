@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Google Search Console connection by entering a Site URL and configuring a REST endpoint in the Google Search Console Query dialog. Retrieves search performance and keyword data from Google Search Console.
+Summary: How to create a Data Worksheet query from a Google Search Console connection in Visual Composer by entering a Site URL and configuring a REST endpoint in the Google Search Console Query dialog. Retrieves search performance and keyword data from Google Search Console.
 endif::ai[]
 
 

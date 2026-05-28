@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Circle Packing chart, which represents a measure using hierarchically nested circles. Place hierarchical dimensions in the T region and the measure in the Size region; use the Color region to distinguish groups.
+Summary: How to create a Circle Packing chart in Visual Composer, which represents a measure using hierarchically nested circles. Place hierarchical dimensions in the T region and the measure in the Size region; use the Color region to distinguish groups.
 endif::ai[]
 
 A  circle packing chart displays a *measure* by using circles in a hierarchical display.

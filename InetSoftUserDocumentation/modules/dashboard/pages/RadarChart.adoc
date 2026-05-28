@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Radar (spider/web) chart in a Dashboard, which visualizes multiple measures as axes or a single measure broken out by dimension values. Covers both the Multiple Measures and Single Measure binding approaches, setting aggregate and Trend and Comparison methods (e.g., Percent of Grand Total), and renaming axis labels via Axis Properties aliases. See ChartProperties for the Show Points option.
+Summary: How to create a Radar (spider/web) chart in Visual Composer, which visualizes multiple measures as axes or a single measure broken out by dimension values. Covers both the Multiple Measures and Single Measure binding approaches, setting aggregate and Trend and Comparison methods (e.g., Percent of Grand Total), and renaming axis labels via Axis Properties aliases. See ChartProperties for the Show Points option.
 endif::ai[]
 
 A Radar Chart (also called a spider chart or web chart) typically allows you to visualize a single *measure* along several *dimensions*, or multiple measures along a single dimension.

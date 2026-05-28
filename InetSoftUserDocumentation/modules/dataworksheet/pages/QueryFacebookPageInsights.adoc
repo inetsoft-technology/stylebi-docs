@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Facebook Page Insights connection (Enterprise only) by selecting a Metric Type, Date Preset, Metrics, and Additional Parameters in the Facebook Page Insights Query dialog. Covers querying page engagement and performance metrics using the Facebook Marketing API.
+Summary: How to create a Data Worksheet query from a Facebook Page Insights connection in Visual Composer (Enterprise only) by selecting a Metric Type, Date Preset, Metrics, and Additional Parameters in the Facebook Page Insights Query dialog. Covers querying page engagement and performance metrics using the Facebook Marketing API.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

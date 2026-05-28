@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Pareto chart in a Dashboard, which combines a descending bar chart with a cumulative percentage line to highlight the top contributors to a total. The left axis shows actual values; the right axis shows cumulative percentage. Covers selecting the Pareto style, binding a dimension and measure, and setting the aggregation method.
+Summary: How to create a Pareto chart in Visual Composer, which combines a descending bar chart with a cumulative percentage line to highlight the top contributors to a total. The left axis shows actual values; the right axis shows cumulative percentage. Covers selecting the Pareto style, binding a dimension and measure, and setting the aggregation method.
 endif::ai[]
 
 A Pareto chart highlights the contributions of individual groups to an overall total. The chart consists of two parts: A bar chart that displays the dimension’s groups in order of decreasing value, and a line chart that provides a cumulative total of the groups’ values. The left axis of the chart represents the actual aggregate values, and the right axis represents the percent contribution to the overall total.

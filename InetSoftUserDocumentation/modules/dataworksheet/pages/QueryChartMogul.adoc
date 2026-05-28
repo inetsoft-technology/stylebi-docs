@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a ChartMogul connection using the ChartMogul Query dialog box. The query uses a REST endpoint configuration to retrieve subscription analytics and revenue data from ChartMogul.
+Summary: How to create a Data Worksheet query from a ChartMogul connection in Visual Composer using the ChartMogul Query dialog box. The query uses a REST endpoint configuration to retrieve subscription analytics and revenue data from ChartMogul.
 endif::ai[]
 
 

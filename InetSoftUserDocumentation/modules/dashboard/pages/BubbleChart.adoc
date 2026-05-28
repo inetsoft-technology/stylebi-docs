@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Bubble chart, which is a Point chart where the size of each point represents a second measure. Use the Size region for the size measure, and optionally Color and Shape regions for additional visual encoding.
+Summary: How to create a Bubble chart in Visual Composer, which is a Point chart where the size of each point represents a second measure. Use the Size region for the size measure, and optionally Color and Shape regions for additional visual encoding.
 endif::ai[]
 
 [.videotitle]

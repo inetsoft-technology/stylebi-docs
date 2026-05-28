@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a MongoDB REST connection by entering a query using MongoDB JSON command format with an aggregation command. Links to MongoDB documentation for JSON syntax and aggregation command references.
+Summary: How to create a Data Worksheet query in Visual Composer from a MongoDB REST connection by entering a query using MongoDB JSON command format with an aggregation command. Links to MongoDB documentation for JSON syntax and aggregation command references.
 endif::ai[]
 
 

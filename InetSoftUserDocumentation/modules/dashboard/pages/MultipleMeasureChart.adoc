@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to display multiple measures (also called a multi-measure chart) on a chart using color, shape, size, or text visual encodings, or by using multiple axes (single-axis vs. separate-axis mode). See MultipleStyleChart for assigning different chart styles (bar, line, point) to different measures.
+Summary: Explains how to display multiple measures (also called a multi-measure chart) on a chart in Visual Composer using color, shape, size, or text visual encodings, or by using multiple axes (single-axis vs. separate-axis mode). See MultipleStyleChart for assigning different chart styles (bar, line, point) to different measures.
 endif::ai[]
 
 .See Also...

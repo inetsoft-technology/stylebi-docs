@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add target lines, target bands, statistical measures, and trend lines (curve fits) to a Chart. Target lines (also called reference lines, goal lines, benchmark lines, or threshold lines) mark goal or threshold values; trend lines fit a statistical model (linear, quadratic, etc.) to the data. Available to end users at view time as well as designers.
+Summary: How to add target lines, target bands, statistical measures, and trend lines (curve fits) to a Chart in Visual Composer. Target lines (also called reference lines, goal lines, benchmark lines, or threshold lines) mark goal or threshold values; trend lines fit a statistical model (linear, quadratic, etc.) to the data. Available to end users at view time as well as designers.
 endif::ai[]
 
 include::dashboard:partial$availableToEndUsers.adoc[]

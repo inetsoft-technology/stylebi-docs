@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to group chart data by color, shape, size, or text labels, how to group dates by level (week/month/year/quarter), how to create named groups (also called custom groups or groups by category) by merging axis labels, and how to apply top-N/bottom-N ranking filters to chart dimensions.
+Summary: Explains how to group chart data in Visual Composer by color, shape, size, or text labels, how to group dates by level (week/month/year/quarter), how to create named groups (also called custom groups or groups by category) by merging axis labels, and how to apply top-N/bottom-N ranking filters to chart dimensions.
 endif::ai[]
 
 [.videotitle]

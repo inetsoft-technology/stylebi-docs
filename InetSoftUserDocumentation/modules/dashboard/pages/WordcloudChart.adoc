@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Word Cloud chart, which displays dimension labels at sizes and/or colors proportional to an associated measure value (e.g., frequency of occurrence). Place the dimension in the T region and the measure in the Size or Color region.
+Summary: Reference for creating a Word Cloud chart in Visual Composer, which displays dimension labels at sizes and/or colors proportional to an associated measure value (e.g., frequency of occurrence). Place the dimension in the T region and the measure in the Size or Color region.
 endif::ai[]
 
 A “word cloud” is a cluster of labels whose size and/or color indicates the value of some *measure* associated with these terms, such as their frequency of occurrence in the data set.

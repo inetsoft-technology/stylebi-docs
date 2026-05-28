@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating an Icicle chart, which displays a measure using hierarchically sized rectangles arranged top-to-bottom. Place hierarchical dimensions in the T region and the measure in the Size region. Similar to TreemapChart but with a different layout orientation.
+Summary: Reference for creating an Icicle chart in Visual Composer, which displays a measure using hierarchically sized rectangles arranged top-to-bottom. Place hierarchical dimensions in the T region and the measure in the Size region. Similar to TreemapChart but with a different layout orientation.
 endif::ai[]
 
 An icicle chart displays a measure by using the sizes of rectangles in a hierarchical display.

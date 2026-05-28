@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to position and organize Dashboard components using snapping, alignment tools, grouping (Container), and tabbed layouts (Tab component). Also covers layering, resizing, and selecting multiple components. Use this page when you need to arrange or combine components to make efficient use of screen space.  Describes how to scale a Dashboard to screen, but for more complete responsive design see "Create a Device Layout".
+Summary: How to position and organize Dashboard components in Visual Composer using snapping, alignment tools, grouping (Container), and tabbed layouts (Tab component). Also covers layering, resizing, and selecting multiple components. Use this page when you need to arrange or combine components to make efficient use of screen space.  Describes how to scale a Dashboard to screen, but for more complete responsive design see "Create a Device Layout".
 endif::ai[]
 
 [.videotitle]

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how end-users interact with charts at runtime, including using the chart toolbar, zooming, drilling down into data, and saving chart changes via bookmarks, image export, or Dashboard save. Available to end-users viewing Dashboards in the Portal.
+Summary: Explains how end-users interact with charts at runtime in the User Portal, including using the chart toolbar, zooming, drilling down into data, and saving chart changes via bookmarks, image export, or Dashboard save.
 endif::ai[]
 
 include::dashboard:partial$availableToEndUsers.adoc[]
