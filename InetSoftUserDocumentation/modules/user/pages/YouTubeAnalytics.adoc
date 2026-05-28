@@ -2,14 +2,14 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-include::ROOT:partial$APIKeyForOpenSource.adoc[]
-
-== Create the Connection
-
 // metadata for AI
 ifdef::ai[]
 Summary: How to connect to YouTube Analytics as a data source in InetSoft. Requires a Google OAuth Client ID and Client Secret (created via Google Cloud project with YouTube Analytics API enabled). Covers both creating the connection and generating the required Google Cloud credentials.
 endif::ai[]
+
+include::ROOT:partial$APIKeyForOpenSource.adoc[]
+
+== Create the Connection
 include::partial$dataSourceUserIntro.adoc[]
 
 . Select the ‘YouTube Analytics’ data source, and press btn:[Create]. This opens the data source definition screen.
