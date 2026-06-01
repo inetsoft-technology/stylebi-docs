@@ -94,9 +94,9 @@ Use the ‘Expression’ option as described below to enter a right-hand side  e
 
 * If you select the ‘Expression’ option, press the btn:[JS]/btn:[SQL] button to select JavaScript or SQL syntax, and then press the {buttonEditExpression}. This opens the Script Editor where you can enter your expression. (See xref:dataworksheet:CreateNewDataField.adoc[] for details on using expressions.)
 
-* If you select the ‘Session Data’ option, choose one of ‘User’, ‘Roles’, or ‘Groups’. These parameters return information about the user who is currently viewing the Dashboard; respectively, the username, the array of roles to which the user belongs, and the array of groups to which the user belongs.
+* If you select the ‘Session Data’ option, choose one of ‘User’, ‘Roles’, or ‘Groups’. These parameters return information about the user who is currently viewing the Dashboard; respectively, the username, the array of roles to which the user belongs, and the array of groups to which the user belongs. The adjacent menu automatically chooses the `[equal to]` or `[one of]` operator to match your selection.
 +
-NOTE: The adjacent menu automatically chooses the `[equal to]` or `[one of]` operator to match your selection.
+NOTE: These three options are the only Session Data values available. Custom session attributes cannot be added to this menu.
 
 
 [#ControlUserPrompting]

@@ -70,7 +70,7 @@ image::dataModel68.png[alt="use Browse Data to select value"]
 
 Variable:: Enter a desired variable name to create a parametrized condition where the parameter value will be supplied at runtime via script, session information, or user input.
 
-Session Data:: Use the logged-in user’s name, roles, or groups in the condition.
+Session Data:: Use the logged-in user’s name, roles, or groups in the condition. The available options are *User*, *Roles*, and *Groups* — these are the only session values available. If you need to filter by a user property not covered by these options (such as '`region`' or '`department`'), consider encoding that property into a role or group name, or use a VPM with a subquery or expression instead.
 
 Subquery:: Specify a distinct query to return the right-side of the condition.
 ****
