@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a new data block in Visual Composer by dragging and dropping tables and fields in the Data Worksheet to combine or blend data from multiple data sources (mashup, blend data), suitable for simple column selection from data models or database tables.
+Summary: How to create a new data block in Visual Composer by dragging and dropping tables and fields in the Data Worksheet. "Mashup Data" is a general-purpose data preparation approach — it does not imply any specific technique such as joining or combining multiple sources. It is useful both when working from a data model (where joins are pre-defined in the model) and when combining data from different data sources (where joins between data blocks may still be required and can be defined using JoinData.adoc). It is less efficient than QueryData.adoc when you need to create joins on a single datasource without a data model.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
