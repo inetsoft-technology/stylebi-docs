@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and navigation page for Virtual Private Model (VPM) security (also called row-level security, RLS, column-level security, data masking, or data access restriction), which provides row- and column-level data filtering for relational data sources. Covers conditions, hidden columns, lookups, and their triggers. Enterprise only. See CreateNewVPM to begin. Not to be confused with: ConfigureSecurity.adoc, which controls login authentication, user/role definitions, and who can access which Dashboard assets.
+Summary: Overview and navigation page for Virtual Private Model (VPM) security (also called row-level security, RLS, column-level security, data masking, or data access restriction), which provides row- and column-level data filtering for relational data sources. Covers conditions, hidden columns, lookups, and their triggers. Enterprise only. See CreateNewVPM to begin. KEY DISTINCTION — there are two separate types of security: (1) VPM (this page): controls which ROWS and COLUMNS a user sees within a dashboard or data source — i.e., two users open the same dashboard but see different data depending on their role, group, or username. This is row-level security. (2) ConfigureSecurity.adoc and repository permissions: controls which dashboards, folders, and assets a user can open or manage at all — i.e., asset-level visibility. If the question is about users seeing different rows of data in the same dashboard based on their role, VPM is the correct answer.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

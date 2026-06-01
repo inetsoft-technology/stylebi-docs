@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview of data security options in Data Worksheets, pointing to Virtual Private Model (VPM) for role-based data restriction and to filter conditions for per-data-block access control.
+Summary: How to implement row-level security (RLS) and column-level security in Data Worksheets. The primary method is the Virtual Private Model (VPM), defined in AddDataSecurity.adoc — use VPM when you want users in different roles, groups, or with different usernames to automatically see different rows (or columns) from the same data source and dashboard, without any user-visible filtering UI. VPM conditions are applied transparently at query time. For lighter-weight per-data-block filtering (not a full VPM), you can also set filter conditions on individual data blocks that reference session variables such as user, group, or role.
 endif::ai[]
 
 The fundamental method used by InetSoft for securing data is the Virtual Private Model (VPM). A VPM allows you to restrict data based on user, group, role, or any other criteria. See  xref:user:AddDataSecurity.adoc[] for  information on how to create and use a VPM.
