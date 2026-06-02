@@ -106,7 +106,7 @@ To use OAuth SMTP Authentication for Google, follow the steps below:
 
 . In Enterprise Manager, change '`SMTP Authentication Type`' to '`Google OAuth2 SMTP`' and enter the credentials.
 
-. Enable '`Opportunistic TLS`'.
+. Set 'Mail Host'  to `smtp.gmail.com`  and enable '`Opportunistic TLS`'.
 
 . Press btn:[Sign in with Google] and accept the permissions.
 
