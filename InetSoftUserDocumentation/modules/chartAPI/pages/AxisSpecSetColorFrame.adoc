@@ -17,7 +17,7 @@ include::scriptexample:partial$AxisSpecSetColorFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the `AxisSpec` object.
-<3> Create the `CategoricalColorFrame` object and map values to colors.
+<3> Create the xref:CategoricalColorFrame.adoc[] object and use xref:CategoricalColorFrameSetColor.adoc[] to map values to colors.
 <4> Use `setColorFrame` to assign the `ColorFrame` to the axis.
 
 image::commonscript:AxisSpecsetColorFrame.png[alt="bar chart with colored axis labels"]
