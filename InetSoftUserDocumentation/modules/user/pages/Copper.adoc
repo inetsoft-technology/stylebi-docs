@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Copper as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: Instructions for connecting to Copper (a CRM platform) as a data source in InetSoft. Authentication requires an Email address and an API Key. After a successful connection, users can proceed to define a data set using the Copper query interface. See ConnectToDataSource for the full list of available connectors.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

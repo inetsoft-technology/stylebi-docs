@@ -7,7 +7,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Dremio as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: Instructions for connecting to Dremio as a JDBC data source in InetSoft. Requires a third-party JDBC driver (driver class and JDBC URL in the form jdbc:dremio:direct={host}[:{port}][;schema={schema}]). Covers setting the database type to Custom, specifying the driver class, entering login credentials, and testing the connection. See ConnectToDataSource for the full list of available connectors.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

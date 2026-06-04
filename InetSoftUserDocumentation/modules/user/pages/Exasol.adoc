@@ -7,7 +7,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Exasol as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: Instructions for connecting to Exasol as a JDBC data source in InetSoft. Requires a plugin driver. Steps include selecting the Exasol data source, setting the Database Type to Custom, entering the driver class name (provided by the driver vendor), and specifying the JDBC URL in the form jdbc:exa:{hostname}:{port}. Also covers entering login credentials and verifying the connection. See ConnectToDataSource for the full list of available connectors.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

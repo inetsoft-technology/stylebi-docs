@@ -7,7 +7,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Derby as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: Instructions for connecting to Apache Derby as a JDBC data source in InetSoft. Requires a third-party JDBC driver (plugin driver required). Covers specifying the driver class name, the JDBC URL in the form jdbc:derby://{host}[:{port}]/databaseName, and entering login credentials. See ConnectToDataSource for the full list of available connectors.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

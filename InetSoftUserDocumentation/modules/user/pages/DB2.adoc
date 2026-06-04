@@ -7,7 +7,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to DB2 as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: Instructions for connecting to DB2 as a data source in InetSoft using JDBC. Requires an external driver (plugin driver). Users specify a driver class name and either supply a custom JDBC URL (jdbc:db2://{host}[:{port}]/{databaseName}) or enter connection details (host, port, database name, credentials) manually. Also covers connection pool (HikariCP) configuration and testing the connection. See ConnectToDataSource for the full list of available connectors.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

@@ -7,7 +7,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to ClickHouse as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: Instructions for connecting to ClickHouse as a JDBC data source in InetSoft. Requires a third-party JDBC driver (driver class name and JDBC URL in the form jdbc:(ch|clickhouse)[:<protocol>]://endpoint[/<database>]). Covers setting the database type to Custom, entering driver class and JDBC URL, and providing login credentials. See ConnectToDataSource for the full list of available connectors.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

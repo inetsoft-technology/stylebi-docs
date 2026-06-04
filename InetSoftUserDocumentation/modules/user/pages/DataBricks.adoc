@@ -7,7 +7,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Databricks as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: Instructions for connecting to Databricks as a JDBC data source in InetSoft. Requires a third-party JDBC driver (driver class and JDBC URL must be supplied manually). Authentication uses a Databricks Personal Access Token (PAT) embedded in the JDBC URL. Covers the required JDBC URL format, driver class configuration, and login credentials. See ConnectToDataSource for the full list of available connectors.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
