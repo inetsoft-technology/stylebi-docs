@@ -1,0 +1,53 @@
+= CategoricalFontFrame
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+ifdef::ai[]
+Summary: Reference for the CategoricalFontFrame object in Chart API scripts. Assigns a distinct font to each unique axis label value, used with AxisSpec.setFontFrame() to style individual axis labels. Inherits from VisualFrame.
+endif::ai[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:VisualFrame.adoc[]
+====
+
+The `CategoricalFontFrame` object assigns a distinct font to each unique axis label value. To create a `CategoricalFontFrame` object, call the `CategoricalFontFrame` constructor.
+
+[source,javascript]
+var frame = new CategoricalFontFrame();
+
+Use xref:CategoricalFontFrameSetFont.adoc[] to map individual values to fonts, then assign the frame to an axis using xref:AxisSpecSetFontFrame.adoc[].
+
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+----
+include::scriptexample:partial$CategoricalFontFrame1.js[]
+----
+<1> {dataset}
+<2> Create the `CategoricalFontFrame` object.
+<3> Use xref:CategoricalFontFrameSetFont.adoc[] to assign a font to a value.
+<4> Use xref:AxisSpecSetFontFrame.adoc[] to assign the `FontFrame` to the axis.
+
+image::commonscript:AxisSpecSetFontFrame.png[alt="bar chart with custom font on axis label"]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+----
+var coord = graph.getCoordinate(); //<1>
+var scale = coord.getXScale(); //<2>
+var spec = scale.getAxisSpec(); //<3>
+var frame = new CategoricalFontFrame();
+frame.setFont("NJ", new java.awt.Font("Arial", java.awt.Font.BOLD, 14));
+spec.setFontFrame(frame);
+----
+=====
