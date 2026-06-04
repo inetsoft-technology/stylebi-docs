@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to manage Dashboards programmatically using the Groovy DSL Administration Console :viewsheet command. Enterprise only. See CreateNewDashboard for Portal-based creation.
+Summary: How to manage Dashboards programmatically using the Groovy DSL :vs (viewsheet) script commands. Enterprise only. Covers listing, opening, closing, getting, mailing, exporting (synchronous and asynchronous), renaming, deleting, and pinning/unpinning Dashboards. See CreateNewDashboard for Portal-based Dashboard creation.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

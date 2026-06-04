@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to use the Monitoring section of Enterprise Manager to track server activity, including executing Dashboards, running queries, cache usage, active user sessions, cluster nodes, and server logs. Covers how to terminate Dashboards, queries, or user sessions from the monitoring pages.
+Summary: How to use the Monitoring section of Enterprise Manager to track server activity. The Summary page shows server performance charts (heap memory, CPU, GC, uptime, cache, swapping, top users) and JVM details. Other pages cover executing Dashboards, running queries, data cache statistics, active user sessions, cluster nodes, and server/scheduler logs. Covers how to terminate Dashboards, queries, or user sessions from the monitoring pages.
 endif::ai[]
 
 To monitor and manage a variety of aspects of server activity, press the {buttonMonitoring} at the top of Enterprise Manager.

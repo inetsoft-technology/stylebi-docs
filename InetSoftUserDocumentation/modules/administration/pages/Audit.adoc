@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to enable and configure the audit feature in Enterprise Manager to track Dashboard and data access, user activity, and asset dependencies in an audit database. Enterprise only.
+Summary: How to view audit data and configure the audit database in Enterprise Manager. Covers available audit datasets (bookmark history, logon history, modification history, asset dependencies, etc.) and how to configure a custom audit database via docker-compose.yaml environment variables (supported databases: Cosmos DB, DynamoDB, H2, Firestore, MongoDB). Enterprise only.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

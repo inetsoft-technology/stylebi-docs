@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a tenant organization in Enterprise Manager for multi-tenant deployments, including assigning users and configuring org-specific access. Enterprise only.
+Summary: How to create and edit a tenant organization in Enterprise Manager for multi-tenant deployments. Covers cloning from an existing organization, setting the organization name and ID, assigning a portal theme, adding roles as members, configuring inherited permissions and administrator permissions, and setting organization-level properties such as max row count, max column count, max cell size, and max user count. Enterprise only.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

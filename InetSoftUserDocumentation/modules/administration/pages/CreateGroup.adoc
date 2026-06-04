@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create and manage user groups in Enterprise Manager when using the default authentication provider, including adding users to groups.
+Summary: How to create and manage user groups in Enterprise Manager when using the default authentication provider, including adding members and roles to groups, assigning administrator permissions, setting a portal theme for a group, editing existing groups, and copying and pasting member or role identities between groups.
 endif::ai[]
 
 A group is a collection of users, such as a project team, a department, or a geographical location. (You can create and edit groups in Enterprise Manager only when using the ‘Default’ authentication provider.) Groups are generally organizational in nature, while roles are functional in nature.

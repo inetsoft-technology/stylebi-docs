@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to monitor and manage scheduled cycles using the Groovy DSL Administration Console :schedule command, including adding, editing, and checking cycle status. Enterprise only.
+Summary: How to manage scheduled cycles using the Groovy DSL :schedule (:sch) command, including listing, creating, getting, updating, and removing cycles, as well as managing the conditions assigned to each cycle. Enterprise only.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

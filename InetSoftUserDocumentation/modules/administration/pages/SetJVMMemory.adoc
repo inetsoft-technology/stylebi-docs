@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to configure JVM memory and Docker container memory settings using JAVA_MEMORY_OPTS and related environment variables in docker-compose.yaml.
+Summary: How to configure Docker container memory and JVM options using JAVA_MEMORY_OPTS and JAVA_TOOL_OPTIONS environment variables in docker-compose.yaml, including Linux and Windows/WSL memory constraints.
 endif::ai[]
 
 The following sections describe how to set certain Docker and JVM options.

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to use the Login as Different User feature in Enterprise Manager to impersonate another user for testing and debugging purposes.
+Summary: How to enable and use the Login as Different User feature to impersonate another user without knowing their password. Configuration is done in Enterprise Manager (enabling the login.loginAs property and assigning permissions on the Security page), and the actual impersonation is performed from the User Portal login screen using a special 'Login as' field.
 endif::ai[]
 
 

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to manage logical models programmatically using the Groovy DSL Administration Console :logicalmodel command. Enterprise only.
+Summary: How to manage logical models programmatically using the Groovy DSL shell :logicalmodel (or :lm) command. Covers listing model attributes, listing available logical models, and getting, creating, renaming, updating, and removing logical models. Enterprise only.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

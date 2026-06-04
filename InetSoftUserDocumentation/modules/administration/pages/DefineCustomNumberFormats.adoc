@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to define custom number formats in Enterprise Manager, including using K, M, B suffixes to scale values and creating reusable format patterns for Dashboard number display.
+Summary: How to define custom number formats, including using built-in K, M, B suffixes to scale values and creating custom suffixes and multipliers by editing the userformat.xml file and uploading it via the Presentation page in Enterprise Manager.
 endif::ai[]
 
 When applying a number format, users can add a suffix “K”, “M”, or “B” to the pattern string to automatically divide the numerical value by 10^3^, 10^6^, or 10^9^, respectively.

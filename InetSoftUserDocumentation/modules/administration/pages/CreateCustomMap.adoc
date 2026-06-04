@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a custom geographic map in Enterprise Manager for use in Dashboard map charts, including uploading shape files and configuring region mappings.
+Summary: How to create a custom geographic map for use in Dashboard map charts by processing shapefiles with the OpenJUMP GIS application and InetSoft plugin, then uploading the exported mapdata.xml file to server storage. Covers installing OpenJUMP, exporting and simplifying map layers, adding additional layers, overlaying shapes, and editing existing custom maps.
 endif::ai[]
 
 

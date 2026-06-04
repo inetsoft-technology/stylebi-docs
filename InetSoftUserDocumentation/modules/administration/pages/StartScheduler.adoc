@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to start, stop, and check the status of the Scheduler application in Enterprise Manager.
+Summary: How to start the Scheduler application (via Docker container or command line) and check its status in Enterprise Manager.
 endif::ai[]
 
 To start or stop the Scheduler application, or to view its operational status, follow the steps below:
