@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: xref:thisViewsheetIsActionVisible.adoc[] to return Dashboard toolbar button visibility.
+Summary: Documents the `isActionVisible(name)` function for the Calendar component in Dashboard component script. Returns a Boolean indicating whether the specified end-user feature (toolbar button or action) is visible/accessible. The `name` parameter is a String identifying the feature, such as 'Apply', 'Clear Calendar', 'Switch To Year View', etc. Can be called as `isActionVisible` (unqualified) or `Calendar1.isActionVisible` (qualified) in component script.
 endif::ai[]
 
 [WARNING,caption=See Also]

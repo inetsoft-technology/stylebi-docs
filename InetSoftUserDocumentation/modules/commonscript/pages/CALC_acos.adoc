@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Returns the inverse cosine of a number in radians. {CALCExcelFunctionPage}
+Summary: Documents the CALC.acos() function, which returns the inverse cosine (arc cosine) of a number as a value in radians. Accepts a single numeric parameter between -1 and 1. Available in Dashboard scripts and Data Worksheet expression/calculation fields.
 endif::ai[]
 
 

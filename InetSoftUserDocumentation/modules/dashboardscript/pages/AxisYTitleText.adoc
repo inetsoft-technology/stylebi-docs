@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the Y-axis title text.
+Summary: The `yTitle.text` property (string) gets or sets the Y-axis title text on a Chart component in Dashboard script. It can be used in component script as either `yTitle.text` (unqualified) or `Chart1.yTitle.text` (qualified).
 endif::ai[]
 
 

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Returns `true` only if all arguments evaluate to `true`, otherwise returns `false`. {CALCExcelFunctionPage}
+Summary: Documents the `CALC.and(Boolean_1, Boolean_2, ..., Boolean_n)` function, which returns `true` only if all Boolean arguments evaluate to `true`, otherwise returns `false`. Applies to Data Worksheet expression/calculated fields and Dashboard scripts.
 endif::ai[]
 
 Returns `true` only if all arguments evaluate to `true`, otherwise returns `false`. {CALCExcelFunctionPage}

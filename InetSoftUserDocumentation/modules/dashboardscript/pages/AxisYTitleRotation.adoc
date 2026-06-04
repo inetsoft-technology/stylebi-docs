@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the Y-axis title rotation angle.
+Summary: Documents the `yTitle.rotation` property for Chart components in Dashboard component script. Gets or sets the Y-axis title rotation angle as a Number (degrees).
 endif::ai[]
 
 

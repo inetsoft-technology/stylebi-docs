@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the X-axis title rotation angle.
+Summary: The xTitle.rotation property gets or sets the X-axis title rotation angle (Number, in degrees) for a Chart component in Dashboard script.
 endif::ai[]
 
 

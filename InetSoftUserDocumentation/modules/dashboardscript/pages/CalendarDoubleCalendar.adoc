@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: xref:dashboard:CalendarProperties.adoc[] for more information on user selection editing.
+This page documents the `doubleCalendar` property of the Calendar component in Dashboard scripts. It is a Boolean property that controls whether the calendar displays in double-panel view (two months or two years) or single-panel view (one month or one year). Set to `true` for double-panel, `false` for single-panel. Can be used as a qualified (`Calendar1.doubleCalendar`) or unqualified (`doubleCalendar`) expression in component script.
 endif::ai[]
 
 [WARNING,caption=See Also]

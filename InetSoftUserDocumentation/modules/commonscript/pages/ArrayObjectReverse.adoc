@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reverse the order of the elements in the array.
+Summary: Documents the Array.reverse() method, which reverses the order of elements in an array in place. Applies to both Dashboard script and Data Worksheet script contexts.
 endif::ai[]
 
 

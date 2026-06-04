@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: xref:CalendarFields.adoc[] to specify the fields to display in the Calendar.
+Summary: The `queries` property of the Calendar component specifies the data blocks to be merged in the Calendar. It accepts an Array of data block names. Used in Dashboard component script (Visual Composer). The selected data blocks must be compatible for merging.
 endif::ai[]
 
 [WARNING,caption=See Also]

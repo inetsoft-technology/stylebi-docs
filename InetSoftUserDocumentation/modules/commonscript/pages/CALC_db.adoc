@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Returns the depreciation of an asset for accounting year `period` using the *fixed-declining balance* method. {CALCExcelFunctionPage} The rate of depreciation is for a given year is
+Summary: Documents the `CALC.db(cost, salvage, life, period, [month])` function, which returns the depreciation of an asset for a given accounting year using the fixed-declining balance method. Parameters are: `cost` (initial asset cost), `salvage` (end-of-life salvage value), `life` (number of depreciation years), `period` (the year index to compute, 1 to `life`), and optional `month` (number of months in the first year, default 12). Returns 0 once the asset reaches salvage value. Applies to Dashboard scripts and Data Worksheet expression columns/calculated fields.
 endif::ai[]
 
 

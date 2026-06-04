@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the X-axis title text.
+Summary: The xTitle.text property gets or sets the X-axis title text (string) on a Chart component in Dashboard component script.
 endif::ai[]
 
 

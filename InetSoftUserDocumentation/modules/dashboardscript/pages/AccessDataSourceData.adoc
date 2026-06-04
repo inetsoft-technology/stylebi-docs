@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to access data from the Dashboard data source within Dashboard scripts, including syntax for referencing data fields by name or index.
+Summary: How to access and aggregate data from the Dashboard data source within Dashboard scripts. Covers syntax for referencing data block fields by name or index, using the viewsheet keyword for names with spaces, accessing date/time field parts, and applying aggregation methods (Sum, Average, Max, Min, Count, First, Last, and others) to data block columns.
 endif::ai[]
 
 You can access data contained in the Dashboard data source from within any Dashboard script. The following sections explain the syntax for accessing data from the data source data. See xref:AccessComponentData.adoc[] for information on how to access the specific data represented in a component.

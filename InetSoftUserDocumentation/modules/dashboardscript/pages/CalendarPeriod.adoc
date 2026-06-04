@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Specifies whether the two panels of a Calendar in xref:CalendarDoubleCalendar.adoc[] mode represent a period comparison or a simple date range.
+Summary: Documents the `period` Boolean property of the Calendar component in Dashboard script. Specifies whether the two panels of a Calendar in double-calendar mode represent a period comparison (`true`) or a simple date range (`false`, default). Retained for backwards compatibility only; current date comparisons should use the Compare Data by Date feature instead.
 endif::ai[]
 
 

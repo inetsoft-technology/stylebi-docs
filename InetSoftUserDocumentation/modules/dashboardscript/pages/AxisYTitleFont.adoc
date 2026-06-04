@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the Y-axis title font.
+Summary: Sets or gets the font of the Y-axis title on a Chart component. Accepts a java.awt.Font object or a font description string (e.g., 'Lucida Sans Unicode-BOLD-14'). Available in Dashboard component script as yTitle.font (unqualified) or Chart1.yTitle.font (qualified).
 endif::ai[]
 
 

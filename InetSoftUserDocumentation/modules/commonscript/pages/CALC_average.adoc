@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: xref:CALC_averagea.adoc[] to process text and Boolean values in addition to numerical values.
+Summary: Documents the CALC.average(array) function, which returns the arithmetic mean of an array of numerical values. Takes a single parameter: an array of real values. Applies to both Dashboard script and Data Worksheet script contexts. See also CALC.averagea() for a variant that also processes text and Boolean values.
 endif::ai[]
 
 [WARNING,caption=see also]

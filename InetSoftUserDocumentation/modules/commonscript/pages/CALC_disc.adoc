@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Returns the *discount* rate for a security. {CALCExcelFunctionPage} The rate is calculated as follows:
+Summary: Documents the CALC.disc() function, which returns the discount rate for a security as a decimal number. Parameters are: settlement (Date), maturity (Date), pr (price per $100 face value), redemption (redemption value per $100 face value), and optional basis (day-count convention). Available in Data Worksheet expression columns/calc fields and Dashboard scripts.
 endif::ai[]
 
 

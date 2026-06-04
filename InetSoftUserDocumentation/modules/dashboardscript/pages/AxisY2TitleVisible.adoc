@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the visibility of the secondary (right) Y-axis. The default is `true` (visible) if a value has been provided for xref:AxisY2TitleText.adoc[], otherwise `false`.
+Summary: The `y2Title.visible` property (Boolean) gets or sets the visibility of the secondary (right) Y-axis title on a Chart component in Dashboard script. The default is `true` if a value has been provided for the y2Title text, otherwise `false`.
 endif::ai[]
 
 

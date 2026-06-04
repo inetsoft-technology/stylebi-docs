@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: xref:dashboard:CalendarProperties.adoc[] for more information on user selection editing.
+This page documents the `max` property of the Calendar component in Dashboard component script. It specifies the latest date available for selection on a Calendar component. The property type is Date. Script using `max` must be placed on the Calendar component. It can be used in qualified form (`Calendar1.max`) or unqualified form (`max`) within component script.
 endif::ai[]
 
 [WARNING,caption=See Also]

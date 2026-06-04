@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: xref:dashboard:CalendarProperties.adoc[] for more information on user selection editing.
+This page documents the `dropdown` property of the Calendar component in Dashboard scripting. It specifies a collapsible style for the calendar: set to `true` to collapse the calendar when not in use, or `false` (default) to keep it expanded. The property is a Boolean and can be used in component script as either `dropdown` (unqualified) or `Calendar1.dropdown` (qualified).
 endif::ai[]
 
 [WARNING,caption=See Also]

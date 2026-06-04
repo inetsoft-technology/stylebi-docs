@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: If you need to modify a Dashboard at runtime, or implement more complex business logic, you can add script to your Dashboard. There are three levels at which you can attach script in a Dashboard:
+This page explains how to add JavaScript to a Dashboard in Visual Composer. It covers three levels at which script can be attached: (1) property-level expressions, which dynamically set individual component property values (e.g., visibility, color) via the Formula Editor; (2) component-level script, which runs whenever a component refreshes and can modify component properties including color, font, visibility, and alignment, or execute on user click via an onClick handler; and (3) dashboard-level script in the onInit handler (runs once on load, for initialization) or the onRefresh handler (runs on every Dashboard refresh). The page also describes script evaluation order (onInit → onRefresh → component scripts), how to access Java packages from script, and how to add Chart script using the Chart API.
 endif::ai[]
 
 If you need to modify a Dashboard at runtime, or implement  more complex business logic, you can add script to your Dashboard. There are three levels at which you can attach script in a Dashboard:

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Returns the depreciation of an asset for accounting year `period` on a prorated basis according to the *degressive* method of the French accounting system. {CALCExcelFunctionPage} This function is similar to xref:CALC_amorlinc.adoc[] except that the depreciation coefficient is calculated based on the life of the asset:
+Summary: Documents the `CALC.amordegrc(cost, date_purchased, first_period, salvage, period, rate, [basis])` function, which returns the depreciation of an asset for a given accounting year period on a prorated basis using the degressive method of the French accounting system. The depreciation coefficient varies based on the asset's lifespan (e.g., 1 for 0–2 years, 2.5 for more than 6 years). Parameters include the asset's initial cost, purchase date, end of first period date, salvage value, period number, rate of depreciation, and an optional day-count basis. Returns a number. Available in Dashboard scripts and Data Worksheet expression columns and calculated fields.
 endif::ai[]
 
 

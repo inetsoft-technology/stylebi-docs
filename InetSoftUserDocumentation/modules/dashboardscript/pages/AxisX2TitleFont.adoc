@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the title font for the secondary (top) X-axis.
+Summary: Sets or gets the title font for the secondary (top) X-axis on a Chart component in Dashboard script. Accepts a java.awt.Font object or a font description string (e.g., 'FontName-STYLE-size').
 endif::ai[]
 
 

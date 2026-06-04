@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the X-axis title font.
+Summary: The xTitle.font property sets the X-axis title font for a Chart component in Dashboard script. Accepts a java.awt.Font object or a font description string (e.g., 'FontName-STYLE-SIZE'). It is a writable property accessed as Chart1.xTitle.font (qualified) or xTitle.font (unqualified in component script).
 endif::ai[]
 
 

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: xref:dashboardscript:CalendarQuery.adoc[] to specify the data block from which to draw the fields.
+Summary: The `fields` property of a Calendar component specifies the data block field to be filtered by the Calendar. It is an array type and is equivalent to setting the field under the Data tab of the component Properties dialog. Used in Dashboard component script (qualified as `Calendar1.fields` or unqualified as `fields`).
 endif::ai[]
 
 [WARNING,caption=See Also]

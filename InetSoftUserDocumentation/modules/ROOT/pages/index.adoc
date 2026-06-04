@@ -37,6 +37,7 @@ This user documentation explains how to use the User Portal to create data sourc
 
 
 == About the API Documentation
+include::ROOT:partial$enterpriseOnly.adoc[]
 
 If you want to call StyleBI functions from within your own application, see the following InetSoft API references.  These references are intended for developers and integration engineers. Consult the  InetSoft Support Team for guidance in using these APIs  in your application.
 

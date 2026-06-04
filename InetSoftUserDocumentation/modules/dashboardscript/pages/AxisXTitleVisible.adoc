@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the visibility of the X-axis title.
+Summary: Documents the xTitle.visible property for Dashboard chart component scripts. This Boolean property gets or sets the visibility of the X-axis title on a Chart component.
 endif::ai[]
 
 

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: xref:dashboard:CalendarProperties.adoc[] for more information on user selection editing.
+Summary: The `min` property specifies the earliest date available for selection on a Calendar component. It is of type Date and is used in Dashboard component script. Set it using a Date value, for example with CALC.today() or dateAdd(). See CalendarProperties for related user selection editing options.
 endif::ai[]
 
 [WARNING,caption=See Also]

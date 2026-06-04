@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the Y-axis title color.
+Summary: Documents the `yTitle.color` property for Chart components in Dashboard component script. Sets or gets the Y-axis title color. Accepts a color value (RGB array or object). Can be used as qualified (`Chart1.yTitle.color`) or unqualified (`yTitle.color`) in component script.
 endif::ai[]
 
 

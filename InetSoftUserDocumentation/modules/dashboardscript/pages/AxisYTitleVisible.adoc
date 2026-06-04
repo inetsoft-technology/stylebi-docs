@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the visibility of the Y-axis title.
+Summary: Documents the `yTitle.visible` Boolean property for Chart components in Dashboard script. Gets or sets the visibility of the Y-axis title.
 endif::ai[]
 
 

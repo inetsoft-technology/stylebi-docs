@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: You can access component data and filter selections using script. The following sections explain how to do this. For information on how to detect the most recent user interaction, see xref:dashboard:WriteBackToStorage.adoc#AccessUserModifiedData[Access User-Modified Data] in xref:dashboard:WriteBackToStorage.adoc[].
+Summary: This page explains how to access component data and filter selections in Dashboard script. It covers: (1) Form components — using selectedObject/selectedObjects and selectedLabel/selectedLabels to read the state of Slider, Spinner, RadioButton, ComboBox, CheckBox, and Tabbed Interface components; (2) Filter components — using selectedObjects/selectedLabels on Selection List, Selection Tree, Range Slider, and Calendar, and drillMember on Selection Tree to get the next hierarchy level below the user's lowest selection; (3) Output components — using the value property on Gauge, Text, and Image components; (4) Chart components — using the data or table properties (covered in full in the Chart Script tutorial); (5) Table/Crosstab components — using table[rowIx][colIx] (displayed data, including headers) and data[rowIx][colIx] (raw pre-summarized data), along with table.length/table.size (row/column counts as displayed), data.length/data.size (raw counts), the field['col_name'] keyword (value in current row of a named column), the value keyword (current cell value), and the row/col variables for relative cell references. Applies to Dashboard (Viewsheet) script context.
 endif::ai[]
 
 include::dashboardscript:partial$seeAlsoComponentData.adoc[]

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: xref:dashboard:CalendarProperties.adoc[] for more information on user selection editing.
+Summary: The `daySelection` property is a Boolean that specifies whether users can select individual days of the week on a Calendar component in Monthly view mode. When set to `true`, individual day selection is enabled; when `false` (the default), users must select the entire week. It applies to Calendar components in Dashboard script (component script or Dashboard script context).
 endif::ai[]
 
 [WARNING,caption=See Also]

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Counts the number of distinct elements in array.
+Summary: Documents the CALC.countDistinct(array) function, which counts the number of distinct elements in the given array (numeric or non-numeric). Returns a number. Applies to both Dashboard script and Data Worksheet script contexts.
 endif::ai[]
 
 Counts the number of distinct elements in array.

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the title text for the secondary (right) Y-axis.
+Summary: The y2Title.text property (type: string) gets or sets the title text for the secondary (right) Y-axis on a Chart component. Used in Dashboard component script, with both qualified (Chart1.y2Title.text) and unqualified (y2Title.text) syntax supported.
 endif::ai[]
 
 

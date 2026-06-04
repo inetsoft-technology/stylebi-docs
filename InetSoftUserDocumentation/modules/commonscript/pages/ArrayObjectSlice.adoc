@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Return a slice of the array as a new array.
+Summary: Documents the Array.slice(begin[, end]) method, which returns a new array containing the elements from the specified begin index up to the optional end index. Available in both Dashboard script and Data Worksheet script contexts.
 endif::ai[]
 
 
