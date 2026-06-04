@@ -49,7 +49,7 @@ Create MV On-demand:: Specifies that a new materialized view should be automatic
 
 Design mode sample data size::  Limits the number of records retrieved by a Dashboard in design mode.
 
-Snap Grid::  Number of pixels defining the snap increment for the '`Snap to Grid`' feature.  See xref:ArrangeComponents.adoc#SnapComponents[Snap Components] for more details.
+Grid Height::  Number of pixels defining the snap increment for the '`Snap to Grid`' feature.  See xref:ArrangeComponents.adoc#SnapComponents[Snap Components] for more details.
 
 Alias:: Specifies a designation to be used in place of the actual Dashboard name. The alias replaces the Dashboard name in all contexts except the *Repository* tab and the ‘Export Assets’ page in Enterprise Manager. These always display the actual Dashboard name.
 
