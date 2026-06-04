@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Selection Container component properties (also called a filter panel or filter group), which groups multiple filter components (Selection Lists, Trees, etc.) into a collapsible panel to save Dashboard space. Covers appearance, title, and layout settings. See AddFilterComponents for how to create filter components.
+Summary: Reference for Selection Container component properties (also called a filter panel or filter group), which groups multiple filter components (Selection Lists, Trees, etc.) into a collapsible panel to save Dashboard space. The General tab provides two unique properties: "Show Current Selections" (displays current state of all Dashboard selection controls) and "Allow User to Add/Remove Selections" (lets end-users add filters via toolbar or by dragging columns from a Table). Also includes a Script tab. See AddFilterComponents for how to create a Selection Container.
 endif::ai[]
 
 [WARNING,caption=see also]

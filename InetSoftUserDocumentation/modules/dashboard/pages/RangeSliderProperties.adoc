@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Range Slider filter component properties (also called a date range picker or numeric filter slider). Covers single-value vs. composite-value filtering, min/max range labels, snap-to-increment, and the Compatible Tables setting for filtering multiple data blocks simultaneously. See AddFilterComponents for how to create a Range Slider.
+Summary: Reference for the Range Slider filter component properties in Visual Composer dashboards. Covers the Data tab (single-value vs. composite-value filtering, Compatible Tables for filtering multiple data blocks simultaneously) and the Advanced tab (Slider Size for string/numeric/date fields, Minimum Increment, Maximum Increment, Upper Bound Inclusive, Logarithmic Scale, and Label options for min/max/tick/current-value display). See AddFilterComponents for how to create a Range Slider.
 endif::ai[]
 
 [WARNING,caption=see also]

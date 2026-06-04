@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Table component properties, accessible via right-click > Properties. Covers the General tab (table style, header/data cell formatting, pagination, row/column sizing, tooltip) and Advanced tab (max rows, drill-down, column visibility). See AddTable for how to create and bind a Table.
+Summary: Reference for Table component properties in Visual Composer dashboards, accessible via right-click > Properties. Covers the General tab (table styles from the Style Library) and Advanced tab (Shrink to Fit, Enable Table Editing with add/delete/edit rows, Write Back to Storage for persisting user edits, Data Tip View, and Flyover Views). See AddTable for how to create and bind a Table.
 endif::ai[]
 
 [WARNING,caption=see also]

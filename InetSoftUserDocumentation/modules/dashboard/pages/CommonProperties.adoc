@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for properties shared across all Dashboard components (Tables, Charts, Crosstabs, Filter components, etc.), accessible via right-click > Properties. Covers the General tab (position, size, visibility, padding) and other tabs common to most components. Component-specific properties are covered in each component's own page.
+Summary: Reference for properties shared across all Dashboard components (Tables, Charts, Crosstabs, Filter components, Container components, etc.), accessible via right-click > Properties in Visual Composer. Covers four tabs common to most components: General (position, size, visibility, padding), Data, Advanced, and Script. Component-specific properties are covered in each component's own page.
 endif::ai[]
 
 [.videotitle]
