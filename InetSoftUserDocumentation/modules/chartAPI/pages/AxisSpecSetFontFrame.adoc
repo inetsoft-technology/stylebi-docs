@@ -24,6 +24,8 @@ include::scriptexample:partial$AxisSpecSetFontFrame1.js[]
 <3> Create the `CategoricalFontFrame` object and map values to fonts.
 <4> Use `setFontFrame` to assign the `FontFrame` to the axis.
 
+image::commonscript:AxisSpecSetFontFrame.png[alt="bar chart with custom axis label fonts"]
+
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
