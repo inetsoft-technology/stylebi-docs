@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and navigation page for physical views (also called a join diagram, table joins diagram, or database schema view), which define the database table join structure underlying a data model. Physical views are not directly exposed to users; they are accessed via logical models. See CreatePhysicalView for creation steps.
+Overview and navigation page for physical views (also called a join diagram, table joins diagram, or database schema view), which define the database table join structure underlying a data model and enable automatic query generation when dashboards access data model attributes. Physical views are not directly exposed to users; they are accessed via logical models. Physical views are independent of one another — a data model relies on a single physical view, but multiple physical views can be created from the same database (including overlapping ones). See CreatePhysicalView for creation steps.
 endif::ai[]
 
 The basis of a data model is the *physical view*, which specifies a set of database tables and the joins that relate them. The physical view does not represent a *particular* query that retrieves specific fields, but rather outlines the full join structure that will enable arbitrary queries to be generated *automatically* when a dashboard accesses a set of attributes from the data model.

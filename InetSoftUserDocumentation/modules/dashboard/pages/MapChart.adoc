@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a geographic Map Chart in Visual Composer, including built-in maps (world, US states, etc.) and custom maps. Covers binding geographic name or coordinate fields, adding color and size encodings for measures, and configuring map layers. Use when you need to visualize data by geographic region or location.
+How to create a geographic Map Chart in Visual Composer. Covers two approaches: (1) binding geographic name fields (country, state, city, zip code, etc.) to display data by region, and (2) binding latitude and longitude coordinate fields to display data by exact location. Explains how to mark fields as geographic using the Edit Geographic dialog, including selecting a map region (Asia, Canada, Europe, Mexico, U.S., or World), selecting a geographic layer, and resolving unmatched location names via the Geographic Mapping dialog. Also covers adding color, shape, size, or text encodings for measures; using an optional web map background (Mapbox or Google Map); adding a path field for trajectory lines; setting zoom and pan for the initial map view; and coordinate transformations for Alaska and Hawaii. For creating maps with user-defined regions, see the administration section. Use when you need to visualize data by geographic region or by latitude/longitude coordinates.
 endif::ai[]
 
 [.videotitle]

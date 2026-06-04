@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Circular Network chart in Visual Composer, which displays pairwise peer relationships with nodes arranged along a circle circumference. Requires Source and Target dimension fields. An alternative layout to NetworkChart.
+Summary: How to create a Circular Network chart in Visual Composer, which displays pairwise peer relationships with nodes arranged along a circle circumference. Requires Source and Target dimension fields in the chart editor. An alternative layout to NetworkChart. Optional configuration includes: breaking out the diagram along a dimension using X or Y regions (creates disconnected subgraphs); color-coding nodes by dimension (node style is based on Target field values; use 'Apply Aesthetics to Source Nodes' in Chart Properties to force source-only nodes to adopt their first target's color); representing aggregates on nodes by dragging a measure to the Node Color or Size region; representing connection weight or strength by dragging a weight field to the Color or Size region; setting fixed size or color for nodes and lines independently; and adding node labels by dragging a dimension to the Text region.
 endif::ai[]
 
 A circular network chart displays a network structure defined by pairwise peer relationships, and arranged with the nodes spaced along the circumference of a circle.  It is an alternative representation of a xref:NetworkChart.adoc[].

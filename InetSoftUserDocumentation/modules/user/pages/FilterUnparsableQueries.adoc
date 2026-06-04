@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to use special VPM tags (vpm.tables, vpm.columns, vpm.condition) in complex SQL queries that the server cannot parse automatically, enabling VPM security filtering for those queries. Enterprise only.
+How to use special VPM tags (--vpm.tables, --vpm.columns, --vpm.aliases, /*<idx>*/, /*<where>*/) in complex SQL queries that the server cannot parse automatically, enabling VPM security filtering for those queries. The --vpm.tables and --vpm.columns tags are placed at the beginning of the query; /*<idx>*/ tags wrap individual query columns to inherit security from a listed hidden column by index; /*<where>*/ tags wrap the WHERE clause so VPM filtering conditions are applied there. Enterprise only.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

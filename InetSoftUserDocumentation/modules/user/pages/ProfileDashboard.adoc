@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to enable Dashboard profiling in the Portal to measure execution time for each component, identifying performance bottlenecks.
+How to enable Dashboard profiling in the Portal to measure execution time and identify performance bottlenecks. Profiling is enabled via the Account button > Profile option, which causes a 'Profiling...' link to appear below the Dashboard toolbar. The Profile dialog breaks down execution time and allows grouping by Cycle Name, Dashboard, Logical Model, Data Worksheet, or Component. A 'Show Detail Records' option provides a tabular view, and results can be exported.
 endif::ai[]
 
 You can profile the execution of your Dashboards to determine which aspects of execution consume the most time. To do this, follow the steps below:

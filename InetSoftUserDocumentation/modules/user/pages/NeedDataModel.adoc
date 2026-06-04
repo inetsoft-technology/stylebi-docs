@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Guidance on whether to create a data model for a relational database. Explains the benefits of logical models for self-service, reducing query maintenance, and simplifying data access for Dashboard designers.
+Guidance on whether to create a data model for a relational database (not available for Hadoop Hive). Explains the benefits of data models for self-service access, reducing query maintenance, simplifying data access for Dashboard designers, enabling filtering on fields not in a Dashboard, and avoiding manual joins. Also describes the two components of a data model: the physical view (defines a subset of database tables and their join relationships) and the logical model (maps tables to entities and columns to attributes for a business-oriented representation).
 endif::ai[]
 
 A *data model* is a simplified representation of the underlying database schema. The data model reorganizes the database tables and columns to provide a simplified entity-attribute interface for users who are designing  Dashboards. For example, the ‘Order Model’ data model below  organizes attributes into a set of five entities, ‘Customer’, ‘Order’, ‘Product’, ‘Salesperson’, and ‘Supplier’.

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Container component properties in Visual Composer (also called a component group or grouped components), which groups multiple Dashboard components into a single resizable unit. Covers background, border, padding, and layout behavior. See ArrangeComponents for how to create a Container by grouping components.
+Reference for Container component properties in Visual Composer (also called a component group or grouped components), which groups multiple Dashboard components into a single resizable unit. The General tab allows specifying an image as the group background (same as Image component). The Advanced tab allows setting scaling properties for the background image (same as Image component). See ArrangeComponents for how to create a Container by grouping components. See ImageProperties for details on the General and Advanced tab options.
 endif::ai[]
 
 [WARNING,caption=see also]

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Freehand Table in Visual Composer (also called a free-form table, ad-hoc table, or custom layout table), an advanced component that enables non-hierarchical groupings and formula cells — layouts not possible in a regular Table or Crosstab (pivot table). The recommended workflow is to first create a Crosstab that approximates the desired result, then convert it to a Freehand Table and make final adjustments.
+How to create a Freehand Table in Visual Composer (also called a free-form table, ad-hoc table, or custom layout table), an advanced component that enables non-hierarchical groupings and formula cells — layouts not possible in a regular Table or Crosstab (pivot table). Two creation methods are covered: (1) converting an existing Table or Crosstab (recommended — build the Table/Crosstab first, then right-click and select "Convert to Freehand Table"), and (2) dragging a new Freehand Table from the Toolbox. The Freehand Table Editor workflow covers: binding data fields, grouping dimensions (including sort/rank and custom named groups), aggregating measures, setting cell expansion direction and merging expanded cells, adding formula cells via script (using $cell_name syntax to reference cells), adding/removing/merging rows and columns, and applying formatting. Also covers applying basic column sorting via the right-click "Sorting" dialog (Freehand Tables do not have the column-header sort button found in regular Tables).
 endif::ai[]
 
 [WARNING, caption=see also]

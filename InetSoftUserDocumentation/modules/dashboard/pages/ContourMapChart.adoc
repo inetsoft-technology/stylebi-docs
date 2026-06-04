@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Contour Map chart in Visual Composer, which combines a MapChart with a ScatterContourChart to display data density either by geographic region (country, state, city) or by latitude/longitude coordinates. Supports optional web map backgrounds.
+How to create a Contour Map chart in Visual Composer, which combines a MapChart with a ScatterContourChart to display data density either by geographic region (country, state, city) or by latitude/longitude coordinates. Covers how to mark dimensions as geographical fields (including the Edit Geographic dialog for selecting map region, layer, and resolving unmatched location names), optionally weighting contour density by a measure on the Size field, adjusting density contour appearance via Chart Properties, setting the initial map view with pan/zoom controls, using optional web map backgrounds (Mapbox or Google Map), and transforming coordinates for Alaska and Hawaii.
 endif::ai[]
 
 This chart type combines a xref:MapChart.adoc[] with a xref:ScatterContourChart.adoc[] to display density data either based on regional information (country, state, city, etc.) or based on latitude and longitude.   For information on creating maps with user-defined regions, see xref:administration:CreateCustomMap.adoc[] in xref:administration:ManageServer.adoc[].

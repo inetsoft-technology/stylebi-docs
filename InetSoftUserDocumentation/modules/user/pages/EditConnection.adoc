@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to edit an existing data source connection in the Portal, including modifying connection parameters.
+How to manage existing data source connections in the Portal, including editing connection parameters, deleting a connection, refreshing cached metadata, moving a data source to another folder, and creating new data source folders.
 endif::ai[]
 
 To edit an existing database connection, follow the steps below.

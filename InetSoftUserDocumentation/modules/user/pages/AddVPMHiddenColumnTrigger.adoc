@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add a scripted trigger to a VPM hidden column, allowing the column restriction to be applied selectively based on user role, group, or identity. Requires an existing VPM. See CreateNewVPM and AddDataSecurity.
+How to add a scripted trigger to a VPM hidden column, allowing the column restriction to be applied selectively. The trigger script uses standard JavaScript and returns an array of hidden columns. Available script parameters include: user (current user name), roles (user's roles), groups (user's groups), parameter (dashboard or worksheet parameters), tables (list of tables in the query), columns (columns in the query), and hiddenColumns (hidden columns currently defined in the VPM). Requires an existing VPM. See CreateNewVPM and AddDataSecurity.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

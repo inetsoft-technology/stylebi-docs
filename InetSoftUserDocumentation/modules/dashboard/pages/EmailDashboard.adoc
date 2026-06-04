@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to immediately email a Dashboard from the User Portal, including specifying recipients, export format (Excel, PDF, PowerPoint, HTML, PNG, CSV), and bookmarks to include. For scheduling recurring emails, see user:ScheduleDashboard.
+How to immediately email a Dashboard from the User Portal. Covers the Email tab (Mail To recipients, CC, From address, Subject, and Message body) and the Content tab (export format: Excel, PDF, PowerPoint, HTML, Embedded PNG, CSV; Data Size options: Match Layout, Expand Components, Only Data Elements; Current View toggle; Include Link option to embed a URL; and bookmarks to include as separate pages/sheets). For scheduling recurring emails, see user:ScheduleDashboard.
 endif::ai[]
 
 include::dashboard:partial$availableToEndUsers.adoc[]

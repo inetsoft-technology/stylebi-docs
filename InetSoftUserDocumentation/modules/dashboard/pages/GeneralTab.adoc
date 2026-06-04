@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for the General tab that is common to most Dashboard components. Covers the Name (used for scripting), Visible, Enabled, and Title properties. See also DataTab and AdvancedTab for other common property tabs.
+Reference for the General tab that is common to most Dashboard components. Covers five properties: Name (used for binding and scripting, no spaces recommended), Visible in External Dashboards (controls visibility when this Dashboard is embedded in another Dashboard), Visible (Show / Hide / Hide on Print and Export), Enabled (true/false; for Filter components, Enabled=false means existing selections do not affect Dashboard data), and Title (text in the title bar, with a Visible sub-option for the title bar itself). See also DataTab and AdvancedTab for other common property tabs.
 endif::ai[]
 
 [WARNING,caption=seel also]

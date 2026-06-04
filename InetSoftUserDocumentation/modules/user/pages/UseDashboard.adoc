@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to open and interact with a Dashboard in the User Portal, including opening pinned Dashboards, searching the repository, and using filter components.
+How to open and use a Dashboard in the User Portal. Covers two ways to open a Dashboard: via the Dashboard button (pinned Dashboards as tabs) and via the Repository button (browsing a folder tree). Also describes the Dashboard toolbar buttons: undo/redo, edit in Visual Composer, refresh, email, social sharing, schedule, print, export to Excel/PowerPoint/PDF, zoom, bookmarks, full screen, and toggle annotations.
 endif::ai[]
 
 The following sections explain how to open and use a Dashboard in the Portal. See xref:dashboard:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.

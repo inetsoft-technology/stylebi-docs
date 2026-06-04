@@ -7,7 +7,7 @@ include::dashboard:partial$availableToEndUsers.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to compare data across multiple date ranges in Visual Composer using Charts and Crosstabs — sometimes called year-over-year (YoY), period comparison, or date comparison — supporting standard periods (years, quarters, months, weeks) or custom date ranges, with three comparison modes (all periods, same period, period-to-date). Results can be shown as values, changes, or percentage changes. A Date-type field is required; color or axis will be used to distinguish date groups depending on existing chart settings.
+How to compare data across multiple date ranges in Visual Composer using Charts and Crosstabs — sometimes called year-over-year (YoY), period comparison, or date comparison — supporting standard periods (years, quarters, months, weeks) or custom date ranges, with three comparison modes (all periods, same period, period-to-date). Results can be displayed as values, changes, percentage changes, or combined change-and-value views; additional display options include "In Separate Sub-Graphs" and "Only Show Most Recent Date On Axis Label." Comparison parameters can be driven dynamically by Form components via variables or expressions. A Date-type field is required; color or axis will be used to distinguish date groups depending on existing chart settings. Multiple Charts and Crosstabs in the same Dashboard can share a date comparison configuration using the "Share Date Comparison With" option.
 endif::ai[]
 
 Charts and Crosstabs provide an easy way to *compare* data across different date ranges. For example:

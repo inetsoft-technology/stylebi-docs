@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add interactive filter components (Selection List, Range Slider, Calendar, CheckBox, RadioButton, ComboBox) to a Dashboard in Visual Composer. These components let end users filter dashboard data at runtime by selecting values, ranges, or dates, affecting all components bound to the same data block. For fixed (non-user-adjustable) filters on a specific component, see AddConditions instead.
+How to add interactive filter components to a Dashboard in Visual Composer, including: Selection List (for filtering dimensions or discrete measures), Selection Tree (for filtering hierarchical or recursive parent-child data), Range Slider (for date or numerical ranges), Calendar (for date range selection including non-continuous ranges), and Selection Container (to combine multiple filter components in one region). Also covers displaying aggregates next to filter values, configuring a filter to operate on multiple data blocks simultaneously, and batch-submitting filter selections using a Submit button. These components filter data at runtime, affecting all components bound to the same data block. For fixed (non-user-adjustable) filters on a specific component, see AddConditions instead.
 endif::ai[]
 
 [WARNING,caption=See Also]

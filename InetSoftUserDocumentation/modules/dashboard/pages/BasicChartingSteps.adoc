@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Step-by-step instructions for adding a Chart to a Dashboard in Visual Composer, including understanding dimensions vs. measures, binding data to chart axes, selecting a chart type, and using the Chart Editor. This is the foundational chart creation page — also called chart setup or chart binding — read this before consulting chart-type-specific pages such as BarChart or LineChart.
+Step-by-step instructions for adding a Chart to a Dashboard in Visual Composer, including understanding dimensions vs. measures, binding data to chart axes (X/Y regions), selecting a chart type, using color/shape/size/text regions for visual encoding, setting aggregation methods, and date grouping. Also covers post-creation adjustments: hiding or formatting chart axes (Axis Properties), adding a chart title, modifying chart legends (Legend Properties dialog — General, Scale, and Alias tabs, including renaming legend labels), and adjusting chart spacing (Resize Plot). This is the foundational chart creation page — also called chart setup or chart binding — read this before consulting chart-type-specific pages such as BarChart or LineChart.
 endif::ai[]
 
 The following sections explain how to add a Chart to your Dashboard.

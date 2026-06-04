@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: URL syntax reference for accessing StyleBI components from external web applications, including displaying the User Portal, individual portal tabs, Dashboards (public and private), exporting Dashboards, embedding interactive charts via IFrame or web component, passing parameters to Dashboards, and pinging the server. Covers IFrame embedding and cross-page communication.
+URL syntax reference for accessing StyleBI components from external web applications. Topics covered: displaying the User Portal, individual portal tabs (Repository, Dashboard, Schedule, custom tabs), Dashboards (public and private, both standalone and within Portal tabs), Portal Dashboards deployed to the Dashboard tab, exporting Dashboards (PDF, Excel, PowerPoint, PNG, HTML, CSV, VSO formats), passing parameters to Dashboards via URL, displaying interactive charts (via IFrame or the inetsoft-chart web component including shadow DOM), displaying static charts as PNG or SVG images, opening Visual Composer, displaying Portal Preferences, and pinging the server. Also covers IFrame embedding details: cross-page communication via MessageEvent, adapting IFrame size to browser size, and controlling Dashboard toolbar buttons from the parent page via postMessage. Open Graph tag behavior for Dashboard titles and descriptions is also noted.
 endif::ai[]
 
 The following sections show you how to display User Portal components via URL. (HTTP requests can be submitted with both the GET and POST methods.) To embed User Portal components into your web application, use the supplied URLs with an *IFrame*.

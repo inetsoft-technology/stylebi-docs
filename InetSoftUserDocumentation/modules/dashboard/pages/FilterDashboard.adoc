@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and hub page for all Dashboard filtering techniques in Visual Composer. Links to user-adjustable Filter components (Selection List, Range Slider, Calendar, etc.), fixed component-level Conditions, data-level filtering in the Data Worksheet, and other approaches. Start here to understand the full range of filtering options and choose the right technique.
+Overview and hub page for all Dashboard filtering techniques in Visual Composer. Links to four filtering approaches: adding user-adjustable Filter components (Selection List, Range Slider, etc.), filtering aggregated/post-aggregate data, applying top-N or bottom-N ranking filters, and adding static Conditions that end-users cannot modify. Start here to understand the full range of filtering options and choose the right technique.
 endif::ai[]
 
 One of the most important tools for data exploration is *filtering*.  StyleBI allows you to filter measures and dimensions  in a variety of different ways, both at the aggregate and detail level.

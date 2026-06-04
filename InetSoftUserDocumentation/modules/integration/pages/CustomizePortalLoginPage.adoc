@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to customize the StyleBI User Portal login page by replacing the login.html and login.css files in the inetsoft web resources directory inside a custom Docker image.
+How to customize the StyleBI User Portal login page by modifying and replacing the login.html and login.css files in the inetsoft web resources directory inside a custom Docker image. The login.html file goes in /usr/local/inetsoft/classes/inetsoft/web/resources/ and the login.css file goes in a css subfolder at that same location. When altering CSS styles, the id attributes of all input and button elements in login.html must be preserved. Other assets such as images can be referenced via the Storage settings. Customizations apply only to the Portal, not to Enterprise Manager. Customizing the login JavaScript requires contacting technical support. InetSoft does not support these customizations and does not guarantee compatibility with future versions.
 endif::ai[]
 
 To customize the Portal login page, follow the steps below:

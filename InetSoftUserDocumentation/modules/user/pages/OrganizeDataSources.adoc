@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to organize data sources, logical models, physical views, and VPMs into folders in the Portal data panel.
+How to organize data sources, logical models, physical views, VPMs, and folders in the Portal data panel, including: creating new folders, moving assets between folders (individually or in bulk using multi-select), deleting assets (individually or in bulk), and renaming assets.
 endif::ai[]
 
 The following sections explain how to manage your data sources.

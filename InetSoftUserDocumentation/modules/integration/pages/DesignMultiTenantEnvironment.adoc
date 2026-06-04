@@ -5,7 +5,7 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to design a multi-tenant data environment in StyleBI Enterprise by defining independent database connections per tenant, extending physical views and logical models for tenant-specific data, assigning connection permissions, and using aliases to provide tenant-appropriate names in the repository.
+How to design a multi-tenant data environment in StyleBI Enterprise. Covers a sequential six-step workflow: (1) enabling multi-tenancy on the server, (2) adding tenant-specific database connections to a Data Source, (3) extending a common Physical View with tenant-specific tables/columns, (4) extending a common Logical Model with tenant-specific entities/attributes, (5) assigning connection and action permissions to users and groups, and (6) setting aliases on folders, Data Worksheets, and Dashboards so tenants see appropriate names while admins maintain distinct names. Also notes that a common set of data accessible to all tenants can be defined alongside tenant-specific connections.
 endif::ai[]
 
 In certain deployment scenarios, you may need to provide different groups of users (i.e., “tenants”) with access to different sets of data. This is called a *multi-tenant* environment. For example, if you are serving user groups from different departments or organizations, you may need to give each tenant access to data stored in a unique database or schema (different login permissions, etc.).

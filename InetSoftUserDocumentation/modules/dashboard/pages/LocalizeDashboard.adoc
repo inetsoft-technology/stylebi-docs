@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to configure Dashboard components in Visual Composer for multi-locale display by assigning Text IDs to component text properties, and how to create SreeBundle mapping files that translate those Text IDs into locale-specific strings. See administration:Localization for server-level localization.
+Explains how to configure Dashboard components in Visual Composer for multi-locale display. Localizable components include table/Freehand Table/Crosstab titles and headers, Chart axis and legend titles, Filter titles, Text component text, Form component titles, and Submit button labels. Localization is done by assigning Text IDs to component properties via the Localization tab in Dashboard Options. Text IDs are mapped to locale-specific replacement strings in SreeBundle .properties files (e.g., SreeBundle_fr_CA.properties) placed in /usr/local/inetsoft/classes/inetsoft/util, named with ISO two-letter language/country codes. The locale is selected by the user at User Portal login or assigned by an administrator. If no matching resource bundle is found, no localization is performed. See administration:Localization for server-level localization including User Portal interface components.
 endif::ai[]
 
 If the Dashboards you create are viewed in multiple locales, it may be desirable to configure Dashboard components to display text in a language specific to the user locale. The following Dashboard components can be localized in this way:

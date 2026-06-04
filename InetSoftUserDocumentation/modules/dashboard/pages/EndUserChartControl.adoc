@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to allow end users to modify charts at runtime, configured in Visual Composer using two approaches: the Ad Hoc Chart Editor (enabled via 'Enable Ad Hoc Editing' in Chart Properties) or dynamic properties (linking Form components such as RadioButton to chart fields and aggregation methods via the Variable option). See DynamicallySetProperties for full details on dynamic property configuration.
+How to allow end users to modify charts at runtime using two approaches: the Ad Hoc Chart Editor (enabled via 'Enable Ad Hoc Editing' on the Advanced tab of Chart Properties, gives users full access to the Chart Editor) or dynamic properties (linking Form components such as RadioButton to chart fields using the 'Variable' or 'Expression' option in Change Value Type). The dynamic properties walkthrough demonstrates letting a user switch the Y-axis field via a RadioButton. See DynamicallySetProperties for full details on dynamic property configuration.
 endif::ai[]
 
 In addition to using basic chart tools  to explore a chart (see xref:DrillDownIntoData.adoc[]), users can also dynamically modify a chart by changing the fields displayed on the X and Y axes, changing aggregation methods, adding target lines, and so on.

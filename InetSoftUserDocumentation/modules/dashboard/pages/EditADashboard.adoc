@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to open an existing Dashboard for editing in Visual Composer, either from the Portal toolbar or by double-clicking/dragging in the Assets panel. Recommends using a development or test environment for edits rather than production.
+Explains how to open an existing Dashboard for editing in Visual Composer, either from the Portal toolbar (using the Edit button) or from Visual Composer's Assets panel by double-clicking, dragging, or right-clicking and selecting 'Open Sheet'. Also covers opening a Dashboard in Metadata mode (without data) via right-click 'Open in Metadata mode' or by pressing Cancel in the loading dialog. Recommends using a development or test environment rather than production, notes that the Modification History audit report tracks who makes edits (but not the specifics), and advises maintaining backups.
 endif::ai[]
 
 To open an existing Dashboard for editing, you can open the Dashboard for viewing in the Portal (see xref:user:UseDashboard.adoc[]) and press the {buttonEdit} in the Dashboard toolbar.

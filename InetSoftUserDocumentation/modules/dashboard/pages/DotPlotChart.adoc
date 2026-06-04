@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Dot Plot chart in Visual Composer, which displays individual (un-aggregated) data points as stacked dots. Best for small datasets with fewer than ~20 points per dimension. Uses Point style with Stack enabled and Aggregate set to None.
+How to create a Dot Plot chart in Visual Composer, which displays individual (un-aggregated) data points as stacked dots. Best for small datasets with fewer than ~20 points per dimension. Steps: select Point style with Stack enabled; drag a dimension to the X region; drag a measure to the 'Break By' region (not Y axis); set the measure's Aggregate property to None. Optionally, drag an additional dimension to the Break By region alongside the measure to display both values in chart tooltips. Optionally adjust point size via the Size field. Warning: too many records will prevent all data points from displaying.
 endif::ai[]
 
 A dot plot represents a measure by its individual data points (_without aggregation_).

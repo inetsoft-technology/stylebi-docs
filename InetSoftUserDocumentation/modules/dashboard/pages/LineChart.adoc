@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Line Chart in Visual Composer, including stacked and step-line variants. Best suited for showing trends over time or continuous data. Covers binding dimensions and measures and configuring line style options. See BasicChartingSteps for general chart creation fundamentals.
+How to create a Line Chart in Visual Composer, including the stacked line variant. Best suited for showing trends over time or continuous data. Covers binding dimensions and measures to chart regions, breaking out data by color, shape, size, text, or break-by/tooltip, and setting measure aggregation. See BasicChartingSteps for general chart creation fundamentals.
 endif::ai[]
 
 A line chart displays a measure as a continuous line.

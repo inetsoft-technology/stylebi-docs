@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference table for keyboard navigation in Dashboards, covering Tab/Shift+Tab for component focus, arrow keys for within-component navigation and adjustments, and Space for making selections. Also covers toolbar navigation from within a component.
+Reference table for keyboard navigation in Dashboards, covering Tab/Shift+Tab to move focus between components, Up/Down arrows to move focus within a component, Left/Right arrows to adjust a component setting, and Space to make a selection. Also covers toolbar access: pressing Up arrow repeatedly moves focus from the component body to the component toolbar, Left/Right arrows navigate within the toolbar, and Down arrow returns focus from the toolbar to the component body.
 endif::ai[]
 
 There are several different techniques by which you can navigate a Dashboard using the keyboard (or equivalent voice commands). The table below lists the essential techniques.

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add a scripted trigger to a VPM row condition, allowing the condition to be applied selectively based on user role, group, or identity. Requires an existing VPM. See CreateNewVPM and AddDataSecurity.
+How to add a scripted trigger to a VPM row condition. The trigger script uses standard JavaScript and can dynamically modify the condition string using available parameters: user (current user name), roles (array of user roles), groups (array of user groups), parameter (dashboard or worksheet parameters), tables (list of tables in the query), columns (array of columns in the query), and condition (the existing condition string from the Conditions sub-tab). The script must return the modified condition string. Requires an existing VPM. See CreateNewVPM and AddDataSecurity.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

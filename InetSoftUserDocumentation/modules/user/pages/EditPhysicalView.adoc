@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to edit an existing physical view in InetSoft, covering add inline SQL (embedded SQL views), automatically creating joins, resolving join cycles (loops) using weak joins or table aliases, modifying join properties (type, cardinality, merging rule, weak link), and identifying query traps such as loop traps, higher-level aggregate traps, and higher-level join traps.
+How to edit an existing physical view in InetSoft, covering: adding inline SQL (embedded SQL views); automatically creating joins; resolving join cycles (loops) using weak joins or table aliases; creating a single-table alias to break a join cycle; using the auto-alias feature to alias multiple downstream tables at once; modifying join properties (type, order priority, cardinality, merging rule, weak link); and identifying query traps such as loop traps, higher-level aggregate traps, and higher-level join traps.
 endif::ai[]
 
 include::ROOT:partial$createVisualizationClose.adoc[]

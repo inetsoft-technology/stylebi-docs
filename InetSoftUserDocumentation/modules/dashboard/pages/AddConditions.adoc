@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to apply a fixed (non-user-adjustable) condition filter to a specific Dashboard component (Chart, Table, Crosstab, Gauge, or Text) in Visual Composer. Unlike Filter components such as Selection Lists, a Condition affects only the single component it is applied to and cannot be changed by end users at runtime.
+How to apply a condition filter to a specific Dashboard component (Chart, Table, Crosstab, Gauge, or Text) in Visual Composer. A Condition affects only the single component it is applied to, unlike Filter components (e.g., Selection Lists) which affect all components sharing the same data block. The comparison value can be a literal Value, another Field, a JavaScript/SQL Expression, a Variable (allowing dynamic user input at runtime via Form components or prompted parameters), or Session Data (current user's username, roles, or groups). When a Variable is used and no value is provided, the condition is ignored and all records are returned. The page also covers how to suppress parameter prompting for all or specific parameters via the Dashboard Options dialog.
 endif::ai[]
 
 [WARNING,caption=see also]

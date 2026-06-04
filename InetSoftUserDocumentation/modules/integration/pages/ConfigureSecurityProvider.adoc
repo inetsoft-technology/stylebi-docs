@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to choose and configure a security provider for SSO integration in StyleBI, covering when to use the default file-based provider, LDAP provider, or a custom DB/API-based provider. Includes a reference table showing which security provider functions are invoked or bypassed during SSO authentication.
+How to choose and configure a security provider for SSO integration in StyleBI, covering when to use the default file-based provider, LDAP provider (not available when multi-tenancy is enabled), or a custom DB/API-based provider. For custom providers, the recommended approach is the composite security provider, which splits responsibility by implementing a custom authentication provider alongside the built-in file-based authorization provider. Includes reference tables listing the key security provider functions for authentication and authorization, and showing which functions are invoked or bypassed during SSO authentication.
 endif::ai[]
 
 The security provider is responsible for authentication and authorization. Choose your security provider based on your SSO implementation and your security framework.

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to improve Dashboard performance using materialized views, which pre-aggregate and cache data so the Dashboard avoids querying the database on every load. Covers creating, scheduling, and managing materialized views from Visual Composer. When a VPM is in use, materialized views must be managed from Enterprise Manager instead.
+How to improve Dashboard performance using materialized views, which pre-aggregate and cache data so the Dashboard avoids querying the database on every load. Covers creating, deleting, and scheduling materialized views from the User Portal. When a VPM is in use, materialized views must be managed from Enterprise Manager instead.
 endif::ai[]
 
 The best method for boosting Dashboard performance is to create a _materialized view_. A materialized view is a caching strategy that pre-aggregates and stores the data required by a Dashboard  so that the Dashboard can respond more quickly at runtime. When a materialized view exists for a Dashboard, the server attempts to query the cached materialized view rather than querying the database. This can significantly  increase Dashboard responsiveness in many cases.

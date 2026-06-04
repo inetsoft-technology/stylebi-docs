@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview of all drill-down techniques available in a Dashboard in Visual Composer, including chart brushing (cross-chart filter or linked selection), hyperlinks, flyover views (hover tooltips), and dimension-level drilling. Most techniques are available to end users at view time. Use this page to choose the right approach for interactive data exploration and navigation between detail levels.
+Overview of all drill-down and data-exploration techniques available in a Dashboard in Visual Composer. Covers: chart brushing (cross-chart filter highlighting related data); chart zoom (focus on selected groups by include or exclude); drilling through chart or crosstab date/dimension hierarchies (drill down/up buttons on axes and headers, facet chart behavior, expand/collapse hierarchy in crosstabs); drilling to chart or crosstab detail data (Show Details button opens a Data panel with underlying records, supports formatting, table styles, and export); hyperlinks on chart elements, labels, tables, and crosstabs (link to another dashboard with parameter passing, or to a web page); flyover views (hover or click on a chart/table/crosstab to filter other Dashboard components in place); and drill-down-with-filter (simultaneously drill to next hierarchy level and filter to selected group, affecting all components showing that dataset). Most techniques are available to end users at view time. Use this page to choose the right approach for interactive data exploration and navigation between detail levels.
 endif::ai[]
 
 include::dashboard:partial$availableToEndUsers.adoc[]

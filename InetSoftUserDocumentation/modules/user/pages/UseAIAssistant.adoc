@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to use the AI Assistant to ask natural-language questions about StyleBI features and documentation, getting answers sourced from the documentation and knowledge base.
+How to use the AI Assistant to ask natural-language questions about StyleBI features and documentation. Covers opening the Assistant from the Portal or Visual Composer toolbar, typing questions, selecting reasoning effort ('Think' or 'DeepThink'), sending questions, and managing chat history with New Chat and Clear All buttons. Also describes panel controls: toggling between side and bottom dock modes, collapsing/expanding the panel, and closing it. Notes that if the Assistant button is not visible, the user should consult their administrator.
 endif::ai[]
 
 

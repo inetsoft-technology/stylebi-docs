@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create device-specific layouts for a Dashboard in Visual Composer to control how it appears on mobile devices, tablets, and printed pages. Covers adding device layouts, repositioning and resizing components per layout, and setting print layout options. Permission to edit device layouts is controlled by administrator settings.
+How to create and configure device-specific layouts for a Dashboard in Visual Composer to control how it appears on mobile devices, tablets, and printed pages. Covers creating device layouts for device classes (Extra small, Small, Medium, Large) and creating custom device classes based on min/max CSS pixel widths. Explains the 'Mobile Only' option to prevent layouts from triggering on narrow desktop browser windows. Describes configuring print layout page settings (paper size, orientation, margins, font scaling, page numbering). Covers assigning Dashboard components to a layout by dragging from the Components folder, repositioning and resizing components, using guidelines, adding PageBreak components, and applying Table Flow Control (Fit Page Width or Fit Contents) for tables in print layout. Also covers adding Text and Image components to print layout headers and footers, including special codes for inserting page numbers ({P}), total pages ({N}), date ({D}), and time ({T}). Explains how to edit and delete existing device layouts.
 endif::ai[]
 
 [.videotitle]

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create custom reusable Table Styles in Visual Composer that can be applied to Tables and Crosstabs across multiple Dashboards. Covers defining cell formatting for each region of the table (header, body, total rows, etc.) in the Table Style Editor. Use when the built-in predefined styles are insufficient.
+How to create, organize, and delete custom reusable Table Styles in Visual Composer that can be applied to Tables and Crosstabs across multiple Dashboards. Covers defining cell formatting for each region of the table (Header Row, Header Column, Trailer Row, Trailer Column, Body, and border regions) in the Table Style Editor. Also explains how to create Table Style folders to organize styles, delete existing styles, and create or edit custom style patterns — mathematical row/column repeat rules that apply formatting to every Nth row or column. Use when the built-in predefined styles are insufficient.
 endif::ai[]
 
 In addition to using  predefined Table Styles (see xref:TableProperties.adoc[]), you also can create your own custom table styles. A custom Table Style  is a reusable component that can be applied to multiple tables in  Dashboards. The following sections explain how to create and use a custom Table Style.

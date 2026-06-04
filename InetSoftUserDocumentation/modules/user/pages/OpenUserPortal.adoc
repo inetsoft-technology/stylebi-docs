@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to open the User Portal in a web browser from the main landing page.
+How to open the User Portal from the main landing page, including logging in with username, password, and optional Locale. Describes the main navigation options in the Portal: Home (return to landing page), Dashboard (access dashboards), Repository (view all available dashboards), Create (create dashboards, data worksheets, or open Visual Composer), Schedule (schedule dashboard generation and monitor tasks), Data (create and manage data sources), Help (open documentation), and Account (access Preferences or Logout). Available options depend on permissions granted by the administrator.
 endif::ai[]
 
 

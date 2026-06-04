@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and navigation page for logical models (also called a data model, semantic layer, business model, or data dictionary), which present a business-oriented entity-attribute view of a relational database for Dashboard designers and end users. See CreateLogicalModel for creation steps.
+Overview and navigation page for logical models (also called a data model, semantic layer, business model, or data dictionary), which present a business-oriented entity-attribute view of a relational database for Dashboard designers and end users. See CreateLogicalModel for creation steps, EditLogicalModel for editing an existing model, and ExtendLogicalModel for extending a model.
 endif::ai[]
 
 A *logical model* presents a business-oriented, easy-to-understand view of a single underlying physical view. The logical model organizes data from the physical view into logical entities that correspond to business world objects, rather than to the underlying physical tables. Each entity contains one or more attributes that map to database table columns from the physical view.

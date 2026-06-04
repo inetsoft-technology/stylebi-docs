@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Admin guide for configuring self-service Dashboard creation features, including setting up repository permissions, action permissions, and data source access for end users.
+Admin guide for configuring self-service Dashboard creation features. Covers security settings (repository read/write permissions, data source access, and action permissions such as Portal Tabs, Visual Composer, and My Dashboards) and dashboard settings for end-user self-service, including enabling Ad Hoc Editing for Chart and Crosstab components and enabling Ad Hoc Filtering via a Selection Container's 'Allow User to Add/Remove Selections' property.
 endif::ai[]
 
 The following sections explain how you can configure self-service features to enable users to most effectively create their own  dashboards.

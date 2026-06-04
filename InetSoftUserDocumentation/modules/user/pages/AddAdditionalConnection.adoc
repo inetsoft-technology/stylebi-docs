@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for adding multiple connections to a single data source, enabling multi-tenant environments where different connections are assigned to different users or tenants.
+Instructions for adding multiple connections to a single data source. Useful in multi-tenant environments to assign different connections to different users, and also supports parameterizing a data source so different connections use different parameters. For JDBC data sources, the additional connection can be any JDBC data source; for other types, the additional connection must match the same data source type. Includes a JDBC-only option to disable the default connection, preventing unassigned users from obtaining any data connection. Covers how to edit, rename, and delete connections. Administrators can set user or group permissions on individual connections after they are created.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

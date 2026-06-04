@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to manage assets (folders, Dashboards, Worksheets) in the Portal Repository, including creating folders, renaming, moving, and deleting assets.
+How to manage assets (folders, Dashboards) in the Portal Repository, including creating folders, renaming, moving, and deleting assets, marking assets as Favorites, and materializing a Dashboard to improve performance.
 endif::ai[]
 
 The following sections explain how to manage your assets under the {buttonRepository} of the Portal.

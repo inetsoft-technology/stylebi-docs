@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add and configure a Crosstab (also called a pivot table or cross-tab) in a Dashboard in Visual Composer. Crosstabs aggregate data across row and column dimensions, displaying subtotals and grand totals. Use a Crosstab when you need to summarize measures broken down by two or more dimensions in a tabular format.
+How to add and configure a Crosstab (also called a pivot table or cross-tab) in a Dashboard in Visual Composer. Covers dragging dimensions into Rows and Columns regions and measures into the Aggregates region; selecting aggregate methods including bivariate aggregation (Correlation, Weighted Average) and percentage-of-row or percentage-of-column representations; sorting dimension values (ascending, descending, by value, or manual order); ranking groups using Top/Bottom filters with an optional "Others" category; date grouping levels (Year, Month, etc.) and fiscal calendar grouping; hiding and showing columns; creating named groups that merge multiple row or column header labels into custom categories; making row, column, and aggregate fields dynamic via Form components; and displaying row and column grand totals. Use a Crosstab when you need to summarize measures broken down by two or more dimensions in a tabular format.
 endif::ai[]
 
 The following sections explain how to add a  Crosstab, which allows you to display aggregated data in tabular  form. To create a crosstab, follow the steps below:

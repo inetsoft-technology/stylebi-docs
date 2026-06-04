@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to connect to Stripe as a data source in InetSoft. Requires a Stripe API Key for authentication. After entering the API Key and pressing OK, verify the connection status icon to confirm success.
+How to connect to Stripe as a data source in InetSoft. Steps: select the Stripe data source and press Create; enter a Name (label) for the connection; enter the API Key; optionally press Refresh Metadata if the data source structure has changed; optionally configure multi-tenant user settings; press OK. Verify the connection status icon — a check icon means success, an error icon means the connection failed (check settings or use EditConnection to correct them). After a successful connection, proceed to define a data set using QueryStripe.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

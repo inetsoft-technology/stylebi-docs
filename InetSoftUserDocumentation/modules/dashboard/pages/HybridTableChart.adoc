@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Hybrid Table chart in Visual Composer, which combines a graphical chart (e.g., bar chart) with tabular text columns in the same component. Uses the Discrete option on measures to render them as text columns rather than chart elements.
+Reference for creating a Hybrid Table chart in Visual Composer, which combines a graphical chart with tabular text columns in the same component. The graphical measure is placed on the X axis; dimensions and one or more measures (made discrete) are placed on the Y axis. Enabling the 'Discrete' option on a measure renders it as a text column rather than a chart element — multiple discrete measures produce multiple text columns. To display grid lines, open Chart Properties, go to the Line tab, and enable 'Show Table Grid'. Column widths can be adjusted by dragging column boundaries. Text components can be added above the chart to serve as column headers, and each text column can be formatted independently using the Format panel.
 endif::ai[]
 
 A hybrid table chart is a chart that displays columns of data (like a table) in addition to the usual graphical chart elements.

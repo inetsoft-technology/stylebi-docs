@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add a scripted trigger to a VPM lookup to enable or disable the lookup based on user role, group, or identity. Requires an existing VPM. See CreateNewVPM and AddDataSecurity.
+How to add a scripted trigger to a VPM lookup to enable or disable the VPM using JavaScript. The trigger script returns true to enable or false to disable. Available script parameters include: user (current username), roles (user's roles), groups (user's groups), parameter (dashboard or worksheet parameters), tables (tables in the query), and columns (columns in the query). Requires an existing VPM. See CreateNewVPM and AddDataSecurity.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a tenant-specific logical model extension in a multi-tenant environment, mapping the model to a tenant-specific physical view and connection. Enterprise only.
+How to create a tenant-specific logical model extension in a multi-tenant environment. Covers linking the extended model to an extended physical view and a specific connection (one-to-one relationship), adding new entities/attributes or extending inherited ones, and hiding inherited attributes via the 'Visible' option (inherited properties cannot be modified, only hidden). Administrators expose the extended model to tenants by setting permissions on the corresponding connection. Enterprise only.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

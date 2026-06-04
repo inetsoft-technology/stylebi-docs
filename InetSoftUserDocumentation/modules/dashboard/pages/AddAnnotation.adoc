@@ -7,7 +7,7 @@ include::dashboard:partial$availableToEndUsers.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add, reposition, format, and delete text annotations (also called comments, notes, or data notes) in a Dashboard in Visual Composer. Annotations can be attached to the Dashboard body, to a specific component, or to an individual data point in a Chart. Annotations are saved per bookmark and are available to end users (not just designers) at view time.  They allow a user to "mark up" a Dashboard.
+How to add, reposition, format, and edit text annotations (also called comments, notes, or data notes) in a Dashboard. Annotations can be attached to the Dashboard body, to a specific component, to an individual data point in a Chart, or to an individual cell in a Table. Annotations can be hidden (shown as a small note icon) or shown via a toolbar button; visible annotations are included when a Dashboard is exported. Annotations are saved per bookmark and are available to end users (not just designers) at view time. They allow a user to "mark up" a Dashboard.
 endif::ai[]
 
 You can add annotations to a Dashboard, to an individual Dashboard component, and even to an individual data point. The following sections explain how to do this.

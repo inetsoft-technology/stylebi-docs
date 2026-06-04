@@ -10,7 +10,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a custom JDBC data source connection in InetSoft for databases not covered by built-in connectors. Requires uploading a JDBC driver plugin, specifying the Driver Class and JDBC URL, and providing login credentials. Covers connection testing and common database URL formats for Oracle, DB2, MySQL, SQL Server, and others.
+Summary: How to create a custom JDBC data source connection in InetSoft for databases not covered by built-in connectors. Requires uploading a JDBC driver plugin, specifying the Driver Class and JDBC URL, and providing login credentials. Covers connection testing with sample test queries for common databases (Oracle, DB2, MySQL, SQL Server, PostgreSQL, and others), and optional properties including default schema, ANSI join syntax, transaction isolation level, and table name representation (Schema.Table vs. Table).
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 

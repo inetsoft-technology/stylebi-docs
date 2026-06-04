@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Heat Map chart in Visual Composer, which displays a measure using a colored grid where cell color intensity represents the aggregated value at each dimension intersection. Place dimensions on X and Y axes, and the measure in the Color region.
+Reference for creating a Heat Map chart in Visual Composer, which displays a measure using a colored grid where cell color intensity represents the aggregated value at each dimension intersection. Place dimensions on X and Y axes, and the measure in the Color region. Do not place measures on X/Y axes and do not place any fields in the Size or Shape regions. A measure can optionally be placed in the Text region, but placing a dimension in the Text region will create a Wordcloud chart instead.
 endif::ai[]
 
 A heat map displays a *measure* using a colored grid, where the value of the aggregated measure for a given combination of *dimension* values is used to determine the color of the grid at that location.

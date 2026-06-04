@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add a background to a Dashboard in Visual Composer, either as a solid color fill or as an image. Also covers setting background color or image on individual components. Use this page to improve Dashboard visual design by adding branding, logos, or a consistent color scheme.
+How to add a background to a Dashboard in Visual Composer using two approaches: (1) assigning a solid background color to the entire Dashboard via the Format tab, or (2) using an Image or Shape component as a visual background behind other components. For Image components, covers uploading image files (JPEG, GIF, SVG, PNG, TIFF), selecting skins, and scaling options (Maintain Aspect Ratio or 9-Cell Grid). For Shape components, covers line and fill settings including gradient fills (linear or radial with configurable color stops), and round corners for rectangles. Also covers using 'Send to Back', locking background components, and layering other components on top. Use this page to improve Dashboard visual design by adding branding, logos, colored panels, or a consistent color scheme.
 endif::ai[]
 
 [.videotitle]

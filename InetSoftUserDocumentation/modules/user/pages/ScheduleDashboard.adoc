@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to schedule automatic Dashboard generation and delivery on a predefined cycle, including quick-scheduling and advanced schedule options for email delivery and format selection. For admin-level scheduling with full delivery control, email templates, and alerts, see CreateScheduledTask.adoc in the administration module.
+How to schedule automatic Dashboard generation and delivery on a predefined cycle. Covers: (1) quick-scheduling with bookmark selection, format, email recipients, recurrence (daily/weekly/monthly), time zone, and optional link inclusion; (2) setting alerts that trigger actions only when Dashboard highlight or gauge range conditions are met; (3) creating advanced scheduled tasks via the Portal Schedule button, with full control over Condition, Action, and Options tabs; (4) managing scheduled tasks — viewing status, editing, running immediately, stopping, deleting, and moving tasks to folders; (5) Schedule Actions including notification of task status, deliver to emails (PDF/PowerPoint/Excel/CSV with layout and expansion options, dynamic subject/filename parameters), and save to disk (server filesystem or FTP/SFTP); (6) creation parameters for passing Dashboard parameter values into scheduled tasks; (7) Schedule Options including enabling/disabling, date range, Execute As user (for VPM filtering), and locale.
 endif::ai[]
 
 

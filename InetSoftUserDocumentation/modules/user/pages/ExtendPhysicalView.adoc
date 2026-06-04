@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a tenant-specific physical view extension in a multi-tenant environment, adding tenant-specific database tables alongside shared tables. Enterprise only.
+How to create a tenant-specific physical view extension in a multi-tenant environment, adding tenant-specific database tables alongside shared tables. Enterprise only. Key constraints: an extended physical view is associated with exactly one connection, and a connection can be associated with only one extended physical view. Tables and joins inherited from the base physical view cannot be modified within the extended view. After creating the extended physical view, it can be used to create an extended logical model.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

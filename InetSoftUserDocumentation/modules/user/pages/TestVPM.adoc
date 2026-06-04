@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to test VPM row and column filters in the Portal to verify that security rules are correctly applied for different users and roles. Enterprise only.
+How to test VPM row and column filters in the VPM editor to verify that security rules are correctly applied for different users and roles. Enterprise only.
 endif::ai[]
 include::ROOT:partial$enterpriseOnly.adoc[]
 

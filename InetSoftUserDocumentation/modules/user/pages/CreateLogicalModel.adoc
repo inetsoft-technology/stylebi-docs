@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Step-by-step instructions for creating a logical model (data model, semantic layer, business model) on top of a physical view, organizing database columns into business-oriented entities and attributes for relational database data sources.
+Step-by-step instructions for creating a logical model (data model, semantic layer, business model) on top of a physical view for relational database data sources only. Requires a physical view to be defined first. Covers creating entities and adding attributes (database columns) to those entities, adding SQL expression/formula attributes, editing attribute properties, and naming restrictions for entities and attributes (certain special characters cause problems; attribute names cannot contain a period).
 endif::ai[]
 
 

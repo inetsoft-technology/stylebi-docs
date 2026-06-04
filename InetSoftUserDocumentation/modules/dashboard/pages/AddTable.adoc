@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add and configure a Table in Visual Composer, including styling, resizing, aligning, and formatting columns. Most of these operations—especially applying Table Styles—also apply to Crosstab and Freehand table, ensuring consistent formatting across all table types.
+How to add and configure a Table in Visual Composer, including binding data columns, hiding or sorting columns, applying Table Styles, resizing the table and its columns, aligning header and data cells, and formatting columns as currency, date, or number. Also covers reordering columns.
 endif::ai[]
 
 [.videotitle]

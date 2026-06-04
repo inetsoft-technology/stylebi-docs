@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to specify hidden columns (column masking, restrict column access) in a VPM to restrict user access to specific database table columns. Enterprise only. See AddDataSecurity for VPM overview.
+How to specify hidden columns (column masking, restrict column access) in a VPM to restrict user access to specific database table columns. Hidden columns are restricted from all users except those associated with roles listed in the "Grant to" pane. Tables with hidden columns are automatically added to the Lookup tab. Columns derived from hidden columns via expressions are accessible only to users who have permission for all columns used in the expression. Enterprise only. See AddDataSecurity for VPM overview.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

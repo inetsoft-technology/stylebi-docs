@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Chart component properties in Visual Composer (also called chart settings or chart configuration), accessed via right-click > Properties on the chart body. Covers the General tab (title, padding, alpha), Advanced tab (drill-down, tooltip, chart-specific settings), Line tab (line styles), Hierarchy tab (drill paths), and Script tab (Chart scripting). See BasicChartingSteps and ChartTypes for how to create and configure a Chart.
+Reference for Chart component properties in Visual Composer (also called chart settings or chart configuration), accessed via right-click > Properties on the chart body. Covers the General tab (tooltip, data tip view, flyover views), Advanced tab (chart options such as glossy effect, sparkline, ad hoc editing, date comparison, drilling, top-N; plot settings such as background, alpha, banding; and chart-type-specific plot options for Pie, Bar, Network/Tree, Circle Packing/Treemap, Word Cloud, Line/Area/Radar, Point, Map, Contour, and Interval charts; and target lines), Line tab (X/Y grid lines, quadrant grid, diagonal line, table grid, trend lines, and projection), Hierarchy tab (custom drill-down hierarchy configuration), and Script tab (Chart scripting). See AddAChart and BasicChartingSteps for how to create and configure a Chart.
 endif::ai[]
 
 [WARNING,caption=see also]

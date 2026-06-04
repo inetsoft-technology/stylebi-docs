@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Step-by-step instructions for creating a physical view (join diagram, table joins, database schema view) that defines the database table join structure underlying a data model, for relational database data sources.
+Step-by-step instructions for creating a physical view (join diagram, table joins, database schema view) that defines the database table join structure underlying a data model, for relational database data sources. Covers: adding tables to the physical view (with optional search filtering and inline SQL custom tables), adding and configuring joins between tables (including join operator such as inner/outer/inequality, cardinality, merging rule, and weak join settings in the Edit Join dialog), removing and editing joins, and saving the physical view. Includes a caution about query traps that can cause unexpected query results.
 endif::ai[]
 
 IMPORTANT: Physical views can only be created for relational databases. (See xref:JDBC.adoc[]  or  xref:ConnectToDataSource.adoc[] for information on how to configure a relational database data source.)

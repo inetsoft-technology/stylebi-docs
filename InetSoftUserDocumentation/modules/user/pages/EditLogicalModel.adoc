@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to open and edit an existing logical model (data model, semantic layer, data dictionary), including adding entities and attributes, renaming entities, modifying attribute properties (data type, format, reference type, browse data), and adding auto-drill hyperlinks that link to dashboards or web pages with optional parameter passing.
+How to open and edit an existing logical model (data model, semantic layer, data dictionary), including adding entities and attributes, renaming entities, modifying attribute properties (attribute name, data type, physical column mapping, format, reference type, browse data), and adding auto-drill hyperlinks that link to dashboards or web pages. Auto-drill configuration includes: passing the hyperlinked value or a constant as a parameter, using a Data Worksheet query lookup to retrieve a related value to pass as a parameter, embedding parameters in URLs, sending dashboard-level parameters via the 'Send Dashboard Parameters' option, controlling the target browser window/frame, and disabling parameter prompts on drill-down dashboards.
 endif::ai[]
 
 include::ROOT:partial$createVisualizationClose.adoc[]

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to display multiple measures (also called a multi-measure chart) on a chart in Visual Composer using color, shape, size, or text visual encodings, or by using multiple axes (single-axis vs. separate-axis mode). See MultipleStyleChart for assigning different chart styles (bar, line, point) to different measures.
+Explains how to display multiple measures (also called a multi-measure chart) on a chart in Visual Composer using: (1) color, shape, size, or text visual encodings; (2) multiple adjacent axes or a single shared axis (single-axis mode via the Switch to Single Graph button); (3) stacking multiple measures on top of each other (Stack Measures option, available for Bar, Line, Area, Point, Step Line, and Step Area chart types in single-axis mode); or (4) a dual axis with a secondary Y-axis on the right side (see DualAxisChart). See MultipleStyleChart for assigning different chart styles (bar, line, point) to different measures.
 endif::ai[]
 
 .See Also...

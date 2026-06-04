@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a new Dashboard from the User Portal, covering two starting paths: the Dashboard Wizard (guided, auto-generated layout from a data source) and the Visual Composer (blank canvas). Explains how to select a data source (Data Worksheet, data model, or database table). This page is about creating a brand-new Dashboard — not editing an existing one.
+How to create a new Dashboard, covering creation from the User Portal and from within Visual Composer. From the User Portal, two starting paths are available: the Dashboard Wizard (guided, auto-generated layout from a data source) and the Visual Composer (blank canvas). Explains how to select a data source (Data Worksheet, data model, or database table). Also covers how to create a new folder to organize Dashboards or Data Worksheets. This page is about creating a brand-new Dashboard — not editing an existing one.
 endif::ai[]
 
 To create a new Dashboard, follow the steps below:
