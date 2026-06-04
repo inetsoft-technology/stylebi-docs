@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to profile Data Worksheet data block performance in Visual Composer by examining the SQL query plan (Show Plan) to see whether processing is merged into a single query or requires post-processing, and how to view actual query execution time using Live Data View.
+Summary: How to profile Data Worksheet data block performance by examining the SQL query plan (Show Plan) to see whether processing is merged into a single query or requires post-processing, and how to view actual query execution time using Live Data View.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 

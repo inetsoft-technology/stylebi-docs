@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Data.Gov JSON connection in Visual Composer by entering a URL Suffix for the web service endpoint, with an optional tabular data format selection. Covers opening the Data.Gov JSON Query dialog and completing the query setup in a Data Worksheet.
+Summary: How to create a Data Worksheet query from a Data.Gov JSON connection by entering a URL Suffix for the web service endpoint, with an optional tabular data format selection. Covers opening the Data.Gov JSON Query dialog and completing the query setup in a Data Worksheet.
 endif::ai[]
 
 

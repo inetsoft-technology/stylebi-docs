@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an Intervals connection in Visual Composer by selecting an endpoint, specifying a JSON Path expression to extract data, optionally expanding arrays, and setting a query timeout.
+Summary: How to create a Data Worksheet query from an Intervals connection by opening a Data Worksheet, selecting the Intervals Query object, choosing an endpoint, specifying a JSON Path expression to extract data, optionally expanding arrays, and setting a query timeout.
 endif::ai[]
 
 

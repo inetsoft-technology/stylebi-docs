@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to join (SQL join, table join, merge tables) two or more data blocks horizontally in a Data Worksheet in Visual Composer, defining equality or inequality join conditions to combine data from different tables, queries, or data models.
+Summary: How to join (SQL join, table join, merge tables) two or more data blocks horizontally in a Data Worksheet, defining equality or inequality join conditions to combine data from different tables, queries, or data models. Covers inner join, outer join, inequality join, cross join, and merge join, as well as editing joins (changing join type, reorder tables, add tables, hide duplicate columns).
 endif::ai[]
 
 [WARNING,caption=see also]

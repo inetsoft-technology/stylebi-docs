@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Chargify connection in Visual Composer using the Chargify Query dialog box. The query uses a REST endpoint configuration to retrieve subscription management data from Chargify.
+Summary: How to create a Data Worksheet query from a Chargify connection using the Chargify Query dialog box. The query uses a REST endpoint configuration to retrieve subscription management data from Chargify.
 endif::ai[]
 
 

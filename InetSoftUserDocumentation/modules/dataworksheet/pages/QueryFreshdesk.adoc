@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Freshdesk connection in Visual Composer using the Freshdesk Query dialog box. The query uses a REST endpoint configuration to retrieve customer support ticket and helpdesk data from Freshdesk.
+Summary: How to create a Data Worksheet query from a Freshdesk connection using the Freshdesk Query dialog box. The user opens a Data Worksheet, adds a Freshdesk Query object, and configures a REST endpoint to retrieve customer support ticket and helpdesk data from Freshdesk.
 endif::ai[]
 
 

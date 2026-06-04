@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to preview the data returned by a Data Worksheet data block in Visual Composer using Live Data View, showing a limited sample along with query execution time.
+Summary: How to preview the data returned by a Data Worksheet data block using Live Data View, showing a limited sample along with query execution time, and how to enable or disable the display row limit.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 

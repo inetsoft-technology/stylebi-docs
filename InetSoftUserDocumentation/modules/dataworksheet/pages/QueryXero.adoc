@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query in Visual Composer from a Xero data source by opening a Data Worksheet, pressing the Object button, selecting the Xero Query option, and configuring the endpoint and query fields in the Xero Query dialog box.
+Summary: How to create a Data Worksheet query from a Xero data source by opening a Data Worksheet, pressing the Object button, selecting the Xero Query option, and configuring the endpoint, optional parameters, JSON Path, and other settings in the Xero Query dialog box.
 endif::ai[]
 
 

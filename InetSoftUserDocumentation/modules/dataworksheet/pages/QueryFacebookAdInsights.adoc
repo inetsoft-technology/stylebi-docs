@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Facebook Ad Insights connection in Visual Composer (Enterprise only) by selecting a Date Preset, adding Metrics, specifying Breakdowns, and configuring Additional Parameters in the Facebook Ad Insights Query dialog. Covers selecting ad campaign metrics and breakdowns using the Facebook Marketing API.
+Summary: How to create a Data Worksheet query from a Facebook Ad Insights connection (Enterprise only) by selecting a Date Preset, adding Metrics, specifying Breakdowns, and configuring Additional Parameters in the Facebook Ad Insights Query dialog. Covers selecting ad campaign metrics and breakdowns using the Facebook Marketing API.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]

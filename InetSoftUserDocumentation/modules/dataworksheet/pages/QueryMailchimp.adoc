@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query in Visual Composer from a Mailchimp email marketing connection by selecting an endpoint, specifying a JSON Path expression to extract data, optionally expanding arrays, and setting a query timeout.
+Summary: How to create a Data Worksheet query from a Mailchimp email marketing connection by selecting an endpoint, specifying a JSON Path expression to extract data, optionally expanding arrays, and setting a query timeout.
 endif::ai[]
 
 

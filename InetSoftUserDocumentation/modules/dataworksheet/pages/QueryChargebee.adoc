@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Chargebee connection in Visual Composer using the Chargebee Query dialog box. The query uses a REST endpoint configuration to retrieve subscription billing data from Chargebee.
+Summary: How to create a Data Worksheet query from a Chargebee connection using the Chargebee Query dialog box. The query uses a REST endpoint configuration to retrieve data from Chargebee.
 endif::ai[]
 
 

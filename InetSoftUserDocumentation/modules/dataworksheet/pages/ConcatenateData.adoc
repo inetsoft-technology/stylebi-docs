@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a concatenated data block in a Data Worksheet in Visual Composer by combining two or more data blocks vertically using union, intersection, or difference (minus) operations — also referred to as union, stacking tables, or appending data.
+Summary: How to create and manage a concatenated data block in a Data Worksheet by combining two or more data blocks vertically using union, intersection, or difference (minus) operations. Covers creating each concatenation type, changing the concatenation type (including keeping duplicate rows for union), reordering tables, and adding tables to an existing concatenation using the Concatenation Editor.
 endif::ai[]
 
 Concatenations  allow you to mash up data from different data blocks, which may represent different database tables, queries, or data models.  A _concatenated data block_ is a *vertical composition* of two or more data blocks with a specified relationship (union, intersection, difference) between the rows of the base data blocks.

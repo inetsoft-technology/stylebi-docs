@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a GraphQL connection in Visual Composer, including writing GraphQL query syntax, using variables, enabling pagination with a pagination variable and JSON Path expression, choosing GET or POST request type, and specifying a JSON Path to extract results. Also covers the optional Expand Arrays feature for normalizing nested array data.
+Summary: How to create a Data Worksheet query from a GraphQL connection, including writing GraphQL query syntax, using variables, enabling pagination with a pagination variable and JSON Path expression, choosing GET or POST request type, and specifying a JSON Path to extract results. Also covers the optional Expand Arrays feature for normalizing nested array data.
 endif::ai[]
 
 

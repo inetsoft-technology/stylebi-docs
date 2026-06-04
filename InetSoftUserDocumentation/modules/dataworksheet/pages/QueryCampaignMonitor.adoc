@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Campaign Monitor connection in Visual Composer using the Campaign Monitor Query dialog box. The query uses a REST endpoint configuration to retrieve email marketing data from Campaign Monitor.
+Summary: How to create a Data Worksheet query from a Campaign Monitor connection using the Campaign Monitor Query dialog box. The query uses a REST endpoint configuration to retrieve email marketing data from Campaign Monitor.
 endif::ai[]
 
 

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to copy a data block in a Data Worksheet in Visual Composer using a regular copy (independent duplicate) or a mirror copy (linked copy, synchronized duplicate that reflects changes to the original).
+Summary: How to copy a data block in a Data Worksheet using a regular copy (independent duplicate) or a mirror copy (linked copy, synchronized duplicate that reflects changes to the original).
 endif::ai[]
 
 There are two ways to copy a data block, by using a regular copy, or by using a mirror copy.  The following sections explain these methods.

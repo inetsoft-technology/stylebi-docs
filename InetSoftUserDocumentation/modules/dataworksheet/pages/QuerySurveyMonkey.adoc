@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query in Visual Composer from a SurveyMonkey data source by opening a Data Worksheet, pressing the Object button, selecting the SurveyMonkey Query option, and configuring the endpoint and query fields in the SurveyMonkey Query dialog box.
+Summary: How to create a Data Worksheet query from a SurveyMonkey data source by opening a Data Worksheet, pressing the Object button, selecting the SurveyMonkey Query option, and configuring the endpoint, optional parameters, JSON Path, Expand Arrays, and Timeout settings in the SurveyMonkey Query dialog box.
 endif::ai[]
 
 

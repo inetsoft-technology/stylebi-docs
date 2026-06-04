@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Copper connection in Visual Composer using the Copper Query dialog box. The query uses a REST endpoint configuration to retrieve CRM and sales pipeline data from Copper.
+Summary: How to create a Data Worksheet query from a Copper connection using the Copper Query dialog box. The query uses a REST endpoint configuration to retrieve data from Copper.
 endif::ai[]
 
 

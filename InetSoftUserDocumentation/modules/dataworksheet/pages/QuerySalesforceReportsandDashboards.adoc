@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query in Visual Composer from a Salesforce Reports and Dashboards data source by opening a Data Worksheet, pressing the Object button, selecting the Salesforce Reports and Dashboards Query option, and configuring the endpoint and query fields in the query dialog box.
+Summary: How to create a query in a Data Worksheet from a Salesforce Reports and Dashboards data source by opening a Data Worksheet, pressing the Object button, selecting the Salesforce Reports and Dashboards Query option, and configuring the endpoint, parameters, JSON Path, and optional settings such as Expand Arrays and Timeout in the query dialog box.
 endif::ai[]
 
 

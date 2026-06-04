@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query in Visual Composer from an OData connection, covering entity selection, bound and unbound function queries, the Select ($select), Filter ($filter), Expand ($expand for navigation properties), Order By ($orderby), Top ($top), and Skip ($skip) query options, and the optional Expand Arrays setting.
+Summary: How to create a Data Worksheet query from an OData connection, covering entity selection, bound and unbound function queries, the Select ($select), Filter ($filter), Expand ($expand for navigation properties), Order By ($orderby), Top ($top), and Skip ($skip) query options, and the optional Expand Arrays setting.
 endif::ai[]
 
 

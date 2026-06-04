@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an Azure Search connection in Visual Composer using the Azure Search Query dialog box. The query uses a REST endpoint configuration to retrieve data from Azure Cognitive Search.
+Summary: How to create a Data Worksheet query from an Azure Search connection using the Azure Search Query dialog box. The query uses a REST endpoint configuration to retrieve data from Azure Cognitive Search.
 endif::ai[]
 
 

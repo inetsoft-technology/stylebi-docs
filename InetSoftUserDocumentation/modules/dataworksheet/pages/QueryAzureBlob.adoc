@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an Azure Blob connection in Visual Composer using the Azure Blob Query dialog box. The query uses a REST endpoint configuration to retrieve data from Azure Blob Storage.
+Summary: How to create a Data Worksheet query from an Azure Blob connection using the Azure Blob Query dialog box. The query uses a REST endpoint configuration to retrieve data from Azure Blob Storage.
 endif::ai[]
 
 

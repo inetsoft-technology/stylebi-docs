@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to access data block column values within Data Worksheet expressions in Visual Composer, including current-row field access, row indexing, and referencing other data blocks. See CreateNewDataField for how to add expression columns.
+Summary: How to access data block column values within Data Worksheet expressions, including current-row field access, previous-row relative indexing, referencing columns in other data blocks by name or row index, and value lookup using a primary key. See CreateNewDataField for how to add expression columns.
 endif::ai[]
 :experimental:
 

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query in Visual Composer from a data.world data source by opening a Data Worksheet, pressing the Object button, selecting the data.world Query option, and configuring the endpoint and query fields in the data.world Query dialog box.
+Summary: How to create a data set in a Data Worksheet from a data.world data source by pressing the Object button, selecting the data.world Query option, and configuring the endpoint, parameters, JSON Path, Expand Arrays option, and timeout in the data.world Query dialog box.
 endif::ai[]
 
 

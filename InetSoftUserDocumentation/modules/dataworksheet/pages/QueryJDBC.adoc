@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet data set from a relational database (JDBC) data source in Visual Composer. Configure the JDBC connection first (see user:JDBC), then proceed to create a new worksheet to build queries against the database.
+Summary: How to create a Data Worksheet data set from a relational database (JDBC) data source. Configure the JDBC connection first (see user:JDBC), then proceed to create a new worksheet to build queries against the database.
 endif::ai[]
 
 To create a new data set from a relational database  data source, first set up the data source connection. See xref:user:JDBC.adoc[] for more details.

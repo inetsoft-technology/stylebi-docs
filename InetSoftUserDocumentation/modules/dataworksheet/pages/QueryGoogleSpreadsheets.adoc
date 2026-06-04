@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Google Spreadsheets connection in Visual Composer by selecting a Spreadsheet and Worksheet in the query dialog box. Note that the Google API reformats column names (lowercased, spaces removed). Requires a configured Google Spreadsheets data source connection.
+Summary: How to create a Data Worksheet query from a Google Spreadsheets connection by selecting a Spreadsheet and Worksheet in the Google Spreadsheets Query dialog box. Note that the Google API reformats column names (lowercased, spaces removed). Requires a configured Google Spreadsheets data source connection.
 endif::ai[]
 
 

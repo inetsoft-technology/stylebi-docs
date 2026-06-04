@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a GitHub connection in Visual Composer using the GitHub Query dialog box. The query uses a REST endpoint configuration to retrieve repositories, issues, pull requests, and other GitHub data.
+Summary: How to create a Data Worksheet query from a GitHub connection using the GitHub Query dialog box. The query uses a REST endpoint configuration, with options to select an endpoint, add parameters, specify a JSON Path, expand arrays, and set a timeout.
 endif::ai[]
 
 

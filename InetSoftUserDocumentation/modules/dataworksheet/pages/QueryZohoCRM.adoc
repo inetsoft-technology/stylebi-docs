@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query in Visual Composer from a Zoho CRM data source by opening a Data Worksheet, pressing the Object button, selecting the ZohoCRM Query option, and configuring the endpoint and query fields in the ZohoCRM Query dialog box.
+Summary: How to create a Data Worksheet query from a Zoho CRM data source by opening a Data Worksheet, pressing the Object button, selecting the ZohoCRM Query option, and configuring the endpoint, optional parameters, JSON Path, and other query settings in the ZohoCRM Query dialog box.
 endif::ai[]
 
 
