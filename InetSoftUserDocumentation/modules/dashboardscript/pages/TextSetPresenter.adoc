@@ -12,8 +12,6 @@ endif::ai[]
 Sets the contents of a Text component to the specified Presenter. Built-in presenters include the following:
 
 |===
-|inetsoft.report.painter.Abstract2DCodePresenter| Base class for all 2D code presenters.
-|inetsoft.report.painter.AbstractBarcodePresenter|Base class for all barcode presenter.
 |inetsoft.report.painter.Bar2Presenter|Presents a positive or negative number as a horizontal bar. Commonly used in  table cells.
 |inetsoft.report.painter.Barcode2of7Presenter|Displays a string in the Codabar 2 of 7 symbology.
 |inetsoft.report.painter.Barcode3of9Presenter| Displays a string in the Codabar 3 of 9 symbology
@@ -38,23 +36,14 @@ Sets the contents of a Text component to the specified Presenter. Built-in prese
 |inetsoft.report.painter.BarPresenter|Presents a *positive* number as a horizontal bar. Commonly used in table cells.
 |inetsoft.report.painter.BooleanPresenter|Presents the value of boolean data as two different icons: By default, a check mark is used to represent the `true` value, and an empty box is used to represent the `false` value.  You can supply alternate icons if needed. Often  used in a table to display boolean values as check marks.
 |inetsoft.report.painter.BulletGraphPresenter|Displays a bullet graph, which is similar to a gauge but has a simpler look-and-feel.
-|inetsoft.report.painter.BulletPainter|NA
 |inetsoft.report.painter.ButtonPresenter|Displays a string value inside a 3D button border.
 |inetsoft.report.painter.CCWRotatePresenter|Rotates text 90 degrees counterclockwise in a table cell.
-|inetsoft.report.painter.ComponentPainter|Wraps around an AWT component and provides a Painter object that is suitable to be used in the Dashboard. By default, the painter calls `Component.paintAll()` for lightweight components and calls `Component.printAll()` for heavyweight components. However,  these  methods may not work for all  components. If the default method does not work for a component, the application can supply  a different printing method: `printAll()`,  `paintAll()`, `print()`, or `paint()`.  See {InetsoftComponentPainter} for more details.
 |inetsoft.report.painter.CWRotatePresenter|Rotates text 90 degrees clockwise in a table cell.
 |inetsoft.report.painter.HeaderPresenter|Displays a table header cell with two or three labels separated by diagonal lines.
 |inetsoft.report.painter.HTMLPresenter|Displays basic HTML.
-|inetsoft.report.painter.HTMLSource|NA.
 |inetsoft.report.painter.IconCounterPresenter|Presents an integer  as a number of icons,  commonly used for ratings or other small scale numbers. A custom image can be used.
-|inetsoft.report.painter.ImagePainter|NA.
-|inetsoft.report.painter.LegendPresenter|NA
 |inetsoft.report.painter.ImagePresenter|Displays a basic image.
-|inetsoft.report.painter.PresenterPainter|NA
 |inetsoft.report.painter.QRCodePresenter|Displays a string as the QR code.
-|inetsoft.report.painter.RotatedPainter|Rotates a painter output 90 degrees clockwise.
-|inetsoft.report.painter.RotatePresenter|Rotates text in a table cell.
-|inetsoft.report.painter.RulerPresenter|Draws a ruler (coordinate axis) which can display a value.
 |inetsoft.report.painter.ShadowPresenter|Displays a string value inside a 3D shadow border.
 |inetsoft.report.painter.TrafficLightPresenter|Displays an integer number as one of the following colors based on its range: red, yellow, or green. By default,  high range uses the red light.
 |===
