@@ -3,10 +3,10 @@ graph = new EGraph();
 var elem = new IntervalElement("State", "Quantity");
 var xscale = new CategoricalScale("State");
 var yscale = new LinearScale("Quantity");
-var aspec = new AxisSpec(); //<2>
-var fontFrame = new CategoricalFontFrame(); //<3>
-fontFrame.setFont("NJ", new java.awt.Font("Arial", java.awt.Font.BOLD, 14)); //<4>
-aspec.setFontFrame(fontFrame); //<5>
+var aspec = new AxisSpec();
+var frame = new CategoricalFontFrame(); //<2>
+frame.setFont("NJ", new java.awt.Font("Arial", java.awt.Font.BOLD, 14)); //<3>
+aspec.setFontFrame(frame); //<4>
 xscale.setAxisSpec(aspec);
 graph.setCoordinate(new RectCoord(xscale, yscale));
 graph.addElement(elem);

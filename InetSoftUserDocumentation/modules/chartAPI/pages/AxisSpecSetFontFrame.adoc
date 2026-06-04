@@ -10,7 +10,7 @@ endif::ai[]
 Specifies a mapping between axis label values and fonts. The corresponding "getter" function is `getFontFrame()`.
 
 == Parameter
-frame:: A `CategoricalFontFrame` object (`inetsoft.graph.aesthetic.CategoricalFontFrame`)
+frame:: A xref:CategoricalFontFrame.adoc[] object
 
 == Example
 
@@ -21,8 +21,9 @@ include::scriptexample:partial$AxisSpecSetFontFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the `AxisSpec` object.
-<3> Create the `CategoricalFontFrame` object and map values to fonts.
-<4> Use `setFontFrame` to assign the `FontFrame` to the axis.
+<3> Create the xref:CategoricalFontFrame.adoc[] object.
+<4> Use xref:CategoricalFontFrameSetFont.adoc[] to map values to fonts.
+<5> Use `setFontFrame` to assign the `FontFrame` to the axis.
 
 image::commonscript:AxisSpecSetFontFrame.png[alt="bar chart with custom axis label fonts"]
 
@@ -31,5 +32,10 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]
 =====
-To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on.
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
+
+[source,javascript]
+----
+include::scriptexample:partial$AxisSpecSetFontFrame2.js[]
+----
 =====
