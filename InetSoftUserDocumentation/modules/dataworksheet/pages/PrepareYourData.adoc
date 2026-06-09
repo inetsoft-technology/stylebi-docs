@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Top-level routing index for the Data Worksheet module (also called query builder, data prep, ETL layer, or data pipeline). Use this to find the right page for any data preparation task. Creating a new Data Worksheet: CreateNewWorksheet.adoc. Writing SQL queries or using the query wizard: QueryData.adoc. Importing a CSV, Excel, or text file: UploadData.adoc. Filtering data (conditions, WHERE clause, row restrictions): FilterData.adoc. Grouping and aggregation (SUM, COUNT, AVG by dimension): GroupAggregateData.adoc. Joining data blocks (inner, outer, inequality joins): JoinData.adoc. General drag-and-drop data preparation (add tables, select columns, build a data set) — the term "mashup" here means manipulating data broadly, not specifically combining multiple sources or performing joins: MashupData.adoc. Union, intersection, or difference between data blocks: ConcatenateData.adoc. Calculated fields and derived expressions: CreateNewDataField.adoc. Variables and parameters (user input to queries): CreateNewVariable.adoc. Pivoting, transposing, or reshaping data: PivotData.adoc. Sorting: SortData.adoc. Copying or creating mirror copies of data blocks: CopyData.adoc. Row-level and column-level data security (VPM): SecureData.adoc. Data Worksheet properties: DataWorksheetProperties.adoc.
+Summary: Top-level routing index for the Data Worksheet module (also called query builder, data prep, ETL layer, or data pipeline). Use this to find the right page for any data preparation task. Creating a new Data Worksheet: CreateNewWorksheet.adoc. Writing SQL queries or using the query wizard: QueryData.adoc. Importing a CSV, Excel, or text file: UploadData.adoc. Filtering data (conditions, WHERE clause, row restrictions): FilterData.adoc. Grouping and aggregation (SUM, COUNT, AVG by dimension): GroupAggregateData.adoc. Joining data blocks (inner, outer, inequality joins): JoinData.adoc. General drag-and-drop data preparation (add tables, select columns, build a data set from one or more sources): MashupData.adoc. Union, intersection, or difference between data blocks: ConcatenateData.adoc. Calculated fields and derived expressions: CreateNewDataField.adoc. Variables and parameters (user input to queries): CreateNewVariable.adoc. Pivoting, transposing, or reshaping data: PivotData.adoc. Sorting: SortData.adoc. Copying or creating mirror copies of data blocks: CopyData.adoc. Row-level and column-level data security (VPM): SecureData.adoc. Data Worksheet properties: DataWorksheetProperties.adoc.
 endif::ai[]
 
 [WARNING,caption=see also]
@@ -13,7 +13,7 @@ endif::ai[]
 * xref:dashboard:SortData.adoc[] to sort data at the Dashboard level.
 ====
 
-If you need to   manipulate your dataset (e.g.,  filter, group, sort, transform), or if you need to mashup data from multiple data sources, create  a *Data Worksheet*  using *Visual Composer*.
+If you need to manipulate your dataset (e.g., filter, group, sort, transform), or combine data from multiple sources, create a *Data Worksheet* using *Visual Composer*.
 
 include::ROOT:partial$AboutVisualComposer.adoc[]
 
@@ -29,7 +29,7 @@ This module contains the following key sections, and is relevant to  designers a
 ** xref:dataworksheet:UploadData.adoc[]: Import data from a file into a Data Worksheet to allow further manipulation.  This is useful for smaller data sets that are not stored in a database.
 ** xref:dataworksheet:EnterData.adoc[]: Manually type data into a Data Worksheet data block or table to be saved with the Data Worksheet.  This is useful for very small data sets that are not stored in files or databases, and for entering parameter values into a table.
 ** xref:dataworksheet:QueryData.adoc[]: Create a SQL query using a wizard or by hand-coding the SQL.  This approach in many cases produces the most efficient queries when a data model is *not* being used.
-** xref:dataworksheet:MashupData.adoc[]: Build a data set by joining, filtering, and sorting data blocks using drag-and-drop operations.  This approach is most useful when you are using a data model, or plan to mashup different data sources.
+** xref:dataworksheet:MashupData.adoc[]: Build a data set by dragging and dropping data from one or more data sources into the Data Worksheet and applying operations such as filtering, joining, and sorting.
 ** xref:dataworksheet:ModifyColumn.adoc[]: Perform operations on a data block column such as hiding, renaming, repositioning, changing data type.
 ** xref:dataworksheet:FilterData.adoc[]: Apply filtering conditions to a data block to restrict the data returned by the query. Conditions can be static or dynamic based on parameters, session data, or user input.
 ** xref:dataworksheet:GroupAggregateData.adoc[]: Group and summarize data in a data block to produce a more compact data set.

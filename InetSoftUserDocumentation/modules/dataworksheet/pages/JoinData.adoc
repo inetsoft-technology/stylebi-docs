@@ -10,9 +10,10 @@ endif::ai[]
 [WARNING,caption=see also]
 xref:ConcatenateData.adoc[] to create a *vertical composition* of two or more data blocks.
 
-Joins  allow you to mash up data from different data blocks, which may represent different database tables, queries, or data models. A _joined data block_ is a *horizontal composition* of two or more data blocks with a specified relationship (equality or inequality) between the rows of the base data blocks. The following sections explain how to create and edit joins.
+Joins allow you to combine data from different data blocks, which may represent different database tables, queries, or data models. A _joined data block_ is a *horizontal composition* of two or more data blocks with a specified relationship (equality or inequality) between the rows of the base data blocks. The following sections explain how to create and edit joins.
 
-
+== When to Use
+This approach may produce the most efficient queries when you need to combine data from different data sources.
 
 
 [id=InnerOuterInequalityJoin]

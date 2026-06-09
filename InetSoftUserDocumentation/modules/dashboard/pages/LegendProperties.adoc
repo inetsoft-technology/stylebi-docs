@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Reference for Chart Legend properties (also called chart legend color, legend position, or legend settings), accessed via right-click on the legend. Covers the General tab (position, legend border style/color, title text, title visibility, ignore null, and symbol size), Scale tab (logarithmic scale, reverse orientation, and include zero for measure/numerical legends), and Alias tab (rename labels for dimension/categorical legends). Also explains how to hide and show legends.
+Reference for Chart Legend properties (also called chart legend color, legend position, or legend settings), accessed via right-click on the legend. Covers the General tab (position, legend border style/color, title text, title visibility, ignore null, and symbol size), Scale tab (logarithmic scale, reverse orientation, and include zero for measure/numerical legends), Alias tab (rename labels for dimension/categorical legends), and Legend Order (default data order, and how to sort legend items by setting the sort order on the bound dimension field — ascending, descending, by value, or manual). Also explains how to hide and show legends.
 endif::ai[]
 
 [WARNING,caption=see also]
@@ -16,6 +16,8 @@ xref:dashboardscript:PlotProperties.adoc[]  in xref:dashboardscript:DashboardObj
 To edit a legend, right-click the legend, and select ‘Legend Properties’ from the context menu. {rightClickOptions} This opens the ‘Legend Properties’ panel, which provides the following tabs: *General*, *Scale*, *Alias*.
 
 TIP: To hide a legend, right-click the legend and choose ‘Hide Legend’ from the context menu. {rightClickOptions} To show all legends, right-click the chart and select ‘Show Legend’ from the context menu.
+
+For information on ordering legend items, see xref:#LegendOrder[] below.
 
 == General Tab
 The *General* tab offers the following options.
@@ -41,6 +43,7 @@ Reverse:: Orient the scale with maximum at left, minimum at right (or maximum re
 Include Zero:: For a ‘Size’ legend, specifies that zero should be included in the scaling such that the (hypothetical) minimum element size corresponds to a value of zero rather than the actual minimum data value.
 
 
+
 == Alias Tab
 The *Alias* tab is available for *dimension* (categorical) legends, and displays a table containing the mapping between original legend labels and new legend labels.
 
@@ -54,3 +57,15 @@ This updates the legend labels with the specified replacement text.
 
 image::legendFormatAliasUpdated.png[alt="legend labels updated with replacement text"]
 
+[#LegendOrder]
+== Legend Order
+By default, legend items are displayed in *data order*, the order in which values first appear in the data source. To change the order of legend items, set the sort order on the dimension field that is bound to the legend (i.e., the field assigned to the 'Color', 'Shape', or 'Size' region in the Chart Editor). Press the {buttonEditDimension} next to the field and choose from the following options in the 'Sort' menu:
+
+[square]
+* *Ascending* / *Descending*: Sort legend items alphabetically or in reverse-alphabetical order.
+* *By Value (Asc)* / *By Value (Desc)*: Sort legend items by an aggregated measure value.
+* *Manual*: Specify an arbitrary order using the 'Manual Ordering' dialog box.
+
+See xref:GroupDataByDimension.adoc#SortRankChartGroups[Sort and Rank Chart Groups] for more details on these sort options.
+
+NOTE: The *Reverse* option on the <<Scale Tab>> reverses the order of a *measure* (numerical) legend scale, not the item order of a categorical legend.

@@ -11,9 +11,9 @@ image::dataworksheet:embeddedTable4.png[alt="import data file dialog opened afte
 +
 See xref:dataworksheet:UploadData.adoc[] for information about how to use the upload options.
 +
-Mashup Data:: To create your Data Worksheet by *mashing up data*, select the {buttonMashupData} option. This creates a blank Data Worksheet named ‘Untitled-X’. Proceed to xref:#CreateDataBlocks[] below.
+Mashup Data:: To create your Data Worksheet by *mashing up data*, select the {buttonMashupData} option. This is especially useful if you are using a data model, or if you need to combine data from multiple sources.  *Mashup Data* creates a blank Data Worksheet named ‘Untitled-X’. Proceed to xref:#CreateDataBlocks[] below.
 +
-Data Source:: To create your Data Worksheet by *defining a query*, select a data source query option (e.g., ‘Orders Query’). This creates a blank Data Worksheet named ‘Untitled’ and opens the ‘Database Query’ dialog box.
+Data Source:: To create your Data Worksheet by *defining a query*, select a data source query option (e.g., ‘Orders Query’). This is primarily useful when you are *not* using a data model or multiple datasources, or if you want to copy over existing SQL strings. *Data Source*  creates a blank Data Worksheet named ‘Untitled’ and opens the ‘Database Query’ dialog box.
 +
 image::dataworksheet:newWorksheet4.png[alt="database query dialog opened after selecting a data source query option"]
 +
@@ -26,7 +26,7 @@ Proceed to add (additional) data blocks to the Data Worksheet. Drag the desired 
 
 image::dataworksheet:transform1.png[alt="data block created by dragging fields from the left panel"]
 
-NOTE: You can drag fields from the  _same_ data model or _same_ table into a single data block. For example, you can drag any attributes from the sample ‘Order Model’ into a single data block.  However, to add fields from _different_ sources (different models, different queries, etc.) into a single data block, you must perform a join.  See xref:dataworksheet:JoinData.adoc[] for more details.
+NOTE: You can drag fields from the _same_ data model or _same_ table directly into a single data block. To combine fields from _different_ sources (different models, different queries, etc.), define a join between the data blocks. See xref:dataworksheet:JoinData.adoc[] for more details.
 
 You can also drag a data block (or individual columns of a data block) from another Data Worksheet. In this case, the inserted data block remains linked to the original Data Worksheet in which it is defined, and updates automatically in response to changes in the source Data Worksheet. To disable this auto-update behavior, press the {buttonAutoUpdate}  in the toolbar of the bottom panel.
 

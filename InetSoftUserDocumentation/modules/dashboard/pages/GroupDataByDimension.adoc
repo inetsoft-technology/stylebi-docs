@@ -269,8 +269,8 @@ To decompose an existing named group, right-click on the group label and select 
 +
 image::Named Group 4.png[alt="right-click group label and select ungroup items"]
 
-[#RankTopBottom]
-== Rank Top or Bottom Chart Groups
+[#SortRankChartGroups]
+== Sort and Rank Chart Groups
 [.videotitle]
 .Watch Video: Creating a Chart (Sort and Rank)
 [%collapsible]
@@ -294,15 +294,17 @@ To set a ranking filter for a dimension, follow the steps below:
 +
 image::topNFilter1.png[alt="press edit dimension button in chart editor"]
 
-. From the 'Ranking' menu, select 'Top' or 'Bottom', respectively, to select the top or bottom groups  based on the measure you specify in the next step.
+. From the '`Ranking`' menu, select '`Top`' or '`Bottom`', respectively, to select the top or bottom groups  based on the measure you specify in the next step.
 +
 image::topNFilter2.png[alt="select top or bottom from ranking menu"]
 . Enter the number of top or bottom groups to select, and choose the measure on which to rank the groups.
 +
 image::topNFilter3.png[alt="enter count and select ranking measure"]
-. *_Optional:_*  To sort the selected top or bottom groups in order of the aggregated measure, select an option from the 'Sort' menu: 'By Value (Asc)' or 'By Value (Desc)'. Then choose the measure on which to sort the groups.
+. *_Optional:_*  To sort the selected top or bottom groups in order of the aggregated measure, select an option from the '`Sort`' menu: '`By Value (Asc)`' or '`By Value (Desc)`'. Then choose the measure on which to sort the groups.
 +
 image::topNFilter4.png[alt="select sort order for ranked groups"]
++
+NOTE: The sort order set here also controls the order of items in the chart legend. See xref:LegendProperties.adoc#LegendOrder[Legend Order] for more details.
 
 . To specify an arbitrary sort order, select the ‘Manual’ option in the ‘Sort’ menu, and press the {buttonEdit} to open the ‘Manual Ordering’ dialog box. To reorder an item in the ‘Manual Ordering’ dialog box, select the item and press the ‘Up’ or ‘Down’ buttons. Press btn:[OK] to close the dialog box.
 +
@@ -313,6 +315,7 @@ image::Manual Ordering Dialog.png[alt="reorder items in manual ordering dialog b
 . Press the {buttonApply} to apply the ranking filter and sorting.
 +
 image::topNFilter5.png[alt="chart showing ranked top or bottom groups"]
+
 
 
 .Explore More...
