@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Script reference for the parameter property, which reads and writes Dashboard and session parameters including Data Worksheet variables, Form component values, hyperlink parameters, and session context like user and roles.
+Summary: Script reference for the parameter property, which reads and writes Dashboard and session parameters including Data Worksheet variables, Form component values, hyperlink parameters, and session context like user, groups, and roles. NOTE: parameter._USER_, parameter._GROUPS_, and parameter._ROLES_ are intended for conditional UI logic (showing/hiding components, labeling, etc.), not for row-level data security — use a VPM (see AddDataSecurity.adoc) for that.
 endif::ai[]
 
 
@@ -39,7 +39,7 @@ parameter.myParamName = 'Hello';
 == pass:[parameter._GROUPS_]
 include::partial$readOnly.adoc[]
 
-Returns an array of groups to which the current user belongs.
+Returns an array of groups to which the current user belongs. You can use this  for  conditional logic such as  showing, hiding, or labeling UI components based on the user`'s group.
 
 === Type
 Array of Strings:: Groups to which current user belongs
@@ -48,10 +48,14 @@ Array of Strings:: Groups to which current user belongs
 [source,javascript]
 alert('User belongs to: ' + parameter._GROUPS_.join(', '))
 
+include::ROOT:partial$vpmSecurityNote.adoc[]
+
+
+
 == pass:[parameter._ROLES_]
 include::partial$readOnly.adoc[]
 
-Returns an array of roles possessed by the current user.
+Returns an array of roles possessed by the current user. You can use this  for  conditional logic such as  showing, hiding, or labeling UI components based on the user`'s roles.
 
 === Type
 Array of Strings::	Roles possesed by current user
@@ -60,10 +64,12 @@ Array of Strings::	Roles possesed by current user
 [source,javascript]
 alert('User roles: ' + parameter._ROLES_.join(', '))
 
+include::ROOT:partial$vpmSecurityNote.adoc[]
+
 == pass:[parameter._USER_]
 include::partial$readOnly.adoc[]
 
-Returns the username of the current user.
+Returns the username of the current user. You can use this  for  conditional logic such as  showing, hiding, or labeling UI components based on the username.
 
 === Type
 String:: Username of current user
@@ -71,6 +77,8 @@ String:: Username of current user
 === Example
 [source,javascript]
 alert('Logged in as ' + parameter._USER_)
+
+include::ROOT:partial$vpmSecurityNote.adoc[]
 
 == pass:[parameter.__LINK_HOST__]
 include::partial$readOnly.adoc[]
