@@ -97,9 +97,7 @@ To create a new calculated field, follow the steps below:
 
 . In the *Toolbox* panel, right-click on the data block or data model  to which you want to add the calculated field. Select ‘New Calculated Field’ from the context menu.
 +
-
 image::dashboard:NewCalculatedField1.png[alt="right-click data block in Toolbox and select New Calculated Field"]
-
 +
 This opens the ‘Calculated Field’ panel.
 +
@@ -107,15 +105,14 @@ This opens the ‘Calculated Field’ panel.
 +
 [IMPORTANT]
 .Name restrictions
-The following special characters are *permitted* in the name of a calculated field: Period ("."), comma (","), question mark ("?"), parentheses ("()"), exclamation point ("!"), at sign ("@"), ampersand ("&"), single quote (" ' ").  Slash("/") is *not permitted*.
-
+The following special characters are *permitted* in the name of a calculated field: Period ("."), comma (","), question mark ("?"), parentheses ("()"), exclamation point ("!"), at sign ("@"), ampersand ("&"), single quote (" ‘ ").  Slash("/") is *not permitted*.
++
 . Select the ‘Detail’ option to perform calculations on the data directly provided by the data block, or click ‘Aggregate’ to perform calculations on the data after it has been aggregated (for example in a Chart or a Crosstab). See below for examples of detail and aggregate calculations.
 +
 NOTE: Your choice of ‘Detail’ or ‘Aggregate’ *cannot* be changed later.
 +
 image::dashboard:NewCalculatedField2.png[alt="select Detail or Aggregate option in Calculated Field panel"]
-
-
++
 . In the ‘Return Data Type’ menu, select the data type that the calculated field will return.
 +
 . Enable the ‘SQL’ option to construct the formula using SQL syntax. Disable the ‘SQL’ option to construct the formula using JavaScript syntax.
@@ -129,7 +126,6 @@ In general, SQL expressions perform better than JavaScript expressions because S
 +
 . Press btn:[OK] to close the Formula Editor. This adds the new calculated field to the data source at the top of the *Toobox* panel.
 +
-
 image::dashboard:NewCalculatedField4.png[alt="new calculated field added to data source in Toolbox panel"]
 
 
