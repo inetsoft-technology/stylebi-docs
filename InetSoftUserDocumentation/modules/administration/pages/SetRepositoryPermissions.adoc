@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to set, copy, and paste repository permissions in Enterprise Manager for Dashboards, folders, data sources, and other repository assets. Covers assigning READ, WRITE, DELETE, SHARE, and ADMIN permissions to users, roles, or groups, and explains the derive-from-parent inheritance model.
+Summary: How to set, copy, and paste repository permissions in Enterprise Manager for Dashboards, folders, data sources, and other repository assets. Covers assigning READ, WRITE, DELETE, SHARE, and ADMIN permissions to users, roles, or groups, and explains the derive-from-parent inheritance model. NOTE: This page covers asset-level security only — i.e., who can open or manage a dashboard. To restrict which DATA users see within a dashboard (row-level or column-level filtering), use a VPM instead. See AddDataSecurity.adoc.
 endif::ai[]
 
 To set permissions for Dashboards,  data sources, multi-tenant connections, repository folders, etc., follow the steps below.  Use the same steps to view existing permissions for any of these assets.
