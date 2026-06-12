@@ -1,16 +1,27 @@
 = Publish a Dashboard
-%experimetal%
+%experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
-
 
 // metadata for AI
 ifdef::ai[]
-Summary: Navigation index for Dashboard publishing features, including device-specific layouts (CreateDeviceLayout), modular Dashboard design (ModularizeDashboard), and multi-language localization (LocalizeDashboard).
+Summary: Overview of the different ways to "publish" a Dashboard in StyleBI. The word "publish" can mean several different things: (1) Making the Dashboard accessible to other users — save it to a public location and enable 'List on Portal Tree': see SavePublicDashboard.adoc and DashboardOptions.adoc. (2) Controlling who can see or edit it — set repository permissions for users, groups, or roles: see administration:SetRepositoryPermissions.adoc. (3) Sharing it via email, link, or social network — see ShareDashboard.adoc and EmailDashboard.adoc. (4) Preparing layouts for different devices or languages — see PrepareForPublication.adoc.
 endif::ai[]
 
-The following sections explain how to arrange components on a Dashboard for publication across a variety of devices and languages.
+*Publishing a Dashboard* means making the Dashboard accessible to a wider audience, either inside or outside your organization.  There are several ways to do this, described below.
+
+Make a Dashboard Accessible to Other Users::
+If you are creating or editing a Dashboard in Visual Composer, and want to make the Dashboard visible to other users in the User Portal, do the following:
 
 [square]
-** xref:dashboard:CreateDeviceLayout.adoc[]: Define or select a device class based on screen size, and specify how a Dashboard should be displayed for that device class.
-** xref:dashboard:ModularizeDashboard.adoc[]: Build a complex Dashboard from several smaller Dashboards.  This allows you to compartmentalize functions and integrate data from multiple sources into a single presentation.  Modularization also facilitates team development and maintainability.
-** xref:dashboard:LocalizeDashboard.adoc[]: Translate a Dashboard into one or more alternate languages.  The Dashboard is then displayed to the user in the appropriate language based on the user's locale setting.
+* Save it to a *public* folder in the Repository (i.e, not '`Private Dashboards`'). See xref:SavePublicDashboard.adoc[]. This will make the Dashboard available to other users who have READ permission for that folder.
+* Ensure the *List on Portal Tree* option for the Dashboard is enabled. See xref:DashboardOptions.adoc[].
+
+Control Who Can See or Edit a Dashboard::
+To restrict which users, groups, or roles can view or modify a Dashboard, set repository permissions in Enterprise Manager. See xref:administration:SetRepositoryPermissions.adoc[].
+
+
+Share a Dashboard via Email or Social Network::
+To share a Dashboard with others via email, a link, or social networks, see xref:ShareDashboard.adoc[].  This is the best way to share a Dashboard with individuals (for example, outside the organization) who do not have access to the User Portal.
+
+Prepare a Dashboard for Different Devices or Languages::
+To configure device-specific layouts or multi-language localization, see xref:PrepareForPublication.adoc[].

@@ -3,7 +3,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Navigation index for Dashboard sharing and collaboration features in the User Portal, available to end-users. Links to sub-pages covering sharing methods such as email, social network, and bookmarks.
+Summary: Navigation index for Dashboard sharing and collaboration features in the User Portal, available to end-users. Links to sub-pages covering sharing methods such as email, social network, and bookmarks. If the user wants to publish or share a Dashboard with others, this page covers the sharing/distribution angle. For making a Dashboard accessible to all users in the portal, see SavePublicDashboard.adoc and PublishDashboard.adoc.
 endif::ai[]
 
 include::dashboard:partial$availableToEndUsers.adoc[]
