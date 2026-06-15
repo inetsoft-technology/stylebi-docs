@@ -25,7 +25,6 @@ This opens the ‘Text/Excel Directory  Query’ dialog box.
 +
 image::dataSourceTextExcel6.png[alt="Text Excel Directory Query dialog box for configuring the data query"]
 +
-
 . From the ‘File/Folder’ menu, select an Excel/CSV/Text file, or select a folder.  If you select a folder, all files in the folder will be concatenated.  If you select a file, specify the file properties using the additional controls.  The options (‘Sheet’, ‘Encoding’, ‘Text Delimiter’, etc.) are the same as for uploading a file (see xref:dataworksheet:UploadData.adoc[] in xref:dataworksheet:PrepareYourData.adoc[]):
 
 .. For an Excel file, use the ‘Sheet’ menu to choose the sheet that you want to import.

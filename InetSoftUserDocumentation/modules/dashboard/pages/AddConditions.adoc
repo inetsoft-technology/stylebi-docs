@@ -42,7 +42,6 @@ TIP: Note: To filter out *null* values, you can use a condition such as `[Compan
 
 . Press the {buttonChangeValueType}, and select ‘Value’, ‘Field’, ‘Expression’, ‘Variable’, or ‘Session Data’.  See xref:#ValueTypeOptions[] for more information about these options.
 +
-
 . When you have fully specified the condition, press btn:[Append].
 
 . To create a compound condition with multiple clauses, repeat Steps 2-4 above, using the `[and]` and `[or]` operators to compose the condition clauses. See below:

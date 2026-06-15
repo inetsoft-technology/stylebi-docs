@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a Twitter (X) data source by opening a Data Worksheet, pressing the Object button, selecting the Twitter Query option, and configuring the endpoint and query fields in the Twitter Query dialog box.
+Summary: How to create a Data Worksheet query from a Twitter data source (Twitter is also known as X) by opening a Data Worksheet, pressing the Object button, selecting the Twitter Query option, and configuring the endpoint and query fields in the Twitter Query dialog box. The connector is labeled "Twitter" in the interface but refers to the platform now called X (formerly Twitter).
 endif::ai[]
 
 

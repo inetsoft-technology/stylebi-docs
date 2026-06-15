@@ -31,7 +31,6 @@ image::embedURL.png[alt="select embed as URL option"]
 
 . In the ‘Text’ field, enter the URL that you want to display within the embedded IFrame, for example, `http://www.inetsoft.com`. If you want to pass *parameters*, simply add them to the URL as label-value pairs.
 +
-
 For example, to pass a parameter to a Dashboard named "`DashboardChild`"  in the automatically generated IFrame, use a URL such as:
 +
  http://host:8080/app/viewer/view/1%5E128%5E%5EDashboardChild?param=Duke

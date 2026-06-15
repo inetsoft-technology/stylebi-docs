@@ -262,7 +262,6 @@ Consider the sample ‘ProductSales’ Data Worksheet, which contains a data blo
 +
 include::ROOT:partial$ProductSalesWorksheet.adoc[]
 +
-
 For information on how to open a Data Worksheet, see xref:EditDataWorksheet.adoc[].
 
 . Right-click the ‘SalesByDate’ data block and select ‘Set as Primary’ from the context menu. {rightClickOptions} This makes the ‘SalesByDate’ data block visible to other Data Worksheets.

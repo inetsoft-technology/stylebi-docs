@@ -42,7 +42,6 @@ include::ROOT:partial$customersQuery.adoc[]
 
 . Press the {buttonOptions} in the Dashboard toolbar, and select the *Script* tab. Select the ‘onInit’ option at the bottom and enter the following script:
 +
-
 [source,javascript]
 var q = runQuery('ws:global:Examples/customers')
 
@@ -101,7 +100,6 @@ include::ROOT:partial$customersQuery.adoc[]
 
 . Press the {buttonOptions} in the Dashboard toolbar, and select the *Script* tab. Select the ‘onInit’ option at the bottom and enter the following script:
 +
-
 [source,javascript]
 var q = runQuery('ws:global:Examples/customers')
 
@@ -199,7 +197,6 @@ In this example, you will create a Freehand Table (based on the ‘customers’ 
 
 . Press the {buttonOptions} in the toolbar, and select the *Script* tab. Select the ‘onInit’ option at the bottom and enter the following script:
 +
-
 [source,javascript]
 var q = runQuery('ws:global:Examples/customers')
 
@@ -393,7 +390,6 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . Press the {buttonOptions} in the toolbar, and select the *Script* tab. Select the ‘onInit’ option at the bottom and enter the following script:
 +
-
 [source,javascript]
 var q = runQuery('ws:global:Examples/Sales Explore')
 
@@ -485,7 +481,6 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 
 . Press the {buttonOptions} in the toolbar, and select the *Script* tab. Select the ‘onInit’ option at the bottom and enter the following script:
 +
-
 [source,javascript]
 var q = runQuery('ws:global:Examples/Sales Explore')
 
@@ -575,7 +570,6 @@ In this example, you will find the relative sales for each year compared to the 
 
 . Press the  in the toolbar, and select the *Script* tab. Select the ‘onInit’ option at the bottom and enter the following script:
 +
-
 [source,javascript]
 var q = runQuery('ws:global:Examples/Sales Explore')
 

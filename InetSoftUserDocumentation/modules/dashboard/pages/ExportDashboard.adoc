@@ -43,7 +43,6 @@ To export a static copy of the Dashboard into Excel, PowerPoint, PDF, HTML, or P
 +
 image::Viewsheet Export Content Tab_1.png[alt="select export type in export dialog"]
 +
-
 NOTE: The ‘Snapshot’ option (if available) is mainly used for troubleshooting purposes. It produces a portable version of the Dashboard that incorporates an embedded (static) copy of the underlying data. This “snapshot” Dashboard can be loaded into another server installation via incremental deployment. (See xref:administration:ImportExportAssets.adoc[] for more details.)
 
 . In the ‘Data Size’ panel, select ‘Match Layout’ to obtain the closest possible match between the appearance of the exported copy and the original Dashboard. Select ‘Expand Components’ to fully expand scrolling tables and scrolling charts to show all data. Select the ‘Only Data Elements’ option to limit the export to only the data-bearing components.

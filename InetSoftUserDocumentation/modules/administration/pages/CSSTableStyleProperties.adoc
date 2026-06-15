@@ -18,7 +18,6 @@ HeaderRow:: Top row containing column headers. *Restrictions*: Does not support 
 [source,css]
 TableStyle[region=HeaderRow].
 +
-
 HeaderCol:: Left-most column containing row headers. *Restrictions*: Available only for Crosstabs. Does not support `opacity` and `word-wrap` attributes.
 +
 [source,css]

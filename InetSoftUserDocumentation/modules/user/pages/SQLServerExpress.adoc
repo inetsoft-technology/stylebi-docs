@@ -38,7 +38,6 @@ include::user:partial$hikariConfig.adoc[]
 
 . Press btn:[OK].
 +
-
 . Verify that the data source you added is shown with a {buttonCheckIcon}, indicating that the connection was successful.
 +
 image::dataSourceSQLServerExpress2.png[alt="connection successful icon"]

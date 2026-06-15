@@ -17,7 +17,6 @@ xref:commonscript:DateGlobalDateAdd.adoc[]:: Add or subtract a specified number 
 dateAdd('m',-1,field['Date'])
 // Subtract one month from the value in the date field
 +
-
 xref:commonscript:DateGlobalDateDiff.adoc[]:: Return the difference in days, months, or years between two dates.
 +
 [source,javascript]

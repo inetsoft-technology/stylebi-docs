@@ -33,7 +33,6 @@ include::ROOT:partial$dimensionTip.adoc[]
 +
 image::VS Group Visual2.png[alt="drag dimension to color field in chart editor"]
 +
-
 +
 This distinguishes the different values by color and adds a color legend to the chart. (See xref:BasicChartingSteps.adoc#ModifyChartLegend[Modify  Chart Legend] for information about modifying the legend.) Set the ‘Stack’ option for the chart if you want to display the groups stacked vertically. See xref:BasicChartingSteps.adoc[] for more information.
 

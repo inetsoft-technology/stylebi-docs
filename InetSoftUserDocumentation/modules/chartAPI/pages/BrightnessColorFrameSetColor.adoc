@@ -79,7 +79,6 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 . Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
 
 +
-
 .onRefresh Script
 [source,javascript]
 ----

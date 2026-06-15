@@ -34,7 +34,7 @@ To add an expression column to a data block, follow the steps below:
 . Click the data block to select it.
 +
 NOTE: If the data block is grouped and aggregated, use the {buttonChangeView} to switch the view to either {buttonMetaDetailView} or {buttonLiveDetailView}. (See xref:PreviewData.adoc[] for more information.)
-
++
 . In the bottom panel, press the {buttonCreateExpression}. This opens the Formula Editor.
 +
 image::dataworksheet:agileTransform3.png[alt="press Create Expression button in the bottom panel"]
@@ -52,8 +52,7 @@ CAUTION: Setting an incorrect ‘Return Data Type’ may cause the expression to
 The following data types are available:
 +
 include::ROOT:partial$DataTypeTable.adoc[]
-
-
++
 . Type the desired expression into the script area. To add a field into the expression, click on the field name in the ‘Fields’ listing. To reference the data contained in other cells of the data block, see xref:dataworksheet:AccessDataInExpression.adoc[].
 +
 image::dataworksheet:agileTransform5.png[alt="Formula Editor with expression entered in the script area"]
@@ -121,6 +120,7 @@ In general, SQL expressions perform better than JavaScript expressions because S
 +
 . Enter the desired calculation into the formula field at the bottom of the dialog box.  The sections below explain how to construct *detail* and *aggregate* calculations:
 +
+[square]
 * xref:DetailLevelCalculation[]
 * xref:AggeregateLevelCalculation[]
 +

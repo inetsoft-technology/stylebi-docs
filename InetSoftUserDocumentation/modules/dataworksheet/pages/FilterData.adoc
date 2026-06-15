@@ -463,7 +463,6 @@ For example, to retrieve orders placed before today, you can use one of the foll
 [Order Date][is][less than][Expression:SQL[CURRENT_TIMESTAMP]]
 ----
 +
-
 .JavaScript
 [source]
 ----
