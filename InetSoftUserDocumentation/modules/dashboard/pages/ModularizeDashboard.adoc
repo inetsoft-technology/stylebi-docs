@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to build composite Dashboards in Visual Composer by nesting smaller Dashboard modules within a parent Dashboard, and how to synchronize filter and form components across nested Dashboards using shared filter IDs. Covers reusability, maintainability, and team development benefits.
+Summary: Explains how to build composite Dashboards in Visual Composer by nesting smaller Dashboard modules within a parent Dashboard, and how to synchronize filter and form components across nested Dashboards using shared filter IDs. Covers reusability, maintainability, and team development benefits. Note: users familiar with other BI tools may refer to this pattern as "cards" or a "card layout" — where a dashboard is composed of reusable, independently-designed panels. In InetSoft this is achieved via modular/nested Dashboards. For simply grouping components into a single movable unit (also sometimes called a "card"), see ContainerProperties and ArrangeComponents instead.
 endif::ai[]
 
 Some Dashboards require a large number of elements, and would be complex to design using just a single Dashboard. In such cases, it is often easier to use a _modular_ design, and build the final Dashboard from a set of simpler Dashboards. Each of the simple Dashboards might contain just a few controls, and provide specific functionality to the composite Dashboard.
