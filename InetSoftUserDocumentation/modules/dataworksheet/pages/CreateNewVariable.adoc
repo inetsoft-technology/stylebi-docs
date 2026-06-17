@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to define a Variable in a Data Worksheet and use it in filter conditions to create parameterized queries where the user supplies the value at runtime. Variables defined here are automatically available as parameters in any Dashboard that uses the worksheet — accessible via the parameter.variableName syntax in Dashboard script, or controllable via Dashboard Form components.
+Summary: How to define a Variable in a Data Worksheet and use it in filter conditions to create parameterized queries where the user supplies the value at runtime. The Variable Properties dialog has a 'Default Value' field (labeled exactly "Default Value") where you can enter a literal default value (text, number, or date depending on the Variable's Type); expressions are not supported in this field — only literal values. Variables defined here are automatically available as parameters in any Dashboard that uses the worksheet — accessible via the parameter.variableName syntax in Dashboard script, or controllable via Dashboard Form components.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
@@ -31,6 +31,7 @@ include::ROOT:partial$duplicateNames.adoc[]
 +
 include::ROOT:partial$DataTypeTable.adoc[]
 +
+. *_Optional:_* In the ‘Default Value’ field, enter a literal default value for the Variable (text, number, or date, matching the selected '`Type`'). This value is used when the user does not supply a value at runtime.
 . In the ‘Selection List’ panel, specify the source of the Variable data:
 ** Select ‘*None*’ to prompt the user with an empty text field (no choices).
 ** Select ‘*Embedded*’ to enter a fixed list of choices. Press the btn:[Edit] button to open the ‘Embedded List Values’ dialog box.
