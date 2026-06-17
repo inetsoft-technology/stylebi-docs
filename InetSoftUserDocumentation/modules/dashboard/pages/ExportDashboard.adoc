@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to export a Dashboard in the User Portal as a static file (Excel, PowerPoint, PDF, HTML, PNG, CSV, Snapshot) and how to export data from individual components (Table, Crosstab, Chart). Also covers saving an individual chart as an image (SVG or PNG) via right-click, and offline editing by exporting to Excel and re-importing modified data.
+How to export a Dashboard in the User Portal as a static file (Excel, PowerPoint, PDF, HTML, PNG, CSV, Snapshot) and how to export data from individual components (Table, Crosstab, Chart). Also covers saving an individual chart as an image (SVG or PNG) via right-click, and offline editing by exporting to Excel and re-importing modified data. See also: ScheduleDashboard, which covers automated/scheduled export — for example, automatically emailing a PDF of a dashboard on a recurring basis.
 endif::ai[]
 
 include::dashboard:partial$availableToEndUsers.adoc[]
@@ -21,6 +21,8 @@ video::359123773[vimeo,640,400]
 
 
 The following sections explain how to export a Dashboard in its entirety, as well as how to export data from a Dashboard.
+
+TIP: To automatically export and email a dashboard on a recurring schedule, see xref:user:ScheduleDashboard.adoc[].
 
 == Export an Entire Dashboard
 
