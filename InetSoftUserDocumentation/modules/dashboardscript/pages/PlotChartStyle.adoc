@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: For a chart with ‘Multiple Styles’ selected from {buttonSelectChartStyle}, sets the style for the specified dataset. For a chart with a single style, sets the global style.
+Summary: Sets the chart style (chart type) for a chart at runtime via script. For a chart with ‘Multiple Styles’ selected, sets the style for the specified dataset (e.g., Chart1.chartStyle[‘Sum(Total)’] = Chart.CHART_LINE). For a single-style chart, sets the global style (e.g., Chart1.chartStyle = Chart.CHART_BAR). This is the correct approach for allowing users to switch chart type at runtime: add a Form control (RadioButton, ComboBox, etc.) whose values correspond to Chart style constants, then read the selected value in the chart’s Script tab to set chartStyle. Note: chart style cannot be changed via the Change Value Type / Variable binding mechanism in the Chart Editor — script is required.
 endif::ai[]
 
 
