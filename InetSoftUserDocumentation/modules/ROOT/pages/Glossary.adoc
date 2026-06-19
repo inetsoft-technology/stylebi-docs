@@ -148,6 +148,9 @@ The join-layer of a Data Model that specifies tables, columns, and the joins tha
 Range Slider::
 A filter component that lets users select a numerical or date range by adjusting a slider control. See xref:dashboard:RangeSliderProperties.adoc[].
 
+Report::
+StyleBI does not have an asset called a "`report`". What other products call a "`report`" is called a *Dashboard* in StyleBI. See xref:dashboard:CreateNewDashboard.adoc[]. For paginated, print-ready output — with multiple pages, page breaks, headers/footers with page numbers, and fully expanded tables — define a *Print Layout* for the Dashboard. See xref:dashboard:CreateDeviceLayout.adoc#CreateLayoutForPrint[Create a Layout for Print].
+
 Repository::
 The central server-side storage for all StyleBI assets — Dashboards, Data Worksheets, data source definitions, table styles, and scripts.
 

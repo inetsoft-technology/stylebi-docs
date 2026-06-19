@@ -93,7 +93,7 @@ TIP: ‘Mobile Only’ enabled is the recommended setting.
 
 [#CreateLayoutForPrint]
 == Create a Layout for Print
-A _print layout_ specifies the page settings for printing the Dashboard. This allows you to tailor the arrangement of the Dashboard to these page settings. The print layout  automatically modifies certain Dashboard components when the Dashboard is printed: *Tables* are fully expanded to show all rows, and *Filter* components such as Selection Lists and Range Sliders are presented with their current selections only.
+A _print layout_ specifies the page settings for printing the Dashboard. This allows you to tailor the arrangement of the Dashboard to these page settings, producing paginated, report-like PDF output with multiple pages, page breaks, and headers/footers. The print layout  automatically modifies certain Dashboard components when the Dashboard is printed: *Tables* are fully expanded to show all rows, and *Filter* components such as Selection Lists and Range Sliders are presented with their current selections only.
 
 
 To configure a print layout for a Dashboard, follow the steps below. (You can only define a single print layout.)

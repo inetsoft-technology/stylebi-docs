@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to create a new Dashboard, covering creation from the User Portal and from within Visual Composer. From the User Portal, two starting paths are available: the Dashboard Wizard (guided, auto-generated layout from a data source) and the Visual Composer (blank canvas). Explains how to select a data source (Data Worksheet, data model, or database table). Also covers how to create a new folder to organize Dashboards or Data Worksheets. This page is about creating a brand-new Dashboard — not editing an existing one.
+How to create a new Dashboard, covering creation from the User Portal and from within Visual Composer. From the User Portal, two starting paths are available: the Dashboard Wizard (guided, auto-generated layout from a data source) and the Visual Composer (blank canvas). Explains how to select a data source (Data Worksheet, data model, or database table). Also covers how to create a new folder to organize Dashboards or Data Worksheets. This page is about creating a brand-new Dashboard — not editing an existing one. IMPORTANT TERMINOLOGY: StyleBI does not have a separate "report" concept. What other products call a "report" is called a "Dashboard" in StyleBI. If a user asks how to create a report, build a report, or use a report builder, the answer is to create a Dashboard as described on this page.
 endif::ai[]
 
 To create a new Dashboard, follow the steps below:
