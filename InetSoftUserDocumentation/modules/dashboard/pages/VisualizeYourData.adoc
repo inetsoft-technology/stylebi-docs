@@ -32,4 +32,4 @@ This module contains the following key sections, and is relevant to  designers a
 ** xref:dashboard:DynamicallySetProperties.adoc[]: Enhance a Dashboard with greater interactivity by using Form components and scripting to modify properties in response to user input or other parameters and conditions.
 ** xref:dashboard:WriteBackToStorage.adoc[]: Configure the Dashboard to save modified data together with the Data Worksheet.  This allows you to persist changes across sessions.
 ** xref:dashboard:ImprovePerformance.adoc[]: Create a *materialized view* to facilitate rapid dashboard interactions.  Materialized view is an advanced caching mechanism for Dashboards that retrieve large datasets.
-** xref:dashboard:EnhanceVisualization.adoc[]: Add formats, colors, and other visual aids to a Dashboard to make it look professional and user-friendly.
+** xref:dashboard:EnhanceAppearance.adoc[]: Add formats, colors, and other visual aids to a Dashboard to make it look professional and user-friendly.
