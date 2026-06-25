@@ -1,0 +1,45 @@
+= AxisSpec.setFacetGrid(Boolean)
+:navtitle: setFacetGrid()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+
+
+Specifies whether axis grid lines extend across axis labels (as in a facet table layout). When `true`, grid lines extend beyond the plot border across the label region. When `false`, grid lines are clipped at the plot border.
+
+NOTE: This is distinct from xref:chartAPI:FacetCoordSetFacetGrid.adoc[], which controls whether a border is drawn around the outer perimeter of a facet chart.
+
+== Parameter
+Boolean:: `true`: grid lines extend across labels (beyond plot border) +
+`false`: grid lines stop at plot border (default)
+
+
+== Example
+
+
+.Chart Component Script
+[source,javascript]
+----
+include::scriptexample:partial$AxisSpecSetFacetGrid1.js[]
+----
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Set the grid style and color.
+<4> Use `setFacetGrid` to allow grid lines to extend across axis labels.
+
+image::commonscript:AxisSpecSetFacetGrid.png[alt="bar chart with grid lines clipped at the plot border"]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetXScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:AxisSpec.adoc[] object. For example:
+
+[source,javascript]
+----
+include::scriptexample:partial$AxisSpecSetFacetGrid2.js[]
+----
+=====

@@ -11,6 +11,8 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 Specifies whether a border is drawn around the outer perimeter of a facet chart. {noGetter}
 
+NOTE: This is distinct from xref:chartAPI:AxisSpecSetFacetGrid.adoc[], which controls whether axis grid lines extend across axis labels beyond the plot border.
+
 == Parameter
 Boolean:: `true`: display outer border +
 `false`: no outer border (default)
