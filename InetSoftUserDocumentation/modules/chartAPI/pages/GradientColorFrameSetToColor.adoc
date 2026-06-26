@@ -1,4 +1,4 @@
-= GradientColorFrame.setToColor(value)
+﻿= GradientColorFrame.setToColor(value)
 :navtitle: setToColor()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -6,11 +6,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 
-Specifies the ending color (for highest value) of the gradient.  The corresponding “getter” function is `getToColor()`.You can also set this using the `bindingInfo.colorFrame.toColor`   property syntax in *onRefresh* script. See xref:#Example2[] below.
+Specifies the ending color (for highest value) of the gradient.  The corresponding “getter” function is `getToColor()`.You can also set this using the `bindingInfo.colorFrame.toColor`   property syntax in *onRefresh* script.
 
 
 
@@ -24,9 +24,38 @@ include::dashboardscript:partial$colorSyntax.adoc[]
 
 
 
-
-
+[#Example1]
 == Example 1
+
+
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+----
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new GradientColorFrame;
+Chart1.bindingInfo.colorFrame.fromColor = 0x0000FF;
+Chart1.bindingInfo.colorFrame.toColor = 0xFF00FF;
+
+----
+
++
+image::commonscript:GradientColorFrame_3.png[alt="chart with gradient to color via bindingInfo"]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+
+[#Example2]
+== Example 2
 
 .Chart Component Script
 [source,javascript]
@@ -67,34 +96,3 @@ frame.setField("Quantity");
 elem.setColorFrame(frame);
 ----
 =====
-
-
-[#Example2]
-== Example 2
-
-
-This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
-
-. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
-+
-include::ROOT:partial$AllSalesQuery.adoc[]
-
-
-. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
-
-+
-.onRefresh Script
-[source,javascript]
-----
-Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
-Chart1.bindingInfo.colorFrame = new GradientColorFrame;
-Chart1.bindingInfo.colorFrame.fromColor = 0x0000FF;
-Chart1.bindingInfo.colorFrame.toColor = 0xFF00FF;
-
-----
-
-+
-image::commonscript:GradientColorFrame_3.png[alt="chart with gradient to color via bindingInfo"]
-+
-include::commonscript:partial$bindingInfoNote.adoc[]
-

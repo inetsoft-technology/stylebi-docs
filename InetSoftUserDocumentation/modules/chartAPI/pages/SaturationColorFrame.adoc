@@ -1,11 +1,11 @@
-= SaturationColorFrame
+﻿= SaturationColorFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 
@@ -18,3 +18,70 @@ var frame = new SaturationColorFrame('Quantity');
 You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script.
 
 `SaturationColorFrame` provides the special xref:SaturationColorFrameSetColor.adoc[] method.
+
+
+[#Example1]
+== Example 1
+
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+----
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new SaturationColorFrame;
+Chart1.bindingInfo.colorFrame.color = 0xFF0000;
+
+----
+
++
+image::commonscript:SaturationColorFrame.png[alt="bar chart with SaturationColorFrame applied via bindingInfo colorFrame property"]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+
+[#Example2]
+== Example 2
+
+.Chart Component Script
+[source,javascript]
+----
+dataset = [["State", "Quantity"],["NJ",200],["NY",300],["PA",50],["CT",100]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new SaturationColorFrame(); //<2>
+frame.setField("Quantity"); //<3>
+elem.setColorFrame(frame); //<4>
+graph.addElement(elem);
+----
+<1> {dataset}
+<2> Create the `SaturationColorFrame` object.
+<3> Use the inherited xref:VisualFrameSetField.adoc[] property to specify the field for the `SaturationColorFrame`.
+<4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
+
+image::commonscript:SaturationColorFrame2.png[alt="bar chart with SaturationColorFrame mapping Quantity to saturation levels"]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
+
+[source,javascript]
+----
+var elem = graph.getElement(0); //<1>
+var frame = new SaturationColorFrame();
+frame.setField("Quantity");
+elem.setColorFrame(frame);
+----
+=====

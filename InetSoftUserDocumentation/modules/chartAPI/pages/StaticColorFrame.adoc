@@ -1,11 +1,11 @@
-=  StaticColorFrame
+﻿=  StaticColorFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 
@@ -19,13 +19,38 @@ var frame = new StaticColorFrame(java.awt.Color(0xFF00FF)); //<2>
 <1> Call constructor without specifying a color.
 <2> Call constructor with specified color.
 
-You can pass a color value directly to the constructor or specify it later using the in xref:StaticColorFrameSetColor.adoc[] method. `StaticColorFrame` also provides the special xref:StaticColorFrameSetNegativeColor.adoc[]  method.
-
+You can pass a color value directly to the constructor or specify it later using the xref:StaticColorFrameSetColor.adoc[] method. `StaticColorFrame` also provides the special xref:StaticColorFrameSetNegativeColor.adoc[]  method. You can also assign a `StaticColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script.
 
 
 
 
 == Example 1
+
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:dashboard:BarChart.adoc[] to the sample '`All Sales`' Data Worksheet, with '`Company`' (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+----
+Chart1.bindingInfo.colorFrame = new StaticColorFrame;
+Chart1.bindingInfo.colorFrame.color = 0xFF00FF;
+
+----
+
++
+image::commonscript:StaticColorFrame.png[alt="bar chart with StaticColorFrame applying a fixed magenta color via bindingInfo"]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+
+[#Example2]
+== Example 2
 
 .Chart Component Script
 [source,javascript]
@@ -46,6 +71,4 @@ graph.addElement(elem);
 image::commonscript:StaticColorFrame3.png[alt="bar chart with StaticColorFrame reading explicit hex color values from data column"]
 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
-
-
 

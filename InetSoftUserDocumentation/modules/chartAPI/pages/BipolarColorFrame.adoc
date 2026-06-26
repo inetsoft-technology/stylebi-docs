@@ -1,11 +1,11 @@
-= BipolarColorFrame
+﻿= BipolarColorFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 The `BipolarColorFrame` object contains a continuous color frame that returns gradations between two colors. To create a `BipolarColorFrame` object, call the `BipolarColorFrame` constructor.
@@ -13,11 +13,38 @@ The `BipolarColorFrame` object contains a continuous color frame that returns gr
 [source,javascript]
 var frame = new BipolarColorFrame('Quantity');
 
-You can pass a field name to the constructor (e.g., “Quantity”), or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script. See xref:#Example2[].
+You can pass a field name to the constructor (e.g., “Quantity”), or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script.
 
 
 
+[#Example1]
 == Example 1
+
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+----
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new BipolarColorFrame;
+
+----
+
++
+image::commonscript:BipolarColorFrame.png[alt="bar chart with bipolar color frame via bindingInfo"]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+[#Example2]
+== Example 2
 
 .Chart Component Script
 [source,javascript]
@@ -53,30 +80,3 @@ frame.setField("Quantity");
 elem.setColorFrame(frame);
 ----
 =====
-
-
-[#Example2]
-== Example 2
-
-This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
-
-. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
-+
-include::ROOT:partial$AllSalesQuery.adoc[]
-
-
-. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
-
-+
-.onRefresh Script
-[source,javascript]
-----
-Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
-Chart1.bindingInfo.colorFrame = new BipolarColorFrame;
-
-----
-
-+
-image::commonscript:BipolarColorFrame.png[alt="bar chart with bipolar color frame via bindingInfo"]
-+
-include::commonscript:partial$bindingInfoNote.adoc[]

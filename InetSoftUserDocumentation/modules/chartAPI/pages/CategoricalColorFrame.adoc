@@ -1,11 +1,11 @@
-= CategoricalColorFrame
+﻿= CategoricalColorFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 
@@ -14,7 +14,7 @@ The `CategoricalColorFrame` object contains a color frame that returns a distinc
 [source,javascript]
 var frame = new CategoricalColorFrame('State');
 
-You can pass the name of a field (e.g., ‘State’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script. See xref:#Example2[]  below.
+You can pass the name of a field (e.g., '`State`') to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script.
 
 The following special methods are provided:
 [square]
@@ -22,6 +22,33 @@ include::ROOT:partial$MINITOC_CategoricalColorFrame.adoc[]
 
 
 == Example 1
+
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+----
+Chart1.bindingInfo.setColorField("Employee",Chart.STRING);
+Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
+
+----
+
++
+image::commonscript:CategoricalColorFrame.png[alt="bar chart with categorical color frame via bindingInfo"]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+
+[#Example2]
+== Example 2
 
 .Chart Component Script
 [source,javascript]
@@ -48,8 +75,6 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 [TIP]
 =====
 
-
-
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
@@ -61,35 +86,3 @@ elem.setColorFrame(frame);
 
 ----
 =====
-
-
-[#Example2]
-== Example 2
-
-
-
-
-
-This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
-
-. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
-+
-include::ROOT:partial$AllSalesQuery.adoc[]
-
-
-. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
-
-+
-.onRefresh Script
-[source,javascript]
-----
-Chart1.bindingInfo.setColorField("Employee",Chart.STRING);
-Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
-
-----
-
-+
-image::commonscript:CategoricalColorFrame.png[alt="bar chart with categorical color frame via bindingInfo"]
-+
-include::commonscript:partial$bindingInfoNote.adoc[]
-

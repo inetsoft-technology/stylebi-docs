@@ -26,15 +26,34 @@ xref:chartAPI:ColorFrame.adoc[]
 
 
 
-== Example
+== Example 1
 
+This example sets a fixed color for all chart elements using a xref:chartAPI:StaticColorFrame.adoc[].
+
+.onRefresh Script
+[source,javascript]
+----
+Chart1.bindingInfo.colorFrame = new StaticColorFrame;
+Chart1.bindingInfo.colorFrame.color = 0xFF00FF;
+
+----
+
+image::commonscript:StaticColorFrame.png[alt="bar chart with StaticColorFrame applying a fixed magenta color via bindingInfo"]
+
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+
+== Example 2
+
+This example color-codes chart elements by a data field value using a xref:chartAPI:HeatColorFrame.adoc[].
+
+.onRefresh Script
 [source,javascript]
 ----
 Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
 Chart1.bindingInfo.colorFrame = new HeatColorFrame;
 
 ----
-
 
 image::commonscript:HeatColorFrame.png[alt="chart with elements color-coded using HeatColorFrame by Total value"]
 

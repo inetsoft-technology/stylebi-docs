@@ -1,4 +1,4 @@
-= StaticColorFrame.setNegativeColor(value)
+﻿= StaticColorFrame.setNegativeColor(value)
 :navtitle: setNegativeColor()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -6,11 +6,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 
-Specifies the static color to be used for negative field values . If a value is specified by  `setNegativeColor()`, then xref:StaticColorFrameSetColor.adoc[] defines the color of positive values, and `setNegativeColor()` defines the color of negative values. In this case, the inherited xref:VisualFrameSetField.adoc[] value is not used.  You can also set this using the `bindingInfo.colorFrame.color`  property syntax in *onRefresh* script . See xref:#Example2[] below.  The corresponding “getter” function is `getNegativeColor()`.
+Specifies the static color to be used for negative field values . If a value is specified by  `setNegativeColor()`, then xref:StaticColorFrameSetColor.adoc[] defines the color of positive values, and `setNegativeColor()` defines the color of negative values. In this case, the inherited xref:VisualFrameSetField.adoc[] value is not used.  You can also set this using the `bindingInfo.colorFrame.negativeColor`  property syntax in *onRefresh* script.  The corresponding “getter” function is `getNegativeColor()`.
 
 
 
@@ -25,7 +25,44 @@ include::dashboardscript:partial$colorSyntax.adoc[]
 
 
 
+[#Example1]
 == Example 1
+
+
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Place ‘Order Date’  on the X-axis. Press the {buttonEditDimension} next to the ‘X’ region and set ‘Level’ to ‘Quarter’. Press the {buttonApply}.
+
+. Place ‘Total’ on the Y-axis. Press the {buttonEditMeasure} next to the ‘Y’ region and select ‘Change from Previous’ from the ‘Trend and Comparison’ menu. Press the {buttonApply}.
+
+. Place ‘Total’ also in the ‘Color’ region. Press the {buttonEditMeasure} next to the ‘Color’ region, and select ‘Change from Previous’ from the ‘Trend and Comparison’ menu. Press the {buttonApply}.
+
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+----
+Chart1.bindingInfo.colorFrame = new StaticColorFrame;
+Chart1.bindingInfo.colorFrame.color = 0x00FF00;
+Chart1.bindingInfo.colorFrame.negativeColor = 0xFF0000;
+
+
+----
+
++
+image::commonscript:StaticColorFrameNegative3.png[alt="bar chart with negative change values red and positive change values green"]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+
+[#Example2]
+== Example 2
 
 .Chart Component Script
 [source,javascript]
@@ -64,40 +101,3 @@ frame.setColor(java.awt.Color(0x00ff00));
 frame.setNegativeColor(java.awt.Color(0xff0000));
 ----
 =====
-
-
-[#Example2]
-== Example 2
-
-
-This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
-
-. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet.
-+
-include::ROOT:partial$AllSalesQuery.adoc[]
-
-
-. Place ‘Order Date’  on the X-axis. Press the {buttonEditDimension} next to the ‘X’ region and set ‘Level’ to ‘Quarter’. Press the {buttonApply}.
-
-. Place ‘Total’ on the Y-axis. Press the {buttonEditMeasure} next to the ‘Y’ region and select ‘Change from Previous’ from the ‘Trend and Comparison’ menu. Press the {buttonApply}.
-
-. Place ‘Total’ also in the ‘Color’ region. Press the {buttonEditMeasure} next to the ‘Color’ region, and select ‘Change from Previous’ from the ‘Trend and Comparison’ menu. Press the {buttonApply}.
-
-. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
-
-+
-.onRefresh Script
-[source,javascript]
-----
-Chart1.bindingInfo.colorFrame = new StaticColorFrame;
-Chart1.bindingInfo.colorFrame.color = 0x00FF00;
-Chart1.bindingInfo.colorFrame.negativeColor = 0xFF0000;
-
-
-----
-
-+
-image::commonscript:StaticColorFrameNegative3.png[alt="bar chart with negative change values red and positive change values green"]
-+
-include::commonscript:partial$bindingInfoNote.adoc[]
-

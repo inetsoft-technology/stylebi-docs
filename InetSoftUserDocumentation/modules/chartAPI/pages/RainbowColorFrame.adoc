@@ -1,11 +1,11 @@
-= RainbowColorFrame
+﻿= RainbowColorFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 
@@ -15,38 +15,13 @@ The `RainbowColorFrame` object contains a continuous color frame that returns co
 var frame = new RainbowColorFrame('Quantity');
 
 
-You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
+You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script.
 
 
 
 
+[#Example1]
 == Example 1
-
-.Chart Component Script
-[source,javascript]
-----
-dataset = [["State", "Quantity"],["NJ",200],["NY",300],["PA",50],["CT",100]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new RainbowColorFrame(); //<2>
-frame.setField("Quantity"); //<3>
-elem.setColorFrame(frame); //<4>
-graph.addElement(elem);
-----
-<1> {dataset}
-<2> Create the `RainbowColorFrame` object.
-<3> Use the inherited xref:VisualFrameSetField.adoc[] property to specify the field for the `RainbowColorFrame`.
-<4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
-
-image::commonscript:RainbowColorFrame2.png[alt="bar chart with rainbow color frame"]
-
-include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
-
-
-
-
-[#Example2]
-== Example 2
 
 
 This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
@@ -72,3 +47,26 @@ image::commonscript:RainbowColorFrame.png[alt="bar chart with rainbow color fram
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 
+
+[#Example2]
+== Example 2
+
+.Chart Component Script
+[source,javascript]
+----
+dataset = [["State", "Quantity"],["NJ",200],["NY",300],["PA",50],["CT",100]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new RainbowColorFrame(); //<2>
+frame.setField("Quantity"); //<3>
+elem.setColorFrame(frame); //<4>
+graph.addElement(elem);
+----
+<1> {dataset}
+<2> Create the `RainbowColorFrame` object.
+<3> Use the inherited xref:VisualFrameSetField.adoc[] property to specify the field for the `RainbowColorFrame`.
+<4> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
+
+image::commonscript:RainbowColorFrame2.png[alt="bar chart with rainbow color frame"]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

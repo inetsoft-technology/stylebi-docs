@@ -1,19 +1,20 @@
-= ColorFrame
+﻿= ColorFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [CAUTION,caption=created by]
 ====
 [square]
-* xref:BrightnessColorFrame.adoc[]
-* xref:SaturationColorFrame.adoc[]
 * xref:BipolarColorFrame.adoc[]
-* xref:StaticColorFrame.adoc[]
+* xref:BrightnessColorFrame.adoc[]
+* xref:CategoricalColorFrame.adoc[]
 * xref:CircularColorFrame.adoc[]
 * xref:GradientColorFrame.adoc[]
 * xref:HeatColorFrame.adoc[]
 * xref:RainbowColorFrame.adoc[]
-* xref:CategoricalColorFrame.adoc[]
+* xref:RGBCubeColorFrame.adoc[]
+* xref:SaturationColorFrame.adoc[]
+* xref:StaticColorFrame.adoc[]
 ====
 
 [CAUTION,caption=inherits from]
@@ -30,37 +31,12 @@ A `ColorFrame` object contains the color treatment for visual chart elements. Yo
 [source,javascript]
 var frame = new CircularColorFrame('Quantity');
 
-You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
-
+You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script.
 
 
 
 
 == Example 1
-
-.Chart Component Script
-[source,javascript]
-----
-var elem = graph.getElement(0); // <1>
-var frame = new StaticColorFrame(); //<2>
-frame.setColor(java.awt.Color(0xFF00FF));
-elem.setColorFrame(frame); //<3>
-----
-<1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the desired xref:GraphElement.adoc[] object.
-<2> Create the xref:ColorFrame.adoc[] object.
-<3> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
-
-image::commonscript:graphStaticColorFrame.png[alt="bar chart with StaticColorFrame applying a fixed magenta color"]
-
-include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
-
-
-
-
-
-[#Example2]
-== Example 2
-
 
 This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
 
@@ -78,3 +54,22 @@ image::commonscript:BrightnessColorFrame.png[alt="bar chart with BrightnessColor
 
 include::commonscript:partial$bindingInfoNote.adoc[]
 
+
+[#Example2]
+== Example 2
+
+.Chart Component Script
+[source,javascript]
+----
+var elem = graph.getElement(0); // <1>
+var frame = new StaticColorFrame(); //<2>
+frame.setColor(java.awt.Color(0xFF00FF));
+elem.setColorFrame(frame); //<3>
+----
+<1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the desired xref:GraphElement.adoc[] object.
+<2> Create the xref:ColorFrame.adoc[] object.
+<3> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the Chart.
+
+image::commonscript:graphStaticColorFrame.png[alt="bar chart with StaticColorFrame applying a fixed magenta color"]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

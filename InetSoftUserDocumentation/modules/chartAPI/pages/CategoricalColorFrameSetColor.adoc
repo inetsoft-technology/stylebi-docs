@@ -1,4 +1,4 @@
-= CategoricalColorFrame.setColor(val,color)
+﻿= CategoricalColorFrame.setColor(val,color)
 :navtitle: setColor()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -6,11 +6,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 
-Assigns a `color` to the specified `value`.  The corresponding “getter” function is xref:CategoricalColorFrameGetColor.adoc[].
+Assigns a `color` to the specified `value`.  You can also set this using the `bindingInfo.colorFrame.setColor()` method syntax in *onRefresh* script.  The corresponding “getter” function is xref:CategoricalColorFrameGetColor.adoc[].
 
 
 == Parameter
@@ -18,8 +18,37 @@ val::			a data value
 color:: {javaawtcolor} to represent data value
 
 
-
+[#Example1]
 == Example 1
+
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+----
+Chart1.bindingInfo.setColorField("Employee",Chart.STRING);
+Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
+Chart1.bindingInfo.colorFrame.setColor("Robert",java.awt.Color.lightGray);
+Chart1.bindingInfo.colorFrame.setColor("Sue",java.awt.Color(0x222222));
+
+----
+
++
+image::commonscript:CategoricalColorFrameSetColor.png[alt="bar chart with setColor applied via bindingInfo"]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+
+[#Example2]
+== Example 2
 
 .Chart Component Script
 [source,javascript]
@@ -60,33 +89,3 @@ frame.setColor('NY',java.awt.Color(0xff00ff));
 elem.setColorFrame(frame)
 ----
 =====
-
-
-[#Example2]
-== Example 2
-
-This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
-
-. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
-+
-include::ROOT:partial$AllSalesQuery.adoc[]
-
-
-. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
-
-+
-.onRefresh Script
-[source,javascript]
-----
-Chart1.bindingInfo.setColorField("Employee",Chart.STRING);
-Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
-Chart1.bindingInfo.colorFrame.setColor("Robert",java.awt.Color.lightGray);
-Chart1.bindingInfo.colorFrame.setColor("Sue",java.awt.Color(0x222222));
-
-----
-
-+
-image::commonscript:CategoricalColorFrameSetColor.png[alt="bar chart with setColor applied via bindingInfo"]
-+
-include::commonscript:partial$bindingInfoNote.adoc[]
-

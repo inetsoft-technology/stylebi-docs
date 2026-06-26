@@ -1,4 +1,4 @@
-= BrightnessColorFrame.setColor(value)
+﻿= BrightnessColorFrame.setColor(value)
 :navtitle: setColor()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -6,13 +6,13 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 
 Specifies the color whose brightness is varied. The data values in the associated column (specified by the inherited xref:VisualFrameSetField.adoc[] property) are mapped to a spectrum of brightnesses of the specified color.
 
-You can also set this using the `bindingInfo.colorFrame.color` property syntax in *onRefresh* script. See xref:#Example2[].
+You can also set this using the `bindingInfo.colorFrame.color` property syntax in *onRefresh* script.
 
 == Paramater (Function Syntax)
 value:: a {JavaAwtColor} object
@@ -24,7 +24,36 @@ include::dashboardscript:partial$colorSyntax.adoc[]
 
 
 
+[#Example1]
 == Example 1
+
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+----
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new BrightnessColorFrame;
+Chart1.bindingInfo.colorFrame.color = 0xFF00FF;
+
+----
+
++
+image::commonscript:BrightnessColorFrame_1.png[alt="bar chart with brightness color set via bindingInfo"]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+
+[#Example2]
+== Example 2
 
 .Chart Component Script
 [source,javascript]
@@ -64,32 +93,3 @@ frame.setColor(java.awt.Color(0xff0000));
 elem.setColorFrame(frame);
 ----
 =====
-
-
-[#Example2]
-== Example 2
-
-This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
-
-. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
-+
-include::ROOT:partial$AllSalesQuery.adoc[]
-
-
-. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
-
-+
-.onRefresh Script
-[source,javascript]
-----
-Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
-Chart1.bindingInfo.colorFrame = new BrightnessColorFrame;
-Chart1.bindingInfo.colorFrame.color = 0xFF00FF;
-
-----
-
-+
-image::commonscript:BrightnessColorFrame_1.png[alt="bar chart with brightness color set via bindingInfo"]
-+
-include::commonscript:partial$bindingInfoNote.adoc[]
-

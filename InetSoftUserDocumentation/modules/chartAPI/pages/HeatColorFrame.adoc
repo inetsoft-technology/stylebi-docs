@@ -1,11 +1,11 @@
-= HeatColorFrame
+﻿= HeatColorFrame
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 
@@ -15,12 +15,42 @@ The `HeatColorFrame` object contains a continuous color frame that returns varyi
 var frame = new HeatColorFrame('Quantity');
 
 
-You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script. See xref:#Example2[] below.
+You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or specify this later using the inherited xref:VisualFrameSetField.adoc[] property. You can also assign a `ColorFrame` using the xref:dashboardscript:ChartBindingInfoColorframe.adoc[] property in *onRefresh* script.
 
 
 
 
+[#Example1]
 == Example 1
+
+
+This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
+
+. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
++
+include::ROOT:partial$AllSalesQuery.adoc[]
+
+
+. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
+
++
+.onRefresh Script
+[source,javascript]
+----
+Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
+Chart1.bindingInfo.colorFrame = new HeatColorFrame();
+
+
+----
+
++
+image::commonscript:HeatColorFrame_1.png[alt="bar chart with HeatColorFrame applied via bindingInfo colorFrame property"]
++
+include::commonscript:partial$bindingInfoNote.adoc[]
+
+
+[#Example2]
+== Example 2
 
 .Chart Component Script
 [source,javascript]
@@ -56,33 +86,3 @@ frame.setField("Sum(Product:Quantity Purchased)");
 elem.setColorFrame(frame);
 ----
 =====
-
-
-[#Example2]
-== Example 2
-
-
-This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
-
-. Bind a xref:dashboard:BarChart.adoc[]  to the sample ‘All Sales’ Data Worksheet, with ‘Company’ (top 5) on the X-axis, and Sum(Total) on the Y-axis.
-+
-include::ROOT:partial$AllSalesQuery.adoc[]
-
-
-. Add the following script in the *onRefresh* handler. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script].)
-
-+
-.onRefresh Script
-[source,javascript]
-----
-Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
-Chart1.bindingInfo.colorFrame = new HeatColorFrame();
-
-
-----
-
-+
-image::commonscript:HeatColorFrame_1.png[alt="bar chart with HeatColorFrame applied via bindingInfo colorFrame property"]
-+
-include::commonscript:partial$bindingInfoNote.adoc[]
-

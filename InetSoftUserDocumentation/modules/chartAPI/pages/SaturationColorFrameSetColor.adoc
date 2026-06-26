@@ -1,4 +1,4 @@
-= SaturationColorFrame.setColor(value)
+﻿= SaturationColorFrame.setColor(value)
 :navtitle: setColor()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -6,11 +6,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:ColorFrame.adoc[]
 ====
 
 
-Specifies the color whose saturation is varied. The data values in the associated column (specified by the inherited xref:VisualFrameSetField.adoc[] property) are mapped to a spectrum of saturations of the specified color.  You can also set this using the `bindingInfo.colorFrame.color`   property syntax in *onRefresh* script. See xref:#Example2[] below.  The corresponding “getter” function is `getColor()`.
+Specifies the color whose saturation is varied. The data values in the associated column (specified by the inherited xref:VisualFrameSetField.adoc[] property) are mapped to a spectrum of saturations of the specified color.  You can also set this using the `bindingInfo.colorFrame.color`   property syntax in *onRefresh* script.  The corresponding “getter” function is `getColor()`.
 
 
 
@@ -25,37 +25,8 @@ include::dashboardscript:partial$colorSyntax.adoc[]
 
 
 
-
-
+[#Example1]
 == Example 1
-
-.Chart Component Script
-[source,javascript]
-----
-dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new SaturationColorFrame(); //<2>
-frame.setField("Quantity"); //<3>
-frame.setColor(java.awt.Color(0xff0000)); //<4>
-elem.setColorFrame(frame); //<5>
-graph.addElement(elem);
-----
-<1> {dataset}
-<2> Create the xref:SaturationColorFrame.adoc[] object.
-<3> Use the inherited xref:VisualFrameSetField.adoc[] property to specify the field for the `SaturationColorFrame`.
-<4> Use `setColor` to specify the  color for the `SaturationColorFrame`.
-<5> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the xref:IntervalElement.adoc[].
-
-image::commonscript:SaturationColorFrame2.png[alt="bar chart with SaturationColorFrame mapping Quantity to red saturation levels"]
-
-include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
-
-
-
-
-[#Example2]
-== Example 2
 
 
 This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[] properties to control the xref:ColorFrame.adoc[].
@@ -82,3 +53,28 @@ image::commonscript:SaturationColorFrame.png[alt="bar chart with SaturationColor
 +
 include::commonscript:partial$bindingInfoNote.adoc[]
 
+
+[#Example2]
+== Example 2
+
+.Chart Component Script
+[source,javascript]
+----
+dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var frame = new SaturationColorFrame(); //<2>
+frame.setField("Quantity"); //<3>
+frame.setColor(java.awt.Color(0xff0000)); //<4>
+elem.setColorFrame(frame); //<5>
+graph.addElement(elem);
+----
+<1> {dataset}
+<2> Create the xref:SaturationColorFrame.adoc[] object.
+<3> Use the inherited xref:VisualFrameSetField.adoc[] property to specify the field for the `SaturationColorFrame`.
+<4> Use `setColor` to specify the  color for the `SaturationColorFrame`.
+<5> Use xref:GraphElementSetColorFrame.adoc[] to add the `ColorFrame` to the xref:IntervalElement.adoc[].
+
+image::commonscript:SaturationColorFrame2.png[alt="bar chart with SaturationColorFrame mapping Quantity to red saturation levels"]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
