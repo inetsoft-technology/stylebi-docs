@@ -3,6 +3,11 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
+[TIP]
+====
+If your Chart was created with the Chart Editor, use the *simpler* xref:dashboardscript:ChartAxisProperties.adoc[] script  to modify the axis. The information below is useful when you need more advanced capabilities, or when you are  building a Chart from scratch with the Chart API.
+====
+
 To alter the appearance of chart axes, use the Chart’s  xref:chartAPI:EGraphSetScale.adoc[] method to assign a new xref:chartAPI:Scale.adoc[] object. For example, you can replace a linear scale with a logarithmic scale, show or hide tick marks, display axis labels at top or right, change the label font and color, etc.
 
 Consider the following Chart component script:

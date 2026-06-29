@@ -3,6 +3,11 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
+[TIP]
+====
+If your Chart was created with the Chart Editor, use *simpler* xref:dashboardscript:ChartBindingInfoColorframe.adoc[], xref:dashboardscript:ChartBindingInfoShapeFrame.adoc[], and xref:dashboardscript:ChartBindingInfoSizeFrame.adoc[] properties in *onRefresh* script to modify chart elements. The information below is useful when you need more advanced capabilities, or when you are building a Chart from scratch with the Chart API.
+====
+
 You can change the *static* appearance of chart elements by using a static xref:chartAPI:VisualFrame.adoc[]. For example, you can set static colors, sizes, and textures to enhance the aesthetic appearance of a chart.
 
 Consider the script below:

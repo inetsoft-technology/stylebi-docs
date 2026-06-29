@@ -33,11 +33,11 @@ This tutorial provides a set of Chart examples to illustrate some common chart s
 ** xref:chartAPI:BindDatatoChartinScript.adoc[]: Use Chart script to select the data that should appear on Chart.
 ** xref:chartAPI:AccessChartData.adoc[]: Use Chart script to read the data that is displayed on the Chart.
 ** xref:chartAPI:ChangeChartCoordinates.adoc[]: Use Chart script to switch between rectangular, polar, and parallel coordinates, and set a coordinate background.
-** xref:chartAPI:ChangeChartLabels.adoc[]: Use Chart script to modify Chart labels.
-** xref:chartAPI:ChangeChartScaling.adoc[]: Use Chart script to switch between linear and log scales and set axis minimums and maximums.
-** xref:chartAPI:ChangeChartElements.adoc[]: Use Chart script to change the appearance of element, such as color, shape, size.
-** xref:chartAPI:ChangeAxisProperties.adoc[]: Use Chart script to change the appearance of Chart axes, such as color, thickness, style, etc.
-** xref:chartAPI:ChangeLegendProperties.adoc[]: Use Chart script to change the properties of a Chart legend, such as color, font, border, etc.
-** xref:chartAPI:RepresentDatawithShapeColorSize.adoc[]: Use Chart script to choose how data should be mapped to Chart elements, for example, by using the size, color, or shape of Chart elements.
+** xref:chartAPI:ChangeChartLabels.adoc[]: Use Chart script to modify Chart labels. (For Charts created with the Chart Editor, consider the *simpler* xref:dashboardscript:ChartAxisProperties.adoc[] and xref:dashboardscript:ChartBindingInfoTextFrame.adoc[] properties first.)
+** xref:chartAPI:ChangeChartScaling.adoc[]: Use Chart script to switch between linear and log scales and set axis minimums and maximums. (For Charts created with the Chart Editor, consider the *simpler* xref:dashboardscript:MeasureAxisProperties.adoc[] properties first.)
+** xref:chartAPI:ChangeChartElements.adoc[]: Use Chart script to change the appearance of element, such as color, shape, size. (For Charts created with the Chart Editor, consider the *simpler* xref:dashboardscript:ChartBindingInfoColorframe.adoc[], xref:dashboardscript:ChartBindingInfoShapeFrame.adoc[], and xref:dashboardscript:ChartBindingInfoSizeFrame.adoc[] properties first.)
+** xref:chartAPI:ChangeAxisProperties.adoc[]: Use Chart API script to change the appearance of Chart axes, such as color, thickness, style, etc. (For Charts created with the Chart Editor, consider the *simpler* xref:dashboardscript:ChartAxisProperties.adoc[] properties first.)
+** xref:chartAPI:ChangeLegendProperties.adoc[]: Use Chart script to change the properties of a Chart legend, such as color, font, border, etc. (For Charts created with the Chart Editor, consider the *simpler* xref:dashboardscript:PlotProperties.adoc[] properties first.)
+** xref:chartAPI:RepresentDatawithShapeColorSize.adoc[]: Use Chart script to choose how data should be mapped to Chart elements, for example, by using the size, color, or shape of Chart elements. (For Charts created with the Chart Editor, consider the *simpler* xref:dashboardscript:ChartBindingInfoColorframe.adoc[], xref:dashboardscript:ChartBindingInfoShapeFrame.adoc[], and xref:dashboardscript:ChartBindingInfoSizeFrame.adoc[] properties first.)
 ** xref:chartAPI:RepresentMultipleMeasures.adoc[]: Use Chart script to add additional measures onto a Chart.
 ** xref:chartAPI:AddChartDecoration.adoc[]: Use Chart script to add custom labeling to a Chart.

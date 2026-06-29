@@ -5,6 +5,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [WARNING, caption=see also]
 xref:ChangeChartElements.adoc[], to use static VisualFrame objects.
 
+[TIP]
+====
+If your Chart was created with the Chart Editor, use *simpler* xref:dashboardscript:ChartBindingInfoColorframe.adoc[], xref:dashboardscript:ChartBindingInfoShapeFrame.adoc[], and xref:dashboardscript:ChartBindingInfoSizeFrame.adoc[] properties in *onRefresh* script for data-driven color, shape, and size coding. The information below is useful when you need more advanced capabilities, or when you are building a Chart from scratch with the Chart API.
+====
+
 You can create a basic two-dimensional representation of data with just a xref:chartAPI:GraphElement.adoc[] object. To represent additional dimensions by using other visual attributes of elements, create a  xref:VisualFrame.adoc[].
 
 To understand how to use a VisualFrame, consider the script below:

@@ -3,6 +3,11 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
+[TIP]
+====
+If your Chart was created with the Chart Editor, use *simpler* xref:dashboardscript:MeasureAxisProperties.adoc[] script properties (such as xref:dashboardscript:MeasureAxisLogarithmic.adoc[], xref:dashboardscript:MeasureAxisMinimum.adoc[], xref:dashboardscript:MeasureAxisMaximum.adoc[], etc.) to modify axis scaling. The information below is useful when you need more advanced capabilities, or when you are building a Chart from scratch with the Chart API.
+====
+
 A xref:chartAPI:Scale.adoc[] object determines how abstract data values are mapped to physical Chart representations such as position, color, shape, etc. The xref:chartAPI:EGraph.adoc[] object and the xref:chartAPI:VisualFrame.adoc[] object both map data values to physical representations, so both of these objects require a Scale.
 
 NOTE: Some objects, such as xref:chartAPI:IntervalElement.adoc[], create an implicit xref:chartAPI:Scale.adoc[].

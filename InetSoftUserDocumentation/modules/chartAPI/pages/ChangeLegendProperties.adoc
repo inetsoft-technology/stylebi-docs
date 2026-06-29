@@ -9,6 +9,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 * xref:chartAPI:RepresentDatawithShapeColorSize.adoc[] for more information on VisualFrames.
 ====
 
+[TIP]
+====
+If your Chart was created with the Chart Editor, use  *simpler* xref:dashboardscript:PlotProperties.adoc[]   script (such as xref:dashboardscript:PlotLegendPosition.adoc[] or xref:dashboardscript:PlotLegendTitleFont.adoc[])  to modify the legend. The information below is useful when you need more advanced capabilities, or when you are  building a Chart from scratch with the Chart API.
+====
+
 When you assign a xref:chartAPI:VisualFrame.adoc[] to a Chart element to visually code data, a corresponding legend is created automatically. You can change the appearance of this legend by editing the `VisualFrame`’s xref:chartAPI:LegendSpec.adoc[].
 
 Consider the following Chart component script:

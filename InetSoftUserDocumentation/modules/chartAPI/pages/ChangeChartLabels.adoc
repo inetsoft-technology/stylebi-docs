@@ -3,6 +3,11 @@
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
+[TIP]
+====
+If your Chart was created with the Chart Editor, use *simpler* xref:dashboardscript:ChartAxisProperties.adoc[] script properties for axis labels, and xref:dashboardscript:ChartBindingInfoTextFrame.adoc[] for data labels. The information below is useful when you need more advanced capabilities, or when you are building a Chart from scratch with the Chart API.
+====
+
 When you assign a xref:chartAPI:TextFrame.adoc[] to a Chart element to represent data textually, you can modify the *labels* by using xref:chartAPI:TextFrameSetText.adoc[].
 
 == Walkthrough
