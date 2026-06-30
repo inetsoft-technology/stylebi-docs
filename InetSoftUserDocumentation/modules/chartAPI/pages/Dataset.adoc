@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: The `dataset` property is the correct way to *set* chart data in Chart API script (charts built from scratch with `EGraph`). It gives direct access to the underlying graph data object, which is required by methods such as `Scale.init()`. Use `dataset` (not `data`) when assigning arrays or `runQuery()` results in Chart API script. The `data` property is designed for *reading* aggregated values with formula syntax — do not tell users the two properties are interchangeable.
+endif::ai[]
+
 
 
 
@@ -23,7 +28,7 @@ include::ROOT:partial$MINITOC_Dataset.adoc[]
 You can specify the `dataset` by one of the following methods:
 
 [square]
-* Set the Chart binding using the Chart Editor.
+* Set the Chart binding using the Chart Editor.  See xref:dashboard:AddAChart.adoc[].
 * In script, assign a JavaScript array to the `dataset` property.
 +
 [source,javascript]
@@ -35,6 +40,14 @@ dataset = [["State", "Quantity"],["NJ", 200],["NY", 300],["PA", 370],["CT", 75]]
 dataset = runQuery("ws:global:Examples/AllSales");
 +
 See xref:dashboardscript:RunQueryFromScript.adoc[]  and xref:chartAPI:CreateChartwithChartAPI.adoc[] for details about using xref:commonscript:runQuery.adoc[runQuery].
+
+
+* In script, reference a data block from the Dashboard’s own Data Worksheet directly by name.
++
+[source,javascript]
+dataset = Sales; // "Sales" is the data block name
++
+If the data block name contains spaces, use the syntax `viewsheet[‘data block name’]`. See xref:dashboardscript:AccessDataSourceData.adoc[] for more information.
 
 
 The `dataset` object is also accessible for reading. See the xref:chartAPI:DataSetGetData.adoc[] method for more information. However, in many cases, the xref:chartAPI:Data.adoc[] property provides more convenient access to Chart data.

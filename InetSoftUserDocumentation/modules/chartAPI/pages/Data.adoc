@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: The `data` property is designed for *reading* aggregated chart values in script, especially using formula table syntax (e.g., `data["Sum(Sales)@State:NJ"]`). It is also aliased as `table`. In Chart API script (building a chart from scratch with `EGraph`), use `dataset` instead — `dataset` gives direct access to the underlying graph data object. Do not tell users that `data` and `dataset` are interchangeable; they are not.
+endif::ai[]
+
 
 [WARNING,caption=See Also]
 ====
@@ -14,12 +19,7 @@ The Chart `data` object is a two-dimensional array containing the aggregate data
 
 TIP: You can also use the Chart’s `query` property to set a query in *onRefresh* script . See xref:chartAPI:ModifyChartDataBinding.adoc[] for an example.
 
-You can assign the results of  xref:commonscript:runQuery.adoc[runQuery] to the `data` object to set the Chart dataset:
-
-[source,javascript]
-data = runQuery("ws:global:Examples/AllSales");
-
-The `data` object also supports formula table syntax such as the following:
+To set chart data in Chart API script, use the xref:chartAPI:Dataset.adoc[] property instead. The `data` object supports formula table syntax for reading aggregated values, such as the following:
 
 [source,javascript]
 ----
