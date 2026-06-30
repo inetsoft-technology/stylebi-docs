@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Shows how to modify chart data binding using `Chart1.query` and `Chart1.bindingInfo.*` in *onRefresh script*. This is a dashboard script approach — it is *not* a Chart API (EGraph) approach. Do not mix with `graph.setScale()` or other Chart API methods in the same answer.
+endif::ai[]
+
 
 
 

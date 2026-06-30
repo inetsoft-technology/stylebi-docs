@@ -1,5 +1,10 @@
 = AxisSpec
 
+// metadata for AI
+ifdef::ai[]
+Summary: Documents the `AxisSpec` object, which is part of the *Chart API* approach for building charts from scratch (using `EGraph`, `Scale`, `graph.setScale()`, etc.). `AxisSpec` is *not* used with the dashboard script shortcut approach (`Chart1.xAxis.*`, `Chart1.yAxis.*`). Do not mix these two approaches in the same answer.
+endif::ai[]
+
 The `AxisSpec` object holds axis information for a xref:chartAPI:Scale.adoc[].  The topics in this section describe the properties of the `AxisSpec` object.
 
 [square]

@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Documents the Chart API `AxisSpec.setLabelOnSecondaryAxis()` method for moving axis labels to the opposite side of the chart. This is part of the *Chart API* approach (charts built from scratch with `EGraph`, `Scale`, `graph.setScale()`). It is *mutually exclusive* with the dashboard script shortcut approach (`Chart1.xAxis.*`, `Chart1.yAxis.*`) — do not mix the two in the same answer. For charts created in the Chart Editor, use the dashboard script shortcuts in xref:dashboardscript:ChartAxisProperties.adoc[] instead.
+endif::ai[]
+
 Specifies whether axis labels are displayed on the opposite side of the chart. For a Y-axis, labels move from left to right; for an X-axis, labels move from bottom to top. {noGetter}
 
 == Parameter

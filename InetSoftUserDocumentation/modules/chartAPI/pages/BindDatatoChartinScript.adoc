@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Overview of three distinct, *mutually exclusive* approaches to binding chart data in script — each suited to a different context. Do not mix approaches in the same answer: (1) *Component-level script + Chart API* — use `Chart1.data = runQuery(...)` or an array, then build the chart with `graph = new EGraph()` etc.; (2) *Array* — similar to (1) but data defined inline; (3) *onRefresh script* — use `Chart1.query` and `Chart1.bindingInfo.*` (no `EGraph`). Present only the approach that matches the user's context.
+endif::ai[]
+
 There are several ways to bind data to a Chart using script. The following sections present the various approaches.
 
 TIP: It is not necessary to use script to do this.  In fact, the easiest way to bind data to a Chart is to use the Chart Editor (see xref:dashboard:AddAChart.adoc[]). After you have bound data to the Chart using the Chart Editor, you can proceed to modify the chart using script operations as described in xref:chartAPI:ModifyChartElement.adoc[].

@@ -1,6 +1,10 @@
 = Modify Chart Properties
 %experimental%
 
+// metadata for AI
+ifdef::ai[]
+Summary: Shows how to modify chart style, axis titles, and axis properties using the *dashboard script shortcut* approach (`Chart1.chartStyle`, `Chart1.xTitle.text`, `Chart1.axis.*`). Despite being in the chartAPI module, this page uses *only* dashboard script syntax — it is *not* a Chart API (EGraph/graph.setScale) page. Do not mix with Chart API methods in the same answer.
+endif::ai[]
 
 include::ROOT:partial$buttonSnippets.adoc[]
 

@@ -2,6 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Explains how to change axis properties using the *Chart API* approach — creating `Scale` and `AxisSpec` objects and assigning them via `graph.setScale()`. This approach is for charts built from scratch with the Chart API. It is *mutually exclusive* with the dashboard script shortcut approach (`Chart1.xAxis.*`, `Chart1.yAxis.*`) — do not mix the two in the same answer. Use the shortcut approach for charts created in the Chart Editor; use this page's approach only when constructing a chart entirely in script.
+endif::ai[]
 
 [TIP]
 ====
