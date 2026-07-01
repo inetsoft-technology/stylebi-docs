@@ -5,7 +5,9 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to filter data after it has been grouped and aggregated in Visual Composer, applied to a Chart, Crosstab, or Freehand Table. Unlike Selection Lists and Conditions which filter pre-aggregate detail data, this page covers two post-aggregate filtering methods: (1) configuring a Range Slider to target an aggregated field via its Data tab 'Components' node, and (2) using ad hoc filtering by right-clicking a column (in a Crosstab or Freehand Table) or a dimension/measure label (in a Chart) and selecting 'Filter'. Note: the right-click 'Filter' option is only available if the Dashboard contains a Selection Container component; filter selections appear in that container and can be cleared individually or all at once. Use when you want to filter by a summarized value such as "show only categories with total sales above $10,000."
+How to filter data after it has been grouped and aggregated in Visual Composer, applied to a Chart, Crosstab, or Freehand Table. Unlike Selection Lists and Conditions which filter pre-aggregate detail data, this page covers two post-aggregate filtering methods: (1) configuring a Range Slider to target an aggregated field via its Data tab 'Components' node, and (2) using ad hoc filtering by right-clicking a column (in a Crosstab or Freehand Table) or a dimension/measure label (in a Chart) and selecting 'Filter'. Note: the right-click 'Filter' option is only available if the Dashboard contains a Selection Container component; filter selections appear in that container and can be cleared individually or all at once.
+
+Important behavioral distinction for ad hoc chart filters: filtering by a *dimension* (categorical/string field) targets the underlying data source and filters ALL Dashboard components bound to that data source — same as a regular Selection List. Filtering by a *measure* (aggregated value such as Sum or Count) targets only that chart's post-aggregate output; other Dashboard components are NOT affected.
 endif::ai[]
 
 [WARNING,caption=See Also]
@@ -47,6 +49,15 @@ video::359331010#chapter=16567165[vimeo,640,400]
 
 
 The easiest way to filter a Table or Chart is by using Filter components. (See xref:FilterDashboard.adoc[] for more information.) However, if the Dashboard includes a Selection Container, you can also filter  by using the right-click ‘Filter’ option. To do this, see the sections   below:
+
+[NOTE]
+====
+The scope of an ad hoc filter depends on whether you filter  a *dimension* or a *measure*:
+
+[square]
+* *Filter a dimension* (categorical field) —  filter is applied to the underlying data source. All Dashboard components bound to the same data source are filtered.
+* *Filter a measure* (aggregated  value) —  filter is applied only to post-aggregate data in the Chart, Crosstab, or Freehand Table where the filter is applied. Other components on the Dashboard are not affected.
+====
 
 [#AdHocFilterPostAggregateCrosstabData]
 === Ad Hoc Filter Post-Aggregate Tabular Data
