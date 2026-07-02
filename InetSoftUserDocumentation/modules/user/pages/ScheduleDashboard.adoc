@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 ifdef::ai[]
 How to schedule automatic Dashboard generation and delivery on a predefined cycle. There are two distinct entry points with very different feature sets:
 
-QUICK-SCHEDULE (Dashboard toolbar Schedule button only): Opens a simple wizard. Supports bookmark selection (new or existing), output format (CSV or Excel only — not PDF or PowerPoint), email recipients, recurrence (Daily/Weekly/Monthly) with time and time zone, and an optional Include Link option. Does NOT support PDF, PowerPoint, Save to Disk, Notification, Creation Parameters, Alerts, Execute As, or any other advanced options.
+QUICK-SCHEDULE (Dashboard toolbar Schedule button only): Opens a simple wizard. Supports bookmark selection (new or existing), output format (PDF, PowerPoint, Excel, or CSV — available formats depend on the export options configured for the Dashboard by an administrator), email recipients, recurrence (Daily/Weekly/Monthly) with time and time zone, and an optional Include Link option. Does NOT support Save to Disk, Notification, Creation Parameters, Alerts, Execute As, or any other advanced options.
 
 ADVANCED SCHEDULED TASKS (Portal Schedule button → New Task): Full scheduling interface with Condition, Action, and Options tabs. Supports all output formats (PDF, PowerPoint, Excel, CSV), Notification of task status, Deliver to Emails with dynamic subject/filename parameters (MessageFormat-style {0}/{1,date} placeholders and creation parameter names in curly braces), Save to Disk (server filesystem or FTP/SFTP), Creation Parameters for passing Dashboard parameter values at generation time, Alerts (execute action only when highlight or gauge range conditions are met), and Schedule Options (enable/disable, date range, Execute As a specific user for VPM/row-level security filtering, locale). Execute As and all Options tab settings are available ONLY in advanced scheduled tasks, not in quick-schedule. Managing tasks (edit, run now, stop, delete, move to folder) also applies only to advanced tasks.
 endif::ai[]
@@ -27,10 +27,13 @@ image::scheduleDashboard1.png[alt="select Create New Bookmark or Use Current Boo
 
 . Press btn:[Next].
 
-. In the ‘Format’ menu, select the format in which the Dashboard should be delivered.
+. In the ‘Format’ menu, select the format in which the Dashboard should be delivered. (Available formats depend on administrative settings).
 +
-CSV:: {exportcsv}
+PDF:: Generates the Dashboard as a PDF document.
+PowerPoint:: Generates the Dashboard as a PowerPoint presentation.
 Excel:: {exportexcel}
+CSV:: {exportcsv}
+
 
 . In the ‘Emails’ field, enter a comma-separated list of email addresses to which the Dashboard should be delivered, or press the btn:[?] button to select from a list of user emails. (Only users from your own groups are listed.)
 
