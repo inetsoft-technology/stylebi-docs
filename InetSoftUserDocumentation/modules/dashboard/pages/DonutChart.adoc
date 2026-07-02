@@ -17,6 +17,10 @@ The simple donut chart is the same as a xref:PieChart.adoc[], but with an empty 
 
 include::partial$chartNewbieTip.adoc[]
 
+. Press the {buttonSelectChartStyle}, and choose ‘Donut’. This converts the chart into a donut-chart representation.
++
+image::commonscript:ChartExpDonut.png[alt="select Donut chart style"]
+
 . In the Chart Editor, drag the *measure*  field (e.g., ‘Total’) from the *Data Source* panel to the ‘Y’ region.
 +
 include::ROOT:partial$measureTip.adoc[]
@@ -25,11 +29,7 @@ include::ROOT:partial$measureTip.adoc[]
 +
 include::ROOT:partial$dimensionTip.adoc[]
 +
-image::commonscript:PieChartConfig.png[alt="drag measure to Y and dimension to Color"]
-
-. Press the {buttonSelectChartStyle}, and choose ‘Donut’. This converts the chart into a donut-chart representation.
-+
-image::commonscript:ChartExpDonut.png[alt="select Donut chart style"]
+image::commonscript:DonutChartConfig.png[alt="drag measure to Y and dimension to Color"]
 
 . Add the respective dimension values to the pie slices: Drag the dimension (‘Date’) field from the *Data Source* panel to the ‘Text’ region.
 +

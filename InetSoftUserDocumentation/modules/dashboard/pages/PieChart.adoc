@@ -30,6 +30,10 @@ include::partial$chartNewbieTip.adoc[]
 
 
 
+. Press the {buttonSelectChartStyle}, and choose ‘Pie’. This converts the chart into a pie-chart representation.
++
+image::commonscript:SelectChartTypeButtonPie.png[alt="press Select Chart Style, choose Pie"]
+
 . In the Chart Editor, drag the *measure*  field (e.g., ‘Total’) from the *Data Source* panel to the ‘Y’ region.
 +
 image::commonscript:PieChartConfig2.png[alt="drag measure to Y region"]
@@ -43,11 +47,6 @@ image::commonscript:PieChartConfig.png[alt="drag dimension to Color region"]
 . Press the ‘Edit Color’ button to choose the colors. See xref:GroupDataByDimension.adoc[] for more information about the color panel.
 +
 image::commonscript:PieChartConfig4.png[alt="press Edit Color button"]
-
-
-. Press the {buttonSelectChartStyle}, and choose ‘Pie’. This converts the chart into a pie-chart representation.
-+
-image::commonscript:SelectChartTypeButtonPie.png[alt="press Select Chart Style, choose Pie"]
 
 . Add the respective dimension values to the pie slices: Drag the dimension (‘Date’) field from the *Data Source* panel to the ‘Text’ region.
 +
@@ -72,11 +71,10 @@ image::commonscript:Ad Hoc Pie7.png[alt="select Explode Pie in Advanced tab"]
 . *_Optional:_* {multipleDimensionNoColor}
 
 . {finishEditing}
-
-
-The pie chart is now complete.
 +
 image::commonscript:Ad Hoc Pie8.png[alt="completed pie chart"]
+
+The pie chart is now complete.
 
 
 .Explore More...
