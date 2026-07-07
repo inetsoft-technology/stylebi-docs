@@ -14,52 +14,41 @@ include::ROOT:partial$measureAndDimensionTip.adoc[]
 
 image::commonscript:SunburstConfig1.png[alt="sunburst chart example"]
 
-To create a sunburst  chart, follow the basic steps below:
+To create a sunburst chart, follow the basic steps below:
 
 include::partial$chartNewbieTip.adoc[]
 
-To create a sunburst chart, place the desired hierarchical dimensions in the ‘T’ region of the Chart Editor, and place the desired measure in the ‘Size’ region of the Chart Editor. Use the ‘Color’ region to distinguish particular dimension values by color.
-
-NOTE: To create a grid of charts, place dimensions into the ‘X’ and/or ‘Y’ regions as well. See xref:TrellisChartGrid.adoc[] for more information.
-
-.Walkthrough: Sunburst Chart
-****
-This example illustrates how to create a sunburst chart that displays total broken down by state, city, and company.
-
-. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
-include::ROOT:partial$CreateNewWorksheetNote.adoc[]
-+
-include::ROOT:partial$SalesExploreWorksheet.adoc[]
-
-. Drag a Chart component from the *Toolbox*  to the Dashboard, and press the {buttonEdit} at the top-right corner of the Chart to open the Visualization Recommender. Press the  {buttonFullEditor} at the top right to open the Chart Editor. (For more details on creating a chart, see xref:BasicChartingSteps.adoc[].)
-
-. In the Chart Editor, press the {buttonSelectChartStyle} and choose the ‘Sunburst’ option. Press the {buttonApply}.
+. Press the {buttonSelectChartStyle}. Choose the ‘Sunburst’ style. Press the {buttonApply}.
 +
 image::commonscript:SunburstConfig2.png[alt="press Select Chart Style, choose Sunburst"]
 
-. Drag the ‘State’, ‘City’, and ‘Company’ fields from the *Data Source* panel to the ‘T’ region.
-
-. Drag the ‘Total’ measure   from the *Data Source* panel to the ‘Size’ region.
-
-. Drag the ‘State’ dimension from the *Data Source* panel to the ‘Color’ region.
+. From the ‘Dimensions’ folder of the *Data Source* panel, drag the desired hierarchical *dimension* fields to the ‘T’ region. Add dimensions from the outermost to the innermost level of the hierarchy.
 +
-image::commonscript:SunburstConfig3.png[alt="drag State dimension to Color region"]
-
-
-. *_Optional:_* Press the ‘Edit Color’ button next to the ‘State’ dimension, and choose the desired colors to represent the state values. Press the {buttonApply}.
+include::ROOT:partial$dimensionTip.adoc[]
 +
-image::commonscript:EditColorButton.png[alt="press Edit Color button for State dimension"]
+image::commonscript:SunburstConfigT.png[alt="drag hierarchical dimensions to T region"]
+
+. From the ‘Measures’ folder of the *Data Source* panel, drag a desired *measure* to the ‘Size’ region.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image::commonscript:SunburstConfigSize.png[alt="drag measure to Size region"]
+
+. *_Optional:_* Drag a dimension from the *Data Source* panel to the ‘Color’ region to distinguish dimension values by color.
++
+image::commonscript:SunburstConfig3.png[alt="drag dimension to Color region"]
+
+. *_Optional:_* Press the {buttonEditMeasure} next to the measure, and select the desired aggregation method.
+
+. *_Optional:_* {multipleDimensionNoColor}
 
 . {finishEditing}
-
-. Resize the chart as desired.
 +
-image::commonscript:SunburstConfig1.png[alt="resize completed sunburst chart"]
+image::commonscript:SunburstConfig1.png[alt="completed sunburst chart"]
 
-. Hover the mouse over the chart to see a tooltip providing full information about each group.
+NOTE: To create a grid of charts, place dimensions into the ‘X’ and/or ‘Y’ regions as well. See xref:TrellisChartGrid.adoc[] for more information.
 
 include::partial$addTitlesLegend.adoc[]
-****
 
 
 

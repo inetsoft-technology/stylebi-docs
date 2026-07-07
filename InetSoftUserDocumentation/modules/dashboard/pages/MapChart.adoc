@@ -86,7 +86,7 @@ image::commonscript:bindGeographicFieldSetAgg.png[alt="select aggregation method
 +
 image::commonscript:bindGeographicFieldRanking_1.png[alt="set ranking for geographic dimension data"]
 
-. *_Optional:_*  To create a particular trajectory through the points on the chart, drag a path field to the ‘Path’ region. The values of this field are used to assign the sort order for the plotted data so that connecting lines are drawn between points that are adjacent in the path sort order.
+. *_Optional:_*  To create a particular trajectory through the points on the chart, drag a path field to the ‘Path’ region. The values of this field are used to assign the sort order for the plotted data so that connecting lines are drawn between points that are adjacent in the path sort order.  See the "`Hurricane`" example in xref:#ExploreMore[] for an illustration of using ‘Path’.
 +
 TIP: If your data set contains map data points in separate columns (such as origin and destination columns), you should combine these into a single column.
 
@@ -106,7 +106,83 @@ image::commonscript:MapChartType_4.png[alt="zoomed map chart with data displayed
 
 == Display Data by Latitude and Longitude
 
-To learn how to display data on a map by latitude and longitude, follow the steps in the walk-through below.
+To display data on a map by latitude and longitude, follow the steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Map’ style.   Press the {buttonApply} (or double-click the ‘Map’ icon).
++
+image::commonscript:MapChartType_1.png[alt="choose Map chart style"]
++
+The Chart Editor now provides a ‘Geographic’ field.
+
+. *_Optional:_* If you want to use a web map background (Mapbox map or Google Map, depending on what your administrator has configured), expand the section below:
++
+.Use Web Map...
+[%collapsible]
+====
+.. Right-click the Chart and select ‘Properties’. This opens the ‘Chart Properties’ dialog box.
++
+image::commonscript:MapChartType_2.png[alt="right-click chart to open Chart Properties dialog"]
+
+.. Under the *Advanced* tab, enable ‘Use Web Map as Background’ and press btn:[OK]. (If this option is not available, ask your administrator  to enable the Web Map feature.)
++
+image::commonscript:MapChartType_3.png[alt="enable Use Web Map as Background on Advanced tab"]
+
+.. *_Optional:_* If your geographical field represents areas on the Chart (e.g., states) rather than points (e.g., cities), adjust the ‘Alpha’ setting to  less than 100% so that the filled regions do not obscure the underlying map background.
+
+.. Press btn:[OK] to exit the ‘Chart Properties’ dialog box.
++
+include::partial$webMapResize.adoc[]
+====
+
+. In the *Data Source* panel, right-click the field containing latitude values, or press the {buttonActions}, and select ‘Set Geographic’ from the context menu.
++
+image::commonscript:Map Chart LongLat SetGeo.png[alt="right-click latitude field and select Set Geographic"]
++
+This opens the ‘Edit Geographic’ dialog box. If you need to open the ‘Edit Geographic’ dialog box later, right-click the field or press the {buttonActions}, and select ‘Edit Geographic’ from the context menu.
+
+. From the ‘Map’ menu, select the desired region, and press btn:[OK].
++
+image::commonscript:Map Chart LongLat US.png[alt="select a region from the Map menu in Edit Geographic"]
++
+IMPORTANT: If you are using a Web Map background with latitude and longitude data, you should always use the ‘World’ map option.
+
+. Repeat the above steps to set the field containing longitude values as a geographic field.
+
+. Drag the longitude field to the ‘X’ region.
+
+. Drag the latitude field to the ‘Y’ region.
++
+image::commonscript:Map Chart LongLat BindGeo.png[alt="drag latitude and longitude fields to Y and X regions"]
++
+Data points now appear on the map to mark the locations specified by the latitude and longitude data.
+
+. From the *Data Source* panel, drag a *measure* onto one of the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ regions.
++
+include::ROOT:partial$measureTip.adoc[]
++
+This displays the measure on the chart using the visual coding you selected (color, shape, or size), and automatically creates a corresponding legend.
+
+. Press the {buttonEditMeasure}, and select the desired aggregation method for the measure.
++
+image::commonscript:bindGeographicFieldSetAgg.png[alt="select aggregation method for geographic measure"]
+
+. *_Optional:_* To add labels to the points on the map, drag a label field from the *Data Source* panel to the ‘Text’ field.
++
+image::commonscript:Map Chart LongLat NameLabel.png[alt="drag label field to Text region to add map labels"]
++
+NOTE: By default, the label values are displayed as tooltips. If the labels appear crowded, you can zoom the map to see them more clearly. (See below.)
+
+. *_Optional:_*  Set the initial map view by selecting a region, and pressing the {buttonZoom}.
++
+image::commonscript:MapChartType_6.png[alt="select region and press Zoom to set initial map view"]
++
+You can also press the {buttonPanMap} and drag on the map to reposition, or  press the {buttonZoomIn} or {buttonZoomOut} to zoom. Press the {buttonClearMapZoom} to reset the view.
++
+image::commonscript:MapChartType_5.png[alt="map chart with labeled latitude and longitude points"]
+
+. {finishEditing}
 
 .Walkthrough: Latitude and Longitude
 ****
@@ -200,6 +276,11 @@ You can also press the {buttonPanMap} and drag on the map to reposition, or  pre
 +
 image::commonscript:MapChartType_5.png[alt="map chart with labeled Route 66 landmark points"]
 
+. *_Optional:_* Create a path through the points by dragging the '`Long`' field to the '`Path`' area. See the "`Hurricane`" example in xref:#ExploreMore[] for another illustration of using ‘Path’.
++
+image::commonscript:MapChartType_7.png[alt="map chart with labeled Route 66 landmark points"]
+
+
 . {finishEditing}
 
 ****
@@ -252,7 +333,7 @@ image::editGeographic2.png[alt="match unmatched locations in Geographic Mapping 
 .. Repeat the above steps to match all locations and press btn:[OK].
 ****
 
-. *_Optional:_* To remove the geographical status of a field, right click the field or press the {buttonActions}, and select ‘Clear Geographic’ from the context menu.
+. *_Optional:_* To remove the geographical status of a field, right-click the field or press the {buttonActions}, and select ‘Clear Geographic’ from the context menu.
 
 == Transforming Coordinates for Alaska and Hawaii
 
@@ -260,6 +341,7 @@ include::ROOT:partial$alaskaHawaii.adoc[]
 
 '''
 
+[#ExploreMore]
 .Explore More...
 ****
 The sample xref:ROOT:attachment$Global_Visual_Analysis.zip[Global Visual Analysis] Dashboard provides an example of a *world*  map.

@@ -21,15 +21,33 @@ include::partial$chartNewbieTip.adoc[]
 
 . *_Optional:_*  Place the desired break-down *dimensions* on the ‘X’ and ‘Y’ axes.
 +
+include::ROOT:partial$dimensionTip.adoc[]
++
+image::commonscript:WordCloudConfigXY.png[alt="drag dimension to X or Y region"]
++
 {multipleDimensionNoColor}  If you *do not* place any dimension on ‘X’ or ‘Y’, this will create just a single word cloud (i.e., without any groups). If you place one or more dimensions on ‘X’ or ‘Y’, this will create an individual word cloud for each combination of dimension values.
 
 . Place the *dimension* containing the desired word cloud labels into the ‘Text’ region of the Chart Editor.
++
+image::commonscript:WordCloudConfigText.png[alt="drag dimension to Text region"]
 
 . Place a desired *measure* in the ‘Size’ and/or ‘Color’ region of the Chart Editor. To create a traditional word cloud where the size and/or color of the labels is proportional to their frequency in the data set, place a measure in the ‘Size’ and/or ‘Color’ region and summarize it by using the ‘Count’  aggregation method.  You can also use other aggregation methods, such as ‘Sum’ or ‘Average’, to highlight different aspects of the data.
 +
-NOTE: When you use the ‘Count’ method, it does not matter which measure you choose to aggregate. See the example below.
+include::ROOT:partial$measureTip.adoc[]
++
+image::commonscript:WordCloudConfigSizeColor.png[alt="drag measure to Size or Color region"]
++
+NOTE: When you use the ‘Count’ method, it does not matter which measure you choose to aggregate.
 
+. *_Optional:_* Press the '`Edit Size`' button to adjust the minimum and maximum display size. To further increase the size range of displayed words, use the ‘Font Scale’ property under the *Advanced* tab of the ‘Chart Properties’ dialog box. (See xref:ChartProperties.adoc[] for more information.)
 
+. *_Optional:_* Apply any desired filtering to restrict the size and number of clouds.  See xref:#WalkthroughWordCloud[] below for an example.
+
+. {finishEditing}
++
+image::commonscript:WordCloudExample11.png[alt="completed word cloud chart"]
+
+[#WalkthroughWordCloud]
 .Walkthrough: Word Cloud
 ****
 The following example illustrates how to create a word cloud that compares a count of products for two different years.

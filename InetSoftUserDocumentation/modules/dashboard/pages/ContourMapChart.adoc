@@ -86,7 +86,91 @@ image::commonscript:contourMapChartExp4.png[alt="press Pan and Zoom buttons to s
 
 == Display Data by Latitude and Longitude
 
-To learn how to display a contour on a map by latitude and longitude, follow the steps in the walkthrough below.
+To display a contour on a map by latitude and longitude, follow the steps below:
+
+include::partial$chartNewbieTip.adoc[]
+
+. Press the {buttonSelectChartStyle}. Choose the ‘Contour Map’ style.   Press the {buttonApply} (or double-click the ‘Contour Map’ icon).
++
+image::commonscript:contourMapChartExp5.png[alt="press Select Chart Style and choose Contour Map"]
++
+The Chart Editor now provides a ‘Geographic’ field.
+
+. *_Optional:_* If you want to use a web map background (Mapbox map or Google Map, depending on what your administrator has configured), expand the section below:
++
+.Use Web Map...
+[%collapsible]
+====
+.. Right-click the Chart and select ‘Properties’. This opens the ‘Chart Properties’ dialog box.
++
+image::VS Chart Map3.png[alt="right-click chart and select Properties"]
+
+.. Under the *Advanced* tab, enable ‘Use Web Map as Background’ and press btn:[OK]. (If this option is not available, ask your administrator  to enable the Web Map feature.)
++
+image::VS Chart Map4.png[alt="enable use web map as background under Advanced tab"]
+
+.. *_Optional:_* If your geographical field represents areas on the Chart (e.g., states) rather than points (e.g., cities), adjust the ‘Alpha’ setting to  less than 100% so that the filled regions do not obscure the underlying map background.
+
+.. Press btn:[OK] to exit the ‘Chart Properties’ dialog box.
++
+include::partial$webMapResize.adoc[]
+====
+
+. In the *Data Source* panel, right-click the ‘latitude’ measure or press the {buttonActions}, and select ‘Set Geographic’ from the context menu.
++
+image::commonscript:contourMapChartExp6.png[alt="right-click latitude measure and select Set Geographic"]
++
+This opens the ‘Edit Geographic’ dialog box. If you need to open the ‘Edit Geographic’ dialog box later, right-click the ‘latitude’ measure or press the {buttonActions}, and select ‘Edit Geographic’ from the context menu.
+
+. From the ‘Map’ menu, select ‘World’, and press btn:[OK].
++
+image::commonscript:Map Chart LongLat US.png[alt="select World from Map menu and press OK"]
++
+IMPORTANT: If you are using a Web Map background with latitude and longitude data, you should always use the ‘World’ map option.
+
+. Repeat the above steps to set the ‘longitude’ measure as a geographic field.
+
+. Drag the ‘longitude’ field to the ‘X’ region.
+
+. Drag the ‘latitude’ field to the ‘Y’ region.
++
+image::commonscript:contourMapChartExp7.png[alt="drag longitude to X and latitude to Y region"]
+
+
+. *_Optional:_* Drag a desired *measure* to the ‘Size’ region to weight the data points. A larger weight assigns greater density to the point.
++
+include::ROOT:partial$measureTip.adoc[]
++
+image::commonscript:contourMapChartExp11.png[alt="drag measure to Size region to weight contour points"]
++
+To change how the contours are focused on the data points (without weighting), press the ‘Edit Size’ button, and choose a fixed size value.
++
+image::commonscript:contourMapExp7.png[alt="press Edit Size button and choose fixed size value"]
++
+TIP: You can make additional adjustments to the appearance of the contours from the ‘Chart Properties’ dialog box. See below.
+
+. *_Optional:_* To add labels to the points on the map, drag a label field from the *Data Source* panel to the ‘Text’ field.
++
+image::commonscript:contourMapChartExp9.png[alt="drag label field to Text region to add map point labels"]
++
+NOTE: If the labels appear crowded, you can zoom the map to see them more clearly. See xref:DrillDownIntoData.adoc[] for instructions.
+
+. {finishEditing}
+
+. *_Optional:_*  To change the characteristics of the contours, press the {buttonMore} in the Chart toolbar, and select ‘Properties’. In the ‘Chart Properties’ dialog box, adjust the following  settings under ‘Density Contour’ in the *Advanced* tab.
++
+[example]
+====
+include::ROOT:partial$contourSettings.adoc[]
+====
+
+. *_Optional:_* Drag the label field into the Dashboard to add a Selection List, so that users can filter which points are displayed. Select the desired values in the Selection List.
++
+image::commonscript:contourMapChartExp8.png[alt="selection list filtering points on map"]
+
+. *_Optional:_*  Set the initial map view by pressing the {buttonPanMap} and dragging on the map to reposition, and by pressing the {buttonZoomIn} or {buttonZoomOut} to zoom. Press the {buttonClearMapZoom} to reset the view.
++
+image::commonscript:contourMapChartExp4.png[alt="press Pan and Zoom buttons to set initial map view"]
 
 .Walkthrough: Latitude and Longitude
 ****
