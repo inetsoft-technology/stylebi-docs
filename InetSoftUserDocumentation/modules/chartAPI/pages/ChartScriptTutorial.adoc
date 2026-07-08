@@ -1,5 +1,10 @@
 = Chart Script Tutorial
 
+// metadata for AI
+ifdef::ai[]
+Summary: Tutorial for using the Chart Script (Chart API) to modify or create Charts via JavaScript. This should be treated as a LAST RESORT for chart interactivity and customization — prefer, in order: (1) built-in toolbar tools (dashboard:UseCharts.adoc, dashboard:DrillDownIntoData.adoc), (2) the Ad Hoc Chart Editor, and (3) Form-driven dynamic properties (dashboard:EndUserChartControl.adoc, dashboard:DynamicallySetProperties.adoc). Use Chart Script only when none of those can achieve the desired result, typically for non-standard axis layouts or unusual mixtures of text and graphics. Charts created or heavily modified by script lose standard end-user interactivity/Ad Hoc Editing features.
+endif::ai[]
+
 The following sections explain how to use the Chart Script API to modify and create Charts.
 
 == Why Use Chart Script?

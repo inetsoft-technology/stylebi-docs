@@ -2,6 +2,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: How to create a new Chart from scratch using Chart API script. Chart API script provides fine-grained control over all aspects of Chart generation, and is useful for creating Charts that cannot be created using the Chart Editor, though it requires programming skill. For chart interactivity/customization specifically, this is a LAST-RESORT approach — prefer built-in toolbar tools (dashboard:UseCharts.adoc), the Ad Hoc Chart Editor, or Form-driven dynamic properties (dashboard:EndUserChartControl.adoc, dashboard:DynamicallySetProperties.adoc) first. IMPORTANT: Charts created by script do NOT provide end-user interactivity features — 'Enable Ad Hoc Editing' should be deselected for script-based charts.
+endif::ai[]
+
 The previous sections, xref:chartAPI:ModifyChartDataBinding.adoc[] and xref:chartAPI:ModifyChartElement.adoc[], explained how to modify the data binding and element properties of an *existing* Chart. This section explains how to create a new Chart (from the ground-up) using Chart API commands.
 
 CAUTION: Charts created by script do not provide end-user interactivity features. Therefore, for script-based charts you should deselect 'Enable Ad Hoc Editing' in the 'Chart Properties' panel (*Advanced* tab).
