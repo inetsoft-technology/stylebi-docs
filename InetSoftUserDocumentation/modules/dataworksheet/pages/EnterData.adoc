@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create and manage an Embedded Table in a Data Worksheet by manually typing data, including creating the table, editing column headers and data cells, adding or removing rows, converting an existing data block to an Embedded Table, importing data from a CSV or Excel file, and configuring a Dashboard Form component or Dashboard Table to modify Embedded Table values from a Dashboard.
+Summary: How to create and manage an Embedded Table (also called an editable grid, editable table, or data entry grid) in a Data Worksheet by manually typing data, including creating the table, editing column headers and data cells, adding or removing rows, converting an existing data block to an Embedded Table, importing data from a CSV or Excel file, and configuring a Dashboard Form component or Dashboard Table to modify Embedded Table values from a Dashboard.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 

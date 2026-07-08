@@ -1,5 +1,9 @@
 = Chart Script Reference
 
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `Chart Script Reference`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
 
 The topics in this Reference describe Chart API JavaScript objects and properties   available for use in Chart scripts. See xref:chartAPI:ChartScriptTutorial.adoc[] for guidance on how to use these functions.
 

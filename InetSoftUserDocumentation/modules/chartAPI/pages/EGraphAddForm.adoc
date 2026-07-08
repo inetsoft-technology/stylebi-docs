@@ -3,6 +3,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `EGraph.addForm(form)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
 
 Adds the specified GraphForm to the chart. See xref:chartAPI:ChartAnnotation.adoc[] for available forms. The inverse operations are xref:EGraphRemoveForm.adoc[] and xref:EGraphClearForms.adoc[].
 

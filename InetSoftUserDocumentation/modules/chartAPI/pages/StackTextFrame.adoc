@@ -2,7 +2,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `StackTextFrame`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
 
 [CAUTION,caption=inherits from]
 ====

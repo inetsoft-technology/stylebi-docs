@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `AxisSpec.setLastOrAll(Boolean)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
+
 Specifies the truncation behavior for multi-line axis labels when there is insufficient space to display all lines. When `true`, only the *last line* of the label is displayed; when `false`, as many lines as possible are displayed . {noGetter}
 
 == Parameter

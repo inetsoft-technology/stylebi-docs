@@ -3,7 +3,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
-
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `createBulletGraph(measure, ranges, target, color, xdims, ydims, opts)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
 
 The `createBulletGraph()` function generates a bullet graph to display a specified measure along with a target and multiple value ranges. (All parameters are optional. To omit any parameter setting, pass `null` as the value.)
 

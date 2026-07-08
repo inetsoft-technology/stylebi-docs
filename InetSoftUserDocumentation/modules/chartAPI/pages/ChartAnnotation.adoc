@@ -1,5 +1,10 @@
 = Chart Annotation
 
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `Chart Annotation`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
+
 This following pages describe functions for  adding arbitrary text, shapes, and lines to a Chart.
 [square]
 include::ROOT:partial$MINITOC_ChartAnnotation.adoc[]

@@ -3,6 +3,10 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `VisualFrame.setLegendSpec(spec)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
 
 Specifies the formatting for the legend generated for the `VisualFrame`.  The corresponding “getter” function is xref:VisualFrameGetLegendSpec.adoc[].
 

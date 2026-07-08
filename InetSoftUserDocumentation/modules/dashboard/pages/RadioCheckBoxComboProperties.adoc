@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Radio Button, Check Box, and Combo Box Form component properties (also called form controls or input controls). These are Form components, not Filter components — they pass a selected value to a variable target in a Data Worksheet, which can then be used in conditions or expressions. Unlike Filter components (Selection List, Selection Tree, Range Slider, Calendar), they do not directly filter data blocks; using them for filtering requires a variable-type condition, which is a special use case. Covers list value sources (embedded or query-populated), submit behavior, and default value selection. See DynamicallySetProperties for usage.
+Summary: Reference for Radio Button, Check Box, and Combo Box (also called a dropdown or dropdown menu) Form component properties (also called form controls or input controls). These are Form components, not Filter components — they pass a selected value to a variable target in a Data Worksheet, which can then be used in conditions or expressions. Unlike Filter components (Selection List, Selection Tree, Range Slider, Calendar), they do not directly filter data blocks; using them for filtering requires a variable-type condition, which is a special use case. Covers list value sources (embedded or query-populated), submit behavior, and default value selection. See DynamicallySetProperties for usage.
 endif::ai[]
 
 [WARNING,caption=see also]

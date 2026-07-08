@@ -1,7 +1,7 @@
 = StyleBI Glossary
 
 ifdef::ai[]
-Definitions of StyleBI-specific terms used throughout this documentation. Key concepts include: Ad Hoc Editing, Aggregation, Alert, Alias, Annotation, Asset, Bookmark, Brush/Brushing, Calendar, Chart, Condition, Container, Crosstab, Cycle, Dashboard, Data Block, Data Model, Data Worksheet, Device Layout, Dimension, Drill-Down, Enterprise Manager, Filter Component, Flyover View, Form Component, Freehand Table, Gauge, Highlight, Logical Model, Mashup, Materialized View, Measure, Mirror Copy, Named Group, Nested Dashboard, Physical View, Range Slider, Repository, Scheduled Task, Selection Container, Selection List, Selection Tree, Show Details, User Portal, VPM (Virtual Private Model), Visual Composer, and Zoom. Consult this page when encountering unfamiliar StyleBI terminology.
+Definitions of StyleBI-specific terms used throughout this documentation. Key concepts include: Ad Hoc Editing, Aggregation, Alert, Alias, Annotation, Asset, Bookmark, Brush/Brushing, Calendar, Chart, Condition, Container, Crosstab, Cycle, Dashboard, Data Block, Data Model, Data Worksheet, Device Layout, Dimension, Drill-Down, Drill-Through, Enterprise Manager, Filter Component, Flyover View, Form Component, Freehand Table, Gauge, Highlight, Logical Model, Mashup, Materialized View, Measure, Mirror Copy, Named Group, Nested Dashboard, Physical View, Range Slider, Repository, Scheduled Task, Selection Container, Selection List, Selection Tree, Show Details, User Portal, VPM (Virtual Private Model), Visual Composer, and Zoom. Consult this page when encountering unfamiliar StyleBI terminology.
 endif::ai[]
 
 This page defines StyleBI-specific terms used throughout the documentation.
@@ -81,6 +81,9 @@ A categorical data field (such as Region, Product, or Date) used for grouping an
 
 Drill-Down::
 Navigation from summary data to more detailed data — for example, clicking a chart bar to see the underlying records. Implemented by a variety of techniques such as hyperlinks, zoom, Show Details, and hierarchy. See xref:dashboard:DrillDownIntoData.adoc[].
+
+Drill-Through::
+In StyleBI, drilling into a date or dimension hierarchy on a chart axis or Crosstab header to view a finer or coarser level of detail *within the same component* — see the "Drill Through a Chart" and "Drill Through a Crosstab" sections of xref:dashboard:DrillDownIntoData.adoc[]. IMPORTANT: This is different from the Power BI meaning of "drill through," which navigates to a *separate* report page filtered to the selected value. The equivalent StyleBI technique for that cross-dashboard, filtered-navigation behavior is drill-down-with-filter or a hyperlink to another Dashboard — also covered in xref:dashboard:DrillDownIntoData.adoc[].
 
 == E
 

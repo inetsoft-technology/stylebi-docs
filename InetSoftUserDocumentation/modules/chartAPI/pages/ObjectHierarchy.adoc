@@ -1,5 +1,9 @@
 = Object Hierarchy
 
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `Object Hierarchy`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
 
 The figure below shows the object structure of the  Chart API. Among the significant objects, xref:chartAPI:GraphElement.adoc[] contains the elements that graphically represent data (lines, bars, etc.). xref:chartAPI:VisualFrame.adoc[] contains information about mapping data dimensions to physical properties (size, color, etc.), and xref:chartAPI:Scale.adoc[] contains the scaling information for such mappings. xref:chartAPI:GraphForm.adoc[] contains information for manually-drawn chart objects.
 

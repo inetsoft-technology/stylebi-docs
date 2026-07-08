@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `Scale.setSharedRange(Boolean)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
+
 For a xref:FacetCoord.adoc[], specifies whether the same scale range should be used across all sub-graphs in a facet, or whether a sub-graph’s scaling should be shared only with sub-graphs in the same row (for Y-axis scaling) or same column (for X-axis scaling).
 
 == Parameter

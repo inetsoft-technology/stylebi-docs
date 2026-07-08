@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Reference for Calendar filter component properties in Visual Composer. Covers date field selection (Data tab), display style (Calendar wall or Dropdown), View Mode (Simple View for a single calendar unit, or Range for two side-by-side calendars), Calendar Type (Yearly, Monthly, Day Selection, Single Selection), Min/Max date constraints, Submit on Change behavior, and the Compatible Tables setting for filtering multiple data blocks simultaneously. See AddFilterComponents for how to create a Calendar.
+Reference for Calendar filter component properties in Visual Composer (also called a date picker or date filter). Covers date field selection (Data tab), display style (Calendar wall or Dropdown), View Mode (Simple View for a single calendar unit, or Range for two side-by-side calendars), Calendar Type (Yearly, Monthly, Day Selection, Single Selection), Min/Max date constraints, Submit on Change behavior, and the Compatible Tables setting for filtering multiple data blocks simultaneously. See AddFilterComponents for how to create a Calendar.
 endif::ai[]
 
 [WARNING,caption=see also]

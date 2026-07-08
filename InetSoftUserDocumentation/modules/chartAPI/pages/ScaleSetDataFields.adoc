@@ -3,6 +3,11 @@
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `Scale.setDataFields(arr)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
+
 Specifies the fields to use for initializing the xref:Scale.adoc[]; i.e., determining the maximum and minimum values. If left unspecified, the values in the xref:ScaleSetDataFields.adoc[] property are used for this purpose.  The corresponding “getter” function is `getDataFields()`.
 
 == Parameter
