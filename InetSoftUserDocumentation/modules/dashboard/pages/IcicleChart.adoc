@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Reference for creating an Icicle chart in Visual Composer, which displays a measure using hierarchically sized rectangles in a hierarchical layout. Place hierarchical dimensions in the T region and the desired measure in the Size region. Use the Color region to distinguish dimension values by color. To create a trellis grid of icicle charts, place dimensions in the X and/or Y regions. Similar to a Treemap chart but with a different layout orientation.
+Reference for creating an Icicle chart in Visual Composer, which displays a measure using hierarchically sized rectangles arranged in layered horizontal bands. Place hierarchical dimensions in the T region and the desired measure in the Size region. Use the Color region to distinguish dimension values by color. To create a trellis grid of icicle charts, place dimensions in the X and/or Y regions. IcicleChart, SunburstChart, TreemapChart, and CirclePackingChart all bind identically (T/Size/Color) and encode the same hierarchical part-to-whole data — they differ only in layout: Icicle is the Cartesian (rectangular) equivalent of Sunburst's radial wedges, Treemap uses nested rectangles, and Circle Packing uses nested circles. MarimekkoChart shows a related but structurally different 2-level mosaic (X/Y/Color/Break By binding, not T/Size).
 endif::ai[]
 
 An icicle chart displays a measure by using the sizes of rectangles in a hierarchical display.

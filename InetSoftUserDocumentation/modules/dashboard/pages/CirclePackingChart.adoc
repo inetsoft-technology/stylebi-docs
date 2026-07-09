@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Circle Packing chart in Visual Composer, which represents a measure using hierarchically nested circles. Place hierarchical dimensions in the T region and the measure in the Size region; use the Color region to distinguish groups.
+Summary: How to create a Circle Packing chart in Visual Composer, which represents a measure using hierarchically nested circles. Place hierarchical dimensions in the T region and the measure in the Size region; use the Color region to distinguish groups. CirclePackingChart, TreemapChart, SunburstChart, and IcicleChart all bind identically (T/Size/Color) and encode the same hierarchical part-to-whole data — they differ only in layout: Circle Packing uses nested circles, Treemap uses nested rectangles, Sunburst uses radial wedges, and Icicle uses layered rectangular bands (the Cartesian equivalent of Sunburst). MarimekkoChart shows a related but structurally different 2-level mosaic (X/Y/Color/Break By binding, not T/Size).
 endif::ai[]
 
 A  circle packing chart displays a *measure* by using circles in a hierarchical display.

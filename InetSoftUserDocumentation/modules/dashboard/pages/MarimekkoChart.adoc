@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Marimekko (Mekko/mosaic) chart in Visual Composer, which displays a measure using variable-width and variable-height rectangles arranged in columns. Place a dimension in the X region for columns and another dimension in the Color or Break By region for the grouping within columns.
+Summary: Reference for creating a Marimekko (Mekko/mosaic) chart in Visual Composer, which displays a measure using variable-width and variable-height rectangles arranged in columns. Place a dimension in the X region for columns and another dimension in the Color or Break By region for the grouping within columns. MarimekkoChart encodes the same kind of hierarchical part-to-whole data as TreemapChart, SunburstChart, IcicleChart, and CirclePackingChart, but with a different binding: it is capped at a 2-level mosaic grid (X/Y/Color/Break By) rather than an arbitrary-depth hierarchy (T/Size/Color).
 endif::ai[]
 
 A Marimekko chart (also known as a Mekko or mosaic chart) displays a *measure* by using the sizes of rectangles in a hierarchical display.

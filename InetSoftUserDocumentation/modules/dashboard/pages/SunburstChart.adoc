@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Sunburst chart in Visual Composer, which displays a measure using hierarchically arranged wedges in a radial layout (like a multi-level pie chart). Place hierarchical dimensions in the T region and the measure in the Size region. Compare to TreemapChart (rectangles) and CirclePackingChart (circles).
+Summary: Reference for creating a Sunburst chart in Visual Composer, which displays a measure using hierarchically arranged wedges in a radial layout (like a multi-level pie chart). Place hierarchical dimensions in the T region and the measure in the Size region. SunburstChart, TreemapChart, IcicleChart, and CirclePackingChart all bind identically (T/Size/Color) and encode the same hierarchical part-to-whole data — they differ only in layout: Sunburst uses radial wedges, Treemap uses nested rectangles, Icicle uses layered rectangular bands (the Cartesian equivalent of Sunburst), and Circle Packing uses nested circles. MarimekkoChart shows a related but structurally different 2-level mosaic (X/Y/Color/Break By binding, not T/Size).
 endif::ai[]
 
 A  Sunburst (mosaic) chart displays a *measure* by using wedges in a hierarchical display.
