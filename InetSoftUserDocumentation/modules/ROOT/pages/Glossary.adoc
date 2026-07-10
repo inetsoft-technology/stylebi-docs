@@ -122,7 +122,10 @@ The business-facing layer of a Data Model that presents database entities and at
 == M
 
 Mashup::
-A Data Worksheet technique that combines data from multiple data blocks or data sources — including joining and concatenating them — using drag-and-drop. See xref:dataworksheet:MashupData.adoc[].
+[square]
+* A general term for drag-and-drop workflow in Data Worksheet that combines data from multiple data blocks or data sources. Joining, concatenating, filtering, and sorting are all specific techniques that can be used *within* a mashup.
+
+* The ‘Mashup Data’ option in the New Data Worksheet dialog, which starts a blank Data Worksheet canvas (as opposed to the ‘Query Data’ or ‘Upload Data’ starting options). See xref:dataworksheet:MashupData.adoc[].
 
 Materialized View::
 A server-side cache of pre-aggregated Dashboard query results that dramatically improves load performance for complex or large-data Dashboards. See xref:administration:MaterializedView.adoc[].
