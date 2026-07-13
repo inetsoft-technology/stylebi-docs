@@ -18,7 +18,7 @@ On the pages listed in the left panel you can view Dashboards and queries that a
 include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
 
 
-Use the *Summary* Monitoring page  to track server performance. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine. Click on a chart to view the detailed information provided by the corresponding ‘Monitoring’ page.
+Use the *Summary* Monitoring page  to track server performance. To access this page, press the {buttonMonitoring} at the top of Enterprise Manager, then select *Summary* from the left panel. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine. Click on a chart to view the detailed information provided by the corresponding ‘Monitoring’ page.
 
 
 image::Monitoring Summary.png[alt="summary monitoring page with server performance charts"]
@@ -51,7 +51,7 @@ image::JVM.png[alt="JVM details panel at bottom of summary page"]
 
 == Dashboards
 
-Use the *Dashboards* Monitoring page to access key information about *executing* Dashboards that are currently being processed by the server, as well as *open* Dashboards that are active in memory but are not currently being processed.
+Use the *Dashboards* Monitoring page to access key information about *executing* Dashboards that are currently being processed by the server, as well as *open* Dashboards that are active in memory but are not currently being processed. To access this page, press the {buttonMonitoring} at the top of Enterprise Manager, then select *Dashboards* from the left panel.
 
 
 In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
@@ -74,7 +74,7 @@ To terminate a Dashboard, press the  {buttonSelect}  next to the Dashboard, and 
 * For an open Dashboard, btn:[Remove] deletes any cached data.
 
 == Queries
-Use the *Queries* Monitoring page  to access key information about queries currently executing on the server. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
+Use the *Queries* Monitoring page  to access key information about queries currently executing on the server. To access this page, press the {buttonMonitoring} at the top of Enterprise Manager, then select *Queries* from the left panel. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
 
 image::Monitoring Queries.png[alt="queries monitoring page with active query list"]
 
@@ -96,7 +96,7 @@ include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
 [WARNING,caption=See Also]
 xref:TailorServerPerformance.adoc[], for information on configuring caching.
 
-Use the *Cache* Monitoring page  to access key information for  the data cache. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
+Use the *Cache* Monitoring page  to access key information for  the data cache. To access this page, press the {buttonMonitoring} at the top of Enterprise Manager, then select *Cache* from the left panel. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
 
 image::Monitoring Cache.png[alt="cache monitoring page with data cache statistics"]
 
@@ -114,7 +114,7 @@ The page provides the following information:
 
 IMPORTANT: Requires the `monitor.level` property  to be set to ‘High’. See xref:AllProperties.adoc[].
 
-Use the *Users* Monitoring page  to access key information about user logins, and allows you to terminate a given user session. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
+Use the *Users* Monitoring page  to access key information about user logins, and allows you to terminate a given user session. To access this page, press the {buttonMonitoring} at the top of Enterprise Manager, then select *Users* from the left panel. In a clustered environment, select a machine from ‘Cluster Node’ menu to view the monitoring statistics for that machine.
 
 image::Monitoring Users.png[alt="users monitoring page with active session list"]
 
@@ -133,7 +133,7 @@ To terminate a user session, click the {buttonSelect} next to the desired user, 
 include::ROOT:partial$enterpriseOnly.adoc[]
 include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
 
-Use the *Cluster* Monitoring page  to view cluster nodes.
+Use the *Cluster* Monitoring page  to view cluster nodes. To access this page, press the {buttonMonitoring} at the top of Enterprise Manager, then select *Cluster* from the left panel.
 
 image::Monitoring Cluster.png[alt="cluster monitoring page showing cluster nodes"]
 
@@ -144,7 +144,7 @@ include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
 [WARNING,caption=See Also]
 xref:Logging.adoc[], for information on how to  configure logging behavior.
 
-Use the *Logs* Monitoring page  to view and download server and scheduler logs.
+Use the *Logs* Monitoring page  to view and download server and scheduler logs. To access this page, press the {buttonMonitoring} at the top of Enterprise Manager, then select *Logs* from the left panel.
 
 image::Figure 36.png[alt="logs monitoring page with log file viewer"]
 

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to join (SQL join, table join, merge tables) two or more data blocks horizontally in a Data Worksheet, defining equality or inequality join conditions to combine data from different tables, queries, or data models. Covers inner join, outer join, inequality join, cross join, and merge join, as well as editing joins (changing join type, reorder tables, add tables, hide duplicate columns). Joining is one of the techniques performed while mashing up data in a Data Worksheet — it is not an alternative to "mashup," which is the general term for the whole drag-and-drop worksheet workflow. See MashupData.adoc.
+Summary: How to join (SQL join, table join, merge tables) two or more data blocks horizontally in a Data Worksheet, defining equality or inequality join conditions to combine data from different tables, queries, or data models. Covers inner join, outer join, inequality join, cross join, and merge join, as well as editing joins (changing join type, reorder tables, add tables, hide duplicate columns). Joining is one of the techniques performed while mashing up data in a Data Worksheet — it is not an alternative to "mashup," which is the general term for the whole drag-and-drop worksheet workflow. See MashupData.adoc. This is the recommended, simpler approach — rather than xref:dashboard:AddFreehandTable.adoc[Freehand Table] — for a request like "a table where cells pull from different data sources plus a custom calculation," as long as the sources share a common row/key: join them here, add the calculation as a Calculated Field (see CreateNewDataField.adoc), and bind a regular Table or Crosstab to the joined result.
 endif::ai[]
 
 [WARNING,caption=see also]
@@ -13,7 +13,9 @@ xref:ConcatenateData.adoc[] to create a *vertical composition* of two or more da
 Joins allow you to combine data from different data blocks, which may represent different database tables, queries, or data models. A _joined data block_ is a *horizontal composition* of two or more data blocks with a specified relationship (equality or inequality) between the rows of the base data blocks. The following sections explain how to create and edit joins.
 
 == When to Use
-This approach may produce the most efficient queries when you need to combine data from different data sources.
+This approach may produce the most efficient queries when you need to combine data from different data sources, or when you are using a data model.
+
+TIP: To construct a dataset from a single data source, consider using xref:QueryData.adoc[] instead. To combine different tables in ways that are not described by formal joins (e.g., referencing arbitrary cells), use a Freehand Table (see xref:dashboard:AddFreehandTable.adoc[]).
 
 
 [id=InnerOuterInequalityJoin]
