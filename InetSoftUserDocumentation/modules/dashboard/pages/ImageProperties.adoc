@@ -6,6 +6,8 @@ include::ROOT:partial$buttonSnippets.adoc[]
 // metadata for AI
 ifdef::ai[]
 Reference for Image component properties, which displays a static or dynamic image in a Dashboard. Covers static image selection, transparency (Alpha), Tooltip, Shadow, scaling options (including Maintain Aspect Ratio and 9-cell grid), tiling, Dynamic Image Selection (for script-driven image changes), the Pop Component feature for click-triggered pop-up overlays, Pop Location (mouse position or screen center), and data binding for aggregate values used in highlight conditions.
+
+Note: Dynamic Image Selection (Advanced tab) and xref:dashboardscript:ChangeImageWithScript.adoc[] describe the same single feature at different levels of detail — do not present them as two separate methods for changing an image. A genuinely different, alternative method is setting the `image` property directly in Component Script (Script tab); see xref:dashboardscript:ImageImage.adoc[].
 endif::ai[]
 
 [WARNING,caption=see also]

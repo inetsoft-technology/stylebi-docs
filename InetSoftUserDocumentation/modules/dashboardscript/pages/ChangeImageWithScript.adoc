@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: You can dynamically set the image file (GIF, JPG, etc.) of an image component using a variable or an expression. Follow the steps below:
+Summary: This page details ONE feature — Dynamic Image Selection on the Image component's Advanced tab (Expression or Variable) — described at the reference level in xref:dashboard:ImageProperties.adoc[]. Both pages describe the same steps at different levels of detail; do not present them as two different ways to change an image. The genuinely distinct alternative is setting the scriptable `image` property directly in Component Script (Script tab), e.g. `Image1.image = 'file.gif';` — see xref:dashboardscript:ImageImage.adoc[].
 endif::ai[]
 
 include::dashboardscript:partial$scriptAccessDashboardData.adoc[]
