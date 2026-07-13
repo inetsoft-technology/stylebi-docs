@@ -15,7 +15,7 @@ Joins allow you to combine data from different data blocks, which may represent 
 == When to Use
 This approach may produce the most efficient queries when you need to combine data from different data sources, or when you are using a data model.
 
-TIP: To construct a dataset from a single data source, consider using xref:QueryData.adoc[] instead. To combine different tables in ways that are not described by formal joins (e.g., referencing arbitrary cells), use a Freehand Table (see xref:dashboard:AddFreehandTable.adoc[]).
+TIP: To construct a dataset from a single data source, consider using xref:QueryData.adoc[] instead. To combine different tables in ways that are not accomplished by formal joins (e.g., referencing arbitrary cells), use a Freehand Table (see xref:dashboard:AddFreehandTable.adoc[]).
 
 
 [id=InnerOuterInequalityJoin]

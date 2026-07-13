@@ -21,7 +21,7 @@ Multiple groupings that are NOT hierarchical::  For example, a Crosstab can disp
 
 Cells that compute formulas:: For example, a Crosstab can display row totals or column totals.  But if you want a column that compares values from  this Table to values in a *different* Table or other component, you will need to create a  formula cell that performs the desired  computation.  You can only do this in a Freehand Table.
 +
-NOTE: If you want to assemble data in a manner typical of a *join* (combining different tables by relating rows), you should do this in a Data Worksheet (see xref:dataworksheet:JoinData.adoc[]) rather than a Freehand Table. After you join the desired datasets, you can  add custom calculations as Expression Columns in the Data Worksheet or  Calculated Fields in the Dashboard (see xref:dataworksheet:CreateNewDataField.adoc[]) and display the result in a regular Table or Crosstab.
+NOTE: If you want to assemble data in a manner typical of a *join* (combining different tables by relating rows), you should do this in a Data Worksheet (see xref:dataworksheet:JoinData.adoc[]) rather than a Freehand Table. After you join the desired datasets, you can  add custom calculations by using  Expression Columns in the Data Worksheet or  Calculated Fields in the Dashboard (see xref:dataworksheet:CreateNewDataField.adoc[]), and then display the result in a regular Table or Crosstab.
 
 
 Because Freehand Tables  are usually very similar to Crosstab Tables, it is easiest to create a Crosstab Table that is as "`close as possible`" to your desired result, and then *convert* the Crosstab to a Freehand Table, and  make the final adjustments.  See xref:#ConvertToFreehandTable[] for instructions on how to do this.
