@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to apply display format patterns (date, number, currency, text, percent, duration) to values in Dashboard components. Formatting controls how data is presented without changing the underlying values. Duration format displays elapsed time using placeholder codes (H, m, s, d, etc.) with an optional 'Pad with Zeros' setting. Accessed via the Format panel in Visual Composer. Not to be confused with: VisualFormat.adoc (static visual appearance — colors, fonts, borders) or ConditionalFormat.adoc (conditional highlighting based on data values).
+How to apply display format patterns (date, number, currency, text, percent, duration) to values in Dashboard components. Formatting controls how data is presented without changing the underlying values. Number format supports a "K"/"M"/"B" suffix to display large values in thousands/millions/billions (e.g., 10000 as "10K"). Duration format displays elapsed time using placeholder codes (H, m, s, d, etc.) with an optional 'Pad with Zeros' setting. This is accessed via the *same* Format panel in Visual Composer used for visual settings (see VisualFormat.adoc) — it is the "Format" section of that panel, not a separate panel or location. As with Font/Color/Alignment, click a specific region (e.g., a Chart's axis or axis labels) before applying a data format, to apply the format only to that region rather than the whole component. Not to be confused with: VisualFormat.adoc (static visual appearance — colors, fonts, borders) or ConditionalFormat.adoc (conditional highlighting based on data values).
 endif::ai[]
 
 [.videotitle]
@@ -17,13 +17,38 @@ include::ROOT:partial$videoVersion.adoc[]
 video::359874333#chapter=16573664[vimeo,640,400]
 =====
 
-The ‘Format’ setting allows you to specify a data format. Formatting is available for the following data types: Date, Number, Currency, Text, Percent.  (To open the *Format* panel, see xref:VisualFormat.adoc[].)
+
+The *Format* panel provides a ‘Format’ setting that allows you to specify a data format. Formatting is available for the following data types:
+
+[square]
+* xref:#DateFormat[]
+* xref:#NumberFormat[]
+* xref:#CurrencyFormat[]
+* xref:#TextFormat[]
+* xref:#PercentFormat[]
+* xref:#DurationFormat[]
+
+A *data format* is a method for representing data as a string (for display purposes). For example, the date December 31, 2008 might be displayed as “12/31/08” or “Dec. 31, 2008” or simply “2008,” depending on the  format specified. Likewise, the number 123456 might be displayed as “123,456” or “123456.00” or “00123456,” depending on the  format specified.
+
+
+To format a component, click on a component to select it, and select the *Format* tab  in the left panel. {rightClickFormat}
+
+image::textComponentAggregateExp2.png[alt="select component and open format tab"]
+
+Certain components have multiple regions that can be selected and formatted independently. See xref:administration:CSSDashboardRegions.adoc[] for a list of regions that can be independently formatted.
+
+* To format a *particular region* of a component, click on the desired region.
+* To format the *whole component*, first make sure the component is entirely _deselected_. (Click away from the component.) Then click the component once to select the entire component.
+
+After you have selected the desired component or component region, proceed to adjust the  ‘Format’ setting in the *Format* panel, as described in the sections below.
+
 
 image::Table format_3.png[alt="format panel with data format options"]
 
-A data format is a method for representing data as a string (for display purposes). For example, the date December 31, 2008 might be displayed as “12/31/08” or “Dec. 31, 2008” or simply “2008,” depending on the  format specified. Likewise, the number 123456 might be displayed as “123,456” or “123456.00” or “00123456,” depending on the  format specified.
 
-The following sections explain the available formats.
+NOTE: You can use the  same *Format* panel to  make visual settings such as Font and Color (see xref:VisualFormat.adoc[]).
+
+
 
 [#DateFormat]
 == Date Format
@@ -102,12 +127,13 @@ You can insert other text into the format string, for example: `pass:[Total is $
 
 
 
-
+[#CurrencyFormat]
 == Currency Format
 The ‘Currency’ format represents the number as a currency rounded to two decimal places. For example, the number 25.867 displays as `$25.87`. Use the {buttonIncreaseDecimal} and {buttonDecreaseDecimal} in the panel to change the number of decimals displayed.
 
 IMPORTANT: The *currency symbol* ($, £, €, ¥, etc.)  is automatically determined by the user *locale* upon login. If the user has no assigned locale, the locale settings of the operating system are used. To apply a fixed currency symbol for all locales, use the xref:#NumberFormat[]  option with a recognized currency symbol, e.g., `pass:[$#,###.##]`.
 
+[#TextFormat]
 == Text Format
 Use ‘Text’ format to add a prefix or suffix to string data. The special tag `pass:[{0}]` acts as a placeholder for the actual data. Use the escape sequence `\n` to insert a carriage return in the text.
 
@@ -146,7 +172,8 @@ The text format `pass:[“-{0}-”]` will display these values as follows:
  -AZ-
 ====
 
-==  Percent Format
+[#PercentFormat]
+== Percent Format
 The ‘Percent’ format displays a number as a percent. For example, percent format displays the number 0.15  as `15%.` To gain more precision over how the value is displayed, use a xref:#NumberFormat[] together with a `%` symbol.
 
 [#DurationFormat]

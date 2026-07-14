@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Add Visual Format explains how to use the Format panel in Visual Composer to control the visual appearance of Dashboard components without scripting. Topics covered include setting font (face, style, size), foreground and background color, alignment, borders, wrap text, graphical presenters (also called cell renderers, in-cell bars, or data bars), and CSS classes/IDs. For Charts, color and font can be applied chart-wide (affecting all text including axis labels, axis titles, legends, and plot labels) or to individual regions independently by clicking a specific region before formatting. Not to be confused with: DataFormat.adoc (number/date/percent display patterns such as currency symbols and date strings) or ConditionalFormat.adoc (rule-based highlighting that changes appearance based on data values).
+Summary: Add Visual Format explains how to use the Format panel in Visual Composer to control the visual appearance of Dashboard components without scripting. Topics covered include setting font (face, style, size), foreground and background color, alignment, borders, wrap text, graphical presenters (also called cell renderers, in-cell bars, or data bars), and CSS classes/IDs. For Charts, color and font can be applied chart-wide (affecting all text including axis labels, axis titles, legends, and plot labels) or to individual regions independently by clicking a specific region before formatting. DataFormat.adoc (number/date/percent display patterns such as currency symbols, date strings, and the "K"/"M"/"B" thousands/millions/billions suffix) is reached via this *same* Format panel, not a separate panel or location — it covers the value-display-pattern settings rather than the visual-appearance settings covered here. Not to be confused with: ConditionalFormat.adoc (rule-based highlighting that changes appearance based on data values).
 endif::ai[]
 
 [WARNING,caption=see also]
@@ -20,7 +20,7 @@ image::textComponentAggregateExp2.png[alt="select component and open format tab"
 
 
 
-Certain components have multiple regions that can be selected and formatted independently. See xref:#FormatDataWithCSS[] below for a list of regions that can be independently formatted.
+Certain components have multiple regions that can be selected and formatted independently. See xref:administration:CSSDashboardRegions.adoc[] for a list of regions that can be independently formatted.
 
 * To format a *particular region* of a component, click on the desired region.
 * To format the *whole component*, first make sure the component is entirely _deselected_. (Click away from the component.) Then click the component once to select the entire component.
