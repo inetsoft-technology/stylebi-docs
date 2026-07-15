@@ -104,11 +104,13 @@ Corner Radius:: A value between 0 and 0.5 that controls the rounding of bar corn
 Round All Corners:: When enabled, rounds all four corners of each bar equally using the '`Corner Radius`' value. When disabled (default), only the open (value) end of each bar is rounded.
 
 === Plot Options (Network/Tree Chart)
-The following plot option is  available for xref:dashboard:NetworkChart.adoc[], xref:CircularNetworkChart.adoc[] and xref:TreeChart.adoc[] types.
+The following plot options are  available for xref:dashboard:NetworkChart.adoc[], xref:CircularNetworkChart.adoc[] and xref:TreeChart.adoc[] types.
 
 Apply Aesthetics to Source Nodes:: Specifies that node ‘Color’ and ‘Size’ determined by ‘Target’ value should also be applied to source nodes that are not also target nodes.
 
 Smooth Lines:: For xref:CircularNetworkChart.adoc[] only, when enabled (default), draws chart edges as smooth Bézier curves instead of straight lines.
+
+Layout Direction:: For xref:TreeChart.adoc[] only, sets the direction in which the tree layout grows: ‘Top to Bottom’ (default), ‘Bottom to Top’, ‘Left to Right’, or ‘Right to Left’.
 
 
 === Plot Options (Circle Packing/ Treemap)

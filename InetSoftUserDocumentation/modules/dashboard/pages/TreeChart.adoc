@@ -34,6 +34,8 @@ include::partial$createChartIntro.adoc[]
 . Press the {buttonSelectChartStyle}. Choose the ‘Tree’  style.  Press the {buttonApply}.
 +
 image::commonscript:treeChartVS1.png[alt="select tree chart style"]
++
+By default, the tree grows from top to bottom. To change this, set ‘Layout Direction’ (Top to Bottom, Bottom to Top, Left to Right, or Right to Left) in the ‘Chart Properties’ dialog box. See xref:ChartProperties.adoc[] for more information.
 
 . From the ‘Dimensions’ folder of the *Data Source* panel, drag the desired *parent dimension* to the ‘Source’ region.
 +
