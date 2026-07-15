@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Reference for Chart Legend properties (also called chart legend color, legend position, or legend settings), accessed via right-click on the legend. Covers the General tab (position, legend border style/color, title text, title visibility, ignore null, and symbol size), Scale tab (logarithmic scale, reverse orientation, and include zero for measure/numerical legends), Alias tab (rename labels for dimension/categorical legends), and Legend Order (default data order, and how to sort legend items by setting the sort order on the bound dimension field — ascending, descending, by value, or manual). Also explains how to hide and show legends.
+Reference for Chart Legend properties (also called chart legend color, legend position, or legend settings), accessed via right-click on the legend. Covers the General tab (position, legend border style/color, round corner, title text, title visibility, ignore null, and symbol size), Scale tab (logarithmic scale, reverse orientation, and include zero for measure/numerical legends), Alias tab (rename labels for dimension/categorical legends), and Legend Order (default data order, and how to sort legend items by setting the sort order on the bound dimension field — ascending, descending, by value, or manual). Also explains how to hide and show legends. Round Corner: displays the legend border/background with rounded (10px radius) corners instead of square corners; enabled by default for newly created charts, disabled by default for charts that existed before this option was introduced.
 endif::ai[]
 
 [WARNING,caption=see also]
@@ -29,6 +29,7 @@ image::Chart Legend Format Dialog.png[alt="legend properties panel"]
 Title:: The text to display in the legend title bar.
 Visible:: Sets the visibility of the legend title bar.
 Legend Border:: The line style and color of the legend boundary.
+Round Corner:: Displays  legend border and background with rounded corners instead of square corners. Enabled by default.
 Legend Position:: Sets the position of the legend on the plot. Legend position can also be changed by dragging with the mouse.
 Ignore Null:: Ignore null values when generating the legend.
 Symbol Size:: The size (in pixels) of symbols displayed in the legend (color swatches, shapes, textures, size bars, and line indicators). Valid range is 6–50. Default is 12.
