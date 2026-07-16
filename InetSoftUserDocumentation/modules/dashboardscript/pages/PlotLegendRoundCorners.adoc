@@ -1,0 +1,34 @@
+= legendRoundCorners
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Set to `true` to display the legend border and background with rounded corners instead of square corners.
+endif::ai[]
+
+
+Set to `true` to display the legend border and background with rounded corners instead of square corners.
+
+== Type
+Boolean:: `true`: 10px radius rounded corners (default) +
+`false`: square corners
+
+== Example
+[source,javascript]
+Chart1.legendRoundCorners = false;
+
+image::commonscript:legendRoundCorners.png[alt="chart legend with rounded corners"]
+
+
+
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+legendRoundCorners          // unqualified
+Chart1.legendRoundCorners   // qualified
+
+{secondForm}
+====
