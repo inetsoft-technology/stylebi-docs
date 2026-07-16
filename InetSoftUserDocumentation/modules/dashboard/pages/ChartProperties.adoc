@@ -112,6 +112,8 @@ Smooth Lines:: For xref:CircularNetworkChart.adoc[] only, when enabled (default)
 
 Layout Direction:: For xref:TreeChart.adoc[] only, sets the direction in which the tree layout grows: ‘Top to Bottom’ (default), ‘Bottom to Top’, ‘Left to Right’, or ‘Right to Left’.
 
+Node Corner Radius:: For xref:TreeChart.adoc[] only, a value between 0 and 0.5 that controls the rounding of node corners. A value of `0` produces square corners; `0.5` produces the maximum rounding. Default is 0.3.
+
 
 === Plot Options (Circle Packing/ Treemap)
 The following plot option is  available for xref:dashboard:CirclePackingChart.adoc[] and xref:TreeChart.adoc[] types.

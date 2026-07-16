@@ -1,0 +1,31 @@
+= nodeCornerRadius
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the corner radius for nodes on a xref:dashboard:TreeChart.adoc[]. A value of `0` produces square corners; `0.5` produces the maximum rounding. Only available for Tree charts. Default is `0.3` for newly created charts; charts created before this property was introduced default to `0` (square corners).
+endif::ai[]
+
+Sets the corner radius for nodes on a xref:dashboard:TreeChart.adoc[]. A value of `0` produces square corners; `0.5` produces the maximum rounding. Default is `0.3`.
+
+== Type
+Number:: A value between `0` (square) and `0.5` (maximum rounding)
+
+== Example
+[source,javascript]
+Chart1.nodeCornerRadius = 0.5;
+
+// TODO: placeholder image copied from PlotBarCornerRadius.adoc (bar chart, not tree chart) -
+// replace with an actual screenshot of a Tree chart with rounded node corners.
+image::commonscript:barCornerRadius.png[alt="placeholder - replace with tree chart rounded node corners screenshot"]
+
+[TIP]
+====
+Either syntax below can be used in xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+nodeCornerRadius          // unqualified
+Chart1.nodeCornerRadius   // qualified
+
+{secondForm}
+====
