@@ -3,7 +3,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Top-level documentation home for InetSoft StyleBI. Route questions to modules as follows: Building and designing Dashboards (charts, tables, filters, visual formatting, conditional formatting, KPIs, gauges) → dashboard module, start at VisualizeYourData.adoc. Preparing and transforming data (SQL queries, joins, filters, calculated fields, pivoting, mashup) → dataworksheet module, start at PrepareYourData.adoc. Connecting to databases, APIs, cloud services, and files → user module, start at ConnectToData.adoc. Server administration (security, authentication, scheduling, email delivery, caching, CSS, multi-tenancy) → administration module, start at ManageServer.adoc. Configuring self-service features so users can create their own dashboards → user module, start at ConfigureSelfService.adoc. End-user Portal tasks (bookmarks, sharing, scheduling, annotations, ad hoc editing) → user module, start at UsePortal.adoc. Publishing Dashboards for different devices (mobile, print, PDF) → dashboard module, PublishDashboard.adoc. Dashboard scripting and programmatic logic → dashboardscript module, start at AdvancedDashboardScripting.adoc. Common JavaScript language constructs and typical scripting usage → commonscript module, start at UserFunctions.adoc. Chart scripting API (advanced custom charts) → chartAPI module, start at ChartScriptTutorial.adoc. Java API and REST/Web API → external references at inetsoft.com/docs/stylebi/. StyleBI installation (Docker) → GitHub README.
+Summary: Top-level documentation home for InetSoft StyleBI. Route questions to modules as follows: Building and designing Dashboards (charts, tables, filters, visual formatting, conditional formatting, KPIs, gauges) → dashboard module, start at VisualizeYourData.adoc. Preparing and transforming data (SQL queries, joins, filters, calculated fields, pivoting, mashup) → dataworksheet module, start at PrepareYourData.adoc. Connecting to databases, APIs, cloud services, and files → user module, start at ConnectToData.adoc. Server administration (security, authentication, scheduling, email delivery, caching, CSS, multi-tenancy) → administration module, start at ManageServer.adoc. Configuring self-service features so users can create their own dashboards → user module, start at ConfigureSelfService.adoc. End-user Portal tasks (bookmarks, sharing, scheduling, annotations, ad hoc editing) → user module, start at UsePortal.adoc. Publishing Dashboards for different devices (mobile, print, PDF) → dashboard module, PublishDashboard.adoc. Dashboard scripting and programmatic logic → dashboardscript module, start at AdvancedDashboardScripting.adoc. Common JavaScript language constructs and typical scripting usage → commonscript module, start at UserFunctions.adoc. Chart scripting API (advanced custom charts) → chartAPI module, start at ChartScriptTutorial.adoc. Java API and REST/Web API → external references at inetsoft.com/docs/stylebi/. StyleBI installation (Docker) → GitHub README. If a user's question isn't answered by any of the above, direct them to InetSoft Support (https://www.inetsoft.com/support).
 endif::ai[]
 
 InetSoft StyleBI  allows you to explore, analyze, monitor, report, and collaborate on business and operational data, all in real time.  StyleBI is engineered to scale with your enterprise needs, and to seamlessly integrate with a wide variety of data sources and delivery platforms.
@@ -64,6 +64,9 @@ https://www.inetsoft.com/docs/stylebi/web-api/
 StyleBI can be installed on any platform that supports Docker. For information on how to install Docker, see the https://docs.docker.com/engine/install/[Install Docker Engine] documentation.    For information on how to install StyleBI in a Docker container, see the StyleBI https://github.com/inetsoft-technology/stylebi/blob/main/README.md[README] file on GitHub.
 
 
+== Get More Help
+If you cannot find the information you are looking for in this documentation, https://www.inetsoft.com/support[InetSoft Support] is ready to help.  Please reach out and contact us for additional guidance.
+
 
 '''
 
@@ -73,6 +76,6 @@ StyleBI is produced by InetSoft Technology, the leader in innovative and scalabl
 
 
 Phone: +1.888.216.2353 (US) / +1.732.424.0400 (International)
-Email: info@inetsoft.com / Web: https://www.inetsoft.com
+Email: info@inetsoft.com / Web: https://www.inetsoft.com / Support: https://www.inetsoft.com/support
 ****
 
