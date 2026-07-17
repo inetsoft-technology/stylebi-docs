@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to add tooltips and data tips (also called chart tooltips, data tooltips, or hover labels) to a Chart or Crosstab in Visual Composer. Data tips display a Dashboard component (such as a Chart, Gauge, or Text) filtered to the hovered chart region; the data tip can be triggered on hover or on click only (via the 'On Click Only' option). Custom tooltips use HTML markup and Java MessageFormat patterns to display user-defined text when hovering over a data point; they apply to Chart, Text, Gauge, and Image components. Custom tooltips support field name or index references, conditional lines (using pipe symbols) for multi-measure charts, and a "None" option to hide tooltips entirely. For Chart components only, a 'Tooltip Style' option (Default or Card) sets the tooltip's visual style: 'Default' is the standard flat label:value tooltip, and 'Card' is a rounded panel with hierarchical text (large measure value, medium dimensions, small aesthetics); 'Card' is the default for newly created charts. Both features are available to end users at view time. See also AddAnnotation for persistent chart annotations.
+How to add tooltips and data tips (also called chart tooltips, data tooltips, or hover labels) to a Chart or Crosstab in Visual Composer. Data tips display a Dashboard component (such as a Chart, Gauge, or Text) filtered to the hovered chart region; the data tip can be triggered on hover or on click only (via the 'On Click Only' option). Custom tooltips use HTML markup and Java MessageFormat patterns to display user-defined text when hovering over a data point; they apply to Chart, Text, Gauge, and Image components. Custom tooltips support field name or index references, conditional lines (using pipe symbols) for multi-measure charts, and a "None" option to hide tooltips entirely. For Chart components only, a 'Tooltip Style' option (Default or Card) sets the tooltip's visual style: 'Default' is the standard flat label:value tooltip, and 'Card' is a rounded panel with hierarchical text (large measure value, medium dimensions, small aesthetics); 'Card' is the default for newly created charts. For Line, Area, and Bar charts, 'Combine tooltips from different series' merges all series into a single tooltip, and 'Snap to nearest data point' (available when a dimension is on the X axis) locks the cursor/tooltip to the nearest X-axis tick mark instead of following the mouse position exactly. Both features are available to end users at view time. See also AddAnnotation for persistent chart annotations.
 endif::ai[]
 
 include::dashboard:partial$availableToEndUsers.adoc[]
@@ -142,7 +142,9 @@ To create a custom tooltip, follow the steps below:
 
 . To hide the tooltip entirely, select the ‘None’ option.
 
-. For a Line or Area type chart, select ‘Combine tooltips from different lines’ to display a single tooltip with details from all lines. (The amount of data displayed will be limited by available space in the tooltip.) Otherwise, the tooltip displays details only for the line to which the user points.
+. For a Line, Area, or Bar type chart, select ‘Combine tooltips from different series’ to display a single tooltip with details from all series (e.g., all lines, or all segments of a stacked bar). The amount of data displayed will be limited by available space in the tooltip. When not selected, the tooltip displays details only for the series to which the user points.
+
+. For a Line, Area, or Bar type chart that has a dimension on the X axis, select ‘Snap to nearest data point’ to lock the cursor and tooltip to the nearest X-axis tick mark instead of following the mouse position exactly.
 
 . For a Chart component, choose a ‘Tooltip Style’: ‘Default’ displays the standard flat label-value tooltip; ‘Card’ displays a rounded panel with centered, hierarchical text (the measure value shown largest, dimensions medium, and aesthetics smallest).
 

@@ -1,0 +1,33 @@
+= snapTooltip
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: For a single-style xref:dashboard:LineChart.adoc[], xref:dashboard:AreaChart.adoc[], or xref:dashboard:BarChart.adoc[] (including stacked bar) with a dimension on the X axis, when set to `true`, locks the cursor and tooltip to the nearest X-axis tick mark instead of following the mouse position exactly. When `false` (default), the tooltip follows the mouse position.
+endif::ai[]
+
+
+For a xref:dashboard:LineChart.adoc[], xref:dashboard:AreaChart.adoc[], or xref:dashboard:BarChart.adoc[] (including stacked bar) with a dimension on the X-axis, when set to `true`, locks the cursor and tooltip to the nearest X-axis tick mark  instead of following the mouse position exactly. When `false` (default), the tooltip follows the mouse position.
+
+NOTE: Only available for single-style Charts with  dimension on the X-axis.
+
+== Type
+Boolean:: `true`: snap to nearest tick +
+`false`: follow mouse position (default)
+
+== Example
+[source,javascript]
+Chart1.snapTooltip = true;
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+snapTooltip         // unqualified
+Chart1.snapTooltip  // qualified
+
+{secondForm}
+====
+
