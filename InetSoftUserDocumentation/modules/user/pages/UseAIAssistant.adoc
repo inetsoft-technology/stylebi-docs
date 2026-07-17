@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to use the AI Assistant to ask natural-language questions about StyleBI features and documentation. Covers opening the Assistant from the Portal or Visual Composer toolbar, typing questions, selecting reasoning effort ('Think' or 'DeepThink'), sending questions, and managing chat history with New Chat and Clear All buttons. Also describes panel controls: toggling between side and bottom dock modes, collapsing/expanding the panel, and closing it. Notes that if the Assistant button is not visible, the user should consult their administrator.
+How to use the AI Assistant to ask natural-language questions about StyleBI features and documentation. Covers opening the Assistant from the Portal or Visual Composer toolbar, typing questions, selecting reasoning effort ('Think' or 'DeepThink'), sending questions, and managing chat history with New Chat and Clear All buttons. Also describes panel controls: toggling between side and bottom dock modes, collapsing/expanding the panel, and closing it. Notes that if the Assistant button is not visible, the user should consult their administrator. Also notes that the Assistant does not perform actions on the user's behalf (e.g., cannot change Dashboard settings or values) and has no visibility into what the user is currently viewing or working on outside of the chat.
 endif::ai[]
 
 
@@ -14,6 +14,8 @@ The AI Assistant allows you to ask questions about any aspect of  StyleBI. The A
 * "`How do I create a bar chart?`"
 * "`I need to extract the year part of a date.  How can I do that?`"
 * "`My Worksheet data is being limited.  What is causing that?`"
+
+Please note that the AI Assistant answers questions and provides guidance, but it *does not perform actions* on your behalf. For example, it cannot change settings or values within a Dashboard for you.  The Assistant also cannot see what you are doing *outside the chat*, so please be sure to describe what you're working on whenever you ask the Assistant for help.
 
 == Open the Assistant
 To use the AI Assistant, follow the steps below:
