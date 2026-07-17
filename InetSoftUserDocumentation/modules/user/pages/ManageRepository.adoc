@@ -4,10 +4,14 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to manage assets (folders, Dashboards) in the Portal Repository, including creating folders, renaming, moving, and deleting assets, marking assets as Favorites, and materializing a Dashboard to improve performance.
+How to manage assets (folders, Dashboards) in the Portal Repository, including searching or filtering the Repository listing, creating folders, renaming, moving, and deleting assets, marking assets as Favorites, and materializing a Dashboard to improve performance.
 endif::ai[]
 
 The following sections explain how to manage your assets under the {buttonRepository} of the Portal.
+
+== Search the Repository
+
+To filter the Repository listing, enter  a Dashboard or Folder name (or partial name) in the ‘Search’ box above the Repository, and press the {buttonSearch}.  To limit the result to only favorites, toggle the {buttonFavorites}. (See xref:#FavoriteAsset[] below.) Press the {buttonClearSearchX} to clear the search text.
 
 == Create a New Folder
 To create a new folder in the Repository, follow the steps below:
@@ -58,6 +62,7 @@ To rename a Dashboard, or folder, follow the steps below:
 
 . Type the new name, and press kbd:[Enter] on the keyboard or simply click somewhere else.
 
+[#FavoriteAsset]
 == Make an Asset  '`Favorite`'
 
 To mark an asset as a ‘favorite’, follow the steps below:
