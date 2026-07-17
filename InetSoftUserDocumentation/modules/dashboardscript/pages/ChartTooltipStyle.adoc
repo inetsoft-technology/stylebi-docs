@@ -1,0 +1,31 @@
+= tooltipStyle
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the visual style of the Chart's tooltip. `"CARD"` displays a rounded panel with centered, hierarchical text (large measure value, medium dimensions, small aesthetics); `"DEFAULT"` displays the legacy flat label:value tooltip.
+endif::ai[]
+
+
+Sets the visual style of the Chart's tooltip. `"CARD"` displays a rounded panel with centered, hierarchical text. `"DEFAULT"` displays a flat label-value tooltip.
+
+== Type
+String:: `"DEFAULT"`: flat label:value tooltip +
+`"CARD"`: rounded card-style tooltip
+
+== Example
+[source,javascript]
+Chart1.tooltipStyle = "CARD";
+
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+tooltipStyle         // unqualified
+Chart1.tooltipStyle  // qualified
+
+{secondForm}
+====
+
