@@ -27,8 +27,6 @@ An *expression column* is a data set column that you define using either JavaScr
 To add an expression column to a data block, follow the steps below:
 
 
-
-
 . Create the data block to which you want to add an expression column. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
 
 . Click the data block to select it.
@@ -124,7 +122,7 @@ In general, SQL expressions perform better than JavaScript expressions because S
 * xref:DetailLevelCalculation[]
 * xref:AggeregateLevelCalculation[]
 +
-. Press btn:[OK] to close the Formula Editor. This adds the new calculated field to the data source at the top of the *Toobox* panel.
+. Press btn:[OK] to close the Formula Editor. This adds the new calculated field to the data source at the top of the *Toolbox* panel.
 +
 image::dashboard:NewCalculatedField4.png[alt="new calculated field added to data source in Toolbox panel"]
 
@@ -135,13 +133,32 @@ NOTE: You cannot bind an aggregate-based calculated field to Filter components.
 
 [id=DetailLevelCalculation]
 == Detail-Level Calculation
-See xref:CreateCalcField[] to open the ‘Edit Calculated Field’ dialog box, and select the ‘Detail’ option. The available detail fields are listed in the top-left panel. Click on an available field in the panel to add it to the expression.
+To create a detail-level calculation, follow the steps below.
 
+. In the *Toolbox* panel, right-click on the data block or data model  to which you want to add the calculated field. Select ‘New Calculated Field’ from the context menu.
++
+image::dashboard:NewCalculatedField1.png[alt="right-click data block in Toolbox and select New Calculated Field"]
++
+This opens the ‘Calculated Field’ panel.
++
+. In the ‘Name’ field, enter a name for the new calculated field. (See xref:#CreateCalcField[] above for full details about naming.)
+
+. Select the ‘Detail’ option.
+
+. Enter  the desired expression. The available detail fields are listed in the top-left panel. Click on an available field in the panel to add it to the expression. See xref:#ExcelStyleFunctions[] below for common operators in detail calculations.
++
 image::dashboard:NewCalculatedField3.png[alt="Edit Calculated Field dialog showing detail fields available for expression"]
++
+NOTE:  *Date*-type fields supply the following date parts: Year, QuarterOfYear, MonthOfYear,             DayOfMonth, and DayOfWeek. *Time*-type fields supply the following date parts: HourOfDay, MinuteOfHour,            SecondOfMinute. *TimeInstant*-type fields supply all the previous date parts.
 
-NOTE:  *Date*-type fields supply the following date parts: Year, QuarterOfYear, MonthOfYear,             DayOfMonth, and DayOfWeek. *Time*-type fields supply the following date parts: HourOfDay, MinuteOfHour,            SecondOfMinute. *TimeInstant*-type fields supply all of the previous date parts.
+. Press btn:[OK] to close the Formula Editor. This adds the new calculated field to the data source at the top of the *Toolbox* panel.
+
+
+[#ExcelStyleFunctions]
+=== Excel-Style Functions
 
 Many expressions are similar to formulas that you might use in Microsoft Excel^®^. Some common examples are shown below.
+
 
 include::ROOT:partial$ExcelScalarFormulas.adoc[]
 
@@ -157,40 +174,51 @@ sum('Sales Amount')/count('Order Number')
 
 When you bind this ‘Average Sales Amount’ field to a Gauge that summarizes the whole dataset, it will present the average sales amount for all orders. On the other hand, when you use this ‘Average Sales Amount’ field as the measure for a Chart that has a ‘Product’ dimension, the Chart will display the average sales amount for each product.
 ****
-See xref:CreateCalcField[] to open the ‘Edit Calculated Field’ dialog box, and select the ‘Aggregate’ option.  The Formula Editor may already contain the desired aggregate fields in the top-left panel. Click on an available field in the panel to add it to the expression.
+The Formula Editor may already contain the desired aggregate fields in the top-left panel. Click on an available field in the panel to add it to the expression.
 
-To add a new aggregate to the list, follow the steps below:
+To create an aggregate-level calculation, follow the steps below.
 
-. Press the ‘New Aggregate’ link in the top-left panel.
+. In the *Toolbox* panel, right-click on the data block or data model  to which you want to add the calculated field. Select ‘New Calculated Field’ from the context menu.
++
+image::dashboard:NewCalculatedField1.png[alt="right-click data block in Toolbox and select New Calculated Field"]
++
+This opens the ‘Calculated Field’ panel.
++
+. In the ‘Name’ field, enter a name for the new calculated field. (See xref:#CreateCalcField[] above for full details about naming.)
+
+. Select the ‘Aggregate’ option.  If  the Dashboard already contains aggregating components such as Charts or Crosstabs, you may see predefined aggregates already available in the left panel.
+
+. To add a new aggregate to the list, follow the steps below:
+
+.. Press the ‘New Aggregate’ link in the top-left panel. This opens the ‘Aggregate’ dialog box.
 +
 image::dashboard:CalcFieldExample8.png[alt="press New Aggregate link to add a new aggregate to the list"]
-+
-This opens the ‘Aggregate’ dialog box.
-+
-. In the ‘Field’ menu of the ‘Aggregate’ dialog box, select the field that you wish to aggregate for purposes of the calculation.
+
+.. In the ‘Field’ menu of the ‘Aggregate’ dialog box, select the field that you wish to aggregate for purposes of the calculation.
 +
 image::dashboard:CalcFieldExample9.png[alt="select field to aggregate in the Aggregate dialog box"]
 +
-. In the ‘Aggregate’ menu, select the desired aggregation method.
+.. In the ‘Aggregate’ menu, select the desired aggregation method.
 +
 .Read about the available aggregation methods...
 [%collapsible]
 ====
 include::ROOT:partial$AggregationMethods.adoc[]
 ====
-. For a bivariate aggregation method, select the second field from the ‘With’ menu.
-. Press btn:[OK] to close the ‘Aggregate’ dialog box. The Formula Editor now displays the newly defined aggregate quantity in the top-left panel.
+.. For a bivariate aggregation method, select the second field from the ‘With’ menu.
+.. Press btn:[OK] to close the ‘Aggregate’ dialog box. The Formula Editor now displays the newly defined aggregate quantity in the top-left panel.
 +
 image::dashboard:CalcFieldExample10.png[alt="newly defined aggregate appears in the top-left panel of Formula Editor"]
 +
 . *_Optional:_*  Press the ‘New Aggregate’ button again, and repeat the above steps to add as many additional aggregates as desired. To *delete* an aggregate from the list, press the {buttonActions} to the right of the aggregate, and select '`Delete Column(s)`'.
 
-. Once you have defined the required aggregates in the top-left panel, enter the desired calculation (using the aggregate fields) in the formula field at the bottom of the dialog box.
+. Once you have defined the required aggregates in the top-left panel (or have the predefined aggregates that you want), enter the desired calculation (using the aggregate fields) in the formula field at the bottom of the dialog box.
 +
 NOTE: Click an aggregate field in the top-left panel to add it to the expression.
 +
 image::dashboard:CalcFieldExample11.png[alt="enter calculation using aggregate fields in the formula area"]
 
+. Press btn:[OK] to close the Formula Editor. This adds the new calculated field to the data source at the top of the *Toolbox* panel.
 
 
 .Explore More...
