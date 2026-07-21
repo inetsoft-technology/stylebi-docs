@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-URL syntax reference for accessing StyleBI components from external web applications. Topics covered: displaying the User Portal, individual portal tabs (Repository, Dashboard, Schedule, custom tabs), Dashboards (public and private, both standalone and within Portal tabs), Portal Dashboards deployed to the Dashboard tab, exporting Dashboards (PDF, Excel, PowerPoint, PNG, HTML, CSV, VSO formats), passing parameters to Dashboards via URL, displaying interactive charts (via IFrame or the inetsoft-chart web component including shadow DOM), displaying static charts as PNG or SVG images, opening Visual Composer, displaying Portal Preferences, and pinging the server. Also covers IFrame embedding details: cross-page communication via MessageEvent, adapting IFrame size to browser size, and controlling Dashboard toolbar buttons from the parent page via postMessage. Open Graph tag behavior for Dashboard titles and descriptions is also noted.
+URL syntax reference for accessing StyleBI components from external web applications. Topics covered: displaying the User Portal, individual portal tabs (Repository, Dashboard, Schedule, custom tabs), Dashboards (public and private, both standalone and within Portal tabs), Pinboards deployed to the Dashboard tab, exporting Dashboards (PDF, Excel, PowerPoint, PNG, HTML, CSV, VSO formats), passing parameters to Dashboards via URL, displaying interactive charts (via IFrame or the inetsoft-chart web component including shadow DOM), displaying static charts as PNG or SVG images, opening Visual Composer, displaying Portal Preferences, and pinging the server. Also covers IFrame embedding details: cross-page communication via MessageEvent, adapting IFrame size to browser size, and controlling Dashboard toolbar buttons from the parent page via postMessage. Open Graph tag behavior for Dashboard titles and descriptions is also noted.
 endif::ai[]
 
 The following sections show you how to display User Portal components via URL. (HTTP requests can be submitted with both the GET and POST methods.) To embed User Portal components into your web application, use the supplied URLs with an *IFrame*.
@@ -47,7 +47,7 @@ TIP: For information on how to create a custom tab, see xref:administration:Pres
 [WARNING,caption=see also]
 ====
 * xref:#PassParameterstoDashboard[] for information on how to pass parameters to the Dashboard.
-* xref:#DisplayPortalDashboard[] to display a Dashboard that has been deployed as a Portal Dashboard.
+* xref:#DisplayPinboard[] to display a Dashboard that has been deployed as a Pinboard.
 ====
 
 The following sections explain how to display a Dashboard by URL, and within an IFrame.
@@ -236,11 +236,11 @@ include::partial$noMyReports.adoc[]
 
 include::partial$copyLink.adoc[]
 
-[#DisplayPortalDashboard]
-== Display a Portal Dashboard
+[#DisplayPinboard]
+== Display a Pinboard
 
 
-The *Dashboard* tab of the User Portal provides quick access to Dashboards. These Dashboards can be deployed either by a user (see xref:user:DeployDashboard.adoc[]) or by an administrator (see xref:administration:Presentation.adoc#PortalDashboards[Portal Dashboards] in xref:administration:ManageServer.adoc[]).
+The *Dashboard* tab of the User Portal provides quick access to Dashboards. These Dashboards can be deployed either by a user (see xref:user:DeployDashboard.adoc[]) or by an administrator (see xref:administration:Repository.adoc#Pinboards[Pinboards]).
 
 To open a deployed Dashboard within the Dashboard tab of the User Portal, use the following syntax:
 
@@ -254,7 +254,7 @@ If the Dashboard has been deployed by an administrator (rather than the user), a
 [example]
 {SREEContext}/app/portal/tab/Dashboard/vs/Dashboard/Hurricane__GLOBAL
 
-To display a Dashboard that has not been deployed as a Portal Dashboard, see xref:#DisplayDashboard[].
+To display a Dashboard that has not been deployed as a Pinboard, see xref:#DisplayDashboard[].
 
 === Set Open Graph Tags
 If a Dashboard  includes a title/alias or description, then the title/alias or description is used to set `og:title`, and `og:description` Open Graph tags. Otherwise, the ‘Open Graph Title’ and ‘Open Graph Description’ Social Sharing properties are used to set `og:title` and `og:description`. See xref:administration:Presentation.adoc#SocialSharing[Social Sharing] for more information.

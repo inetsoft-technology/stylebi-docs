@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to manage the repository in Enterprise Manager, covering sorting repository assets, creating folders, deleting and restoring assets, configuring Dashboard properties and security, pinning Portal Dashboards for users, and managing Data Worksheet properties.
+Summary: How to manage the repository in Enterprise Manager, covering sorting repository assets, creating folders, deleting and restoring assets, configuring Dashboard properties and security, pinning Pinboards for users, and managing Data Worksheet properties.
 endif::ai[]
 
 The *Repository* is the collection of   Dashboards deployed on the server.   Dashboards can be organized into folders, and folders can be hierarchically nested. If  security is enabled, users and roles can be given read and write permission for  folders or individual  Dashboards.
@@ -145,12 +145,12 @@ IMPORTANT: For multi-tenant implementations utilizing the *additional connection
 . Press btn:[Apply].
 
 
-[#PortalDashboards]
+[#Pinboards]
 == Pin a Dashboard
 
 TIP: Users can also deploy Dashboards under the {buttonDashboard}.  See xref:user:DeployDashboard.adoc[] for more information.
 
-A Portal Dashboard or "`pinned Dashboard`" is a Dashboard that appear under the {buttonDashboard} in the User Portal. To pin a Portal Dashboard, follow the steps below:
+A *Pinboard* is a Dashboard that has been added to the {buttonDashboard} in the User Portal for quick, repeated access. To pin a Dashboard, follow the steps below:
 
 . Press the {buttonSettings} at the top of Enterprise Manager.
 
@@ -158,7 +158,7 @@ A Portal Dashboard or "`pinned Dashboard`" is a Dashboard that appear under the 
 +
 image::Figure 15.png[alt="repository tab in content page showing asset tree"]
 
-. To add a Dashboard *for all users*, select the ‘Portal Dashboard Tab’ folder on the tree. To add a Dashboard for a *particular user only*, select the '`User Portal Dashboard Tab`' folder, and choose the desired user.
+. To add a Dashboard *for all users*, select the ‘Pinboard Tab’ folder on the tree. To add a Dashboard for a *particular user only*, select the ‘`User Pinboard Tab`’ folder, and choose the desired user.
 
 . Press the {buttonNewCircle} above the tree, and select ‘New Dashboard’.
 +
@@ -172,13 +172,13 @@ image::Dashboard Properties Dialog VS_1.png[alt="dashboard property tab with nam
 
 . Choose a Dashboard from the ‘Select Dashboard’ list.
 +
-image::Edit Dashboard Admin VS.png[alt="select dashboard from list to pin as portal dashboard"]
+image::Edit Dashboard Admin VS.png[alt="select dashboard from list to pin as Pinboard"]
 
 . Select the *Security* tab in the right panel. See xref:SetRepositoryPermissions.adoc[] for information on how to assign permissions.
 
 . Press btn:[Apply].
 
-The new Dashboard is now listed in the ‘Portal Dashboard Tab’ folder, and will be visible to the users who have appropriate permissions. To delete a Dashboard, select the Dashboard and press the {buttonDelete} above the repository list.
+The new Dashboard is now listed in the ‘Pinboard Tab’ folder, and will be visible to the users who have appropriate permissions. To delete a Dashboard, select the Dashboard and press the {buttonDelete} above the repository list.
 
 [#ManageDataWorksheets]
 == Manage Data Worksheets
