@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to open and use a Dashboard in the User Portal. Covers two ways to open a Dashboard: via the Dashboard button (pinned Dashboards as tabs) and via the Repository button (browsing a folder tree). Also describes the Dashboard toolbar buttons: undo/redo, edit in Visual Composer, refresh, email, social sharing, schedule, print, export to Excel/PowerPoint/PDF, zoom, bookmarks, full screen, and toggle annotations.
+How to open and use a Dashboard in the User Portal. Covers two ways to open a Dashboard: via the Dashboard button (Pinboards as tabs) and via the Repository button (browsing a folder tree). Also describes the Dashboard toolbar buttons: undo/redo, edit in Visual Composer, refresh, email, social sharing, schedule, print, export to Excel/PowerPoint/PDF, zoom, bookmarks, full screen, and toggle annotations.
 endif::ai[]
 
 The following sections explain how to open and use a Dashboard in the Portal. See xref:dashboard:UseFilterComponents.adoc[] to  learn how to  explore your data using Dashboard filters.
@@ -12,8 +12,8 @@ The following sections explain how to open and use a Dashboard in the Portal. Se
 NOTE: Mobile devices should be running iOS 7 or later, or Android 4.1 "Jelly Bean" or later, to view Dashboards.
 
 
-== Open a Pinned Dashboard
-To open a Dashboard using the Portal's {buttonDashboard}, follow the steps below.
+== Open a Pinboard
+A Pinboard is a Dashboard that has been added to the {buttonDashboard} tab for quick, repeated access — as opposed to a Repository Dashboard, which is opened by browsing the folder tree (see "Open a Repository Dashboard" below). To open a Dashboard using the Portal's {buttonDashboard}, follow the steps below.
 
 
 . Open the User Portal. (See xref:UsePortal.adoc[].)

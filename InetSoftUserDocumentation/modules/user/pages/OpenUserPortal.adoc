@@ -37,13 +37,13 @@ include::ROOT:partial$createVisualizationClose.adoc[]
 
 
 {buttonHome}:: Return to the InetSoft landing page.
-{buttonDashboard}:: Access your important Dashboards. See xref:DeployDashboard.adoc[] for information on configuring Dashboards.
+{buttonDashboard}:: Access your Pinboards — Dashboards you've added to this tab for quick, repeated access (see xref:ROOT:Glossary.adoc[Glossary]). See xref:DeployDashboard.adoc[] for information on configuring Pinboards.
 +
 [TIP]
 ====
-If you are using the Portal for the first time, you can also press the Portal Dashboards link to deploy your first Dashboard.
+If you are using the Portal for the first time, you can also press the Pinboards link to deploy your first Dashboard.
 
-image::UserPortalFirstTimePortalDashboards.png[alt="press Portal Dashboards link"]
+image::UserPortalFirstTimePortalDashboards.png[alt="press Pinboards link"]
 ====
 {buttonRepository}:: View all available Dashboards in the repository.  See xref:ManageRepository.adoc[] for information on how to organize the Repository.
 {buttonCreate}:: Create data sources, Data Worksheets, and Dashboards, or open  Visual Composer. The following options are available for  users who have appropriate permissions:
