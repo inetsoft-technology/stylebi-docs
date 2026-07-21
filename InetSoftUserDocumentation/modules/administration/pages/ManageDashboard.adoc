@@ -246,8 +246,8 @@ id:: Runtime Dashboard ID. Obtain this from the `list-open` action.  (See xref:#
 ----
 
 
-== Add a Pinned Dashboard
-The `add-favorite` action adds a pinned dashboard to the Portal for the current user. {connectRepositoryNote}
+== Add a Pinboard
+The `add-favorite` action adds a Pinboard to the Portal for the current user. {connectRepositoryNote}
 
 === Parameters
 
@@ -261,8 +261,8 @@ id:: Runtime Dashboard ID. Obtain this from the `list-open` action.  (See xref:#
 :vs add-favorite "1^128^__NULL__^Examples/Census^host-org"
 ----
 
-== Remove a Pinned Dashboard
-The `remove-favorite` action removes the specified pinned dashboard from  the Portal for the current user. {connectRepositoryNote}
+== Remove a Pinboard
+The `remove-favorite` action removes the specified Pinboard from  the Portal for the current user. {connectRepositoryNote}
 
 === Parameters
 
