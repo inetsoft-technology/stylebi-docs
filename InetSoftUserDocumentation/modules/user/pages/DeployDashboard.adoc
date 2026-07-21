@@ -4,14 +4,14 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to deploy, edit, delete, and reposition Pinned Dashboards in the User Portal, including selecting which Dashboard to display under each tab, adjusting the tab order, and hiding Dashboard tabs using the Arrange Dashboards dialog.
+How to deploy, edit, delete, and reposition Pinboards in the User Portal, including selecting which Dashboard to display under each tab, adjusting the tab order, and hiding Dashboard tabs using the Arrange Dashboards dialog.
 endif::ai[]
 
-You can arrange the Pinned Dashboards displayed by the {buttonDashboard} of the User Portal, and add your own Pinned Dashboards under this button.
+You can arrange the Pinboards displayed by the {buttonDashboard} of the User Portal, and add your own Pinboards under this button.
 
-image::user:Opening Sample Viewsheet2.png[alt="Pinned Dashboards in User Portal"]
+image::user:Opening Sample Viewsheet2.png[alt="Pinboards in User Portal"]
 
-== Deploy a Pinned Dashboard
+== Deploy a Pinboard
 
 To deploy a Dashboard, follow the steps below:
 
@@ -33,19 +33,19 @@ image::user:newDashboard.png[alt="New Pin dialog box"]
 +
 image::Edit Dashboard User VS.png[alt="choose Dashboard from Select Dashboard list"]
 
-. Press btn:[OK]. This deploys the Dashboard as a Pinned Dashboard.
+. Press btn:[OK]. This deploys the Dashboard as a Pinboard.
 +
-image::user:My Viewsheet Dashboard.png[alt="press OK to deploy Pinned Dashboard"]
+image::user:My Viewsheet Dashboard.png[alt="press OK to deploy Pinboard"]
 
 
 
 
-== Edit a Pinned Dashboard
-To edit an existing Pinned Dashboard, follow the steps below:
+== Edit a Pinboard
+To edit an existing Pinboard, follow the steps below:
 
 . Press  the {buttonDashboard} in the User Portal.
 
-. Open the desired Pinned  Dashboard by selecting the corresponding tab.
+. Open the desired Pinboard by selecting the corresponding tab.
 
 . Press the {buttonDashboardConfiguration}, and select the {buttonEditAction} option.
 +
@@ -53,23 +53,23 @@ image::user:Edit Dashboard User.png[alt="press Dashboard Configuration and selec
 +
 This opens the ‘Edit Dashboard’ dialog box, which is the same as the ‘New Dashboard’ dialog box described above. Follow the instructions above to make the desired edits to the Dashboard name and description, or to select a new Dashboard to display.
 
-== Delete a Pinned Dashboard
-To delete an existing Pinned Dashboard, follow the steps below:
+== Delete a Pinboard
+To delete an existing Pinboard, follow the steps below:
 
 . Press the {buttonDashboard} in the User Portal.
 
-. Open the desired Pinned Dashboard by selecting the corresponding tab.
+. Open the desired Pinboard by selecting the corresponding tab.
 
 . Press the {buttonDashboardConfiguration} , and select the {buttonDeleteAction} option.
 +
 image::user:deleteDashboard.png[alt="press Dashboard Configuration and select Delete"]
 
-== Reposition a Pinned Dashboard
-To reposition an existing Pinned Dashboard, follow the steps below:
+== Reposition a Pinboard
+To reposition an existing Pinboard, follow the steps below:
 
 . Press the {buttonDashboard} in the User Portal.
 
-. Open the desired Pinned Dashboard by selecting the corresponding tab.
+. Open the desired Pinboard by selecting the corresponding tab.
 
 . Press the {buttonDashboardConfiguration}, and select the {buttonArrangeAction}  option. This opens the ‘Arrange Dashboards’ dialog box.
 +
