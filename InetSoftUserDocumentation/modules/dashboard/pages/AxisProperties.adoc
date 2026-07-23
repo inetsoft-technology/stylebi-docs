@@ -5,13 +5,15 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Reference for Chart Axis properties in Visual Composer (also called axis label, axis format, or axis scale settings), accessed via right-click on an axis or axis label. Covers the Label tab (show/hide labels, labels on opposite side, rotation), Line tab (logarithmic scale, reverse orientation, shared range for facet charts, ignore null, truncate long labels, show axis line, show ticks, axis line and tick color, minimum/maximum values, minor/major increments), and Alias tab (rename categorical axis labels). See AxisTitleProperties for axis title settings.
+Reference for Chart Axis properties in Visual Composer (also called axis label, axis format, or axis scale settings), accessed via right-click on an axis or axis label. Covers the Label tab (show/hide labels, labels on opposite side, rotation), Line tab (logarithmic scale, reverse orientation, shared range for facet charts, ignore null, truncate long labels, show axis line, show ticks, axis line and tick color, minimum/maximum values, minor/major increments), and Alias tab (rename categorical axis labels). See AxisTitleProperties for axis title settings. Does NOT cover numeric value formatting of axis labels (e.g., decimal precision, currency, percent, or "K"/"M"/"B" suffixes to abbreviate large values like 10000 as "10K") — that is a no-script GUI option set via the Format panel's Number Format, applied by clicking the axis/axis labels then using the same Format panel as other components (see DataFormat.adoc). To set axis label format via script, see ChartAxisFormat.adoc (axis.format).
 endif::ai[]
 
 [WARNING,caption=see also]
 ====
 [square]
 * xref:AxisTitleProperties.adoc[] to set properties of the axis title.
+* xref:DataFormat.adoc#NumberFormat[Number Format] to format axis *values* (decimal precision, currency, percent, or K/M/B suffixes for large numbers) without scripting.
+* xref:dashboardscript:ChartAxisFormat.adoc[] to set axis label format via script.
 * xref:dashboardscript:ChartAxisProperties.adoc[] and  xref:dashboardscript:MeasureAxisProperties.adoc[]  in xref:dashboardscript:DashboardObjectReference.adoc[] to set these properties dynamically using script.
 
 ====
