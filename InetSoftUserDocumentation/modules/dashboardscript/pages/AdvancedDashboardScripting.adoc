@@ -2,13 +2,71 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Introduction to advanced Dashboard scripting using JavaScript (ECMA-262), covering event-driven behavior, conditional display, and common scripting patterns for experienced Dashboard designers.
+Summary: Introduction to advanced Dashboard scripting using JavaScript (ECMA-262), covering event-driven behavior, conditional display, and common scripting patterns for experienced Dashboard designers. This is the canonical page for deciding when script is actually required versus when a no-script, UI-driven alternative already exists (Chart Editor/Ad Hoc Editing, Data Worksheet Calculated Fields, Highlight-based conditional formatting and alerts, VPM condition UI, Freehand Table cell bindings, the Hyperlink dialog, and Format panel number formatting). Script is a last resort for behavior the UI cannot achieve, and scripted components generally lose end-user Ad Hoc Editing/modification.
 endif::ai[]
 
 Certain Dashboard applications require a degree of flexibility that can only be achieved with programmatic logic. For example, you may need to hide or show certain Dashboard components under particular conditions, such as when a user’s selections return no data, or you might wish to present an alert message if a certain key indicator does not meet its target.  The Dashboard scripting environment allows you to easily implement such event-driven behavior.
 
 TIP: The scripting language is based on the popular JavaScript language  (https://www.ecma-international.org/publications/standards/Ecma-262.htm[ECMA-262] standard).
 
+The following sections explain xref:#WhenToUseScript[] and xref:#HowToUseScript[].
+
+[#WhenToUseScript]
+== When to Use Script
+You can implement *most* dashboard interactivity without *any scripting* at all. Reach for script only when the built-in features  cannot produce the required appearance or behavior. The following table lists many of the different features that can be implemented by script, and the corresponding no-script approach (preferred).
+
+
+[cols="1,2,2"]
+|===
+|Area |Script Option |No-Script Option (Preferred)
+
+|Custom logic or behavior
+|Add script at dashboard level, component level, or property level. See xref:AddScriptToDashboard.adoc[].
+|
+
+|Chart appearance and behavior
+a|
+*Basic Chart scripting:* See xref:Chart.adoc[]. +
+*Advanced Chart scripting:* See xref:chartAPI:ChartScriptReference.adoc[Chart API Script].
+|Use Chart Editor, *Format* panel, Chart Property panels, and Ad Hoc Editor.  See xref:dashboard:AddAChart.adoc[].
+
+|Computed columns
+a|*Expression Column:*  See xref:dataworksheet:CreateNewDataField.adoc#CreateExpressionColumninDataWorksheet[Create an Expression Column in a Data Worksheet]. +
+*Calculated Field:* See xref:dataworksheet:CreateNewDataField.adoc#CreateCalcField[Create a Calculated Field in a Dashboard].
+| None
+
+|Conditional formatting
+|Set formatting based on component data. See xref:AccessComponentData.adoc[].
+|Use Highlighting. See xref:dashboard:ConditionalFormat.adoc[].
+
+|Alerts and thresholds
+|Use xref:thisViewsheetScheduleAction.adoc[thisViewsheet.scheduleAction] in component script.  See xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].
+|Add an *Alert* to scheduled task.  See xref:user:ScheduleDashboard.adoc#SetAlert[Set an Alert].
+
+|Data security
+|Use VPM trigger script.  See xref:user:AddVPMConditionTrigger.adoc[] and xref:user:AddVPMHiddenColumnTrigger.adoc[].
+|Use VPM. See xref:user:AddDataSecurity.adoc[].
+
+|Custom tables
+|Add formulas to Freehand Table.  See xref:dashboard:AddFreehandTable.adoc#AddFormulaCells[Add Formula Cells].
+|Use xref:dashboard:AddFreehandTable.adoc[Freehand Table] for complex table design.
+
+|Hyperlinks and drill-down
+|Use xref:ChartSetHyperlink.adoc[] to set hyperlinks dynamically.
+|Use Hyperlink dialog box. See xref:dashboard:DrillDownIntoData.adoc#DrillwithChartHyperlinks[Drill with Chart Hyperlinks].
+
+|Axis and number formatting
+|Use xref:ChartAxisFormat.adoc[] to set dynamically.
+|Use *Format* panel. See xref:dashboard:DataFormat.adoc#NumberFormat[Number Format].
+
+|Dynamic images
+a|*Component Script:* Use xref:ImageImage.adoc[]  (see xref:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script]). +
+*Property Script:* Use '`Dynamic Image`' setting with '`Expression`' option  (see xref:ChangeImageWithScript.adoc[]).
+|Use '`Dynamic Image`' setting with '`Variable`' option.  See xref:ChangeImageWithScript.adoc[].
+|===
+
+[#HowToUseScript]
+== How to Use Script
 
 The following sections provide a short introduction to JavaScript, concentrating on the Dashboard environment and examples of common Dashboard scripting. These sections are intended for advanced Dashboard designers who are familiar with programming concepts and languages.
 
