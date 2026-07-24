@@ -210,6 +210,7 @@ You may also need to set the appropriate '`Row Group`' or '`Column Group`' for t
 +
 image::FreehandTableColumnGroup.png[alt="assign grouping dimension from row group or column group menus"]
 
+[#AddFormulaCells]
 === Add Formula Cells
 [start=9]
 . *_Optional:_*  To populate a cell using script, press the ‘Edit’ button at the bottom of the dialog box. This opens the Script Editor and allows you to create a calculation based on cell values, parameter values, component values, or values from any accessible  Data Worksheet.
