@@ -1,8 +1,8 @@
-= User Functions
+= Built-In Functions
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and navigation page for user-defined functions available in the scripting environment, with links to Data Worksheet scripting and Dashboard scripting references.
+Summary: Overview and navigation page for the product's built-in/predefined function libraries available in the scripting environment (JavaScript language basics, String/Number/Date/Math/Array/Regex object functions, the Excel-style Calc function library, Java object access, and predefined style constants), with links to Data Worksheet scripting and Dashboard scripting references. These are NOT user-authored — for functions the user writes themselves, see dashboardscript:CreateScriptFunction.adoc (Script Library).
 endif::ai[]
 
 [WARNING,caption=see also]
