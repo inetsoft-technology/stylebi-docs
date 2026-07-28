@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to access data block column values within Data Worksheet expressions, including current-row field access, previous-row relative indexing, referencing columns in other data blocks by name or row index, and value lookup using a primary key. See CreateNewDataField for how to add expression columns.
+Summary: How to access data block column values within Data Worksheet expressions, including current-row field access, previous-row relative indexing, referencing columns in other data blocks by name or row index, and value lookup using a primary key. See CreateNewDataField for how to add expression columns. To compute a running/cumulative total as a no-Dashboard-script alternative to looping through table[row][col] in a Table component script, create an expression column that self-references the previous row of itself using the relative-row syntax, e.g. field[-1]['RunningTotal'] + field['Value'] (where 'RunningTotal' is the name of the expression column being defined and 'Value' is the column being accumulated); bind the resulting precomputed column to the Table.
 endif::ai[]
 :experimental:
 
