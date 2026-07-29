@@ -1,15 +1,15 @@
-= Global Functions
+= Special Dashboard Functions
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and navigation page for global Dashboard scripting functions not attached to any specific component, such as those for checking Dashboard status and communicating with users.
+Summary: Overview and navigation page for special Dashboard scripting functions (alert, confirm, refreshData, saveWorksheet, appendRow, addImage, event, pviewsheet, viewsheetPath, viewsheetUser, isCancelled) that are not attached to any specific component. Every one of these requires a live running Dashboard/Viewsheet — they act on or report about the Dashboard itself (showing dialogs, refreshing/persisting its data, reporting its path/owner/parent) — so none of them are usable from a Data Worksheet expression. Do NOT confuse this page with commonscript:GlobalObjectFunctions.adoc, which is a completely different, unrelated set of generic JavaScript functions (parseInt, eval, importClass, etc.) usable anywhere in the scripting environment, including Data Worksheet expressions. This page follows the same "Special [scope] Functions" naming pattern as dashboardscript:SpecialFreehandFunctions.adoc (Freehand Table-specific) and chartAPI:SpecialChartFunctions.adoc (Chart-specific) — this one covers functions specific to the Dashboard/Viewsheet as a whole.
 endif::ai[]
 
 
 
 
 
-The topics in this section describe global functions that are not attached to a particular component.  They provide methods for checking the status and location of the Dashboard and communicating this to a user.
+The topics in this section describe special functions that are not attached to a particular component.  They provide methods for checking the status and location of the Dashboard and communicating this to a user.
 
 [square]
 include::ROOT:partial$MINITOC_GlobalFunctions.adoc[]
