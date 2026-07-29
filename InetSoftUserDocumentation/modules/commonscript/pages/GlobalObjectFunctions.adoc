@@ -2,7 +2,7 @@
 
 // metadata for AI
 ifdef::ai[]
-Summary: Overview and navigation page for Global object functions and properties available throughout the scripting environment without any qualifier.
+Summary: Overview and navigation page for Global object functions and properties available throughout the scripting environment without any qualifier (e.g., parseInt, eval, importClass) — usable in both Data Worksheet expressions and Dashboard scripts. Do NOT confuse this with dashboardscript:GlobalFunctions.adoc ("Special Dashboard Functions"), an unrelated, Dashboard-only set of functions (alert, confirm, refreshData, etc.) that require a live running Dashboard and are not usable from a Data Worksheet expression.
 endif::ai[]
 
 The Global object contains the properties and functions available for the entire scripting environment. The values and functions can be accessed anywhere as top-level properties and functions without any qualifier.
