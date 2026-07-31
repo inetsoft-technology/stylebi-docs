@@ -32,15 +32,40 @@ image::dashboard:portalDesignTab.png[alt="User Portal showing Create button and 
 +
 image::customFunction1.png[alt="Assets panel with Script folder and New Script Function option selected"]
 
-
-
 . Enter the desired function script, beginning with `function` keyword.  You can use the built-in functions provided in the '`JavaScript Functions`' and '`Excel Functions`' folders on the left side.
 +
 image::customFunction2.png[alt="script library editor showing custom function with parameter and body"]
 +
-Any parameters (e.g., col) should be placed in a comma-separated list inside the parentheses that follow the function name. These parameters can then be used inside the function body. Since JavaScript does not support type declaration, parameters are not qualified with types.
+Any parameters (e.g., `col`) should be placed in a comma-separated list inside the parentheses that follow the function name. These parameters can then be used inside the function body. (Since JavaScript does not support type declaration, parameters are not qualified with types.)
++
+.Example 1: tableTotal function (iteration)
+[source,javascript]
+----
+// Parameter 'col' is a numerical index OR column name
+function tableTotal(col) {
+  var total=0;
+  for(var r=1; r<table.length; r++) {
+    total += table[r][col];
+  }
+  return total;
+}
+----
 +
 TIP: Note in the above function that the property `table` is not qualified by a component ID (e.g., `Table1.table`). Functions are scoped dynamically; therefore, the property `table` refers to whichever Table component called the `tableTotal()` function. You can therefore call this `tableTotal()` function from within any Table xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[component script] to operate on that particular Table component. See xref:#FunctionScope[] below   for more information.
++
+In the above  example, if you plan to call `tableTotal()`  with a *column name* as parameter (NOT a numerical index), the built-in xref:commonscript:CALC_sum.adoc[CALC.sum()] function provides a simpler script (below).  Use  built-in CALC functions whenever you can.
++
+.Example 2: tableTotal function (CALC function)
+[source,javascript]
+----
+// Parameter 'col' is a column name ONLY
+function tableTotal(col) {
+  return CALC.sum(table[col]);
+}
+----
+
+
+
 
 . *_Optional_*: Press the {buttonOptions} in the toolbar to set the following propeties:
 +
