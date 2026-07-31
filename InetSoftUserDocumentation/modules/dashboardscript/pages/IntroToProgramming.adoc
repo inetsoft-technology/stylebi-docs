@@ -11,6 +11,7 @@ You can add advanced interactivity to your Dashboards by attaching scripts to co
 
 The following sections provide a brief overview of Dashboard programming with JavaScript. A basic JavaScript reference is provided in the xref:commonscript:UserFunctions.adoc[] section. To find more complete information about the JavaScript language, please refer to a JavaScript book or tutorial website (e.g., https://www.w3schools.com/js). If you are already familiar with the JavaScript language, you can skip ahead to xref:dashboardscript:AddScriptToDashboard.adoc[], which explains the different areas of a Dashboard to which you can add script.
 
+
 == Server-Side vs. Client-Side Script
 In Web development, JavaScript is used to add client-side scripting to HTML pages. Scripts are embedded into the contents of a Web page and executed inside the client browser. Traditionally, these client-side scripts deal exclusively with user-browser interactions, and have limited server-side actions (e.g., HTTP requests).
 
@@ -414,13 +415,8 @@ default:
 
 
 
-
-
-
-
-
 === Custom Functions
-JavaScript, like most programming languages, has facilities for creating subprograms to modularize or divide operations into distinct functions. Once you define such a function, you can  call it from other parts of your script to perform the specified operations, as needed. See xref:dashboardscript:CreateScriptFunction.adoc[] for more details on how to define a function.
+As a general rule, use built-in CALC/Excel-style functions  whenever your calculation can be expressed as a single formula. (See xref:commonscript:CalcObjectFunctions.adoc[]). You can also create your own custom functions to help modularize your scripts. Once you define such a function, you can  call it from other parts of your script to perform the specified operations, as needed. See xref:dashboardscript:CreateScriptFunction.adoc[] for more details on how to define a function.
 
 
 JavaScript functions behave a little differently than you might expect:
