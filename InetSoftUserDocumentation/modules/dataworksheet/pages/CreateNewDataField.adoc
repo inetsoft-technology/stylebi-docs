@@ -157,7 +157,8 @@ NOTE:  *Date*-type fields supply the following date parts: Year, QuarterOfYear, 
 [#ExcelStyleFunctions]
 === Excel-Style Functions
 
-Many expressions are similar to formulas that you might use in Microsoft Excel^®^. Some common examples are shown below.
+Many expressions are similar to formulas that you might use in Microsoft Excel^®^. Use these CALC functions  whenever your calculation can be expressed as a single formula.  Some common examples are shown below.  (See xref:commonscript:CalcObjectFunctions.adoc[] for a more complete listing.)
+
 
 
 include::ROOT:partial$ExcelScalarFormulas.adoc[]
