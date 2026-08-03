@@ -43,6 +43,7 @@ In some cases you may need to use a dimension as a measure, or a measure as a di
 
 == Create a Basic Chart
 
+
 include::partial$chartNewbieTip.adoc[]
 
 include::partial$availableToEndUsers.adoc[]
@@ -86,6 +87,9 @@ TIP: If you selected a ‘Pie’ style, you should place the dimension field in 
 include::dashboard:partial$bindToComponent.adoc[]
 +
 *Optional:* You can drag  multiple  dimensions to the ‘X’ region. Dimensions will be represented automatically  against  the *top* or *bottom* X-axis depending on the order that  you place them in the ‘X’ region.  You can change that order by dragging the fields within the '`X`' region.
++
+TIP: If the Chart appears to be missing rows or values you expect,  check whether the underlying data block has a '`Max Rows`' limit set (see xref:dataworksheet:DataBlockProperties.adoc[]).
+
 
 . To rotate the Chart (interchange the X and Y axes), press the {buttonSwapXY}.  You can also do this by interchanging the fields in the '`X`' region and  '`Y`' region of the Editor.
 
