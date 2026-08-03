@@ -21,6 +21,9 @@ The  properties are described below.
 
 Description:: The description text is displayed as a tooltip when the user hovers the mouse  over the data block in the Worksheet canvas or over the  {buttonTableIcon} in the table’s title row.
 Max Rows:: The maximum number of rows to retrieve from the database at runtime.
++
+TIP: If a Dashboard Chart, Table, or Crosstab bound to this data block shows fewer rows than expected, check this setting first. It silently caps the data at the source, before any Dashboard-level filters, Top-N settings, or aggregation are applied.
+
 Visible in Dashboard:: When selected, allows the fields of the data block to be accessed for Dashboard design. Otherwise, the data block is not accessible to the Dashboard.
 +
 NOTE: The primary data block cannot be hidden.
