@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to group chart data in Visual Composer by color, shape, size, or text labels, how to group dates by level (week/month/year/quarter), how to create named groups (also called custom groups or groups by category) by merging axis labels, and how to apply top-N/bottom-N ranking filters to chart dimensions. Also covers the 'Share Colors' option (in the Group by Color section) for keeping chart colors consistent/synchronized across multiple charts in a Dashboard, so that values from columns or data model attributes with the same name always get the same color, even across different data sources — this is the mechanism to use when charts show mismatched colors for what should be the same category, as opposed to xref:VisualFormat.adoc[] (Format panel), which sets a component's own visual appearance rather than synchronizing colors between charts.
+Summary: Explains how to group chart data in Visual Composer by color, shape, size, or text labels, how to group dates by level (week/month/year/quarter), how to create named groups (also called custom groups or groups by category) by merging axis labels, and how to apply top-N/bottom-N ranking filters to chart dimensions. Also covers the 'Share Colors' option (in the Group by Color section) for keeping chart colors consistent/synchronized across multiple charts in a Dashboard, so that values from columns or data model attributes with the same name always get the same color, even across different data sources — this is the mechanism to use when charts show mismatched colors for what should be the same category, as opposed to xref:VisualFormat.adoc[] (Format panel), which sets a component's own visual appearance rather than synchronizing colors between charts. Also covers Size legend color: whether/how the symbols in a Size legend can be recolored depends entirely on the chart's Color binding, including a hard limitation — if Color is bound to a different field than Size, the Size legend symbols are always a fixed gray and cannot be recolored at all.
 endif::ai[]
 
 [.videotitle]
@@ -138,6 +138,17 @@ include::ROOT:partial$dimensionTip.adoc[]
 image::Ad Hoc Group Visual11.png[alt="size panel with slider to set size range"]
 
 . Press the {buttonApply} to apply the size setting.
+
+=== Size Legend Color
+
+The color of the symbols in a Size legend depends on the  *Color* binding in the Chart Editor:
+
+[square]
+* If no field is bound in  the '`Color`' region, you can set the Size legend symbol color  using the '`Edit Color`' button next to the '`Color`' region.
+
+* If the *same field* is bound in both the '`Color`' and '`Size`' regions, the Size legend symbols use the color mapping and palette assigned to that field. See xref:#GroupbyColor[] above.
+
+* If  *different fields* are bound in  the '`Color`' and '`Size`' regions, the color of the Size legend symbols *cannot be changed* — the symbols always display in  the default gray color.
 
 == Group by Text
 To group using *text* labels, follow the steps below:
