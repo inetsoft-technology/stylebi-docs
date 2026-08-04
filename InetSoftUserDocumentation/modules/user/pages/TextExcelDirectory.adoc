@@ -7,7 +7,7 @@ This page explains how to create a persistent connection to a specified file (te
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a persistent connection to a Text or Excel file (or directory of files) as a data source in InetSoft. You specify a server-side Root Folder path; this differs from a one-time data upload. After connecting, query the files using QueryTextExcelDirectory.
+Summary: How to create a persistent connection to a Text or Excel spreadsheet file (or directory of files) as a data source in InetSoft — this is what to use when a user asks how to "connect to a spreadsheet." You specify a server-side Root Folder path; this differs from a one-time data upload, which does not create a reusable connection — for that, see xref:dataworksheet:UploadData.adoc[] instead. After connecting, query the files using QueryTextExcelDirectory.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
