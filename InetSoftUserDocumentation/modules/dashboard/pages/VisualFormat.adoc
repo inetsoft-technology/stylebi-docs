@@ -90,6 +90,9 @@ a|Color can be applied globally to entire Chart or to individual regions indepen
 * *Global*: With no Chart region selected, foreground color applies to all Chart text: Axis labels, axis titles, legend content, legend titles, and plot labels.
 
 * *Independent Region*: To target a specific region (e.g., axis label, axis title, legend), click  first to select it, and then set the color.
+
+This relates to Chart *text* color (axis labels, legend, etc.).  To set Chart *data color*, see xref:GroupDataByDimension.adoc#GroupbyColor[Group by Color]. To synchronize data colors across two or  more Charts, use the '`Share Colors`' option in the Chart Editor.
+
 |Crosstab|Same as Table.
 |Table|Color can be set independently for title bar, column headers, and data cells. Click the desired region, then set the color.
 |Freehand Table|Same as Table.
@@ -107,6 +110,7 @@ a|Color can be applied globally to entire Chart or to individual regions indepen
 |Radio Button|Same as Checkbox.
 |Combo Box|Color setting affects the choice text.
 |===
+
 
 === Set a Static Color
 
