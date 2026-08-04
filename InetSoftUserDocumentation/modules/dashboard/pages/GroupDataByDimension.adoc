@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to group chart data in Visual Composer by color, shape, size, or text labels, how to group dates by level (week/month/year/quarter), how to create named groups (also called custom groups or groups by category) by merging axis labels, and how to apply top-N/bottom-N ranking filters to chart dimensions.
+Summary: Explains how to group chart data in Visual Composer by color, shape, size, or text labels, how to group dates by level (week/month/year/quarter), how to create named groups (also called custom groups or groups by category) by merging axis labels, and how to apply top-N/bottom-N ranking filters to chart dimensions. Also covers the 'Share Colors' option (in the Group by Color section) for keeping chart colors consistent/synchronized across multiple charts in a Dashboard, so that values from columns or data model attributes with the same name always get the same color, even across different data sources — this is the mechanism to use when charts show mismatched colors for what should be the same category, as opposed to xref:VisualFormat.adoc[] (Format panel), which sets a component's own visual appearance rather than synchronizing colors between charts.
 endif::ai[]
 
 [.videotitle]
@@ -23,6 +23,7 @@ To group data on a chart by using chart axis labels or color, shape, size, or te
 
 NOTE: To perform calculations and create aggregates based on grouped data, see xref:dataworksheet:CreateNewDataField.adoc[].
 
+[#GroupbyColor]
 == Group by Color
 To group using *color*, follow the steps below:
 
