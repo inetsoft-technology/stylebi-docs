@@ -9,7 +9,7 @@ TIP: You can set up the https://www.inetsoft.com/docs/stylebi/web-api/[InetSoft 
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to connect to a REST JSON web service as a data source in InetSoft, including how to configure Basic authentication (username/password and HTTP parameters) and Two-step Token authentication (authentication URI, token regex pattern, and query parameters). Also explains how to set up the InetSoft Web API as a REST JSON data source.
+Summary: How to connect to a REST JSON web service as a data source in InetSoft, including how to configure Basic authentication (username/password and HTTP parameters) and Two-step Token authentication (authentication URI, token regex pattern, and query parameters). Also explains how to set up the InetSoft Web API as a REST JSON data source. Includes a worked example of splitting a full web service URL between the connection's 'URL' field (scheme and host only) and the query's 'URL Suffix' field (path and query string), for both a plain path and a path with query parameters.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
@@ -22,6 +22,29 @@ image::dataSourceNewRESTJSON2.png[alt="REST JSON data source definition screen"]
 . In the ‘Name’ field, enter a label for this data source connection.
 
 . Enter the ‘URL’ for the web service.
++
+.Example: URL and URL Suffix
+****
+The ‘URL’ field requires only the base address of the web service (scheme and host). The remaining path and query string are entered separately in the ‘URL Suffix’ field when you create the query (see xref:dataworksheet:QueryRESTJSON.adoc[]), because the ‘URL Suffix’ can be different for each query that uses this connection. For example, consider the web service address below:
+
+ https://jsonplaceholder.typicode.com/users
+
+Enter the following parts for ‘URL’ (in data source definition) and ‘URL Suffix’ (in query definition).
+
+[square]
+* *URL*: `https://jsonplaceholder.typicode.com`
+* *URL Suffix*: `/users`
+
+This also applies when the address includes query parameters. For example:
+
+ https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json
+
+
+
+[square]
+* *URL*: `https://api.worldbank.org`
+* *URL Suffix*: `/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json`
+****
 
 . Select an authentication method (if desired). The options are ‘Basic’ and ‘Two-step Token’.
 +
