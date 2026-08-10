@@ -17,7 +17,9 @@ image::dataSourceNewRESTXML2_1.png[alt="REST XML data source definition screen"]
 
 . Enter the ‘URL’ for the web service.
 +
-include::partial$urlAndUrlSuffixExample.adoc[queryPageXref=dataworksheet:QueryRESTXML.adoc]
+:queryPageXref: dataworksheet:QueryRESTXML.adoc
++
+include::partial$urlAndUrlSuffixExample.adoc[]
 
 . Select an authentication method (if desired). The options are ‘Basic’ and ‘Two-step Token’.
 +

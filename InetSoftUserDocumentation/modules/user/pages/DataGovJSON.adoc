@@ -18,7 +18,9 @@ image::dataSourceDataGov2.png[alt="Data.Gov JSON data source definition screen"]
 
 . Enter the  ‘URL’ for the web service and any required credentials.
 +
-include::partial$urlAndUrlSuffixExample.adoc[queryPageXref=dataworksheet:QueryDataGovJSON.adoc]
+:queryPageXref: dataworksheet:QueryDataGovJSON.adoc
++
+include::partial$urlAndUrlSuffixExample.adoc[]
 
 . *_Optional:_* {multiTenantUser}
 
