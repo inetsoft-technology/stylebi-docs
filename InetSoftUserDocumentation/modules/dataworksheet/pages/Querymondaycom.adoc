@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from a monday.com data source using GraphQL, including writing the query with optional variables, configuring pagination (Pagination Variable and Pagination JSON Path), choosing a Request Type (GET or POST), specifying a JSON Path to extract fields from the response, and optionally enabling the Expand Arrays option.
+Summary: How to create a Data Worksheet query from a monday.com data source using GraphQL, including writing the query with optional variables, configuring pagination (Pagination Variable and Pagination JSON Path), choosing a Request Type (GET or POST), specifying a JSON Path to extract fields from the response (with examples for a bare array, a named-field-wrapped array, and a top-level array of mixed content), and optionally enabling the Expand Arrays option.
 endif::ai[]
 
 
@@ -66,17 +66,7 @@ GET https://api.monday.com/v2?query=boards{activity_logs{id}}&amp;variables={pag
 
 . Enter the  desired ‘JSON Path’.  See https://goessner.net/articles/JsonPath/[JSONPath - XPath for JSON] for information about the JSON Path syntax.
 +
-****
-Example: JSON Path:: Consider the data at https://jsonplaceholder.typicode.com/users.  The JSONPath string
-+
- $.[*][?(@.id < 4)]
-+
-retrieves all fields (because none are specified) from all objects where the `id` field value is less than 4. The JSONPath string
-+
- $.[*][?(@.id < 4)].email
-+
-retrieves just the `email` field from all objects where the `id` field value is less than 4.
-****
+include::dataworksheet:partial$jsonPathExample.adoc[]
 
 
 . *_Optional:_*  Select ‘Expand Arrays’ to expand a record that contains an array into multiple records.

@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query from an Elasticsearch REST connection by configuring a URL Suffix, JSON Path expression, optional Expand Arrays setting, and a Filter field. Covers JSONPath syntax for selecting fields and filtering Elasticsearch data within the Elasticsearch REST Query dialog.
+Summary: How to create a Data Worksheet query from an Elasticsearch REST connection by configuring a URL Suffix, JSON Path expression, optional Expand Arrays setting, and a Filter field. Covers JSONPath syntax for selecting fields and filtering Elasticsearch data within the Elasticsearch REST Query dialog, including examples for a bare array response, a response with the array nested under a named field, and a response shaped as a top-level array of mixed content (e.g. metadata followed by data).
 endif::ai[]
 
 
@@ -27,17 +27,7 @@ image::dataSourceElasticQuery1.png[alt="Elasticsearch REST Query dialog box for 
 
 . Enter the ‘URL Suffix’ and a desired ‘JSON Path’.  See https://goessner.net/articles/JsonPath/[JSONPath - XPath for JSON] for information about the JSON Path syntax.
 +
-****
-Example: JSON Path:: Consider the data at https://jsonplaceholder.typicode.com/users.  The JSONPath string
-+
- $.[*][?(@.id < 4)]
-+
-retrieves all fields (because none are specified) from all objects where the `id` field value is less than 4. The JSONPath string
-+
- $.[*][?(@.id < 4)].email
-+
-retrieves just the `email` field from all objects where the `id` field value is less than 4.
-****
+include::dataworksheet:partial$jsonPathExample.adoc[]
 
 . *_Optional:_*  Select ‘Expand Arrays’ to expand a record that contains an array into multiple records.
 +

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Data.Gov JSON as a data source in InetSoft. The user provides a name and URL for the web service along with any required credentials, then verifies the connection was successful. After creating the connection, the user can define a data set using the Data Worksheet query editor. See ConnectToDataSource for the full list of available connectors.
+Summary: Instructions for connecting to Data.Gov JSON as a data source in InetSoft. The user provides a name and URL for the web service along with any required credentials, then verifies the connection was successful. Includes a worked example of splitting a full web service URL between the connection's 'URL' field (scheme and host only) and the query's 'URL Suffix' field (path and query string). After creating the connection, the user can define a data set using the Data Worksheet query editor. See ConnectToDataSource for the full list of available connectors.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
@@ -18,6 +18,8 @@ image::dataSourceDataGov2.png[alt="Data.Gov JSON data source definition screen"]
 
 . Enter the  ‘URL’ for the web service and any required credentials.
 +
+include::partial$urlAndUrlSuffixExample.adoc[queryPageXref=dataworksheet:QueryDataGovJSON.adoc]
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].
