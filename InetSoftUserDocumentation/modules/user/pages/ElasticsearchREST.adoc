@@ -21,7 +21,9 @@ image::dataSourceNewElasticsearchREST1.png[alt="Elasticsearch REST data source d
 
 . Enter the ‘URL’ and any required security credentials.
 +
-include::partial$urlAndUrlSuffixExample.adoc[queryPageXref=dataworksheet:QueryElasticsearchREST.adoc]
+:queryPageXref: dataworksheet:QueryElasticsearchREST.adoc
++
+include::partial$urlAndUrlSuffixExample.adoc[]
 
 . *_Optional:_* {multiTenantUser}
 

@@ -23,7 +23,9 @@ image::dataSourceNewRESTJSON2.png[alt="REST JSON data source definition screen"]
 
 . Enter the ‘URL’ for the web service.
 +
-include::partial$urlAndUrlSuffixExample.adoc[queryPageXref=dataworksheet:QueryRESTJSON.adoc]
+:queryPageXref: dataworksheet:QueryRESTJSON.adoc
++
+include::partial$urlAndUrlSuffixExample.adoc[]
 
 . Select an authentication method (if desired). The options are ‘Basic’ and ‘Two-step Token’.
 +
