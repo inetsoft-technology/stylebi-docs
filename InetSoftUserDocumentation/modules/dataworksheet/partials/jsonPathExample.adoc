@@ -12,7 +12,7 @@ retrieves all fields (because none are specified) from all objects where the `id
 
 retrieves just the `email` field from all objects where the `id` field value is less than 4.
 
-Some web services wrap the array of results inside a named field of a top-level object, rather than returning a bare array. For example, `https://api.stripe.com/v1/charges` returns:
+*Array nested in a named field:* Some web services wrap the array of results inside a named field of a top-level object, rather than returning a bare array. For example, `https://api.stripe.com/v1/charges` returns:
 
 [source,json]
 ----
@@ -31,7 +31,7 @@ To select and expand the `data` array, use the JSONPath string
 
  $.data[*]
 
-Some web services return a response that is itself an array whose elements are different kinds of content, such as pagination metadata followed by the actual data. For example, `https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json` returns:
+*Array as one element of a mixed-content response:* Some web services return a response that is itself an array whose elements are different kinds of content, such as pagination metadata followed by the actual data. For example, `https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json` returns:
 
 [source,json]
 ----
