@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a REST JSON query in a Data Worksheet from an existing REST JSON connection, including entering a URL suffix and JSON Path expression, optionally expanding arrays, selecting a pagination type, and configuring Lookup Queries to resolve values from URLs embedded in JSON fields. Also covers the optional Tabular selection and query timeout settings. Includes JSON Path examples for filtering objects by a field value and for indexing into a specific numbered position of a top-level array (e.g. a response shaped as [metadata, data]), using $.[1][*] to select and expand the data element.
+Summary: How to create a REST JSON query in a Data Worksheet from an existing REST JSON connection, including entering a URL suffix and JSON Path expression, optionally expanding arrays, selecting a pagination type, and configuring Lookup Queries to resolve values from URLs embedded in JSON fields. Also covers the optional Tabular selection and query timeout settings. Includes JSON Path examples for filtering objects by a field value, for extracting an array nested under a named field (e.g. $.data[*]), and for indexing into a specific numbered position of a top-level array (e.g. a response shaped as [metadata, data]), using $.[1][*] to select and expand the data element.
 endif::ai[]
 
 
@@ -25,40 +25,7 @@ image::dataSourceREST5.png[alt="REST JSON Query dialog box for configuring the d
 +
 image::dataSourceREST6.png[alt="URL Suffix and JSON Path fields entered for the REST query"]
 +
-****
-.Example: JSON Path...
-[%collapsible]
-=====
-Consider the data at https://jsonplaceholder.typicode.com/users.  The JSONPath string
-
- $.[*][?(@.id < 4)]
-
-retrieves all fields (because none are specified) from all objects where the `id` field value is less than 4. The JSONPath string
-
- $.[*][?(@.id < 4)].email
-
-retrieves just the `email` field from all objects where the `id` field value is less than 4.
-
-Some web services return a response that is itself an array whose elements are different kinds of content, such as pagination metadata followed by the actual data. For example, `https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json` returns:
-
-[source,json]
-----
-[
-  { "page": 1, "pages": 106, "per_page": 50, "total": 5300 },
-  [
-    { "country": { "value": "Aruba" }, "date": "2024", "value": 1234.5 },
-    { "country": { "value": "Aruba" }, "date": "2023", "value": 1200.1 }
-  ]
-]
-----
-
-The first element (index `0`) is the metadata object, and the second element (index `1`) is the array of data records. To select and expand the data records, use the JSONPath string
-
- $.[1][*]
-
-This selects index `1` of the top-level array (the data records) and expands its elements into rows.
-=====
-****
+include::dataworksheet:partial$jsonPathExample.adoc[]
 
 
 . *_Optional:_*  Select ‘Expand Arrays’ to expand a record that contains an array into multiple records.

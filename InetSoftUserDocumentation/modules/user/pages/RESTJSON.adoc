@@ -23,28 +23,7 @@ image::dataSourceNewRESTJSON2.png[alt="REST JSON data source definition screen"]
 
 . Enter the ‘URL’ for the web service.
 +
-.Example: URL and URL Suffix
-****
-The ‘URL’ field requires only the base address of the web service (scheme and host). The remaining path and query string are entered separately in the ‘URL Suffix’ field when you create the query (see xref:dataworksheet:QueryRESTJSON.adoc[]), because the ‘URL Suffix’ can be different for each query that uses this connection. For example, consider the web service address below:
-
- https://jsonplaceholder.typicode.com/users
-
-Enter the following parts for ‘URL’ (in data source definition) and ‘URL Suffix’ (in query definition).
-
-[square]
-* *URL*: `https://jsonplaceholder.typicode.com`
-* *URL Suffix*: `/users`
-
-This also applies when the address includes query parameters. For example:
-
- https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json
-
-
-
-[square]
-* *URL*: `https://api.worldbank.org`
-* *URL Suffix*: `/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json`
-****
+include::partial$urlAndUrlSuffixExample.adoc[queryPageXref=dataworksheet:QueryRESTJSON.adoc]
 
 . Select an authentication method (if desired). The options are ‘Basic’ and ‘Two-step Token’.
 +

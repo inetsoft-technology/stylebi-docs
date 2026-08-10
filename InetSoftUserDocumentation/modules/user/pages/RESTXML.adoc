@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to connect to a REST XML web service as a data source in InetSoft, including how to configure Basic authentication (username/password and HTTP parameters) and Two-step Token authentication (authentication URI, token regex pattern, and query parameters).
+Summary: How to connect to a REST XML web service as a data source in InetSoft, including how to configure Basic authentication (username/password and HTTP parameters) and Two-step Token authentication (authentication URI, token regex pattern, and query parameters). Includes a worked example of splitting a full web service URL between the connection's 'URL' field (scheme and host only) and the query's 'URL Suffix' field (path and query string).
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
@@ -16,6 +16,8 @@ image::dataSourceNewRESTXML2_1.png[alt="REST XML data source definition screen"]
 . In the ‘Name’ field, enter a label for this data source connection.
 
 . Enter the ‘URL’ for the web service.
++
+include::partial$urlAndUrlSuffixExample.adoc[queryPageXref=dataworksheet:QueryRESTXML.adoc]
 
 . Select an authentication method (if desired). The options are ‘Basic’ and ‘Two-step Token’.
 +

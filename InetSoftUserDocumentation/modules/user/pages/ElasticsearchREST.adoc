@@ -9,7 +9,7 @@ IMPORTANT: {pluginDriverRequired}
 
 // metadata for AI
 ifdef::ai[]
-Summary: Instructions for connecting to Elasticsearch REST as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. See ConnectToDataSource for the full list of available connectors.
+Summary: Instructions for connecting to Elasticsearch REST as a data source in InetSoft. Covers connection parameters, authentication, and any driver or API key requirements. Includes a worked example of splitting a full web service URL between the connection's 'URL' field (scheme and host only) and the query's 'URL Suffix' field (path and query string). See ConnectToDataSource for the full list of available connectors.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
@@ -21,6 +21,8 @@ image::dataSourceNewElasticsearchREST1.png[alt="Elasticsearch REST data source d
 
 . Enter the ‘URL’ and any required security credentials.
 +
+include::partial$urlAndUrlSuffixExample.adoc[queryPageXref=dataworksheet:QueryElasticsearchREST.adoc]
+
 . *_Optional:_* {multiTenantUser}
 
 . Press btn:[OK].
