@@ -12,7 +12,7 @@ include::ROOT:partial$videoVersion.adoc[]
 video::359874333#chapter=16573525[vimeo,640,400]
 =====
 
-You can add text, such as titles or descriptions, to any region of a Dashboard.  Text can contain UTF-8 (unicode) characters as well as HTML markup.
+You can add text, such as titles or descriptions, to any region of a Dashboard.   Text is also commonly used to add  descriptive labels or titles for components that have no built-in title, such as Range Slider (see xref:RangeSliderProperties.adoc[]) and  Gauge (see xref:GaugeProperties.adoc[]). Text can contain UTF-8 (unicode) characters as well as HTML markup.
 
 TIP: To assemble the text string using script in the *Script* tab, see the xref:dashboardscript:TextText.adoc[] property. To assemble the text string using Expression script on the '`Text`' property in the '`Text Properties`' dialog box, see xref:DynamicallySetProperties.adoc#ControlPropertieswithExpression[Control Properties with Expression].
 
@@ -48,8 +48,6 @@ video::359874333#chapter=16573561[vimeo,640,400]
 
 +
 image:textComponentAggregateExp2.png[alt="style text using format tab"]
-
-TIP: A Text component is also commonly used to add a descriptive label or title next to a component that has no built-in title of its own, such as a Range Slider (see xref:RangeSliderProperties.adoc[]) or a Gauge (see xref:GaugeProperties.adoc[]). Simply position a Text component near the component to serve as its caption.
 
 == Display HTML
 There are two ways to display HTML content within a Dashboard. One method is to use the *Basic HTML presenter*, which is available for data elements such as Text and Tables. See xref:VisualFormat.adoc[] for more information.

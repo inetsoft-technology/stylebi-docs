@@ -19,7 +19,7 @@ The *General* tab in the ‘Gauge Properties’ dialog box provides the followin
 
 TIP: {dynamicProperties}
 
-NOTE: A Gauge has no built-in title or caption. To label a Gauge (for example, to show what metric it displays), add a separate Text component positioned near the Gauge. See xref:AddTextOrHTML.adoc[].
+NOTE: Gauge has no built-in title or caption. To label a Gauge, add a separate Text component near the Gauge. See xref:AddTextOrHTML.adoc[].
 
 
 Number Range::
