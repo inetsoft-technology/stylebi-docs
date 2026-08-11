@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for the Range Slider filter component properties in Visual Composer dashboards. Covers the Data tab (single-value vs. composite-value filtering, Compatible Tables for filtering multiple data blocks simultaneously) and the Advanced tab (Slider Size for string/numeric/date fields, Minimum Increment, Maximum Increment, Upper Bound Inclusive, Logarithmic Scale, and Label options for min/max/tick/current-value display). See AddFilterComponents for how to create a Range Slider.
+Summary: Reference for the Range Slider filter component properties in Visual Composer dashboards. Covers the Data tab (single-value vs. composite-value filtering, Compatible Tables for filtering multiple data blocks simultaneously) and the Advanced tab (Slider Size for string/numeric/date fields, Minimum Increment, Maximum Increment, Upper Bound Inclusive, Logarithmic Scale, and Label options for min/max/tick/current-value display — this Label option only controls tick/min/max/current-value markings on the slider track, not a descriptive caption). Range Slider has no built-in title/caption; to label what a Range Slider controls, add a separate Text component near it (see AddTextOrHTML). See AddFilterComponents for how to create a Range Slider.
 endif::ai[]
 
 [WARNING,caption=see also]
@@ -21,6 +21,8 @@ The ‘Range Slider Properties’ panel provides *General*, *Data*,  *Advanced*,
 
 == General Tab
 Only the standard properties are available. {commonGeneral}
+
+NOTE: A Range Slider has no built-in title or caption. To label a Range Slider (for example, to show what metric it controls), add a separate Text component positioned near the Range Slider. See xref:AddTextOrHTML.adoc[].
 
 == Data Tab
 The *Data* tab in the ‘Range Slider Properties’ dialog box provides the following Range Slider-specific properties:

@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to add text labels, titles, descriptions, and HTML content to a Dashboard in Visual Composer. Text components support UTF-8 characters and HTML markup, and can be populated statically or dynamically via script or expressions. Also covers displaying HTML using the Basic HTML presenter or by wrapping content in html tags, embedding multimedia such as iframes and videos, and displaying aggregated measures as text.
+Summary: How to add text labels, titles, descriptions, and HTML content to a Dashboard in Visual Composer. Text components support UTF-8 characters and HTML markup, and can be populated statically or dynamically via script or expressions. Also covers displaying HTML using the Basic HTML presenter or by wrapping content in html tags, embedding multimedia such as iframes and videos, and displaying aggregated measures as text. A Text component is also the way to add a descriptive label/title next to components with no built-in title, such as a Range Slider or Gauge.
 endif::ai[]
 
 [.videotitle]
@@ -53,6 +53,8 @@ video::359874333#chapter=16573561[vimeo,640,400]
 
 +
 image::textComponentAggregateExp2.png[alt="style text using format tab"]
+
+TIP: A Text component is also commonly used to add a descriptive label or title next to a component that has no built-in title of its own, such as a Range Slider (see xref:RangeSliderProperties.adoc[]) or a Gauge (see xref:GaugeProperties.adoc[]). Simply position a Text component near the component to serve as its caption.
 
 == Display HTML
 There are two ways to display HTML content within a Dashboard. One method is to use the *Basic HTML presenter*, which is available for data elements such as Text and Tables. See xref:VisualFormat.adoc[] for more information.

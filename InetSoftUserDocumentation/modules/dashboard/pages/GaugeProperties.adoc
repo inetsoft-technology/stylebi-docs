@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Reference for Gauge component properties in Visual Composer (General, Advanced, Data, Script tabs). A Gauge is also known as a dial, speedometer, KPI dial, or metric dial. Covers gauge face (visual skin), number range (minimum, maximum, minor/major increments), tooltip, shadow, colored range zones with optional gradient blending, and Show Value (digital display). See AddAKPI for how to use a Gauge to display a KPI.
+Reference for Gauge component properties in Visual Composer (General, Advanced, Data, Script tabs). A Gauge is also known as a dial, speedometer, KPI dial, or metric dial. Covers gauge face (visual skin), number range (minimum, maximum, minor/major increments), tooltip, shadow, colored range zones with optional gradient blending, and Show Value (digital display). Gauge has no built-in title/caption; to label what a Gauge displays, add a separate Text component near it (see AddTextOrHTML). See AddAKPI for how to use a Gauge to display a KPI.
 endif::ai[]
 
 [WARNING,caption=see also]
@@ -23,6 +23,8 @@ The ‘Gauge Properties’ panel provides the following tabs: *General*, *Advanc
 The *General* tab in the ‘Gauge Properties’ dialog box provides the following unique properties.
 
 TIP: {dynamicProperties}
+
+NOTE: A Gauge has no built-in title or caption. To label a Gauge (for example, to show what metric it displays), add a separate Text component positioned near the Gauge. See xref:AddTextOrHTML.adoc[].
 
 
 Number Range::
