@@ -17,6 +17,8 @@ The ‘Range Slider Properties’ panel provides *General*, *Data*,  *Advanced*,
 == General Tab
 Only the standard properties are available. {commonGeneral}
 
+NOTE: A Range Slider has no built-in title or caption. To label a Range Slider (for example, to show what metric it controls), add a separate Text component positioned near the Range Slider. See xref:AddTextOrHTML.adoc[].
+
 == Data Tab
 The *Data* tab in the ‘Range Slider Properties’ dialog box provides the following Range Slider-specific properties:
 

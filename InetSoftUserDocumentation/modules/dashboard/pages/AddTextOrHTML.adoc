@@ -49,6 +49,8 @@ video::359874333#chapter=16573561[vimeo,640,400]
 +
 image:textComponentAggregateExp2.png[alt="style text using format tab"]
 
+TIP: A Text component is also commonly used to add a descriptive label or title next to a component that has no built-in title of its own, such as a Range Slider (see xref:RangeSliderProperties.adoc[]) or a Gauge (see xref:GaugeProperties.adoc[]). Simply position a Text component near the component to serve as its caption.
+
 == Display HTML
 There are two ways to display HTML content within a Dashboard. One method is to use the *Basic HTML presenter*, which is available for data elements such as Text and Tables. See xref:VisualFormat.adoc[] for more information.
 
