@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to import or upload data (import CSV, upload file) from a text file, CSV, or Excel spreadsheet file directly into a Data Worksheet in Visual Composer as an Embedded Table. This is a one-time import of the file's current contents, not a persistent data source connection — for a persistent connection to an Excel/spreadsheet file or directory that gets re-queried each time, see xref:user:TextExcelDirectory.adoc[] instead.
+Summary: How to import or upload data (import CSV, upload file) from a text file, CSV, or Excel spreadsheet file directly into a Data Worksheet in Visual Composer as an Embedded Table. This is a one-time import of the file's current contents, not a persistent data source connection.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
