@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for Shape component properties (Line, Oval, Rectangle). Covers border style and color, fill color and transparency, rounded corner radius (rectangles), and gradient fills. See AddBackground for how to add shapes to a Dashboard.
+Summary: Reference for Shape component properties (Line, Oval, Rectangle). Covers border style and color, fill color and transparency, rounded corner radius (rectangles), gradient fills, and a drop shadow toggle (Rectangle and Oval only, not Line). See AddBackground for how to add shapes to a Dashboard.
 endif::ai[]
 
 [WARNING,caption=see also]
@@ -20,7 +20,9 @@ endif::ai[]
 The Shape component’s ‘Properties’ dialog box provides *General*, *Shape*, and *Script* tabs. The next sections discuss the component-specific properties available under these tabs.
 
 == General Tab
-No special properties are available: {commonGeneral}
+In addition to the common properties, the *General* tab in the ‘Shape Properties’ dialog box provides the following property.
+
+Shadow:: Adds a drop shadow to the component. Available for Rectangle and Oval; not available for Line.
 
 == Shape Tab
 The *Shape* tab in the ‘Properties’ dialog box for shape components provides slightly different properties for each shape type, as explained below.
