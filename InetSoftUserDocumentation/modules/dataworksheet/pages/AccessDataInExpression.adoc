@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to access data block column values within Data Worksheet expressions, including current-row field access, previous-row relative indexing, referencing columns in other data blocks by name or row index, and value lookup using a primary key. See CreateNewDataField for how to add expression columns. To compute a running/cumulative total as a no-Dashboard-script alternative to looping through table[row][col] in a Table component script, create an expression column that self-references the previous row of itself using the relative-row syntax, e.g. field[-1]['RunningTotal'] + field['Value'] (where 'RunningTotal' is the name of the expression column being defined and 'Value' is the column being accumulated); bind the resulting precomputed column to the Table.
+Summary: How to access data block column values within Data Worksheet expressions, including current-row field access, previous-row relative indexing, referencing columns in other data blocks by name or row index, and value lookup using a primary key. See CreateNewDataField for how to add expression columns. To compute a running/cumulative total as a no-Dashboard-script alternative to looping through table[row][col] in a Table component script, create an expression column that self-references the previous row of itself using the relative-row syntax, e.g. field[-1]['RunningTotal'] + field['Value'] (where 'RunningTotal' is the name of the expression column being defined and 'Value' is the column being accumulated); bind the resulting precomputed column to the Table. Caution: if the value being computed (running total, period-over-period difference, percent change) will be displayed in a Chart or Crosstab, prefer the Dashboard's built-in Trend and Comparison calculations (Change, Running, Value Of — see TrendCompareData) instead of this self-reference pattern. field[-1]/field[n] indexing depends on the data block's physical row evaluation order, which is not guaranteed to match its configured Sort Column, and it does not reset at group boundaries (e.g., per category) on its own — the last row of one group can silently read into the next group's row. Reserve the self-reference technique for computations that must happen at the Worksheet layer itself, not purely for Dashboard display.
 endif::ai[]
 :experimental:
 
@@ -35,6 +35,13 @@ field[relative_position]['column name']
 // examples:
 field[-1]['Total Sales']  // previous row, in 'Total Sales'
 field[-3][3]              // three rows above, in column 3
+
+[IMPORTANT]
+Row offset references like `field[-1]['column']` are evaluated *before any sorting or grouping* is applied to the data block. In a data block with sorting or grouping applied, these expressions are  NOT expected to return the value in the specified row of the *data preview*.
+
+If you want to compute a running total,  period-over-period difference, or percent change, it is preferable to use the Dashboard`'s built-in '`Trend and Comparison`' calculations.  See xref:dashboard:TrendCompareData.adoc[] for more information. These calculations automatically handle group boundaries, and will generally produce more reliable results.
+
+
 
 == Access a Column of Any Data Block
 You can reference a column with name ‘columnheader’ in a data block having name ‘Tablename’ as follows:
