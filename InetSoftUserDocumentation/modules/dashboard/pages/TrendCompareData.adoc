@@ -5,14 +5,13 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to apply trend and comparison calculation methods in Visual Composer to Chart or Crosstab measures. Covers six calculation types: Percent (percent of grand total, subtotal, or a dimension), Change (difference from first, previous, next, or last group), Running (cumulative aggregate with optional date-based reset), Sliding (sliding window aggregate for smoothing), Value Of (reference a neighboring group value without calculation), and Compound Growth (compounding accumulation for percentage values). Methods are configured via the Trend and Comparison option in the Edit Measure panel.
+Summary: Explains how to apply trend and comparison calculation methods in Visual Composer to Chart or Crosstab measures. Covers six calculation types: Percent (percent of grand total, subtotal, or a dimension), Change (difference from first, previous, next, or last group), Running (cumulative aggregate with optional date-based reset), Sliding (sliding window aggregate for smoothing), Value Of (reference a neighboring group value without calculation), and Compound Growth (compounding accumulation for percentage values). Methods are configured via the Trend and Comparison option in the Edit Measure panel. For a running total, period-over-period difference, or percent change that will be displayed in a Chart or Crosstab, prefer these built-in calculations over a hand-built Data Worksheet self-reference formula (see AccessDataInExpression). These calculations reset correctly at each group boundary; a Worksheet field[-1]/field[n] self-reference does not.
 endif::ai[]
 
-There are many different ways to represent an aggregated *measure* in a Chart or Crosstab. For example, you can represent the aggregated measure  in terms of its _percentage_ of a total, or by its _difference_ from a preceding group, or by a _moving average_ based on adjacent groups, etc.
+There are many different ways to represent an aggregated *measure* in a Chart or Crosstab. For example, you can represent the aggregated measure  in terms of its _percentage_ of a total, or by its _difference_ from a preceding group, or by a _moving average_ based on adjacent groups, etc. The following sections explain the different options, and how to implement them in a Chart or Crosstab.
 
 include::ROOT:partial$measureTip.adoc[]
 
-The following sections explain the different options, and how to implement them in a Chart or Crosstab.
 
 == Choose a Trend or Comparison Method
 To use one of these representations, set the appropriate ‘Trend and Comparison’ method in your Chart or Crosstab. Follow the steps below:
