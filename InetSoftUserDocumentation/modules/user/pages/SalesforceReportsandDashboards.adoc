@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to connect to Salesforce Reports and Dashboards as a data source in InetSoft. Requires selecting an Account Type and providing the corresponding credentials. After connecting, proceed to define a data set using the Salesforce Reports and Dashboards query page.
+Summary: How to connect to Salesforce Reports and Dashboards as a data source in InetSoft. Requires selecting an Account Type and providing the corresponding credentials. After connecting, proceed to define a data set using the Salesforce Reports and Dashboards query page. This connector authenticates using the same underlying Salesforce SOAP login() mechanism as the plain Salesforce data source, so it can hit the same org-level login failures (invalid/mismatched password and security token, IP range restrictions, or SOAP API login() disabled by the org). See xref:user:Salesforce.adoc#Troubleshooting[the Troubleshooting section of the Salesforce data source page] for how to diagnose and resolve these.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
@@ -34,5 +34,7 @@ If the database is shown with an {buttonError}, this means that the connection w
 image::dataSourceSalesforceReportsandDashboards3.png[alt="connection error icon"]
 +
 In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
++
+NOTE: This connector authenticates using the same Salesforce SOAP `login()` mechanism as the xref:Salesforce.adoc[]  data source.  See the xref:Salesforce.adoc#Troubleshooting[Troubleshooting] section on that page if you encounter any errors.
 
 After you have created a connection to the database, you can proceed to define a data set. See xref:dataworksheet:QuerySalesforceReportsandDashboards.adoc[].

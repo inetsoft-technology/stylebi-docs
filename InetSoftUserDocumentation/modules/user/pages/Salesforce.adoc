@@ -6,7 +6,7 @@ include::ROOT:partial$enterpriseOnly.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to connect to Salesforce as a data source in InetSoft (enterprise edition). Requires a Salesforce username and a combined password+security token string (e.g., if password is "abc123" and token is "XYZ987654321", enter "abc123XYZ987654321" in the Password field).
+Summary: How to connect to Salesforce as a data source in InetSoft (enterprise edition). Requires a Salesforce username and a combined password+security token string (e.g., if password is "abc123" and token is "XYZ987654321", enter "abc123XYZ987654321" in the Password field). The ‘Login URL Type’ field selects which Salesforce SOAP login endpoint is used (‘Default’, ‘Default Sandbox’, or ‘Enhanced Domain’); ‘Hostname’ is only needed for ‘Enhanced Domain’. See the Troubleshooting section below for how to resolve login failures, including orgs that have SOAP API login() disabled.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
@@ -17,6 +17,15 @@ image::dataSourceSalesforce2.png[alt="Salesforce data source definition screen"]
 . In the ‘Name’ field, enter a label for this data source connection.
 
 . Enter the ‘User’ and ‘Password’.  The password is a password string and token concatenated together.  For example, if the password is ‘abc123’ and the token is ‘XYZ987654321’, the ‘Password’ field should specify “abc123XYZ987654321”.
+
+. Select the ‘Login URL Type’. This determines which Salesforce login endpoint is used to authenticate:
++
+[square]
+* ‘Default’ – Logs in against `\https://login.salesforce.com`. Use this for a standard production org.
+* ‘Default Sandbox’ – Logs in against `\https://test.salesforce.com`. Use this for a Salesforce sandbox org.
+* ‘Enhanced Domain’ – Logs in against the hostname you provide in the ‘Hostname’ field. Use this if your org has Salesforce's Enhanced Domain feature enabled.  Enter your  domain in the ‘Hostname’ field. Enter only the bare domain, with no `https` prefix and no path, for example `orgfarm-xyz-dev-ed.develop.my.salesforce.com`.
++
+TIP: To find your org's Enhanced Domain hostname, log into Salesforce and check menu:Setup[My Domain], or read it off the browser URL after login.
 
 +
 . *_Optional:_* To refresh meta-data for the data source (which may be necessary if the data source's fields or structure have changed), press the btn:[Refresh Metadata] button.
@@ -35,6 +44,45 @@ If the database is shown with an {buttonError}, this means that the connection w
 +
 image::dataSourceSalesforce4.png[alt="connection error icon"]
 +
-In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings.
+In this case, check the settings to make sure they are correct for your database. See xref:EditConnection.adoc[] for information on how to change connection settings. See <<Troubleshooting>> below for help resolving specific login errors.
 
 After you have created a connection to the database, you can proceed to define a data set. See xref:dataworksheet:QuerySalesforce.adoc[].
+
+[[Troubleshooting]]
+== Troubleshooting
+
+Salesforce connections authenticate using the SOAP `login()` API, and the errors it returns are not always self-explanatory. This section covers the errors most commonly seen when setting up a Salesforce connection.
+
+=== Invalid username, password, security token; or user locked out
+
+This generic Salesforce error can mean several different things:
+[square]
+
+* The username or password is incorrect.
+* The password and security token are individually correct but do not match each other. Make sure both  password and  token are current, and reenter the concatenated string into the ‘Password’ field.
+* A Login IP Range restriction on the user`'s Salesforce profile is blocking requests from the StyleBI server's IP address.
+
+To determine which of these applies, log into Salesforce and go to menu:Setup[Quick Find > Login History]. Find the failed attempt (it should match the timestamp and source IP of the connection attempt), and check its ‘Status’ column, which may report a more specific reason (for example, "`Invalid Password`") than the generic message StyleBI displays.
+
+=== SOAP API login() is disabled by default in this org
+
+Salesforce disables the legacy SOAP `login()` operation by default for any org created in the Summer `'23 release or later. This affects most new Developer Edition, scratch, and trial orgs. No password or security token will work until a Salesforce administrator re-enables it. Follow the steps below:
+
+. In Salesforce, go to menu:Setup[Quick Find > User Interface].
+. Check the ‘Enable SOAP API login()’ checkbox.
+. Press btn:[Save].
++
+NOTE: Salesforce has announced that the SOAP `login()` operation will be fully retired in the Summer '27 release. Enabling this setting is a temporary workaround, not a permanent fix.
+
+=== SOAP API login() requires the use any api auth user permission
+
+This means an administrator enabled the narrower ‘Enable SOAP API login() to Users with the Use Any API Auth user permission’ checkbox instead of the plain ‘Enable SOAP API login()’ checkbox. There are two ways to resolve it:
+[square]
+* Go back to menu:Setup[Quick Find > User Interface] and check the plain ‘Enable SOAP API login()’ checkbox instead. This removes the permission requirement entirely.
+* Grant the connecting user the ‘Use Any API Auth’ system permission through a Permission Set.  Follow the steps below:
+
+. In Salesforce, go to menu:Setup[Quick Find > Permission Sets], and press btn:[New]. Give the permission set a name, and press btn:[Save].
+. Open the new permission set, and select ‘System Permissions’.
+. Press btn:[Edit], check ‘Use Any API Auth’, and press btn:[Save].
+. Back on the permission set page, select ‘Manage Assignments’.
+. Press btn:[Add Assignment], select the connecting user, and press btn:[Next] and btn:[Assign].
