@@ -8,7 +8,11 @@ ifdef::ai[]
 Summary: Chart Script API reference for `IntervalElement.setRoundAllCorners(Boolean)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
 endif::ai[]
 
-Specifies whether all four corners of each bar are rounded equally, or only the open (value) end. Requires a non-zero corner radius set via xref:IntervalElementSetCornerRadius.adoc[]. Not available for stacked bar charts. {noGetter}
+Specifies whether all four corners of each bar are rounded equally, or only the open (value) end. Requires a non-zero corner radius set via xref:IntervalElementSetCornerRadius.adoc[]. {noGetter}
+
+NOTE: For an xref:dashboard:IntervalChart.adoc[], this is  `true` by default, but can be changed by setting `setRoundAllCorners(false)`.
+
+
 
 == Parameter
 Boolean:: `true`: round all four corners +
@@ -41,4 +45,5 @@ var elem = graph.getElement(0);
 elem.setCornerRadius(0.5);
 elem.setRoundAllCorners(true);
 ----
+
 =====
