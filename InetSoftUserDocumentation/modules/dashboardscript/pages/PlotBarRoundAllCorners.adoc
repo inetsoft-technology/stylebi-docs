@@ -4,10 +4,12 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: When `true`, rounds all four corners of each bar equally using the radius set by xref:PlotBarCornerRadius.adoc[]. When `false` (default), only the open (value) end of each bar is rounded. Not available for stacked bar charts.
+Summary: When `true`, rounds all four corners of each bar equally using the radius set by xref:PlotBarCornerRadius.adoc[]. When `false` (default), only the open (value) end of each bar is rounded. For an Interval Chart this is always `true` and not exposed in the Properties panel, but setting `false` from script does take effect.
 endif::ai[]
 
-When `true`, rounds all four corners of each bar equally using the radius set by xref:PlotBarCornerRadius.adoc[]. When `false` (default), only the open (value) end of each bar is rounded. Not available for stacked bar charts.
+When `true`, rounds all four corners of each bar equally using the radius set by xref:PlotBarCornerRadius.adoc[]. When `false` (default), only the open (value) end of each bar is rounded.
+
+NOTE: For an xref:dashboard:IntervalChart.adoc[], this is `true` by default, but can be changed by setting `barRoundAllCorners=false`.
 
 == Type
 Boolean:: `true`: round all four corners +
