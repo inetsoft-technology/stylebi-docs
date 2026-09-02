@@ -29,12 +29,15 @@ height::			positive integer: row height in pixels +
 
 
 
+
 == Example
 [source,javascript]
 ----
 //Set body row height to 30 pixels
 TableView1.setRowHeight(1,30);
 
+//Hide Table header row entirely
+TableView1.setRowHeight(0,0);
 
 ----
 
