@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Reference for creating a Hybrid Table chart in Visual Composer, which combines a graphical chart with tabular text columns in the same component. The graphical measure is placed on the X axis; dimensions and one or more measures (made discrete) are placed on the Y axis. Enabling the 'Discrete' option on a measure renders it as a text column rather than a chart element — multiple discrete measures produce multiple text columns. To display grid lines, open Chart Properties, go to the Line tab, and enable 'Show Table Grid'. Column widths can be adjusted by dragging column boundaries. Text components can be added above the chart to serve as column headers, and each text column can be formatted independently using the Format panel.
+Reference for creating a Hybrid Table chart in Visual Composer, which combines a graphical chart with tabular text columns in the same component. Use this for a bar chart (or other graphical chart) that also shows the exact value as text next to each bar — for example, a horizontal bar chart with the number displayed to the right of the bar, or a ranked list with a value column beside each row — rather than relying on a tooltip or an axis alone to convey the number. The graphical measure is placed on the X axis; dimensions and one or more measures (made discrete) are placed on the Y axis. Enabling the 'Discrete' option on a measure renders it as a text column rather than a chart element — multiple discrete measures produce multiple text columns. To display grid lines, open Chart Properties, go to the Line tab, and enable 'Show Table Grid'. Column widths can be adjusted by dragging column boundaries. Text components can be added above the chart to serve as column headers, and each text column can be formatted independently using the Format panel.
 endif::ai[]
 
 A hybrid table chart is a chart that displays columns of data (like a table) in addition to the usual graphical chart elements.
@@ -49,6 +49,10 @@ image::commonscript:tableLikeChart2_1.png[alt="enable Discrete option for measur
 Observe that the chart now displays a column of values giving the aggregated measure value as text for each dimension value.
 +
 image::commonscript:tableLikeChart3_1.png[alt="chart displaying column of aggregated values"]
+
+. *_Optional:_* To move the text column to the right side of the bars instead of the left, right-click the text column's axis label and select ‘Axis Property’ from the context menu. On the *Label* tab, enable ‘Labels on Opposite Side’. See xref:AxisProperties.adoc[] for more information.
++
+image::commonscript:tableLikeChart12_1.png[alt="enable Labels on Opposite Side to move text column to the right of the bar"]
 
 . Drag another measure (e.g., ‘Discount’) from the ‘Measures’ folder in the *Data Source* panel to the ‘Y’ region  next to the previous measure.
 
