@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Explains how to group chart data in Visual Composer by color, shape, size, or text labels, how to group dates by level (week/month/year/quarter), how to create named groups (also called custom groups or groups by category) by merging axis labels, and how to apply top-N/bottom-N ranking filters to chart dimensions. Also covers the 'Share Colors' option (in the Group by Color section) for keeping chart colors consistent/synchronized across multiple charts in a Dashboard, so that values from columns or data model attributes with the same name always get the same color, even across different data sources — this is the mechanism to use when charts show mismatched colors for what should be the same category, as opposed to xref:VisualFormat.adoc[] (Format panel), which sets a component's own visual appearance rather than synchronizing colors between charts. Also covers Size legend color: whether/how the symbols in a Size legend can be recolored depends entirely on the chart's Color binding, including a hard limitation — if Color is bound to a different field than Size, the Size legend symbols are always a fixed gray and cannot be recolored at all.
+Summary: Explains how to group chart data in Visual Composer by color, shape, size, or text labels, how to group dates by level (week/month/year/quarter), how to create named groups (also called custom groups or groups by category) by merging axis labels, and how to apply top-N/bottom-N ranking filters to chart dimensions. Also covers the 'Share Colors' option (in the Group by Color section) for keeping chart colors consistent/synchronized across multiple charts in a Dashboard, so that values from columns or data model attributes with the same name always get the same color, even across different data sources — this is the mechanism to use when charts show mismatched colors for what should be the same category, as opposed to xref:VisualFormat.adoc[] (Format panel), which sets a component's own visual appearance rather than synchronizing colors between charts. Also covers Size legend color: when no field is bound to Color, the Size legend's symbols simply use whatever static color is set for the chart (see xref:AddUniformDataStyle.adoc[]); when Color and Size are bound to different fields, the Size legend symbols are always a fixed gray and cannot be recolored at all. To instead apply one uniform color, shape, or size to all of a chart's marks (no grouping), see xref:AddUniformDataStyle.adoc[] (Add Uniform Data Style).
 endif::ai[]
 
 [.videotitle]
@@ -17,7 +17,7 @@ include::ROOT:partial$videoVersion.adoc[]
 video::359390270#chapter=16509488[vimeo,640,400]
 =====
 
-To group data on a chart by using chart axis labels or color, shape, size, or text, see xref:BasicChartingSteps.adoc[]. The following sections explain some special ways of grouping chart data.
+To group data on a chart by using chart axis labels or color, shape, size, or text, see xref:BasicChartingSteps.adoc[]. The following sections explain some special ways of grouping Chart data.
 
 
 
@@ -25,6 +25,10 @@ NOTE: To perform calculations and create aggregates based on grouped data, see x
 
 [#GroupbyColor]
 == Group by Color
+
+[WARNING,caption=see also]
+xref:AddUniformDataStyle.adoc#SetAStaticColor[Set a Static Color], to apply one uniform color to every mark on the chart (no grouping) instead.
+
 To group using *color*, follow the steps below:
 
 
@@ -33,7 +37,6 @@ To group using *color*, follow the steps below:
 include::ROOT:partial$dimensionTip.adoc[]
 +
 image::VS Group Visual2.png[alt="drag dimension to color field in chart editor"]
-+
 +
 This distinguishes the different values by color and adds a color legend to the chart. (See xref:BasicChartingSteps.adoc#ModifyChartLegend[Modify  Chart Legend] for information about modifying the legend.) Set the ‘Stack’ option for the chart if you want to display the groups stacked vertically. See xref:BasicChartingSteps.adoc[] for more information.
 
@@ -51,7 +54,7 @@ image::SelectPalette.png[alt="choose palette from select palette dialog"]
 +
 If the selected palette does not contain enough colors to represent all the distinct data groups, additional groups will be represented by colors from previously selected palettes or from the default palette.
 
-. Click on the color chips to create the desired color order. (Colors are assigned to values from left to right.) To reset the color order, press the {buttonReset} on the color menu.
+. Click on the color chips to create the desired color order. (Colors are assigned to values from left to right.) To reset the color order, press the {buttonResetToDefault} on the color menu.
 +
 image::VS Group Visual6.png[alt="click color chips to set color order"]
 
@@ -76,9 +79,11 @@ NOTE: Colors remain synchronized across all charts when any filtering or sorting
 +
 image::fixedColorMapping1.png[alt="press assign fixed mapping button to open color mapping dialog"]
 
-.. In the ‘Color Mapping’ dialog box, press the ‘Add Row’ btn:[+] button to add a new value, and use the color swatch to set a fixed color for that value. Press the ‘Delete Row’ btn:[-] button to remove a mapping.
+.. In the ‘Color Mapping’ dialog box, press the ‘Add Row’ btn:[+] button to add a new value, and click the color swatch to set a fixed color for that value. Press the ‘Delete Row’ btn:[-] button to remove a mapping.
 +
 image::fixedColorMapping2.png[alt="add rows and assign fixed colors in color mapping dialog"]
++
+NOTE: Clicking the color swatch opens the same '`Select Color`' dialog box used in xref:AddUniformDataStyle.adoc#SetAStaticColor[Set a Static Color] — see that section for details on using the dialog's hue slider, saturation/brightness square, and HSV, RGB, and hex fields.
 +
 To assign a color to a dimension value that does not appear in the current data, enable the ‘Switch To Manual Input’ option, and type the value directly.
 +
@@ -88,10 +93,17 @@ image::fixedColorMapping4.png[alt="manually enter a dimension value not included
 
 . Press the {buttonApply} to apply the color setting.
 
+To  apply one uniform color to every mark on the chart (no grouping), see xref:AddUniformDataStyle.adoc#SetAStaticColor[Set a Static Color].
+
+[#GroupbyShape]
 == Group by Shape
 
 [WARNING,caption=see also]
-xref:MultipleMeasureChart.adoc#ColorShapeSize[Color, Shape, Size] in xref:MultipleMeasureChart.adoc[] to edit the shapes used for measures.
+====
+[square]
+* xref:MultipleMeasureChart.adoc#ColorShapeSize[Color, Shape, Size] in xref:MultipleMeasureChart.adoc[] to edit the shapes used for measures.
+* xref:AddUniformDataStyle.adoc#SetAStaticShape[Set a Static Shape], to apply one uniform shape to every mark on the chart (no grouping) instead.
+====
 
 To group using *shape*, follow the steps below:
 
@@ -110,7 +122,7 @@ image::VS Group Visual8.png[alt="shape panel opened for editing shape options"]
 +
 NOTE: The available shape options vary depending on the Chart type.
 
-. Click on the shape chips to create the desired shape order. (Shapes are assigned to values from left to right.) To reset the shape order, press the {buttonReset} on the shape menu.
+. Click on the shape chips to create the desired shape order. (Shapes are assigned to values from left to right.) To reset the shape order, press the {buttonResetToDefault} on the shape menu.
 +
 image::VS Group Visual9.png[alt="click shape chips to set shape order"]
 . *_Optional:_* To upload a custom image to use as a shape, press the {buttonAddShape}, and select the desired file.
@@ -122,7 +134,14 @@ NOTE: An administrator can make custom shapes available by placing the image fil
 
 . Press the {buttonApply} to apply the shape setting.
 
+To apply one uniform shape to every mark on the chart (no grouping), see xref:AddUniformDataStyle.adoc#SetAStaticShape[Set a Static Shape].
+
+[#GroupbySize]
 == Group by Size
+
+[WARNING,caption=see also]
+xref:AddUniformDataStyle.adoc#SetAStaticSize[Set a Static Size], to apply one uniform size to every mark on the chart (no grouping) instead.
+
 To group using *size*, follow the steps below:
 
 . Drag the *dimension* that you want to group from the data source panel to the ‘Size’ field in the bottom left panel.
@@ -139,12 +158,15 @@ image::Ad Hoc Group Visual11.png[alt="size panel with slider to set size range"]
 
 . Press the {buttonApply} to apply the size setting.
 
+To apply one uniform size to every mark on the chart (no grouping), see xref:AddUniformDataStyle.adoc#SetAStaticSize[Set a Static Size].
+
+[#SizeLegendColor]
 === Size Legend Color
 
 The color of the symbols in a Size legend depends on the  *Color* binding in the Chart Editor:
 
 [square]
-* If no field is bound in  the '`Color`' region, you can set the Size legend symbol color  using the '`Edit Color`' button next to the '`Color`' region.
+* If no field is bound in  the '`Color`' region, the Size legend symbols use whatever single static color is set for the Chart's data marks — see xref:AddUniformDataStyle.adoc#SetAStaticColor[Set a Static Color]. This is not a separate, legend-specific setting; the legend symbols simply match the same color as the marks.
 
 * If the *same field* is bound in both the '`Color`' and '`Size`' regions, the Size legend symbols use the color mapping and palette assigned to that field. See xref:#GroupbyColor[] above.
 

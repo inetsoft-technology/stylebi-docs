@@ -1,0 +1,64 @@
+= Add Uniform Data Style
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to apply one uniform color, shape, or size to all of a chart's data marks (bars, points, lines, etc.), rather than varying them by category. This is the opposite case from xref:GroupDataByDimension.adoc[] (Group Data by Dimension), which covers binding a dimension to 'Color', 'Shape', or 'Size' to distinguish groups. Here, the 'Color', 'Shape', or 'Size' field in the Chart Editor's bottom left panel is left *empty*, and the 'Edit'/'Edit Color' button next to it is used instead to set one fixed value applied uniformly across the whole chart; the color/shape/size is applied to the chart immediately, with no separate OK or Apply step. For color, pressing the color wheel opens a 'Select Color' dialog box, and a 'Reset to Default' button clears the chosen color back to the factory default (blue) — this button exists only for color, not shape or size. Also covers the interaction with Size Legend Color (xref:GroupDataByDimension.adoc#SizeLegendColor[]): when no field is bound to Color, the Size legend's symbols use this same static color, since there is no per-category color mapping for them to draw from.
+endif::ai[]
+
+The following sections  explain how to apply a  uniform color, shape, or size to *all* the Chart data  to create a consistent look. To *group or categorize*  data by color, shape, or size, see xref:GroupDataByDimension.adoc[] instead.
+
+[#SetAStaticColor]
+== Set a Static Color
+To  apply a single color to all data on the Chart, follow the steps below:
+
+. In the Chart Editor, leave the ‘Color’ field in the bottom left panel empty (do not drag any field into it).
+. Press the ‘Edit Color’ button next to the ‘Color’ field. Since no field is bound, this opens a single-color picker.
++
+image::staticColor1.png[alt="single color picker opened when no field is bound to color"]
+
+. Click a  color chip,   enter the desired RGB color code (hex), or press the color wheel to open the '`Select Color`' dialog box:
++
+image::selectColorDialog1.png[alt="select color dialog box with hue slider, saturation and brightness square, and H/S/V, R/G/B, and hex fields"]
++
+Drag the cursor in the square to adjust the saturation and brightness of the color, drag the handle on the vertical rainbow slider to change the hue, or enter exact values directly in the HSV, RGB, or '#' (hex) fields. Press btn:[OK] to apply the color to the Chart, or btn:[Cancel] to discard the change.
+. *_Optional:_* To clear the selected color and return to the factory default (blue), press the {buttonResetToDefault}.
++
+NOTE: If the Chart also has a field bound to ‘Size’, the  same color is used for the Size legend symbols. See xref:GroupDataByDimension.adoc#SizeLegendColor[Size Legend Color] for more information.
+
+
+
+
+To use color to identify different groups in the data, see xref:GroupDataByDimension.adoc#GroupbyColor[Group by Color].
+
+[#SetAStaticShape]
+== Set a Static Shape
+
+To apply a single shape to all data on the Chart, follow the steps below:
+
+. In the Chart Editor, leave the ‘Shape’ field in the bottom left panel empty (do not drag any field into it).
+. Press the ‘Edit’ button next to the ‘Shape’ field. Since no field is bound, this opens a single-shape picker.
++
+image::staticShape1.png[alt="single shape picker opened when no field is bound to shape"]
+. Click the desired shape. The shape is applied to the chart immediately.
+. *_Optional:_* To use a custom image as the shape (for Charts with points), press the ‘Add Shape’ icon, and select the desired image file (jpg, png, svg, or gif).
+. *_Optional:_* To clear the selected shape and return to the default, press the {buttonClearShape}.
+
+To use shape to identify different groups in the data, see xref:GroupDataByDimension.adoc#GroupbyShape[Group by Shape].
+
+[#SetAStaticSize]
+== Set a Static Size
+
+To apply a single size to all data on the Chart, follow the steps below:
+
+. In the Chart Editor, leave the ‘Size’ field in the bottom left panel empty (do not drag any field into it).
+. Press the ‘Edit’ button next to the ‘Size’ field. Since no field is bound, this opens a size picker with an ‘Auto’ option and a slider.
++
+image::staticSize1.png[alt="size picker with auto option and slider opened when no field is bound to size"]
+. Disable the ‘Auto’ option, then use the slider to set the desired fixed size. The size is applied to the chart immediately.
++
+NOTE: Leaving ‘Auto’ enabled lets StyleBI choose a default size automatically, rather than applying a size you set manually.
+
+To use size to identify different groups in the data, see xref:GroupDataByDimension.adoc#GroupbySize[Group by Size].
