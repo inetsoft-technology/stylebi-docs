@@ -157,7 +157,8 @@ report.log.max:: Sets the maximum log file size.
 == Mail Properties
 The following table lists a variety of email properties.  See xref:ConfigureServerEmail.adoc[] for related properties in Enterprise Manager.
 
-mail.from.address:: ‘From’ email address used in email messages. Set to `true` to allow users to enter a ‘From’ address that is different from their own email address. Default is `false`.
+mail.from.address:: ‘From’ email address used in email messages. Default is `reportserver@inetsoft.com`.
+mail.from.enabled:: Set to `true` to allow users to enter a ‘From’ address that is different from their own email address. Default is `false`.
 mail.smtp.host:: Mail SMTP host name.
 mail.smtp.port:: Specifies the SMTP port number. The default for non-SSL use is port 25. The default for SSL use is port 465.
 mail.subject.format:: Format for the mail subject line. It is a message format ({JavaTextMessageFormat}). There are two parameters used in generating the subject line. The first parameter is the alias, and the second parameter is the date and time. For example, a possible format could be  `pass:[Dashboard {0} generated at {1,time} on {1,date}]`.
@@ -167,7 +168,7 @@ mail.smtp.ssl.protocols:: Specifies an alternate SMTP protocol. Example:  `mail.
 == Materialized View Properties
 The following table lists configuration properties for materialized views. See xref:MaterializedView.adoc[] for more information about materialized views.
 
-mv.cache.data:: When set to `true`, caches materialized view result sets so that they can be shared across Dashboards.
+mv.cache.data:: Set to `false` to stop materialized view result sets from being cached and shared across Dashboards. Caching is on by default.
 mv.detail.data:: When set to `true`, populates Dashboard Chart and Crosstab ‘Show Details’ data from an existing materialized view rather than from the database.
 mv.enabled.all:: Sets the ‘MV On-demand by Default’ property  (see xref:MaterializedView.adoc[]).
 mv.metadata:: Sets the ‘Use meta-data for editing if MV is not available’ property. Default is `false`.
