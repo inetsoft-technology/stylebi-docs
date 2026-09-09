@@ -1,0 +1,51 @@
+= shadowInfo
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Specifies the appearance of the Oval's drop shadow (color, opacity, direction, distance, and blur), as a `ShapeShadow` object. This only controls the shadow's appearance — the shadow must still be turned on separately via xref:OvalShadow.adoc[] (the `shadow` boolean property). Corresponds to the 'Shadow' group on the 'Shape' tab of the Oval Properties dialog.
+endif::ai[]
+
+[WARNING,caption=See Also]
+====
+[square]
+* xref:OvalShadow.adoc[] to turn the drop shadow on or off.
+* xref:CommonProperties.adoc[] for properties shared with other components.
+* xref:dashboard:ShapeProperties.adoc[] for more information about Oval components.
+====
+
+Specifies the appearance of the Oval's drop shadow, as a `ShapeShadow` object. Turning the shadow on or off is controlled separately by xref:OvalShadow.adoc[]; `shadowInfo` only affects its appearance once enabled.
+
+== Type
+Object:: A `ShapeShadow` object with the following properties:
++
+****
+color:: The shadow color, as a hex string (for example, `"#000000"`). Default is `"#000000"` (black).
+alpha:: The shadow opacity, an integer from 0 to 100. Default is `30`.
+direction:: The  direction of the shadow: `"N"`, `"NE"`, `"E"`, `"SE"`, `"S"`, `"SW"`, `"W"`, or `"NW"` (North, Northeast, East, Southeast, South, Southwest, West, Northwest). Default is `"SE"`.
+distance:: How far the shadow is offset from the shape, in pixels, from 0 to 50. Default is `5`.
+blur:: The blur radius of the shadow’s edge, in pixels, from 0 to 50. Default is `6`.
+****
+
+== Example
+[source,javascript]
+----
+Oval1.shadow = true;
+Oval1.shadowInfo.color = "#333333";
+Oval1.shadowInfo.alpha = 50;
+Oval1.shadowInfo.direction = "SE";
+Oval1.shadowInfo.distance = 10;
+Oval1.shadowInfo.blur = 8;
+----
+
+[TIP]
+====
+Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+shadowInfo           // unqualified
+Oval1.shadowInfo    // qualified
+
+{secondForm}
+====
+

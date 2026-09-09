@@ -4,17 +4,18 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Adds a drop shadow to the component.
+Summary: Adds a drop shadow to the component. To set the shadow's color, opacity, direction, distance, and blur, see xref:RectangleShadowInfo.adoc[] (the `shadowInfo` property).
 endif::ai[]
 
 [WARNING,caption=See Also]
 ====
 [square]
+* xref:RectangleShadowInfo.adoc[] to set the shadow's color, opacity, direction, distance, and blur.
 * xref:CommonProperties.adoc[] for properties shared with other components.
 * xref:dashboard:ShapeProperties.adoc[] for more information about Rectangle components.
 ====
 
-Adds a drop shadow to the component.
+Adds a drop shadow to the component.  See xref:RectangleShadowInfo.adoc[] to style the shadow.
 
 == Type
 Boolean:: `true`: add drop shadow +
