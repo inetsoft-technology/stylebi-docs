@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Step-by-step instructions for adding a Chart to a Dashboard in Visual Composer, including understanding dimensions vs. measures, binding data to chart axes (X/Y regions), selecting a chart type, using color/shape/size/text regions for visual encoding, setting aggregation methods, and date grouping. Also covers post-creation adjustments: hiding or formatting chart axes (Axis Properties), adding a chart title, modifying chart legends (Legend Properties dialog — General, Scale, and Alias tabs, including renaming legend labels), and adjusting chart spacing (Resize Plot). This is the foundational chart creation page — also called chart setup or chart binding — read this before consulting chart-type-specific pages such as BarChart or LineChart.
+Step-by-step instructions for adding a Chart to a Dashboard in Visual Composer, including understanding dimensions vs. measures, binding data to chart axes (X/Y regions), selecting a chart type, using color/shape/size/text regions for visual encoding, setting aggregation methods, and date grouping. The 'X' and 'Y' regions accept multiple fields, but each of the 'Color', 'Shape', 'Size', and 'Text' regions holds only a single field at a time — dragging a new field into one of these regions replaces the field already there rather than combining with it. Also covers post-creation adjustments: hiding or formatting chart axes (Axis Properties), adding a chart title, modifying chart legends (Legend Properties dialog — General, Scale, and Alias tabs, including renaming legend labels), and adjusting chart spacing (Resize Plot). This is the foundational chart creation page — also called chart setup or chart binding — read this before consulting chart-type-specific pages such as BarChart or LineChart.
 endif::ai[]
 
 The following sections explain how to add a Chart to your Dashboard.
@@ -105,6 +105,8 @@ video::359085988#chapter=16555854[vimeo,640,400]
 =====
 +
 image::addingChart3.png[alt="drag dimension to Color, Shape, Size, or Text region"]
++
+NOTE: Unlike the ‘X’ and ‘Y’ regions (which accept multiple fields), each of the ‘Color’, ‘Shape’, ‘Size’, and ‘Text’ regions holds only a single field at a time. Dragging a new field into one of these regions replaces the current field.
 +
 Note that the effect of color, shape, and size coding varies by chart style. For example, in a bar-type chart the ‘Shape’ representation affects the style of the fill pattern, whereas in a point-type chart the ‘Shape’ representation affects the image of the point.
 +
