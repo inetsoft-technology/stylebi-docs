@@ -123,7 +123,6 @@ http.session.timeout:: HTTP session timeout in seconds (default is 1800, which i
 join.table.maxrows:: Sets the maximum number of rows to retain in any Data Block that is created by joining two or more Data Blocks in a Data Worksheet. The limit does *not* apply to joins performed in the ‘Database Query’ dialog box (see xref:dataworksheet:QueryData.adoc[]). By default, the user will be shown only a single warning each session if the limit is violated. To warn the user for each individual violation, set `always.warn.joinMaxRows=true`.
 
 
-olap.table.maxrow:: Determines how many rows to retrieve when creating unique values for selection lists. Default is 10000.
 query.analysis.maxrow:: Number of rows that the Visualization Recommender should use when suggesting components to display data. Default=5000. (The Visualization Recommender is displayed when the user selects ‘Open Wizard’  in the ‘New Dashboard’ dialog box.)
 query.cache.limit:: With `query.cache.data` enabled, specifies the number of query result sets to be retained in the cache. Default: 100 datasets (for  Data Worksheets/Dashboards).
 query.cache.timeout:: With `query.cache.data` enabled, specifies the amount of time (ms) that result sets for Data Worksheet and Dashboard queries persist in the cache. Default:  10 minutes.
