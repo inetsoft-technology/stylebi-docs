@@ -5,9 +5,9 @@ site:
 
 content:
    #edit_url: 'https://repo.inetsoft.com/docs/inetsoft/files/master/{path}'
-   sources: 
+   sources:
    - url: ../
-     branches: 'main'
+     branches: [main, v1.0, v1.2]
      start_path: InetSoftUserDocumentation
 
 ui:
@@ -17,13 +17,14 @@ ui:
 antora:
   extensions:
   - require: '@antora/lunr-extension'
-  - antora-router-extension
-    
+  - ./antora-router-extension.js
+  - ./versioned-router-extension.js
+
 asciidoc:
   attributes:
     testdrive: false
     si: true
-    
+
 runtime:
   log:
-    format: pretty    
+    format: pretty

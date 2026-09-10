@@ -1,7 +1,7 @@
 name: Publish to GitHub Pages with Lunr Search Extension
 on:
   push:
-    branches: [main]
+    branches: [main, v1.0, v1.2]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 concurrency:
@@ -17,13 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: playbook  # All run: steps execute here    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+        working-directory: playbook  # All run: steps execute here
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v5
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Configure Pages
       uses: actions/configure-pages@v5
     - name: Install Node.js
@@ -32,18 +31,27 @@ jobs:
         node-version: '18'
     - name: Install UI components
       working-directory: ui
-      run: npm install      
+      run: npm install
     - name: Create UI Bundle
       working-directory: ui
       run: npx gulp bundle
     - name: Install Antora with the Antora Lunr Extension
-      run: npm i antora @antora/lunr-extension
+      run: npm i antora @antora/lunr-extension antora-router-extension
     - name: Generate Site
+      env:
+        URL: https://inetsoft-technology.github.io/stylebi-docs
       run: npx antora --ui-bundle-url ../ui/build/ui-bundle.zip antora-playbook.yml
     - name: Upload Artifacts
       uses: actions/upload-pages-artifact@v4
       with:
         path: playbook/build/site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
