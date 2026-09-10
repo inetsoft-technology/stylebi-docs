@@ -317,7 +317,10 @@ schedule.task.listener:: Specifies the fully-qualified name of a listener class 
 schedule.time.12hours:: When `true`, uses a 12-hour clock for scheduled task conditions. Default is `false` (24-hour clock).
 scheduler.classpath:: The path that will be prepended to the system classpath when the Scheduler process is started.
 scheduleTask.thread.count:: Maximum number of task execution threads in the Scheduler (for ‘cpu’ and ‘session’ keys only). Default is 6 times the CPU count.
-schedule.task.timeout:: The maximum duration in milliseconds for  scheduled tasks and materialized view creation. Default is `600000` (ten minutes); an invalid (non-numeric) value also falls back to this default. Set to `0` for no timeout. Tasks dispatched via the cloud runner are an exception: a value of `0` or less is clamped to the `600000` default instead of waiting unbounded, since cloud runner execution consumes billed cloud compute. The timeout ensures that a task cannot persist   indefinitely.  When the timeout is reached, the job  is terminated regardless of whether the task is in a failed state or running successfully.
+schedule.task.timeout:: The maximum duration in milliseconds for  scheduled tasks and materialized view creation. Default is `600000` (ten minutes). Set to `0` for no timeout. When the timeout is reached, the job  is terminated regardless of whether the task is in a failed state or running successfully.
++
+[IMPORTANT]
+Tasks dispatched via the *cloud runner* are an *exception*: A value of `0` or less is clamped to the `600000` default instead of waiting unbounded. This ensures that a cloud-billed task cannot persist   indefinitely.
 
 == Security Properties
 The following table lists a variety of security properties.  See xref:SpecifySecurityProvider.adoc[] and xref:TailorServerPerformance.adoc[] for related properties.
