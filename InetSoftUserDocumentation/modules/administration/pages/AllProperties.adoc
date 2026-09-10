@@ -335,11 +335,11 @@ login.loginAs:: Set to `on` to permit an administrator to log in as a particular
 openid.property.provider:: Fully-qualified class name of an implementation of `inetsoft.web.security.sso.OpenIDPropertyProvider` that provides the OpenID Connect configuration for a given HTTP request.
 openid.postprocessor:: Fully-qualified class name of an implementation of `inetsoft.web.security.sso.OpenIDPostprocessor` that modifies the SRPrincipal created by the SSO filter given the set of claims returned from the IdP.
 role.administrator:: Only users with this role can log into the EM and administer the  server.
-security.cache:: Caches data when using LDAP security for improved performance.
+security.cache:: Caches identity lookups (such as user roles and group memberships) for improved performance. This applies to any security provider (LDAP, database, or custom), not just LDAP.
 
-security.allow.iframe:: Set to `false` (default) to prevent the Enterprise Manager and User Portal login pages from being displayed within an IFrame. This is equivalent to setting the HTTP header property `X-Frame-Options` to `SAMEORIGIN`, and should be used in conjunction with Single Sign-On (SSO). See xref:integration:ConfigureSingleSignOn.adoc[] in xref:integration:AdvancedServerIntegration.adoc[]   for more information.
+security.allow.iframe:: Set to `false` (default) to add the `X-Frame-Options` header (`SAMEORIGIN`) to server responses generally, preventing the application -- not only the Enterprise Manager and User Portal login pages -- from being displayed within an IFrame. Set to `true` to omit that header, which may be necessary when you want to embed StyleBI within an IFrame; this should be used in conjunction with Single Sign-On (SSO), and the server must be using SSL in this case. See xref:integration:ConfigureSingleSignOn.adoc[] in xref:integration:AdvancedServerIntegration.adoc[]   for more information.
 +
-Set to `true` to prevent the `X-Frame-Options` header from being added, which may be necessary when you want to embed the login pages within an IFrame.  (The server must be using SSL in this case.)
+Setting this to `true` also changes session cookie behavior: the session cookie's `SameSite` attribute is set to `None` (rather than the default `Lax`) so the cookie can still be sent with the cross-site requests an embedded IFrame produces.
 
 sso.logout.url:: The URL to which the user is directed when they  select '`Log Out`'. After SSO logout occurs, the user is redirected to the URL defined at `portal.logout.url`.
 
