@@ -306,7 +306,7 @@ The following table lists a variety of scheduling properties. See xref:Configure
 ftp.knownhosts.path:: Location of the known hosts file for SFTP connections. Default is *.ssh/known_hosts* in user’s home directory.
 schedule.condition.taskDefaultTime:: Determines whether the user needs to explicitly supply a '`Start Time`' when creating a scheduled task.  Set to `false` to suppress the default value and force the user to enter an explicit value.  Set to `true` to allow the '`Start Time`' to be populated with a default value.
 schedule.java.opts:: Specifies additional Java options and parameters to be passed to the Scheduler instance.
-schedule.auto.start::  Set to `true` (default) to allow the scheduler to be started automatically on initialization of the repository servlet. (This property is only utilized when running from *source*). If you need to specify additional parameters to the Java executable when using this  auto-start option, add a `schedule.java.opts` property. (See above.)
+schedule.auto.start::  Set to `true` (default) to allow the scheduler to be started automatically on initialization of the repository servlet. This property applies only to a development environment running from *source*; it has no effect in a container deployment, where StyleBI's supported configuration is a separate scheduler container rather than a second long-lived process inside the main container. In a container, this property is set to `false` at first storage initialization regardless of the `defaults.properties` default of `true`, and the `INETSOFTENV_SCHEDULE_AUTO_START` environment variable does not override this. If you need to specify additional parameters to the Java executable when using this  auto-start option, add a `schedule.java.opts` property. (See above.)
 
 
 
@@ -317,7 +317,7 @@ schedule.task.listener:: Specifies the fully-qualified name of a listener class 
 schedule.time.12hours:: When `true`, uses a 12-hour clock for scheduled task conditions. Default is `false` (24-hour clock).
 scheduler.classpath:: The path that will be prepended to the system classpath when the Scheduler process is started.
 scheduleTask.thread.count:: Maximum number of task execution threads in the Scheduler (for ‘cpu’ and ‘session’ keys only). Default is 6 times the CPU count.
-schedule.task.timeout:: The maximum duration in milliseconds for  scheduled tasks and materialized view creation. Default is 0 (no timeout). The timeout ensures that a task cannot persist   indefinitely.  When the timeout is reached, the job  is terminated regardless of whether the task is in a failed state or running successfully.
+schedule.task.timeout:: The maximum duration in milliseconds for  scheduled tasks and materialized view creation. Default is `600000` (ten minutes). Set to `0` for no timeout, except for tasks executed via the cloud runner, which are always capped at `600000` regardless of this setting, since a cloud-billed task must never wait unbounded. The timeout ensures that a task cannot persist   indefinitely.  When the timeout is reached, the job  is terminated regardless of whether the task is in a failed state or running successfully.
 
 == Security Properties
 The following table lists a variety of security properties.  See xref:SpecifySecurityProvider.adoc[] and xref:TailorServerPerformance.adoc[] for related properties.
