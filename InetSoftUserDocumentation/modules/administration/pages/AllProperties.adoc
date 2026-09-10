@@ -216,11 +216,11 @@ share.twitter.enabled:: Enables the {buttonTwitter} under the {buttonSocialShari
 
 share.link.enabled:: Enables the {buttonCopyLink} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `true`.
 
-share.slack.enabled:: Enables the {buttonSlack} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `false`. Requires `share.slack.url` to also be set, otherwise the option remains hidden.
+share.slack.enabled:: Enables the {buttonSlack} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `false`. Requires `share.slack.url` to also be set, otherwise the option is shown disabled.
 
 share.slack.url:: The Slack incoming webhook URL for a channel. When a user shares the Dashboard using the {buttonSlack}, the server POSTs a JSON SlackMessage to this URL containing  the Dashboard link.
 
-share.googlechat.enabled:: Enables the {buttonGoogleHangoutsChat} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `false`. Requires `share.googlechat.url` to also be set, otherwise the option remains hidden.
+share.googlechat.enabled:: Enables the {buttonGoogleHangoutsChat} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `false`. Requires `share.googlechat.url` to also be set, otherwise the option is shown disabled.
 
 share.googlechat.url:: The Google Hangouts Chat incoming webhook URL. When a user shares the Dashboard using the {buttonGoogleHangoutsChat}, the server POSTs a card-style JSON message to this URL containing a `<users/all>` mention and a clickable '`Click here to view`' link.
 
