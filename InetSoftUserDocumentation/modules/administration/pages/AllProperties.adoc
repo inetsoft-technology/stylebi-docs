@@ -269,7 +269,7 @@ portal.home.link:: Sets the URL of the ‘Home’ button in the User Portal. Def
 
 em.home.link:: Sets the URL of the ‘Home’ button in Enterprise Manager. Default is `..`, one level above the Enterprise Manager URL. This can be an absolute URL such as https://www.google.com, or a path relative to `/app/` such as  `composer`. See  xref:Presentation.adoc#PortalIntegration[Portal Integration] for more information.
 
-portal.customLoadingText:: Specifies text to display on the loading screen when the user logs into the User Portal, replacing the built-in "`*Loading...*`" message. This text is displayed below the loading logo -- either the built-in animated logo, or the optional custom image set by `portal.customLoadingLogo`.
+portal.customLoadingText:: Specifies text to display on the loading screen when the user logs into the User Portal. The message is displayed under the "Please wait, the application is loading" message and logo -- but that built-in message and logo are shown only while `portal.customLoadingLogo` is empty. If a custom loading logo is configured, this text is the only text shown on the splash screen.
 
 portal.customLogo.enabled:: When set to `true`, this reveals the '`Default Favicon`' property  xref:Presentation.adoc#LookandFeel[Look and Feel] page.  Default is `false`.  Uncheck the '`Default Favicon`' property to upload a custom favicon.
 
