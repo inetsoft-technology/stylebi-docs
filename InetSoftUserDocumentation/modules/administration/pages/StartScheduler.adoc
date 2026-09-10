@@ -13,7 +13,7 @@ To invoke a custom listener class at the start and end of each scheduled task, s
 ====
 
 == Start from Docker
-In a typical environment, you can start the Scheduler by starting the Scheduler Docker container.
+In a typical environment, you can start the Scheduler by starting the Scheduler Docker container. This starts the Scheduler as a single, long-running process that executes every scheduled task in-process. To instead run each task in its own short-lived cloud container, see xref:ConfigureCloudRunner.adoc[].
 
 
 [#StartfromCommandLine]
