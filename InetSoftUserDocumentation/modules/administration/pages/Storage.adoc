@@ -161,6 +161,12 @@ image::Drivers_Plugins5.png[alt="check plugin checkbox and press Uninstall butto
 
 [#ChangetheStorageMethod]
 == Change the Storage Method
+
+[WARNING,caption=see also]
+====
+If you are configuring the Scheduler to dispatch tasks to cloud-native infrastructure, see xref:ConfigureCloudRunner.adoc[].
+====
+
 You can configure the type of back-end storage by setting variables in the _docker-compose.yaml_ file. If you have previously configured ‘File System’ storage, you can import the existing files into the database. See xref:administration:ManageContent.adoc[] for more information.
 
 IMPORTANT:  If you change the key-value storage from the default MapDB, you will also need to change the specified  audit database (see xref:Audit.adoc#ConfiguretheAuditDatabase[Configure the Audit Database]).
@@ -168,6 +174,7 @@ IMPORTANT:  If you change the key-value storage from the default MapDB, you will
 
 
 TIP: {SampleYAML}
+
 
 The sections below provide examples of common storage configurations.
 
