@@ -324,7 +324,7 @@ schedule.task.listener:: Specifies the fully-qualified name of a listener class 
 schedule.time.12hours:: When `true`, uses a 12-hour clock for scheduled task conditions. Default is `false` (24-hour clock).
 scheduler.classpath:: The path that will be prepended to the system classpath when the Scheduler process is started.
 scheduleTask.thread.count:: Maximum number of task execution threads in the Scheduler (for ‘cpu’ and ‘session’ keys only). Default is 6 times the CPU count.
-schedule.task.timeout:: The maximum duration in milliseconds for  scheduled tasks and materialized view creation. Default is `600000` (ten minutes). Set to `0` for no timeout. The timeout ensures that a task cannot persist   indefinitely.  When the timeout is reached, the job  is terminated regardless of whether the task is in a failed state or running successfully.
+schedule.task.timeout:: The maximum duration in milliseconds for  scheduled tasks and materialized view creation. Default is `600000` (ten minutes); an invalid (non-numeric) value also falls back to this default. Set to `0` for no timeout. Tasks dispatched via the cloud runner are an exception: a value of `0` or less is clamped to the `600000` default instead of waiting unbounded, since cloud runner execution consumes billed cloud compute. The timeout ensures that a task cannot persist   indefinitely.  When the timeout is reached, the job  is terminated regardless of whether the task is in a failed state or running successfully.
 
 == Security Properties
 The following table lists a variety of security properties.  See xref:SpecifySecurityProvider.adoc[] and xref:TailorServerPerformance.adoc[] for related properties.
@@ -332,8 +332,8 @@ The following table lists a variety of security properties.  See xref:SpecifySec
 anonymous.userdata.save:: Set to `false` to prevent storage of preferences for the anonymous user.
 enable.changePassword:: Set to `false` to disable users’ ability to change passwords in the User Portal (using the default security provider).
 login.loginAs:: Set to `on` to permit an administrator to log in as a particular user. This adds a ‘Log in As’ action to the *Actions* tab of the *Security* page (see xref:SetSecurityActions.adoc[]) that determines which users are allowed to access this function. If a user is granted permission for the ‘Log in As’ action, they will see a ‘Login as’ field on the Portal login screen,  and can log in as any user for which they are assigned “Administrator Permissions”.  See  xref:LoginAsDifferentUser.adoc[] for more information.
-openid.property.provider:: Fully-qualified class name of an implementation of `inetsoft.web.security.sso.OpenIDPropertyProvider` that provides the OpenID Connect configuration for a given HTTP request.
-openid.postprocessor:: Fully-qualified class name of an implementation of `inetsoft.web.security.sso.OpenIDPostprocessor` that modifies the SRPrincipal created by the SSO filter given the set of claims returned from the IdP.
+openid.property.provider:: Fully-qualified class name of an implementation of `inetsoft.enterprise.sso.OpenIDPropertyProvider` that provides the OpenID Connect configuration for a given HTTP request.
+openid.postprocessor:: Fully-qualified class name of an implementation of `inetsoft.enterprise.sso.OpenIDPostprocessor` that modifies the SRPrincipal created by the SSO filter given the set of claims returned from the IdP.
 role.administrator:: Only users with this role can log into the EM and administer the  server.
 security.cache:: Caches identity lookups (such as user roles and group memberships) for improved performance. This applies to any security provider (LDAP, database, or custom), not just LDAP.
 
