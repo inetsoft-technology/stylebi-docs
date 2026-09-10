@@ -1,0 +1,187 @@
+= Configure the Cloud Runner
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to configure the cloud runner, an alternative scheduler execution mode that dispatches each scheduled task to a short-lived container (AWS Fargate, Azure Container Apps, Google Cloud Run, Kubernetes, or local Docker) instead of running it in-process. Covers why to use it, the inetsoft.yaml cloudRunner configuration per provider, monitoring, and debugging.
+endif::ai[]
+
+include::ROOT:partial$enterpriseOnly.adoc[]
+
+
+
+By default, the Scheduler runs every scheduled task  in a single long-running Scheduler process. The *cloud runner* is an alternative execution mode:  The Scheduler instead launches a short-lived, single-purpose container to run the task, then waits for that container to report the result.
+
+Consider using the cloud runner in the following situations:
+[square]
+* A single misbehaving task (runaway export, large materialized view build) could  degrade or crash the shared Scheduler process, and you want each task isolated with its own CPU/memory limits.
+* Your scheduled workload varies dramatically, and you don`'t want to permanently size the Scheduler for its worst-case load.
+* StyleBI is already deployed on container-native infrastructure (Kubernetes, ECS, Azure Container Apps, Cloud Run), and running scheduled tasks as native jobs on that same infrastructure fits your operational model better than a second long-lived process.
+* You want scheduled-task compute billed only while a task is actually running, rather than keeping Scheduler capacity provisioned continuously.
+
+[IMPORTANT]
+====
+The cloud runner is a deployment-wide setting, not a per-task option. When  cloud-running is configured, *every* scheduled task is dispatched as a cloud job. You cannot run some tasks in-process and others in the cloud runner.
+====
+
+== How It Works
+
+When the cloud runner is configured, each individual scheduled task proceeds as follows when triggered:
+
+. The Scheduler looks up the cloud runner type configured in _inetsoft.yaml_ and launches a container for that platform (an ECS Fargate task, an Azure Container Apps job, a Google Cloud Run job, a Kubernetes `Job`, or a local Docker container).
+. The container joins the StyleBI cluster as a client node, runs the task, and reports success or failure back to the Scheduler over the cluster messaging channel.
+. The Scheduler waits for that result, subject to the `schedule.task.timeout` property. See xref:AllProperties.adoc[] for the timeout behavior specific to the cloud runner.
+. The container exits once the task is complete; nothing is left running afterward.
+
+Because the container reports its result back over the cluster, it must be able to reach the rest of the StyleBI cluster over the network. Kubernetes and AWS Fargate deployments typically handle this automatically, since each pod or task gets its own routable address. Docker-based deployments and Azure Container Apps, however, may need the following environment variables configured on the server and Scheduler so cluster nodes can find each other correctly:
+
+`INETSOFT_HOST_IP`:: The externally reachable IP address of the host machine. (Not needed for Azure Container Apps.)
+`INETSOFT_HOST_PORT`:: The port used for cluster node discovery. For a Docker deployment, this must match the published port mapping (e.g., if the port mapping is `5702:5701`, set this to `5702`).
+`INETSOFT_HOST_OUTBOUND_PORT`:: The port used for cluster node communication. For a Docker deployment, this must match the published port mapping (e.g., if the port mapping is `47101:47100`, set this to `47101`).
+
+If these are set incorrectly, the cloud runner container will start but will never successfully report its result back, and the task will appear to hang until `schedule.task.timeout` is reached.
+
+== Enable the Cloud Runner
+
+[WARNING,caption=See also]
+====
+[square]
+* xref:AllProperties.adoc[] for the `schedule.task.timeout` behavior specific to the cloud runner.
+* xref:ConfigureScheduler.adoc[] for Scheduler settings that apply regardless of execution mode.
+* xref:Storage.adoc#ChangetheStorageMethod[Change the Storage Method] for configuring cloud-native key-value and blob storage, which typically accompanies a cloud runner deployment.
+====
+To enable the cloud runner, add a `cloudRunner` section to the _inetsoft.yaml_ file. Set `cloudRunner.type` to one of `fargate`, `azure`, `google`, `kubernetes`, or `docker`, and provide the matching subsection. The examples below show the settings most commonly needed to get started.
+
+
+TIP: {SampleYAML}
+
+
+=== AWS Fargate
+
+.Fargate Properties for inetsoft.yaml
+[source,yaml]
+cloudRunner:
+  type: fargate
+  fargate:
+    region: us-east-1
+    cluster: inetsoft-runner-cluster
+    dockerImageUri: your_account.dkr.ecr.us-east-1.amazonaws.com/stylebi-enterprise:latest
+    executionRoleArn: arn:aws:iam::your_account:role/ecsTaskExecutionRole
+    vpcSubnets: ["subnet-xxxxxxxx"]
+    vpcSecurityGroups: ["sg-xxxxxxxx"]
+    cpu: "1024"
+    memory: "2048"
+
+Use the same VPC subnets and security groups as the StyleBI server so that the runner container can reach the cluster. If credentials are not specified, the task's IAM role is used. Other available settings include `accessKeyId`/`secretAccessKey` (falls back to the task IAM role if omitted), `taskDefinitionArn` (to reuse an existing task definition instead of registering a new one), `family`, `containerName`, `assignPublicIp`, and `logGroup`/`logRegion`/`logStreamPrefix` to send container output to CloudWatch Logs.
+
+=== Azure Container Apps
+
+.Azure Properties for inetsoft.yaml
+[source,yaml]
+cloudRunner:
+  type: azure
+  azure:
+    tenantId: "your_tenant_id"
+    subscriptionId: "your_subscription_id"
+    clientId: "your_client_id"
+    clientSecret: "your_client_secret"
+    region: eastus
+    resourceGroup: inetsoft-resources
+    containerAppsEnvironmentId: "/subscriptions/.../resourceGroups/.../providers/Microsoft.App/managedEnvironments/your_environment"
+    dockerImageUri: your_registry.azurecr.io/stylebi-enterprise:latest
+    cpu: 1.0
+    memory: "2Gi"
+
+Use the Container Apps Environment created on the same virtual network as the StyleBI server. If `clientId`/`clientSecret` are omitted, a managed identity (`DefaultAzureCredential`) is used instead. If the image is in a private registry, also set `containerRegistryServer`, `containerRegistryUsername`, and `containerRegistryPassword`.
+
+=== Google Cloud Run
+
+.Google Properties for inetsoft.yaml
+[source,yaml]
+cloudRunner:
+  type: google
+  google:
+    projectId: your-project-id
+    location: us-east1
+    serviceAccountFile: "/path/to/credentials.json"
+    dockerImageUri: us-east1-docker.pkg.dev/your-project-id/your-repo/stylebi-enterprise:latest
+    vpcNetwork: your-network
+    vpcSubnet: your-subnet
+    cpu: "1000m"
+    memory: "2Gi"
+
+Use the VPC network and subnet shared with the StyleBI server. Instead of `serviceAccountFile` (a path to a service account key file), you can set `serviceAccountJson` to a Base64-encoded service account key directly, which is more convenient when the key can't be mounted as a file (for example, when set via a Docker environment variable).
+
+=== Kubernetes
+
+.Kubernetes Properties for inetsoft.yaml
+[source,yaml]
+cloudRunner:
+  type: kubernetes
+  kubernetes:
+    namespace: inetsoft
+    dockerImageUri: your_registry/stylebi-enterprise:latest
+    serviceAccount: inetsoft-runner
+    ttlSecondsAfterFinished: 300
+    backoffLimit: 0
+
+Omit `configFilePath` to use the cluster's default in-cluster service account credentials (the typical case when StyleBI itself runs in the same cluster); set it to a kubeconfig file path only when connecting to a cluster from outside it. Other available settings include `imagePullPolicy`, `imagePullSecrets`, `volumeMounts`, and `tolerations`.
+
+=== Docker (local/on-premises)
+
+.Docker Properties for inetsoft.yaml
+[source,yaml]
+cloudRunner:
+  type: docker
+  docker:
+    dockerHost: "tcp://localhost:2375"
+    dockerImageUri: stylebi-enterprise:latest
+    network: inetsoft-network
+    memory: 2147483648
+
+This mode launches containers on a local Docker daemon and is intended for development and on-premises deployments rather than a managed cloud platform. If the daemon requires TLS, also set `tlsVerify: true` and `certificatePath`. If the image is in a private registry, also set `registryUrl`, `registryUsername`, `registryPassword`, and `registryEmail`.
+
+== Monitor Task Execution
+
+
+
+Because each task run is a separate, temporary container rather than a thread in the Scheduler process, task status is not visible on the Enterprise Manager *Schedule* > *Status* page. (The *Status*  tab is hidden once a cloud runner is configured). Instead, you can monitor task execution from the cloud platform`'s own console:
+
+[cols="1,2"]
+|===
+|Platform |Where to look
+
+|AWS Fargate
+|ECS console -> *Clusters* -> your cluster -> *Tasks*
+
+|Azure Container Apps
+|Azure portal -> your Container Apps Environment -> *Jobs*
+
+|Google Cloud Run
+|Google Cloud console -> *Cloud Run* -> *Jobs*
+
+|Kubernetes
+|`kubectl get jobs` (or a cluster UI such as Lens) in the configured namespace
+
+|Docker
+|`docker ps` / `docker logs` on the host running the Docker daemon
+|===
+
+Task success/failure and start/end times are still recorded normally in the *Tasks* tab in Enterprise Manager.
+
+== Debugging
+
+To attach a remote Java debugger to a cloud runner container, set the following under `cloudRunner.debugProperties` in _inetsoft.yaml_:
+
+.Debug Properties for inetsoft.yaml
+[source,yaml]
+cloudRunner:
+  debugProperties:
+    DEBUG: "true"
+    DEBUG_PORT: "5009"
+    DEBUG_SUSPEND: "n"
+
+Set `DEBUG_SUSPEND` to `"y"` to have the container wait for a debugger to attach before running the task. Make sure the debug port is reachable from your development machine (for example, opened in the relevant cloud security group or firewall).
+
+
