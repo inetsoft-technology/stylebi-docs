@@ -271,6 +271,8 @@ em.home.link:: Sets the URL of the ‘Home’ button in Enterprise Manager. Defa
 
 portal.customLoadingText:: Specifies text to display on the loading screen when the user logs into the User Portal, replacing the built-in "`*Loading...*`" message. This text is displayed below the loading logo -- either the built-in animated logo, or the optional custom image set by `portal.customLoadingLogo`.
 
+portal.customLogo.enabled:: When set to `true`, this reveals the '`Default Favicon`' property  xref:Presentation.adoc#LookandFeel[Look and Feel] page.  Default is `false`.  Uncheck the '`Default Favicon`' property to upload a custom favicon.
+
 portal.logout.url:: The URL to which the user is directed when they  select '`Log Out`'. If  SSO is in effect, this redirect occurs after  the user is directed to  `sso.logout.url`.
 
 
