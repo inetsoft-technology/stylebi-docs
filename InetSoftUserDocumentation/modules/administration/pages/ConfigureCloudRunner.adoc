@@ -42,7 +42,7 @@ Because the container reports its result back over the cluster, it must be able 
 
 If these are set incorrectly, the cloud runner container will start but will never successfully report its result back, and the task will appear to hang until `schedule.task.timeout` is reached.
 
-Reaching the cluster is not the only network requirement: the container also runs the task itself, so it needs the same access as the main server to whatever the task actually uses -- the configured data sources, and the key-value/blob storage backend (see xref:Storage.adoc[]). A container that joins the cluster successfully but can't reach a data source or the storage backend will fail partway through the task rather than at startup.
+The container also needs access to any resources the task requires -- configured data sources and the key-value/blob storage backend (see xref:Storage.adoc[]), for example. A container that joins the cluster successfully but cannot reach a data source or the storage backend will fail partway through the task rather than at startup.
 
 == Enable the Cloud Runner
 
@@ -57,7 +57,7 @@ To enable the cloud runner, add a `cloudRunner` section to the _inetsoft.yaml_ f
 
 In every case, `dockerImageUri` must point to your own licensed StyleBI Enterprise image, pushed to a registry the target platform or cluster can actually pull from (an ECR/ACR/Artifact Registry repository, or a registry reachable from your Kubernetes cluster or Docker host).
 
-IMPORTANT: The `cloudRunner` section is read once when the server and Scheduler start; changes are not picked up automatically. Restart both after adding, changing, or removing it. To revert to in-process execution, remove the `cloudRunner` section entirely and restart.
+IMPORTANT: The `cloudRunner` section is read once when the server and Scheduler start; later changes are not picked up automatically. Be sure to restart both server and Scheduler after making any alterations to the `cloudRunner` section. To revert to the default in-process execution, remove the `cloudRunner` section entirely and restart.
 
 === AWS Fargate
 
