@@ -1,7 +1,12 @@
-= Create a Device Layout
+= Create a Dashboard Layout
 :page-aliases: viewsheet:CreateDeviceLayout.adoc
 %experimetal%
 include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+How to create and configure layouts that control how a Dashboard appears on different devices and on the printed page. Covers device layouts for device classes (Extra small, Small, Medium, Large) and creating custom device classes based on min/max CSS pixel widths, with the 'Mobile Only' option to prevent layouts from triggering on narrow desktop browser windows. StyleBI does not have a separate "report" asset -- what other products call a report is a Dashboard -- so print layouts are how a Dashboard produces paginated, report-style output: multiple pages, page breaks, page numbering, font scaling, and headers/footers that repeat on every page, the same capability report pagination provided. Covers assigning Dashboard components to a layout by dragging from the Components folder, repositioning and resizing components, using guidelines, adding PageBreak components, and applying Table Flow Control (Fit Page Width or Fit Contents) for tables in print layout. Also covers adding Text and Image components to print layout headers and footers, including special codes for inserting page numbers ({P}), total pages ({N}), date ({D}), and time ({T}) -- for example, a "Page {P} of {N}" footer, a common report pagination pattern. Explains how to edit and delete existing device and print layouts.
+endif::ai[]
 
 [.videotitle]
 .Watch Video: Creating a Dashboard (Layout for Mobile)
@@ -13,11 +18,15 @@ video::359874333#chapter=16573902[vimeo,640,400]
 =====
 
 
-You can set the layout that determines how a Dashboard  is displayed on an electronic device and on the printed page.
+You can set the layout that determines how a Dashboard is displayed on an electronic device and on the printed page. StyleBI does not have a separate "`report`" asset -- what other products call a report is simply a Dashboard -- so if you need paginated, report-style output with page breaks, page numbering, and repeating headers/footers, that is what a *print layout* provides. See xref:#PrintLayouts[] below.
+
+[#DeviceLayouts]
+== Device Layouts
+A Dashboard _layout_ for an electronic device identifies a class of devices (e.g., phone, tablet) based on screen dimensions, and lets you tailor the display of the Dashboard to that class of devices.
 
 [#CreateLayoutForMobileDevice]
-== Create a Layout for Mobile Device
-A Dashboard _layout_ identifies a class of devices (e.g., phone, tablet) based on screen dimensions. The Dashboard layout allows you to tailor the display of the Dashboard to this class of devices. To create a Dashboard layout for a device class, follow the steps below:
+=== Create a Layout for Mobile Device
+To create a Dashboard layout for a device class, follow the steps below:
 
 . Press the {buttonOptions} in the toolbar to open the ‘Dashboard Options’ dialog box.
 
@@ -86,8 +95,17 @@ TIP: ‘Mobile Only’ enabled is the recommended setting.
 
 . Press btn:[OK] to close the ‘Dashboard Options’ dialog box.
 
+[#PrintLayouts]
+== Print Layouts
+
+[TIP]
+.How to make your Dashboard print like a report
+====
+StyleBI does not have a separate "`report`" asset -- what other products call a report is simply a Dashboard. A *print layout* is how you get the same paginated, multi-page output a report used to provide: page breaks, page numbering, and headers/footers that repeat identically on every printed page.
+====
+
 [#CreateLayoutForPrint]
-== Create a Layout for Print
+=== Create a Layout for Print
 A _print layout_ specifies the page settings for printing the Dashboard. This allows you to tailor the arrangement of the Dashboard to these page settings. The print layout  automatically modifies certain Dashboard components when the Dashboard is printed: *Tables* are fully expanded to show all rows, and *Filter* components such as Selection Lists and Range Sliders are presented with their current selections only.
 
 
@@ -123,7 +141,7 @@ image:Viewsheet Layout Dialog Print.png[alt="dashboard print layout dialog box w
 
 To assign Dashboard components to an existing print layout, see xref:AssignDashboardComponentsToLayout[] below.
 
-== Edit an Existing Device Layout
+== Edit or Delete an Existing Layout
 To edit the existing layout settings for a device class or print layout, follow the steps below:
 
 . Press the {buttonOptions} in the toolbar to open the ‘Dashboard Options’'Dashboard Options' dialog box.
@@ -137,7 +155,6 @@ image:Viewsheet Layout Edit.png[alt="select layout and press Edit button in devi
 . Edit the layout as desired. See xref:#CreateLayoutForMobileDevice[] and xref:#CreateLayoutForPrint[] for more details.
 
 To *delete* an existing layout, select the layout in the ‘Device Layouts’ panel and press the btn:[Delete] button.
-
 
 
 
@@ -190,7 +207,7 @@ For the ‘Fit Page Width’ option the table width is set to the width of the p
 +
 image:Viewsheet Layout Assignment 4.png[alt="table with Fit Page Width or Fit Contents option applied"]
 
-. *_Optional:_* For a print layout, add additional Text components into the page header or footer. See below:
+. *_Optional:_* For a print layout, add additional Text components into the page header or footer. A header or footer is exactly the kind of element that made a printed report a report: whatever you place there -- a title, a page number, a generation date -- repeats identically on every page of the printed output. See below:
 +
 .Add Text to Print Layout
 ****
@@ -209,6 +226,8 @@ image:Viewsheet Layout HeaderText.png[alt="drag text component into header or fo
 image:Viewsheet Layout HeaderText2.png[alt="text properties dialog with text entered for header"]
 +
 NOTE: You can use the following special codes within the text that you enter: `pass:[{P}]` inserts the current page number, `pass:[{N}]` inserts the total number of pages, and `pass:[{D}]` and `pass:[{T}]` insert the current date and time. To control the formatting of the inserted values, use the optional `format` parameter, for example, `pass:[{P,format}]`. The format for page numbering should follow the syntax described in xref:dashboard:DataFormat.adoc#NumberFormat[Number Format]. The format for date and time should follow the syntax described in xref:dashboard:DataFormat.adoc#DateFormat[Date Format].
++
+TIP: A common report-style footer combines these codes in one Text component, for example `Page pass:[{P}] of pass:[{N}]` to number each page against the total, or `Generated pass:[{D}] pass:[{T}]` to stamp the printed date and time. Placing a Text component with the Dashboard's title in the header, and one of these page/date patterns in the footer, is the most common way to reproduce a traditional report's title-plus-pagination layout.
 
 .. *_Optional:_*  To format the text, click the Text component to select it and select the *Format* tab in the left panel. Apply the desired formatting.
 +
@@ -222,7 +241,7 @@ See xref:VisualFormat.adoc[] for more information about the *Format* panel.
 ****
 
 
-. *_Optional:_*  For a print layout, add additional Image components into the page header or footer.
+. *_Optional:_*  For a print layout, add additional Image components into the page header or footer. Like a Text component in the header or footer, an Image component placed here (for example, a company logo) repeats identically on every printed page.
 +
 .Add Images to Print Layout
 ****
