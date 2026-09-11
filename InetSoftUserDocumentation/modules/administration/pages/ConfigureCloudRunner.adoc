@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to configure the cloud runner, an alternative scheduler execution mode that dispatches each scheduled task to a short-lived container (AWS Fargate, Azure Container Apps, Google Cloud Run, Kubernetes, or local Docker) instead of running it in-process. Covers why to use it, the inetsoft.yaml cloudRunner configuration per provider, monitoring, and debugging.
+Summary: How to configure the cloud runner, an alternative scheduler execution mode that dispatches each scheduled task to a short-lived container (AWS Fargate, Azure Container Apps, Google Cloud Run, Kubernetes, or local Docker) instead of running it in-process. Covers why to use it, the inetsoft.yaml cloudRunner configuration per provider, and monitoring task execution.
 endif::ai[]
 
 include::ROOT:partial$enterpriseOnly.adoc[]
@@ -42,6 +42,8 @@ Because the container reports its result back over the cluster, it must be able 
 
 If these are set incorrectly, the cloud runner container will start but will never successfully report its result back, and the task will appear to hang until `schedule.task.timeout` is reached.
 
+Reaching the cluster is not the only network requirement: the container also runs the task itself, so it needs the same access as the main server to whatever the task actually uses -- the configured data sources, and the key-value/blob storage backend (see xref:Storage.adoc[]). A container that joins the cluster successfully but can't reach a data source or the storage backend will fail partway through the task rather than at startup.
+
 == Enable the Cloud Runner
 
 [WARNING,caption=See also]
@@ -53,9 +55,9 @@ If these are set incorrectly, the cloud runner container will start but will nev
 ====
 To enable the cloud runner, add a `cloudRunner` section to the _inetsoft.yaml_ file. Set `cloudRunner.type` to one of `fargate`, `azure`, `google`, `kubernetes`, or `docker`, and provide the matching subsection. The examples below show the settings most commonly needed to get started.
 
+In every case, `dockerImageUri` must point to your own licensed StyleBI Enterprise image, pushed to a registry the target platform or cluster can actually pull from (an ECR/ACR/Artifact Registry repository, or a registry reachable from your Kubernetes cluster or Docker host).
 
-TIP: {SampleYAML}
-
+IMPORTANT: The `cloudRunner` section is read once when the server and Scheduler start; changes are not picked up automatically. Restart both after adding, changing, or removing it. To revert to in-process execution, remove the `cloudRunner` section entirely and restart.
 
 === AWS Fargate
 
@@ -128,6 +130,8 @@ cloudRunner:
 
 Omit `configFilePath` to use the cluster's default in-cluster service account credentials (the typical case when StyleBI itself runs in the same cluster); set it to a kubeconfig file path only when connecting to a cluster from outside it. Other available settings include `imagePullPolicy`, `imagePullSecrets`, `volumeMounts`, and `tolerations`.
 
+IMPORTANT: The `serviceAccount` used here needs permission to create, get, list, watch, and delete `batch/v1` Jobs in the target namespace -- a missing grant is the most common reason a job never launches. If StyleBI itself was deployed with the StyleBI Kubernetes Operator, this is typically already provisioned for you; if you deployed manually, you'll need to grant it yourself.
+
 === Docker (local/on-premises)
 
 .Docker Properties for inetsoft.yaml
@@ -139,8 +143,10 @@ cloudRunner:
     dockerImageUri: stylebi-enterprise:latest
     network: inetsoft-network
     memory: 2147483648
+    memoryReservation: 1073741824
+    autoRemove: true
 
-This mode launches containers on a local Docker daemon and is intended for development and on-premises deployments rather than a managed cloud platform. If the daemon requires TLS, also set `tlsVerify: true` and `certificatePath`. If the image is in a private registry, also set `registryUrl`, `registryUsername`, `registryPassword`, and `registryEmail`.
+This mode launches containers on a local Docker daemon and is intended for development and on-premises deployments rather than a managed cloud platform. Unlike the other providers, `memory` and `memoryReservation` here are raw byte counts (e.g., `2147483648` = 2 GiB), not strings like `"2Gi"`. If the daemon requires TLS, also set `tlsVerify: true`, `certificatePath`, and optionally `configPath`/`apiVersion`. If the image is in a private registry, also set `registryUrl`, `registryUsername`, `registryPassword`, and `registryEmail`. Set `autoRemove: true` to have Docker delete each container automatically after it exits, and `volumes` to mount host paths into it.
 
 == Monitor Task Execution
 
@@ -169,19 +175,4 @@ Because each task run is a separate, temporary container rather than a thread in
 |===
 
 Task success/failure and start/end times are still recorded normally in the *Tasks* tab in Enterprise Manager.
-
-== Debugging
-
-To attach a remote Java debugger to a cloud runner container, set the following under `cloudRunner.debugProperties` in _inetsoft.yaml_:
-
-.Debug Properties for inetsoft.yaml
-[source,yaml]
-cloudRunner:
-  debugProperties:
-    DEBUG: "true"
-    DEBUG_PORT: "5009"
-    DEBUG_SUSPEND: "n"
-
-Set `DEBUG_SUSPEND` to `"y"` to have the container wait for a debugger to attach before running the task. Make sure the debug port is reachable from your development machine (for example, opened in the relevant cloud security group or firewall).
-
 
