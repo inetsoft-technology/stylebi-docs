@@ -97,13 +97,11 @@ Pie Ratio:: A value in the range [0.1,1] that determines the proportion of the p
 CAUTION: Large  ‘Pie Ratio’ settings may leave less space for the display of values on the Chart.
 
 === Plot Options (Network/Tree Chart)
-The following plot options are  available for xref:dashboard:NetworkChart.adoc[], xref:CircularNetworkChart.adoc[] and xref:TreeChart.adoc[] types.
+The following plot option is  available for xref:dashboard:NetworkChart.adoc[], xref:CircularNetworkChart.adoc[] and xref:TreeChart.adoc[] types.
 
 Apply Aesthetics to Source Nodes:: Specifies that node ‘Color’ and ‘Size’ determined by ‘Target’ value should also be applied to source nodes that are not also target nodes.
 
 Smooth Lines:: For xref:CircularNetworkChart.adoc[] only, when enabled (default), draws chart edges as smooth Bézier curves instead of straight lines.
-
-Layout Direction:: For xref:TreeChart.adoc[] only, sets the direction in which the tree layout grows: ‘Top to Bottom’ (default), ‘Bottom to Top’, ‘Left to Right’, or ‘Right to Left’.
 
 
 === Plot Options (Circle Packing/ Treemap)
