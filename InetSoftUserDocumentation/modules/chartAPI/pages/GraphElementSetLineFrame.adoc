@@ -26,13 +26,7 @@ frame:: A xref:LineFrame.adoc[] object
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["CA", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity"); //<2>
-var frame = new StaticLineFrame(); //<3>
-frame.setLine(GLine.LARGE_DASH);
-elem.setLineFrame(frame); //<4>
-graph.addElement(elem); //<5>
+include::scriptexample:partial$GraphElementSetLineFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the `IntervalElement` object.

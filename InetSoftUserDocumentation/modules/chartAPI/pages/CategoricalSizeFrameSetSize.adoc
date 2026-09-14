@@ -28,16 +28,7 @@ size::			size at which to represent data value
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ", 200],["NY", 300], ["PA", 75]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new CategoricalSizeFrame(); //<2>
-frame.setField("State");
-frame.setSize('NJ',5); //<3>
-frame.setSize('NY',10); //<3>
-frame.setSize('PA',20); //<3>
-elem.setSizeFrame(frame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$CategoricalSizeFrameSetSize1.js[]
 ----
 <1> {dataset}
 <2> Create the xref:CategoricalSizeFrame.adoc[] object.
@@ -84,13 +75,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setSizeField("Employee",Chart.STRING);
-Chart1.bindingInfo.sizeFrame = new CategoricalSizeFrame;
-Chart1.bindingInfo.sizeFrame.setSize('Robert',20);
-Chart1.bindingInfo.sizeFrame.setSize('Eric',20);
-Chart1.bindingInfo.sizeFrame.setSize('Sue',5);
-Chart1.bindingInfo.sizeFrame.setSize('Annie',5);
-
+include::scriptexample:partial$CategoricalSizeFrameSetSize2.js[]
 ----
 +
 image::commonscript:CategoricalSizeFrameSize.png[alt="bar chart with setSize applied via bindingInfo"]

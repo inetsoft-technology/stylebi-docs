@@ -31,17 +31,7 @@ xref:GShapeImageShape.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var form = new ShapeForm(); //<2>
-form.setValues(['NJ',100]);
-form.setShape(GShape.FILLED_TRIANGLE); //<3>
-form.setColor(java.awt.Color(0xff0000));
-form.setSize(new java.awt.Dimension(50,50));
-graph.addForm(form); //<4>
-graph.addElement(elem);
-
+include::scriptexample:partial$ShapeFormSetShape1.js[]
 ----
 <1> {dataset}
 <2> Create the  xref:ShapeForm.adoc[] object.
@@ -59,20 +49,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-
-
-dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
-var shape = new GShape.ImageShape();
-shape.setImage(logo);
-var form = new ShapeForm(); //<2>
-form.setValues(['NJ',100]);
-form.setShape(shape); //<3>
-form.setSize(new java.awt.Dimension(150,40));
-graph.addForm(form); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$ShapeFormSetShape2.js[]
 ----
 <1> {dataset}
 <2> Create the  xref:ShapeForm.adoc[] object.

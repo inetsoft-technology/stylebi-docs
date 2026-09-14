@@ -34,16 +34,7 @@ value::			An [X,Y] pair
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var form = new ShapeForm(); //<2>
-form.setTuple([.5,100]); //<3>
-form.setShape(GShape.FILLED_TRIANGLE);
-form.setColor(java.awt.Color(0xff0000));
-form.setSize(new java.awt.Dimension(50,50));
-graph.addForm(form); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$ShapeFormSetTuple1.js[]
 ----
 <1> {dataset}
 <2> Create the  xref:ShapeForm.adoc[] object.

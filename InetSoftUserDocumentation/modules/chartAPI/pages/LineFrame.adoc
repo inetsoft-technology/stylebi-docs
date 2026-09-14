@@ -36,15 +36,7 @@ The `LineFrame` object contains the line design for visual chart objects. `LineF
 .Chart Component Script
 [source,javascript]
 ----
-
-dataset = [["State", "Quantity"], ["NJ",200], ["NY",300], ["PA",100]]; //<1>
-graph = new EGraph();
-var elem = new LineElement("State", "Quantity");
-var frame = new StaticLineFrame(); //<2>
-frame.setLine(GLine.DASH_LINE);
-// or frame.setLine(new GLine(10,5));
-elem.setLineFrame(frame); //<3>
-graph.addElement(elem);
+include::scriptexample:partial$LineFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the `LineFrame` object.
@@ -73,9 +65,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
-Chart1.bindingInfo.lineFrame = new LinearLineFrame;
-
+include::scriptexample:partial$LineFrame2.js[]
 ----
 
 +

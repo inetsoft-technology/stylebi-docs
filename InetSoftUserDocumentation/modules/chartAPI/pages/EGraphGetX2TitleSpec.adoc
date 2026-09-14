@@ -26,8 +26,7 @@ A xref:chartAPI:TitleSpec.adoc[] object
 .Chart Component Script
 [source,javascript]
 ----
-var spec = Chart1.graph.getX2TitleSpec();
-alert(spec.getLabel());
+include::scriptexample:partial$EGraphGetX2TitleSpec1.js[]
 ----
 
 

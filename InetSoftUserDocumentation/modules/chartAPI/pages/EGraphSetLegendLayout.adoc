@@ -26,14 +26,7 @@ include::dashboardscript:partial$legendPosition.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]];
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new CategoricalColorFrame();
-frame.setField("State");
-elem.setColorFrame(frame);
-graph.setLegendLayout(Chart.BOTTOM); <1>
-graph.addElement(elem);
+include::scriptexample:partial$EGraphSetLegendLayout1.js[]
 ----
 <1> Set the legend layout.
 

@@ -28,16 +28,7 @@ You can pass a field name (e.g., ‘Quantity’) to the constructor in element s
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ",203], ["NY",327]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var spec = new TextSpec();
-var frame = new DefaultTextFrame(); //<2>
-spec.setFont(java.awt.Font('Verdana',java.awt.Font.BOLD, 14));
-frame.setField("Quantity");
-elem.setTextFrame(frame); //<3>
-elem.setTextSpec(spec);
-graph.addElement(elem);
+include::scriptexample:partial$DefaultTextFrame1.js[]
 ----
 
 <1> {dataset}
@@ -54,18 +45,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var cframe = new CategoricalColorFrame();
-var tframe = new DefaultTextFrame(); //<2>
-var spec = cframe.getLegendSpec();
-cframe.setField("State");
-tframe.setText('NJ','New Jersey'); //<3>
-tframe.setText('NY','New York'); //<3>
-spec.setTextFrame(tframe); //<4>
-elem.setColorFrame(cframe);
-graph.addElement(elem);
+include::scriptexample:partial$DefaultTextFrame2.js[]
 ----
 
 <1> {dataset}
@@ -86,9 +66,7 @@ This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setTextField("Company",Chart.STRING);
-Chart1.bindingInfo.textFrame = new DefaultTextFrame;
-
+include::scriptexample:partial$DefaultTextFrame3.js[]
 ----
 
 

@@ -28,13 +28,7 @@ frame:: A xref:TextFrame.adoc[] object
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["CA", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State", "Quantity"); //<2>
-var frame = new DefaultTextFrame(); //<3>
-frame.setField("Quantity");
-elem.setTextFrame(frame); //<4>
-graph.addElement(elem);  //<5>
+include::scriptexample:partial$GraphElementSetTextFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the `PointElement` object.

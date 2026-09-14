@@ -41,10 +41,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
-Chart1.bindingInfo.colorFrame = new CircularColorFrame;
-
-
+include::scriptexample:partial$CircularColorFrame1.js[]
 ----
 
 +
@@ -59,13 +56,7 @@ include::commonscript:partial$bindingInfoNote.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"],["NJ",200],["NY",300],["PA",50],["CT",100]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new CircularColorFrame(); //<2>
-frame.setField("Quantity"); //<3>
-elem.setColorFrame(frame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$CircularColorFrame2.js[]
 ----
 <1> {dataset}
 <2> Create the xref:CircularColorFrame.adoc[] object.

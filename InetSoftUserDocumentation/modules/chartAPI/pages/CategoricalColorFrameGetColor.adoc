@@ -42,12 +42,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setColorField("Employee",Chart.STRING);
-Chart1.bindingInfo.colorFrame = new CategoricalColorFrame;
-Chart1.bindingInfo.colorFrame.setColor("Robert",java.awt.Color.lightGray);
-var robColor = Chart1.bindingInfo.colorFrame.getColor("Robert");
-Chart1.bindingInfo.colorFrame.setColor("Sue",robColor);
-
+include::scriptexample:partial$CategoricalColorFrameGetColor1.js[]
 ----
 
 +
@@ -62,17 +57,7 @@ include::commonscript:partial$bindingInfoNote.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity"],["NJ",200],["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-frame = new CategoricalColorFrame(); //<2>
-frame.setField("State");
-frame.setColor('NJ',java.awt.Color(0xff0000));
-var NJcolor = frame.getColor('NJ'); //<3>
-frame.setColor('NY',NJcolor); //<4>
-elem.setColorFrame(frame); //<5>
-graph.addElement(elem);
-
+include::scriptexample:partial$CategoricalColorFrameGetColor2.js[]
 ----
 <1> {dataset}
 <2> Create the xref:ColorFrame.adoc[] object.

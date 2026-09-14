@@ -26,16 +26,7 @@ spec::			a xref:LegendSpec.adoc[] object
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State", "Quantity");
-var frame = new LinearSizeFrame();
-var spec = new LegendSpec(); //<2>
-spec.setBorderColor(java.awt.Color(0xff0000));
-frame.setField("Quantity");
-frame.setLegendSpec(spec); //<3>
-elem.setSizeFrame(frame);
-graph.addElement(elem);
+include::scriptexample:partial$VisualFrameSetLegendSpec1.js[]
 ----
 <1> {dataset}
 <2> Create the `LegendSpec` object.

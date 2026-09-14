@@ -26,13 +26,7 @@ shape:: xref:GShape.adoc[], `GShape.ImageShape`, or xref:SVGShape.adoc[] object
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var frame = new StaticShapeFrame(); //<2>
-var elem = new PointElement("State", "Quantity");
-frame.setShape(GShape.CROSS); //<3>
-elem.setShapeFrame(frame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$StaticShapeFrameSetShape1.js[]
 ----
 <1> {dataset}
 <2> Create the `StaticShapeFrame` object.
@@ -77,10 +71,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Company",Chart.STRING);
-Chart1.bindingInfo.shapeFrame = new StaticShapeFrame;
-Chart1.bindingInfo.shapeFrame.setShape(GShape.ARROWBAR);
-
+include::scriptexample:partial$StaticShapeFrameSetShape2.js[]
 ----
 
 +

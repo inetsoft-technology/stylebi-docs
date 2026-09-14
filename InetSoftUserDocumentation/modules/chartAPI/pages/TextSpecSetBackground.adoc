@@ -26,17 +26,7 @@ A {javaawtcolor} object
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var form = new LabelForm();
-form.setLabel("label1");
-form.setValues(['NY', 100]);
-var spec = new TextSpec(); //<2>
-spec.setBackground(java.awt.Color(0xcccccc)); //<3>
-form.setTextSpec(spec); //<4>
-graph.addForm(form);
-graph.addElement(elem);
+include::scriptexample:partial$TextSpecSetBackground1.js[]
 ----
 <1> {dataset}
 <2> Create the  xref:TextSpec.adoc[] object.

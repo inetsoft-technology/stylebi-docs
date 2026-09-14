@@ -30,13 +30,7 @@ You can pass the name of a field (e.g., ‘Quantity’) to the constructor, or s
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"],["NJ",300],["NY",200],["PA",100]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new CategoricalLineFrame(); //<2>
-frame.setField("State"); //<3>
-elem.setLineFrame(frame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$CategoricalLineFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the xref:LineFrame.adoc[] object.
@@ -82,13 +76,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
-Chart1.bindingInfo.lineFrame = new CategoricalLineFrame;
-Chart1.bindingInfo.lineFrame.setLine('Robert', GLine.LARGE_DASH);
-Chart1.bindingInfo.lineFrame.setLine('Eric', GLine.LARGE_DASH);
-Chart1.bindingInfo.lineFrame.setLine('Sue',GLine.DOT_LINE);
-Chart1.bindingInfo.lineFrame.setLine('Annie', GLine.DOT_LINE);
-
+include::scriptexample:partial$CategoricalLineFrame2.js[]
 ----
 
 +

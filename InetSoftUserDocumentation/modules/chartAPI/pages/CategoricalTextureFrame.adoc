@@ -28,14 +28,7 @@ You can pass the name of a field (e.g., ‘State’) to the constructor, or spec
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity","Rep"], ["NJ",200,"John"], ["NY",300,"Sue"], \
-["PA",75,"Sue"], ["CT", 120,"John"]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new CategoricalTextureFrame(); //<2>
-frame.setField("Rep");
-elem.setTextureFrame(frame); //<3>
-graph.addElement(elem);
+include::scriptexample:partial$CategoricalTextureFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the xref:CategoricalTextureFrame.adoc[] object.
@@ -79,13 +72,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
-Chart1.bindingInfo.textureFrame = new CategoricalTextureFrame;
-Chart1.bindingInfo.textureFrame.setTexture('Robert',GTexture.PATTERN_1);
-Chart1.bindingInfo.textureFrame.setTexture('Eric',GTexture.PATTERN_1);
-Chart1.bindingInfo.textureFrame.setTexture('Sue',GTexture.PATTERN_5);
-Chart1.bindingInfo.textureFrame.setTexture('Annie',GTexture.PATTERN_5);
-
+include::scriptexample:partial$CategoricalTextureFrame2.js[]
 ----
 
 +

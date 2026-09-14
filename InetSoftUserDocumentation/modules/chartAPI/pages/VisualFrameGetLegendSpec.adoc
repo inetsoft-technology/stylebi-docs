@@ -24,10 +24,7 @@ spec::			a xref:LegendSpec.adoc[] object
 .Chart Component Script
 [source,javascript]
 ----
-var elem = graph.getElement(0);  //<1>
-var frame = elem.getColorFrame(); //<2>
-var spec = frame.getLegendSpec(); //<3>
-spec.setBorderColor(java.awt.Color(0xff0000)); //<4>
+include::scriptexample:partial$VisualFrameGetLegendSpec1.js[]
 ----
 <1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the xref:GraphElement.adoc[].
 <2>  Use xref:GraphElementGetColorFrame.adoc[] to obtain a handle to the xref:ColorFrame.adoc[].

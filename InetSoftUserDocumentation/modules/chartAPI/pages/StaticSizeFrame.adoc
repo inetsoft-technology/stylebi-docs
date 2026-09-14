@@ -32,13 +32,7 @@ You can pass the numerical size (e.g., 10) to the constructor, or specify this l
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity","Size"],["NJ",200,1], ["NY",300,10]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new StaticSizeFrame(); //<2>
-frame.setField("Size");
-elem.setSizeFrame(frame); //<3>
-graph.addElement(elem);
+include::scriptexample:partial$StaticSizeFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the `StaticSizeFrame` object.
@@ -69,9 +63,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setSizeField("Company",Chart.STRING);
-Chart1.bindingInfo.sizeFrame = new StaticSizeFrame;
-Chart1.bindingInfo.sizeFrame.setSize(30);
+include::scriptexample:partial$StaticSizeFrame2.js[]
 ----
 
 +

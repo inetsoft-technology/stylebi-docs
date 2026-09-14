@@ -29,14 +29,7 @@ include::partial$gLineConstants.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-
-dataset = [["State", "Quantity"], ["NJ", 300], ["NY", 200]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State", "Quantity");
-var frame = new StaticLineFrame(); //<2>
-frame.setLine(GLine.DOT_LINE); //<3>
-elem.setLineFrame(frame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$StaticLineFrameSetLine1.js[]
 ----
 <1> {dataset}
 <2> Create the `LineFrame` object.
@@ -79,9 +72,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.lineFrame = new StaticLineFrame;
-Chart1.bindingInfo.lineFrame.line = GLine.LARGE_DASH;
-
+include::scriptexample:partial$StaticLineFrameSetLine2.js[]
 ----
 
 +

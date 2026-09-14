@@ -50,14 +50,7 @@ You can also create a custom `SVGShape` from an SVG image stored in the local fi
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State","Quantity");
-var shapeFrame = new StaticShapeFrame(SVGShape.FACE_HAPPY); //<2>
-var sizeFrame = new StaticSizeFrame(10);
-elem.setSizeFrame(sizeFrame);
-elem.setShapeFrame(shapeFrame); //<3>
-graph.addElement(elem);
+include::scriptexample:partial$SVGShape1.js[]
 ----
 <1> {dataset}
 <2> Pass the `SVGShape` to   the xref:StaticShapeFrame.adoc[] constructor.
@@ -73,15 +66,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State","Quantity");
-var svg = new SVGShape("file:\C:/HappyFaceSVG.svg"); //<2>
-var shapeFrame = new StaticShapeFrame(svg); //<3>
-var sizeFrame = new StaticSizeFrame(10);
-elem.setSizeFrame(sizeFrame);
-elem.setShapeFrame(shapeFrame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$SVGShape2.js[]
 ----
 <1> {dataset}
 <2> Pass the image to the `SVGShape()` constructor to create the `svg` shape.
@@ -94,15 +79,7 @@ graph.addElement(elem);
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State","Quantity");
-var svg = new SVGShape("https://www.w3.org/Icons/SVG/svg-logo.svg"); //<2>
-var shapeFrame = new StaticShapeFrame(svg); //<3>
-var sizeFrame = new StaticSizeFrame(10);
-elem.setSizeFrame(sizeFrame);
-elem.setShapeFrame(shapeFrame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$SVGShape3.js[]
 ----
 <1> {dataset}
 <2> Pass the image URL to the `SVGShape()` constructor to create the `svg` shape.

@@ -48,11 +48,7 @@ include::ROOT:partial$SalesExploreWorksheet.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-var coord = graph.getCoordinate(); //<1>
-var polar = new PolarCoord(coord); //<2>
-polar.setType(PolarCoord.PLUS);
-polar.setHoleRatio(.25); //<3>
-graph.setCoordinate(polar); //<4>
+include::scriptexample:partial$PolarCoordSetHoleRatio1.js[]
 ----
 <1> Get a handle to the xref:Coordinate.adoc[] object.
 <2> Create the `PolarCoord`  object.

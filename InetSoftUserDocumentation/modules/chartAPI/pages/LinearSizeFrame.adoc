@@ -33,17 +33,7 @@ You can pass the name of a field (e.g., ‘State’) to the constructor, or spec
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity", "width"], ["NJ", 200, 5], ["NY", 300,10], ["PA",75,15]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new LinearSizeFrame(); //<2>
-frame.setField("width"); //<3>
-frame.setSmallest(10); //<4>
-frame.setLargest(50); //<4>
-frame.setMax(100); //<4>
-elem.setSizeFrame(frame); //<5>
-graph.addElement(elem);
-
+include::scriptexample:partial$LinearSizeFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the `LinearSizeFrame` object.
@@ -76,8 +66,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setSizeField("Total",Chart.NUMBER)
-Chart1.bindingInfo.sizeFrame = new LinearSizeFrame;
+include::scriptexample:partial$LinearSizeFrame2.js[]
 ----
 
 +

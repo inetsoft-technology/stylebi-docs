@@ -35,12 +35,7 @@ Boolean:: `true`: ignore nulls and draw a continuous line +
 .Chart Component Script: Break Line at Null
 [source,javascript]
 ----
-dataset = [["State","Quantity"],["Sun",100],["Mon",300],["Tue",null],
-["Wed",400],["Thur",600],["Fri",550],["Sat",200]]; //<1>
-graph = new EGraph();
-elem = new LineElement("State", "Quantity"); //<2>
-elem.setIgnoreNull(false); // <3>
-graph.addElement(elem);//<4>
+include::scriptexample:partial$LineElementSetIgnoreNull1.js[]
 ----
 
 <1> {dataset}
@@ -55,12 +50,7 @@ image::commonscript:setIgnoreNull1.png[alt="line chart with gap at null value"]
 .Chart Component Script: Continue Line at Null
 [source,javascript]
 ----
-dataset = [["State","Quantity"],["Sun",100],["Mon",300],["Tue",null], \
-["Wed",400],["Thur",600],["Fri",550],["Sat",200]]; //<1>
-graph = new EGraph();
-elem = new LineElement("State", "Quantity"); //<2>
-elem.setIgnoreNull(true); //<3>
-graph.addElement(elem); //<4>
+include::scriptexample:partial$LineElementSetIgnoreNull2.js[]
 ----
 
 <1> {dataset}

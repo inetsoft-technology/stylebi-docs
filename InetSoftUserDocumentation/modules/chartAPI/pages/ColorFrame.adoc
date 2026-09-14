@@ -48,10 +48,7 @@ This example illustrates how to use xref:dashboardscript:ChartBindingInfo.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
-Chart1.bindingInfo.colorFrame = new BrightnessColorFrame;
-Chart1.bindingInfo.colorFrame.color = 0xFF00FF;
-
+include::scriptexample:partial$ColorFrame1.js[]
 ----
 
 
@@ -66,10 +63,7 @@ include::commonscript:partial$bindingInfoNote.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-var elem = graph.getElement(0); // <1>
-var frame = new StaticColorFrame(); //<2>
-frame.setColor(java.awt.Color(0xFF00FF));
-elem.setColorFrame(frame); //<3>
+include::scriptexample:partial$ColorFrame2.js[]
 ----
 <1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the desired xref:GraphElement.adoc[] object.
 <2> Create the xref:ColorFrame.adoc[] object.

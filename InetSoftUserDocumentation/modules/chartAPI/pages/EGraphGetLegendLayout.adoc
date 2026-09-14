@@ -21,19 +21,13 @@ Returns the chart legend’s position as a  constant (below).  The corresponding
 One of the following constants:
 include::dashboardscript:partial$legendPosition.adoc[]
 
+== Example
+
 
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new CategoricalColorFrame();
-frame.setField("State");
-elem.setColorFrame(frame);
-graph.setLegendLayout(Chart.BOTTOM); //<2>
-graph.addElement(elem);
-alert(graph.getLegendLayout()); //<3>
+include::scriptexample:partial$EGraphGetLegendLayout1.js[]
 ----
 <1> {dataset}
 <2> Set the legend layout.

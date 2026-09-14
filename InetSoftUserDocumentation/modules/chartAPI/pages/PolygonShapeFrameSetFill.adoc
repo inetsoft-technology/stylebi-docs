@@ -32,16 +32,7 @@ Boolean:: `true`: fill polygon  +
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity","Total"], ["NJ",200,30], ["NY",300,15],["PA",150,5]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State", "Quantity");
-var sizeframe = new StaticSizeFrame();
-sizeframe.setSize(10);
-var frame = new PolygonShapeFrame("Total"); //<2>
-frame.setFill(true); //<3>
-elem.setShapeFrame(frame); //<4>
-elem.setSizeFrame(sizeframe);
-graph.addElement(elem);
+include::scriptexample:partial$PolygonShapeFrameSetFill1.js[]
 ----
 <1> {dataset}
 <2> Create the `PolygonShapeFrame` object.
@@ -72,10 +63,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
-Chart1.bindingInfo.shapeFrame = new PolygonShapeFrame;
-Chart1.bindingInfo.shapeFrame.fill = true;
-
+include::scriptexample:partial$PolygonShapeFrameSetFill2.js[]
 ----
 +
 image::commonscript:PolygonShapeFrameFill.png[alt="point chart with filled polygon shape frame via bindingInfo"]

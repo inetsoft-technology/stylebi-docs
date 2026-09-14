@@ -26,16 +26,7 @@ Boolean:: `true`: keep original size, and tile to fit +
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
-var shape = new GShape.ImageShape(); //<2>
-shape.setImage(logo);
-shape.setTile(true); //<3>
-var frame = new StaticShapeFrame(shape); //<4>
-elem.setShapeFrame(frame); //<5>
-graph.addElement(elem);
+include::scriptexample:partial$GShapeImageShapeSetTile1.js[]
 ----
 <1> {dataset}
 <2> Create the `GShape.ImageShape` shape.
@@ -86,14 +77,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
-var logo = getImage("https://www.inetsoft.com/images/home/logo.gif");
-var shape = new GShape.ImageShape();
-shape.image = logo;
-shape.tile = true;
-var frame = new StaticShapeFrame(shape);
-Chart1.bindingInfo.shapeFrame = frame;
-
+include::scriptexample:partial$GShapeImageShapeSetTile2.js[]
 ----
 
 +

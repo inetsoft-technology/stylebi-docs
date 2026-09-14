@@ -28,13 +28,7 @@ You can pass the name of a field (e.g., ‘State’) to the constructor, or spec
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity","Rep"], ["NJ",200,"John"], ["NY",300,"Sue"], \
-["PA",75,"Sue"], ["CT", 120,"John"]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State", "Quantity");
-var frame = new CategoricalShapeFrame("Rep"); //<2>
-elem.setShapeFrame(frame); //<3>
-graph.addElement(elem);
+include::scriptexample:partial$CategoricalShapeFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the xref:CategoricalShapeFrame.adoc[] object.
@@ -79,9 +73,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Employee",Chart.STRING);
-Chart1.bindingInfo.shapeFrame = new CategoricalShapeFrame;
-
+include::scriptexample:partial$CategoricalShapeFrame2.js[]
 ----
 
 +

@@ -23,20 +23,7 @@ frame::			A xref:chartAPI:TextFrame.adoc[] object
 .Chart Component Script
 [source,javascript]
 ----
-
-dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new CategoricalColorFrame();
-var tf = new DefaultTextFrame(); //<2>
-frame.setField("State");
-tf.setText('NJ','New Jersey');
-tf.setText('NY','New York');
-var spec = new LegendSpec(); //<3>
-spec.setTextFrame(tf); //<4>
-frame.setLegendSpec(spec);
-elem.colorFrame = frame;
-graph.addElement(elem);
+include::scriptexample:partial$LegendSpecSetTextFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the xref:TextFrame.adoc[] object.

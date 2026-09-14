@@ -39,18 +39,7 @@ row::			Row index of value to return
 .Chart Component Script
 [source,javascript]
 ----
-var str = "";
-// Loop through rows
-for (var i = 0; i < dataset.getRowCount(); i++) {
-  str = "";
-  // Loop through columns
-  for (var j = 0; j < dataset.getColCount(); j++) {
-    str += dataset.getData(j, i) + ",";
-  }
-  // Output the results
-  alert(str);
-}
-
+include::scriptexample:partial$DataSetGetData1.js[]
 ----
 
 The following output is displayed:

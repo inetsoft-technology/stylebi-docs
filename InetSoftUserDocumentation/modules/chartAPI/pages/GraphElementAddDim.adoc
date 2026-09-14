@@ -26,12 +26,7 @@ field::			String containing name of dimension
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["City" , "State", "Quantity"],["NJ","Edison",2500],
-["NJ","Piscataway",3000], ["NY","NY City",5000],["NY","Yonkers",450]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("City","Quantity"); //<2>
-elem.addDim("State"); //<3>
-graph.addElement(elem); //<4>
+include::scriptexample:partial$GraphElementAddDim1.js[]
 ----
 <1> {dataset}
 <2> Create the `IntervalElement` object.

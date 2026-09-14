@@ -29,18 +29,7 @@ value:: Array of String
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var sscale = new CategoricalScale("State"); //<2>
-var qscale = new LinearScale("Quantity");
-var coord = new RectCoord(sscale, qscale); //<3>
-sscale.setValues(["NY","NJ"]); //<4>
-coord.transpose();
-graph.setCoordinate(coord); //<5>
-graph.addElement(elem);
-
-
+include::scriptexample:partial$CategoricalScaleSetValues1.js[]
 ----
 <1> {dataset}
 <2> Create the `CategoricalScale` object.

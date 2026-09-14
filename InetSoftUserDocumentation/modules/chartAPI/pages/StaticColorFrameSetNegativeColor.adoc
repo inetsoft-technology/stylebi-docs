@@ -53,11 +53,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.colorFrame = new StaticColorFrame;
-Chart1.bindingInfo.colorFrame.color = 0x00FF00;
-Chart1.bindingInfo.colorFrame.negativeColor = 0xFF0000;
-
-
+include::scriptexample:partial$StaticColorFrameSetNegativeColor1.js[]
 ----
 
 +
@@ -72,14 +68,7 @@ include::commonscript:partial$bindingInfoNote.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ",200], ["NY",-300]];graph = new EGraph(); //<1>
-var elem = new IntervalElement("State", "Quantity");
-var frame = new StaticColorFrame(); //<2>
-frame.setField("Quantity");
-frame.setColor(java.awt.Color(0x00ff00));
-frame.setNegativeColor(java.awt.Color(0xff0000)); //<3>
-elem.setColorFrame(frame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$StaticColorFrameSetNegativeColor2.js[]
 ----
 <1> {dataset}
 <2> Create the xref:StaticColorFrame.adoc[] object.

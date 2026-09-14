@@ -34,14 +34,7 @@ value::			a String containing label text
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var form = new LabelForm(); //<2>
-form.setLabel("Hello\nWorld"); //<3>
-form.setValues(['NY', 100]);
-graph.addForm(form); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$LabelFormSetLabel1.js[]
 ----
 <1> {dataset}
 <2> Create the  xref:LabelForm.adoc[] object.

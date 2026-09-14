@@ -34,12 +34,7 @@ You can pass the name of a field (e.g., ‘Total’) to the constructor, or spec
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity","Total"], ["NJ",300,10],["NY",200,20],["PA",250,35]];  //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new RightTiltTextureFrame("Total"); //<2>
-elem.setTextureFrame(frame); //<3>
-graph.addElement(elem);
+include::scriptexample:partial$RightTiltTextureFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the `RightTiltTextureFrame` object.
@@ -69,8 +64,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
-Chart1.bindingInfo.textureFrame = new RightTiltTextureFrame;
+include::scriptexample:partial$RightTiltTextureFrame2.js[]
 ----
 
 +

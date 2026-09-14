@@ -35,14 +35,7 @@ value::			Number of pixels, or relative size
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new StaticSizeFrame(); //<2>
-frame.setMax(100);
-frame.setSize(50); //<3>
-elem.setSizeFrame(frame);  //<4>
-graph.addElement(elem);
+include::scriptexample:partial$StaticSizeFrameSetSize1.js[]
 ----
 <1> {dataset}
 <2> Create the `StaticSizeFrame` object.
@@ -86,9 +79,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setSizeField("Company",Chart.STRING);
-Chart1.bindingInfo.sizeFrame = new StaticSizeFrame;
-Chart1.bindingInfo.sizeFrame.size = 30;
+include::scriptexample:partial$StaticSizeFrameSetSize2.js[]
 ----
 
 +

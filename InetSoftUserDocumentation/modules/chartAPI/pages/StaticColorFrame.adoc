@@ -43,9 +43,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.colorFrame = new StaticColorFrame;
-Chart1.bindingInfo.colorFrame.color = 0xFF00FF;
-
+include::scriptexample:partial$StaticColorFrame1.js[]
 ----
 
 +
@@ -60,13 +58,7 @@ include::commonscript:partial$bindingInfoNote.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity","Color"], ["NJ",200,0xff0000], ["NY",300,0xff00ff]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new StaticColorFrame(); //<2>
-frame.setField("Color"); //<3>
-elem.setColorFrame(frame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$StaticColorFrame2.js[]
 ----
 <1> {dataset}
 <2> Create the `StaticColorFrame` object.

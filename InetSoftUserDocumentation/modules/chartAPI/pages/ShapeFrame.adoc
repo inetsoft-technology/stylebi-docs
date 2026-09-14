@@ -45,11 +45,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-var elem = graph.getElement(0); //<1>
-var frame = new StaticShapeFrame(); //<2>
-frame.setShape(GShape.ARROWBAR);
-elem.setShapeFrame(frame);  //<3>
-
+include::scriptexample:partial$ShapeFrame1.js[]
 ----
 <1> Use xref:EGraphGetElement.adoc[] to get a handle to the xref:PointElement.adoc[].
 <2> Create the `StaticShapeFrame` object.
@@ -76,10 +72,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
-Chart1.bindingInfo.shapeFrame = new FillShapeFrame;
-
-
+include::scriptexample:partial$ShapeFrame2.js[]
 ----
 
 +

@@ -31,15 +31,7 @@ You can pass the name of a field (e.g., ‘Total’) to the constructor, or spec
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity","Total"], ["NJ",200,30], ["NY",300,15], ["PA",150,5]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State", "Quantity");
-var shapeframe = new OrientationShapeFrame("Total"); //<2>
-var sizeframe = new StaticSizeFrame();
-sizeframe.setSize(10);
-elem.setSizeFrame(sizeframe);
-elem.setShapeFrame(shapeframe); //<3>
-graph.addElement(elem);
+include::scriptexample:partial$OrientationShapeFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the `OrientationShapeFrame` object.
@@ -65,9 +57,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
-Chart1.bindingInfo.shapeFrame = new OrientationShapeFrame;
-
+include::scriptexample:partial$OrientationShapeFrame2.js[]
 ----
 
 +

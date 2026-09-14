@@ -23,16 +23,7 @@ value::			 String containing the title text
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ",200], ["NY",300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new CategoricalColorFrame();
-frame.setField("State");
-var spec = new LegendSpec(); //<2>
-spec.setTitle('Legend1'); //<3>
-frame.setLegendSpec(spec); //<4>
-elem.setColorFrame(frame);
-graph.addElement(elem);
+include::scriptexample:partial$LegendSpecSetTitle1.js[]
 ----
 <1> {dataset}
 <2> Create the xref:LegendSpec.adoc[] object.

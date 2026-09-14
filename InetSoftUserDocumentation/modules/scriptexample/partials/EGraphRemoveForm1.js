@@ -1,0 +1,11 @@
+dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
+graph = new EGraph();
+var elem = new IntervalElement("State", "Quantity");
+var form = new LineForm();
+form.addPoint(new java.awt.Point(0,0));
+form.addPoint(new java.awt.Point(100,100));
+form.addPoint(new java.awt.Point(200,100));
+form.setFill(true);
+graph.addForm(form); //<2>
+graph.addElement(elem);
+graph.removeForm(0); //<3>

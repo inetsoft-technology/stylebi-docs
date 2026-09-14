@@ -38,13 +38,7 @@ You can pass a `GTexture` object directly to the constructor or specify it later
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity","Texture"],["NJ",200,1], ["NY",300,10]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new StaticTextureFrame(); //<2>
-frame.setField("Texture");
-elem.setTextureFrame(frame); //<3>
-graph.addElement(elem);
+include::scriptexample:partial$StaticTextureFrame1.js[]
 ----
 <1> {dataset}
 <2> Create the `StaticTextureFrame` object.
@@ -87,9 +81,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setShapeField("Total",Chart.NUMBER);
-Chart1.bindingInfo.textureFrame = new StaticTextureFrame;
-
+include::scriptexample:partial$StaticTextureFrame2.js[]
 ----
 
 +

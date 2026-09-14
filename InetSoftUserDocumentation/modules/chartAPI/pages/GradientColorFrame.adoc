@@ -43,11 +43,7 @@ include::ROOT:partial$AllSalesQuery.adoc[]
 .onRefresh Script
 [source,javascript]
 ----
-Chart1.bindingInfo.setColorField("Total",Chart.NUMBER);
-Chart1.bindingInfo.colorFrame = new GradientColorFrame;
-Chart1.bindingInfo.colorFrame.fromColor = 0x0000FF;
-Chart1.bindingInfo.colorFrame.toColor = 0xFF00FF;
-
+include::scriptexample:partial$GradientColorFrame1.js[]
 ----
 
 +
@@ -62,13 +58,7 @@ include::commonscript:partial$bindingInfoNote.adoc[]
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"],["NJ",200],["NY",300],["PA",50],["CT",100]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var frame = new GradientColorFrame(); //<2>
-frame.setField("Quantity"); //<3>
-elem.setColorFrame(frame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$GradientColorFrame2.js[]
 ----
 <1> {dataset}
 <2> Create the xref:GradientColorFrame.adoc[] object.

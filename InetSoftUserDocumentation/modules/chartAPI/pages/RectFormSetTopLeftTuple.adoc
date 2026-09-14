@@ -29,14 +29,7 @@ value::			an [X,Y] pair
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var rect = new RectForm(); //<2>
-rect.setTopLeftTuple([1,200]); //<3>
-rect.setBottomRightTuple([2,50]);
-rect.setColor(java.awt.Color(0xff0000));
-graph.addForm(rect); //<4>
-graph.addElement(new IntervalElement("State", "Quantity"));
+include::scriptexample:partial$RectFormSetTopLeftTuple1.js[]
 ----
 <1> {dataset}
 <2> Create the  xref:RectForm.adoc[] object.

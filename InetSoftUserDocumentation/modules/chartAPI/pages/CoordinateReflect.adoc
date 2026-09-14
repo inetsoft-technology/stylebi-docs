@@ -22,15 +22,7 @@ vert:: `true`: reflect about horizontal axis +
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"], ["NJ", 200], ["NY", 300]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity");
-var sscale = new CategoricalScale("State");
-var qscale = new LinearScale("Quantity");
-var coord = new RectCoord(sscale,qscale); //<2>
-coord.reflect(true); //<3>
-graph.setCoordinate(coord); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$CoordinateReflect1.js[]
 ----
 <1> {dataset}
 <2> Create the xref:Coordinate.adoc[] object.

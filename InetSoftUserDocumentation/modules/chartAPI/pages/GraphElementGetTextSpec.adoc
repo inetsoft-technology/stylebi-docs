@@ -27,9 +27,7 @@ A xref:TextSpec.adoc[] object
 .Chart Component Script
 [source,javascript]
 ----
-var elem = graph.getElement(0); //<1>
-var spec = elem.getTextSpec("Sum(Product:Total)"); //<2>
-spec.setColor(java.awt.Color(0xff0000)); //<3>
+include::scriptexample:partial$GraphElementGetTextSpec1.js[]
 ----
 
 <1> Obtain a handle to the  `GraphElement` object.

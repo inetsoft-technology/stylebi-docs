@@ -28,8 +28,7 @@ value::			an integer
 .Chart Component Script
 [source,javascript]
 ----
-graph.getScale("Order Date").setIncrement(12) <1>
-
+include::scriptexample:partial$TimeScaleSetIncrement1.js[]
 ----
 
 <1> Set increment to 12 weeks.

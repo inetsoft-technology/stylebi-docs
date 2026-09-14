@@ -30,22 +30,7 @@ value::			angle in degrees
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity", "m1", "m2", "m3"],["NJ", 200,90,25,50],["NY", 300,30,15,15]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State", "Quantity");
-var frame = new VineShapeFrame(); //<2>
-var mscale = new LinearScale();
-var rscale = new LinearScale();
-mscale.setMin(0);
-mscale.setMax(5);
-rscale.setMin(0);
-rscale.setMax(90);
-frame.setScales([rscale, mscale, mscale]);
-frame.setFields(["m1", "m2", "m3"]);
-frame.setStartAngle(0); //<3>
-frame.setEndAngle(90);
-elem.setShapeFrame(frame); //<4>
-graph.addElement(elem);
+include::scriptexample:partial$VineShapeFrameSetStartAngle1.js[]
 ----
 <1> {dataset}
 <2> Create the `VineShapeFrame` object.

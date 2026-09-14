@@ -28,17 +28,7 @@ Boolean:: `true`: stack negative values to get range +
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"],["NJ",200],["NJ",100],["NY",-300],["NY",-400]]; //<1>
-graph = new EGraph();
-var qscale = new LinearScale("Quantity"); //<2>
-var elem = new IntervalElement("State", "Quantity");
-range = new StackRange(); //<3>
-range.setStackNegative(false); //<4>
-qscale.setScaleRange(range); //<5>
-graph.setScale("Quantity", qscale); //<6>
-graph.addElement(elem);
-
-
+include::scriptexample:partial$StackRangeSetNegative1.js[]
 ----
 <1> {dataset}
 <2> Create the xref:Scale.adoc[] object.

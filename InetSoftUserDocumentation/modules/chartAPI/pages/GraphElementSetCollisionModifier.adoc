@@ -31,16 +31,7 @@ GraphElement.STACK_SYMMETRIC  (offset vert, center)
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State", "Quantity"],["NJ", 200],["NJ", 300],["NY", 300],["NY", 100]]; //<1>
-graph = new EGraph();
-var elem = new IntervalElement("State", "Quantity"); //<2>
-var scale = new LinearScale("Quantity");
-var frame = new HeatColorFrame();
-frame.setField("Quantity");
-elem.setColorFrame(frame);
-elem.setStackGroup(true);
-elem.setCollisionModifier(GraphElement.STACK_SYMMETRIC); //<3>
-graph.addElement(elem); //<4>
+include::scriptexample:partial$GraphElementSetCollisionModifier1.js[]
 ----
 <1> {dataset}
 <2> Create the `IntervalElement` object.
@@ -52,16 +43,7 @@ image::commonscript:GraphElementsetCollisionMod.png[alt="bar chart with symmetri
 .Chart Component Script
 [source,javascript]
 ----
-dataset = [["State","Quantity"],["NJ",200],["NJ",200],["NJ",200],["NJ",200],["NJ",200],["NJ",300],
-["NY",300],["NY",300],["NY",300],["NY",300],["NY",300],["NY",450]]; //<1>
-graph = new EGraph();
-var elem = new PointElement("State", "Quantity"); //<2>
-var frame = new HeatColorFrame();
-frame.setField("Quantity");
-elem.setColorFrame(frame);
-elem.setStackGroup(true);
-elem.setCollisionModifier(GraphElement.MOVE_JITTER); //<3>
-graph.addElement(elem); //<4>
+include::scriptexample:partial$GraphElementSetCollisionModifier2.js[]
 ----
 <1> {dataset}
 <2> Create the `PointElement` object.
