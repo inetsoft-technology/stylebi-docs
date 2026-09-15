@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for the Visual Composer toolbar buttons, including Create (new Data Worksheet or Dashboard), Save, Save As, Preview, Options, and other editing controls. See CreateNewDashboard and DashboardOptions for details on specific toolbar actions.
+Summary: Reference for the Visual Composer toolbar buttons, including Create (new Data Worksheet or Dashboard), Save, Save As, Preview, Options, and other editing controls. See CreateNewDashboard and DashboardOptions for details on specific toolbar actions. Note: charts automatically animate on entrance and dim non-hovered elements on hover when viewed via Preview, in the Portal, or embedded — this is not configurable (no script property, GUI option, or admin setting), and does not occur while editing in the Composer canvas, Wizard, or chart binding editor.
 endif::ai[]
 
 The Visual Composer toolbar provides the following buttons for editing Dashboards:
@@ -19,7 +19,7 @@ The Visual Composer toolbar provides the following buttons for editing Dashboard
 
 {buttonSaveAs}:: Save the Dashboard under a new name or scope.
 
-{buttonPreview}:: View the Dashboard as the user does.
+{buttonPreview}:: View the Dashboard as the user does. Charts display automatic entrance and hover animations in Preview and in the Portal. (Animations are not configurable.)
 
 {buttonRefresh}:: Reload the Dashboard and re-execute scripts.
 
