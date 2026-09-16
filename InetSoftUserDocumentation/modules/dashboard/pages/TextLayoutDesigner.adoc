@@ -1,0 +1,43 @@
+= Text Layout Designer
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: The Text Layout Designer lets a Chart's 'Text' region be composed of multiple fields, literal text, and spacing arranged across multiple rows, instead of the single field the 'Text' region normally accepts (see BasicChartingSteps). It is opened from a button next to the 'Text' field row in the Chart Binding Editor's aesthetic panel. This is a Visual Composer/Binding Editor feature only — there is no chartAPI or dashboardscript property for it. Existing single-field 'Text' bindings are unaffected unless the Text Layout Designer is opened and a layout is defined for that field; once defined, the layout takes over rendering of the label.
+endif::ai[]
+
+The Text Layout Designer lets you compose a Chart's data labels (the text shown on bars, points, pie slices, tiles, etc.) from multiple fields, literal text, and spacing — instead of being limited to the single field that the 'Text' region normally accepts. See xref:BasicChartingSteps.adoc[] for the basic 'Text' region binding.
+
+== Open the Text Layout Designer
+
+In the Chart Binding Editor, locate the 'Text' field row in the aesthetic panel (below the 'Color', 'Shape', and 'Size' rows), and press the layout designer button next to it.
+
+image::TextLayoutDesignerButton.png[alt="PLACEHOLDER - press the layout designer button next to the Text field row"]
+
+A badge appears on this button once a layout has been defined for the field, so you can tell at a glance whether a chart is using a plain single-field 'Text' binding or a layout.
+
+== Using the Designer
+
+Pressing the button opens the Text Layout Designer as an overlay panel.
+
+image::TextLayoutDesignerDialog.png[alt="PLACEHOLDER - Text Layout Designer panel showing the element palette and a row of chips"]
+
+The panel provides the following:
+
+Elements palette:: A list of draggable chips on the left, including the available data fields, a static text chip, and a spacer chip (for adding blank space between other elements).
++
+image::TextLayoutDesignerDragField.png[alt="PLACEHOLDER - dragging a field chip from the palette into a row"]
+
+Add Row:: Adds a new row to the layout. A label can span multiple rows.
+
+Row Alignment:: With a row selected (and no individual item selected), choose Left, Center, or Right alignment for that row's contents.
+
+Text Properties:: Selecting a static text chip lets you type its literal text content directly.
+
+Format:: Each chip (field or static text) can be individually formatted, independent of the other chips in the row.
+
+== Notes
+
+* This feature is available only in the Chart Binding Editor. There is no chartAPI or dashboardscript equivalent for a multi-field text layout.
+* Defining a layout does not affect the underlying 'Text' field binding — it only changes how the label is rendered. Removing the layout returns the label to its single bound field.
