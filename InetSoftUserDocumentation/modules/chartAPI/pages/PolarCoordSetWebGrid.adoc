@@ -29,7 +29,7 @@ Boolean::			`true`: polygon ("`spider-web`") grid +
 include::scriptexample:partial$PolarCoordSetWebGrid1.js[]
 ----
 <1> {dataset}
-<2> Thicken and darken the grid lines to make polygon more visible. 
+<2> Thicken and darken the grid lines to make polygon more visible.
 <3> Create the xref:ParallelCoord.adoc[] object, using the technique described in xref:ChangeChartCoordinates.adoc#ParallelCoordinates[Parallel Coordinates].
 <4> Wrap the `ParallelCoord` in a `PolarCoord` object to arrange the parallel axes radially, as spokes.
 <5> Use `setWebGrid` to change the grid from circular rings to a polygon ("spider-web") shape.
