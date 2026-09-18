@@ -1,0 +1,52 @@
+= PolarCoord.setWebGrid(Boolean)
+:navtitle: setWebGrid()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `PolarCoord.setWebGrid(Boolean)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties). There is no GUI equivalent for this property — a xref:dashboard:RadarChart.adoc[] always uses the default circular-ring grid unless this scripting property is used.
+endif::ai[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+Enables a polygon ("spider-web") grid instead of the default circular-ring grid for a  xref:dashboard:RadarChart.adoc[]. Each concentric grid ring becomes an N-sided polygon, where N is the number of dimensions on the chart (for example, a hexagon for six dimensions), and the outer axis boundary becomes the matching polygon shape instead of a circle. The corresponding “getter” function is `isWebGrid()`.
+
+
+== Parameter
+Boolean::			`true`: polygon ("`spider-web`") grid +
+`false`: circular-ring grid (default)
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+----
+include::scriptexample:partial$PolarCoordSetWebGrid1.js[]
+----
+<1> {dataset}
+<2> Thicken and darken the grid lines to make polygon more visible. 
+<3> Create the xref:ParallelCoord.adoc[] object, using the technique described in xref:ChangeChartCoordinates.adoc#ParallelCoordinates[Parallel Coordinates].
+<4> Wrap the `ParallelCoord` in a `PolarCoord` object to arrange the parallel axes radially, as spokes.
+<5> Use `setWebGrid` to change the grid from circular rings to a polygon ("spider-web") shape.
+<6> Use xref:EGraphSetCoordinate.adoc[] to add the `Coordinate` to the Chart.
+
+image::commonscript:PolarCoordsetWebGrid.png[alt="radar chart with polygon spider-web grid"]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] {circle1} to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object. For example:
+
+[source,javascript]
+----
+var coord = graph.getCoordinate(); //<1>
+coord.setWebGrid(true);
+----
+=====
