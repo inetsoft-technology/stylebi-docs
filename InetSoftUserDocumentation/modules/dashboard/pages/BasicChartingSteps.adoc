@@ -106,7 +106,7 @@ video::359085988#chapter=16555854[vimeo,640,400]
 +
 image::addingChart3.png[alt="drag dimension to Color, Shape, Size, or Text region"]
 +
-NOTE: Unlike the ‘X’ and ‘Y’ regions (which accept multiple fields), each of the ‘Color’, ‘Shape’, and ‘Size’ regions holds only a single field at a time. Dragging a new field into one of these regions replaces the current field. The ‘Text’ region also normally holds a single field, but you can instead compose it from multiple fields, literal text, and spacing using the Text Layout Designer. See xref:TextLayoutDesigner.adoc[].
+NOTE: Unlike the ‘X’ and ‘Y’ regions (which accept multiple fields), each of the ‘Color’, ‘Shape’, and ‘Size’ regions holds only a single field at a time. Dragging a new field into one of these regions replaces the current field. The ‘Text’ region also normally holds a single field, but can also be composed of multiple fields and static text. See xref:TextLayoutDesigner.adoc[] foor more information.
 +
 Note that the effect of color, shape, and size coding varies by chart style. For example, in a bar-type chart the ‘Shape’ representation affects the style of the fill pattern, whereas in a point-type chart the ‘Shape’ representation affects the image of the point.
 +
@@ -211,6 +211,7 @@ video::359085988#chapter=16556376[vimeo,640,400]
 
 
 +
+[#AggregationMethods]
 .Read more about the available aggregation methods…
 [%collapsible]
 ====

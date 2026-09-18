@@ -7,37 +7,67 @@ ifdef::ai[]
 Summary: The Text Layout Designer lets a Chart's 'Text' region be composed of multiple fields, literal text, and spacing arranged across multiple rows, instead of the single field the 'Text' region normally accepts (see BasicChartingSteps). It is opened from a button next to the 'Text' field row in the Chart Binding Editor's aesthetic panel. This is a Visual Composer/Binding Editor feature only — there is no chartAPI or dashboardscript property for it. Existing single-field 'Text' bindings are unaffected unless the Text Layout Designer is opened and a layout is defined for that field; once defined, the layout takes over rendering of the label.
 endif::ai[]
 
-The Text Layout Designer lets you compose a Chart's data labels (the text shown on bars, points, pie slices, tiles, etc.) from multiple fields, literal text, and spacing — instead of being limited to the single field that the 'Text' region normally accepts. See xref:BasicChartingSteps.adoc[] for the basic 'Text' region binding.
+The Text Layout Designer lets you compose a Chart's data labels (the text shown on bars, points, pie slices, tiles, etc.) from multiple fields and  literal text. If you only need data from a single field, see xref:BasicChartingSteps.adoc[] for the basic '`Text`' region binding.
 
-== Open the Text Layout Designer
 
-In the Chart Binding Editor, locate the 'Text' field row in the aesthetic panel (below the 'Color', 'Shape', and 'Size' rows), and press the layout designer button next to it.
+image::TextLayoutDesignerExample.png[alt="PLACEHOLDER - example chart label composed of multiple fields and text using the Text Layout Designer"]
 
+
+To compose  complex text labeling for the data on the Chart, follow the steps below:
+
+
+. Create a Chart as described in xref:BasicChartingSteps.adoc[].
+
+. In the Chart  Editor,  press the {buttonOpenLayoutDesigner} next to  the '`Text`' field in *Visual* panel.
++
 image::TextLayoutDesignerButton.png[alt="PLACEHOLDER - press the layout designer button next to the Text field row"]
-
-A badge appears on this button once a layout has been defined for the field, so you can tell at a glance whether a chart is using a plain single-field 'Text' binding or a layout.
-
-== Using the Designer
-
-Pressing the button opens the Text Layout Designer as an overlay panel.
-
++
+This opens the *Text Layout Designer*  panel.
++
 image::TextLayoutDesignerDialog.png[alt="PLACEHOLDER - Text Layout Designer panel showing the element palette and a row of chips"]
 
-The panel provides the following:
+. Press the btn:[+ Add Row] button.
 
-Elements palette:: A list of draggable chips on the left, including the available data fields, a static text chip, and a spacer chip (for adding blank space between other elements).
+. Drag a field from the *Data Source* panel into the Designer.
 +
 image::TextLayoutDesignerDragField.png[alt="PLACEHOLDER - dragging a field chip from the palette into a row"]
 
-Add Row:: Adds a new row to the layout. A label can span multiple rows.
+. *_Optional:_* Use the buttons next to field name to adjust how the field data is represented:
++
+Value Type:: Press the {buttonValueType} to set the field to a fixed value, a user-supplied Variable, or a scripted Expression instead. See xref:DynamicallySetProperties.adoc[] for more information.
++
+Edit Dimension / Edit Measure:: Press the {buttonEditDimension} (for a dimension) or {buttonEditMeasure} (for a measure) to change settings for that field. See xref:GroupDataByDimension.adoc[] for sorting, ranking, date grouping, and other dimension settings, or xref:BasicChartingSteps.adoc#AggregationMethods[Aggregation Methods] for the available aggregate formulas for a measure.
++
+Format:: Press the {buttonFormat} to change  how the field value is displayed in the label. See xref:VisualFormat.adoc[] for more information.
++
+Remove:: Press the {buttonRemove} to remove the field from the layout.
 
-Row Alignment:: With a row selected (and no individual item selected), choose Left, Center, or Right alignment for that row's contents.
+. In the '`Row Alignment`' panel, choose the {buttonAlignLeft}, {buttonAlignCenter}, or {buttonAlignRight} alignment for that row.
 
-Text Properties:: Selecting a static text chip lets you type its literal text content directly.
+. *_Optional_*: To add static text into the label, drag the '`Text`' element from the *Elements* tray into the bottom panel.
++
+image::TextLayoutDesignerDragText.png[alt="PLACEHOLDER - dragging the Text element from the Elements tray into a row"]
++
+Enter the desired text in the *TEXT PROPERTIES* panel.
++
+image::TextLayoutDesignerTextProps.png[alt="PLACEHOLDER - entering literal text in the Text Properties panel"]
 
-Format:: Each chip (field or static text) can be individually formatted, independent of the other chips in the row.
+. *_Optional_*: Press the {buttonFormat} in the new text chip to change  how the text  is displayed in the label. See xref:VisualFormat.adoc[] for more information.
 
-== Notes
+. *_Optional_*: To add spacing into the label, drag the '`Spacer`' element from the *Elements* tray into the bottom panel.
++
+image::TextLayoutDesignerDragSpacer.png[alt="PLACEHOLDER - dragging the Spacer element from the Elements tray into a row"]
 
-* This feature is available only in the Chart Binding Editor. There is no chartAPI or dashboardscript equivalent for a multi-field text layout.
-* Defining a layout does not affect the underlying 'Text' field binding — it only changes how the label is rendered. Removing the layout returns the label to its single bound field.
+. Repeat the above steps to add additional rows, data, text, spacing into the label.
++
+image::TextLayoutDesignerDragField2.png[alt="PLACEHOLDER - a multi-row label with additional fields, text, and spacing added"]
+
+. Press the btn:[OK] button at the bottom of the screen to save the label you constructed, and exit the Text Layout Designer.
++
+TIP: When a text layout is in effect, the {buttonOpenLayoutDesigner} displays a dot in the corner.
+
+. Press {buttonFinish} to exit the Chart Editor.
+
+Note that if you want to delete the layout and revert  to the plain single-field '`Text`' binding, remove each row (or each item within a row) individually using the {buttonRemove}  in the Layout Editor, and then press btn:[OK].
+
+
