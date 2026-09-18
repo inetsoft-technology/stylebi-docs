@@ -4,8 +4,7 @@ var elem = new IntervalElement("State", "Quantity");
 var frame = new CategoricalColorFrame();
 frame.setField("State");
 var spec = new LegendSpec(); // <2>
-spec.setRoundCorners(true); // <3>
-spec.setBorderColor(java.awt.Color(0xff0000));
+spec.setSymbolSize(40); // <3>
 frame.setLegendSpec(spec); // <4>
 elem.setColorFrame(frame);
 graph.addElement(elem);

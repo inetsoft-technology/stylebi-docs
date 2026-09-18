@@ -28,7 +28,9 @@ include::scriptexample:partial$LegendSpecSetSymbolRoundCorners1.js[]
 <1> {dataset}
 <2> Create the xref:LegendSpec.adoc[] object.
 <3> Use `setSymbolRoundCorners` to square off the corners of the legend symbols.
-<4> Use xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` to the `ColorFrame`.
+<4> Use xref:LegendSpecSetSymbolSize.adoc[] to enlarge symbols, making edges more visible.
+<5> Use xref:LegendSpecSetTextSpec.adoc[] to enlarge the legend text.
+<6> Use xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` to the `ColorFrame`.
 
 image::commonscript:LegendSpecsetSymbolRoundCorners.png[alt="legend with rounded symbol corners applied"]
 
