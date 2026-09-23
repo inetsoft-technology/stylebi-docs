@@ -1,0 +1,35 @@
+= treeLayout
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Sets the layout direction of a xref:dashboard:TreeChart.adoc[]'s tree structure. One of `"TOP_BOTTOM"` (default), `"BOTTOM_TOP"`, `"LEFT_RIGHT"`, or `"RIGHT_LEFT"`. Only meaningful for Tree charts; unrecognized values fall back to `"TOP_BOTTOM"`.
+endif::ai[]
+
+Sets the layout direction of a xref:dashboard:TreeChart.adoc[]'s tree structure.
+
+== Type
+String:: `"TOP_BOTTOM"` (default): tree grows top to bottom +
+`"BOTTOM_TOP"`: tree grows bottom to top +
+`"LEFT_RIGHT"`: tree grows left to right +
+`"RIGHT_LEFT"`: tree grows right to left
+
+== Example
+
+Create a Tree Chart as described at xref:dashboard:TreeChart.adoc[]. Add the following component script to make the tree grow from left to right:
+
+[source,javascript]
+Chart1.treeLayout = "LEFT_RIGHT";
+
+image::commonscript:treeLayout.png[alt="tree chart with the hierarchy growing from left to right"]
+
+[TIP]
+====
+Either syntax below can be used in xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
+[source,javascript]
+treeLayout         // unqualified
+Chart1.treeLayout  // qualified
+
+{secondForm}
+====
