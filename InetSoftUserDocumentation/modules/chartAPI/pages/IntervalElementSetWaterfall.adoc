@@ -1,0 +1,35 @@
+= IntervalElement.setWaterfall(Boolean)
+:navtitle: setWaterfall()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `IntervalElement.setWaterfall(Boolean)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties). There is no GUI equivalent. Marks an `IntervalElement` as belonging to a waterfall chart, which enables waterfall-only behavior such as the connector lines set by xref:chartAPI:IntervalElementSetBridgeLine.adoc[]. A chart created with the Waterfall style (xref:dashboard:WaterfallChart.adoc[]) is marked automatically, so this is needed only when a Chart Component Script builds a new `EGraph` from scratch. On an element that is not marked, `setBridgeLine()` has no effect.
+endif::ai[]
+
+Specifies whether the `IntervalElement` belongs to a xref:dashboard:WaterfallChart.adoc[], which enables waterfall-only features such as bridge lines. See xref:IntervalElementSetBridgeLine.adoc[]. The corresponding “getter” function is `isWaterfall()`.
+
+NOTE: You do not need to use `setWaterfall(true)` if the xref:dashboard:WaterfallChart.adoc[] was created in the Chart Editor. Use `setWaterfall(true)` only when you build the Chart from scratch using script, as shown in the example below.
+
+== Parameter
+Boolean:: `true`: element belongs to a waterfall chart +
+`false`: element is a regular bar element (default)
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+----
+include::scriptexample:partial$IntervalElementSetWaterfall1.js[]
+----
+<1> Each value is the change from the previous total. {dataset}
+<2> Create the `IntervalElement` object.
+<3> Stack the bars across categories, so that each bar starts where the previous bar ends. See xref:GraphElementSetCollisionModifier.adoc[], xref:IntervalElementSetStackGroup.adoc[], and xref:IntervalElementSetStackNegative.adoc[].
+<4> Use `setWaterfall(true)` to mark the element as a waterfall element.
+<5> Use xref:IntervalElementSetBridgeLine.adoc[] to add a solid black line connecting adjacent bars. Without `setWaterfall(true)`, this has no effect.
+<6> Use xref:EGraphAddElement.adoc[] to add the `IntervalElement` to the Chart.
+
+image::commonscript:IntervalElementSetWaterfall.png[alt="waterfall chart built in script with bridge lines connecting adjacent bars"]
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
