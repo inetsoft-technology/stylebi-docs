@@ -13,7 +13,7 @@ If you are using the *default security provider* for authentication, you can def
 [TIP]
 ====
 [square]
-* There are two embedded users: *admin* is a super-user with the role of ‘Administrator’ and *guest* is a user with the role of ‘Everyone’. The default passwords are ‘admin’ and ‘success123’, respectively.
+* There are two embedded users: *admin* is a super-user with the role of ‘Administrator’ and *guest* is a user with the role of ‘Everyone’. The *admin* password is set with the `INETSOFT_ADMIN_PASSWORD` environment variable when StyleBI is first started. The default *guest* password is ‘success123’.
 * To allow users to log in without a password (as  “guest”), create a user with name *anonymous*.  This will allow all users to log in without entering credentials and be governed by the permissions assigned to the ‘anonymous’ user (see xref:SetRepositoryPermissions.adoc[] and xref:SetSecurityActions.adoc[]). If  a user wants to log in under their own name, they will need to press the {buttonAccount} and select {buttonLogin}.
 ====
 

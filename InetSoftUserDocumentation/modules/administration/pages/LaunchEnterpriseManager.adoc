@@ -19,7 +19,7 @@ This opens the Enterprise Manager login screen.  Alternatively, enter the Enterp
 +
 image::Enterprise Manager Login Screen.png[alt="Enterprise Manager login screen"]
 +
-The default login/password is `admin/admin`. For security reasons, login information expires after five minutes. If you receive a ‘Login Expired’ warning, simply re-enter your credentials to log in.
+Log in with the user name `admin` and the password that was set with the `INETSOFT_ADMIN_PASSWORD` environment variable when StyleBI was first started. There is no default password. For security reasons, login information expires after five minutes. If you receive a ‘Login Expired’ warning, simply re-enter your credentials to log in.
 
 
 
