@@ -48,7 +48,7 @@ Default (File):: This is the built-in security provider, and can be used for bot
 [TIP]
 ====
 [square]
-* When using the ‘Default Security Provider’, the default login/password to the Enterprise Manager is admin/admin.
+* When using the ‘Default Security Provider’, log into Enterprise Manager with the user name `admin` and the password that was set with the `INETSOFT_ADMIN_PASSWORD` environment variable when StyleBI was first started.
 * When you select the default security provider for *authentication*,  create users, groups, and roles as explained in xref:administration:CreateUser.adoc[], xref:CreateRole.adoc[], and xref:CreateGroup.adoc[]. When you select the default security provider for *authorization*,  assign permissions for components, capabilities, and assets as explained in xref:SetRepositoryPermissions.adoc[] and xref:SetSecurityActions.adoc[].
 ====
 LDAP:: This specifies a third-party LDAP server (e.g., Active Directory) that contains your users/groups/roles, and can be used for *authentication* only. For more information, see xref:ConfigureLDAPSecurity.adoc[].
