@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Tree chart in Visual Composer, which visualizes organizational hierarchies or parent-child relationships as a tree-shaped diagram with nodes and branches. Requires Source and Target dimension fields defining parent-child pairs.
+Summary: Reference for creating a Tree chart in Visual Composer, which visualizes organizational hierarchies or parent-child relationships as a tree-shaped diagram with nodes and branches. Requires Source and Target dimension fields defining parent-child pairs. Nodes are rectangles (optionally with rounded corners); there is no GUI option for other node shapes. To draw nodes as circles, triangles, diamonds, or other shapes, use xref:chartAPI:RelationElementSetNodeShape.adoc[] in script.
 endif::ai[]
 
 A tree chart displays an organizational hierarchy defined by parent-child relationships.

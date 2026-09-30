@@ -1,0 +1,43 @@
+= RelationElement.setNodeShape(GShape)
+:navtitle: setNodeShape()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `RelationElement.setNodeShape(GShape)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties). There is no GUI equivalent: the Chart Editor and Chart Properties dialog box offer only rectangular nodes (optionally with rounded corners). Sets the shape of the nodes on a xref:dashboard:TreeChart.adoc[], xref:dashboard:NetworkChart.adoc[], or xref:dashboard:CircularNetworkChart.adoc[], such as `GShape.CIRCLE`, `GShape.TRIANGLE`, or `GShape.DIAMOND`. The shape stretches to fill the node's bounding box, so `GShape.CIRCLE` produces an oval on a Tree chart, whose nodes are wider than tall. Node labels are fitted inside the shape, so shapes with less interior space (such as `GShape.TRIANGLE` or `GShape.DIAMOND`) truncate long labels with an ellipsis; to show the full text, increase the node size (‘Edit Size’ in the Chart Editor ‘Node’ panel) or reduce the label font size (xref:dashboard:VisualFormat.adoc[]). Only the outline of the shape is used; node colors still come from the chart's Color binding, fill color, and border color. When a node shape is set, the node corner radius (xref:dashboardscript:PlotNodeCornerRadius.adoc[]) is ignored. An image shape (`GShape.ImageShape`) does not display its image, and `GShape.NIL` or `null` restores the default rectangular nodes. Use xref:chartAPI:EGraphGetElement.adoc[] to get a handle to the element of a chart created in the Chart Editor, as shown in the example.
+endif::ai[]
+
+Sets the shape of the nodes on a xref:dashboard:TreeChart.adoc[], xref:dashboard:NetworkChart.adoc[], or xref:dashboard:CircularNetworkChart.adoc[]. By default, nodes are rectangles. The corresponding “getter” function is `getNodeShape()`.
+
+Only the shape *outline* is applied. Node colors are still set by the Chart's color binding, fill color, and border color, not by the shape's own properties, such as xref:GShapeSetFillColor.adoc[].
+The shape outline stretches to fill the node's bounding box. For example, on a xref:dashboard:TreeChart.adoc[], whose nodes are wider than they are tall, `GShape.CIRCLE` produces an oval. When a label *does not fit* within the node, the label is truncated with an ellipsis (…). To display the full label text, use the Chart Editor to either increase the node size or decrease the label font size. See xref:dashboard:VisualFormat.adoc[].
+
+[NOTE]
+====
+[square]
+
+
+* When a node shape is set, the node corner radius (see xref:dashboardscript:PlotNodeCornerRadius.adoc[]) is ignored.
+* An image shape (xref:GShapeImageShape.adoc[]) does not display its image.
+====
+
+== Parameter
+GShape:: A xref:GShape.adoc[] constant specifying the node shape, or `null` to restore the default rectangular nodes. (`GShape.NIL` also restores the default.)
++
+include::partial$gShapeConstants.adoc[]
+
+== Example
+
+Create a Tree Chart as described at xref:dashboard:TreeChart.adoc[], and bind the parent field to the ‘Color’ region of the ‘Node’ panel. Add the following script:
+
+.Chart Component Script
+[source,javascript]
+----
+include::scriptexample:partial$RelationElementSetNodeShape1.js[]
+----
+<1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the Chart's xref:RelationElement.adoc[].
+<2> Use `setNodeShape` to draw each node as a circle/oval.
+<3> Use xref:GraphElementSetAutoTextColor.adoc[] to automatically contrast labels with background.
+
+image::commonscript:RelationElementSetNodeShape.png[alt="tree chart with oval nodes colored by parent"]

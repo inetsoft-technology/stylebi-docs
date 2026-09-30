@@ -39,7 +39,7 @@ include::scriptexample:partial$SchemaElement1.js[]
 
 <1> {dataset}
 <2> Create the `SchemaElement` object.
-<3> Use xref:EGraphAddElement.adoc[] to add the `PointElement` to the Chart.
+<3> Use xref:EGraphAddElement.adoc[] to add the `SchemaElement` to the Chart.
 
 
 image::commonscript:SchemaElement.png[alt="box and whiskers chart using SchemaElement with BoxPainter by state"]

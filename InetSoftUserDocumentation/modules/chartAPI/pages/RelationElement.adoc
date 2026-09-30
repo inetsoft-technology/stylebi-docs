@@ -1,0 +1,26 @@
+= RelationElement
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `RelationElement`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties). `RelationElement` is the element used to draw xref:dashboard:TreeChart.adoc[], xref:dashboard:NetworkChart.adoc[], and xref:dashboard:CircularNetworkChart.adoc[] charts: nodes connected by lines, defined by Source (parent) and Target (child) fields. To modify such a chart created in the Chart Editor, use xref:chartAPI:EGraphGetElement.adoc[] to get a handle to its `RelationElement`.
+endif::ai[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+The `RelationElement` object contains the visual elements for a chart that displays relationships between nodes: a xref:dashboard:TreeChart.adoc[], xref:dashboard:NetworkChart.adoc[], or xref:dashboard:CircularNetworkChart.adoc[]. Each node is connected by a line to its related nodes, as defined by a '`Source`' field and a '`Target`' field.
+
+To modify a Tree, Network, or Circular Network chart that was created in the Chart Editor, use xref:EGraphGetElement.adoc[] to obtain a handle to the chart's `RelationElement`:
+
+[source,javascript]
+var elem = graph.getElement(0);
+
+The following special methods are provided:
+
+[square]
+include::ROOT:partial$MINITOC_RelationElement.adoc[]
