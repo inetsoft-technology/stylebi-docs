@@ -84,7 +84,7 @@ This formula says: “Look in the ‘Customers’ data block, and return the val
 This example illustrates how you can reference the cells of another data block from within an Expression Column. You will use the tables in the menu:TABLE[SA] folder of the ‘Orders’ data source to create a data block that has columns for product ID, product name, category ID, and category name.
 
 [NOTE]
-include::ROOT:partial$importAllExamples.adoc[]
+include::ROOT:partial$importExamplesDatabase.adoc[]
 
 
 . In the left panel, expand the ‘Data Source’ node, the ‘Orders’ node, and the *TABLE* node.
