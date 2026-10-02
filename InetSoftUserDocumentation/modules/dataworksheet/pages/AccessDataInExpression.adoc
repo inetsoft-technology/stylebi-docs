@@ -87,7 +87,7 @@ This formula says: _“Look in the ‘Customers’ data block, and return the va
 This example illustrates how you can reference the cells of another data block from within a formula column. You will use the tables in the menu:TABLE[SA] folder of the ‘Orders’ data source to create a data block that has columns for product ID, product name, category ID, and category name.
 
 [NOTE]
-include::ROOT:partial$importAllExamples.adoc[]
+include::ROOT:partial$importExamplesDatabase.adoc[]
 
 . In the left panel, expand  menu:Data Source[Orders,TABLE].
 

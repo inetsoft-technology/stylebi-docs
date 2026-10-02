@@ -601,7 +601,7 @@ image::SubQueryExampleRowDep1.png[alt="Category and Total columns dragged from O
 +
 [NOTE]
 The ‘Order Model’ data model can be found in the menu:Examples[Orders] folder.
-include::ROOT:partial$importAllExamples.adoc[]
+include::ROOT:partial$importExamplesDatabase.adoc[]
 
 .. Double click the data block title bar, and rename the data block ‘Sales this week’.
 .. Press the {buttonDefineCondition} in the bottom panel to open the Condition panel.
