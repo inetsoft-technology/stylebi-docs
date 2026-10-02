@@ -1,0 +1,156 @@
+= Set Up the Example Data
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: How to set up the example data used by the examples and walkthroughs throughout this documentation (Sales Explore, All Sales, ProductSales, customers, Fast Go Game, Wireless Mouse, the Orders data source, Order Model, Census, Hurricane, Map Points, etc.). The examples come from the examples.zip file, which is imported in Enterprise Manager. Some example Data Worksheets contain their own (embedded) data and work as soon as they are imported. Others query the example ‘Orders’ database, a PostgreSQL database that the StyleBI Quickstart docker-compose.yaml starts automatically (the ‘postgres’ service, loaded from orders.sql). If you installed StyleBI without the Quickstart files, you must add this database yourself or those examples show no data. Readers who cannot set up the database can upload Excel copies of the main example datasets instead, but this does not work for examples that use the Orders data source directly (physical views, data models, VPMs, database tables).
+endif::ai[]
+
+The examples in this documentation use a common set of sample Dashboards, Data Worksheets, and data sources. Set them up once, as described below, to follow the examples in the documentation.
+
+The example assets are in the https://github.com/inetsoft-technology/stylebi/blob/v1.1.0/community-examples/examples.zip[*examples.zip*] file. Some of them contain their own data, and will work as soon as you import the file. Others use the example *Orders* database, which must also be running.
+
+To set up the example data, follow the instructions for your installation:
+[square]
+* xref:#Quickstart[]: You installed StyleBI using  the Quickstart procedure from the https://github.com/inetsoft-technology/stylebi[StyleBI README on GitHub].
+* xref:#OtherInstall[]: You installed StyleBI some other way.
+* xref:#NoDatabase[]: You cannot add the example database (for example, you do not have administrator access to the server).
+
+[#ExampleRequirements]
+.Documentation Example Requirements
+[cols="2,2,1",options="header"]
+|===
+|Example asset |Location |Requires the Orders database?
+
+|‘Call Center Monitoring’, ‘Census Data’, ‘Construction Data’, ‘Hurricane’, ‘Map Points’, ‘Order Details’, and ‘Sales Revenue’ Data Worksheets
+|menu:Data Worksheet[Examples]
+|No
+
+|‘Census’, ‘Call Center Monitoring’, ‘Construction Dashboard’, ‘Hurricane’, ‘Return Analysis’, and ‘Sales Summary’ Dashboards
+|menu:Dashboard[Examples]
+|No
+
+|‘Sales Explore’, ‘ProductSales’, ‘Analysis’, and ‘Projection’ Data Worksheets
+|menu:Data Worksheet[Examples]
+|Yes
+
+|‘All Sales’, ‘customers’, ‘Fast Go Game’, ‘Wireless Mouse’, and ‘sales by state’ Data Worksheets
+|menu:Data Worksheet[Sample Queries]
+|Yes
+
+|‘Projection’ Dashboard
+|menu:Dashboard[Examples]
+|Yes
+
+|‘Orders’ data source, including the ‘Order View’ physical view and the ‘Order Model’ and ‘Return Model’ data models
+|menu:Data Source[Examples]
+|Yes
+|===
+
+
+
+[#Quickstart]
+== Quickstart Installation
+
+If you installed StyleBI by following the Quickstart instructions in the StyleBI https://github.com/inetsoft-technology/stylebi/blob/main/README.md[README] file (using the *community-examples.zip* file from the https://github.com/inetsoft-technology/stylebi/releases[StyleBI Releases] page), the Orders database is already running. The Quickstart *docker-compose.yaml* file starts  the `postgres` service and loads  the *orders.sql* file automatically.
+
+You only need to import the example assets:
+
+. Locate the *examples.zip* file in the folder where you extracted *community-examples.zip*.
++
+TIP: Use this copy of *examples.zip*, rather than one downloaded separately, so that the examples match your version of StyleBI.
+
+. Import *examples.zip* in Enterprise Manager. See xref:administration:ImportExportAssets.adoc#ImportAssets[Import Assets] for instructions. (This requires access to Enterprise Manager.)
+
+. To confirm that the example database is connected, open the ‘Sales Explore’ Data Worksheet in the menu:Data Worksheet[Examples] folder. Click the ‘Sales’ data block to select it. In the bottom panel, press the {buttonChangeView} and choose {buttonLiveDataView}. The data block should display rows of data.
+
+[#OtherInstall]
+== Other Installations
+
+If you installed StyleBI *without* the Quickstart files, the Orders database will  not be running, and the examples that require it (see xref:#ExampleRequirements[xrefstyle=short]) will not display any data. To add the database, follow the steps below.
+
+. Download the *community-examples.zip* file for your version of StyleBI from the https://github.com/inetsoft-technology/stylebi/releases[StyleBI Releases] page, and extract it. It contains the *orders.sql* and *examples.zip* files.
+
+. Create the Orders database, using one of the following methods:
++
+--
+[square]
+* *Add a PostgreSQL service to your Docker Compose file.* Copy *orders.sql* into the folder that contains your *docker-compose.yaml* file, and add the following service to the file. The service must be named `postgres`, because the example ‘Orders’ data source connects to a server with this host name.
++
+[source,yaml]
+----
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: inetsoft
+      POSTGRES_PASSWORD: inetsoft
+      POSTGRES_DB: orders
+    volumes:
+      - "./orders.sql:/docker-entrypoint-initdb.d/orders.sql:ro"
+----
++
+Then restart your containers with `docker compose up -d`.
+
+* *Use an existing PostgreSQL server.* Create a database named `orders` on the server, and run the *orders.sql* script in that database.
+--
+
+. Import *examples.zip* in Enterprise Manager. See xref:administration:ImportExportAssets.adoc#ImportAssets[Import Assets] for instructions.
+
+. If you used an existing PostgreSQL server, or if the examples do not display data, edit the ‘Orders’ data source (in the menu:Data Source[Examples] folder) as described in xref:user:EditConnection.adoc[]:
++
+[square]
+* Set the connection URL to point to your database server, for example `jdbc:postgresql://__hostname__:5432/orders`.
+* Enter the user name and password for the database. (For the Docker Compose service shown above, the user name and password are both `inetsoft`.)
+
+. To confirm that the example database is connected, open the ‘Sales Explore’ Data Worksheet in the menu:Data Worksheet[Examples] folder. Click the ‘Sales’ data block to select it. In the bottom panel, press the {buttonChangeView} and choose {buttonLiveDataView}. The data block should display rows of data.
+
+[#NoDatabase]
+== No Example Database
+
+If you cannot add the Orders database, you can still follow most Dashboard, Data Worksheet, and scripting examples by uploading Excel copies of the main example datasets. Each Excel file contains the same data as the corresponding example Data Worksheet.
+
+IMPORTANT: This method does not work for examples that use the ‘Orders’ data source directly, such as examples that open database tables, physical views, data models (‘Order Model’), or VPMs. These examples require the Orders database.
+
+For each dataset that you need, follow the steps below:
+
+. Download the Excel file from the table below.
+. Create a new Data Worksheet, and upload the Excel file. See xref:dataworksheet:UploadData.adoc[] for instructions.
+. Rename the new data block to the name in the ‘Data Block Name’ column below.
+. Save the Data Worksheet with the name and in the folder shown in the ‘Data Worksheet’ column below. (If you cannot save to that folder, save the Data Worksheet in another folder. Examples that refer to the Data Worksheet by its full path, such as scripts that use the `runQuery()` function, will then need that path changed to match.)
++
+[cols="1,2,1",options="header"]
+|===
+|Excel File |Data Worksheet |Data Block Name
+
+|xref:ROOT:attachment$Sales_Explore.xlsx[Sales_Explore.xlsx]
+|‘Sales Explore’ in menu:Data Worksheet[Examples]
+|Sales
+
+|xref:ROOT:attachment$ProductSales.xlsx[ProductSales.xlsx]
+|‘ProductSales’ in menu:Data Worksheet[Examples]
+|SalesByDate
+
+|xref:ROOT:attachment$All_Sales.xlsx[All_Sales.xlsx]
+|‘All Sales’ in menu:Data Worksheet[Sample Queries]
+|All Sales
+
+|xref:ROOT:attachment$customers.xlsx[customers.xlsx]
+|‘customers’ in menu:Data Worksheet[Sample Queries]
+|customers
+
+|xref:ROOT:attachment$sales_by_state.xlsx[sales_by_state.xlsx]
+|‘sales by state’ in menu:Data Worksheet[Sample Queries]
+|sales by state
+
+|xref:ROOT:attachment$Fast_Go_Game.xlsx[Fast_Go_Game.xlsx]
+|‘Fast Go Game’ in menu:Data Worksheet[Sample Queries]
+|Fast Go Game
+
+|xref:ROOT:attachment$Wireless_Mouse.xlsx[Wireless_Mouse.xlsx]
+|‘Wireless Mouse’ in menu:Data Worksheet[Sample Queries]
+|Wireless Mouse
+|===
++
+The Excel files do not include the ‘Analysis’ and ‘Projection’ Data Worksheets, which no example in this documentation uses.
