@@ -347,9 +347,9 @@ When the user views this Dashboard in the User Portal, they will now see hyperli
 [#HyperlinkDashboard]
 === Hyperlink to a Dashboard
 
-This example shows how Chart hyperlinks can be used to drill to a sample ‘OrderList’ Dashboard.
+This example shows how Chart hyperlinks can be used to drill to another Dashboard and pass it a parameter. The steps use a target Dashboard named ‘OrderList’ that accepts a parameter named `customer`.
 
-IMPORTANT: You may need to download the xref:ROOT:attachment$OrderList.zip[Order List Example] into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+NOTE: The ‘OrderList’ Dashboard is not included with the example assets. To follow these steps, use one of your own Dashboards that accepts a parameter, and substitute its name and parameter name for ‘OrderList’ and `customer`. See xref:dashboardscript:parameter.adoc[] for the ways a Dashboard can receive a parameter.
 
 
 
