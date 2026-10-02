@@ -21,7 +21,7 @@ This example illustrates how you can control the SQL query that a table sends to
 . Expand the menu:TABLE[SA] node of the *Orders* data source.
 +
 [NOTE]
-include::ROOT:partial$importAllExamples.adoc[]
+include::ROOT:partial$importExamplesDatabase.adoc[]
 . Drag the *PRODUCTS* table to an empty location in the right panel.
 . Drag the *CATEGORIES* table to an empty location in the right panel.
 . Join the two data blocks using an inner join on the  `CATEGORY_ID` field in each data block. See xref:dataworksheet:JoinData.adoc[] more details.
