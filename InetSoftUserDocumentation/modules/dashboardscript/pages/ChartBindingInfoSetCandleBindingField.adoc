@@ -60,7 +60,7 @@ To create a candle chart that displays the average high, low, opening, and closi
 . Create a   new Dashboard.
 include::ROOT:partial$CreateNewDashboardNote.adoc[]
 
-. Select the  ‘Stock Prices’ query  as the data source.
+. Select the ‘Stock Prices’ Data Worksheet as the data source.
 +
 include::ROOT:partial$stockPricesQuery.adoc[]
 
@@ -77,7 +77,7 @@ Chart1.query='Stock Prices';
 Chart1.chartStyle = Chart.CHART_CANDLE;
 var data_high = ["Stock Prices.High",Chart.HIGH,Chart.AVERAGE_FORMULA];
 var data_low = ["Stock Prices.Low",Chart.LOW,Chart.AVERAGE_FORMULA];
-var data_close = ['Stock Prices.Close/Last',Chart.CLOSE,Chart.AVERAGE_FORMULA];
+var data_close = ['Stock Prices.Close',Chart.CLOSE,Chart.AVERAGE_FORMULA];
 var data_open = ['Stock Prices.Open',Chart.OPEN,Chart.AVERAGE_FORMULA];
 Chart1.bindingInfo.xFields=[['Date',Chart.DATE]];
 Chart1.bindingInfo.setGroupOrder('Date',Chart.QUARTER_INTERVAL);
@@ -99,7 +99,7 @@ TIP: You can also use the {buttonZoomIn} to limit the date range.
 +
 image::commonscript:setCandleBinding3.png[alt="candle chart filtered to year 2004 showing quarterly OHLC structure"]
 
-Note that for each quarter, the values of each of the measures (`High`, `Low`, `Close/Last`, `Open`) have been independently aggregated as specified by the corresponding formula parameter (in this case, `Chart.AVERAGE_FORMULA`  for each). The “high” and “low” measures are represented by the extremes of the vertical line, and the “open” and “close” measures are represented, respectively, by the left and right horizontal lines.
+Note that for each quarter, the values of each of the measures (`High`, `Low`, `Close`, `Open`) have been independently aggregated as specified by the corresponding formula parameter (in this case, `Chart.AVERAGE_FORMULA`  for each). The “high” and “low” measures are represented by the extremes of the vertical line, and the “open” and “close” measures are represented, respectively, by the left and right horizontal lines.
 
 TIP: Typically, different formulas are used for the different measures.  For example, *max* for the "high", *min* for the "low", *first* for the open, and *last* for the close.  See xref:dashboard:CandleChart.adoc[] for an example that uses this approach.
 

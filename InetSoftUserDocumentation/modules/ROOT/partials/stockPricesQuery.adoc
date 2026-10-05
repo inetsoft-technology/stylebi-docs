@@ -1,2 +1,1 @@
-NOTE: The 'Stock Prices' Data Worksheet can be found in  menu:Data Worksheet[Examples].
-include::ROOT:partial$importAllExamples.adoc[]
+NOTE: The 'Stock Prices' Data Worksheet is not included in the example assets for this version of StyleBI. To create it, download xref:ROOT:attachment$Stock_Prices.xlsx[Stock_Prices.xlsx], and upload it to a new Data Worksheet (see xref:dataworksheet:UploadData.adoc[]). Rename the new data block to 'Stock Prices', and save the Data Worksheet as 'Stock Prices' in menu:Data Worksheet[Examples].
