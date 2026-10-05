@@ -20,7 +20,7 @@ NOTE: Chart API script (which operates on the Chart’s 'EGraph' property) shoul
 . *Define the data*: Define the dataset for the Chart using the Chart’s xref:chartAPI:Data.adoc[] property.
 +
 [source,javascript]
-data = runQuery("ws:global:Examples/AllSales");
+data = runQuery("ws:global:Sample Queries/sales by state");
 +
 You will generally obtain the data from a  Data Worksheet  by using xref:commonscript:runQuery.adoc[]. You can also define your own dataset in script by assigning a JavaScript array to the `data` or `dataset` property.
 
@@ -54,7 +54,7 @@ image:commonscript:GraphScriptIntro.png[alt="bar chart created from script using
 .Complete Script
 ****
 [source,javascript]
-data = runQuery("ws:global:Examples/AllSales");
+data = runQuery("ws:global:Sample Queries/sales by state");
 graph = new EGraph();
 var elem = new IntervalElement("State", "Sales");
 graph.addElement(elem);

@@ -17,7 +17,7 @@ TIP: You can also use the Chart’s `query` property to set a query in *onRefres
 You can assign the results of  xref:commonscript:runQuery.adoc[runQuery] to the `data` object to set the Chart dataset:
 
 [source,javascript]
-data = runQuery("ws:global:Examples/AllSales");
+data = runQuery("ws:global:Sample Queries/All Sales");
 
 The `data` object also supports formula table syntax such as the following:
 

@@ -19,7 +19,7 @@ type:: `1`: Horizontal expansion +
 
 == Example
 [source,javascript]
-var q = runQuery('ws:global:Examples/AllSales');
+var q = runQuery('ws:global:Sample Queries/sales by state');
 FreehandTable1.layoutInfo.setCellBinding(1,0,3,"toList(q['State'],'sort=asc')");
 FreehandTable1.layoutInfo.setExpansion(1,0,1); // horizontal expansion
 

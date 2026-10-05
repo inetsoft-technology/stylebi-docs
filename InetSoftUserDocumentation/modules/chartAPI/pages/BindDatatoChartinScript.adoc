@@ -12,7 +12,7 @@ To bind data to a chart from an arbitrary query or Data Worksheet in element-lev
 
 .Example: Data from arbitrary  Data Worksheet
 [source,javascript]
-Chart1.data = runQuery("ws:global:Examples/AllSales");
+Chart1.data = runQuery("ws:global:Sample Queries/sales by state");
 graph = new EGraph();
 var elem = new IntervalElement("State", "Sales");
 graph.addElement(elem);
