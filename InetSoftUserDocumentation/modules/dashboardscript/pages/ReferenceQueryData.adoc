@@ -43,7 +43,7 @@ include::ROOT:partial$customersQuery.adoc[]
 . Press the {buttonOptions} in the Dashboard toolbar, and select the *Script* tab. Select the ‘onInit’ option at the bottom and enter the following script:
 +
 [source,javascript]
-var q = runQuery('ws:global:Examples/customers')
+var q = runQuery('ws:global:Sample Queries/customers')
 
 
 +
@@ -101,7 +101,7 @@ include::ROOT:partial$customersQuery.adoc[]
 . Press the {buttonOptions} in the Dashboard toolbar, and select the *Script* tab. Select the ‘onInit’ option at the bottom and enter the following script:
 +
 [source,javascript]
-var q = runQuery('ws:global:Examples/customers')
+var q = runQuery('ws:global:Sample Queries/customers')
 
 +
 image::dashboard:freehandExp1.png[alt="Dashboard Options Script tab with runQuery entered in onInit script"]
@@ -198,7 +198,7 @@ In this example, you will create a Freehand Table (based on the ‘customers’ 
 . Press the {buttonOptions} in the toolbar, and select the *Script* tab. Select the ‘onInit’ option at the bottom and enter the following script:
 +
 [source,javascript]
-var q = runQuery('ws:global:Examples/customers')
+var q = runQuery('ws:global:Sample Queries/customers')
 
 +
 image::dashboard:freehandExp1.png[alt="Dashboard Options Script tab with runQuery entered in onInit script"]

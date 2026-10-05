@@ -34,10 +34,10 @@ You can specify the `dataset` by one of the following methods:
 [source,javascript]
 dataset = [["State", "Quantity"],["NJ", 200],["NY", 300],["PA", 370],["CT", 75]];
 
-* In script, assign a Data Worksheet result (e.g., ‘AllSales’) to the dataset property.
+* In script, assign a Data Worksheet result (e.g., ‘All Sales’) to the dataset property.
 +
 [source,javascript]
-dataset = runQuery("ws:global:Examples/AllSales");
+dataset = runQuery("ws:global:Sample Queries/All Sales");
 +
 See xref:dashboardscript:RunQueryFromScript.adoc[]  and xref:chartAPI:CreateChartwithChartAPI.adoc[] for details about using xref:commonscript:runQuery.adoc[runQuery].
 

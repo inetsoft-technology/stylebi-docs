@@ -19,7 +19,7 @@ NOTE: Use `dataset` (not `data`) in Chart API script. The `data` property is des
 
 .Example: Data from arbitrary  Data Worksheet
 [source,javascript]
-Chart1.dataset = runQuery("ws:global:Examples/AllSales");
+Chart1.dataset = runQuery("ws:global:Sample Queries/sales by state");
 graph = new EGraph();
 var elem = new IntervalElement("State", "Sales");
 graph.addElement(elem);
