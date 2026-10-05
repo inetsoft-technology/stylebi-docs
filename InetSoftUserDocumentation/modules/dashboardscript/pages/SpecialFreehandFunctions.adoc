@@ -62,7 +62,7 @@ sortcolumn=column_name:: Sort data according to a specific query column which is
 The variable ‘`q`’ contains the results of a query. This is usually generated in onInit Handler script (see xref:AddScriptToDashboard.adoc#AddDashboardScript[Add Dashboard Script]) by  xref:commonscript:runQuery.adoc[]. For example:
 
 [source,javascript]
-var q = runQuery('ws:global:Examples/AllSales')
+var q = runQuery('ws:global:Examples/Sales Explore')
 
 The `rowList()` function also adds the fields of the result set to the formula scope of the table cells, so that they can be accessed as `field['colName']`. Therefore, you can use `rowList()` to extract a portion of a query result set, and then fill out the table with other fields of the result set which correspond to the records of the extracted rows.
 
