@@ -541,7 +541,9 @@ For example,  the following  query takes in two date parameters: ‘StartDate’
 [source,javascript]
 var sd = dateAdd('d', -15, CALC.today());
 var ed = dateAdd('d',  15, CALC.today());
-var q = runQuery('ws:global:Examples/AllSales', [['StartDate', sd],['EndDate', ed]]);
+var q = runQuery('ws:global:Sample Queries/All Sales', [['StartDate', sd],['EndDate', ed]]);
+
+NOTE: The example ‘All Sales’ Data Worksheet (in menu:Data Worksheet[Sample Queries]) does not define these parameters, so this example only illustrates the syntax. To pass parameters to a Data Worksheet, the Data Worksheet must define variables with matching names. See xref:dataworksheet:CreateNewVariable.adoc[].
 
 === Extract Date Component
 When extracting calendar elements within a date (year, month, quarter, etc.) use the date functions within the CALC function library.

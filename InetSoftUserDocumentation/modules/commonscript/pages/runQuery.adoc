@@ -19,4 +19,6 @@ parameters::			 two-dimensional string array,			each row containing a name-value
 
 == Example
 [source,javascript]
-var rs = runQuery('ws:global:Examples/AllSales',[['category','Business'],['price',100]]);
+var rs = runQuery('ws:global:Sample Queries/All Sales',[['category','Business'],['price',100]]);
+
+NOTE: The example ‘All Sales’ Data Worksheet (in menu:Data Worksheet[Sample Queries]) does not define these parameters, so this example only illustrates the syntax. To pass parameters to a Data Worksheet, the Data Worksheet must define variables with matching names. See xref:dataworksheet:CreateNewVariable.adoc[].

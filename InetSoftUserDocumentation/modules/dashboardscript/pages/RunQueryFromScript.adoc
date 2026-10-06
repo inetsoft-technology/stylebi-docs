@@ -38,7 +38,9 @@ Query parameters (if any) can be passed as part of the `runQuery` call. For exam
 
 
 [source,javascript]
-var q = runQuery('ws:global:Examples/AllSales', [['start_time', parameter.start_time],['end_time', new Date()]]);
+var q = runQuery('ws:global:Sample Queries/All Sales', [['start_time', parameter.start_time],['end_time', new Date()]]);
+
+NOTE: The example ‘All Sales’ Data Worksheet (in menu:Data Worksheet[Sample Queries]) does not define these parameters, so this example only illustrates the syntax. To pass parameters to a Data Worksheet, the Data Worksheet must define variables with matching names. See xref:dataworksheet:CreateNewVariable.adoc[].
 
 The topics in the following sections explain different ways that you can extract data from a  Data Worksheet.
 
