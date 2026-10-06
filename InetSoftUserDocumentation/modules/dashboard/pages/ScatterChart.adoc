@@ -79,12 +79,13 @@ include::partial$addTitlesLegend.adoc[]
 
 .Explore More...
 ****
-The sample xref:ROOT:attachment$Census.zip[Census] Dashboard (in the ‘Examples’ folder) provides an example of a scatter chart.
+The sample ‘Census’ Dashboard in the menu:Dashboard[Examples] folder provides an example of a scatter chart.
 
 
 image::dashboard:galleryMultipleMeasure3.png[alt="Census dashboard scatter chart example"]
 
-To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Census.zip[Census] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+To explore this sample Dashboard, open it from the Repository.
+include::ROOT:partial$importAllExamples.adoc[]
 
 ****
 
