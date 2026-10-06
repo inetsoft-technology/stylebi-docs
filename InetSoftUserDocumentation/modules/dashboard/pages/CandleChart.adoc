@@ -66,9 +66,10 @@ include::partial$addTitlesLegend.adoc[]
 
 .Explore More...
 ****
-The sample xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard provides an example of a candle chart.
+The sample ‘Sales Summary’ Dashboard in the menu:Dashboard[Examples] folder (titled ‘Executive Sales Summary’) provides an example of a candle chart.
 
 image::dashboard:galleryDataTip2.png[alt="candle chart dashboard example"]
 
-To explore this sample Dashboard, download and import the  xref:ROOT:attachment$Executive_Sales_Summary.zip[Executive Sales Summary] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+To explore this sample Dashboard, open it from the Repository.
+include::ROOT:partial$importAllExamples.adoc[]
 ****
