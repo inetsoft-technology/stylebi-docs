@@ -25,11 +25,22 @@ String
 
 
 == Example
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a Text component to the Dashboard. (The default name of this component is ‘Text1’.)
+
+. Add the following script to the Text component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 [source,javascript]
+----
 Text1.query = 'Sales';
 Text1.fields = ['Total'];
 Text1.formula = StyleConstant.AVERAGE_FORMULA;
-
+----
 
 [TIP]
 ====

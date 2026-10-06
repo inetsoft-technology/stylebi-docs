@@ -23,15 +23,29 @@ Array
 
 
 == Examples
+
+. Create a new Dashboard based on the ‘ProductSales’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$ProductSalesWorksheet.adoc[]
+
+. Add a Selection List or Selection Tree component to the Dashboard. (The default names of these components are ‘SelectionList1’ and ‘SelectionTree1’.)
+
+. Add the corresponding script below to the component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 .Selection List
 [source,javascript]
+----
 SelectionList1.query = 'SalesByDate';
 SelectionList1.fields = ['State'];
-
+----
++
 .Selection Tree
 [source,javascript]
+----
 SelectionTree1.query = 'SalesByDate';
 SelectionTree1.fields = ['State','Company'];
+----
 
 [TIP]
 ====

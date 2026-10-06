@@ -25,7 +25,18 @@ Boolean::			`true` for 'Bottom', `false` for 'Top'
 
 
 == Example
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a Crosstab component to the Dashboard. (The default name of this component is ‘Crosstab1’.)
+
+. Add the following script to the Crosstab component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 [source,javascript]
+----
 Crosstab1.query = 'Sales';
 Crosstab1.bindingInfo.rowFields = ['Name'];
 Crosstab1.bindingInfo.colFields = ['Region'];
@@ -35,9 +46,9 @@ Crosstab1.bindingInfo.showColumnTotal = true;
 Crosstab1.bindingInfo.setTopN('Name',StyleConstant.ROW_HEADER,3);
 Crosstab1.bindingInfo.setTopNSummaryCol('Name',StyleConstant.ROW_HEADER,'Sum(Total)');
 Crosstab1.bindingInfo.setTopNReverse('Name',StyleConstant.ROW_HEADER,false);
-
-image:commonscript:bindingInfoSetTopNExp1_2.png[alt="crosstab showing top 3 names filtered by Sum of Total with column totals"]
-
+----
++
+image::commonscript:bindingInfoSetTopNExp1_2.png[alt="crosstab showing top 3 names filtered by Sum of Total with column totals"]
 
 [TIP]
 ====

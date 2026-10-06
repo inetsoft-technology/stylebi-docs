@@ -27,19 +27,33 @@ Array
 
 
 == Examples
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a Range Slider component to the Dashboard. (The default name of this component is ‘RangeSlider1’.)
+
+. Add one of the following scripts to the Range Slider component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 .Single-value Range Slider
 [source,javascript]
+----
 RangeSlider1.composite = false;
 RangeSlider1.query = 'Sales';
 RangeSlider1.fields = ['Date'];
 RangeSlider1.rangeType = StyleConstant.DATE;
-
+----
++
 .Composite-value Range Slider
 [source,javascript]
+----
 RangeSlider1.composite = true;
 RangeSlider1.query = 'Sales';
 RangeSlider1.fields = ['Region','Category'];
 RangeSlider1.rangeType = StyleConstant.STRING;
+----
 
 [TIP]
 ====

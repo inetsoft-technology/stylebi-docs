@@ -58,7 +58,18 @@ measure::			String: Formula for by-value sorting:
 
 
 == Example
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a Crosstab component to the Dashboard. (The default name of this component is ‘Crosstab1’.)
+
+. Add the following script to the Crosstab component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 [source,javascript]
+----
 Crosstab1.query = 'Sales';
 Crosstab1.bindingInfo.rowFields = ['Name'];
 Crosstab1.bindingInfo.colFields = ['Region'];
@@ -66,9 +77,9 @@ Crosstab1.bindingInfo.measureFields = ['Total'];
 Crosstab1.bindingInfo.setFormula('Total', StyleConstant.SUM_FORMULA);
 Crosstab1.bindingInfo.showColumnTotal = true;
 Crosstab1.bindingInfo.setColumnOrder('Name',StyleConstant.ROW_HEADER,StyleConstant.SORT_VALUE_DESC,'Sum(Total)');
-
-image:commonscript:bindingInfoSetColumnOrder2.png[alt="crosstab with Name rows sorted descending by Sum of Total value"]
-
+----
++
+image::commonscript:bindingInfoSetColumnOrder2.png[alt="crosstab with Name rows sorted descending by Sum of Total value"]
 
 [TIP]
 ====
