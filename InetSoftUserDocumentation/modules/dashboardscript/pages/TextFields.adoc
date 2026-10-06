@@ -32,19 +32,30 @@ Array
 
 == Example
 
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a Text component to the Dashboard. (The default name of this component is ‘Text1’.)
+
+. Add one of the following scripts to the Text component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 .Univariate aggregation
 [source,javascript]
+----
 Text1.query = 'Sales';
 Text1.fields = ['Total'];
 Text1.formula = StyleConstant.AVERAGE_FORMULA;
-
+----
++
 .Bivariate aggregation
 [source,javascript]
+----
 Text1.query = 'Sales';
 Text1.fields = ['Total','Quantity Purchased'];
 Text1.formula = StyleConstant.CORRELATION_FORMULA;
-
-
+----
 
 [TIP]
 ====
