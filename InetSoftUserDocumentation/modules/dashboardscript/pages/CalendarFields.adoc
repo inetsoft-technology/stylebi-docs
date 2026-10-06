@@ -22,12 +22,21 @@ array
 
 
 == Example
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a Calendar component to the Dashboard. (The default name of this component is ‘Calendar1’.)
+
+. Add the following script to the Calendar component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 [source,javascript]
+----
 Calendar1.query = 'Sales';
 Calendar1.fields = ['Date'];
-
-
-
+----
 
 [TIP]
 ====

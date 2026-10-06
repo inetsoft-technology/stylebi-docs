@@ -22,12 +22,23 @@ String
 
 
 == Example
+
+. Create a new Dashboard based on the ‘ProductSales’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$ProductSalesWorksheet.adoc[]
+
+. Add a Selection List component to the Dashboard. (The default name of this component is ‘SelectionList1’.)
+
+. Add the following script to the Selection List component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 [source,javascript]
+----
 SelectionList1.query = 'SalesByDate';
 SelectionList1.fields = ['State'];
 SelectionList1.measure ='Total';
 SelectionList1.formula = StyleConstant.MAX_FORMULA;
-
+----
 
 [TIP]
 ====
