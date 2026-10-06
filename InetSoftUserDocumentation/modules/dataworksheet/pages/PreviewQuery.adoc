@@ -18,7 +18,7 @@ By default, the Data Worksheet attempts to create a single SQL query that fully 
 ****
 This example illustrates how you can control the SQL query that a table sends to the database.
 
-. Expand the menu:TABLE[SA] node of the *Orders* data source.
+. In the left panel, expand menu:Data Source[Examples,Orders,TABLE].
 +
 [NOTE]
 include::ROOT:partial$importExamplesDatabase.adoc[]
