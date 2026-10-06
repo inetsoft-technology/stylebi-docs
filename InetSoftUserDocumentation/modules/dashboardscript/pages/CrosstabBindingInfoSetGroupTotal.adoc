@@ -26,14 +26,26 @@ Boolean::			`true`: display group total +
 
 
 == Example
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a Crosstab component to the Dashboard. (The default name of this component is ‘Crosstab1’.)
+
+. Add the following script to the Crosstab component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 [source,javascript]
+----
 Crosstab1.query = 'Sales';
 Crosstab1.bindingInfo.rowFields = ['Region','State'];
 Crosstab1.bindingInfo.colFields = ['Category'];
 Crosstab1.bindingInfo.measureFields = ['Total'];
 Crosstab1.bindingInfo.setFormula('Total', StyleConstant.SUM_FORMULA);
 Crosstab1.bindingInfo.setGroupTotal('Region',StyleConstant.ROW_HEADER,true);
-
+----
++
 image::commonscript:bindingInfoSetGroupTotalExp.png[alt="crosstab with Region row subtotals displayed for each region group"]
 
 [TIP]

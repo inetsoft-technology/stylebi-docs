@@ -25,15 +25,22 @@ Array
 
 == Example
 
+. Create a new Dashboard based on the ‘ProductSales’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$ProductSalesWorksheet.adoc[]
+
+. Add a Table component to the Dashboard. (The default name of this component is ‘TableView1’.)
+
+. Add the following script to the Table component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 [source,javascript]
 ----
 TableView1.query = 'SalesByDate';
 TableView1.fields = ['State','Company','Total'];
-
 ----
-
-
-
++
+image::tableFields.png[alt="table showing State Company and Total columns bound from SalesByDate data block"]
 
 [TIP]
 ====
@@ -45,7 +52,6 @@ TableView1.fields     // qualified
 {secondForm}
 ====
 
-image::tableFields.png[alt="table showing State Company and Total columns bound from SalesByDate data block"]
 
 
 

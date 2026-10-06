@@ -27,13 +27,22 @@ String
 
 
 == Example
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a Gauge component to the Dashboard. (The default name of this component is ‘Gauge1’.)
+
+. Add the following script to the Gauge component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 [source,javascript]
+----
 Gauge1.query = 'Sales';
 Gauge1.fields = ['Total'];
 Gauge1.formula = StyleConstant.AVERAGE_FORMULA;
-
-
-
+----
 
 [TIP]
 ====

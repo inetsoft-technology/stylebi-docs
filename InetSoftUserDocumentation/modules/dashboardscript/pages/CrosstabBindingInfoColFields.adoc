@@ -22,12 +22,24 @@ Array
 
 
 == Example
+
+. Create a new Dashboard based on the ‘Sales Explore’ Data Worksheet.
+include::ROOT:partial$CreateNewDashboardNote.adoc[]
++
+include::ROOT:partial$SalesExploreWorksheet.adoc[]
+
+. Add a Crosstab component to the Dashboard. (The default name of this component is ‘Crosstab1’.)
+
+. Add the following script to the Crosstab component. (See xref:dashboardscript:AddScriptToDashboard.adoc#AddComponentScript[Add Component Script].)
++
 [source,javascript]
-Cross Crosstab1.query = 'Sales';
+----
+Crosstab1.query = 'Sales';
 Crosstab1.bindingInfo.rowFields = ['Category','Name'];
 Crosstab1.bindingInfo.colFields = ['Region','State'];
 Crosstab1.bindingInfo.measureFields = ['Total','Quantity Purchased'];
-
+----
++
 image::commonscript:bindingInfoCrosstabExp1_2.png[alt="crosstab with category and name as rows region and state as columns"]
 
 [TIP]
