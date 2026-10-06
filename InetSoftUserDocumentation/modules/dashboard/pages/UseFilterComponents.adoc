@@ -217,9 +217,9 @@ image::SelectionContainer2.png[alt="clear all filters in selection container"]
 [#ExampleFilterDashboard]
 .Example: Filter a Dashboard
 ****
-The following example illustrates how to use the Selection Lists in the sample xref:ROOT:attachment$Census.zip[Census] Dashboard (in the ‘Examples’ folder).
+The following example illustrates how to use the Selection Lists in the sample ‘Census’ Dashboard in the menu:Dashboard[Examples] folder.
 
-NOTE: If you don't see the Dashboard in the Repository, download and import the  xref:ROOT:attachment$Census.zip[Census] Dashboard into your environment. (This requires access to Enterprise Manager.) See xref:administration:ImportExportAssets.adoc[] for instructions on how to import.
+NOTE: If you don't see the Dashboard in the Repository, see xref:ROOT:SetUpExampleData.adoc[] to import the example assets. (Importing requires access to Enterprise Manager.)
 
 . Open the sample ‘Census’ Dashboard (in the ‘Examples’ folder).
 +
