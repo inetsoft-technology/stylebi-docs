@@ -24,7 +24,11 @@ asciidoc:
   attributes:
     testdrive: false
     si: true
+    # Report references to undefined {attributes} instead of silently dropping them
+    attribute-missing: warn
 
 runtime:
   log:
     format: pretty
+    # Fail the build (and skip publishing) on errors such as broken xrefs, includes, or images
+    failure_level: error
