@@ -1,0 +1,79 @@
+name: Doc checks (report only)
+
+# Compares each docs branch with the matching StyleBI product branch and posts
+# a report on the run's summary page. It never blocks publishing.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'InetSoftUserDocumentation/**'
+      - 'tools/doc-checks/**'
+      - '.github/workflows/doc-checks.yml'
+  schedule:
+    - cron: '0 6 * * 1'   # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: docs ${{ matrix.docs }} vs product ${{ matrix.product }}
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { docs: main,       product: v1.1.x }
+          - { docs: v1.2,       product: main }
+          - { docs: v1.0,       product: v1.0.x }
+          - { docs: epic-74519, product: epic-74519 }
+    steps:
+      - name: Check out the checker (from docs main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: checker
+          sparse-checkout: tools/doc-checks
+
+      - name: Check out docs ${{ matrix.docs }}
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.docs }}
+          path: docs
+          sparse-checkout: InetSoftUserDocumentation
+
+      - name: Check out product ${{ matrix.product }}
+        uses: actions/checkout@v4
+        with:
+          repository: inetsoft-technology/stylebi
+          ref: ${{ matrix.product }}
+          path: product
+          sparse-checkout: |
+            core/src/main/java/inetsoft/graph
+            community-examples
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run checks
+        run: >
+          python checker/tools/doc-checks/run.py
+          --docs docs --product product
+          --docs-branch "${{ matrix.docs }}"
+          --label "docs ${{ matrix.docs }} vs product ${{ matrix.product }}"
+          --out report.md
+
+      - name: Publish report
+        if: always()
+        run: |
+          if [ -f report.md ]; then cat report.md >> "$GITHUB_STEP_SUMMARY"; fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: doc-checks-${{ matrix.docs }}
+          path: report.md
+          if-no-files-found: ignore
