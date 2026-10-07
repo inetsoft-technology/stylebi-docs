@@ -3,6 +3,7 @@
 All checks use only the Python standard library so they run anywhere
 (locally or in GitHub Actions) without installing packages.
 """
+import fnmatch
 import os
 import re
 from dataclasses import dataclass, field
@@ -75,8 +76,10 @@ def load_exceptions(path):
 
 
 def is_excepted(finding, rules, docs_branch):
+    """A rule's key may use * and ? wildcards, e.g. 'missing-page:*'."""
     for check, branch, key in rules:
-        if check == finding.check and key == finding.key and branch in ("*", docs_branch):
+        if (check == finding.check and fnmatch.fnmatchcase(finding.key, key)
+                and branch in ("*", docs_branch)):
             return True
     return False
 

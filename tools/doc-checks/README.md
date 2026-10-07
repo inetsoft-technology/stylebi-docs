@@ -37,6 +37,7 @@ Update this table, and the matrix in `doc-checks.yml`, when branches change
 | `calc` | Every `CALC.<function>` reference page and every `CALC.x(...)` call in the docs names a function in the product's CALC library (`inetsoft.util.script` CalcDateTime, CalcFinancial, CalcLogic, CalcMath, CalcStat, CalcTextData). Also lists, for information, CALC functions that have no reference page. |
 | `dashboard` | Every Dashboard Scripting reference page title, and every component property used in an example (`Chart1.tooltipVisible`), is a name the product exposes to scripts (`inetsoft.report.script`, `inetsoft.util.script`, `inetsoft.uql.viewsheet`). Names are compared case-sensitively, because a miscased property silently does nothing. Name-level only: it does not verify that the name applies to that particular component. |
 | `examples` | Example Data Worksheets and Dashboards that the docs place in Examples or Sample Queries, `runQuery('ws:global:...')` paths, and `.query = '...'` data block names all exist in the product's `community-examples/examples.zip`. |
+| `helplinks` | The product's Help buttons reach the right documentation: every route in `playbook/antora-router.yml` points at a page and anchor that exist, and every help ID the product uses (`@ContextHelp`, `cshid`/`helpLink`/`helpLinkKey` in `web/projects`) has a route. The publish build applies the triggering branch's router to every version, so keep the router the same on all docs branches. |
 
 ## Handling a finding
 
@@ -48,7 +49,8 @@ Update this table, and the matrix in `doc-checks.yml`, when branches change
    check | docs-branch-or-* | key   # reason
    ```
 
-   The key is printed with each finding in the report.
+   The key is printed with each finding in the report. It may use `*` and `?`
+   wildcards (for example `missing-page:*`).
 
 ## Running locally
 
@@ -56,7 +58,7 @@ The checks need only Python 3 (standard library). Point them at a docs
 checkout and a product checkout (a sparse checkout of
 `core/src/main/java/inetsoft/graph`, `core/src/main/java/inetsoft/report/script`,
 `core/src/main/java/inetsoft/uql/viewsheet`, `core/src/main/java/inetsoft/util/script`,
-and `community-examples` is enough):
+`community-examples`, and `web/projects` is enough):
 
 ```
 python tools/doc-checks/run.py --docs . --product ../stylebi --docs-branch main

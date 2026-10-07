@@ -42,7 +42,9 @@ jobs:
         with:
           ref: ${{ matrix.docs }}
           path: docs
-          sparse-checkout: InetSoftUserDocumentation
+          sparse-checkout: |
+            InetSoftUserDocumentation
+            playbook
 
       - name: Check out product ${{ matrix.product }}
         uses: actions/checkout@v4
@@ -56,6 +58,7 @@ jobs:
             core/src/main/java/inetsoft/uql/viewsheet
             core/src/main/java/inetsoft/util/script
             community-examples
+            web/projects
 
       - uses: actions/setup-python@v5
         with:

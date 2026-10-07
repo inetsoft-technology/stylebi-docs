@@ -14,3 +14,8 @@ examples | * | runQuery:{Folder1/Folder 2/.../}datasetName:tableName   # RunQuer
 
 # Registered in report/composition/execution/ViewsheetSandbox.java, outside the folders the check reads.
 dashboard | * | page:SpecialFunctionPViewsheet.adoc   # pviewsheet global
+
+# The help router is site-wide (see check_helplinks.py); routes to pages added after 1.0 are expected there.
+helplinks | v1.0 | missing-page:*
+helplinks | v1.0 | anchor:EMSettingsScheduleMoveTask   # moving scheduled tasks was added after 1.0
+helplinks | v1.0 | anchor:ScheduleDashboardMoveTask    # moving scheduled tasks was added after 1.0

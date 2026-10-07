@@ -4,9 +4,9 @@ Usage:
   python tools/doc-checks/run.py --docs <docs checkout> --product <stylebi checkout>
          [--docs-branch main] [--label "docs main vs product v1.1.x"] [--out report.md]
 
-<docs checkout> is the folder that contains InetSoftUserDocumentation/.
+<docs checkout> is the folder that contains InetSoftUserDocumentation/ and playbook/.
 <stylebi checkout> needs the core/src/main/java/inetsoft folders graph, report/script,
-uql/viewsheet and util/script, plus community-examples/.
+uql/viewsheet and util/script, plus community-examples/ and web/projects/.
 
 The checks are report-only: the exit code is 0 unless a check crashes.
 """
@@ -21,9 +21,10 @@ import check_calc       # noqa: E402
 import check_chartapi   # noqa: E402
 import check_dashboard  # noqa: E402
 import check_examples   # noqa: E402
+import check_helplinks  # noqa: E402
 from common import is_excepted, load_exceptions   # noqa: E402
 
-CHECKS = [check_chartapi, check_calc, check_dashboard, check_examples]
+CHECKS = [check_chartapi, check_calc, check_dashboard, check_examples, check_helplinks]
 
 
 def render(results, label, docs_branch, rules):
