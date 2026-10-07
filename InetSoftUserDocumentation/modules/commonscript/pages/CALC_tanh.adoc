@@ -28,7 +28,7 @@ CALC.tanh(field['Value'])
 include::partial$dashboardScriptData.adoc[]
 [source,javascript]
 ----
-CALC.tanh(Slider1.Value)
+CALC.tanh(Slider1.value)
 CALC.tanh(parameter.Value)
 ----
 

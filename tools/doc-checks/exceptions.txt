@@ -11,3 +11,6 @@ examples | v1.0 | query:Stock Prices      # uploaded by the reader on 1.0
 examples | * | query:Orders And Returns   # BindDatatoChartinScript: "assume that ... is the name of a data block"
 examples | * | runQuery:{Folder1/Folder 2/.../}datasetName             # RunQueryFromScript syntax template
 examples | * | runQuery:{Folder1/Folder 2/.../}datasetName:tableName   # RunQueryFromScript syntax template
+
+# Registered in report/composition/execution/ViewsheetSandbox.java, outside the folders the check reads.
+dashboard | * | page:SpecialFunctionPViewsheet.adoc   # pviewsheet global

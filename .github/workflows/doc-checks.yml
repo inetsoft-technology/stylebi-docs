@@ -52,6 +52,8 @@ jobs:
           path: product
           sparse-checkout: |
             core/src/main/java/inetsoft/graph
+            core/src/main/java/inetsoft/report/script
+            core/src/main/java/inetsoft/uql/viewsheet
             core/src/main/java/inetsoft/util/script
             community-examples
 
