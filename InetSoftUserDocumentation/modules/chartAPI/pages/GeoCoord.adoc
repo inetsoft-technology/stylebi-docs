@@ -1,0 +1,27 @@
+= GeoCoord
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `GeoCoord`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+The `GeoCoord` object is the coordinate system of a map chart. It maps longitude and latitude values onto the rectangular chart area using a Mercator projection. (See xref:dashboard:MapChart.adoc[] for information about creating a map chart.)
+
+In the script of a map chart, use xref:EGraphGetCoordinate.adoc[] to obtain the `GeoCoord` object:
+
+[source,javascript]
+var coord = graph.getCoordinate();
+
+`GeoCoord` provides the following special methods:
+[square]
+include::ROOT:partial$MINITOC_GeoCoord.adoc[]
+
+See xref:CoordinateSetExtent.adoc[GeoCoord.setExtent()] for an example.
