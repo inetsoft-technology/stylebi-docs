@@ -4,6 +4,12 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 
 
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GeomForm.adoc[]
+====
+
 Creates a xref:GraphForm.adoc[] object. Note that you can also create a GraphForm with  xref:LabelForm.adoc[], xref:LineForm.adoc[], xref:RectForm.adoc[], and xref:ShapeForm.adoc[].
 
 

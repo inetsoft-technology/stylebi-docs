@@ -1,12 +1,10 @@
 = GeomForm.setFill(Boolean)
-:navtitle: setFill() (GeomForm)
+:navtitle: setFill()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
 
-
-
-Specifies whether the form should be filled or unfilled. The corresponding “getter” function is `isFill()`. This method is available for line, rectangle, and default forms (xref:LineForm.adoc[], xref:RectForm.adoc[], and xref:DefaultForm.adoc[], which extend `GeomForm`). {noGetter}
+Specifies whether the form should be filled or unfilled. This method is available for the forms that extend xref:GeomForm.adoc[]: xref:LineForm.adoc[], xref:RectForm.adoc[], and xref:DefaultForm.adoc[]. The corresponding “getter” function is `isFill()`.
 
 
 == Parameter
