@@ -24,7 +24,7 @@ CALC.trunc(field['Value'], 2)
 include::partial$dashboardScriptData.adoc[]
 [source,javascript]
 ----
-CALC.trunc(Slider1.Value, 2)
+CALC.trunc(Slider1.value, 2)
 CALC.trunc(parameter.Value, 2)
 ----
 

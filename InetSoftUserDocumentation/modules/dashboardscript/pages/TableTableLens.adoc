@@ -1,4 +1,4 @@
-= tableLens
+= tablelens
 :page-aliases: viewsheetscript:TableTableLens.adoc
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -23,8 +23,8 @@ TableView1.tablelens.setForeground(0, 2, java.awt.Color.red);
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-tableLens                 // unqualified
-TableView1.tableLens      // qualified
+tablelens                 // unqualified
+TableView1.tablelens      // qualified
 
 {secondForm}
 ====

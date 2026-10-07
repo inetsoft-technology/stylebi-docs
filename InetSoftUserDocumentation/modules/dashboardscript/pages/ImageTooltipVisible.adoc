@@ -1,4 +1,4 @@
-= toolTipVisible
+= tooltipVisible
 :page-aliases: viewsheetscript:ImageTooltipVisible.adoc
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -29,15 +29,15 @@ Boolean:: `true`: display tooltip (default) +
 
 == Example
 [source,javascript]
-Image1.toolTipVisible = false; // hide tooltip
+Image1.tooltipVisible = false; // hide tooltip
 
 
 [TIP]
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-toolTipVisible           // unqualified
-Image1.toolTipVisible    // qualified
+tooltipVisible           // unqualified
+Image1.tooltipVisible    // qualified
 
 {secondForm}
 ====
