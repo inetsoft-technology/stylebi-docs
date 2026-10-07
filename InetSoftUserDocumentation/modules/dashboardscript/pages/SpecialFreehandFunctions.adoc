@@ -35,7 +35,7 @@ toArray(tableLens);
 toArray(delimString);
 
 //Example:
-var a = toArray(Table1.tableLens);
+var a = toArray(Table1.tablelens);
 var a = toArray('1,2,3');
 ----
 
