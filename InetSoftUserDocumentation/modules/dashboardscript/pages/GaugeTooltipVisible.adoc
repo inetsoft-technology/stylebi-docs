@@ -1,4 +1,4 @@
-= toolTipVisible
+= tooltipVisible
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -28,7 +28,7 @@ Boolean:: `true`: display tooltip (default) +
 
 == Example
 [source,javascript]
-Gauge1.toolTipVisible = false; // hide tooltip
+Gauge1.tooltipVisible = false; // hide tooltip
 
 
 
@@ -36,8 +36,8 @@ Gauge1.toolTipVisible = false; // hide tooltip
 ====
 Either syntax below can be used in  xref:AddScriptToDashboard.adoc#AddComponentScript[component script]:
 [source,javascript]
-toolTipVisible           // unqualified
-Gauge1.toolTipVisible    // qualified
+tooltipVisible           // unqualified
+Gauge1.tooltipVisible    // qualified
 
 {secondForm}
 ====
