@@ -12,7 +12,8 @@ This is a name-level check: it confirms the name exists in the product's
 scripting layer, not that it is available on that particular component. The
 product registers names in several ways, and all of them are collected:
 - addProperty("x", ...), addFunctionProperty(..., "x", ...) and similar calls
-- globalscope.put("x", ...) / put("x", ...) for global functions and objects
+- globalscope.put("x", ...) / put("x", ...) / putMember("x", ...) for global functions and objects
+- string constants (static final String X = "x")
 - public methods, and JavaBean properties (getX/isX/setX -> x) of the
   scripting classes and of the viewsheet model/descriptor classes
 """
@@ -26,10 +27,10 @@ SOURCE_DIRS = [
     os.path.join("core", "src", "main", "java", "inetsoft", "util", "script"),
     os.path.join("core", "src", "main", "java", "inetsoft", "uql", "viewsheet"),
 ]
-REGISTER_CALL_RE = re.compile(r"\b(?:add(?:Property|FunctionProperty|Function|Functions|Properties)\w*|put)\(([^;]{0,300})")
+REGISTER_CALL_RE = re.compile(r"\b(?:add(?:Property|FunctionProperty|Function|Functions|Properties)\w*|put\w*)\(([^;]{0,300})")
 STRING_LITERAL_RE = re.compile(r'"([A-Za-z_]\w*)"')
 EQUALS_RE = re.compile(r'"([A-Za-z_]\w*)"\s*\.\s*equals(?:IgnoreCase)?\(|\.equals(?:IgnoreCase)?\(\s*"([A-Za-z_]\w*)"\s*\)')
-CONSTANT_RE = re.compile(r'static\s+final\s+String\s+\w+\s*=\s*"([A-Za-z_]\w*)"')
+CONSTANT_RE = re.compile(r'\bstatic\s+final\s+String\s+\w+\s*=\s*"([A-Za-z_]\w*)"')
 FILE_EXTENSIONS = {"js", "png", "jpg", "jpeg", "gif", "svg", "otf", "ttf", "adoc", "html", "css",
                    "csv", "xls", "xlsx", "zip", "pdf", "json", "xml", "txt"}
 PUBLIC_METHOD_RE = re.compile(r"\bpublic\s+(?:(?:static|final|synchronized|abstract)\s+)*[\w.<>\[\],?\s]+?\s+(\w+)\s*\(")
