@@ -1,5 +1,5 @@
 = GeomForm.setFill(Boolean)
-:navtitle: setFill() (GeomForm)
+:navtitle: setFill()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
 
@@ -8,7 +8,7 @@ ifdef::ai[]
 Summary: Chart Script API reference for `GeomForm.setFill(Boolean)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
 endif::ai[]
 
-Specifies whether the form should be filled or unfilled. This method is available for line, rectangle, and default forms (xref:LineForm.adoc[], xref:RectForm.adoc[], and xref:DefaultForm.adoc[], which extend `GeomForm`). The corresponding “getter” function is `isFill()`.
+Specifies whether the form should be filled or unfilled. This method is available for the forms that extend xref:GeomForm.adoc[]: xref:LineForm.adoc[], xref:RectForm.adoc[], and xref:DefaultForm.adoc[]. The corresponding “getter” function is `isFill()`.
 
 
 == Parameter
