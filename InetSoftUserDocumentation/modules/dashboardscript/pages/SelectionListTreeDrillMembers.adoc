@@ -109,7 +109,7 @@ image:commonscript:DrillMembersExample10.png[alt="map chart showing total measur
 +
 image:commonscript:DrillMembersExample9.png[alt="map chart filtered to California showing total measure at city level"]
 
-To automatically zoom a map to display only the regions that the user selects, see the example for Coordinate.setFullMap(boolean).
+To automatically zoom a map to display only the regions that the user selects, see the example for xref:chartAPI:CoordinateSetFullMap.adoc[].
 // XXXXXXXXXXXXXX
 
 

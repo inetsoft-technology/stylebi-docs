@@ -1,4 +1,4 @@
-= TextFrame.setText(value,text)
+= DefaultTextFrame.setText(value,text)
 :navtitle: setText()
 %experimental%
 include::ROOT:partial$buttonSnippets.adoc[]
@@ -6,7 +6,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 [CAUTION,caption=inherits from]
 ====
 [square]
-* xref:VisualFrame.adoc[]
+* xref:TextFrame.adoc[]
 ====
 
 Specifies the mapping between a value and the text that should be displayed.  The corresponding “getter” function is `getText(value)`.
