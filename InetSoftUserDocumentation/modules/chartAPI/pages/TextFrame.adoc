@@ -22,4 +22,4 @@ endif::ai[]
 
 
 
-The `TextFrame` object contains a mapping between values and displayed text.  It provides the special xref:TextFrameSetText.adoc[] method.
+The `TextFrame` object contains a mapping between values and displayed text.  The xref:DefaultTextFrame.adoc[] subclass provides the special xref:TextFrameSetText.adoc[] method.
