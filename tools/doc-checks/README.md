@@ -34,6 +34,7 @@ Update this table, and the matrix in `doc-checks.yml`, when branches change
 | Check | What it verifies |
 |---|---|
 | `chartapi` | Every Chart API page title (`Class.method(...)`) names a class in the product's `inetsoft.graph` source, and a method or constant on that class or one of its parent classes. |
+| `calc` | Every `CALC.<function>` reference page and every `CALC.x(...)` call in the docs names a function in the product's CALC library (`inetsoft.util.script` CalcDateTime, CalcFinancial, CalcLogic, CalcMath, CalcStat, CalcTextData). Also lists, for information, CALC functions that have no reference page. |
 | `examples` | Example Data Worksheets and Dashboards that the docs place in Examples or Sample Queries, `runQuery('ws:global:...')` paths, and `.query = '...'` data block names all exist in the product's `community-examples/examples.zip`. |
 
 ## Handling a finding
@@ -52,7 +53,8 @@ Update this table, and the matrix in `doc-checks.yml`, when branches change
 
 The checks need only Python 3 (standard library). Point them at a docs
 checkout and a product checkout (a sparse checkout of
-`core/src/main/java/inetsoft/graph` and `community-examples` is enough):
+`core/src/main/java/inetsoft/graph`, `core/src/main/java/inetsoft/util/script`, and
+`community-examples` is enough):
 
 ```
 python tools/doc-checks/run.py --docs . --product ../stylebi --docs-branch main

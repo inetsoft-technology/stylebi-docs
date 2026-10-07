@@ -52,6 +52,7 @@ jobs:
           path: product
           sparse-checkout: |
             core/src/main/java/inetsoft/graph
+            core/src/main/java/inetsoft/util/script
             community-examples
 
       - uses: actions/setup-python@v5

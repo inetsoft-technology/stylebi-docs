@@ -16,11 +16,12 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import check_calc       # noqa: E402
 import check_chartapi   # noqa: E402
 import check_examples   # noqa: E402
 from common import is_excepted, load_exceptions   # noqa: E402
 
-CHECKS = [check_chartapi, check_examples]
+CHECKS = [check_chartapi, check_calc, check_examples]
 
 
 def render(results, label, docs_branch, rules):
