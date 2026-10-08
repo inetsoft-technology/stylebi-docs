@@ -19,3 +19,8 @@ dashboard | * | page:SpecialFunctionPViewsheet.adoc   # pviewsheet global
 helplinks | v1.0 | missing-page:*
 helplinks | v1.0 | anchor:EMSettingsScheduleMoveTask   # moving scheduled tasks was added after 1.0
 helplinks | v1.0 | anchor:ScheduleDashboardMoveTask    # moving scheduled tasks was added after 1.0
+helplinks | v1.0 | anchor:EMPresentationAIIntegration   # AI integration was added after 1.0
+
+# Dead product code: reports and ad hoc reports were removed, and nothing opens these dialogs in a reachable mode.
+helplinks | * | id:ScheduleReport     # simple-schedule-dialog never gets isReport=true
+helplinks | * | id:AdhocNamedGroup    # NamedGroupView is declared but never opened
