@@ -8,6 +8,26 @@ image:Monitoring.png[alt="monitoring button at top of enterprise manager"]
 
 On the pages listed in the left panel you can view Dashboards and queries that are currently executing on the server, and can terminate undesired activity. You can also view currently active users, and terminate any undesired sessions.
 
+[#EnableMonitoring]
+== Monitoring Level
+The `monitor.level` property controls how much activity the server records for the Monitoring pages. Set it to one of the following values (not case-sensitive):
+
+[cols="1,1,3"]
+|===
+|Value|Number|Effect
+
+|`off`|`0`|No monitoring data is collected, and the *Summary*, *Dashboards*, *Queries*, *Cache*, *Users*, and *Cluster* pages show the message ‘The Monitoring page cannot be shown’ instead of their usual content.
+|`low`|`1`|Default. Collects the basic information: server and scheduler uptime, Dashboard and query execution, and the top five users.
+|`medium`|`5`|Adds memory cache usage, disk cache usage, and swapping.
+|`high`|`10`|Adds cache hits and misses, and the details on the *Users* page.
+|===
+
+Heap memory, CPU usage, garbage collection, and the server version appear at every level. See the table in the <<Summary,Summary>> section for the level each item requires.
+
+To change the level, add or edit the `monitor.level` property on the *All Properties* page (see xref:AllProperties.adoc[] for the steps).
+
+TIP: If you see the message ‘The Monitoring page cannot be shown’, the monitoring level is set to `off` (or to a value that is not recognized). Set `monitor.level` to `low`, `medium`, or `high`.
+
 [#Summary]
 == Summary
 include::ROOT:partial$siteAdminOnlyMultiTenant.adoc[]
@@ -20,7 +40,7 @@ image:Monitoring Summary.png[alt="summary monitoring page with server performanc
 
 
 
-The following information is available. The ‘Level’ column indicates the monitoring level required for the feature. The level is set by the `monitor.level` property. (See xref:AllProperties.adoc[] for information about how to set properties.)
+The following information is available. The ‘Level’ column indicates the monitoring level required for the feature. The level is set by the `monitor.level` property. (See xref:#EnableMonitoring[] for information about the levels.)
 
 |===
 |Summary|Notes|Level
