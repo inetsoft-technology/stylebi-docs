@@ -203,6 +203,10 @@ routes:
   EMSettingsScheduleTask: InetSoftUserDocumentation:administration:CreateScheduledTask.adoc#CreateScheduledTask
   EMSettingsScheduleMoveTask: InetSoftUserDocumentation:administration:CreateScheduledTask.adoc#MoveTask
   ScheduleDashboardMoveTask: InetSoftUserDocumentation:user:ScheduleDashboard.adoc#MoveTask
+  EMPresentationAIIntegration: InetSoftUserDocumentation:administration:Presentation.adoc#AIIntegration
+  EMSettingsSecurityProviderAuthorization: InetSoftUserDocumentation:administration:SpecifySecurityProvider.adoc
+  EMSettingsOrganizationProperties: InetSoftUserDocumentation:administration:CreateOrganization.adoc#CreateNewOrganization
+  SavingScriptFunction: InetSoftUserDocumentation:dashboardscript:CreateScriptFunction.adoc#AddFunctiontoScriptLibrary
   EMSchedulerStatus: InetSoftUserDocumentation:administration:StartScheduler.adoc  
   ScheduleTaskSchedulerOptions: InetSoftUserDocumentation:administration:CreateScheduledTask.adoc#SchedulerOptions
   addImage: InetSoftUserDocumentation:dashboardscript:SpecialFunctionsAddImage.adoc
