@@ -52,12 +52,17 @@
   background-image: url(../img/home.svg);
 }
 
-/* InetSoft: Add position and right */
+/* InetSoft: keep in the toolbar's flex flow, right-aligned after the version menu */
 .edit-this-page {
   display: block;
+  flex-shrink: 0;
+  margin-left: auto;
   padding-right: 1.5rem;
-  position: absolute;
-  right: 5em;
+  white-space: nowrap;
+}
+
+.page-versions + .edit-this-page {
+  margin-left: 0;
 }
 
 @media screen and (min-width: 1024px) {
