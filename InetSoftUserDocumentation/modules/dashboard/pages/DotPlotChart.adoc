@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to create a Dot Plot chart in Visual Composer, which displays individual (un-aggregated) data points as stacked dots. Best for small datasets with fewer than ~20 points per dimension. Steps: select Point style with Stack enabled; drag a dimension to the X region; drag a measure to the 'Break By' region (not Y axis); set the measure's Aggregate property to None. Optionally, drag an additional dimension to the Break By region alongside the measure to display both values in chart tooltips. Optionally adjust point size via the Size field. Warning: too many records will prevent all data points from displaying.
+How to create a Dot Plot chart in Visual Composer, which displays individual (un-aggregated) data points as stacked dots. Best for small datasets with fewer than ~20 points per dimension. Steps: select Point style with Stack enabled; drag a dimension to the X region; drag a measure to the 'Break By' region (not Y axis); set the measure's Aggregate property to None. Optionally, drag an additional dimension to the Break By region alongside the measure to display both values in chart tooltips. Optionally adjust point size via the Size field. Warning: a dot plot displays at most 300 records (a fixed limit, not an administrator setting); beyond that it shows the message "Data is limited to 300 rows." The same dot-plot rendering, and therefore the same message, also appears whenever a Point-style (or Auto-style) chart has exactly one field on the X/Y axes and no aggregated measure — for example, right after dragging the first dimension onto the X region and before adding a measure. Adding an aggregated measure (e.g., Sum) to the Y axis removes the limit and the message.
 endif::ai[]
 
 A dot plot represents a measure by its individual data points (_without aggregation_).
@@ -14,7 +14,7 @@ image::commonscript:Ad Hoc Dot9.png[alt="dot plot chart example"]
 
 This type of chart can be useful when the dataset is very small, with fewer than approximately 20 data points for each dimension value.
 
-WARNING: If the dataset contains too many records, the chart will not be able to display all the data points.
+NOTE: A dot plot displays at most 300 records. If the dataset contains more, the chart shows only the first 300 and displays the message '`Data is limited to 300 rows.`' This limit is fixed and cannot be changed by an administrator.
 
 
 Follow the steps below to create a dot plot:
