@@ -65,7 +65,7 @@ query.cache.data:: Set to `true` (default) to cache query result sets for reuse 
 query.registry.file:: List of `.xml` files that are used to define all the available queries.
 query.variable.unique:: If query variables are declared as unique, variables with the same name across different queries are treated as one variable. Otherwise, each query contains its own set of variables.
 remove.outerJoin.only:: When `false`, the query engine removes joined tables with no columns in the ‘select’ and ‘where’ clauses, such as when a condition is dropped due to null parameter.
-string.compare.caseSensitive:: Default grouping and ordering is now case-insensitive, which is consistent with most databases. Set this property to `true` to revert to pre-9.1 behavior.
+string.compare.caseSensitive:: Default grouping and ordering is now case-insensitive, which is consistent with most databases. Set this property to `true` to revert to pre-9.1 behavior. Also governs string case sensitivity for in-memory condition matching (equal to, one of, starting with, contains) — see xref:dataworksheet:FilterData.adoc[]. Does not apply to a condition pushed down to a SQL-backed data source, which follows that database's own collation instead.
 
 == Export Properties
 The following table lists properties related to exporting  Dashboards.
