@@ -19,6 +19,11 @@ antora:
   - require: '@antora/lunr-extension'
   - ./antora-router-extension.js
   - ./versioned-router-extension.js
+  # Help buttons on patch releases open <patch version>/index.html; forward those to
+  # the docs version that covers them. Keys and values must be quoted strings.
+  - require: ./version-alias-extension.js
+    aliases:
+      '2.0.1': '2.0.0'
     
 asciidoc:
   attributes:
