@@ -9,7 +9,7 @@ endif::ai[]
 
 The examples in this documentation use a common set of sample Dashboards, Data Worksheets, and data sources. Set them up once, as described below, to follow the examples in the documentation.
 
-The example assets are in the https://github.com/inetsoft-technology/stylebi/blob/main/community-examples/examples.zip[*examples.zip*] file. Some of them contain their own data, and will work as soon as you import the file. Others use the example *Orders* database, which must also be running.
+The example assets are in the https://github.com/inetsoft-technology/stylebi/blob/v2.0.1/community-examples/examples.zip[*examples.zip*] file. Some of them contain their own data, and will work as soon as you import the file. Others use the example *Orders* database, which must also be running.
 
 To set up the example data, follow the instructions for your installation:
 [square]
