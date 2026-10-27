@@ -5,7 +5,7 @@ site:
 
 content:
    #edit_url: 'https://repo.inetsoft.com/docs/inetsoft/files/master/{path}'
-   sources:
+   sources: 
    - url: ../
      branches: [v1.1.x, v2.0.x]
      start_path: InetSoftUserDocumentation
@@ -19,14 +19,19 @@ antora:
   - require: '@antora/lunr-extension'
   - ./antora-router-extension.js
   - ./versioned-router-extension.js
-
+  # Help buttons on patch releases open <patch version>/index.html; forward those to
+  # the docs version that covers them. Keys and values must be quoted strings.
+  - require: ./version-alias-extension.js
+    aliases:
+      '2.0.1': '2.0.0'
+    
 asciidoc:
   attributes:
     testdrive: false
     si: true
     # Report references to undefined {attributes} instead of silently dropping them
     attribute-missing: warn
-
+    
 runtime:
   log:
     format: pretty
