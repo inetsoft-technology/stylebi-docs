@@ -7,7 +7,7 @@ content:
    #edit_url: 'https://repo.inetsoft.com/docs/inetsoft/files/master/{path}'
    sources: 
    - url: ../
-     branches: [main, v1.0, v1.2]
+     branches: [v1.1.x, v2.0.x]
      start_path: InetSoftUserDocumentation
 
 ui:
