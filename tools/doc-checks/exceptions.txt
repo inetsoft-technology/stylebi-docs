@@ -2,10 +2,9 @@
 # Format:  check | docs-branch-or-* | key   # reason
 # The key is shown with each finding in the report.
 
-# 1.0/1.1 readers create Stock Prices by uploading Stock_Prices.xlsx
-# (see ROOT/partials/stockPricesQuery.adoc); it is not in those releases' examples.zip.
-examples | v1.1.x | query:Stock Prices      # uploaded by the reader on 1.1
-examples | v1.0.x | query:Stock Prices      # uploaded by the reader on 1.0
+# Readers create Stock Prices by uploading Stock_Prices.xlsx
+# (see ROOT/partials/stockPricesQuery.adoc); it is not in any release's examples.zip.
+examples | * | query:Stock Prices      # uploaded by the reader
 
 # Hypothetical names and syntax templates, not references to example assets.
 examples | * | query:Orders And Returns   # BindDatatoChartinScript: "assume that ... is the name of a data block"
