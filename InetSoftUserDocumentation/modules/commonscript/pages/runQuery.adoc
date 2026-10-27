@@ -19,4 +19,6 @@ parameters::			 two-dimensional string array,			each row containing a name-value
 
 == Example
 [source,javascript]
-var rs = runQuery('ws:global:Examples/AllSales',[['category','Business'],['price',100]]);
+var rs = runQuery('ws:global:Sample Queries/Sales by Date Range',[['StartDate', new Date(2025,0,1)],['EndDate', new Date(2025,11,31)]]);
+
+NOTE: The example ‘Sales by Date Range’ Data Worksheet (in menu:Data Worksheet[Sample Queries]) defines the `StartDate` and `EndDate` variables used here. To pass parameters to a Data Worksheet, the Data Worksheet must define variables with matching names. See xref:dataworksheet:CreateNewVariable.adoc[].
