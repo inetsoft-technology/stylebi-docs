@@ -34,11 +34,13 @@ Text1.value = q[1][0];
 
 To extract only  data that meets certain conditions, see xref:ReferenceQueryData.adoc[].
 
-Query parameters (if any) can be passed as part of the `runQuery` call. For example, to pass the Dashboard `start_time` parameter to the query as `start_time` and pass the current date/time as `end_time`:
+Query parameters (if any) can be passed as part of the `runQuery` call. For example, to pass the Dashboard `start_time` parameter to the query as `StartDate` and pass the current date/time as `EndDate`:
 
 
 [source,javascript]
-var q = runQuery('ws:global:Examples/AllSales', [['start_time', parameter.start_time],['end_time', new Date()]]);
+var q = runQuery('ws:global:Sample Queries/Sales by Date Range', [['StartDate', parameter.start_time],['EndDate', new Date()]]);
+
+NOTE: The example ‘Sales by Date Range’ Data Worksheet (in menu:Data Worksheet[Sample Queries]) defines the `StartDate` and `EndDate` variables used here. To pass parameters to a Data Worksheet, the Data Worksheet must define variables with matching names. See xref:dataworksheet:CreateNewVariable.adoc[].
 
 The topics in the following sections explain different ways that you can extract data from a  Data Worksheet.
 
