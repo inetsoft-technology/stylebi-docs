@@ -1,0 +1,39 @@
+name: Build check (unpublished branch)
+
+# Builds this branch on its own so broken xrefs, includes or images show up
+# before the branch is ever published. It never deploys.
+on:
+  push:
+    branches: [main, epic-74519]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: playbook
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Install Node.js
+      uses: actions/setup-node@v5
+      with:
+        node-version: '18'
+    - name: Install UI components
+      working-directory: ui
+      run: npm install
+    - name: Create UI Bundle
+      working-directory: ui
+      run: npx gulp bundle
+    - name: Install Antora with the Antora Lunr Extension
+      run: npm i antora @antora/lunr-extension antora-router-extension
+    - name: Build this branch only
+      run: |
+        sed -i 's/branches: \[.*\]/branches: HEAD/' antora-playbook.yml
+        npx antora --ui-bundle-url ../ui/build/ui-bundle.zip antora-playbook.yml
