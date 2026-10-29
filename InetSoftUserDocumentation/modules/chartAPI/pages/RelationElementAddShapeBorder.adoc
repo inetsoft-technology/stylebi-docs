@@ -1,0 +1,48 @@
+= RelationElement.addShapeBorder(GShape, Color, GLine)
+:navtitle: addShapeBorder()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `RelationElement.addShapeBorder(GShape, Color, GLine)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties). There is no GUI equivalent. Sets the ring drawn through the node centers of a xref:dashboard:CircularNetworkChart.adoc[]. A Circular Network chart created in the Chart Editor draws a light gray dashed ring (`GShape.CIRCLE`, `GLine.MEDIUM_DASH`) automatically; call `addShapeBorder()` to change its color or line style, or pass `null` as the shape to remove the ring. The ring is drawn only for the circular layout, so `addShapeBorder()` has no effect on a xref:dashboard:TreeChart.adoc[] or xref:dashboard:NetworkChart.adoc[]. Use xref:chartAPI:EGraphGetElement.adoc[] to get a handle to the element of a chart created in the Chart Editor, as shown in the example.
+endif::ai[]
+
+Sets the characteristics of the "`ring`" that is drawn through the  nodes on a xref:dashboard:CircularNetworkChart.adoc[]. This allows you to remove  the default  gray dashed ring, or change its color or line style.
+
+
+[NOTE]
+====
+[square]
+* The ring is drawn only for the circular layout. On a xref:dashboard:TreeChart.adoc[] or xref:dashboard:NetworkChart.adoc[], `addShapeBorder()` has no effect.
+* Use *only* `GShape.CIRCLE` for the shape. Other shapes do not follow the node positions.
+====
+
+== Parameters
+GShape:: A xref:GShape.adoc[] constant specifying the shape of the ring (normally `GShape.CIRCLE`), or `null` to remove the ring.
+Color:: A {javaawtcolor} object specifying the ring color, or `null` to use the default line color, a light gray.
+GLine:: A xref:GLine.adoc[] constant specifying the line style, or `null` to use `GLine.THIN_LINE`. The default ring uses `GLine.MEDIUM_DASH`.
++
+include::partial$gLineConstants.adoc[]
+
+== Example
+
+Create a Circular Network Chart as described at xref:dashboard:CircularNetworkChart.adoc[]. Add the following script:
+
+.Chart Component Script
+[source,javascript]
+----
+include::scriptexample:partial$RelationElementAddShapeBorder1.js[]
+----
+<1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the Chart's xref:RelationElement.adoc[].
+<2> Use `addShapeBorder` to draw the ring as a solid blue line.
+
+image::commonscript:RelationElementAddShapeBorder.png[alt="circular network chart with a solid blue ring through the node centers"]
+
+To remove the ring, pass `null` as the shape:
+
+[source,javascript]
+----
+var elem = graph.getElement(0);
+elem.addShapeBorder(null, null, null);
+----
