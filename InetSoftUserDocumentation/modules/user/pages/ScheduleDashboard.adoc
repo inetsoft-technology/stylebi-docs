@@ -8,7 +8,7 @@ How to schedule automatic Dashboard generation and delivery on a predefined cycl
 
 QUICK-SCHEDULE (Dashboard toolbar Schedule button only): Opens a simple wizard. Supports bookmark selection (new or existing), output format (PDF, PowerPoint, Excel, or CSV — available formats depend on the export options configured for the Dashboard by an administrator), email recipients, recurrence (Daily/Weekly/Monthly) with time and time zone, and an optional Include Link option. Does NOT support Save to Disk, Notification, Creation Parameters, Alerts, Execute As, or any other advanced options.
 
-ADVANCED SCHEDULED TASKS (Portal Schedule button → New Task): Full scheduling interface with Condition, Action, and Options tabs. Supports all output formats (PDF, PowerPoint, Excel, CSV), Notification of task status, Deliver to Emails with dynamic subject/filename parameters (MessageFormat-style {0}/{1,date} placeholders and creation parameter names in curly braces), Save to Disk (server filesystem or FTP/SFTP), Creation Parameters for passing Dashboard parameter values at generation time, Alerts (execute action only when highlight or gauge range conditions are met), and Schedule Options (enable/disable, date range, Execute As a specific user for VPM/row-level security filtering, locale). Execute As and all Options tab settings are available ONLY in advanced scheduled tasks, not in quick-schedule. Managing tasks (edit, run now, stop, delete, move to folder) also applies only to advanced tasks.
+ADVANCED SCHEDULED TASKS (Portal Schedule button → New Task): Full scheduling interface with Condition, Action, and Options tabs. Supports all output formats (PDF, PowerPoint, Excel, CSV), Notification of task status, Deliver to Emails with dynamic subject/filename parameters (MessageFormat-style {0}/{1,date} placeholders and creation parameter names in curly braces), Save to Disk (server filesystem or FTP/SFTP), Creation Parameters for passing Dashboard parameter values at generation time, Alerts (execute action only when highlight or gauge range conditions are met), and Schedule Options (enable/disable, date range, Execute As a specific user for VPM/row-level security filtering, locale). Execute As and all Options tab settings are available ONLY in advanced scheduled tasks, not in quick-schedule. Managing tasks (edit, run now, stop, delete, move to folder) also applies only to advanced tasks. In an advanced task's Deliver to Emails and Save to Disk actions, the 'Deliver content as' / 'Save content as' groups offer 'Match Layout' / 'Expand Components' radio buttons plus 'Expand Selection List/Tree', 'Only Data Elements', and 'Export All Tabbed Tables' checkboxes; options that do not apply to the chosen format or settings stay visible but disabled, with the reason shown next to them.
 endif::ai[]
 
 
@@ -192,9 +192,8 @@ Excel:: {ExportExcel}
 NOTE: If the generated file is too large, it will be split into multiple emails. The ‘Bundled as zip’ option allows you to zip the attachment and optionally specify a password to encode the archive with WinZip 256-bit AES encryption.
 
 Other Options::
-* The ‘Match Layout’ option obtains the closest possible match between the appearance of the emailed copy and the original Dashboard.
-* The ‘Expand Components’ option expands scrolling tables and charts in the generated Dashboard so that all data is displayed.
-* The ‘Only Data Elements’ option limits the export to only the data-bearing components.
+include::ROOT:partial$scheduleContentAsOptions.adoc[]
+* The ‘Match Layout’ and ‘Expand Components’ options are not applied to the HTML and CSV formats, and are disabled when one of those formats is selected.
 * The ‘Include Link’ option  includes a URL link to the Dashboard in the email. The email recipient can click the link to open the Dashboard in a new browser tab if they possess the appropriate permissions for that Dashboard.
 
 
@@ -251,9 +250,7 @@ Excel:: {exportexcel}
 . *_Optional_*: Set other options:
 +
 [square]
-* The ‘Match Layout’ option obtains the closest possible match between the appearance of the saved copy and the original Dashboard.
-* The ‘Expand Components’ option expands scrolling tables and charts in the generated Dashboard so that all data is displayed.
-* The ‘Only Data Elements’ option limits the export to only the data-bearing components.
+include::ROOT:partial$scheduleContentAsOptions.adoc[]
 
 . *_Optional_*: To  include parameters into the file name for automatic insertion of Dashboard name and time and date of generation,  use the {JavaTextMessageFormat} syntax, where `pass:[{0}]` represents the Dashboard  alias (or name, if no alias is specified), and `pass:[{1,date}]` represents the time and date of Dashboard  generation. You can specify a format for the date parameter using the patterns described in xref:dashboard:DataFormat.adoc[]. Some examples of automatically generated names are shown below.
 +
