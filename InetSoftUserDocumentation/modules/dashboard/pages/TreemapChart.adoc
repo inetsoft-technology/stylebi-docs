@@ -5,10 +5,10 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Reference for creating a Treemap chart in Visual Composer, which displays a measure using proportionally sized rectangles arranged in a hierarchical layout. Place hierarchical dimensions in the T region and the measure in the Size region. TreemapChart, SunburstChart, IcicleChart, and CirclePackingChart all bind identically (T/Size/Color) and encode the same hierarchical part-to-whole data — they differ only in layout: Treemap uses nested rectangles, Sunburst uses radial wedges, Icicle uses layered rectangular bands (the Cartesian equivalent of Sunburst), and Circle Packing uses nested circles. MarimekkoChart shows a related but structurally different 2-level mosaic (X/Y/Color/Break By binding, not T/Size).
+Summary: Reference for creating a Treemap chart in Visual Composer, which displays a measure using proportionally sized rectangles arranged in a hierarchical layout. Place hierarchical dimensions in the T region and the measure in the Size region. TreemapChart, SunburstChart, IcicleChart, and CirclePackingChart all bind identically (T/Size/Color) and encode the same hierarchical part-to-whole data — they differ only in layout: Treemap uses nested rectangles, Sunburst uses radial wedges, Icicle uses layered rectangular bands (the Cartesian equivalent of Sunburst), and Circle Packing uses nested circles. MarimekkoChart shows a related but structurally different 2-level mosaic (X/Y/Color/Break By binding, not T/Size). A Treemap chart places its largest rectangle in the top left corner; there is no GUI option to change this. To place it in another corner, use xref:chartAPI:TreemapElementSetOrientation.adoc[] in script.
 endif::ai[]
 
-A treemap displays a *measure* by using the sizes of rectangles in a hierarchical display.
+A treemap displays a *measure* by using the sizes of rectangles in a hierarchical display. The largest rectangle is placed in the top left corner. To place it in another corner, use xref:chartAPI:TreemapElementSetOrientation.adoc[] in script.
 
 include::ROOT:partial$measureAndDimensionTip.adoc[]
 

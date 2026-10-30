@@ -1,0 +1,26 @@
+= TreemapElement
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `TreemapElement`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties). `TreemapElement` is the element used to draw xref:dashboard:TreemapChart.adoc[], xref:dashboard:SunburstChart.adoc[], xref:dashboard:IcicleChart.adoc[], and xref:dashboard:CirclePackingChart.adoc[] charts, which all display a measure over a hierarchy defined by the dimensions in the T region. To modify such a chart created in the Chart Editor, use xref:chartAPI:EGraphGetElement.adoc[] to get a handle to the element. The special method `setOrientation()` chooses the corner in which a Treemap chart places its largest rectangle (see xref:chartAPI:TreemapElementSetOrientation.adoc[]). It has no GUI equivalent.
+endif::ai[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:GraphElement.adoc[]
+====
+
+The `TreemapElement` object contains the visual elements for a Chart that displays a measure over a hierarchy of dimensions:  xref:dashboard:TreemapChart.adoc[], xref:dashboard:SunburstChart.adoc[], xref:dashboard:IcicleChart.adoc[], or xref:dashboard:CirclePackingChart.adoc[].
+
+To modify  a Chart  created in the Chart Editor, use xref:EGraphGetElement.adoc[] to obtain a handle to the chart's `TreemapElement`:
+
+[source,javascript]
+var elem = graph.getElement(0);
+
+The following special methods are provided (for xref:dashboard:TreemapChart.adoc[] only):
+
+[square]
+include::ROOT:partial$MINITOC_TreemapElement.adoc[]

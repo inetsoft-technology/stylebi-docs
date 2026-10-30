@@ -1,0 +1,46 @@
+= TreemapElement.setOrientation(orientation)
+:navtitle: setOrientation()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `TreemapElement.setOrientation(orientation)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties). There is no GUI equivalent: the Chart Editor and Chart Properties dialog box offer no option for choosing the corner in which a xref:dashboard:TreemapChart.adoc[] places its largest rectangle. Sets which corner of a Treemap chart holds the largest rectangle, using one of the constants `TreemapElement.Orientation.TOP_LEFT` (the default), `TOP_RIGHT`, `BOTTOM_LEFT`, or `BOTTOM_RIGHT`. The setting mirrors the whole layout, including nested rectangles, and applies only to a Treemap chart; it has no effect on a xref:dashboard:SunburstChart.adoc[], xref:dashboard:IcicleChart.adoc[], or xref:dashboard:CirclePackingChart.adoc[]. Use xref:chartAPI:EGraphGetElement.adoc[] to get a handle to the element of a chart created in the Chart Editor, as shown in the example.
+endif::ai[]
+
+Sets the corner of a xref:dashboard:TreemapChart.adoc[] in which the largest rectangle is placed. By default, the largest rectangle is in the top-left corner, and the remaining rectangles are arranged by size from there. The corresponding “getter” function is `getOrientation()`.
+
+The orientation mirrors the entire layout, so the nested rectangles of each hierarchy level move together with their parents. The `setOrientation` function  changes only the arrangement, not the data or the size of any rectangle.
+
+[NOTE]
+====
+[square]
+* The orientation applies only to xref:dashboard:TreemapChart.adoc[], and   has no effect on  xref:dashboard:SunburstChart.adoc[], xref:dashboard:IcicleChart.adoc[], or xref:dashboard:CirclePackingChart.adoc[].
+* The orientation must be one of the four `TreemapElement.Orientation` constants. Passing `null` generates  an error.
+====
+
+== Parameter
+orientation:: A `TreemapElement.Orientation` constant specifying the corner for the largest rectangle:
++
+[source]
+----
+TreemapElement.Orientation.TOP_LEFT       (default)
+TreemapElement.Orientation.TOP_RIGHT
+TreemapElement.Orientation.BOTTOM_LEFT
+TreemapElement.Orientation.BOTTOM_RIGHT
+----
+
+== Example
+
+Create a Treemap Chart as described at xref:dashboard:TreemapChart.adoc[]. Add the following script:
+
+.Chart Component Script
+[source,javascript]
+----
+include::scriptexample:partial$TreemapElementSetOrientation1.js[]
+----
+<1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the Chart's xref:TreemapElement.adoc[].
+<2> Use `setOrientation` to place the largest rectangle in the bottom right corner.
+<3> Use xref:GraphElementSetAutoTextColor.adoc[] to automatically contrast labels with background.
+
+image::commonscript:TreemapElementSetOrientation.png[alt="treemap chart with the largest rectangle in the bottom right corner"]
