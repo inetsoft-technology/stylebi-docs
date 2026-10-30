@@ -1,0 +1,51 @@
+= AxisSpec.setLabelBetween(Boolean)
+:navtitle: setLabelBetween()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `AxisSpec.setLabelBetween(Boolean)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties). There is no GUI equivalent. Specifies whether the labels on an axis are centered between the tick marks instead of aligned with them. Each label is centered in the interval between its tick mark and the next one, and the last label is centered between the last tick mark and the end of the axis. A xref:dashboard:GanttChart.adoc[] created in the Chart Editor applies this setting automatically to the month labels on its time axis; use `setLabelBetween(false)` to put those labels back at the tick marks. The default for other charts is `false`. The corresponding getter function is `isLabelBetween()`.
+endif::ai[]
+
+Specifies whether axis labels are centered between tick marks rather than aligned with tick marks. When the setting is `true`, each label is centered in the interval between its own tick mark and the next one. The last label is centered between the last tick mark and the end of the axis. The corresponding “getter” function is `isLabelBetween()`.
+
+
+
+[NOTE]
+====
+[square]
+* The setting takes effect only when the axis has one label for each tick mark, as on a date axis that labels every tick. Otherwise, the labels remain at the tick marks.
+* A xref:dashboard:GanttChart.adoc[] created in the Chart Editor  labels the time axis  this way by default.
+====
+
+== Parameter
+Boolean:: `true`: center each label between tick marks +
+`false`: align each label with its tick mark (default)
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+----
+include::scriptexample:partial$AxisSpecSetLabelBetween1.js[]
+----
+<1> {dataset}
+<2> Create the `AxisSpec` object.
+<3> Use `setLabelBetween` to center each date label between tick marks.
+<4> Use xref:chartAPI:AxisSpecSetLineColor.adoc[] to color the axis line and tick marks red, so that the tick marks are easy to see.
+
+
+image::commonscript:AxisSpecSetLabelBetween.png[alt="bar chart with date labels centered between red tick marks"]
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
+
+
+[TIP]
+=====
+To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ①, xref:chartAPI:RectCoordGetYScale.adoc[] ②, and xref:chartAPI:ScaleGetAxisSpec.adoc[] ③ to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example, on a xref:dashboard:GanttChart.adoc[], the following script puts the month labels back at the tick marks:
+
+[source,javascript]
+----
+include::scriptexample:partial$AxisSpecSetLabelBetween2.js[]
+----
+=====
