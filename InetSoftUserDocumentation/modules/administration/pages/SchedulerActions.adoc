@@ -40,6 +40,8 @@ image::schedulerAdminDeliverToEmails_dashboard.png[alt="configure deliver to ema
 
 Use the '`Format`' menu to choose the format in which to generate the Dashboard: '`PDF`', '`PowerPoint`', or '`Excel`'. Enter the ‘Message’ body of the email using the rich text editor provided. For information on using an email template for the body, see xref:ConfigureServerEmail.adoc[].
 
+Excel:: {ExportExcel}
+
 NOTE: If the generated file is too large, it will be split into multiple emails. The ‘Bundled as zip’ option allows you to zip the attachment and optionally specify a password to encode the archive with WinZip 256-bit AES encryption. (See '`Maximum Attachment Size`' in xref:ConfigureServerEmail.adoc[] to set this threshold.)
 
 The email '`Subject`' line can include parameters for automatic insertion of Dashboard alias and time or date of generation (see xref:#InsertParameters[] below). The subject line that you specify here overrides the setting on the ‘Mail Configuration’ page. (See xref:ConfigureServerEmail.adoc[].)
@@ -56,6 +58,8 @@ include::ROOT:partial$scheduleContentAsOptions.adoc[]
 This option saves a copy of the Dashboard to the server file system or to an FTP server. Use the '`Format`' menu to choose the format in which to generate the Dashboard: 'PDF', 'PowerPoint', or 'Excel'.
 
 image::schedulerAdminSaveToServer.png[alt="configure save to disk action for scheduled Dashboard"]
+
+Excel:: {ExportExcel}
 
 To save to the server file system, press the {buttonAddFilePath}  button and specify a valid absolute path including filename.  (The filename extension, e.g., `.pdf`, is added automatically.) The filename can include parameters for automatic insertion of Dashboard name and time/date of  generation (see xref:#InsertParameters[] below).
 

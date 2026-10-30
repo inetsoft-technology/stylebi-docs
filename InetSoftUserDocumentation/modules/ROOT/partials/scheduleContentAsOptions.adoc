@@ -2,6 +2,3 @@
 * The ‘Expand Components’ option expands scrolling tables and charts in the generated Dashboard so that all data is displayed. This option is available only if you have permission to expand components.
 * The ‘Expand Selection List/Tree’ option expands Selection List and Selection Tree components so that all of their items are displayed. This option is available only when ‘Expand Components’ is selected, and it is not used when ‘Only Data Elements’ is selected.
 * The ‘Only Data Elements’ option limits the export to only the data-bearing components. This option is available only for the Excel format, and only when ‘Expand Components’ is selected.
-* The ‘Export All Tabbed Tables’ option also exports the tables on the tabs of a Tab component that are not currently selected, with all of their rows. Otherwise, only the table on the selected tab is exported. This option is available only for the Excel format.
-+
-These options are always displayed. An option that does not apply to the current format or settings is disabled, and the reason (for example, ‘Excel only’ or ‘Needs Expand components’) is shown next to it.

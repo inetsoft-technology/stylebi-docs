@@ -53,7 +53,7 @@ Excel:: {ExportExcel}
 +
 image::Viewsheet Export Content Tab.png[alt="choose export type in content tab"]
 
-. In the  ‘Data Size’ panel, select ‘Match Layout’ to obtain the closest possible match between the appearance of the emailed copy and the original Dashboard. Select ‘Expand Components’ to expand scrolling tables and charts in the emailed Dashboard so that all data is displayed. ‘Expand Components’ is available only if you have permission to expand components. When ‘Expand Components’ is selected, select ‘Expand Selection List/Tree’ to also expand Selection Lists and Selection Trees so that all of their items are displayed. For the Excel format, you can also select ‘Only Data Elements’ to limit the export to only the data-bearing components (this requires ‘Expand Components’), and ‘Export All Tabbed Tables’ to also export the tables on the tabs of a Tab component that are not currently selected.
+. In the  ‘Data Size’ panel, select ‘Match Layout’ to obtain the closest possible match between the appearance of the emailed copy and the original Dashboard. Select ‘Expand Components’ to expand scrolling tables and charts in the emailed Dashboard so that all data is displayed. ‘Expand Components’ is available only if you have permission to expand components. When ‘Expand Components’ is selected, select ‘Expand Selection List/Tree’ to also expand Selection Lists and Selection Trees so that all of their items are displayed. For the Excel format, you can also select ‘Only Data Elements’ to limit the export to only the data-bearing components (this requires ‘Expand Components’).
 
 . Select ‘Current View’ to include the current state of the Dashboard in the emailed file.
 

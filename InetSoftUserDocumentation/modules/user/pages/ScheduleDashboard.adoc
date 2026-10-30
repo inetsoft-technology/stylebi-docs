@@ -184,11 +184,11 @@ To send an *SMS*  message to a phone, enter the provisioned email address suppli
 [%collapsible]
 ====
 ****
-This option sends the Dashboard as an email attachment to the email addresses that you specify as a comma-separated list  in the ‘To’ field. Use the 'Format' menu to choose the format in which to generate the Dashboard: 'PDF', 'PowerPoint', or 'Excel'.
+This option sends the Dashboard as an email attachment to the email addresses that you specify as a comma-separated list  in the ‘To’ field. Use the '`Format`' menu to choose the format in which to generate the Dashboard: '`PDF`', '`PowerPoint`', or '`Excel`'.
 
 CSV:: {EXPORTCSV}
 Excel:: {ExportExcel}
-
++
 NOTE: If the generated file is too large, it will be split into multiple emails. The ‘Bundled as zip’ option allows you to zip the attachment and optionally specify a password to encode the archive with WinZip 256-bit AES encryption.
 
 Other Options::
