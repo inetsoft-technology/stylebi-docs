@@ -9,7 +9,7 @@ TIP: You can set up the https://www.inetsoft.com/docs/stylebi/web-api/[InetSoft 
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to connect to a REST JSON web service as a data source in InetSoft, including how to configure Basic authentication (username/password and HTTP parameters) and Two-step Token authentication (authentication URI, token regex pattern, and query parameters). Also explains how to set up the InetSoft Web API as a REST JSON data source. Includes a worked example of splitting a full web service URL between the connection's 'URL' field (scheme and host only) and the query's 'URL Suffix' field (path and query string), for both a plain path and a path with query parameters.
+Summary: How to connect to a REST JSON web service as a data source in InetSoft, including how to configure Basic authentication (username/password and HTTP parameters) Two-step Token authentication (authentication URI, token regex pattern, and query parameters), and OAuth2 Client Credentials authentication (client ID and secret, token URI, optional scope and audience, and whether the credentials are sent in an HTTP Basic header or the request body). Also explains how to set up the InetSoft Web API as a REST JSON data source. Includes a worked example of splitting a full web service URL between the connection's 'URL' field (scheme and host only) and the query's 'URL Suffix' field (path and query string), for both a plain path and a path with query parameters.
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
@@ -27,7 +27,7 @@ image::dataSourceNewRESTJSON2.png[alt="REST JSON data source definition screen"]
 +
 include::partial$urlAndUrlSuffixExample.adoc[]
 
-. Select an authentication method (if desired). The options are ‘Basic’ and ‘Two-step Token’.
+. Select an authentication method (if desired). The options include ‘Basic’, ‘Two-step Token’, and ‘OAuth2 Client Credentials’.
 +
 ****
 Basic:: If you select ‘Basic’, follow the steps below:
@@ -59,6 +59,8 @@ or for ‘application/x-www-form-urlencoded’ content,
 .. Enter the ‘Token Regex Pattern’. The regex you enter should extract the token from the response of this query. For example: `"token":"(.*?)"`.
 
 .. Under the ‘Query HTTP Parameters’ field, press the btn:[Add] button to add the retrieved token into a parameter for the second-step query, as illustrated below (for generic REST data source). You can use the predefined `pass:[{{token}}]` variable to represent the retrieved token value in the query.
+
+include::partial$oauthClientCredentials.adoc[]
 ****
 
 
