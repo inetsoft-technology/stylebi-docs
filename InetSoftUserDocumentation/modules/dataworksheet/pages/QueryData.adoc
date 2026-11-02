@@ -3,7 +3,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to create a Data Worksheet query in Visual Composer using the Database Query dialog box, supporting both basic and advanced SQL query modes, including column selection, joins, filter conditions, grouping, sorting, SQL string editing, and adding query variables or materialized view update conditions.
+Summary: How to create a Data Worksheet query in Visual Composer using the Database Query dialog box, supporting both basic and advanced SQL query modes, including column selection, joins, filter conditions, grouping, sorting, SQL string editing, and adding query variables or materialized view update conditions. In the basic query, the SQL section shows auto-generated, read-only SQL; the Manual Edit button (requires the Free Form SQL permission) makes it editable, hides the Columns, Joins and Conditions sections, and shows a Parse SQL button with a status message.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
@@ -76,7 +76,7 @@ image::agileData11_1.png[alt="choose database in the data source menu in the Dat
 image::agileData12_1.png[alt="drag database fields from left panel into the Columns area"]
 
 . Define any required joins. To do this, follow the steps below:
-.. Press the btn:[New] button next to the ‘Joins’ area to open the ‘Add Join’ dialog box.
+.. Press the btn:[+ New] button next to the ‘Joins’ area to open the ‘Add Join’ dialog box.
 .. Select a table from the top-left menu, and select the join field for that table from the bottom-left menu. Select a table from the top-right menu, and select the join field for that table from the bottom-right menu. From the center menu, select the join operator (equi-join or inequality join).
 +
 image::agileData13_1.png[alt="Add Join dialog with table and join field menus and join operator"]
@@ -88,7 +88,7 @@ NOTE: For full information about specifying joins, see xref:JoinData.adoc[].
 +
 image::agileData20_1.png[alt="join displayed in the Joins area after pressing OK in Add Join dialog"]
 +
-.. To add an additional join, press the btn:[New] button again to open the ‘Add Join’ dialog box. Repeat as necessary to add all desired joins.
+.. To add an additional join, press the btn:[+ New] button again to open the ‘Add Join’ dialog box. Repeat as necessary to add all desired joins.
 +
 image::agileData21_1.png[alt="multiple joins displayed in the Joins area of the query definition"]
 
@@ -106,20 +106,22 @@ image::agileData14_1.png[alt="press Edit button next to Conditions area to open 
 NOTE: For full information about specifying conditions, see xref:FilterData.adoc[].
 
 
-. *_Optional:_*  To make manual edits to the SQL string that will be sent to the database, press the btn:[Edit] button next to the ‘SQL’  area to open the ‘SQL’ panel for editing. Make the desired edits.
+. *_Optional:_*  To make manual edits to the SQL string that will be sent to the database, press the btn:[Manual Edit] button below the auto-generated SQL in the ‘SQL’ area, and press btn:[Proceed] to confirm. The SQL string becomes editable. Make the desired edits.
++
+NOTE: The btn:[Manual Edit] button is available only if you have the ‘Free Form SQL’ permission. (See xref:administration:SetSecurityActions.adoc[].)
 +
 [IMPORTANT]
 ====
 [square]
-* If you make manual edits to the SQL string, you will no longer be able to modify the query using the '`Columns`', '`Joins`', and '`Conditions`' panels.
-* If you add a condition to a manually-edited query, the condition will be applied in post-processing, *after* the dataset has been retrieved  from the database.
+* If you make manual edits to the SQL string, the '`Columns`', '`Joins`', and '`Conditions`' sections are hidden, and you can no longer use them to modify the query. All further changes to the query must be made directly in the SQL string.
+* If the SQL string cannot be fully parsed (see the ‘Parse SQL’ step below), any condition that you add to the resulting data block is applied in post-processing, *after* the dataset has been retrieved from the database.
 ====
 +
 image::agileData15_1.png[alt="press Edit button next to SQL area to open the SQL string for manual editing"]
 +
 To add variables into a query condition, see xref:#AddVariablestoSQLString[]. To add a materialized view update codition, see xref:#AddMVUpdateConditiontoSQLString[].
 
-. Press the btn:[Parse Now] button to parse the SQL string. Note, however, that due to database variations, the parser may not be able to parse all valid SQL statements.
+. Press the btn:[Parse SQL] button to parse the SQL string. A message next to the button reports the result, for example ‘SQL parsed successfully.’ or ‘SQL parsing failed.’ Note, however, that due to database variations, the parser may not be able to parse all valid SQL statements, and that a successful parse does not guarantee that the query is valid.
 
 
 [#AddVariablestoSQLString]
@@ -163,7 +165,7 @@ The update condition can use the special variables `pass:[MV.LastUpdateTime]`, `
 == Advanced Query
 The '`Advanced Query`' option provides some additional query design features such as sorting and grouping.  Note that you can also perform these operations on the data block at a later time.  See xref:SortData.adoc[] and xref:GroupAggregateData.adoc[] for more information.
 
-CAUTION: After you switch to '`Advanced Query`', you cannot return to the '`Basic Query`' interface.
+CAUTION: You can turn the '`Advanced Query`' setting off again, but you are warned that some information may be lost. The query then reopens in the basic dialog box as a manually-edited SQL string, so you cannot use the '`Columns`', '`Joins`', and '`Conditions`' sections to modify it.
 
 === Create a New Query
 To create a new query for a relational database, follow the steps below:
@@ -196,7 +198,6 @@ image::advancedQuery5.png[alt="Join Editor opened showing automatically created 
  Repeat to create join conditions on as many fields as needed.
 +
 image::advancedQuery6.png[alt="drag join field from one table onto corresponding field in the other table"]
-+
 +
 .Example: Multiple Joins
 ****
