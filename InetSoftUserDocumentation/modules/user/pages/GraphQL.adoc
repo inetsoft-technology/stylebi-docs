@@ -19,7 +19,7 @@ image::dataSourceGraphQL1.png[alt="GraphQL data source definition screen"]
 
 . Enter the ‘URL’ for the web service.
 
-. Select an '`Authentication`' method (if desired). The options are ‘Basic’, ‘OAuth2/OpenID Connect’, ‘OAuth2 Client Credentials’, ‘Two-step Token’, and ‘Kerberos’.
+. Select an '`Authentication`' method (if desired). The options are ‘None’, ‘Basic’, ‘OAuth2/OpenID Connect’, ‘OAuth2 Client Credentials’, ‘Two-step Token’, and ‘Kerberos’.
 +
 ****
 Basic:: If you select ‘Basic’, simply enter a username and password.

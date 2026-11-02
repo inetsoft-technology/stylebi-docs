@@ -21,7 +21,7 @@ image::dataSourceNewRESTXML2_1.png[alt="REST XML data source definition screen"]
 +
 include::partial$urlAndUrlSuffixExample.adoc[]
 
-. Select an authentication method (if desired). The options are ‘Basic’, ‘OAuth2/OpenID Connect’, ‘OAuth2 Client Credentials’, ‘Two-step Token’, and ‘Kerberos’.
+. Select an authentication method (if desired). The options are ‘None’, ‘Basic’, ‘OAuth2/OpenID Connect’, ‘OAuth2 Client Credentials’, ‘Two-step Token’, and ‘Kerberos’.
 +
 ****
 Basic:: If you select ‘Basic’, follow the steps below:
