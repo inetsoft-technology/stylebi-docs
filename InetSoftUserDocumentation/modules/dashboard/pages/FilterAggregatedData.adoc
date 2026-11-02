@@ -12,7 +12,7 @@ Filter components such as Selection Lists (see xref:AddFilterComponents.adoc[]) 
 
 
 == Filter Aggregated Data with Range Slider
-You can use a Range Slider to filter the post-aggregate data displayed by a Chart, Crosstab, or Freehand Table. To do this, follow the steps below:
+You can use a Range Slider to filter the post-aggregate data displayed by a Chart or Crosstab. To do this, follow the steps below:
 
 . Drag a ‘Range Slider’ element from the *Toolbox*  into the Dashboard.
 +
@@ -26,7 +26,7 @@ image:Range Slider Assemblies.png[alt="select assemblies node in range slider da
 
 . Press btn:[OK] to close the panel.
 
-This Range Slider will now filter the post-aggregate values in the selected Chart, Crosstab, or Freehand Table.
+This Range Slider will now filter the post-aggregate values in the selected Chart or Crosstab.
 
 
 == Filter Aggregated Data with Ad Hoc Filter
@@ -45,7 +45,9 @@ The easiest way to filter a Table or Chart is by using Filter components. (See x
 
 [#AdHocFilterPostAggregateCrosstabData]
 === Ad Hoc Filter Post-Aggregate Tabular Data
-To filter aggregated  data in a Crosstab or Freehand Table, follow the steps below:
+IMPORTANT: For a xref:AddFreehandTable.adoc[Freehand Table], the ‘Filter’ option filters the source column of the cell’s binding *before* aggregation, so the table’s totals are recomputed over the remaining rows. The ‘Filter’ option is not available for text or formula cells or for aggregate calculated fields of a Freehand Table.
+
+To filter aggregated  data in a Crosstab, follow the steps below:
 
 . Right-click on the column that you want to filter and select ‘Filter’ from the context menu.  {rightClickOptions}
 +
@@ -59,7 +61,7 @@ image:filtering2_1.png[alt="filter control displayed for selected column"]
 
 . Make the desired selection using the Filter control, and click away from the column to submit. (See  xref:UseFilterComponents.adoc[] for information on how to use these controls.) The selections that you make are shown in the Selection Container.
 +
-IMPORTANT: For a Crosstab or Freehand Table with aggregation, a Range Slider filters the *post-aggregate* data.
+IMPORTANT: For a Crosstab with aggregation, a Range Slider filters the *post-aggregate* data.
 
 +
 image:filtering3_1.png[alt="filter selections shown in selection container"]
