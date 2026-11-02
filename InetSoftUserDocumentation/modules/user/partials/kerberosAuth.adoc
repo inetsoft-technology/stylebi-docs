@@ -1,0 +1,17 @@
+Kerberos:: If you select ‘Kerberos’, the server authenticates to the web service by using Kerberos. The server must already be configured for Kerberos authentication. Follow the steps below:
+
+.. *_Optional:_* Enter the ‘Service Principal Name’, which is the principal that the server authenticates as. If you leave this field blank, the server uses its default Kerberos principal.
+
+.. *_Optional:_* To have the server call the web service on behalf of a user, select ‘Use Constrained Delegation’, and then complete the following:
+
+... Enter the ‘Configuration Service Name’, which is the name of the entry in the JAAS login configuration that the server uses to log in.
+
+... Select an ‘Impersonation Type’ to specify which identity to impersonate:
++
+‘Static Value’:: Always impersonate the principal that you enter in the ‘Principal to Impersonate’ field.
+‘Principal Name’:: Impersonate the user who is running the query.
+‘Principal Property’:: Impersonate the identity that is stored in the user property whose name you enter in the ‘Principal to Impersonate’ field.
+
+... Enter the ‘Principal to Impersonate’ if the impersonation type is ‘Static Value’ or ‘Principal Property’.
++
+NOTE: If the identity is taken from the user who runs the query (‘Principal Name’ or ‘Principal Property’), the results of the query depend on the user.

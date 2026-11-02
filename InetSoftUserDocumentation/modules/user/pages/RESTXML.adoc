@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to connect to a REST XML web service as a data source in InetSoft, including how to configure Basic authentication (username/password and HTTP parameters) Two-step Token authentication (authentication URI, token regex pattern, and query parameters), and OAuth2 Client Credentials authentication (client ID and secret, token URI, optional scope and audience, and whether the credentials are sent in an HTTP Basic header or the request body). Includes a worked example of splitting a full web service URL between the connection's 'URL' field (scheme and host only) and the query's 'URL Suffix' field (path and query string).
+Summary: How to connect to a REST XML web service as a data source in InetSoft, including how to configure Basic authentication (username/password and HTTP parameters) Two-step Token authentication (authentication URI, token regex pattern, and query parameters), and OAuth2 Client Credentials authentication (client ID and secret, token URI, optional scope and audience, and whether the credentials are sent in an HTTP Basic header or the request body). It also covers OAuth2/OpenID Connect authentication (client ID and secret, authorization and token URIs, scope, OAuth flags, and the Authorize button) and Kerberos authentication (service principal name, and optional constrained delegation with impersonation). Includes a worked example of splitting a full web service URL between the connection's 'URL' field (scheme and host only) and the query's 'URL Suffix' field (path and query string).
 endif::ai[]
 include::partial$dataSourceUserIntro.adoc[]
 
@@ -21,7 +21,7 @@ image::dataSourceNewRESTXML2_1.png[alt="REST XML data source definition screen"]
 +
 include::partial$urlAndUrlSuffixExample.adoc[]
 
-. Select an authentication method (if desired). The options include ‘Basic’, ‘Two-step Token’, and ‘OAuth2 Client Credentials’.
+. Select an authentication method (if desired). The options are ‘Basic’, ‘OAuth2/OpenID Connect’, ‘OAuth2 Client Credentials’, ‘Two-step Token’, and ‘Kerberos’.
 +
 ****
 Basic:: If you select ‘Basic’, follow the steps below:
@@ -29,6 +29,10 @@ Basic:: If you select ‘Basic’, follow the steps below:
 .. Enter a username and password.
 
 .. *_Optional:_* Press the btn:[Add] button below the ‘Query HTTP Parameters’ label to add parameter names and values. From the menu on the right side specify ‘Header’ or ‘Query’ to indicate where the parameters should be attached.
+
+include::partial$oauthOpenIdConnect.adoc[]
+
+include::partial$oauthClientCredentials.adoc[]
 
 Two-Step Token:: If you select ‘Two-step Token’, specify the required information for obtaining a token (step one) and requesting data using the token (step two). Follow the steps below:
 
@@ -51,7 +55,7 @@ Two-Step Token:: If you select ‘Two-step Token’, specify the required inform
 
 .. Under the ‘Query HTTP Parameters’ field, press the btn:[Add] button to add the retrieved token into a parameter for the second-step query, as illustrated below (for generic REST data source). You can use the predefined `pass:[{{token}}]` variable to represent the retrieved token value in the query.
 
-include::partial$oauthClientCredentials.adoc[]
+include::partial$kerberosAuth.adoc[]
 ****
 
 

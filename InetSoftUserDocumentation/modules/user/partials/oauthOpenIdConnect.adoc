@@ -1,0 +1,7 @@
+OAuth2/OpenID Connect:: If you select ‘OAuth2/OpenID Connect’, follow the steps below:
+
+.. Enter the ‘Client ID’ and ‘Client Secret’, ‘Authorization URI’, ‘Token URI’, and ‘Scope’. For more details about these settings, see the https://oauth.net/2/[OAuth 2.0 Framework Documentation].
+
+.. *_Optional:_* Enter one or both of the following values (space separated) in the ‘OAuth Flags’ field. Use flag `credentialsInTokenRequestBody` to put the ‘Client ID’ and ‘Client Secret’ credentials in the body of the request to the ‘Token URI’ when the authorization code is swapped for the access token value. Use flag `useAuthorizationCodeForRefresh` to indicate that the data source doesn’t provide the typical refresh token when swapping the authorization code for the access token or refresh token, and to use the authorization code again in place of a refresh token after the token expires.
+
+.. Press btn:[Authorize] to populate the ‘Access Token’ and ‘Refresh Token’ fields.
