@@ -1,13 +1,15 @@
-equal to:: True when the column value identically matches the specified criterion. (String matching is case-insensitive.)
-one of:: True when the column value is a member of the set of criteria values. (String matching is case-sensitive.)
+NOTE: Whether string matching is case-sensitive depends on where the condition is evaluated. When a condition on a table bound to a SQL data source is pushed down to the database, the database collation decides, so matching may be case-sensitive (for example, in Derby and PostgreSQL by default) or case-insensitive (for example, in MySQL and SQL Server by default). When a condition is evaluated in memory, as for embedded and imported tables, mirrors, and other tables that are not pushed down, matching follows the `string.compare.casesensitive` server property, which is case-insensitive by default. This applies to all string operators, including ‘equal to’, ‘one of’, ‘starting with’, ‘contains’, and the comparison operators. To match regardless of case on a case-sensitive database, enter the value in the case stored in the data (use the value browser to see it).
+
+equal to:: True when the column value identically matches the specified criterion.
+one of:: True when the column value is a member of the set of criteria values.
 less than:: True when the column value is strictly less than the criterion value. Select the ‘or equal to’ check box to obtain a “less than or equal to” criterion. (Strings are compared based on their alphabetical ordering.)
 greater than:: True when the column value is strictly greater than the criterion value. Select the ‘or equal to’ check box to obtain a “greater than or equal to” criterion. (Strings are compared based on their alphabetical ordering.)
 between:: True when the column value is within the interval specified by its upper and lower boundaries. The boundary values are included in the interval. (Strings are compared based on their alphabetical ordering.) For date fields, consider using the ‘in range’ operator in place of specifying fixed dates.
 null:: True when the column value is ‘null’. (Nulls appear as empty cells in a table.)
 top:: For grouped and aggregated data, true when the aggregated column value is among the top N aggregated values, according to the grouping specified by the secondary menu.
 bottom:: For grouped and aggregated data, true when the aggregated column value is among the bottom N aggregated values, according to the grouping specified by the secondary menu.
-starting with:: For numeric and string data, true when the column value begins with (i.e., the left-most characters match) the specified numerals or characters. String matching is case-insensitive.
-contains:: For numeric and string data, true when the column value contains the exact sequence of specified numerals or characters. String matching is case-insensitive.
+starting with:: For numeric and string data, true when the column value begins with (i.e., the left-most characters match) the specified numerals or characters.
+contains:: For numeric and string data, true when the column value contains the exact sequence of specified numerals or characters.
 in range:: For date fields, true when the column value (date) falls within the specified date range criterion.
 +
 =====
