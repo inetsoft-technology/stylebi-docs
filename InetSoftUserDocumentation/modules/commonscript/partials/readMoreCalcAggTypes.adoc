@@ -1,3 +1,4 @@
+ifndef::ai[]
 
 ---
 [TIP,caption=tip: access your data in script]
@@ -87,3 +88,12 @@ image:dashboard:TableDataAccess.png[alt="script accessing table data using compo
 See xref:dashboardscript:DashboardObjectReference.adoc[] for information about accessing dashboard properties  in script.  See xref:dashboardscript:AccessComponentData.adoc[] and xref:dashboardscript:AccessDataSourceData.adoc[] for more information about accessing Dashboard and Data Worksheet data.
 ====
 =====
+endif::[]
+
+ifdef::ai[]
+This function takes a column (array) of values, and the column can be referenced in three places:
+
+* *Data Worksheet Expression Column:* press the Create Expression button on a data block, type the expression, and click a field name in the ‘Fields’ listing to insert it. Reference a column of this or another data block by the data block name, for example `CALC.average(Sales['Total'])`. See Access Data in Expression for referencing other rows, other data blocks and lookups.
+* *Dashboard property expression:* press the value type button next to a property and select ‘Expression’ to open the Formula Editor. Reference a component’s data with its *value*, *selectedObjects*, *data* or *table* property, for example `CALC.average(TableView1.table['Total'])`. You can also reference data in the underlying Data Worksheet, for example `CALC.average(Sales['Total'])`.
+* *Dashboard script:* in a component’s Properties panel, use the Script tab; for global script, use the Script tab of Dashboard Options (onInit or onRefresh). Reference data the same way as in a property expression.
+endif::ai[]
