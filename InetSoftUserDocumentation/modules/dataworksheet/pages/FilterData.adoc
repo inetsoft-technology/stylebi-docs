@@ -56,6 +56,8 @@ include::ROOT:partial$filterOperators.adoc[]
 +
 image:filtering3.png[alt=”specify pre-aggregate condition using menus in the Condition panel”]
 +
+include::ROOT:partial$caseSensitivityTip.adoc[]
++
 If the condition you specify references data model attributes that do not already exist in the data block, these attributes are automatically added to the data block as hidden columns.
 . Press btn:[Append] to add the condition.
 . *_Optional:_* To create a compound condition, repeat the above steps to specify another condition clause, select ‘and’ or ‘or’, and press btn:[Insert]. This adds the additional clause into the composite condition.
@@ -155,6 +157,8 @@ include::ROOT:partial$filterOperators.adoc[]
 ====
 +
 image:filtering4.png[alt="specify post-aggregate condition using menus in the Condition panel"]
++
+include::ROOT:partial$caseSensitivityTip.adoc[]
 
 . Press btn:[Append] to add the condition.
 . *_Optional:_* To create a compound condition, repeat the above steps to specify another condition clause, select ‘and’ or ‘or’, and press btn:[Insert]. This adds the additional clause into the composite condition.  See below.
