@@ -43,7 +43,7 @@ TIP: You can change the order of multiple dimensions or measures by dragging the
 
 . *_Optional:_*  To make the row, column, and aggregate fields dynamic so that a user can change them, see xref:DynamicallySetProperties.adoc[].
 +
-TIP: If you want to use a single Form component (e.g., ComboBox) to dynamically set both the measure field and aggregation method, you can enter strings such as `Ave('Total')` or `Sum('Total')` as the values in the Form element,  and then use the Form element as a ‘Variable’ to set the measure in the ‘Aggregates’ panel. (See xref:DynamicallySetProperties.adoc[] for information on how to do this.) With this approach, you also need to press the {buttonEditMeasure} next to the Variable-based measure in the ‘Aggregates’ panel, and set the ‘Aggregate’ property to ‘None’.
+TIP: If you want to use a single Form component (e.g., ComboBox) to dynamically set both the measure field and aggregation method, enter the aggregate formula and the column name as the values in the Form element, without quotation marks. Use the full formula name and the column’s full name as it appears in the ‘Aggregates’ panel, such as `Sum(Product:Total)` or `Average(Product:Total)`. Then use the Form element as a ‘Variable’ to set the measure in the ‘Aggregates’ panel. (See xref:DynamicallySetProperties.adoc[] for information on how to do this.) With this approach, you also need to press the {buttonEditMeasure} next to the Variable-based measure in the ‘Aggregates’ panel, and set the ‘Aggregate’ property to ‘None’.
 
 . *_Optional:_* To *hide* a particular column, right-click the column in the Crosstab  Editor, and select '`Hide Column`'.  To *show* all hidden columns, right-click any column in the Crosstab  Editor, and select '`Show Columns`'.
 
