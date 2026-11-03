@@ -1,3 +1,4 @@
+ifndef::ai[]
 
 ---
 [TIP,caption=tip: access your data in script]
@@ -90,3 +91,13 @@ image::dashboard:ScriptComponentData.png[alt="script accessing component data us
 See xref:dashboardscript:DashboardObjectReference.adoc[] for information about accessing dashboard settings and data in script.
 ====
 =====
+endif::[]
+
+ifdef::ai[]
+This function can be used in four places, and each exposes the data differently:
+
+* *Data Worksheet Expression Column:* press the Create Expression button on a data block, and insert fields (and parameters) by clicking items in the tree. Reference the current row with `field['Column']`, for example `CALC.quarter(field['Order Date'])`. See Access Data in Expression for referencing other rows, other data blocks and lookups.
+* *Dashboard Calculated Field:* right-click the data block, data model or query, select ‘New Calculated Field’, and insert fields (and parameters and component properties) by clicking items in the tree, for example `CALC.quarter(field['Order Date'])`.
+* *Dashboard property expression:* press the value type button next to a property and select ‘Expression’ to open the Formula Editor. Reference a component’s data with its *value*, *selectedObjects*, *data* or *table* property, for example `CALC.quarter(Calendar1.selectedObjects[0])` or `CALC.quarter(TableView1.table['Order Date'][1])`.
+* *Dashboard script:* in a component’s Properties panel, use the Script tab; for global script, use the Script tab of Dashboard Options (onInit or onRefresh). Reference component data the same way as in a property expression.
+endif::ai[]
