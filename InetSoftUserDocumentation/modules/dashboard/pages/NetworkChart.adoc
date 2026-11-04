@@ -31,6 +31,8 @@ If you are *new to charting*, see the following section:
 include::partial$createChartIntro.adoc[]
 =====
 
+== Choose the Style and Dimensions
+
 . Press the {buttonSelectChartStyle}. Choose the ‘Network’  style.  Press the {buttonApply}.
 +
 image::commonscript:networkChart1VS.png[alt="choose Network chart style and press Apply"]
@@ -47,6 +49,9 @@ TIP: {convertToDimension}
 +
 image::commonscript:networkChart3VS.png[alt="drag second peer dimension to Target region"]
 
+== Display Additional Dimensions
+
+[start=4]
 . *_Optional:_* From the ‘Dimensions’ folder of the *Data Source* panel, drag a desired dimension to the ‘X’ or ‘Y’ region to break out the diagram along this dimension.
 +
 WARNING: This will create a disconnected graph for each dimension value, which may not be desirable.
@@ -63,6 +68,9 @@ image::viewsheetExp34.png[alt="set date dimension level grouping in Chart Editor
 
 . *_Optional:_* {multipleDimensionNoColor}
 
+== Display Measures
+
+[start=8]
 . To represent an aggregate on the chart nodes, from the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘Color’ or ‘Size’ region of the ‘Node’ panel.
 +
 include::ROOT:partial$measureTip.adoc[]
@@ -75,6 +83,9 @@ image::commonscript:networkChart6VS.png[alt="drag weight field to Color or Size 
 +
 image::commonscript:networkChart6bVS.png[alt="select aggregation method for network chart measure"]
 
+== Change Appearance
+
+[start=11]
 . To set a fixed size or color for the *nodes* (if not being used to represent dimension or measure), press the ‘Edit Size’ or ‘Edit Color’ button and set the desired value in the ‘Node’ panel.
 +
 image::commonscript:networkChart8VS.png[alt="set fixed size or color for network chart nodes"]

@@ -29,6 +29,8 @@ If you are *new to charting*, see the following section:
 include::partial$createChartIntro.adoc[]
 =====
 
+== Select the Dates and Tasks
+
 . Press the {buttonSelectChartStyle}. Choose the ‘Gantt’  style.  Press the {buttonApply}.
 +
 image::commonscript:gantt2.png[alt="press Select Chart Style button"]
@@ -69,6 +71,9 @@ image::commonscript:gantt9.png[alt="press Edit Dimension button"]
 +
 See xref:SortData.adoc[] for more information about setting dimension properties.
 
+== Refine Chart Appearance
+
+[start=8]
 . To display the milestones using a different color, select the milestone field from the menu above the ‘Color’ region, press the {buttonEditColor}, and choose the desired color.
 +
 image::commonscript:ganttChartExpVS6.png[alt="press Edit Color button"]
