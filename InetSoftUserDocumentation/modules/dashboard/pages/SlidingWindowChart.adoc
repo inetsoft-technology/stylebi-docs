@@ -17,7 +17,7 @@ A sliding window chart displays an aggregate that is computed based on overlappi
 
 image::commonscript:movingAverageChartExpw.png[alt="sliding window moving average chart"]
 
-To create a running total chart, follow the basic steps below:
+To create a sliding window chart, follow the basic steps below:
 
 include::partial$chartNewbieTip.adoc[]
 
