@@ -14,6 +14,8 @@ To create a word cloud, follow the basic steps below:
 
 include::partial$chartNewbieTip.adoc[]
 
+== Create a Word Cloud
+
 . *_Optional:_*  Place the desired break-down *dimensions* on the ‘X’ and ‘Y’ axes.
 +
 {multipleDimensionNoColor}  If you *do not* place any dimension on ‘X’ or ‘Y’, this will create just a single word cloud (i.e., without any groups). If you place one or more dimensions on ‘X’ or ‘Y’, this will create an individual word cloud for each combination of dimension values.
@@ -25,7 +27,8 @@ include::partial$chartNewbieTip.adoc[]
 NOTE: When you use the ‘Count’ method, it does not matter which measure you choose to aggregate. See the example below.
 
 
-.Walkthrough: Word Cloud
+== Walkthrough: Word Cloud
+
 ****
 The following example illustrates how to create a word cloud that compares a count of products for two different years.
 

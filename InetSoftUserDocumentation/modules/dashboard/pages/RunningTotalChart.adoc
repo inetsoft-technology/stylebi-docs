@@ -12,9 +12,12 @@ A running total chart displays an aggregated measure that accumulates across gro
 
 image:commonscript:runningTotalChartExp2.png[alt="running total chart accumulating values across groups"]
 
+
 To create a running total chart, follow the basic steps below:
 
 include::partial$chartNewbieTip.adoc[]
+
+== Choose the Style and Dimensions
 
 . Press the {buttonSelectChartStyle}. Choose a desired style.   Press the {buttonApply}.
 +
@@ -42,6 +45,9 @@ image:commonscript:barChartExp2.png[alt="drag dimension to Color Shape Size or T
 +
 image:viewsheetExp34.png[alt="set date dimension level grouping in Chart Editor"]
 
+== Choose the Measure and Running Total
+
+[start=7]
 . From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
 +
 include::ROOT:partial$measureTip.adoc[]
@@ -84,7 +90,8 @@ image:commonscript:runningTotalChartExp2.png[alt="completed running total chart"
 
 include::partial$addTitlesLegend.adoc[]
 
-.Example: Running Average
+== Example: Running Average
+
 ****
 In this example, you will create a chart that computes total quantities sold by month, and displays these values as a running average. The running average will be reset on a yearly basis.
 
