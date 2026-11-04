@@ -12,6 +12,8 @@ You can apply conditional formatting (*highlighting*) to Table columns, Images, 
 
 To apply a highlight to a Table column, Image, Text, Chart, or Crosstab, follow these steps:
 
+== Add Highlights
+
 . Right-click the component you wish to highlight. (For a Table, right-click a data cell in column to which you want the highlight to be applied. For a Chart, right-click on a plot element or an axis label.) {rightClickOptions}
 
 . Select ‘Highlight’ from the right-click context menu. This opens the ‘Highlight’ panel.
@@ -27,6 +29,9 @@ image::Highlight Dialog Box.png[alt="highlight panel with add button and attribu
 TIP: Multiple highlights allow you to produce composite formats. For example, if you specify a *red-foreground* highlight for the condition “Discount is greater than 0,” and  a *bold-font* highlight for the condition “State is equal to NJ,” values that meet both conditions will appear highlighted in *red* _and_ *bold*.
 
 
+== Choose the Highlight Format
+
+[start=6]
 . Select the highlight in the list that you want to edit.
 
 . In the ‘Attributes’ panel, select the highlight format. The formatting is applied when the data meets the highlight condition (specified below):
@@ -40,6 +45,9 @@ TIP: Multiple highlights allow you to produce composite formats. For example, if
 NOTE: Cell-based highlights take precedence over row-based highlights.
 
 
+== Specify the Condition
+
+[start=9]
 . Press the btn:[Edit] button below the ‘Conditions’ box. This opens the ‘Conditions’ dialog box.
 +
 image::dataworksheet:ConditionDialogBox.png[alt="conditions dialog box with operand and comparison menus"]
