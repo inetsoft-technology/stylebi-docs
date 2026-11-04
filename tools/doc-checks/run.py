@@ -17,6 +17,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import check_ai         # noqa: E402
 import check_calc       # noqa: E402
 import check_chartapi   # noqa: E402
 import check_dashboard  # noqa: E402
@@ -24,7 +25,7 @@ import check_examples   # noqa: E402
 import check_helplinks  # noqa: E402
 from common import is_excepted, load_exceptions   # noqa: E402
 
-CHECKS = [check_chartapi, check_calc, check_dashboard, check_examples, check_helplinks]
+CHECKS = [check_chartapi, check_calc, check_dashboard, check_examples, check_helplinks, check_ai]
 
 
 def render(results, label, docs_branch, rules):
