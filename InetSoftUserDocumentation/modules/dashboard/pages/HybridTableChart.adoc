@@ -12,10 +12,12 @@ A hybrid table chart is a chart that displays columns of data (like a table) in 
 
 image::commonscript:tableLikeChart8_1.png[alt="example hybrid table chart"]
 
+
 To create a hybrid table chart, follow the basic steps below:
 
 include::partial$chartNewbieTip.adoc[]
 
+== Select the Measure and Dimension
 
 . From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* (e.g., ‘Total’) to the ‘X’ region. This places the selected field onto the chart as a measure.
 +
@@ -34,6 +36,9 @@ image::commonscript:tableLikeChart1_1.png[alt="drag dimension to Y region"]
 +
 TIP: {convertToDimension}
 
+== Display Data as Text
+
+[start=3]
 . Drag the measure that you want to represent as text (e.g., ‘Quantity Purchased’) from the ‘Measures’ folder in the *Data Source* panel to the ‘Y’ region  (next to the dimension).
 +
 image::commonscript:tableLikeChart11_1.png[alt="drag text measure to Y region"]
@@ -66,6 +71,9 @@ Observe that the chart now displays a column of values giving the aggregated mea
 +
 image::commonscript:tableLikeChart9_1.png[alt="chart with two discrete measure columns"]
 
+== Create a Tabular Appearance
+
+[start=9]
 . Right-click in the plot area and select ‘Properties’ from the context menu. This opens the ‘Chart Properties’ panel.
 +
 image::commonscript:VS Hybrid7.png[alt="open Chart Properties from context menu"]
