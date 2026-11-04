@@ -27,7 +27,7 @@ CSS properties in the table below can be applied using either Component xref:Cre
 |font-family|Font name| Does not apply to Shape, Image, ChartPalette, GaugeValueFill, Gauge (component).
 |font|Shorthand: font-style font-weight font-size font-family| Does not apply to Shape, Image, ChartPalette, GaugeValueFill, Gauge (component).
 |text-decoration|‘underline’, ‘line-through’| Does not apply to Shape, Image, Gauge, GaugeTickLabel, GaugeValueLabel, GaugeValueFill, ChartPalette, Gauge (component).
-|colorColor |value (hex, rgb, color string)| Does not apply to Image, Gauge (component).
+|color|value (hex, rgb, color string)| Does not apply to Image, Gauge (component).
 |background-color|Color value (hex, rgb, color string)| Does not apply to GaugeTickLabel, GaugeValueLabel, GaugeValueFill, Line, ChartPalette.
 |opacity|Float in range [0.0, 1.0]|  Does not apply to ChartPalette, GaugeTickLabel, GaugeValueLabel, GaugeValueFill, Line.
 |border-style|Line style: ‘none’, ‘dotted’, ‘dashed’, ‘solid’, ‘double’; Single value (all borders); Two values (top/bottom left/right); Three values (top right/left bottom); Four values (top right bottom left)| Does not apply to Chart regions except for ChartLegend and Chart (component). Does not apply to ChartPalette, Line, Rectangle, Oval, GaugeTickLabel, GaugeValueLabel, GaugeValueFill, ComboBox drop-down. Use TableStyle CSS (xref:CSSTableStyleProperties.adoc[])  for component-level table formatting.
