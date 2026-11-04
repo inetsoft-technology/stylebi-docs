@@ -18,6 +18,8 @@ To create a radar chart, follow the basic steps below:
 
 include::partial$chartNewbieTip.adoc[]
 
+== Choose the Style and Measures
+
 . Press the {buttonSelectChartStyle}.  Choose the ‘Radar’  or ‘Filled Radar’ style.     Press the {buttonApply}.
 +
 image::commonscript:radarChartExp1.png[alt="choose Radar or Filled Radar chart style and press Apply"]
@@ -57,6 +59,9 @@ image::commonscript:radarChartExp11.png[alt="drag dimension to Break By field to
 image::commonscript:radarChartExp12.png[alt="drag dimension to Color Shape Size or Text for grouping"]
 ****
 
+== Change Appearance and Labels
+
+[start=5]
 . *_Optional:_*  Right-click on the Y-axis title and select ‘Hide Title’ from the context menu.
 +
 image::commonscript:radarChartExp3.png[alt="right-click Y-axis title and select Hide Title"]

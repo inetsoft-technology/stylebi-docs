@@ -21,6 +21,8 @@ To create a sliding window chart, follow the basic steps below:
 
 include::partial$chartNewbieTip.adoc[]
 
+== Choose the Style and Dimensions
+
 . Press the {buttonSelectChartStyle}. Choose a desired style.   Press the {buttonApply}.
 +
 image::commonscript:barChartExp1.png[alt="press Select Chart Style, choose style"]
@@ -42,6 +44,9 @@ image::viewsheetExp34.png[alt="set Level to desired date grouping"]
 
 
 
+== Choose the Measure and Moving Average
+
+[start=5]
 . From the ‘Measures’ folder of the *Data Source* panel, drag a *measure* to the ‘X’ or ‘Y’ region. This places the selected field onto the chart as a measure.
 +
 include::ROOT:partial$measureTip.adoc[]
