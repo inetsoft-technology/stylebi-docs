@@ -19,6 +19,8 @@ To create a word cloud, follow the basic steps below:
 
 include::partial$chartNewbieTip.adoc[]
 
+== Create a Word Cloud
+
 . *_Optional:_*  Place the desired break-down *dimensions* on the ‘X’ and ‘Y’ axes.
 +
 include::ROOT:partial$dimensionTip.adoc[]
@@ -48,7 +50,8 @@ NOTE: When you use the ‘Count’ method, it does not matter which measure you 
 image::commonscript:WordCloudExample11.png[alt="completed word cloud chart"]
 
 [#WalkthroughWordCloud]
-.Walkthrough: Word Cloud
+== Walkthrough: Word Cloud
+
 ****
 The following example illustrates how to create a word cloud that compares a count of products for two different years.
 
