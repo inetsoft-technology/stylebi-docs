@@ -20,6 +20,8 @@ include::ROOT:partial$videoVersion.adoc[]
 video::359390270#chapter=16506257[vimeo,640,400]
 =====
 
+== Add a Crosstab
+
 . If necessary, create a new Dashboard.
 include::ROOT:partial$CreateNewDashboardNote.adoc[]
 
@@ -30,7 +32,10 @@ image::addCrosstab_1.png[alt="drag crosstab element into dashboard"]
 . Press the {buttonEdit} at the top-right corner of the Crosstab to open the Crosstab Editor.
 +
 image::Crosstab Edit Button_1.png[alt="press Edit button to open crosstab editor"]
-+
+
+== Select the Rows, Columns, and Measures
+
+[start=4]
 . From the *Data Source* panel, drag the desired columns or cube dimensions into the ‘Columns’ and ‘Rows’ regions.
 
 +
@@ -52,6 +57,9 @@ TIP: If you want to use a single Form component (e.g., ComboBox) to dynamically 
 
 . *_Optional:_* To *hide* a particular column, right-click the column in the Crosstab  Editor, and select '`Hide Column`'.  To *show* all hidden columns, right-click any column in the Crosstab  Editor, and select '`Show Columns`'.
 
+== Set Sorting, Ranking, and Aggregation
+
+[start=8]
 . *_Optional:_*  Specify group sorting  and ranking. Follow the steps below:
 +
 [#SortandRank]
@@ -121,6 +129,9 @@ NOTE: If you choose a percentage representation, press the btn:[Edit] button to 
 
 
 
+== Change Crosstab Presentation
+
+[start=10]
 . {finishEditing}
 
 . If desired, expand the crosstab horizontally so that all of the column headers are visible.

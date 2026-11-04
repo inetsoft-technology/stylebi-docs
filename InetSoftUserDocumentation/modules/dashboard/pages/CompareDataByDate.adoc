@@ -20,6 +20,8 @@ To perform such date comparisons in a Chart or Crosstab, follow the steps below.
 
 IMPORTANT: The Chart or Crosstab must contain a Date-type field. Date comparisons use color to distinguish date groups unless the original chart already uses color; in this case, the axis is used to distinguish date groups.
 
+== Open the Date Comparison Dialog
+
 . Press the {buttonMore} in the top corner of Chart or Crosstab, and select ‘Date Comparison’.
 +
 image::commonscript:dateComparison1.png[alt="press More button and select Date Comparison"]
@@ -32,6 +34,9 @@ image::commonscript:dateComparison2.png[alt="date comparison dialog box"]
 +
 image::commonscript:dateComparison3.png[alt="enable share date comparison with option"]
 
+== Set the Date Range to Include
+
+[start=3]
 . Under *Date Range to Include in Comparison*, set the span of time to consider in the comparison. You can do this by specifying either a number of previous standard periods to compare (e.g., “compare previous 5 years”) or by specifying a set of custom periods to compare (e.g., “compare Jan. 5, 2019 through Feb. 10, 2020 with Nov. 5, 2019 through Dec 10, 2020”). Expand the sections below for more details on these two approaches.
 +
 .Compare standard periods...
@@ -70,6 +75,9 @@ TIP: You can also use Form components to set the dates by pressing the {buttonVa
 
 ====
 
+== Choose the Comparison Type
+
+[start=4]
 . Under *Compare Data Of*, use the menus to set the desired comparison. You can perform the following three types of comparisons:
 +
 .Compare all periods within the date range...
@@ -175,6 +183,9 @@ The data on the Chart and Crosstab includes the past two years, and provides a c
 =====
 ====
 
+== Choose the Display Options
+
+[start=5]
 . Under *Display*, choose a way to display the comparisons on the Chart:
 +
 * *Value* displays the aggregated values for all groups on the chart.
