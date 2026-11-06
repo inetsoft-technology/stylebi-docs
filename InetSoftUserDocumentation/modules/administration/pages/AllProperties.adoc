@@ -209,6 +209,8 @@ vs.font.asDefault:: When set to `true`, uses the Dashboard default font for a Ta
 == Portal Properties
 The following table lists a variety of User Portal properties.  See xref:Presentation.adoc[] and xref:TailorServerPerformance.adoc[] for the related  pages in Enterprise Manager.
 
+=== Sharing Properties
+
 share.email.enabled:: Enables the {buttonSocialEmail} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `true`.
 
 share.facebook.enabled:: Enables the {buttonFacebook} under the {buttonSocialSharing}  in the Dashboard toolbar.  Default is `true`.
@@ -234,6 +236,8 @@ share.opengraph.description:: The fallback `og:description` `<meta>` tag injecte
 share.opengraph.sitename:: The fallback `og:site_name` `<meta>` tag injected into the User Portal's HTML `<head>` for  social sharing previews. Default is "`InetSoft.com`".
 
 share.opengraph.image:: The fallback `og:image` URL `<meta>` tag injected into the User Portal's HTML `<head>` for  social sharing previews. Default is `/images/logo.png`.  (Relative paths are resolved to the server`'s base URL.)
+
+=== General Portal Properties
 
 accessibility.enabled:: Set to `true` to enable features for Rehabilitation Act Section 508 compliance.
 
