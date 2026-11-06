@@ -90,6 +90,8 @@ To display a contour on a map by latitude and longitude, follow the steps below:
 
 include::partial$chartNewbieTip.adoc[]
 
+=== Choose the Style and Background
+
 . Press the {buttonSelectChartStyle}. Choose the ‘Contour Map’ style.   Press the {buttonApply} (or double-click the ‘Contour Map’ icon).
 +
 image::commonscript:contourMapChartExp5.png[alt="press Select Chart Style and choose Contour Map"]
@@ -116,6 +118,9 @@ image::VS Chart Map4.png[alt="enable use web map as background under Advanced ta
 include::partial$webMapResize.adoc[]
 ====
 
+=== Assign the Latitude and Longitude Fields
+
+[start=3]
 . In the *Data Source* panel, right-click the ‘latitude’ measure or press the {buttonActions}, and select ‘Set Geographic’ from the context menu.
 +
 image::commonscript:contourMapChartExp6.png[alt="right-click latitude measure and select Set Geographic"]
@@ -137,6 +142,9 @@ IMPORTANT: If you are using a Web Map background with latitude and longitude dat
 image::commonscript:contourMapChartExp7.png[alt="drag longitude to X and latitude to Y region"]
 
 
+=== Add Weights and Labels
+
+[start=8]
 . *_Optional:_* Drag a desired *measure* to the ‘Size’ region to weight the data points. A larger weight assigns greater density to the point.
 +
 include::ROOT:partial$measureTip.adoc[]
@@ -157,6 +165,9 @@ NOTE: If the labels appear crowded, you can zoom the map to see them more clearl
 
 . {finishEditing}
 
+=== Refine the Contour Map
+
+[start=11]
 . *_Optional:_*  To change the characteristics of the contours, press the {buttonMore} in the Chart toolbar, and select ‘Properties’. In the ‘Chart Properties’ dialog box, adjust the following  settings under ‘Density Contour’ in the *Advanced* tab.
 +
 [example]
@@ -172,7 +183,8 @@ image::commonscript:contourMapChartExp8.png[alt="selection list filtering points
 +
 image::commonscript:contourMapChartExp4.png[alt="press Pan and Zoom buttons to set initial map view"]
 
-.Walkthrough: Latitude and Longitude
+=== Walkthrough: Latitude and Longitude
+
 ****
 
 

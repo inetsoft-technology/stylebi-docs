@@ -49,6 +49,8 @@ include::partial$chartNewbieTip.adoc[]
 include::partial$availableToEndUsers.adoc[]
 See xref:EndUserChartControl.adoc[] for information about how to make the Ad Hoc Chart Editor available to end users. In the Ad Hoc Chart Editor, press the ‘`Enable Manual Refresh`’ button in the mini-toolbar to update the chart only when the {buttonRefresh} button is pressed.  Press the ‘`Enable Auto Refresh`’ button to update the Chart when any changes are made in the Editor.
 
+=== Choose the Style and Dimensions
+
 . *_Optional:_*  Set the style of the chart. To do this, press the {buttonSelectChartStyle}. Choose a desired style, such as ‘Line’ or ‘Bar’, and press the {buttonApply}.
 +
 [.videotitle]
@@ -158,6 +160,9 @@ image::viewsheetExp34.png[alt="press Edit Dimension and set date grouping level"
 +
 TIP: To group dates using a *fiscal calendar*, create Calculated Fields  for the desired date ranges (fiscal week, month, etc.) by using the corresponding fiscal functions, such as xref:commonscript:CALC_fiscalweek.adoc[CALC_fiscalweek] and xref:commonscript:CALC_fiscalmonth.adoc[CALC_fiscalmonth], and then use those Calculated Fields as the desired dimensions on the Chart.  See  xref:dataworksheet:CreateNewDataField.adoc#CreateCalcField[Create a Calculated Field in a Dashboard] for more details.
 
+=== Add Measures
+
+[start=8]
 . From the ‘Measures’ folder of the data source panel, drag measure the ‘Y’ region. This places the selected field onto the chart as a measure. You can add multiple measures to a chart. (See xref:MultipleMeasureChart.adoc[].)
 +
 image::addingChart4.png[alt="drag measure from data source to Y region"]
