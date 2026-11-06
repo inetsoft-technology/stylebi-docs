@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Reference for the General tab that is common to most Dashboard components. Covers five properties: Name (used for binding and scripting, no spaces recommended), Visible in External Dashboards (controls visibility when this Dashboard is embedded in another Dashboard), Visible (Show / Hide / Hide on Print and Export), Enabled (true/false; for Filter components, Enabled=false means existing selections do not affect Dashboard data), and Title (text in the title bar, with a Visible sub-option for the title bar itself). See also DataTab and AdvancedTab for other common property tabs.
+Reference for the General tab that is common to most Dashboard components. Covers five properties: Name (used for binding and scripting; spaces are allowed, but a name with spaces cannot be used directly in a script, so use names without spaces for components that scripts refer to), Visible in External Dashboards (controls visibility when this Dashboard is embedded in another Dashboard), Visible (Show / Hide / Hide on Print and Export), Enabled (true/false; for Filter components, Enabled=false means existing selections do not affect Dashboard data), and Title (text in the title bar, with a Visible sub-option for the title bar itself). See also DataTab and AdvancedTab for other common property tabs.
 endif::ai[]
 
 [WARNING,caption=seel also]
@@ -18,7 +18,7 @@ NOTE: {dynamicProperties}
 
 image::General Tab.png[alt="general tab properties panel for dashboard component"]
 
-Name::	This name is used to refer to the component in binding and scripting. For purposes of scripting, the name should contain no spaces.
+Name::	This name is used to refer to the component in binding and scripting. The name may contain spaces, but a name with spaces cannot be used directly in a script (for example, `State List.title` is not valid). Use names without spaces for components that you refer to in scripts.
 Visible in External Dashboards::	If checked, the component will be visible when this Dashboard is embedded in another Dashboard (see xref:ModularizeDashboard.adoc[]).
 Visible::
 * *Show*: Component is visible.
