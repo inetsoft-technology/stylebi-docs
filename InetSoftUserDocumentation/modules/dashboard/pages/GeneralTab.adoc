@@ -13,7 +13,7 @@ NOTE: {dynamicProperties}
 
 image:General Tab.png[alt="general tab properties panel for dashboard component"]
 
-Name::	This name is used to refer to the component in binding and scripting. For purposes of scripting, the name should contain no spaces.
+Name::	This name is used to refer to the component in binding and scripting. The name may contain spaces, but a name with spaces cannot be used directly in a script (for example, `State List.title` is not valid). Use names without spaces for components that you refer to in scripts.
 Visible in External Dashboards::	If checked, the component will be visible when this Dashboard is embedded in another Dashboard (see xref:ModularizeDashboard.adoc[]).
 Visible::
 * *Show*: Component is visible.
