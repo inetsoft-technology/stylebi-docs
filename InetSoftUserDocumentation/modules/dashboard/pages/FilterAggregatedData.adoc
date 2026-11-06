@@ -5,7 +5,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to filter data after it has been grouped and aggregated in Visual Composer, applied to a Chart or Crosstab. Unlike Selection Lists and Conditions which filter pre-aggregate detail data, this page covers two post-aggregate filtering methods: (1) configuring a Range Slider to target an aggregated field via its Data tab 'Components' node, and (2) using ad hoc filtering by right-clicking a column (in a Crosstab) or a dimension/measure label (in a Chart) and selecting 'Filter'. A Freehand Table cannot be targeted by a post-aggregate Range Slider. For a Freehand Table, the right-click 'Filter' option filters the source column of the cell's binding before aggregation; it is not available for text or formula cells or for aggregate calculated fields. Note: the right-click 'Filter' option is only available if the Dashboard contains a Selection Container component; filter selections appear in that container and can be cleared individually or all at once.
+How to filter data after it has been grouped and aggregated in Visual Composer, applied to a Chart or Crosstab. Unlike Selection Lists and Conditions which filter pre-aggregate detail data, this page covers two post-aggregate filtering methods: (1) configuring a Range Slider to target an aggregated field via its Data tab 'Components' node, and (2) using ad hoc filtering by right-clicking a column (in a Crosstab) or a dimension/measure label (in a Chart) and selecting 'Filter'. A Freehand Table cannot be targeted by a post-aggregate Range Slider. For a Freehand Table, the right-click 'Filter' option filters the source column of the cell's binding before aggregation; it is not available for text or formula cells or for aggregate calculated fields. Note: when viewing the Dashboard, the right-click 'Filter' option is only available if the Dashboard contains a Selection Container component; filter selections appear in that container and can be cleared individually or all at once.
 
 Important behavioral distinction for ad hoc chart filters: filtering by a *dimension* (categorical/string field) targets the underlying data source and filters ALL Dashboard components bound to that data source — same as a regular Selection List. Filtering by a *measure* (aggregated value such as Sum or Count) targets only that chart's post-aggregate output; other Dashboard components are NOT affected.
 endif::ai[]
@@ -29,7 +29,7 @@ image::Range Slider_1.png[alt="drag range slider element onto dashboard"]
 
 . Select the *Data* tab. Expand the ‘Components’ node, and select the component and aggregated field that you want to filter.
 +
-image::Range Slider Assemblies.png[alt="select assemblies node in range slider data tab"]
+image::Range Slider Assemblies.png[alt="select components node in range slider data tab"]
 
 . Press btn:[OK] to close the panel.
 
@@ -48,7 +48,7 @@ video::359331010#chapter=16567165[vimeo,640,400]
 =====
 
 
-The easiest way to filter a Table or Chart is by using Filter components. (See xref:FilterDashboard.adoc[] for more information.) However, if the Dashboard includes a Selection Container, you can also filter  by using the right-click ‘Filter’ option. To do this, see the sections   below:
+The easiest way to filter a Table or Chart is by using Filter components. (See xref:FilterDashboard.adoc[] for more information.) However, if the  Dashboard  includes a xref:AddFilterComponents.adoc#UseSelectionContainer[Selection Container], a user can also filter by using the right-click ‘Filter’ option. To do this, see the sections  below:
 
 [NOTE]
 ====
@@ -67,7 +67,7 @@ To filter aggregated  data in a Crosstab, follow the steps below:
 
 . Right-click on the column that you want to filter and select ‘Filter’ from the context menu.  {rightClickOptions}
 +
-NOTE: The ‘Filter’ option is only available if the Dashboard contains a Selection Container component.
+NOTE: When viewing the Dashboard, the ‘Filter’ option is only available if the Dashboard contains a Selection Container component.
 +
 image::filtering1.png[alt="right-click column and select filter from context menu"]
 +
@@ -105,7 +105,7 @@ To filter aggregated Chart data, follow the steps below:
 
 . Right-click on the *dimension* label or *measure* that you want to filter and select ‘Filter’ from the context menu. {rightClickOptions}
 +
-NOTE: The ‘Filter’ option is only available if the Dashboard contains a Selection Container component.
+NOTE: When viewing the Dashboard, the ‘Filter’ option is only available if the Dashboard contains a Selection Container component.
 
 +
 image::Chart Filter1.png[alt="right-click chart dimension and select filter"]
