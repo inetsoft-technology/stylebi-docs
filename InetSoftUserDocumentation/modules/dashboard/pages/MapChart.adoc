@@ -110,6 +110,8 @@ To display data on a map by latitude and longitude, follow the steps below:
 
 include::partial$chartNewbieTip.adoc[]
 
+=== Choose the Style and Background
+
 . Press the {buttonSelectChartStyle}. Choose the ‘Map’ style.   Press the {buttonApply} (or double-click the ‘Map’ icon).
 +
 image::commonscript:MapChartType_1.png[alt="choose Map chart style"]
@@ -136,6 +138,9 @@ image::commonscript:MapChartType_3.png[alt="enable Use Web Map as Background on 
 include::partial$webMapResize.adoc[]
 ====
 
+=== Assign the Latitude and Longitude Fields
+
+[start=3]
 . In the *Data Source* panel, right-click the field containing latitude values, or press the {buttonActions}, and select ‘Set Geographic’ from the context menu.
 +
 image::commonscript:Map Chart LongLat SetGeo.png[alt="right-click latitude field and select Set Geographic"]
@@ -158,6 +163,9 @@ image::commonscript:Map Chart LongLat BindGeo.png[alt="drag latitude and longitu
 +
 Data points now appear on the map to mark the locations specified by the latitude and longitude data.
 
+=== Add Measures and Labels
+
+[start=8]
 . From the *Data Source* panel, drag a *measure* onto one of the ‘Color’, ‘Shape’, ‘Size’, or ‘Text’ regions.
 +
 include::ROOT:partial$measureTip.adoc[]
@@ -184,7 +192,8 @@ image::commonscript:MapChartType_5.png[alt="map chart with labeled latitude and 
 
 . {finishEditing}
 
-.Walkthrough: Latitude and Longitude
+=== Walkthrough: Latitude and Longitude
+
 ****
 In this example, you will label a map with a list of landmarks along Historic Route 66. The locations of the landmarks are provided by the ‘Map Points’ Data Worksheet data block, which contains raw latitude and longitude data.
 

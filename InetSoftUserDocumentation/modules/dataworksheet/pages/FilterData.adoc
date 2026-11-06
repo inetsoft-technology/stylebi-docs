@@ -37,6 +37,8 @@ include::ROOT:partial$dataRowLimit.adoc[]
 
 
 
+=== Open the Condition Panel
+
 . Create the data block you want to filter. See xref:CreateNewWorksheet.adoc[]  for information on how to create a data block.
 
 
@@ -64,6 +66,10 @@ image::filtering3.png[alt=”specify pre-aggregate condition using menus in the 
 include::ROOT:partial$caseSensitivityTip.adoc[]
 +
 If the condition you specify references data model attributes that do not already exist in the data block, these attributes are automatically added to the data block as hidden columns.
+
+=== Add and Combine Conditions
+
+[start=6]
 . Press btn:[Append] to add the condition.
 . *_Optional:_* To create a compound condition, repeat the above steps to specify another condition clause, select ‘and’ or ‘or’, and press btn:[Insert]. This adds the additional clause into the composite condition.
 +
@@ -75,6 +81,10 @@ image::commonscript:Ad Hoc Filtering10_ws.png[alt="compound condition with AND o
 image::commonscript:Ad Hoc Filtering11_ws.png[alt="use Indent and Unindent buttons to specify evaluation order for compound conditions"]
 +
 Clauses are evaluated in order of indentation, the most indented clauses being evaluated first.
+
+=== Edit the Condition and Save
+
+[start=10]
 . To delete a clause in the condition, select the clause and press btn:[Delete]. To delete ALL clauses in the condition, press btn:[Clear]. To reposition a clause in the condition, select the clause and press btn:[Up] or btn:[Down].
 . To modify  a clause in the condition, select the clause and then specify the clause using the menus at the top (as described above). Press btn:[Modify] to change the existing condition to a new condition matching the menu selections.
 . Press  btn:[OK] to close the dialog box. The selected data set is now filtered to return only data matching the specified condition.
@@ -87,7 +97,9 @@ You can now use this Data Worksheet as the data source for a Dashboard. See xref
 If your condition requires only the “AND” operator and does not require the “OR” operator, or if it requires no logical operators at all, you can use the simple condition interface (without selecting the ‘Advanced Conditions’ check box).  See the example below.
 
 [id=SimpleConditions]
-.Example: Simple Conditions
+
+=== Example: Simple Conditions
+
 ****
 In the sample ‘Sales Explore’ Data Worksheet, retrieve only orders with sales of at least $1,000.
 
