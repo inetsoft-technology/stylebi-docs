@@ -18,10 +18,7 @@ Boolean:: `true`: smooth curves (default for  xref:dashboard:AreaChart.adoc[] an
 [source,javascript]
 Chart1.smoothLines = true;
 
-
-
-
-
+image::commonscript:smoothLines.png[alt="line chart drawn with smooth curves instead of straight segments"]
 
 [TIP]
 ====
