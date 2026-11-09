@@ -4,7 +4,7 @@ var elem = new IntervalElement("State", "Quantity");
 var frame = new CategoricalColorFrame();
 frame.setField("State");
 var spec = new LegendSpec(); // <2>
-spec.setSymbolRoundCorners(false); // <3>
+spec.setSymbolRoundCorners(true); // <3>
 spec.setSymbolSize(40); // <4>
 var tspec = new TextSpec();
 tspec.setFont(java.awt.Font('Dialog', java.awt.Font.PLAIN, 20)); // <5>

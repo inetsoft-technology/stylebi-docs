@@ -8,7 +8,7 @@ ifdef::ai[]
 Summary: Chart Script API reference for `LegendSpec.setRoundCorners(Boolean)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
 endif::ai[]
 
-Specifies whether the legend`'s border has rounded corners. This is distinct from xref:LegendSpecSetSymbolRoundCorners.adoc[], which rounds the corners of the legend`'s symbols rather than its border. The corresponding “getter” function is `getRoundCorners()`.
+Specifies whether the legend`'s border has rounded corners. This is distinct from xref:LegendSpecSetSymbolRoundCorners.adoc[], which rounds the corners of the legend`'s symbols rather than its border. The corresponding “getter” function is `isRoundCorners()`.
 
 == Parameter
 Boolean::			`true`: round the legend border corners +

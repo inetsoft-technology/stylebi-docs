@@ -8,11 +8,11 @@ ifdef::ai[]
 Summary: Chart Script API reference for `LegendSpec.setSymbolRoundCorners(Boolean)`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
 endif::ai[]
 
-Specifies whether the symbols (color swatches, shapes, etc.) displayed in the legend have rounded corners. This is distinct from xref:LegendSpecSetRoundCorners.adoc[], which rounds the corners of the legend`'s own border rather than its symbols. The corresponding “getter” function is `getSymbolRoundCorners()`.
+Specifies whether the symbols (color swatches, shapes, etc.) displayed in the legend have rounded corners. This is distinct from xref:LegendSpecSetRoundCorners.adoc[], which rounds the corners of the legend`'s own border rather than its symbols. The corresponding “getter” function is `isSymbolRoundCorners()`.
 
 == Parameter
-Boolean::			`true`: round the corners of legend symbols (default) +
-`false`: use square-cornered legend symbols
+Boolean::			`true`: round the corners of legend symbols +
+`false`: use square-cornered legend symbols (the default for a `LegendSpec` created with `new LegendSpec()`)
 
 
 
@@ -27,7 +27,7 @@ include::scriptexample:partial$LegendSpecSetSymbolRoundCorners1.js[]
 ----
 <1> {dataset}
 <2> Create the xref:LegendSpec.adoc[] object.
-<3> Use `setSymbolRoundCorners` to square off the corners of the legend symbols.
+<3> Use `setSymbolRoundCorners` to round the corners of the legend symbols.
 <4> Use xref:LegendSpecSetSymbolSize.adoc[] to enlarge symbols, making edges more visible.
 <5> Use xref:LegendSpecSetTextSpec.adoc[] to enlarge the legend text.
 <6> Use xref:VisualFrameSetLegendSpec.adoc[] to assign the `LegendSpec` to the `ColorFrame`.
@@ -49,7 +49,7 @@ var frame = elem.getColorFrame(); // <2>
 var spec = frame.getLegendSpec(); // <3>
 // Compact syntax: var spec = graph.getElement(0).getColorFrame().getLegendSpec();
 
-spec.setSymbolRoundCorners(false);
+spec.setSymbolRoundCorners(true);
 
 ----
 =====
