@@ -35,7 +35,7 @@ Schedule Options::	Select options available to a user when they schedule tasks, 
 
 Share Tasks Between Users in Same Group::	Allows users in the same group to access a scheduled task.  Enable the subordinate '`Modify By Owner Only`' option to prevent users other than the task creator from deleting or editing a task.
 
-Save File Suffix::	Suffix to be automatically appended to the name of all files saved to the server by the Scheduler. User placeholder `pass:[{0}]` to insert the  Dashboard name, and use placeholder `pass:[{1}]` to insert the file creation date. You can specify a format for the *date* parameter using date format symbols.
+Save File Suffix::	Suffix to be automatically appended to the name of all files saved to the server by the Scheduler. Use placeholder `pass:[{0}]` to insert the Dashboard name, `pass:[{1}]` to insert the file creation date, and `pass:[{2}]` to insert the name of the user under which the task runs. You can specify a format for the *date* parameter using date format symbols.
 +
 .See a list  of available date format symbols...
 [%collapsible]
