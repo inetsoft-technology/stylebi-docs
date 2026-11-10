@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-How to deploy, edit, delete, and reposition Pinboards in the User Portal, including selecting which Dashboard to display under each tab, adjusting the tab order, and hiding Dashboard tabs using the Arrange Dashboards dialog.
+How to deploy, edit, delete, and reposition Pinboards in the User Portal, including selecting which Dashboard to display under each tab, adjusting the tab order, and hiding Dashboard tabs using the Arrange Pinboard dialog.
 endif::ai[]
 
 You can arrange the Pinboards displayed by the {buttonDashboard} of the User Portal, and add your own Pinboards under this button.
@@ -15,7 +15,7 @@ image::user:Opening Sample Viewsheet2.png[alt="Pinboards in User Portal"]
 
 To deploy a Dashboard, follow the steps below:
 
-. Press {buttonDashboard} the  in the User Portal.
+. Press the {buttonDashboard} in the User Portal.
 
 . Press the {buttonDashboardConfiguration}, and select the  {buttonAdd} option.
 +
@@ -43,7 +43,7 @@ image::user:My Viewsheet Dashboard.png[alt="press OK to deploy Pinboard"]
 == Edit a Pinboard
 To edit an existing Pinboard, follow the steps below:
 
-. Press  the {buttonDashboard} in the User Portal.
+. Press the {buttonDashboard} in the User Portal.
 
 . Open the desired Pinboard by selecting the corresponding tab.
 
@@ -51,7 +51,7 @@ To edit an existing Pinboard, follow the steps below:
 +
 image::user:Edit Dashboard User.png[alt="press Dashboard Configuration and select Edit"]
 +
-This opens the ‘Edit Dashboard’ dialog box, which is the same as the ‘New Dashboard’ dialog box described above. Follow the instructions above to make the desired edits to the Dashboard name and description, or to select a new Dashboard to display.
+This opens the ‘Edit Dashboard’ dialog box, which is the same as the ‘New Pin’ dialog box described above. Follow the instructions above to make the desired edits to the Dashboard name and description, or to select a new Dashboard to display.
 
 == Delete a Pinboard
 To delete an existing Pinboard, follow the steps below:
@@ -71,7 +71,7 @@ To reposition an existing Pinboard, follow the steps below:
 
 . Open the desired Pinboard by selecting the corresponding tab.
 
-. Press the {buttonDashboardConfiguration}, and select the {buttonArrangeAction}  option. This opens the ‘Arrange Dashboards’ dialog box.
+. Press the {buttonDashboardConfiguration}, and select the {buttonArrangeAction}  option. This opens the ‘Arrange Pinboard’ dialog box.
 +
 image::user:arrangeDashboard.png[alt="press Dashboard Configuration and select Arrange"]
 
