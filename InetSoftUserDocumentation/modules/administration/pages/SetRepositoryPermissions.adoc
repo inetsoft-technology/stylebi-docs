@@ -31,9 +31,9 @@ image::dashboardSecurityTab.png[alt="select Security tab for repository asset"]
 +
 .Expand to view a list of parent permissions
 [%collapsible]
-=====
+====
 include::ROOT:partial$ParentPermissions.adoc[]
-=====
+====
 
 . Select ‘Access requires BOTH User and Role permission’ to specify that access to the Dashboard or folder is granted only if the current user has *both* user *and* role permissions; i.e., both the user’s name (or group) and at least one of the user’s roles appear in the ‘Selected Entities’ table.
 +

@@ -71,11 +71,11 @@ Only those customers who purchased more than 100 pieces of both ‘Wireless Mous
 [.videotitle]
 .Watch Video: Create a Union
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::298278750[vimeo,640,400]
-=====
+====
 
 By default, the union of two data blocks contains all the unique rows from the two data blocks. The first data blocks you select is the data block whose distinct rows will appear first in the result. By default, no duplicate rows are retained in the union data blocks.  To retain duplicates, see xref:ChangeConcatenationType[].
 
@@ -151,11 +151,11 @@ To change the concatenation type of concatenated data block (intersection, union
 .Watch Video: Change Concatenation
 
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::298263200[vimeo,640,400]
-=====
+====
 
 . Right-click on the Concatenated Table and select ‘Edit Concatenation’ from the context menu. {rightClickOptions}
 +

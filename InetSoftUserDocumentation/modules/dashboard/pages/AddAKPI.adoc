@@ -11,11 +11,11 @@ endif::ai[]
 [.videotitle]
 .Watch Video: Creating a Dashboard (Add a KPI)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359874333#chapter=16573507[vimeo,640,400]
-=====
+====
 
 The most common way to represent a Key Performance indicator (KPI) is by using a Gauge component for graphical representation or a Text component for digital representation. The following sections explain how to do this.
 

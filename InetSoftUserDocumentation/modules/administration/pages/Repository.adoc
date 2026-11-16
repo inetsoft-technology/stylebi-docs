@@ -64,9 +64,9 @@ image::Figure 18.png[alt="folder property tab with name and description fields"]
 +
 .Expand to view a list of parent permissions
 [%collapsible]
-=====
+====
 include::ROOT:partial$ParentPermissions.adoc[]
-=====
+====
 
 .. Press the btn:[Add] button to assign permissions to users, roles, or groups. See xref:SetRepositoryPermissions.adoc[].
 +

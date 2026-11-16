@@ -60,7 +60,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -74,6 +74,6 @@ var scale = coord.getXScale(); //<2>
 
 scale.setMin(dateAdd('yyyy',-10,CALC.today()));
 ----
-=====
+====
 
 

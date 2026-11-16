@@ -48,7 +48,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -67,4 +67,4 @@ var textspec = titlespec.getTextSpec(); //<2>
 
 textspec.setColor(java.awt.Color(0xff0000));
 ----
-=====
+====

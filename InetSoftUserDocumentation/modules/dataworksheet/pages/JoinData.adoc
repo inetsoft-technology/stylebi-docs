@@ -25,11 +25,11 @@ TIP: To construct a dataset from a single data source, consider using xref:Query
 .Watch Video: Create an Inner or Outer Join
 
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::300392678[vimeo,640,400]
-=====
+====
 
 A joined data block contains all the columns from the base data blocks, but retains only the rows that satisfy a set of join conditions. The join conditions are relations between pairs of columns from the base data blocks.
 
@@ -175,11 +175,11 @@ image::JoinedPreview.png[alt="preview of Query1 joined data block showing combin
 .Watch Video: Create a Cross Join
 
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::300389967[vimeo,640,400]
-=====
+====
 
 Data blocks that do not share the same data model or database table can be joined together with a cross join. A cross-joined data block contains the cross-product (Cartesian product) of the data in the base tables. This means that every row in the first table is paired together with every row in the second table. The length of the new joined data block is the product of the two base data block lengths.
 
@@ -247,11 +247,11 @@ Note that the ‘Query2’ data block returns the cross-product of the ‘custom
 .Watch Video: Create a Merge Join
 
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::300398343[vimeo,640,400]
-=====
+====
 
 A _merge join_ is a special type of join that creates no logical relationship between the two base data blocks. The base data blocks are simply merged horizontally into a single data block by collecting their columns together and placing corresponding rows side by side.
 
@@ -330,11 +330,11 @@ Then proceed to xref:#UsetheJoinEditor[] as explained above, or see  xref:#Chang
 .Watch Video: Change a Join
 
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::300385527[vimeo,640,400]
-=====
+====
 
 NOTE: You can change the join type for all joined data blocks *_except_* for merge-joins, because merge-joins do not define a relationship.
 

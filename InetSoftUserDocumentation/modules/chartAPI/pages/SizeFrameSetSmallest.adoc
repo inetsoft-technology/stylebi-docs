@@ -54,7 +54,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} and xref:GraphElementGetSizeFrame.adoc[] {circle2}  to obtain a handle to the desired xref:GraphElement.adoc[] and xref:SizeFrame.adoc[]. For example:
@@ -67,7 +67,7 @@ frame.setSmallest(10);
 frame.setLargest(50);
 frame.setMax(100);
 ----
-=====
+====
 
 
 [#Example2]

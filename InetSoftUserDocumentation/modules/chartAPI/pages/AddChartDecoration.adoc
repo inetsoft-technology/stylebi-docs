@@ -57,10 +57,10 @@ include::scriptexample:partial$AddChartDecoration2.js[]
 
 
 [NOTE]
-=====
+====
 To set properties for a Chart that has already been created in the Chart Editor, there is no need to create the xref:IntervalElement.adoc[]. In this case, a script such as the one below is sufficient:
 
 [source,javascript]
 include::scriptexample:partial$AddChartDecoration3.js[]
-=====
+====
 ****

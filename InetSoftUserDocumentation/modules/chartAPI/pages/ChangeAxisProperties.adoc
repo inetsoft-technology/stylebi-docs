@@ -111,7 +111,7 @@ graph.setScale('State',cscale);
 graph.addElement(elem);
 ----
 [NOTE]
-=====
+====
 To change properties on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetYScale2.adoc[] ②  to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object, xref:chartAPI:Scale.adoc[] object, and so on. For example:
 [source,javascript]
 ----
@@ -133,5 +133,5 @@ tspec.setFont(java.awt.Font('Dialog',java.awt.Font.BOLD, 14)); xspec.setTextSpec
 xspec.setAxisStyle(AxisSpec.AXIS_SINGLE2);
 xscale.setAxisSpec(xspec);
 ----
-=====
+====
 ****

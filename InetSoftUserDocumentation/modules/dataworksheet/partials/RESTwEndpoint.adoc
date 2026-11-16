@@ -13,9 +13,9 @@ include::dataworksheet:partial$jsonPathExample.adoc[]
 ****
 .Example: Expand Arrays…
 [%collapsible]
-=====
+====
 include::dataworksheet:partial$expandArrays.adoc[]
-=====
+====
 ****
 
 . *_Optional_*: Enter a '`Timeout`' in seconds to limit the query execution time.

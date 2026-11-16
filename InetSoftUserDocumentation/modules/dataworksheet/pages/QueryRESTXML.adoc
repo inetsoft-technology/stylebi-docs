@@ -34,9 +34,9 @@ image::user:dataSourceRESTXML4.png[alt="XPath expression field entered to filter
 ****
 .Example: Expand Arrays...
 [%collapsible]
-=====
+====
 include::dataworksheet:partial$expandArrays.adoc[]
-=====
+====
 ****
 
 . For ‘Request Type’, select ‘GET’ or ‘POST’.
