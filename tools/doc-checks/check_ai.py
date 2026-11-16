@@ -20,6 +20,8 @@ Findings, by category:
   long AI summary           summary is repeated in every chunk, so keep it short
   ifndef::ai closed wrong   ifndef::ai[] closed with endif::ai[] (downdoc drops the rest)
   include with lines/tag    include the converter cannot resolve
+  five-equals block         [TIP]/[NOTE]/[%collapsible]/[example] block delimited with =====
+                            where ==== would do (the converter only recognises ====)
 """
 import os
 import re
@@ -170,6 +172,40 @@ def ai_summary(text):
     return m.group(1).strip() if m else None
 
 
+def five_equals_blocks(text):
+    """Line numbers of `=====` blocks that should be `====`.
+
+    The assistant's converter (downdoc) only recognises `====` example blocks:
+    an admonition or [%collapsible] block delimited with `=====` keeps stray
+    `=====` lines and loses its TIP/NOTE label. AsciiDoc needs `=====` only
+    when the block holds, or sits inside, a `====` block, so those are allowed.
+    """
+    flagged = []
+    stack = []                   # [delimiter, line number, holds a ==== block]
+    verbatim = None
+    for n, line in enumerate(text.split("\n"), 1):
+        s = line.rstrip()
+        if verbatim:
+            if s == verbatim:
+                verbatim = None
+            continue
+        if s in NO_NEST:
+            verbatim = s
+            continue
+        if not re.fullmatch(r"={4,}", s):
+            continue
+        if stack and stack[-1][0] == s:
+            delim, start, holds4 = stack.pop()
+            if delim == "=====" and not holds4 and not any(x[0] == "====" for x in stack):
+                flagged.append(start)
+        else:
+            if s == "====":
+                for x in stack:
+                    x[2] = True
+            stack.append([s, n, False])
+    return flagged
+
+
 def conditional_problems(text):
     """ifndef::ai[] closed with endif::ai[] (downdoc then drops the rest of the file)."""
     stack = []
@@ -187,6 +223,13 @@ def conditional_problems(text):
         else:
             stack.append((kind, name))
     return bad
+
+
+def five_equals_message(lines):
+    where = ", ".join(str(n) for n in lines[:5]) + (", ..." if len(lines) > 5 else "")
+    return (f"{len(lines)} block(s) delimited with `=====` (line {where}). The assistant's converter "
+            "only recognises `====`, so the block keeps stray `=====` lines and loses its TIP/NOTE "
+            "label. Use `====` unless the block is nested inside another `====` block")
 
 
 def run(docs_root, product_root):
@@ -211,6 +254,9 @@ def run(docs_root, product_root):
             add(f"ifndef-endif:{rel}", rel,
                 "`ifndef::ai[]` is closed with `endif::ai[]`; close it with `endif::[]`",
                 "ifndef::ai closed wrong")
+        fives = five_equals_blocks(text)
+        if fives:
+            add(f"five-equals:{rel}", rel, five_equals_message(fives), "five-equals block")
 
     for mod in sorted(os.listdir(modules)):
         if mod in SKIP_MODULES:
@@ -240,6 +286,9 @@ def run(docs_root, product_root):
                     add(f"ifndef-endif:{rel}", rel,
                         "`ifndef::ai[]` is closed with `endif::ai[]`; close it with `endif::[]`",
                         "ifndef::ai closed wrong")
+                fives = five_equals_blocks(raw)
+                if fives:
+                    add(f"five-equals:{rel}", rel, five_equals_message(fives), "five-equals block")
                 summary = ai_summary(raw)
                 if summary is None:
                     add(f"no-summary:{rel}", rel, "no `ifdef::ai[]` summary block", "missing AI summary")
