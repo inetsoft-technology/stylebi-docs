@@ -13,22 +13,22 @@ The following sections explain how to add a Chart to your Dashboard.
 [.videotitle]
 .Watch Video: Creating a Chart
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988[vimeo,640,400]
-=====
+====
 
 == Understanding  Dimensions and Measures
 
 [.videotitle]
 .Watch Video: Creating a Chart (Dimensions and Measures)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16555681[vimeo,640,400]
-=====
+====
 
 A chart visualizes a _dataset_, which is a table containing rows and columns. Columns (also called fields) in the dataset are classified as either *_dimensions_* or *_measures_* in the Chart Editor.
 
@@ -56,11 +56,11 @@ See xref:EndUserChartControl.adoc[] for information about how to make the Ad Hoc
 [.videotitle]
 .Watch Video: Creating a Chart (Set the Chart Style)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16555884[vimeo,640,400]
-=====
+====
 
 +
 image::viewsheetExp37.png[alt="press Select Chart Style and choose a style"]
@@ -74,11 +74,11 @@ To create a stacked chart, enable the ‘Stack’ option at the bottom of the pa
 [.videotitle]
 .Watch Video: Creating a Chart (Group and Summarize)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16555701[vimeo,640,400]
-=====
+====
 
 
 +
@@ -100,11 +100,11 @@ TIP: If the Chart appears to be missing rows or values you expect,  check whethe
 [.videotitle]
 .Watch Video: Creating a Chart (Use Color, Shape, Size)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16555854[vimeo,640,400]
-=====
+====
 +
 image::addingChart3.png[alt="drag dimension to Color, Shape, Size, or Text region"]
 +
@@ -118,11 +118,11 @@ To change the color, shape, or size assignment, press the corresponding '`Edit C
 [.videotitle]
 .Watch Video: Creating a Chart (Change Dimension Color)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16556408[vimeo,640,400]
-=====
+====
 +
 image::EditColor.png[alt="press Edit Color to change dimension color"]
 
@@ -139,22 +139,22 @@ NOTE: An administrator can make custom shapes available by placing the image fil
 [.videotitle]
 .Watch Video: Creating a Chart (Group Without Format)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16556431[vimeo,640,400]
-=====
+====
 
 . *_Optional:_*  For a date dimension, press the {buttonEditDimension} next to the field name in the Chart Editor, and set the ‘Level’ to the desired date grouping. Then press the {buttonApply}.
 +
 [.videotitle]
 .Watch Video: Creating a Chart (Date Grouping)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16556440[vimeo,640,400]
-=====
+====
 +
 image::viewsheetExp34.png[alt="press Edit Dimension and set date grouping level"]
 +
@@ -174,11 +174,11 @@ TIP: {convertToMeasure}
 [.videotitle]
 .Watch Video: Creating a Chart (Show Values)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16555934[vimeo,640,400]
-=====
+====
 
 +
 image::addingChart5.png[alt="drag measure to Color, Shape, Size, or Text region"]
@@ -191,11 +191,11 @@ To change the color, shape, or size assignment, press the corresponding '`Edit C
 [.videotitle]
 .Watch Video: Creating a Chart (Change Measure Color)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16556423[vimeo,640,400]
-=====
+====
 +
 image::EditColor2.png[alt="press Edit Color to change measure color"]
 
@@ -208,11 +208,11 @@ image::EditColor2.png[alt="press Edit Color to change measure color"]
 [.videotitle]
 .Watch Video: Creating a Chart (Change Aggregation)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16556376[vimeo,640,400]
-=====
+====
 
 
 +
@@ -233,11 +233,11 @@ Use the ‘Trend and Comparison’ menu to perform calculations based on chart a
 [.videotitle]
 .Watch Video: Creating a Chart (Aggregate Without Format)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16556449[vimeo,640,400]
-=====
+====
 
 
 . {finishEditing}
@@ -248,11 +248,11 @@ To hide an axis, right-click the axis and select ‘Hide Axis’ from the contex
 [.videotitle]
 .Watch Video: Creating a Chart (Format Chart Labels)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16555943[vimeo,640,400]
-=====
+====
 
 To make other adjustments to an axis, right-click the axis and select ‘Axis Properties’ from the context menu. See xref:AxisProperties.adoc[] in xref:DashboardReference.adoc[] for more information about these axis settings.
 
@@ -302,11 +302,11 @@ Legend Position:: Sets the position of the legend on the plot. Legend position c
 [.videotitle]
 .Watch Video: Creating a Chart (Change Legend Position)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359085988#chapter=16555914[vimeo,640,400]
-=====
+====
 
 +
 image::Chart Legend Move.png[alt="drag legend to change legend position"]

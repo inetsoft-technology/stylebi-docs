@@ -44,7 +44,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -61,4 +61,4 @@ spec.setPartial(true);
 frame.setLegendSpec(spec);
 
 ----
-=====
+====

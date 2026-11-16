@@ -1,7 +1,7 @@
 ****
 .Example: JSON Path...
 [%collapsible]
-=====
+====
 Consider the data at https://jsonplaceholder.typicode.com/users.  The JSONPath string
 
  $.[*][?(@.id < 4)]
@@ -49,5 +49,5 @@ The first element (index `0`) is the metadata object, and the second element (in
  $.[1][*]
 
 This selects index `1` of the top-level array (the data records) and expands its elements into rows.
-=====
+====
 ****

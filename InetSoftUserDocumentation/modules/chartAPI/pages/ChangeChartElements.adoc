@@ -72,7 +72,7 @@ elem.setSizeFrame(sframe);
 graph.addElement(elem);
 ----
 [TIP]
-=====
+====
 To change the property on a Chart that was *previously created* with the Chart Editor, use the xref:chartAPI:EGraphGetElement.adoc[] method ① to obtain a handle to the desired Chart element. For example:
 [source,javascript]
 var elem = graph.getElement(0); <1>
@@ -81,7 +81,7 @@ cframe.setColor(java.awt.Color(0xff0000)); // red
 var sframe = new StaticSizeFrame();
 sframe.setSize(10);elem.setColorFrame(cframe);
 elem.setSizeFrame(sframe);
-=====
+====
 ****
 
 

@@ -50,7 +50,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:chartAPI:EGraphGetElement.adoc[] {circle1}, xref:chartAPI:GraphElementGetColorFrame.adoc[] {circle2}, and xref:chartAPI:VisualFrameGetScale.adoc[] {circle3} to obtain a handle to the desired xref:chartAPI:GraphElement.adoc[],  xref:chartAPI:ColorFrame.adoc[], and xref:chartAPI:Scale.adoc[]. For example:
 
@@ -64,6 +64,6 @@ var scale = frame.getScale(); //<3>
 scale.setMax(4000);
 scale.setMin(700);
 ----
-=====
+====
 
 

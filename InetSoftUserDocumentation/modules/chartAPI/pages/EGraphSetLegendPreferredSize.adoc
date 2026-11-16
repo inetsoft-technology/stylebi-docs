@@ -32,7 +32,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 To use the property on a Chart that was previously created with the Chart Editor, simply call the function. For example:
 
@@ -40,7 +40,7 @@ To use the property on a Chart that was previously created with the Chart Editor
 ----
 graph.setLegendPreferredSize(150);
 ----
-=====
+====
 
 
 

@@ -37,7 +37,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -47,4 +47,4 @@ To change the property on a Chart that was *previously created* with the Chart E
 ----
 include::scriptexample:partial$AxisSpecSetGridOnTop2.js[]
 ----
-=====
+====

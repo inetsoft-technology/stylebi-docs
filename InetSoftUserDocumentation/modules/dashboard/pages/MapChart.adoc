@@ -12,11 +12,11 @@ endif::ai[]
 [.videotitle]
 .Watch Video: Create a Custom Map (Create a Built-In Map)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::306605213#chapter=16520797[vimeo,640,400]
-=====
+====
 
 
 You can use maps to display data either based on regional information (country, state, city, etc.) or based on latitude and longitude.     For information on creating maps with user-defined regions, see xref:administration:CreateCustomMap.adoc[] in xref:administration:ManageServer.adoc[].

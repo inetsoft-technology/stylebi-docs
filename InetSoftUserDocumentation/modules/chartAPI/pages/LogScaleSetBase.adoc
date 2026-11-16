@@ -42,7 +42,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ① and  xref:chartAPI:RectCoordGetYScale.adoc[]  to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object and xref:chartAPI:Scale.adoc[] object. For example:
 
 [source,javascript]
@@ -53,6 +53,6 @@ var scale = coord.getYScale(); //<2>
 
 scale.setBase(2);
 ----
-=====
+====
 
 

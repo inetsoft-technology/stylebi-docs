@@ -52,7 +52,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ①   to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object. For example:
 
 [source,javascript]
@@ -64,7 +64,7 @@ polar.rotate(90);
 polar.setHoleRatio(.25);
 graph.setCoordinate(polar);
 ----
-=====
+====
 
 
 

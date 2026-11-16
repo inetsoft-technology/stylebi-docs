@@ -38,7 +38,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -56,4 +56,4 @@ var textspec = spec.getTextSpec(); //<4>
 
 textspec.setRotation(45);
 ----
-=====
+====

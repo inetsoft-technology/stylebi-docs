@@ -42,7 +42,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
@@ -52,4 +52,4 @@ var frame = new StarShapeFrame();
 frame.setFields(["m1", "m2", "m3"]);
 elem.setShapeFrame(frame);
 ----
-=====
+====

@@ -43,7 +43,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 To change the property on a Chart that was previously created with the Chart Editor, you do not need to add a Chart element. For example:
 
 [source,javascript]
@@ -55,5 +55,5 @@ rect.setColor(java.awt.Color(0xff0000));
 graph.addForm(rect);
 
 ----
-=====
+====
 

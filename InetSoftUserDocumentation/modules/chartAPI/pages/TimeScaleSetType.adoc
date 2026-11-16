@@ -54,7 +54,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ① and xref:chartAPI:RectCoordGetXScale.adoc[] ② to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object and xref:chartAPI:Scale.adoc[] object. For example:
 
@@ -66,6 +66,6 @@ var scale = coord.getXScale(); //<2>
 
 scale.setType(TimeScale.YEAR);
 ----
-=====
+====
 
 

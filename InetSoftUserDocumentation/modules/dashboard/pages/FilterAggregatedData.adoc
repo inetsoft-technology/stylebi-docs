@@ -41,11 +41,11 @@ This Range Slider will now filter the post-aggregate values in the selected Char
 [.videotitle]
 .Watch Video: Filtering a Dashboard (Post-Aggregate Filter)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359331010#chapter=16567165[vimeo,640,400]
-=====
+====
 
 
 The easiest way to filter a Table or Chart is by using Filter components. (See xref:FilterDashboard.adoc[] for more information.) However, if the  Dashboard  includes a xref:AddFilterComponents.adoc#UseSelectionContainer[Selection Container], a user can also filter by using the right-click ‘Filter’ option. To do this, see the sections  below:

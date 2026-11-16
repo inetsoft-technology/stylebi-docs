@@ -33,11 +33,11 @@ Because Freehand Tables  are usually very similar to Crosstab Tables, it is easi
 [.videotitle]
 .Watch Video: Add Formulas to  Table (Convert to Freehand Table)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::306617295#chapter=16540130[vimeo,640,400]
-=====
+====
 
 
 You can create a Freehand Table by converting a Table or Crosstab. (This conversion cannot be reversed.) Follow the steps below:
@@ -67,11 +67,11 @@ image::ConvertToFreehand2.png[alt="press Edit to open freehand table editor"]
 [.videotitle]
 .Watch Video: Add Formulas to a Table (Create New Freehand Table)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::306617295#chapter=16541283[vimeo,640,400]
-=====
+====
 
 To create a new Freehand Table, follow the steps below:
 
@@ -179,11 +179,11 @@ Select the aggregation method. If you select a bivariate aggregation measure (e.
 [.videotitle]
 .Watch Video: Add Formulas to a Table (Set Aggregation)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::306617295#chapter=16540190[vimeo,640,400]
-=====
+====
 
 . Press btn:[OK].
 
@@ -194,11 +194,11 @@ video::306617295#chapter=16540190[vimeo,640,400]
 [.videotitle]
 .Watch Video: Add Formulas to a Table (Set Cell Expansion)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::306617295#chapter=16540189[vimeo,640,400]
-=====
+====
 +
 image::Freehand Table Binding New2.png[alt="select expand cell and set expansion direction"]
 +
@@ -218,11 +218,11 @@ image::FreehandTableColumnGroup.png[alt="assign grouping dimension from row grou
 [.videotitle]
 .Watch Video: Add Formulas to a Table
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::306617295#chapter=16541286[vimeo,640,400]
-=====
+====
 +
 image::Freehand Table Formula1.png[alt="press Edit button to open script editor"]
 +
@@ -232,11 +232,11 @@ image::Freehand Table Formula1.png[alt="press Edit button to open script editor"
 [.videotitle]
 .Watch Video: Add Formulas to a Table (Reference Table Values)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::306617295#chapter=16541385[vimeo,640,400]
-=====
+====
 
 
 Refer to the value in a cell of the table by using syntax `$cell_name`, where _cell_name_ is the name assigned in the ‘Cell Name’ field for the cell being referenced.
@@ -268,11 +268,11 @@ See the following sections for more information on how to reference data within 
 [.videotitle]
 .Watch Video: Add Formulas to a Table (Add Rows or Columns)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::306617295#chapter=16540156[vimeo,640,400]
-=====
+====
 
 
 +
@@ -287,11 +287,11 @@ To *combine* multiple cells into a single cell, {buttonCtrl}-click to select the
 [.videotitle]
 .Watch Video: Add Formulas to a Table (Set Date Format)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::306617295#chapter=16541209[vimeo,640,400]
-=====
+====
 
 . {finishEditing}
 

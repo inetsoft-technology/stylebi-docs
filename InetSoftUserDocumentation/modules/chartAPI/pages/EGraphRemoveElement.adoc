@@ -47,7 +47,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -57,6 +57,6 @@ To use the property on a Chart that was previously created with the Chart Editor
 ----
 graph.removeElement(0);
 ----
-=====
+====
 
 

@@ -38,7 +38,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -53,4 +53,4 @@ var spec = scale.getAxisSpec(); <3>
 
 spec.setTickVisible(false);
 ----
-=====
+====

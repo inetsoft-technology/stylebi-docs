@@ -34,7 +34,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 To change the property on a Chart that was *previously created* with the Chart Editor, use  xref:chartAPI:EGraphGetCoordinate.adoc[] ① to obtain a handle to the desired xref:chartAPI:Coordinate.adoc[] object. For example:
@@ -45,4 +45,4 @@ var coord = graph.getCoordinate(); //<1>
 coord.transpose();
 
 ----
-=====
+====
