@@ -23,28 +23,28 @@ To add a small note indicating that the lowest value was due to an inventory pro
 . Create a new xref:LineForm.adoc[] object, and specify location values to point at the ‘CT’ bar.
 +
 [source,javascript]
-include::scriptexample:partial$AddChartDecoration2.js[lines=4..6]
+include::scriptexample:partial$AddChartDecoration2a.js[]
 
 . Set the line color to red, and draw an arrow at the end.
 +
 [source,javascript]
-include::scriptexample:partial$AddChartDecoration2.js[lines=7..8]
+include::scriptexample:partial$AddChartDecoration2b.js[]
 
 . Create a new xref:LabelForm.adoc[] object, and specify location values to position it above the ‘CT’ bar.
 +
 [source,javascript]
-include::scriptexample:partial$AddChartDecoration2.js[lines=9..10]
+include::scriptexample:partial$AddChartDecoration2c.js[]
 
 . Set the label contents, set the text color to red, and center-align. To set the text color, create a new xref:TextSpec.adoc[] object and assign it to the `LabelForm`.
 +
 [source,javascript]
-include::scriptexample:partial$AddChartDecoration2.js[lines=11..15]
+include::scriptexample:partial$AddChartDecoration2d.js[]
 
 
 . Assign the `LineForm` and `LabelForm` objects to the Chart's xref:EGraph.adoc[] object.
 +
 [source,javascript]
-include::scriptexample:partial$AddChartDecoration2.js[lines=16..17]
+include::scriptexample:partial$AddChartDecoration2e.js[]
 
 +
 image::commonscript:DecorativeElementExample2.png[alt="bar chart with annotation arrow and label"]
