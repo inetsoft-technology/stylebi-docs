@@ -10,6 +10,6 @@ starting with:: For numeric and string data, true when the column value begins w
 contains:: For numeric and string data, true when the column value contains the exact sequence of specified numerals or characters.
 in range:: For date fields, true when the column value (date) falls within the specified date range criterion.
 +
-====
+=====
 include::ROOT:partial$dateRanges.adoc[]
-====
+=====
