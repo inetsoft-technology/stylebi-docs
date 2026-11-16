@@ -4,12 +4,14 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to configure and manage materialized views (also called query cache, pre-aggregated data, performance cache, or cached query) in Enterprise Manager, which pre-aggregate Dashboard data in a cache to dramatically improve query performance for end users.
+Summary: How to configure and manage materialized views (also called query cache, pre-aggregated data, performance cache, or cached query) in Enterprise Manager, which pre-aggregate Dashboard data in a cache to dramatically improve query performance for end users. When a Dashboard uses a materialized view, a "not equal to" condition also drops rows with an empty string, because a materialized view stores empty strings and nulls as the same value; without a materialized view those rows are returned.
 endif::ai[]
 
 A materialized view is a caching strategy that pre-aggregates and stores the data required by a Dashboard or Data Worksheet. When a Dashboard has a materialized view,  the Dashboard  will attempt to query the cached materialized view rather than the database. This can significantly reduce the run time for certain queries, and greatly improve performance for the end-user.
 
 Dashboards that are configured to use a materialized view will rely on this materialized view to supply their data.  If no materialized view is found, the Dashboard will either query the database directly or automatically trigger the creation of a materialized view. Use the ‘Enable MV On-demand’ option in xref:#MaterializedViewOptions[] to enable the latter behavior.
+
+NOTE: A materialized view stores an empty string and a null value as the same value. When a Dashboard uses a materialized view, an `[is not][equal to]` condition therefore also excludes the rows where the value is an empty string. Without a materialized view, these rows are returned.
 
 [#CreateMaterializedView]
 == Create a Materialized View

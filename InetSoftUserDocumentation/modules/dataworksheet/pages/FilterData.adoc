@@ -4,7 +4,7 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: How to filter data in a Data Worksheet in Visual Composer. Filtering is done by selecting an existing data block and pressing the Define Condition button — there is no separate "filter data block" or "filter object"; the condition is added directly to the data block. Conditions are also called query filters, row filters, or WHERE clauses. Covers pre-aggregate and post-aggregate conditions, ranking (top-N/bottom-N) filters, dynamic conditions using variables, session data, field comparisons, expressions, and subqueries, plus materialized view update conditions. Not to be confused with: FilterDashboard.adoc, which covers user-controlled filter UI components (Selection Lists, Range Sliders, Calendars) that appear on a Dashboard.
+Summary: How to filter data in a Data Worksheet in Visual Composer. Filtering is done by selecting an existing data block and pressing the Define Condition button — there is no separate "filter data block" or "filter object"; the condition is added directly to the data block. Conditions are also called query filters, row filters, or WHERE clauses. Covers pre-aggregate and post-aggregate conditions, ranking (top-N/bottom-N) filters, dynamic conditions using variables, session data, field comparisons, expressions, and subqueries, plus materialized view update conditions. Not to be confused with: FilterDashboard.adoc, which covers user-controlled filter UI components (Selection Lists, Range Sliders, Calendars) that appear on a Dashboard. A "not equal to" condition (the Is Not operator with Equal To) does not return rows where the value is null, the same as the other negated operators and as a condition run by a database; rows with an empty string are still returned. To keep null rows, combine it with an "or" clause using Is Null. Highlight and chart color conditions are not affected.
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
@@ -64,6 +64,8 @@ include::ROOT:partial$filterOperators.adoc[]
 image::filtering3.png[alt=”specify pre-aggregate condition using menus in the Condition panel”]
 +
 include::ROOT:partial$caseSensitivityTip.adoc[]
++
+include::ROOT:partial$notEqualNullNote.adoc[]
 +
 If the condition you specify references data model attributes that do not already exist in the data block, these attributes are automatically added to the data block as hidden columns.
 
@@ -176,6 +178,8 @@ include::ROOT:partial$filterOperators.adoc[]
 image::filtering4.png[alt="specify post-aggregate condition using menus in the Condition panel"]
 +
 include::ROOT:partial$caseSensitivityTip.adoc[]
++
+include::ROOT:partial$notEqualNullNote.adoc[]
 
 . Press btn:[Append] to add the condition.
 . *_Optional:_* To create a compound condition, repeat the above steps to specify another condition clause, select ‘and’ or ‘or’, and press btn:[Insert]. This adds the additional clause into the composite condition.  See below.
