@@ -63,7 +63,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 To change the property on a Chart that was previously created with the Chart Editor, you do not need to add a Chart element. For example:
 
 [source,javascript]
@@ -85,5 +85,5 @@ graph.addForm(shape2);
 
 
 ----
-=====
+====
 

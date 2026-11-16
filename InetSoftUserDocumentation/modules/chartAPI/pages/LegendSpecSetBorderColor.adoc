@@ -50,7 +50,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -67,4 +67,4 @@ spec.setBorderColor(java.awt.Color(0xff00ff));
 frame.setLegendSpec(spec);
 
 ----
-=====
+====

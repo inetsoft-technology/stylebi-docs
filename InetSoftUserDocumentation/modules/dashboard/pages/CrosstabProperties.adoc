@@ -37,11 +37,11 @@ include::partial$CrosstabAdvancedProperties.adoc[]
 [.videotitle]
 .Watch Video: Grouping Data in a Dashboard (Add Hierarchy to Crosstab)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359390270#chapter=16508711[vimeo,640,400]
-=====
+====
 
 The *Hierarchy* tab in the ‘Crosstab Properties’ panel allows you to specify the hierarchy for a custom drill-down. The procedure for this is the same as that for a Chart. See xref:ChartProperties.adoc[] for details. For information on how to navigate a crosstab with drill-downs, see xref:DrillDownIntoData.adoc[].
 

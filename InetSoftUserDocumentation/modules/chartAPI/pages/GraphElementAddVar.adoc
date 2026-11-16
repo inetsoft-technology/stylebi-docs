@@ -40,7 +40,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -52,6 +52,6 @@ To change the property on a Chart that was *previously created* with the Chart E
 var elem = graph.getElement(0); //<1>
 elem.addVar("Total");
 ----
-=====
+====
 
 

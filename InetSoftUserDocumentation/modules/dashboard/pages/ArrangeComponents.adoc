@@ -11,11 +11,11 @@ endif::ai[]
 [.videotitle]
 .Watch Video: Creating a Dashboard (Position Components)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359874333#chapter=16573244[vimeo,640,400]
-=====
+====
 
 Because screen real estate is limited, it is often important to organize Dashboard components for maximum efficiency. There are a variety of ways that you can efficiently arrange components and combine multiple components to conserve screen real estate.
 
@@ -31,11 +31,11 @@ include::dashboard:partial$selectComponents.adoc[]
 [.videotitle]
 .Watch Video: Creating a Dashboard (Snap Objects)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359874333#chapter=16573229[vimeo,640,400]
-=====
+====
 
 When moving components on the Dashboard, you can choose to snap components to the *grid* or to other *components*.  Press the {buttonSnapping} in the toolbar and select '`Snap to Grid`' or '`Snap to Objects`', or both.  You can adjust the grid snapping interval using  the '`Grid Height`' property in the '`Options`' dialog box.  See xref:DashboardOptions.adoc[] for more information.
 

@@ -17,11 +17,11 @@ Instead of creating a data block from database tables or data model fields (see 
 [.videotitle]
 .Watch Video:  Enter Embedded Data
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::299093804[vimeo,640,400]
-=====
+====
 
 include::ROOT:partial$createVisualizationClose.adoc[]
 To create a new Embedded Table, follow the steps below:
@@ -98,11 +98,11 @@ To *remove an existing row* from an Embedded Table, follow these steps:
 [.videotitle]
 .Watch Video: Convert  to Embedded Table
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::299081891[vimeo,640,400]
-=====
+====
 
 To convert a regular data block to an Embedded Table, right-click the title bar of the data block, and select ‘Convert to Embedded Table’. {rightClickOptions}
 
@@ -177,11 +177,11 @@ A user can modify the values in an Embedded Table (or the value of a Variable) i
 [.videotitle]
 .Watch Video: Update Embedded Data from Dashboard
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::300402540[vimeo,640,400]
-=====
+====
 
 To configure a Dashboard *Form component* to control  a Data Worksheet Embedded Table (or Variable), follow these steps:
 

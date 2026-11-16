@@ -14,11 +14,11 @@ The following sections explain how to add a  Crosstab, which allows you to displ
 .Watch Video: Grouping Data in a Dashboard (Add a Crosstab)
 
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359390270#chapter=16506257[vimeo,640,400]
-=====
+====
 
 == Add a Crosstab
 
@@ -69,11 +69,11 @@ TIP: If you want to use a single Form component (e.g., ComboBox) to dynamically 
 [.videotitle]
 .Watch Video: Grouping Data in a Dashboard (Sort and Rank)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359390270#chapter=16506274[vimeo,640,400]
-=====
+====
 
 .. Press the {buttonEditDimension} next to a row header or column header.
 +
@@ -90,11 +90,11 @@ image::Manual Ordering Dialog.png[alt="manual ordering dialog box"]
 .Watch Video: Grouping Data in a Dashboard (Set Date Grouping Level)
 
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359390270#chapter=16505740[vimeo,640,400]
-=====
+====
 +
 TIP: To group dates using a *fiscal calendar*, create Calculated Fields  for the desired date ranges (fiscal week, month, etc.) by using the corresponding fiscal functions, such as xref:commonscript:CALC_fiscalweek.adoc[CALC_fiscalweek] and xref:commonscript:CALC_fiscalmonth.adoc[CALC_fiscalmonth], and then use those Calculated Fields in the ‘Columns’ and ‘Rows’ regions of the Crosstab.  See  xref:dataworksheet:CreateNewDataField.adoc#CreateCalcField[Create a Calculated Field in a Dashboard] for more details.
 
@@ -115,11 +115,11 @@ Select ‘Group all others together’ to create an “Others” category which 
 [.videotitle]
 .Watch Video: Grouping Data in a Dashboard (Aggregate in Crosstab)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359390270#chapter=16506565[vimeo,640,400]
-=====
+====
 +
 image::Crosstab Measure Options_1.png[alt="press Edit Measure and select aggregate method"]
 +
@@ -146,11 +146,11 @@ NOTE: Named groups cannot be defined for date fields.
 [.videotitle]
 .Watch Video: Grouping Data in a Dashboard (Combine Groups in Crosstab)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359390270#chapter=16508525[vimeo,640,400]
-=====
+====
 
 .. Hold the {buttonCtrl} and click to select the individual crosstab header labels (from the same heading level) that you want to combine into a single group.
 

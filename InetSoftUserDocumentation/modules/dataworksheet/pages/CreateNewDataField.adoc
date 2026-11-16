@@ -16,11 +16,11 @@ You can create a new data field with one of the following two approaches.
 .Watch Video: Create a New Data Field in a Data Block
 
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::299108619[vimeo,640,400]
-=====
+====
 
 An *expression column* is a data set column that you define using either JavaScript or SQL (for SQL data sources). The expression is evaluated for each row of the data set. (You can use the `row` keyword to access the current row number within the expression.) Creating an expression column in a Data Worksheet allows you to reference the field in any  Dashboard that uses the Data Worksheet. SQL expressions can often also be executed more efficiently  (for SQL data sources) than JavaScript expressions.
 
@@ -76,11 +76,11 @@ include::ROOT:partial$CreateDashboard.adoc[]
 .Watch Video: Add a New Data Field to a Dashboard
 
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::298164978[vimeo,640,400]
-=====
+====
 
 If your data source does not provide data in the correct form for display on the Dashboard, use a *calculated field* to create the desired data field. Unlike the expression column described above, a calculated field is available only to the Dashboard in which defined, and it can operate both on detail data and on data that is being aggregated within the Dashboard (for example, in charts and crosstabs).
 

@@ -38,11 +38,11 @@ image::commonscript:AxisSpecSetFacetGrid.png[alt="facet chart with outer border 
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]
-=====
+====
 To change the property on a Chart that was *previously created* with the Chart Editor, use xref:chartAPI:EGraphGetCoordinate.adoc[] ① to obtain a handle to the xref:chartAPI:FacetCoord.adoc[] object. For example:
 
 [source,javascript]
 ----
 include::scriptexample:partial$FacetCoordSetFacetGrid2.js[]
 ----
-=====
+====

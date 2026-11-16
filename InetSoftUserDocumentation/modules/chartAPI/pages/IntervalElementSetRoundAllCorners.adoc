@@ -36,7 +36,7 @@ image::commonscript:IntervalElementSetRoundAllCorners.png[alt="bar chart with al
 include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 [TIP]
-=====
+====
 To change the property on a Chart that was *previously created* with the Chart Editor, use xref:EGraphGetElement.adoc[] to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
@@ -46,4 +46,4 @@ elem.setCornerRadius(0.5);
 elem.setRoundAllCorners(true);
 ----
 
-=====
+====

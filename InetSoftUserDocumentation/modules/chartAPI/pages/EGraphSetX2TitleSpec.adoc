@@ -44,7 +44,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 To change the property on a Chart that was previously created with the Chart Editor, use xref:chartAPI:EGraphGetX2TitleSpec.adoc[] ① to get a handle to the `TitleSpec` object. For example:
 
@@ -55,7 +55,7 @@ var spec = graph.getX2TitleSpec(); <1>
 spec.setLabel("X Title");
 
 ----
-=====
+====
 
 
 

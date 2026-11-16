@@ -46,7 +46,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 To change the property on a Chart that was previously created with the Chart Editor, simply add the xref:chartAPI:GraphForm.adoc[] ① to the chart without defining a new Chart element.
 
 
@@ -61,6 +61,6 @@ form.addPoint(new java.awt.Point(200,100));
 form.setFill(true);
 graph.addForm(form); <1>
 ----
-=====
+====
 
 

@@ -65,7 +65,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -84,4 +84,4 @@ frame.setLegendSpec(spec);
 graph.setLegendLayout(Chart.IN_PLACE);
 
 ----
-=====
+====

@@ -136,7 +136,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 
 
@@ -154,4 +154,4 @@ var textspec = spec.getTextSpec(); //<4>
 textspec.setFormat(java.text.DecimalFormat("##,###.00"));
 
 ----
-=====
+====

@@ -59,7 +59,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} and xref:GraphElementGetTextureFrame.adoc[] {circle2} to obtain a handle to the desired xref:GraphElement.adoc[] and xref:TextureFrame.adoc[]  objects. For example:
 
@@ -69,7 +69,7 @@ var elem = graph.getElement(0); //<1>
 var frame = elem.getTextureFrame(); //<2>
 frame.setTexture(GTexture.PATTERN_18);
 ----
-=====
+====
 
 
 
