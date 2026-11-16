@@ -62,7 +62,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
@@ -83,7 +83,7 @@ coord.setYScale(qscale);
 coord.setYScale2(qscale2);
 graph.setCoordinate(coord);
 ----
-=====
+====
 
 
 [#Example2]

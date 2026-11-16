@@ -54,7 +54,7 @@ include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
 
 
 [TIP]
-=====
+====
 To change the property on a Chart that was *previously created* with the Chart Editor, use “getter” methods such as xref:EGraphGetElement.adoc[] {circle1} to obtain a handle to the desired xref:GraphElement.adoc[] object. For example:
 
 [source,javascript]
@@ -62,4 +62,4 @@ To change the property on a Chart that was *previously created* with the Chart E
 var elem = graph.getElement(0); //<1>
 elem.setHints({shine:"true", alpha:"0.5"});
 ----
-=====
+====

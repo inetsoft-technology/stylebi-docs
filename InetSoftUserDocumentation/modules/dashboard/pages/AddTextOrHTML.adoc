@@ -11,11 +11,11 @@ endif::ai[]
 [.videotitle]
 .Watch Video: Creating a Dashboard (Add Text)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359874333#chapter=16573525[vimeo,640,400]
-=====
+====
 
 You can add text, such as titles or descriptions, to any region of a Dashboard.   Text is also commonly used to add  descriptive labels or titles for components that have no built-in title, such as Range Slider (see xref:RangeSliderProperties.adoc[]) and  Gauge (see xref:GaugeProperties.adoc[]). Text can contain UTF-8 (unicode) characters as well as HTML markup.
 
@@ -45,11 +45,11 @@ The *optional* second parameter specifies the format type (e.g., `number`), and 
 [.videotitle]
 .Watch Video: Creating a Dashboard (Format Text)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359874333#chapter=16573561[vimeo,640,400]
-=====
+====
 
 +
 image::textComponentAggregateExp2.png[alt="style text using format tab"]

@@ -17,11 +17,11 @@ There are two difference ways that users can make modifications to charts: By us
 [.videotitle]
 .Watch Video: Filtering a Dashboard (User-Dessdigned Filter)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359331010#chapter=16567124[vimeo,640,400]
-=====
+====
 
 
 Users can access an Ad Hoc Chart Editor that gives them complete flexibility to  edit charts. The Editor is the same as the Chart Editor available to designers. See xref:AddAChart.adoc[] for more information about using the Editor.
@@ -43,11 +43,11 @@ If this option is not selected, users will not have access to the Chart Editor. 
 [.videotitle]
 .Watch Video: Grouping Data in a Dashboard (User-Controlled Chart Measure)
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::359390270#chapter=16517185[vimeo,640,400]
-=====
+====
 
 
 You can allow a user to modify a chart using dynamic properties. To do this, use Form components to set chart properties by choosing the ‘Variable’ or Expression’ option in the {buttonChangeValueType}. See xref:DynamicallySetProperties.adoc[] for more information.

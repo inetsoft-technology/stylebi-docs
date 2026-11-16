@@ -10,11 +10,11 @@ include::ROOT:partial$rightClickOptions.adoc[]
 [.videotitle]
 .Watch Video: Import Data
 [%collapsible]
-=====
+====
 include::ROOT:partial$videoVersion.adoc[]
 
 video::300375356[vimeo,640,400]
-=====
+====
 
 In most cases, data sources will already be configured for you by an administrator. However, you can also import a plain text file, CSV file, or Excel file into a Data Worksheet. Follow the steps below to import a file into a Data Worksheet.
 
