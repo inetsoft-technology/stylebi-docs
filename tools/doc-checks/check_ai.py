@@ -179,6 +179,8 @@ def five_equals_blocks(text):
     an admonition or [%collapsible] block delimited with `=====` keeps stray
     `=====` lines and loses its TIP/NOTE label. AsciiDoc needs `=====` only
     when the block holds, or sits inside, a `====` block, so those are allowed.
+    The check runs on the page with its partials included, because a partial's
+    block can sit inside a `====` block of the page that includes it.
     """
     flagged = []
     stack = []                   # [delimiter, line number, holds a ==== block]
@@ -226,8 +228,9 @@ def conditional_problems(text):
 
 
 def five_equals_message(lines):
+    # Line numbers are in the page text with its partials included.
     where = ", ".join(str(n) for n in lines[:5]) + (", ..." if len(lines) > 5 else "")
-    return (f"{len(lines)} block(s) delimited with `=====` (line {where}). The assistant's converter "
+    return (f"{len(lines)} block(s) delimited with `=====` (line {where} of the page with its partials included). The assistant's converter "
             "only recognises `====`, so the block keeps stray `=====` lines and loses its TIP/NOTE "
             "label. Use `====` unless the block is nested inside another `====` block")
 
@@ -254,9 +257,6 @@ def run(docs_root, product_root):
             add(f"ifndef-endif:{rel}", rel,
                 "`ifndef::ai[]` is closed with `endif::ai[]`; close it with `endif::[]`",
                 "ifndef::ai closed wrong")
-        fives = five_equals_blocks(text)
-        if fives:
-            add(f"five-equals:{rel}", rel, five_equals_message(fives), "five-equals block")
 
     for mod in sorted(os.listdir(modules)):
         if mod in SKIP_MODULES:
@@ -286,7 +286,7 @@ def run(docs_root, product_root):
                     add(f"ifndef-endif:{rel}", rel,
                         "`ifndef::ai[]` is closed with `endif::ai[]`; close it with `endif::[]`",
                         "ifndef::ai closed wrong")
-                fives = five_equals_blocks(raw)
+                fives = five_equals_blocks(expand(raw, mod, partials, ai=False, used=set()))
                 if fives:
                     add(f"five-equals:{rel}", rel, five_equals_message(fives), "five-equals block")
                 summary = ai_summary(raw)
