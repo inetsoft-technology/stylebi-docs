@@ -68,7 +68,14 @@ image::wizard3.png[alt="suggested visualizations in top panel"]
 . Select the desired visualization, and set the desired options.
 +
 NOTE: The Wizard does not display all Chart types available in StyleBI.  To view the full menu of Charts, press the {buttonFullEditor} and then proceed to xref:AddAChart.adoc[].
+ifdef::ai[]
+
+=== Wizard: Chart visualization
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 .Chart Visualization...
 [%collapsible]
 ====
@@ -98,7 +105,14 @@ image::wizard8.png[alt=”press Format to select field format”]
 +
 NOTE: After you make modifications to the chart using the full Chart Editor, you should press the {buttonFinish} in the top toolbar. You can also return to the Wizard by pressing the {buttonToWizard}, but you will lose any changes that you made in the Chart Editor.
 ====
+ifdef::ai[]
+
+=== Wizard: Crosstab visualization
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 .Crosstab Visualization...
 [%collapsible]
 ====
@@ -128,7 +142,14 @@ image::wizard9.png[alt=”press Sort on column header”]
 +
 NOTE: After you make modifications to the crosstab using the full Crosstab Editor, you should press the {buttonFinish} in the top toolbar. You can also return to the Wizard by pressing the {buttonToWizard}, but you will lose any changes that you made in the Crosstab Editor.
 ====
+ifdef::ai[]
+
+=== Wizard: Table visualization
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 .Table Visualization...
 [%collapsible]
 ====
@@ -149,7 +170,14 @@ image::wizard11.png[alt=”press Format to select field format”]
 +
 NOTE: After you make modifications to the crosstab using the full Table Editor, you should press the {buttonFinish} in the top toolbar. You can also return to the Wizard by pressing the {buttonToWizard}, but you will lose any changes that you made in the Table Editor.
 ====
+ifdef::ai[]
+
+=== Wizard: Gauge visualization
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 .Gauge Visualization...
 [%collapsible]
 ====
@@ -173,7 +201,14 @@ image::wizard14.png[alt=”press Format to select field format”]
 
 .. *_Optional:_* You can  make more detailed adjustments to the Gauge  after you exit the Wizard.  (See xref:AddAKPI.adoc[] and xref:GaugeProperties.adoc[] for more information about Gauges.)
 ====
+ifdef::ai[]
+
+=== Wizard: Filter visualization
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 .Filter Visualization...
 [%collapsible]
 ====
@@ -199,7 +234,14 @@ image::wizard17.png[alt=”press Format to select field format”]
 
 .. *_Optional:_* You can  make more detailed adjustments to the Filter  after you exit the Wizard.  (See xref:AddFilterComponents.adoc[], xref:SelectionListProperties.adoc[], xref:SelectionTreeProperties.adoc[], and xref:RangeSliderProperties.adoc[] for more information about Filter components.)
 ====
+ifdef::ai[]
+
+=== Wizard: Text visualization
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 .Text Visualization...
 [%collapsible]
 ====
@@ -220,6 +262,12 @@ image::wizard14.png[alt=”press Format to select field format”]
 .. *_Optional:_* You can  make more detailed adjustments to the Text  after you exit the Wizard.  (See xref:AddAKPI.adoc[] and xref:TextProperties.adoc[] more information about Text components.)
 ====
 
+ifdef::ai[]
+
+=== Wizard: Finish and add more components
+
+[start=5]
+endif::ai[]
 . Press the {buttonFinish} in the top toolbar to open the layout view, where you can add more components.
 
 . To add an additional component, move the pointer to the location where you want to insert the component, and press the large {buttonAddButton}.
