@@ -115,7 +115,7 @@ See xref:dashboardscript:DashboardObjectReference.adoc[] and xref:commonscript:U
 A script attached to a Dashboard component is evaluated whenever the component is refreshed, such as upon Dashboard loading and user interactions. The script can change various properties of the component, including its visibility. Properties set in script override  properties set (either statically or via expression script) in the component ‘Properties’ dialog box.
 
 
-TIP: A component's script can access other components`' properties as well. However, it is *not* good practice to modify the properties of one component from within the script of another component, as the evaluation order is dependent on component positioning.
+TIP: A component's script can access other components’ properties as well. However, it is *not* good practice to modify the properties of one component from within the script of another component, as the evaluation order is dependent on component positioning.
 
 
 The following sections explain how to add component script, and illustrate some common uses.
