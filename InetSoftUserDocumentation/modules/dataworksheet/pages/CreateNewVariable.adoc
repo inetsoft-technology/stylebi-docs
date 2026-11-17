@@ -123,7 +123,7 @@ image::DragStateWorksheet.png[alt="State variable dragged from left panel into t
 . Select the ‘Sales1’ data block, and press the {buttonDefineCondition} in the bottom panel to open the ‘Condition’ dialog box.
 . Press the btn:[More] button to add a new condition.
 . Create the condition `[State] [is] [equal to]`.
-. Press the {buttonChangeValueType} and select ‘Variable`'.
+. Press the {buttonChangeValueType} and select ‘Variable’.
 +
 image::SwitchtoVariableCondition.png[alt="press Change Value Type button and select Variable in condition panel"]
 . From the ‘Variable Name’ menu, select ‘state’.
