@@ -523,6 +523,7 @@ image::SubQueryDialog.png[alt="Subquery dialog box with subquery in column and t
 .How to use the menus to create different kinds of subqueries...
 [%collapsible]
 ====
+****
 You do not need to specify every setting in the ‘Subquery’ dialog box. The required menu choices depend on how you wish to use the subquery result set. This section explains three different ways that you can use a subquery.
 
 Subquery Returns a Fixed Value:: If the subquery returns a single fixed value (i.e., the subquery data block in the Data Worksheet contains a single data cell), then in the ‘Subquery’ dialog box you only need to specify the _name_ of the subquery. No further settings are required.
@@ -540,12 +541,14 @@ To configure a row-dependent subquery, follow these steps:
 . From the ‘Current table column’ menu, select the column in the _filtered data block_ that contains the indexing values corresponding to those in the ‘Subquery column’ of the subquery data block. (In the example above, the ‘Current table column’ would be the ‘year’ column of the NY data block, since this is the column that corresponds to the CA ‘year’ column.)
 +
 The ‘Subquery column’ and ‘Current table column’ link the subquery data block and filtered data block. For each row in filtered data block, the value in the ‘Current table column’ is matched against the values in the ‘Subquery column’. The results returned by the subquery for each row are the values of the condition ‘In column’ in the rows where the ‘Subquery column’ value is matched. See the xref:exampleRowDependent[] example below.
+****
 ====
 +
 [id=exampleFixedList]
 .Example: Subquery returns a fixed list
 [%collapsible]
 ====
+****
 Assume that you have a data block returning companies that purchased a ‘Wireless Mouse’ product, and a second data block returning companies that purchased a ‘Fast Go Game’ product. You would like to filter the ‘Wireless Mouse’ data to show only the companies that _did not_ purchased the ‘Fast Go Game.’ To do this, define a condition on the ‘Wireless Mouse’ data bock that uses the ‘Fast Go Game’ data as a subquery.
 
 Follow the steps below:
@@ -595,12 +598,14 @@ image::SubQueryExampleDialog.png[alt="Subquery dialog with Fast Go Game1 selecte
 image::SubQueryExampleResult.png[alt="Wireless Mouse data filtered to exclude companies that purchased Fast Go Game"]
 
 The ‘Wireless Mouse1’ data is filtered to display only the companies that did not purchase the ‘Fast Go Game’.
+****
 ====
 +
 [id=exampleRowDependent]
 .Example: Subquery returns a row-dependent value
 [%collapsible]
 ====
+****
 This example illustrates how to use a row-dependent subquery. Suppose you have the total sales for all product categories, both for this week and last week. However, you want to display only those product categories that have yielded more sales revenue this week than last week. To do this, you can use last week’s total sales as a subquery to provide the data for the condition you place on this week’s sales table.
 
 Follow the steps below:
@@ -666,6 +671,7 @@ image::TablewithSubQuery.png[alt="two data blocks connected by subquery link in 
 image::SubQueryExampleRowDep6.png[alt="sales this week data block showing only categories with higher sales than last week"]
 
 Note that the filtered ‘Sales this week’ data block now contains only the categories for which sales were higher than the previous week. (In this example, only the category of ‘Hardware’ had higher sales this week.)
+****
 ====
 +
 . Press btn:[OK] to close the ‘Subquery’ dialog box, and press btn:[OK] to close the ‘Condition’ panel.
