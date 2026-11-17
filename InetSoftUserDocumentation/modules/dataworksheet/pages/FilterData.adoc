@@ -553,7 +553,7 @@ The ‘Subquery column’ and ‘Current table column’ link the subquery data 
 [%collapsible]
 ====
 ****
-Assume that you have a data block returning companies that purchased a ‘Wireless Mouse’ product, and a second data block returning companies that purchased a ‘Fast Go Game’ product. You would like to filter the ‘Wireless Mouse’ data to show only the companies that _did not_ purchased the ‘Fast Go Game.’ To do this, define a condition on the ‘Wireless Mouse’ data bock that uses the ‘Fast Go Game’ data as a subquery.
+Assume that you have a data block returning companies that purchased a ‘Wireless Mouse’ product, and a second data block returning companies that purchased a ‘Fast Go Game’ product. You would like to filter the ‘Wireless Mouse’ data to show only the companies that _did not_ purchase the ‘Fast Go Game.’ To do this, define a condition on the ‘Wireless Mouse’ data bock that uses the ‘Fast Go Game’ data as a subquery.
 
 Follow the steps below:
 
