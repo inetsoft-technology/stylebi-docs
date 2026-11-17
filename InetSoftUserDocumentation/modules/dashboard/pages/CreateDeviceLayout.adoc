@@ -205,7 +205,14 @@ For the ‘Fit Page Width’ option the table width is set to the width of the p
 image::Viewsheet Layout Assignment 4.png[alt="table with Fit Page Width or Fit Contents option applied"]
 
 . *_Optional:_* For a print layout, add additional Text components into the page header or footer. Any text you place in the header or footer -- title, page number, generation date, etc. -- repeats identically on every page of the printed output. See below:
+ifdef::ai[]
+
+=== Print layout: Add Text to the header or footer
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 .Add Text to Print Layout
 ****
 To add a Text component into the layout, follow the steps below:
@@ -241,8 +248,18 @@ See xref:VisualFormat.adoc[] for more information about the *Format* panel.
 ****
 
 
+ifdef::ai[]
+[start=11]
+endif::ai[]
 . *_Optional:_*  For a print layout, add additional Image components into the page header or footer. Like a Text component in the header or footer, an Image component placed here (for example, a company logo) repeats identically on every printed page.
+ifdef::ai[]
+
+=== Print layout: Add Images to the header or footer
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 .Add Images to Print Layout
 ****
 To add an image into the layout, follow the steps below:
@@ -272,6 +289,9 @@ image::Viewsheet Layout HeaderImage3.png[alt="format tab applied to style image 
 .. Position and resize Image components in the header or footer as desired by dragging on the “move” handle and “resize” handles.
 ****
 
+ifdef::ai[]
+[start=12]
+endif::ai[]
 . Press the {buttonPreview} in the toolbar to see a preview of the Dashboard for the selected devices or for print.
 +
 [square]
