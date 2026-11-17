@@ -66,7 +66,7 @@ To determine which of these applies, log into Salesforce and go to menu:Setup[Qu
 
 === SOAP API login() is disabled by default in this org
 
-Salesforce disables the legacy SOAP `login()` operation by default for any org created in the Summer `'23 release or later. This affects most new Developer Edition, scratch, and trial orgs. No password or security token will work until a Salesforce administrator re-enables it. Follow the steps below:
+Salesforce disables the legacy SOAP `login()` operation by default for any org created in the Summer ’23 release or later. This affects most new Developer Edition, scratch, and trial orgs. No password or security token will work until a Salesforce administrator re-enables it. Follow the steps below:
 
 . In Salesforce, go to menu:Setup[Quick Find > User Interface].
 . Check the ‘Enable SOAP API login()’ checkbox.
