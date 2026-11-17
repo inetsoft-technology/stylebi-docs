@@ -7,7 +7,7 @@ ifdef::ai[]
 endif::ai[]
 include::ROOT:partial$rightClickOptions.adoc[]
 
-*Data Worksheet* is StyleBI`'s tool for mashing up data. "`Mashing up data`" means  acquiring data from one or more data  sources, and then combining, transforming, and processing those data sets in a variety of ways to produce a desired result.  The final result is generally used to feed data to a Dashboard.
+*Data Worksheet* is StyleBI's tool for mashing up data. "`Mashing up data`" means  acquiring data from one or more data  sources, and then combining, transforming, and processing those data sets in a variety of ways to produce a desired result.  The final result is generally used to feed data to a Dashboard.
 
 == When to Use
 This approach is especially useful in the following cases:

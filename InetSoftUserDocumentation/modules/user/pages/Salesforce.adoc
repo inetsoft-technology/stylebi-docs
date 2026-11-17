@@ -60,7 +60,7 @@ This generic Salesforce error can mean several different things:
 
 * The username or password is incorrect.
 * The password and security token are individually correct but do not match each other. Make sure both  password and  token are current, and reenter the concatenated string into the ‘Password’ field.
-* A Login IP Range restriction on the user`'s Salesforce profile is blocking requests from the StyleBI server's IP address.
+* A Login IP Range restriction on the user's Salesforce profile is blocking requests from the StyleBI server's IP address.
 
 To determine which of these applies, log into Salesforce and go to menu:Setup[Quick Find > Login History]. Find the failed attempt (it should match the timestamp and source IP of the connection attempt), and check its ‘Status’ column, which may report a more specific reason (for example, "`Invalid Password`") than the generic message StyleBI displays.
 

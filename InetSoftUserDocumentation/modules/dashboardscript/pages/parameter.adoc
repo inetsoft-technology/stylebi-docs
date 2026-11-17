@@ -39,7 +39,7 @@ parameter.myParamName = 'Hello';
 == pass:[parameter._GROUPS_]
 include::partial$readOnly.adoc[]
 
-Returns an array of groups to which the current user belongs. You can use this  for  conditional logic such as  showing, hiding, or labeling UI components based on the user`'s group.
+Returns an array of groups to which the current user belongs. You can use this  for  conditional logic such as  showing, hiding, or labeling UI components based on the user's group.
 
 === Type
 Array of Strings:: Groups to which current user belongs
@@ -55,7 +55,7 @@ include::ROOT:partial$vpmSecurityNote.adoc[]
 == pass:[parameter._ROLES_]
 include::partial$readOnly.adoc[]
 
-Returns an array of roles possessed by the current user. You can use this  for  conditional logic such as  showing, hiding, or labeling UI components based on the user`'s roles.
+Returns an array of roles possessed by the current user. You can use this  for  conditional logic such as  showing, hiding, or labeling UI components based on the user's roles.
 
 === Type
 Array of Strings::	Roles possesed by current user
