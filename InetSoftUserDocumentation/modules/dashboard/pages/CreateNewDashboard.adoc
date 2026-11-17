@@ -71,7 +71,7 @@ NOTE: The Wizard does not display all Chart types available in StyleBI.  To view
 +
 .Chart Visualization...
 [%collapsible]
-====
+=====
 .. Press the {buttonChart} in the top panel.
 .. Choose the chart type from the top panel.
 +
@@ -97,11 +97,11 @@ image::wizard8.png[alt=”press Format to select field format”]
 .. *_Optional:_* To make more detailed adjustments to the component, press the {buttonFullEditor} in the top toolbar. See xref:BasicChartingSteps.adoc[] for more information about how to use the Chart Editor.
 +
 NOTE: After you make modifications to the chart using the full Chart Editor, you should press the {buttonFinish} in the top toolbar. You can also return to the Wizard by pressing the {buttonToWizard}, but you will lose any changes that you made in the Chart Editor.
-====
+=====
 +
 .Crosstab Visualization...
 [%collapsible]
-====
+=====
 .. Press the {buttonCrosstabButton} in the top panel.
 .. In the ‘Group and Aggregate panel, use the menu to select the desired aggregation method for the selected measure(s).
 +
@@ -127,11 +127,11 @@ image::wizard9.png[alt=”press Sort on column header”]
 .. *_Optional:_* To make more detailed adjustments to the component, press the {buttonFullEditor} in the top toolbar.  See xref:AddTable.adoc[] for more information about how to use the Crosstab Editor.
 +
 NOTE: After you make modifications to the crosstab using the full Crosstab Editor, you should press the {buttonFinish} in the top toolbar. You can also return to the Wizard by pressing the {buttonToWizard}, but you will lose any changes that you made in the Crosstab Editor.
-====
+=====
 +
 .Table Visualization...
 [%collapsible]
-====
+=====
 .. Press the {buttonTableButton} in the top panel.
 .. To change a selected dimension to a measure, or a measure to a dimension, press the {buttonConvertToDimension} or {buttonConvertToMeasure} in the ‘Details’ panel, respectively.
 +
@@ -148,11 +148,11 @@ image::wizard11.png[alt=”press Format to select field format”]
 .. *_Optional:_* To make more detailed adjustments to the component, press the {buttonFullEditor} in the top toolbar.  See xref:AddTable.adoc[] for more information about how to use the Table Editor.
 +
 NOTE: After you make modifications to the crosstab using the full Table Editor, you should press the {buttonFinish} in the top toolbar. You can also return to the Wizard by pressing the {buttonToWizard}, but you will lose any changes that you made in the Table Editor.
-====
+=====
 +
 .Gauge Visualization...
 [%collapsible]
-====
+=====
 .. Press the {buttonGaugeButton} in the top panel.
 .. Choose the Gauge type from the top panel.
 +
@@ -172,11 +172,11 @@ image::wizard14.png[alt=”press Format to select field format”]
 .. To delete a selected field, press the {buttonDeleteWizard} next to the field.
 
 .. *_Optional:_* You can  make more detailed adjustments to the Gauge  after you exit the Wizard.  (See xref:AddAKPI.adoc[] and xref:GaugeProperties.adoc[] for more information about Gauges.)
-====
+=====
 +
 .Filter Visualization...
 [%collapsible]
-====
+=====
 .. Press the {buttonFilter} in the top panel.
 .. If you have selected a single dimension or measure in the left panel, choose the Filter type from the top panel: Selection List or Range Slider. (If you have selected multiple dimensions, the only option is a Selection Tree.)
 +
@@ -198,11 +198,11 @@ image::wizard17.png[alt=”press Format to select field format”]
 .. To delete a selected field, press the {buttonDeleteWizard} next to the field.
 
 .. *_Optional:_* You can  make more detailed adjustments to the Filter  after you exit the Wizard.  (See xref:AddFilterComponents.adoc[], xref:SelectionListProperties.adoc[], xref:SelectionTreeProperties.adoc[], and xref:RangeSliderProperties.adoc[] for more information about Filter components.)
-====
+=====
 +
 .Text Visualization...
 [%collapsible]
-====
+=====
 .. Press the {buttonTextButton} in the top panel.
 .. *_Optional:_* Enter a ‘Description’ for the Text.
 .. In the ‘Group and Aggregate panel, use the menu to select the desired aggregation method for the selected measure.
@@ -218,7 +218,7 @@ image::wizard14.png[alt=”press Format to select field format”]
 .. To delete a selected field, press the {buttonDeleteWizard} next to the field.
 
 .. *_Optional:_* You can  make more detailed adjustments to the Text  after you exit the Wizard.  (See xref:AddAKPI.adoc[] and xref:TextProperties.adoc[] more information about Text components.)
-====
+=====
 
 . Press the {buttonFinish} in the top toolbar to open the layout view, where you can add more components.
 
