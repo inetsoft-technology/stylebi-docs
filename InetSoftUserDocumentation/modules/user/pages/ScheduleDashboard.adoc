@@ -167,6 +167,11 @@ image::scheduleDashboard3.png[alt="press Multiple Actions button"]
 The following options are available:
 
 
+ifdef::ai[]
+
+=== Schedule action: Notify of task status
+
+endif::ai[]
 .Enable Notification of Task Status
 [%collapsible]
 ====
@@ -180,6 +185,11 @@ To send an *SMS*  message to a phone, enter the provisioned email address suppli
 ====
 
 
+ifdef::ai[]
+
+=== Schedule action: Deliver to emails
+
+endif::ai[]
 .Enable Deliver to Emails
 [%collapsible]
 ====
@@ -219,6 +229,11 @@ To include Dashboard  *creation parameter* values in the filename or subject lin
 ****
 ====
 
+ifdef::ai[]
+
+=== Schedule action: Save to disk
+
+endif::ai[]
 .Enable Save to Disk
 [%collapsible]
 ====

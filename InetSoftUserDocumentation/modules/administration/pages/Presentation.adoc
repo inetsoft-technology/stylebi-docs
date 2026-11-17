@@ -154,7 +154,14 @@ image::theme3.png[alt="CSS tab for editing theme properties"]
 
 . Edit the desired CSS property. (To find a property, type some of the property’s name in the ‘Filter’ field above the property list.) For colors, you can click the color chip to enter a color using a color picker, or press the {buttonEdit} to enter a hex color code.
 
+ifdef::ai[]
+
+=== Available Portal CSS Properties
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 [#AvailablePortalCSSProperties]
 .See Available Portal CSS Properties...
 [%collapsible]
@@ -425,7 +432,14 @@ The following sections describe the available CSS variables (classes) that you c
 |===
 ****
 ====
+ifdef::ai[]
+
+=== Available Enterprise Manager CSS Properties
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 [#AvailableEnterpriseManagerCSSProperties]
 .See Available Enterprise Manager CSS Properties...
 [%collapsible]
@@ -466,9 +480,19 @@ The ‘Enterprise Dark’ option  sets the ‘Dark’ theme for Enterprise Manag
 
 ****
 ====
+ifdef::ai[]
+
+=== Apply and Reset Theme Changes
+
+endif::ai[]
+ifndef::ai[]
 +
+endif::ai[]
 image::theme4.png[alt="apply CSS changes to theme"]
 
+ifdef::ai[]
+[start=6]
+endif::ai[]
 . Press btn:[Apply] to make the changes to the theme.
 
 . *_Optional:_* Press btn:[Clear All] to remove all the current CSS settings. Press btn:[Reset] to reverse any recent changes you made (before you press btn:[Apply]).
