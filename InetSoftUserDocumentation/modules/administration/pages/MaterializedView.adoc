@@ -11,7 +11,8 @@ A materialized view is a caching strategy that pre-aggregates and stores the dat
 
 Dashboards that are configured to use a materialized view will rely on this materialized view to supply their data.  If no materialized view is found, the Dashboard will either query the database directly or automatically trigger the creation of a materialized view. Use the ‘Enable MV On-demand’ option in xref:#MaterializedViewOptions[] to enable the latter behavior.
 
-NOTE: A materialized view stores an empty string and a null value as the same value. When a Dashboard uses a materialized view, an `[is not][equal to]` condition therefore also excludes the rows where the value is an empty string. Without a materialized view, these rows are returned.
+CAUTION: A materialized view stores an empty string and a *null* as the same value. A Dashboard can therefore show different results with a materialized view than without one. For example, with the condition `[Region][is not][equal to][East]`, rows where Region is an empty string are *excluded* from a Dashboard that uses a materialized view (because they are treated as null), but *included* in one that does not. This affects only data that contains real empty strings.
+
 
 [#CreateMaterializedView]
 == Create a Materialized View
