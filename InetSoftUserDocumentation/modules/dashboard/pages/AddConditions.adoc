@@ -75,12 +75,12 @@ video::359331010#chapter=16567722[vimeo,640,400]
 [TIP]
 ====
 If you are using the `[in range]` operator for a date field condition, the value assigned to the variable should be one of the permissible range strings, such as ‘Last Year’, ‘This Year’, etc.
-
+====
++
 .Read more about the available date ranges…
 [%collapsible]
-=====
+====
 include::ROOT:partial$dateRanges.adoc[]
-=====
 ====
 You can also enter an arbitrary variable name (one which does not correspond to an existing Form component). In this case, the user will be prompted at runtime to enter a value for the parameter.  See xref:#ControlUserPrompting[] below for more information about prompting.
 +
