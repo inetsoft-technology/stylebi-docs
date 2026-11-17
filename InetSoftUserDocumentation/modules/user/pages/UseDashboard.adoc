@@ -58,7 +58,7 @@ NOTE: Not all buttons may be available at all times.
 {buttonSchedule}:: Configures a Dashboard for automatic generation and delivery. See xref:ScheduleDashboard.adoc[] for more information.
 {buttonPrint}:: Prints the Dashboard on any available printer.
 {buttonExport}:: Exports a copy of the Dashboard to Excel, PowerPoint, or PDF format. See xref:dashboard:ExportDashboard.adoc[]  for detailed instructions.
-{buttonZoomDash}:: Increase or decrease the Dashboard magnification. You should use this {buttonZoomDash}  rather than the *browser`'s* built-in zoom.  (The browser zoom may not preserve dashboard appearance accurately).
+{buttonZoomDash}:: Increase or decrease the Dashboard magnification. You should use this {buttonZoomDash}  rather than the *browser's* built-in zoom.  (The browser zoom may not preserve dashboard appearance accurately).
 +
 TIP: To zoom into data on a  Chart, see xref:dashboard:DrillDownIntoData.adoc#ZoomChart[Zoom a Chart].
 {buttonBookmarks}:: Opens the ‘Bookmark’ menu, which allows you to save a bookmark or load a previously-saved bookmark. See xref:BookmarkDashboard.adoc[] for more details.

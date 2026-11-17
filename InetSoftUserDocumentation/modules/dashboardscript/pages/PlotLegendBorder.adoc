@@ -4,11 +4,11 @@ include::ROOT:partial$buttonSnippets.adoc[]
 
 // metadata for AI
 ifdef::ai[]
-Summary: Sets the legend border`'s line style. Set the property to `Chart.NONE` to hide the legend border.
+Summary: Sets the legend border's line style. Set the property to `Chart.NONE` to hide the legend border.
 endif::ai[]
 
 
-Sets the legend border`'s line style. Set the property to `Chart.NONE` to hide the legend border.
+Sets the legend border's line style. Set the property to `Chart.NONE` to hide the legend border.
 
 == Type
 A  xref:commonscript:StyleConstantLineStyle.adoc[] constant
