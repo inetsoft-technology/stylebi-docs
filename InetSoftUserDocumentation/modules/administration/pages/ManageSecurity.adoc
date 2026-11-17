@@ -478,7 +478,7 @@ adminIdentities:: Structure, with following elements, containing list of identit
 * `users` (string) is the list of the users with admin permission over the identity. The list need not include the current API user, which is added automatically.
 * `groups` (string) is the list of the groups with admin permission over the identity.
 * `roles` (string) is the list of the roles with admin permission over the identity.
-orgID:: The ID of the user`'s organization. If omitted, the Host Organization is assumed.
+orgID:: The ID of the user's organization. If omitted, the Host Organization is assumed.
 
 [#SecurityGroupProperties]
 == Security Group Properties
@@ -495,7 +495,7 @@ adminIdentities:: Structure, with the following elements, containing list of ide
 * `users` (string) is the list of the users with admin permission over the identity. The list need not include the current API user, which is added automatically.
 * `groups` (string) is the list of the groups with admin permission over the identity.
 * `roles` (string) is the list of the roles with admin permission over the identity.
-orgID:: The ID of the user`'s organization. If omitted, the Host Organization is assumed.
+orgID:: The ID of the user's organization. If omitted, the Host Organization is assumed.
 
 
 [#SecurityRoleProperties]
@@ -513,7 +513,7 @@ adminIdentities::  Structure, with the following elements, containing list of id
 * `users` (string) is the list of the users with admin permission over the identity. The list need not include the current API user, which is added automatically.
 * `groups` (string) is the list of the groups with admin permission over the identity.
 * `roles` (string) is the list of the roles with admin permission over the identity.
-orgID:: The ID of the role`'s organization. If omitted, the Host Organization is assumed.
+orgID:: The ID of the role's organization. If omitted, the Host Organization is assumed.
 
 [#SecurityOrganizationProperties]
 == Security Organization Properties

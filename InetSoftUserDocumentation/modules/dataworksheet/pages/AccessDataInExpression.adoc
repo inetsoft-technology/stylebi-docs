@@ -39,7 +39,7 @@ field[-3][3]              // three rows above, in column 3
 [IMPORTANT]
 Row offset references like `field[-1]['column']` are evaluated *before any sorting or grouping* is applied to the data block. In a data block with sorting or grouping applied, these expressions are  NOT expected to return the value in the specified row of the *data preview*.
 
-If you want to compute a running total,  period-over-period difference, or percent change, it is preferable to use the Dashboard`'s built-in '`Trend and Comparison`' calculations.  See xref:dashboard:TrendCompareData.adoc[] for more information. These calculations automatically handle group boundaries, and will generally produce more reliable results.
+If you want to compute a running total,  period-over-period difference, or percent change, it is preferable to use the Dashboard's built-in '`Trend and Comparison`' calculations.  See xref:dashboard:TrendCompareData.adoc[] for more information. These calculations automatically handle group boundaries, and will generally produce more reliable results.
 
 
 
