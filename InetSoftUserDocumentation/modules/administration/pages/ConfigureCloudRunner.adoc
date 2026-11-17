@@ -16,7 +16,7 @@ By default, the Scheduler runs every scheduled task  in a single long-running Sc
 Consider using the cloud runner in the following situations:
 [square]
 * A single misbehaving task (runaway export, large materialized view build) could  degrade or crash the shared Scheduler process, and you want each task isolated with its own CPU/memory limits.
-* Your scheduled workload varies dramatically, and you don`'t want to permanently size the Scheduler for its worst-case load.
+* Your scheduled workload varies dramatically, and you don't want to permanently size the Scheduler for its worst-case load.
 * StyleBI is already deployed on container-native infrastructure (Kubernetes, ECS, Azure Container Apps, Cloud Run), and running scheduled tasks as native jobs on that same infrastructure fits your operational model better than a second long-lived process.
 * You want scheduled-task compute billed only while a task is actually running, rather than keeping Scheduler capacity provisioned continuously.
 
@@ -152,7 +152,7 @@ This mode launches containers on a local Docker daemon and is intended for devel
 
 
 
-Because each task run is a separate, temporary container rather than a thread in the Scheduler process, task status is not visible on the Enterprise Manager *Schedule* > *Status* page. (The *Status*  tab is hidden once a cloud runner is configured). Instead, you can monitor task execution from the cloud platform`'s own console:
+Because each task run is a separate, temporary container rather than a thread in the Scheduler process, task status is not visible on the Enterprise Manager *Schedule* > *Status* page. (The *Status*  tab is hidden once a cloud runner is configured). Instead, you can monitor task execution from the cloud platform's own console:
 
 [cols="1,2"]
 |===

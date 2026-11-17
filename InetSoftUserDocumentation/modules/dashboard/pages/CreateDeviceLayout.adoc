@@ -226,7 +226,7 @@ image::Viewsheet Layout HeaderText2.png[alt="text properties dialog with text en
 ====
 You can use the following special codes within the text that you enter: `pass:[{P}]` inserts the current page number, `pass:[{N}]` inserts the total number of pages, and `pass:[{D}]` and `pass:[{T}]` insert the current date and time. To control the formatting of the inserted values, use the optional `format` parameter, for example, `pass:[{P,format}]`. The format for page numbering should follow the syntax described in xref:dashboard:DataFormat.adoc#NumberFormat[Number Format]. The format for date and time should follow the syntax described in xref:dashboard:DataFormat.adoc#DateFormat[Date Format].
 
-A common *report-style footer* combines these codes in one Text component, for example, use `Page pass:[{P}] of pass:[{N}]` to number each page against the total, or `Generated pass:[{D}] pass:[{T}]` to stamp the printed date and time. To reproduce a traditional report`'s *title-plus-pagination* layout, simply place a Text component with the Dashboard title in the header, and one of these page/date patterns in the footer.
+A common *report-style footer* combines these codes in one Text component, for example, use `Page pass:[{P}] of pass:[{N}]` to number each page against the total, or `Generated pass:[{D}] pass:[{T}]` to stamp the printed date and time. To reproduce a traditional report's *title-plus-pagination* layout, simply place a Text component with the Dashboard title in the header, and one of these page/date patterns in the footer.
 ====
 
 .. *_Optional:_*  To format the text, click the Text component to select it and select the *Format* tab in the left panel. Apply the desired formatting.
