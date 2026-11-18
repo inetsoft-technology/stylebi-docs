@@ -16,7 +16,7 @@ To create a *regular copy* of an existing data block or data block flow, follow 
 . To copy a *single* data block, right-click the data block that you want to copy, and select ‘Copy’ from the context menu. {rightClickOptions}
 +
 //[role=bodyImage]
-image::copyDataBlock.png[role=bodyImage]
+image::copyDataBlock.png[alt="right-click the data block and select Copy from the context menu",role=bodyImage]
 
 . To copy *multiple* data blocks in a data block flow (preserving the relationships between them), use lasso, {buttonCtrl}-click, or {buttonShift}-click to select the desired data blocks, or right-click a data block and choose ‘Select Dependent’ from the context menu to select related data blocks. Then select ‘Copy’ from the context menu. {rightClickOptions}
 . Right-click in an empty region of the Data Worksheet and select ‘Paste’ from the context menu. This pastes the data blocks or data block flow  into the Data Worksheet.
