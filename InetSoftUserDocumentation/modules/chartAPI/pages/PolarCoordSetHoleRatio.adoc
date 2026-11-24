@@ -20,7 +20,7 @@ endif::ai[]
 * xref:ChangeChartCoordinates.adoc#PolarCoordinates[Polar Coordinates] for a walkthrough of polar coordinates.
 ====
 
-Specifies the size of the “hole” when using the `PolarCoord.PLUS` option for xref:PolarCoordSetType.adoc[].  The corresponding “getter” function is `getHoleRatio()`.
+Specifies the size of the “hole” when using the `PolarCoord.PLUS` option for xref:PolarCoordSetType.adoc[].  The corresponding “getter” function is xref:chartAPI:PolarCoordGetHoleRatio.adoc[].
 
 == Parameter
 value::			Number between 0 and 1, indicating the fraction of outer plot radius occupied by center hole. Default is 0.5, specifying hole radius as half of outer plot radius. Value of 0 specifies no hole; value of 1 sets hole to full chart.

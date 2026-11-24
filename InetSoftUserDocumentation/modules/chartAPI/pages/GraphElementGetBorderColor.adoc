@@ -1,0 +1,27 @@
+= GraphElement.getBorderColor()
+:navtitle: getBorderColor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `GraphElement.getBorderColor()`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
+
+Retrieves the element border color.  The corresponding “setter” function is xref:chartAPI:GraphElementSetBorderColor.adoc[].
+
+== Returns
+A {javaawtcolor} object
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+----
+var elem = graph.getElement(0); //<1>
+var color = elem.getBorderColor(); //<2>
+----
+<1> Use xref:EGraphGetElement.adoc[] to obtain a handle to the xref:GraphElement.adoc[] object.
+<2> Use `getBorderColor` to get the current border color.
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]

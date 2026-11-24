@@ -1,0 +1,31 @@
+= AxisSpec.getGridColor()
+:navtitle: getGridColor()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `AxisSpec.getGridColor()`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
+
+Retrieves the color of the axis grid lines.  The corresponding “setter” function is xref:chartAPI:AxisSpecSetGridColor.adoc[].
+
+== Returns
+A {javaawtcolor} object
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+----
+var coord = graph.getCoordinate(); //<1>
+var scale = coord.getYScale(); //<2>
+var spec = scale.getAxisSpec(); //<3>
+var color = spec.getGridColor(); //<4>
+----
+<1> Use xref:EGraphGetCoordinate.adoc[] to obtain a handle to the xref:Coordinate.adoc[].
+<2> Use xref:RectCoordGetYScale.adoc[] to obtain a handle to the xref:Scale.adoc[].
+<3> Use xref:ScaleGetAxisSpec.adoc[] to get a handle to the xref:AxisSpec.adoc[].
+<4> Use `getGridColor` to get the current grid line color.
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
