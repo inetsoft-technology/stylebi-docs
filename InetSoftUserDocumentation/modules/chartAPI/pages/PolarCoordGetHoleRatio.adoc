@@ -1,0 +1,35 @@
+= PolarCoord.getHoleRatio()
+:navtitle: getHoleRatio()
+%experimental%
+include::ROOT:partial$buttonSnippets.adoc[]
+
+// metadata for AI
+ifdef::ai[]
+Summary: Chart Script API reference for `PolarCoord.getHoleRatio()`. This is part of StyleBI's Chart Script (Chart API) scripting layer — a last-resort approach for chart customization/interactivity. See chartAPI:ChartScriptTutorial.adoc for guidance on when to use scripting vs. UI-driven alternatives (built-in toolbar tools, Ad Hoc Editor, Form-driven dynamic properties).
+endif::ai[]
+
+[CAUTION,caption=inherits from]
+====
+[square]
+* xref:Coordinate.adoc[]
+====
+
+Retrieves the size of the “hole” used with the `PolarCoord.PLUS` option for xref:PolarCoordSetType.adoc[].  The corresponding “setter” function is xref:chartAPI:PolarCoordSetHoleRatio.adoc[].
+
+== Returns
+A number between 0 and 1, indicating the fraction of the outer plot radius occupied by the center hole.
+
+== Example
+
+.Chart Component Script
+[source,javascript]
+----
+var polar = new PolarCoord(graph.getCoordinate()); //<1>
+polar.setType(PolarCoord.PLUS);
+polar.setHoleRatio(.25);
+var ratio = polar.getHoleRatio(); //<2>
+----
+<1> Create the `PolarCoord` object.
+<2> Use `getHoleRatio` to get the current hole ratio (0.25 in this example).
+
+include::chartAPI:partial$scriptThatModifiesGraph.adoc[]
